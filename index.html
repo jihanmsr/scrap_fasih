@@ -110,9 +110,7 @@
             font-size: 2.25rem;
             font-weight: 800;
             letter-spacing: -0.025em;
-            background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 50%, #ec4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--text-primary);
         }
 
         .brand-title p {
@@ -392,6 +390,7 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            margin-bottom: 2rem;
         }
 
         /* Expandable Card Design */
@@ -423,12 +422,14 @@
             flex-direction: column;
             gap: 0.25rem;
             flex-grow: 1;
+            min-width: 0; /* allows text truncation/wrapping in flexbox */
         }
 
         .company-name-row {
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            min-width: 0;
         }
 
         .company-name {
@@ -436,6 +437,9 @@
             font-size: 1.2rem;
             font-weight: 700;
             color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .company-meta {
@@ -447,6 +451,11 @@
             flex-wrap: wrap;
         }
 
+        .company-email-text {
+            word-break: break-all;
+            overflow-wrap: anywhere;
+        }
+
         .code-badge {
             background-color: var(--pill-inactive-bg);
             padding: 0.15rem 0.5rem;
@@ -455,12 +464,14 @@
             font-weight: 600;
             font-family: monospace;
             font-size: 0.8rem;
+            flex-shrink: 0;
         }
 
         .right-badges {
             display: flex;
             align-items: center;
             gap: 1rem;
+            flex-shrink: 0;
         }
 
         .company-status-badge {
@@ -495,11 +506,6 @@
             overflow: hidden;
             transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
             opacity: 0;
-        }
-
-        .company-card.expanded .details-wrapper {
-            max-height: 1000px; /* high enough to contain content */
-            opacity: 1;
         }
 
         .timeline-section {
@@ -565,6 +571,7 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+            min-width: 0;
         }
 
         .timeline-badge {
@@ -575,12 +582,16 @@
             text-transform: uppercase;
             background-color: var(--badge-bg);
             color: var(--badge-color);
+            flex-shrink: 0;
         }
 
         .timeline-email {
             font-size: 0.85rem;
             color: var(--text-primary);
             font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .timeline-time {
@@ -588,6 +599,51 @@
             color: var(--text-secondary);
             font-family: monospace;
             font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        /* Pagination Styling */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .page-btn {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            user-select: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+        }
+
+        .page-btn:hover:not(:disabled) {
+            border-color: var(--primary);
+            color: var(--text-primary);
+            background-color: var(--card-hover-bg);
+        }
+
+        .page-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+        }
+
+        .page-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
         }
 
         /* Empty state styling */
@@ -641,21 +697,20 @@
             }
 
             .company-header {
+                flex-direction: column;
                 align-items: flex-start;
-                position: relative;
+                gap: 0.75rem;
+            }
+
+            .company-name {
+                white-space: normal;
+                overflow: visible;
+                text-overflow: clip;
             }
 
             .right-badges {
-                position: absolute;
-                right: 0;
-                top: 0;
-                flex-direction: column;
-                align-items: flex-end;
-                gap: 0.5rem;
-            }
-
-            .toggle-icon {
-                margin-top: 0.25rem;
+                width: 100%;
+                justify-content: space-between;
             }
 
             .timeline-item {
@@ -768,6 +823,11 @@
             <div class="company-list" id="company-list">
                 <!-- Data dynamically loaded -->
             </div>
+            
+            <!-- Pagination Container -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination buttons dynamically loaded -->
+            </div>
         </main>
 
     </div>
@@ -785,6 +845,7 @@
             const sortSelect = document.getElementById('sort-select');
             const pills = document.querySelectorAll('.pill');
             const companyListContainer = document.getElementById('company-list');
+            const paginationContainer = document.getElementById('pagination');
             const themeToggleBtn = document.getElementById('theme-toggle-btn');
             const htmlElement = document.documentElement;
             
@@ -800,6 +861,10 @@
             const countOpened = document.getElementById('count-opened');
             const countDelivered = document.getElementById('count-delivered');
             const countQueued = document.getElementById('count-queued');
+
+            // Pagination configuration
+            const ITEMS_PER_PAGE = 20;
+            let currentPage = 1;
 
             let activeFilter = 'all';
             let searchQuery = '';
@@ -886,6 +951,100 @@
                 countQueued.textContent = queued;
             }
 
+            // Render Pagination Buttons
+            function renderPagination(totalItems) {
+                paginationContainer.innerHTML = '';
+                const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+
+                if (totalPages <= 1) return; // No pagination needed if only 1 page
+
+                // Previous Button
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'page-btn';
+                prevBtn.innerHTML = '&laquo;';
+                prevBtn.disabled = currentPage === 1;
+                prevBtn.addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderList();
+                        window.scrollTo({ top: document.querySelector('.filter-panel').offsetTop - 20, behavior: 'smooth' });
+                    }
+                });
+                paginationContainer.appendChild(prevBtn);
+
+                // Page numbers
+                let startPage = Math.max(1, currentPage - 2);
+                let endPage = Math.min(totalPages, currentPage + 2);
+
+                if (startPage > 1) {
+                    const firstBtn = document.createElement('button');
+                    firstBtn.className = 'page-btn';
+                    firstBtn.textContent = '1';
+                    firstBtn.addEventListener('click', () => {
+                        currentPage = 1;
+                        renderList();
+                    });
+                    paginationContainer.appendChild(firstBtn);
+
+                    if (startPage > 2) {
+                        const dots = document.createElement('span');
+                        dots.className = 'page-btn';
+                        dots.textContent = '...';
+                        dots.style.cursor = 'default';
+                        dots.style.border = 'none';
+                        dots.style.background = 'none';
+                        paginationContainer.appendChild(dots);
+                    }
+                }
+
+                for (let i = startPage; i <= endPage; i++) {
+                    const pageBtn = document.createElement('button');
+                    pageBtn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+                    pageBtn.textContent = i;
+                    pageBtn.addEventListener('click', () => {
+                        currentPage = i;
+                        renderList();
+                        window.scrollTo({ top: document.querySelector('.filter-panel').offsetTop - 20, behavior: 'smooth' });
+                    });
+                    paginationContainer.appendChild(pageBtn);
+                }
+
+                if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                        const dots = document.createElement('span');
+                        dots.className = 'page-btn';
+                        dots.textContent = '...';
+                        dots.style.cursor = 'default';
+                        dots.style.border = 'none';
+                        dots.style.background = 'none';
+                        paginationContainer.appendChild(dots);
+                    }
+
+                    const lastBtn = document.createElement('button');
+                    lastBtn.className = 'page-btn';
+                    lastBtn.textContent = totalPages;
+                    lastBtn.addEventListener('click', () => {
+                        currentPage = totalPages;
+                        renderList();
+                    });
+                    paginationContainer.appendChild(lastBtn);
+                }
+
+                // Next Button
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'page-btn';
+                nextBtn.innerHTML = '&raquo;';
+                nextBtn.disabled = currentPage === totalPages;
+                nextBtn.addEventListener('click', () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderList();
+                        window.scrollTo({ top: document.querySelector('.filter-panel').offsetTop - 20, behavior: 'smooth' });
+                    }
+                });
+                paginationContainer.appendChild(nextBtn);
+            }
+
             // Render Company List
             function renderList() {
                 companyListContainer.innerHTML = '';
@@ -919,6 +1078,14 @@
                     return 0;
                 });
 
+                // Update pagination buttons based on total items
+                renderPagination(filtered.length);
+
+                // Slice data for current page
+                const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+                const endIndex = startIndex + ITEMS_PER_PAGE;
+                const pageItems = filtered.slice(startIndex, endIndex);
+
                 if (filtered.length === 0) {
                     companyListContainer.innerHTML = `
                         <div class="empty-state">
@@ -929,10 +1096,11 @@
                             <p>Coba gunakan kata kunci pencarian lain atau pilih filter status berbeda.</p>
                         </div>
                     `;
+                    paginationContainer.innerHTML = '';
                     return;
                 }
 
-                filtered.forEach(comp => {
+                pageItems.forEach(comp => {
                     const card = document.createElement('div');
                     card.className = 'company-card';
                     
@@ -944,7 +1112,8 @@
                         historyHTML = `
                             <div class="timeline-section">
                                 <div class="timeline-title">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                    <!-- Clock / History Icon -->
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                                     Riwayat Log Pengiriman
                                 </div>
                                 <div class="timeline-list">
@@ -979,7 +1148,7 @@
                                 </div>
                                 <div class="company-meta">
                                     <span class="code-badge">${comp.code}</span>
-                                    <span>${comp.email}</span>
+                                    <span class="company-email-text">${comp.email}</span>
                                 </div>
                             </div>
                             <div class="right-badges">
@@ -1000,25 +1169,37 @@
 
                     // Handle Accordion Toggle Click
                     card.addEventListener('click', (e) => {
-                        // Prevent expansion if user is clicking links/buttons inside card
                         if (e.target.closest('a') || e.target.closest('button')) return;
                         
                         const isExpanded = card.classList.contains('expanded');
+                        const details = card.querySelector('.details-wrapper');
                         
                         // Close other cards for clean UI
                         document.querySelectorAll('.company-card.expanded').forEach(c => {
                             if (c !== card) {
                                 c.classList.remove('expanded');
-                                c.querySelector('.details-wrapper').style.maxHeight = null;
+                                const otherDetails = c.querySelector('.details-wrapper');
+                                otherDetails.style.maxHeight = null;
                             }
                         });
 
                         card.classList.toggle('expanded');
-                        const details = card.querySelector('.details-wrapper');
                         
                         if (!isExpanded) {
+                            // First set to scrollHeight so it transitions smoothly
                             details.style.maxHeight = details.scrollHeight + "px";
+                            
+                            // Once the transition finishes, set max-height to none to prevent any cropping/truncation
+                            details.addEventListener('transitionend', function handler() {
+                                if (card.classList.contains('expanded')) {
+                                    details.style.maxHeight = 'none';
+                                }
+                                details.removeEventListener('transitionend', handler);
+                            });
                         } else {
+                            // To collapse, set back to scrollHeight, then next tick set to null
+                            details.style.maxHeight = details.scrollHeight + "px";
+                            details.offsetHeight; // Force repaint
                             details.style.maxHeight = null;
                         }
                     });
@@ -1030,11 +1211,13 @@
             // Listeners
             searchInput.addEventListener('input', (e) => {
                 searchQuery = e.target.value.toLowerCase().trim();
+                currentPage = 1; // Reset to first page
                 renderList();
             });
 
             sortSelect.addEventListener('change', (e) => {
                 activeSort = e.target.value;
+                currentPage = 1; // Reset to first page
                 renderList();
             });
 
@@ -1043,6 +1226,7 @@
                     pills.forEach(p => p.classList.remove('active'));
                     pill.classList.add('active');
                     activeFilter = pill.getAttribute('data-filter');
+                    currentPage = 1; // Reset to first page
                     renderList();
                 });
             });
