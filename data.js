@@ -10474,5 +10474,4353 @@ window.EMAIL_DATA = [
     "status": "delivered",
     "timestamp": "02 Jun 2026, 09:00:26",
     "order": 2
+  },
+  {
+    "code": "7208011006000200 - UB - 2",
+    "company_name": "BANK MANDIRI TBK, PT",
+    "email": "mmu.parigi_mtgtsrtl@bankmandiri.co.id",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 08:57:42",
+    "order": 1
+  },
+  {
+    "code": "7208011006000200 - UB - 2",
+    "company_name": "BANK MANDIRI TBK, PT",
+    "email": "mmu.parigi_mtgtsrtl@bankmandiri.co.id",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 08:57:43",
+    "order": 2
+  },
+  {
+    "code": "-",
+    "company_name": "MATRA ARONA BANGGAI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050012000700 - UB - 1",
+    "company_name": "Kantor Pln Rayon Banggai",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7210120011000500 - UB - 2",
+    "company_name": "KPN PAKABELO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7210060013000600 - UB - 1",
+    "company_name": "KOPERASI PALOLO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050023000200 - UB - 1",
+    "company_name": "PT Mandiri Tunas Finance [MANDIRI TUNAS FINANCE]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010011002704 - UB - 1",
+    "company_name": "PANCA BOGA PARAMITA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271011004000401 - UB - 2",
+    "company_name": "BANK BRI UNIT GUSTI NGURAH RAI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010008001000 - UB - 1",
+    "company_name": "BANK MANDIRI UNIT MANONDA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050026000302 - UB - 2",
+    "company_name": "PERTAMINA PERSERO PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202051005000900 - UB - 1",
+    "company_name": "Pertamina",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271011003000500 - UB - 1",
+    "company_name": "KSU TADULUKO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202052004000200 - UB - 1",
+    "company_name": "Pertamina",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010004000800 - UB - 2",
+    "company_name": "UNIT BRI GAJAH MADA (RITA A)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010004001500 - UB - 1",
+    "company_name": "Bank BSI Area Palu",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010005000800 - UB - 1",
+    "company_name": "BANK NEGARA INDONESIA 1946 CA-BANG IMAM BONJOL",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009002902 - UB - 2",
+    "company_name": "PT Unilever Indonesia Tbk, Kantor Utama Luwuk",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050011000700 - UB - 1",
+    "company_name": "KOP. DAM",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271011002000300 - UB - 2",
+    "company_name": "DEVELOPER BANGUNAN <ISMAIL>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010007001100 - UB - 1",
+    "company_name": "INDO PLASTIK, UD",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050012000700 - UB - 2",
+    "company_name": "PT BPR CIPTA DANA PRIMA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050023001100 - UB - 1",
+    "company_name": "PT BFI Finance Indonesia Tbk Cabang Luwuk [BFI FINANCE INDONESIA]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271011004000402 - UB - 1",
+    "company_name": "PT Anugerahkarya Agrasentosa (AKAS)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271012001002200 - UB - 1",
+    "company_name": "KPN MULTI KARYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202053001000100 - UB - 1",
+    "company_name": "PERTAMINA DPPU BUBUNG LUWUK",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010006000101 - UB - 1",
+    "company_name": "PT Pegadaian (Persero), UPC BAYAOGE",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009000900 - UB - 3",
+    "company_name": "KOPERASI KARYAWAN KOKABRI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010006000300 - UB - 1",
+    "company_name": "RM PADAIDI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009003000 - UB - 1",
+    "company_name": "KPN RAHAMAT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009003300 - UB - 1",
+    "company_name": "KPN HANDAYANI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010007000801 - UB - 1",
+    "company_name": "BANK MEGA TBK, PT KCP PALU MANONDA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050010000200 - UB - 1",
+    "company_name": "KOPBUN TUNAS KARYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010007000802 - UB - 2",
+    "company_name": "BANK BRI UNIT MANONDA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050023000700 - UB - 1",
+    "company_name": "PT. SMS Finance Cabang Luwuk",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202053002000100 - UB - 1",
+    "company_name": "FEDERAL INTERNATIONAL FINANCE",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020004002803 - UB - 1",
+    "company_name": "KPN SMAN 3",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020008003501 - UB - 1",
+    "company_name": "KSU BELOTA PURA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020007000300 - UB - 1",
+    "company_name": "KPN PELITA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020004000400 - UB - 1",
+    "company_name": "BRIUNIT TATURA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020007000800 - UB - 1",
+    "company_name": "TABUR BONI PALUMARA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202060019000100 - UB - 1",
+    "company_name": "BRI UNIT PAGIMANA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271012001001800 - UB - 1",
+    "company_name": "RSU ANUTAPURA PALU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020007002702 - UB - 1",
+    "company_name": "KPN DALA LOMPE SINGGANI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202061009000200 - UB - 1",
+    "company_name": "PLN KECAMATAN BUALEMO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271012002003100 - UB - 1",
+    "company_name": "MEUBEL JATI INDAH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020007000401 - UB - 1",
+    "company_name": "KPN KPSDA (SD 22)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020007002400 - UB - 1",
+    "company_name": "KPN PANGAYOMAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202051007000700 - UB - 1",
+    "company_name": "LAUTAN INTERNATIONAL JAYA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271012001001800 - UB - 2",
+    "company_name": "PT Pegadaian (Persero), UPC BALAROA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020007003801 - UB - 1",
+    "company_name": "CLIPAN FINANCE CAB PALU,PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212100014000100 - UB - 1",
+    "company_name": "PT. Langgeng Nusa Makmur / Perkebunan Kelapa Sawit beserta turunannya",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009000400 - UB - 1",
+    "company_name": "SILVI ANDA ENERGI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010005000900 - UB - 1",
+    "company_name": "Bank Rakyat Indonesia",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010006000101 - UB - 3",
+    "company_name": "BANK PANIN PT TBK",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009001700 - UB - 3",
+    "company_name": "PONPES AL-KHAIRAT LUWUK",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009001700 - UB - 1",
+    "company_name": "KPN KOPJA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009001700 - UB - 2",
+    "company_name": "KOP. AL-HASANAH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009001700 - UB - 4",
+    "company_name": "PEGAWAI PT.BANK NEGARA INDONESIA (PERSERO) SWADHARMA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009003000 - UB - 3",
+    "company_name": "LAUT SULINDAH PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010006000500 - UB - 1",
+    "company_name": "BANK MANDIRI (PERSERO)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010006000200 - UB - 1",
+    "company_name": "KSU HASANAH AL CHAERAT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010006000600 - UB - 2",
+    "company_name": "BANK BRI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050010001100 - UB - 1",
+    "company_name": "PT. Bank Perkreditan Rakyat (BPR) Cipta Dana Prima",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009000900 - UB - 8",
+    "company_name": "PT. BANK MEGA TBK, KANTOR CABANG LUWUK BANGGAI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010006000101 - UB - 2",
+    "company_name": "BANK MANDIRI SYARIAH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009000900 - UB - 1",
+    "company_name": "Mega Auto Finance. PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010006000600 - UB - 3",
+    "company_name": "BANK MUAMALAT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010007000802 - UB - 1",
+    "company_name": "BNI UNIT MANONDA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010011001700 - UB - 2",
+    "company_name": "WAHYU VARIASI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202031011000300 - UB - 1",
+    "company_name": "ARONA TELUK TOMINI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009000800 - UB - 1",
+    "company_name": "KPN KOPRIN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009000701 - UB - 1",
+    "company_name": "BANK SINAR MAS TBK PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009001900 - UB - 1",
+    "company_name": "PT BPR PALU ANUGERAH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050009000300 - UB - 1",
+    "company_name": "BANK RAKYAT INDONESIA, PT (PERSERO) TBK UNIT LUWUK",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202032008200200 - UB - 1",
+    "company_name": "KING AMEER HOTEL",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010005000800 - UB - 3",
+    "company_name": "Bank BRI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010005000800 - UB - 4",
+    "company_name": "Bank BRI UNIT Imam Bonjol Palu",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271010005000800 - UB - 6",
+    "company_name": "BANK BNI 46 PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020007004101 - UB - 1",
+    "company_name": "DINAMIS ABADI, CV",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020008003502 - UB - 1",
+    "company_name": "KSU GOTONG ROYONG",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020007001101 - UB - 2",
+    "company_name": "Garuda Indonesia (Persero) Tbk, Kantor Cabang Palu",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021004200200 - UB - 7",
+    "company_name": "QING KOTA METAL INDONESIA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202071001001000 - UB - 1",
+    "company_name": "PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Tangeban",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030001000100 - UB - 1",
+    "company_name": "BANK BRI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202071006000300 - UB - 1",
+    "company_name": "Pertambangan Bijih Nikel [ANUGERAH TOMPIRA NIKEL]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020009000101 - UB - 1",
+    "company_name": "KSU PERDANA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021004200200 - UB - 8",
+    "company_name": "YONG WANG INDONESIA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020008003700 - UB - 1",
+    "company_name": "KPN PENGAYOMAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202053003001100 - UB - 1",
+    "company_name": "BANK BTN KCP LUWUK",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020008003800 - UB - 6",
+    "company_name": "Bank SMBC Indonesia PT TBK KC Palu",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040016005001 - UB - 1",
+    "company_name": "MANDALA MULTIFINANCE, PT KC TOLITOLI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208020016000300 - UB - 2",
+    "company_name": "BPR ALIMO DANA PRIMA PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205102002000300 - UB - 1",
+    "company_name": "PT Adira Dinamika Multi Finance Tbk, Kantor Representative Office Sulawesi",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204071002000300 - UB - 1",
+    "company_name": "PUAN PALA GUNA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204072003000400 - UB - 1",
+    "company_name": "Suzuki Finance Indonesia, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204072003000902 - UB - 1",
+    "company_name": "Poso Media Vision. PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208021003000500 - UB - 1",
+    "company_name": "PT BPR BINARTA LUHUR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040016005300 - UB - 1",
+    "company_name": "BANK BRI UNIT MALOSONG",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206060006000802 - UB - 1",
+    "company_name": "pt POS INDONESIA , KC LAULALANG",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040016005001 - UB - 2",
+    "company_name": "BANK BRI UNIT BAOLAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208011006000200 - UB - 1",
+    "company_name": "Bank Mandiri KCP Pasar Tolai",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208023005000400 - UB - 1",
+    "company_name": "Bank BRI Unit Toboli",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080021000900 - UB - 1",
+    "company_name": "MALOMO 77",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080026000700 - UB - 1",
+    "company_name": "PT BANK MANDIRI PERSERO TBK KCP DONGGALA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205100003000200 - UB - 1",
+    "company_name": "KUD SINDUE",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206010004000200 - UB - 1",
+    "company_name": "BANK BRI UNIT BANGKIR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206020003000700 - UB - 1",
+    "company_name": "ESAPUTLII PRAKARSA UTAMA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208032003000300 - UB - 1",
+    "company_name": "ESA PUTLII PRAKARSA UTAMA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206050002000200 - UB - 1",
+    "company_name": "BANK BRI UNIT SANDANA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208020016000200 - UB - 1",
+    "company_name": "BANK BRI < KANTOR CABANG PARIGI >",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205081019000300 - UB - 1",
+    "company_name": "KOPTAN SINAR TANI MANDIRI TANAMPULU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205101002000200 - UB - 1",
+    "company_name": "KOPTAN PERINTIS",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040016002500 - UB - 1",
+    "company_name": "MAKTO JAYA PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206030010000300 - UB - 1",
+    "company_name": "BANK BRI UNIT TINABOGAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208031003000200 - UB - 1",
+    "company_name": "BRI UNIT KASIMBAR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208063002000200 - UB - 1",
+    "company_name": "PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Moutong",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208020017000302 - UB - 1",
+    "company_name": "KANTOR BRI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040014000500 - UB - 1",
+    "company_name": "KALANDA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040016001900 - UB - 1",
+    "company_name": "WIYATA MANDALA, KOPERASI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208020015000100 - UB - 1",
+    "company_name": "BANK DANAMON",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206041007001100 - UB - 1",
+    "company_name": "CELINDO CEMERLANG, CV",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205081010000500 - UB - 1",
+    "company_name": "KOPTAN MASUGI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205120009000103 - UB - 1",
+    "company_name": "PT BANK RAKYAT INDONESIA UNIT SIRENJA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208030009000200 - UB - 1",
+    "company_name": "BRI KECAMATAN AMPIBABO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205140014000300 - UB - 1",
+    "company_name": "TAMAN HUTAN ASRI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205161004000400 - UB - 1",
+    "company_name": "KOPTAN BINA TANI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040015002200 - UB - 1",
+    "company_name": "SAMAS TOLITOLI, pt",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206050007000500 - UB - 1",
+    "company_name": "PT. POS INDONESIA, KANTOR POS GALANG",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208020013000300 - UB - 1",
+    "company_name": "PT. POS INDONESIA, KANTOR POS CABANG LUAR KOTA PARIGI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020008003401 - UB - 2",
+    "company_name": "TATA LOGAM LESTARI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203011004200100 - UB - 1",
+    "company_name": "NUSAJAYA PERSADATAMA MANDIRI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202060031000200 - UB - 1",
+    "company_name": "PERTAMBANGAN BIJIH NIKEL [ANUGERAH BANGUN MAKMUR]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202060031000100 - UB - 2",
+    "company_name": "Pertambangan Bijih Nikel [INTEGRA MINING NUSANTARA INDONESIA]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005200100 - UB - 6",
+    "company_name": "ORACLE NICKEL INDUSTRY, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030001001100 - UB - 2",
+    "company_name": "BANK INDONESIA PROVINSI SULAWESI TENGAH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202080020000800 - UB - 1",
+    "company_name": "Pertambangan Biji Nikel [MOHHAT]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020008003700 - UB - 2",
+    "company_name": "KPN SITUVU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030002001000 - UB - 2",
+    "company_name": "KOPERASI KOSMANTU SMU I",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004000101 - UB - 1",
+    "company_name": "PEGADAIAN UPS LOLU, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005000401 - UB - 2",
+    "company_name": "GREEN ECO NICKEL",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202060019000300 - UB - 1",
+    "company_name": "PT Pegadaian (Persero), UPC PAGIMANA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030002000500 - UB - 1",
+    "company_name": "KPN KEHUTANAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030002001100 - UB - 3",
+    "company_name": "PT BANK CENTRAL ASIA, TBK KCU PALU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005000406 - UB - 19",
+    "company_name": "INDONESIA MOROWALI INDUSTRIAL PARK PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030002001100 - UB - 2",
+    "company_name": "BANK CENTRAL ASIA CABANG PALU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030003001000 - UB - 1",
+    "company_name": "PRIMADONA CV",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020007002901 - UB - 2",
+    "company_name": "BANK BRI UNIT PALU SELATAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7210120013001500 - UB - 1",
+    "company_name": "KPN SEJAHTERA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7210130008003000 - UB - 1",
+    "company_name": "KARMIL CAHYA SULAWESI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208061003000300 - UB - 1",
+    "company_name": "WALUYO, UD",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212010007000600 - UB - 1",
+    "company_name": "PLN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7207011004000200 - UB - 1",
+    "company_name": "MANDALA MULTIFINANCE, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208060028000200 - UB - 1",
+    "company_name": "PK. SENANG HATI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7209010003000100 - UB - 1",
+    "company_name": "PERUSAHAAN LISTRIK NASIONAL (PERSERO), PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208021003000200 - UB - 1",
+    "company_name": "BRI UNIT SUMBERSARI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040016003901 - UB - 3",
+    "company_name": "GUNUNG SOJOL, FIRMA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208061033000500 - UB - 1",
+    "company_name": "BANK SULTENG CABANG PARIGI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208040026000200 - UB - 1",
+    "company_name": "BANK SULTENG <MOH ANDRIYANSYAH >",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208051012000500 - UB - 2",
+    "company_name": "PT BPR ALIMO DANA PRIMA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208061016000500 - UB - 1",
+    "company_name": "PENANGKAR BENIH TIRTA RAHAYU, CV",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208031008000102 - UB - 1",
+    "company_name": "PT BANK PERKREDITAN RAKYAT BINARTA LUHUR <I KOMANG ELI ASTRAWAN>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208000000000000 - UB - 1",
+    "company_name": "PT Pegadaian Persero UPC KOTARAYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208011001000702 - UB - 1",
+    "company_name": "PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Tolai",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208051012000500 - UB - 1",
+    "company_name": "BANK MANDIRI KOTARAYA <NIZAR>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208064004000400 - UB - 1",
+    "company_name": "BRI UNIT PERSATUAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208011001000302 - UB - 1",
+    "company_name": "PT Pegadaian (Persero), UPC TOLAI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212000000000000 - UB - 1",
+    "company_name": "PT Sinergi Perkebunan Nusantara (SPN)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208060025000100 - UB - 1",
+    "company_name": "PARIGI AQUAKULTURA PRIMA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208051003000300 - UB - 1",
+    "company_name": "PT Adira Dinamika Multi Finance Tbk, Kantor Representative Office Sulawesi",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208051012000500 - UB - 3",
+    "company_name": "BANK BRI KCP KOTARAYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208051015000100 - UB - 1",
+    "company_name": "SPBU <FARID>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040015002200 - UB - 3",
+    "company_name": "PUTRI TUNGGAL TOLIS",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040016003600 - UB - 1",
+    "company_name": "FAJAR INDAH KUSUMA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205041005000600 - UB - 3",
+    "company_name": "KUD SARI TANI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205091010000300 - UB - 1",
+    "company_name": "KERAJINAN TENUN BUNGA MEKAR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204071002000600 - UB - 1",
+    "company_name": "PT.Niaga Nusa Abadi Pos Poso",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204072005000500 - UB - 1",
+    "company_name": "PT. Mitra Distribusi Mandiri Poso",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208010002000402 - UB - 1",
+    "company_name": "BPR BINARTA LUHUR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208010017000100 - UB - 1",
+    "company_name": "BRI UNIT SAUSU PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070012000800 - UB - 2",
+    "company_name": "Bank BTN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271040004000200 - UB - 1",
+    "company_name": "RAYA PONSEL, CV",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204071002000300 - UB - 3",
+    "company_name": "PLN RAYON POSO PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204072005000500 - UB - 2",
+    "company_name": "SPBU SAYO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204010017000300 - UB - 1",
+    "company_name": "SEMESTA CIPTA KARYA UTAMA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031002003200 - UB - 1",
+    "company_name": "KPN SEJAHTERA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031006002700 - UB - 1",
+    "company_name": "KOPINKRA MINA PALU MAJU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070011000100 - UB - 4",
+    "company_name": "RAMA PUTRA MANDIRI <RPMR>, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271040002001500 - UB - 2",
+    "company_name": "CARGILL INDONESIA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070011000301 - UB - 1",
+    "company_name": "ADIRA DINAMIKA MULTI FINANCE TBK",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271041003000902 - UB - 1",
+    "company_name": "Bank Sulteng Tawaeli",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203042005001000 - UB - 1",
+    "company_name": "TELUK METAL INDUSTRY, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205140009000900 - UB - 1",
+    "company_name": "KUD BINA MUKTI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204020005001200 - UB - 1",
+    "company_name": "MULTI KARYA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204031004000400 - UB - 1",
+    "company_name": "RIU MAMBA KARYA SENTOSA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070007000900 - UB - 1",
+    "company_name": "PT CIPTA LUCKMAN BASRY",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205120007000900 - UB - 1",
+    "company_name": "BRI UNIT SABANG",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080031000100 - UB - 1",
+    "company_name": "BELLONA MANDIRI, CV",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205131004000102 - UB - 1",
+    "company_name": "KOPERMAS SEJAHTERA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271041001000300 - UB - 1",
+    "company_name": "PT Pegadaian (Persero), UPC TAWAELI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204032006001302 - UB - 1",
+    "company_name": "PLTA Poso 2",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070007000600 - UB - 1",
+    "company_name": "PT INDOMARCO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080024000200 - UB - 1",
+    "company_name": "KPN KORPRI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080024000200 - UB - 3",
+    "company_name": "UNGGAS SEJATI, CV",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204071002000300 - UB - 2",
+    "company_name": "SICEPAT, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080026000300 - UB - 1",
+    "company_name": "Bank BRI Donggala",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031006500200 - UB - 2",
+    "company_name": "BANK BNI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204071002000600 - UB - 3",
+    "company_name": "POS INDONESIA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070009000200 - UB - 1",
+    "company_name": "MAKASSAR RAYA MOTOR, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031008001200 - UB - 1",
+    "company_name": "PEGADAIAN UNIT SIGMA PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031008002200 - UB - 1",
+    "company_name": "INTI MERCURY",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271040004000300 - UB - 1",
+    "company_name": "JASUMA MITRA PERKASA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070010000602 - UB - 1",
+    "company_name": "Teknologi Perdana Indonesia, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204030009001300 - UB - 1",
+    "company_name": "PT PLN PERSERO ULP TENTENA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031007000200 - UB - 2",
+    "company_name": "BORWITA CITRA PRIMA PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206061003000600 - UB - 1",
+    "company_name": "INTI KARYA VANAME",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206061004000101 - UB - 1",
+    "company_name": "ESAPUTLII PRAKARSA UTAMA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271041004001900 - UB - 1",
+    "company_name": "KPN SANATA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208020016000300 - UB - 1",
+    "company_name": "BPR PALU LOKADANA UTAMA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040018001300 - UB - 1",
+    "company_name": "BANK BRI UNIT TAMBUN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202053002001500 - UB - 1",
+    "company_name": "CITRA BANGUN ABADI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202053003000800 - UB - 2",
+    "company_name": "BRI UNIT SIMPONG",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202072010000100 - UB - 1",
+    "company_name": "PLN (BROMTITO ATUBA)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202080020000500 - UB - 1",
+    "company_name": "PLN BALANTAK",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202060019000800 - UB - 1",
+    "company_name": "KOPPAS MITRA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020008003800 - UB - 4",
+    "company_name": "Bank Syariah Indonesia KCP Paluta",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021004200200 - UB - 10",
+    "company_name": "Vale Indonesia Tbk, Daerah Tambang Matarape",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005000209 - UB - 2",
+    "company_name": "SINERGI MOROWALI INDONESIA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202052009000400 - UB - 1",
+    "company_name": "MULTI NABATI SULAWESI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030001001700 - UB - 1",
+    "company_name": "Bank BTN KC Palu",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020008003800 - UB - 1",
+    "company_name": "KPN CAKTI BUDI BAKTI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004000201 - UB - 3",
+    "company_name": "BNI CABANG PALU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021007400100 - UB - 2",
+    "company_name": "ZHONGTSING NEW ENERGY, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203022003000400 - UB - 1",
+    "company_name": "PINTU AIR MAS MINERAL, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030001001400 - UB - 2",
+    "company_name": "PUPUK KALTIM PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030002000900 - UB - 3",
+    "company_name": "Bank Mandiri - Tadulako",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005200100 - UB - 5",
+    "company_name": "ZHAO HUI NICKEL, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005000406 - UB - 13",
+    "company_name": "Honch New Energy, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005000406 - UB - 16",
+    "company_name": "PT Chengseng New Energy",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021006001305 - UB - 1",
+    "company_name": "BANK MANDIRI KCP MOROWALI BAHODOPI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030002001300 - UB - 3",
+    "company_name": "KOP. ABRI PRIMKOPAD DENBEKANG VII-44.02",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203022003200100 - UB - 1",
+    "company_name": "BIMA CAKRA PERKASA MINERALINDO, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004000800 - UB - 2",
+    "company_name": "Bank BRI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203030024000402 - UB - 1",
+    "company_name": "BANK NEGARA INDONESIA KCP BUNGKU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004000502 - UB - 2",
+    "company_name": "KPN KOPERIND",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203040005000500 - UB - 2",
+    "company_name": "PT. Baoshuo Taman Industry Investment Group (#224)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204010017000100 - UB - 2",
+    "company_name": "PENDOLO JAYA MANDIRI PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204030008000200 - UB - 1",
+    "company_name": "SPBU TENTENA JAYA PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031002002300 - UB - 1",
+    "company_name": "KOPKAR KOPTASPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204030009000400 - UB - 2",
+    "company_name": "BANK BRI UNIT TENTENA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031007000800 - UB - 1",
+    "company_name": "HANJAYA MANDALA SAMPOERNA ,TBK. PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070007001000 - UB - 1",
+    "company_name": "PERTAMINA PERSERO PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204030008001000 - UB - 1",
+    "company_name": "MANDALA FINANCE PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204030009000600 - UB - 1",
+    "company_name": "BANK BPD SULAWESI TENGAH, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031006000604 - UB - 1",
+    "company_name": "Bank Syariah Indonesia",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203030024000403 - UB - 2",
+    "company_name": "BANK TABUNGAN NEGARA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050026000602 - UB - 1",
+    "company_name": "PT Kurnia Luwuk Sejati",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202051004000200 - UB - 2",
+    "company_name": "LAUTAN GUNUNG MAS, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202050023001100 - UB - 2",
+    "company_name": "PLN, PT WILAYAH SULUTENGGO AREA LUWUK",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271011004000401 - UB - 1",
+    "company_name": "BANK SULTENG",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030002001200 - UB - 1",
+    "company_name": "KPN SEMAFTA BHAKTI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030002001300 - UB - 1",
+    "company_name": "KPN ANDALAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004000400 - UB - 7",
+    "company_name": "DANAMON INDONESIA,TBK PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030003001800 - UB - 1",
+    "company_name": "PT. KIMIA FARMA APOTEK, KANTOR CABANG PALU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203030017000500 - UB - 1",
+    "company_name": "BANK BRI UNIT PEHONDAA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004001500 - UB - 2",
+    "company_name": "Bank Muamalat KC Palu",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005000406 - UB - 12",
+    "company_name": "Seawing New Energy, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005000406 - UB - 18",
+    "company_name": "PT Xinheng Metal Indonesia",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021012000102 - UB - 1",
+    "company_name": "VALE INDONESIA TBK PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004000201 - UB - 1",
+    "company_name": "PT. BPD SULAWESI TENGAH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004000501 - UB - 1",
+    "company_name": "KPN DISKES",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203022004100100 - UB - 2",
+    "company_name": "Morowali Industri Sejahtera",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004001400 - UB - 1",
+    "company_name": "KPN KOPERTASI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203022002200100 - UB - 2",
+    "company_name": "CIPTA PERSADA SAMBALAGI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030003002000 - UB - 3",
+    "company_name": "PT TELKOM INDONESIA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203022004000300 - UB - 2",
+    "company_name": "TITAH MINERAL INDONESIA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203030021001402 - UB - 1",
+    "company_name": "OCEAN SKY METAL INDUSTRY, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203030024000403 - UB - 3",
+    "company_name": "BANK MANDIRI CABANG MOROWALI BUNGKU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005000403 - UB - 3",
+    "company_name": "DECHO NEW ENERGY",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030002000300 - UB - 1",
+    "company_name": "KPN ADYAKSA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030002000300 - UB - 6",
+    "company_name": "Bank Panin",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021006001102 - UB - 1",
+    "company_name": "BANK CENTRAL ASIA KCP MOROWALI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021006200100 - UB - 2",
+    "company_name": "AGRI BUMI KARYA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030002001300 - UB - 5",
+    "company_name": "BANK PERMATA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203030017000300 - UB - 1",
+    "company_name": "WALSIN NICKEL INDUSTRIAL INDONESIA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031003000902 - UB - 1",
+    "company_name": "BANK SINARMAS UNIT DEWI SARTIKA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204010021000200 - UB - 2",
+    "company_name": "BRI UNIT PENDOLO, pt",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004001000 - UB - 1",
+    "company_name": "LPM KRISYE PALU <KURSUS MENJAHIT>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203040005200200 - UB - 3",
+    "company_name": "KUTAI PALM PLANTATION,PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212020008001100 - UB - 4",
+    "company_name": "ADIRA FINANCE PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212020008100300 - UB - 1",
+    "company_name": "PERKEBUNAN KELAPA SAWIT PT ANA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212030001000700 - UB - 1",
+    "company_name": "SINAR KARYAGAMMA PRIMATAMA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212020001000500 - UB - 1",
+    "company_name": "HENTRACO INDOPERKASA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7207050006000200 - UB - 1",
+    "company_name": "PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Paleleh",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208020017000202 - UB - 1",
+    "company_name": "PT Pegadaian (Persero), CPS Kampal Parigi",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208020017000501 - UB - 3",
+    "company_name": "BPR PALU ANUGERA CABANG PARIGI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205161004000200 - UB - 1",
+    "company_name": "PT Bank Rakyat Indonesia UNIT OGOAMAS",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208051007000500 - UB - 1",
+    "company_name": "BRI UNIT TINOMBALA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208030020000300 - UB - 1",
+    "company_name": "PEGADAIAN PT.",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208030015000200 - UB - 1",
+    "company_name": "POS INDONESIA ( PERSERO) PT.",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208041003000400 - UB - 1",
+    "company_name": "BRI UNIT MANINILI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208010004001600 - UB - 1",
+    "company_name": "PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Sausu",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208051003000100 - UB - 1",
+    "company_name": "BANK MANDIRI KCP KOTARAYA PARIGI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050008000100 - UB - 10",
+    "company_name": "BHAYR MULTI MOROWALI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208040010000101 - UB - 1",
+    "company_name": "PT. BRI KCP UNIT TINOMBO <FAJAR MAULANA>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7210030011000200 - UB - 1",
+    "company_name": "PT BANK SULTENG <Anna Rosita>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7210120013001500 - UB - 2",
+    "company_name": "KPN SAMPO ROA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208061003000400 - UB - 1",
+    "company_name": "BANK BRI UNIT KOTANAGAYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7209020027000101 - UB - 1",
+    "company_name": "BANK BRI UNIT TOJO PT <INRI TANDAWUYA>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7210030011000100 - UB - 1",
+    "company_name": "BRI UNIT CABANG KULAWI, pt",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208040010000101 - UB - 2",
+    "company_name": "PT PEGADAIAN (PERSERO), UPC BRI UNIT TINOMBO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7210120012001201 - UB - 2",
+    "company_name": "Bank Negara Indonesia, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7209020018000400 - UB - 1",
+    "company_name": "Bank BPR PT <RAHMAT >",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040016002900 - UB - 1",
+    "company_name": "mitra sepadan finance, pt cabang Tolitoli <SMS finance> <Arif usumayadi >",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080026000900 - UB - 1",
+    "company_name": "BANK SULTENG CABANG PEMBANTU DONGGALA",
+    "email": "husni89mubarak@gmail.com",
+    "global_status": "queued",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 02:48:12",
+    "order": 1
+  },
+  {
+    "code": "7205080026000900 - UB - 1",
+    "company_name": "BANK SULTENG CABANG PEMBANTU DONGGALA",
+    "email": "husni89mubarak@gmail.com",
+    "global_status": "queued",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 02:48:12",
+    "order": 2
+  },
+  {
+    "code": "7205101004000302 - UB - 1",
+    "company_name": "KUD SUKA MAJU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205130010000500 - UB - 1",
+    "company_name": "KUD TOWEA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204051004001000 - UB - 1",
+    "company_name": "TUNGGAL MANDIRI JAYA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031001002102 - UB - 1",
+    "company_name": "PT. MEGA VISION TV KABEL",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204030005001801 - UB - 4",
+    "company_name": "PEGADAIAN PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031006001200 - UB - 1",
+    "company_name": "BANK SYARIAH MANDIRI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205041010000100 - UB - 1",
+    "company_name": "KUD TANI BONMAR INDAH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080022000700 - UB - 3",
+    "company_name": "BERKAH BATU BANAWA PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205081003000201 - UB - 1",
+    "company_name": "PT Bank Rakyat Indonesia UNIT WATATU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271041003001200 - UB - 10",
+    "company_name": "WIJAYA MITRA ADIATAMA, PT.",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205090007000201 - UB - 1",
+    "company_name": "BIRINGKASI RAYA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205130008000300 - UB - 1",
+    "company_name": "Koperasi Petani Nelayan Mina Labean",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205102002000100 - UB - 1",
+    "company_name": "UVEMPOMATA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205131002000300 - UB - 1",
+    "company_name": "KUD BALA ETANG JAYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040013000201 - UB - 1",
+    "company_name": "SUMBER CIPTA MULTI NIAGA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208020015000400 - UB - 1",
+    "company_name": "BANK MANDIRI < KCP PARIGI >",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080026000900 - UB - 2",
+    "company_name": "Bank Sulteng Donggala",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031002002300 - UB - 3",
+    "company_name": "PT. Taspen Persero, Kantor Cabang Palu",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205041005000600 - UB - 2",
+    "company_name": "KUD BANGUN TANI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030005002300 - UB - 1",
+    "company_name": "KPN TEKNOLOGI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204072005200100 - UB - 1",
+    "company_name": "Asuransi Kesehatan Indonesia, PT Persero",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080022000700 - UB - 1",
+    "company_name": "KUD SUMBER MAKMUR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080026000900 - UB - 3",
+    "company_name": "BANK PERKREDITAN RAKYAT <BPR>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205090007000201 - UB - 2",
+    "company_name": "ADAS SEJAHTERA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205041005000600 - UB - 1",
+    "company_name": "KUD RIO JAYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205081019000100 - UB - 1",
+    "company_name": "KUD SINAR TANI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070010000602 - UB - 3",
+    "company_name": "BRI CABANG KANTOR KAS PEMDA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271040002001101 - UB - 1",
+    "company_name": "COMEXTRA MAJORA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205041010000100 - UB - 2",
+    "company_name": "KOPTAN BUKIT RIO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205082005000300 - UB - 1",
+    "company_name": "KUD PESAT LIMBORO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205041005000600 - UB - 4",
+    "company_name": "KOPTAN HARAPAN MAKMUR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205000000000000 - UB - 1",
+    "company_name": "ADI RAMAT CV",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205041002002200 - UB - 1",
+    "company_name": "PT Bank Rakyat Indonesia UNIT lalundu",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205080024000200 - UB - 2",
+    "company_name": "PT BANK NEGARA INDONESIA UNIT DONGGALA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204020005001100 - UB - 1",
+    "company_name": "BANK BPR YASPIS PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031008000600 - UB - 1",
+    "company_name": "Bank Bri",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070010000603 - UB - 1",
+    "company_name": "UNIVERSITAS SINTUWU MAROSO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204071002000600 - UB - 2",
+    "company_name": "PT BANK RAKYAT INDONESIA <PERSERO> TBK",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204071006000300 - UB - 1",
+    "company_name": "PT. INTI UTAMA ENERGI SULTENG",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004002000 - UB - 2",
+    "company_name": "SINARMAS MULTIFINANCE PALU, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030003002000 - UB - 4",
+    "company_name": "KARS INTI AMANAH, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004002700 - UB - 1",
+    "company_name": "KOP. VETERAN PRIMKOPERI KARYADAMA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004001301 - UB - 1",
+    "company_name": "KPN KOPFU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205100017000500 - UB - 1",
+    "company_name": "PT Bank Rakyat Indonesia UNIT TOAYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7205140004001000 - UB - 1",
+    "company_name": "KUD MAPUTI JAYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206010003001400 - UB - 1",
+    "company_name": "PT MANDALA MULTIFINANCE <AZIIZ GALIH RUMEKSO>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031001003003 - UB - 1",
+    "company_name": "PESTA PORA ABADI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031002001600 - UB - 2",
+    "company_name": "GRAPARI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070006000400 - UB - 1",
+    "company_name": "HOTEL 99",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031008000200 - UB - 1",
+    "company_name": "KOPABRI PRIMKOPAD DEPOM VII/2",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203041003000200 - UB - 1",
+    "company_name": "KINARYA ALAM SEMESTA PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031001000701 - UB - 1",
+    "company_name": "KSU USAHA MAKMUR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212040006000300 - UB - 2",
+    "company_name": "AGRO NUSA ABADI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212040006000300 - UB - 3",
+    "company_name": "SAWIT JAYA ABADI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212070008200100 - UB - 1",
+    "company_name": "RIMBUNAN ALAM SENTOSA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7209051007000400 - UB - 1",
+    "company_name": "FEDERAL INTERNATIONAL FINANCE, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040016005001 - UB - 3",
+    "company_name": "BANK BTPN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7206040018000100 - UB - 1",
+    "company_name": "KPRI PENGAYOMAN LP",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208031008000101 - UB - 1",
+    "company_name": "BPR BINARTA LUHUR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212090016000400 - UB - 1",
+    "company_name": "KARUNIA ALAM MAKMUR, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7210070004000500 - UB - 1",
+    "company_name": "KOPERASI UNIT DESA GUMBASA INDAH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7210120013000300 - UB - 1",
+    "company_name": "BRI UNIT BIROMARU, pt",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212020008000300 - UB - 1",
+    "company_name": "PERKEBUNAN NUSANTARA 1 REGIONAL 8,PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202030043000400 - UB - 1",
+    "company_name": "PLN SUB RANTING BUNTA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202020023001200 - UB - 1",
+    "company_name": "BERKAT BERSAMA, CV",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202030021000200 - UB - 1",
+    "company_name": "BANK RAKYAT INDONESIA, PT (PERSERO) TBK UNIT BUNTA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7209051019000400 - UB - 2",
+    "company_name": "BANK BNI KANTOR KAS AMPANA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7210120012001201 - UB - 1",
+    "company_name": "BINA ASTA TUNGGAL PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203000000000000 - UB - 4",
+    "company_name": "PT SULAWESI NICKEL COBALT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271000000000000 - UB - 30",
+    "company_name": "PT. ALFA INDUSTRI MANDIRI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212060010000400 - UB - 1",
+    "company_name": "Nasi Kuning Hasna <Hasna>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204000000000000 - UB - 3",
+    "company_name": "PT BORWITA PRIMA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202011011001100 - UB - 1",
+    "company_name": "BANK BRI UNIT MAKAPA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271000000000000 - UB - 50",
+    "company_name": "PT Sofi Agro Industries",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202012009000400 - UB - 1",
+    "company_name": "Pertambangan Bijih Nikel [KONAWE PANCA INDONESIA]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212090015000300 - UB - 1",
+    "company_name": "ASDP INDONESIA FERRY PERSERO,PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212100001200100 - UB - 1",
+    "company_name": "CIPTA AGRO SAKTI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271000000000000 - UB - 46",
+    "company_name": "PT Sarana Sulteng Ventura (SSTengV)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202012008100200 - UB - 1",
+    "company_name": "Bank BRI UNIT Toili",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202011007000300 - UB - 1",
+    "company_name": "BANK BPR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202020014000400 - UB - 1",
+    "company_name": "Bank Perkreditan Rakyat Palu Anugerah Kantor Kas Batui",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202031008000300 - UB - 1",
+    "company_name": "PT Pegadaian (Persero), UPC NUHON",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202020014000700 - UB - 1",
+    "company_name": "Bank BRI UNIT Batui",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271000000000000 - UB - 49",
+    "company_name": "PT Segar Jaya Mandiri",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212100008000300 - UB - 1",
+    "company_name": "Pertambangan Bijih Nikel ( TIGA DARA)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202011011000500 - UB - 1",
+    "company_name": "KUD SINAR HARAPAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212030001000700 - UB - 2",
+    "company_name": "KIRANA SINAR GEMILANG, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212030010100100 - UB - 1",
+    "company_name": "CIPTA AGRO NUSANTARA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050008000100 - UB - 11",
+    "company_name": "Kantin TASMA <TASMA>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212030007000600 - UB - 1",
+    "company_name": "Warung Campuran <Sudaryono> <SUDARYONO>",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202012006001000 - UB - 1",
+    "company_name": "Bank BRI Teras Mulyoharjo",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050002000100 - UB - 1",
+    "company_name": "SPBU TANJUNG PUTIA PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050008000100 - UB - 2",
+    "company_name": "Jasa Pertambangan dan Penggalian( ZHOKY RAYA TANGGUH)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050010000500 - UB - 1",
+    "company_name": "PT SKM(SUMBER KARUNIA MINERAL)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7209051007000300 - UB - 1",
+    "company_name": "BANK SYARIAH INDONESIA TBK, PT/BANK SYARIAH MANDIRI TBK, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202021009000400 - UB - 1",
+    "company_name": "Minyak dan Gas Bumi [JOB PERTAMINA - MEDCO E&P TOMORI SULAWESI]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050008000400 - UB - 4",
+    "company_name": "UNILEVER PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212100006100100 - UB - 1",
+    "company_name": "GHANESA WANA UTAMA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202011010000400 - UB - 1",
+    "company_name": "PERTAMBANGAN BIJIH NIKEL [GEMILANG BANGUN PERKASA]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202020014000100 - UB - 1",
+    "company_name": "BNI (PERSERO) PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212080001000300 - UB - 1",
+    "company_name": "Perdagangan Besar Logam Dan Bijih Logam ( STR MINERAL INDONESIA)",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202010020000600 - UB - 1",
+    "company_name": "BANK MANDIRI PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202020014000700 - UB - 2",
+    "company_name": "PT BANK SULTENG",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202021005000700 - UB - 1",
+    "company_name": "SAWINDO CEMERLANG. , PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202030021000900 - UB - 1",
+    "company_name": "TRI JAYA MAKMUR, CV",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202030035100100 - UB - 1",
+    "company_name": "Tambang nikel",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202013008000500 - UB - 1",
+    "company_name": "KOPONTREN HIDAYATULAH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202031001000200 - UB - 1",
+    "company_name": "Pertambangan Bijih Nikel [BANGGAI MINERAL PERKASA]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202031005000700 - UB - 1",
+    "company_name": "Pertambangan Bijih Nikel [GEMILANG MANDIRI PERKASA]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202013003000800 - UB - 1",
+    "company_name": "BIJIH NIKEL [ANUGERAH BUMI GEMILANG]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050007000101 - UB - 1",
+    "company_name": "PT. HEMDEV MULTI KARYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7201060006000500 - UB - 1",
+    "company_name": "Bank BRI BULAGI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050008000500 - UB - 1",
+    "company_name": "CIPTA HUTAMA MARANTI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212070007400100 - UB - 1",
+    "company_name": "NUSA MAS GRIYA LESTARI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202012009000400 - UB - 2",
+    "company_name": "kantor [DELAPAN SEMBILAN ENERGI]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212040006000100 - UB - 1",
+    "company_name": "SUMBER PERMATA LESTARI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203030020000600 - UB - 1",
+    "company_name": "CAHAYA SMELTER INDONESIA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203030024000402 - UB - 2",
+    "company_name": "BANK MANDIRI TASPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004001500 - UB - 6",
+    "company_name": "BANK MUAMALAT INDONESIA TBK PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005000406 - UB - 14",
+    "company_name": "Cantostar Air Indonesia, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005000406 - UB - 15",
+    "company_name": "MARS METAL INDUSTRY, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004001500 - UB - 1",
+    "company_name": "Bank Mandiri KCP Palu Mohammad Yamin",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004001100 - UB - 1",
+    "company_name": "KOPKAR SARANA MANDIRI SEJAHTERA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203030024000403 - UB - 4",
+    "company_name": "HOTEL METRO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203030028000100 - UB - 1",
+    "company_name": "PT. BOSOWA BERLIAN MOTOR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203031002000500 - UB - 1",
+    "company_name": "BANK SULTENG BAHOMOTEFE",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031001001104 - UB - 1",
+    "company_name": "WITADA BANGUN GEMILANG, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004001900 - UB - 1",
+    "company_name": "MANDIRI TUNAS FINANCE, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203040005000600 - UB - 1",
+    "company_name": "SENTRAL INDUSTRI MANDIRI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203030021100100 - UB - 1",
+    "company_name": "BUKIT SMELTER INDONESIA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004001301 - UB - 2",
+    "company_name": "KPN ANDINI BAKTI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070007000900 - UB - 2",
+    "company_name": "TANAH MAS CELEBES INDAH, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031001001901 - UB - 1",
+    "company_name": "KPN MANDIRI WASPADA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031006500200 - UB - 3",
+    "company_name": "UNIVERSITAS TADULAKO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030005003100 - UB - 1",
+    "company_name": "KPN MAKARTI MUKTI TAMA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203040005200200 - UB - 4",
+    "company_name": "HIZRA AGRI PLANTATION, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204070011000301 - UB - 2",
+    "company_name": "J&T EXPRESS",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271041001000100 - UB - 1",
+    "company_name": "UD ALAM RAYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031001001203 - UB - 1",
+    "company_name": "KOP. UNISMUH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031001001205 - UB - 1",
+    "company_name": "Bank Ina Perdana KC Palu",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204030009000800 - UB - 1",
+    "company_name": "BPR Lokadana Utama Kc Poso Kas Tentena, pt",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204072005000400 - UB - 1",
+    "company_name": "BERKAH PAMORINDO PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031002002000 - UB - 1",
+    "company_name": "BANK BRI UNIT VETERAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030005002800 - UB - 1",
+    "company_name": "KPN HARAPAN BARU",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030005004100 - UB - 1",
+    "company_name": "KPN WAHANA CITRA SEJATI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204010017000300 - UB - 2",
+    "company_name": "INDO SULAWESI RAYA DIVA PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031002001000 - UB - 1",
+    "company_name": "KOPABRI PRIMKOPAD DENKESYAH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031002001600 - UB - 1",
+    "company_name": "KOPINKRA LEMBAK KAILI",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204030008000900 - UB - 1",
+    "company_name": "CITRA SATU UTAMA, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204010021000200 - UB - 1",
+    "company_name": "BANK YASPIS UNIT PENDOLO",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021005000406 - UB - 1",
+    "company_name": "BINTANG DELAPAN MINERAL , PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030003001900 - UB - 2",
+    "company_name": "KOPKAR BINA ADHIBERSAMA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203040005500200 - UB - 1",
+    "company_name": "MOROWALI AGRO MANDIRI,PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030004003000 - UB - 2",
+    "company_name": "BPD PROV SULAWESI TENGAH",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204010021000300 - UB - 1",
+    "company_name": "MANDALA FINANCE TBK CABANG PENDOLO PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271031001003100 - UB - 1",
+    "company_name": "PT. Nindya Karya (Persero), Kantor Cabang Sulawesi Tengah dan Sulawesi Barat",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7204030009000400 - UB - 1",
+    "company_name": "PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Tentena",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202061005000200 - UB - 1",
+    "company_name": "IMANI MATRA INFINITI, PT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202080020000700 - UB - 1",
+    "company_name": "KPN SABAR",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020009002400 - UB - 1",
+    "company_name": "KOPABRI PRIMKOPAD YOINIF 711",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271030001000600 - UB - 1",
+    "company_name": "KPN KOPERIKAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020007004201 - UB - 1",
+    "company_name": "OBS FOOD INDUSTRY INDONESIA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7203021004000205 - UB - 1",
+    "company_name": "CEMERLANG SERVIS PERAWATAN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7202060031000100 - UB - 1",
+    "company_name": "Pertambangan Bijih Nikel [MINERAL SIUNA PERKASA]",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020007000200 - UB - 1",
+    "company_name": "KPN ARGO KARYA",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020009000202 - UB - 1",
+    "company_name": "Bank Panin Kcp Emmy Saelan",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7271020008000402 - UB - 1",
+    "company_name": "KPN PERKAS",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
   }
 ];
+window.LAST_UPDATED = '04 Jun 2026, 01:00:51';
