@@ -5,8 +5,23 @@ import time
 import logging
 import pandas as pd
 from playwright.sync_api import sync_playwright
+from dotenv import load_dotenv
+from supabase import create_client, Client
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Load Supabase config
+load_dotenv()
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+supabase: Client = None
+if SUPABASE_URL and SUPABASE_KEY and "MASUKKAN" not in SUPABASE_URL and "http" in SUPABASE_URL:
+    try:
+        supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+        logging.info("Koneksi Supabase berhasil diinisialisasi.")
+    except Exception as e:
+        logging.error(f"Gagal menginisialisasi Supabase: {e}")
 
 USER_DATA_DIR = "playwright_chrome_profile"
 OUTPUT_CSV = "all_email_history.csv"
@@ -29,8 +44,29 @@ def save_realtime_data(all_records):
             bounced_emails = df[df['status'].str.lower() == 'bounced']['email'].unique()
             df_bounced = df[df['email'].isin(bounced_emails)]
             df_bounced.to_excel(OUTPUT_BOUNCED_EXCEL, index=False)
+
+            # Kirim data ke Supabase jika terkonfigurasi
+            if supabase:
+                logging.info("Menyinkronkan data ke Supabase...")
+                # Format data agar sesuai dengan kolom tabel Supabase
+                db_records = []
+                for r in js_data:
+                    db_records.append({
+                        "code": str(r.get("code", "-")),
+                        "company_name": str(r.get("company_name", "-")),
+                        "email": str(r.get("email", "-")),
+                        "global_status": str(r.get("global_status", "-")),
+                        "status": str(r.get("status", "-")),
+                        "timestamp": str(r.get("timestamp", "-")),
+                        "order": int(r.get("order", 0))
+                    })
+                
+                # Kosongkan tabel lama lalu isi dengan data terbaru (karena data history berurutan)
+                supabase.table("email_logs").delete().neq("code", "FORCE_DELETE_ALL_XYZ").execute()
+                supabase.table("email_logs").insert(db_records).execute()
+                logging.info(f"Sinkronisasi Supabase berhasil! Mengunggah {len(db_records)} records.")
     except Exception as e:
-        logging.error(f"Gagal menulis data real-time: {e}")
+        logging.error(f"Gagal menulis data/sinkronisasi real-time: {e}")
 
 def get_authenticated_context(p, headless=False):
     logging.info("Membuka browser dengan profil Chrome lokal...")
