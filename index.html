@@ -1319,16 +1319,34 @@
                 
                 if (supabaseClient) {
                     try {
-                        const { data, error } = await supabaseClient
-                            .from('email_logs')
-                            .select('*');
-                        
-                        if (error) throw error;
-                        
-                        if (data && data.length > 0) {
-                            sourceData = data;
+                        let allData = [];
+                        let fromOffset = 0;
+                        const limitVal = 1000;
+                        let keepFetching = true;
+
+                        while (keepFetching) {
+                            const { data, error } = await supabaseClient
+                                .from('email_logs')
+                                .select('*')
+                                .range(fromOffset, fromOffset + limitVal - 1);
+
+                            if (error) throw error;
+
+                            if (data && data.length > 0) {
+                                allData = allData.concat(data);
+                                fromOffset += limitVal;
+                                if (data.length < limitVal) {
+                                    keepFetching = false;
+                                }
+                            } else {
+                                keepFetching = false;
+                            }
+                        }
+
+                        if (allData.length > 0) {
+                            sourceData = allData;
                             isSupabaseUsed = true;
-                            console.log(`Loaded ${data.length} records dynamically from Supabase.`);
+                            console.log(`Loaded ${allData.length} records dynamically from Supabase.`);
                         }
                     } catch (e) {
                         console.warn("Supabase fetch failed, falling back to local data.js:", e);
