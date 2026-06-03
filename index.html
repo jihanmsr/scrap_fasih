@@ -756,6 +756,9 @@
             <div class="brand-title">
                 <h1 id="main-header">E-Survey Email Monitor</h1>
                 <p>Status Pengiriman Email & Bounced Usaha Besar (UB)</p>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; font-weight: 500;" id="last-updated-text">
+                    Terakhir Diperbarui: -
+                </p>
             </div>
             <div class="header-actions">
                 <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Theme">
@@ -767,6 +770,10 @@
                     <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                     </svg>
+                </button>
+                <button class="btn-action" id="btn-refresh" title="Muat Ulang Halaman">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                    Refresh
                 </button>
                 <a href="./bounced_emails.xlsx" class="btn-action" id="btn-download-xlsx" download>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
@@ -1263,6 +1270,22 @@
                     renderList();
                 });
             });
+
+            // Display Last Updated time
+            const lastUpdatedEl = document.getElementById('last-updated-text');
+            if (window.LAST_UPDATED) {
+                lastUpdatedEl.textContent = `Terakhir Diperbarui: ${window.LAST_UPDATED}`;
+            } else {
+                lastUpdatedEl.textContent = `Terakhir Diperbarui: Hari ini (Lokal)`;
+            }
+
+            // Refresh button handler
+            const refreshBtn = document.getElementById('btn-refresh');
+            if (refreshBtn) {
+                refreshBtn.addEventListener('click', () => {
+                    window.location.reload();
+                });
+            }
 
             // Initial Execution
             updateFiltersAndStats();

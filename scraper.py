@@ -18,9 +18,12 @@ def save_realtime_data(all_records):
         df = pd.DataFrame(all_records)
         if not df.empty:
             # Simpan data.js untuk dashboard
+            import datetime
+            now_str = datetime.datetime.now().strftime("%d %b %Y, %H:%M:%S")
             js_data = df.to_dict(orient="records")
             with open(OUTPUT_JS, "w", encoding="utf-8") as js_file:
-                js_file.write(f"window.EMAIL_DATA = {json.dumps(js_data, ensure_ascii=False, indent=2)};")
+                js_file.write(f"window.EMAIL_DATA = {json.dumps(js_data, ensure_ascii=False, indent=2)};\n")
+                js_file.write(f"window.LAST_UPDATED = '{now_str}';\n")
             
             # Rekap Excel Bounced
             bounced_emails = df[df['status'].str.lower() == 'bounced']['email'].unique()
