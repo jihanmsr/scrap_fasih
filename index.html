@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Supabase JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
     <!-- Vanilla CSS Styles -->
     <style>
         :root[data-theme="dark"] {
@@ -861,6 +864,8 @@
 
     </div>
 
+    <!-- Load Supabase configuration if present -->
+    <script src="supabase_config.js"></script>
     <!-- Load data.js (holds data in window.EMAIL_DATA) -->
     <script src="data.js"></script>
 
@@ -918,11 +923,24 @@
                 localStorage.setItem('theme', newTheme);
             });
 
+            // Initialize Supabase Client if credentials are provided
+            let supabaseClient = null;
+            if (typeof supabase !== 'undefined' && window.SUPABASE_URL && window.SUPABASE_KEY && window.SUPABASE_URL !== 'URL_PLACEHOLDER') {
+                try {
+                    supabaseClient = supabase.createClient(window.SUPABASE_URL, window.SUPABASE_KEY);
+                    console.log("Supabase Client initialized successfully.");
+                } catch (e) {
+                    console.error("Failed to initialize Supabase client:", e);
+                }
+            }
+
+            let companies = [];
+
             // Group logs by company code
-            function processGroupedData() {
+            function processGroupedData(dataArray) {
                 const grouped = {};
                 
-                rawData.forEach(record => {
+                dataArray.forEach(record => {
                     const code = record.code;
                     if (!grouped[code]) {
                         grouped[code] = {
@@ -953,8 +971,6 @@
 
                 return Object.values(grouped);
             }
-
-            const companies = processGroupedData();
 
             // Status Badge Colors & Styling
             function getStatusStyle(status) {
@@ -1271,25 +1287,78 @@
                 });
             });
 
-            // Display Last Updated time
-            const lastUpdatedEl = document.getElementById('last-updated-text');
-            if (window.LAST_UPDATED) {
-                lastUpdatedEl.textContent = `Terakhir Diperbarui: ${window.LAST_UPDATED}`;
-            } else {
-                lastUpdatedEl.textContent = `Terakhir Diperbarui: Hari ini (Lokal)`;
+            // Asynchronously fetch data from Supabase or fallback to data.js
+            async function fetchDataAndRender() {
+                companyListContainer.innerHTML = `
+                    <div style="text-align: center; padding: 4rem 2rem; color: var(--text-secondary);">
+                        <svg style="animation: spin 1s linear infinite; margin: 0 auto 1rem; width: 32px; height: 32px; color: var(--primary);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle style="opacity: 0.25;" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path style="opacity: 0.75;" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <style>
+                            @keyframes spin {
+                                from { transform: rotate(0deg); }
+                                to { transform: rotate(360deg); }
+                            }
+                        </style>
+                        <h3>Memuat data terbaru...</h3>
+                    </div>
+                `;
+                
+                let sourceData = [];
+                let isSupabaseUsed = false;
+                
+                if (supabaseClient) {
+                    try {
+                        const { data, error } = await supabaseClient
+                            .from('email_logs')
+                            .select('*');
+                        
+                        if (error) throw error;
+                        
+                        if (data && data.length > 0) {
+                            sourceData = data;
+                            isSupabaseUsed = true;
+                            console.log(`Loaded ${data.length} records dynamically from Supabase.`);
+                        }
+                    } catch (e) {
+                        console.warn("Supabase fetch failed, falling back to local data.js:", e);
+                    }
+                }
+                
+                if (sourceData.length === 0) {
+                    sourceData = window.EMAIL_DATA || [];
+                    console.log(`Loaded ${sourceData.length} records from local data.js.`);
+                }
+                
+                companies = processGroupedData(sourceData);
+                
+                // Update Last Updated Timestamp text
+                const lastUpdatedEl = document.getElementById('last-updated-text');
+                if (isSupabaseUsed) {
+                    const lastFetched = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                    lastUpdatedEl.textContent = `Terakhir Diperbarui: Hari ini, ${lastFetched} (Live DB)`;
+                } else if (window.LAST_UPDATED) {
+                    lastUpdatedEl.textContent = `Terakhir Diperbarui: ${window.LAST_UPDATED}`;
+                } else {
+                    lastUpdatedEl.textContent = `Terakhir Diperbarui: Hari ini (Lokal)`;
+                }
+                
+                currentPage = 1; // Reset page on refresh/fetch
+                updateFiltersAndStats();
+                renderList();
             }
 
             // Refresh button handler
             const refreshBtn = document.getElementById('btn-refresh');
             if (refreshBtn) {
                 refreshBtn.addEventListener('click', () => {
-                    window.location.reload();
+                    fetchDataAndRender();
                 });
             }
 
             // Initial Execution
-            updateFiltersAndStats();
-            renderList();
+            fetchDataAndRender();
         });
     </script>
 </body>
