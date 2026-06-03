@@ -3553,5 +3553,1058 @@ window.EMAIL_DATA = [
     "status": "delivered",
     "timestamp": "02 Jun 2026, 11:25:33",
     "order": 2
+  },
+  {
+    "code": "7206040016002400 - UB - 1",
+    "company_name": "BANK PEREKONOMIAN RAKYAT (BPR) MODERN EXPRESS CABANG TOLTIOLI",
+    "email": "kc.tolitoli@bprpalulokadanautama.com",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 23:16:27",
+    "order": 1
+  },
+  {
+    "code": "7206040016002400 - UB - 1",
+    "company_name": "BANK PEREKONOMIAN RAKYAT (BPR) MODERN EXPRESS CABANG TOLTIOLI",
+    "email": "kc.tolitoli@bprpalulokadanautama.com",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "01 Jun 2026, 23:16:31",
+    "order": 2
+  },
+  {
+    "code": "7208011001000602 - UB - 1",
+    "company_name": "BANK BNI PARIGI UNIT KUR",
+    "email": "nigustiayutasni23@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 07:24:03",
+    "order": 1
+  },
+  {
+    "code": "7208011001000602 - UB - 1",
+    "company_name": "BANK BNI PARIGI UNIT KUR",
+    "email": "nigustiayutasni23@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 07:24:06",
+    "order": 2
+  },
+  {
+    "code": "7209051019000400 - UB - 1",
+    "company_name": "BANK MANDIRI (PERSERO)",
+    "email": "ampana@bankmandiri.co.id",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 03:25:19",
+    "order": 1
+  },
+  {
+    "code": "7209051019000400 - UB - 1",
+    "company_name": "BANK MANDIRI (PERSERO)",
+    "email": "ampana@bankmandiri.co.id",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 03:25:19",
+    "order": 2
+  },
+  {
+    "code": "7205160007000200 - UB - 1",
+    "company_name": "BRI UNIT SOJOL",
+    "email": "n5192@corp.bri.co.id",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 05:38:30",
+    "order": 1
+  },
+  {
+    "code": "7205160007000200 - UB - 1",
+    "company_name": "BRI UNIT SOJOL",
+    "email": "n5192@corp.bri.co.id",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 05:38:35",
+    "order": 2
+  },
+  {
+    "code": "7202061009000100 - UB - 1",
+    "company_name": "BRI UNIT BUALEMO",
+    "email": "nbobs@corp.brico.id",
+    "global_status": "queued",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 06:50:12",
+    "order": 1
+  },
+  {
+    "code": "7202061009000100 - UB - 1",
+    "company_name": "BRI UNIT BUALEMO",
+    "email": "nbobs@corp.brico.id",
+    "global_status": "queued",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 06:50:12",
+    "order": 2
+  },
+  {
+    "code": "7271020008003002 - UB - 1",
+    "company_name": "PALU GRAND HERO, PT",
+    "email": "grandherotax@gmail.com",
+    "global_status": "queued",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 04:38:43",
+    "order": 1
+  },
+  {
+    "code": "7271020008003002 - UB - 1",
+    "company_name": "PALU GRAND HERO, PT",
+    "email": "grandherotax@gmail.com",
+    "global_status": "queued",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 04:38:44",
+    "order": 2
+  },
+  {
+    "code": "7203021005000403 - UB - 2",
+    "company_name": "DEZHIQING NEW ENERGY INDONESIA",
+    "email": "dezhiqingnetindonesia@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 02:53:25",
+    "order": 1
+  },
+  {
+    "code": "7203021005000403 - UB - 2",
+    "company_name": "DEZHIQING NEW ENERGY INDONESIA",
+    "email": "dezhiqingnetindonesia@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 02:53:29",
+    "order": 2
+  },
+  {
+    "code": "7271030002000700 - UB - 1",
+    "company_name": "TANJUNG DALAO SEJAHTERA",
+    "email": "pttanjungdalaosejahtera@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 02:35:41",
+    "order": 1
+  },
+  {
+    "code": "7271030002000700 - UB - 1",
+    "company_name": "TANJUNG DALAO SEJAHTERA",
+    "email": "pttanjungdalaosejahtera@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 02:35:45",
+    "order": 2
+  },
+  {
+    "code": "7203021007400100 - UB - 1",
+    "company_name": "PT. MCC20 INDONESIA CONSTRUCTION",
+    "email": "sunaijunmcc@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 02:09:57",
+    "order": 1
+  },
+  {
+    "code": "7203021007400100 - UB - 1",
+    "company_name": "PT. MCC20 INDONESIA CONSTRUCTION",
+    "email": "sunaijunmcc@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 02:09:59",
+    "order": 2
+  },
+  {
+    "code": "7271020009000101 - UB - 2",
+    "company_name": "SINERGI INVESTASI DEVELOPMENT",
+    "email": "ptsinergiinvestasidevelop@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 08:12:23",
+    "order": 1
+  },
+  {
+    "code": "7271020009000101 - UB - 2",
+    "company_name": "SINERGI INVESTASI DEVELOPMENT",
+    "email": "ptsinergiinvestasidevelop@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 08:12:28",
+    "order": 2
+  },
+  {
+    "code": "7203021004500400 - UB - 1",
+    "company_name": "BINTANG DELAPAN TERMINAL",
+    "email": "elisabethnovita20@gmail.com",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 01:12:51",
+    "order": 1
+  },
+  {
+    "code": "7203021004500400 - UB - 1",
+    "company_name": "BINTANG DELAPAN TERMINAL",
+    "email": "elisabethnovita20@gmail.com",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 01:12:55",
+    "order": 2
+  },
+  {
+    "code": "7203021004500400 - UB - 1",
+    "company_name": "BINTANG DELAPAN TERMINAL",
+    "email": "elisabethnovita20@gmail.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "02 Jun 2026, 02:07:31",
+    "order": 3
+  },
+  {
+    "code": "7203021004500400 - UB - 2",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 22:58:30",
+    "order": 1
+  },
+  {
+    "code": "7203021004500400 - UB - 2",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "01 Jun 2026, 22:58:34",
+    "order": 2
+  },
+  {
+    "code": "7203021004500400 - UB - 2",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "opened",
+    "status": "clicked",
+    "timestamp": "01 Jun 2026, 22:58:35",
+    "order": 3
+  },
+  {
+    "code": "7203021004500400 - UB - 2",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "02 Jun 2026, 01:03:48",
+    "order": 4
+  },
+  {
+    "code": "7203021004500400 - UB - 2",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "02 Jun 2026, 08:04:45",
+    "order": 5
+  },
+  {
+    "code": "7271030001001200 - UB - 1",
+    "company_name": "BANK PAN INDONESIA TBK.",
+    "email": "selvie.octaviyanti2@panin.co.id",
+    "global_status": "clicked",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 09:10:04",
+    "order": 1
+  },
+  {
+    "code": "7271030001001200 - UB - 1",
+    "company_name": "BANK PAN INDONESIA TBK.",
+    "email": "selvie.octaviyanti2@panin.co.id",
+    "global_status": "clicked",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 09:10:08",
+    "order": 2
+  },
+  {
+    "code": "7271030001001200 - UB - 1",
+    "company_name": "BANK PAN INDONESIA TBK.",
+    "email": "selvie.octaviyanti2@panin.co.id",
+    "global_status": "clicked",
+    "status": "clicked",
+    "timestamp": "02 Jun 2026, 09:10:08",
+    "order": 3
+  },
+  {
+    "code": "7203011004200100 - UB - 2",
+    "company_name": "TIGA BAJI, PT",
+    "email": "aka-hamsah@yahoo.co.id",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 23:47:52",
+    "order": 1
+  },
+  {
+    "code": "7203011004200100 - UB - 2",
+    "company_name": "TIGA BAJI, PT",
+    "email": "aka-hamsah@yahoo.co.id",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "01 Jun 2026, 23:47:52",
+    "order": 2
+  },
+  {
+    "code": "7271020009002300 - UB - 1",
+    "company_name": "ELISABET",
+    "email": "khenelis2@gmail.com",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 08:34:32",
+    "order": 1
+  },
+  {
+    "code": "7271020009002300 - UB - 1",
+    "company_name": "ELISABET",
+    "email": "khenelis2@gmail.com",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 08:35:20",
+    "order": 2
+  },
+  {
+    "code": "7203021005000406 - UB - 7",
+    "company_name": "SHUOSHI INDONESIA INVESTMENT II",
+    "email": "suryadi@zhenshigroup.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 22:48:07",
+    "order": 1
+  },
+  {
+    "code": "7203021005000406 - UB - 7",
+    "company_name": "SHUOSHI INDONESIA INVESTMENT II",
+    "email": "suryadi@zhenshigroup.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "01 Jun 2026, 22:48:07",
+    "order": 2
+  },
+  {
+    "code": "7271020007000500 - UB - 3",
+    "company_name": "HASRAT ABADI PT",
+    "email": "crc.mka@hasjrat.co.id",
+    "global_status": "queued",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 04:22:11",
+    "order": 1
+  },
+  {
+    "code": "7271020007000500 - UB - 3",
+    "company_name": "HASRAT ABADI PT",
+    "email": "crc.mka@hasjrat.co.id",
+    "global_status": "queued",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 04:22:11",
+    "order": 2
+  },
+  {
+    "code": "7271020004001901 - UB - 1",
+    "company_name": "JOYFUL KIDS",
+    "email": "jk_joyfulkids@yahoo.com",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 06:58:39",
+    "order": 1
+  },
+  {
+    "code": "7271020004001901 - UB - 1",
+    "company_name": "JOYFUL KIDS",
+    "email": "jk_joyfulkids@yahoo.com",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 06:59:00",
+    "order": 2
+  },
+  {
+    "code": "7271020007001005 - UB - 1",
+    "company_name": "NUR CAHAYA JAYA",
+    "email": "pt.nurcahayajaya2022@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 01:39:04",
+    "order": 1
+  },
+  {
+    "code": "7271020007001005 - UB - 1",
+    "company_name": "NUR CAHAYA JAYA",
+    "email": "pt.nurcahayajaya2022@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 01:39:10",
+    "order": 2
+  },
+  {
+    "code": "7203021004500400 - UB - 3",
+    "company_name": "HENGJAYA NICKEL INDUSTRY",
+    "email": "vinavictory.vina@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 03:45:18",
+    "order": 1
+  },
+  {
+    "code": "7203021004500400 - UB - 3",
+    "company_name": "HENGJAYA NICKEL INDUSTRY",
+    "email": "vinavictory.vina@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 03:45:21",
+    "order": 2
+  },
+  {
+    "code": "7203021006200100 - UB - 1",
+    "company_name": "TSINGCHENG TECHNOLOGY INDONESIA",
+    "email": "secretariat@tsing-cheng.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 03:33:15",
+    "order": 1
+  },
+  {
+    "code": "7203021006200100 - UB - 1",
+    "company_name": "TSINGCHENG TECHNOLOGY INDONESIA",
+    "email": "secretariat@tsing-cheng.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 03:33:22",
+    "order": 2
+  },
+  {
+    "code": "7203021005000401 - UB - 1",
+    "company_name": "NUSA KARYA MINERAL",
+    "email": "alwi@bintangdelapan.com",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 09:09:31",
+    "order": 1
+  },
+  {
+    "code": "7203021005000401 - UB - 1",
+    "company_name": "NUSA KARYA MINERAL",
+    "email": "alwi@bintangdelapan.com",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 09:09:39",
+    "order": 2
+  },
+  {
+    "code": "7203021005000401 - UB - 1",
+    "company_name": "NUSA KARYA MINERAL",
+    "email": "alwi@bintangdelapan.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "02 Jun 2026, 22:48:16",
+    "order": 3
+  },
+  {
+    "code": "7203021005000401 - UB - 3",
+    "company_name": "MCC15 ENGINEERING AND CONSTRUCTION",
+    "email": "mccmorowali@yahoo.com",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 08:52:30",
+    "order": 1
+  },
+  {
+    "code": "7203021005000401 - UB - 3",
+    "company_name": "MCC15 ENGINEERING AND CONSTRUCTION",
+    "email": "mccmorowali@yahoo.com",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 08:55:13",
+    "order": 2
+  },
+  {
+    "code": "7203021004200200 - UB - 6",
+    "company_name": "PUTRA HARAPAN POMALAA",
+    "email": "info.kwanco.php@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 10:15:12",
+    "order": 1
+  },
+  {
+    "code": "7203021004200200 - UB - 6",
+    "company_name": "PUTRA HARAPAN POMALAA",
+    "email": "info.kwanco.php@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 10:15:17",
+    "order": 2
+  },
+  {
+    "code": "7271030002000700 - UB - 2",
+    "company_name": "TERRE MITRA PERSADA",
+    "email": "teremitrapersada@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 09:56:12",
+    "order": 1
+  },
+  {
+    "code": "7271030002000700 - UB - 2",
+    "company_name": "TERRE MITRA PERSADA",
+    "email": "teremitrapersada@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 09:56:16",
+    "order": 2
+  },
+  {
+    "code": "7271020009001700 - UB - 2",
+    "company_name": "B P J S KETENAGAKERJAAN",
+    "email": "kacab.palu@bpjsketenagakerjaan.go.id",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 23:39:36",
+    "order": 1
+  },
+  {
+    "code": "7271020009001700 - UB - 2",
+    "company_name": "B P J S KETENAGAKERJAAN",
+    "email": "kacab.palu@bpjsketenagakerjaan.go.id",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "01 Jun 2026, 23:39:37",
+    "order": 2
+  },
+  {
+    "code": "7271020009001700 - UB - 2",
+    "company_name": "B P J S KETENAGAKERJAAN",
+    "email": "kacab.palu@bpjsketenagakerjaan.go.id",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "02 Jun 2026, 11:01:59",
+    "order": 3
+  },
+  {
+    "code": "7202053007000500 - UB - 1",
+    "company_name": "BANK CENTRAL ASIA TBK. CABANG LUWUK",
+    "email": "bca_luwuk_pajak@gmail.com",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 23:34:56",
+    "order": 1
+  },
+  {
+    "code": "7202053007000500 - UB - 1",
+    "company_name": "BANK CENTRAL ASIA TBK. CABANG LUWUK",
+    "email": "bca_luwuk_pajak@gmail.com",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "01 Jun 2026, 23:34:59",
+    "order": 2
+  },
+  {
+    "code": "7271010011001400 - UB - 1",
+    "company_name": "MITRA BARU MARITIM",
+    "email": "mitrabarumaritim@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 02:37:10",
+    "order": 1
+  },
+  {
+    "code": "7271010011001400 - UB - 1",
+    "company_name": "MITRA BARU MARITIM",
+    "email": "mitrabarumaritim@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 02:37:13",
+    "order": 2
+  },
+  {
+    "code": "7271010011002703 - UB - 1",
+    "company_name": "UNIVERSITAS ISLAM NEGERI DATOKRAMA PALU",
+    "email": "humas@iainpalu.ac.id",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 03:44:52",
+    "order": 1
+  },
+  {
+    "code": "7271010011002703 - UB - 1",
+    "company_name": "UNIVERSITAS ISLAM NEGERI DATOKRAMA PALU",
+    "email": "humas@iainpalu.ac.id",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 03:44:55",
+    "order": 2
+  },
+  {
+    "code": "7271011002002600 - UB - 1",
+    "company_name": "BAROKAH GAMPING ARTOMORO",
+    "email": "m.alamtimur@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 07:55:41",
+    "order": 1
+  },
+  {
+    "code": "7271011002002600 - UB - 1",
+    "company_name": "BAROKAH GAMPING ARTOMORO",
+    "email": "m.alamtimur@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 07:55:44",
+    "order": 2
+  },
+  {
+    "code": "7202053001000400 - UB - 1",
+    "company_name": "SULAWESI MAKMUR SEJAHTERA",
+    "email": "sulawesimakmursejahtera@yahoo.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 00:36:00",
+    "order": 1
+  },
+  {
+    "code": "7202053001000400 - UB - 1",
+    "company_name": "SULAWESI MAKMUR SEJAHTERA",
+    "email": "sulawesimakmursejahtera@yahoo.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 00:36:04",
+    "order": 2
+  },
+  {
+    "code": "7210120012001201 - UB - 3",
+    "company_name": "DZAKYRAH JAYA MANDIRI",
+    "email": "dzakirahjayamandiri@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 04:54:25",
+    "order": 1
+  },
+  {
+    "code": "7210120012001201 - UB - 3",
+    "company_name": "DZAKYRAH JAYA MANDIRI",
+    "email": "dzakirahjayamandiri@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 04:54:29",
+    "order": 2
+  },
+  {
+    "code": "7212020008100200 - UB - 3",
+    "company_name": "INDOMORI",
+    "email": "ernibalirante69@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 23:14:43",
+    "order": 1
+  },
+  {
+    "code": "7212020008100200 - UB - 3",
+    "company_name": "INDOMORI",
+    "email": "ernibalirante69@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "01 Jun 2026, 23:14:44",
+    "order": 2
+  },
+  {
+    "code": "7210060013000500 - UB - 1",
+    "company_name": "BANK BRI PALOLO, PT",
+    "email": "ferdydaud@socrpgi.co.id",
+    "global_status": "queued",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 00:49:31",
+    "order": 1
+  },
+  {
+    "code": "7210060013000500 - UB - 1",
+    "company_name": "BANK BRI PALOLO, PT",
+    "email": "ferdydaud@socrpgi.co.id",
+    "global_status": "queued",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 00:49:30",
+    "order": 2
+  },
+  {
+    "code": "7210120013001500 - UB - 4",
+    "company_name": "CV ANEKA JAYA",
+    "email": "anekajaya.sigi@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 01:01:58",
+    "order": 1
+  },
+  {
+    "code": "7210120013001500 - UB - 4",
+    "company_name": "CV ANEKA JAYA",
+    "email": "anekajaya.sigi@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 01:01:58",
+    "order": 2
+  },
+  {
+    "code": "7212020008100200 - UB - 5",
+    "company_name": "PTP NUSANTARA XIV EX TASPEN",
+    "email": "narmanlita@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 03:38:00",
+    "order": 1
+  },
+  {
+    "code": "7212020008100200 - UB - 5",
+    "company_name": "PTP NUSANTARA XIV EX TASPEN",
+    "email": "narmanlita@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 03:38:04",
+    "order": 2
+  },
+  {
+    "code": "7209051007000600 - UB - 1",
+    "company_name": "ANEKA JAYA, CV",
+    "email": "anekajaya.ampana@gmail.com",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 05:39:02",
+    "order": 1
+  },
+  {
+    "code": "7209051007000600 - UB - 1",
+    "company_name": "ANEKA JAYA, CV",
+    "email": "anekajaya.ampana@gmail.com",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 05:39:02",
+    "order": 2
+  },
+  {
+    "code": "7209051007000600 - UB - 1",
+    "company_name": "ANEKA JAYA, CV",
+    "email": "anekajaya.ampana@gmail.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "02 Jun 2026, 11:53:49",
+    "order": 3
+  },
+  {
+    "code": "7209051007000600 - UB - 1",
+    "company_name": "ANEKA JAYA, CV",
+    "email": "anekajaya.ampana@gmail.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "02 Jun 2026, 13:46:13",
+    "order": 4
+  },
+  {
+    "code": "7209051007000600 - UB - 1",
+    "company_name": "ANEKA JAYA, CV",
+    "email": "anekajaya.ampana@gmail.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "02 Jun 2026, 15:28:59",
+    "order": 5
+  },
+  {
+    "code": "7208020017000501 - UB - 2",
+    "company_name": "BANK PERKREDITAN RAKYAT PALU ANUGERAH",
+    "email": "paluanugerahprg@yahoo.com",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 01:23:24",
+    "order": 1
+  },
+  {
+    "code": "7208020017000501 - UB - 2",
+    "company_name": "BANK PERKREDITAN RAKYAT PALU ANUGERAH",
+    "email": "paluanugerahprg@yahoo.com",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 01:23:29",
+    "order": 2
+  },
+  {
+    "code": "7212020008100200 - UB - 2",
+    "company_name": "PUTRA BONGKA MINERAL",
+    "email": "putrabongkamineral@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 09:24:21",
+    "order": 1
+  },
+  {
+    "code": "7212020008100200 - UB - 2",
+    "company_name": "PUTRA BONGKA MINERAL",
+    "email": "putrabongkamineral@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 09:24:25",
+    "order": 2
+  },
+  {
+    "code": "7212020008100200 - UB - 6",
+    "company_name": "BRI UNIT BETELEME.PT",
+    "email": "n3633@co.rp.bri.co.id",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 06:19:08",
+    "order": 1
+  },
+  {
+    "code": "7212020008100200 - UB - 6",
+    "company_name": "BRI UNIT BETELEME.PT",
+    "email": "n3633@co.rp.bri.co.id",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 06:19:08",
+    "order": 2
+  },
+  {
+    "code": "7212040001000500 - UB - 1",
+    "company_name": "AGRO MORUT MAJU PERSADA",
+    "email": "agromorutmajupersada@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 10:05:47",
+    "order": 1
+  },
+  {
+    "code": "7212040001000500 - UB - 1",
+    "company_name": "AGRO MORUT MAJU PERSADA",
+    "email": "agromorutmajupersada@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 10:05:51",
+    "order": 2
+  },
+  {
+    "code": "7212040011000500 - UB - 2",
+    "company_name": "PT TELUK TOMORI INDO",
+    "email": "teluktomoriindo@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 11:25:18",
+    "order": 1
+  },
+  {
+    "code": "7212040011000500 - UB - 2",
+    "company_name": "PT TELUK TOMORI INDO",
+    "email": "teluktomoriindo@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 11:25:18",
+    "order": 2
+  },
+  {
+    "code": "7212020008001100 - UB - 3",
+    "company_name": "HANATA MOTOR CELEBES MANDIRI",
+    "email": "hanatacelebesmandiri07@gmail.com",
+    "global_status": "queued",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 03:26:39",
+    "order": 1
+  },
+  {
+    "code": "7212020008001100 - UB - 3",
+    "company_name": "HANATA MOTOR CELEBES MANDIRI",
+    "email": "hanatacelebesmandiri07@gmail.com",
+    "global_status": "queued",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 03:26:40",
+    "order": 2
+  },
+  {
+    "code": "7212040009000200 - UB - 1",
+    "company_name": "RAJA PASIR MANDIRI",
+    "email": "iwanrafi280@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 23:06:42",
+    "order": 1
+  },
+  {
+    "code": "7212040009000200 - UB - 1",
+    "company_name": "RAJA PASIR MANDIRI",
+    "email": "iwanrafi280@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "01 Jun 2026, 23:06:46",
+    "order": 2
+  },
+  {
+    "code": "7207051001000500 - UB - 1",
+    "company_name": "PERTAMBANGAN EMAS <HAYANTO>",
+    "email": "haiyanhayanto@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 09:55:19",
+    "order": 1
+  },
+  {
+    "code": "7207051001000500 - UB - 1",
+    "company_name": "PERTAMBANGAN EMAS <HAYANTO>",
+    "email": "haiyanhayanto@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 09:55:22",
+    "order": 2
+  },
+  {
+    "code": "7212010010000100 - UB - 7",
+    "company_name": "CITRA TAMBANG MINERAL",
+    "email": "citratambangmineral@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 04:05:59",
+    "order": 1
+  },
+  {
+    "code": "7212010010000100 - UB - 7",
+    "company_name": "CITRA TAMBANG MINERAL",
+    "email": "citratambangmineral@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 04:05:59",
+    "order": 2
+  },
+  {
+    "code": "7212010013000500 - UB - 1",
+    "company_name": "SAWIT JAYA SUKSES",
+    "email": "sawitjayasukses@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 01:49:11",
+    "order": 1
+  },
+  {
+    "code": "7212010013000500 - UB - 1",
+    "company_name": "SAWIT JAYA SUKSES",
+    "email": "sawitjayasukses@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 01:49:12",
+    "order": 2
+  },
+  {
+    "code": "7209051007000101 - UB - 1",
+    "company_name": "PAGADAIAN, PT",
+    "email": "cppampana@yahoo.co.id",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 09:04:47",
+    "order": 1
+  },
+  {
+    "code": "7209051007000101 - UB - 1",
+    "company_name": "PAGADAIAN, PT",
+    "email": "cppampana@yahoo.co.id",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 09:06:32",
+    "order": 2
+  },
+  {
+    "code": "7206040015002200 - UB - 2",
+    "company_name": "MERATUS LINE, PT CABANG TOLITOLI",
+    "email": "warsini.warsini@meratusline.com",
+    "global_status": "clicked",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 11:39:42",
+    "order": 1
+  },
+  {
+    "code": "7206040015002200 - UB - 2",
+    "company_name": "MERATUS LINE, PT CABANG TOLITOLI",
+    "email": "warsini.warsini@meratusline.com",
+    "global_status": "clicked",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 11:39:42",
+    "order": 2
+  },
+  {
+    "code": "7206040015002200 - UB - 2",
+    "company_name": "MERATUS LINE, PT CABANG TOLITOLI",
+    "email": "warsini.warsini@meratusline.com",
+    "global_status": "clicked",
+    "status": "opened",
+    "timestamp": "02 Jun 2026, 11:39:50",
+    "order": 3
+  },
+  {
+    "code": "7206040015002200 - UB - 2",
+    "company_name": "MERATUS LINE, PT CABANG TOLITOLI",
+    "email": "warsini.warsini@meratusline.com",
+    "global_status": "clicked",
+    "status": "clicked",
+    "timestamp": "02 Jun 2026, 11:40:29",
+    "order": 4
+  },
+  {
+    "code": "7206040015002200 - UB - 2",
+    "company_name": "MERATUS LINE, PT CABANG TOLITOLI",
+    "email": "warsini.warsini@meratusline.com",
+    "global_status": "clicked",
+    "status": "clicked",
+    "timestamp": "02 Jun 2026, 11:40:29",
+    "order": 5
+  },
+  {
+    "code": "7210120012001800 - UB - 1",
+    "company_name": "BANK SULTENG CAB SIGI PT",
+    "email": "banksulteng_sigi@yahoo.co.id",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 06:32:51",
+    "order": 1
+  },
+  {
+    "code": "7210120012001800 - UB - 1",
+    "company_name": "BANK SULTENG CAB SIGI PT",
+    "email": "banksulteng_sigi@yahoo.co.id",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 06:33:41",
+    "order": 2
+  },
+  {
+    "code": "7206050001000600 - UB - 1",
+    "company_name": "KOPERASI KONSUMEN DHARMA MARITIM TOLITOLI",
+    "email": "koperasi_maritim@yahoo.com",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 10:04:58",
+    "order": 1
+  },
+  {
+    "code": "7206050001000600 - UB - 1",
+    "company_name": "KOPERASI KONSUMEN DHARMA MARITIM TOLITOLI",
+    "email": "koperasi_maritim@yahoo.com",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 10:08:22",
+    "order": 2
+  },
+  {
+    "code": "7206050008000401 - UB - 2",
+    "company_name": "ELRISMA TRI CITRA, PT",
+    "email": "pt_elrisma_tri_citra@yahoo.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 23:47:40",
+    "order": 1
+  },
+  {
+    "code": "7206050008000401 - UB - 2",
+    "company_name": "ELRISMA TRI CITRA, PT",
+    "email": "pt_elrisma_tri_citra@yahoo.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "01 Jun 2026, 23:47:44",
+    "order": 2
   }
 ];
