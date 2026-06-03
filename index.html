@@ -393,6 +393,19 @@
             margin-bottom: 2rem;
         }
 
+        /* Search query highlight style */
+        .highlight {
+            background-color: rgba(99, 102, 241, 0.25);
+            color: #a5b4fc;
+            font-weight: 700;
+            border-radius: 4px;
+            padding: 0 2px;
+        }
+        :root[data-theme="light"] .highlight {
+            background-color: rgba(99, 102, 241, 0.15);
+            color: #4f46e5;
+        }
+
         /* Expandable Card Design */
         .company-card {
             background: var(--card-bg);
@@ -402,12 +415,17 @@
             cursor: pointer;
             box-shadow: var(--shadow-sm);
             overflow: hidden;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+                        border-color 0.25s ease, 
+                        background-color 0.25s ease, 
+                        box-shadow 0.25s ease;
         }
 
         .company-card:hover {
             border-color: var(--card-hover-border);
             background-color: var(--card-hover-bg);
             box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
         }
 
         .company-header {
@@ -844,6 +862,14 @@
         document.addEventListener('DOMContentLoaded', () => {
             const rawData = window.EMAIL_DATA || [];
             
+            // Helper to highlight matching search query text
+            function highlightText(text, query) {
+                if (!query) return text;
+                const escapedQuery = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                const regex = new RegExp(`(${escapedQuery})`, 'gi');
+                return text.replace(regex, '<mark class="highlight">$1</mark>');
+            }
+            
             // UI elements
             const searchInput = document.getElementById('search-input');
             const sortSelect = document.getElementById('sort-select');
@@ -1148,11 +1174,11 @@
                         <div class="company-header">
                             <div class="company-info">
                                 <div class="company-name-row">
-                                    <div class="company-name">${comp.company_name}</div>
+                                    <div class="company-name">${highlightText(comp.company_name, searchQuery)}</div>
                                 </div>
                                 <div class="company-meta">
-                                    <span class="code-badge">${comp.code}</span>
-                                    <span class="company-email-text">${comp.email}</span>
+                                    <span class="code-badge">${highlightText(comp.code, searchQuery)}</span>
+                                    <span class="company-email-text">${highlightText(comp.email, searchQuery)}</span>
                                 </div>
                             </div>
                             <div class="right-badges">
@@ -1183,6 +1209,7 @@
                             if (c !== card) {
                                 c.classList.remove('expanded');
                                 const otherDetails = c.querySelector('.details-wrapper');
+                                otherDetails.style.overflow = 'hidden';
                                 otherDetails.style.maxHeight = null;
                             }
                         });
@@ -1193,15 +1220,17 @@
                             // First set to scrollHeight so it transitions smoothly
                             details.style.maxHeight = details.scrollHeight + "px";
                             
-                            // Once the transition finishes, set max-height to none to prevent any cropping/truncation
+                            // Once the transition finishes, set max-height to none and overflow to visible to prevent clipping
                             details.addEventListener('transitionend', function handler() {
                                 if (card.classList.contains('expanded')) {
                                     details.style.maxHeight = 'none';
+                                    details.style.overflow = 'visible';
                                 }
                                 details.removeEventListener('transitionend', handler);
                             });
                         } else {
-                            // To collapse, set back to scrollHeight, then next tick set to null
+                            // To collapse, set back to scrollHeight, hide overflow, then next tick set to null
+                            details.style.overflow = 'hidden';
                             details.style.maxHeight = details.scrollHeight + "px";
                             details.offsetHeight; // Force repaint
                             details.style.maxHeight = null;
