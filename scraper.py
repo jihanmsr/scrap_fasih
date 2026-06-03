@@ -179,6 +179,22 @@ def scrape_data():
                 except Exception:
                     pass
                 time.sleep(3)  # Jeda aman agar seluruh data termuat
+
+                # Deteksi jika dialihkan ke halaman login SSO BPS
+                if "sso" in page.url.lower() or "login" in page.url.lower():
+                    logging.warning("=== DETEKSI: Sesi Login SSO BPS Kedaluwarsa! ===")
+                    print("\n" + "!"*70)
+                    print("SESI LOGIN KEDALUWARSA. SILAKAN LOGIN KEMBALI DI BROWSER CHROMIUM.")
+                    print("Script akan otomatis mendeteksi ketika Anda sudah login kembali.")
+                    print("!"*70 + "\n")
+                    
+                    # Tunggu sampai pengguna login kembali
+                    while "sso" in page.url.lower() or "login" in page.url.lower():
+                        time.sleep(3)
+                        
+                    logging.info("Sesi login terdeteksi aktif kembali! Membuka ulang halaman data...")
+                    page.goto(f"{base_url}?page={page_num}&perPage=10", timeout=45000)
+                    time.sleep(4)
                 
                 # Pastikan berada di tampilan List (≡)
                 try:
