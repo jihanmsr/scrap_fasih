@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,46 +13,85 @@
     
     <!-- Vanilla CSS Styles -->
     <style>
-        :root {
+        :root[data-theme="dark"] {
             --bg-color: #0b0f19;
-            --card-bg: rgba(22, 28, 45, 0.7);
+            --bg-gradient: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                           radial-gradient(at 100% 100%, rgba(239, 68, 68, 0.08) 0px, transparent 50%);
+            --card-bg: rgba(22, 28, 45, 0.6);
+            --card-hover-bg: rgba(30, 41, 59, 0.8);
             --card-border: rgba(255, 255, 255, 0.08);
+            --card-hover-border: rgba(99, 102, 241, 0.3);
             --text-primary: #f3f4f6;
             --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
             --primary: #6366f1;
             --primary-hover: #4f46e5;
-            
-            /* Status Colors */
-            --color-queued: #6b7280;
+            --input-bg: rgba(15, 23, 42, 0.6);
+            --input-focus-bg: rgba(15, 23, 42, 0.9);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            --btn-border: rgba(99, 102, 241, 0.3);
+            --pill-inactive-bg: rgba(255, 255, 255, 0.04);
+            --timeline-line: rgba(255, 255, 255, 0.08);
+            --timeline-bg: #0b0f19;
+
+            /* Status Colors (Glowy Dark) */
+            --color-queued: #9ca3af;
             --color-delivered: #10b981;
             --color-opened: #3b82f6;
             --color-clicked: #8b5cf6;
             --color-bounced: #ef4444;
-            
-            --font-main: 'Plus Jakarta Sans', sans-serif;
-            --font-title: 'Outfit', sans-serif;
+        }
+
+        :root[data-theme="light"] {
+            --bg-color: #f8fafc;
+            --bg-gradient: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 40%),
+                           radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.05) 0px, transparent 45%);
+            --card-bg: #ffffff;
+            --card-hover-bg: #f1f5f9;
+            --card-border: #e2e8f0;
+            --card-hover-border: rgba(99, 102, 241, 0.4);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --input-bg: #ffffff;
+            --input-focus-bg: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 15px -3px rgba(99, 102, 241, 0.08);
+            --btn-border: #cbd5e1;
+            --pill-inactive-bg: #f1f5f9;
+            --timeline-line: #e2e8f0;
+            --timeline-bg: #f8fafc;
+
+            /* Status Colors (Vibrant Light) */
+            --color-queued: #64748b;
+            --color-delivered: #16a34a;
+            --color-opened: #2563eb;
+            --color-clicked: #7c3aed;
+            --color-bounced: #dc2626;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
         }
 
         body {
             background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(239, 68, 68, 0.08) 0px, transparent 50%);
+            background-image: var(--bg-gradient);
             color: var(--text-primary);
-            font-family: var(--font-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
             min-height: 100vh;
-            padding: 2rem 1.5rem;
+            padding: 2.5rem 1.5rem;
             line-height: 1.5;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -67,11 +106,11 @@
         }
 
         .brand-title h1 {
-            font-family: var(--font-title);
+            font-family: 'Outfit', sans-serif;
             font-size: 2.25rem;
             font-weight: 800;
             letter-spacing: -0.025em;
-            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #e0e7ff 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 50%, #ec4899 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -80,30 +119,73 @@
             color: var(--text-secondary);
             font-size: 0.95rem;
             margin-top: 0.25rem;
+            font-weight: 500;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Theme Toggle Switch */
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            color: var(--text-primary);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.05);
+            border-color: var(--primary);
+        }
+
+        .theme-toggle svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .theme-toggle .sun-icon {
+            display: none;
+        }
+
+        :root[data-theme="light"] .theme-toggle .sun-icon {
+            display: block;
+        }
+
+        :root[data-theme="light"] .theme-toggle .moon-icon {
+            display: none;
         }
 
         .btn-action {
-            background-color: rgba(99, 102, 241, 0.1);
-            border: 1px dashed var(--primary);
-            color: #a5b4fc;
-            padding: 0.6rem 1.2rem;
-            border-radius: 0.75rem;
-            font-family: var(--font-main);
+            background-color: rgba(99, 102, 241, 0.08);
+            border: 1px solid var(--btn-border);
+            color: var(--primary);
+            padding: 0.75rem 1.25rem;
+            border-radius: 1rem;
             font-weight: 600;
             font-size: 0.9rem;
             cursor: pointer;
-            transition: all 0.2s ease;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            box-shadow: var(--shadow-sm);
         }
 
         .btn-action:hover {
             background-color: var(--primary);
             color: white;
-            border-style: solid;
-            box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+            border-color: var(--primary);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
             transform: translateY(-2px);
         }
 
@@ -119,17 +201,17 @@
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             backdrop-filter: blur(12px);
-            border-radius: 1.25rem;
+            border-radius: 1.5rem;
             padding: 1.5rem;
             position: relative;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow-sm);
         }
 
         .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--card-hover-border);
         }
 
         .stat-card::before {
@@ -145,26 +227,24 @@
         .stat-label {
             color: var(--text-secondary);
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
 
         .stat-value {
-            font-family: var(--font-title);
-            font-size: 2.25rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
             font-weight: 800;
             margin-top: 0.5rem;
-            color: white;
-            display: flex;
-            align-items: baseline;
-            gap: 0.5rem;
+            color: var(--text-primary);
+            line-height: 1.1;
         }
 
         .stat-subtext {
             font-size: 0.8rem;
-            color: var(--text-secondary);
-            margin-top: 0.25rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
         }
 
         /* Filter Controls */
@@ -172,36 +252,42 @@
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             backdrop-filter: blur(12px);
-            border-radius: 1.25rem;
+            border-radius: 1.5rem;
             padding: 1.5rem;
             margin-bottom: 2rem;
             display: flex;
             flex-direction: column;
             gap: 1.25rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .search-row {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
         }
 
         .search-wrapper {
             position: relative;
-            width: 100%;
+            flex-grow: 1;
         }
 
         .search-input {
             width: 100%;
-            background-color: rgba(15, 23, 42, 0.6);
+            background-color: var(--input-bg);
             border: 1px solid var(--card-border);
-            border-radius: 0.75rem;
-            padding: 0.8rem 1.2rem 0.8rem 2.75rem;
-            color: white;
-            font-family: var(--font-main);
+            border-radius: 1rem;
+            padding: 0.85rem 1.2rem 0.85rem 2.75rem;
+            color: var(--text-primary);
+            font-family: inherit;
             font-size: 0.95rem;
             outline: none;
-            transition: all 0.2s ease;
         }
 
         .search-input:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
-            background-color: rgba(15, 23, 42, 0.9);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+            background-color: var(--input-focus-bg);
         }
 
         .search-icon {
@@ -215,6 +301,34 @@
             pointer-events: none;
         }
 
+        .sort-wrapper {
+            min-width: 200px;
+        }
+
+        .sort-select {
+            width: 100%;
+            height: 100%;
+            background-color: var(--input-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1rem;
+            padding: 0 1rem;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.25rem;
+        }
+
+        .sort-select:focus {
+            border-color: var(--primary);
+        }
+
         /* Filter Pills */
         .pills-group {
             display: flex;
@@ -225,71 +339,82 @@
 
         .filter-title {
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--text-secondary);
             margin-right: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .pill {
-            background-color: rgba(255, 255, 255, 0.04);
+            background-color: var(--pill-inactive-bg);
             border: 1px solid var(--card-border);
             color: var(--text-secondary);
-            padding: 0.4rem 1rem;
+            padding: 0.45rem 1.1rem;
             border-radius: 9999px;
-            font-family: var(--font-main);
+            font-family: inherit;
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
             user-select: none;
         }
 
         .pill:hover {
-            background-color: rgba(255, 255, 255, 0.08);
-            color: white;
+            background-color: var(--card-hover-bg);
+            color: var(--text-primary);
         }
 
         .pill.active {
             background-color: var(--pill-bg, var(--primary));
             border-color: transparent;
             color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+        }
+
+        .pill-count {
+            background: rgba(0, 0, 0, 0.15);
+            color: inherit;
+            font-size: 0.75rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+
+        .pill.active .pill-count {
+            background: rgba(255, 255, 255, 0.25);
         }
 
         /* Main Data Layout */
-        .dashboard-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        /* Card list */
         .company-list {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
 
+        /* Expandable Card Design */
         .company-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 1.25rem;
-            padding: 1.5rem;
-            transition: all 0.2s ease;
-            position: relative;
+            border-radius: 1.5rem;
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
         }
 
         .company-card:hover {
-            border-color: rgba(255, 255, 255, 0.15);
-            background-color: rgba(26, 32, 53, 0.8);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-color: var(--card-hover-border);
+            background-color: var(--card-hover-bg);
+            box-shadow: var(--shadow-md);
         }
 
         .company-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
+            align-items: center;
             gap: 1rem;
         }
 
@@ -297,50 +422,90 @@
             display: flex;
             flex-direction: column;
             gap: 0.25rem;
-            max-width: 70%;
+            flex-grow: 1;
+        }
+
+        .company-name-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
 
         .company-name {
-            font-family: var(--font-title);
-            font-size: 1.15rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
             font-weight: 700;
-            color: white;
+            color: var(--text-primary);
         }
 
         .company-meta {
             display: flex;
             gap: 0.75rem;
             align-items: center;
-            font-family: monospace;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
             flex-wrap: wrap;
         }
 
         .code-badge {
-            background-color: rgba(255, 255, 255, 0.06);
-            padding: 0.1rem 0.5rem;
-            border-radius: 0.35rem;
+            background-color: var(--pill-inactive-bg);
+            padding: 0.15rem 0.5rem;
+            border-radius: 0.5rem;
             border: 1px solid var(--card-border);
+            font-weight: 600;
+            font-family: monospace;
+            font-size: 0.8rem;
+        }
+
+        .right-badges {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
 
         .company-status-badge {
-            padding: 0.3rem 0.8rem;
-            border-radius: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 0.75rem;
             font-size: 0.75rem;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
-            background-color: var(--badge-bg, rgba(255, 255, 255, 0.08));
-            color: var(--badge-color, white);
-            border: 1px solid var(--badge-border, transparent);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            background-color: var(--badge-bg);
+            color: var(--badge-color);
+            border: 1px solid var(--badge-border);
+            letter-spacing: 0.03em;
         }
 
-        /* Timeline / History Container */
+        /* Accordion Chevron Icon */
+        .toggle-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .company-card.expanded .toggle-icon {
+            transform: rotate(180deg);
+            color: var(--primary);
+        }
+
+        /* Collapsible Section */
+        .details-wrapper {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .company-card.expanded .details-wrapper {
+            max-height: 1000px; /* high enough to contain content */
+            opacity: 1;
+        }
+
         .timeline-section {
             margin-top: 1.25rem;
             padding-top: 1.25rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-top: 1px dashed var(--card-border);
         }
 
         .timeline-title {
@@ -349,7 +514,7 @@
             color: var(--text-secondary);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -358,19 +523,19 @@
         .timeline-list {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 1rem;
             position: relative;
-            padding-left: 1.25rem;
+            padding-left: 1.5rem;
         }
 
         .timeline-list::before {
             content: '';
             position: absolute;
-            left: 4px;
+            left: 5px;
             top: 6px;
             bottom: 6px;
             width: 2px;
-            background-color: rgba(255, 255, 255, 0.06);
+            background-color: var(--timeline-line);
         }
 
         .timeline-item {
@@ -384,75 +549,113 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -22px;
+            left: -24px;
             top: 50%;
             transform: translateY(-50%);
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            background-color: var(--node-color, var(--text-secondary));
-            border: 2px solid var(--bg-color);
+            background-color: var(--node-color);
+            border: 3px solid var(--timeline-bg);
+            box-shadow: 0 0 8px var(--node-color);
             z-index: 2;
         }
 
         .timeline-left {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 1rem;
         }
 
         .timeline-badge {
-            padding: 0.15rem 0.5rem;
-            border-radius: 0.35rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.5rem;
             font-size: 0.7rem;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
-            background-color: var(--badge-bg, rgba(255, 255, 255, 0.08));
-            color: var(--badge-color, white);
+            background-color: var(--badge-bg);
+            color: var(--badge-color);
         }
 
         .timeline-email {
             font-size: 0.85rem;
             color: var(--text-primary);
+            font-weight: 500;
         }
 
         .timeline-time {
             font-size: 0.8rem;
             color: var(--text-secondary);
             font-family: monospace;
+            font-weight: 500;
         }
 
         /* Empty state styling */
         .empty-state {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             background: var(--card-bg);
             border: 1px dashed var(--card-border);
-            border-radius: 1.25rem;
+            border-radius: 1.5rem;
             color: var(--text-secondary);
         }
 
+        .empty-state svg {
+            width: 48px;
+            height: 48px;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
         .empty-state h3 {
-            font-family: var(--font-title);
+            font-family: 'Outfit', sans-serif;
             font-size: 1.25rem;
-            font-weight: 600;
-            color: white;
+            font-weight: 700;
+            color: var(--text-primary);
             margin-bottom: 0.5rem;
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
             body {
-                padding: 1rem 1rem;
+                padding: 1.5rem 1rem;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .header-actions {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .search-row {
+                flex-direction: column;
+            }
+
+            .sort-wrapper {
+                width: 100%;
             }
 
             .company-header {
-                flex-direction: column;
                 align-items: flex-start;
+                position: relative;
             }
 
-            .company-info {
-                max-width: 100%;
+            .right-badges {
+                position: absolute;
+                right: 0;
+                top: 0;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 0.5rem;
+            }
+
+            .toggle-icon {
+                margin-top: 0.25rem;
             }
 
             .timeline-item {
@@ -463,6 +666,7 @@
 
             .timeline-time {
                 padding-left: 0;
+                font-size: 0.75rem;
             }
         }
     </style>
@@ -474,11 +678,21 @@
         <header>
             <div class="brand-title">
                 <h1 id="main-header">E-Survey Email Monitor</h1>
-                <p>Dashboard Monitoring Status Pengiriman Email & Bounced Usaha Besar (UB)</p>
+                <p>Status Pengiriman Email & Bounced Usaha Besar (UB)</p>
             </div>
-            <div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Theme">
+                    <!-- Sun Icon (for light theme) -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                    </svg>
+                    <!-- Moon Icon (for dark theme) -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
                 <a href="./bounced_emails.xlsx" class="btn-action" id="btn-download-xlsx" download>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                     Unduh Excel Bounced
                 </a>
             </div>
@@ -489,49 +703,70 @@
             <div class="stat-card" style="--stat-color: var(--primary);">
                 <div class="stat-label">Total Perusahaan</div>
                 <div class="stat-value" id="stat-total-companies">0</div>
-                <div class="stat-subtext">Semua records terdaftar</div>
+                <div class="stat-subtext">Semua record terdaftar</div>
             </div>
             <div class="stat-card" style="--stat-color: var(--color-bounced);">
                 <div class="stat-label">Bounced Emails</div>
                 <div class="stat-value" id="stat-bounced" style="color: var(--color-bounced);">0</div>
-                <div class="stat-subtext">Gagal dikirim (Bounced)</div>
+                <div class="stat-subtext">Gagal terkirim balik</div>
             </div>
             <div class="stat-card" style="--stat-color: var(--color-clicked);">
                 <div class="stat-label">Link Clicked</div>
                 <div class="stat-value" id="stat-clicked" style="color: var(--color-clicked);">0</div>
-                <div class="stat-subtext">Membuka kuesioner</div>
+                <div class="stat-subtext">Responden membuka link</div>
             </div>
             <div class="stat-card" style="--stat-color: var(--color-opened);">
                 <div class="stat-label">Opened Emails</div>
                 <div class="stat-value" id="stat-opened" style="color: var(--color-opened);">0</div>
-                <div class="stat-subtext">Sudah dibuka responden</div>
+                <div class="stat-subtext">Dibaca oleh responden</div>
             </div>
         </div>
 
         <!-- Filter Controls -->
         <div class="filter-panel">
-            <div class="search-wrapper">
-                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <input type="text" id="search-input" class="search-input" placeholder="Cari Nama Perusahaan, Kode Identitas, atau Email...">
+            <div class="search-row">
+                <div class="search-wrapper">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input type="text" id="search-input" class="search-input" placeholder="Cari Nama Perusahaan, Kode Identitas, atau Email...">
+                </div>
+                <div class="sort-wrapper">
+                    <select id="sort-select" class="sort-select">
+                        <option value="name-asc">Nama Perusahaan (A-Z)</option>
+                        <option value="name-desc">Nama Perusahaan (Z-A)</option>
+                        <option value="status-severity">Urutkan dari Bounced</option>
+                    </select>
+                </div>
             </div>
             
             <div class="pills-group">
-                <span class="filter-title">Filter Status Terakhir:</span>
-                <button class="pill active" data-filter="all" id="filter-all">Semua</button>
-                <button class="pill" data-filter="bounced" style="--pill-bg: var(--color-bounced)" id="filter-bounced">Bounced</button>
-                <button class="pill" data-filter="clicked" style="--pill-bg: var(--color-clicked)" id="filter-clicked">Clicked</button>
-                <button class="pill" data-filter="opened" style="--pill-bg: var(--color-opened)" id="filter-opened">Opened</button>
-                <button class="pill" data-filter="delivered" style="--pill-bg: var(--color-delivered)" id="filter-delivered">Delivered</button>
-                <button class="pill" data-filter="queued" style="--pill-bg: var(--color-queued)" id="filter-queued">Queued</button>
+                <span class="filter-title">Filter Status:</span>
+                <button class="pill active" data-filter="all" id="filter-all">
+                    Semua <span class="pill-count" id="count-all">0</span>
+                </button>
+                <button class="pill" data-filter="bounced" style="--pill-bg: var(--color-bounced)" id="filter-bounced">
+                    Bounced <span class="pill-count" id="count-bounced">0</span>
+                </button>
+                <button class="pill" data-filter="clicked" style="--pill-bg: var(--color-clicked)" id="filter-clicked">
+                    Clicked <span class="pill-count" id="count-clicked">0</span>
+                </button>
+                <button class="pill" data-filter="opened" style="--pill-bg: var(--color-opened)" id="filter-opened">
+                    Opened <span class="pill-count" id="count-opened">0</span>
+                </button>
+                <button class="pill" data-filter="delivered" style="--pill-bg: var(--color-delivered)" id="filter-delivered">
+                    Delivered <span class="pill-count" id="count-delivered">0</span>
+                </button>
+                <button class="pill" data-filter="queued" style="--pill-bg: var(--color-queued)" id="filter-queued">
+                    Queued <span class="pill-count" id="count-queued">0</span>
+                </button>
             </div>
         </div>
 
         <!-- Main Dashboard List -->
-        <main class="dashboard-content">
+        <main>
             <div class="company-list" id="company-list">
-                <!-- Data will be dynamically loaded here by JavaScript -->
+                <!-- Data dynamically loaded -->
             </div>
         </main>
 
@@ -540,26 +775,48 @@
     <!-- Load data.js (holds data in window.EMAIL_DATA) -->
     <script src="data.js"></script>
 
-    <!-- Vanilla Javascript Logic -->
+    <!-- Javascript Logic -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const rawData = window.EMAIL_DATA || [];
             
-            // Elements
+            // UI elements
             const searchInput = document.getElementById('search-input');
+            const sortSelect = document.getElementById('sort-select');
             const pills = document.querySelectorAll('.pill');
             const companyListContainer = document.getElementById('company-list');
+            const themeToggleBtn = document.getElementById('theme-toggle-btn');
+            const htmlElement = document.documentElement;
             
-            // Stats Elements
+            // Stats & Badge count elements
             const statTotalEl = document.getElementById('stat-total-companies');
             const statBouncedEl = document.getElementById('stat-bounced');
             const statClickedEl = document.getElementById('stat-clicked');
             const statOpenedEl = document.getElementById('stat-opened');
 
+            const countAll = document.getElementById('count-all');
+            const countBounced = document.getElementById('count-bounced');
+            const countClicked = document.getElementById('count-clicked');
+            const countOpened = document.getElementById('count-opened');
+            const countDelivered = document.getElementById('count-delivered');
+            const countQueued = document.getElementById('count-queued');
+
             let activeFilter = 'all';
             let searchQuery = '';
+            let activeSort = 'name-asc';
 
-            // Group logs by company code to construct unique company entries
+            // Theme Switcher Setup
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            htmlElement.setAttribute('data-theme', savedTheme);
+
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+
+            // Group logs by company code
             function processGroupedData() {
                 const grouped = {};
                 
@@ -584,54 +841,57 @@
                     }
                 });
                 
-                // Sort history for each company by order
+                // Sort history and determine final status
                 Object.values(grouped).forEach(comp => {
                     comp.history.sort((a, b) => a.order - b.order);
-                    // Determine final status
                     if (comp.history.length > 0) {
                         comp.global_status = comp.history[comp.history.length - 1].status;
-                        comp.email = recordEmailForCompany(comp);
                     }
                 });
 
                 return Object.values(grouped);
             }
 
-            function recordEmailForCompany(comp) {
-                // Return first non-dash email from history if possible
-                return comp.email || '-';
-            }
-
             const companies = processGroupedData();
 
-            // Calculate and display Stats
-            function renderStats() {
-                statTotalEl.textContent = companies.length;
-                
-                const bouncedCount = companies.filter(c => c.global_status.toLowerCase() === 'bounced').length;
-                const clickedCount = companies.filter(c => c.global_status.toLowerCase() === 'clicked').length;
-                const openedCount = companies.filter(c => c.global_status.toLowerCase() === 'opened').length;
-                
-                statBouncedEl.textContent = bouncedCount;
-                statClickedEl.textContent = clickedCount;
-                statOpenedEl.textContent = openedCount;
-            }
-
-            // Status Badge Helpers
+            // Status Badge Colors & Styling
             function getStatusStyle(status) {
                 const s = status.toLowerCase().trim();
-                if (s === 'bounced') return { bg: 'rgba(239, 68, 68, 0.1)', color: 'var(--color-bounced)', border: 'var(--color-bounced)' };
-                if (s === 'clicked') return { bg: 'rgba(139, 92, 246, 0.1)', color: 'var(--color-clicked)', border: 'var(--color-clicked)' };
-                if (s === 'opened') return { bg: 'rgba(59, 130, 246, 0.1)', color: 'var(--color-opened)', border: 'var(--color-opened)' };
-                if (s === 'delivered') return { bg: 'rgba(16, 185, 129, 0.1)', color: 'var(--color-delivered)', border: 'var(--color-delivered)' };
-                return { bg: 'rgba(107, 114, 128, 0.1)', color: 'var(--color-queued)', border: 'var(--color-queued)' };
+                if (s === 'bounced') return { bg: 'rgba(239, 68, 68, 0.1)', color: 'var(--color-bounced)', border: 'rgba(239, 68, 68, 0.3)' };
+                if (s === 'clicked') return { bg: 'rgba(139, 92, 246, 0.1)', color: 'var(--color-clicked)', border: 'rgba(139, 92, 246, 0.3)' };
+                if (s === 'opened') return { bg: 'rgba(59, 130, 246, 0.1)', color: 'var(--color-opened)', border: 'rgba(59, 130, 246, 0.3)' };
+                if (s === 'delivered') return { bg: 'rgba(16, 185, 129, 0.1)', color: 'var(--color-delivered)', border: 'rgba(16, 185, 129, 0.3)' };
+                return { bg: 'rgba(107, 114, 128, 0.1)', color: 'var(--color-queued)', border: 'rgba(107, 114, 128, 0.3)' };
+            }
+
+            // Calculate and display Stats & Filter Pill Count Badges
+            function updateFiltersAndStats() {
+                statTotalEl.textContent = companies.length;
+                countAll.textContent = companies.length;
+
+                const bounced = companies.filter(c => c.global_status.toLowerCase() === 'bounced').length;
+                const clicked = companies.filter(c => c.global_status.toLowerCase() === 'clicked').length;
+                const opened = companies.filter(c => c.global_status.toLowerCase() === 'opened').length;
+                const delivered = companies.filter(c => c.global_status.toLowerCase() === 'delivered').length;
+                const queued = companies.filter(c => c.global_status.toLowerCase() === 'queued').length;
+
+                statBouncedEl.textContent = bounced;
+                statClickedEl.textContent = clicked;
+                statOpenedEl.textContent = opened;
+
+                countBounced.textContent = bounced;
+                countClicked.textContent = clicked;
+                countOpened.textContent = opened;
+                countDelivered.textContent = delivered;
+                countQueued.textContent = queued;
             }
 
             // Render Company List
             function renderList() {
                 companyListContainer.innerHTML = '';
                 
-                const filtered = companies.filter(comp => {
+                // Filter
+                let filtered = companies.filter(comp => {
                     const matchesSearch = 
                         comp.company_name.toLowerCase().includes(searchQuery) ||
                         comp.code.toLowerCase().includes(searchQuery) ||
@@ -644,9 +904,27 @@
                     return matchesSearch && matchesFilter;
                 });
 
+                // Sort
+                filtered.sort((a, b) => {
+                    if (activeSort === 'name-asc') {
+                        return a.company_name.localeCompare(b.company_name);
+                    } else if (activeSort === 'name-desc') {
+                        return b.company_name.localeCompare(a.company_name);
+                    } else if (activeSort === 'status-severity') {
+                        const severity = { 'bounced': 0, 'queued': 1, 'delivered': 2, 'opened': 3, 'clicked': 4 };
+                        const sevA = severity[a.global_status.toLowerCase()] ?? 5;
+                        const sevB = severity[b.global_status.toLowerCase()] ?? 5;
+                        return sevA - sevB;
+                    }
+                    return 0;
+                });
+
                 if (filtered.length === 0) {
                     companyListContainer.innerHTML = `
                         <div class="empty-state">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
                             <h3>Tidak ada data ditemukan</h3>
                             <p>Coba gunakan kata kunci pencarian lain atau pilih filter status berbeda.</p>
                         </div>
@@ -666,8 +944,8 @@
                         historyHTML = `
                             <div class="timeline-section">
                                 <div class="timeline-title">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                                    Riwayat Pengiriman
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                    Riwayat Log Pengiriman
                                 </div>
                                 <div class="timeline-list">
                                     ${comp.history.map(item => {
@@ -687,8 +965,8 @@
                         `;
                     } else {
                         historyHTML = `
-                            <div class="timeline-section" style="color: var(--text-secondary); font-size: 0.85rem; font-style: italic;">
-                                Tidak ada data riwayat log email.
+                            <div class="timeline-section" style="color: var(--text-muted); font-size: 0.85rem; font-style: italic;">
+                                Tidak ada data log email yang tercatat.
                             </div>
                         `;
                     }
@@ -696,30 +974,70 @@
                     card.innerHTML = `
                         <div class="company-header">
                             <div class="company-info">
-                                <div class="company-name">${comp.company_name}</div>
+                                <div class="company-name-row">
+                                    <div class="company-name">${comp.company_name}</div>
+                                </div>
                                 <div class="company-meta">
                                     <span class="code-badge">${comp.code}</span>
                                     <span>${comp.email}</span>
                                 </div>
                             </div>
-                            <span class="company-status-badge" style="--badge-bg: ${statusStyle.bg}; --badge-color: ${statusStyle.color}; --badge-border: ${statusStyle.border}">
-                                ${comp.global_status}
-                            </span>
+                            <div class="right-badges">
+                                <span class="company-status-badge" style="--badge-bg: ${statusStyle.bg}; --badge-color: ${statusStyle.color}; --badge-border: ${statusStyle.border}">
+                                    ${comp.global_status}
+                                </span>
+                                <div class="toggle-icon">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                        ${historyHTML}
+                        <div class="details-wrapper">
+                            ${historyHTML}
+                        </div>
                     `;
+
+                    // Handle Accordion Toggle Click
+                    card.addEventListener('click', (e) => {
+                        // Prevent expansion if user is clicking links/buttons inside card
+                        if (e.target.closest('a') || e.target.closest('button')) return;
+                        
+                        const isExpanded = card.classList.contains('expanded');
+                        
+                        // Close other cards for clean UI
+                        document.querySelectorAll('.company-card.expanded').forEach(c => {
+                            if (c !== card) {
+                                c.classList.remove('expanded');
+                                c.querySelector('.details-wrapper').style.maxHeight = null;
+                            }
+                        });
+
+                        card.classList.toggle('expanded');
+                        const details = card.querySelector('.details-wrapper');
+                        
+                        if (!isExpanded) {
+                            details.style.maxHeight = details.scrollHeight + "px";
+                        } else {
+                            details.style.maxHeight = null;
+                        }
+                    });
                     
                     companyListContainer.appendChild(card);
                 });
             }
 
-            // Search input listener
+            // Listeners
             searchInput.addEventListener('input', (e) => {
                 searchQuery = e.target.value.toLowerCase().trim();
                 renderList();
             });
 
-            // Pills active status switcher
+            sortSelect.addEventListener('change', (e) => {
+                activeSort = e.target.value;
+                renderList();
+            });
+
             pills.forEach(pill => {
                 pill.addEventListener('click', () => {
                     pills.forEach(p => p.classList.remove('active'));
@@ -729,8 +1047,8 @@
                 });
             });
 
-            // Initial execution
-            renderStats();
+            // Initial Execution
+            updateFiltersAndStats();
             renderList();
         });
     </script>
