@@ -44,6 +44,7 @@
             --color-opened: #3b82f6;
             --color-clicked: #8b5cf6;
             --color-bounced: #ef4444;
+            --color-nolog: #6b7280;
         }
 
         :root[data-theme="light"] {
@@ -74,6 +75,7 @@
             --color-opened: #2563eb;
             --color-clicked: #7c3aed;
             --color-bounced: #dc2626;
+            --color-nolog: #64748b;
         }
 
         * {
@@ -847,6 +849,9 @@
                 <button class="pill" data-filter="queued" style="--pill-bg: var(--color-queued)" id="filter-queued">
                     Queued <span class="pill-count" id="count-queued">0</span>
                 </button>
+                <button class="pill" data-filter="-" style="--pill-bg: var(--color-nolog)" id="filter-nolog">
+                    Belum Dikirim <span class="pill-count" id="count-nolog">0</span>
+                </button>
             </div>
         </div>
 
@@ -903,6 +908,7 @@
             const countOpened = document.getElementById('count-opened');
             const countDelivered = document.getElementById('count-delivered');
             const countQueued = document.getElementById('count-queued');
+            const countNolog = document.getElementById('count-nolog');
 
             // Pagination configuration
             const ITEMS_PER_PAGE = 20;
@@ -979,6 +985,7 @@
                 if (s === 'clicked') return { bg: 'rgba(139, 92, 246, 0.1)', color: 'var(--color-clicked)', border: 'rgba(139, 92, 246, 0.3)' };
                 if (s === 'opened') return { bg: 'rgba(59, 130, 246, 0.1)', color: 'var(--color-opened)', border: 'rgba(59, 130, 246, 0.3)' };
                 if (s === 'delivered') return { bg: 'rgba(16, 185, 129, 0.1)', color: 'var(--color-delivered)', border: 'rgba(16, 185, 129, 0.3)' };
+                if (s === '-') return { bg: 'rgba(107, 114, 128, 0.1)', color: 'var(--color-nolog)', border: 'rgba(107, 114, 128, 0.3)' };
                 return { bg: 'rgba(107, 114, 128, 0.1)', color: 'var(--color-queued)', border: 'rgba(107, 114, 128, 0.3)' };
             }
 
@@ -992,6 +999,7 @@
                 const opened = companies.filter(c => c.global_status.toLowerCase() === 'opened').length;
                 const delivered = companies.filter(c => c.global_status.toLowerCase() === 'delivered').length;
                 const queued = companies.filter(c => c.global_status.toLowerCase() === 'queued').length;
+                const nolog = companies.filter(c => c.global_status.trim() === '-').length;
 
                 statBouncedEl.textContent = bounced;
                 statClickedEl.textContent = clicked;
@@ -1002,6 +1010,7 @@
                 countOpened.textContent = opened;
                 countDelivered.textContent = delivered;
                 countQueued.textContent = queued;
+                countNolog.textContent = nolog;
             }
 
             // Render Pagination Buttons
