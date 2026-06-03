@@ -335,6 +335,18 @@ def scrape_data():
                                 b_card.click()
                                 time.sleep(0.4)
                             
+                            if processed_count == 0:
+                                writer.writerow([code, company_name, "-", "-", "-", "-", 0])
+                                all_records.append({
+                                    "code": code,
+                                    "company_name": company_name,
+                                    "email": "-",
+                                    "global_status": "-",
+                                    "status": "-",
+                                    "timestamp": "-",
+                                    "order": 0
+                                })
+
                             # Tutup modal/dialog riwayat dengan Escape
                             page.keyboard.press("Escape")
                             time.sleep(0.8)
