@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasih Email Delivery Dashboard</title>
+    <meta name="description" content="Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Vanilla CSS Styles -->
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(22, 28, 45, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            
+            /* Status Colors */
+            --color-queued: #6b7280;
+            --color-delivered: #10b981;
+            --color-opened: #3b82f6;
+            --color-clicked: #8b5cf6;
+            --color-bounced: #ef4444;
+            
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --font-title: 'Outfit', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(239, 68, 68, 0.08) 0px, transparent 50%);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .brand-title h1 {
+            font-family: var(--font-title);
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #e0e7ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-title p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+        }
+
+        .btn-action {
+            background-color: rgba(99, 102, 241, 0.1);
+            border: 1px dashed var(--primary);
+            color: #a5b4fc;
+            padding: 0.6rem 1.2rem;
+            border-radius: 0.75rem;
+            font-family: var(--font-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-action:hover {
+            background-color: var(--primary);
+            color: white;
+            border-style: solid;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Summary Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(12px);
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--stat-color, var(--primary));
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-value {
+            font-family: var(--font-title);
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            color: white;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .stat-subtext {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        /* Filter Controls */
+        .filter-panel {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(12px);
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .search-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-input {
+            width: 100%;
+            background-color: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--card-border);
+            border-radius: 0.75rem;
+            padding: 0.8rem 1.2rem 0.8rem 2.75rem;
+            color: white;
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+            background-color: rgba(15, 23, 42, 0.9);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            width: 1.1rem;
+            height: 1.1rem;
+            pointer-events: none;
+        }
+
+        /* Filter Pills */
+        .pills-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .filter-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-right: 0.5rem;
+        }
+
+        .pill {
+            background-color: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-family: var(--font-main);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .pill:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: white;
+        }
+
+        .pill.active {
+            background-color: var(--pill-bg, var(--primary));
+            border-color: transparent;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main Data Layout */
+        .dashboard-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        /* Card list */
+        .company-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .company-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1.25rem;
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .company-card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(26, 32, 53, 0.8);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .company-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            max-width: 70%;
+        }
+
+        .company-name {
+            font-family: var(--font-title);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .company-meta {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+
+        .code-badge {
+            background-color: rgba(255, 255, 255, 0.06);
+            padding: 0.1rem 0.5rem;
+            border-radius: 0.35rem;
+            border: 1px solid var(--card-border);
+        }
+
+        .company-status-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: var(--badge-bg, rgba(255, 255, 255, 0.08));
+            color: var(--badge-color, white);
+            border: 1px solid var(--badge-border, transparent);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        /* Timeline / History Container */
+        .timeline-section {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .timeline-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timeline-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            position: relative;
+            padding-left: 1.25rem;
+        }
+
+        .timeline-list::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 6px;
+            bottom: 6px;
+            width: 2px;
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            gap: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -22px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--node-color, var(--text-secondary));
+            border: 2px solid var(--bg-color);
+            z-index: 2;
+        }
+
+        .timeline-left {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .timeline-badge {
+            padding: 0.15rem 0.5rem;
+            border-radius: 0.35rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: var(--badge-bg, rgba(255, 255, 255, 0.08));
+            color: var(--badge-color, white);
+        }
+
+        .timeline-email {
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+
+        .timeline-time {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-family: monospace;
+        }
+
+        /* Empty state styling */
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--card-bg);
+            border: 1px dashed var(--card-border);
+            border-radius: 1.25rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-state h3 {
+            font-family: var(--font-title);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 1rem;
+            }
+
+            .company-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .company-info {
+                max-width: 100%;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+
+            .timeline-time {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="brand-title">
+                <h1 id="main-header">E-Survey Email Monitor</h1>
+                <p>Dashboard Monitoring Status Pengiriman Email & Bounced Usaha Besar (UB)</p>
+            </div>
+            <div>
+                <a href="./bounced_emails.xlsx" class="btn-action" id="btn-download-xlsx" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Unduh Excel Bounced
+                </a>
+            </div>
+        </header>
+
+        <!-- Stats Cards Grid -->
+        <div class="stats-grid" id="stats-container">
+            <div class="stat-card" style="--stat-color: var(--primary);">
+                <div class="stat-label">Total Perusahaan</div>
+                <div class="stat-value" id="stat-total-companies">0</div>
+                <div class="stat-subtext">Semua records terdaftar</div>
+            </div>
+            <div class="stat-card" style="--stat-color: var(--color-bounced);">
+                <div class="stat-label">Bounced Emails</div>
+                <div class="stat-value" id="stat-bounced" style="color: var(--color-bounced);">0</div>
+                <div class="stat-subtext">Gagal dikirim (Bounced)</div>
+            </div>
+            <div class="stat-card" style="--stat-color: var(--color-clicked);">
+                <div class="stat-label">Link Clicked</div>
+                <div class="stat-value" id="stat-clicked" style="color: var(--color-clicked);">0</div>
+                <div class="stat-subtext">Membuka kuesioner</div>
+            </div>
+            <div class="stat-card" style="--stat-color: var(--color-opened);">
+                <div class="stat-label">Opened Emails</div>
+                <div class="stat-value" id="stat-opened" style="color: var(--color-opened);">0</div>
+                <div class="stat-subtext">Sudah dibuka responden</div>
+            </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-panel">
+            <div class="search-wrapper">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input type="text" id="search-input" class="search-input" placeholder="Cari Nama Perusahaan, Kode Identitas, atau Email...">
+            </div>
+            
+            <div class="pills-group">
+                <span class="filter-title">Filter Status Terakhir:</span>
+                <button class="pill active" data-filter="all" id="filter-all">Semua</button>
+                <button class="pill" data-filter="bounced" style="--pill-bg: var(--color-bounced)" id="filter-bounced">Bounced</button>
+                <button class="pill" data-filter="clicked" style="--pill-bg: var(--color-clicked)" id="filter-clicked">Clicked</button>
+                <button class="pill" data-filter="opened" style="--pill-bg: var(--color-opened)" id="filter-opened">Opened</button>
+                <button class="pill" data-filter="delivered" style="--pill-bg: var(--color-delivered)" id="filter-delivered">Delivered</button>
+                <button class="pill" data-filter="queued" style="--pill-bg: var(--color-queued)" id="filter-queued">Queued</button>
+            </div>
+        </div>
+
+        <!-- Main Dashboard List -->
+        <main class="dashboard-content">
+            <div class="company-list" id="company-list">
+                <!-- Data will be dynamically loaded here by JavaScript -->
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Load data.js (holds data in window.EMAIL_DATA) -->
+    <script src="data.js"></script>
+
+    <!-- Vanilla Javascript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rawData = window.EMAIL_DATA || [];
+            
+            // Elements
+            const searchInput = document.getElementById('search-input');
+            const pills = document.querySelectorAll('.pill');
+            const companyListContainer = document.getElementById('company-list');
+            
+            // Stats Elements
+            const statTotalEl = document.getElementById('stat-total-companies');
+            const statBouncedEl = document.getElementById('stat-bounced');
+            const statClickedEl = document.getElementById('stat-clicked');
+            const statOpenedEl = document.getElementById('stat-opened');
+
+            let activeFilter = 'all';
+            let searchQuery = '';
+
+            // Group logs by company code to construct unique company entries
+            function processGroupedData() {
+                const grouped = {};
+                
+                rawData.forEach(record => {
+                    const code = record.code;
+                    if (!grouped[code]) {
+                        grouped[code] = {
+                            code: code,
+                            company_name: record.company_name,
+                            global_status: record.global_status,
+                            email: record.email,
+                            history: []
+                        };
+                    }
+                    
+                    if (record.status !== '-' && record.timestamp !== '-') {
+                        grouped[code].history.push({
+                            status: record.status,
+                            timestamp: record.timestamp,
+                            order: record.order
+                        });
+                    }
+                });
+                
+                // Sort history for each company by order
+                Object.values(grouped).forEach(comp => {
+                    comp.history.sort((a, b) => a.order - b.order);
+                    // Determine final status
+                    if (comp.history.length > 0) {
+                        comp.global_status = comp.history[comp.history.length - 1].status;
+                        comp.email = recordEmailForCompany(comp);
+                    }
+                });
+
+                return Object.values(grouped);
+            }
+
+            function recordEmailForCompany(comp) {
+                // Return first non-dash email from history if possible
+                return comp.email || '-';
+            }
+
+            const companies = processGroupedData();
+
+            // Calculate and display Stats
+            function renderStats() {
+                statTotalEl.textContent = companies.length;
+                
+                const bouncedCount = companies.filter(c => c.global_status.toLowerCase() === 'bounced').length;
+                const clickedCount = companies.filter(c => c.global_status.toLowerCase() === 'clicked').length;
+                const openedCount = companies.filter(c => c.global_status.toLowerCase() === 'opened').length;
+                
+                statBouncedEl.textContent = bouncedCount;
+                statClickedEl.textContent = clickedCount;
+                statOpenedEl.textContent = openedCount;
+            }
+
+            // Status Badge Helpers
+            function getStatusStyle(status) {
+                const s = status.toLowerCase().trim();
+                if (s === 'bounced') return { bg: 'rgba(239, 68, 68, 0.1)', color: 'var(--color-bounced)', border: 'var(--color-bounced)' };
+                if (s === 'clicked') return { bg: 'rgba(139, 92, 246, 0.1)', color: 'var(--color-clicked)', border: 'var(--color-clicked)' };
+                if (s === 'opened') return { bg: 'rgba(59, 130, 246, 0.1)', color: 'var(--color-opened)', border: 'var(--color-opened)' };
+                if (s === 'delivered') return { bg: 'rgba(16, 185, 129, 0.1)', color: 'var(--color-delivered)', border: 'var(--color-delivered)' };
+                return { bg: 'rgba(107, 114, 128, 0.1)', color: 'var(--color-queued)', border: 'var(--color-queued)' };
+            }
+
+            // Render Company List
+            function renderList() {
+                companyListContainer.innerHTML = '';
+                
+                const filtered = companies.filter(comp => {
+                    const matchesSearch = 
+                        comp.company_name.toLowerCase().includes(searchQuery) ||
+                        comp.code.toLowerCase().includes(searchQuery) ||
+                        comp.email.toLowerCase().includes(searchQuery);
+                    
+                    const matchesFilter = 
+                        activeFilter === 'all' || 
+                        comp.global_status.toLowerCase() === activeFilter;
+                        
+                    return matchesSearch && matchesFilter;
+                });
+
+                if (filtered.length === 0) {
+                    companyListContainer.innerHTML = `
+                        <div class="empty-state">
+                            <h3>Tidak ada data ditemukan</h3>
+                            <p>Coba gunakan kata kunci pencarian lain atau pilih filter status berbeda.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                filtered.forEach(comp => {
+                    const card = document.createElement('div');
+                    card.className = 'company-card';
+                    
+                    const statusStyle = getStatusStyle(comp.global_status);
+                    
+                    // Create History List HTML
+                    let historyHTML = '';
+                    if (comp.history.length > 0) {
+                        historyHTML = `
+                            <div class="timeline-section">
+                                <div class="timeline-title">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                    Riwayat Pengiriman
+                                </div>
+                                <div class="timeline-list">
+                                    ${comp.history.map(item => {
+                                        const stepStyle = getStatusStyle(item.status);
+                                        return `
+                                            <div class="timeline-item" style="--node-color: ${stepStyle.color}">
+                                                <div class="timeline-left">
+                                                    <span class="timeline-badge" style="--badge-bg: ${stepStyle.bg}; --badge-color: ${stepStyle.color}">${item.status}</span>
+                                                    <span class="timeline-email">${comp.email}</span>
+                                                </div>
+                                                <div class="timeline-time">${item.timestamp}</div>
+                                            </div>
+                                        `;
+                                    }).join('')}
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        historyHTML = `
+                            <div class="timeline-section" style="color: var(--text-secondary); font-size: 0.85rem; font-style: italic;">
+                                Tidak ada data riwayat log email.
+                            </div>
+                        `;
+                    }
+
+                    card.innerHTML = `
+                        <div class="company-header">
+                            <div class="company-info">
+                                <div class="company-name">${comp.company_name}</div>
+                                <div class="company-meta">
+                                    <span class="code-badge">${comp.code}</span>
+                                    <span>${comp.email}</span>
+                                </div>
+                            </div>
+                            <span class="company-status-badge" style="--badge-bg: ${statusStyle.bg}; --badge-color: ${statusStyle.color}; --badge-border: ${statusStyle.border}">
+                                ${comp.global_status}
+                            </span>
+                        </div>
+                        ${historyHTML}
+                    `;
+                    
+                    companyListContainer.appendChild(card);
+                });
+            }
+
+            // Search input listener
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value.toLowerCase().trim();
+                renderList();
+            });
+
+            // Pills active status switcher
+            pills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    pills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                    activeFilter = pill.getAttribute('data-filter');
+                    renderList();
+                });
+            });
+
+            // Initial execution
+            renderStats();
+            renderList();
+        });
+    </script>
+</body>
+</html>
