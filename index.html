@@ -782,6 +782,7 @@
                 gap: 0.25rem;
             }
 
+
             .timeline-time {
                 padding-left: 0;
                 font-size: 0.75rem;
@@ -884,24 +885,41 @@
             </div>
         </div>
 
+
         <!-- Filter Controls -->
         <div class="filter-panel">
-            <div class="search-row">
-                <div class="search-wrapper">
+            <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem;">
+                <div class="search-wrapper" style="flex: 2 1 300px;">
                     <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                     <input type="text" id="search-input" class="search-input" placeholder="Cari Nama Perusahaan, Kode Identitas, atau Email...">
                 </div>
-                <div class="sort-wrapper" style="display: flex; gap: 0.5rem;">
-                    <select id="survey-filter-select" class="sort-select">
+                <div style="display: flex; gap: 0.5rem; flex: 3 1 auto; flex-wrap: wrap;">
+                    <select id="kabkot-filter-select" class="sort-select" style="flex: 1 1 180px; height: 48px;">
+                        <option value="all">Semua Kabupaten/Kota</option>
+                        <option value="7201">Banggai</option>
+                        <option value="7207">Banggai Kepulauan</option>
+                        <option value="7211">Banggai Laut</option>
+                        <option value="7205">Buol</option>
+                        <option value="7203">Donggala</option>
+                        <option value="7206">Morowali</option>
+                        <option value="7212">Morowali Utara</option>
+                        <option value="7271">Palu</option>
+                        <option value="7208">Parigi Moutong</option>
+                        <option value="7202">Poso</option>
+                        <option value="7210">Sigi</option>
+                        <option value="7209">Tojo Una-Una</option>
+                        <option value="7204">Toli-Toli</option>
+                    </select>
+                    <select id="survey-filter-select" class="sort-select" style="flex: 1 1 180px; height: 48px;">
                         <option value="all">Semua Status Dokumen</option>
                         <option value="SUBMITTED RESPONDENT">SUBMITTED RESPONDENT</option>
                         <option value="OPEN">OPEN</option>
                         <option value="DRAFT">DRAFT</option>
                         <option value="-">- (Tanpa Status)</option>
                     </select>
-                    <select id="sort-select" class="sort-select">
+                    <select id="sort-select" class="sort-select" style="flex: 1 1 180px; height: 48px;">
                         <option value="name-asc">Nama Perusahaan (A-Z)</option>
                         <option value="name-desc">Nama Perusahaan (Z-A)</option>
                         <option value="status-severity">Urutkan dari Bounced</option>
@@ -973,6 +991,7 @@
             const searchInput = document.getElementById('search-input');
             const sortSelect = document.getElementById('sort-select');
             const surveyFilterSelect = document.getElementById('survey-filter-select');
+            const kabkotFilterSelect = document.getElementById('kabkot-filter-select');
             const pills = document.querySelectorAll('.pill');
             const companyListContainer = document.getElementById('company-list');
             const paginationContainer = document.getElementById('pagination');
@@ -999,8 +1018,25 @@
 
             let activeFilter = 'all';
             let activeSurveyFilter = 'all';
+            let activeKabkotFilter = 'all';
             let searchQuery = '';
             let activeSort = 'name-asc';
+
+            const kabkotMapping = {
+                "7201": "Banggai",
+                "7202": "Poso",
+                "7203": "Donggala",
+                "7204": "Toli-Toli",
+                "7205": "Buol",
+                "7206": "Morowali",
+                "7207": "Banggai Kepulauan",
+                "7208": "Parigi Moutong",
+                "7209": "Tojo Una-Una",
+                "7210": "Sigi",
+                "7211": "Banggai Laut",
+                "7212": "Morowali Utara",
+                "7271": "Palu"
+            };
 
             // Theme Switcher Setup
             const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -1244,7 +1280,12 @@
                         activeSurveyFilter === 'all' || 
                         comp.survey_status.toUpperCase() === activeSurveyFilter.toUpperCase();
                         
-                    return matchesSearch && matchesFilter && matchesSurveyFilter;
+                    const prefix = comp.code ? comp.code.substring(0, 4) : '';
+                    const matchesKabkotFilter = 
+                        activeKabkotFilter === 'all' || 
+                        (activeKabkotFilter === 'other' ? !kabkotMapping[prefix] : prefix === activeKabkotFilter);
+                        
+                    return matchesSearch && matchesFilter && matchesSurveyFilter && matchesKabkotFilter;
                 });
 
                 // Sort
@@ -1346,6 +1387,9 @@
                                 </div>
                                 <div class="company-meta">
                                     <span class="code-badge">${highlightText(comp.code, searchQuery)}</span>
+                                    <span class="code-badge" style="background-color: rgba(99, 102, 241, 0.08); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.15); font-weight: 700;">
+                                        ${(comp.code && typeof comp.code === 'string') ? (kabkotMapping[comp.code.substring(0, 4)] || 'Lainnya') : 'Lainnya'}
+                                    </span>
                                     <span class="code-badge" style="background-color: ${surveyStyle.bg}; color: ${surveyStyle.color}; border: 1px solid ${surveyStyle.border}; font-weight: 700; text-transform: uppercase;">
                                         ${comp.survey_status}
                                     </span>
@@ -1430,6 +1474,14 @@
                 currentPage = 1; // Reset to first page
                 renderList();
             });
+
+            if (kabkotFilterSelect) {
+                kabkotFilterSelect.addEventListener('change', (e) => {
+                    activeKabkotFilter = e.target.value;
+                    currentPage = 1; // Reset to first page
+                    renderList();
+                });
+            }
 
             pills.forEach(pill => {
                 pill.addEventListener('click', () => {
