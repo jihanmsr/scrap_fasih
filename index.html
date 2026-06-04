@@ -825,6 +825,8 @@
                         <option value="name-asc">Nama Perusahaan (A-Z)</option>
                         <option value="name-desc">Nama Perusahaan (Z-A)</option>
                         <option value="status-severity">Urutkan dari Bounced</option>
+                        <option value="survey-status-asc">Status Dokumen (Draft &rarr; Approved)</option>
+                        <option value="survey-status-desc">Status Dokumen (Approved &rarr; Draft)</option>
                     </select>
                 </div>
             </div>
@@ -983,8 +985,11 @@
                 // Sort history and determine final status
                 Object.values(grouped).forEach(comp => {
                     comp.history.sort((a, b) => a.order - b.order);
-                    if (comp.history.length > 0) {
-                        comp.global_status = comp.history[comp.history.length - 1].status;
+                    // Gunakan global_status yang sudah dihitung oleh database/scraper jika valid
+                    if (!comp.global_status || comp.global_status === '-') {
+                        if (comp.history.length > 0) {
+                            comp.global_status = comp.history[comp.history.length - 1].status;
+                        }
                     }
                 });
 
@@ -1159,6 +1164,18 @@
                         const sevA = severity[a.global_status.toLowerCase()] ?? 5;
                         const sevB = severity[b.global_status.toLowerCase()] ?? 5;
                         return sevA - sevB;
+                    } else if (activeSort === 'survey-status-asc') {
+                        const severity = { 'draft': 1, 'open': 2, 'submitted': 3, 'approved': 4 };
+                        const sevA = severity[a.survey_status.toLowerCase()] ?? 5;
+                        const sevB = severity[b.survey_status.toLowerCase()] ?? 5;
+                        if (sevA !== sevB) return sevA - sevB;
+                        return a.company_name.localeCompare(b.company_name);
+                    } else if (activeSort === 'survey-status-desc') {
+                        const severity = { 'draft': 1, 'open': 2, 'submitted': 3, 'approved': 4 };
+                        const sevA = severity[a.survey_status.toLowerCase()] ?? 5;
+                        const sevB = severity[b.survey_status.toLowerCase()] ?? 5;
+                        if (sevA !== sevB) return sevB - sevA;
+                        return a.company_name.localeCompare(b.company_name);
                     }
                     return 0;
                 });

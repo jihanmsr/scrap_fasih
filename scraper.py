@@ -113,48 +113,54 @@ def get_authenticated_context(p, headless=False):
     )
     page = context.pages[0] if context.pages else context.new_page()
     
-    # Akses halaman awal
-    login_url = "https://fasih-sm.bps.go.id/survey-collection/survey"
-    try:
-        page.goto(login_url, timeout=90000, wait_until="domcontentloaded")
-    except Exception as e:
-        logging.warning(f"Timeout saat membuka halaman awal, script akan lanjut: {e}")
-    
-    print("\n" + "="*70)
-    print("SILAKAN LOGIN SSO DI BROWSER CHROMIUM YANG TERBUKA.")
-    print("Setelah login berhasil, script akan otomatis mendeteksi dan navigasi.")
-    print("Atau, jika sudah masuk, Anda bisa menekan ENTER di terminal ini.")
-    print("="*70 + "\n")
-    
     target_data_url = "https://fasih-sm.bps.go.id/app/surveys/ecddb52e-f392-403c-a963-47391f217010/37526b20-81c8-42f5-a895-6190137d7394/data"
     
-    # Deteksi otomatis login, atau tunggu ENTER
-    import select
-    import sys
-    
-    while True:
-        if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
-            sys.stdin.readline() # consume input
-            logging.info("Konfirmasi manual diterima via ENTER.")
-            break
-            
-        try:
-            current_url = page.url
-            if "fasih-sm.bps.go.id" in current_url and "sso" not in current_url.lower() and "login" not in current_url.lower():
-                logging.info("Login terdeteksi secara otomatis!")
-                break
-        except Exception:
-            pass
-            
-        logging.info("Menunggu login SSO di browser (atau tekan ENTER jika sudah login)...")
-        time.sleep(3)
-        
-    logging.info(f"Navigasi otomatis ke halaman target: {target_data_url}")
+    logging.info(f"Mencoba membuka halaman target langsung: {target_data_url}")
     try:
-        page.goto(target_data_url, timeout=90000, wait_until="domcontentloaded")
+        page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
     except Exception as e:
-        logging.warning(f"Timeout saat navigasi (mungkin karena jaringan lambat), script akan lanjut: {e}")
-    time.sleep(5)
+        logging.warning(f"Navigasi awal ke target langsung lambat/timeout: {e}")
+    time.sleep(3)
+    
+    # Deteksi jika dialihkan ke halaman login SSO BPS
+    current_url = page.url
+    if "sso" in current_url.lower() or "login" in current_url.lower() or "fasih-sm.bps.go.id" not in current_url:
+        print("\n" + "="*70)
+        print("Sesi belum aktif atau memerlukan login SSO BPS.")
+        print("SILAKAN LOGIN SSO DI BROWSER CHROMIUM YANG TERBUKA.")
+        print("Setelah login berhasil, script akan otomatis mendeteksi dan navigasi.")
+        print("Atau, jika sudah masuk, Anda bisa menekan ENTER di terminal ini.")
+        print("="*70 + "\n")
+        
+        # Deteksi otomatis login, atau tunggu ENTER
+        import select
+        import sys
+        
+        while True:
+            if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
+                sys.stdin.readline() # consume input
+                logging.info("Konfirmasi manual diterima via ENTER.")
+                break
+                
+            try:
+                current_url = page.url
+                if "fasih-sm.bps.go.id" in current_url and "sso" not in current_url.lower() and "login" not in current_url.lower():
+                    logging.info("Login terdeteksi secara otomatis!")
+                    break
+            except Exception:
+                pass
+                
+            logging.info("Menunggu login SSO di browser (atau tekan ENTER jika sudah login)...")
+            time.sleep(3)
+            
+        logging.info(f"Membuka ulang halaman target: {target_data_url}")
+        try:
+            page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
+        except Exception as e:
+            logging.warning(f"Timeout saat membuka halaman target: {e}")
+        time.sleep(5)
+    else:
+        logging.info("Sesi login terdeteksi aktif. Melanjutkan langsung...")
     
     return context, page
 
@@ -225,9 +231,34 @@ def scrape_data():
                     logging.warning(f"Gagal memilih opsi '{target_text}': {e}")
                 return False
 
+            # Tunggu halaman benar-benar termuat secara visual
+            print("\n" + "="*75)
+            print("MENUNGGU HALAMAN UTAMA FASIH TERMUAT SEMPURNA DI BROWSER.")
+            print("Perhatikan browser yang terbuka. Jika halaman daftar perusahaan sudah muncul")
+            print("dan tombol filter (ikon corong filter) sudah terlihat:")
+            print("-> Silakan TEKAN [ENTER] di terminal ini untuk memulai scraping.")
+            print("="*75 + "\n")
+            input("Tekan ENTER jika halaman sudah termuat...")
+
             # Buka filter pertama kali untuk memetakan kabupaten/kota
             logging.info("Membuka filter wilayah untuk mendeteksi Kabupaten/Kota...")
             filter_btn = page.locator("button").filter(has=page.locator("svg.tabler-icon-filter")).first
+            try:
+                # Tunggu tombol filter tersedia/terlihat
+                filter_btn.wait_for(state="visible", timeout=15000)
+            except Exception as e:
+                logging.warning(f"Tombol filter belum terlihat: {e}. Mencoba memuat ulang halaman...")
+                try:
+                    page.reload(timeout=45000, wait_until="domcontentloaded")
+                except Exception as ex:
+                    logging.warning(f"Reload gagal/timeout: {ex}. Melanjutkan...")
+                time.sleep(5)
+                try:
+                    filter_btn.wait_for(state="visible", timeout=30000)
+                except Exception as ex2:
+                    logging.error(f"Tombol filter tetap tidak terlihat setelah reload: {ex2}")
+                    raise ex2
+            
             filter_btn.click(force=True)
             time.sleep(1.5)
 
@@ -301,8 +332,10 @@ def scrape_data():
                         while "sso" in page.url.lower() or "login" in page.url.lower():
                             time.sleep(3)
                             
-                        logging.info("Sesi login terdeteksi aktif kembali! Membuka ulang halaman data...")
-                        page.goto(base_url)
+                        try:
+                            page.goto(base_url, timeout=60000, wait_until="domcontentloaded")
+                        except Exception as e:
+                            logging.warning(f"Timeout saat membuka ulang halaman data: {e}. Melanjutkan...")
                         time.sleep(4)
                     
                     # Pastikan berada di tampilan List (≡)
@@ -414,6 +447,9 @@ def scrape_data():
                                         
                                         history_items.append((status_hist, time_hist))
                                     
+                                    # Balik urutan agar kronologis (oldest ke newest)
+                                    history_items.reverse()
+                                    
                                     if not history_items:
                                         writer.writerow([code, company_name, survey_status, email, "-", "-", "-", 0])
                                         all_records.append({
@@ -427,7 +463,28 @@ def scrape_data():
                                             "order": 0
                                         })
                                     else:
-                                        last_status = history_items[-1][0] if history_items else "-"
+                                        # Tentukan status global berdasarkan prioritas
+                                        status_priority = {
+                                             'bounced': 7,
+                                             'dropped': 6,
+                                             'clicked': 5,
+                                             'opened': 4,
+                                             'delivered': 3,
+                                             'processed': 2,
+                                             'queued': 1,
+                                             'deferred': 0,
+                                             '-': -1
+                                        }
+                                        best_score = -1
+                                        best_status = "-"
+                                        for st, _ in history_items:
+                                            score = status_priority.get(st.lower().strip(), -1)
+                                            if score > best_score:
+                                                best_score = score
+                                                best_status = st
+                                        
+                                        last_status = best_status if best_status != "-" else history_items[-1][0]
+                                        
                                         for order, (status_hist, time_hist) in enumerate(history_items):
                                             writer.writerow([code, company_name, survey_status, email, last_status, status_hist, time_hist, order + 1])
                                             all_records.append({
