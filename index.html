@@ -946,6 +946,16 @@
             function processGroupedData(dataArray) {
                 const grouped = {};
                 
+                // Fallback map: jika database Supabase belum memiliki kolom survey_status,
+                // kita ambil dari data.js lokal yang memiliki status lengkap hasil scraping.
+                const localData = window.EMAIL_DATA || [];
+                const localStatusMap = {};
+                localData.forEach(r => {
+                    if (r.code && r.survey_status) {
+                        localStatusMap[r.code] = r.survey_status;
+                    }
+                });
+                
                 dataArray.forEach(record => {
                     const code = record.code;
                     if (!grouped[code]) {
@@ -953,7 +963,7 @@
                             code: code,
                             company_name: record.company_name,
                             global_status: record.global_status,
-                            survey_status: record.survey_status || "-",
+                            survey_status: record.survey_status || localStatusMap[code] || "-",
                             email: record.email,
                             history: []
                         };
@@ -985,6 +995,7 @@
             function getSurveyStatusStyle(status) {
                 const s = status.toUpperCase().trim();
                 if (s === 'DRAFT') return { bg: 'rgba(245, 158, 11, 0.1)', color: '#f59e0b', border: 'rgba(245, 158, 11, 0.3)' };
+                if (s === 'OPEN') return { bg: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', border: 'rgba(59, 130, 246, 0.3)' };
                 if (s.includes('SUBMITTED') || s === 'APPROVED') return { bg: 'rgba(16, 185, 129, 0.1)', color: '#10b981', border: 'rgba(16, 185, 129, 0.3)' };
                 if (s === 'REJECTED') return { bg: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', border: 'rgba(239, 68, 68, 0.3)' };
                 return { bg: 'rgba(107, 114, 128, 0.1)', color: 'var(--text-secondary)', border: 'rgba(107, 114, 128, 0.3)' };

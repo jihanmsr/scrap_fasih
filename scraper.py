@@ -28,6 +28,25 @@ OUTPUT_CSV = "all_email_history.csv"
 OUTPUT_BOUNCED_EXCEL = "bounced_emails.xlsx"
 OUTPUT_JS = "data.js"
 
+def save_csv_data(all_records):
+    try:
+        with open(OUTPUT_CSV, mode="w", newline="", encoding="utf-8") as csv_file:
+            writer = csv.writer(csv_file)
+            writer.writerow(["Kode Identitas", "Nama Perusahaan", "Status Dokumen", "Email Tujuan", "Status terakhir", "Status History", "Timestamp History", "Urutan History"])
+            for r in all_records:
+                writer.writerow([
+                    r.get("code", "-"),
+                    r.get("company_name", "-"),
+                    r.get("survey_status", "-"),
+                    r.get("email", "-"),
+                    r.get("global_status", "-"),
+                    r.get("status", "-"),
+                    r.get("timestamp", "-"),
+                    r.get("order", 0)
+                ])
+    except Exception as e:
+        logging.error(f"Gagal menyimpan CSV: {e}")
+
 def save_realtime_data(all_records):
     try:
         df = pd.DataFrame(all_records)
@@ -44,6 +63,9 @@ def save_realtime_data(all_records):
             bounced_emails = df[df['status'].str.lower() == 'bounced']['email'].unique()
             df_bounced = df[df['email'].isin(bounced_emails)]
             df_bounced.to_excel(OUTPUT_BOUNCED_EXCEL, index=False)
+
+            # Simpan CSV hasil pembaruan
+            save_csv_data(all_records)
 
             # Kirim data ke Supabase jika terkonfigurasi
             if supabase:
@@ -191,7 +213,7 @@ def scrape_data():
                     for opt in options:
                         opt_text = opt.inner_text().strip()
                         if target_text.upper() in opt_text.upper():
-                            opt.click()
+                            opt.click(force=True)
                             return True
                 except Exception as e:
                     logging.warning(f"Gagal memilih opsi '{target_text}': {e}")
@@ -200,19 +222,21 @@ def scrape_data():
             # Buka filter pertama kali untuk memetakan kabupaten/kota
             logging.info("Membuka filter wilayah untuk mendeteksi Kabupaten/Kota...")
             filter_btn = page.locator("button").filter(has=page.locator("svg.tabler-icon-filter")).first
-            filter_btn.click()
+            filter_btn.click(force=True)
             time.sleep(1.5)
 
-            # Pilih Provinsi SULAWESI TENGAH
-            prov_btn = page.locator("button:has-text('Pilih wilayah')").first
-            prov_btn.click()
+            # Pilih Provinsi SULAWESI TENGAH (dropdown index 0)
+            dropdown_buttons = page.locator("div[role='dialog'] button.f\\:justify-between, [data-radix-portal] button.f\\:justify-between").all()
+            dropdown_buttons[0].click(force=True)
             time.sleep(1)
             select_dropdown_option("SULAWESI TENGAH")
             time.sleep(1)
 
-            # Klik dropdown Kabupaten/Kota
-            kab_btn = page.locator("button:has-text('Pilih wilayah')").first
-            kab_btn.click()
+            # Klik dropdown Kabupaten/Kota (dropdown index 1)
+            # Ambil kembali list button karena DOM ter-update setelah memilih provinsi
+            dropdown_buttons = page.locator("div[role='dialog'] button.f\\:justify-between, [data-radix-portal] button.f\\:justify-between").all()
+            dropdown_buttons[1].click(force=True)
+            page.wait_for_selector("[cmdk-item], div[role='option']", timeout=8000)
             time.sleep(1)
             
             kab_options = page.locator("div[role='option'], [cmdk-item]").all()
@@ -227,25 +251,27 @@ def scrape_data():
                 logging.info(f"=== Memulai Scraping Wilayah: {kab_name} ===")
                 
                 # Buka filter
-                filter_btn.click()
+                filter_btn.click(force=True)
                 time.sleep(1.5)
                 
                 # Reset filter agar kembali bersih
                 reset_btn = page.locator("button:has-text('Reset')").first
                 if reset_btn.count() > 0:
-                    reset_btn.click()
+                    reset_btn.click(force=True)
                     time.sleep(1.5)
                 
+                # Ambil dropdown_buttons setelah reset
+                dropdown_buttons = page.locator("div[role='dialog'] button.f\\:justify-between, [data-radix-portal] button.f\\:justify-between").all()
+                
                 # Pilih Provinsi
-                prov_btn = page.locator("button:has-text('Pilih wilayah')").first
-                prov_btn.click()
+                dropdown_buttons[0].click(force=True)
                 time.sleep(1)
                 select_dropdown_option("SULAWESI TENGAH")
                 time.sleep(1.5)
                 
                 # Pilih Kabupaten/Kota
-                kab_btn = page.locator("button:has-text('Pilih wilayah')").first
-                kab_btn.click()
+                dropdown_buttons = page.locator("div[role='dialog'] button.f\\:justify-between, [data-radix-portal] button.f\\:justify-between").all()
+                dropdown_buttons[1].click(force=True)
                 time.sleep(1)
                 select_dropdown_option(kab_name)
                 time.sleep(1.5)
@@ -306,9 +332,23 @@ def scrape_data():
                                     code = line
                                     break
                             
+                            # 2. Ambil Status Dokumen (Survey Status) dari halaman awal terlebih dahulu
+                            survey_status = "-"
+                            for line in lines:
+                                line_upper = line.strip().upper()
+                                if line_upper in ["DRAFT", "OPEN", "SUBMITTED RESPONDENT", "SUBMITTED PENGAWAS", "SUBMITTED KOSEKA", "SUBMITTED KABKOT", "SUBMITTED PROV", "APPROVED", "REJECTED"]:
+                                    survey_status = line_upper
+                                    break
+
                             if code != "-" and code in processed_codes:
-                                logging.info(f"-> Skip (Sudah diproses): {code}")
-                                continue
+                                logging.info(f"-> Update Status (Sudah ada): {code} | Status: {survey_status}")
+                                updated_any = False
+                                for r in all_records:
+                                    if r.get("code") == code:
+                                        r["survey_status"] = survey_status
+                                        updated_any = True
+                                if updated_any:
+                                    continue
                                 
                             # Klik tombol tiga titik (⋮)
                             btn.click()
@@ -324,7 +364,7 @@ def scrape_data():
                                 time.sleep(1)
                                 riwayat_menu_item.wait_for(state="visible", timeout=3000)
                             
-                            # 2. Ambil Nama Perusahaan
+                            # 3. Ambil Nama Perusahaan
                             company_name = "-"
                             for i, line in enumerate(lines):
                                 if "Nama Perusahaan" in line and i + 1 < len(lines):
@@ -332,14 +372,6 @@ def scrape_data():
                                     break
                             if company_name == "-" and len(lines) >= 3:
                                 company_name = lines[2] if "Nama" not in lines[2] else lines[3]
-                            
-                            # 3. Ambil Status Dokumen (Survey Status) dari halaman awal
-                            survey_status = "-"
-                            for line in lines:
-                                line_upper = line.strip().upper()
-                                if line_upper in ["DRAFT", "SUBMITTED RESPONDENT", "SUBMITTED PENGAWAS", "SUBMITTED KOSEKA", "SUBMITTED KABKOT", "SUBMITTED PROV", "APPROVED", "REJECTED"]:
-                                    survey_status = line_upper
-                                    break
                             
                             # 4. Klik "Riwayat Broadcast" dari pop-up menu
                             if riwayat_menu_item.count() > 0:
@@ -434,14 +466,23 @@ def scrape_data():
                     csv_file.flush()
                     save_realtime_data(all_records)
                     
+                    # Tunggu sebentar agar DOM selesai loading/rendering
+                    time.sleep(2)
+                    
                     # Beralih ke halaman berikutnya menggunakan tombol pagination 'Next'
-                    next_btn = page.locator("button").filter(has=page.locator("svg.tabler-icon-chevron-right")).first
+                    next_btn = page.locator("button[aria-label='Go to next page']").first
+                    
+                    # Jika tidak langsung terdeteksi, tunggu sekali lagi (karena render React/Radix lambat)
+                    if next_btn.count() == 0:
+                        time.sleep(2)
+                        next_btn = page.locator("button[aria-label='Go to next page']").first
+                        
                     if next_btn.count() == 0 or not next_btn.is_enabled() or next_btn.get_attribute("disabled") is not None:
                         logging.info(f"Selesai memproses halaman terakhir untuk {kab_name}.")
                         break
                     
                     logging.info("Beralih ke halaman berikutnya...")
-                    next_btn.click()
+                    next_btn.click(force=True)
                     time.sleep(4)
                     page_num += 1
 

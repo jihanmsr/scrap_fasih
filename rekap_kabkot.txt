@@ -1,0 +1,21 @@
+=== REKAP STATUS DOKUMEN PER KABUPATEN/KOTA (KODE BENAR) ===
+
+Status Dokumen       -  DRAFT  OPEN  SUBMITTED RESPONDENT   All
+KabKot                                                         
+Banggai              0      0   171                     0   171
+Banggai Kepulauan    0      0     6                     0     6
+Banggai Laut         0      3     2                     2     7
+Buol                 0      6     3                     1    10
+Donggala            47      0    10                     0    57
+Morowali            90      1     8                     1   100
+Morowali Utara     124      0    13                     0   137
+Palu               154      0   262                     1   417
+Parigi Moutong      51      0    10                     0    61
+Poso                69      3     5                     2    79
+Sigi                11      0    10                     0    21
+Tojo Una-Una         4      0    10                     0    14
+Toli-Toli           48      0     0                    10    58
+All                598     13   510                    17  1138
+
+Total Unique Companies: 1138
+Total Rows in CSV (including history): 1895
