@@ -49,9 +49,20 @@ def save_realtime_data(all_records):
             if supabase:
                 logging.info("Menyinkronkan data ke Supabase...")
                 # Format data agar sesuai dengan kolom tabel Supabase
+                available_cols = set()
+                try:
+                    sample_res = supabase.table("email_logs").select("*").limit(1).execute()
+                    if sample_res.data:
+                        available_cols = set(sample_res.data[0].keys())
+                    else:
+                        available_cols = {"code", "company_name", "email", "global_status", "status", "timestamp", "order"}
+                except Exception as e:
+                    logging.warning(f"Gagal mendeteksi kolom Supabase: {e}")
+                    available_cols = {"code", "company_name", "email", "global_status", "status", "timestamp", "order"}
+
                 db_records = []
                 for r in js_data:
-                    db_records.append({
+                    rec = {
                         "code": str(r.get("code", "-")),
                         "company_name": str(r.get("company_name", "-")),
                         "email": str(r.get("email", "-")),
@@ -59,7 +70,10 @@ def save_realtime_data(all_records):
                         "status": str(r.get("status", "-")),
                         "timestamp": str(r.get("timestamp", "-")),
                         "order": int(r.get("order", 0))
-                    })
+                    }
+                    if "survey_status" in available_cols:
+                        rec["survey_status"] = str(r.get("survey_status", "-"))
+                    db_records.append(rec)
                 
                 # Kosongkan tabel lama lalu isi dengan data terbaru (karena data history berurutan)
                 supabase.table("email_logs").delete().neq("code", "FORCE_DELETE_ALL_XYZ").execute()
@@ -128,17 +142,33 @@ def scrape_data():
                 header = next(reader, None)
                 for row in reader:
                     if len(row) >= 7:
-                        all_records.append({
-                            "code": row[0],
-                            "company_name": row[1],
-                            "email": row[2],
-                            "global_status": row[3],
-                            "status": row[4],
-                            "timestamp": row[5],
-                            "order": int(row[6]) if row[6].isdigit() else 0
-                        })
-                        if row[0] != "-":
-                            processed_codes.add(row[0])
+                        # Mendukung pembacaan format baru (8 kolom) dan format lama (7 kolom)
+                        if len(row) >= 8:
+                            all_records.append({
+                                "code": row[0],
+                                "company_name": row[1],
+                                "survey_status": row[2],
+                                "email": row[3],
+                                "global_status": row[4],
+                                "status": row[5],
+                                "timestamp": row[6],
+                                "order": int(row[7]) if row[7].isdigit() else 0
+                            })
+                            if row[0] != "-":
+                                processed_codes.add(row[0])
+                        else:
+                            all_records.append({
+                                "code": row[0],
+                                "company_name": row[1],
+                                "survey_status": "-",
+                                "email": row[2],
+                                "global_status": row[3],
+                                "status": row[4],
+                                "timestamp": row[5],
+                                "order": int(row[6]) if row[6].isdigit() else 0
+                            })
+                            if row[0] != "-":
+                                processed_codes.add(row[0])
             logging.info(f"Berhasil memuat {len(processed_codes)} perusahaan yang sudah diproses sebelumnya.")
         except Exception as e:
             logging.warning(f"Gagal membaca CSV lama: {e}")
@@ -147,226 +177,274 @@ def scrape_data():
         context, page = get_authenticated_context(p, headless=False)
         
         base_url = "https://fasih-sm.bps.go.id/app/surveys/ecddb52e-f392-403c-a963-47391f217010/37526b20-81c8-42f5-a895-6190137d7394/data"
-        total_pages = 127
         
         csv_exists = os.path.exists(OUTPUT_CSV)
         with open(OUTPUT_CSV, mode="a", newline="", encoding="utf-8") as csv_file:
             writer = csv.writer(csv_file)
             if not csv_exists:
-                writer.writerow(["Kode Identitas", "Nama Perusahaan", "Email Tujuan", "Status terakhir", "Status History", "Timestamp History", "Urutan History"])
+                writer.writerow(["Kode Identitas", "Nama Perusahaan", "Status Dokumen", "Email Tujuan", "Status terakhir", "Status History", "Timestamp History", "Urutan History"])
             
-            for page_num in range(1, total_pages + 1):
-                logging.info(f"=== Memproses Halaman {page_num} dari {total_pages} ===")
-                
-                # Navigasi ke halaman target dengan mekanisme retry jika timeout
-                success = False
-                for attempt in range(3):
-                    try:
-                        page.goto(f"{base_url}?page={page_num}&perPage=10", timeout=45000)
-                        success = True
-                        break
-                    except Exception as e:
-                        logging.warning(f"Timeout/Error saat membuka halaman {page_num} (percobaan {attempt+1}/3): {e}")
-                        time.sleep(5)
-                
-                if not success:
-                    logging.error(f"Gagal memuat halaman {page_num} setelah 3 percobaan. Melewati halaman ini.")
-                    continue
-                
-                # Tunggu daftar data termuat
+            def select_dropdown_option(target_text):
                 try:
-                    page.wait_for_load_state("networkidle", timeout=10000)
-                except Exception:
-                    pass
-                time.sleep(3)  # Jeda aman agar seluruh data termuat
-
-                # Deteksi jika dialihkan ke halaman login SSO BPS
-                if "sso" in page.url.lower() or "login" in page.url.lower():
-                    logging.warning("=== DETEKSI: Sesi Login SSO BPS Kedaluwarsa! ===")
-                    print("\n" + "!"*70)
-                    print("SESI LOGIN KEDALUWARSA. SILAKAN LOGIN KEMBALI DI BROWSER CHROMIUM.")
-                    print("Script akan otomatis mendeteksi ketika Anda sudah login kembali.")
-                    print("!"*70 + "\n")
-                    
-                    # Tunggu sampai pengguna login kembali
-                    while "sso" in page.url.lower() or "login" in page.url.lower():
-                        time.sleep(3)
-                        
-                    logging.info("Sesi login terdeteksi aktif kembali! Membuka ulang halaman data...")
-                    page.goto(f"{base_url}?page={page_num}&perPage=10", timeout=45000)
-                    time.sleep(4)
-                
-                # Pastikan berada di tampilan List (≡)
-                try:
-                    list_button = page.locator("button[aria-label='Daftar'], button[aria-label='List'], [data-slot=toggle-group-item]").nth(1)
-                    if list_button.count() > 0:
-                        if list_button.get_attribute("aria-checked") != "true":
-                            logging.info("Beralih ke tampilan List (≡)...")
-                            list_button.click()
-                            time.sleep(3) # Jeda lebih lama untuk transisi layout
+                    page.wait_for_selector("[cmdk-item], div[role='option']", timeout=8000)
+                    options = page.locator("[cmdk-item], div[role='option']").all()
+                    for opt in options:
+                        opt_text = opt.inner_text().strip()
+                        if target_text.upper() in opt_text.upper():
+                            opt.click()
+                            return True
                 except Exception as e:
-                    logging.warning(f"Gagal memeriksa/mengklik tombol List: {e}")
+                    logging.warning(f"Gagal memilih opsi '{target_text}': {e}")
+                return False
+
+            # Buka filter pertama kali untuk memetakan kabupaten/kota
+            logging.info("Membuka filter wilayah untuk mendeteksi Kabupaten/Kota...")
+            filter_btn = page.locator("button").filter(has=page.locator("svg.tabler-icon-filter")).first
+            filter_btn.click()
+            time.sleep(1.5)
+
+            # Pilih Provinsi SULAWESI TENGAH
+            prov_btn = page.locator("button:has-text('Pilih wilayah')").first
+            prov_btn.click()
+            time.sleep(1)
+            select_dropdown_option("SULAWESI TENGAH")
+            time.sleep(1)
+
+            # Klik dropdown Kabupaten/Kota
+            kab_btn = page.locator("button:has-text('Pilih wilayah')").first
+            kab_btn.click()
+            time.sleep(1)
+            
+            kab_options = page.locator("div[role='option'], [cmdk-item]").all()
+            kab_names = [opt.inner_text().strip() for opt in kab_options if opt.inner_text().strip()]
+            logging.info(f"Ditemukan {len(kab_names)} Kabupaten/Kota untuk diproses: {kab_names}")
+
+            # Tutup filter sementara
+            page.keyboard.press("Escape")
+            time.sleep(1.5)
+
+            for kab_name in kab_names:
+                logging.info(f"=== Memulai Scraping Wilayah: {kab_name} ===")
                 
-                # Cari semua tombol tiga titik (⋮) di setiap baris/card data (hanya vertikal untuk aksi baris)
-                dots_buttons = page.locator("button").filter(has=page.locator("svg.tabler-icon-dots-vertical")).all()
+                # Buka filter
+                filter_btn.click()
+                time.sleep(1.5)
                 
-                if not dots_buttons:
-                    logging.warning(f"Tidak menemukan tombol tiga titik (⋮) di halaman {page_num}. Mencoba reload...")
-                    page.reload()
-                    time.sleep(4)
-                    dots_buttons = page.locator("button").filter(has=page.locator("svg.tabler-icon-dots-vertical")).all()
+                # Reset filter agar kembali bersih
+                reset_btn = page.locator("button:has-text('Reset')").first
+                if reset_btn.count() > 0:
+                    reset_btn.click()
+                    time.sleep(1.5)
                 
-                logging.info(f"Menemukan {len(dots_buttons)} baris data (tombol ⋮) di halaman {page_num}")
+                # Pilih Provinsi
+                prov_btn = page.locator("button:has-text('Pilih wilayah')").first
+                prov_btn.click()
+                time.sleep(1)
+                select_dropdown_option("SULAWESI TENGAH")
+                time.sleep(1.5)
                 
-                for idx, btn in enumerate(dots_buttons):
+                # Pilih Kabupaten/Kota
+                kab_btn = page.locator("button:has-text('Pilih wilayah')").first
+                kab_btn.click()
+                time.sleep(1)
+                select_dropdown_option(kab_name)
+                time.sleep(1.5)
+                
+                # Tutup dialog filter
+                page.keyboard.press("Escape")
+                time.sleep(2)
+                
+                page_num = 1
+                while True:
+                    logging.info(f"=== Kab/Kot: {kab_name} | Memproses Halaman {page_num} ===")
+                    
+                    # Deteksi jika dialihkan ke halaman login SSO BPS
+                    if "sso" in page.url.lower() or "login" in page.url.lower():
+                        logging.warning("=== DETEKSI: Sesi Login SSO BPS Kedaluwarsa! ===")
+                        print("\n" + "!"*70)
+                        print("SESI LOGIN KEDALUWARSA. SILAKAN LOGIN KEMBALI DI BROWSER CHROMIUM.")
+                        print("Script akan otomatis mendeteksi ketika Anda sudah login kembali.")
+                        print("!"*70 + "\n")
+                        
+                        while "sso" in page.url.lower() or "login" in page.url.lower():
+                            time.sleep(3)
+                            
+                        logging.info("Sesi login terdeteksi aktif kembali! Membuka ulang halaman data...")
+                        page.goto(base_url)
+                        time.sleep(4)
+                    
+                    # Pastikan berada di tampilan List (≡)
                     try:
-                        # 1. Ambil Kode Identitas terlebih dahulu untuk mengecek apakah sudah diproses
-                        parent_card = btn.locator("xpath=ancestor::div[contains(@class, 'border') or contains(@class, 'rounded') or contains(@class, 'p-4')][1]")
-                        card_text = parent_card.inner_text()
-                        lines = [line.strip() for line in card_text.split("\n") if line.strip()]
-                        
-                        code = "-"
-                        for line in lines:
-                            if "- UB -" in line:
-                                code = line
-                                break
-                        
-                        if code != "-" and code in processed_codes:
-                            logging.info(f"-> Skip (Sudah diproses): {code}")
-                            continue
-                            
-                        # Klik tombol tiga titik (⋮)
-                        btn.click()
-                        time.sleep(0.5)
-                        
-                        # Self-healing check: pastikan menu popup muncul
-                        riwayat_menu_item = page.locator("div[role='menuitem']").filter(has_text="Riwayat Broadcast").first
+                        list_button = page.locator("button[aria-label='Daftar'], button[aria-label='List'], [data-slot=toggle-group-item]").nth(1)
+                        if list_button.count() > 0:
+                            if list_button.get_attribute("aria-checked") != "true":
+                                logging.info("Beralih ke tampilan List (≡)...")
+                                list_button.click()
+                                time.sleep(3)
+                    except Exception as e:
+                        logging.warning(f"Gagal memeriksa/mengklik tombol List: {e}")
+                    
+                    # Cari semua tombol tiga titik (⋮) di setiap baris/card data
+                    dots_buttons = page.locator("button").filter(has=page.locator("svg.tabler-icon-dots-vertical")).all()
+                    
+                    if not dots_buttons:
+                        logging.info(f"Tidak ada data (tombol tiga titik) di halaman {page_num} untuk {kab_name}. Selesai untuk wilayah ini.")
+                        break
+                    
+                    logging.info(f"Menemukan {len(dots_buttons)} baris data (tombol ⋮) di halaman {page_num} untuk {kab_name}")
+                    
+                    for idx, btn in enumerate(dots_buttons):
                         try:
-                            riwayat_menu_item.wait_for(state="visible", timeout=2000)
-                        except Exception:
-                            # Jika tidak muncul, coba klik ulang (mungkin layout bergeser sedikit saat load)
-                            logging.info("Menu pop-up tidak terdeteksi, mencoba klik ulang tombol tiga titik...")
+                            # 1. Ambil Kode Identitas
+                            parent_card = btn.locator("xpath=ancestor::div[contains(@class, 'border') or contains(@class, 'rounded') or contains(@class, 'p-4')][1]")
+                            card_text = parent_card.inner_text()
+                            lines = [line.strip() for line in card_text.split("\n") if line.strip()]
+                            
+                            code = "-"
+                            for line in lines:
+                                if "- UB -" in line:
+                                    code = line
+                                    break
+                            
+                            if code != "-" and code in processed_codes:
+                                logging.info(f"-> Skip (Sudah diproses): {code}")
+                                continue
+                                
+                            # Klik tombol tiga titik (⋮)
                             btn.click()
-                            time.sleep(1)
-                            riwayat_menu_item.wait_for(state="visible", timeout=3000)
-                        
-                        # 2. Ambil Nama Perusahaan dari card (lines dan code sudah diambil sebelumnya)
-                        company_name = "-"
-                        for i, line in enumerate(lines):
-                            if "Nama Perusahaan" in line and i + 1 < len(lines):
-                                company_name = lines[i+1]
-                                break
-                        
-                        # Jika pencarian Nama Perusahaan di atas gagal, coba ambil baris kedua (di bawah Kode Identitas)
-                        if company_name == "-" and len(lines) >= 3:
-                            company_name = lines[2] if "Nama" not in lines[2] else lines[3]
-                        
-                        # 3. Klik "Riwayat Broadcast" dari pop-up menu
-                        if riwayat_menu_item.count() > 0:
-                            riwayat_menu_item.click()
-                            time.sleep(1.5) # Tunggu dialog riwayat terbuka
+                            time.sleep(0.5)
                             
-                            # 4. Cari semua card broadcast di dalam dialog
-                            broadcast_headers = page.locator("div[role='dialog'] div.f\\:cursor-pointer").all()
+                            # Pastikan menu popup muncul
+                            riwayat_menu_item = page.locator("div[role='menuitem']").filter(has_text="Riwayat Broadcast").first
+                            try:
+                                riwayat_menu_item.wait_for(state="visible", timeout=2000)
+                            except Exception:
+                                logging.info("Menu pop-up tidak terdeteksi, mencoba klik ulang tombol tiga titik...")
+                                btn.click()
+                                time.sleep(1)
+                                riwayat_menu_item.wait_for(state="visible", timeout=3000)
                             
-                            processed_count = 0
-                            for b_card in broadcast_headers:
-                                # Ambil email dari header card
-                                email_el = b_card.locator("h4").first
-                                email = email_el.inner_text().strip() if email_el.count() > 0 else "-"
+                            # 2. Ambil Nama Perusahaan
+                            company_name = "-"
+                            for i, line in enumerate(lines):
+                                if "Nama Perusahaan" in line and i + 1 < len(lines):
+                                    company_name = lines[i+1]
+                                    break
+                            if company_name == "-" and len(lines) >= 3:
+                                company_name = lines[2] if "Nama" not in lines[2] else lines[3]
+                            
+                            # 3. Ambil Status Dokumen (Survey Status) dari halaman awal
+                            survey_status = "-"
+                            for line in lines:
+                                line_upper = line.strip().upper()
+                                if line_upper in ["DRAFT", "SUBMITTED RESPONDENT", "SUBMITTED PENGAWAS", "SUBMITTED KOSEKA", "SUBMITTED KABKOT", "SUBMITTED PROV", "APPROVED", "REJECTED"]:
+                                    survey_status = line_upper
+                                    break
+                            
+                            # 4. Klik "Riwayat Broadcast" dari pop-up menu
+                            if riwayat_menu_item.count() > 0:
+                                riwayat_menu_item.click()
+                                time.sleep(1.5)
                                 
-                                # Pastikan card ini sesuai dengan Kode Identitas target (code)
-                                card_text = b_card.inner_text()
-                                if code == "-" or code not in card_text:
-                                    continue
-                                
-                                processed_count += 1
-                                # Klik header/card untuk expand riwayat detail
-                                b_card.click()
-                                
-                                # Tunggu agar log riwayat memuat dan dirender (sehingga tidak kosong / -)
-                                first_box = page.locator("div[role='dialog'] div.f\\:mb-3.f\\:flex-1.f\\:rounded-lg.f\\:border.f\\:bg-card.f\\:p-3").first
-                                try:
-                                    # Tunggu box log pengiriman pertama muncul secara dinamis
-                                    first_box.wait_for(state="visible", timeout=4000)
-                                except Exception:
-                                    pass
-                                
-                                # Ambil semua box riwayat yang terlihat di dialog saat ini
-                                boxes = page.locator("div[role='dialog'] div.f\\:mb-3.f\\:flex-1.f\\:rounded-lg.f\\:border.f\\:bg-card.f\\:p-3").all()
-                                
-                                history_items = []
-                                for box in boxes:
-                                    status_hist_el = box.locator("div.f\\:inline-flex").first
-                                    status_hist = status_hist_el.inner_text().strip().lower() if status_hist_el.count() > 0 else "-"
+                                broadcast_headers = page.locator("div[role='dialog'] div.f\\:cursor-pointer").all()
+                                processed_count = 0
+                                for b_card in broadcast_headers:
+                                    email_el = b_card.locator("h4").first
+                                    email = email_el.inner_text().strip() if email_el.count() > 0 else "-"
                                     
-                                    time_hist_el = box.locator("span.f\\:shrink-0.f\\:text-muted-foreground.f\\:text-xs").first
-                                    time_hist = time_hist_el.inner_text().strip() if time_hist_el.count() > 0 else "-"
+                                    card_text = b_card.inner_text()
+                                    if code == "-" or code not in card_text:
+                                        continue
                                     
-                                    history_items.append((status_hist, time_hist))
+                                    processed_count += 1
+                                    b_card.click()
+                                    
+                                    first_box = page.locator("div[role='dialog'] div.f\\:mb-3.f\\:flex-1.f\\:rounded-lg.f\\:border.f\\:bg-card.f\\:p-3").first
+                                    try:
+                                        first_box.wait_for(state="visible", timeout=4000)
+                                    except Exception:
+                                        pass
+                                    
+                                    boxes = page.locator("div[role='dialog'] div.f\\:mb-3.f\\:flex-1.f\\:rounded-lg.f\\:border.f\\:bg-card.f\\:p-3").all()
+                                    history_items = []
+                                    for box in boxes:
+                                        status_hist_el = box.locator("div.f\\:inline-flex").first
+                                        status_hist = status_hist_el.inner_text().strip().lower() if status_hist_el.count() > 0 else "-"
+                                        
+                                        time_hist_el = box.locator("span.f\\:shrink-0.f\\:text-muted-foreground.f\\:text-xs").first
+                                        time_hist = time_hist_el.inner_text().strip() if time_hist_el.count() > 0 else "-"
+                                        
+                                        history_items.append((status_hist, time_hist))
+                                    
+                                    if not history_items:
+                                        writer.writerow([code, company_name, survey_status, email, "-", "-", "-", 0])
+                                        all_records.append({
+                                            "code": code,
+                                            "company_name": company_name,
+                                            "survey_status": survey_status,
+                                            "email": email,
+                                            "global_status": "-",
+                                            "status": "-",
+                                            "timestamp": "-",
+                                            "order": 0
+                                        })
+                                    else:
+                                        last_status = history_items[-1][0] if history_items else "-"
+                                        for order, (status_hist, time_hist) in enumerate(history_items):
+                                            writer.writerow([code, company_name, survey_status, email, last_status, status_hist, time_hist, order + 1])
+                                            all_records.append({
+                                                "code": code,
+                                                "company_name": company_name,
+                                                "survey_status": survey_status,
+                                                "email": email,
+                                                "global_status": last_status,
+                                                "status": status_hist,
+                                                "timestamp": time_hist,
+                                                "order": order + 1
+                                            })
+                                    
+                                    b_card.click()
+                                    time.sleep(0.4)
                                 
-                                # Tulis ke CSV & List
-                                if not history_items:
-                                    writer.writerow([code, company_name, email, "-", "-", "-", 0])
+                                if processed_count == 0:
+                                    writer.writerow([code, company_name, survey_status, "-", "-", "-", "-", 0])
                                     all_records.append({
                                         "code": code,
                                         "company_name": company_name,
-                                        "email": email,
+                                        "survey_status": survey_status,
+                                        "email": "-",
                                         "global_status": "-",
                                         "status": "-",
                                         "timestamp": "-",
                                         "order": 0
                                     })
-                                else:
-                                    last_status = history_items[-1][0] if history_items else "-"
-                                    for order, (status_hist, time_hist) in enumerate(history_items):
-                                        writer.writerow([code, company_name, email, last_status, status_hist, time_hist, order + 1])
-                                        all_records.append({
-                                            "code": code,
-                                            "company_name": company_name,
-                                            "email": email,
-                                            "global_status": last_status,
-                                            "status": status_hist,
-                                            "timestamp": time_hist,
-                                            "order": order + 1
-                                        })
-                                
-                                # Klik lagi untuk collapse
-                                b_card.click()
-                                time.sleep(0.4)
-                            
-                            if processed_count == 0:
-                                writer.writerow([code, company_name, "-", "-", "-", "-", 0])
-                                all_records.append({
-                                    "code": code,
-                                    "company_name": company_name,
-                                    "email": "-",
-                                    "global_status": "-",
-                                    "status": "-",
-                                    "timestamp": "-",
-                                    "order": 0
-                                })
-
-                            # Tutup modal/dialog riwayat dengan Escape
+                                    
+                                page.keyboard.press("Escape")
+                                time.sleep(0.8)
+                                logging.info(f"-> Berhasil: {code} | {company_name} ({processed_count} email(s) processed)")
+                            else:
+                                logging.warning(f"Menu 'Riwayat Broadcast' tidak ditemukan untuk card indeks {idx}")
+                                page.keyboard.press("Escape")
+                                time.sleep(0.5)
+                        except Exception as e:
+                            logging.error(f"Gagal memproses baris indeks {idx} di halaman {page_num}: {e}")
                             page.keyboard.press("Escape")
                             time.sleep(0.8)
-                            
-                            logging.info(f"-> Berhasil: {code} | {company_name} ({processed_count} email(s) processed)")
-                        else:
-                            logging.warning(f"Menu 'Riwayat Broadcast' tidak ditemukan untuk card indeks {idx}")
-                            page.keyboard.press("Escape")
-                            time.sleep(0.5)
-                            
-                    except Exception as e:
-                        logging.error(f"Gagal memproses baris indeks {idx} di halaman {page_num}: {e}")
-                        page.keyboard.press("Escape")
-                        time.sleep(0.8)
-                
-                # Simpan data real-time ke CSV, data.js (Dashboard), dan Excel
-                csv_file.flush()
-                save_realtime_data(all_records)
-        
-        # Simpan rekap data final
+                    
+                    csv_file.flush()
+                    save_realtime_data(all_records)
+                    
+                    # Beralih ke halaman berikutnya menggunakan tombol pagination 'Next'
+                    next_btn = page.locator("button").filter(has=page.locator("svg.tabler-icon-chevron-right")).first
+                    if next_btn.count() == 0 or not next_btn.is_enabled() or next_btn.get_attribute("disabled") is not None:
+                        logging.info(f"Selesai memproses halaman terakhir untuk {kab_name}.")
+                        break
+                    
+                    logging.info("Beralih ke halaman berikutnya...")
+                    next_btn.click()
+                    time.sleep(4)
+                    page_num += 1
+
         logging.info("Membuat rekap data final...")
         save_realtime_data(all_records)
         logging.info("Scraping selesai!")
