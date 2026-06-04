@@ -245,9 +245,45 @@
         }
 
         .stat-subtext {
-            font-size: 0.8rem;
-            color: var(--text-muted);
             margin-top: 0.5rem;
+        }
+
+        /* Stats Category Sections and Tags */
+        .stats-section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title-stats {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            opacity: 0.85;
+        }
+        
+        .card-category-tag {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            font-size: 0.6rem;
+            font-weight: 800;
+            padding: 0.15rem 0.45rem;
+            border-radius: 0.5rem;
+            background: rgba(99, 102, 241, 0.08);
+            color: var(--primary);
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            text-transform: uppercase;
+        }
+        
+        .card-category-tag.doc-tag {
+            background: rgba(139, 92, 246, 0.08);
+            color: #8B5CF6;
+            border: 1px solid rgba(139, 92, 246, 0.15);
         }
 
         /* Filter Controls */
@@ -787,27 +823,64 @@
             </div>
         </header>
 
-        <!-- Stats Cards Grid -->
-        <div class="stats-grid" id="stats-container">
-            <div class="stat-card" style="--stat-color: var(--primary);">
-                <div class="stat-label">Total Perusahaan</div>
-                <div class="stat-value" id="stat-total-companies">0</div>
-                <div class="stat-subtext">Semua record terdaftar</div>
+        <!-- Summary Stats Sections -->
+        <div class="stats-section">
+            <h3 class="section-title-stats">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                Status Pengiriman Email
+            </h3>
+            <div class="stats-grid" id="stats-container">
+                <div class="stat-card" style="--stat-color: var(--primary);">
+                    <span class="card-category-tag">Email</span>
+                    <div class="stat-label">Total Perusahaan</div>
+                    <div class="stat-value" id="stat-total-companies">0</div>
+                    <div class="stat-subtext">Semua record terdaftar</div>
+                </div>
+                <div class="stat-card" style="--stat-color: var(--color-bounced);">
+                    <span class="card-category-tag">Email</span>
+                    <div class="stat-label">Bounced Emails</div>
+                    <div class="stat-value" id="stat-bounced" style="color: var(--color-bounced);">0</div>
+                    <div class="stat-subtext">Gagal terkirim balik</div>
+                </div>
+                <div class="stat-card" style="--stat-color: var(--color-clicked);">
+                    <span class="card-category-tag">Email</span>
+                    <div class="stat-label">Link Clicked</div>
+                    <div class="stat-value" id="stat-clicked" style="color: var(--color-clicked);">0</div>
+                    <div class="stat-subtext">Responden membuka link</div>
+                </div>
+                <div class="stat-card" style="--stat-color: var(--color-opened);">
+                    <span class="card-category-tag">Email</span>
+                    <div class="stat-label">Opened Emails</div>
+                    <div class="stat-value" id="stat-opened" style="color: var(--color-opened);">0</div>
+                    <div class="stat-subtext">Dibaca oleh responden</div>
+                </div>
             </div>
-            <div class="stat-card" style="--stat-color: var(--color-bounced);">
-                <div class="stat-label">Bounced Emails</div>
-                <div class="stat-value" id="stat-bounced" style="color: var(--color-bounced);">0</div>
-                <div class="stat-subtext">Gagal terkirim balik</div>
-            </div>
-            <div class="stat-card" style="--stat-color: var(--color-clicked);">
-                <div class="stat-label">Link Clicked</div>
-                <div class="stat-value" id="stat-clicked" style="color: var(--color-clicked);">0</div>
-                <div class="stat-subtext">Responden membuka link</div>
-            </div>
-            <div class="stat-card" style="--stat-color: var(--color-opened);">
-                <div class="stat-label">Opened Emails</div>
-                <div class="stat-value" id="stat-opened" style="color: var(--color-opened);">0</div>
-                <div class="stat-subtext">Dibaca oleh responden</div>
+        </div>
+
+        <div class="stats-section" style="margin-top: -1rem;">
+            <h3 class="section-title-stats">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Status Dokumen di Web Fasih
+            </h3>
+            <div class="stats-grid" id="document-stats-container">
+                <div class="stat-card" style="--stat-color: #8B5CF6;">
+                    <span class="card-category-tag doc-tag">Dokumen</span>
+                    <div class="stat-label">Submitted Respondent</div>
+                    <div class="stat-value" id="stat-submitted-respondent" style="color: #8B5CF6;">0</div>
+                    <div class="stat-subtext">Dokumen terkirim</div>
+                </div>
+                <div class="stat-card" style="--stat-color: #3B82F6;">
+                    <span class="card-category-tag doc-tag">Dokumen</span>
+                    <div class="stat-label">Open Document</div>
+                    <div class="stat-value" id="stat-open-document" style="color: #3B82F6;">0</div>
+                    <div class="stat-subtext">Dokumen status open</div>
+                </div>
+                <div class="stat-card" style="--stat-color: #F59E0B;">
+                    <span class="card-category-tag doc-tag">Dokumen</span>
+                    <div class="stat-label">Draft Document</div>
+                    <div class="stat-value" id="stat-draft-document" style="color: #F59E0B;">0</div>
+                    <div class="stat-subtext">Dokumen masih draft</div>
+                </div>
             </div>
         </div>
 
@@ -820,7 +893,14 @@
                     </svg>
                     <input type="text" id="search-input" class="search-input" placeholder="Cari Nama Perusahaan, Kode Identitas, atau Email...">
                 </div>
-                <div class="sort-wrapper">
+                <div class="sort-wrapper" style="display: flex; gap: 0.5rem;">
+                    <select id="survey-filter-select" class="sort-select">
+                        <option value="all">Semua Status Dokumen</option>
+                        <option value="SUBMITTED RESPONDENT">SUBMITTED RESPONDENT</option>
+                        <option value="OPEN">OPEN</option>
+                        <option value="DRAFT">DRAFT</option>
+                        <option value="-">- (Tanpa Status)</option>
+                    </select>
                     <select id="sort-select" class="sort-select">
                         <option value="name-asc">Nama Perusahaan (A-Z)</option>
                         <option value="name-desc">Nama Perusahaan (Z-A)</option>
@@ -892,6 +972,7 @@
             // UI elements
             const searchInput = document.getElementById('search-input');
             const sortSelect = document.getElementById('sort-select');
+            const surveyFilterSelect = document.getElementById('survey-filter-select');
             const pills = document.querySelectorAll('.pill');
             const companyListContainer = document.getElementById('company-list');
             const paginationContainer = document.getElementById('pagination');
@@ -917,6 +998,7 @@
             let currentPage = 1;
 
             let activeFilter = 'all';
+            let activeSurveyFilter = 'all';
             let searchQuery = '';
             let activeSort = 'name-asc';
 
@@ -1029,9 +1111,17 @@
                 const queued = companies.filter(c => c.global_status.toLowerCase() === 'queued').length;
                 const nolog = companies.filter(c => c.global_status.trim() === '-').length;
 
+                const submittedRespondent = companies.filter(c => c.survey_status.toUpperCase() === 'SUBMITTED RESPONDENT').length;
+                const openDocument = companies.filter(c => c.survey_status.toUpperCase() === 'OPEN').length;
+                const draftDocument = companies.filter(c => c.survey_status.toUpperCase() === 'DRAFT').length;
+
                 statBouncedEl.textContent = bounced;
                 statClickedEl.textContent = clicked;
                 statOpenedEl.textContent = opened;
+
+                document.getElementById('stat-submitted-respondent').textContent = submittedRespondent;
+                document.getElementById('stat-open-document').textContent = openDocument;
+                document.getElementById('stat-draft-document').textContent = draftDocument;
 
                 countBounced.textContent = bounced;
                 countClicked.textContent = clicked;
@@ -1150,7 +1240,11 @@
                         activeFilter === 'all' || 
                         comp.global_status.toLowerCase() === activeFilter;
                         
-                    return matchesSearch && matchesFilter;
+                    const matchesSurveyFilter = 
+                        activeSurveyFilter === 'all' || 
+                        comp.survey_status.toUpperCase() === activeSurveyFilter.toUpperCase();
+                        
+                    return matchesSearch && matchesFilter && matchesSurveyFilter;
                 });
 
                 // Sort
@@ -1327,6 +1421,12 @@
 
             sortSelect.addEventListener('change', (e) => {
                 activeSort = e.target.value;
+                currentPage = 1; // Reset to first page
+                renderList();
+            });
+
+            surveyFilterSelect.addEventListener('change', (e) => {
+                activeSurveyFilter = e.target.value;
                 currentPage = 1; // Reset to first page
                 renderList();
             });
