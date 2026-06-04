@@ -1,0 +1,81 @@
+{
+    "success": true,
+    "message": "Successfully fetched a user.",
+    "data": {
+        "id": "0edc15ae-962f-4e91-b640-525c2ac36dbb",
+        "username": "jihanmaisaroh",
+        "fullname": "Jihan Maisaroh S.Tr.Stat.",
+        "email": "jihanmaisaroh@bps.go.id",
+        "roleRealm": [
+            "pegawai"
+        ],
+        "roleIcs": [],
+        "surveyRole": {
+            "id": "0a7230d0-fd7c-4f27-a3c1-fb449a2e268f",
+            "sequence": 4,
+            "description": "Admin Provinsi",
+            "surveyRoleGroupId": "25f8887b-012b-4b6f-bcbe-6a62ce62a390",
+            "isApproving": false,
+            "smallestAreaOrder": 1,
+            "canDrawSample": false,
+            "isPencacah": false,
+            "isOperator": false,
+            "createdAt": "2026-06-04T22:12:59.184965148",
+            "updatedAt": null,
+            "surveyId": "ecddb52e-f392-403c-a963-47391f217010",
+            "surveyRoleGroup": {
+                "id": "25f8887b-012b-4b6f-bcbe-6a62ce62a390",
+                "name": "Admin",
+                "createdAt": "2022-05-23T20:44:43.5533333",
+                "updatedAt": null
+            },
+            "canEdit": false,
+            "canChangeMode": true,
+            "adminTicket": false,
+            "canAccessTicket": false,
+            "canDeleteSample": true,
+            "canTransferSample": false,
+            "canExploreData": false,
+            "canChangeSample": false
+        },
+        "regionId": [
+            "72"
+        ],
+        "allocations": [
+            {
+                "id": "4a04dc59-e5bf-43b8-a44d-2b5874da06a9",
+                "surveyPeriodId": "37526b20-81c8-42f5-a895-6190137d7394",
+                "userId": "0edc15ae-962f-4e91-b640-525c2ac36dbb",
+                "surveyRole": {
+                    "id": "0a7230d0-fd7c-4f27-a3c1-fb449a2e268f",
+                    "sequence": 4,
+                    "description": "Admin Provinsi",
+                    "surveyRoleGroupId": "25f8887b-012b-4b6f-bcbe-6a62ce62a390",
+                    "isApproving": false,
+                    "smallestAreaOrder": 1,
+                    "canDrawSample": false,
+                    "isPencacah": false,
+                    "isOperator": false,
+                    "canEdit": false,
+                    "canChangeMode": true,
+                    "adminTicket": false,
+                    "canAccessTicket": false,
+                    "canDeleteSample": true,
+                    "canTransferSample": false,
+                    "canExploreData": false,
+                    "canChangeSample": false,
+                    "surveyId": "ecddb52e-f392-403c-a963-47391f217010"
+                },
+                "parentRegionCode": "72",
+                "active": true
+            }
+        ],
+        "userRegions": [],
+        "userResourcePermissions": [
+            {
+                "resourceMasterName": "SURVEY PERIOD",
+                "permissionName": "read"
+            }
+        ]
+    }
+}

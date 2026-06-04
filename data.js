@@ -3912,7 +3912,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208061033000500 - UB - 2",
     "company_name": "BANK SULTENG",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "kaslambunu@yahoo.co.id",
     "global_status": "bounced",
     "status": "bounced",
@@ -3922,7 +3922,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208061033000500 - UB - 2",
     "company_name": "BANK SULTENG",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "kaslambunu@yahoo.co.id",
     "global_status": "bounced",
     "status": "queued",
@@ -3972,7 +3972,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208011001000602 - UB - 1",
     "company_name": "BANK BNI PARIGI UNIT KUR",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "nigustiayutasni23@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -3982,7 +3982,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208011001000602 - UB - 1",
     "company_name": "BANK BNI PARIGI UNIT KUR",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "nigustiayutasni23@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -4012,7 +4012,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205160007000200 - UB - 1",
     "company_name": "BRI UNIT SOJOL",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "n5192@corp.bri.co.id",
     "global_status": "delivered",
     "status": "delivered",
@@ -4022,7 +4022,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205160007000200 - UB - 1",
     "company_name": "BRI UNIT SOJOL",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "n5192@corp.bri.co.id",
     "global_status": "delivered",
     "status": "queued",
@@ -4792,7 +4792,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020017000501 - UB - 2",
     "company_name": "BANK PERKREDITAN RAKYAT PALU ANUGERAH",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "paluanugerahprg@yahoo.com",
     "global_status": "bounced",
     "status": "bounced",
@@ -4802,7 +4802,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020017000501 - UB - 2",
     "company_name": "BANK PERKREDITAN RAKYAT PALU ANUGERAH",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "paluanugerahprg@yahoo.com",
     "global_status": "bounced",
     "status": "queued",
@@ -5182,7 +5182,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204071002000200 - UB - 1",
     "company_name": "bank Perekonomian Rakyat (BPR) Palu Anugerah Cabang Poso, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bprpaluanugerahcabangposo@yahoo.co.id",
     "global_status": "-",
     "status": "-",
@@ -5192,7 +5192,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205000000000000 - UB - 2",
     "company_name": "PDAM KAB DONGGALA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pdam_donggala@gmail.com",
     "global_status": "bounced",
     "status": "queued",
@@ -5202,7 +5202,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205000000000000 - UB - 2",
     "company_name": "PDAM KAB DONGGALA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pdam_donggala@gmail.com",
     "global_status": "bounced",
     "status": "bounced",
@@ -5362,7 +5362,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204050003000900 - UB - 1",
     "company_name": "BANK BRI KCP UNIT MAPANE",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "n5203@corp.bri.co.id",
     "global_status": "delivered",
     "status": "queued",
@@ -5372,7 +5372,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204050003000900 - UB - 1",
     "company_name": "BANK BRI KCP UNIT MAPANE",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "n5203@corp.bri.co.id",
     "global_status": "delivered",
     "status": "delivered",
@@ -5402,7 +5402,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204070011000302 - UB - 2",
     "company_name": "BANK BPD",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bsposo@yahoo.com",
     "global_status": "bounced",
     "status": "bounced",
@@ -5412,7 +5412,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204070011000302 - UB - 2",
     "company_name": "BANK BPD",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bsposo@yahoo.com",
     "global_status": "bounced",
     "status": "queued",
@@ -5442,7 +5442,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204071001000600 - UB - 1",
     "company_name": "BANK MANDIRI (PERSERO)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bm-poso.rcvmsg_bg@bankmandiri.co.id",
     "global_status": "delivered",
     "status": "queued",
@@ -5452,7 +5452,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204071001000600 - UB - 1",
     "company_name": "BANK MANDIRI (PERSERO)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bm-poso.rcvmsg_bg@bankmandiri.co.id",
     "global_status": "delivered",
     "status": "delivered",
@@ -5462,7 +5462,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204070012000600 - UB - 1",
     "company_name": "BANK BNI KCP POSO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ralphy.suawah@bni.co.id",
     "global_status": "delivered",
     "status": "delivered",
@@ -5472,7 +5472,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204070012000600 - UB - 1",
     "company_name": "BANK BNI KCP POSO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ralphy.suawah@bni.co.id",
     "global_status": "delivered",
     "status": "queued",
@@ -5522,7 +5522,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204072005000600 - UB - 1",
     "company_name": "BRI UNIT MAROSO SAYO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "n5204@corp.bri.co.id",
     "global_status": "delivered",
     "status": "queued",
@@ -5532,7 +5532,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204072005000600 - UB - 1",
     "company_name": "BRI UNIT MAROSO SAYO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "n5204@corp.bri.co.id",
     "global_status": "delivered",
     "status": "delivered",
@@ -5562,7 +5562,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080024000300 - UB - 1",
     "company_name": "AMINUDDIN H. ARSYAD",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "arsyadaminudin17@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -5572,7 +5572,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080024000300 - UB - 1",
     "company_name": "AMINUDDIN H. ARSYAD",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "arsyadaminudin17@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -5632,7 +5632,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204070011000100 - UB - 2",
     "company_name": "AKAR DAYA MANDIRI PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "akardayamandiri49@gmail.com",
     "global_status": "bounced",
     "status": "bounced",
@@ -5642,7 +5642,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204070011000100 - UB - 2",
     "company_name": "AKAR DAYA MANDIRI PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "akardayamandiri49@gmail.com",
     "global_status": "bounced",
     "status": "queued",
@@ -5892,7 +5892,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205090010000301 - UB - 1",
     "company_name": "BPR PALU LOKADANA UTAMA KAS LABUAN",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bprlabuan@yahoo.co.id",
     "global_status": "bounced",
     "status": "bounced",
@@ -5902,7 +5902,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205090010000301 - UB - 1",
     "company_name": "BPR PALU LOKADANA UTAMA KAS LABUAN",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bprlabuan@yahoo.co.id",
     "global_status": "bounced",
     "status": "queued",
@@ -5942,7 +5942,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206040016001300 - UB - 2",
     "company_name": "GALAXI INDO PRATAMA, CV",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "galaxiindopratamatolis@gmail.com",
     "global_status": "bounced",
     "status": "queued",
@@ -5952,7 +5952,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206040016001300 - UB - 2",
     "company_name": "GALAXI INDO PRATAMA, CV",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "galaxiindopratamatolis@gmail.com",
     "global_status": "bounced",
     "status": "bounced",
@@ -5962,7 +5962,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208011001000200 - UB - 1",
     "company_name": "SAHABAT TANI, TOKO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "sonnykandou80@gmail.com",
     "global_status": "bounced",
     "status": "bounced",
@@ -5972,7 +5972,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208011001000200 - UB - 1",
     "company_name": "SAHABAT TANI, TOKO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "sonnykandou80@gmail.com",
     "global_status": "bounced",
     "status": "queued",
@@ -7222,7 +7222,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020016000400 - UB - 1",
     "company_name": "PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "sekretariat244@bankmega.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -7232,7 +7232,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020016000400 - UB - 1",
     "company_name": "PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "sekretariat244@bankmega.com",
     "global_status": "delivered",
     "status": "queued",
@@ -7242,7 +7242,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020017000501 - UB - 1",
     "company_name": "GLORY ANUGRAH PERKASA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cv.gloryanugerahperkasa@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -7252,7 +7252,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020017000501 - UB - 1",
     "company_name": "GLORY ANUGRAH PERKASA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cv.gloryanugerahperkasa@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -7352,7 +7352,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208030015000100 - UB - 1",
     "company_name": "SPBU AMPI BABO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "spbu_ampibabo@yahoo.co.id",
     "global_status": "bounced",
     "status": "bounced",
@@ -7362,7 +7362,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208030015000100 - UB - 1",
     "company_name": "SPBU AMPI BABO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "spbu_ampibabo@yahoo.co.id",
     "global_status": "bounced",
     "status": "queued",
@@ -7402,7 +7402,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020015001200 - UB - 1",
     "company_name": "BANK MEGA TBK",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bagus.hartono@bankmega.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -7412,7 +7412,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020015001200 - UB - 1",
     "company_name": "BANK MEGA TBK",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bagus.hartono@bankmega.com",
     "global_status": "delivered",
     "status": "queued",
@@ -7422,7 +7422,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206010003001100 - UB - 1",
     "company_name": "BANK SULTENG UNIT SONI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "febrialdin.rial@yahoo.co.id",
     "global_status": "bounced",
     "status": "bounced",
@@ -7432,7 +7432,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206010003001100 - UB - 1",
     "company_name": "BANK SULTENG UNIT SONI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "febrialdin.rial@yahoo.co.id",
     "global_status": "bounced",
     "status": "queued",
@@ -7462,7 +7462,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020019000100 - UB - 1",
     "company_name": "BANK SULTENG KANCAB PEMB.PARIGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "banksulteng.parigi@yahoo.co.id",
     "global_status": "clicked",
     "status": "clicked",
@@ -7472,7 +7472,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020019000100 - UB - 1",
     "company_name": "BANK SULTENG KANCAB PEMB.PARIGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "banksulteng.parigi@yahoo.co.id",
     "global_status": "clicked",
     "status": "opened",
@@ -7482,7 +7482,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020019000100 - UB - 1",
     "company_name": "BANK SULTENG KANCAB PEMB.PARIGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "banksulteng.parigi@yahoo.co.id",
     "global_status": "clicked",
     "status": "queued",
@@ -7492,7 +7492,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020019000100 - UB - 1",
     "company_name": "BANK SULTENG KANCAB PEMB.PARIGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "banksulteng.parigi@yahoo.co.id",
     "global_status": "clicked",
     "status": "delivered",
@@ -7522,7 +7522,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208021003000500 - UB - 2",
     "company_name": "BANK PERKREDITAN RAKYAT BINARTA LUHUR",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "binartasumber@yahoo.co.id",
     "global_status": "bounced",
     "status": "bounced",
@@ -7532,7 +7532,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208021003000500 - UB - 2",
     "company_name": "BANK PERKREDITAN RAKYAT BINARTA LUHUR",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "binartasumber@yahoo.co.id",
     "global_status": "bounced",
     "status": "queued",
@@ -7572,7 +7572,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208060002000200 - UB - 1",
     "company_name": "OGOLIGO SEJAHTERA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "sejahteraptogoligo@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -7582,7 +7582,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208060002000200 - UB - 1",
     "company_name": "OGOLIGO SEJAHTERA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "sejahteraptogoligo@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -7792,7 +7792,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205101001000302 - UB - 1",
     "company_name": "INDONESIA HENGXING TRADE DEVELOPMENT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptindonesiahengxing@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -7802,7 +7802,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205101001000302 - UB - 1",
     "company_name": "INDONESIA HENGXING TRADE DEVELOPMENT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptindonesiahengxing@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -7812,7 +7812,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205130008000401 - UB - 1",
     "company_name": "PT. BANK SULTENG KAS LABEAN",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "banksulteng_kaslabean@yahoo.com",
     "global_status": "bounced",
     "status": "bounced",
@@ -7822,7 +7822,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205130008000401 - UB - 1",
     "company_name": "PT. BANK SULTENG KAS LABEAN",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "banksulteng_kaslabean@yahoo.com",
     "global_status": "bounced",
     "status": "queued",
@@ -7832,7 +7832,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205140004000900 - UB - 1",
     "company_name": "PT PERKEBUNAN KELAPA MALONAS",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "mohamatsidik00@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -7842,7 +7842,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205140004000900 - UB - 1",
     "company_name": "PT PERKEBUNAN KELAPA MALONAS",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "mohamatsidik00@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -7852,7 +7852,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206010001000300 - UB - 1",
     "company_name": "TAMAKI, CV",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "warno2004kombo@gmail.com",
     "global_status": "opened",
     "status": "opened",
@@ -7862,7 +7862,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206010001000300 - UB - 1",
     "company_name": "TAMAKI, CV",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "warno2004kombo@gmail.com",
     "global_status": "opened",
     "status": "opened",
@@ -7872,7 +7872,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206010001000300 - UB - 1",
     "company_name": "TAMAKI, CV",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "warno2004kombo@gmail.com",
     "global_status": "opened",
     "status": "delivered",
@@ -7882,7 +7882,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206010001000300 - UB - 1",
     "company_name": "TAMAKI, CV",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "warno2004kombo@gmail.com",
     "global_status": "opened",
     "status": "queued",
@@ -7942,7 +7942,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080022000700 - UB - 2",
     "company_name": "PALU INDAH TEHKNIK, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "adm.paluindahtehnik@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -7952,7 +7952,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080022000700 - UB - 2",
     "company_name": "PALU INDAH TEHKNIK, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "adm.paluindahtehnik@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -8032,7 +8032,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205081004000400 - UB - 1",
     "company_name": "LESTARI TANI TELADAN, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "oka@astra-agro.co.id",
     "global_status": "delivered",
     "status": "delivered",
@@ -8042,7 +8042,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205081004000400 - UB - 1",
     "company_name": "LESTARI TANI TELADAN, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "oka@astra-agro.co.id",
     "global_status": "delivered",
     "status": "queued",
@@ -8402,7 +8402,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080024000400 - UB - 1",
     "company_name": "ASTUN HI. ARSYAD",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "astunhiarsyad28@gmail.com",
     "global_status": "bounced",
     "status": "bounced",
@@ -8412,7 +8412,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080024000400 - UB - 1",
     "company_name": "ASTUN HI. ARSYAD",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "astunhiarsyad28@gmail.com",
     "global_status": "bounced",
     "status": "queued",
@@ -9502,7 +9502,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 6",
     "company_name": "KHANSA PERMATA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cvkhansapermata120@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9512,7 +9512,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 6",
     "company_name": "KHANSA PERMATA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cvkhansapermata120@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9522,7 +9522,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 16",
     "company_name": "PT Pertamina Patra Niaga Fuel Terminal Kolonodale",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "hse.tbbmkolonodale@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9532,7 +9532,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 16",
     "company_name": "PT Pertamina Patra Niaga Fuel Terminal Kolonodale",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "hse.tbbmkolonodale@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9542,7 +9542,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000302 - UB - 3",
     "company_name": "MIRNA KARYA KONSTRUKSINDO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "mirnakaryakonstruksindocv@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9552,7 +9552,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000302 - UB - 3",
     "company_name": "MIRNA KARYA KONSTRUKSINDO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "mirnakaryakonstruksindocv@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9582,7 +9582,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000100 - UB - 6",
     "company_name": "JOURNEY ADVENTURE INDONESIA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cv.journeyadventureindonesia@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9592,7 +9592,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000100 - UB - 6",
     "company_name": "JOURNEY ADVENTURE INDONESIA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cv.journeyadventureindonesia@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9602,7 +9602,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000100 - UB - 7",
     "company_name": "BINA BANGGAI MEMBANGUN",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.binabanggaimembangun@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9612,7 +9612,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000100 - UB - 7",
     "company_name": "BINA BANGGAI MEMBANGUN",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.binabanggaimembangun@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9622,7 +9622,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000400 - UB - 3",
     "company_name": "BERKAT ANUGRAH TAMBANG",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptberkatanugrahtambang@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9632,7 +9632,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000400 - UB - 3",
     "company_name": "BERKAT ANUGRAH TAMBANG",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptberkatanugrahtambang@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9642,7 +9642,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 13",
     "company_name": "MEDINA MINING CONSORTIUM",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "medinaminingconsortium@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9652,7 +9652,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 13",
     "company_name": "MEDINA MINING CONSORTIUM",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "medinaminingconsortium@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9662,7 +9662,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050010000500 - UB - 2",
     "company_name": "GUNUNG SAFHA MINERAL",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptgsm1977@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9672,7 +9672,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050010000500 - UB - 2",
     "company_name": "GUNUNG SAFHA MINERAL",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptgsm1977@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9682,7 +9682,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001000300 - UB - 2",
     "company_name": "SAMUDERA TOWI INDONESIA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "samuderatowiindonesia@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9692,7 +9692,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001000300 - UB - 2",
     "company_name": "SAMUDERA TOWI INDONESIA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "samuderatowiindonesia@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9702,7 +9702,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212100003000400 - UB - 1",
     "company_name": "SAWIT PERMAI PRATAMA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "permaipratamasawit@gmail.com",
     "global_status": "-",
     "status": "-",
@@ -9812,7 +9812,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001000300 - UB - 3",
     "company_name": "MINERAL SAMUDERA PRATAMA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "mineralsamuderapratama@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9822,7 +9822,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001000300 - UB - 3",
     "company_name": "MINERAL SAMUDERA PRATAMA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "mineralsamuderapratama@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9872,7 +9872,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212090007000500 - UB - 1",
     "company_name": "BUMITAMA AGRO NUSANTARA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bumitamaagronusantara01@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9882,7 +9882,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212090007000500 - UB - 1",
     "company_name": "BUMITAMA AGRO NUSANTARA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bumitamaagronusantara01@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9912,7 +9912,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000302 - UB - 1",
     "company_name": "PUTRA NUSANTARA SEJATI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pn.sejati80@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9922,7 +9922,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000302 - UB - 1",
     "company_name": "PUTRA NUSANTARA SEJATI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pn.sejati80@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9932,7 +9932,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 2",
     "company_name": "Nasi Kuning Putriadi <PUTRIADI>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptenamsembilankawasanindustri@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9942,7 +9942,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 2",
     "company_name": "Nasi Kuning Putriadi <PUTRIADI>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptenamsembilankawasanindustri@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9952,7 +9952,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 12",
     "company_name": "MULIA PACIFIC RESOURCES BHL",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "muliapacificresources@gmail.com",
     "global_status": "bounced",
     "status": "bounced",
@@ -9962,7 +9962,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 12",
     "company_name": "MULIA PACIFIC RESOURCES BHL",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "muliapacificresources@gmail.com",
     "global_status": "bounced",
     "status": "queued",
@@ -9972,7 +9972,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040010000600 - UB - 1",
     "company_name": "Warung makan online rini <Rini>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "tax.sei.site@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -9982,7 +9982,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040010000600 - UB - 1",
     "company_name": "Warung makan online rini <Rini>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "tax.sei.site@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -9992,7 +9992,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000301 - UB - 2",
     "company_name": "MANDORA MOIKO WATER",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "moikowater@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10002,7 +10002,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000301 - UB - 2",
     "company_name": "MANDORA MOIKO WATER",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "moikowater@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10012,7 +10012,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000302 - UB - 2",
     "company_name": "IZZI TRI JAYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptizzytrijaya@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10022,7 +10022,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000302 - UB - 2",
     "company_name": "IZZI TRI JAYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptizzytrijaya@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10032,7 +10032,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212100005100100 - UB - 1",
     "company_name": "CAHAYA TIGA PUTRA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cahayatigaputra9191@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10042,7 +10042,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212100005100100 - UB - 1",
     "company_name": "CAHAYA TIGA PUTRA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cahayatigaputra9191@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10052,7 +10052,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212020008100200 - UB - 4",
     "company_name": "CENTRAL CELEBES MINERALINDO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "celebescentral82@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10062,7 +10062,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212020008100200 - UB - 4",
     "company_name": "CENTRAL CELEBES MINERALINDO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "celebescentral82@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10072,7 +10072,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000302 - UB - 4",
     "company_name": "BOANERGES",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "rudolf.inosen@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10082,7 +10082,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000302 - UB - 4",
     "company_name": "BOANERGES",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "rudolf.inosen@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10112,7 +10112,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040011000400 - UB - 1",
     "company_name": "ARUNIKA BUMI MORUTA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptarunikabumimoruta@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10122,7 +10122,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040011000400 - UB - 1",
     "company_name": "ARUNIKA BUMI MORUTA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptarunikabumimoruta@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10132,7 +10132,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040002000200 - UB - 1",
     "company_name": "DONGHUANG INTELLIGENT ENGINEERING",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "andri.lee.joy@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10142,7 +10142,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040002000200 - UB - 1",
     "company_name": "DONGHUANG INTELLIGENT ENGINEERING",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "andri.lee.joy@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10152,7 +10152,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050002000400 - UB - 1",
     "company_name": "SULAWESI MINERAL UTAMA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "haryadibahtiar1991@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10162,7 +10162,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050002000400 - UB - 1",
     "company_name": "SULAWESI MINERAL UTAMA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "haryadibahtiar1991@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10172,7 +10172,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040006000200 - UB - 4",
     "company_name": "PT. SUMBER PERMATA MINERAL",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "sumberpermatamineral176@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10182,7 +10182,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040006000200 - UB - 4",
     "company_name": "PT. SUMBER PERMATA MINERAL",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "sumberpermatamineral176@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10192,7 +10192,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040009000200 - UB - 3",
     "company_name": "KEINZ VENTURA PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "keinzventura1205@gmail.com",
     "global_status": "bounced",
     "status": "bounced",
@@ -10202,7 +10202,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040009000200 - UB - 3",
     "company_name": "KEINZ VENTURA PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "keinzventura1205@gmail.com",
     "global_status": "bounced",
     "status": "queued",
@@ -10212,7 +10212,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000100 - UB - 3",
     "company_name": "PURNAMA LOGISTIK MORUT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptpurnamalogistikmorut@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10222,7 +10222,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000100 - UB - 3",
     "company_name": "PURNAMA LOGISTIK MORUT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptpurnamalogistikmorut@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10232,7 +10232,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050003000700 - UB - 6",
     "company_name": "MAMALA JAYA MINERAL",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "mamalajayamineral@gmail.com",
     "global_status": "-",
     "status": "-",
@@ -10262,7 +10262,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000301 - UB - 1",
     "company_name": "PT. RABBANI PANCA SAMUDRA (RABBANI PANCA SAMUDRA)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptrabbanipancasamudra@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10272,7 +10272,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000301 - UB - 1",
     "company_name": "PT. RABBANI PANCA SAMUDRA (RABBANI PANCA SAMUDRA)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "ptrabbanipancasamudra@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10282,7 +10282,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212020014000500 - UB - 1",
     "company_name": "BAIXING MINING INVESEMENT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "idrisnohon088@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10292,7 +10292,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212020014000500 - UB - 1",
     "company_name": "BAIXING MINING INVESEMENT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "idrisnohon088@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10302,7 +10302,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 15",
     "company_name": "BERKAH ENERGI INDO GROUP",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "berkahenergigroup@gmail.com",
     "global_status": "-",
     "status": "-",
@@ -10312,7 +10312,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040009000200 - UB - 2",
     "company_name": "GARUDA PERKASA SULAWESI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "garudaperkasasulawesi@gmail.com",
     "global_status": "-",
     "status": "-",
@@ -10322,7 +10322,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040010000201 - UB - 1",
     "company_name": "NADESICO NICKEL INDUSTRY",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "office.nadesico@gmail.com",
     "global_status": "-",
     "status": "-",
@@ -10342,7 +10342,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040010300300 - UB - 3",
     "company_name": "DJAVA BERKAH MINERAL SITE MOROWALI UTARA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "admin.hrga@dbm-mining.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10352,7 +10352,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040010300300 - UB - 3",
     "company_name": "DJAVA BERKAH MINERAL SITE MOROWALI UTARA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "admin.hrga@dbm-mining.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10362,7 +10362,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050006000100 - UB - 1",
     "company_name": "PT. TIPPULU SEJAHTERA BERSAUDARA (TIPPULU SEJAHTERA BERSAUDARA)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pttippulusejahterabersaudara@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10372,7 +10372,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050006000100 - UB - 1",
     "company_name": "PT. TIPPULU SEJAHTERA BERSAUDARA (TIPPULU SEJAHTERA BERSAUDARA)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pttippulusejahterabersaudara@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10382,7 +10382,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 11",
     "company_name": "SINAR NIKEL NOVEMBER",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.sinarnikelnovember@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10392,7 +10392,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 11",
     "company_name": "SINAR NIKEL NOVEMBER",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.sinarnikelnovember@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10402,7 +10402,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040012000502 - UB - 1",
     "company_name": "BUNGA SAWIT DESA BUNTA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bungasawitdesabunta@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10412,7 +10412,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040012000502 - UB - 1",
     "company_name": "BUNGA SAWIT DESA BUNTA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bungasawitdesabunta@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10422,7 +10422,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000302 - UB - 5",
     "company_name": "PT GRACIA TOMORI ANUGRAH (GUDANG UTAMA OBAT)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.graciatomorianugrah@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10432,7 +10432,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000302 - UB - 5",
     "company_name": "PT GRACIA TOMORI ANUGRAH (GUDANG UTAMA OBAT)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.graciatomorianugrah@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10442,7 +10442,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212070003000300 - UB - 1",
     "company_name": "MAELO MOROWALI MANDIRI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cvmaelomorowalimandiri@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10452,7 +10452,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212070003000300 - UB - 1",
     "company_name": "MAELO MOROWALI MANDIRI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cvmaelomorowalimandiri@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10462,7 +10462,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050003000700 - UB - 4",
     "company_name": "CAHAYA RIZTMAL MINERAL",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cahayariztmalmineral@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10472,7 +10472,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050003000700 - UB - 4",
     "company_name": "CAHAYA RIZTMAL MINERAL",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cahayariztmalmineral@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10482,7 +10482,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 8",
     "company_name": "SRIKANDI MINING CELEBES",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "srikandiminingcelebes@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10492,7 +10492,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 8",
     "company_name": "SRIKANDI MINING CELEBES",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "srikandiminingcelebes@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10532,7 +10532,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001200100 - UB - 2",
     "company_name": "CAHAYA MINA BAHARI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "koperasicahayaminabahari@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10542,7 +10542,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001200100 - UB - 2",
     "company_name": "CAHAYA MINA BAHARI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "koperasicahayaminabahari@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10552,7 +10552,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001200100 - UB - 6",
     "company_name": "ZIMO INVESTASI INDONESIA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "zimoinvestasiindonesia@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10562,7 +10562,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001200100 - UB - 6",
     "company_name": "ZIMO INVESTASI INDONESIA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "zimoinvestasiindonesia@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10572,7 +10572,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 1",
     "company_name": "BINTANG MINERAL SULAWESI PERKASA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bintangmineralsp@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10582,7 +10582,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 1",
     "company_name": "BINTANG MINERAL SULAWESI PERKASA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "bintangmineralsp@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10592,7 +10592,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 3",
     "company_name": "INSAN KREATIF MORUT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "insankreatifmorut@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10602,7 +10602,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 3",
     "company_name": "INSAN KREATIF MORUT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "insankreatifmorut@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10612,7 +10612,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 10",
     "company_name": "XMINE CELEBES",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "celebesxmine@gmail.com",
     "global_status": "opened",
     "status": "opened",
@@ -10622,7 +10622,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 10",
     "company_name": "XMINE CELEBES",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "celebesxmine@gmail.com",
     "global_status": "opened",
     "status": "delivered",
@@ -10632,7 +10632,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 10",
     "company_name": "XMINE CELEBES",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "celebesxmine@gmail.com",
     "global_status": "opened",
     "status": "queued",
@@ -10642,7 +10642,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 14",
     "company_name": "MOROWALI AGRO LESTARI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "morowaliagrolestari@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10652,7 +10652,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 14",
     "company_name": "MOROWALI AGRO LESTARI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "morowaliagrolestari@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10662,7 +10662,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001200100 - UB - 3",
     "company_name": "HIQMAH MERONGA UTAMA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pthiqmahmeronga23@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10672,7 +10672,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001200100 - UB - 3",
     "company_name": "HIQMAH MERONGA UTAMA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pthiqmahmeronga23@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10682,7 +10682,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001200100 - UB - 4",
     "company_name": "MOROWALI MINERAL JAYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "sulkarnainnatsirhse@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10692,7 +10692,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001200100 - UB - 4",
     "company_name": "MOROWALI MINERAL JAYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "sulkarnainnatsirhse@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10702,7 +10702,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212100007000400 - UB - 1",
     "company_name": "PANCA MUTIARA BERKAH",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pancamutiaraberkah@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10712,7 +10712,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212100007000400 - UB - 1",
     "company_name": "PANCA MUTIARA BERKAH",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pancamutiaraberkah@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10722,7 +10722,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212060008000300 - UB - 1",
     "company_name": "CAHAYA IPUL PERDANA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cvcahayaipulperdana0672@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10732,7 +10732,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212060008000300 - UB - 1",
     "company_name": "CAHAYA IPUL PERDANA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "cvcahayaipulperdana0672@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10742,7 +10742,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001000200 - UB - 1",
     "company_name": "PADANG SUMARA MINING",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.padangsumaramining@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10752,7 +10752,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001000200 - UB - 1",
     "company_name": "PADANG SUMARA MINING",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.padangsumaramining@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10762,7 +10762,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001200100 - UB - 5",
     "company_name": "FIVE STAR INDONESIA - HOFFMEN",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "lidychayadi@gmail.com",
     "global_status": "bounced",
     "status": "bounced",
@@ -10772,7 +10772,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001200100 - UB - 5",
     "company_name": "FIVE STAR INDONESIA - HOFFMEN",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "lidychayadi@gmail.com",
     "global_status": "bounced",
     "status": "queued",
@@ -10782,7 +10782,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 5",
     "company_name": "MOROWALI MINERAL MINING",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "morowalimineralmining@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10792,7 +10792,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050009000200 - UB - 5",
     "company_name": "MOROWALI MINERAL MINING",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "morowalimineralmining@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10802,7 +10802,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212060002000200 - UB - 1",
     "company_name": "LBM JAYA ENERGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "lbmjayaenergi@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -10812,7 +10812,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212060002000200 - UB - 1",
     "company_name": "LBM JAYA ENERGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "lbmjayaenergi@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10822,7 +10822,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050003000700 - UB - 7",
     "company_name": "MAJU ENERGI MORUT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.majuenergimorut@gmail.com",
     "global_status": "opened",
     "status": "opened",
@@ -10832,7 +10832,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050003000700 - UB - 7",
     "company_name": "MAJU ENERGI MORUT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.majuenergimorut@gmail.com",
     "global_status": "opened",
     "status": "delivered",
@@ -10842,7 +10842,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050003000700 - UB - 7",
     "company_name": "MAJU ENERGI MORUT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.majuenergimorut@gmail.com",
     "global_status": "opened",
     "status": "queued",
@@ -10892,7 +10892,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040010200200 - UB - 1",
     "company_name": "INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.internusamajuperkasa@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -10902,7 +10902,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040010200200 - UB - 1",
     "company_name": "INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "pt.internusamajuperkasa@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -11642,7 +11642,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208011006000200 - UB - 2",
     "company_name": "BANK MANDIRI TBK, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "mmu.parigi_mtgtsrtl@bankmandiri.co.id",
     "global_status": "delivered",
     "status": "delivered",
@@ -11652,7 +11652,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208011006000200 - UB - 2",
     "company_name": "BANK MANDIRI TBK, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "mmu.parigi_mtgtsrtl@bankmandiri.co.id",
     "global_status": "delivered",
     "status": "queued",
@@ -12862,7 +12862,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208031003000200 - UB - 1",
     "company_name": "BRI UNIT KASIMBAR",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -12872,7 +12872,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208063002000200 - UB - 1",
     "company_name": "PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Moutong",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -12882,7 +12882,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020017000302 - UB - 1",
     "company_name": "KANTOR BRI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -12912,7 +12912,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020015000100 - UB - 1",
     "company_name": "BANK DANAMON",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -12952,7 +12952,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208030009000200 - UB - 1",
     "company_name": "BRI KECAMATAN AMPIBABO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -12962,7 +12962,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205140014000300 - UB - 1",
     "company_name": "TAMAN HUTAN ASRI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -12972,7 +12972,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205161004000400 - UB - 1",
     "company_name": "KOPTAN BINA TANI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13002,7 +13002,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020013000300 - UB - 1",
     "company_name": "PT. POS INDONESIA, KANTOR POS CABANG LUAR KOTA PARIGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13212,7 +13212,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208061003000300 - UB - 1",
     "company_name": "WALUYO, UD",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13242,7 +13242,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208060028000200 - UB - 1",
     "company_name": "PK. SENANG HATI, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13262,7 +13262,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208021003000200 - UB - 1",
     "company_name": "BRI UNIT SUMBERSARI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13282,7 +13282,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208061033000500 - UB - 1",
     "company_name": "BANK SULTENG CABANG PARIGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13292,7 +13292,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208040026000200 - UB - 1",
     "company_name": "BANK SULTENG <MOH ANDRIYANSYAH >",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13302,7 +13302,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208051012000500 - UB - 2",
     "company_name": "PT BPR ALIMO DANA PRIMA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13312,7 +13312,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208061016000500 - UB - 1",
     "company_name": "PENANGKAR BENIH TIRTA RAHAYU, CV",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13322,7 +13322,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208031008000102 - UB - 1",
     "company_name": "PT BANK PERKREDITAN RAKYAT BINARTA LUHUR <I KOMANG ELI ASTRAWAN>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13332,7 +13332,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208000000000000 - UB - 1",
     "company_name": "PT Pegadaian Persero UPC KOTARAYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13342,7 +13342,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208011001000702 - UB - 1",
     "company_name": "PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Tolai",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13352,7 +13352,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208051012000500 - UB - 1",
     "company_name": "BANK MANDIRI KOTARAYA <NIZAR>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13362,7 +13362,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208064004000400 - UB - 1",
     "company_name": "BRI UNIT PERSATUAN",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13372,7 +13372,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208011001000302 - UB - 1",
     "company_name": "PT Pegadaian (Persero), UPC TOLAI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13392,7 +13392,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208060025000100 - UB - 1",
     "company_name": "PARIGI AQUAKULTURA PRIMA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13402,7 +13402,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208051003000300 - UB - 1",
     "company_name": "PT Adira Dinamika Multi Finance Tbk, Kantor Representative Office Sulawesi",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13412,7 +13412,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208051012000500 - UB - 3",
     "company_name": "BANK BRI KCP KOTARAYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13422,7 +13422,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208051015000100 - UB - 1",
     "company_name": "SPBU <FARID>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13452,7 +13452,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205041005000600 - UB - 3",
     "company_name": "KUD SARI TANI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13462,7 +13462,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205091010000300 - UB - 1",
     "company_name": "KERAJINAN TENUN BUNGA MEKAR",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13482,7 +13482,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204072005000500 - UB - 1",
     "company_name": "PT. Mitra Distribusi Mandiri Poso",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13492,7 +13492,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208010002000402 - UB - 1",
     "company_name": "BPR BINARTA LUHUR",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13502,7 +13502,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208010017000100 - UB - 1",
     "company_name": "BRI UNIT SAUSU PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13512,7 +13512,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204070012000800 - UB - 2",
     "company_name": "Bank BTN",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13532,7 +13532,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204071002000300 - UB - 3",
     "company_name": "PLN RAYON POSO PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13542,7 +13542,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204072005000500 - UB - 2",
     "company_name": "SPBU SAYO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13552,7 +13552,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204010017000300 - UB - 1",
     "company_name": "SEMESTA CIPTA KARYA UTAMA, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13582,7 +13582,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204070011000100 - UB - 4",
     "company_name": "RAMA PUTRA MANDIRI <RPMR>, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13602,7 +13602,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204070011000301 - UB - 1",
     "company_name": "ADIRA DINAMIKA MULTI FINANCE TBK",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13632,7 +13632,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205140009000900 - UB - 1",
     "company_name": "KUD BINA MUKTI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13642,7 +13642,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204020005001200 - UB - 1",
     "company_name": "MULTI KARYA, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13652,7 +13652,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204031004000400 - UB - 1",
     "company_name": "RIU MAMBA KARYA SENTOSA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13662,7 +13662,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204070007000900 - UB - 1",
     "company_name": "PT CIPTA LUCKMAN BASRY",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13672,7 +13672,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205120007000900 - UB - 1",
     "company_name": "BRI UNIT SABANG",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13682,7 +13682,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080031000100 - UB - 1",
     "company_name": "BELLONA MANDIRI, CV",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13692,7 +13692,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205131004000102 - UB - 1",
     "company_name": "KOPERMAS SEJAHTERA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13712,7 +13712,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204032006001302 - UB - 1",
     "company_name": "PLTA Poso 2",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13722,7 +13722,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204070007000600 - UB - 1",
     "company_name": "PT INDOMARCO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13732,7 +13732,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080024000200 - UB - 1",
     "company_name": "KPN KORPRI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13742,7 +13742,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080024000200 - UB - 3",
     "company_name": "UNGGAS SEJATI, CV",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13752,7 +13752,7 @@ window.EMAIL_DATA = [
   {
     "code": "7204071002000300 - UB - 2",
     "company_name": "SICEPAT, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13762,7 +13762,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080026000300 - UB - 1",
     "company_name": "Bank BRI Donggala",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -13892,7 +13892,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020016000300 - UB - 1",
     "company_name": "BPR PALU LOKADANA UTAMA, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14652,7 +14652,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020017000202 - UB - 1",
     "company_name": "PT Pegadaian (Persero), CPS Kampal Parigi",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14662,7 +14662,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020017000501 - UB - 3",
     "company_name": "BPR PALU ANUGERA CABANG PARIGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14672,7 +14672,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205161004000200 - UB - 1",
     "company_name": "PT Bank Rakyat Indonesia UNIT OGOAMAS",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14682,7 +14682,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208051007000500 - UB - 1",
     "company_name": "BRI UNIT TINOMBALA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14692,7 +14692,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208030020000300 - UB - 1",
     "company_name": "PEGADAIAN PT.",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14702,7 +14702,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208030015000200 - UB - 1",
     "company_name": "POS INDONESIA ( PERSERO) PT.",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14712,7 +14712,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208041003000400 - UB - 1",
     "company_name": "BRI UNIT MANINILI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14722,7 +14722,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208010004001600 - UB - 1",
     "company_name": "PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Sausu",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14732,7 +14732,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208051003000100 - UB - 1",
     "company_name": "BANK MANDIRI KCP KOTARAYA PARIGI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14752,7 +14752,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208040010000101 - UB - 1",
     "company_name": "PT. BRI KCP UNIT TINOMBO <FAJAR MAULANA>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14782,7 +14782,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208061003000400 - UB - 1",
     "company_name": "BANK BRI UNIT KOTANAGAYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14812,7 +14812,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208040010000101 - UB - 2",
     "company_name": "PT PEGADAIAN (PERSERO), UPC BRI UNIT TINOMBO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14842,7 +14842,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206040016002900 - UB - 1",
     "company_name": "mitra sepadan finance, pt cabang Tolitoli <SMS finance> <Arif usumayadi >",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14852,7 +14852,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080026000900 - UB - 1",
     "company_name": "BANK SULTENG CABANG PEMBANTU DONGGALA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "husni89mubarak@gmail.com",
     "global_status": "delivered",
     "status": "queued",
@@ -14862,7 +14862,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080026000900 - UB - 1",
     "company_name": "BANK SULTENG CABANG PEMBANTU DONGGALA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "husni89mubarak@gmail.com",
     "global_status": "delivered",
     "status": "delivered",
@@ -14872,7 +14872,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205101004000302 - UB - 1",
     "company_name": "KUD SUKA MAJU",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14882,7 +14882,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205130010000500 - UB - 1",
     "company_name": "KUD TOWEA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14932,7 +14932,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205041010000100 - UB - 1",
     "company_name": "KUD TANI BONMAR INDAH",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14942,7 +14942,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080022000700 - UB - 3",
     "company_name": "BERKAH BATU BANAWA PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14952,7 +14952,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205081003000201 - UB - 1",
     "company_name": "PT Bank Rakyat Indonesia UNIT WATATU",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14972,7 +14972,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205090007000201 - UB - 1",
     "company_name": "BIRINGKASI RAYA, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14982,7 +14982,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205130008000300 - UB - 1",
     "company_name": "Koperasi Petani Nelayan Mina Labean",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -14992,7 +14992,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205102002000100 - UB - 1",
     "company_name": "UVEMPOMATA, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15002,7 +15002,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205131002000300 - UB - 1",
     "company_name": "KUD BALA ETANG JAYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15012,7 +15012,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206040013000201 - UB - 1",
     "company_name": "SUMBER CIPTA MULTI NIAGA, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15022,7 +15022,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208020015000400 - UB - 1",
     "company_name": "BANK MANDIRI < KCP PARIGI >",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15032,7 +15032,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080026000900 - UB - 2",
     "company_name": "Bank Sulteng Donggala",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15052,7 +15052,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205041005000600 - UB - 2",
     "company_name": "KUD BANGUN TANI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15082,7 +15082,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080022000700 - UB - 1",
     "company_name": "KUD SUMBER MAKMUR",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15092,7 +15092,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080026000900 - UB - 3",
     "company_name": "BANK PERKREDITAN RAKYAT <BPR>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15102,7 +15102,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205090007000201 - UB - 2",
     "company_name": "ADAS SEJAHTERA, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15112,7 +15112,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205041005000600 - UB - 1",
     "company_name": "KUD RIO JAYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15122,7 +15122,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205081019000100 - UB - 1",
     "company_name": "KUD SINAR TANI",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15152,7 +15152,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205041010000100 - UB - 2",
     "company_name": "KOPTAN BUKIT RIO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15162,7 +15162,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205082005000300 - UB - 1",
     "company_name": "KUD PESAT LIMBORO",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15172,7 +15172,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205041005000600 - UB - 4",
     "company_name": "KOPTAN HARAPAN MAKMUR",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15182,7 +15182,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205000000000000 - UB - 1",
     "company_name": "ADI RAMAT CV",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15192,7 +15192,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205041002002200 - UB - 1",
     "company_name": "PT Bank Rakyat Indonesia UNIT lalundu",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15202,7 +15202,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205080024000200 - UB - 2",
     "company_name": "PT BANK NEGARA INDONESIA UNIT DONGGALA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15302,7 +15302,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205100017000500 - UB - 1",
     "company_name": "PT Bank Rakyat Indonesia UNIT TOAYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15312,7 +15312,7 @@ window.EMAIL_DATA = [
   {
     "code": "7205140004001000 - UB - 1",
     "company_name": "KUD MAPUTI JAYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15322,7 +15322,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206010003001400 - UB - 1",
     "company_name": "PT MANDALA MULTIFINANCE <AZIIZ GALIH RUMEKSO>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15432,7 +15432,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206040016005001 - UB - 3",
     "company_name": "BANK BTPN",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15442,7 +15442,7 @@ window.EMAIL_DATA = [
   {
     "code": "7206040018000100 - UB - 1",
     "company_name": "KPRI PENGAYOMAN LP",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15452,7 +15452,7 @@ window.EMAIL_DATA = [
   {
     "code": "7208031008000101 - UB - 1",
     "company_name": "BPR BINARTA LUHUR",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15622,7 +15622,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212090015000300 - UB - 1",
     "company_name": "ASDP INDONESIA FERRY PERSERO,PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15632,7 +15632,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212100001200100 - UB - 1",
     "company_name": "CIPTA AGRO SAKTI, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15712,7 +15712,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212100008000300 - UB - 1",
     "company_name": "Pertambangan Bijih Nikel ( TIGA DARA)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15732,7 +15732,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212030001000700 - UB - 2",
     "company_name": "KIRANA SINAR GEMILANG, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15742,7 +15742,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212030010100100 - UB - 1",
     "company_name": "CIPTA AGRO NUSANTARA, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15752,7 +15752,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000100 - UB - 11",
     "company_name": "Kantin TASMA <TASMA>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15762,7 +15762,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212030007000600 - UB - 1",
     "company_name": "Warung Campuran <Sudaryono> <SUDARYONO>",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15782,7 +15782,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050002000100 - UB - 1",
     "company_name": "SPBU TANJUNG PUTIA PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15792,7 +15792,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000100 - UB - 2",
     "company_name": "Jasa Pertambangan dan Penggalian( ZHOKY RAYA TANGGUH)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15802,7 +15802,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050010000500 - UB - 1",
     "company_name": "PT SKM(SUMBER KARUNIA MINERAL)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15832,7 +15832,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000400 - UB - 4",
     "company_name": "UNILEVER PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15842,7 +15842,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212100006100100 - UB - 1",
     "company_name": "GHANESA WANA UTAMA, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15872,7 +15872,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212080001000300 - UB - 1",
     "company_name": "Perdagangan Besar Logam Dan Bijih Logam ( STR MINERAL INDONESIA)",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15972,7 +15972,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050007000101 - UB - 1",
     "company_name": "PT. HEMDEV MULTI KARYA",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -15992,7 +15992,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212050008000500 - UB - 1",
     "company_name": "CIPTA HUTAMA MARANTI, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -16002,7 +16002,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212070007400100 - UB - 1",
     "company_name": "NUSA MAS GRIYA LESTARI, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -16022,7 +16022,7 @@ window.EMAIL_DATA = [
   {
     "code": "7212040006000100 - UB - 1",
     "company_name": "SUMBER PERMATA LESTARI, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -18968,6 +18968,996 @@ window.EMAIL_DATA = [
     "status": "queued",
     "timestamp": "21 Mei 2026, 09:27:56",
     "order": 5
+  },
+  {
+    "code": "-",
+    "company_name": "MATRA ARONA BANGGAI, PT",
+    "survey_status": "DRAFT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "-",
+    "company_name": "MATRA ARONA BANGGAI, PT",
+    "survey_status": "DRAFT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "-",
+    "company_name": "MATRA ARONA BANGGAI, PT",
+    "survey_status": "DRAFT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "-",
+    "company_name": "MATRA ARONA BANGGAI, PT",
+    "survey_status": "DRAFT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7207011003002200 - UB - 1",
+    "company_name": "PEGADAIAN UNIT BUOL 1, PT <FAIZAL RUSMAN HI. SIGI>",
+    "survey_status": "OPEN",
+    "email": "andikagenesis02@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "19 Mei 2026, 11:14:42",
+    "order": 1
+  },
+  {
+    "code": "7207011003002200 - UB - 1",
+    "company_name": "PEGADAIAN UNIT BUOL 1, PT <FAIZAL RUSMAN HI. SIGI>",
+    "survey_status": "OPEN",
+    "email": "andikagenesis02@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "19 Mei 2026, 11:14:38",
+    "order": 2
+  },
+  {
+    "code": "7207011003000100 - UB - 1",
+    "company_name": "BANK MANDIRI (PERSERO) TBK KCP BUOL, PT",
+    "survey_status": "OPEN",
+    "email": "nyoalvaro@gmail.com",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "19 Mei 2026, 11:14:38",
+    "order": 1
+  },
+  {
+    "code": "7207011003000100 - UB - 1",
+    "company_name": "BANK MANDIRI (PERSERO) TBK KCP BUOL, PT",
+    "survey_status": "OPEN",
+    "email": "nyoalvaro@gmail.com",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "19 Mei 2026, 11:14:34",
+    "order": 2
+  },
+  {
+    "code": "7207050006000500 - UB - 1",
+    "company_name": "PT Bank rakyat indonesia UNIT PALELEH",
+    "survey_status": "OPEN",
+    "email": "085298108146adi@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "21 Mei 2026, 08:24:51",
+    "order": 1
+  },
+  {
+    "code": "7207050006000500 - UB - 1",
+    "company_name": "PT Bank rakyat indonesia UNIT PALELEH",
+    "survey_status": "OPEN",
+    "email": "085298108146adi@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "21 Mei 2026, 08:24:48",
+    "order": 2
+  },
+  {
+    "code": "7207050006000500 - UB - 1",
+    "company_name": "PT Bank rakyat indonesia UNIT PALELEH",
+    "survey_status": "OPEN",
+    "email": "noviantopian77@gmail.com",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "21 Mei 2026, 10:08:15",
+    "order": 1
+  },
+  {
+    "code": "7207050006000500 - UB - 1",
+    "company_name": "PT Bank rakyat indonesia UNIT PALELEH",
+    "survey_status": "OPEN",
+    "email": "noviantopian77@gmail.com",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "21 Mei 2026, 10:08:11",
+    "order": 2
+  },
+  {
+    "code": "7207050006000500 - UB - 1",
+    "company_name": "PT Bank rakyat indonesia UNIT PALELEH",
+    "survey_status": "OPEN",
+    "email": "noviantopian77@gmail.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "21 Mei 2026, 10:03:16",
+    "order": 3
+  },
+  {
+    "code": "7207050006000500 - UB - 1",
+    "company_name": "PT Bank rakyat indonesia UNIT PALELEH",
+    "survey_status": "OPEN",
+    "email": "noviantopian77@gmail.com",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "21 Mei 2026, 10:00:41",
+    "order": 4
+  },
+  {
+    "code": "7207050006000500 - UB - 1",
+    "company_name": "PT Bank rakyat indonesia UNIT PALELEH",
+    "survey_status": "OPEN",
+    "email": "noviantopian77@gmail.com",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "21 Mei 2026, 10:00:38",
+    "order": 5
+  },
+  {
+    "code": "7207050006000400 - UB - 1",
+    "company_name": "PT BANK SULTENG KCP PALELEH",
+    "survey_status": "OPEN",
+    "email": "noviantopian77@gmail.com",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7207011003000200 - UB - 1",
+    "company_name": "BANK BRI UNIT BUOL",
+    "survey_status": "OPEN",
+    "email": "buolunit@gmail.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "21 Mei 2026, 18:18:40",
+    "order": 1
+  },
+  {
+    "code": "7207011003000200 - UB - 1",
+    "company_name": "BANK BRI UNIT BUOL",
+    "survey_status": "OPEN",
+    "email": "buolunit@gmail.com",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "21 Mei 2026, 08:24:52",
+    "order": 2
+  },
+  {
+    "code": "7207011003000200 - UB - 1",
+    "company_name": "BANK BRI UNIT BUOL",
+    "survey_status": "OPEN",
+    "email": "buolunit@gmail.com",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "21 Mei 2026, 08:24:51",
+    "order": 3
+  },
+  {
+    "code": "7207040002001400 - UB - 1",
+    "company_name": "BANK BRI UNIT DIAPATIH",
+    "survey_status": "OPEN",
+    "email": "yohanesyafetsulung@gmail.com",
+    "global_status": "bounced",
+    "status": "permanent_fail",
+    "timestamp": "02 Jun 2026, 00:32:29",
+    "order": 1
+  },
+  {
+    "code": "7207040002001400 - UB - 1",
+    "company_name": "BANK BRI UNIT DIAPATIH",
+    "survey_status": "OPEN",
+    "email": "yohanesyafetsulung@gmail.com",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "21 Mei 2026, 08:24:52",
+    "order": 2
+  },
+  {
+    "code": "7207040002001400 - UB - 1",
+    "company_name": "BANK BRI UNIT DIAPATIH",
+    "survey_status": "OPEN",
+    "email": "yohanesyafetsulung@gmail.com",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "21 Mei 2026, 08:24:48",
+    "order": 3
+  },
+  {
+    "code": "7207040002001400 - UB - 1",
+    "company_name": "BANK BRI UNIT DIAPATIH",
+    "survey_status": "OPEN",
+    "email": "yohanesyafetsulung@gmail.com",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7207011003000900 - UB - 1",
+    "company_name": "BRI UNIT SENTRAL BUOL",
+    "survey_status": "OPEN",
+    "email": "zhafirahilma@gmail.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "21 Mei 2026, 08:26:33",
+    "order": 1
+  },
+  {
+    "code": "7207011003000900 - UB - 1",
+    "company_name": "BRI UNIT SENTRAL BUOL",
+    "survey_status": "OPEN",
+    "email": "zhafirahilma@gmail.com",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "21 Mei 2026, 08:24:52",
+    "order": 2
+  },
+  {
+    "code": "7207011003000900 - UB - 1",
+    "company_name": "BRI UNIT SENTRAL BUOL",
+    "survey_status": "OPEN",
+    "email": "zhafirahilma@gmail.com",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "21 Mei 2026, 08:24:51",
+    "order": 3
+  },
+  {
+    "code": "7207011003000900 - UB - 1",
+    "company_name": "BRI UNIT SENTRAL BUOL",
+    "survey_status": "OPEN",
+    "email": "fharitz1205@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "21 Mei 2026, 09:38:57",
+    "order": 1
+  },
+  {
+    "code": "7207011003000900 - UB - 1",
+    "company_name": "BRI UNIT SENTRAL BUOL",
+    "survey_status": "OPEN",
+    "email": "fharitz1205@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "21 Mei 2026, 09:38:54",
+    "order": 2
+  },
+  {
+    "code": "7208060002000502 - UB - 1",
+    "company_name": "BANK PERKREDITAN RAKYAT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208011001000404 - UB - 1",
+    "company_name": "BANK TABUNGAN PENSIUNAN NASIONAL CAB.TOLAI",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208024001200100 - UB - 1",
+    "company_name": "UPTD AIR MINUM",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7208021003000300 - UB - 1",
+    "company_name": "PT Pegadaian (Persero), UPC SUMBERSARI",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050001000100 - UB - 1",
+    "company_name": "MOMEN KONSTRUKSI",
+    "survey_status": "OPEN",
+    "email": "cvmomenkonstruksi@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 04:49:15",
+    "order": 1
+  },
+  {
+    "code": "7212050001000100 - UB - 1",
+    "company_name": "MOMEN KONSTRUKSI",
+    "survey_status": "OPEN",
+    "email": "cvmomenkonstruksi@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 04:49:11",
+    "order": 2
+  },
+  {
+    "code": "7212050001000100 - UB - 2",
+    "company_name": "SETIA JAYA NICKELINDO 2",
+    "survey_status": "OPEN",
+    "email": "ptsetiajayanickelindo@gmail.com",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050002000200 - UB - 1",
+    "company_name": "BATARA GAMPING SULAWESI",
+    "survey_status": "OPEN",
+    "email": "bataragampingsulawesi@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 23:06:14",
+    "order": 1
+  },
+  {
+    "code": "7212050002000200 - UB - 1",
+    "company_name": "BATARA GAMPING SULAWESI",
+    "survey_status": "OPEN",
+    "email": "bataragampingsulawesi@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "01 Jun 2026, 23:06:13",
+    "order": 2
+  },
+  {
+    "code": "7212050003000500 - UB - 1",
+    "company_name": "PITAGORAS PARAMA ENERGI",
+    "survey_status": "OPEN",
+    "email": "pitagorasparamaenergi@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 09:05:07",
+    "order": 1
+  },
+  {
+    "code": "7212050003000500 - UB - 1",
+    "company_name": "PITAGORAS PARAMA ENERGI",
+    "survey_status": "OPEN",
+    "email": "pitagorasparamaenergi@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 09:05:02",
+    "order": 2
+  },
+  {
+    "code": "7212050003000700 - UB - 5",
+    "company_name": "HEMDEV MINERAL PERKASA",
+    "survey_status": "OPEN",
+    "email": "pthemdevmineralperkasa@gmail.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "01 Jun 2026, 23:45:46",
+    "order": 1
+  },
+  {
+    "code": "7212050003000700 - UB - 5",
+    "company_name": "HEMDEV MINERAL PERKASA",
+    "survey_status": "OPEN",
+    "email": "pthemdevmineralperkasa@gmail.com",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "01 Jun 2026, 23:44:43",
+    "order": 2
+  },
+  {
+    "code": "7212050003000700 - UB - 5",
+    "company_name": "HEMDEV MINERAL PERKASA",
+    "survey_status": "OPEN",
+    "email": "pthemdevmineralperkasa@gmail.com",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 23:44:42",
+    "order": 3
+  },
+  {
+    "code": "7212100005000600 - UB - 1",
+    "company_name": "INTI MINERAL PERSADA",
+    "survey_status": "OPEN",
+    "email": "cvintimineralpersada@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 05:46:17",
+    "order": 1
+  },
+  {
+    "code": "7212100005000600 - UB - 1",
+    "company_name": "INTI MINERAL PERSADA",
+    "survey_status": "OPEN",
+    "email": "cvintimineralpersada@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 05:46:13",
+    "order": 2
+  },
+  {
+    "code": "7212050008000400 - UB - 1",
+    "company_name": "CIPTA GRAHA PADOE",
+    "survey_status": "OPEN",
+    "email": "ciptagraha99@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 00:39:33",
+    "order": 1
+  },
+  {
+    "code": "7212050008000400 - UB - 1",
+    "company_name": "CIPTA GRAHA PADOE",
+    "survey_status": "OPEN",
+    "email": "ciptagraha99@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 00:39:33",
+    "order": 2
+  },
+  {
+    "code": "7212050008000100 - UB - 4",
+    "company_name": "JAYA ENVIRO",
+    "survey_status": "OPEN",
+    "email": "jayaenviro@gmail.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "02 Jun 2026, 07:09:55",
+    "order": 1
+  },
+  {
+    "code": "7212050008000100 - UB - 4",
+    "company_name": "JAYA ENVIRO",
+    "survey_status": "OPEN",
+    "email": "jayaenviro@gmail.com",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 00:41:32",
+    "order": 2
+  },
+  {
+    "code": "7212050008000100 - UB - 4",
+    "company_name": "JAYA ENVIRO",
+    "survey_status": "OPEN",
+    "email": "jayaenviro@gmail.com",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 00:41:31",
+    "order": 3
+  },
+  {
+    "code": "7212050005000500 - UB - 1",
+    "company_name": "INDONESIA HUAFENG INVESTMENT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050009000200 - UB - 7",
+    "company_name": "ANUGERAH NUSANTARA GROUP",
+    "survey_status": "OPEN",
+    "email": "anugerahnusantaragroup@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 01:44:56",
+    "order": 1
+  },
+  {
+    "code": "7212050009000200 - UB - 7",
+    "company_name": "ANUGERAH NUSANTARA GROUP",
+    "survey_status": "OPEN",
+    "email": "anugerahnusantaragroup@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 01:44:52",
+    "order": 2
+  },
+  {
+    "code": "7212050009000200 - UB - 9",
+    "company_name": "MOROWALI MINERAL SEJAHTERA",
+    "survey_status": "OPEN",
+    "email": "morowalimineralsejahtera77@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 07:04:27",
+    "order": 1
+  },
+  {
+    "code": "7212050009000200 - UB - 9",
+    "company_name": "MOROWALI MINERAL SEJAHTERA",
+    "survey_status": "OPEN",
+    "email": "morowalimineralsejahtera77@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 07:04:27",
+    "order": 2
+  },
+  {
+    "code": "7212050008000100 - UB - 9",
+    "company_name": "AVIZHA MOROWALI MINING",
+    "survey_status": "OPEN",
+    "email": "avizhamorowalimining@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 04:49:06",
+    "order": 1
+  },
+  {
+    "code": "7212050008000100 - UB - 9",
+    "company_name": "AVIZHA MOROWALI MINING",
+    "survey_status": "OPEN",
+    "email": "avizhamorowalimining@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 04:49:03",
+    "order": 2
+  },
+  {
+    "code": "7212050008000200 - UB - 1",
+    "company_name": "TELKOM PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050002000100 - UB - 2",
+    "company_name": "KARYA BUWANA MANDIRI, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212040010300300 - UB - 1",
+    "company_name": "MULTI MINERAL INDUSTRI",
+    "survey_status": "OPEN",
+    "email": "multimineralindustri@gmail.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "03 Jun 2026, 06:07:01",
+    "order": 1
+  },
+  {
+    "code": "7212040010300300 - UB - 1",
+    "company_name": "MULTI MINERAL INDUSTRI",
+    "survey_status": "OPEN",
+    "email": "multimineralindustri@gmail.com",
+    "global_status": "opened",
+    "status": "opened",
+    "timestamp": "02 Jun 2026, 06:21:04",
+    "order": 2
+  },
+  {
+    "code": "7212040010300300 - UB - 1",
+    "company_name": "MULTI MINERAL INDUSTRI",
+    "survey_status": "OPEN",
+    "email": "multimineralindustri@gmail.com",
+    "global_status": "opened",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 01:12:48",
+    "order": 3
+  },
+  {
+    "code": "7212040010300300 - UB - 1",
+    "company_name": "MULTI MINERAL INDUSTRI",
+    "survey_status": "OPEN",
+    "email": "multimineralindustri@gmail.com",
+    "global_status": "opened",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 01:12:48",
+    "order": 4
+  },
+  {
+    "code": "7212040012000501 - UB - 1",
+    "company_name": "KANTOR CABANG PT. RAJAWALI INDOLAND INDONESIA",
+    "survey_status": "OPEN",
+    "email": "rajawalicabang7@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 05:05:33",
+    "order": 1
+  },
+  {
+    "code": "7212040012000501 - UB - 1",
+    "company_name": "KANTOR CABANG PT. RAJAWALI INDOLAND INDONESIA",
+    "survey_status": "OPEN",
+    "email": "rajawalicabang7@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 05:05:29",
+    "order": 2
+  },
+  {
+    "code": "7212020003000200 - UB - 1",
+    "company_name": "BATAM SULAWESI MANDIRI",
+    "survey_status": "OPEN",
+    "email": "batamsulawesimandiri@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 06:26:36",
+    "order": 1
+  },
+  {
+    "code": "7212020003000200 - UB - 1",
+    "company_name": "BATAM SULAWESI MANDIRI",
+    "survey_status": "OPEN",
+    "email": "batamsulawesimandiri@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 06:26:33",
+    "order": 2
+  },
+  {
+    "code": "7212020008001100 - UB - 2",
+    "company_name": "ERA GOLDEN ENERGY",
+    "survey_status": "OPEN",
+    "email": "eragoldenenergy@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 08:46:22",
+    "order": 1
+  },
+  {
+    "code": "7212020008001100 - UB - 2",
+    "company_name": "ERA GOLDEN ENERGY",
+    "survey_status": "OPEN",
+    "email": "eragoldenenergy@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 08:46:21",
+    "order": 2
+  },
+  {
+    "code": "7212020009000600 - UB - 1",
+    "company_name": "MULIA ENERGI MORUT",
+    "survey_status": "OPEN",
+    "email": "muliaenergimorut@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 01:14:24",
+    "order": 1
+  },
+  {
+    "code": "7212020009000600 - UB - 1",
+    "company_name": "MULIA ENERGI MORUT",
+    "survey_status": "OPEN",
+    "email": "muliaenergimorut@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 01:14:20",
+    "order": 2
+  },
+  {
+    "code": "7212010007000200 - UB - 2",
+    "company_name": "BANK RAKYAT INDONESIA PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212040003000100 - UB - 1",
+    "company_name": "ASIAMAX MINING INDONESIA PT",
+    "survey_status": "OPEN",
+    "email": "pt.asiamax@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 08:19:55",
+    "order": 1
+  },
+  {
+    "code": "7212040003000100 - UB - 1",
+    "company_name": "ASIAMAX MINING INDONESIA PT",
+    "survey_status": "OPEN",
+    "email": "pt.asiamax@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 08:19:52",
+    "order": 2
+  },
+  {
+    "code": "7212040010000102 - UB - 2",
+    "company_name": "KIRANA MAJU ABADI",
+    "survey_status": "OPEN",
+    "email": "kiranamajubersama@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 02:00:47",
+    "order": 1
+  },
+  {
+    "code": "7212040010000102 - UB - 2",
+    "company_name": "KIRANA MAJU ABADI",
+    "survey_status": "OPEN",
+    "email": "kiranamajubersama@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 02:00:44",
+    "order": 2
+  },
+  {
+    "code": "7212050003000700 - UB - 2",
+    "company_name": "MOROWALI MINERAL SEJAHTERA UTAMA",
+    "survey_status": "OPEN",
+    "email": "pt.mmsutama@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 10:43:09",
+    "order": 1
+  },
+  {
+    "code": "7212050003000700 - UB - 2",
+    "company_name": "MOROWALI MINERAL SEJAHTERA UTAMA",
+    "survey_status": "OPEN",
+    "email": "pt.mmsutama@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 10:43:06",
+    "order": 2
+  },
+  {
+    "code": "7212040010300300 - UB - 2",
+    "company_name": "BUKIT MAKMUR ISTINDO NIKELTAMA SITE MOROWALI UTARA",
+    "survey_status": "OPEN",
+    "email": "bumanik@bumanik.co.id",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 03:20:44",
+    "order": 1
+  },
+  {
+    "code": "7212040010300300 - UB - 2",
+    "company_name": "BUKIT MAKMUR ISTINDO NIKELTAMA SITE MOROWALI UTARA",
+    "survey_status": "OPEN",
+    "email": "bumanik@bumanik.co.id",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 03:19:23",
+    "order": 2
+  },
+  {
+    "code": "7212040011000400 - UB - 2",
+    "company_name": "BANK MANDIRI TBK, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050003000500 - UB - 2",
+    "company_name": "SULAWESI INTAN MINING",
+    "survey_status": "OPEN",
+    "email": "ptsulawesiintanm@gmail.com",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212050008000100 - UB - 5",
+    "company_name": "BUMI MINERAL INDONESIA",
+    "survey_status": "OPEN",
+    "email": "cvbmineralindonesia@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 07:51:45",
+    "order": 1
+  },
+  {
+    "code": "7212050008000100 - UB - 5",
+    "company_name": "BUMI MINERAL INDONESIA",
+    "survey_status": "OPEN",
+    "email": "cvbmineralindonesia@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 07:50:16",
+    "order": 2
+  },
+  {
+    "code": "7212040011000300 - UB - 1",
+    "company_name": "LAROYALE RESIDENCE MORUT",
+    "survey_status": "OPEN",
+    "email": "ptlaroyaleresidencemorut@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "01 Jun 2026, 22:51:32",
+    "order": 1
+  },
+  {
+    "code": "7212040011000300 - UB - 1",
+    "company_name": "LAROYALE RESIDENCE MORUT",
+    "survey_status": "OPEN",
+    "email": "ptlaroyaleresidencemorut@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "01 Jun 2026, 22:51:28",
+    "order": 2
+  },
+  {
+    "code": "7212010007000200 - UB - 1",
+    "company_name": "SAWIT TOA SIOKO",
+    "survey_status": "OPEN",
+    "email": "konsumensawittoasioko@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 03:11:02",
+    "order": 1
+  },
+  {
+    "code": "7212010007000200 - UB - 1",
+    "company_name": "SAWIT TOA SIOKO",
+    "survey_status": "OPEN",
+    "email": "konsumensawittoasioko@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 03:10:58",
+    "order": 2
+  },
+  {
+    "code": "7212050008000100 - UB - 1",
+    "company_name": "PT. ZHUFU INTI TRACK CONSTRUKCTION (ZHUFU INTI TRACK CONSTRUCTION)",
+    "survey_status": "OPEN",
+    "email": "trackinti99@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 08:33:00",
+    "order": 1
+  },
+  {
+    "code": "7212050008000100 - UB - 1",
+    "company_name": "PT. ZHUFU INTI TRACK CONSTRUKCTION (ZHUFU INTI TRACK CONSTRUCTION)",
+    "survey_status": "OPEN",
+    "email": "trackinti99@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 08:32:56",
+    "order": 2
+  },
+  {
+    "code": "7212040001000300 - UB - 1",
+    "company_name": "MITRA JARINGAN PERKASA",
+    "survey_status": "OPEN",
+    "email": "ptmjperkasa@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 02:25:44",
+    "order": 1
+  },
+  {
+    "code": "7212040001000300 - UB - 1",
+    "company_name": "MITRA JARINGAN PERKASA",
+    "survey_status": "OPEN",
+    "email": "ptmjperkasa@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 02:25:41",
+    "order": 2
+  },
+  {
+    "code": "7212030004100100 - UB - 1",
+    "company_name": "KIRANA SINAR GEMILANG SITE",
+    "survey_status": "OPEN",
+    "email": "crisantamikha@bintangtimurplantation.com",
+    "global_status": "queued",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 07:31:34",
+    "order": 1
+  },
+  {
+    "code": "7212040010000102 - UB - 1",
+    "company_name": "BUMI CELEBES PERMAI",
+    "survey_status": "OPEN",
+    "email": "bumicelebespermai@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 06:36:30",
+    "order": 1
+  },
+  {
+    "code": "7212040010000102 - UB - 1",
+    "company_name": "BUMI CELEBES PERMAI",
+    "survey_status": "OPEN",
+    "email": "bumicelebespermai@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 06:36:29",
+    "order": 2
+  },
+  {
+    "code": "7212020008001100 - UB - 5",
+    "company_name": "BANK SULTENG, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7212040011000102 - UB - 1",
+    "company_name": "BERKAH JAYA MINERAL",
+    "survey_status": "OPEN",
+    "email": "berkahjayamineral99@gmail.com",
+    "global_status": "delivered",
+    "status": "delivered",
+    "timestamp": "02 Jun 2026, 01:22:45",
+    "order": 1
+  },
+  {
+    "code": "7212040011000102 - UB - 1",
+    "company_name": "BERKAH JAYA MINERAL",
+    "survey_status": "OPEN",
+    "email": "berkahjayamineral99@gmail.com",
+    "global_status": "delivered",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 01:22:44",
+    "order": 2
+  },
+  {
+    "code": "7212040011100100 - UB - 1",
+    "company_name": "SINERGI BINTANG UTARA",
+    "survey_status": "OPEN",
+    "email": "pt.sinergibintangutara@yahoo.com",
+    "global_status": "bounced",
+    "status": "bounced",
+    "timestamp": "02 Jun 2026, 07:45:53",
+    "order": 1
+  },
+  {
+    "code": "7212040011100100 - UB - 1",
+    "company_name": "SINERGI BINTANG UTARA",
+    "survey_status": "OPEN",
+    "email": "pt.sinergibintangutara@yahoo.com",
+    "global_status": "bounced",
+    "status": "queued",
+    "timestamp": "02 Jun 2026, 07:44:51",
+    "order": 2
   }
 ];
-window.LAST_UPDATED = '04 Jun 2026, 14:09:37';
+window.LAST_UPDATED = '04 Jun 2026, 23:57:10';

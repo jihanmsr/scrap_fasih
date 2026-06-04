@@ -3,6 +3,8 @@ import json
 import csv
 import time
 import logging
+import subprocess
+import socket
 import pandas as pd
 from playwright.sync_api import sync_playwright
 from dotenv import load_dotenv
@@ -17,11 +19,11 @@ SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
 supabase: Client = None
 if SUPABASE_URL and SUPABASE_KEY and "MASUKKAN" not in SUPABASE_URL and "http" in SUPABASE_URL:
-    try:
-        supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
-        logging.info("Koneksi Supabase berhasil diinisialisasi.")
-    except Exception as e:
-        logging.error(f"Gagal menginisialisasi Supabase: {e}")
+	try:
+		supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+		logging.info("Koneksi Supabase berhasil diinisialisasi.")
+	except Exception as e:
+		logging.error(f"Gagal menginisialisasi Supabase: {e}")
 
 USER_DATA_DIR = "playwright_chrome_profile"
 OUTPUT_CSV = "all_email_history.csv"
@@ -29,140 +31,210 @@ OUTPUT_BOUNCED_EXCEL = "bounced_emails.xlsx"
 OUTPUT_JS = "data.js"
 
 def save_csv_data(all_records):
-    try:
-        with open(OUTPUT_CSV, mode="w", newline="", encoding="utf-8") as csv_file:
-            writer = csv.writer(csv_file)
-            writer.writerow(["Kode Identitas", "Nama Perusahaan", "Status Dokumen", "Email Tujuan", "Status terakhir", "Status History", "Timestamp History", "Urutan History"])
-            for r in all_records:
-                writer.writerow([
-                    r.get("code", "-"),
-                    r.get("company_name", "-"),
-                    r.get("survey_status", "-"),
-                    r.get("email", "-"),
-                    r.get("global_status", "-"),
-                    r.get("status", "-"),
-                    r.get("timestamp", "-"),
-                    r.get("order", 0)
-                ])
-    except Exception as e:
-        logging.error(f"Gagal menyimpan CSV: {e}")
+	try:
+		with open(OUTPUT_CSV, mode="w", newline="", encoding="utf-8") as csv_file:
+			writer = csv.writer(csv_file)
+			writer.writerow(["Kode Identitas", "Nama Perusahaan", "Status Dokumen", "Email Tujuan", "Status terakhir", "Status History", "Timestamp History", "Urutan History"])
+			for r in all_records:
+				writer.writerow([
+					r.get("code", "-"),
+					r.get("company_name", "-"),
+					r.get("survey_status", "-"),
+					r.get("email", "-"),
+					r.get("global_status", "-"),
+					r.get("status", "-"),
+					r.get("timestamp", "-"),
+					r.get("order", 0)
+				])
+	except Exception as e:
+		logging.error(f"Gagal menyimpan CSV: {e}")
 
 def save_realtime_data(all_records):
-    try:
-        df = pd.DataFrame(all_records)
-        if not df.empty:
-            # Simpan data.js untuk dashboard
-            import datetime
-            now_str = datetime.datetime.now().strftime("%d %b %Y, %H:%M:%S")
-            js_data = df.to_dict(orient="records")
-            with open(OUTPUT_JS, "w", encoding="utf-8") as js_file:
-                js_file.write(f"window.EMAIL_DATA = {json.dumps(js_data, ensure_ascii=False, indent=2)};\n")
-                js_file.write(f"window.LAST_UPDATED = '{now_str}';\n")
-            
-            # Rekap Excel Bounced
-            bounced_emails = df[df['status'].str.lower() == 'bounced']['email'].unique()
-            df_bounced = df[df['email'].isin(bounced_emails)]
-            df_bounced.to_excel(OUTPUT_BOUNCED_EXCEL, index=False)
+	try:
+		df = pd.DataFrame(all_records)
+		if not df.empty:
+			# Simpan data.js untuk dashboard
+			import datetime
+			now_str = datetime.datetime.now().strftime("%d %b %Y, %H:%M:%S")
+			js_data = df.to_dict(orient="records")
+			with open(OUTPUT_JS, "w", encoding="utf-8") as js_file:
+				js_file.write(f"window.EMAIL_DATA = {json.dumps(js_data, ensure_ascii=False, indent=2)};\n")
+				js_file.write(f"window.LAST_UPDATED = '{now_str}';\n")
+			
+			# Rekap Excel Bounced
+			bounced_emails = df[df['status'].str.lower() == 'bounced']['email'].unique()
+			df_bounced = df[df['email'].isin(bounced_emails)]
+			df_bounced.to_excel(OUTPUT_BOUNCED_EXCEL, index=False)
 
-            # Simpan CSV hasil pembaruan
-            save_csv_data(all_records)
+			# Simpan CSV hasil pembaruan
+			save_csv_data(all_records)
 
-            # Kirim data ke Supabase jika terkonfigurasi
-            if supabase:
-                logging.info("Menyinkronkan data ke Supabase...")
-                # Format data agar sesuai dengan kolom tabel Supabase
-                available_cols = set()
-                try:
-                    sample_res = supabase.table("email_logs").select("*").limit(1).execute()
-                    if sample_res.data:
-                        available_cols = set(sample_res.data[0].keys())
-                    else:
-                        available_cols = {"code", "company_name", "email", "global_status", "status", "timestamp", "order"}
-                except Exception as e:
-                    logging.warning(f"Gagal mendeteksi kolom Supabase: {e}")
-                    available_cols = {"code", "company_name", "email", "global_status", "status", "timestamp", "order"}
+			# Kirim data ke Supabase jika terkonfigurasi
+			if supabase:
+				logging.info("Menyinkronkan data ke Supabase...")
+				# Format data agar sesuai dengan kolom tabel Supabase
+				available_cols = set()
+				try:
+					sample_res = supabase.table("email_logs").select("*").limit(1).execute()
+					if sample_res.data:
+						available_cols = set(sample_res.data[0].keys())
+					else:
+						available_cols = {"code", "company_name", "email", "global_status", "status", "timestamp", "order"}
+				except Exception as e:
+					logging.warning(f"Gagal mendeteksi kolom Supabase: {e}")
+					available_cols = {"code", "company_name", "email", "global_status", "status", "timestamp", "order"}
 
-                db_records = []
-                for r in js_data:
-                    rec = {
-                        "code": str(r.get("code", "-")),
-                        "company_name": str(r.get("company_name", "-")),
-                        "email": str(r.get("email", "-")),
-                        "global_status": str(r.get("global_status", "-")),
-                        "status": str(r.get("status", "-")),
-                        "timestamp": str(r.get("timestamp", "-")),
-                        "order": int(r.get("order", 0))
-                    }
-                    if "survey_status" in available_cols:
-                        rec["survey_status"] = str(r.get("survey_status", "-"))
-                    db_records.append(rec)
-                
-                # Kosongkan tabel lama lalu isi dengan data terbaru (karena data history berurutan)
-                supabase.table("email_logs").delete().neq("code", "FORCE_DELETE_ALL_XYZ").execute()
-                supabase.table("email_logs").insert(db_records).execute()
-                logging.info(f"Sinkronisasi Supabase berhasil! Mengunggah {len(db_records)} records.")
-    except Exception as e:
-        logging.error(f"Gagal menulis data/sinkronisasi real-time: {e}")
+				db_records = []
+				for r in js_data:
+					rec = {
+						"code": str(r.get("code", "-")),
+						"company_name": str(r.get("company_name", "-")),
+						"email": str(r.get("email", "-")),
+						"global_status": str(r.get("global_status", "-")),
+						"status": str(r.get("status", "-")),
+						"timestamp": str(r.get("timestamp", "-")),
+						"order": int(r.get("order", 0))
+					}
+					if "survey_status" in available_cols:
+						rec["survey_status"] = str(r.get("survey_status", "-"))
+					db_records.append(rec)
+				
+				# Kosongkan tabel lama lalu isi dengan data terbaru (karena data history berurutan)
+				supabase.table("email_logs").delete().neq("code", "FORCE_DELETE_ALL_XYZ").execute()
+				supabase.table("email_logs").insert(db_records).execute()
+				logging.info(f"Sinkronisasi Supabase berhasil! Mengunggah {len(db_records)} records.")
+	except Exception as e:
+		logging.error(f"Gagal menulis data/sinkronisasi real-time: {e}")
 
-def get_authenticated_context(p, headless=False):
-    logging.info("Membuka browser dengan profil Chrome lokal...")
-    context = p.chromium.launch_persistent_context(
-        user_data_dir=USER_DATA_DIR,
-        headless=headless,
-        viewport={"width": 1280, "height": 800}
-    )
-    page = context.pages[0] if context.pages else context.new_page()
-    
-    target_data_url = "https://fasih-sm.bps.go.id/app/surveys/ecddb52e-f392-403c-a963-47391f217010/37526b20-81c8-42f5-a895-6190137d7394/data"
-    
-    logging.info(f"Mencoba membuka halaman target langsung: {target_data_url}")
-    try:
-        page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
-    except Exception as e:
-        logging.warning(f"Navigasi awal ke target langsung lambat/timeout: {e}")
-    time.sleep(3)
-    
-    # Deteksi jika dialihkan ke halaman login SSO BPS
-    current_url = page.url
-    if "sso" in current_url.lower() or "login" in current_url.lower() or "fasih-sm.bps.go.id" not in current_url:
-        print("\n" + "="*70)
-        print("Sesi belum aktif atau memerlukan login SSO BPS.")
-        print("SILAKAN LOGIN SSO DI BROWSER CHROMIUM YANG TERBUKA.")
-        print("Setelah login berhasil, script akan otomatis mendeteksi dan navigasi.")
-        print("Atau, jika sudah masuk, Anda bisa menekan ENTER di terminal ini.")
-        print("="*70 + "\n")
-        
-        # Deteksi otomatis login, atau tunggu ENTER
-        import select
-        import sys
-        
-        while True:
-            if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
-                sys.stdin.readline() # consume input
-                logging.info("Konfirmasi manual diterima via ENTER.")
-                break
-                
-            try:
-                current_url = page.url
-                if "fasih-sm.bps.go.id" in current_url and "sso" not in current_url.lower() and "login" not in current_url.lower():
-                    logging.info("Login terdeteksi secara otomatis!")
-                    break
-            except Exception:
-                pass
-                
-            logging.info("Menunggu login SSO di browser (atau tekan ENTER jika sudah login)...")
-            time.sleep(3)
-            
-        logging.info(f"Membuka ulang halaman target: {target_data_url}")
-        try:
-            page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
-        except Exception as e:
-            logging.warning(f"Timeout saat membuka halaman target: {e}")
-        time.sleep(5)
-    else:
-        logging.info("Sesi login terdeteksi aktif. Melanjutkan langsung...")
-    
-    return context, page
+def check_port_open(port=9222):
+	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+		return s.connect_ex(('localhost', port)) == 0
+
+def launch_chrome_if_needed():
+	port = 9222
+	if check_port_open(port):
+		logging.info("Chrome remote debugging port 9222 sudah aktif. Menggunakan instansi yang ada.")
+		return
+	
+	logging.info("Chrome remote debugging port 9222 tidak aktif. Mencoba meluncurkan browser...")
+	chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
+	
+	# Hapus lock file jika ada agar Chrome bisa berjalan lancar
+	lock_file = os.path.join(USER_DATA_DIR, "SingletonLock")
+	if os.path.exists(lock_file):
+		try:
+			os.remove(lock_file)
+			logging.info("File SingletonLock berhasil dihapus untuk mencegah error lock profile.")
+		except Exception as e:
+			logging.warning(f"Gagal menghapus SingletonLock: {e}")
+	
+	abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
+	os.makedirs(abs_user_data_dir, exist_ok=True)
+	
+	cmd = [
+		chrome_path,
+		f"--remote-debugging-port={port}",
+		f"--user-data-dir={abs_user_data_dir}",
+		"--no-first-run",
+		"--no-default-browser-check"
+	]
+	
+	# Launch Chrome in detached mode
+	subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+	
+	# Tunggu sampai port siap
+	for _ in range(15):
+		time.sleep(1)
+		if check_port_open(port):
+			logging.info("Browser Chrome berhasil diluncurkan dan siap di port 9222.")
+			return
+	logging.error("Gagal mendeteksi port 9222 setelah meluncurkan Chrome.")
+
+def get_authenticated_context(p):
+	launch_chrome_if_needed()
+	
+	logging.info("Menyambung ke browser via CDP di port 9222...")
+	browser = p.chromium.connect_over_cdp("http://localhost:9222")
+	context = browser.contexts[0]
+	
+	target_data_url = "https://fasih-sm.bps.go.id/app/surveys/ecddb52e-f392-403c-a963-47391f217010/37526b20-81c8-42f5-a895-6190137d7394/data"
+	
+	# Cari tab aktif yang sudah membuka fasih-sm
+	page = None
+	for p_page in context.pages:
+		if "fasih-sm.bps.go.id" in p_page.url:
+			page = p_page
+			logging.info(f"Menemukan tab aktif dengan URL target: {page.url}")
+			break
+			
+	if not page:
+		logging.info("Tidak menemukan tab aktif. Membuat tab baru...")
+		page = context.new_page()
+		logging.info(f"Mencoba membuka halaman target langsung: {target_data_url}")
+		try:
+			page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
+		except Exception as e:
+			logging.warning(f"Navigasi awal ke target langsung lambat/timeout: {e}")
+		time.sleep(3)
+	
+	# Memantau redirect SSO selama beberapa detik pertama
+	logging.info("Memantau status login dan redirect...")
+	for _ in range(8):
+		current_url = page.url
+		if "sso" in current_url.lower() or "login" in current_url.lower() or "fasih-sm.bps.go.id" not in current_url:
+			break
+		time.sleep(1)
+	
+	current_url = page.url
+	if "sso" in current_url.lower() or "login" in current_url.lower() or "fasih-sm.bps.go.id" not in current_url:
+		print("\n" + "="*70)
+		print("Sesi belum aktif atau memerlukan login SSO BPS.")
+		print("SILAKAN LOGIN SSO DI BROWSER CHROMIUM YANG TERBUKA.")
+		print("Setelah login berhasil, script akan otomatis mendeteksi dan navigasi.")
+		print("Atau, jika sudah masuk, Anda bisa menekan ENTER di terminal ini.")
+		print("="*70 + "\n")
+		
+		# Deteksi otomatis login, atau tunggu ENTER
+		import select
+		import sys
+		
+		while True:
+			if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
+				sys.stdin.readline() # consume input
+				logging.info("Konfirmasi manual diterima via ENTER.")
+				break
+				
+			try:
+				current_url = page.url
+				if "fasih-sm.bps.go.id" in current_url and "sso" not in current_url.lower() and "login" not in current_url.lower():
+					logging.info("Login terdeteksi secara otomatis!")
+					break
+			except Exception:
+				pass
+				
+			logging.info("Menunggu login SSO di browser (atau tekan ENTER jika sudah login)...")
+			time.sleep(3)
+			
+	# Setelah login (atau jika sesi sudah aktif), pastikan kita di target_data_url
+	time.sleep(3)
+	if page.url != target_data_url:
+		logging.info(f"Mengalihkan ke halaman target data: {target_data_url}")
+		try:
+			page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
+			time.sleep(5)
+		except Exception as e:
+			logging.warning(f"Timeout saat membuka halaman target: {e}")
+
+	# Deteksi halaman error BPS dan muat ulang jika ditemukan
+	try:
+		if "error" in page.title().lower() or page.locator("text=There's some error").count() > 0 or page.locator("text=unexpected condition").count() > 0:
+			logging.warning("Mendeteksi halaman error BPS ('There's some error'). Mencoba memuat ulang...")
+			page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
+			time.sleep(5)
+	except Exception as e:
+		logging.warning(f"Gagal memeriksa/memuat ulang halaman error: {e}")
+	
+	return browser, context, page
 
 def scrape_data():
     # Load existing data to resume/prevent overwrite
@@ -208,7 +280,7 @@ def scrape_data():
             logging.warning(f"Gagal membaca CSV lama: {e}")
 
     with sync_playwright() as p:
-        context, page = get_authenticated_context(p, headless=False)
+        browser, context, page = get_authenticated_context(p)
         
         base_url = "https://fasih-sm.bps.go.id/app/surveys/ecddb52e-f392-403c-a963-47391f217010/37526b20-81c8-42f5-a895-6190137d7394/data"
         
@@ -245,16 +317,16 @@ def scrape_data():
             filter_btn = page.locator("button").filter(has=page.locator("svg.tabler-icon-filter")).first
             try:
                 # Tunggu tombol filter tersedia/terlihat
-                filter_btn.wait_for(state="visible", timeout=15000)
+                filter_btn.wait_for(state="visible", timeout=60000)
             except Exception as e:
                 logging.warning(f"Tombol filter belum terlihat: {e}. Mencoba memuat ulang halaman...")
                 try:
-                    page.reload(timeout=45000, wait_until="domcontentloaded")
+                    page.reload(timeout=60000, wait_until="domcontentloaded")
                 except Exception as ex:
                     logging.warning(f"Reload gagal/timeout: {ex}. Melanjutkan...")
                 time.sleep(5)
                 try:
-                    filter_btn.wait_for(state="visible", timeout=30000)
+                    filter_btn.wait_for(state="visible", timeout=60000)
                 except Exception as ex2:
                     logging.error(f"Tombol filter tetap tidak terlihat setelah reload: {ex2}")
                     raise ex2
@@ -291,27 +363,17 @@ def scrape_data():
                 filter_btn.click(force=True)
                 time.sleep(1.5)
                 
-                # Reset filter agar kembali bersih
-                reset_btn = page.locator("button:has-text('Reset')").first
-                if reset_btn.count() > 0:
-                    reset_btn.click(force=True)
-                    time.sleep(1.5)
+                # Tunggu dialog filter terbuka secara visual
+                page.wait_for_selector("div[role='dialog'] button.f\\:justify-between, [data-radix-portal] button.f\\:justify-between", timeout=15000)
                 
-                # Ambil dropdown_buttons setelah reset
-                dropdown_buttons = page.locator("div[role='dialog'] button.f\\:justify-between, [data-radix-portal] button.f\\:justify-between").all()
+                # Gunakan locator dengan index .nth() agar otomatis menunggu element tersedia di DOM
+                dropdown_loc = page.locator("div[role='dialog'] button.f\\:justify-between, [data-radix-portal] button.f\\:justify-between")
                 
-                # Pilih Provinsi
-                dropdown_buttons[0].click(force=True)
-                time.sleep(1)
-                select_dropdown_option("SULAWESI TENGAH")
-                time.sleep(1.5)
-                
-                # Pilih Kabupaten/Kota
-                dropdown_buttons = page.locator("div[role='dialog'] button.f\\:justify-between, [data-radix-portal] button.f\\:justify-between").all()
-                dropdown_buttons[1].click(force=True)
+                # Klik dropdown Kabupaten/Kota (index 1)
+                dropdown_loc.nth(1).click(force=True)
                 time.sleep(1)
                 select_dropdown_option(kab_name)
-                time.sleep(1.5)
+                time.sleep(1)
                 
                 # Tutup dialog filter
                 page.keyboard.press("Escape")
@@ -551,8 +613,7 @@ def scrape_data():
 
         logging.info("Membuat rekap data final...")
         save_realtime_data(all_records)
-        logging.info("Scraping selesai!")
-        context.close()
+        logging.info("Scraping selesai! Browser dibiarkan tetap terbuka.")
 
 if __name__ == "__main__":
     scrape_data()

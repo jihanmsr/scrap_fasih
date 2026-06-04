@@ -390,18 +390,18 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7206040016003901 - UB - 1,"BUSSAN AUTO FINANCE (BAF), PT KC TOLITOLI",-,luijius123@gmail.com,delivered,queued,"02 Jun 2026, 02:57:23",2
 7206040016005102 - UB - 1,"KHALIFAH, PT",-,lank.ghilank83@gmail.com,delivered,delivered,"02 Jun 2026, 11:32:49",1
 7206040016005102 - UB - 1,"KHALIFAH, PT",-,lank.ghilank83@gmail.com,delivered,queued,"02 Jun 2026, 11:32:49",2
-7208061033000500 - UB - 2,BANK SULTENG,-,kaslambunu@yahoo.co.id,bounced,bounced,"02 Jun 2026, 04:02:15",1
-7208061033000500 - UB - 2,BANK SULTENG,-,kaslambunu@yahoo.co.id,bounced,queued,"02 Jun 2026, 03:59:51",2
+7208061033000500 - UB - 2,BANK SULTENG,OPEN,kaslambunu@yahoo.co.id,bounced,bounced,"02 Jun 2026, 04:02:15",1
+7208061033000500 - UB - 2,BANK SULTENG,OPEN,kaslambunu@yahoo.co.id,bounced,queued,"02 Jun 2026, 03:59:51",2
 7206010003000400 - UB - 1,BANK MANDIRI UNIT SONI,-,tolitolisoni@bankmandiri.co.id,delivered,delivered,"02 Jun 2026, 11:25:33",1
 7206010003000400 - UB - 1,BANK MANDIRI UNIT SONI,-,tolitolisoni@bankmandiri.co.id,delivered,queued,"02 Jun 2026, 11:25:22",2
 7206040016002400 - UB - 1,BANK PEREKONOMIAN RAKYAT (BPR) MODERN EXPRESS CABANG TOLTIOLI,-,kc.tolitoli@bprpalulokadanautama.com,bounced,bounced,"01 Jun 2026, 23:16:31",1
 7206040016002400 - UB - 1,BANK PEREKONOMIAN RAKYAT (BPR) MODERN EXPRESS CABANG TOLTIOLI,-,kc.tolitoli@bprpalulokadanautama.com,bounced,queued,"01 Jun 2026, 23:16:27",2
-7208011001000602 - UB - 1,BANK BNI PARIGI UNIT KUR,-,nigustiayutasni23@gmail.com,delivered,delivered,"02 Jun 2026, 07:24:06",1
-7208011001000602 - UB - 1,BANK BNI PARIGI UNIT KUR,-,nigustiayutasni23@gmail.com,delivered,queued,"02 Jun 2026, 07:24:03",2
+7208011001000602 - UB - 1,BANK BNI PARIGI UNIT KUR,OPEN,nigustiayutasni23@gmail.com,delivered,delivered,"02 Jun 2026, 07:24:06",1
+7208011001000602 - UB - 1,BANK BNI PARIGI UNIT KUR,OPEN,nigustiayutasni23@gmail.com,delivered,queued,"02 Jun 2026, 07:24:03",2
 7209051019000400 - UB - 1,BANK MANDIRI (PERSERO),OPEN,ampana@bankmandiri.co.id,delivered,delivered,"02 Jun 2026, 03:25:19",1
 7209051019000400 - UB - 1,BANK MANDIRI (PERSERO),OPEN,ampana@bankmandiri.co.id,delivered,queued,"02 Jun 2026, 03:25:19",2
-7205160007000200 - UB - 1,BRI UNIT SOJOL,-,n5192@corp.bri.co.id,delivered,delivered,"02 Jun 2026, 05:38:35",1
-7205160007000200 - UB - 1,BRI UNIT SOJOL,-,n5192@corp.bri.co.id,delivered,queued,"02 Jun 2026, 05:38:30",2
+7205160007000200 - UB - 1,BRI UNIT SOJOL,OPEN,n5192@corp.bri.co.id,delivered,delivered,"02 Jun 2026, 05:38:35",1
+7205160007000200 - UB - 1,BRI UNIT SOJOL,OPEN,n5192@corp.bri.co.id,delivered,queued,"02 Jun 2026, 05:38:30",2
 7202061009000100 - UB - 1,BRI UNIT BUALEMO,OPEN,nbobs@corp.brico.id,bounced,queued,"02 Jun 2026, 06:50:12",1
 7202061009000100 - UB - 1,BRI UNIT BUALEMO,OPEN,nbobs@corp.brico.id,bounced,bounced,"02 Jun 2026, 06:50:12",2
 7271020008003002 - UB - 1,"PALU GRAND HERO, PT",-,grandherotax@gmail.com,delivered,queued,"02 Jun 2026, 04:38:44",1
@@ -478,8 +478,8 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7209051007000600 - UB - 1,"ANEKA JAYA, CV",OPEN,anekajaya.ampana@gmail.com,opened,opened,"02 Jun 2026, 11:53:49",3
 7209051007000600 - UB - 1,"ANEKA JAYA, CV",OPEN,anekajaya.ampana@gmail.com,opened,delivered,"02 Jun 2026, 05:39:02",4
 7209051007000600 - UB - 1,"ANEKA JAYA, CV",OPEN,anekajaya.ampana@gmail.com,opened,queued,"02 Jun 2026, 05:39:02",5
-7208020017000501 - UB - 2,BANK PERKREDITAN RAKYAT PALU ANUGERAH,-,paluanugerahprg@yahoo.com,bounced,bounced,"02 Jun 2026, 01:23:29",1
-7208020017000501 - UB - 2,BANK PERKREDITAN RAKYAT PALU ANUGERAH,-,paluanugerahprg@yahoo.com,bounced,queued,"02 Jun 2026, 01:23:24",2
+7208020017000501 - UB - 2,BANK PERKREDITAN RAKYAT PALU ANUGERAH,OPEN,paluanugerahprg@yahoo.com,bounced,bounced,"02 Jun 2026, 01:23:29",1
+7208020017000501 - UB - 2,BANK PERKREDITAN RAKYAT PALU ANUGERAH,OPEN,paluanugerahprg@yahoo.com,bounced,queued,"02 Jun 2026, 01:23:24",2
 7212020008100200 - UB - 2,PUTRA BONGKA MINERAL,OPEN,putrabongkamineral@gmail.com,delivered,delivered,"02 Jun 2026, 09:24:25",1
 7212020008100200 - UB - 2,PUTRA BONGKA MINERAL,OPEN,putrabongkamineral@gmail.com,delivered,queued,"02 Jun 2026, 09:24:21",2
 7212020008100200 - UB - 6,BRI UNIT BETELEME.PT,OPEN,n3633@co.rp.bri.co.id,bounced,bounced,"02 Jun 2026, 06:19:08",1
@@ -517,9 +517,9 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7271041003001200 - UB - 7,PUTRA BARUS RAYA,-,putrabarusraya20@gmail.com,delivered,queued,"01 Jun 2026, 22:52:42",2
 7204071007000300 - UB - 1,"ANEKA TRADING SEJATI, PT",OPEN,ptatsposo@gmail.com,delivered,delivered,"02 Jun 2026, 09:12:08",1
 7204071007000300 - UB - 1,"ANEKA TRADING SEJATI, PT",OPEN,ptatsposo@gmail.com,delivered,queued,"02 Jun 2026, 09:12:08",2
-7204071002000200 - UB - 1,"bank Perekonomian Rakyat (BPR) Palu Anugerah Cabang Poso, PT",-,bprpaluanugerahcabangposo@yahoo.co.id,-,-,-,0
-7205000000000000 - UB - 2,PDAM KAB DONGGALA,-,pdam_donggala@gmail.com,bounced,queued,"02 Jun 2026, 06:31:35",1
-7205000000000000 - UB - 2,PDAM KAB DONGGALA,-,pdam_donggala@gmail.com,bounced,bounced,"02 Jun 2026, 06:31:35",2
+7204071002000200 - UB - 1,"bank Perekonomian Rakyat (BPR) Palu Anugerah Cabang Poso, PT",OPEN,bprpaluanugerahcabangposo@yahoo.co.id,-,-,-,0
+7205000000000000 - UB - 2,PDAM KAB DONGGALA,OPEN,pdam_donggala@gmail.com,bounced,queued,"02 Jun 2026, 06:31:35",1
+7205000000000000 - UB - 2,PDAM KAB DONGGALA,OPEN,pdam_donggala@gmail.com,bounced,bounced,"02 Jun 2026, 06:31:35",2
 7271031006000201 - UB - 2,INDONESIA JIANDA TRADING,-,daiyongzhi319@gmail.com,delivered,delivered,"02 Jun 2026, 01:46:58",1
 7271031006000201 - UB - 2,INDONESIA JIANDA TRADING,-,daiyongzhi319@gmail.com,delivered,queued,"02 Jun 2026, 01:46:54",2
 7271040001000102 - UB - 1,MANDIRI AGRO LESTARI,-,cvmandiriagrolestari@gmail.com,delivered,delivered,"02 Jun 2026, 07:05:22",1
@@ -535,35 +535,35 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7271041003200100 - UB - 1,WANHONG NONFERROUS RECYCLING UTILIZATION,-,wanhong.nru@gmail.com,delivered,queued,"02 Jun 2026, 04:12:55",2
 7271041004000300 - UB - 2,PT. Ganda Parade Artana,-,gpartana2020@gmail.com,delivered,delivered,"02 Jun 2026, 06:30:27",1
 7271041004000300 - UB - 2,PT. Ganda Parade Artana,-,gpartana2020@gmail.com,delivered,queued,"02 Jun 2026, 06:30:24",2
-7204050003000900 - UB - 1,BANK BRI KCP UNIT MAPANE,-,n5203@corp.bri.co.id,delivered,queued,"01 Jun 2026, 23:38:29",1
-7204050003000900 - UB - 1,BANK BRI KCP UNIT MAPANE,-,n5203@corp.bri.co.id,delivered,delivered,"01 Jun 2026, 23:38:29",2
+7204050003000900 - UB - 1,BANK BRI KCP UNIT MAPANE,OPEN,n5203@corp.bri.co.id,delivered,queued,"01 Jun 2026, 23:38:29",1
+7204050003000900 - UB - 1,BANK BRI KCP UNIT MAPANE,OPEN,n5203@corp.bri.co.id,delivered,delivered,"01 Jun 2026, 23:38:29",2
 7271041003001200 - UB - 9,SURYA ENERGY PALU,-,suryaenergypalu1@gmail.com,delivered,queued,"02 Jun 2026, 01:59:29",1
 7271041003001200 - UB - 9,SURYA ENERGY PALU,-,suryaenergypalu1@gmail.com,delivered,delivered,"02 Jun 2026, 01:59:29",2
-7204070011000302 - UB - 2,BANK BPD,-,bsposo@yahoo.com,bounced,bounced,"02 Jun 2026, 08:52:48",1
-7204070011000302 - UB - 2,BANK BPD,-,bsposo@yahoo.com,bounced,queued,"02 Jun 2026, 08:52:14",2
+7204070011000302 - UB - 2,BANK BPD,OPEN,bsposo@yahoo.com,bounced,bounced,"02 Jun 2026, 08:52:48",1
+7204070011000302 - UB - 2,BANK BPD,OPEN,bsposo@yahoo.com,bounced,queued,"02 Jun 2026, 08:52:14",2
 7271040004000500 - UB - 1,HADJRIN,-,hadjrinartha@gmail.com,delivered,delivered,"02 Jun 2026, 00:05:39",1
 7271040004000500 - UB - 1,HADJRIN,-,hadjrinartha@gmail.com,delivered,queued,"02 Jun 2026, 00:05:35",2
-7204071001000600 - UB - 1,BANK MANDIRI (PERSERO),-,bm-poso.rcvmsg_bg@bankmandiri.co.id,delivered,queued,"02 Jun 2026, 10:26:44",1
-7204071001000600 - UB - 1,BANK MANDIRI (PERSERO),-,bm-poso.rcvmsg_bg@bankmandiri.co.id,delivered,delivered,"02 Jun 2026, 10:26:44",2
-7204070012000600 - UB - 1,BANK BNI KCP POSO,-,ralphy.suawah@bni.co.id,delivered,delivered,"02 Jun 2026, 03:46:54",1
-7204070012000600 - UB - 1,BANK BNI KCP POSO,-,ralphy.suawah@bni.co.id,delivered,queued,"02 Jun 2026, 03:46:50",2
+7204071001000600 - UB - 1,BANK MANDIRI (PERSERO),OPEN,bm-poso.rcvmsg_bg@bankmandiri.co.id,delivered,queued,"02 Jun 2026, 10:26:44",1
+7204071001000600 - UB - 1,BANK MANDIRI (PERSERO),OPEN,bm-poso.rcvmsg_bg@bankmandiri.co.id,delivered,delivered,"02 Jun 2026, 10:26:44",2
+7204070012000600 - UB - 1,BANK BNI KCP POSO,OPEN,ralphy.suawah@bni.co.id,delivered,delivered,"02 Jun 2026, 03:46:54",1
+7204070012000600 - UB - 1,BANK BNI KCP POSO,OPEN,ralphy.suawah@bni.co.id,delivered,queued,"02 Jun 2026, 03:46:50",2
 7271040001000102 - UB - 2,"OLAM COCOA, PT",-,media@olamnet.com,clicked,clicked,"02 Jun 2026, 07:30:42",1
 7271040001000102 - UB - 2,"OLAM COCOA, PT",-,media@olamnet.com,clicked,clicked,"02 Jun 2026, 07:30:42",2
 7271040001000102 - UB - 2,"OLAM COCOA, PT",-,media@olamnet.com,clicked,delivered,"02 Jun 2026, 07:30:11",3
 7271040001000102 - UB - 2,"OLAM COCOA, PT",-,media@olamnet.com,clicked,queued,"02 Jun 2026, 07:30:06",4
-7204072005000600 - UB - 1,BRI UNIT MAROSO SAYO,-,n5204@corp.bri.co.id,delivered,queued,"02 Jun 2026, 02:47:44",1
-7204072005000600 - UB - 1,BRI UNIT MAROSO SAYO,-,n5204@corp.bri.co.id,delivered,delivered,"02 Jun 2026, 02:47:44",2
+7204072005000600 - UB - 1,BRI UNIT MAROSO SAYO,OPEN,n5204@corp.bri.co.id,delivered,queued,"02 Jun 2026, 02:47:44",1
+7204072005000600 - UB - 1,BRI UNIT MAROSO SAYO,OPEN,n5204@corp.bri.co.id,delivered,delivered,"02 Jun 2026, 02:47:44",2
 7206031007001200 - UB - 1,"CITRA MULIA PERKASA, PT",-,hrdcmpten2024@gmail.com,delivered,delivered,"02 Jun 2026, 11:51:11",1
 7206031007001200 - UB - 1,"CITRA MULIA PERKASA, PT",-,hrdcmpten2024@gmail.com,delivered,queued,"02 Jun 2026, 11:51:10",2
-7205080024000300 - UB - 1,AMINUDDIN H. ARSYAD,-,arsyadaminudin17@gmail.com,delivered,delivered,"02 Jun 2026, 06:45:27",1
-7205080024000300 - UB - 1,AMINUDDIN H. ARSYAD,-,arsyadaminudin17@gmail.com,delivered,queued,"02 Jun 2026, 06:45:23",2
+7205080024000300 - UB - 1,AMINUDDIN H. ARSYAD,OPEN,arsyadaminudin17@gmail.com,delivered,delivered,"02 Jun 2026, 06:45:27",1
+7205080024000300 - UB - 1,AMINUDDIN H. ARSYAD,OPEN,arsyadaminudin17@gmail.com,delivered,queued,"02 Jun 2026, 06:45:23",2
 7271031008001600 - UB - 1,RIZKI TOLITAMA SEJAHTERA,-,adhysetiawan6009@gmail.com,opened,opened,"02 Jun 2026, 12:16:07",1
 7271031008001600 - UB - 1,RIZKI TOLITAMA SEJAHTERA,-,adhysetiawan6009@gmail.com,opened,delivered,"02 Jun 2026, 08:55:13",2
 7271031008001600 - UB - 1,RIZKI TOLITAMA SEJAHTERA,-,adhysetiawan6009@gmail.com,opened,queued,"02 Jun 2026, 08:55:13",3
 7271040003000102 - UB - 1,SPBU KAYUMALUE,-,spbutawaeli74943313@gmail.com,bounced,bounced,"02 Jun 2026, 00:41:02",1
 7271040003000102 - UB - 1,SPBU KAYUMALUE,-,spbutawaeli74943313@gmail.com,bounced,queued,"02 Jun 2026, 00:41:01",2
-7204070011000100 - UB - 2,AKAR DAYA MANDIRI PT,-,akardayamandiri49@gmail.com,bounced,bounced,"02 Jun 2026, 09:17:21",1
-7204070011000100 - UB - 2,AKAR DAYA MANDIRI PT,-,akardayamandiri49@gmail.com,bounced,queued,"02 Jun 2026, 09:17:21",2
+7204070011000100 - UB - 2,AKAR DAYA MANDIRI PT,OPEN,akardayamandiri49@gmail.com,bounced,bounced,"02 Jun 2026, 09:17:21",1
+7204070011000100 - UB - 2,AKAR DAYA MANDIRI PT,OPEN,akardayamandiri49@gmail.com,bounced,queued,"02 Jun 2026, 09:17:21",2
 7271041003001200 - UB - 5,BANGUN PALU SULAWESI TENGAH,-,hlppalu.bangunpalusulawesitengah@yahoo.com,bounced,bounced,"02 Jun 2026, 09:12:41",1
 7271041003001200 - UB - 5,BANGUN PALU SULAWESI TENGAH,-,hlppalu.bangunpalusulawesitengah@yahoo.com,bounced,queued,"02 Jun 2026, 09:11:39",2
 7203040002000200 - UB - 1,CAHAYA IDOLA TUNGGAL RONA ALAM,-,citracabang@gmail.com,delivered,delivered,"02 Jun 2026, 09:51:39",1
@@ -588,15 +588,15 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7206040016001300 - UB - 1,"GUNA USAHA TOLIS, CV",-,cv.gunausahatolis@gmail.com,delivered,queued,"02 Jun 2026, 01:14:35",2
 7206041007200300 - UB - 1,PABRIK KELAPA SAWIT PT CITRA MULIA PERKASA,-,hrdcmpten2024@gmail.com,delivered,delivered,"02 Jun 2026, 11:46:07",1
 7206041007200300 - UB - 1,PABRIK KELAPA SAWIT PT CITRA MULIA PERKASA,-,hrdcmpten2024@gmail.com,delivered,queued,"02 Jun 2026, 11:46:04",2
-7205090010000301 - UB - 1,BPR PALU LOKADANA UTAMA KAS LABUAN,-,bprlabuan@yahoo.co.id,bounced,bounced,"01 Jun 2026, 23:30:02",1
-7205090010000301 - UB - 1,BPR PALU LOKADANA UTAMA KAS LABUAN,-,bprlabuan@yahoo.co.id,bounced,queued,"01 Jun 2026, 23:29:34",2
+7205090010000301 - UB - 1,BPR PALU LOKADANA UTAMA KAS LABUAN,OPEN,bprlabuan@yahoo.co.id,bounced,bounced,"01 Jun 2026, 23:30:02",1
+7205090010000301 - UB - 1,BPR PALU LOKADANA UTAMA KAS LABUAN,OPEN,bprlabuan@yahoo.co.id,bounced,queued,"01 Jun 2026, 23:29:34",2
 7206040019001200 - UB - 1,"ALAM MEGA JAYA, CV",-,sst.asterodewa@gmail.com,opened,delivered,"02 Jun 2026, 11:38:52",1
 7206040019001200 - UB - 1,"ALAM MEGA JAYA, CV",-,sst.asterodewa@gmail.com,opened,opened,"02 Jun 2026, 11:38:32",2
 7206040019001200 - UB - 1,"ALAM MEGA JAYA, CV",-,sst.asterodewa@gmail.com,opened,queued,"02 Jun 2026, 11:38:23",3
-7206040016001300 - UB - 2,"GALAXI INDO PRATAMA, CV",-,galaxiindopratamatolis@gmail.com,bounced,queued,"02 Jun 2026, 11:53:38",1
-7206040016001300 - UB - 2,"GALAXI INDO PRATAMA, CV",-,galaxiindopratamatolis@gmail.com,bounced,bounced,"02 Jun 2026, 11:53:36",2
-7208011001000200 - UB - 1,"SAHABAT TANI, TOKO",-,sonnykandou80@gmail.com,bounced,bounced,"02 Jun 2026, 02:01:57",1
-7208011001000200 - UB - 1,"SAHABAT TANI, TOKO",-,sonnykandou80@gmail.com,bounced,queued,"02 Jun 2026, 02:01:57",2
+7206040016001300 - UB - 2,"GALAXI INDO PRATAMA, CV",OPEN,galaxiindopratamatolis@gmail.com,bounced,queued,"02 Jun 2026, 11:53:38",1
+7206040016001300 - UB - 2,"GALAXI INDO PRATAMA, CV",OPEN,galaxiindopratamatolis@gmail.com,bounced,bounced,"02 Jun 2026, 11:53:36",2
+7208011001000200 - UB - 1,"SAHABAT TANI, TOKO",OPEN,sonnykandou80@gmail.com,bounced,bounced,"02 Jun 2026, 02:01:57",1
+7208011001000200 - UB - 1,"SAHABAT TANI, TOKO",OPEN,sonnykandou80@gmail.com,bounced,queued,"02 Jun 2026, 02:01:57",2
 7271012004000200 - UB - 1,BUMI ALPHA MANDIRI,-,bumialphamandiri@gmail.com,delivered,delivered,"02 Jun 2026, 08:47:33",1
 7271012004000200 - UB - 1,BUMI ALPHA MANDIRI,-,bumialphamandiri@gmail.com,delivered,queued,"02 Jun 2026, 08:47:30",2
 7202060019001000 - UB - 1,SINAR RAYA,OPEN,cvsinarraya92@gmail.com,delivered,delivered,"02 Jun 2026, 09:04:47",1
@@ -721,10 +721,10 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7209051019000800 - UB - 1,"BANK RAKYAT INDONESIA TBK, PT",OPEN,n5210@copr.bri.co.id,bounced,bounced,"01 Jun 2026, 23:01:16",1
 7209051019000800 - UB - 1,"BANK RAKYAT INDONESIA TBK, PT",OPEN,n5210@copr.bri.co.id,bounced,queued,"01 Jun 2026, 23:01:16",2
 7212020008100200 - UB - 1,ASSAQTI MORUT ENERGY,-,assaqtimorutenergy1@gmail.com,-,-,-,0
-7208020016000400 - UB - 1,PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI,-,sekretariat244@bankmega.com,delivered,delivered,"02 Jun 2026, 04:04:48",1
-7208020016000400 - UB - 1,PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI,-,sekretariat244@bankmega.com,delivered,queued,"02 Jun 2026, 04:04:47",2
-7208020017000501 - UB - 1,GLORY ANUGRAH PERKASA,-,cv.gloryanugerahperkasa@gmail.com,delivered,delivered,"02 Jun 2026, 00:33:27",1
-7208020017000501 - UB - 1,GLORY ANUGRAH PERKASA,-,cv.gloryanugerahperkasa@gmail.com,delivered,queued,"02 Jun 2026, 00:33:24",2
+7208020016000400 - UB - 1,PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI,OPEN,sekretariat244@bankmega.com,delivered,delivered,"02 Jun 2026, 04:04:48",1
+7208020016000400 - UB - 1,PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI,OPEN,sekretariat244@bankmega.com,delivered,queued,"02 Jun 2026, 04:04:47",2
+7208020017000501 - UB - 1,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,delivered,delivered,"02 Jun 2026, 00:33:27",1
+7208020017000501 - UB - 1,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,delivered,queued,"02 Jun 2026, 00:33:24",2
 7210110006000600 - UB - 1,NUSANTARA RAYA KONSTRUKSI,OPEN,nusantararayakonstruksi.pt@gmail.com,-,-,-,0
 7212010010000100 - UB - 1,CITRA ANEKA TAMBANG,-,citraanekatambang@gmail.com,delivered,delivered,"02 Jun 2026, 09:34:55",1
 7212010010000100 - UB - 1,CITRA ANEKA TAMBANG,-,citraanekatambang@gmail.com,delivered,queued,"02 Jun 2026, 09:34:51",2
@@ -734,30 +734,30 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7212040006000300 - UB - 1,GENBA MULTI MINERAL,-,pt.gmm.work@gmail.com,opened,opened,"02 Jun 2026, 06:16:56",2
 7212040006000300 - UB - 1,GENBA MULTI MINERAL,-,pt.gmm.work@gmail.com,opened,delivered,"02 Jun 2026, 06:16:15",3
 7212040006000300 - UB - 1,GENBA MULTI MINERAL,-,pt.gmm.work@gmail.com,opened,queued,"02 Jun 2026, 06:16:11",4
-7208030015000100 - UB - 1,SPBU AMPI BABO,-,spbu_ampibabo@yahoo.co.id,bounced,bounced,"02 Jun 2026, 05:46:05",1
-7208030015000100 - UB - 1,SPBU AMPI BABO,-,spbu_ampibabo@yahoo.co.id,bounced,queued,"02 Jun 2026, 05:45:34",2
+7208030015000100 - UB - 1,SPBU AMPI BABO,OPEN,spbu_ampibabo@yahoo.co.id,bounced,bounced,"02 Jun 2026, 05:46:05",1
+7208030015000100 - UB - 1,SPBU AMPI BABO,OPEN,spbu_ampibabo@yahoo.co.id,bounced,queued,"02 Jun 2026, 05:45:34",2
 7212050008000400 - UB - 2,PALU BARUGA YAKU,-,palubarugayaku@gmail.com,opened,opened,"02 Jun 2026, 02:17:19",1
 7212050008000400 - UB - 2,PALU BARUGA YAKU,-,palubarugayaku@gmail.com,opened,delivered,"02 Jun 2026, 02:17:08",2
 7212050008000400 - UB - 2,PALU BARUGA YAKU,-,palubarugayaku@gmail.com,opened,queued,"02 Jun 2026, 02:17:04",3
-7208020015001200 - UB - 1,BANK MEGA TBK,-,bagus.hartono@bankmega.com,delivered,delivered,"02 Jun 2026, 08:23:35",1
-7208020015001200 - UB - 1,BANK MEGA TBK,-,bagus.hartono@bankmega.com,delivered,queued,"02 Jun 2026, 08:23:34",2
-7206010003001100 - UB - 1,BANK SULTENG UNIT SONI,-,febrialdin.rial@yahoo.co.id,bounced,bounced,"02 Jun 2026, 07:00:54",1
-7206010003001100 - UB - 1,BANK SULTENG UNIT SONI,-,febrialdin.rial@yahoo.co.id,bounced,queued,"02 Jun 2026, 07:00:24",2
+7208020015001200 - UB - 1,BANK MEGA TBK,OPEN,bagus.hartono@bankmega.com,delivered,delivered,"02 Jun 2026, 08:23:35",1
+7208020015001200 - UB - 1,BANK MEGA TBK,OPEN,bagus.hartono@bankmega.com,delivered,queued,"02 Jun 2026, 08:23:34",2
+7206010003001100 - UB - 1,BANK SULTENG UNIT SONI,OPEN,febrialdin.rial@yahoo.co.id,bounced,bounced,"02 Jun 2026, 07:00:54",1
+7206010003001100 - UB - 1,BANK SULTENG UNIT SONI,OPEN,febrialdin.rial@yahoo.co.id,bounced,queued,"02 Jun 2026, 07:00:24",2
 7212010010000100 - UB - 4,AGENG PERMATA MINING,-,agengpermata121@gmail.com,delivered,delivered,"02 Jun 2026, 05:40:19",1
 7212010010000100 - UB - 4,AGENG PERMATA MINING,-,agengpermata121@gmail.com,delivered,queued,"02 Jun 2026, 05:40:16",2
-7208020019000100 - UB - 1,BANK SULTENG KANCAB PEMB.PARIGI,-,banksulteng.parigi@yahoo.co.id,clicked,clicked,"02 Jun 2026, 07:58:11",1
-7208020019000100 - UB - 1,BANK SULTENG KANCAB PEMB.PARIGI,-,banksulteng.parigi@yahoo.co.id,clicked,opened,"02 Jun 2026, 07:57:50",2
-7208020019000100 - UB - 1,BANK SULTENG KANCAB PEMB.PARIGI,-,banksulteng.parigi@yahoo.co.id,clicked,queued,"01 Jun 2026, 23:54:31",3
-7208020019000100 - UB - 1,BANK SULTENG KANCAB PEMB.PARIGI,-,banksulteng.parigi@yahoo.co.id,clicked,delivered,"01 Jun 2026, 23:54:30",4
+7208020019000100 - UB - 1,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,clicked,clicked,"02 Jun 2026, 07:58:11",1
+7208020019000100 - UB - 1,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,clicked,opened,"02 Jun 2026, 07:57:50",2
+7208020019000100 - UB - 1,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,clicked,queued,"01 Jun 2026, 23:54:31",3
+7208020019000100 - UB - 1,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,clicked,delivered,"01 Jun 2026, 23:54:30",4
 7212050003000700 - UB - 3,BATU TAMBANG MINERALINDO,-,batutambangmineralindo@gmail.com,delivered,delivered,"02 Jun 2026, 02:43:51",1
 7212050003000700 - UB - 3,BATU TAMBANG MINERALINDO,-,batutambangmineralindo@gmail.com,delivered,queued,"02 Jun 2026, 02:43:47",2
-7208021003000500 - UB - 2,BANK PERKREDITAN RAKYAT BINARTA LUHUR,-,binartasumber@yahoo.co.id,bounced,bounced,"02 Jun 2026, 09:00:10",1
-7208021003000500 - UB - 2,BANK PERKREDITAN RAKYAT BINARTA LUHUR,-,binartasumber@yahoo.co.id,bounced,queued,"02 Jun 2026, 08:59:36",2
+7208021003000500 - UB - 2,BANK PERKREDITAN RAKYAT BINARTA LUHUR,OPEN,binartasumber@yahoo.co.id,bounced,bounced,"02 Jun 2026, 09:00:10",1
+7208021003000500 - UB - 2,BANK PERKREDITAN RAKYAT BINARTA LUHUR,OPEN,binartasumber@yahoo.co.id,bounced,queued,"02 Jun 2026, 08:59:36",2
 7212050003000700 - UB - 1,SINOSTEEL INDONESIA MINING,-,kathyzhw@gmail.com,opened,opened,"02 Jun 2026, 08:16:07",1
 7212050003000700 - UB - 1,SINOSTEEL INDONESIA MINING,-,kathyzhw@gmail.com,opened,delivered,"02 Jun 2026, 08:03:43",2
 7212050003000700 - UB - 1,SINOSTEEL INDONESIA MINING,-,kathyzhw@gmail.com,opened,queued,"02 Jun 2026, 08:03:36",3
-7208060002000200 - UB - 1,OGOLIGO SEJAHTERA,-,sejahteraptogoligo@gmail.com,delivered,delivered,"02 Jun 2026, 07:17:15",1
-7208060002000200 - UB - 1,OGOLIGO SEJAHTERA,-,sejahteraptogoligo@gmail.com,delivered,queued,"02 Jun 2026, 07:16:48",2
+7208060002000200 - UB - 1,OGOLIGO SEJAHTERA,OPEN,sejahteraptogoligo@gmail.com,delivered,delivered,"02 Jun 2026, 07:17:15",1
+7208060002000200 - UB - 1,OGOLIGO SEJAHTERA,OPEN,sejahteraptogoligo@gmail.com,delivered,queued,"02 Jun 2026, 07:16:48",2
 7212020008000900 - UB - 1,MORI DUTA MINERAL,-,stevankristy@moridutamineral.com,bounced,bounced,"02 Jun 2026, 08:50:41",1
 7212020008000900 - UB - 1,MORI DUTA MINERAL,-,stevankristy@moridutamineral.com,bounced,queued,"02 Jun 2026, 08:50:41",2
 7209050015000600 - UB - 1,"BPR MODERN EXSPRESS, PT/BPR PALU LOKADANA UTAMA, PT",OPEN,kc.touna@bprpalulokadana.com,bounced,queued,"01 Jun 2026, 23:04:03",1
@@ -778,23 +778,23 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7204070011000400 - UB - 2,HERO SUKSES MAKMUR CV,-,hsmposo@yahoo.co.id,delivered,queued,"02 Jun 2026, 03:43:46",2
 7204070011000400 - UB - 2,HERO SUKSES MAKMUR CV,-,hsmposo@yahoo.co.id,delivered,delivered,"26 Mei 2026, 08:30:37",3
 7204070011000400 - UB - 2,HERO SUKSES MAKMUR CV,-,hsmposo@yahoo.co.id,delivered,queued,"26 Mei 2026, 08:30:33",4
-7205101001000302 - UB - 1,INDONESIA HENGXING TRADE DEVELOPMENT,-,ptindonesiahengxing@gmail.com,delivered,delivered,"02 Jun 2026, 02:35:41",1
-7205101001000302 - UB - 1,INDONESIA HENGXING TRADE DEVELOPMENT,-,ptindonesiahengxing@gmail.com,delivered,queued,"02 Jun 2026, 02:35:40",2
-7205130008000401 - UB - 1,PT. BANK SULTENG KAS LABEAN,-,banksulteng_kaslabean@yahoo.com,bounced,bounced,"02 Jun 2026, 04:12:10",1
-7205130008000401 - UB - 1,PT. BANK SULTENG KAS LABEAN,-,banksulteng_kaslabean@yahoo.com,bounced,queued,"02 Jun 2026, 04:11:35",2
-7205140004000900 - UB - 1,PT PERKEBUNAN KELAPA MALONAS,-,mohamatsidik00@gmail.com,delivered,delivered,"02 Jun 2026, 05:15:05",1
-7205140004000900 - UB - 1,PT PERKEBUNAN KELAPA MALONAS,-,mohamatsidik00@gmail.com,delivered,queued,"02 Jun 2026, 05:15:04",2
-7206010001000300 - UB - 1,"TAMAKI, CV",-,warno2004kombo@gmail.com,opened,opened,"02 Jun 2026, 06:46:17",1
-7206010001000300 - UB - 1,"TAMAKI, CV",-,warno2004kombo@gmail.com,opened,opened,"02 Jun 2026, 06:45:10",2
-7206010001000300 - UB - 1,"TAMAKI, CV",-,warno2004kombo@gmail.com,opened,delivered,"02 Jun 2026, 00:43:30",3
-7206010001000300 - UB - 1,"TAMAKI, CV",-,warno2004kombo@gmail.com,opened,queued,"02 Jun 2026, 00:43:29",4
+7205101001000302 - UB - 1,INDONESIA HENGXING TRADE DEVELOPMENT,OPEN,ptindonesiahengxing@gmail.com,delivered,delivered,"02 Jun 2026, 02:35:41",1
+7205101001000302 - UB - 1,INDONESIA HENGXING TRADE DEVELOPMENT,OPEN,ptindonesiahengxing@gmail.com,delivered,queued,"02 Jun 2026, 02:35:40",2
+7205130008000401 - UB - 1,PT. BANK SULTENG KAS LABEAN,OPEN,banksulteng_kaslabean@yahoo.com,bounced,bounced,"02 Jun 2026, 04:12:10",1
+7205130008000401 - UB - 1,PT. BANK SULTENG KAS LABEAN,OPEN,banksulteng_kaslabean@yahoo.com,bounced,queued,"02 Jun 2026, 04:11:35",2
+7205140004000900 - UB - 1,PT PERKEBUNAN KELAPA MALONAS,OPEN,mohamatsidik00@gmail.com,delivered,delivered,"02 Jun 2026, 05:15:05",1
+7205140004000900 - UB - 1,PT PERKEBUNAN KELAPA MALONAS,OPEN,mohamatsidik00@gmail.com,delivered,queued,"02 Jun 2026, 05:15:04",2
+7206010001000300 - UB - 1,"TAMAKI, CV",OPEN,warno2004kombo@gmail.com,opened,opened,"02 Jun 2026, 06:46:17",1
+7206010001000300 - UB - 1,"TAMAKI, CV",OPEN,warno2004kombo@gmail.com,opened,opened,"02 Jun 2026, 06:45:10",2
+7206010001000300 - UB - 1,"TAMAKI, CV",OPEN,warno2004kombo@gmail.com,opened,delivered,"02 Jun 2026, 00:43:30",3
+7206010001000300 - UB - 1,"TAMAKI, CV",OPEN,warno2004kombo@gmail.com,opened,queued,"02 Jun 2026, 00:43:29",4
 7271041003001200 - UB - 2,SANTOSA UTAMA LESTARI,OPEN,taxpalu.sul@japfa.com,clicked,clicked,"02 Jun 2026, 02:13:16",1
 7271041003001200 - UB - 2,SANTOSA UTAMA LESTARI,OPEN,taxpalu.sul@japfa.com,clicked,clicked,"02 Jun 2026, 02:13:15",2
 7271041003001200 - UB - 2,SANTOSA UTAMA LESTARI,OPEN,taxpalu.sul@japfa.com,clicked,opened,"02 Jun 2026, 02:12:55",3
 7271041003001200 - UB - 2,SANTOSA UTAMA LESTARI,OPEN,taxpalu.sul@japfa.com,clicked,delivered,"02 Jun 2026, 02:12:47",4
 7271041003001200 - UB - 2,SANTOSA UTAMA LESTARI,OPEN,taxpalu.sul@japfa.com,clicked,queued,"02 Jun 2026, 02:12:46",5
-7205080022000700 - UB - 2,"PALU INDAH TEHKNIK, PT",-,adm.paluindahtehnik@gmail.com,delivered,delivered,"02 Jun 2026, 11:52:13",1
-7205080022000700 - UB - 2,"PALU INDAH TEHKNIK, PT",-,adm.paluindahtehnik@gmail.com,delivered,queued,"02 Jun 2026, 11:52:10",2
+7205080022000700 - UB - 2,"PALU INDAH TEHKNIK, PT",OPEN,adm.paluindahtehnik@gmail.com,delivered,delivered,"02 Jun 2026, 11:52:13",1
+7205080022000700 - UB - 2,"PALU INDAH TEHKNIK, PT",OPEN,adm.paluindahtehnik@gmail.com,delivered,queued,"02 Jun 2026, 11:52:10",2
 7271040004000900 - UB - 1,BETON INDUSTRI INDONESIA,OPEN,pt.betonindustriind@gmail.com,clicked,clicked,"02 Jun 2026, 06:48:48",1
 7271040004000900 - UB - 1,BETON INDUSTRI INDONESIA,OPEN,pt.betonindustriind@gmail.com,clicked,clicked,"02 Jun 2026, 06:48:47",2
 7271040004000900 - UB - 1,BETON INDUSTRI INDONESIA,OPEN,pt.betonindustriind@gmail.com,clicked,opened,"02 Jun 2026, 06:48:32",3
@@ -802,8 +802,8 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7271040004000900 - UB - 1,BETON INDUSTRI INDONESIA,OPEN,pt.betonindustriind@gmail.com,clicked,queued,"02 Jun 2026, 03:22:53",5
 7271040002000100 - UB - 1,HAYCARB PALU MITRA PT,OPEN,hpm-accountr@haycarbindo.com,bounced,queued,"02 Jun 2026, 01:06:09",1
 7271040002000100 - UB - 1,HAYCARB PALU MITRA PT,OPEN,hpm-accountr@haycarbindo.com,bounced,bounced,"02 Jun 2026, 01:06:09",2
-7205081004000400 - UB - 1,"LESTARI TANI TELADAN, PT",-,oka@astra-agro.co.id,delivered,delivered,"02 Jun 2026, 01:32:42",1
-7205081004000400 - UB - 1,"LESTARI TANI TELADAN, PT",-,oka@astra-agro.co.id,delivered,queued,"02 Jun 2026, 01:32:30",2
+7205081004000400 - UB - 1,"LESTARI TANI TELADAN, PT",OPEN,oka@astra-agro.co.id,delivered,delivered,"02 Jun 2026, 01:32:42",1
+7205081004000400 - UB - 1,"LESTARI TANI TELADAN, PT",OPEN,oka@astra-agro.co.id,delivered,queued,"02 Jun 2026, 01:32:30",2
 7204070011000400 - UB - 1,"BANK SYARIAH INDONESIA KCP POSO, PT",-,contactus@bankbsi.co.id,clicked,clicked,"02 Jun 2026, 04:39:40",1
 7204070011000400 - UB - 1,"BANK SYARIAH INDONESIA KCP POSO, PT",-,contactus@bankbsi.co.id,clicked,delivered,"02 Jun 2026, 04:39:32",2
 7204070011000400 - UB - 1,"BANK SYARIAH INDONESIA KCP POSO, PT",-,contactus@bankbsi.co.id,clicked,queued,"02 Jun 2026, 04:39:32",3
@@ -839,8 +839,8 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7271031007000200 - UB - 1,SULAWESI CENTRAL COMMODITY,OPEN,sulawesicentralcommodity@yahoo.com,bounced,bounced,"02 Jun 2026, 07:11:36",1
 7271031007000200 - UB - 1,SULAWESI CENTRAL COMMODITY,OPEN,sulawesicentralcommodity@yahoo.com,bounced,queued,"02 Jun 2026, 07:11:00",2
 7271041003001200 - UB - 4,HONG THAI INTERNATIONAL,OPEN,internationalhongthai@gmail.com,-,-,-,0
-7205080024000400 - UB - 1,ASTUN HI. ARSYAD,-,astunhiarsyad28@gmail.com,bounced,bounced,"02 Jun 2026, 09:45:54",1
-7205080024000400 - UB - 1,ASTUN HI. ARSYAD,-,astunhiarsyad28@gmail.com,bounced,queued,"02 Jun 2026, 09:45:51",2
+7205080024000400 - UB - 1,ASTUN HI. ARSYAD,OPEN,astunhiarsyad28@gmail.com,bounced,bounced,"02 Jun 2026, 09:45:54",1
+7205080024000400 - UB - 1,ASTUN HI. ARSYAD,OPEN,astunhiarsyad28@gmail.com,bounced,queued,"02 Jun 2026, 09:45:51",2
 7271031008000400 - UB - 1,ALFIAN CHANIAGO,OPEN,chaniago1978a@gmail.com,delivered,delivered,"02 Jun 2026, 08:59:15",1
 7271031008000400 - UB - 1,ALFIAN CHANIAGO,OPEN,chaniago1978a@gmail.com,delivered,queued,"02 Jun 2026, 08:59:11",2
 7204032006001600 - UB - 1,PLTA Poso 1,-,pltaposo2@posoenergy.com,bounced,bounced,"02 Jun 2026, 05:08:43",1
@@ -949,27 +949,27 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7202013009000200 - UB - 1,"RAMAI JAYA ABADI, PT",OPEN,ramaijayaabadi18@gmail.com,opened,queued,"02 Jun 2026, 01:45:20",3
 7202011017000200 - UB - 1,JAYA MAKMUR ABADI,OPEN,cvjayamakmurabadi8@gmail.com,delivered,delivered,"02 Jun 2026, 03:05:22",1
 7202011017000200 - UB - 1,JAYA MAKMUR ABADI,OPEN,cvjayamakmurabadi8@gmail.com,delivered,queued,"02 Jun 2026, 03:05:14",2
-7212050009000200 - UB - 6,KHANSA PERMATA,-,cvkhansapermata120@gmail.com,delivered,delivered,"02 Jun 2026, 07:10:45",1
-7212050009000200 - UB - 6,KHANSA PERMATA,-,cvkhansapermata120@gmail.com,delivered,queued,"02 Jun 2026, 07:10:42",2
-7212050009000200 - UB - 16,PT Pertamina Patra Niaga Fuel Terminal Kolonodale,-,hse.tbbmkolonodale@gmail.com,delivered,delivered,"02 Jun 2026, 11:55:07",1
-7212050009000200 - UB - 16,PT Pertamina Patra Niaga Fuel Terminal Kolonodale,-,hse.tbbmkolonodale@gmail.com,delivered,queued,"02 Jun 2026, 11:55:06",2
-7212050009000302 - UB - 3,MIRNA KARYA KONSTRUKSINDO,-,mirnakaryakonstruksindocv@gmail.com,delivered,delivered,"02 Jun 2026, 11:48:40",1
-7212050009000302 - UB - 3,MIRNA KARYA KONSTRUKSINDO,-,mirnakaryakonstruksindocv@gmail.com,delivered,queued,"02 Jun 2026, 11:48:40",2
+7212050009000200 - UB - 6,KHANSA PERMATA,OPEN,cvkhansapermata120@gmail.com,delivered,delivered,"02 Jun 2026, 07:10:45",1
+7212050009000200 - UB - 6,KHANSA PERMATA,OPEN,cvkhansapermata120@gmail.com,delivered,queued,"02 Jun 2026, 07:10:42",2
+7212050009000200 - UB - 16,PT Pertamina Patra Niaga Fuel Terminal Kolonodale,OPEN,hse.tbbmkolonodale@gmail.com,delivered,delivered,"02 Jun 2026, 11:55:07",1
+7212050009000200 - UB - 16,PT Pertamina Patra Niaga Fuel Terminal Kolonodale,OPEN,hse.tbbmkolonodale@gmail.com,delivered,queued,"02 Jun 2026, 11:55:06",2
+7212050009000302 - UB - 3,MIRNA KARYA KONSTRUKSINDO,OPEN,mirnakaryakonstruksindocv@gmail.com,delivered,delivered,"02 Jun 2026, 11:48:40",1
+7212050009000302 - UB - 3,MIRNA KARYA KONSTRUKSINDO,OPEN,mirnakaryakonstruksindocv@gmail.com,delivered,queued,"02 Jun 2026, 11:48:40",2
 7201040014000300 - UB - 1,BPR Syariah <Agus Supriadi>,OPEN,avatarcrue@gmail.com,bounced,queued,"02 Jun 2026, 11:35:03",1
 7201040014000300 - UB - 1,BPR Syariah <Agus Supriadi>,OPEN,avatarcrue@gmail.com,bounced,bounced,"02 Jun 2026, 11:35:02",2
-7212050008000100 - UB - 6,JOURNEY ADVENTURE INDONESIA,-,cv.journeyadventureindonesia@gmail.com,delivered,delivered,"02 Jun 2026, 10:45:02",1
-7212050008000100 - UB - 6,JOURNEY ADVENTURE INDONESIA,-,cv.journeyadventureindonesia@gmail.com,delivered,queued,"02 Jun 2026, 10:45:01",2
-7212050008000100 - UB - 7,BINA BANGGAI MEMBANGUN,-,pt.binabanggaimembangun@gmail.com,delivered,delivered,"02 Jun 2026, 02:46:52",1
-7212050008000100 - UB - 7,BINA BANGGAI MEMBANGUN,-,pt.binabanggaimembangun@gmail.com,delivered,queued,"02 Jun 2026, 02:46:47",2
-7212050008000400 - UB - 3,BERKAT ANUGRAH TAMBANG,-,ptberkatanugrahtambang@gmail.com,delivered,delivered,"02 Jun 2026, 08:09:41",1
-7212050008000400 - UB - 3,BERKAT ANUGRAH TAMBANG,-,ptberkatanugrahtambang@gmail.com,delivered,queued,"02 Jun 2026, 08:09:34",2
-7212050009000200 - UB - 13,MEDINA MINING CONSORTIUM,-,medinaminingconsortium@gmail.com,delivered,delivered,"01 Jun 2026, 23:06:19",1
-7212050009000200 - UB - 13,MEDINA MINING CONSORTIUM,-,medinaminingconsortium@gmail.com,delivered,queued,"01 Jun 2026, 23:06:18",2
-7212050010000500 - UB - 2,GUNUNG SAFHA MINERAL,-,ptgsm1977@gmail.com,delivered,delivered,"02 Jun 2026, 01:40:01",1
-7212050010000500 - UB - 2,GUNUNG SAFHA MINERAL,-,ptgsm1977@gmail.com,delivered,queued,"02 Jun 2026, 01:40:01",2
-7212080001000300 - UB - 2,SAMUDERA TOWI INDONESIA,-,samuderatowiindonesia@gmail.com,delivered,queued,"02 Jun 2026, 00:33:06",1
-7212080001000300 - UB - 2,SAMUDERA TOWI INDONESIA,-,samuderatowiindonesia@gmail.com,delivered,delivered,"02 Jun 2026, 00:33:06",2
-7212100003000400 - UB - 1,SAWIT PERMAI PRATAMA,-,permaipratamasawit@gmail.com,-,-,-,0
+7212050008000100 - UB - 6,JOURNEY ADVENTURE INDONESIA,OPEN,cv.journeyadventureindonesia@gmail.com,delivered,delivered,"02 Jun 2026, 10:45:02",1
+7212050008000100 - UB - 6,JOURNEY ADVENTURE INDONESIA,OPEN,cv.journeyadventureindonesia@gmail.com,delivered,queued,"02 Jun 2026, 10:45:01",2
+7212050008000100 - UB - 7,BINA BANGGAI MEMBANGUN,OPEN,pt.binabanggaimembangun@gmail.com,delivered,delivered,"02 Jun 2026, 02:46:52",1
+7212050008000100 - UB - 7,BINA BANGGAI MEMBANGUN,OPEN,pt.binabanggaimembangun@gmail.com,delivered,queued,"02 Jun 2026, 02:46:47",2
+7212050008000400 - UB - 3,BERKAT ANUGRAH TAMBANG,OPEN,ptberkatanugrahtambang@gmail.com,delivered,delivered,"02 Jun 2026, 08:09:41",1
+7212050008000400 - UB - 3,BERKAT ANUGRAH TAMBANG,OPEN,ptberkatanugrahtambang@gmail.com,delivered,queued,"02 Jun 2026, 08:09:34",2
+7212050009000200 - UB - 13,MEDINA MINING CONSORTIUM,OPEN,medinaminingconsortium@gmail.com,delivered,delivered,"01 Jun 2026, 23:06:19",1
+7212050009000200 - UB - 13,MEDINA MINING CONSORTIUM,OPEN,medinaminingconsortium@gmail.com,delivered,queued,"01 Jun 2026, 23:06:18",2
+7212050010000500 - UB - 2,GUNUNG SAFHA MINERAL,OPEN,ptgsm1977@gmail.com,delivered,delivered,"02 Jun 2026, 01:40:01",1
+7212050010000500 - UB - 2,GUNUNG SAFHA MINERAL,OPEN,ptgsm1977@gmail.com,delivered,queued,"02 Jun 2026, 01:40:01",2
+7212080001000300 - UB - 2,SAMUDERA TOWI INDONESIA,OPEN,samuderatowiindonesia@gmail.com,delivered,queued,"02 Jun 2026, 00:33:06",1
+7212080001000300 - UB - 2,SAMUDERA TOWI INDONESIA,OPEN,samuderatowiindonesia@gmail.com,delivered,delivered,"02 Jun 2026, 00:33:06",2
+7212100003000400 - UB - 1,SAWIT PERMAI PRATAMA,OPEN,permaipratamasawit@gmail.com,-,-,-,0
 7271000000000000 - UB - 6,MINERAL SIUNA PERKASA,OPEN,mineralsiunaperkasa@gmail.com,delivered,delivered,"01 Jun 2026, 23:34:23",1
 7271000000000000 - UB - 6,MINERAL SIUNA PERKASA,OPEN,mineralsiunaperkasa@gmail.com,delivered,queued,"01 Jun 2026, 23:34:19",2
 7271000000000000 - UB - 14,LEMBO MINERAL PERKASA,OPEN,lembomineralperkasa@gmail.com,delivered,delivered,"02 Jun 2026, 02:38:48",1
@@ -980,116 +980,116 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7271000000000000 - UB - 29,BATU BUOL LESTARI,OPEN,ptbatubuollestari@gmail.com,delivered,queued,"01 Jun 2026, 23:44:24",2
 7271000000000000 - UB - 28,TOUNA MINERAL PERKASA,OPEN,tounamineralperkasa@gmail.com,delivered,delivered,"02 Jun 2026, 01:08:24",1
 7271000000000000 - UB - 28,TOUNA MINERAL PERKASA,OPEN,tounamineralperkasa@gmail.com,delivered,queued,"02 Jun 2026, 01:08:20",2
-7212080001000300 - UB - 3,MINERAL SAMUDERA PRATAMA,-,mineralsamuderapratama@gmail.com,delivered,delivered,"02 Jun 2026, 06:03:46",1
-7212080001000300 - UB - 3,MINERAL SAMUDERA PRATAMA,-,mineralsamuderapratama@gmail.com,delivered,queued,"02 Jun 2026, 06:02:58",2
+7212080001000300 - UB - 3,MINERAL SAMUDERA PRATAMA,OPEN,mineralsamuderapratama@gmail.com,delivered,delivered,"02 Jun 2026, 06:03:46",1
+7212080001000300 - UB - 3,MINERAL SAMUDERA PRATAMA,OPEN,mineralsamuderapratama@gmail.com,delivered,queued,"02 Jun 2026, 06:02:58",2
 7202012010000200 - UB - 1,ABDULLAH JAYA MANDIRI,OPEN,cv.abdullahjayamandiri@gmail.com,delivered,delivered,"02 Jun 2026, 03:51:37",1
 7202012010000200 - UB - 1,ABDULLAH JAYA MANDIRI,OPEN,cv.abdullahjayamandiri@gmail.com,delivered,queued,"02 Jun 2026, 03:51:34",2
 7202030021000200 - UB - 2,BANK MANDIRI (PERSERO) TBK KCP BANGGAI BUNTA,OPEN,cma@bankmandiri.co.id,delivered,delivered,"02 Jun 2026, 06:35:57",1
 7202030021000200 - UB - 2,BANK MANDIRI (PERSERO) TBK KCP BANGGAI BUNTA,OPEN,cma@bankmandiri.co.id,delivered,queued,"02 Jun 2026, 06:35:57",2
-7212090007000500 - UB - 1,BUMITAMA AGRO NUSANTARA,-,bumitamaagronusantara01@gmail.com,delivered,delivered,"02 Jun 2026, 08:45:29",1
-7212090007000500 - UB - 1,BUMITAMA AGRO NUSANTARA,-,bumitamaagronusantara01@gmail.com,delivered,queued,"02 Jun 2026, 08:45:28",2
+7212090007000500 - UB - 1,BUMITAMA AGRO NUSANTARA,OPEN,bumitamaagronusantara01@gmail.com,delivered,delivered,"02 Jun 2026, 08:45:29",1
+7212090007000500 - UB - 1,BUMITAMA AGRO NUSANTARA,OPEN,bumitamaagronusantara01@gmail.com,delivered,queued,"02 Jun 2026, 08:45:28",2
 7201040016000100 - UB - 2,BRI UNIT SALAKAN,OPEN,n5164@corp.bri.com,bounced,bounced,"02 Jun 2026, 09:36:45",1
 7201040016000100 - UB - 2,BRI UNIT SALAKAN,OPEN,n5164@corp.bri.com,bounced,queued,"02 Jun 2026, 09:36:44",2
-7212050009000302 - UB - 1,PUTRA NUSANTARA SEJATI,-,pn.sejati80@gmail.com,delivered,delivered,"02 Jun 2026, 02:41:43",1
-7212050009000302 - UB - 1,PUTRA NUSANTARA SEJATI,-,pn.sejati80@gmail.com,delivered,queued,"02 Jun 2026, 02:41:39",2
-7212050009000200 - UB - 2,Nasi Kuning Putriadi <PUTRIADI>,-,ptenamsembilankawasanindustri@gmail.com,delivered,delivered,"02 Jun 2026, 09:22:10",1
-7212050009000200 - UB - 2,Nasi Kuning Putriadi <PUTRIADI>,-,ptenamsembilankawasanindustri@gmail.com,delivered,queued,"02 Jun 2026, 09:22:10",2
-7212050009000200 - UB - 12,MULIA PACIFIC RESOURCES BHL,-,muliapacificresources@gmail.com,bounced,bounced,"02 Jun 2026, 03:21:19",1
-7212050009000200 - UB - 12,MULIA PACIFIC RESOURCES BHL,-,muliapacificresources@gmail.com,bounced,queued,"02 Jun 2026, 03:21:19",2
-7212040010000600 - UB - 1,Warung makan online rini <Rini>,-,tax.sei.site@gmail.com,delivered,delivered,"02 Jun 2026, 02:39:43",1
-7212040010000600 - UB - 1,Warung makan online rini <Rini>,-,tax.sei.site@gmail.com,delivered,queued,"02 Jun 2026, 02:39:39",2
-7212050009000301 - UB - 2,MANDORA MOIKO WATER,-,moikowater@gmail.com,delivered,delivered,"02 Jun 2026, 02:21:08",1
-7212050009000301 - UB - 2,MANDORA MOIKO WATER,-,moikowater@gmail.com,delivered,queued,"02 Jun 2026, 02:21:05",2
-7212050009000302 - UB - 2,IZZI TRI JAYA,-,ptizzytrijaya@gmail.com,delivered,delivered,"02 Jun 2026, 08:37:19",1
-7212050009000302 - UB - 2,IZZI TRI JAYA,-,ptizzytrijaya@gmail.com,delivered,queued,"02 Jun 2026, 08:37:16",2
-7212100005100100 - UB - 1,CAHAYA TIGA PUTRA,-,cahayatigaputra9191@gmail.com,delivered,delivered,"02 Jun 2026, 02:53:45",1
-7212100005100100 - UB - 1,CAHAYA TIGA PUTRA,-,cahayatigaputra9191@gmail.com,delivered,queued,"02 Jun 2026, 02:53:41",2
-7212020008100200 - UB - 4,CENTRAL CELEBES MINERALINDO,-,celebescentral82@gmail.com,delivered,delivered,"02 Jun 2026, 00:50:11",1
-7212020008100200 - UB - 4,CENTRAL CELEBES MINERALINDO,-,celebescentral82@gmail.com,delivered,queued,"02 Jun 2026, 00:50:06",2
-7212050009000302 - UB - 4,BOANERGES,-,rudolf.inosen@gmail.com,delivered,delivered,"02 Jun 2026, 02:24:51",1
-7212050009000302 - UB - 4,BOANERGES,-,rudolf.inosen@gmail.com,delivered,queued,"02 Jun 2026, 02:24:47",2
+7212050009000302 - UB - 1,PUTRA NUSANTARA SEJATI,OPEN,pn.sejati80@gmail.com,delivered,delivered,"02 Jun 2026, 02:41:43",1
+7212050009000302 - UB - 1,PUTRA NUSANTARA SEJATI,OPEN,pn.sejati80@gmail.com,delivered,queued,"02 Jun 2026, 02:41:39",2
+7212050009000200 - UB - 2,Nasi Kuning Putriadi <PUTRIADI>,OPEN,ptenamsembilankawasanindustri@gmail.com,delivered,delivered,"02 Jun 2026, 09:22:10",1
+7212050009000200 - UB - 2,Nasi Kuning Putriadi <PUTRIADI>,OPEN,ptenamsembilankawasanindustri@gmail.com,delivered,queued,"02 Jun 2026, 09:22:10",2
+7212050009000200 - UB - 12,MULIA PACIFIC RESOURCES BHL,OPEN,muliapacificresources@gmail.com,bounced,bounced,"02 Jun 2026, 03:21:19",1
+7212050009000200 - UB - 12,MULIA PACIFIC RESOURCES BHL,OPEN,muliapacificresources@gmail.com,bounced,queued,"02 Jun 2026, 03:21:19",2
+7212040010000600 - UB - 1,Warung makan online rini <Rini>,OPEN,tax.sei.site@gmail.com,delivered,delivered,"02 Jun 2026, 02:39:43",1
+7212040010000600 - UB - 1,Warung makan online rini <Rini>,OPEN,tax.sei.site@gmail.com,delivered,queued,"02 Jun 2026, 02:39:39",2
+7212050009000301 - UB - 2,MANDORA MOIKO WATER,OPEN,moikowater@gmail.com,delivered,delivered,"02 Jun 2026, 02:21:08",1
+7212050009000301 - UB - 2,MANDORA MOIKO WATER,OPEN,moikowater@gmail.com,delivered,queued,"02 Jun 2026, 02:21:05",2
+7212050009000302 - UB - 2,IZZI TRI JAYA,OPEN,ptizzytrijaya@gmail.com,delivered,delivered,"02 Jun 2026, 08:37:19",1
+7212050009000302 - UB - 2,IZZI TRI JAYA,OPEN,ptizzytrijaya@gmail.com,delivered,queued,"02 Jun 2026, 08:37:16",2
+7212100005100100 - UB - 1,CAHAYA TIGA PUTRA,OPEN,cahayatigaputra9191@gmail.com,delivered,delivered,"02 Jun 2026, 02:53:45",1
+7212100005100100 - UB - 1,CAHAYA TIGA PUTRA,OPEN,cahayatigaputra9191@gmail.com,delivered,queued,"02 Jun 2026, 02:53:41",2
+7212020008100200 - UB - 4,CENTRAL CELEBES MINERALINDO,OPEN,celebescentral82@gmail.com,delivered,delivered,"02 Jun 2026, 00:50:11",1
+7212020008100200 - UB - 4,CENTRAL CELEBES MINERALINDO,OPEN,celebescentral82@gmail.com,delivered,queued,"02 Jun 2026, 00:50:06",2
+7212050009000302 - UB - 4,BOANERGES,OPEN,rudolf.inosen@gmail.com,delivered,delivered,"02 Jun 2026, 02:24:51",1
+7212050009000302 - UB - 4,BOANERGES,OPEN,rudolf.inosen@gmail.com,delivered,queued,"02 Jun 2026, 02:24:47",2
 7201040016000100 - UB - 1,BANK SULTENG,OPEN,n7763078@gmail.com,delivered,delivered,"02 Jun 2026, 10:18:10",1
 7201040016000100 - UB - 1,BANK SULTENG,OPEN,n7763078@gmail.com,delivered,queued,"02 Jun 2026, 10:18:07",2
-7212040011000400 - UB - 1,ARUNIKA BUMI MORUTA,-,ptarunikabumimoruta@gmail.com,delivered,delivered,"02 Jun 2026, 09:17:56",1
-7212040011000400 - UB - 1,ARUNIKA BUMI MORUTA,-,ptarunikabumimoruta@gmail.com,delivered,queued,"02 Jun 2026, 09:17:53",2
-7212040002000200 - UB - 1,DONGHUANG INTELLIGENT ENGINEERING,-,andri.lee.joy@gmail.com,delivered,queued,"02 Jun 2026, 05:25:23",1
-7212040002000200 - UB - 1,DONGHUANG INTELLIGENT ENGINEERING,-,andri.lee.joy@gmail.com,delivered,delivered,"02 Jun 2026, 05:25:23",2
-7212050002000400 - UB - 1,SULAWESI MINERAL UTAMA,-,haryadibahtiar1991@gmail.com,delivered,delivered,"02 Jun 2026, 06:01:03",1
-7212050002000400 - UB - 1,SULAWESI MINERAL UTAMA,-,haryadibahtiar1991@gmail.com,delivered,queued,"02 Jun 2026, 06:00:41",2
-7212040006000200 - UB - 4,PT. SUMBER PERMATA MINERAL,-,sumberpermatamineral176@gmail.com,delivered,delivered,"02 Jun 2026, 11:38:24",1
-7212040006000200 - UB - 4,PT. SUMBER PERMATA MINERAL,-,sumberpermatamineral176@gmail.com,delivered,queued,"02 Jun 2026, 11:38:20",2
-7212040009000200 - UB - 3,KEINZ VENTURA PT,-,keinzventura1205@gmail.com,bounced,bounced,"02 Jun 2026, 07:01:31",1
-7212040009000200 - UB - 3,KEINZ VENTURA PT,-,keinzventura1205@gmail.com,bounced,queued,"02 Jun 2026, 07:01:30",2
-7212050008000100 - UB - 3,PURNAMA LOGISTIK MORUT,-,ptpurnamalogistikmorut@gmail.com,delivered,delivered,"02 Jun 2026, 00:23:19",1
-7212050008000100 - UB - 3,PURNAMA LOGISTIK MORUT,-,ptpurnamalogistikmorut@gmail.com,delivered,queued,"02 Jun 2026, 00:23:15",2
-7212050003000700 - UB - 6,MAMALA JAYA MINERAL,-,mamalajayamineral@gmail.com,-,-,-,0
+7212040011000400 - UB - 1,ARUNIKA BUMI MORUTA,OPEN,ptarunikabumimoruta@gmail.com,delivered,delivered,"02 Jun 2026, 09:17:56",1
+7212040011000400 - UB - 1,ARUNIKA BUMI MORUTA,OPEN,ptarunikabumimoruta@gmail.com,delivered,queued,"02 Jun 2026, 09:17:53",2
+7212040002000200 - UB - 1,DONGHUANG INTELLIGENT ENGINEERING,OPEN,andri.lee.joy@gmail.com,delivered,queued,"02 Jun 2026, 05:25:23",1
+7212040002000200 - UB - 1,DONGHUANG INTELLIGENT ENGINEERING,OPEN,andri.lee.joy@gmail.com,delivered,delivered,"02 Jun 2026, 05:25:23",2
+7212050002000400 - UB - 1,SULAWESI MINERAL UTAMA,OPEN,haryadibahtiar1991@gmail.com,delivered,delivered,"02 Jun 2026, 06:01:03",1
+7212050002000400 - UB - 1,SULAWESI MINERAL UTAMA,OPEN,haryadibahtiar1991@gmail.com,delivered,queued,"02 Jun 2026, 06:00:41",2
+7212040006000200 - UB - 4,PT. SUMBER PERMATA MINERAL,OPEN,sumberpermatamineral176@gmail.com,delivered,delivered,"02 Jun 2026, 11:38:24",1
+7212040006000200 - UB - 4,PT. SUMBER PERMATA MINERAL,OPEN,sumberpermatamineral176@gmail.com,delivered,queued,"02 Jun 2026, 11:38:20",2
+7212040009000200 - UB - 3,KEINZ VENTURA PT,OPEN,keinzventura1205@gmail.com,bounced,bounced,"02 Jun 2026, 07:01:31",1
+7212040009000200 - UB - 3,KEINZ VENTURA PT,OPEN,keinzventura1205@gmail.com,bounced,queued,"02 Jun 2026, 07:01:30",2
+7212050008000100 - UB - 3,PURNAMA LOGISTIK MORUT,OPEN,ptpurnamalogistikmorut@gmail.com,delivered,delivered,"02 Jun 2026, 00:23:19",1
+7212050008000100 - UB - 3,PURNAMA LOGISTIK MORUT,OPEN,ptpurnamalogistikmorut@gmail.com,delivered,queued,"02 Jun 2026, 00:23:15",2
+7212050003000700 - UB - 6,MAMALA JAYA MINERAL,OPEN,mamalajayamineral@gmail.com,-,-,-,0
 7202011014000102 - UB - 1,EP PT. Pertamania DONGGI MATINDOK FIELD,OPEN,keuangandmt@gmail.com,delivered,delivered,"02 Jun 2026, 08:27:19",1
 7202011014000102 - UB - 1,EP PT. Pertamania DONGGI MATINDOK FIELD,OPEN,keuangandmt@gmail.com,delivered,queued,"02 Jun 2026, 08:27:15",2
-7212050009000301 - UB - 1,PT. RABBANI PANCA SAMUDRA (RABBANI PANCA SAMUDRA),-,ptrabbanipancasamudra@gmail.com,delivered,delivered,"02 Jun 2026, 04:28:03",1
-7212050009000301 - UB - 1,PT. RABBANI PANCA SAMUDRA (RABBANI PANCA SAMUDRA),-,ptrabbanipancasamudra@gmail.com,delivered,queued,"02 Jun 2026, 04:27:59",2
-7212020014000500 - UB - 1,BAIXING MINING INVESEMENT,-,idrisnohon088@gmail.com,delivered,queued,"02 Jun 2026, 02:00:32",1
-7212020014000500 - UB - 1,BAIXING MINING INVESEMENT,-,idrisnohon088@gmail.com,delivered,delivered,"02 Jun 2026, 02:00:32",2
-7212050009000200 - UB - 15,BERKAH ENERGI INDO GROUP,-,berkahenergigroup@gmail.com,-,-,-,0
-7212040009000200 - UB - 2,GARUDA PERKASA SULAWESI,-,garudaperkasasulawesi@gmail.com,-,-,-,0
-7212040010000201 - UB - 1,NADESICO NICKEL INDUSTRY,-,office.nadesico@gmail.com,-,-,-,0
+7212050009000301 - UB - 1,PT. RABBANI PANCA SAMUDRA (RABBANI PANCA SAMUDRA),OPEN,ptrabbanipancasamudra@gmail.com,delivered,delivered,"02 Jun 2026, 04:28:03",1
+7212050009000301 - UB - 1,PT. RABBANI PANCA SAMUDRA (RABBANI PANCA SAMUDRA),OPEN,ptrabbanipancasamudra@gmail.com,delivered,queued,"02 Jun 2026, 04:27:59",2
+7212020014000500 - UB - 1,BAIXING MINING INVESEMENT,OPEN,idrisnohon088@gmail.com,delivered,queued,"02 Jun 2026, 02:00:32",1
+7212020014000500 - UB - 1,BAIXING MINING INVESEMENT,OPEN,idrisnohon088@gmail.com,delivered,delivered,"02 Jun 2026, 02:00:32",2
+7212050009000200 - UB - 15,BERKAH ENERGI INDO GROUP,OPEN,berkahenergigroup@gmail.com,-,-,-,0
+7212040009000200 - UB - 2,GARUDA PERKASA SULAWESI,OPEN,garudaperkasasulawesi@gmail.com,-,-,-,0
+7212040010000201 - UB - 1,NADESICO NICKEL INDUSTRY,OPEN,office.nadesico@gmail.com,-,-,-,0
 7202010026000400 - UB - 1,BANK PERKREDITAN RAKYAT MITRA NIAGA BANGGAI,OPEN,toili@mailnesia.com,-,permanent_fail,"02 Jun 2026, 02:11:11",1
-7212040010300300 - UB - 3,DJAVA BERKAH MINERAL SITE MOROWALI UTARA,-,admin.hrga@dbm-mining.com,delivered,delivered,"02 Jun 2026, 00:09:11",1
-7212040010300300 - UB - 3,DJAVA BERKAH MINERAL SITE MOROWALI UTARA,-,admin.hrga@dbm-mining.com,delivered,queued,"02 Jun 2026, 00:04:22",2
-7212050006000100 - UB - 1,PT. TIPPULU SEJAHTERA BERSAUDARA (TIPPULU SEJAHTERA BERSAUDARA),-,pttippulusejahterabersaudara@gmail.com,delivered,delivered,"02 Jun 2026, 10:32:05",1
-7212050006000100 - UB - 1,PT. TIPPULU SEJAHTERA BERSAUDARA (TIPPULU SEJAHTERA BERSAUDARA),-,pttippulusejahterabersaudara@gmail.com,delivered,queued,"02 Jun 2026, 10:32:02",2
-7212050009000200 - UB - 11,SINAR NIKEL NOVEMBER,-,pt.sinarnikelnovember@gmail.com,delivered,delivered,"02 Jun 2026, 02:14:15",1
-7212050009000200 - UB - 11,SINAR NIKEL NOVEMBER,-,pt.sinarnikelnovember@gmail.com,delivered,queued,"02 Jun 2026, 02:14:10",2
-7212040012000502 - UB - 1,BUNGA SAWIT DESA BUNTA,-,bungasawitdesabunta@gmail.com,delivered,queued,"02 Jun 2026, 06:34:47",1
-7212040012000502 - UB - 1,BUNGA SAWIT DESA BUNTA,-,bungasawitdesabunta@gmail.com,delivered,delivered,"02 Jun 2026, 06:34:46",2
-7212050009000302 - UB - 5,PT GRACIA TOMORI ANUGRAH (GUDANG UTAMA OBAT),-,pt.graciatomorianugrah@gmail.com,delivered,delivered,"02 Jun 2026, 04:37:12",1
-7212050009000302 - UB - 5,PT GRACIA TOMORI ANUGRAH (GUDANG UTAMA OBAT),-,pt.graciatomorianugrah@gmail.com,delivered,queued,"02 Jun 2026, 04:37:08",2
-7212070003000300 - UB - 1,MAELO MOROWALI MANDIRI,-,cvmaelomorowalimandiri@gmail.com,delivered,delivered,"02 Jun 2026, 00:41:35",1
-7212070003000300 - UB - 1,MAELO MOROWALI MANDIRI,-,cvmaelomorowalimandiri@gmail.com,delivered,queued,"02 Jun 2026, 00:41:32",2
-7212050003000700 - UB - 4,CAHAYA RIZTMAL MINERAL,-,cahayariztmalmineral@gmail.com,delivered,delivered,"02 Jun 2026, 03:29:45",1
-7212050003000700 - UB - 4,CAHAYA RIZTMAL MINERAL,-,cahayariztmalmineral@gmail.com,delivered,queued,"02 Jun 2026, 03:29:42",2
-7212050009000200 - UB - 8,SRIKANDI MINING CELEBES,-,srikandiminingcelebes@gmail.com,delivered,delivered,"02 Jun 2026, 09:32:11",1
-7212050009000200 - UB - 8,SRIKANDI MINING CELEBES,-,srikandiminingcelebes@gmail.com,delivered,queued,"02 Jun 2026, 09:32:10",2
+7212040010300300 - UB - 3,DJAVA BERKAH MINERAL SITE MOROWALI UTARA,OPEN,admin.hrga@dbm-mining.com,delivered,delivered,"02 Jun 2026, 00:09:11",1
+7212040010300300 - UB - 3,DJAVA BERKAH MINERAL SITE MOROWALI UTARA,OPEN,admin.hrga@dbm-mining.com,delivered,queued,"02 Jun 2026, 00:04:22",2
+7212050006000100 - UB - 1,PT. TIPPULU SEJAHTERA BERSAUDARA (TIPPULU SEJAHTERA BERSAUDARA),OPEN,pttippulusejahterabersaudara@gmail.com,delivered,delivered,"02 Jun 2026, 10:32:05",1
+7212050006000100 - UB - 1,PT. TIPPULU SEJAHTERA BERSAUDARA (TIPPULU SEJAHTERA BERSAUDARA),OPEN,pttippulusejahterabersaudara@gmail.com,delivered,queued,"02 Jun 2026, 10:32:02",2
+7212050009000200 - UB - 11,SINAR NIKEL NOVEMBER,OPEN,pt.sinarnikelnovember@gmail.com,delivered,delivered,"02 Jun 2026, 02:14:15",1
+7212050009000200 - UB - 11,SINAR NIKEL NOVEMBER,OPEN,pt.sinarnikelnovember@gmail.com,delivered,queued,"02 Jun 2026, 02:14:10",2
+7212040012000502 - UB - 1,BUNGA SAWIT DESA BUNTA,OPEN,bungasawitdesabunta@gmail.com,delivered,queued,"02 Jun 2026, 06:34:47",1
+7212040012000502 - UB - 1,BUNGA SAWIT DESA BUNTA,OPEN,bungasawitdesabunta@gmail.com,delivered,delivered,"02 Jun 2026, 06:34:46",2
+7212050009000302 - UB - 5,PT GRACIA TOMORI ANUGRAH (GUDANG UTAMA OBAT),OPEN,pt.graciatomorianugrah@gmail.com,delivered,delivered,"02 Jun 2026, 04:37:12",1
+7212050009000302 - UB - 5,PT GRACIA TOMORI ANUGRAH (GUDANG UTAMA OBAT),OPEN,pt.graciatomorianugrah@gmail.com,delivered,queued,"02 Jun 2026, 04:37:08",2
+7212070003000300 - UB - 1,MAELO MOROWALI MANDIRI,OPEN,cvmaelomorowalimandiri@gmail.com,delivered,delivered,"02 Jun 2026, 00:41:35",1
+7212070003000300 - UB - 1,MAELO MOROWALI MANDIRI,OPEN,cvmaelomorowalimandiri@gmail.com,delivered,queued,"02 Jun 2026, 00:41:32",2
+7212050003000700 - UB - 4,CAHAYA RIZTMAL MINERAL,OPEN,cahayariztmalmineral@gmail.com,delivered,delivered,"02 Jun 2026, 03:29:45",1
+7212050003000700 - UB - 4,CAHAYA RIZTMAL MINERAL,OPEN,cahayariztmalmineral@gmail.com,delivered,queued,"02 Jun 2026, 03:29:42",2
+7212050009000200 - UB - 8,SRIKANDI MINING CELEBES,OPEN,srikandiminingcelebes@gmail.com,delivered,delivered,"02 Jun 2026, 09:32:11",1
+7212050009000200 - UB - 8,SRIKANDI MINING CELEBES,OPEN,srikandiminingcelebes@gmail.com,delivered,queued,"02 Jun 2026, 09:32:10",2
 7201040015000300 - UB - 1,BPR PALU LOKADANA CAB SALAKAN,OPEN,bpr.381@lakadana.com,-,-,-,0
 7202031003000200 - UB - 1,MANDIRI AMANAH BANGGAI,OPEN,cvmandiriamanagbanggai@gmail.com,delivered,delivered,"02 Jun 2026, 01:13:56",1
 7202031003000200 - UB - 1,MANDIRI AMANAH BANGGAI,OPEN,cvmandiriamanagbanggai@gmail.com,delivered,queued,"02 Jun 2026, 01:13:56",2
-7212080001200100 - UB - 2,CAHAYA MINA BAHARI,-,koperasicahayaminabahari@gmail.com,delivered,delivered,"02 Jun 2026, 09:51:16",1
-7212080001200100 - UB - 2,CAHAYA MINA BAHARI,-,koperasicahayaminabahari@gmail.com,delivered,queued,"02 Jun 2026, 09:51:08",2
-7212080001200100 - UB - 6,ZIMO INVESTASI INDONESIA,-,zimoinvestasiindonesia@gmail.com,delivered,delivered,"01 Jun 2026, 23:07:45",1
-7212080001200100 - UB - 6,ZIMO INVESTASI INDONESIA,-,zimoinvestasiindonesia@gmail.com,delivered,queued,"01 Jun 2026, 23:07:44",2
-7212050009000200 - UB - 1,BINTANG MINERAL SULAWESI PERKASA,-,bintangmineralsp@gmail.com,delivered,delivered,"02 Jun 2026, 08:30:34",1
-7212050009000200 - UB - 1,BINTANG MINERAL SULAWESI PERKASA,-,bintangmineralsp@gmail.com,delivered,queued,"02 Jun 2026, 08:30:30",2
-7212050009000200 - UB - 3,INSAN KREATIF MORUT,-,insankreatifmorut@gmail.com,delivered,delivered,"01 Jun 2026, 23:52:50",1
-7212050009000200 - UB - 3,INSAN KREATIF MORUT,-,insankreatifmorut@gmail.com,delivered,queued,"01 Jun 2026, 23:52:45",2
-7212050009000200 - UB - 10,XMINE CELEBES,-,celebesxmine@gmail.com,opened,opened,"02 Jun 2026, 20:34:09",1
-7212050009000200 - UB - 10,XMINE CELEBES,-,celebesxmine@gmail.com,opened,delivered,"02 Jun 2026, 10:42:31",2
-7212050009000200 - UB - 10,XMINE CELEBES,-,celebesxmine@gmail.com,opened,queued,"02 Jun 2026, 10:42:27",3
-7212050009000200 - UB - 14,MOROWALI AGRO LESTARI,-,morowaliagrolestari@gmail.com,delivered,delivered,"02 Jun 2026, 09:47:15",1
-7212050009000200 - UB - 14,MOROWALI AGRO LESTARI,-,morowaliagrolestari@gmail.com,delivered,queued,"02 Jun 2026, 09:47:10",2
-7212080001200100 - UB - 3,HIQMAH MERONGA UTAMA,-,pthiqmahmeronga23@gmail.com,delivered,delivered,"02 Jun 2026, 10:34:28",1
-7212080001200100 - UB - 3,HIQMAH MERONGA UTAMA,-,pthiqmahmeronga23@gmail.com,delivered,queued,"02 Jun 2026, 10:34:27",2
-7212080001200100 - UB - 4,MOROWALI MINERAL JAYA,-,sulkarnainnatsirhse@gmail.com,delivered,delivered,"02 Jun 2026, 02:10:07",1
-7212080001200100 - UB - 4,MOROWALI MINERAL JAYA,-,sulkarnainnatsirhse@gmail.com,delivered,queued,"02 Jun 2026, 02:10:03",2
-7212100007000400 - UB - 1,PANCA MUTIARA BERKAH,-,pancamutiaraberkah@gmail.com,delivered,delivered,"02 Jun 2026, 01:30:54",1
-7212100007000400 - UB - 1,PANCA MUTIARA BERKAH,-,pancamutiaraberkah@gmail.com,delivered,queued,"02 Jun 2026, 01:30:50",2
-7212060008000300 - UB - 1,CAHAYA IPUL PERDANA,-,cvcahayaipulperdana0672@gmail.com,delivered,delivered,"02 Jun 2026, 00:37:37",1
-7212060008000300 - UB - 1,CAHAYA IPUL PERDANA,-,cvcahayaipulperdana0672@gmail.com,delivered,queued,"02 Jun 2026, 00:37:32",2
-7212080001000200 - UB - 1,PADANG SUMARA MINING,-,pt.padangsumaramining@gmail.com,delivered,delivered,"01 Jun 2026, 23:00:54",1
-7212080001000200 - UB - 1,PADANG SUMARA MINING,-,pt.padangsumaramining@gmail.com,delivered,queued,"01 Jun 2026, 23:00:51",2
-7212080001200100 - UB - 5,FIVE STAR INDONESIA - HOFFMEN,-,lidychayadi@gmail.com,bounced,bounced,"01 Jun 2026, 23:00:08",1
-7212080001200100 - UB - 5,FIVE STAR INDONESIA - HOFFMEN,-,lidychayadi@gmail.com,bounced,queued,"01 Jun 2026, 23:00:04",2
-7212050009000200 - UB - 5,MOROWALI MINERAL MINING,-,morowalimineralmining@gmail.com,delivered,delivered,"01 Jun 2026, 23:01:59",1
-7212050009000200 - UB - 5,MOROWALI MINERAL MINING,-,morowalimineralmining@gmail.com,delivered,queued,"01 Jun 2026, 23:01:55",2
-7212060002000200 - UB - 1,LBM JAYA ENERGI,-,lbmjayaenergi@gmail.com,delivered,delivered,"02 Jun 2026, 05:07:01",1
-7212060002000200 - UB - 1,LBM JAYA ENERGI,-,lbmjayaenergi@gmail.com,delivered,queued,"02 Jun 2026, 05:06:57",2
-7212050003000700 - UB - 7,MAJU ENERGI MORUT,-,pt.majuenergimorut@gmail.com,opened,opened,"02 Jun 2026, 06:00:48",1
-7212050003000700 - UB - 7,MAJU ENERGI MORUT,-,pt.majuenergimorut@gmail.com,opened,delivered,"02 Jun 2026, 06:00:23",2
-7212050003000700 - UB - 7,MAJU ENERGI MORUT,-,pt.majuenergimorut@gmail.com,opened,queued,"02 Jun 2026, 06:00:22",3
+7212080001200100 - UB - 2,CAHAYA MINA BAHARI,OPEN,koperasicahayaminabahari@gmail.com,delivered,delivered,"02 Jun 2026, 09:51:16",1
+7212080001200100 - UB - 2,CAHAYA MINA BAHARI,OPEN,koperasicahayaminabahari@gmail.com,delivered,queued,"02 Jun 2026, 09:51:08",2
+7212080001200100 - UB - 6,ZIMO INVESTASI INDONESIA,OPEN,zimoinvestasiindonesia@gmail.com,delivered,delivered,"01 Jun 2026, 23:07:45",1
+7212080001200100 - UB - 6,ZIMO INVESTASI INDONESIA,OPEN,zimoinvestasiindonesia@gmail.com,delivered,queued,"01 Jun 2026, 23:07:44",2
+7212050009000200 - UB - 1,BINTANG MINERAL SULAWESI PERKASA,OPEN,bintangmineralsp@gmail.com,delivered,delivered,"02 Jun 2026, 08:30:34",1
+7212050009000200 - UB - 1,BINTANG MINERAL SULAWESI PERKASA,OPEN,bintangmineralsp@gmail.com,delivered,queued,"02 Jun 2026, 08:30:30",2
+7212050009000200 - UB - 3,INSAN KREATIF MORUT,OPEN,insankreatifmorut@gmail.com,delivered,delivered,"01 Jun 2026, 23:52:50",1
+7212050009000200 - UB - 3,INSAN KREATIF MORUT,OPEN,insankreatifmorut@gmail.com,delivered,queued,"01 Jun 2026, 23:52:45",2
+7212050009000200 - UB - 10,XMINE CELEBES,OPEN,celebesxmine@gmail.com,opened,opened,"02 Jun 2026, 20:34:09",1
+7212050009000200 - UB - 10,XMINE CELEBES,OPEN,celebesxmine@gmail.com,opened,delivered,"02 Jun 2026, 10:42:31",2
+7212050009000200 - UB - 10,XMINE CELEBES,OPEN,celebesxmine@gmail.com,opened,queued,"02 Jun 2026, 10:42:27",3
+7212050009000200 - UB - 14,MOROWALI AGRO LESTARI,OPEN,morowaliagrolestari@gmail.com,delivered,delivered,"02 Jun 2026, 09:47:15",1
+7212050009000200 - UB - 14,MOROWALI AGRO LESTARI,OPEN,morowaliagrolestari@gmail.com,delivered,queued,"02 Jun 2026, 09:47:10",2
+7212080001200100 - UB - 3,HIQMAH MERONGA UTAMA,OPEN,pthiqmahmeronga23@gmail.com,delivered,delivered,"02 Jun 2026, 10:34:28",1
+7212080001200100 - UB - 3,HIQMAH MERONGA UTAMA,OPEN,pthiqmahmeronga23@gmail.com,delivered,queued,"02 Jun 2026, 10:34:27",2
+7212080001200100 - UB - 4,MOROWALI MINERAL JAYA,OPEN,sulkarnainnatsirhse@gmail.com,delivered,delivered,"02 Jun 2026, 02:10:07",1
+7212080001200100 - UB - 4,MOROWALI MINERAL JAYA,OPEN,sulkarnainnatsirhse@gmail.com,delivered,queued,"02 Jun 2026, 02:10:03",2
+7212100007000400 - UB - 1,PANCA MUTIARA BERKAH,OPEN,pancamutiaraberkah@gmail.com,delivered,delivered,"02 Jun 2026, 01:30:54",1
+7212100007000400 - UB - 1,PANCA MUTIARA BERKAH,OPEN,pancamutiaraberkah@gmail.com,delivered,queued,"02 Jun 2026, 01:30:50",2
+7212060008000300 - UB - 1,CAHAYA IPUL PERDANA,OPEN,cvcahayaipulperdana0672@gmail.com,delivered,delivered,"02 Jun 2026, 00:37:37",1
+7212060008000300 - UB - 1,CAHAYA IPUL PERDANA,OPEN,cvcahayaipulperdana0672@gmail.com,delivered,queued,"02 Jun 2026, 00:37:32",2
+7212080001000200 - UB - 1,PADANG SUMARA MINING,OPEN,pt.padangsumaramining@gmail.com,delivered,delivered,"01 Jun 2026, 23:00:54",1
+7212080001000200 - UB - 1,PADANG SUMARA MINING,OPEN,pt.padangsumaramining@gmail.com,delivered,queued,"01 Jun 2026, 23:00:51",2
+7212080001200100 - UB - 5,FIVE STAR INDONESIA - HOFFMEN,OPEN,lidychayadi@gmail.com,bounced,bounced,"01 Jun 2026, 23:00:08",1
+7212080001200100 - UB - 5,FIVE STAR INDONESIA - HOFFMEN,OPEN,lidychayadi@gmail.com,bounced,queued,"01 Jun 2026, 23:00:04",2
+7212050009000200 - UB - 5,MOROWALI MINERAL MINING,OPEN,morowalimineralmining@gmail.com,delivered,delivered,"01 Jun 2026, 23:01:59",1
+7212050009000200 - UB - 5,MOROWALI MINERAL MINING,OPEN,morowalimineralmining@gmail.com,delivered,queued,"01 Jun 2026, 23:01:55",2
+7212060002000200 - UB - 1,LBM JAYA ENERGI,OPEN,lbmjayaenergi@gmail.com,delivered,delivered,"02 Jun 2026, 05:07:01",1
+7212060002000200 - UB - 1,LBM JAYA ENERGI,OPEN,lbmjayaenergi@gmail.com,delivered,queued,"02 Jun 2026, 05:06:57",2
+7212050003000700 - UB - 7,MAJU ENERGI MORUT,OPEN,pt.majuenergimorut@gmail.com,opened,opened,"02 Jun 2026, 06:00:48",1
+7212050003000700 - UB - 7,MAJU ENERGI MORUT,OPEN,pt.majuenergimorut@gmail.com,opened,delivered,"02 Jun 2026, 06:00:23",2
+7212050003000700 - UB - 7,MAJU ENERGI MORUT,OPEN,pt.majuenergimorut@gmail.com,opened,queued,"02 Jun 2026, 06:00:22",3
 7201040014000700 - UB - 1,BANK MANDIRI (PERSERO),OPEN,mmu.banggai-kepulauan@bankmandiri.co.id,delivered,delivered,"02 Jun 2026, 01:50:58",1
 7201040014000700 - UB - 1,BANK MANDIRI (PERSERO),OPEN,mmu.banggai-kepulauan@bankmandiri.co.id,delivered,queued,"02 Jun 2026, 01:50:58",2
 7202010020000300 - UB - 1,BANK SULTENG,OPEN,banksulteng.toili@yahoo.com,bounced,bounced,"02 Jun 2026, 00:12:21",1
 7202010020000300 - UB - 1,BANK SULTENG,OPEN,banksulteng.toili@yahoo.com,bounced,queued,"02 Jun 2026, 00:11:48",2
-7212040010200200 - UB - 1,INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA,-,pt.internusamajuperkasa@gmail.com,delivered,queued,"02 Jun 2026, 00:47:47",1
-7212040010200200 - UB - 1,INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA,-,pt.internusamajuperkasa@gmail.com,delivered,delivered,"02 Jun 2026, 00:47:51",2
+7212040010200200 - UB - 1,INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA,OPEN,pt.internusamajuperkasa@gmail.com,delivered,queued,"02 Jun 2026, 00:47:47",1
+7212040010200200 - UB - 1,INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA,OPEN,pt.internusamajuperkasa@gmail.com,delivered,delivered,"02 Jun 2026, 00:47:51",2
 7203030017000100 - UB - 1,PT. MOROWALI MEGASIAR,-,syauqinayah@gmail.com,delivered,delivered,"02 Jun 2026, 00:35:46",1
 7203030017000100 - UB - 1,PT. MOROWALI MEGASIAR,-,syauqinayah@gmail.com,delivered,queued,"02 Jun 2026, 00:35:42",2
 7203030025000300 - UB - 1,YINXIANG MOROWALI TRADING,-,yinxiangmorowalitrading@gmail.com,delivered,delivered,"02 Jun 2026, 07:39:56",1
@@ -1163,8 +1163,8 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7271020007003601 - UB - 1,PT BPR PALU ANUGERAH,OPEN,bprpaluanugerah@gmail.com,opened,queued,"02 Jun 2026, 06:17:59",3
 7202053003000900 - UB - 1,INDO NIKEL KARYA PRATAMA,OPEN,karyapratamaindonikel@gmail.com,delivered,delivered,"02 Jun 2026, 09:00:26",1
 7202053003000900 - UB - 1,INDO NIKEL KARYA PRATAMA,OPEN,karyapratamaindonikel@gmail.com,delivered,queued,"02 Jun 2026, 09:00:26",2
-7208011006000200 - UB - 2,"BANK MANDIRI TBK, PT",-,mmu.parigi_mtgtsrtl@bankmandiri.co.id,delivered,delivered,"02 Jun 2026, 08:57:43",1
-7208011006000200 - UB - 2,"BANK MANDIRI TBK, PT",-,mmu.parigi_mtgtsrtl@bankmandiri.co.id,delivered,queued,"02 Jun 2026, 08:57:42",2
+7208011006000200 - UB - 2,"BANK MANDIRI TBK, PT",OPEN,mmu.parigi_mtgtsrtl@bankmandiri.co.id,delivered,delivered,"02 Jun 2026, 08:57:43",1
+7208011006000200 - UB - 2,"BANK MANDIRI TBK, PT",OPEN,mmu.parigi_mtgtsrtl@bankmandiri.co.id,delivered,queued,"02 Jun 2026, 08:57:42",2
 -,"MATRA ARONA BANGGAI, PT",DRAFT,-,-,-,-,1
 -,"MATRA ARONA BANGGAI, PT",DRAFT,-,-,-,-,2
 -,"MATRA ARONA BANGGAI, PT",DRAFT,-,-,-,-,3
@@ -1285,21 +1285,21 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7205101002000200 - UB - 1,KOPTAN PERINTIS,OPEN,-,-,-,-,0
 7206040016002500 - UB - 1,MAKTO JAYA PT,-,-,-,-,-,0
 7206030010000300 - UB - 1,BANK BRI UNIT TINABOGAN,-,-,-,-,-,0
-7208031003000200 - UB - 1,BRI UNIT KASIMBAR,-,-,-,-,-,0
-7208063002000200 - UB - 1,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Moutong",-,-,-,-,-,0
-7208020017000302 - UB - 1,KANTOR BRI,-,-,-,-,-,0
+7208031003000200 - UB - 1,BRI UNIT KASIMBAR,OPEN,-,-,-,-,0
+7208063002000200 - UB - 1,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Moutong",OPEN,-,-,-,-,0
+7208020017000302 - UB - 1,KANTOR BRI,OPEN,-,-,-,-,0
 7206040014000500 - UB - 1,"KALANDA, PT",-,-,-,-,-,0
 7206040016001900 - UB - 1,"WIYATA MANDALA, KOPERASI",-,-,-,-,-,0
-7208020015000100 - UB - 1,BANK DANAMON,-,-,-,-,-,0
+7208020015000100 - UB - 1,BANK DANAMON,OPEN,-,-,-,-,0
 7206041007001100 - UB - 1,"CELINDO CEMERLANG, CV",-,-,-,-,-,0
 7205081010000500 - UB - 1,KOPTAN MASUGI,OPEN,-,-,-,-,0
 7205120009000103 - UB - 1,PT BANK RAKYAT INDONESIA UNIT SIRENJA,OPEN,-,-,-,-,0
-7208030009000200 - UB - 1,BRI KECAMATAN AMPIBABO,-,-,-,-,-,0
-7205140014000300 - UB - 1,TAMAN HUTAN ASRI,-,-,-,-,-,0
-7205161004000400 - UB - 1,KOPTAN BINA TANI,-,-,-,-,-,0
+7208030009000200 - UB - 1,BRI KECAMATAN AMPIBABO,OPEN,-,-,-,-,0
+7205140014000300 - UB - 1,TAMAN HUTAN ASRI,OPEN,-,-,-,-,0
+7205161004000400 - UB - 1,KOPTAN BINA TANI,OPEN,-,-,-,-,0
 7206040015002200 - UB - 1,"SAMAS TOLITOLI, pt",-,-,-,-,-,0
 7206050007000500 - UB - 1,"PT. POS INDONESIA, KANTOR POS GALANG",-,-,-,-,-,0
-7208020013000300 - UB - 1,"PT. POS INDONESIA, KANTOR POS CABANG LUAR KOTA PARIGI",-,-,-,-,-,0
+7208020013000300 - UB - 1,"PT. POS INDONESIA, KANTOR POS CABANG LUAR KOTA PARIGI",OPEN,-,-,-,-,0
 7271020008003401 - UB - 2,"TATA LOGAM LESTARI, PT",-,-,-,-,-,0
 7203011004200100 - UB - 1,"NUSAJAYA PERSADATAMA MANDIRI, PT",OPEN,-,-,-,-,0
 7202060031000200 - UB - 1,PERTAMBANGAN BIJIH NIKEL [ANUGERAH BANGUN MAKMUR],OPEN,-,-,-,-,0
@@ -1320,62 +1320,62 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7271020007002901 - UB - 2,BANK BRI UNIT PALU SELATAN,-,-,-,-,-,0
 7210120013001500 - UB - 1,KPN SEJAHTERA,OPEN,-,-,-,-,0
 7210130008003000 - UB - 1,KARMIL CAHYA SULAWESI,OPEN,-,-,-,-,0
-7208061003000300 - UB - 1,"WALUYO, UD",-,-,-,-,-,0
+7208061003000300 - UB - 1,"WALUYO, UD",OPEN,-,-,-,-,0
 7212010007000600 - UB - 1,PLN,OPEN,-,-,-,-,0
 7207011004000200 - UB - 1,"MANDALA MULTIFINANCE, PT",OPEN,-,-,-,-,0
-7208060028000200 - UB - 1,"PK. SENANG HATI, PT",-,-,-,-,-,0
+7208060028000200 - UB - 1,"PK. SENANG HATI, PT",OPEN,-,-,-,-,0
 7209010003000100 - UB - 1,"PERUSAHAAN LISTRIK NASIONAL (PERSERO), PT",OPEN,-,-,-,-,0
-7208021003000200 - UB - 1,BRI UNIT SUMBERSARI,-,-,-,-,-,0
+7208021003000200 - UB - 1,BRI UNIT SUMBERSARI,OPEN,-,-,-,-,0
 7206040016003901 - UB - 3,"GUNUNG SOJOL, FIRMA",-,-,-,-,-,0
-7208061033000500 - UB - 1,BANK SULTENG CABANG PARIGI,-,-,-,-,-,0
-7208040026000200 - UB - 1,BANK SULTENG <MOH ANDRIYANSYAH >,-,-,-,-,-,0
-7208051012000500 - UB - 2,PT BPR ALIMO DANA PRIMA,-,-,-,-,-,0
-7208061016000500 - UB - 1,"PENANGKAR BENIH TIRTA RAHAYU, CV",-,-,-,-,-,0
-7208031008000102 - UB - 1,PT BANK PERKREDITAN RAKYAT BINARTA LUHUR <I KOMANG ELI ASTRAWAN>,-,-,-,-,-,0
-7208000000000000 - UB - 1,PT Pegadaian Persero UPC KOTARAYA,-,-,-,-,-,0
-7208011001000702 - UB - 1,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Tolai",-,-,-,-,-,0
-7208051012000500 - UB - 1,BANK MANDIRI KOTARAYA <NIZAR>,-,-,-,-,-,0
-7208064004000400 - UB - 1,BRI UNIT PERSATUAN,-,-,-,-,-,0
-7208011001000302 - UB - 1,"PT Pegadaian (Persero), UPC TOLAI",-,-,-,-,-,0
+7208061033000500 - UB - 1,BANK SULTENG CABANG PARIGI,OPEN,-,-,-,-,0
+7208040026000200 - UB - 1,BANK SULTENG <MOH ANDRIYANSYAH >,OPEN,-,-,-,-,0
+7208051012000500 - UB - 2,PT BPR ALIMO DANA PRIMA,OPEN,-,-,-,-,0
+7208061016000500 - UB - 1,"PENANGKAR BENIH TIRTA RAHAYU, CV",OPEN,-,-,-,-,0
+7208031008000102 - UB - 1,PT BANK PERKREDITAN RAKYAT BINARTA LUHUR <I KOMANG ELI ASTRAWAN>,OPEN,-,-,-,-,0
+7208000000000000 - UB - 1,PT Pegadaian Persero UPC KOTARAYA,OPEN,-,-,-,-,0
+7208011001000702 - UB - 1,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Tolai",OPEN,-,-,-,-,0
+7208051012000500 - UB - 1,BANK MANDIRI KOTARAYA <NIZAR>,OPEN,-,-,-,-,0
+7208064004000400 - UB - 1,BRI UNIT PERSATUAN,OPEN,-,-,-,-,0
+7208011001000302 - UB - 1,"PT Pegadaian (Persero), UPC TOLAI",OPEN,-,-,-,-,0
 7212000000000000 - UB - 1,PT Sinergi Perkebunan Nusantara (SPN),-,-,-,-,-,0
-7208060025000100 - UB - 1,PARIGI AQUAKULTURA PRIMA,-,-,-,-,-,0
-7208051003000300 - UB - 1,"PT Adira Dinamika Multi Finance Tbk, Kantor Representative Office Sulawesi",-,-,-,-,-,0
-7208051012000500 - UB - 3,BANK BRI KCP KOTARAYA,-,-,-,-,-,0
-7208051015000100 - UB - 1,SPBU <FARID>,-,-,-,-,-,0
+7208060025000100 - UB - 1,PARIGI AQUAKULTURA PRIMA,OPEN,-,-,-,-,0
+7208051003000300 - UB - 1,"PT Adira Dinamika Multi Finance Tbk, Kantor Representative Office Sulawesi",OPEN,-,-,-,-,0
+7208051012000500 - UB - 3,BANK BRI KCP KOTARAYA,OPEN,-,-,-,-,0
+7208051015000100 - UB - 1,SPBU <FARID>,OPEN,-,-,-,-,0
 7206040015002200 - UB - 3,PUTRI TUNGGAL TOLIS,-,-,-,-,-,0
 7206040016003600 - UB - 1,"FAJAR INDAH KUSUMA, PT",-,-,-,-,-,0
-7205041005000600 - UB - 3,KUD SARI TANI,-,-,-,-,-,0
-7205091010000300 - UB - 1,KERAJINAN TENUN BUNGA MEKAR,-,-,-,-,-,0
+7205041005000600 - UB - 3,KUD SARI TANI,OPEN,-,-,-,-,0
+7205091010000300 - UB - 1,KERAJINAN TENUN BUNGA MEKAR,OPEN,-,-,-,-,0
 7204071002000600 - UB - 1,PT.Niaga Nusa Abadi Pos Poso,OPEN,-,-,-,-,0
-7204072005000500 - UB - 1,PT. Mitra Distribusi Mandiri Poso,-,-,-,-,-,0
-7208010002000402 - UB - 1,BPR BINARTA LUHUR,-,-,-,-,-,0
-7208010017000100 - UB - 1,BRI UNIT SAUSU PT,-,-,-,-,-,0
-7204070012000800 - UB - 2,Bank BTN,-,-,-,-,-,0
+7204072005000500 - UB - 1,PT. Mitra Distribusi Mandiri Poso,OPEN,-,-,-,-,0
+7208010002000402 - UB - 1,BPR BINARTA LUHUR,OPEN,-,-,-,-,0
+7208010017000100 - UB - 1,BRI UNIT SAUSU PT,OPEN,-,-,-,-,0
+7204070012000800 - UB - 2,Bank BTN,OPEN,-,-,-,-,0
 7271040004000200 - UB - 1,"RAYA PONSEL, CV",-,-,-,-,-,0
-7204071002000300 - UB - 3,PLN RAYON POSO PT,-,-,-,-,-,0
-7204072005000500 - UB - 2,SPBU SAYO,-,-,-,-,-,0
-7204010017000300 - UB - 1,"SEMESTA CIPTA KARYA UTAMA, PT",-,-,-,-,-,0
+7204071002000300 - UB - 3,PLN RAYON POSO PT,OPEN,-,-,-,-,0
+7204072005000500 - UB - 2,SPBU SAYO,OPEN,-,-,-,-,0
+7204010017000300 - UB - 1,"SEMESTA CIPTA KARYA UTAMA, PT",OPEN,-,-,-,-,0
 7271031002003200 - UB - 1,KPN SEJAHTERA,-,-,-,-,-,0
 7271031006002700 - UB - 1,KOPINKRA MINA PALU MAJU,-,-,-,-,-,0
-7204070011000100 - UB - 4,"RAMA PUTRA MANDIRI <RPMR>, PT",-,-,-,-,-,0
+7204070011000100 - UB - 4,"RAMA PUTRA MANDIRI <RPMR>, PT",OPEN,-,-,-,-,0
 7271040002001500 - UB - 2,"CARGILL INDONESIA, PT",-,-,-,-,-,0
-7204070011000301 - UB - 1,ADIRA DINAMIKA MULTI FINANCE TBK,-,-,-,-,-,0
+7204070011000301 - UB - 1,ADIRA DINAMIKA MULTI FINANCE TBK,OPEN,-,-,-,-,0
 7271041003000902 - UB - 1,Bank Sulteng Tawaeli,-,-,-,-,-,0
 7203042005001000 - UB - 1,"TELUK METAL INDUSTRY, PT",-,-,-,-,-,0
-7205140009000900 - UB - 1,KUD BINA MUKTI,-,-,-,-,-,0
-7204020005001200 - UB - 1,"MULTI KARYA, PT",-,-,-,-,-,0
-7204031004000400 - UB - 1,RIU MAMBA KARYA SENTOSA,-,-,-,-,-,0
-7204070007000900 - UB - 1,PT CIPTA LUCKMAN BASRY,-,-,-,-,-,0
-7205120007000900 - UB - 1,BRI UNIT SABANG,-,-,-,-,-,0
-7205080031000100 - UB - 1,"BELLONA MANDIRI, CV",-,-,-,-,-,0
-7205131004000102 - UB - 1,KOPERMAS SEJAHTERA,-,-,-,-,-,0
+7205140009000900 - UB - 1,KUD BINA MUKTI,OPEN,-,-,-,-,0
+7204020005001200 - UB - 1,"MULTI KARYA, PT",OPEN,-,-,-,-,0
+7204031004000400 - UB - 1,RIU MAMBA KARYA SENTOSA,OPEN,-,-,-,-,0
+7204070007000900 - UB - 1,PT CIPTA LUCKMAN BASRY,OPEN,-,-,-,-,0
+7205120007000900 - UB - 1,BRI UNIT SABANG,OPEN,-,-,-,-,0
+7205080031000100 - UB - 1,"BELLONA MANDIRI, CV",OPEN,-,-,-,-,0
+7205131004000102 - UB - 1,KOPERMAS SEJAHTERA,OPEN,-,-,-,-,0
 7271041001000300 - UB - 1,"PT Pegadaian (Persero), UPC TAWAELI",-,-,-,-,-,0
-7204032006001302 - UB - 1,PLTA Poso 2,-,-,-,-,-,0
-7204070007000600 - UB - 1,PT INDOMARCO,-,-,-,-,-,0
-7205080024000200 - UB - 1,KPN KORPRI,-,-,-,-,-,0
-7205080024000200 - UB - 3,"UNGGAS SEJATI, CV",-,-,-,-,-,0
-7204071002000300 - UB - 2,"SICEPAT, PT",-,-,-,-,-,0
-7205080026000300 - UB - 1,Bank BRI Donggala,-,-,-,-,-,0
+7204032006001302 - UB - 1,PLTA Poso 2,OPEN,-,-,-,-,0
+7204070007000600 - UB - 1,PT INDOMARCO,OPEN,-,-,-,-,0
+7205080024000200 - UB - 1,KPN KORPRI,OPEN,-,-,-,-,0
+7205080024000200 - UB - 3,"UNGGAS SEJATI, CV",OPEN,-,-,-,-,0
+7204071002000300 - UB - 2,"SICEPAT, PT",OPEN,-,-,-,-,0
+7205080026000300 - UB - 1,Bank BRI Donggala,OPEN,-,-,-,-,0
 7271031006500200 - UB - 2,BANK BNI,-,-,-,-,-,0
 7204071002000600 - UB - 3,"POS INDONESIA, PT",-,-,-,-,-,0
 7204070009000200 - UB - 1,"MAKASSAR RAYA MOTOR, PT",-,-,-,-,-,0
@@ -1388,7 +1388,7 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7206061003000600 - UB - 1,INTI KARYA VANAME,-,-,-,-,-,0
 7206061004000101 - UB - 1,ESAPUTLII PRAKARSA UTAMA,-,-,-,-,-,0
 7271041004001900 - UB - 1,KPN SANATA,-,-,-,-,-,0
-7208020016000300 - UB - 1,"BPR PALU LOKADANA UTAMA, PT",-,-,-,-,-,0
+7208020016000300 - UB - 1,"BPR PALU LOKADANA UTAMA, PT",OPEN,-,-,-,-,0
 7206040018001300 - UB - 1,BANK BRI UNIT TAMBUN,-,-,-,-,-,0
 7202053002001500 - UB - 1,"CITRA BANGUN ABADI, PT",OPEN,-,-,-,-,0
 7202053003000800 - UB - 2,BRI UNIT SIMPONG,OPEN,-,-,-,-,0
@@ -1464,62 +1464,62 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7212030001000700 - UB - 1,"SINAR KARYAGAMMA PRIMATAMA, PT",-,-,-,-,-,0
 7212020001000500 - UB - 1,"HENTRACO INDOPERKASA, PT",-,-,-,-,-,0
 7207050006000200 - UB - 1,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Paleleh",OPEN,-,-,-,-,0
-7208020017000202 - UB - 1,"PT Pegadaian (Persero), CPS Kampal Parigi",-,-,-,-,-,0
-7208020017000501 - UB - 3,BPR PALU ANUGERA CABANG PARIGI,-,-,-,-,-,0
-7205161004000200 - UB - 1,PT Bank Rakyat Indonesia UNIT OGOAMAS,-,-,-,-,-,0
-7208051007000500 - UB - 1,BRI UNIT TINOMBALA,-,-,-,-,-,0
-7208030020000300 - UB - 1,PEGADAIAN PT.,-,-,-,-,-,0
-7208030015000200 - UB - 1,POS INDONESIA ( PERSERO) PT.,-,-,-,-,-,0
-7208041003000400 - UB - 1,BRI UNIT MANINILI,-,-,-,-,-,0
-7208010004001600 - UB - 1,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Sausu",-,-,-,-,-,0
-7208051003000100 - UB - 1,BANK MANDIRI KCP KOTARAYA PARIGI,-,-,-,-,-,0
+7208020017000202 - UB - 1,"PT Pegadaian (Persero), CPS Kampal Parigi",OPEN,-,-,-,-,0
+7208020017000501 - UB - 3,BPR PALU ANUGERA CABANG PARIGI,OPEN,-,-,-,-,0
+7205161004000200 - UB - 1,PT Bank Rakyat Indonesia UNIT OGOAMAS,OPEN,-,-,-,-,0
+7208051007000500 - UB - 1,BRI UNIT TINOMBALA,OPEN,-,-,-,-,0
+7208030020000300 - UB - 1,PEGADAIAN PT.,OPEN,-,-,-,-,0
+7208030015000200 - UB - 1,POS INDONESIA ( PERSERO) PT.,OPEN,-,-,-,-,0
+7208041003000400 - UB - 1,BRI UNIT MANINILI,OPEN,-,-,-,-,0
+7208010004001600 - UB - 1,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Sausu",OPEN,-,-,-,-,0
+7208051003000100 - UB - 1,BANK MANDIRI KCP KOTARAYA PARIGI,OPEN,-,-,-,-,0
 7212050008000100 - UB - 10,BHAYR MULTI MOROWALI,-,-,-,-,-,0
-7208040010000101 - UB - 1,PT. BRI KCP UNIT TINOMBO <FAJAR MAULANA>,-,-,-,-,-,0
+7208040010000101 - UB - 1,PT. BRI KCP UNIT TINOMBO <FAJAR MAULANA>,OPEN,-,-,-,-,0
 7210030011000200 - UB - 1,PT BANK SULTENG <Anna Rosita>,-,-,-,-,-,0
 7210120013001500 - UB - 2,KPN SAMPO ROA,-,-,-,-,-,0
-7208061003000400 - UB - 1,BANK BRI UNIT KOTANAGAYA,-,-,-,-,-,0
+7208061003000400 - UB - 1,BANK BRI UNIT KOTANAGAYA,OPEN,-,-,-,-,0
 7209020027000101 - UB - 1,BANK BRI UNIT TOJO PT <INRI TANDAWUYA>,OPEN,-,-,-,-,0
 7210030011000100 - UB - 1,"BRI UNIT CABANG KULAWI, pt",-,-,-,-,-,0
-7208040010000101 - UB - 2,"PT PEGADAIAN (PERSERO), UPC BRI UNIT TINOMBO",-,-,-,-,-,0
+7208040010000101 - UB - 2,"PT PEGADAIAN (PERSERO), UPC BRI UNIT TINOMBO",OPEN,-,-,-,-,0
 7210120012001201 - UB - 2,"Bank Negara Indonesia, PT",-,-,-,-,-,0
 7209020018000400 - UB - 1,Bank BPR PT <RAHMAT >,OPEN,-,-,-,-,0
-7206040016002900 - UB - 1,"mitra sepadan finance, pt cabang Tolitoli <SMS finance> <Arif usumayadi >",-,-,-,-,-,0
-7205080026000900 - UB - 1,BANK SULTENG CABANG PEMBANTU DONGGALA,-,husni89mubarak@gmail.com,delivered,queued,"02 Jun 2026, 02:48:12",1
-7205080026000900 - UB - 1,BANK SULTENG CABANG PEMBANTU DONGGALA,-,husni89mubarak@gmail.com,delivered,delivered,"02 Jun 2026, 02:48:12",2
-7205101004000302 - UB - 1,KUD SUKA MAJU,-,-,-,-,-,0
-7205130010000500 - UB - 1,KUD TOWEA,-,-,-,-,-,0
+7206040016002900 - UB - 1,"mitra sepadan finance, pt cabang Tolitoli <SMS finance> <Arif usumayadi >",OPEN,-,-,-,-,0
+7205080026000900 - UB - 1,BANK SULTENG CABANG PEMBANTU DONGGALA,OPEN,husni89mubarak@gmail.com,delivered,queued,"02 Jun 2026, 02:48:12",1
+7205080026000900 - UB - 1,BANK SULTENG CABANG PEMBANTU DONGGALA,OPEN,husni89mubarak@gmail.com,delivered,delivered,"02 Jun 2026, 02:48:12",2
+7205101004000302 - UB - 1,KUD SUKA MAJU,OPEN,-,-,-,-,0
+7205130010000500 - UB - 1,KUD TOWEA,OPEN,-,-,-,-,0
 7204051004001000 - UB - 1,"TUNGGAL MANDIRI JAYA, PT",-,-,-,-,-,0
 7271031001002102 - UB - 1,PT. MEGA VISION TV KABEL,OPEN,-,-,-,-,0
 7204030005001801 - UB - 4,PEGADAIAN PT,-,-,-,-,-,0
 7271031006001200 - UB - 1,BANK SYARIAH MANDIRI,OPEN,-,-,-,-,0
-7205041010000100 - UB - 1,KUD TANI BONMAR INDAH,-,-,-,-,-,0
-7205080022000700 - UB - 3,BERKAH BATU BANAWA PT,-,-,-,-,-,0
-7205081003000201 - UB - 1,PT Bank Rakyat Indonesia UNIT WATATU,-,-,-,-,-,0
+7205041010000100 - UB - 1,KUD TANI BONMAR INDAH,OPEN,-,-,-,-,0
+7205080022000700 - UB - 3,BERKAH BATU BANAWA PT,OPEN,-,-,-,-,0
+7205081003000201 - UB - 1,PT Bank Rakyat Indonesia UNIT WATATU,OPEN,-,-,-,-,0
 7271041003001200 - UB - 10,"WIJAYA MITRA ADIATAMA, PT.",OPEN,-,-,-,-,0
-7205090007000201 - UB - 1,"BIRINGKASI RAYA, PT",-,-,-,-,-,0
-7205130008000300 - UB - 1,Koperasi Petani Nelayan Mina Labean,-,-,-,-,-,0
-7205102002000100 - UB - 1,"UVEMPOMATA, PT",-,-,-,-,-,0
-7205131002000300 - UB - 1,KUD BALA ETANG JAYA,-,-,-,-,-,0
-7206040013000201 - UB - 1,"SUMBER CIPTA MULTI NIAGA, PT",-,-,-,-,-,0
-7208020015000400 - UB - 1,BANK MANDIRI < KCP PARIGI >,-,-,-,-,-,0
-7205080026000900 - UB - 2,Bank Sulteng Donggala,-,-,-,-,-,0
+7205090007000201 - UB - 1,"BIRINGKASI RAYA, PT",OPEN,-,-,-,-,0
+7205130008000300 - UB - 1,Koperasi Petani Nelayan Mina Labean,OPEN,-,-,-,-,0
+7205102002000100 - UB - 1,"UVEMPOMATA, PT",OPEN,-,-,-,-,0
+7205131002000300 - UB - 1,KUD BALA ETANG JAYA,OPEN,-,-,-,-,0
+7206040013000201 - UB - 1,"SUMBER CIPTA MULTI NIAGA, PT",OPEN,-,-,-,-,0
+7208020015000400 - UB - 1,BANK MANDIRI < KCP PARIGI >,OPEN,-,-,-,-,0
+7205080026000900 - UB - 2,Bank Sulteng Donggala,OPEN,-,-,-,-,0
 7271031002002300 - UB - 3,"PT. Taspen Persero, Kantor Cabang Palu",OPEN,-,-,-,-,0
-7205041005000600 - UB - 2,KUD BANGUN TANI,-,-,-,-,-,0
+7205041005000600 - UB - 2,KUD BANGUN TANI,OPEN,-,-,-,-,0
 7271030005002300 - UB - 1,KPN TEKNOLOGI,OPEN,-,-,-,-,0
 7204072005200100 - UB - 1,"Asuransi Kesehatan Indonesia, PT Persero",-,-,-,-,-,0
-7205080022000700 - UB - 1,KUD SUMBER MAKMUR,-,-,-,-,-,0
-7205080026000900 - UB - 3,BANK PERKREDITAN RAKYAT <BPR>,-,-,-,-,-,0
-7205090007000201 - UB - 2,"ADAS SEJAHTERA, PT",-,-,-,-,-,0
-7205041005000600 - UB - 1,KUD RIO JAYA,-,-,-,-,-,0
-7205081019000100 - UB - 1,KUD SINAR TANI,-,-,-,-,-,0
+7205080022000700 - UB - 1,KUD SUMBER MAKMUR,OPEN,-,-,-,-,0
+7205080026000900 - UB - 3,BANK PERKREDITAN RAKYAT <BPR>,OPEN,-,-,-,-,0
+7205090007000201 - UB - 2,"ADAS SEJAHTERA, PT",OPEN,-,-,-,-,0
+7205041005000600 - UB - 1,KUD RIO JAYA,OPEN,-,-,-,-,0
+7205081019000100 - UB - 1,KUD SINAR TANI,OPEN,-,-,-,-,0
 7204070010000602 - UB - 3,BRI CABANG KANTOR KAS PEMDA,-,-,-,-,-,0
 7271040002001101 - UB - 1,"COMEXTRA MAJORA, PT",OPEN,-,-,-,-,0
-7205041010000100 - UB - 2,KOPTAN BUKIT RIO,-,-,-,-,-,0
-7205082005000300 - UB - 1,KUD PESAT LIMBORO,-,-,-,-,-,0
-7205041005000600 - UB - 4,KOPTAN HARAPAN MAKMUR,-,-,-,-,-,0
-7205000000000000 - UB - 1,ADI RAMAT CV,-,-,-,-,-,0
-7205041002002200 - UB - 1,PT Bank Rakyat Indonesia UNIT lalundu,-,-,-,-,-,0
-7205080024000200 - UB - 2,PT BANK NEGARA INDONESIA UNIT DONGGALA,-,-,-,-,-,0
+7205041010000100 - UB - 2,KOPTAN BUKIT RIO,OPEN,-,-,-,-,0
+7205082005000300 - UB - 1,KUD PESAT LIMBORO,OPEN,-,-,-,-,0
+7205041005000600 - UB - 4,KOPTAN HARAPAN MAKMUR,OPEN,-,-,-,-,0
+7205000000000000 - UB - 1,ADI RAMAT CV,OPEN,-,-,-,-,0
+7205041002002200 - UB - 1,PT Bank Rakyat Indonesia UNIT lalundu,OPEN,-,-,-,-,0
+7205080024000200 - UB - 2,PT BANK NEGARA INDONESIA UNIT DONGGALA,OPEN,-,-,-,-,0
 7204020005001100 - UB - 1,BANK BPR YASPIS PT,-,-,-,-,-,0
 7271031008000600 - UB - 1,Bank Bri,OPEN,-,-,-,-,0
 7204070010000603 - UB - 1,UNIVERSITAS SINTUWU MAROSO,-,-,-,-,-,0
@@ -1529,9 +1529,9 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7271030003002000 - UB - 4,"KARS INTI AMANAH, PT",OPEN,-,-,-,-,0
 7271030004002700 - UB - 1,KOP. VETERAN PRIMKOPERI KARYADAMA,OPEN,-,-,-,-,0
 7271030004001301 - UB - 1,KPN KOPFU,OPEN,-,-,-,-,0
-7205100017000500 - UB - 1,PT Bank Rakyat Indonesia UNIT TOAYA,-,-,-,-,-,0
-7205140004001000 - UB - 1,KUD MAPUTI JAYA,-,-,-,-,-,0
-7206010003001400 - UB - 1,PT MANDALA MULTIFINANCE <AZIIZ GALIH RUMEKSO>,-,-,-,-,-,0
+7205100017000500 - UB - 1,PT Bank Rakyat Indonesia UNIT TOAYA,OPEN,-,-,-,-,0
+7205140004001000 - UB - 1,KUD MAPUTI JAYA,OPEN,-,-,-,-,0
+7206010003001400 - UB - 1,PT MANDALA MULTIFINANCE <AZIIZ GALIH RUMEKSO>,OPEN,-,-,-,-,0
 7271031001003003 - UB - 1,PESTA PORA ABADI,OPEN,-,-,-,-,0
 7271031002001600 - UB - 2,GRAPARI,OPEN,-,-,-,-,0
 7204070006000400 - UB - 1,HOTEL 99,-,-,-,-,-,0
@@ -1542,9 +1542,9 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7212040006000300 - UB - 3,"SAWIT JAYA ABADI, PT",-,-,-,-,-,0
 7212070008200100 - UB - 1,"RIMBUNAN ALAM SENTOSA, PT",-,-,-,-,-,0
 7209051007000400 - UB - 1,"FEDERAL INTERNATIONAL FINANCE, PT",OPEN,-,-,-,-,0
-7206040016005001 - UB - 3,BANK BTPN,-,-,-,-,-,0
-7206040018000100 - UB - 1,KPRI PENGAYOMAN LP,-,-,-,-,-,0
-7208031008000101 - UB - 1,BPR BINARTA LUHUR,-,-,-,-,-,0
+7206040016005001 - UB - 3,BANK BTPN,OPEN,-,-,-,-,0
+7206040018000100 - UB - 1,KPRI PENGAYOMAN LP,OPEN,-,-,-,-,0
+7208031008000101 - UB - 1,BPR BINARTA LUHUR,OPEN,-,-,-,-,0
 7212090016000400 - UB - 1,"KARUNIA ALAM MAKMUR, PT",-,-,-,-,-,0
 7210070004000500 - UB - 1,KOPERASI UNIT DESA GUMBASA INDAH,-,-,-,-,-,0
 7210120013000300 - UB - 1,"BRI UNIT BIROMARU, pt",-,-,-,-,-,0
@@ -1561,8 +1561,8 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7202011011001100 - UB - 1,BANK BRI UNIT MAKAPA,OPEN,-,-,-,-,0
 7271000000000000 - UB - 50,PT Sofi Agro Industries,OPEN,-,-,-,-,0
 7202012009000400 - UB - 1,Pertambangan Bijih Nikel [KONAWE PANCA INDONESIA],OPEN,-,-,-,-,0
-7212090015000300 - UB - 1,"ASDP INDONESIA FERRY PERSERO,PT",-,-,-,-,-,0
-7212100001200100 - UB - 1,"CIPTA AGRO SAKTI, PT",-,-,-,-,-,0
+7212090015000300 - UB - 1,"ASDP INDONESIA FERRY PERSERO,PT",OPEN,-,-,-,-,0
+7212100001200100 - UB - 1,"CIPTA AGRO SAKTI, PT",OPEN,-,-,-,-,0
 7271000000000000 - UB - 46,PT Sarana Sulteng Ventura (SSTengV),OPEN,-,-,-,-,0
 7202012008100200 - UB - 1,Bank BRI UNIT Toili,OPEN,-,-,-,-,0
 7202011007000300 - UB - 1,BANK BPR,OPEN,-,-,-,-,0
@@ -1570,23 +1570,23 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7202031008000300 - UB - 1,"PT Pegadaian (Persero), UPC NUHON",OPEN,-,-,-,-,0
 7202020014000700 - UB - 1,Bank BRI UNIT Batui,OPEN,-,-,-,-,0
 7271000000000000 - UB - 49,PT Segar Jaya Mandiri,OPEN,-,-,-,-,0
-7212100008000300 - UB - 1,Pertambangan Bijih Nikel ( TIGA DARA),-,-,-,-,-,0
+7212100008000300 - UB - 1,Pertambangan Bijih Nikel ( TIGA DARA),OPEN,-,-,-,-,0
 7202011011000500 - UB - 1,KUD SINAR HARAPAN,OPEN,-,-,-,-,0
-7212030001000700 - UB - 2,"KIRANA SINAR GEMILANG, PT",-,-,-,-,-,0
-7212030010100100 - UB - 1,"CIPTA AGRO NUSANTARA, PT",-,-,-,-,-,0
-7212050008000100 - UB - 11,Kantin TASMA <TASMA>,-,-,-,-,-,0
-7212030007000600 - UB - 1,Warung Campuran <Sudaryono> <SUDARYONO>,-,-,-,-,-,0
+7212030001000700 - UB - 2,"KIRANA SINAR GEMILANG, PT",OPEN,-,-,-,-,0
+7212030010100100 - UB - 1,"CIPTA AGRO NUSANTARA, PT",OPEN,-,-,-,-,0
+7212050008000100 - UB - 11,Kantin TASMA <TASMA>,OPEN,-,-,-,-,0
+7212030007000600 - UB - 1,Warung Campuran <Sudaryono> <SUDARYONO>,OPEN,-,-,-,-,0
 7202012006001000 - UB - 1,Bank BRI Teras Mulyoharjo,OPEN,-,-,-,-,0
-7212050002000100 - UB - 1,SPBU TANJUNG PUTIA PT,-,-,-,-,-,0
-7212050008000100 - UB - 2,Jasa Pertambangan dan Penggalian( ZHOKY RAYA TANGGUH),-,-,-,-,-,0
-7212050010000500 - UB - 1,PT SKM(SUMBER KARUNIA MINERAL),-,-,-,-,-,0
+7212050002000100 - UB - 1,SPBU TANJUNG PUTIA PT,OPEN,-,-,-,-,0
+7212050008000100 - UB - 2,Jasa Pertambangan dan Penggalian( ZHOKY RAYA TANGGUH),OPEN,-,-,-,-,0
+7212050010000500 - UB - 1,PT SKM(SUMBER KARUNIA MINERAL),OPEN,-,-,-,-,0
 7209051007000300 - UB - 1,"BANK SYARIAH INDONESIA TBK, PT/BANK SYARIAH MANDIRI TBK, PT",-,-,-,-,-,0
 7202021009000400 - UB - 1,Minyak dan Gas Bumi [JOB PERTAMINA - MEDCO E&P TOMORI SULAWESI],OPEN,-,-,-,-,0
-7212050008000400 - UB - 4,UNILEVER PT,-,-,-,-,-,0
-7212100006100100 - UB - 1,"GHANESA WANA UTAMA, PT",-,-,-,-,-,0
+7212050008000400 - UB - 4,UNILEVER PT,OPEN,-,-,-,-,0
+7212100006100100 - UB - 1,"GHANESA WANA UTAMA, PT",OPEN,-,-,-,-,0
 7202011010000400 - UB - 1,PERTAMBANGAN BIJIH NIKEL [GEMILANG BANGUN PERKASA],OPEN,-,-,-,-,0
 7202020014000100 - UB - 1,BNI (PERSERO) PT,OPEN,-,-,-,-,0
-7212080001000300 - UB - 1,Perdagangan Besar Logam Dan Bijih Logam ( STR MINERAL INDONESIA),-,-,-,-,-,0
+7212080001000300 - UB - 1,Perdagangan Besar Logam Dan Bijih Logam ( STR MINERAL INDONESIA),OPEN,-,-,-,-,0
 7202010020000600 - UB - 1,BANK MANDIRI PT,OPEN,-,-,-,-,0
 7202020014000700 - UB - 2,PT BANK SULTENG,OPEN,-,-,-,-,0
 7202021005000700 - UB - 1,"SAWINDO CEMERLANG. , PT",OPEN,-,-,-,-,0
@@ -1596,12 +1596,12 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7202031001000200 - UB - 1,Pertambangan Bijih Nikel [BANGGAI MINERAL PERKASA],OPEN,-,-,-,-,0
 7202031005000700 - UB - 1,Pertambangan Bijih Nikel [GEMILANG MANDIRI PERKASA],OPEN,-,-,-,-,0
 7202013003000800 - UB - 1,BIJIH NIKEL [ANUGERAH BUMI GEMILANG],OPEN,-,-,-,-,0
-7212050007000101 - UB - 1,PT. HEMDEV MULTI KARYA,-,-,-,-,-,0
+7212050007000101 - UB - 1,PT. HEMDEV MULTI KARYA,OPEN,-,-,-,-,0
 7201060006000500 - UB - 1,Bank BRI BULAGI,OPEN,-,-,-,-,0
-7212050008000500 - UB - 1,"CIPTA HUTAMA MARANTI, PT",-,-,-,-,-,0
-7212070007400100 - UB - 1,"NUSA MAS GRIYA LESTARI, PT",-,-,-,-,-,0
+7212050008000500 - UB - 1,"CIPTA HUTAMA MARANTI, PT",OPEN,-,-,-,-,0
+7212070007400100 - UB - 1,"NUSA MAS GRIYA LESTARI, PT",OPEN,-,-,-,-,0
 7202012009000400 - UB - 2,kantor [DELAPAN SEMBILAN ENERGI],OPEN,-,-,-,-,0
-7212040006000100 - UB - 1,"SUMBER PERMATA LESTARI, PT",-,-,-,-,-,0
+7212040006000100 - UB - 1,"SUMBER PERMATA LESTARI, PT",OPEN,-,-,-,-,0
 7203030020000600 - UB - 1,CAHAYA SMELTER INDONESIA,-,-,-,-,-,0
 7203030024000402 - UB - 2,BANK MANDIRI TASPEN,-,-,-,-,-,0
 7271030004001500 - UB - 6,BANK MUAMALAT INDONESIA TBK PT,OPEN,-,-,-,-,0
@@ -1896,3 +1896,102 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7202053007000400 - UB - 1,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,clicked,opened,"21 Mei 2026, 09:28:16",3
 7202053007000400 - UB - 1,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,clicked,delivered,"21 Mei 2026, 09:27:59",4
 7202053007000400 - UB - 1,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,clicked,queued,"21 Mei 2026, 09:27:56",5
+-,"MATRA ARONA BANGGAI, PT",DRAFT,-,-,-,-,0
+-,"MATRA ARONA BANGGAI, PT",DRAFT,-,-,-,-,0
+-,"MATRA ARONA BANGGAI, PT",DRAFT,-,-,-,-,0
+-,"MATRA ARONA BANGGAI, PT",DRAFT,-,-,-,-,0
+7207011003002200 - UB - 1,"PEGADAIAN UNIT BUOL 1, PT <FAIZAL RUSMAN HI. SIGI>",OPEN,andikagenesis02@gmail.com,delivered,delivered,"19 Mei 2026, 11:14:42",1
+7207011003002200 - UB - 1,"PEGADAIAN UNIT BUOL 1, PT <FAIZAL RUSMAN HI. SIGI>",OPEN,andikagenesis02@gmail.com,delivered,queued,"19 Mei 2026, 11:14:38",2
+7207011003000100 - UB - 1,"BANK MANDIRI (PERSERO) TBK KCP BUOL, PT",OPEN,nyoalvaro@gmail.com,bounced,bounced,"19 Mei 2026, 11:14:38",1
+7207011003000100 - UB - 1,"BANK MANDIRI (PERSERO) TBK KCP BUOL, PT",OPEN,nyoalvaro@gmail.com,bounced,queued,"19 Mei 2026, 11:14:34",2
+7207050006000500 - UB - 1,PT Bank rakyat indonesia UNIT PALELEH,OPEN,085298108146adi@gmail.com,delivered,delivered,"21 Mei 2026, 08:24:51",1
+7207050006000500 - UB - 1,PT Bank rakyat indonesia UNIT PALELEH,OPEN,085298108146adi@gmail.com,delivered,queued,"21 Mei 2026, 08:24:48",2
+7207050006000500 - UB - 1,PT Bank rakyat indonesia UNIT PALELEH,OPEN,noviantopian77@gmail.com,opened,delivered,"21 Mei 2026, 10:08:15",1
+7207050006000500 - UB - 1,PT Bank rakyat indonesia UNIT PALELEH,OPEN,noviantopian77@gmail.com,opened,queued,"21 Mei 2026, 10:08:11",2
+7207050006000500 - UB - 1,PT Bank rakyat indonesia UNIT PALELEH,OPEN,noviantopian77@gmail.com,opened,opened,"21 Mei 2026, 10:03:16",3
+7207050006000500 - UB - 1,PT Bank rakyat indonesia UNIT PALELEH,OPEN,noviantopian77@gmail.com,opened,delivered,"21 Mei 2026, 10:00:41",4
+7207050006000500 - UB - 1,PT Bank rakyat indonesia UNIT PALELEH,OPEN,noviantopian77@gmail.com,opened,queued,"21 Mei 2026, 10:00:38",5
+7207050006000400 - UB - 1,PT BANK SULTENG KCP PALELEH,OPEN,noviantopian77@gmail.com,-,-,-,0
+7207011003000200 - UB - 1,BANK BRI UNIT BUOL,OPEN,buolunit@gmail.com,opened,opened,"21 Mei 2026, 18:18:40",1
+7207011003000200 - UB - 1,BANK BRI UNIT BUOL,OPEN,buolunit@gmail.com,opened,delivered,"21 Mei 2026, 08:24:52",2
+7207011003000200 - UB - 1,BANK BRI UNIT BUOL,OPEN,buolunit@gmail.com,opened,queued,"21 Mei 2026, 08:24:51",3
+7207040002001400 - UB - 1,BANK BRI UNIT DIAPATIH,OPEN,yohanesyafetsulung@gmail.com,bounced,permanent_fail,"02 Jun 2026, 00:32:29",1
+7207040002001400 - UB - 1,BANK BRI UNIT DIAPATIH,OPEN,yohanesyafetsulung@gmail.com,bounced,bounced,"21 Mei 2026, 08:24:52",2
+7207040002001400 - UB - 1,BANK BRI UNIT DIAPATIH,OPEN,yohanesyafetsulung@gmail.com,bounced,queued,"21 Mei 2026, 08:24:48",3
+7207040002001400 - UB - 1,BANK BRI UNIT DIAPATIH,OPEN,yohanesyafetsulung@gmail.com,-,-,-,0
+7207011003000900 - UB - 1,BRI UNIT SENTRAL BUOL,OPEN,zhafirahilma@gmail.com,opened,opened,"21 Mei 2026, 08:26:33",1
+7207011003000900 - UB - 1,BRI UNIT SENTRAL BUOL,OPEN,zhafirahilma@gmail.com,opened,delivered,"21 Mei 2026, 08:24:52",2
+7207011003000900 - UB - 1,BRI UNIT SENTRAL BUOL,OPEN,zhafirahilma@gmail.com,opened,queued,"21 Mei 2026, 08:24:51",3
+7207011003000900 - UB - 1,BRI UNIT SENTRAL BUOL,OPEN,fharitz1205@gmail.com,delivered,delivered,"21 Mei 2026, 09:38:57",1
+7207011003000900 - UB - 1,BRI UNIT SENTRAL BUOL,OPEN,fharitz1205@gmail.com,delivered,queued,"21 Mei 2026, 09:38:54",2
+7208060002000502 - UB - 1,BANK PERKREDITAN RAKYAT,OPEN,-,-,-,-,0
+7208011001000404 - UB - 1,BANK TABUNGAN PENSIUNAN NASIONAL CAB.TOLAI,OPEN,-,-,-,-,0
+7208024001200100 - UB - 1,UPTD AIR MINUM,OPEN,-,-,-,-,0
+7208021003000300 - UB - 1,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,-,-,-,-,0
+7212050001000100 - UB - 1,MOMEN KONSTRUKSI,OPEN,cvmomenkonstruksi@gmail.com,delivered,delivered,"02 Jun 2026, 04:49:15",1
+7212050001000100 - UB - 1,MOMEN KONSTRUKSI,OPEN,cvmomenkonstruksi@gmail.com,delivered,queued,"02 Jun 2026, 04:49:11",2
+7212050001000100 - UB - 2,SETIA JAYA NICKELINDO 2,OPEN,ptsetiajayanickelindo@gmail.com,-,-,-,0
+7212050002000200 - UB - 1,BATARA GAMPING SULAWESI,OPEN,bataragampingsulawesi@gmail.com,delivered,queued,"01 Jun 2026, 23:06:14",1
+7212050002000200 - UB - 1,BATARA GAMPING SULAWESI,OPEN,bataragampingsulawesi@gmail.com,delivered,delivered,"01 Jun 2026, 23:06:13",2
+7212050003000500 - UB - 1,PITAGORAS PARAMA ENERGI,OPEN,pitagorasparamaenergi@gmail.com,delivered,delivered,"02 Jun 2026, 09:05:07",1
+7212050003000500 - UB - 1,PITAGORAS PARAMA ENERGI,OPEN,pitagorasparamaenergi@gmail.com,delivered,queued,"02 Jun 2026, 09:05:02",2
+7212050003000700 - UB - 5,HEMDEV MINERAL PERKASA,OPEN,pthemdevmineralperkasa@gmail.com,opened,opened,"01 Jun 2026, 23:45:46",1
+7212050003000700 - UB - 5,HEMDEV MINERAL PERKASA,OPEN,pthemdevmineralperkasa@gmail.com,opened,delivered,"01 Jun 2026, 23:44:43",2
+7212050003000700 - UB - 5,HEMDEV MINERAL PERKASA,OPEN,pthemdevmineralperkasa@gmail.com,opened,queued,"01 Jun 2026, 23:44:42",3
+7212100005000600 - UB - 1,INTI MINERAL PERSADA,OPEN,cvintimineralpersada@gmail.com,delivered,delivered,"02 Jun 2026, 05:46:17",1
+7212100005000600 - UB - 1,INTI MINERAL PERSADA,OPEN,cvintimineralpersada@gmail.com,delivered,queued,"02 Jun 2026, 05:46:13",2
+7212050008000400 - UB - 1,CIPTA GRAHA PADOE,OPEN,ciptagraha99@gmail.com,delivered,queued,"02 Jun 2026, 00:39:33",1
+7212050008000400 - UB - 1,CIPTA GRAHA PADOE,OPEN,ciptagraha99@gmail.com,delivered,delivered,"02 Jun 2026, 00:39:33",2
+7212050008000100 - UB - 4,JAYA ENVIRO,OPEN,jayaenviro@gmail.com,opened,opened,"02 Jun 2026, 07:09:55",1
+7212050008000100 - UB - 4,JAYA ENVIRO,OPEN,jayaenviro@gmail.com,opened,delivered,"02 Jun 2026, 00:41:32",2
+7212050008000100 - UB - 4,JAYA ENVIRO,OPEN,jayaenviro@gmail.com,opened,queued,"02 Jun 2026, 00:41:31",3
+7212050005000500 - UB - 1,INDONESIA HUAFENG INVESTMENT,OPEN,-,-,-,-,0
+7212050009000200 - UB - 7,ANUGERAH NUSANTARA GROUP,OPEN,anugerahnusantaragroup@gmail.com,delivered,delivered,"02 Jun 2026, 01:44:56",1
+7212050009000200 - UB - 7,ANUGERAH NUSANTARA GROUP,OPEN,anugerahnusantaragroup@gmail.com,delivered,queued,"02 Jun 2026, 01:44:52",2
+7212050009000200 - UB - 9,MOROWALI MINERAL SEJAHTERA,OPEN,morowalimineralsejahtera77@gmail.com,delivered,delivered,"02 Jun 2026, 07:04:27",1
+7212050009000200 - UB - 9,MOROWALI MINERAL SEJAHTERA,OPEN,morowalimineralsejahtera77@gmail.com,delivered,queued,"02 Jun 2026, 07:04:27",2
+7212050008000100 - UB - 9,AVIZHA MOROWALI MINING,OPEN,avizhamorowalimining@gmail.com,delivered,delivered,"02 Jun 2026, 04:49:06",1
+7212050008000100 - UB - 9,AVIZHA MOROWALI MINING,OPEN,avizhamorowalimining@gmail.com,delivered,queued,"02 Jun 2026, 04:49:03",2
+7212050008000200 - UB - 1,TELKOM PT,OPEN,-,-,-,-,0
+7212050002000100 - UB - 2,"KARYA BUWANA MANDIRI, PT",OPEN,-,-,-,-,0
+7212040010300300 - UB - 1,MULTI MINERAL INDUSTRI,OPEN,multimineralindustri@gmail.com,opened,opened,"03 Jun 2026, 06:07:01",1
+7212040010300300 - UB - 1,MULTI MINERAL INDUSTRI,OPEN,multimineralindustri@gmail.com,opened,opened,"02 Jun 2026, 06:21:04",2
+7212040010300300 - UB - 1,MULTI MINERAL INDUSTRI,OPEN,multimineralindustri@gmail.com,opened,delivered,"02 Jun 2026, 01:12:48",3
+7212040010300300 - UB - 1,MULTI MINERAL INDUSTRI,OPEN,multimineralindustri@gmail.com,opened,queued,"02 Jun 2026, 01:12:48",4
+7212040012000501 - UB - 1,KANTOR CABANG PT. RAJAWALI INDOLAND INDONESIA,OPEN,rajawalicabang7@gmail.com,delivered,delivered,"02 Jun 2026, 05:05:33",1
+7212040012000501 - UB - 1,KANTOR CABANG PT. RAJAWALI INDOLAND INDONESIA,OPEN,rajawalicabang7@gmail.com,delivered,queued,"02 Jun 2026, 05:05:29",2
+7212020003000200 - UB - 1,BATAM SULAWESI MANDIRI,OPEN,batamsulawesimandiri@gmail.com,delivered,delivered,"02 Jun 2026, 06:26:36",1
+7212020003000200 - UB - 1,BATAM SULAWESI MANDIRI,OPEN,batamsulawesimandiri@gmail.com,delivered,queued,"02 Jun 2026, 06:26:33",2
+7212020008001100 - UB - 2,ERA GOLDEN ENERGY,OPEN,eragoldenenergy@gmail.com,delivered,delivered,"02 Jun 2026, 08:46:22",1
+7212020008001100 - UB - 2,ERA GOLDEN ENERGY,OPEN,eragoldenenergy@gmail.com,delivered,queued,"02 Jun 2026, 08:46:21",2
+7212020009000600 - UB - 1,MULIA ENERGI MORUT,OPEN,muliaenergimorut@gmail.com,delivered,delivered,"02 Jun 2026, 01:14:24",1
+7212020009000600 - UB - 1,MULIA ENERGI MORUT,OPEN,muliaenergimorut@gmail.com,delivered,queued,"02 Jun 2026, 01:14:20",2
+7212010007000200 - UB - 2,BANK RAKYAT INDONESIA PT,OPEN,-,-,-,-,0
+7212040003000100 - UB - 1,ASIAMAX MINING INDONESIA PT,OPEN,pt.asiamax@gmail.com,delivered,delivered,"02 Jun 2026, 08:19:55",1
+7212040003000100 - UB - 1,ASIAMAX MINING INDONESIA PT,OPEN,pt.asiamax@gmail.com,delivered,queued,"02 Jun 2026, 08:19:52",2
+7212040010000102 - UB - 2,KIRANA MAJU ABADI,OPEN,kiranamajubersama@gmail.com,delivered,delivered,"02 Jun 2026, 02:00:47",1
+7212040010000102 - UB - 2,KIRANA MAJU ABADI,OPEN,kiranamajubersama@gmail.com,delivered,queued,"02 Jun 2026, 02:00:44",2
+7212050003000700 - UB - 2,MOROWALI MINERAL SEJAHTERA UTAMA,OPEN,pt.mmsutama@gmail.com,delivered,delivered,"02 Jun 2026, 10:43:09",1
+7212050003000700 - UB - 2,MOROWALI MINERAL SEJAHTERA UTAMA,OPEN,pt.mmsutama@gmail.com,delivered,queued,"02 Jun 2026, 10:43:06",2
+7212040010300300 - UB - 2,BUKIT MAKMUR ISTINDO NIKELTAMA SITE MOROWALI UTARA,OPEN,bumanik@bumanik.co.id,delivered,delivered,"02 Jun 2026, 03:20:44",1
+7212040010300300 - UB - 2,BUKIT MAKMUR ISTINDO NIKELTAMA SITE MOROWALI UTARA,OPEN,bumanik@bumanik.co.id,delivered,queued,"02 Jun 2026, 03:19:23",2
+7212040011000400 - UB - 2,"BANK MANDIRI TBK, PT",OPEN,-,-,-,-,0
+7212050003000500 - UB - 2,SULAWESI INTAN MINING,OPEN,ptsulawesiintanm@gmail.com,-,-,-,0
+7212050008000100 - UB - 5,BUMI MINERAL INDONESIA,OPEN,cvbmineralindonesia@gmail.com,delivered,delivered,"02 Jun 2026, 07:51:45",1
+7212050008000100 - UB - 5,BUMI MINERAL INDONESIA,OPEN,cvbmineralindonesia@gmail.com,delivered,queued,"02 Jun 2026, 07:50:16",2
+7212040011000300 - UB - 1,LAROYALE RESIDENCE MORUT,OPEN,ptlaroyaleresidencemorut@gmail.com,delivered,delivered,"01 Jun 2026, 22:51:32",1
+7212040011000300 - UB - 1,LAROYALE RESIDENCE MORUT,OPEN,ptlaroyaleresidencemorut@gmail.com,delivered,queued,"01 Jun 2026, 22:51:28",2
+7212010007000200 - UB - 1,SAWIT TOA SIOKO,OPEN,konsumensawittoasioko@gmail.com,delivered,delivered,"02 Jun 2026, 03:11:02",1
+7212010007000200 - UB - 1,SAWIT TOA SIOKO,OPEN,konsumensawittoasioko@gmail.com,delivered,queued,"02 Jun 2026, 03:10:58",2
+7212050008000100 - UB - 1,PT. ZHUFU INTI TRACK CONSTRUKCTION (ZHUFU INTI TRACK CONSTRUCTION),OPEN,trackinti99@gmail.com,delivered,delivered,"02 Jun 2026, 08:33:00",1
+7212050008000100 - UB - 1,PT. ZHUFU INTI TRACK CONSTRUKCTION (ZHUFU INTI TRACK CONSTRUCTION),OPEN,trackinti99@gmail.com,delivered,queued,"02 Jun 2026, 08:32:56",2
+7212040001000300 - UB - 1,MITRA JARINGAN PERKASA,OPEN,ptmjperkasa@gmail.com,delivered,delivered,"02 Jun 2026, 02:25:44",1
+7212040001000300 - UB - 1,MITRA JARINGAN PERKASA,OPEN,ptmjperkasa@gmail.com,delivered,queued,"02 Jun 2026, 02:25:41",2
+7212030004100100 - UB - 1,KIRANA SINAR GEMILANG SITE,OPEN,crisantamikha@bintangtimurplantation.com,queued,queued,"02 Jun 2026, 07:31:34",1
+7212040010000102 - UB - 1,BUMI CELEBES PERMAI,OPEN,bumicelebespermai@gmail.com,delivered,delivered,"02 Jun 2026, 06:36:30",1
+7212040010000102 - UB - 1,BUMI CELEBES PERMAI,OPEN,bumicelebespermai@gmail.com,delivered,queued,"02 Jun 2026, 06:36:29",2
+7212020008001100 - UB - 5,"BANK SULTENG, PT",OPEN,-,-,-,-,0
+7212040011000102 - UB - 1,BERKAH JAYA MINERAL,OPEN,berkahjayamineral99@gmail.com,delivered,delivered,"02 Jun 2026, 01:22:45",1
+7212040011000102 - UB - 1,BERKAH JAYA MINERAL,OPEN,berkahjayamineral99@gmail.com,delivered,queued,"02 Jun 2026, 01:22:44",2
+7212040011100100 - UB - 1,SINERGI BINTANG UTARA,OPEN,pt.sinergibintangutara@yahoo.com,bounced,bounced,"02 Jun 2026, 07:45:53",1
+7212040011100100 - UB - 1,SINERGI BINTANG UTARA,OPEN,pt.sinergibintangutara@yahoo.com,bounced,queued,"02 Jun 2026, 07:44:51",2

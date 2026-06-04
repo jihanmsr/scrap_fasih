@@ -1,0 +1,197 @@
+[
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[01] BANGGAI KEPULAUAN</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[01] BANGGAI KEPULAUAN",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_sc_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "true",
+            "data-disabled": "false",
+            "data-selected": "true",
+            "data-value": "01 BANGGAI KEPULAUAN"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[02] BANGGAI</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[02] BANGGAI",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_sd_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "02 BANGGAI"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[03] MOROWALI</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[03] MOROWALI",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_se_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "03 MOROWALI"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[04] POSO</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[04] POSO",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_sf_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "04 POSO"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[05] DONGGALA</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[05] DONGGALA",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_sg_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "05 DONGGALA"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[06] TOLI-TOLI</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[06] TOLI-TOLI",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_sh_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "06 TOLI-TOLI"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[07] BUOL</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[07] BUOL",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_si_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "07 BUOL"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[08] PARIGI MOUTONG</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[08] PARIGI MOUTONG",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_sj_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "08 PARIGI MOUTONG"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[09] TOJO UNA-UNA</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[09] TOJO UNA-UNA",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_sk_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "09 TOJO UNA-UNA"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[10] SIGI</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[10] SIGI",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_sl_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "10 SIGI"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[11] BANGGAI LAUT</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[11] BANGGAI LAUT",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_sm_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "11 BANGGAI LAUT"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[12] MOROWALI UTARA</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[12] MOROWALI UTARA",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_sn_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "12 MOROWALI UTARA"
+        }
+    },
+    {
+        "innerHTML": "<span class=\"f:flex-1 f:truncate\">[71] PALU</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"tabler-icon tabler-icon-check f:ml-2 f:h-4 f:w-4 f:shrink-0 f:opacity-0\"><path d=\"M5 12l5 5l10 -10\"></path></svg>",
+        "innerText": "[71] PALU",
+        "attributes": {
+            "class": "f:relative f:flex f:select-none f:items-center f:rounded-sm f:px-2 f:py-1.5 f:text-sm f:outline-none f:data-[disabled=true]:pointer-events-none f:data-[selected=true]:bg-accent f:data-[selected=true]:text-accent-foreground f:data-[disabled=true]:opacity-50 f:cursor-pointer",
+            "id": "radix-_r_so_",
+            "cmdk-item": "",
+            "role": "option",
+            "aria-disabled": "false",
+            "aria-selected": "false",
+            "data-disabled": "false",
+            "data-selected": "false",
+            "data-value": "71 PALU"
+        }
+    }
+]
