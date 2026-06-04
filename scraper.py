@@ -115,7 +115,10 @@ def get_authenticated_context(p, headless=False):
     
     # Akses halaman awal
     login_url = "https://fasih-sm.bps.go.id/survey-collection/survey"
-    page.goto(login_url)
+    try:
+        page.goto(login_url, timeout=90000, wait_until="domcontentloaded")
+    except Exception as e:
+        logging.warning(f"Timeout saat membuka halaman awal, script akan lanjut: {e}")
     
     print("\n" + "="*70)
     print("SILAKAN LOGIN SSO DI BROWSER CHROMIUM YANG TERBUKA.")
@@ -147,8 +150,11 @@ def get_authenticated_context(p, headless=False):
         time.sleep(3)
         
     logging.info(f"Navigasi otomatis ke halaman target: {target_data_url}")
-    page.goto(target_data_url)
-    time.sleep(3)
+    try:
+        page.goto(target_data_url, timeout=90000, wait_until="domcontentloaded")
+    except Exception as e:
+        logging.warning(f"Timeout saat navigasi (mungkin karena jaringan lambat), script akan lanjut: {e}")
+    time.sleep(5)
     
     return context, page
 
@@ -208,7 +214,7 @@ def scrape_data():
             
             def select_dropdown_option(target_text):
                 try:
-                    page.wait_for_selector("[cmdk-item], div[role='option']", timeout=8000)
+                    page.wait_for_selector("[cmdk-item], div[role='option']", timeout=30000)
                     options = page.locator("[cmdk-item], div[role='option']").all()
                     for opt in options:
                         opt_text = opt.inner_text().strip()
@@ -236,7 +242,7 @@ def scrape_data():
             # Ambil kembali list button karena DOM ter-update setelah memilih provinsi
             dropdown_buttons = page.locator("div[role='dialog'] button.f\\:justify-between, [data-radix-portal] button.f\\:justify-between").all()
             dropdown_buttons[1].click(force=True)
-            page.wait_for_selector("[cmdk-item], div[role='option']", timeout=8000)
+            page.wait_for_selector("[cmdk-item], div[role='option']", timeout=30000)
             time.sleep(1)
             
             kab_options = page.locator("div[role='option'], [cmdk-item]").all()

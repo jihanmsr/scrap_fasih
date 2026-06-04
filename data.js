@@ -2852,7 +2852,7 @@ window.EMAIL_DATA = [
   {
     "code": "7271012005000900 - UB - 2",
     "company_name": "TOHA BATU PALU, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "tohabatupalucorp@gmail.com",
     "global_status": "queued",
     "status": "delivered",
@@ -2862,7 +2862,7 @@ window.EMAIL_DATA = [
   {
     "code": "7271012005000900 - UB - 2",
     "company_name": "TOHA BATU PALU, PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "tohabatupalucorp@gmail.com",
     "global_status": "queued",
     "status": "queued",
@@ -13982,7 +13982,7 @@ window.EMAIL_DATA = [
   {
     "code": "7271030001001400 - UB - 2",
     "company_name": "PUPUK KALTIM PT",
-    "survey_status": "-",
+    "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
     "status": "-",
@@ -18948,6 +18948,16 @@ window.EMAIL_DATA = [
     "status": "queued",
     "timestamp": "21 Mei 2026, 09:30:31",
     "order": 5
+  },
+  {
+    "code": "-",
+    "company_name": "MATRA ARONA BANGGAI, PT",
+    "survey_status": "DRAFT",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
   }
 ];
-window.LAST_UPDATED = '04 Jun 2026, 11:12:43';
+window.LAST_UPDATED = '04 Jun 2026, 11:49:21';

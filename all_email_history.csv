@@ -284,8 +284,8 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7202053002000800 - UB - 1,BUSSAN AUTO FINANCE,OPEN,acc3k29@bussan.co.id,opened,opened,"02 Jun 2026, 08:56:21",5
 7202051004000200 - UB - 1,KELAPA ASIA JAYA,OPEN,quanliuzeng@gmail.com,delivered,queued,"02 Jun 2026, 07:42:18",1
 7202051004000200 - UB - 1,KELAPA ASIA JAYA,OPEN,quanliuzeng@gmail.com,delivered,delivered,"02 Jun 2026, 07:42:18",2
-7271012005000900 - UB - 2,"TOHA BATU PALU, PT",-,tohabatupalucorp@gmail.com,queued,delivered,"02 Jun 2026, 01:00:16",1
-7271012005000900 - UB - 2,"TOHA BATU PALU, PT",-,tohabatupalucorp@gmail.com,queued,queued,"02 Jun 2026, 01:00:12",2
+7271012005000900 - UB - 2,"TOHA BATU PALU, PT",OPEN,tohabatupalucorp@gmail.com,queued,delivered,"02 Jun 2026, 01:00:16",1
+7271012005000900 - UB - 2,"TOHA BATU PALU, PT",OPEN,tohabatupalucorp@gmail.com,queued,queued,"02 Jun 2026, 01:00:12",2
 7271020004002901 - UB - 1,BANK PERKREDITAN RAKYAT SULAWESI MITRA ABADI,-,bprsulawesi001@gmail.com,opened,delivered,"02 Jun 2026, 09:29:44",1
 7271020004002901 - UB - 1,BANK PERKREDITAN RAKYAT SULAWESI MITRA ABADI,-,bprsulawesi001@gmail.com,opened,queued,"02 Jun 2026, 09:29:44",2
 7271020004002901 - UB - 1,BANK PERKREDITAN RAKYAT SULAWESI MITRA ABADI,-,bprsulawesi001@gmail.com,opened,opened,"02 Jun 2026, 09:29:52",3
@@ -1397,7 +1397,7 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7271030004000201 - UB - 3,BNI CABANG PALU,-,-,-,-,-,0
 7203021007400100 - UB - 2,"ZHONGTSING NEW ENERGY, PT",-,-,-,-,-,0
 7203022003000400 - UB - 1,"PINTU AIR MAS MINERAL, PT",-,-,-,-,-,0
-7271030001001400 - UB - 2,PUPUK KALTIM PT,-,-,-,-,-,0
+7271030001001400 - UB - 2,PUPUK KALTIM PT,OPEN,-,-,-,-,0
 7271030002000900 - UB - 3,Bank Mandiri - Tadulako,OPEN,-,-,-,-,0
 7203021005200100 - UB - 5,"ZHAO HUI NICKEL, PT",-,-,-,-,-,0
 7203021005000406 - UB - 13,"Honch New Energy, PT",-,-,-,-,-,0
@@ -1894,3 +1894,4 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7202053007000400 - UB - 1,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,queued,opened,"21 Mei 2026, 09:28:16",3
 7202053007000400 - UB - 1,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,queued,clicked,"21 Mei 2026, 09:28:33",4
 7202053007000400 - UB - 1,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,queued,queued,"21 Mei 2026, 09:30:31",5
+-,"MATRA ARONA BANGGAI, PT",DRAFT,-,-,-,-,0
