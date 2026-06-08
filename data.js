@@ -6950,66 +6950,6 @@ window.EMAIL_DATA = [
     "order": 0
   },
   {
-    "code": "7204070012000100 - UB - 1",
-    "company_name": "PT Tompotika Raya (Depo Poso)",
-    "survey_status": "OPEN",
-    "email": "depotr.ps@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "26 May 2026, 15:42:53",
-    "order": 1
-  },
-  {
-    "code": "7204070012000100 - UB - 1",
-    "company_name": "PT Tompotika Raya (Depo Poso)",
-    "survey_status": "OPEN",
-    "email": "depotr.ps@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "26 May 2026, 15:42:15",
-    "order": 2
-  },
-  {
-    "code": "7204070012000100 - UB - 1",
-    "company_name": "PT Tompotika Raya (Depo Poso)",
-    "survey_status": "OPEN",
-    "email": "depotr.ps@gmail.com",
-    "global_status": "Clicked",
-    "status": "Opened",
-    "timestamp": "26 May 2026, 15:38:42",
-    "order": 3
-  },
-  {
-    "code": "7204070012000100 - UB - 1",
-    "company_name": "PT Tompotika Raya (Depo Poso)",
-    "survey_status": "OPEN",
-    "email": "depotr.ps@gmail.com",
-    "global_status": "Clicked",
-    "status": "Opened",
-    "timestamp": "26 May 2026, 15:35:21",
-    "order": 4
-  },
-  {
-    "code": "7204070012000100 - UB - 1",
-    "company_name": "PT Tompotika Raya (Depo Poso)",
-    "survey_status": "OPEN",
-    "email": "depotr.ps@gmail.com",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "26 May 2026, 08:35:57",
-    "order": 5
-  },
-  {
-    "code": "7204070012000100 - UB - 1",
-    "company_name": "PT Tompotika Raya (Depo Poso)",
-    "survey_status": "OPEN",
-    "email": "depotr.ps@gmail.com",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "26 May 2026, 08:35:53",
-    "order": 6
-  },
-  {
     "code": "7204070011000200 - UB - 2",
     "company_name": "BFI FINANCE INDONESIA TBK PT",
     "survey_status": "OPEN",
@@ -7040,26 +6980,6 @@ window.EMAIL_DATA = [
     "order": 3
   },
   {
-    "code": "7204070009001200 - UB - 1",
-    "company_name": "PNM MODAL MIKRO",
-    "survey_status": "OPEN",
-    "email": "ulamposo@gmail.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "26 May 2026, 08:34:35",
-    "order": 1
-  },
-  {
-    "code": "7204070009001200 - UB - 1",
-    "company_name": "PNM MODAL MIKRO",
-    "survey_status": "OPEN",
-    "email": "ulamposo@gmail.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "26 May 2026, 08:34:35",
-    "order": 2
-  },
-  {
     "code": "7204070010000800 - UB - 1",
     "company_name": "DFSK POSO - PT. AUTO INDO UTAMA",
     "survey_status": "OPEN",
@@ -7080,23 +7000,23 @@ window.EMAIL_DATA = [
     "order": 2
   },
   {
-    "code": "7204070012000800 - UB - 1",
-    "company_name": "Balindo Manunggal Bersama, PT",
+    "code": "7204070009001200 - UB - 1",
+    "company_name": "PNM MODAL MIKRO",
     "survey_status": "OPEN",
-    "email": "gracekayupa@gmail.com",
+    "email": "ulamposo@gmail.com",
     "global_status": "Bounced",
     "status": "Bounced",
-    "timestamp": "26 May 2026, 07:30:38",
+    "timestamp": "26 May 2026, 08:34:35",
     "order": 1
   },
   {
-    "code": "7204070012000800 - UB - 1",
-    "company_name": "Balindo Manunggal Bersama, PT",
+    "code": "7204070009001200 - UB - 1",
+    "company_name": "PNM MODAL MIKRO",
     "survey_status": "OPEN",
-    "email": "gracekayupa@gmail.com",
+    "email": "ulamposo@gmail.com",
     "global_status": "Bounced",
     "status": "Queued",
-    "timestamp": "26 May 2026, 07:30:35",
+    "timestamp": "26 May 2026, 08:34:35",
     "order": 2
   },
   {
@@ -7218,6 +7138,86 @@ window.EMAIL_DATA = [
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:53:24",
     "order": 12
+  },
+  {
+    "code": "7204070012000100 - UB - 1",
+    "company_name": "PT Tompotika Raya (Depo Poso)",
+    "survey_status": "OPEN",
+    "email": "depotr.ps@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "26 May 2026, 15:42:53",
+    "order": 1
+  },
+  {
+    "code": "7204070012000100 - UB - 1",
+    "company_name": "PT Tompotika Raya (Depo Poso)",
+    "survey_status": "OPEN",
+    "email": "depotr.ps@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "26 May 2026, 15:42:15",
+    "order": 2
+  },
+  {
+    "code": "7204070012000100 - UB - 1",
+    "company_name": "PT Tompotika Raya (Depo Poso)",
+    "survey_status": "OPEN",
+    "email": "depotr.ps@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "26 May 2026, 15:38:42",
+    "order": 3
+  },
+  {
+    "code": "7204070012000100 - UB - 1",
+    "company_name": "PT Tompotika Raya (Depo Poso)",
+    "survey_status": "OPEN",
+    "email": "depotr.ps@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "26 May 2026, 15:35:21",
+    "order": 4
+  },
+  {
+    "code": "7204070012000100 - UB - 1",
+    "company_name": "PT Tompotika Raya (Depo Poso)",
+    "survey_status": "OPEN",
+    "email": "depotr.ps@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "26 May 2026, 08:35:57",
+    "order": 5
+  },
+  {
+    "code": "7204070012000100 - UB - 1",
+    "company_name": "PT Tompotika Raya (Depo Poso)",
+    "survey_status": "OPEN",
+    "email": "depotr.ps@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "26 May 2026, 08:35:53",
+    "order": 6
+  },
+  {
+    "code": "7204070012000800 - UB - 1",
+    "company_name": "Balindo Manunggal Bersama, PT",
+    "survey_status": "OPEN",
+    "email": "gracekayupa@gmail.com",
+    "global_status": "Bounced",
+    "status": "Bounced",
+    "timestamp": "26 May 2026, 07:30:38",
+    "order": 1
+  },
+  {
+    "code": "7204070012000800 - UB - 1",
+    "company_name": "Balindo Manunggal Bersama, PT",
+    "survey_status": "OPEN",
+    "email": "gracekayupa@gmail.com",
+    "global_status": "Bounced",
+    "status": "Queued",
+    "timestamp": "26 May 2026, 07:30:35",
+    "order": 2
   },
   {
     "code": "7205102002000300 - UB - 1",
@@ -24070,4 +24070,4 @@ window.EMAIL_DATA = [
     "order": 6
   }
 ];
-window.LAST_UPDATED = '08 Jun 2026, 12:07:40';
+window.LAST_UPDATED = '08 Jun 2026, 13:23:36';

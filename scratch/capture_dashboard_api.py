@@ -17,7 +17,7 @@ async def main():
         await page.bring_to_front()
         
         # Dashboard URL instead of data URL
-        target_url = "https://fasih-sm.bps.go.id/app/surveys/ecddb52e-f392-403c-a963-47391f217010/37526b20-81c8-42f5-a895-6190137d7394/dashboard"
+        target_url = "https://fasih-sm.bps.go.id/app/surveys/a0429e96-51a5-477b-a415-485f9c153004/fd68e454-ba45-4b85-8205-f3bf777ded24/dashboard"
         print(f"Navigating to: {target_url}")
         
         captured = []

@@ -694,21 +694,13 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7204000000000000 - UB - 1,PT. Gelifta Ana Abadi,OPEN,geliftaanaabadi@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:44:13",1
 7204000000000000 - UB - 1,PT. Gelifta Ana Abadi,OPEN,geliftaanaabadi@gmail.com,Delivered,Queued,"02 Jun 2026, 10:44:01",2
 7204000000000000 - UB - 5,TOKO ANEKA RIA,OPEN,-,-,-,-,0
-7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Clicked,"26 May 2026, 15:42:53",1
-7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Clicked,"26 May 2026, 15:42:15",2
-7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Opened,"26 May 2026, 15:38:42",3
-7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Opened,"26 May 2026, 15:35:21",4
-7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Delivered,"26 May 2026, 08:35:57",5
-7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Queued,"26 May 2026, 08:35:53",6
 7204070011000200 - UB - 2,BFI FINANCE INDONESIA TBK PT,OPEN,marwan.setiawan@bfi.co.id,Opened,Opened,"26 May 2026, 08:28:54",1
 7204070011000200 - UB - 2,BFI FINANCE INDONESIA TBK PT,OPEN,marwan.setiawan@bfi.co.id,Opened,Delivered,"26 May 2026, 08:28:07",2
 7204070011000200 - UB - 2,BFI FINANCE INDONESIA TBK PT,OPEN,marwan.setiawan@bfi.co.id,Opened,Queued,"26 May 2026, 08:28:07",3
-7204070009001200 - UB - 1,PNM MODAL MIKRO,OPEN,ulamposo@gmail.com,Bounced,Bounced,"26 May 2026, 08:34:35",1
-7204070009001200 - UB - 1,PNM MODAL MIKRO,OPEN,ulamposo@gmail.com,Bounced,Queued,"26 May 2026, 08:34:35",2
 7204070010000800 - UB - 1,DFSK POSO - PT. AUTO INDO UTAMA,OPEN,andrewfernando493@gmail.com,Delivered,Delivered,"26 May 2026, 08:29:04",1
 7204070010000800 - UB - 1,DFSK POSO - PT. AUTO INDO UTAMA,OPEN,andrewfernando493@gmail.com,Delivered,Queued,"26 May 2026, 08:29:01",2
-7204070012000800 - UB - 1,"Balindo Manunggal Bersama, PT",OPEN,gracekayupa@gmail.com,Bounced,Bounced,"26 May 2026, 07:30:38",1
-7204070012000800 - UB - 1,"Balindo Manunggal Bersama, PT",OPEN,gracekayupa@gmail.com,Bounced,Queued,"26 May 2026, 07:30:35",2
+7204070009001200 - UB - 1,PNM MODAL MIKRO,OPEN,ulamposo@gmail.com,Bounced,Bounced,"26 May 2026, 08:34:35",1
+7204070009001200 - UB - 1,PNM MODAL MIKRO,OPEN,ulamposo@gmail.com,Bounced,Queued,"26 May 2026, 08:34:35",2
 7204070011000301 - UB - 3,"FIF, PT",OPEN,dewiputrihilika90@gmail.com,Bounced,Clicked,"31 May 2026, 12:04:58",1
 7204070011000301 - UB - 3,"FIF, PT",OPEN,dewiputrihilika90@gmail.com,Bounced,Opened,"31 May 2026, 12:04:55",2
 7204070011000301 - UB - 3,"FIF, PT",OPEN,dewiputrihilika90@gmail.com,Bounced,Opened,"31 May 2026, 12:04:51",3
@@ -721,6 +713,14 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7204070011000301 - UB - 3,"FIF, PT",OPEN,dewiputrihilika90@gmail.com,Bounced,Opened,"02 Jun 2026, 11:54:52",10
 7204070011000301 - UB - 3,"FIF, PT",OPEN,dewiputrihilika90@gmail.com,Bounced,Delivered,"02 Jun 2026, 11:53:32",11
 7204070011000301 - UB - 3,"FIF, PT",OPEN,dewiputrihilika90@gmail.com,Bounced,Queued,"02 Jun 2026, 11:53:24",12
+7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Clicked,"26 May 2026, 15:42:53",1
+7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Clicked,"26 May 2026, 15:42:15",2
+7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Opened,"26 May 2026, 15:38:42",3
+7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Opened,"26 May 2026, 15:35:21",4
+7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Delivered,"26 May 2026, 08:35:57",5
+7204070012000100 - UB - 1,PT Tompotika Raya (Depo Poso),OPEN,depotr.ps@gmail.com,Clicked,Queued,"26 May 2026, 08:35:53",6
+7204070012000800 - UB - 1,"Balindo Manunggal Bersama, PT",OPEN,gracekayupa@gmail.com,Bounced,Bounced,"26 May 2026, 07:30:38",1
+7204070012000800 - UB - 1,"Balindo Manunggal Bersama, PT",OPEN,gracekayupa@gmail.com,Bounced,Queued,"26 May 2026, 07:30:35",2
 7205102002000300 - UB - 1,"PT Adira Dinamika Multi Finance Tbk, Kantor Representative Office Sulawesi",OPEN,-,-,-,-,0
 7205080021000900 - UB - 1,MALOMO 77,OPEN,-,-,-,-,0
 7205080026000700 - UB - 1,PT BANK MANDIRI PERSERO TBK KCP DONGGALA,OPEN,-,-,-,-,0
@@ -2395,14 +2395,3 @@ Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Statu
 7271000000000000 - UB - 15,LESTARI MINERAL PERKASA,OPEN,lestarimineralperkasa@gmail.com,Delivered,Delivered,"02 Jun 2026, 00:11:30",1
 7271000000000000 - UB - 15,LESTARI MINERAL PERKASA,OPEN,lestarimineralperkasa@gmail.com,Delivered,Queued,"02 Jun 2026, 00:11:23",2
 7271000000000000 - UB - 34,PT DINGLI STEEL INDONESIA,OPEN,-,-,-,-,0
-7271000000000000 - UB - 16,LUWUK MINERAL PERKASA,OPEN,luwukmineralperkasa@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:16:02",1
-7271000000000000 - UB - 16,LUWUK MINERAL PERKASA,OPEN,luwukmineralperkasa@gmail.com,Delivered,Queued,"02 Jun 2026, 10:15:59",2
-7271000000000000 - UB - 42,PT. SULA SILVER EXIM,OPEN,-,-,-,-,0
-7271000000000000 - UB - 8,BAHODOPI MINERAL PERKASA,OPEN,bahodopimineralperkasa@gmail.com,Delivered,Delivered,"02 Jun 2026, 04:20:40",1
-7271000000000000 - UB - 8,BAHODOPI MINERAL PERKASA,OPEN,bahodopimineralperkasa@gmail.com,Delivered,Queued,"02 Jun 2026, 04:20:40",2
-7271012005000900 - UB - 2,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Delivered,"04 Jun 2026, 11:13:08",1
-7271012005000900 - UB - 2,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Queued,"04 Jun 2026, 11:13:02",2
-7271012005000900 - UB - 2,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Delivered,"04 Jun 2026, 11:12:33",3
-7271012005000900 - UB - 2,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Queued,"04 Jun 2026, 11:12:29",4
-7271012005000900 - UB - 2,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Delivered,"02 Jun 2026, 01:00:16",5
-7271012005000900 - UB - 2,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Queued,"02 Jun 2026, 01:00:12",6
