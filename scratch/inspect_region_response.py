@@ -23,26 +23,17 @@ async def main():
         from urllib.parse import unquote
         token = unquote(token)
         
-        urls = [
-            "https://fasih-sm.bps.go.id/app/api/survey/api/v1/survey-periods/my?surveyId=a0429e96-51a5-477b-a415-485f9c153004",
-            "https://fasih-sm.bps.go.id/app/api/survey/api/v1/survey-periods/my?surveyId=ecddb52e-f392-403c-a963-47391f217010"
-        ]
+        group_id = "a45adac1-e711-4c15-b3f9-1f30fc151565" # SENSUS EKONOMI 2026 region group ID
         
-        for url in urls:
-            print(f"\nQuerying: {url}")
-            res = await page.evaluate("""
-                async ({url, token}) => {
-                    try {
-                        const r = await fetch(url, {
-                            headers: { "X-XSRF-TOKEN": token }
-                        });
-                        return await r.json();
-                    } catch (e) {
-                        return { error: e.toString() };
-                    }
-                }
-            """, {"url": url, "token": token})
-            print(json.dumps(res, indent=2))
+        url = f"https://fasih-sm.bps.go.id/app/api/region/api/v1/region/custom-by-smallest-code-and-level?groupId={group_id}&smallestLevelFullCode=7202&level=2"
+        res = await page.evaluate("""
+            async ({url, token}) => {
+                const r = await fetch(url, { headers: { "X-XSRF-TOKEN": token } });
+                return await r.json();
+            }
+        """, {"url": url, "token": token})
+        
+        print(json.dumps(res, indent=2))
 
 if __name__ == "__main__":
     asyncio.run(main())

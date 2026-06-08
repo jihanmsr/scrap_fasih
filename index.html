@@ -788,6 +788,91 @@
                 font-size: 0.75rem;
             }
         }
+
+        /* Tabs Navigation Styles */
+        .tabs-navigation {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-tab {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-secondary);
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 0.65rem 1.25rem;
+            cursor: pointer;
+            border-radius: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .btn-tab:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.03);
+            border-color: var(--card-border);
+        }
+
+        .btn-tab.active {
+            color: white;
+            background: var(--primary);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+            border-color: transparent;
+        }
+
+        /* IPAS Table Styles */
+        .ipas-table-wrapper {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1.25rem;
+            overflow-x: auto;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .ipas-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .ipas-table th {
+            background: rgba(15, 23, 42, 0.4);
+            color: var(--text-secondary);
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .ipas-table td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 0.875rem;
+            color: var(--text-primary);
+        }
+
+        .ipas-table tbody tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .ipas-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.15); }
+            100% { opacity: 0.6; transform: scale(1); }
+        }
     </style>
 </head>
 <body>
@@ -796,8 +881,8 @@
         
         <header>
             <div class="brand-title">
-                <h1 id="main-header">Dashboard Status Email</h1>
-                <p>Status Pengiriman & Bounced Email Usaha Besar (UB)</p>
+                <h1 id="main-header">Dashboard Rekap</h1>
+                <p id="main-subheader">Rekap Progress Pendataan Sensus Ekonomi 2026 & Sensus Ekonomi UB</p>
                 <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; font-weight: 500;" id="last-updated-text">
                     Terakhir Diperbarui: -
                 </p>
@@ -817,15 +902,33 @@
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
                     Refresh
                 </button>
-                <a href="./bounced_emails.xlsx" class="btn-action" id="btn-download-xlsx" download>
+                <a href="./bounced_emails.xlsx" class="btn-action" id="btn-download-xlsx" download style="display: none;">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                     Unduh Excel Bounced
                 </a>
             </div>
         </header>
 
-        <!-- Summary Stats Sections -->
-        <div class="stats-section">
+        <!-- Tabs Navigation -->
+        <div class="tabs-navigation">
+            <button id="tab-btn-se_umum" class="btn-tab active" onclick="switchTab('se_umum')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                Sensus Ekonomi 2026 (Semua Usaha)
+            </button>
+            <button id="tab-btn-se_ub" class="btn-tab" onclick="switchTab('se_ub')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                Sensus Ekonomi 2026 (UB)
+            </button>
+            <button id="tab-btn-email" class="btn-tab" onclick="switchTab('email')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                Tracker Pengiriman Email UB
+            </button>
+        </div>
+
+        <!-- Tab Content: Email Tracker -->
+        <div id="tab-content-email" class="tab-content" style="display: none;">
+            <!-- Summary Stats Sections -->
+            <div class="stats-section">
             <h3 class="section-title-stats">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 Status Pengiriman Email
@@ -966,6 +1069,95 @@
                 <!-- Pagination buttons dynamically loaded -->
             </div>
         </main>
+        
+        </div><!-- End Tab Content: Email Tracker -->
+
+        <!-- Tab Content: IPAS Dashboard -->
+        <div id="tab-content-ipas" class="tab-content">
+            <!-- Welcome Section -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <div>
+                    <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">Analitik <span style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres Harian</span></h2>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus Ekonomi 2026 di Sulawesi Tengah</p>
+                </div>
+                <div>
+                    <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 1rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; display: inline-block; animation: pulse 2s infinite;"></span>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: #10b981;">LIVE SYNC ACTIVE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Grid for IPAS -->
+            <div class="stats-grid" id="ipas-stats-container">
+                <div class="stat-card" style="--stat-color: var(--primary);">
+                    <span class="card-category-tag">IPAS</span>
+                    <div class="stat-label">Total Usaha (Prelist)</div>
+                    <div class="stat-value" id="ipas-stat-total-prelist">0</div>
+                    <div class="stat-subtext" id="ipas-new-today-wrapper">
+                         <span style="color: var(--primary); font-weight: 700;" id="ipas-stat-new-today">+0</span> hari ini
+                    </div>
+                </div>
+                <div class="stat-card" style="--stat-color: var(--color-delivered);">
+                    <span class="card-category-tag">IPAS</span>
+                    <div class="stat-label">Total Selesai</div>
+                    <div class="stat-value" id="ipas-stat-total-akhir" style="color: var(--color-delivered);">0</div>
+                    <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
+                        <div style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
+                            <div id="ipas-progress-bar" style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
+                        </div>
+                        <span id="ipas-stat-percentage" style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
+                    </div>
+                </div>
+                <div class="stat-card" style="--stat-color: var(--color-opened);">
+                    <span class="card-category-tag">IPAS</span>
+                    <div class="stat-label">Progres Hari Ini</div>
+                    <div class="stat-value" id="ipas-stat-today-completed" style="color: var(--color-opened);">0</div>
+                    <div class="stat-subtext" id="ipas-stat-vs-yesterday-wrapper">
+                         <span style="color: var(--color-opened); font-weight: 700;" id="ipas-stat-vs-yesterday">vs 0 kemarin</span>
+                    </div>
+                </div>
+                <div class="stat-card" style="--stat-color: var(--color-bounced);">
+                    <span class="card-category-tag">IPAS</span>
+                    <div class="stat-label">Sisa Usaha</div>
+                    <div class="stat-value" id="ipas-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
+                    <div class="stat-subtext">Membutuhkan tindak lanjut</div>
+                </div>
+            </div>
+
+            <!-- Table Section -->
+            <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
+                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Rincian per Kabupaten/Kota</h3>
+                    <div class="search-wrapper" style="max-width: 300px; width: 100%;">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <input type="text" id="ipas-search-input" class="search-input" placeholder="Cari kabupaten/kota...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ipas-table-wrapper">
+                <table class="ipas-table">
+                    <thead>
+                        <tr>
+                            <th style="font-family: 'Outfit', sans-serif;">Kabupaten/Kota</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Prelist</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Akhir (Selesai)</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">% Capaian</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Sisa Usaha</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini | Kemarin)</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini | Kemarin)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ipas-table-body">
+                        <!-- Loaded dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
     </div>
 
@@ -973,6 +1165,8 @@
     <script src="supabase_config.js"></script>
     <!-- Load data.js (holds data in window.EMAIL_DATA) -->
     <script src="data.js"></script>
+    <!-- Load ipas_data.js (holds data in window.IPAS_DATA) -->
+    <script src="ipas_data.js"></script>
 
     <!-- Javascript Logic -->
     <script>
@@ -1493,8 +1687,222 @@
                 });
             });
 
-            // Asynchronously fetch data from Supabase or fallback to data.js
+            // IPAS Search Input Listener
+            const ipasSearchInput = document.getElementById('ipas-search-input');
+            if (ipasSearchInput) {
+                ipasSearchInput.addEventListener('input', (e) => {
+                    renderIpasDashboard();
+                });
+            }
+
+            // IPAS Dashboard Render Engine
+            window.renderIpasDashboard = function() {
+                const ipasDataObj = window.IPAS_DATA || { data: [] };
+                const ipasData = ipasDataObj.data || [];
+                
+                // Calculate Summary
+                let prelist = 0, akhir = 0, today = 0, yesterday = 0, newToday = 0;
+                
+                ipasData.forEach(item => {
+                    prelist += item.total_prelist || 0;
+                    akhir += item.total_akhir || 0;
+                    today += item.today_completed || 0;
+                    yesterday += item.yesterday_completed || 0;
+                    newToday += item.new_usaha_today || 0;
+                });
+                
+                const persentase = prelist > 0 ? ((akhir / prelist) * 100).toFixed(2) : '0.00';
+                const sisa = prelist - akhir;
+                
+                // Format helper (like formatNumber)
+                const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
+                
+                // Update stats elements
+                document.getElementById('ipas-stat-total-prelist').textContent = formatNum(prelist);
+                document.getElementById('ipas-stat-new-today').textContent = `+${formatNum(newToday)}`;
+                document.getElementById('ipas-stat-total-akhir').textContent = formatNum(akhir);
+                document.getElementById('ipas-stat-percentage').textContent = persentase + '%';
+                
+                const progressBar = document.getElementById('ipas-progress-bar');
+                if (progressBar) {
+                    progressBar.style.width = persentase + '%';
+                }
+                
+                document.getElementById('ipas-stat-today-completed').textContent = formatNum(today);
+                
+                // Color formatting for vs yesterday
+                const vsYesterdayWrapper = document.getElementById('ipas-stat-vs-yesterday-wrapper');
+                if (vsYesterdayWrapper) {
+                    if (today >= yesterday) {
+                        vsYesterdayWrapper.innerHTML = `<span style="color: var(--color-delivered); background-color: rgba(16, 185, 129, 0.1); padding: 0.15rem 0.45rem; border-radius: 0.5rem; font-weight: 700; font-size: 0.75rem;">▲ vs ${formatNum(yesterday)} kemarin</span>`;
+                    } else {
+                        vsYesterdayWrapper.innerHTML = `<span style="color: var(--color-bounced); background-color: rgba(239, 68, 68, 0.1); padding: 0.15rem 0.45rem; border-radius: 0.5rem; font-weight: 700; font-size: 0.75rem;">▼ vs ${formatNum(yesterday)} kemarin</span>`;
+                    }
+                }
+                
+                document.getElementById('ipas-stat-sisa-usaha').textContent = formatNum(sisa);
+                
+                // Render Table with Filtering
+                const searchVal = (document.getElementById('ipas-search-input').value || '').toLowerCase().trim();
+                const tbody = document.getElementById('ipas-table-body');
+                tbody.innerHTML = '';
+                
+                const filtered = ipasData.filter(item => {
+                    return item.kabupaten.toLowerCase().includes(searchVal);
+                });
+                
+                if (filtered.length === 0) {
+                    tbody.innerHTML = `
+                        <tr>
+                            <td colspan="8" style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary);">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin: 0 auto 0.5rem; opacity: 0.5;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.008 1.24l.885 1.77a2.25 2.25 0 002.007 1.24h1.98a2.25 2.25 0 002.007-1.24l.885-1.77a2.25 2.25 0 012.007-1.24h3.86m-18 0h18"></path>
+                                </svg>
+                                Tidak ada data kabupaten yang cocok dengan pencarian.
+                            </td>
+                        </tr>
+                    `;
+                    return;
+                }
+                
+                filtered.forEach(item => {
+                    let pctClass = '';
+                    if (item.persentase >= 80) {
+                        pctClass = 'background-color: rgba(16, 185, 129, 0.1); color: var(--color-delivered); border: 1px solid rgba(16, 185, 129, 0.3);';
+                    } else if (item.persentase >= 50) {
+                        pctClass = 'background-color: rgba(245, 158, 11, 0.1); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3);';
+                    } else {
+                        pctClass = 'background-color: rgba(239, 68, 68, 0.1); color: var(--color-bounced); border: 1px solid rgba(239, 68, 68, 0.3);';
+                    }
+                    
+                    const row = document.createElement('tr');
+                    
+                    // Format addition badges
+                    const todayNewBadge = item.new_usaha_today > 0 
+                        ? `<span style="color: var(--color-delivered); font-weight: 700;">+${formatNum(item.new_usaha_today)}</span>` 
+                        : `<span style="color: var(--text-muted);">-</span>`;
+                        
+                    const yesterdayNewBadge = item.new_usaha_yesterday > 0 
+                        ? `<span style="color: #f59e0b; opacity: 0.85;">+${formatNum(item.new_usaha_yesterday)}</span>` 
+                        : `<span style="color: var(--text-muted);">-</span>`;
+                    
+                    const todayCompBadge = item.today_completed > 0
+                        ? `<span style="color: var(--color-opened); font-weight: 700;">▲ ${formatNum(item.today_completed)}</span>`
+                        : `<span style="color: var(--text-muted);">${formatNum(item.today_completed)}</span>`;
+                        
+                    row.innerHTML = `
+                        <td style="font-weight: 700; color: var(--text-primary);">${highlightText(item.kabupaten, searchVal)}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 500;">${formatNum(item.total_prelist)}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-delivered);">${formatNum(item.total_akhir)}</td>
+                        <td style="text-align: center;">
+                            <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; ${pctClass}">
+                                ${item.persentase}%
+                            </span>
+                        </td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 500; color: var(--color-bounced);">${formatNum(item.sisa_usaha)}</td>
+                        <td style="text-align: center;">
+                            <div style="font-family: monospace; font-size: 0.85rem;">
+                                ${todayCompBadge} <span style="color: var(--card-border);">|</span> <span style="color: var(--text-secondary);">${formatNum(item.yesterday_completed)}</span>
+                            </div>
+                        </td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-clicked);">${formatNum(item.last_2_days_completed)}</td>
+                        <td style="text-align: center;">
+                            <div style="font-family: monospace; font-size: 0.85rem;">
+                                ${todayNewBadge} <span style="color: var(--card-border);">|</span> ${yesterdayNewBadge}
+                            </div>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            };
+
+            // Helpers for dynamic loading last updated status
+            let isSupabaseUsedGlobal = false;
+            let lastUpdatedEmailTextGlobal = '';
+            
+            window.updateLastUpdatedText = function(tabId) {
+                const lastUpdatedEl = document.getElementById('last-updated-text');
+                if (!lastUpdatedEl) return;
+                
+                if (tabId === 'ipas') {
+                    const ipasDataObj = window.IPAS_DATA;
+                    if (ipasDataObj && ipasDataObj.updated_at) {
+                        try {
+                            const d = new Date(ipasDataObj.updated_at);
+                            const formatted = d.toLocaleString('id-ID', { 
+                                day: '2-digit', 
+                                month: 'short', 
+                                year: 'numeric', 
+                                hour: '2-digit', 
+                                minute: '2-digit', 
+                                second: '2-digit' 
+                            });
+                            lastUpdatedEl.textContent = `Terakhir Diperbarui: ${formatted} (BPS Sync)`;
+                        } catch (e) {
+                            lastUpdatedEl.textContent = `Terakhir Diperbarui: ${ipasDataObj.updated_at}`;
+                        }
+                    } else {
+                        lastUpdatedEl.textContent = `Terakhir Diperbarui: Baru saja (BPS Sync)`;
+                    }
+                } else {
+                    if (supabaseClient && isSupabaseUsedGlobal) {
+                        lastUpdatedEl.textContent = lastUpdatedEmailTextGlobal || `Terakhir Diperbarui: Baru saja (Live DB)`;
+                    } else if (window.LAST_UPDATED) {
+                        lastUpdatedEl.textContent = `Terakhir Diperbarui: ${window.LAST_UPDATED}`;
+                    } else {
+                        lastUpdatedEl.textContent = `Terakhir Diperbarui: Hari ini (Lokal)`;
+                    }
+                }
+            };
+
+            // Switch Tab function
+            window.switchTab = function(tabId) {
+                // Hide all tab contents
+                document.querySelectorAll('.tab-content').forEach(el => {
+                    el.style.display = 'none';
+                });
+                
+                // Deactivate all tab buttons
+                document.querySelectorAll('.btn-tab').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Show active tab content
+                const activeContent = document.getElementById('tab-content-' + tabId);
+                if (activeContent) {
+                    activeContent.style.display = 'block';
+                }
+                
+                // Activate clicked tab button
+                const activeBtn = document.getElementById('tab-btn-' + tabId);
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                }
+                
+                // Update main header text & subheader
+                const mainHeader = document.getElementById('main-header');
+                const mainSubheader = document.getElementById('main-subheader');
+                const btnDownloadXlsx = document.getElementById('btn-download-xlsx');
+                
+                if (tabId === 'ipas') {
+                    mainHeader.textContent = 'IPAS Dashboard';
+                    mainSubheader.textContent = 'Integrated Processing and Analytic System';
+                    if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+                    renderIpasDashboard();
+                } else {
+                    mainHeader.textContent = 'Fasih Email Dashboard';
+                    mainSubheader.textContent = 'Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB';
+                    if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'inline-flex';
+                    renderList();
+                }
+                
+                window.updateLastUpdatedText(tabId);
+                localStorage.setItem('active_tab', tabId);
+            };
+
+            // Asynchronously fetch data from Supabase or fallback to data.js & load ipas_data.js
             async function fetchDataAndRender() {
+                const companyListContainer = document.getElementById('company-list');
                 companyListContainer.innerHTML = `
                     <div style="text-align: center; padding: 4rem 2rem; color: var(--text-secondary);">
                         <svg style="animation: spin 1s linear infinite; margin: 0 auto 1rem; width: 32px; height: 32px; color: var(--primary);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -1512,7 +1920,7 @@
                 `;
                 
                 let sourceData = [];
-                let isSupabaseUsed = false;
+                isSupabaseUsedGlobal = false;
                 
                 if (supabaseClient) {
                     try {
@@ -1542,7 +1950,7 @@
 
                         if (allData.length > 0) {
                             sourceData = allData;
-                            isSupabaseUsed = true;
+                            isSupabaseUsedGlobal = true;
                             console.log(`Loaded ${allData.length} records dynamically from Supabase.`);
                         }
                     } catch (e) {
@@ -1550,40 +1958,57 @@
                     }
                 }
                 
+                // Dynamically fetch/reload email data.js
+                await new Promise((resolve) => {
+                    const script = document.createElement('script');
+                    script.src = 'data.js?v=' + Date.now();
+                    script.onload = () => resolve();
+                    script.onerror = () => resolve();
+                    document.head.appendChild(script);
+                });
+                
                 if (sourceData.length === 0) {
                     sourceData = window.EMAIL_DATA || [];
                     console.log(`Loaded ${sourceData.length} records from local data.js.`);
                 }
                 
+                // Dynamically reload IPAS ipas_data.js
+                await new Promise((resolve) => {
+                    const script = document.createElement('script');
+                    script.src = 'ipas_data.js?v=' + Date.now();
+                    script.onload = () => resolve();
+                    script.onerror = () => resolve();
+                    document.head.appendChild(script);
+                });
+                
                 companies = processGroupedData(sourceData);
                 
-                // Update Last Updated Timestamp text
-                const lastUpdatedEl = document.getElementById('last-updated-text');
-                if (isSupabaseUsed) {
+                // Generate last updated text templates
+                if (isSupabaseUsedGlobal) {
                     const timestamps = sourceData.map(r => new Date(r.created_at)).filter(d => !isNaN(d));
                     if (timestamps.length > 0) {
                         const latestTime = new Date(Math.max(...timestamps));
-                        const formatted = latestTime.toLocaleString('id-ID', { 
+                        lastUpdatedEmailTextGlobal = `Terakhir Diperbarui: ${latestTime.toLocaleString('id-ID', { 
                             day: '2-digit', 
                             month: 'short', 
                             year: 'numeric', 
                             hour: '2-digit', 
                             minute: '2-digit', 
                             second: '2-digit' 
-                        });
-                        lastUpdatedEl.textContent = `Terakhir Diperbarui: ${formatted} (Live DB)`;
+                        })} (Live DB)`;
                     } else {
-                        lastUpdatedEl.textContent = `Terakhir Diperbarui: Baru saja (Live DB)`;
+                        lastUpdatedEmailTextGlobal = `Terakhir Diperbarui: Baru saja (Live DB)`;
                     }
-                } else if (window.LAST_UPDATED) {
-                    lastUpdatedEl.textContent = `Terakhir Diperbarui: ${window.LAST_UPDATED}`;
-                } else {
-                    lastUpdatedEl.textContent = `Terakhir Diperbarui: Hari ini (Lokal)`;
                 }
                 
                 currentPage = 1; // Reset page on refresh/fetch
                 updateFiltersAndStats();
                 renderList();
+                renderIpasDashboard();
+                
+                // Refresh last updated text for currently active tab
+                const activeTab = localStorage.getItem('active_tab') || 'ipas';
+                window.updateLastUpdatedText(activeTab);
             }
 
             // Refresh button handler
@@ -1595,7 +2020,11 @@
             }
 
             // Initial Execution
-            fetchDataAndRender();
+            fetchDataAndRender().then(() => {
+                // Restore active tab from localStorage, default to 'ipas'
+                const activeTab = localStorage.getItem('active_tab') || 'ipas';
+                window.switchTab(activeTab);
+            });
         });
     </script>
 </body>
