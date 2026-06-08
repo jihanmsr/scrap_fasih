@@ -7502,3 +7502,40 @@
 2026-06-08 15:13:25,098 - INFO - [1240/1264] Meminta API riwayat email: 7271000000000000 - UB - 36 | PT. HYDROXIDE NIKEL INDONESIA
 2026-06-08 15:13:28,072 - INFO - Progress dibackup ke backup_all_email_history.csv (1240/1264).
 2026-06-08 15:13:28,174 - INFO - [1241/1264] Meminta API riwayat email: 7271000000000000 - UB - 54 | BANK SULTENG PT UNIT PEMBANTU
+2026-06-08 15:13:35,569 - INFO - [1242/1264] Meminta API riwayat email: 7271000000000000 - UB - 47 | PT Bangun Palu Sulteng (#84)
+2026-06-08 15:13:41,025 - INFO - [1243/1264] Meminta API riwayat email: 7271000000000000 - UB - 48 | PT Cokobo Prima Waste
+2026-06-08 15:13:45,136 - INFO - [1244/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 1 | DUAPUTRA PERKASA MANDIRI,CV
+2026-06-08 15:13:45,137 - INFO - [1245/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 21 | MAUTONG MINERAL PERKASA
+2026-06-08 15:13:45,137 - INFO - [1246/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 24 | TANANTOVEA MINERAL PERKASA
+2026-06-08 15:13:45,137 - INFO - [1247/1264] Meminta API riwayat email: 7271000000000000 - UB - 33 | PT COKOBO PRIMA WASTE
+2026-06-08 15:13:49,859 - INFO - [1248/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 23 | MINERAL PARIGI PERKASA
+2026-06-08 15:13:49,862 - INFO - [1249/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 12 | MORUT MINERAL PERKASA
+2026-06-08 15:13:49,862 - INFO - [1250/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 13 | PAGIMANA MINERAL PERKASA
+2026-06-08 15:13:49,862 - INFO - [1251/1264] Meminta API riwayat email: 7271000000000000 - UB - 39 | PT. OBS FOOD INDUSTRY INDONESIA
+2026-06-08 15:13:53,010 - INFO - [1252/1264] Meminta API riwayat email: 7271000000000000 - UB - 51 | PT. NUSANTARA PALU ENERGI
+2026-06-08 15:13:55,041 - INFO - [1253/1264] Meminta API riwayat email: 7271000000000000 - UB - 31 | PT ANUGERAHKARYA AGRASENTOSA (AKAS)
+2026-06-08 15:13:57,290 - INFO - [1254/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 20 | BANGGAI MINERAL PERKASA
+2026-06-08 15:13:57,291 - INFO - [1255/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 53 | KONSUIL, PT
+2026-06-08 15:13:57,291 - INFO - [1256/1264] Meminta API riwayat email: 7271000000000000 - UB - 40 | PT SEGAR JAYA MANDIRI
+2026-06-08 15:13:59,885 - INFO - [1257/1264] Meminta API riwayat email: 7271000000000000 - UB - 43 | PT. SUNGDONG INDUSTRY INDONESIA
+2026-06-08 15:14:06,134 - INFO - [1258/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 25 | DAMPAL MINERAL PERKASA
+2026-06-08 15:14:06,134 - INFO - [1259/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 15 | LESTARI MINERAL PERKASA
+2026-06-08 15:14:06,134 - INFO - [1260/1264] Meminta API riwayat email: 7271000000000000 - UB - 34 | PT DINGLI STEEL INDONESIA
+2026-06-08 15:14:10,401 - INFO - Progress dibackup ke backup_all_email_history.csv (1260/1264).
+2026-06-08 15:14:10,501 - INFO - [1261/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 16 | LUWUK MINERAL PERKASA
+2026-06-08 15:14:10,502 - INFO - [1262/1264] Meminta API riwayat email: 7271000000000000 - UB - 42 | PT. SULA SILVER EXIM
+2026-06-08 15:14:13,659 - INFO - [1263/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 8 | BAHODOPI MINERAL PERKASA
+2026-06-08 15:14:13,659 - INFO - [1264/1264] Skip (Sudah ada di cache): 7271012005000900 - UB - 2 | TOHA BATU PALU, PT
+2026-06-08 15:14:14,037 - INFO - Menyinkronkan data ke Supabase...
+2026-06-08 15:14:15,123 - INFO - HTTP Request: GET https://pnzfjkweiypmzdribxjk.supabase.co/rest/v1/email_logs?select=%2A&limit=1 "HTTP/2 200 OK"
+2026-06-08 15:14:15,694 - INFO - HTTP Request: DELETE https://pnzfjkweiypmzdribxjk.supabase.co/rest/v1/email_logs?code=neq.FORCE_DELETE_ALL_XYZ "HTTP/2 200 OK"
+2026-06-08 15:14:16,383 - INFO - HTTP Request: POST https://pnzfjkweiypmzdribxjk.supabase.co/rest/v1/email_logs?columns=%22order%22%2C%22company_name%22%2C%22timestamp%22%2C%22status%22%2C%22email%22%2C%22code%22%2C%22global_status%22 "HTTP/2 201 Created"
+2026-06-08 15:14:16,882 - INFO - HTTP Request: POST https://pnzfjkweiypmzdribxjk.supabase.co/rest/v1/email_logs?columns=%22order%22%2C%22company_name%22%2C%22timestamp%22%2C%22status%22%2C%22email%22%2C%22code%22%2C%22global_status%22 "HTTP/2 201 Created"
+2026-06-08 15:14:17,275 - INFO - HTTP Request: POST https://pnzfjkweiypmzdribxjk.supabase.co/rest/v1/email_logs?columns=%22order%22%2C%22company_name%22%2C%22timestamp%22%2C%22status%22%2C%22email%22%2C%22code%22%2C%22global_status%22 "HTTP/2 201 Created"
+2026-06-08 15:14:17,643 - INFO - HTTP Request: POST https://pnzfjkweiypmzdribxjk.supabase.co/rest/v1/email_logs?columns=%22order%22%2C%22company_name%22%2C%22timestamp%22%2C%22status%22%2C%22email%22%2C%22code%22%2C%22global_status%22 "HTTP/2 201 Created"
+2026-06-08 15:14:18,001 - INFO - HTTP Request: POST https://pnzfjkweiypmzdribxjk.supabase.co/rest/v1/email_logs?columns=%22order%22%2C%22company_name%22%2C%22timestamp%22%2C%22status%22%2C%22email%22%2C%22code%22%2C%22global_status%22 "HTTP/2 201 Created"
+2026-06-08 15:14:18,344 - INFO - HTTP Request: POST https://pnzfjkweiypmzdribxjk.supabase.co/rest/v1/email_logs?columns=%22order%22%2C%22company_name%22%2C%22timestamp%22%2C%22status%22%2C%22email%22%2C%22code%22%2C%22global_status%22 "HTTP/2 201 Created"
+2026-06-08 15:14:18,525 - INFO - HTTP Request: POST https://pnzfjkweiypmzdribxjk.supabase.co/rest/v1/email_logs?columns=%22order%22%2C%22company_name%22%2C%22timestamp%22%2C%22status%22%2C%22email%22%2C%22code%22%2C%22global_status%22 "HTTP/2 201 Created"
+2026-06-08 15:14:18,527 - INFO - Sinkronisasi Supabase berhasil! Mengunggah 2407 records.
+2026-06-08 15:14:18,529 - INFO - Scraping via API selesai putaran ini. Total records: 2407. Menunggu 30 menit sebelum scrape berikutnya...
+2026-06-08 15:14:18,578 - INFO - Menunggu 30 menit...

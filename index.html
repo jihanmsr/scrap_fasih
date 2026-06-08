@@ -38,6 +38,11 @@
             --timeline-line: rgba(255, 255, 255, 0.08);
             --timeline-bg: #0b0f19;
 
+            /* Solid Table Variables for Dark Mode */
+            --table-header-bg: #121824;
+            --table-sticky-bg: #161c2d;
+            --table-hover-sticky-bg: #1d2438;
+
             /* Status Colors (Glowy Dark) */
             --color-queued: #9ca3af;
             --color-delivered: #10b981;
@@ -68,6 +73,11 @@
             --pill-inactive-bg: #f1f5f9;
             --timeline-line: #e2e8f0;
             --timeline-bg: #f8fafc;
+
+            /* Solid Table Variables for Light Mode */
+            --table-header-bg: #f1f5f9;
+            --table-sticky-bg: #ffffff;
+            --table-hover-sticky-bg: #f8fafc;
 
             /* Status Colors (Vibrant Light) */
             --color-queued: #64748b;
@@ -195,7 +205,7 @@
         /* Summary Stats Cards */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 1.25rem;
             margin-bottom: 2.5rem;
         }
@@ -834,6 +844,8 @@
             border-radius: 1.25rem;
             overflow-x: auto;
             box-shadow: var(--shadow-sm);
+            position: relative;
+            -webkit-overflow-scrolling: touch;
         }
 
         .ipas-table {
@@ -843,7 +855,7 @@
         }
 
         .ipas-table th {
-            background: rgba(15, 23, 42, 0.4);
+            background: var(--table-header-bg);
             color: var(--text-secondary);
             font-weight: 700;
             font-size: 0.75rem;
@@ -851,6 +863,20 @@
             letter-spacing: 0.05em;
             padding: 1rem 1.25rem;
             border-bottom: 1px solid var(--card-border);
+            white-space: nowrap;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        /* Sortable column headers styling */
+        .ipas-table th.sortable {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+
+        .ipas-table th.sortable:hover {
+            background: var(--card-hover-bg) !important;
+            color: var(--text-primary);
         }
 
         .ipas-table td {
@@ -858,10 +884,53 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
             font-size: 0.875rem;
             color: var(--text-primary);
+            white-space: nowrap;
+        }
+
+        /* Sticky first column layout pattern */
+        .ipas-table th:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 10;
+            background: var(--table-header-bg) !important; /* solid color matching header */
+            box-shadow: 2px 0 5px rgba(0,0,0,0.15);
+        }
+
+        .ipas-table td:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 10;
+            background: var(--table-sticky-bg) !important; /* solid card-bg */
+            box-shadow: 2px 0 5px rgba(0,0,0,0.15);
+            font-weight: 700;
+        }
+
+        :root[data-theme="light"] .ipas-table th:first-child {
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+        }
+
+        :root[data-theme="light"] .ipas-table td:first-child {
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+        }
+
+        .ipas-table th:first-child::after,
+        .ipas-table td:first-child::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: var(--card-border);
         }
 
         .ipas-table tbody tr:hover td {
             background: rgba(255, 255, 255, 0.02);
+        }
+        
+        .ipas-table tbody tr:hover td:first-child {
+            /* Keep hover background of sticky column correct */
+            background: var(--table-hover-sticky-bg) !important;
         }
 
         .ipas-table tbody tr:last-child td {
@@ -872,6 +941,46 @@
             0% { opacity: 0.6; transform: scale(1); }
             50% { opacity: 1; transform: scale(1.15); }
             100% { opacity: 0.6; transform: scale(1); }
+        }
+
+        /* Mobile specific adaptations */
+        @media (max-width: 640px) {
+            body {
+                padding: 1.25rem 0.75rem;
+            }
+            .brand-title h1 {
+                font-size: 1.75rem;
+            }
+            .brand-title p {
+                font-size: 0.85rem;
+            }
+            .stats-grid {
+                gap: 0.75rem;
+                margin-bottom: 1.5rem;
+            }
+            .stat-card {
+                padding: 1rem;
+                border-radius: 1rem;
+            }
+            .stat-value {
+                font-size: 1.85rem;
+            }
+            .stat-label {
+                font-size: 0.75rem;
+            }
+            .ipas-table th, .ipas-table td {
+                padding: 0.75rem 0.5rem;
+                font-size: 0.75rem;
+            }
+            .tabs-navigation {
+                gap: 0.4rem;
+                margin-bottom: 1.25rem;
+            }
+            .btn-tab {
+                font-size: 0.8rem;
+                padding: 0.5rem 0.85rem;
+                border-radius: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -1072,13 +1181,13 @@
         
         </div><!-- End Tab Content: Email Tracker -->
 
-        <!-- Tab Content: IPAS Dashboard -->
-        <div id="tab-content-ipas" class="tab-content">
+        <!-- Tab Content: Sensus Ekonomi Umum Dashboard -->
+        <div id="tab-content-se_umum" class="tab-content">
             <!-- Welcome Section -->
             <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
                 <div>
-                    <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">Analitik <span style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres Harian</span></h2>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus Ekonomi 2026 di Sulawesi Tengah</p>
+                    <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">Analitik <span style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres Harian</span> (Semua Usaha)</h2>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus Ekonomi 2026 di Sulawesi Tengah • <span style="color: var(--text-muted); font-size: 0.8rem; font-style: italic;">% Capaian = (Submitted / Total Target) * 100</span></p>
                 </div>
                 <div>
                     <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 1rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
@@ -1088,40 +1197,47 @@
                 </div>
             </div>
 
-            <!-- Stats Grid for IPAS -->
-            <div class="stats-grid" id="ipas-stats-container">
+            <!-- Stats Grid for SE Umum -->
+            <div class="stats-grid" id="se_umum-stats-container">
                 <div class="stat-card" style="--stat-color: var(--primary);">
-                    <span class="card-category-tag">IPAS</span>
+                    <span class="card-category-tag">Umum</span>
                     <div class="stat-label">Total Usaha (Prelist)</div>
-                    <div class="stat-value" id="ipas-stat-total-prelist">0</div>
-                    <div class="stat-subtext" id="ipas-new-today-wrapper">
-                         <span style="color: var(--primary); font-weight: 700;" id="ipas-stat-new-today">+0</span> hari ini
+                    <div class="stat-value" id="se_umum-stat-total-prelist">0</div>
+                    <div class="stat-subtext" id="se_umum-new-today-wrapper">
+                         <span style="color: var(--primary); font-weight: 700;" id="se_umum-stat-new-today">+0</span> hari ini
                     </div>
+                </div>
+                <div class="stat-card" style="--stat-color: #f59e0b;">
+                    <span class="card-category-tag">Umum</span>
+                    <div class="stat-label">Draft</div>
+                    <div class="stat-value" id="se_umum-stat-draft" style="color: #f59e0b;">0</div>
+                    <div class="stat-subtext">Dokumen berstatus draft</div>
+                </div>
+                <div class="stat-card" style="--stat-color: #3b82f6;">
+                    <span class="card-category-tag">Umum</span>
+                    <div class="stat-label">Open</div>
+                    <div class="stat-value" id="se_umum-stat-open" style="color: #3b82f6;">0</div>
+                    <div class="stat-subtext">Dokumen berstatus open</div>
                 </div>
                 <div class="stat-card" style="--stat-color: var(--color-delivered);">
-                    <span class="card-category-tag">IPAS</span>
-                    <div class="stat-label">Total Selesai</div>
-                    <div class="stat-value" id="ipas-stat-total-akhir" style="color: var(--color-delivered);">0</div>
+                    <span class="card-category-tag">Umum</span>
+                    <div class="stat-label">Submitted (Selesai)</div>
+                    <div class="stat-value" id="se_umum-stat-submitted" style="color: var(--color-delivered);">0</div>
                     <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
                         <div style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
-                            <div id="ipas-progress-bar" style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
+                            <div id="se_umum-progress-bar" style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
                         </div>
-                        <span id="ipas-stat-percentage" style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
-                    </div>
-                </div>
-                <div class="stat-card" style="--stat-color: var(--color-opened);">
-                    <span class="card-category-tag">IPAS</span>
-                    <div class="stat-label">Progres Hari Ini</div>
-                    <div class="stat-value" id="ipas-stat-today-completed" style="color: var(--color-opened);">0</div>
-                    <div class="stat-subtext" id="ipas-stat-vs-yesterday-wrapper">
-                         <span style="color: var(--color-opened); font-weight: 700;" id="ipas-stat-vs-yesterday">vs 0 kemarin</span>
+                        <span id="se_umum-stat-percentage" style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
                     </div>
                 </div>
                 <div class="stat-card" style="--stat-color: var(--color-bounced);">
-                    <span class="card-category-tag">IPAS</span>
+                    <span class="card-category-tag">Umum</span>
                     <div class="stat-label">Sisa Usaha</div>
-                    <div class="stat-value" id="ipas-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
-                    <div class="stat-subtext">Membutuhkan tindak lanjut</div>
+                    <div class="stat-value" id="se_umum-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
+                    <div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                         <span>Progres Hari Ini: <span id="se_umum-stat-today-completed" style="font-weight:700;">0</span></span>
+                         <span id="se_umum-stat-vs-yesterday-wrapper"></span>
+                    </div>
                 </div>
             </div>
 
@@ -1133,7 +1249,7 @@
                         <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
-                        <input type="text" id="ipas-search-input" class="search-input" placeholder="Cari kabupaten/kota...">
+                        <input type="text" id="se_umum-search-input" class="search-input" placeholder="Cari kabupaten/kota...">
                     </div>
                 </div>
             </div>
@@ -1143,16 +1259,114 @@
                     <thead>
                         <tr>
                             <th style="font-family: 'Outfit', sans-serif;">Kabupaten/Kota</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Prelist</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Akhir (Selesai)</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Target</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b;">Draft</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6;">Open</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered);">Submitted</th>
                             <th style="font-family: 'Outfit', sans-serif; text-align: center;">% Capaian</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Sisa Usaha</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-bounced);">Sisa Usaha</th>
                             <th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini | Kemarin)</th>
                             <th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
                             <th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini | Kemarin)</th>
                         </tr>
                     </thead>
-                    <tbody id="ipas-table-body">
+                    <tbody id="se_umum-table-body">
+                        <!-- Loaded dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Tab Content: Sensus Ekonomi UB Dashboard -->
+        <div id="tab-content-se_ub" class="tab-content" style="display: none;">
+            <!-- Welcome Section -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <div>
+                    <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">Analitik <span style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres Harian</span> (UB)</h2>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus Ekonomi 2026 - UB di Sulawesi Tengah • <span style="color: var(--text-muted); font-size: 0.8rem; font-style: italic;">% Capaian = (Submitted / Total Target) * 100</span></p>
+                </div>
+                <div>
+                    <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 1rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; display: inline-block; animation: pulse 2s infinite;"></span>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: #10b981;">LIVE SYNC ACTIVE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Grid for SE UB -->
+            <div class="stats-grid" id="se_ub-stats-container">
+                <div class="stat-card" style="--stat-color: var(--primary);">
+                    <span class="card-category-tag">UB</span>
+                    <div class="stat-label">Total Usaha (Prelist)</div>
+                    <div class="stat-value" id="se_ub-stat-total-prelist">0</div>
+                    <div class="stat-subtext" id="se_ub-new-today-wrapper">
+                         <span style="color: var(--primary); font-weight: 700;" id="se_ub-stat-new-today">+0</span> hari ini
+                    </div>
+                </div>
+                <div class="stat-card" style="--stat-color: #f59e0b;">
+                    <span class="card-category-tag">UB</span>
+                    <div class="stat-label">Draft</div>
+                    <div class="stat-value" id="se_ub-stat-draft" style="color: #f59e0b;">0</div>
+                    <div class="stat-subtext">Dokumen berstatus draft</div>
+                </div>
+                <div class="stat-card" style="--stat-color: #3b82f6;">
+                    <span class="card-category-tag">UB</span>
+                    <div class="stat-label">Open</div>
+                    <div class="stat-value" id="se_ub-stat-open" style="color: #3b82f6;">0</div>
+                    <div class="stat-subtext">Dokumen berstatus open</div>
+                </div>
+                <div class="stat-card" style="--stat-color: var(--color-delivered);">
+                    <span class="card-category-tag">UB</span>
+                    <div class="stat-label">Submitted (Selesai)</div>
+                    <div class="stat-value" id="se_ub-stat-submitted" style="color: var(--color-delivered);">0</div>
+                    <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
+                        <div style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
+                            <div id="se_ub-progress-bar" style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
+                        </div>
+                        <span id="se_ub-stat-percentage" style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
+                    </div>
+                </div>
+                <div class="stat-card" style="--stat-color: var(--color-bounced);">
+                    <span class="card-category-tag">UB</span>
+                    <div class="stat-label">Sisa Usaha</div>
+                    <div class="stat-value" id="se_ub-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
+                    <div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                         <span>Progres Hari Ini: <span id="se_ub-stat-today-completed" style="font-weight:700;">0</span></span>
+                         <span id="se_ub-stat-vs-yesterday-wrapper"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Section -->
+            <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
+                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Rincian per Kabupaten/Kota</h3>
+                    <div class="search-wrapper" style="max-width: 300px; width: 100%;">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <input type="text" id="se_ub-search-input" class="search-input" placeholder="Cari kabupaten/kota...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ipas-table-wrapper">
+                <table class="ipas-table">
+                    <thead>
+                        <tr>
+                            <th style="font-family: 'Outfit', sans-serif;">Kabupaten/Kota</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Target</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b;">Draft</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6;">Open</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered);">Submitted</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">% Capaian</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-bounced);">Sisa Usaha</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini | Kemarin)</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
+                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini | Kemarin)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="se_ub-table-body">
                         <!-- Loaded dynamically -->
                     </tbody>
                 </table>
@@ -1687,51 +1901,61 @@
                 });
             });
 
-            // IPAS Search Input Listener
-            const ipasSearchInput = document.getElementById('ipas-search-input');
-            if (ipasSearchInput) {
-                ipasSearchInput.addEventListener('input', (e) => {
-                    renderIpasDashboard();
+            // SE Umum & UB Search Input Listeners
+            const seUmumSearchInput = document.getElementById('se_umum-search-input');
+            if (seUmumSearchInput) {
+                seUmumSearchInput.addEventListener('input', () => {
+                    renderSeDashboard('se_umum');
+                });
+            }
+            const seUbSearchInput = document.getElementById('se_ub-search-input');
+            if (seUbSearchInput) {
+                seUbSearchInput.addEventListener('input', () => {
+                    renderSeDashboard('se_ub');
                 });
             }
 
-            // IPAS Dashboard Render Engine
-            window.renderIpasDashboard = function() {
-                const ipasDataObj = window.IPAS_DATA || { data: [] };
-                const ipasData = ipasDataObj.data || [];
+            // Sensus Ekonomi Dashboard Render Engine (Umum or UB)
+            window.renderSeDashboard = function(surveyType) {
+                const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
+                const surveyData = ipasDataObj[surveyType] || [];
                 
                 // Calculate Summary
-                let prelist = 0, akhir = 0, today = 0, yesterday = 0, newToday = 0;
+                let prelist = 0, draft = 0, openVal = 0, submitted = 0, today = 0, yesterday = 0, newToday = 0;
                 
-                ipasData.forEach(item => {
+                surveyData.forEach(item => {
                     prelist += item.total_prelist || 0;
-                    akhir += item.total_akhir || 0;
+                    draft += item.total_draft || 0;
+                    openVal += item.total_open || 0;
+                    submitted += item.total_submitted || 0;
                     today += item.today_completed || 0;
                     yesterday += item.yesterday_completed || 0;
                     newToday += item.new_usaha_today || 0;
                 });
                 
-                const persentase = prelist > 0 ? ((akhir / prelist) * 100).toFixed(2) : '0.00';
-                const sisa = prelist - akhir;
+                const persentase = prelist > 0 ? ((submitted / prelist) * 100).toFixed(2) : '0.00';
+                const sisa = prelist - submitted;
                 
-                // Format helper (like formatNumber)
+                // Format helper
                 const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
                 
                 // Update stats elements
-                document.getElementById('ipas-stat-total-prelist').textContent = formatNum(prelist);
-                document.getElementById('ipas-stat-new-today').textContent = `+${formatNum(newToday)}`;
-                document.getElementById('ipas-stat-total-akhir').textContent = formatNum(akhir);
-                document.getElementById('ipas-stat-percentage').textContent = persentase + '%';
+                document.getElementById(`${surveyType}-stat-total-prelist`).textContent = formatNum(prelist);
+                document.getElementById(`${surveyType}-stat-new-today`).textContent = `+${formatNum(newToday)}`;
+                document.getElementById(`${surveyType}-stat-draft`).textContent = formatNum(draft);
+                document.getElementById(`${surveyType}-stat-open`).textContent = formatNum(openVal);
+                document.getElementById(`${surveyType}-stat-submitted`).textContent = formatNum(submitted);
+                document.getElementById(`${surveyType}-stat-percentage`).textContent = persentase + '%';
                 
-                const progressBar = document.getElementById('ipas-progress-bar');
+                const progressBar = document.getElementById(`${surveyType}-progress-bar`);
                 if (progressBar) {
                     progressBar.style.width = persentase + '%';
                 }
                 
-                document.getElementById('ipas-stat-today-completed').textContent = formatNum(today);
+                document.getElementById(`${surveyType}-stat-sisa-usaha`).textContent = formatNum(sisa);
+                document.getElementById(`${surveyType}-stat-today-completed`).textContent = formatNum(today);
                 
-                // Color formatting for vs yesterday
-                const vsYesterdayWrapper = document.getElementById('ipas-stat-vs-yesterday-wrapper');
+                const vsYesterdayWrapper = document.getElementById(`${surveyType}-stat-vs-yesterday-wrapper`);
                 if (vsYesterdayWrapper) {
                     if (today >= yesterday) {
                         vsYesterdayWrapper.innerHTML = `<span style="color: var(--color-delivered); background-color: rgba(16, 185, 129, 0.1); padding: 0.15rem 0.45rem; border-radius: 0.5rem; font-weight: 700; font-size: 0.75rem;">▲ vs ${formatNum(yesterday)} kemarin</span>`;
@@ -1740,21 +1964,19 @@
                     }
                 }
                 
-                document.getElementById('ipas-stat-sisa-usaha').textContent = formatNum(sisa);
-                
                 // Render Table with Filtering
-                const searchVal = (document.getElementById('ipas-search-input').value || '').toLowerCase().trim();
-                const tbody = document.getElementById('ipas-table-body');
+                const searchVal = (document.getElementById(`${surveyType}-search-input`).value || '').toLowerCase().trim();
+                const tbody = document.getElementById(`${surveyType}-table-body`);
                 tbody.innerHTML = '';
                 
-                const filtered = ipasData.filter(item => {
+                const filtered = surveyData.filter(item => {
                     return item.kabupaten.toLowerCase().includes(searchVal);
                 });
                 
                 if (filtered.length === 0) {
                     tbody.innerHTML = `
                         <tr>
-                            <td colspan="8" style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary);">
+                            <td colspan="10" style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary);">
                                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin: 0 auto 0.5rem; opacity: 0.5;">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.008 1.24l.885 1.77a2.25 2.25 0 002.007 1.24h1.98a2.25 2.25 0 002.007-1.24l.885-1.77a2.25 2.25 0 012.007-1.24h3.86m-18 0h18"></path>
                                 </svg>
@@ -1777,7 +1999,7 @@
                     
                     const row = document.createElement('tr');
                     
-                    // Format addition badges
+                    // Format badges
                     const todayNewBadge = item.new_usaha_today > 0 
                         ? `<span style="color: var(--color-delivered); font-weight: 700;">+${formatNum(item.new_usaha_today)}</span>` 
                         : `<span style="color: var(--text-muted);">-</span>`;
@@ -1793,7 +2015,9 @@
                     row.innerHTML = `
                         <td style="font-weight: 700; color: var(--text-primary);">${highlightText(item.kabupaten, searchVal)}</td>
                         <td style="text-align: right; font-family: monospace; font-weight: 500;">${formatNum(item.total_prelist)}</td>
-                        <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-delivered);">${formatNum(item.total_akhir)}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 500; color: #f59e0b;">${formatNum(item.total_draft)}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 500; color: #3b82f6;">${formatNum(item.total_open)}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-delivered);">${formatNum(item.total_submitted)}</td>
                         <td style="text-align: center;">
                             <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; ${pctClass}">
                                 ${item.persentase}%
@@ -1815,7 +2039,7 @@
                     tbody.appendChild(row);
                 });
             };
-
+ 
             // Helpers for dynamic loading last updated status
             let isSupabaseUsedGlobal = false;
             let lastUpdatedEmailTextGlobal = '';
@@ -1824,7 +2048,7 @@
                 const lastUpdatedEl = document.getElementById('last-updated-text');
                 if (!lastUpdatedEl) return;
                 
-                if (tabId === 'ipas') {
+                if (tabId === 'se_umum' || tabId === 'se_ub') {
                     const ipasDataObj = window.IPAS_DATA;
                     if (ipasDataObj && ipasDataObj.updated_at) {
                         try {
@@ -1854,7 +2078,7 @@
                     }
                 }
             };
-
+ 
             // Switch Tab function
             window.switchTab = function(tabId) {
                 // Hide all tab contents
@@ -1884,11 +2108,16 @@
                 const mainSubheader = document.getElementById('main-subheader');
                 const btnDownloadXlsx = document.getElementById('btn-download-xlsx');
                 
-                if (tabId === 'ipas') {
-                    mainHeader.textContent = 'IPAS Dashboard';
-                    mainSubheader.textContent = 'Integrated Processing and Analytic System';
+                if (tabId === 'se_umum') {
+                    mainHeader.textContent = 'Dashboard Rekap - Umum';
+                    mainSubheader.textContent = 'Rekap Progress Pendataan Sensus Ekonomi 2026 (Semua Usaha)';
                     if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
-                    renderIpasDashboard();
+                    renderSeDashboard('se_umum');
+                } else if (tabId === 'se_ub') {
+                    mainHeader.textContent = 'Dashboard Rekap - UB';
+                    mainSubheader.textContent = 'Rekap Progress Pendataan Sensus Ekonomi 2026 (UB - Usaha Besar)';
+                    if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+                    renderSeDashboard('se_ub');
                 } else {
                     mainHeader.textContent = 'Fasih Email Dashboard';
                     mainSubheader.textContent = 'Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB';
@@ -2004,13 +2233,14 @@
                 currentPage = 1; // Reset page on refresh/fetch
                 updateFiltersAndStats();
                 renderList();
-                renderIpasDashboard();
+                renderSeDashboard('se_umum');
+                renderSeDashboard('se_ub');
                 
                 // Refresh last updated text for currently active tab
-                const activeTab = localStorage.getItem('active_tab') || 'ipas';
+                const activeTab = localStorage.getItem('active_tab') || 'se_umum';
                 window.updateLastUpdatedText(activeTab);
             }
-
+ 
             // Refresh button handler
             const refreshBtn = document.getElementById('btn-refresh');
             if (refreshBtn) {
@@ -2018,11 +2248,11 @@
                     fetchDataAndRender();
                 });
             }
-
+ 
             // Initial Execution
             fetchDataAndRender().then(() => {
-                // Restore active tab from localStorage, default to 'ipas'
-                const activeTab = localStorage.getItem('active_tab') || 'ipas';
+                // Restore active tab from localStorage, default to 'se_umum'
+                const activeTab = localStorage.getItem('active_tab') || 'se_umum';
                 window.switchTab(activeTab);
             });
         });

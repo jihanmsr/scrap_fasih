@@ -41,34 +41,48 @@ async def generate_report():
         surveys = {
             "se_umum": {
                 "period_id": "fd68e454-ba45-4b85-8205-f3bf777ded24",
-                "label": "Sensus Ekonomi 2026 (Umum)"
+                "prov_id": "5214ecb2-bef1-4a86-9446-451cf430928e",
+                "label": "Sensus Ekonomi 2026 (Umum)",
+                "kabs": [
+                    {"code": "01", "name": "[01] BANGGAI KEPULAUAN", "id": "bc32354f-1245-426f-b2cf-a5733e1295ad"},
+                    {"code": "02", "name": "[02] BANGGAI", "id": "530e9ca5-86ba-434e-9b04-405102e6d900"},
+                    {"code": "03", "name": "[03] MOROWALI", "id": "9783f0c1-f047-477f-8840-11eae7cf70e2"},
+                    {"code": "04", "name": "[04] POSO", "id": "fb9cd9f0-c4c0-4a37-9041-57190693f625"},
+                    {"code": "05", "name": "[05] DONGGALA", "id": "289f1ff3-a6ad-4c9b-a49f-7b454d03a33f"},
+                    {"code": "06", "name": "[06] TOLI-TOLI", "id": "d833fdce-ebfb-429b-a1bb-8966239fd8e4"},
+                    {"code": "07", "name": "[07] BUOL", "id": "c523694a-2e72-4570-9489-da2d7b119fe7"},
+                    {"code": "08", "name": "[08] PARIGI MOUTONG", "id": "25c59fd9-afd5-4c1a-9dfb-42bb697a7434"},
+                    {"code": "09", "name": "[09] TOJO UNA-UNA", "id": "736c4c22-51d1-44be-8b2c-aa197d9459a4"},
+                    {"code": "10", "name": "[10] SIGI", "id": "0061da62-2a47-4dee-b8d0-239b33e2c59d"},
+                    {"code": "11", "name": "[11] BANGGAI LAUT", "id": "eed1a3e7-b81d-4fc7-b0d6-61257c1449b2"},
+                    {"code": "12", "name": "[12] MOROWALI UTARA", "id": "d05ef8fd-b5e4-414f-9a83-8cdea03e0767"},
+                    {"code": "71", "name": "[71] PALU", "id": "4ab6ca2f-7952-4e8e-a94d-b6dd933e5d44"}
+                ]
             },
             "se_ub": {
                 "period_id": "37526b20-81c8-42f5-a895-6190137d7394",
-                "label": "Sensus Ekonomi 2026 - UB (Usaha Besar)"
+                "prov_id": "a00c8aef-afc4-4d4f-b80d-789a15450ef9",
+                "label": "Sensus Ekonomi 2026 - UB (Usaha Besar)",
+                "kabs": [
+                    {"code": "01", "name": "[01] BANGGAI KEPULAUAN", "id": "9c9b2d79-9fb1-4ce7-b0f1-6b7bb5511beb"},
+                    {"code": "02", "name": "[02] BANGGAI", "id": "34165dd5-372e-42fa-99c6-0cc19a9b4d0b"},
+                    {"code": "03", "name": "[03] MOROWALI", "id": "48c4e5d0-5525-41a8-a4ba-2cc38cd9c424"},
+                    {"code": "04", "name": "[04] POSO", "id": "e18368ae-d1cd-4d43-a74d-5b9ddac5dd22"},
+                    {"code": "05", "name": "[05] DONGGALA", "id": "c075c4b4-7eb0-4d72-9c16-5103088fb5eb"},
+                    {"code": "06", "name": "[06] TOLI-TOLI", "id": "d3a28bfa-b611-488b-8255-369da5cedbf7"},
+                    {"code": "07", "name": "[07] BUOL", "id": "dfe4c643-3282-40db-a5fd-cb288a4f592d"},
+                    {"code": "08", "name": "[08] PARIGI MOUTONG", "id": "f18109d2-fc8b-4b9c-886a-dc242d21206e"},
+                    {"code": "09", "name": "[09] TOJO UNA-UNA", "id": "4d01eba1-5ae9-4603-82a6-2c831aea9905"},
+                    {"code": "10", "name": "[10] SIGI", "id": "2a240d3a-67ee-45b2-ae78-4b4b3a909a90"},
+                    {"code": "11", "name": "[11] BANGGAI LAUT", "id": "288c5680-f6d5-4783-a946-d5a06f547c02"},
+                    {"code": "12", "name": "[12] MOROWALI UTARA", "id": "a5324f17-7a00-436f-b468-2fc59fcf605d"},
+                    {"code": "71", "name": "[71] PALU", "id": "1acfedb4-276e-44d6-9e45-6d43588536d6"}
+                ]
             }
         }
         
-        prov_id = "5214ecb2-bef1-4a86-9446-451cf430928e" # Sulawesi Tengah
-        
-        kabs = [
-            {"code": "01", "name": "[01] BANGGAI KEPULAUAN", "id": "bc32354f-1245-426f-b2cf-a5733e1295ad"},
-            {"code": "02", "name": "[02] BANGGAI", "id": "530e9ca5-86ba-434e-9b04-405102e6d900"},
-            {"code": "03", "name": "[03] MOROWALI", "id": "9783f0c1-f047-477f-8840-11eae7cf70e2"},
-            {"code": "04", "name": "[04] POSO", "id": "fb9cd9f0-c4c0-4a37-9041-57190693f625"},
-            {"code": "05", "name": "[05] DONGGALA", "id": "289f1ff3-a6ad-4c9b-a49f-7b454d03a33f"},
-            {"code": "06", "name": "[06] TOLI-TOLI", "id": "d833fdce-ebfb-429b-a1bb-8966239fd8e4"},
-            {"code": "07", "name": "[07] BUOL", "id": "c523694a-2e72-4570-9489-da2d7b119fe7"},
-            {"code": "08", "name": "[08] PARIGI MOUTONG", "id": "25c59fd9-afd5-4c1a-9dfb-42bb697a7434"},
-            {"code": "09", "name": "[09] TOJO UNA-UNA", "id": "736c4c22-51d1-44be-8b2c-aa197d9459a4"},
-            {"code": "10", "name": "[10] SIGI", "id": "0061da62-2a47-4dee-b8d0-239b33e2c59d"},
-            {"code": "11", "name": "[11] BANGGAI LAUT", "id": "eed1a3e7-b81d-4fc7-b0d6-61257c1449b2"},
-            {"code": "12", "name": "[12] MOROWALI UTARA", "id": "d05ef8fd-b5e4-414f-9a83-8cdea03e0767"},
-            {"code": "71", "name": "[71] PALU", "id": "4ab6ca2f-7952-4e8e-a94d-b6dd933e5d44"}
-        ]
-        
         # Mapping first 4 characters of codeIdentity to kabupaten name
-        code_to_name = {f"72{k['code']}": k["name"] for k in kabs}
+        code_to_name = {f"72{k['code']}": k["name"] for k in surveys["se_umum"]["kabs"]}
         
         output_data = {}
         
@@ -81,7 +95,7 @@ async def generate_report():
             
             # Initialize final report dict
             report_data = {}
-            for k in kabs:
+            for k in survey_cfg["kabs"]:
                 report_data[k["name"]] = {
                     "kabupaten": k["name"],
                     "total_prelist": 0,
@@ -101,11 +115,11 @@ async def generate_report():
 
             # 1. Fetch total counts per kabupaten using searchAggregation (uncapped)
             print("Mengambil total target & status per Kabupaten dari BPS...")
-            for kab in kabs:
+            for kab in survey_cfg["kabs"]:
                 payload = {
                     "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
                     "assignmentExtraParam": {
-                        "region1Id": prov_id,
+                        "region1Id": survey_cfg["prov_id"],
                         "region2Id": kab["id"],
                         "surveyPeriodId": period_id,
                         "assignmentErrorStatusType": -1,
@@ -180,7 +194,7 @@ async def generate_report():
                         "order": [],
                         "search": {"value": "", "regex": False},
                         "assignmentExtraParam": {
-                            "region1Id": prov_id,
+                            "region1Id": survey_cfg["prov_id"],
                             "surveyPeriodId": period_id,
                             "assignmentStatusAlias": status,
                             "assignmentErrorStatusType": -1,
@@ -305,5 +319,18 @@ async def generate_report():
             
         print("\nLaporan rekap Sensus Ekonomi berhasil di-generate ke ipas_data.js!")
 
+async def main_loop():
+    delay_seconds = 300 # 5 minutes
+    while True:
+        print(f"\n=========================================")
+        print(f"Memulai siklus update data rekap: {datetime.datetime.now()}")
+        print(f"=========================================")
+        try:
+            await generate_report()
+        except Exception as e:
+            print("Gagal generate report:", e)
+        print(f"\nSiklus selesai. Menunggu {delay_seconds} detik untuk update berikutnya...")
+        await asyncio.sleep(delay_seconds)
+
 if __name__ == "__main__":
-    asyncio.run(generate_report())
+    asyncio.run(main_loop())
