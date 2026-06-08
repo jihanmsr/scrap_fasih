@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPAS - Integrated Processing and Analytic System</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981',
+                        dark: '#111827',
+                        darker: '#030712',
+                        glass: 'rgba(255, 255, 255, 0.05)',
+                        glassBorder: 'rgba(255, 255, 255, 0.1)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0f172a;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,0.5) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,0.5) 0, transparent 50%);
+            background-attachment: fixed;
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+        
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Table Styles */
+        .glass-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        .glass-table th {
+            background: rgba(15, 23, 42, 0.8);
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+        
+        .glass-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+        
+        .glass-table tbody tr:hover td {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        .glass-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(71, 85, 105, 0.8); 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 116, 139, 1); 
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body x-data="ipasDashboard()" x-init="initData()">
+    
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="glass-panel sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                    <i class="fa-solid fa-chart-line text-white text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-white tracking-tight">IPAS <span class="text-blue-400">Dashboard</span></h1>
+                    <p class="text-xs text-slate-400">Integrated Processing and Analytic System</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="text-right hidden md:block">
+                    <p class="text-sm font-medium text-white" x-text="currentTime"></p>
+                    <p class="text-xs text-slate-400">Update Terakhir: <span x-text="lastUpdate"></span></p>
+                </div>
+                <button @click="loadData()" class="glass-panel hover:bg-white/10 p-2.5 rounded-lg transition-all text-slate-300 hover:text-white group">
+                    <i class="fa-solid fa-rotate-right" :class="{'animate-spin': loading}"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 md:p-6 lg:p-8 w-full max-w-7xl mx-auto space-y-6">
+            
+            <!-- Welcome Section -->
+            <div class="fade-in flex flex-col md:flex-row justify-between items-end gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold mb-1">Analitik <span class="gradient-text">Progres Harian</span></h2>
+                    <p class="text-slate-400 text-sm">Pemantauan penyelesaian Sensus Ekonomi 2026 - UB di Sulawesi Tengah</p>
+                </div>
+                <div class="flex gap-2">
+                    <div class="glass-panel px-4 py-2 rounded-lg flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                        <span class="text-xs font-medium text-emerald-400">LIVE SYNC ACTIVE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 fade-in" style="animation-delay: 0.1s">
+                <!-- Stat Card 1 -->
+                <div class="glass-panel rounded-2xl p-5 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-building text-6xl text-blue-400"></i>
+                    </div>
+                    <p class="text-slate-400 text-sm font-medium mb-1">Total Usaha (Prelist)</p>
+                    <h3 class="text-3xl font-bold text-white mb-2" x-text="formatNumber(summary.total_prelist)">0</h3>
+                    <div class="flex items-center gap-1 text-xs">
+                        <span class="text-blue-400 bg-blue-400/10 px-1.5 py-0.5 rounded flex items-center gap-1">
+                            <i class="fa-solid fa-plus"></i> <span x-text="summary.new_today">0</span> hari ini
+                        </span>
+                        <span class="text-slate-500">penambahan data</span>
+                    </div>
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="glass-panel rounded-2xl p-5 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-check-circle text-6xl text-emerald-400"></i>
+                    </div>
+                    <p class="text-slate-400 text-sm font-medium mb-1">Total Selesai</p>
+                    <h3 class="text-3xl font-bold text-white mb-2" x-text="formatNumber(summary.total_akhir)">0</h3>
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1 bg-slate-700/50 rounded-full h-1.5 overflow-hidden">
+                            <div class="bg-emerald-400 h-full rounded-full" :style="`width: ${summary.persentase}%`"></div>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-400" x-text="summary.persentase + '%'">0%</span>
+                    </div>
+                </div>
+
+                <!-- Stat Card 3 -->
+                <div class="glass-panel rounded-2xl p-5 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-bolt text-6xl text-amber-400"></i>
+                    </div>
+                    <p class="text-slate-400 text-sm font-medium mb-1">Progres Hari Ini</p>
+                    <h3 class="text-3xl font-bold text-white mb-2" x-text="formatNumber(summary.today_completed)">0</h3>
+                    <div class="flex items-center gap-1 text-xs">
+                        <span :class="summary.today_completed >= summary.yesterday_completed ? 'text-emerald-400 bg-emerald-400/10' : 'text-rose-400 bg-rose-400/10'" class="px-1.5 py-0.5 rounded flex items-center gap-1">
+                            <i class="fa-solid" :class="summary.today_completed >= summary.yesterday_completed ? 'fa-arrow-trend-up' : 'fa-arrow-trend-down'"></i>
+                            vs <span x-text="summary.yesterday_completed">0</span> kemarin
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Stat Card 4 -->
+                <div class="glass-panel rounded-2xl p-5 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i class="fa-solid fa-hourglass-half text-6xl text-rose-400"></i>
+                    </div>
+                    <p class="text-slate-400 text-sm font-medium mb-1">Sisa Usaha (Belum Selesai)</p>
+                    <h3 class="text-3xl font-bold text-white mb-2" x-text="formatNumber(summary.sisa_usaha)">0</h3>
+                    <div class="flex items-center gap-1 text-xs text-slate-500">
+                        <i class="fa-regular fa-clock"></i> Membutuhkan tindak lanjut
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Section -->
+            <div class="glass-panel rounded-2xl overflow-hidden fade-in" style="animation-delay: 0.2s">
+                <div class="p-5 border-b border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <h3 class="text-lg font-semibold text-white">Rincian per Kabupaten/Kota</h3>
+                    <div class="relative w-full sm:w-64">
+                        <i class="fa-solid fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 text-sm"></i>
+                        <input type="text" x-model="searchQuery" placeholder="Cari kabupaten..." class="w-full bg-slate-800/50 border border-slate-700/50 rounded-lg py-2 pl-9 pr-4 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all placeholder-slate-500">
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="glass-table">
+                        <thead>
+                            <tr>
+                                <th>Kabupaten/Kota</th>
+                                <th class="text-right">Total Prelist</th>
+                                <th class="text-right">Total Akhir<br><span class="text-[10px] text-slate-500 normal-case font-normal">(Selesai)</span></th>
+                                <th class="text-center">% Capaian</th>
+                                <th class="text-right">Sisa Usaha<br><span class="text-[10px] text-slate-500 normal-case font-normal">(Di belakang)</span></th>
+                                <th class="text-center">Progres<br><span class="text-[10px] text-slate-500 normal-case font-normal">(Hari Ini | Kemarin)</span></th>
+                                <th class="text-right">Last 2 Days</th>
+                                <th class="text-center border-l border-white/5">Penambahan Usaha<br><span class="text-[10px] text-slate-500 normal-case font-normal">(Hari Ini | Kemarin)</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template x-if="loading">
+                                <tr>
+                                    <td colspan="8" class="text-center py-12">
+                                        <div class="inline-block animate-spin w-8 h-8 border-4 border-blue-500/30 border-t-blue-500 rounded-full mb-2"></div>
+                                        <p class="text-slate-400 text-sm">Menyinkronkan data...</p>
+                                    </td>
+                                </tr>
+                            </template>
+                            <template x-if="!loading && filteredData.length === 0">
+                                <tr>
+                                    <td colspan="8" class="text-center py-12 text-slate-400">
+                                        <i class="fa-solid fa-folder-open text-3xl mb-2 opacity-50"></i>
+                                        <p>Tidak ada data yang ditemukan.</p>
+                                    </td>
+                                </tr>
+                            </template>
+                            <template x-for="(item, index) in filteredData" :key="index">
+                                <tr>
+                                    <td class="font-medium text-white" x-text="item.kabupaten"></td>
+                                    <td class="text-right text-slate-300 font-mono" x-text="formatNumber(item.total_prelist)"></td>
+                                    <td class="text-right font-bold text-emerald-400 font-mono" x-text="formatNumber(item.total_akhir)"></td>
+                                    <td class="text-center">
+                                        <div class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs font-bold" 
+                                             :class="item.persentase >= 80 ? 'bg-emerald-500/20 text-emerald-400' : (item.persentase >= 50 ? 'bg-amber-500/20 text-amber-400' : 'bg-rose-500/20 text-rose-400')">
+                                            <span x-text="item.persentase + '%'"></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-right text-rose-400 font-mono" x-text="formatNumber(item.sisa_usaha)"></td>
+                                    <td class="text-center">
+                                        <div class="flex items-center justify-center gap-2 font-mono text-sm">
+                                            <span class="text-blue-400 font-bold" title="Selesai Hari Ini">
+                                                <i class="fa-solid fa-arrow-up text-[10px] mr-0.5"></i><span x-text="item.today_completed"></span>
+                                            </span>
+                                            <span class="text-slate-600">|</span>
+                                            <span class="text-slate-400" title="Selesai Kemarin" x-text="item.yesterday_completed"></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-right text-indigo-400 font-mono font-medium" x-text="item.last_2_days_completed"></td>
+                                    <td class="text-center border-l border-white/5">
+                                        <div class="flex items-center justify-center gap-2 font-mono text-sm">
+                                            <span class="text-emerald-400" title="Tambahan Hari Ini" x-show="item.new_usaha_today > 0">+<span x-text="item.new_usaha_today"></span></span>
+                                            <span class="text-slate-500" x-show="item.new_usaha_today === 0">-</span>
+                                            <span class="text-slate-600">|</span>
+                                            <span class="text-amber-400 opacity-70" title="Tambahan Kemarin" x-show="item.new_usaha_yesterday > 0">+<span x-text="item.new_usaha_yesterday"></span></span>
+                                            <span class="text-slate-500" x-show="item.new_usaha_yesterday === 0">-</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </main>
+        
+        <footer class="mt-auto py-6 text-center text-slate-500 text-xs">
+            <p>&copy; 2026 Badan Pusat Statistik. Integrated Processing and Analytic System.</p>
+        </footer>
+    </div>
+
+    <script>
+        function ipasDashboard() {
+            return {
+                loading: true,
+                searchQuery: '',
+                data: [],
+                lastUpdate: '-',
+                currentTime: '',
+                timer: null,
+                
+                summary: {
+                    total_prelist: 0,
+                    total_akhir: 0,
+                    persentase: 0,
+                    today_completed: 0,
+                    yesterday_completed: 0,
+                    sisa_usaha: 0,
+                    new_today: 0
+                },
+                
+                initData() {
+                    this.updateClock();
+                    this.timer = setInterval(() => this.updateClock(), 1000);
+                    this.loadData();
+                    // Auto refresh every 5 minutes
+                    setInterval(() => this.loadData(), 300000);
+                },
+                
+                updateClock() {
+                    const now = new Date();
+                    this.currentTime = now.toLocaleDateString('id-ID', { 
+                        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                        hour: '2-digit', minute: '2-digit', second: '2-digit'
+                    });
+                },
+                
+                async loadData() {
+                    this.loading = true;
+                    try {
+                        // Load data from generated JSON file
+                        // Note: Using a cache buster parameter to prevent browser caching
+                        const response = await fetch(`ipas_data.json?t=${new Date().getTime()}`);
+                        if (response.ok) {
+                            const result = await response.json();
+                            
+                            // Parse mock data if empty (for UI testing until python script creates it)
+                            if (!result || !result.data || result.data.length === 0) {
+                                this.generateMockData();
+                            } else {
+                                this.data = result.data;
+                                if (result.updated_at) {
+                                    const d = new Date(result.updated_at);
+                                    this.lastUpdate = `${d.toLocaleDateString('id-ID')} ${d.toLocaleTimeString('id-ID')}`;
+                                }
+                                this.calculateSummary();
+                            }
+                        } else {
+                            this.generateMockData();
+                        }
+                    } catch (error) {
+                        console.error("Error fetching data:", error);
+                        this.generateMockData(); // Fallback to mock data if file doesn't exist yet
+                    } finally {
+                        setTimeout(() => { this.loading = false; }, 600); // Small delay for smooth animation
+                    }
+                },
+                
+                generateMockData() {
+                    // Fallback mock data while Python script runs
+                    this.lastUpdate = "Sistem sedang menginisiasi... (Data Simulasi)";
+                    this.data = [
+                        { kabupaten: "[01] BANGGAI KEPULAUAN", total_prelist: 156, total_akhir: 45, persentase: 28.85, sisa_usaha: 111, today_completed: 12, yesterday_completed: 8, last_2_days_completed: 20, new_usaha_today: 0, new_usaha_yesterday: 2 },
+                        { kabupaten: "[02] BANGGAI", total_prelist: 1045, total_akhir: 680, persentase: 65.07, sisa_usaha: 365, today_completed: 85, yesterday_completed: 112, last_2_days_completed: 197, new_usaha_today: 5, new_usaha_yesterday: 1 },
+                        { kabupaten: "[03] MOROWALI", total_prelist: 890, total_akhir: 785, persentase: 88.20, sisa_usaha: 105, today_completed: 120, yesterday_completed: 145, last_2_days_completed: 265, new_usaha_today: 12, new_usaha_yesterday: 8 },
+                        { kabupaten: "[04] POSO", total_prelist: 450, total_akhir: 210, persentase: 46.67, sisa_usaha: 240, today_completed: 30, yesterday_completed: 25, last_2_days_completed: 55, new_usaha_today: 1, new_usaha_yesterday: 0 },
+                        { kabupaten: "[71] PALU", total_prelist: 2450, total_akhir: 1840, persentase: 75.10, sisa_usaha: 610, today_completed: 250, yesterday_completed: 310, last_2_days_completed: 560, new_usaha_today: 45, new_usaha_yesterday: 22 }
+                    ];
+                    this.calculateSummary();
+                },
+                
+                calculateSummary() {
+                    let prelist = 0, akhir = 0, today = 0, yesterday = 0, newToday = 0;
+                    
+                    this.data.forEach(item => {
+                        prelist += item.total_prelist || 0;
+                        akhir += item.total_akhir || 0;
+                        today += item.today_completed || 0;
+                        yesterday += item.yesterday_completed || 0;
+                        newToday += item.new_usaha_today || 0;
+                    });
+                    
+                    this.summary = {
+                        total_prelist: prelist,
+                        total_akhir: akhir,
+                        persentase: prelist > 0 ? ((akhir / prelist) * 100).toFixed(2) : 0,
+                        today_completed: today,
+                        yesterday_completed: yesterday,
+                        sisa_usaha: prelist - akhir,
+                        new_today: newToday
+                    };
+                },
+                
+                get filteredData() {
+                    if (this.searchQuery === '') return this.data;
+                    const query = this.searchQuery.toLowerCase();
+                    return this.data.filter(item => 
+                        item.kabupaten.toLowerCase().includes(query)
+                    );
+                },
+                
+                formatNumber(num) {
+                    return new Intl.NumberFormat('id-ID').format(num || 0);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

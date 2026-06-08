@@ -159,11 +159,10 @@ def get_authenticated_context(p):
 	
 	return browser, context, page
 
-def save_realtime_data(all_records):
+def save_local_js(all_records):
     try:
         df = pd.DataFrame(all_records)
         if not df.empty:
-            # Simpan data.js untuk dashboard
             import datetime
             now_str = datetime.datetime.now().strftime("%d %b %Y, %H:%M:%S")
             js_data = df.to_dict(orient="records")
@@ -175,6 +174,17 @@ def save_realtime_data(all_records):
             bounced_emails = df[df['global_status'].str.lower() == 'bounced']['email'].unique()
             df_bounced = df[df['email'].isin(bounced_emails)]
             df_bounced.to_excel(OUTPUT_BOUNCED_EXCEL, index=False)
+    except Exception as e:
+        logging.error(f"Gagal save local js: {e}")
+
+def save_realtime_data(all_records):
+    try:
+        # Panggil save_local_js juga
+        save_local_js(all_records)
+        
+        df = pd.DataFrame(all_records)
+        if not df.empty:
+            js_data = df.to_dict(orient="records")
 
             # Kirim data ke Supabase jika terkonfigurasi
             if supabase:
@@ -215,6 +225,101 @@ def save_realtime_data(all_records):
     except Exception as e:
         logging.error(f"Gagal menulis data/sinkronisasi real-time: {e}")
 
+def get_valid_session(context, page):
+    import time
+    import logging
+    while True:
+        cookies = context.cookies()
+        xsrf_token = None
+        for cookie in cookies:
+            if cookie['name'] == 'XSRF-TOKEN':
+                from urllib.parse import unquote
+                xsrf_token = unquote(cookie['value'])
+                break
+        
+        # Verify session
+        session_ok = False
+        if xsrf_token:
+            test_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
+            test_payload = {
+                "start": 0,
+                "length": 1,
+                "columns": [{"data": "id"}],
+                "order": [],
+                "search": {"value": "", "regex": False},
+                "assignmentExtraParam": {
+                    "region1Id": "a00c8aef-afc4-4d4f-b80d-789a15450ef9",
+                    "region2Id": "9c9b2d79-9fb1-4ce7-b0f1-6b7bb5511beb",
+                    "surveyPeriodId": "37526b20-81c8-42f5-a895-6190137d7394",
+                    "assignmentErrorStatusType": -1,
+                    "filterTargetType": ""
+                }
+            }
+            try:
+                res_eval = page.evaluate("""
+                    async ({url, payload, token}) => {
+                        try {
+                            const r = await fetch(url, {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                    "X-XSRF-TOKEN": token
+                                },
+                                body: JSON.stringify(payload)
+                            });
+                            return r.status;
+                        } catch (e) {
+                            return 500;
+                        }
+                    }
+                """, {"url": test_url, "payload": test_payload, "token": xsrf_token})
+                if res_eval == 200:
+                    session_ok = True
+                else:
+                    logging.warning(f"Verifikasi sesi mengembalikan status HTTP {res_eval}")
+            except Exception as e:
+                logging.warning(f"Error memverifikasi sesi: {e}")
+        
+        if session_ok:
+            return xsrf_token, cookies
+            
+        print("\n" + "="*70)
+        print("Sesi BPS FASIH tidak aktif atau kadaluarsa (HTTP 401/XSRF-TOKEN tidak ditemukan).")
+        print("SILAKAN LOGIN SSO ATAU REFRESH HALAMAN DI BROWSER CHROMIUM YANG TERBUKA.")
+        print("Setelah login berhasil, script akan otomatis mendeteksi dan melanjutkan.")
+        print("Atau, Anda bisa menekan ENTER di terminal ini jika sudah login.")
+        print("="*70 + "\n")
+        
+        import select
+        import sys
+        
+        # Cek apakah stdin interaktif dan tidak EOF
+        has_stdin = False
+        try:
+            has_stdin = sys.stdin.isatty()
+        except Exception:
+            pass
+
+        if has_stdin:
+            # Tunggu login selama 30 detik lalu cek lagi
+            for _ in range(6):
+                try:
+                    r, _, _ = select.select([sys.stdin], [], [], 0)
+                    if r:
+                        line = sys.stdin.readline()
+                        if line == "":  # EOF
+                            has_stdin = False
+                            break
+                        logging.info("Konfirmasi manual diterima via ENTER.")
+                        break
+                except Exception:
+                    pass
+                time.sleep(5)
+        
+        if not has_stdin:
+            # Stdin tidak interaktif atau EOF, cukup sleep 30 detik
+            time.sleep(30)
+
 def scrape_via_api():
     # Muat data yang sudah ada di CSV
     existing_companies = {}
@@ -253,20 +358,8 @@ def scrape_via_api():
     with sync_playwright() as p:
         browser, context, page = get_authenticated_context(p)
 
-        # Ambil token CSRF dan cookies
-        cookies = context.cookies()
-        xsrf_token = None
-        for cookie in cookies:
-            if cookie['name'] == 'XSRF-TOKEN':
-                from urllib.parse import unquote
-                xsrf_token = unquote(cookie['value'])
-                break
-        
-        if not xsrf_token:
-            logging.error("XSRF-TOKEN tidak ditemukan. Harap pastikan Anda sudah masuk dan halaman termuat.")
-            input("Tekan ENTER untuk menutup browser...")
-            context.close()
-            return
+        # Cek dan dapatkan sesi valid
+        xsrf_token, cookies = get_valid_session(context, page)
 
         logging.info(f"XSRF-TOKEN diperoleh: {xsrf_token[:10]}...")
         
@@ -369,7 +462,7 @@ def scrape_via_api():
                         "region2Id": kab_id,
                         "surveyPeriodId": survey_period_id,
                         "assignmentErrorStatusType": -1,
-                        "filterTargetType": "TARGET_ONLY"
+                        "filterTargetType": ""
                     }
                 }
 
@@ -391,6 +484,12 @@ def scrape_via_api():
                 except Exception as e:
                     logging.error(f"Gagal memanggil API Datatable untuk {kab_name} (start: {start_index}): {e}")
                     break
+
+                if res_eval.get("status") == 401:
+                    logging.warning(f"Sesi kadaluarsa (HTTP 401) saat memanggil API Datatable untuk {kab_name}. Meminta re-autentikasi...")
+                    xsrf_token, cookies = get_valid_session(context, page)
+                    cookie_header = "; ".join([f"{c['name']}={c['value']}" for c in cookies])
+                    continue
 
                 if res_eval.get("status") != 200:
                     logging.error(f"Gagal memanggil API Datatable untuk {kab_name}: HTTP {res_eval.get('status')}")
@@ -418,6 +517,7 @@ def scrape_via_api():
         logging.info(f"Total keseluruhan perusahaan yang diperoleh dari semua wilayah: {total_hits}")
 
         all_records = []
+        seen_codes = set()
         status_priority = {
             'bounced': 7,
             'dropped': 6,
@@ -434,6 +534,7 @@ def scrape_via_api():
 
         for idx, comp in enumerate(companies_data):
             code = comp.get("codeIdentity", "-")
+            seen_codes.add(code)
             company_name = comp.get("data1", "-")
             survey_status = comp.get("assignmentStatusAlias", "-")
             email_target = comp.get("email", "-")
@@ -455,54 +556,117 @@ def scrape_via_api():
                 logging.info(f"[{idx+1}/{len(companies_data)}] Skip (Sudah ada di cache): {code} | {company_name}")
                 continue
 
-            # 2. Panggil API untuk mengambil Riwayat Email
-            logging.info(f"[{idx+1}/{len(companies_data)}] Meminta API riwayat email: {code} | {company_name}")
-            
-            email_payload = {
-                "start": 1,
-                "pageNumber": 1,
-                "length": 10,
-                "search": {"value": "", "regex": True},
-                "emailScheduleParam": {
-                    "assignmentId": assignment_id,
-                    "surveyPeriodId": survey_period_id
-                }
-            }
-
-            # Retry mechanism if connection resets (panggilan via browser fetch)
+            # 2. Panggil API untuk mengambil Riwayat Email (dengan retry jika status 401)
             res_eval_email = None
-            for attempt in range(3):
-                try:
-                    res_eval_email = page.evaluate("""
-                        async ({url, payload, token}) => {
-                            const r = await fetch(url, {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type": "application/json",
-                                    "X-XSRF-TOKEN": token
-                                },
-                                body: JSON.stringify(payload)
-                            });
-                            if (!r.ok) return { status: r.status };
-                            return { status: r.status, json: await r.json() };
-                        }
-                    """, {"url": email_datatable_url, "payload": email_payload, "token": xsrf_token})
-                    if res_eval_email and res_eval_email.get("status") == 200:
+            res_eval_events = None
+            
+            for session_attempt in range(3):
+                logging.info(f"[{idx+1}/{len(companies_data)}] Meminta API riwayat email: {code} | {company_name}")
+                
+                email_payload = {
+                    "start": 0,
+                    "pageNumber": 1,
+                    "length": 10,
+                    "search": {"value": "", "regex": True},
+                    "emailScheduleParam": {
+                        "assignmentId": assignment_id,
+                        "surveyPeriodId": survey_period_id
+                    }
+                }
+
+                # Retry mechanism if connection resets (panggilan via browser fetch)
+                res_eval_email = None
+                for attempt in range(1, 4):
+                    try:
+                        res_eval_email = page.evaluate("""
+                            async ({url, payload, token}) => {
+                                const r = await fetch(url, {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                        "X-XSRF-TOKEN": token
+                                    },
+                                    body: JSON.stringify(payload)
+                                });
+                                if (!r.ok) return { status: r.status };
+                                return { status: r.status, json: await r.json() };
+                            }
+                        """, {"url": email_datatable_url, "payload": email_payload, "token": xsrf_token})
                         break
-                except Exception as ex:
-                    logging.warning(f"Percobaan {attempt+1} gagal untuk {code}: {ex}")
-                    time.sleep(2)
+                    except Exception as ex:
+                        logging.warning(f"Percobaan {attempt} gagal untuk {code}: {ex}")
+                        time.sleep(2)
+
+                # --- API KEDUA: EMAIL EVENTS (UNTUK RIWAYAT BROADCAST) ---
+                email_events_url = f"https://fasih-sm.bps.go.id/app/api/email/api/v1/email-events?assignmentId={assignment_id}&page=0&size=50"
+                res_eval_events = None
+                for attempt in range(1, 4):
+                    try:
+                        res_eval_events = page.evaluate("""
+                            async ({url, token}) => {
+                                const r = await fetch(url, {
+                                    method: "GET",
+                                    headers: {
+                                        "Accept": "application/json",
+                                        "X-XSRF-TOKEN": token
+                                    }
+                                });
+                                if (!r.ok) return { status: r.status };
+                                return { status: r.status, json: await r.json() };
+                            }
+                        """, {"url": email_events_url, "token": xsrf_token})
+                        break
+                    except Exception as ex:
+                        logging.warning(f"Percobaan events {attempt} gagal untuk {code}: {ex}")
+                        time.sleep(2)
+
+                # Cek jika ada HTTP 401
+                status_email = res_eval_email.get("status") if res_eval_email else None
+                status_events = res_eval_events.get("status") if res_eval_events else None
+                
+                if status_email == 401 or status_events == 401:
+                    logging.warning(f"Sesi kadaluarsa (HTTP 401) saat mengambil riwayat email untuk {code}. Meminta re-autentikasi...")
+                    xsrf_token, cookies = get_valid_session(context, page)
+                    cookie_header = "; ".join([f"{c['name']}={c['value']}" for c in cookies])
+                    continue
+                else:
+                    break
 
             history_items = []
             email_actual = email_target
             
+            # Jika KEDUA API gagal, maka kita anggap network error dan skip
+            if (not res_eval_email or res_eval_email.get("status") != 200) and (not res_eval_events or res_eval_events.get("status") != 200):
+                logging.error(f"Gagal memanggil KEDUA API untuk {code}, mempertahankan data lama jika ada.")
+                if code in existing_companies:
+                    # Update status dokumen jika ada perubahan lalu masukkan ulang data lama
+                    histories = existing_companies[code]
+                    for h in histories:
+                        h["survey_status"] = survey_status
+                    all_records.extend(histories)
+                else:
+                    # Jika benar-benar baru dan gagal API
+                    all_records.append({
+                        "code": code,
+                        "company_name": company_name,
+                        "survey_status": survey_status,
+                        "email": email_actual if email_actual != "-" else "-",
+                        "global_status": "-",
+                        "status": "-",
+                        "timestamp": "-",
+                        "order": 0
+                    })
+                continue
+
             if res_eval_email and res_eval_email.get("status") == 200:
                 try:
                     email_json = res_eval_email.get("json", {})
                     email_records = email_json.get("searchData", [])
                     if email_records:
                         # Kita ambil email sebenarnya yang tercantum di logs
-                        email_actual = email_records[0].get("email", email_target)
+                        tm_email = email_records[0].get("email")
+                        if email_actual == "-" and tm_email:
+                            email_actual = tm_email
                         
                         # Loop mengambil riwayat log
                         for item in email_records:
@@ -510,13 +674,10 @@ def scrape_via_api():
                             # Waktu pengiriman
                             hist_time = item.get("dateModified", "-")
                             if hist_time != "-":
-                                # Format date string ISO to human-readable
                                 try:
-                                    # Contoh: 2026-06-04T05:57:03.635+00:00 -> 04 Jun 2026, 12:57:03
                                     from datetime import datetime, timezone, timedelta
                                     # Parse ISO format
                                     dt = datetime.fromisoformat(hist_time.replace("Z", "+00:00"))
-                                    # Convert to local timezone (WIB / UTC+7 atau sesuai OS)
                                     # default ke +08:00 (WITA) karena Makassar/Palu/Sulawesi Tengah
                                     local_tz = timezone(timedelta(hours=8))
                                     dt_local = dt.astimezone(local_tz)
@@ -524,8 +685,47 @@ def scrape_via_api():
                                 except Exception:
                                     pass
                             history_items.append((hist_status, hist_time))
-                except Exception as ex:
-                    logging.error(f"Gagal memproses JSON email log untuk {code}: {ex}")
+                except Exception as e:
+                    logging.error(f"Error parsing email-schedule JSON untuk {code}: {e}")
+
+            if res_eval_events and res_eval_events.get("status") == 200:
+                try:
+                    events_json = res_eval_events.get("json", {})
+                    content = events_json.get("data", {}).get("content", [])
+                    import datetime
+                    for item in content:
+                        event_type = item.get("eventType", "")
+                        if not event_type:
+                            event_type = item.get("type", "")
+                        if not event_type:
+                            continue
+                            
+                        # Capitalize first letter
+                        event_type = event_type.capitalize()
+                        
+                        ts = item.get("timestamp")
+                        if ts:
+                            dt = datetime.datetime.fromtimestamp(ts / 1000)
+                            time_str = dt.strftime("%d %b %Y, %H:%M:%S")
+                        else:
+                            time_str = "-"
+                            
+                        history_items.append((event_type, time_str))
+                except Exception as e:
+                    logging.error(f"Error parsing email-events JSON untuk {code}: {e}")
+
+            # Deduplikasi history_items
+            unique_hist = []
+            seen = set()
+            for st, tm in history_items:
+                key = (st.upper(), tm)
+                if key not in seen:
+                    seen.add(key)
+                    unique_hist.append((st, tm))
+            history_items = unique_hist
+
+            # Sort history_items berdasarkan timestamp jika memungkinkan
+            history_items.sort(key=lambda x: x[1])
 
             # Balik urutan log agar tertua di awal
             history_items.reverse()
@@ -563,10 +763,9 @@ def scrape_via_api():
                         "order": order + 1
                     })
 
-            # Tulis real-time ke file setiap 20 perusahaan agar tidak hilang jika diinterupsi
+            # Tulis progress ke CSV setiap 20 perusahaan untuk backup lokal
             if (idx + 1) % 20 == 0 or (idx + 1) == len(companies_data):
-                # Simpan ke CSV
-                with open(OUTPUT_CSV, mode="w", newline="", encoding="utf-8") as csv_file:
+                with open("backup_" + OUTPUT_CSV, mode="w", newline="", encoding="utf-8") as csv_file:
                     writer = csv.writer(csv_file)
                     writer.writerow(["Kode Identitas", "Nama Perusahaan", "Status Dokumen", "Email Tujuan", "Status terakhir", "Status History", "Timestamp History", "Urutan History"])
                     for r in all_records:
@@ -574,15 +773,41 @@ def scrape_via_api():
                             r["code"], r["company_name"], r["survey_status"], r["email"],
                             r["global_status"], r["status"], r["timestamp"], r["order"]
                         ])
-                save_realtime_data(all_records)
-                logging.info(f"Progress disimpan ke {OUTPUT_CSV} ({idx+1}/{len(companies_data)}).")
+                logging.info(f"Progress dibackup ke backup_{OUTPUT_CSV} ({idx+1}/{len(companies_data)}).")
+                
+                # Update dashboard lokal secara real-time!
+                save_local_js(all_records)
                 
             time.sleep(0.1) # Jeda kecil agar ramah server
 
-        # Simpan rekap final
+        # Pindahkan backup menjadi file utama
+        if os.path.exists("backup_" + OUTPUT_CSV):
+            import shutil
+            shutil.move("backup_" + OUTPUT_CSV, OUTPUT_CSV)
+
+        # --- TAMBAHAN PENTING: KEMBALIKAN PERUSAHAAN YANG HILANG DARI API ---
+        # BPS kadang menyembunyikan perusahaan dari API datatable mereka (karena filter target, selesai, dsb)
+        # Kita harus memasukkan kembali data mereka dari existing_companies agar tidak terhapus di Supabase
+        for code_exist, histories in existing_companies.items():
+            if code_exist not in seen_codes and histories:
+                # Masukkan semua riwayat untuk perusahaan tersebut agar tidak terhapus
+                all_records.extend(histories)
+
+        # Simpan HASIL AKHIR (lengkap) ke Supabase dan data.js
         save_realtime_data(all_records)
-        logging.info("Scraping via API selesai!")
-        input("\nProses selesai. Tekan ENTER untuk selesai (browser dibiarkan tetap terbuka)...")
+        logging.info(f"Scraping via API selesai putaran ini. Total records: {len(all_records)}. Menunggu 30 menit sebelum scrape berikutnya...")
+
+def main_loop():
+    while True:
+        try:
+            logging.info("=== MEMULAI SIKLUS SCRAPING REAL-TIME ===")
+            scrape_via_api()
+        except Exception as e:
+            logging.error(f"Terjadi kesalahan fatal pada siklus: {e}")
+        
+        # Jeda 30 menit (1800 detik)
+        logging.info("Menunggu 30 menit...")
+        time.sleep(1800)
 
 if __name__ == "__main__":
-    scrape_via_api()
+    main_loop()

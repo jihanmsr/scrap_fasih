@@ -1,0 +1,161 @@
+{
+  "updated_at": "2026-06-08T11:19:34.396899",
+  "data": [
+    {
+      "kabupaten": "[01] BANGGAI KEPULAUAN",
+      "total_prelist": 6,
+      "total_akhir": 0,
+      "persentase": 0.0,
+      "sisa_usaha": 6,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[02] BANGGAI",
+      "total_prelist": 172,
+      "total_akhir": 0,
+      "persentase": 0.0,
+      "sisa_usaha": 172,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[03] MOROWALI",
+      "total_prelist": 161,
+      "total_akhir": 1,
+      "persentase": 0.62,
+      "sisa_usaha": 160,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[04] POSO",
+      "total_prelist": 92,
+      "total_akhir": 2,
+      "persentase": 2.17,
+      "sisa_usaha": 90,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[05] DONGGALA",
+      "total_prelist": 57,
+      "total_akhir": 0,
+      "persentase": 0.0,
+      "sisa_usaha": 57,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[06] TOLI-TOLI",
+      "total_prelist": 58,
+      "total_akhir": 14,
+      "persentase": 24.14,
+      "sisa_usaha": 44,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[07] BUOL",
+      "total_prelist": 17,
+      "total_akhir": 2,
+      "persentase": 11.76,
+      "sisa_usaha": 15,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[08] PARIGI MOUTONG",
+      "total_prelist": 65,
+      "total_akhir": 0,
+      "persentase": 0.0,
+      "sisa_usaha": 65,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[09] TOJO UNA-UNA",
+      "total_prelist": 15,
+      "total_akhir": 1,
+      "persentase": 6.67,
+      "sisa_usaha": 14,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[10] SIGI",
+      "total_prelist": 22,
+      "total_akhir": 0,
+      "persentase": 0.0,
+      "sisa_usaha": 22,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[11] BANGGAI LAUT",
+      "total_prelist": 7,
+      "total_akhir": 2,
+      "persentase": 28.57,
+      "sisa_usaha": 5,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[12] MOROWALI UTARA",
+      "total_prelist": 173,
+      "total_akhir": 0,
+      "persentase": 0.0,
+      "sisa_usaha": 173,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    },
+    {
+      "kabupaten": "[71] PALU",
+      "total_prelist": 419,
+      "total_akhir": 6,
+      "persentase": 1.43,
+      "sisa_usaha": 413,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "last_2_days_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0
+    }
+  ]
+}
