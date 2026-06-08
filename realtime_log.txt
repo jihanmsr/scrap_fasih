@@ -8748,3 +8748,977 @@
 2026-06-08 18:13:17,507 - WARNING - Percobaan events 1 gagal untuk 7210120013000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
 2026-06-08 18:13:19,508 - WARNING - Percobaan events 2 gagal untuk 7210120013000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
 2026-06-08 18:13:21,510 - WARNING - Percobaan events 3 gagal untuk 7210120013000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:23,513 - ERROR - Gagal memanggil KEDUA API untuk 7210120013000300 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:13:23,513 - INFO - [662/1264] Skip (Sudah ada di cache): 7210130008001400 - UB - 1 | MANDIRI CENTRAL CELLEBES
+2026-06-08 18:13:23,513 - INFO - [663/1264] Skip (Sudah ada di cache): 7210110011000500 - UB - 1 | BANK MANDIR Cabang sigi, PT
+2026-06-08 18:13:23,513 - INFO - [664/1264] Meminta API riwayat email: 7210120012001201 - UB - 1 | BINA ASTA TUNGGAL PT
+2026-06-08 18:13:23,515 - WARNING - Percobaan 1 gagal untuk 7210120012001201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:25,516 - WARNING - Percobaan 2 gagal untuk 7210120012001201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:27,518 - WARNING - Percobaan 3 gagal untuk 7210120012001201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:29,521 - WARNING - Percobaan events 1 gagal untuk 7210120012001201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:31,569 - WARNING - Percobaan events 2 gagal untuk 7210120012001201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:33,571 - WARNING - Percobaan events 3 gagal untuk 7210120012001201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:35,571 - ERROR - Gagal memanggil KEDUA API untuk 7210120012001201 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:13:35,571 - INFO - [665/1264] Meminta API riwayat email: 7210120012000401 - UB - 1 | JUANG JAYA BERSAMA, PT
+2026-06-08 18:13:35,575 - WARNING - Percobaan 1 gagal untuk 7210120012000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:37,576 - WARNING - Percobaan 2 gagal untuk 7210120012000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:39,578 - WARNING - Percobaan 3 gagal untuk 7210120012000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:41,580 - WARNING - Percobaan events 1 gagal untuk 7210120012000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:43,583 - WARNING - Percobaan events 2 gagal untuk 7210120012000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:45,585 - WARNING - Percobaan events 3 gagal untuk 7210120012000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:47,585 - ERROR - Gagal memanggil KEDUA API untuk 7210120012000401 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:13:47,586 - INFO - [666/1264] Skip (Sudah ada di cache): 7211040003000800 - UB - 1 | BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK
+2026-06-08 18:13:47,587 - INFO - [667/1264] Skip (Sudah ada di cache): 7211040004000400 - UB - 2 | BRI UNIT BANGGAI, PT
+2026-06-08 18:13:47,587 - INFO - [668/1264] Skip (Sudah ada di cache): 7211040004000400 - UB - 1 | BANK MANDIRI (PERSERO) TBK KCP BANGGAI LAUT
+2026-06-08 18:13:47,587 - INFO - [669/1264] Skip (Sudah ada di cache): 7211040002000402 - UB - 1 | BANK SULTENG CABANG BANGGAI LAUT, PT
+2026-06-08 18:13:47,590 - INFO - [670/1264] Skip (Sudah ada di cache): 7211040004000800 - UB - 1 | PERTAMINA PATRANIAGA, PT
+2026-06-08 18:13:47,590 - INFO - [671/1264] Skip (Sudah ada di cache): 7211040003000300 - UB - 1 | BANK BNI CAPEM BANGGAI
+2026-06-08 18:13:47,590 - INFO - [672/1264] Skip (Sudah ada di cache): 7211040003000200 - UB - 1 | BPR MODERN EXPRESS CABANG BANGGAI LAUT, PT
+2026-06-08 18:13:47,591 - INFO - [673/1264] Skip (Sudah ada di cache): 7212050004200100 - UB - 1 | SUMBER MINERAL ABADI SITE MOROWALI UTARA
+2026-06-08 18:13:47,592 - INFO - [674/1264] Meminta API riwayat email: 7212100014000100 - UB - 1 | PT. Langgeng Nusa Makmur / Perkebunan Kelapa Sawit beserta turunannya
+2026-06-08 18:13:47,593 - WARNING - Percobaan 1 gagal untuk 7212100014000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:49,597 - WARNING - Percobaan 2 gagal untuk 7212100014000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:51,607 - WARNING - Percobaan 3 gagal untuk 7212100014000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:53,613 - WARNING - Percobaan events 1 gagal untuk 7212100014000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:55,617 - WARNING - Percobaan events 2 gagal untuk 7212100014000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:57,619 - WARNING - Percobaan events 3 gagal untuk 7212100014000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:13:59,622 - ERROR - Gagal memanggil KEDUA API untuk 7212100014000100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:13:59,622 - INFO - [675/1264] Skip (Sudah ada di cache): 7212020008100200 - UB - 3 | INDOMORI
+2026-06-08 18:13:59,624 - INFO - [676/1264] Meminta API riwayat email: 7212010007000600 - UB - 1 | PLN
+2026-06-08 18:13:59,627 - WARNING - Percobaan 1 gagal untuk 7212010007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:01,629 - WARNING - Percobaan 2 gagal untuk 7212010007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:03,631 - WARNING - Percobaan 3 gagal untuk 7212010007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:05,634 - WARNING - Percobaan events 1 gagal untuk 7212010007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:07,635 - WARNING - Percobaan events 2 gagal untuk 7212010007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:09,639 - WARNING - Percobaan events 3 gagal untuk 7212010007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:11,640 - ERROR - Gagal memanggil KEDUA API untuk 7212010007000600 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:14:11,641 - INFO - [677/1264] Skip (Sudah ada di cache): 7212020008100200 - UB - 5 | PTP NUSANTARA XIV EX TASPEN
+2026-06-08 18:14:11,641 - INFO - [678/1264] Skip (Sudah ada di cache): 7212020008100200 - UB - 2 | PUTRA BONGKA MINERAL
+2026-06-08 18:14:11,641 - INFO - [679/1264] Skip (Sudah ada di cache): 7212020008100200 - UB - 6 | BRI UNIT BETELEME.PT
+2026-06-08 18:14:11,641 - INFO - [680/1264] Skip (Sudah ada di cache): 7212040001000500 - UB - 1 | AGRO MORUT MAJU PERSADA
+2026-06-08 18:14:11,641 - INFO - [681/1264] Skip (Sudah ada di cache): 7212040011000500 - UB - 2 | PT TELUK TOMORI INDO
+2026-06-08 18:14:11,641 - INFO - [682/1264] Skip (Sudah ada di cache): 7212020008001100 - UB - 3 | HANATA MOTOR CELEBES MANDIRI
+2026-06-08 18:14:11,642 - INFO - [683/1264] Skip (Sudah ada di cache): 7212040009000200 - UB - 1 | RAJA PASIR MANDIRI
+2026-06-08 18:14:11,642 - INFO - [684/1264] Meminta API riwayat email: 7212000000000000 - UB - 1 | PT Sinergi Perkebunan Nusantara (SPN)
+2026-06-08 18:14:11,644 - WARNING - Percobaan 1 gagal untuk 7212000000000000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:13,645 - WARNING - Percobaan 2 gagal untuk 7212000000000000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:15,648 - WARNING - Percobaan 3 gagal untuk 7212000000000000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:17,649 - WARNING - Percobaan events 1 gagal untuk 7212000000000000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:19,652 - WARNING - Percobaan events 2 gagal untuk 7212000000000000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:21,657 - WARNING - Percobaan events 3 gagal untuk 7212000000000000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:23,657 - ERROR - Gagal memanggil KEDUA API untuk 7212000000000000 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:14:23,657 - INFO - [685/1264] Skip (Sudah ada di cache): 7212010010000100 - UB - 7 | CITRA TAMBANG MINERAL
+2026-06-08 18:14:23,658 - INFO - [686/1264] Skip (Sudah ada di cache): 7212010013000500 - UB - 1 | SAWIT JAYA SUKSES
+2026-06-08 18:14:23,658 - INFO - [687/1264] Meminta API riwayat email: 7212020008001100 - UB - 4 | ADIRA FINANCE PT
+2026-06-08 18:14:23,660 - WARNING - Percobaan 1 gagal untuk 7212020008001100 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:25,662 - WARNING - Percobaan 2 gagal untuk 7212020008001100 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:27,671 - WARNING - Percobaan 3 gagal untuk 7212020008001100 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:29,672 - WARNING - Percobaan events 1 gagal untuk 7212020008001100 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:31,674 - WARNING - Percobaan events 2 gagal untuk 7212020008001100 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:33,675 - WARNING - Percobaan events 3 gagal untuk 7212020008001100 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:35,676 - ERROR - Gagal memanggil KEDUA API untuk 7212020008001100 - UB - 4, mempertahankan data lama jika ada.
+2026-06-08 18:14:35,676 - INFO - [688/1264] Meminta API riwayat email: 7212020008100200 - UB - 1 | ASSAQTI MORUT ENERGY
+2026-06-08 18:14:35,679 - WARNING - Percobaan 1 gagal untuk 7212020008100200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:37,681 - WARNING - Percobaan 2 gagal untuk 7212020008100200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:39,688 - WARNING - Percobaan 3 gagal untuk 7212020008100200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:41,690 - WARNING - Percobaan events 1 gagal untuk 7212020008100200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:43,694 - WARNING - Percobaan events 2 gagal untuk 7212020008100200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:45,776 - WARNING - Percobaan events 3 gagal untuk 7212020008100200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:47,778 - ERROR - Gagal memanggil KEDUA API untuk 7212020008100200 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:14:47,780 - INFO - [689/1264] Meminta API riwayat email: 7212020008100300 - UB - 1 | PERKEBUNAN KELAPA SAWIT PT ANA
+2026-06-08 18:14:47,793 - WARNING - Percobaan 1 gagal untuk 7212020008100300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:49,797 - WARNING - Percobaan 2 gagal untuk 7212020008100300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:51,799 - WARNING - Percobaan 3 gagal untuk 7212020008100300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:53,800 - WARNING - Percobaan events 1 gagal untuk 7212020008100300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:55,802 - WARNING - Percobaan events 2 gagal untuk 7212020008100300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:57,803 - WARNING - Percobaan events 3 gagal untuk 7212020008100300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:14:59,804 - ERROR - Gagal memanggil KEDUA API untuk 7212020008100300 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:14:59,806 - INFO - [690/1264] Meminta API riwayat email: 7212030001000700 - UB - 1 | SINAR KARYAGAMMA PRIMATAMA, PT
+2026-06-08 18:14:59,814 - WARNING - Percobaan 1 gagal untuk 7212030001000700 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:01,817 - WARNING - Percobaan 2 gagal untuk 7212030001000700 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:03,818 - WARNING - Percobaan 3 gagal untuk 7212030001000700 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:05,820 - WARNING - Percobaan events 1 gagal untuk 7212030001000700 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:07,822 - WARNING - Percobaan events 2 gagal untuk 7212030001000700 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:09,823 - WARNING - Percobaan events 3 gagal untuk 7212030001000700 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:11,826 - ERROR - Gagal memanggil KEDUA API untuk 7212030001000700 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:15:11,827 - INFO - [691/1264] Meminta API riwayat email: 7212020001000500 - UB - 1 | HENTRACO INDOPERKASA, PT
+2026-06-08 18:15:11,829 - WARNING - Percobaan 1 gagal untuk 7212020001000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:13,832 - WARNING - Percobaan 2 gagal untuk 7212020001000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:15,841 - WARNING - Percobaan 3 gagal untuk 7212020001000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:17,842 - WARNING - Percobaan events 1 gagal untuk 7212020001000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:19,844 - WARNING - Percobaan events 2 gagal untuk 7212020001000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:21,848 - WARNING - Percobaan events 3 gagal untuk 7212020001000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:23,848 - ERROR - Gagal memanggil KEDUA API untuk 7212020001000500 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:15:23,849 - INFO - [692/1264] Skip (Sudah ada di cache): 7212010010000100 - UB - 1 | CITRA ANEKA TAMBANG
+2026-06-08 18:15:23,849 - INFO - [693/1264] Skip (Sudah ada di cache): 7212010010000100 - UB - 2 | CITRA MINERAL INDONESIA
+2026-06-08 18:15:23,849 - INFO - [694/1264] Skip (Sudah ada di cache): 7212040006000300 - UB - 1 | GENBA MULTI MINERAL
+2026-06-08 18:15:23,849 - INFO - [695/1264] Skip (Sudah ada di cache): 7212050008000400 - UB - 2 | PALU BARUGA YAKU
+2026-06-08 18:15:23,849 - INFO - [696/1264] Meminta API riwayat email: 7212050008000100 - UB - 10 | BHAYR MULTI MOROWALI
+2026-06-08 18:15:23,852 - WARNING - Percobaan 1 gagal untuk 7212050008000100 - UB - 10: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:25,853 - WARNING - Percobaan 2 gagal untuk 7212050008000100 - UB - 10: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:27,854 - WARNING - Percobaan 3 gagal untuk 7212050008000100 - UB - 10: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:29,859 - WARNING - Percobaan events 1 gagal untuk 7212050008000100 - UB - 10: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:31,861 - WARNING - Percobaan events 2 gagal untuk 7212050008000100 - UB - 10: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:33,862 - WARNING - Percobaan events 3 gagal untuk 7212050008000100 - UB - 10: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:35,863 - ERROR - Gagal memanggil KEDUA API untuk 7212050008000100 - UB - 10, mempertahankan data lama jika ada.
+2026-06-08 18:15:35,863 - INFO - [697/1264] Skip (Sudah ada di cache): 7212010010000100 - UB - 4 | AGENG PERMATA MINING
+2026-06-08 18:15:35,863 - INFO - [698/1264] Skip (Sudah ada di cache): 7212050003000700 - UB - 3 | BATU TAMBANG MINERALINDO
+2026-06-08 18:15:35,863 - INFO - [699/1264] Skip (Sudah ada di cache): 7212050003000700 - UB - 1 | SINOSTEEL INDONESIA MINING
+2026-06-08 18:15:35,865 - INFO - [700/1264] Skip (Sudah ada di cache): 7212020008000900 - UB - 1 | MORI DUTA MINERAL
+2026-06-08 18:15:35,866 - INFO - [701/1264] Meminta API riwayat email: 7212040006000300 - UB - 2 | AGRO NUSA ABADI, PT
+2026-06-08 18:15:35,868 - WARNING - Percobaan 1 gagal untuk 7212040006000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:37,869 - WARNING - Percobaan 2 gagal untuk 7212040006000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:39,871 - WARNING - Percobaan 3 gagal untuk 7212040006000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:41,873 - WARNING - Percobaan events 1 gagal untuk 7212040006000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:43,875 - WARNING - Percobaan events 2 gagal untuk 7212040006000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:45,879 - WARNING - Percobaan events 3 gagal untuk 7212040006000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:47,879 - ERROR - Gagal memanggil KEDUA API untuk 7212040006000300 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:15:47,879 - INFO - [702/1264] Meminta API riwayat email: 7212040006000300 - UB - 3 | SAWIT JAYA ABADI, PT
+2026-06-08 18:15:47,881 - WARNING - Percobaan 1 gagal untuk 7212040006000300 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:49,882 - WARNING - Percobaan 2 gagal untuk 7212040006000300 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:51,884 - WARNING - Percobaan 3 gagal untuk 7212040006000300 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:53,885 - WARNING - Percobaan events 1 gagal untuk 7212040006000300 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:55,891 - WARNING - Percobaan events 2 gagal untuk 7212040006000300 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:57,896 - WARNING - Percobaan events 3 gagal untuk 7212040006000300 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:15:59,896 - ERROR - Gagal memanggil KEDUA API untuk 7212040006000300 - UB - 3, mempertahankan data lama jika ada.
+2026-06-08 18:15:59,897 - INFO - [703/1264] Skip (Sudah ada di cache): 7212040012000502 - UB - 2 | JEJE KONSTRUKSI GRUP
+2026-06-08 18:15:59,897 - INFO - [704/1264] Skip (Sudah ada di cache): 7212020008001100 - UB - 1 | BANK PERKREDITAN RAKYAT PRIMA ARTHA SEJAHTERA
+2026-06-08 18:15:59,897 - INFO - [705/1264] Meminta API riwayat email: 7212070008200100 - UB - 1 | RIMBUNAN ALAM SENTOSA, PT
+2026-06-08 18:15:59,899 - WARNING - Percobaan 1 gagal untuk 7212070008200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:01,900 - WARNING - Percobaan 2 gagal untuk 7212070008200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:03,902 - WARNING - Percobaan 3 gagal untuk 7212070008200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:05,906 - WARNING - Percobaan events 1 gagal untuk 7212070008200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:07,907 - WARNING - Percobaan events 2 gagal untuk 7212070008200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:09,912 - WARNING - Percobaan events 3 gagal untuk 7212070008200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:11,912 - ERROR - Gagal memanggil KEDUA API untuk 7212070008200100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:16:11,912 - INFO - [706/1264] Skip (Sudah ada di cache): 7212080001200100 - UB - 1 | Mitra Mineral Indotama, PT(MITRA MINERAL INDOTAMA)
+2026-06-08 18:16:11,912 - INFO - [707/1264] Meminta API riwayat email: 7212090016000400 - UB - 1 | KARUNIA ALAM MAKMUR, PT
+2026-06-08 18:16:11,915 - WARNING - Percobaan 1 gagal untuk 7212090016000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:13,919 - WARNING - Percobaan 2 gagal untuk 7212090016000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:15,920 - WARNING - Percobaan 3 gagal untuk 7212090016000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:17,922 - WARNING - Percobaan events 1 gagal untuk 7212090016000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:19,925 - WARNING - Percobaan events 2 gagal untuk 7212090016000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:21,927 - WARNING - Percobaan events 3 gagal untuk 7212090016000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:23,927 - ERROR - Gagal memanggil KEDUA API untuk 7212090016000400 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:16:23,928 - INFO - [708/1264] Skip (Sudah ada di cache): 7212010010000100 - UB - 3 | USAHA MITRA MUCIVAL
+2026-06-08 18:16:23,928 - INFO - [709/1264] Skip (Sudah ada di cache): 7212010002000300 - UB - 1 | PERKEBUNAN SAWIT MEKARMAS
+2026-06-08 18:16:23,928 - INFO - [710/1264] Meminta API riwayat email: 7212010006000300 - UB - 1 | BINTANG MORUT PERKASA
+2026-06-08 18:16:23,929 - WARNING - Percobaan 1 gagal untuk 7212010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:25,931 - WARNING - Percobaan 2 gagal untuk 7212010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:27,933 - WARNING - Percobaan 3 gagal untuk 7212010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:29,935 - WARNING - Percobaan events 1 gagal untuk 7212010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:31,936 - WARNING - Percobaan events 2 gagal untuk 7212010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:33,938 - WARNING - Percobaan events 3 gagal untuk 7212010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:35,939 - ERROR - Gagal memanggil KEDUA API untuk 7212010006000300 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:16:35,939 - INFO - [711/1264] Meminta API riwayat email: 7212040003100100 - UB - 1 | SINAR SAWIT UTAMA
+2026-06-08 18:16:35,941 - WARNING - Percobaan 1 gagal untuk 7212040003100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:37,943 - WARNING - Percobaan 2 gagal untuk 7212040003100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:39,945 - WARNING - Percobaan 3 gagal untuk 7212040003100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:41,947 - WARNING - Percobaan events 1 gagal untuk 7212040003100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:43,949 - WARNING - Percobaan events 2 gagal untuk 7212040003100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:45,951 - WARNING - Percobaan events 3 gagal untuk 7212040003100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:47,953 - ERROR - Gagal memanggil KEDUA API untuk 7212040003100100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:16:47,954 - INFO - [712/1264] Skip (Sudah ada di cache): 7212020008001000 - UB - 2 | MEGA KARYA ENERGY
+2026-06-08 18:16:47,954 - INFO - [713/1264] Skip (Sudah ada di cache): 7212040012000200 - UB - 1 | BJM BUGIS JAYA MANDIRI
+2026-06-08 18:16:47,954 - INFO - [714/1264] Skip (Sudah ada di cache): 7212010010000100 - UB - 6 | MITRA MINERAL MEAMBO
+2026-06-08 18:16:47,954 - INFO - [715/1264] Skip (Sudah ada di cache): 7212010010000100 - UB - 8 | TIMUR JAYA INDO MAKMUR, PT
+2026-06-08 18:16:47,954 - INFO - [716/1264] Skip (Sudah ada di cache): 7212040011000500 - UB - 1 | MOROWALI MINING RESOURCES
+2026-06-08 18:16:47,954 - INFO - [717/1264] Skip (Sudah ada di cache): 7212010010000100 - UB - 5 | MEGA MINERAL PRAKARSA
+2026-06-08 18:16:47,955 - INFO - [718/1264] Skip (Sudah ada di cache): 7212040010000101 - UB - 1 | NUR BUMI MINERAL
+2026-06-08 18:16:47,955 - INFO - [719/1264] Skip (Sudah ada di cache): 7212040010000102 - UB - 3 | MONSUKA BERDIKARI ABADI
+2026-06-08 18:16:47,955 - INFO - [720/1264] Skip (Sudah ada di cache): 7212020008001000 - UB - 1 | GILINGAN PADI <TONI F KOLUBO>
+2026-06-08 18:16:47,956 - INFO - [721/1264] Skip (Sudah ada di cache): 7212040012000501 - UB - 2 | DRAGON KONSTRUKSI UTAMA
+2026-06-08 18:16:47,956 - INFO - [722/1264] Skip (Sudah ada di cache): 7212040006000200 - UB - 1 | MOLINO JAYA MAKMUR MINERAL
+2026-06-08 18:16:47,956 - INFO - [723/1264] Meminta API riwayat email: 7212020008000300 - UB - 1 | PERKEBUNAN NUSANTARA 1 REGIONAL 8,PT
+2026-06-08 18:16:47,958 - WARNING - Percobaan 1 gagal untuk 7212020008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:49,965 - WARNING - Percobaan 2 gagal untuk 7212020008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:51,967 - WARNING - Percobaan 3 gagal untuk 7212020008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:53,968 - WARNING - Percobaan events 1 gagal untuk 7212020008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:55,970 - WARNING - Percobaan events 2 gagal untuk 7212020008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:57,972 - WARNING - Percobaan events 3 gagal untuk 7212020008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:16:59,976 - ERROR - Gagal memanggil KEDUA API untuk 7212020008000300 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:16:59,976 - INFO - [724/1264] Skip (Sudah ada di cache): 7212050003000500 - UB - 3 | MOROKOA MINING SEJAHTERA
+2026-06-08 18:16:59,976 - INFO - [725/1264] Skip (Sudah ada di cache): 7212040006000200 - UB - 3 | BERLIAN BIRU ENERGY
+2026-06-08 18:16:59,976 - INFO - [726/1264] Skip (Sudah ada di cache): 7212040012000200 - UB - 2 | MMPS MATABOLO PERKASA
+2026-06-08 18:16:59,976 - INFO - [727/1264] Skip (Sudah ada di cache): 7212040012200400 - UB - 1 | LEICHI CONSTRUCTION ENGINEERING INDONESIA
+2026-06-08 18:16:59,978 - INFO - [728/1264] Skip (Sudah ada di cache): 7212040006400100 - UB - 1 | Toko suharman <Darmiati>
+2026-06-08 18:16:59,979 - INFO - [729/1264] Skip (Sudah ada di cache): 7212040006000200 - UB - 2 | GENBA INDO RESOURCES
+2026-06-08 18:16:59,980 - INFO - [730/1264] Skip (Sudah ada di cache): 7212040011000101 - UB - 1 | BIMANTARA GLOBAL RESOURCES
+2026-06-08 18:16:59,980 - INFO - [731/1264] Meminta API riwayat email: 7212060010000400 - UB - 1 | Nasi Kuning Hasna <Hasna>
+2026-06-08 18:16:59,982 - WARNING - Percobaan 1 gagal untuk 7212060010000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:01,988 - WARNING - Percobaan 2 gagal untuk 7212060010000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:03,990 - WARNING - Percobaan 3 gagal untuk 7212060010000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:05,991 - WARNING - Percobaan events 1 gagal untuk 7212060010000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:07,993 - WARNING - Percobaan events 2 gagal untuk 7212060010000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:09,996 - WARNING - Percobaan events 3 gagal untuk 7212060010000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:11,996 - ERROR - Gagal memanggil KEDUA API untuk 7212060010000400 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:17:11,996 - INFO - [732/1264] Skip (Sudah ada di cache): 7212040003000200 - UB - 1 | ARUTALA PATRA ENERGI
+2026-06-08 18:17:11,996 - INFO - [733/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 6 | KHANSA PERMATA
+2026-06-08 18:17:11,996 - INFO - [734/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 16 | PT Pertamina Patra Niaga Fuel Terminal Kolonodale
+2026-06-08 18:17:11,998 - INFO - [735/1264] Skip (Sudah ada di cache): 7212050009000302 - UB - 3 | MIRNA KARYA KONSTRUKSINDO
+2026-06-08 18:17:11,998 - INFO - [736/1264] Skip (Sudah ada di cache): 7212050008000100 - UB - 6 | JOURNEY ADVENTURE INDONESIA
+2026-06-08 18:17:11,998 - INFO - [737/1264] Skip (Sudah ada di cache): 7212050008000100 - UB - 7 | BINA BANGGAI MEMBANGUN
+2026-06-08 18:17:11,998 - INFO - [738/1264] Skip (Sudah ada di cache): 7212050008000400 - UB - 3 | BERKAT ANUGRAH TAMBANG
+2026-06-08 18:17:11,999 - INFO - [739/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 13 | MEDINA MINING CONSORTIUM
+2026-06-08 18:17:11,999 - INFO - [740/1264] Skip (Sudah ada di cache): 7212050010000500 - UB - 2 | GUNUNG SAFHA MINERAL
+2026-06-08 18:17:11,999 - INFO - [741/1264] Skip (Sudah ada di cache): 7212080001000300 - UB - 2 | SAMUDERA TOWI INDONESIA
+2026-06-08 18:17:12,001 - INFO - [742/1264] Skip (Sudah ada di cache): 7212100003000400 - UB - 1 | SAWIT PERMAI PRATAMA
+2026-06-08 18:17:12,001 - INFO - [743/1264] Meminta API riwayat email: 7212090015000300 - UB - 1 | ASDP INDONESIA FERRY PERSERO,PT
+2026-06-08 18:17:12,003 - WARNING - Percobaan 1 gagal untuk 7212090015000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:14,004 - WARNING - Percobaan 2 gagal untuk 7212090015000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:16,006 - WARNING - Percobaan 3 gagal untuk 7212090015000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:18,008 - WARNING - Percobaan events 1 gagal untuk 7212090015000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:20,010 - WARNING - Percobaan events 2 gagal untuk 7212090015000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:22,011 - WARNING - Percobaan events 3 gagal untuk 7212090015000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:24,012 - ERROR - Gagal memanggil KEDUA API untuk 7212090015000300 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:17:24,014 - INFO - [744/1264] Meminta API riwayat email: 7212100001200100 - UB - 1 | CIPTA AGRO SAKTI, PT
+2026-06-08 18:17:24,016 - WARNING - Percobaan 1 gagal untuk 7212100001200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:26,018 - WARNING - Percobaan 2 gagal untuk 7212100001200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:28,019 - WARNING - Percobaan 3 gagal untuk 7212100001200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:30,021 - WARNING - Percobaan events 1 gagal untuk 7212100001200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:32,022 - WARNING - Percobaan events 2 gagal untuk 7212100001200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:34,024 - WARNING - Percobaan events 3 gagal untuk 7212100001200100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:36,024 - ERROR - Gagal memanggil KEDUA API untuk 7212100001200100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:17:36,025 - INFO - [745/1264] Skip (Sudah ada di cache): 7212080001000300 - UB - 3 | MINERAL SAMUDERA PRATAMA
+2026-06-08 18:17:36,025 - INFO - [746/1264] Skip (Sudah ada di cache): 7212090007000500 - UB - 1 | BUMITAMA AGRO NUSANTARA
+2026-06-08 18:17:36,025 - INFO - [747/1264] Skip (Sudah ada di cache): 7212050009000302 - UB - 1 | PUTRA NUSANTARA SEJATI
+2026-06-08 18:17:36,025 - INFO - [748/1264] Meminta API riwayat email: 7212100008000300 - UB - 1 | Pertambangan Bijih Nikel ( TIGA DARA)
+2026-06-08 18:17:36,027 - WARNING - Percobaan 1 gagal untuk 7212100008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:38,033 - WARNING - Percobaan 2 gagal untuk 7212100008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:40,035 - WARNING - Percobaan 3 gagal untuk 7212100008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:42,037 - WARNING - Percobaan events 1 gagal untuk 7212100008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:44,039 - WARNING - Percobaan events 2 gagal untuk 7212100008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:46,041 - WARNING - Percobaan events 3 gagal untuk 7212100008000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:48,041 - ERROR - Gagal memanggil KEDUA API untuk 7212100008000300 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:17:48,042 - INFO - [749/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 2 | Nasi Kuning Putriadi <PUTRIADI>
+2026-06-08 18:17:48,042 - INFO - [750/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 12 | MULIA PACIFIC RESOURCES BHL
+2026-06-08 18:17:48,042 - INFO - [751/1264] Skip (Sudah ada di cache): 7212040010000600 - UB - 1 | Warung makan online rini <Rini>
+2026-06-08 18:17:48,042 - INFO - [752/1264] Skip (Sudah ada di cache): 7212050009000301 - UB - 2 | MANDORA MOIKO WATER
+2026-06-08 18:17:48,042 - INFO - [753/1264] Skip (Sudah ada di cache): 7212050009000302 - UB - 2 | IZZI TRI JAYA
+2026-06-08 18:17:48,042 - INFO - [754/1264] Skip (Sudah ada di cache): 7212100005100100 - UB - 1 | CAHAYA TIGA PUTRA
+2026-06-08 18:17:48,043 - INFO - [755/1264] Meminta API riwayat email: 7212030001000700 - UB - 2 | KIRANA SINAR GEMILANG, PT
+2026-06-08 18:17:48,044 - WARNING - Percobaan 1 gagal untuk 7212030001000700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:50,049 - WARNING - Percobaan 2 gagal untuk 7212030001000700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:52,050 - WARNING - Percobaan 3 gagal untuk 7212030001000700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:54,054 - WARNING - Percobaan events 1 gagal untuk 7212030001000700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:56,056 - WARNING - Percobaan events 2 gagal untuk 7212030001000700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:17:58,057 - WARNING - Percobaan events 3 gagal untuk 7212030001000700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:00,059 - ERROR - Gagal memanggil KEDUA API untuk 7212030001000700 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:18:00,059 - INFO - [756/1264] Meminta API riwayat email: 7212030010100100 - UB - 1 | CIPTA AGRO NUSANTARA, PT
+2026-06-08 18:18:00,061 - WARNING - Percobaan 1 gagal untuk 7212030010100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:02,065 - WARNING - Percobaan 2 gagal untuk 7212030010100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:04,066 - WARNING - Percobaan 3 gagal untuk 7212030010100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:06,068 - WARNING - Percobaan events 1 gagal untuk 7212030010100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:08,070 - WARNING - Percobaan events 2 gagal untuk 7212030010100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:10,071 - WARNING - Percobaan events 3 gagal untuk 7212030010100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:12,072 - ERROR - Gagal memanggil KEDUA API untuk 7212030010100100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:18:12,072 - INFO - [757/1264] Skip (Sudah ada di cache): 7212020008100200 - UB - 4 | CENTRAL CELEBES MINERALINDO
+2026-06-08 18:18:12,072 - INFO - [758/1264] Skip (Sudah ada di cache): 7212050009000302 - UB - 4 | BOANERGES
+2026-06-08 18:18:12,072 - INFO - [759/1264] Meminta API riwayat email: 7212050008000100 - UB - 11 | Kantin  TASMA  <TASMA>
+2026-06-08 18:18:12,074 - WARNING - Percobaan 1 gagal untuk 7212050008000100 - UB - 11: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:14,077 - WARNING - Percobaan 2 gagal untuk 7212050008000100 - UB - 11: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:16,079 - WARNING - Percobaan 3 gagal untuk 7212050008000100 - UB - 11: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:18,081 - WARNING - Percobaan events 1 gagal untuk 7212050008000100 - UB - 11: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:20,082 - WARNING - Percobaan events 2 gagal untuk 7212050008000100 - UB - 11: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:22,084 - WARNING - Percobaan events 3 gagal untuk 7212050008000100 - UB - 11: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:24,084 - ERROR - Gagal memanggil KEDUA API untuk 7212050008000100 - UB - 11, mempertahankan data lama jika ada.
+2026-06-08 18:18:24,084 - INFO - [760/1264] Skip (Sudah ada di cache): 7212040011000400 - UB - 1 | ARUNIKA BUMI MORUTA
+2026-06-08 18:18:24,086 - INFO - [761/1264] Meminta API riwayat email: 7212030007000600 - UB - 1 | Warung Campuran <Sudaryono> <SUDARYONO>
+2026-06-08 18:18:24,088 - WARNING - Percobaan 1 gagal untuk 7212030007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:26,090 - WARNING - Percobaan 2 gagal untuk 7212030007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:28,092 - WARNING - Percobaan 3 gagal untuk 7212030007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:30,099 - WARNING - Percobaan events 1 gagal untuk 7212030007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:32,100 - WARNING - Percobaan events 2 gagal untuk 7212030007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:34,102 - WARNING - Percobaan events 3 gagal untuk 7212030007000600 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:36,103 - ERROR - Gagal memanggil KEDUA API untuk 7212030007000600 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:18:36,103 - INFO - [762/1264] Skip (Sudah ada di cache): 7212040002000200 - UB - 1 | DONGHUANG INTELLIGENT ENGINEERING
+2026-06-08 18:18:36,103 - INFO - [763/1264] Skip (Sudah ada di cache): 7212050002000400 - UB - 1 | SULAWESI MINERAL UTAMA
+2026-06-08 18:18:36,103 - INFO - [764/1264] Skip (Sudah ada di cache): 7212040006000200 - UB - 4 | PT. SUMBER PERMATA MINERAL
+2026-06-08 18:18:36,103 - INFO - [765/1264] Skip (Sudah ada di cache): 7212040009000200 - UB - 3 | KEINZ VENTURA PT
+2026-06-08 18:18:36,103 - INFO - [766/1264] Meminta API riwayat email: 7212050002000100 - UB - 1 | SPBU TANJUNG PUTIA PT
+2026-06-08 18:18:36,106 - WARNING - Percobaan 1 gagal untuk 7212050002000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:38,108 - WARNING - Percobaan 2 gagal untuk 7212050002000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:40,109 - WARNING - Percobaan 3 gagal untuk 7212050002000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:42,114 - WARNING - Percobaan events 1 gagal untuk 7212050002000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:44,116 - WARNING - Percobaan events 2 gagal untuk 7212050002000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:46,117 - WARNING - Percobaan events 3 gagal untuk 7212050002000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:48,118 - ERROR - Gagal memanggil KEDUA API untuk 7212050002000100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:18:48,118 - INFO - [767/1264] Skip (Sudah ada di cache): 7212050008000100 - UB - 3 | PURNAMA LOGISTIK MORUT
+2026-06-08 18:18:48,120 - INFO - [768/1264] Meminta API riwayat email: 7212050003000700 - UB - 6 | MAMALA JAYA MINERAL
+2026-06-08 18:18:48,122 - WARNING - Percobaan 1 gagal untuk 7212050003000700 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:50,124 - WARNING - Percobaan 2 gagal untuk 7212050003000700 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:52,126 - WARNING - Percobaan 3 gagal untuk 7212050003000700 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:54,128 - WARNING - Percobaan events 1 gagal untuk 7212050003000700 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:56,132 - WARNING - Percobaan events 2 gagal untuk 7212050003000700 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:18:58,134 - WARNING - Percobaan events 3 gagal untuk 7212050003000700 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:00,134 - ERROR - Gagal memanggil KEDUA API untuk 7212050003000700 - UB - 6, mempertahankan data lama jika ada.
+2026-06-08 18:19:00,136 - INFO - [769/1264] Meminta API riwayat email: 7212050008000100 - UB - 2 | Jasa Pertambangan dan Penggalian(	 ZHOKY RAYA TANGGUH)
+2026-06-08 18:19:00,139 - WARNING - Percobaan 1 gagal untuk 7212050008000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:02,141 - WARNING - Percobaan 2 gagal untuk 7212050008000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:04,142 - WARNING - Percobaan 3 gagal untuk 7212050008000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:06,144 - WARNING - Percobaan events 1 gagal untuk 7212050008000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:08,149 - WARNING - Percobaan events 2 gagal untuk 7212050008000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:10,151 - WARNING - Percobaan events 3 gagal untuk 7212050008000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:12,152 - ERROR - Gagal memanggil KEDUA API untuk 7212050008000100 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:19:12,152 - INFO - [770/1264] Skip (Sudah ada di cache): 7212050009000301 - UB - 1 | PT. RABBANI PANCA SAMUDRA (RABBANI PANCA SAMUDRA)
+2026-06-08 18:19:12,152 - INFO - [771/1264] Meminta API riwayat email: 7212050010000500 - UB - 1 | PT SKM(SUMBER KARUNIA MINERAL)
+2026-06-08 18:19:12,154 - WARNING - Percobaan 1 gagal untuk 7212050010000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:14,156 - WARNING - Percobaan 2 gagal untuk 7212050010000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:16,158 - WARNING - Percobaan 3 gagal untuk 7212050010000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:18,166 - WARNING - Percobaan events 1 gagal untuk 7212050010000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:20,168 - WARNING - Percobaan events 2 gagal untuk 7212050010000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:22,170 - WARNING - Percobaan events 3 gagal untuk 7212050010000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:24,170 - ERROR - Gagal memanggil KEDUA API untuk 7212050010000500 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:19:24,170 - INFO - [772/1264] Skip (Sudah ada di cache): 7212020014000500 - UB - 1 | BAIXING MINING INVESEMENT
+2026-06-08 18:19:24,171 - INFO - [773/1264] Meminta API riwayat email: 7212050009000200 - UB - 15 | BERKAH ENERGI INDO GROUP
+2026-06-08 18:19:24,173 - WARNING - Percobaan 1 gagal untuk 7212050009000200 - UB - 15: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:26,175 - WARNING - Percobaan 2 gagal untuk 7212050009000200 - UB - 15: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:28,181 - WARNING - Percobaan 3 gagal untuk 7212050009000200 - UB - 15: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:30,183 - WARNING - Percobaan events 1 gagal untuk 7212050009000200 - UB - 15: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:32,185 - WARNING - Percobaan events 2 gagal untuk 7212050009000200 - UB - 15: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:34,186 - WARNING - Percobaan events 3 gagal untuk 7212050009000200 - UB - 15: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:36,187 - ERROR - Gagal memanggil KEDUA API untuk 7212050009000200 - UB - 15, mempertahankan data lama jika ada.
+2026-06-08 18:19:36,187 - INFO - [774/1264] Meminta API riwayat email: 7212040009000200 - UB - 2 | GARUDA PERKASA SULAWESI
+2026-06-08 18:19:36,189 - WARNING - Percobaan 1 gagal untuk 7212040009000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:38,191 - WARNING - Percobaan 2 gagal untuk 7212040009000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:40,193 - WARNING - Percobaan 3 gagal untuk 7212040009000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:42,195 - WARNING - Percobaan events 1 gagal untuk 7212040009000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:44,196 - WARNING - Percobaan events 2 gagal untuk 7212040009000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:46,198 - WARNING - Percobaan events 3 gagal untuk 7212040009000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:48,199 - ERROR - Gagal memanggil KEDUA API untuk 7212040009000200 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:19:48,200 - INFO - [775/1264] Meminta API riwayat email: 7212040010000201 - UB - 1 | NADESICO NICKEL INDUSTRY
+2026-06-08 18:19:48,203 - WARNING - Percobaan 1 gagal untuk 7212040010000201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:50,204 - WARNING - Percobaan 2 gagal untuk 7212040010000201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:52,206 - WARNING - Percobaan 3 gagal untuk 7212040010000201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:54,208 - WARNING - Percobaan events 1 gagal untuk 7212040010000201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:56,210 - WARNING - Percobaan events 2 gagal untuk 7212040010000201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:19:58,212 - WARNING - Percobaan events 3 gagal untuk 7212040010000201 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:00,212 - ERROR - Gagal memanggil KEDUA API untuk 7212040010000201 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:20:00,213 - INFO - [776/1264] Skip (Sudah ada di cache): 7212040010300300 - UB - 3 | DJAVA BERKAH MINERAL SITE MOROWALI UTARA
+2026-06-08 18:20:00,213 - INFO - [777/1264] Skip (Sudah ada di cache): 7212050006000100 - UB - 1 | PT. TIPPULU SEJAHTERA BERSAUDARA (TIPPULU SEJAHTERA BERSAUDARA)
+2026-06-08 18:20:00,213 - INFO - [778/1264] Meminta API riwayat email: 7212050008000400 - UB - 4 | UNILEVER PT
+2026-06-08 18:20:00,215 - WARNING - Percobaan 1 gagal untuk 7212050008000400 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:02,217 - WARNING - Percobaan 2 gagal untuk 7212050008000400 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:04,219 - WARNING - Percobaan 3 gagal untuk 7212050008000400 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:06,220 - WARNING - Percobaan events 1 gagal untuk 7212050008000400 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:08,222 - WARNING - Percobaan events 2 gagal untuk 7212050008000400 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:10,224 - WARNING - Percobaan events 3 gagal untuk 7212050008000400 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:12,225 - ERROR - Gagal memanggil KEDUA API untuk 7212050008000400 - UB - 4, mempertahankan data lama jika ada.
+2026-06-08 18:20:12,225 - INFO - [779/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 11 | SINAR NIKEL NOVEMBER
+2026-06-08 18:20:12,227 - INFO - [780/1264] Skip (Sudah ada di cache): 7212040012000502 - UB - 1 | BUNGA SAWIT DESA BUNTA
+2026-06-08 18:20:12,228 - INFO - [781/1264] Skip (Sudah ada di cache): 7212050009000302 - UB - 5 | PT GRACIA TOMORI ANUGRAH (GUDANG UTAMA OBAT)
+2026-06-08 18:20:12,228 - INFO - [782/1264] Skip (Sudah ada di cache): 7212070003000300 - UB - 1 | MAELO MOROWALI MANDIRI
+2026-06-08 18:20:12,228 - INFO - [783/1264] Meminta API riwayat email: 7212100006100100 - UB - 1 | GHANESA WANA UTAMA, PT
+2026-06-08 18:20:12,230 - WARNING - Percobaan 1 gagal untuk 7212100006100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:14,232 - WARNING - Percobaan 2 gagal untuk 7212100006100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:16,234 - WARNING - Percobaan 3 gagal untuk 7212100006100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:18,236 - WARNING - Percobaan events 1 gagal untuk 7212100006100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:20,237 - WARNING - Percobaan events 2 gagal untuk 7212100006100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:22,239 - WARNING - Percobaan events 3 gagal untuk 7212100006100100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:24,239 - ERROR - Gagal memanggil KEDUA API untuk 7212100006100100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:20:24,240 - INFO - [784/1264] Skip (Sudah ada di cache): 7212050003000700 - UB - 4 | CAHAYA RIZTMAL MINERAL
+2026-06-08 18:20:24,240 - INFO - [785/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 8 | SRIKANDI MINING CELEBES
+2026-06-08 18:20:24,240 - INFO - [786/1264] Meminta API riwayat email: 7212080001000300 - UB - 1 | Perdagangan Besar Logam Dan Bijih Logam ( STR MINERAL INDONESIA)
+2026-06-08 18:20:24,241 - WARNING - Percobaan 1 gagal untuk 7212080001000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:26,248 - WARNING - Percobaan 2 gagal untuk 7212080001000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:28,252 - WARNING - Percobaan 3 gagal untuk 7212080001000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:30,254 - WARNING - Percobaan events 1 gagal untuk 7212080001000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:32,256 - WARNING - Percobaan events 2 gagal untuk 7212080001000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:34,258 - WARNING - Percobaan events 3 gagal untuk 7212080001000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:36,259 - ERROR - Gagal memanggil KEDUA API untuk 7212080001000300 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:20:36,259 - INFO - [787/1264] Skip (Sudah ada di cache): 7212080001200100 - UB - 2 | CAHAYA MINA BAHARI
+2026-06-08 18:20:36,259 - INFO - [788/1264] Skip (Sudah ada di cache): 7212080001200100 - UB - 6 | ZIMO INVESTASI INDONESIA
+2026-06-08 18:20:36,259 - INFO - [789/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 1 | BINTANG MINERAL SULAWESI PERKASA
+2026-06-08 18:20:36,259 - INFO - [790/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 3 | INSAN KREATIF MORUT
+2026-06-08 18:20:36,259 - INFO - [791/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 10 | XMINE CELEBES
+2026-06-08 18:20:36,259 - INFO - [792/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 14 | MOROWALI AGRO LESTARI
+2026-06-08 18:20:36,259 - INFO - [793/1264] Skip (Sudah ada di cache): 7212080001200100 - UB - 3 | HIQMAH MERONGA UTAMA
+2026-06-08 18:20:36,259 - INFO - [794/1264] Skip (Sudah ada di cache): 7212080001200100 - UB - 4 | MOROWALI MINERAL JAYA
+2026-06-08 18:20:36,259 - INFO - [795/1264] Skip (Sudah ada di cache): 7212100007000400 - UB - 1 | PANCA MUTIARA BERKAH
+2026-06-08 18:20:36,259 - INFO - [796/1264] Meminta API riwayat email: 7212050007000101 - UB - 1 | PT. HEMDEV MULTI KARYA
+2026-06-08 18:20:36,262 - WARNING - Percobaan 1 gagal untuk 7212050007000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:38,263 - WARNING - Percobaan 2 gagal untuk 7212050007000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:40,265 - WARNING - Percobaan 3 gagal untuk 7212050007000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:42,266 - WARNING - Percobaan events 1 gagal untuk 7212050007000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:44,268 - WARNING - Percobaan events 2 gagal untuk 7212050007000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:46,270 - WARNING - Percobaan events 3 gagal untuk 7212050007000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:48,270 - ERROR - Gagal memanggil KEDUA API untuk 7212050007000101 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:20:48,271 - INFO - [797/1264] Skip (Sudah ada di cache): 7212060008000300 - UB - 1 | CAHAYA IPUL PERDANA
+2026-06-08 18:20:48,271 - INFO - [798/1264] Skip (Sudah ada di cache): 7212080001000200 - UB - 1 | PADANG SUMARA MINING
+2026-06-08 18:20:48,273 - INFO - [799/1264] Skip (Sudah ada di cache): 7212080001200100 - UB - 5 | FIVE STAR INDONESIA - HOFFMEN
+2026-06-08 18:20:48,273 - INFO - [800/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 5 | MOROWALI MINERAL MINING
+2026-06-08 18:20:48,274 - INFO - [801/1264] Skip (Sudah ada di cache): 7212060002000200 - UB - 1 | LBM JAYA ENERGI
+2026-06-08 18:20:48,274 - INFO - [802/1264] Skip (Sudah ada di cache): 7212050003000700 - UB - 7 | MAJU ENERGI MORUT
+2026-06-08 18:20:48,275 - INFO - [803/1264] Meminta API riwayat email: 7212050008000500 - UB - 1 | CIPTA HUTAMA MARANTI, PT
+2026-06-08 18:20:48,278 - WARNING - Percobaan 1 gagal untuk 7212050008000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:50,282 - WARNING - Percobaan 2 gagal untuk 7212050008000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:52,287 - WARNING - Percobaan 3 gagal untuk 7212050008000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:54,289 - WARNING - Percobaan events 1 gagal untuk 7212050008000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:56,290 - WARNING - Percobaan events 2 gagal untuk 7212050008000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:20:58,292 - WARNING - Percobaan events 3 gagal untuk 7212050008000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:00,293 - ERROR - Gagal memanggil KEDUA API untuk 7212050008000500 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:21:00,293 - INFO - [804/1264] Meminta API riwayat email: 7212070007400100 - UB - 1 | NUSA MAS GRIYA LESTARI, PT
+2026-06-08 18:21:00,294 - WARNING - Percobaan 1 gagal untuk 7212070007400100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:02,304 - WARNING - Percobaan 2 gagal untuk 7212070007400100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:04,306 - WARNING - Percobaan 3 gagal untuk 7212070007400100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:06,308 - WARNING - Percobaan events 1 gagal untuk 7212070007400100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:08,318 - WARNING - Percobaan events 2 gagal untuk 7212070007400100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:10,321 - WARNING - Percobaan events 3 gagal untuk 7212070007400100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:12,322 - ERROR - Gagal memanggil KEDUA API untuk 7212070007400100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:21:12,322 - INFO - [805/1264] Meminta API riwayat email: 7212040006000100 - UB - 1 | SUMBER PERMATA LESTARI, PT
+2026-06-08 18:21:12,325 - WARNING - Percobaan 1 gagal untuk 7212040006000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:14,326 - WARNING - Percobaan 2 gagal untuk 7212040006000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:16,329 - WARNING - Percobaan 3 gagal untuk 7212040006000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:18,330 - WARNING - Percobaan events 1 gagal untuk 7212040006000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:20,332 - WARNING - Percobaan events 2 gagal untuk 7212040006000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:22,334 - WARNING - Percobaan events 3 gagal untuk 7212040006000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:24,341 - ERROR - Gagal memanggil KEDUA API untuk 7212040006000100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:21:24,342 - INFO - [806/1264] Skip (Sudah ada di cache): 7212040010200200 - UB - 1 | INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA
+2026-06-08 18:21:24,343 - INFO - [807/1264] Skip (Sudah ada di cache): 7212050001000100 - UB - 1 | MOMEN KONSTRUKSI
+2026-06-08 18:21:24,343 - INFO - [808/1264] Meminta API riwayat email: 7212050001000100 - UB - 2 | SETIA JAYA NICKELINDO 2
+2026-06-08 18:21:24,344 - WARNING - Percobaan 1 gagal untuk 7212050001000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:26,354 - WARNING - Percobaan 2 gagal untuk 7212050001000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:28,356 - WARNING - Percobaan 3 gagal untuk 7212050001000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:30,363 - WARNING - Percobaan events 1 gagal untuk 7212050001000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:32,365 - WARNING - Percobaan events 2 gagal untuk 7212050001000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:34,367 - WARNING - Percobaan events 3 gagal untuk 7212050001000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:36,367 - ERROR - Gagal memanggil KEDUA API untuk 7212050001000100 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:21:36,367 - INFO - [809/1264] Skip (Sudah ada di cache): 7212050002000200 - UB - 1 | BATARA GAMPING SULAWESI
+2026-06-08 18:21:36,369 - INFO - [810/1264] Skip (Sudah ada di cache): 7212050003000500 - UB - 1 | PITAGORAS PARAMA ENERGI
+2026-06-08 18:21:36,370 - INFO - [811/1264] Skip (Sudah ada di cache): 7212050003000700 - UB - 5 | HEMDEV MINERAL PERKASA
+2026-06-08 18:21:36,370 - INFO - [812/1264] Skip (Sudah ada di cache): 7212100005000600 - UB - 1 | INTI MINERAL PERSADA
+2026-06-08 18:21:36,370 - INFO - [813/1264] Skip (Sudah ada di cache): 7212050008000400 - UB - 1 | CIPTA GRAHA PADOE
+2026-06-08 18:21:36,370 - INFO - [814/1264] Skip (Sudah ada di cache): 7212050008000100 - UB - 4 | JAYA ENVIRO
+2026-06-08 18:21:36,370 - INFO - [815/1264] Meminta API riwayat email: 7212050005000500 - UB - 1 | INDONESIA HUAFENG INVESTMENT
+2026-06-08 18:21:36,373 - WARNING - Percobaan 1 gagal untuk 7212050005000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:38,375 - WARNING - Percobaan 2 gagal untuk 7212050005000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:40,376 - WARNING - Percobaan 3 gagal untuk 7212050005000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:42,379 - WARNING - Percobaan events 1 gagal untuk 7212050005000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:44,380 - WARNING - Percobaan events 2 gagal untuk 7212050005000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:46,382 - WARNING - Percobaan events 3 gagal untuk 7212050005000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:48,383 - ERROR - Gagal memanggil KEDUA API untuk 7212050005000500 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:21:48,383 - INFO - [816/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 7 | ANUGERAH NUSANTARA GROUP
+2026-06-08 18:21:48,383 - INFO - [817/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 9 | MOROWALI MINERAL SEJAHTERA
+2026-06-08 18:21:48,383 - INFO - [818/1264] Skip (Sudah ada di cache): 7212050008000100 - UB - 9 | AVIZHA MOROWALI MINING
+2026-06-08 18:21:48,383 - INFO - [819/1264] Meminta API riwayat email: 7212050008000200 - UB - 1 | TELKOM PT
+2026-06-08 18:21:48,385 - WARNING - Percobaan 1 gagal untuk 7212050008000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:50,387 - WARNING - Percobaan 2 gagal untuk 7212050008000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:52,388 - WARNING - Percobaan 3 gagal untuk 7212050008000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:54,394 - WARNING - Percobaan events 1 gagal untuk 7212050008000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:56,397 - WARNING - Percobaan events 2 gagal untuk 7212050008000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:21:58,402 - WARNING - Percobaan events 3 gagal untuk 7212050008000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:00,402 - ERROR - Gagal memanggil KEDUA API untuk 7212050008000200 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:22:00,402 - INFO - [820/1264] Meminta API riwayat email: 7212050002000100 - UB - 2 | KARYA BUWANA MANDIRI, PT
+2026-06-08 18:22:00,404 - WARNING - Percobaan 1 gagal untuk 7212050002000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:02,406 - WARNING - Percobaan 2 gagal untuk 7212050002000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:04,408 - WARNING - Percobaan 3 gagal untuk 7212050002000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:06,410 - WARNING - Percobaan events 1 gagal untuk 7212050002000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:08,413 - WARNING - Percobaan events 2 gagal untuk 7212050002000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:10,416 - WARNING - Percobaan events 3 gagal untuk 7212050002000100 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:12,416 - ERROR - Gagal memanggil KEDUA API untuk 7212050002000100 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:22:12,417 - INFO - [821/1264] Skip (Sudah ada di cache): 7212040010300300 - UB - 1 | MULTI MINERAL INDUSTRI
+2026-06-08 18:22:12,417 - INFO - [822/1264] Skip (Sudah ada di cache): 7212040012000501 - UB - 1 | KANTOR CABANG PT. RAJAWALI INDOLAND INDONESIA
+2026-06-08 18:22:12,417 - INFO - [823/1264] Skip (Sudah ada di cache): 7212020003000200 - UB - 1 | BATAM SULAWESI MANDIRI
+2026-06-08 18:22:12,417 - INFO - [824/1264] Skip (Sudah ada di cache): 7212020008001100 - UB - 2 | ERA GOLDEN ENERGY
+2026-06-08 18:22:12,417 - INFO - [825/1264] Skip (Sudah ada di cache): 7212020009000600 - UB - 1 | MULIA ENERGI MORUT
+2026-06-08 18:22:12,417 - INFO - [826/1264] Meminta API riwayat email: 7212010007000200 - UB - 2 | BANK RAKYAT INDONESIA PT
+2026-06-08 18:22:12,418 - WARNING - Percobaan 1 gagal untuk 7212010007000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:14,429 - WARNING - Percobaan 2 gagal untuk 7212010007000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:16,432 - WARNING - Percobaan 3 gagal untuk 7212010007000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:18,433 - WARNING - Percobaan events 1 gagal untuk 7212010007000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:20,436 - WARNING - Percobaan events 2 gagal untuk 7212010007000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:22,438 - WARNING - Percobaan events 3 gagal untuk 7212010007000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:24,438 - ERROR - Gagal memanggil KEDUA API untuk 7212010007000200 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:22:24,438 - INFO - [827/1264] Skip (Sudah ada di cache): 7212040003000100 - UB - 1 | ASIAMAX MINING INDONESIA PT
+2026-06-08 18:22:24,438 - INFO - [828/1264] Skip (Sudah ada di cache): 7212040010000102 - UB - 2 | KIRANA MAJU ABADI
+2026-06-08 18:22:24,438 - INFO - [829/1264] Skip (Sudah ada di cache): 7212050003000700 - UB - 2 | MOROWALI MINERAL SEJAHTERA UTAMA
+2026-06-08 18:22:24,438 - INFO - [830/1264] Skip (Sudah ada di cache): 7212040010300300 - UB - 2 | BUKIT MAKMUR ISTINDO NIKELTAMA SITE MOROWALI UTARA
+2026-06-08 18:22:24,438 - INFO - [831/1264] Meminta API riwayat email: 7212040011000400 - UB - 2 | BANK MANDIRI TBK, PT
+2026-06-08 18:22:24,440 - WARNING - Percobaan 1 gagal untuk 7212040011000400 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:26,442 - WARNING - Percobaan 2 gagal untuk 7212040011000400 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:28,443 - WARNING - Percobaan 3 gagal untuk 7212040011000400 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:30,445 - WARNING - Percobaan events 1 gagal untuk 7212040011000400 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:32,447 - WARNING - Percobaan events 2 gagal untuk 7212040011000400 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:34,448 - WARNING - Percobaan events 3 gagal untuk 7212040011000400 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:36,450 - ERROR - Gagal memanggil KEDUA API untuk 7212040011000400 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:22:36,451 - INFO - [832/1264] Meminta API riwayat email: 7212050003000500 - UB - 2 | SULAWESI INTAN MINING
+2026-06-08 18:22:36,452 - WARNING - Percobaan 1 gagal untuk 7212050003000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:38,454 - WARNING - Percobaan 2 gagal untuk 7212050003000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:40,456 - WARNING - Percobaan 3 gagal untuk 7212050003000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:42,459 - WARNING - Percobaan events 1 gagal untuk 7212050003000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:44,461 - WARNING - Percobaan events 2 gagal untuk 7212050003000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:46,463 - WARNING - Percobaan events 3 gagal untuk 7212050003000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:48,464 - ERROR - Gagal memanggil KEDUA API untuk 7212050003000500 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:22:48,464 - INFO - [833/1264] Skip (Sudah ada di cache): 7212050008000100 - UB - 5 | BUMI MINERAL INDONESIA
+2026-06-08 18:22:48,464 - INFO - [834/1264] Skip (Sudah ada di cache): 7212040011000300 - UB - 1 | LAROYALE RESIDENCE MORUT
+2026-06-08 18:22:48,464 - INFO - [835/1264] Skip (Sudah ada di cache): 7212010007000200 - UB - 1 | SAWIT TOA SIOKO
+2026-06-08 18:22:48,464 - INFO - [836/1264] Skip (Sudah ada di cache): 7212050008000100 - UB - 1 | PT. ZHUFU INTI TRACK CONSTRUKCTION (ZHUFU INTI TRACK CONSTRUCTION)
+2026-06-08 18:22:48,464 - INFO - [837/1264] Skip (Sudah ada di cache): 7212040001000300 - UB - 1 | MITRA JARINGAN PERKASA
+2026-06-08 18:22:48,464 - INFO - [838/1264] Skip (Sudah ada di cache): 7212030004100100 - UB - 1 | KIRANA SINAR GEMILANG SITE
+2026-06-08 18:22:48,464 - INFO - [839/1264] Skip (Sudah ada di cache): 7212040010000102 - UB - 1 | BUMI CELEBES PERMAI
+2026-06-08 18:22:48,464 - INFO - [840/1264] Meminta API riwayat email: 7212020008001100 - UB - 5 | BANK SULTENG, PT
+2026-06-08 18:22:48,466 - WARNING - Percobaan 1 gagal untuk 7212020008001100 - UB - 5: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:50,470 - WARNING - Percobaan 2 gagal untuk 7212020008001100 - UB - 5: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:52,473 - WARNING - Percobaan 3 gagal untuk 7212020008001100 - UB - 5: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:54,475 - WARNING - Percobaan events 1 gagal untuk 7212020008001100 - UB - 5: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:56,481 - WARNING - Percobaan events 2 gagal untuk 7212020008001100 - UB - 5: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:22:58,482 - WARNING - Percobaan events 3 gagal untuk 7212020008001100 - UB - 5: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:00,482 - ERROR - Gagal memanggil KEDUA API untuk 7212020008001100 - UB - 5, mempertahankan data lama jika ada.
+2026-06-08 18:23:00,483 - INFO - [841/1264] Skip (Sudah ada di cache): 7212040011000102 - UB - 1 | BERKAH JAYA MINERAL
+2026-06-08 18:23:00,483 - INFO - [842/1264] Skip (Sudah ada di cache): 7212040011100100 - UB - 1 | SINERGI BINTANG UTARA
+2026-06-08 18:23:00,483 - INFO - [843/1264] Skip (Sudah ada di cache): 7212050009000200 - UB - 4 | BINTANG INVESTASI MINERAL ABADI
+2026-06-08 18:23:00,483 - INFO - [844/1264] Skip (Sudah ada di cache): 7212050008000100 - UB - 8 | HEMDEV MINERAL INDONESIA
+2026-06-08 18:23:00,483 - INFO - [845/1264] Skip (Sudah ada di cache): 7212050009000302 - UB - 6 | RS Umum Daerah Kolonodale
+2026-06-08 18:23:00,485 - INFO - [846/1264] Meminta API riwayat email: 7271041003001200 - UB - 3 | SULAWESI GLOBAL COMODITY
+2026-06-08 18:23:00,487 - WARNING - Percobaan 1 gagal untuk 7271041003001200 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:02,491 - WARNING - Percobaan 2 gagal untuk 7271041003001200 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:04,493 - WARNING - Percobaan 3 gagal untuk 7271041003001200 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:06,494 - WARNING - Percobaan events 1 gagal untuk 7271041003001200 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:08,502 - WARNING - Percobaan events 2 gagal untuk 7271041003001200 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:10,504 - WARNING - Percobaan events 3 gagal untuk 7271041003001200 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:12,505 - ERROR - Gagal memanggil KEDUA API untuk 7271041003001200 - UB - 3, mempertahankan data lama jika ada.
+2026-06-08 18:23:12,506 - INFO - [847/1264] Skip (Sudah ada di cache): 7271041003001200 - UB - 10 | WIJAYA MITRA ADIATAMA, PT.
+2026-06-08 18:23:12,506 - INFO - [848/1264] Skip (Sudah ada di cache): 7271031007000200 - UB - 1 | SULAWESI CENTRAL COMMODITY
+2026-06-08 18:23:12,506 - INFO - [849/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 35 | GANESHA GLOBAL IMPEX,PT 
+2026-06-08 18:23:12,506 - INFO - [850/1264] Skip (Sudah ada di cache): 7271041003200100 - UB - 1 | WANHONG NONFERROUS RECYCLING UTILIZATION PT
+2026-06-08 18:23:12,506 - INFO - [851/1264] Skip (Sudah ada di cache): 7271000000000000 - UB - 4 | ALFA INDUSTRI MANDIRI, PT
+2026-06-08 18:23:12,506 - INFO - [852/1264] Skip (Sudah ada di cache): 7271041003001200 - UB - 2 | SANTOSA UTAMA LESTARI, PT
+2026-06-08 18:23:12,506 - INFO - [853/1264] Skip (Sudah ada di cache): 7271041004000300 - UB - 2 | GANDA PARADE ARTANA, PT
+2026-06-08 18:23:12,506 - INFO - [854/1264] Skip (Sudah ada di cache): 7271041003001200 - UB - 5 | BANGUN PALU SULAWESI TENGAH
+2026-06-08 18:23:12,506 - INFO - [855/1264] Skip (Sudah ada di cache): 7271031008003100 - UB - 1 | HONG THAI INTERNATIONAL, PT
+2026-06-08 18:23:12,507 - INFO - [856/1264] Skip (Sudah ada di cache): 7271030003001700 - UB - 1 | KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH
+2026-06-08 18:23:12,507 - INFO - [857/1264] Skip (Sudah ada di cache): 7271010007001500 - UB - 1 | BERKAH BANGGAI RAYA
+2026-06-08 18:23:12,507 - INFO - [858/1264] Skip (Sudah ada di cache): 7271010008001102 - UB - 1 | CERAH PELANGI PURNAMA
+2026-06-08 18:23:12,507 - INFO - [859/1264] Meminta API riwayat email: 7271010011002704 - UB - 1 | PANCA BOGA PARAMITA
+2026-06-08 18:23:12,508 - WARNING - Percobaan 1 gagal untuk 7271010011002704 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:14,510 - WARNING - Percobaan 2 gagal untuk 7271010011002704 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:16,512 - WARNING - Percobaan 3 gagal untuk 7271010011002704 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:18,514 - WARNING - Percobaan events 1 gagal untuk 7271010011002704 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:20,515 - WARNING - Percobaan events 2 gagal untuk 7271010011002704 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:22,517 - WARNING - Percobaan events 3 gagal untuk 7271010011002704 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:24,517 - ERROR - Gagal memanggil KEDUA API untuk 7271010011002704 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:23:24,517 - INFO - [860/1264] Skip (Sudah ada di cache): 7271010011001700 - UB - 1 | GHEZZ PATOMBONG PERKASA
+2026-06-08 18:23:24,517 - INFO - [861/1264] Meminta API riwayat email: 7271011004000401 - UB - 2 | BANK BRI UNIT GUSTI NGURAH RAI
+2026-06-08 18:23:24,519 - WARNING - Percobaan 1 gagal untuk 7271011004000401 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:26,520 - WARNING - Percobaan 2 gagal untuk 7271011004000401 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:28,522 - WARNING - Percobaan 3 gagal untuk 7271011004000401 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:30,524 - WARNING - Percobaan events 1 gagal untuk 7271011004000401 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:32,526 - WARNING - Percobaan events 2 gagal untuk 7271011004000401 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:34,529 - WARNING - Percobaan events 3 gagal untuk 7271011004000401 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:36,530 - ERROR - Gagal memanggil KEDUA API untuk 7271011004000401 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:23:36,530 - INFO - [862/1264] Meminta API riwayat email: 7271010008001000 - UB - 1 | BANK MANDIRI UNIT MANONDA
+2026-06-08 18:23:36,532 - WARNING - Percobaan 1 gagal untuk 7271010008001000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:38,536 - WARNING - Percobaan 2 gagal untuk 7271010008001000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:40,537 - WARNING - Percobaan 3 gagal untuk 7271010008001000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:42,539 - WARNING - Percobaan events 1 gagal untuk 7271010008001000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:44,548 - WARNING - Percobaan events 2 gagal untuk 7271010008001000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:46,558 - WARNING - Percobaan events 3 gagal untuk 7271010008001000 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:48,563 - ERROR - Gagal memanggil KEDUA API untuk 7271010008001000 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:23:48,563 - INFO - [863/1264] Meminta API riwayat email: 7271011003000500 - UB - 1 | KSU TADULUKO
+2026-06-08 18:23:48,566 - WARNING - Percobaan 1 gagal untuk 7271011003000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:50,568 - WARNING - Percobaan 2 gagal untuk 7271011003000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:52,570 - WARNING - Percobaan 3 gagal untuk 7271011003000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:54,572 - WARNING - Percobaan events 1 gagal untuk 7271011003000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:56,574 - WARNING - Percobaan events 2 gagal untuk 7271011003000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:23:58,581 - WARNING - Percobaan events 3 gagal untuk 7271011003000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:00,581 - ERROR - Gagal memanggil KEDUA API untuk 7271011003000500 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:24:00,581 - INFO - [864/1264] Skip (Sudah ada di cache): 7271012003002000 - UB - 1 | MUSTAMIN PATANGA
+2026-06-08 18:24:00,581 - INFO - [865/1264] Meminta API riwayat email: 7271011002000602 - UB - 1 | MAJU JAYA PALU
+2026-06-08 18:24:00,583 - WARNING - Percobaan 1 gagal untuk 7271011002000602 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:02,584 - WARNING - Percobaan 2 gagal untuk 7271011002000602 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:04,586 - WARNING - Percobaan 3 gagal untuk 7271011002000602 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:06,588 - WARNING - Percobaan events 1 gagal untuk 7271011002000602 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:08,589 - WARNING - Percobaan events 2 gagal untuk 7271011002000602 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:10,591 - WARNING - Percobaan events 3 gagal untuk 7271011002000602 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:12,599 - ERROR - Gagal memanggil KEDUA API untuk 7271011002000602 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:24:12,599 - INFO - [866/1264] Skip (Sudah ada di cache): 7271010004000800 - UB - 1 | BANK SYARIAH INDONESIA TBK.
+2026-06-08 18:24:12,599 - INFO - [867/1264] Meminta API riwayat email: 7271010004000800 - UB - 2 | UNIT BRI GAJAH MADA (RITA A)
+2026-06-08 18:24:12,601 - WARNING - Percobaan 1 gagal untuk 7271010004000800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:14,603 - WARNING - Percobaan 2 gagal untuk 7271010004000800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:16,605 - WARNING - Percobaan 3 gagal untuk 7271010004000800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:18,610 - WARNING - Percobaan events 1 gagal untuk 7271010004000800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:20,612 - WARNING - Percobaan events 2 gagal untuk 7271010004000800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:22,613 - WARNING - Percobaan events 3 gagal untuk 7271010004000800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:24,614 - ERROR - Gagal memanggil KEDUA API untuk 7271010004000800 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:24:24,614 - INFO - [868/1264] Meminta API riwayat email: 7271010004001500 - UB - 1 | Bank BSI Area Palu
+2026-06-08 18:24:24,616 - WARNING - Percobaan 1 gagal untuk 7271010004001500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:26,622 - WARNING - Percobaan 2 gagal untuk 7271010004001500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:28,624 - WARNING - Percobaan 3 gagal untuk 7271010004001500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:30,625 - WARNING - Percobaan events 1 gagal untuk 7271010004001500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:32,628 - WARNING - Percobaan events 2 gagal untuk 7271010004001500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:34,631 - WARNING - Percobaan events 3 gagal untuk 7271010004001500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:36,631 - ERROR - Gagal memanggil KEDUA API untuk 7271010004001500 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:24:36,632 - INFO - [869/1264] Skip (Sudah ada di cache): 7271010004001500 - UB - 2 | SAPTA UNGGUL, PT
+2026-06-08 18:24:36,632 - INFO - [870/1264] Skip (Sudah ada di cache): 7271010004001600 - UB - 1 | ROLAND AGUNG SOPUTRA
+2026-06-08 18:24:36,632 - INFO - [871/1264] Skip (Sudah ada di cache): 7271010004002000 - UB - 2 | GARINDO CV
+2026-06-08 18:24:36,632 - INFO - [872/1264] Meminta API riwayat email: 7271010005000800 - UB - 1 | BANK NEGARA INDONESIA 1946 CA-BANG IMAM BONJOL
+2026-06-08 18:24:36,634 - WARNING - Percobaan 1 gagal untuk 7271010005000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:38,643 - WARNING - Percobaan 2 gagal untuk 7271010005000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:40,650 - WARNING - Percobaan 3 gagal untuk 7271010005000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:42,653 - WARNING - Percobaan events 1 gagal untuk 7271010005000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:44,655 - WARNING - Percobaan events 2 gagal untuk 7271010005000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:46,658 - WARNING - Percobaan events 3 gagal untuk 7271010005000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:48,659 - ERROR - Gagal memanggil KEDUA API untuk 7271010005000800 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:24:48,660 - INFO - [873/1264] Skip (Sudah ada di cache): 7271010007000602 - UB - 1 | PEGADAIAN UPC PASAR MANONDA, PT
+2026-06-08 18:24:48,660 - INFO - [874/1264] Meminta API riwayat email: 7271011002000300 - UB - 2 | DEVELOPER BANGUNAN <ISMAIL>
+2026-06-08 18:24:48,662 - WARNING - Percobaan 1 gagal untuk 7271011002000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:50,672 - WARNING - Percobaan 2 gagal untuk 7271011002000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:52,674 - WARNING - Percobaan 3 gagal untuk 7271011002000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:54,676 - WARNING - Percobaan events 1 gagal untuk 7271011002000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:56,679 - WARNING - Percobaan events 2 gagal untuk 7271011002000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:24:58,680 - WARNING - Percobaan events 3 gagal untuk 7271011002000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:00,681 - ERROR - Gagal memanggil KEDUA API untuk 7271011002000300 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:25:00,681 - INFO - [875/1264] Meminta API riwayat email: 7271010007001100 - UB - 1 | INDO PLASTIK, UD
+2026-06-08 18:25:00,683 - WARNING - Percobaan 1 gagal untuk 7271010007001100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:02,685 - WARNING - Percobaan 2 gagal untuk 7271010007001100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:04,688 - WARNING - Percobaan 3 gagal untuk 7271010007001100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:06,690 - WARNING - Percobaan events 1 gagal untuk 7271010007001100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:08,691 - WARNING - Percobaan events 2 gagal untuk 7271010007001100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:10,704 - WARNING - Percobaan events 3 gagal untuk 7271010007001100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:12,704 - ERROR - Gagal memanggil KEDUA API untuk 7271010007001100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:25:12,704 - INFO - [876/1264] Meminta API riwayat email: 7271011004000402 - UB - 1 | PT Anugerahkarya Agrasentosa (AKAS)
+2026-06-08 18:25:12,706 - WARNING - Percobaan 1 gagal untuk 7271011004000402 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:14,718 - WARNING - Percobaan 2 gagal untuk 7271011004000402 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:16,719 - WARNING - Percobaan 3 gagal untuk 7271011004000402 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:18,721 - WARNING - Percobaan events 1 gagal untuk 7271011004000402 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:20,730 - WARNING - Percobaan events 2 gagal untuk 7271011004000402 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:22,732 - WARNING - Percobaan events 3 gagal untuk 7271011004000402 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:24,734 - ERROR - Gagal memanggil KEDUA API untuk 7271011004000402 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:25:24,734 - INFO - [877/1264] Skip (Sudah ada di cache): 7271011004001300 - UB - 1 | BERKAT JAYA MOTOR
+2026-06-08 18:25:24,734 - INFO - [878/1264] Skip (Sudah ada di cache): 7271011006001402 - UB - 1 | DURIAN KING FRUIT
+2026-06-08 18:25:24,734 - INFO - [879/1264] Meminta API riwayat email: 7271012001002200 - UB - 1 | KPN MULTI KARYA
+2026-06-08 18:25:24,736 - WARNING - Percobaan 1 gagal untuk 7271012001002200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:26,741 - WARNING - Percobaan 2 gagal untuk 7271012001002200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:28,750 - WARNING - Percobaan 3 gagal untuk 7271012001002200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:30,752 - WARNING - Percobaan events 1 gagal untuk 7271012001002200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:32,753 - WARNING - Percobaan events 2 gagal untuk 7271012001002200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:34,755 - WARNING - Percobaan events 3 gagal untuk 7271012001002200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:36,757 - ERROR - Gagal memanggil KEDUA API untuk 7271012001002200 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:25:36,757 - INFO - [880/1264] Meminta API riwayat email: 7271010006000101 - UB - 1 | PT Pegadaian (Persero), UPC BAYAOGE
+2026-06-08 18:25:36,759 - WARNING - Percobaan 1 gagal untuk 7271010006000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:38,768 - WARNING - Percobaan 2 gagal untuk 7271010006000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:40,773 - WARNING - Percobaan 3 gagal untuk 7271010006000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:42,775 - WARNING - Percobaan events 1 gagal untuk 7271010006000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:44,777 - WARNING - Percobaan events 2 gagal untuk 7271010006000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:46,779 - WARNING - Percobaan events 3 gagal untuk 7271010006000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:48,779 - ERROR - Gagal memanggil KEDUA API untuk 7271010006000101 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:25:48,779 - INFO - [881/1264] Meminta API riwayat email: 7271010006000300 - UB - 1 | RM PADAIDI
+2026-06-08 18:25:48,781 - WARNING - Percobaan 1 gagal untuk 7271010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:50,786 - WARNING - Percobaan 2 gagal untuk 7271010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:52,788 - WARNING - Percobaan 3 gagal untuk 7271010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:54,789 - WARNING - Percobaan events 1 gagal untuk 7271010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:56,791 - WARNING - Percobaan events 2 gagal untuk 7271010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:25:58,793 - WARNING - Percobaan events 3 gagal untuk 7271010006000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:00,793 - ERROR - Gagal memanggil KEDUA API untuk 7271010006000300 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:26:00,794 - INFO - [882/1264] Skip (Sudah ada di cache): 7271010006000103 - UB - 1 | ARBA SONS COMPANY
+2026-06-08 18:26:00,794 - INFO - [883/1264] Skip (Sudah ada di cache): 7271010007000101 - UB - 1 | ALLTHEA CYRIL ILLONA HUMAIRAH
+2026-06-08 18:26:00,794 - INFO - [884/1264] Meminta API riwayat email: 7271010007000801 - UB - 1 | BANK MEGA TBK, PT KCP PALU MANONDA
+2026-06-08 18:26:00,797 - WARNING - Percobaan 1 gagal untuk 7271010007000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:02,798 - WARNING - Percobaan 2 gagal untuk 7271010007000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:04,800 - WARNING - Percobaan 3 gagal untuk 7271010007000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:06,805 - WARNING - Percobaan events 1 gagal untuk 7271010007000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:08,810 - WARNING - Percobaan events 2 gagal untuk 7271010007000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:10,812 - WARNING - Percobaan events 3 gagal untuk 7271010007000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:12,812 - ERROR - Gagal memanggil KEDUA API untuk 7271010007000801 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:26:12,813 - INFO - [885/1264] Meminta API riwayat email: 7271010007000802 - UB - 2 | BANK BRI UNIT MANONDA
+2026-06-08 18:26:12,814 - WARNING - Percobaan 1 gagal untuk 7271010007000802 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:14,818 - WARNING - Percobaan 2 gagal untuk 7271010007000802 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:16,820 - WARNING - Percobaan 3 gagal untuk 7271010007000802 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:18,822 - WARNING - Percobaan events 1 gagal untuk 7271010007000802 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:20,824 - WARNING - Percobaan events 2 gagal untuk 7271010007000802 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:22,826 - WARNING - Percobaan events 3 gagal untuk 7271010007000802 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:24,828 - ERROR - Gagal memanggil KEDUA API untuk 7271010007000802 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:26:24,829 - INFO - [886/1264] Skip (Sudah ada di cache): 7271011005001301 - UB - 1 | BUMI LAROBENU SEJAHTERA
+2026-06-08 18:26:24,829 - INFO - [887/1264] Skip (Sudah ada di cache): 7271011003002200 - UB - 1 | MEDIA SARANA KONSTRUKSI
+2026-06-08 18:26:24,829 - INFO - [888/1264] Skip (Sudah ada di cache): 7271012005000900 - UB - 1 | SIRTU KARYA UTAMA PT
+2026-06-08 18:26:24,829 - INFO - [889/1264] Meminta API riwayat email: 7271020004000800 - UB - 1 | KOPKAR WASKITA KARYA
+2026-06-08 18:26:24,831 - WARNING - Percobaan 1 gagal untuk 7271020004000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:26,837 - WARNING - Percobaan 2 gagal untuk 7271020004000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:28,839 - WARNING - Percobaan 3 gagal untuk 7271020004000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:30,841 - WARNING - Percobaan events 1 gagal untuk 7271020004000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:32,844 - WARNING - Percobaan events 2 gagal untuk 7271020004000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:34,846 - WARNING - Percobaan events 3 gagal untuk 7271020004000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:36,847 - ERROR - Gagal memanggil KEDUA API untuk 7271020004000800 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:26:36,847 - INFO - [890/1264] Skip (Sudah ada di cache): 7271011006000200 - UB - 1 | FAREL JAYA TRANSPORT
+2026-06-08 18:26:36,847 - INFO - [891/1264] Meminta API riwayat email: 7271012004000200 - UB - 2 | SURYA SETIA SEJAHTERA,PT
+2026-06-08 18:26:36,849 - WARNING - Percobaan 1 gagal untuk 7271012004000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:38,860 - WARNING - Percobaan 2 gagal untuk 7271012004000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:40,862 - WARNING - Percobaan 3 gagal untuk 7271012004000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:42,864 - WARNING - Percobaan events 1 gagal untuk 7271012004000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:44,866 - WARNING - Percobaan events 2 gagal untuk 7271012004000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:46,867 - WARNING - Percobaan events 3 gagal untuk 7271012004000200 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:48,868 - ERROR - Gagal memanggil KEDUA API untuk 7271012004000200 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:26:48,868 - INFO - [892/1264] Skip (Sudah ada di cache): 7271020007000100 - UB - 1 | SETUNGGAL PERKASA
+2026-06-08 18:26:48,868 - INFO - [893/1264] Skip (Sudah ada di cache): 7271020007001500 - UB - 1 | CAKRAWALA LAUTAN MAS
+2026-06-08 18:26:48,868 - INFO - [894/1264] Skip (Sudah ada di cache): 7271020008003300 - UB - 1 | BANK PERKREDITAN SULAWESI KARYA SENTOSA
+2026-06-08 18:26:48,868 - INFO - [895/1264] Meminta API riwayat email: 7271020004002803 - UB - 1 | KPN SMAN 3
+2026-06-08 18:26:48,870 - WARNING - Percobaan 1 gagal untuk 7271020004002803 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:50,882 - WARNING - Percobaan 2 gagal untuk 7271020004002803 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:52,883 - WARNING - Percobaan 3 gagal untuk 7271020004002803 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:54,885 - WARNING - Percobaan events 1 gagal untuk 7271020004002803 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:56,891 - WARNING - Percobaan events 2 gagal untuk 7271020004002803 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:26:58,895 - WARNING - Percobaan events 3 gagal untuk 7271020004002803 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:00,895 - ERROR - Gagal memanggil KEDUA API untuk 7271020004002803 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:27:00,895 - INFO - [896/1264] Meminta API riwayat email: 7271020008003501 - UB - 1 | KSU BELOTA PURA
+2026-06-08 18:27:00,897 - WARNING - Percobaan 1 gagal untuk 7271020008003501 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:02,899 - WARNING - Percobaan 2 gagal untuk 7271020008003501 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:04,900 - WARNING - Percobaan 3 gagal untuk 7271020008003501 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:06,902 - WARNING - Percobaan events 1 gagal untuk 7271020008003501 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:08,904 - WARNING - Percobaan events 2 gagal untuk 7271020008003501 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:10,906 - WARNING - Percobaan events 3 gagal untuk 7271020008003501 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:12,907 - ERROR - Gagal memanggil KEDUA API untuk 7271020008003501 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:27:12,908 - INFO - [897/1264] Meminta API riwayat email: 7271020007000300 - UB - 1 | KPN PELITA
+2026-06-08 18:27:12,909 - WARNING - Percobaan 1 gagal untuk 7271020007000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:14,913 - WARNING - Percobaan 2 gagal untuk 7271020007000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:16,915 - WARNING - Percobaan 3 gagal untuk 7271020007000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:18,918 - WARNING - Percobaan events 1 gagal untuk 7271020007000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:20,920 - WARNING - Percobaan events 2 gagal untuk 7271020007000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:22,930 - WARNING - Percobaan events 3 gagal untuk 7271020007000300 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:24,931 - ERROR - Gagal memanggil KEDUA API untuk 7271020007000300 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:27:24,931 - INFO - [898/1264] Skip (Sudah ada di cache): 7271020008003401 - UB - 1 | BPR PALU ANUGERAH, PT
+2026-06-08 18:27:24,931 - INFO - [899/1264] Meminta API riwayat email: 7271020007000500 - UB - 2 | FAUZAN RIZQI FELYSUW
+2026-06-08 18:27:24,933 - WARNING - Percobaan 1 gagal untuk 7271020007000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:26,935 - WARNING - Percobaan 2 gagal untuk 7271020007000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:28,936 - WARNING - Percobaan 3 gagal untuk 7271020007000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:30,939 - WARNING - Percobaan events 1 gagal untuk 7271020007000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:32,941 - WARNING - Percobaan events 2 gagal untuk 7271020007000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:34,942 - WARNING - Percobaan events 3 gagal untuk 7271020007000500 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:36,946 - ERROR - Gagal memanggil KEDUA API untuk 7271020007000500 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:27:36,946 - INFO - [900/1264] Skip (Sudah ada di cache): 7271012003002300 - UB - 1 | OCEAT MAJU BERSAMA
+2026-06-08 18:27:36,946 - INFO - [901/1264] Skip (Sudah ada di cache): 7271012004000300 - UB - 1 | ANUGRAH JAYA PERKASA, CV
+2026-06-08 18:27:36,946 - INFO - [902/1264] Skip (Sudah ada di cache): 7271012005000900 - UB - 3 | WATU MERIBA JAYA, PT
+2026-06-08 18:27:36,946 - INFO - [903/1264] Meminta API riwayat email: 7271020004000400 - UB - 1 | BRIUNIT TATURA
+2026-06-08 18:27:36,949 - WARNING - Percobaan 1 gagal untuk 7271020004000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:38,950 - WARNING - Percobaan 2 gagal untuk 7271020004000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:40,954 - WARNING - Percobaan 3 gagal untuk 7271020004000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:42,956 - WARNING - Percobaan events 1 gagal untuk 7271020004000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:44,960 - WARNING - Percobaan events 2 gagal untuk 7271020004000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:46,962 - WARNING - Percobaan events 3 gagal untuk 7271020004000400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:48,966 - ERROR - Gagal memanggil KEDUA API untuk 7271020004000400 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:27:48,966 - INFO - [904/1264] Skip (Sudah ada di cache): 7271020004002901 - UB - 1 | BANK PERKREDITAN RAKYAT SULAWESI MITRA ABADI
+2026-06-08 18:27:48,966 - INFO - [905/1264] Meminta API riwayat email: 7271020007000800 - UB - 1 | TABUR BONI PALUMARA
+2026-06-08 18:27:48,968 - WARNING - Percobaan 1 gagal untuk 7271020007000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:50,979 - WARNING - Percobaan 2 gagal untuk 7271020007000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:52,982 - WARNING - Percobaan 3 gagal untuk 7271020007000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:54,985 - WARNING - Percobaan events 1 gagal untuk 7271020007000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:56,987 - WARNING - Percobaan events 2 gagal untuk 7271020007000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:27:58,989 - WARNING - Percobaan events 3 gagal untuk 7271020007000800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:00,989 - ERROR - Gagal memanggil KEDUA API untuk 7271020007000800 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:28:00,989 - INFO - [906/1264] Meminta API riwayat email: 7271012001001800 - UB - 1 | RSU ANUTAPURA PALU
+2026-06-08 18:28:00,991 - WARNING - Percobaan 1 gagal untuk 7271012001001800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:03,003 - WARNING - Percobaan 2 gagal untuk 7271012001001800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:05,005 - WARNING - Percobaan 3 gagal untuk 7271012001001800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:07,012 - WARNING - Percobaan events 1 gagal untuk 7271012001001800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:09,147 - WARNING - Percobaan events 2 gagal untuk 7271012001001800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:11,161 - WARNING - Percobaan events 3 gagal untuk 7271012001001800 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:13,166 - ERROR - Gagal memanggil KEDUA API untuk 7271012001001800 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:28:13,167 - INFO - [907/1264] Meminta API riwayat email: 7271020007002702 - UB - 1 | KPN DALA LOMPE SINGGANI
+2026-06-08 18:28:13,169 - WARNING - Percobaan 1 gagal untuk 7271020007002702 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:15,173 - WARNING - Percobaan 2 gagal untuk 7271020007002702 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:17,181 - WARNING - Percobaan 3 gagal untuk 7271020007002702 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:19,184 - WARNING - Percobaan events 1 gagal untuk 7271020007002702 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:21,186 - WARNING - Percobaan events 2 gagal untuk 7271020007002702 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:23,219 - WARNING - Percobaan events 3 gagal untuk 7271020007002702 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:25,272 - ERROR - Gagal memanggil KEDUA API untuk 7271020007002702 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:28:25,276 - INFO - [908/1264] Meminta API riwayat email: 7271012002003100 - UB - 1 | MEUBEL JATI INDAH
+2026-06-08 18:28:25,280 - WARNING - Percobaan 1 gagal untuk 7271012002003100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:27,287 - WARNING - Percobaan 2 gagal untuk 7271012002003100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:29,291 - WARNING - Percobaan 3 gagal untuk 7271012002003100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:31,294 - WARNING - Percobaan events 1 gagal untuk 7271012002003100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:33,299 - WARNING - Percobaan events 2 gagal untuk 7271012002003100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:35,305 - WARNING - Percobaan events 3 gagal untuk 7271012002003100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:37,309 - ERROR - Gagal memanggil KEDUA API untuk 7271012002003100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:28:37,309 - INFO - [909/1264] Skip (Sudah ada di cache): 7271020007000300 - UB - 2 | PRIMA ARTHA SEJAHTERA BPR
+2026-06-08 18:28:37,317 - INFO - [910/1264] Meminta API riwayat email: 7271020007000401 - UB - 1 | KPN KPSDA (SD 22)
+2026-06-08 18:28:37,318 - WARNING - Percobaan 1 gagal untuk 7271020007000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:39,321 - WARNING - Percobaan 2 gagal untuk 7271020007000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:41,323 - WARNING - Percobaan 3 gagal untuk 7271020007000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:43,325 - WARNING - Percobaan events 1 gagal untuk 7271020007000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:45,327 - WARNING - Percobaan events 2 gagal untuk 7271020007000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:47,329 - WARNING - Percobaan events 3 gagal untuk 7271020007000401 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:49,329 - ERROR - Gagal memanggil KEDUA API untuk 7271020007000401 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:28:49,331 - INFO - [911/1264] Meminta API riwayat email: 7271020007002400 - UB - 1 | KPN PANGAYOMAN
+2026-06-08 18:28:49,333 - WARNING - Percobaan 1 gagal untuk 7271020007002400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:51,339 - WARNING - Percobaan 2 gagal untuk 7271020007002400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:53,342 - WARNING - Percobaan 3 gagal untuk 7271020007002400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:55,343 - WARNING - Percobaan events 1 gagal untuk 7271020007002400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:57,349 - WARNING - Percobaan events 2 gagal untuk 7271020007002400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:28:59,355 - WARNING - Percobaan events 3 gagal untuk 7271020007002400 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:01,356 - ERROR - Gagal memanggil KEDUA API untuk 7271020007002400 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:29:01,356 - INFO - [912/1264] Skip (Sudah ada di cache): 7271020007003001 - UB - 1 | BERKAH BATU SENTOSA
+2026-06-08 18:29:01,356 - INFO - [913/1264] Meminta API riwayat email: 7271012001001800 - UB - 2 | PT Pegadaian (Persero), UPC BALAROA
+2026-06-08 18:29:01,358 - WARNING - Percobaan 1 gagal untuk 7271012001001800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:03,364 - WARNING - Percobaan 2 gagal untuk 7271012001001800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:05,365 - WARNING - Percobaan 3 gagal untuk 7271012001001800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:07,370 - WARNING - Percobaan events 1 gagal untuk 7271012001001800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:09,374 - WARNING - Percobaan events 2 gagal untuk 7271012001001800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:11,376 - WARNING - Percobaan events 3 gagal untuk 7271012001001800 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:13,376 - ERROR - Gagal memanggil KEDUA API untuk 7271012001001800 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:29:13,378 - INFO - [914/1264] Meminta API riwayat email: 7271011005000801 - UB - 1 | NUSA LUKINDO DWIKARYA
+2026-06-08 18:29:13,379 - WARNING - Percobaan 1 gagal untuk 7271011005000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:15,380 - WARNING - Percobaan 2 gagal untuk 7271011005000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:17,383 - WARNING - Percobaan 3 gagal untuk 7271011005000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:19,386 - WARNING - Percobaan events 1 gagal untuk 7271011005000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:21,394 - WARNING - Percobaan events 2 gagal untuk 7271011005000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:23,401 - WARNING - Percobaan events 3 gagal untuk 7271011005000801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:25,406 - ERROR - Gagal memanggil KEDUA API untuk 7271011005000801 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:29:25,407 - INFO - [915/1264] Meminta API riwayat email: 7271012003000300 - UB - 2 | XIN LEI KUANG YEINDONESIA
+2026-06-08 18:29:25,409 - WARNING - Percobaan 1 gagal untuk 7271012003000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:27,419 - WARNING - Percobaan 2 gagal untuk 7271012003000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:29,425 - WARNING - Percobaan 3 gagal untuk 7271012003000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:31,429 - WARNING - Percobaan events 1 gagal untuk 7271012003000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:33,438 - WARNING - Percobaan events 2 gagal untuk 7271012003000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:35,442 - WARNING - Percobaan events 3 gagal untuk 7271012003000300 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:37,444 - ERROR - Gagal memanggil KEDUA API untuk 7271012003000300 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:29:37,444 - INFO - [916/1264] Meminta API riwayat email: 7271020007003801 - UB - 1 | CLIPAN FINANCE CAB PALU,PT
+2026-06-08 18:29:37,446 - WARNING - Percobaan 1 gagal untuk 7271020007003801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:39,454 - WARNING - Percobaan 2 gagal untuk 7271020007003801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:41,457 - WARNING - Percobaan 3 gagal untuk 7271020007003801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:43,474 - WARNING - Percobaan events 1 gagal untuk 7271020007003801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:45,481 - WARNING - Percobaan events 2 gagal untuk 7271020007003801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:47,490 - WARNING - Percobaan events 3 gagal untuk 7271020007003801 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:49,492 - ERROR - Gagal memanggil KEDUA API untuk 7271020007003801 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:29:49,492 - INFO - [917/1264] Skip (Sudah ada di cache): 7271020007004202 - UB - 1 | THE CLIFF TOGEAN
+2026-06-08 18:29:49,492 - INFO - [918/1264] Skip (Sudah ada di cache): 7271010004001400 - UB - 1 | PELUMASINDO PRIMA GEMILANG
+2026-06-08 18:29:49,493 - INFO - [919/1264] Meminta API riwayat email: 7271010005000900 - UB - 1 | Bank Rakyat Indonesia
+2026-06-08 18:29:49,496 - WARNING - Percobaan 1 gagal untuk 7271010005000900 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:51,500 - WARNING - Percobaan 2 gagal untuk 7271010005000900 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:53,503 - WARNING - Percobaan 3 gagal untuk 7271010005000900 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:55,511 - WARNING - Percobaan events 1 gagal untuk 7271010005000900 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:57,522 - WARNING - Percobaan events 2 gagal untuk 7271010005000900 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:29:59,527 - WARNING - Percobaan events 3 gagal untuk 7271010005000900 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:01,529 - ERROR - Gagal memanggil KEDUA API untuk 7271010005000900 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:30:01,530 - INFO - [920/1264] Skip (Sudah ada di cache): 7271010005000800 - UB - 2 | CV NIAGA JAYA
+2026-06-08 18:30:01,530 - INFO - [921/1264] Meminta API riwayat email: 7271010006000101 - UB - 3 | BANK PANIN PT TBK
+2026-06-08 18:30:01,535 - WARNING - Percobaan 1 gagal untuk 7271010006000101 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:03,537 - WARNING - Percobaan 2 gagal untuk 7271010006000101 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:05,546 - WARNING - Percobaan 3 gagal untuk 7271010006000101 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:07,550 - WARNING - Percobaan events 1 gagal untuk 7271010006000101 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:09,553 - WARNING - Percobaan events 2 gagal untuk 7271010006000101 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:11,565 - WARNING - Percobaan events 3 gagal untuk 7271010006000101 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:13,566 - ERROR - Gagal memanggil KEDUA API untuk 7271010006000101 - UB - 3, mempertahankan data lama jika ada.
+2026-06-08 18:30:13,566 - INFO - [922/1264] Meminta API riwayat email: 7271010006000500 - UB - 1 | BANK MANDIRI (PERSERO)
+2026-06-08 18:30:13,573 - WARNING - Percobaan 1 gagal untuk 7271010006000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:15,606 - WARNING - Percobaan 2 gagal untuk 7271010006000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:17,711 - WARNING - Percobaan 3 gagal untuk 7271010006000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:19,725 - WARNING - Percobaan events 1 gagal untuk 7271010006000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:21,733 - WARNING - Percobaan events 2 gagal untuk 7271010006000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:23,737 - WARNING - Percobaan events 3 gagal untuk 7271010006000500 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:25,740 - ERROR - Gagal memanggil KEDUA API untuk 7271010006000500 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:30:25,740 - INFO - [923/1264] Skip (Sudah ada di cache): 7271010006000500 - UB - 2 | BANK MANDIRI PERSERO TBK PT CABANG IMAM BONJOL
+2026-06-08 18:30:25,740 - INFO - [924/1264] Meminta API riwayat email: 7271010006000200 - UB - 1 | KSU HASANAH AL CHAERAT
+2026-06-08 18:30:25,742 - WARNING - Percobaan 1 gagal untuk 7271010006000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:27,750 - WARNING - Percobaan 2 gagal untuk 7271010006000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:29,753 - WARNING - Percobaan 3 gagal untuk 7271010006000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:31,763 - WARNING - Percobaan events 1 gagal untuk 7271010006000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:33,796 - WARNING - Percobaan events 2 gagal untuk 7271010006000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:35,801 - WARNING - Percobaan events 3 gagal untuk 7271010006000200 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:37,802 - ERROR - Gagal memanggil KEDUA API untuk 7271010006000200 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:30:37,805 - INFO - [925/1264] Skip (Sudah ada di cache): 7271010006000600 - UB - 1 | NESINDO ENERGI WAHANA
+2026-06-08 18:30:37,806 - INFO - [926/1264] Meminta API riwayat email: 7271010006000600 - UB - 2 | BANK BRI
+2026-06-08 18:30:37,814 - WARNING - Percobaan 1 gagal untuk 7271010006000600 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:39,823 - WARNING - Percobaan 2 gagal untuk 7271010006000600 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:41,835 - WARNING - Percobaan 3 gagal untuk 7271010006000600 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:43,842 - WARNING - Percobaan events 1 gagal untuk 7271010006000600 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:45,844 - WARNING - Percobaan events 2 gagal untuk 7271010006000600 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:47,849 - WARNING - Percobaan events 3 gagal untuk 7271010006000600 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:49,854 - ERROR - Gagal memanggil KEDUA API untuk 7271010006000600 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:30:49,858 - INFO - [927/1264] Meminta API riwayat email: 7271010006000101 - UB - 2 | BANK MANDIRI SYARIAH
+2026-06-08 18:30:49,865 - WARNING - Percobaan 1 gagal untuk 7271010006000101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:51,872 - WARNING - Percobaan 2 gagal untuk 7271010006000101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:53,877 - WARNING - Percobaan 3 gagal untuk 7271010006000101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:55,882 - WARNING - Percobaan events 1 gagal untuk 7271010006000101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:57,893 - WARNING - Percobaan events 2 gagal untuk 7271010006000101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:30:59,902 - WARNING - Percobaan events 3 gagal untuk 7271010006000101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:01,907 - ERROR - Gagal memanggil KEDUA API untuk 7271010006000101 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:31:01,909 - INFO - [928/1264] Meminta API riwayat email: 7271010006000600 - UB - 3 | BANK MUAMALAT
+2026-06-08 18:31:01,911 - WARNING - Percobaan 1 gagal untuk 7271010006000600 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:03,914 - WARNING - Percobaan 2 gagal untuk 7271010006000600 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:05,922 - WARNING - Percobaan 3 gagal untuk 7271010006000600 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:07,931 - WARNING - Percobaan events 1 gagal untuk 7271010006000600 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:09,938 - WARNING - Percobaan events 2 gagal untuk 7271010006000600 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:11,943 - WARNING - Percobaan events 3 gagal untuk 7271010006000600 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:13,948 - ERROR - Gagal memanggil KEDUA API untuk 7271010006000600 - UB - 3, mempertahankan data lama jika ada.
+2026-06-08 18:31:13,948 - INFO - [929/1264] Skip (Sudah ada di cache): 7271010007001100 - UB - 2 | MULIA JAYA KARYA, PT
+2026-06-08 18:31:13,949 - INFO - [930/1264] Meminta API riwayat email: 7271010007000802 - UB - 1 | BNI UNIT MANONDA
+2026-06-08 18:31:13,950 - WARNING - Percobaan 1 gagal untuk 7271010007000802 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:15,957 - WARNING - Percobaan 2 gagal untuk 7271010007000802 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:17,965 - WARNING - Percobaan 3 gagal untuk 7271010007000802 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:19,972 - WARNING - Percobaan events 1 gagal untuk 7271010007000802 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:21,980 - WARNING - Percobaan events 2 gagal untuk 7271010007000802 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:23,987 - WARNING - Percobaan events 3 gagal untuk 7271010007000802 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:25,988 - ERROR - Gagal memanggil KEDUA API untuk 7271010007000802 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:31:25,988 - INFO - [931/1264] Skip (Sudah ada di cache): 7271010011001200 - UB - 1 | DUTA KIATY SUKMA PT
+2026-06-08 18:31:25,988 - INFO - [932/1264] Skip (Sudah ada di cache): 7271011002000300 - UB - 1 | VIOLA TEKNIK ELEKTRO
+2026-06-08 18:31:25,989 - INFO - [933/1264] Meminta API riwayat email: 7271010011001700 - UB - 2 | WAHYU VARIASI
+2026-06-08 18:31:25,991 - WARNING - Percobaan 1 gagal untuk 7271010011001700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:27,994 - WARNING - Percobaan 2 gagal untuk 7271010011001700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:30,002 - WARNING - Percobaan 3 gagal untuk 7271010011001700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:32,009 - WARNING - Percobaan events 1 gagal untuk 7271010011001700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:34,013 - WARNING - Percobaan events 2 gagal untuk 7271010011001700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:36,020 - WARNING - Percobaan events 3 gagal untuk 7271010011001700 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:38,028 - ERROR - Gagal memanggil KEDUA API untuk 7271010011001700 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:31:38,032 - INFO - [934/1264] Skip (Sudah ada di cache): 7271010011002704 - UB - 2 | MACINDO MITRA RAYA, PT
+2026-06-08 18:31:38,033 - INFO - [935/1264] Skip (Sudah ada di cache): 7271010005000800 - UB - 5 | SUPER JAYA BAN
+2026-06-08 18:31:38,033 - INFO - [936/1264] Skip (Sudah ada di cache): 7271010004002000 - UB - 1 | LANGIT TIMUR REZEKI
+2026-06-08 18:31:38,042 - INFO - [937/1264] Meminta API riwayat email: 7271010005000800 - UB - 3 | Bank BRI
+2026-06-08 18:31:38,080 - WARNING - Percobaan 1 gagal untuk 7271010005000800 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:40,090 - WARNING - Percobaan 2 gagal untuk 7271010005000800 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:42,138 - WARNING - Percobaan 3 gagal untuk 7271010005000800 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:44,143 - WARNING - Percobaan events 1 gagal untuk 7271010005000800 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:46,160 - WARNING - Percobaan events 2 gagal untuk 7271010005000800 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:48,172 - WARNING - Percobaan events 3 gagal untuk 7271010005000800 - UB - 3: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:50,175 - ERROR - Gagal memanggil KEDUA API untuk 7271010005000800 - UB - 3, mempertahankan data lama jika ada.
+2026-06-08 18:31:50,180 - INFO - [938/1264] Meminta API riwayat email: 7271010005000800 - UB - 4 | Bank BRI UNIT Imam Bonjol Palu
+2026-06-08 18:31:50,193 - WARNING - Percobaan 1 gagal untuk 7271010005000800 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:52,196 - WARNING - Percobaan 2 gagal untuk 7271010005000800 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:54,209 - WARNING - Percobaan 3 gagal untuk 7271010005000800 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:56,213 - WARNING - Percobaan events 1 gagal untuk 7271010005000800 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:31:58,219 - WARNING - Percobaan events 2 gagal untuk 7271010005000800 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:00,227 - WARNING - Percobaan events 3 gagal untuk 7271010005000800 - UB - 4: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:02,231 - ERROR - Gagal memanggil KEDUA API untuk 7271010005000800 - UB - 4, mempertahankan data lama jika ada.
+2026-06-08 18:32:02,232 - INFO - [939/1264] Meminta API riwayat email: 7271010005000800 - UB - 6 | BANK BNI 46 PT
+2026-06-08 18:32:02,238 - WARNING - Percobaan 1 gagal untuk 7271010005000800 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:04,245 - WARNING - Percobaan 2 gagal untuk 7271010005000800 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:06,252 - WARNING - Percobaan 3 gagal untuk 7271010005000800 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:08,260 - WARNING - Percobaan events 1 gagal untuk 7271010005000800 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:10,263 - WARNING - Percobaan events 2 gagal untuk 7271010005000800 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:12,270 - WARNING - Percobaan events 3 gagal untuk 7271010005000800 - UB - 6: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:14,273 - ERROR - Gagal memanggil KEDUA API untuk 7271010005000800 - UB - 6, mempertahankan data lama jika ada.
+2026-06-08 18:32:14,274 - INFO - [940/1264] Skip (Sudah ada di cache): 7271020007001500 - UB - 2 | INVERO PRIMALAND PROPERTY
+2026-06-08 18:32:14,274 - INFO - [941/1264] Meminta API riwayat email: 7271020007004101 - UB - 1 | DINAMIS ABADI, CV
+2026-06-08 18:32:14,277 - WARNING - Percobaan 1 gagal untuk 7271020007004101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:16,284 - WARNING - Percobaan 2 gagal untuk 7271020007004101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:18,290 - WARNING - Percobaan 3 gagal untuk 7271020007004101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:20,294 - WARNING - Percobaan events 1 gagal untuk 7271020007004101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:22,301 - WARNING - Percobaan events 2 gagal untuk 7271020007004101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:24,307 - WARNING - Percobaan events 3 gagal untuk 7271020007004101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:26,308 - ERROR - Gagal memanggil KEDUA API untuk 7271020007004101 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:32:26,308 - INFO - [942/1264] Meminta API riwayat email: 7271020008003502 - UB - 1 | KSU GOTONG ROYONG
+2026-06-08 18:32:26,324 - WARNING - Percobaan 1 gagal untuk 7271020008003502 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:28,336 - WARNING - Percobaan 2 gagal untuk 7271020008003502 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:30,345 - WARNING - Percobaan 3 gagal untuk 7271020008003502 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:32,353 - WARNING - Percobaan events 1 gagal untuk 7271020008003502 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:34,357 - WARNING - Percobaan events 2 gagal untuk 7271020008003502 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:36,361 - WARNING - Percobaan events 3 gagal untuk 7271020008003502 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:38,367 - ERROR - Gagal memanggil KEDUA API untuk 7271020008003502 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:32:38,367 - INFO - [943/1264] Meminta API riwayat email: 7271020007001101 - UB - 2 | Garuda Indonesia (Persero) Tbk, Kantor Cabang Palu
+2026-06-08 18:32:38,369 - WARNING - Percobaan 1 gagal untuk 7271020007001101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:40,372 - WARNING - Percobaan 2 gagal untuk 7271020007001101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:42,381 - WARNING - Percobaan 3 gagal untuk 7271020007001101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:44,385 - WARNING - Percobaan events 1 gagal untuk 7271020007001101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:46,388 - WARNING - Percobaan events 2 gagal untuk 7271020007001101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:48,392 - WARNING - Percobaan events 3 gagal untuk 7271020007001101 - UB - 2: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:50,392 - ERROR - Gagal memanggil KEDUA API untuk 7271020007001101 - UB - 2, mempertahankan data lama jika ada.
+2026-06-08 18:32:50,393 - INFO - [944/1264] Skip (Sudah ada di cache): 7271020007002901 - UB - 1 | BANK MANDIRI (PERSERO)
+2026-06-08 18:32:50,393 - INFO - [945/1264] Meminta API riwayat email: 7271030001000100 - UB - 1 | BANK BRI
+2026-06-08 18:32:50,396 - WARNING - Percobaan 1 gagal untuk 7271030001000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:52,400 - WARNING - Percobaan 2 gagal untuk 7271030001000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:54,465 - WARNING - Percobaan 3 gagal untuk 7271030001000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:56,487 - WARNING - Percobaan events 1 gagal untuk 7271030001000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:32:58,495 - WARNING - Percobaan events 2 gagal untuk 7271030001000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:33:00,500 - WARNING - Percobaan events 3 gagal untuk 7271030001000100 - UB - 1: Page.evaluate: Target page, context or browser has been closed
+2026-06-08 18:33:02,503 - ERROR - Gagal memanggil KEDUA API untuk 7271030001000100 - UB - 1, mempertahankan data lama jika ada.
+2026-06-08 18:33:02,504 - INFO - [946/1264] Skip (Sudah ada di cache): 7271030001002000 - UB - 1 | ANUGRAH JAYA HOUSEWARES
+2026-06-08 18:33:02,505 - INFO - [947/1264] Meminta API riwayat email: 7271020009000101 - UB - 1 | KSU PERDANA
+2026-06-08 18:33:02,508 - WARNING - Percobaan 1 gagal untuk 7271020009000101 - UB - 1: Page.evaluate: Target page, context or browser has been closed
