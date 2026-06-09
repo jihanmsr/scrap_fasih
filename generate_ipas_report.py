@@ -1,5 +1,22 @@
 import asyncio
 import json
+from dotenv import load_dotenv
+import os
+import logging
+import os
+
+load_dotenv()
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+supabase = None
+if SUPABASE_URL and SUPABASE_KEY and "MASUKKAN" not in SUPABASE_URL:
+    try:
+        from supabase import create_client
+        supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+        logging.info("Koneksi Supabase berhasil diinisialisasi.")
+    except Exception as e:
+        logging.error(f"Gagal menginisialisasi Supabase: {e}")
 import datetime
 import os
 from playwright.async_api import async_playwright
@@ -43,7 +60,7 @@ async def generate_report():
                 "period_id": "fd68e454-ba45-4b85-8205-f3bf777ded24",
                 "prov_id": "5214ecb2-bef1-4a86-9446-451cf430928e",
                 "label": "Sensus Ekonomi 2026 (Umum)",
-                "kabs": [
+                                "kabs": [
                     {"code": "01", "name": "[01] BANGGAI KEPULAUAN", "id": "bc32354f-1245-426f-b2cf-a5733e1295ad"},
                     {"code": "02", "name": "[02] BANGGAI", "id": "530e9ca5-86ba-434e-9b04-405102e6d900"},
                     {"code": "03", "name": "[03] MOROWALI", "id": "9783f0c1-f047-477f-8840-11eae7cf70e2"},
@@ -113,9 +130,33 @@ async def generate_report():
                 
             datatable_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
 
-            # 1. Fetch total counts per kabupaten using searchAggregation (uncapped)
-            print("Mengambil total target & status per Kabupaten dari BPS...")
+            # Fetch PROVINCE TOTAL
+            payload_prov = {
+                "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
+                "assignmentExtraParam": {
+                    "region1Id": survey_cfg["prov_id"],
+                    "surveyPeriodId": period_id,
+                    "assignmentErrorStatusType": -1
+                }
+            }
+            res_prov = await page.evaluate(f"""
+                async () => {{
+                    try {{
+                        const r = await fetch('{datatable_url}', {{ 
+                            method: "POST", headers: {{ "Content-Type": "application/json", "X-XSRF-TOKEN": '{xsrf_token}' }},
+                            body: JSON.stringify({json.dumps(payload_prov)})
+                        }});
+                        return await r.json();
+                    }} catch(e) {{ return null; }}
+                }}
+            """)
+            prov_total = 0
+            if res_prov and "searchAggregation" in res_prov:
+                prov_total = sum(i["docCount"] for i in res_prov["searchAggregation"])
+            output_data[f"{survey_key}_prov_total"] = prov_total
+
             for kab in survey_cfg["kabs"]:
+
                 payload = {
                     "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
                     "assignmentExtraParam": {
@@ -163,7 +204,7 @@ async def generate_report():
                         approved += count
                 
                 if total_prelist == 0:
-                    total_prelist = res.get("totalHit", 0) # fallback
+                    total_prelist = res.get("totalHit", 0)
                     
                 report_data[kab["name"]]["total_prelist"] = total_prelist
                 report_data[kab["name"]]["total_draft"] = draft
@@ -312,7 +353,9 @@ async def generate_report():
         final_js_obj = {
             "updated_at": now_str,
             "se_umum": output_data["se_umum"],
-            "se_ub": output_data["se_ub"]
+            "se_ub": output_data["se_ub"],
+            "se_umum_prov_total": output_data.get("se_umum_prov_total", 0),
+            "se_ub_prov_total": output_data.get("se_ub_prov_total", 0)
         }
         with open("ipas_data.js", "w", encoding="utf-8") as f:
             f.write(f"window.IPAS_DATA = {json.dumps(final_js_obj, ensure_ascii=False, indent=2)};\n")

@@ -28,6 +28,7 @@ USER_DATA_DIR = "playwright_chrome_profile"
 OUTPUT_CSV = "all_email_history.csv"
 OUTPUT_JS = "data.js"
 OUTPUT_BOUNCED_EXCEL = "bounced_emails.xlsx"
+FORCE_RE_SCRAPE = True
 
 def check_port_open(port=9222):
 	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -519,6 +520,8 @@ def scrape_via_api():
         all_records = []
         seen_codes = set()
         status_priority = {
+            'permanent_fail': 8,
+            'permanent_failure': 8,
             'bounced': 7,
             'dropped': 6,
             'clicked': 5,
@@ -533,16 +536,21 @@ def scrape_via_api():
         email_datatable_url = "https://fasih-sm.bps.go.id/app/api/email/api/v1/email-schedule/datatable"
 
         for idx, comp in enumerate(companies_data):
-            code = comp.get("codeIdentity", "-")
+            code_identity = comp.get("codeIdentity", "-")
+            uid = comp.get("id")
+            
+            # Kita gunakan 'id' BPS sebagai primary key (disimpan di variabel code) agar tidak ter-deduplikasi secara salah
+            code = uid if uid else code_identity
             seen_codes.add(code)
+            
             company_name = comp.get("data1", "-")
             survey_status = comp.get("assignmentStatusAlias", "-")
             email_target = comp.get("email", "-")
-            assignment_id = comp.get("id")
+            assignment_id = uid
 
             # 1. Cek apakah perusahaan sudah berstatus final di data lokal
             has_valid_history = False
-            if code in existing_companies:
+            if not FORCE_RE_SCRAPE and code in existing_companies:
                 # Jika sudah pernah di-scrap dan status globalnya bukan queued/bouncing/deferred (misal delivered/clicked/opened/bounced)
                 histories = existing_companies[code]
                 if histories and histories[0]["global_status"] not in ["-", "queued", "deferred"]:
@@ -795,7 +803,7 @@ def scrape_via_api():
 
         # Simpan HASIL AKHIR (lengkap) ke Supabase dan data.js
         save_realtime_data(all_records)
-        logging.info(f"Scraping via API selesai putaran ini. Total records: {len(all_records)}. Menunggu 30 menit sebelum scrape berikutnya...")
+        logging.info(f"Scraping via API selesai putaran ini. Total records: {len(all_records)}. Menunggu 5 menit sebelum scrape berikutnya...")
 
 def main_loop():
     while True:
@@ -805,9 +813,9 @@ def main_loop():
         except Exception as e:
             logging.error(f"Terjadi kesalahan fatal pada siklus: {e}")
         
-        # Jeda 30 menit (1800 detik)
-        logging.info("Menunggu 30 menit...")
-        time.sleep(1800)
+        # Jeda 5 menit (300 detik)
+        logging.info("Menunggu 5 menit...")
+        time.sleep(300)
 
 if __name__ == "__main__":
     main_loop()

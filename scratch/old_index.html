@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fasih Email Delivery Dashboard</title>
+    <meta name="description" content="Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Supabase JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- Vanilla CSS Styles -->
+    <style>
+        :root[data-theme="dark"] {
+            --bg-color: #0b0f19;
+            --bg-gradient: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                           radial-gradient(at 100% 100%, rgba(239, 68, 68, 0.08) 0px, transparent 50%);
+            --card-bg: rgba(22, 28, 45, 0.6);
+            --card-hover-bg: rgba(30, 41, 59, 0.8);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-hover-border: rgba(99, 102, 241, 0.3);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --input-bg: rgba(15, 23, 42, 0.6);
+            --input-focus-bg: rgba(15, 23, 42, 0.9);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            --btn-border: rgba(99, 102, 241, 0.3);
+            --pill-inactive-bg: rgba(255, 255, 255, 0.04);
+            --timeline-line: rgba(255, 255, 255, 0.08);
+            --timeline-bg: #0b0f19;
+
+            /* Status Colors (Glowy Dark) */
+            --color-queued: #9ca3af;
+            --color-delivered: #10b981;
+            --color-opened: #3b82f6;
+            --color-clicked: #8b5cf6;
+            --color-bounced: #ef4444;
+            --color-nolog: #6b7280;
+        }
+
+        :root[data-theme="light"] {
+            --bg-color: #f8fafc;
+            --bg-gradient: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 40%),
+                           radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.05) 0px, transparent 45%);
+            --card-bg: #ffffff;
+            --card-hover-bg: #f1f5f9;
+            --card-border: #e2e8f0;
+            --card-hover-border: rgba(99, 102, 241, 0.4);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --input-bg: #ffffff;
+            --input-focus-bg: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 15px -3px rgba(99, 102, 241, 0.08);
+            --btn-border: #cbd5e1;
+            --pill-inactive-bg: #f1f5f9;
+            --timeline-line: #e2e8f0;
+            --timeline-bg: #f8fafc;
+
+            /* Status Colors (Vibrant Light) */
+            --color-queued: #64748b;
+            --color-delivered: #16a34a;
+            --color-opened: #2563eb;
+            --color-clicked: #7c3aed;
+            --color-bounced: #dc2626;
+            --color-nolog: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: var(--bg-gradient);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            padding: 2.5rem 1.5rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .brand-title h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            color: var(--text-primary);
+        }
+
+        .brand-title p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+            font-weight: 500;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Theme Toggle Switch */
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            color: var(--text-primary);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.05);
+            border-color: var(--primary);
+        }
+
+        .theme-toggle svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .theme-toggle .sun-icon {
+            display: none;
+        }
+
+        :root[data-theme="light"] .theme-toggle .sun-icon {
+            display: block;
+        }
+
+        :root[data-theme="light"] .theme-toggle .moon-icon {
+            display: none;
+        }
+
+        .btn-action {
+            background-color: rgba(99, 102, 241, 0.08);
+            border: 1px solid var(--btn-border);
+            color: var(--primary);
+            padding: 0.75rem 1.25rem;
+            border-radius: 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-action:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Summary Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(12px);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--card-hover-border);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--stat-color, var(--primary));
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .stat-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-top: 0.5rem;
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+
+        .stat-subtext {
+            margin-top: 0.5rem;
+        }
+
+        /* Stats Category Sections and Tags */
+        .stats-section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title-stats {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            opacity: 0.85;
+        }
+        
+        .card-category-tag {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            font-size: 0.6rem;
+            font-weight: 800;
+            padding: 0.15rem 0.45rem;
+            border-radius: 0.5rem;
+            background: rgba(99, 102, 241, 0.08);
+            color: var(--primary);
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            text-transform: uppercase;
+        }
+        
+        .card-category-tag.doc-tag {
+            background: rgba(139, 92, 246, 0.08);
+            color: #8B5CF6;
+            border: 1px solid rgba(139, 92, 246, 0.15);
+        }
+
+        /* Filter Controls */
+        .filter-panel {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(12px);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .search-row {
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .search-wrapper {
+            position: relative;
+            flex-grow: 1;
+        }
+
+        .search-input {
+            width: 100%;
+            background-color: var(--input-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1rem;
+            padding: 0.85rem 1.2rem 0.85rem 2.75rem;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+            background-color: var(--input-focus-bg);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            width: 1.1rem;
+            height: 1.1rem;
+            pointer-events: none;
+        }
+
+        .sort-wrapper {
+            min-width: 200px;
+        }
+
+        .sort-select {
+            width: 100%;
+            height: 100%;
+            background-color: var(--input-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1rem;
+            padding: 0 1rem;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.25rem;
+        }
+
+        .sort-select:focus {
+            border-color: var(--primary);
+        }
+
+        /* Filter Pills */
+        .pills-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .filter-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-right: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pill {
+            background-color: var(--pill-inactive-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            padding: 0.45rem 1.1rem;
+            border-radius: 9999px;
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            user-select: none;
+        }
+
+        .pill:hover {
+            background-color: var(--card-hover-bg);
+            color: var(--text-primary);
+        }
+
+        .pill.active {
+            background-color: var(--pill-bg, var(--primary));
+            border-color: transparent;
+            color: white;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+        }
+
+        .pill-count {
+            background: rgba(0, 0, 0, 0.15);
+            color: inherit;
+            font-size: 0.75rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+
+        .pill.active .pill-count {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Main Data Layout */
+        .company-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Search query highlight style */
+        .highlight {
+            background-color: rgba(99, 102, 241, 0.25);
+            color: #a5b4fc;
+            font-weight: 700;
+            border-radius: 4px;
+            padding: 0 2px;
+        }
+        :root[data-theme="light"] .highlight {
+            background-color: rgba(99, 102, 241, 0.15);
+            color: #4f46e5;
+        }
+
+        /* Expandable Card Design */
+        .company-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1.5rem;
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+                        border-color 0.25s ease, 
+                        background-color 0.25s ease, 
+                        box-shadow 0.25s ease;
+        }
+
+        .company-card:hover {
+            border-color: var(--card-hover-border);
+            background-color: var(--card-hover-bg);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .company-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            flex-grow: 1;
+            min-width: 0; /* allows text truncation/wrapping in flexbox */
+        }
+
+        .company-name-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            min-width: 0;
+        }
+
+        .company-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .company-meta {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+
+        .company-email-text {
+            word-break: break-all;
+            overflow-wrap: anywhere;
+        }
+
+        .code-badge {
+            background-color: var(--pill-inactive-bg);
+            padding: 0.15rem 0.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--card-border);
+            font-weight: 600;
+            font-family: monospace;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        .right-badges {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .company-status-badge {
+            padding: 0.4rem 1rem;
+            border-radius: 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            background-color: var(--badge-bg);
+            color: var(--badge-color);
+            border: 1px solid var(--badge-border);
+            letter-spacing: 0.03em;
+        }
+
+        /* Accordion Chevron Icon */
+        .toggle-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .company-card.expanded .toggle-icon {
+            transform: rotate(180deg);
+            color: var(--primary);
+        }
+
+        /* Collapsible Section */
+        .details-wrapper {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .company-card.expanded .details-wrapper {
+            opacity: 1;
+        }
+
+        .timeline-section {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px dashed var(--card-border);
+        }
+
+        .timeline-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timeline-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline-list::before {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 6px;
+            bottom: 6px;
+            width: 2px;
+            background-color: var(--timeline-line);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            gap: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--node-color);
+            border: 3px solid var(--timeline-bg);
+            box-shadow: 0 0 8px var(--node-color);
+            z-index: 2;
+        }
+
+        .timeline-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            min-width: 0;
+        }
+
+        .timeline-badge {
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.5rem;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            background-color: var(--badge-bg);
+            color: var(--badge-color);
+            flex-shrink: 0;
+        }
+
+        .timeline-email {
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .timeline-time {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-family: monospace;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        /* Pagination Styling */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .page-btn {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            user-select: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+        }
+
+        .page-btn:hover:not(:disabled) {
+            border-color: var(--primary);
+            color: var(--text-primary);
+            background-color: var(--card-hover-bg);
+        }
+
+        .page-btn.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+        }
+
+        .page-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        /* Empty state styling */
+        .empty-state {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: var(--card-bg);
+            border: 1px dashed var(--card-border);
+            border-radius: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-state svg {
+            width: 48px;
+            height: 48px;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .empty-state h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .header-actions {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .search-row {
+                flex-direction: column;
+            }
+
+            .sort-wrapper {
+                width: 100%;
+            }
+
+            .company-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+
+            .company-name {
+                white-space: normal;
+                overflow: visible;
+                text-overflow: clip;
+            }
+
+            .right-badges {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+
+
+            .timeline-time {
+                padding-left: 0;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="brand-title">
+                <h1 id="main-header">Dashboard Status Email</h1>
+                <p>Status Pengiriman & Bounced Email Usaha Besar (UB)</p>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; font-weight: 500;" id="last-updated-text">
+                    Terakhir Diperbarui: -
+                </p>
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Theme">
+                    <!-- Sun Icon (for light theme) -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                    </svg>
+                    <!-- Moon Icon (for dark theme) -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="btn-action" id="btn-refresh" title="Muat Ulang Halaman">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                    Refresh
+                </button>
+                <a href="./bounced_emails.xlsx" class="btn-action" id="btn-download-xlsx" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Unduh Excel Bounced
+                </a>
+            </div>
+        </header>
+
+        <!-- Summary Stats Sections -->
+        <div class="stats-section">
+            <h3 class="section-title-stats">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                Status Pengiriman Email
+            </h3>
+            <div class="stats-grid" id="stats-container">
+                <div class="stat-card" style="--stat-color: var(--primary);">
+                    <span class="card-category-tag">Email</span>
+                    <div class="stat-label">Total Perusahaan</div>
+                    <div class="stat-value" id="stat-total-companies">0</div>
+                    <div class="stat-subtext">Semua record terdaftar</div>
+                </div>
+                <div class="stat-card" style="--stat-color: var(--color-bounced);">
+                    <span class="card-category-tag">Email</span>
+                    <div class="stat-label">Bounced Emails</div>
+                    <div class="stat-value" id="stat-bounced" style="color: var(--color-bounced);">0</div>
+                    <div class="stat-subtext">Gagal terkirim balik</div>
+                </div>
+                <div class="stat-card" style="--stat-color: var(--color-clicked);">
+                    <span class="card-category-tag">Email</span>
+                    <div class="stat-label">Link Clicked</div>
+                    <div class="stat-value" id="stat-clicked" style="color: var(--color-clicked);">0</div>
+                    <div class="stat-subtext">Responden membuka link</div>
+                </div>
+                <div class="stat-card" style="--stat-color: var(--color-opened);">
+                    <span class="card-category-tag">Email</span>
+                    <div class="stat-label">Opened Emails</div>
+                    <div class="stat-value" id="stat-opened" style="color: var(--color-opened);">0</div>
+                    <div class="stat-subtext">Dibaca oleh responden</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-section" style="margin-top: -1rem;">
+            <h3 class="section-title-stats">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Status Dokumen di Web Fasih
+            </h3>
+            <div class="stats-grid" id="document-stats-container">
+                <div class="stat-card" style="--stat-color: #8B5CF6;">
+                    <span class="card-category-tag doc-tag">Dokumen</span>
+                    <div class="stat-label">Submitted Respondent</div>
+                    <div class="stat-value" id="stat-submitted-respondent" style="color: #8B5CF6;">0</div>
+                    <div class="stat-subtext">Dokumen terkirim</div>
+                </div>
+                <div class="stat-card" style="--stat-color: #3B82F6;">
+                    <span class="card-category-tag doc-tag">Dokumen</span>
+                    <div class="stat-label">Open Document</div>
+                    <div class="stat-value" id="stat-open-document" style="color: #3B82F6;">0</div>
+                    <div class="stat-subtext">Dokumen status open</div>
+                </div>
+                <div class="stat-card" style="--stat-color: #F59E0B;">
+                    <span class="card-category-tag doc-tag">Dokumen</span>
+                    <div class="stat-label">Draft Document</div>
+                    <div class="stat-value" id="stat-draft-document" style="color: #F59E0B;">0</div>
+                    <div class="stat-subtext">Dokumen masih draft</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Filter Controls -->
+        <div class="filter-panel">
+            <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem;">
+                <div class="search-wrapper" style="flex: 2 1 300px;">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input type="text" id="search-input" class="search-input" placeholder="Cari Nama Perusahaan, Kode Identitas, atau Email...">
+                </div>
+                <div style="display: flex; gap: 0.5rem; flex: 3 1 auto; flex-wrap: wrap;">
+                    <select id="kabkot-filter-select" class="sort-select" style="flex: 1 1 180px; height: 48px;">
+                        <option value="all">Semua Kabupaten/Kota</option>
+                        <option value="7201">Banggai</option>
+                        <option value="7207">Banggai Kepulauan</option>
+                        <option value="7211">Banggai Laut</option>
+                        <option value="7205">Buol</option>
+                        <option value="7203">Donggala</option>
+                        <option value="7206">Morowali</option>
+                        <option value="7212">Morowali Utara</option>
+                        <option value="7271">Palu</option>
+                        <option value="7208">Parigi Moutong</option>
+                        <option value="7202">Poso</option>
+                        <option value="7210">Sigi</option>
+                        <option value="7209">Tojo Una-Una</option>
+                        <option value="7204">Toli-Toli</option>
+                    </select>
+                    <select id="survey-filter-select" class="sort-select" style="flex: 1 1 180px; height: 48px;">
+                        <option value="all">Semua Status Dokumen</option>
+                        <option value="SUBMITTED RESPONDENT">SUBMITTED RESPONDENT</option>
+                        <option value="OPEN">OPEN</option>
+                        <option value="DRAFT">DRAFT</option>
+                        <option value="-">- (Tanpa Status)</option>
+                    </select>
+                    <select id="sort-select" class="sort-select" style="flex: 1 1 180px; height: 48px;">
+                        <option value="name-asc">Nama Perusahaan (A-Z)</option>
+                        <option value="name-desc">Nama Perusahaan (Z-A)</option>
+                        <option value="status-severity">Urutkan dari Bounced</option>
+                        <option value="survey-status-asc">Status Dokumen (Draft &rarr; Approved)</option>
+                        <option value="survey-status-desc">Status Dokumen (Approved &rarr; Draft)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="pills-group">
+                <span class="filter-title">Filter Status:</span>
+                <button class="pill active" data-filter="all" id="filter-all">
+                    Semua <span class="pill-count" id="count-all">0</span>
+                </button>
+                <button class="pill" data-filter="bounced" style="--pill-bg: var(--color-bounced)" id="filter-bounced">
+                    Bounced <span class="pill-count" id="count-bounced">0</span>
+                </button>
+                <button class="pill" data-filter="clicked" style="--pill-bg: var(--color-clicked)" id="filter-clicked">
+                    Clicked <span class="pill-count" id="count-clicked">0</span>
+                </button>
+                <button class="pill" data-filter="opened" style="--pill-bg: var(--color-opened)" id="filter-opened">
+                    Opened <span class="pill-count" id="count-opened">0</span>
+                </button>
+                <button class="pill" data-filter="delivered" style="--pill-bg: var(--color-delivered)" id="filter-delivered">
+                    Delivered <span class="pill-count" id="count-delivered">0</span>
+                </button>
+                <button class="pill" data-filter="queued" style="--pill-bg: var(--color-queued)" id="filter-queued">
+                    Queued <span class="pill-count" id="count-queued">0</span>
+                </button>
+                <button class="pill" data-filter="-" style="--pill-bg: var(--color-nolog)" id="filter-nolog">
+                    Belum Dikirim <span class="pill-count" id="count-nolog">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Dashboard List -->
+        <main>
+            <div class="company-list" id="company-list">
+                <!-- Data dynamically loaded -->
+            </div>
+            
+            <!-- Pagination Container -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination buttons dynamically loaded -->
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Load Supabase configuration if present -->
+    <script src="supabase_config.js"></script>
+    <!-- Load data.js (holds data in window.EMAIL_DATA) -->
+    <script src="data.js"></script>
+
+    <!-- Javascript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rawData = window.EMAIL_DATA || [];
+            
+            // Helper to highlight matching search query text
+            function highlightText(text, query) {
+                if (!query) return text;
+                const escapedQuery = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                const regex = new RegExp(`(${escapedQuery})`, 'gi');
+                return text.replace(regex, '<mark class="highlight">$1</mark>');
+            }
+            
+            // UI elements
+            const searchInput = document.getElementById('search-input');
+            const sortSelect = document.getElementById('sort-select');
+            const surveyFilterSelect = document.getElementById('survey-filter-select');
+            const kabkotFilterSelect = document.getElementById('kabkot-filter-select');
+            const pills = document.querySelectorAll('.pill');
+            const companyListContainer = document.getElementById('company-list');
+            const paginationContainer = document.getElementById('pagination');
+            const themeToggleBtn = document.getElementById('theme-toggle-btn');
+            const htmlElement = document.documentElement;
+            
+            // Stats & Badge count elements
+            const statTotalEl = document.getElementById('stat-total-companies');
+            const statBouncedEl = document.getElementById('stat-bounced');
+            const statClickedEl = document.getElementById('stat-clicked');
+            const statOpenedEl = document.getElementById('stat-opened');
+
+            const countAll = document.getElementById('count-all');
+            const countBounced = document.getElementById('count-bounced');
+            const countClicked = document.getElementById('count-clicked');
+            const countOpened = document.getElementById('count-opened');
+            const countDelivered = document.getElementById('count-delivered');
+            const countQueued = document.getElementById('count-queued');
+            const countNolog = document.getElementById('count-nolog');
+
+            // Pagination configuration
+            const ITEMS_PER_PAGE = 20;
+            let currentPage = 1;
+
+            let activeFilter = 'all';
+            let activeSurveyFilter = 'all';
+            let activeKabkotFilter = 'all';
+            let searchQuery = '';
+            let activeSort = 'name-asc';
+
+            const kabkotMapping = {
+                "7201": "Banggai",
+                "7202": "Poso",
+                "7203": "Donggala",
+                "7204": "Toli-Toli",
+                "7205": "Buol",
+                "7206": "Morowali",
+                "7207": "Banggai Kepulauan",
+                "7208": "Parigi Moutong",
+                "7209": "Tojo Una-Una",
+                "7210": "Sigi",
+                "7211": "Banggai Laut",
+                "7212": "Morowali Utara",
+                "7271": "Palu"
+            };
+
+            // Theme Switcher Setup
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            htmlElement.setAttribute('data-theme', savedTheme);
+
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+
+            // Initialize Supabase Client if credentials are provided
+            let supabaseClient = null;
+            if (typeof supabase !== 'undefined' && window.SUPABASE_URL && window.SUPABASE_KEY && window.SUPABASE_URL !== 'URL_PLACEHOLDER') {
+                try {
+                    supabaseClient = supabase.createClient(window.SUPABASE_URL, window.SUPABASE_KEY);
+                    console.log("Supabase Client initialized successfully.");
+                } catch (e) {
+                    console.error("Failed to initialize Supabase client:", e);
+                }
+            }
+
+            let companies = [];
+
+            // Group logs by company code
+            function processGroupedData(dataArray) {
+                const grouped = {};
+                
+                // Fallback map: jika database Supabase belum memiliki kolom survey_status,
+                // kita ambil dari data.js lokal yang memiliki status lengkap hasil scraping.
+                const localData = window.EMAIL_DATA || [];
+                const localStatusMap = {};
+                localData.forEach(r => {
+                    if (r.code && r.survey_status) {
+                        localStatusMap[r.code] = r.survey_status;
+                    }
+                });
+                
+                dataArray.forEach(record => {
+                    const code = record.code;
+                    if (!grouped[code]) {
+                        grouped[code] = {
+                            code: code,
+                            company_name: record.company_name,
+                            global_status: record.global_status,
+                            survey_status: record.survey_status || localStatusMap[code] || "-",
+                            email: record.email,
+                            history: []
+                        };
+                    } else if (record.survey_status && record.survey_status !== "-") {
+                        grouped[code].survey_status = record.survey_status;
+                    }
+                    
+                    if (record.status !== '-' && record.timestamp !== '-') {
+                        grouped[code].history.push({
+                            status: record.status,
+                            timestamp: record.timestamp,
+                            order: record.order
+                        });
+                    }
+                });
+                
+                // Sort history and determine final status
+                Object.values(grouped).forEach(comp => {
+                    comp.history.sort((a, b) => a.order - b.order);
+                    // Gunakan global_status yang sudah dihitung oleh database/scraper jika valid
+                    if (!comp.global_status || comp.global_status === '-') {
+                        if (comp.history.length > 0) {
+                            comp.global_status = comp.history[comp.history.length - 1].status;
+                        }
+                    }
+                });
+
+                return Object.values(grouped);
+            }
+
+            // Survey Status Badge Styling
+            function getSurveyStatusStyle(status) {
+                const s = status.toUpperCase().trim();
+                if (s === 'DRAFT') return { bg: 'rgba(245, 158, 11, 0.1)', color: '#f59e0b', border: 'rgba(245, 158, 11, 0.3)' };
+                if (s === 'OPEN') return { bg: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', border: 'rgba(59, 130, 246, 0.3)' };
+                if (s.includes('SUBMITTED') || s === 'APPROVED') return { bg: 'rgba(16, 185, 129, 0.1)', color: '#10b981', border: 'rgba(16, 185, 129, 0.3)' };
+                if (s === 'REJECTED') return { bg: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', border: 'rgba(239, 68, 68, 0.3)' };
+                return { bg: 'rgba(107, 114, 128, 0.1)', color: 'var(--text-secondary)', border: 'rgba(107, 114, 128, 0.3)' };
+            }
+
+            // Status Badge Colors & Styling
+            function getStatusStyle(status) {
+                const s = status.toLowerCase().trim();
+                if (s === 'bounced') return { bg: 'rgba(239, 68, 68, 0.1)', color: 'var(--color-bounced)', border: 'rgba(239, 68, 68, 0.3)' };
+                if (s === 'clicked') return { bg: 'rgba(139, 92, 246, 0.1)', color: 'var(--color-clicked)', border: 'rgba(139, 92, 246, 0.3)' };
+                if (s === 'opened') return { bg: 'rgba(59, 130, 246, 0.1)', color: 'var(--color-opened)', border: 'rgba(59, 130, 246, 0.3)' };
+                if (s === 'delivered') return { bg: 'rgba(16, 185, 129, 0.1)', color: 'var(--color-delivered)', border: 'rgba(16, 185, 129, 0.3)' };
+                if (s === '-') return { bg: 'rgba(107, 114, 128, 0.1)', color: 'var(--color-nolog)', border: 'rgba(107, 114, 128, 0.3)' };
+                return { bg: 'rgba(107, 114, 128, 0.1)', color: 'var(--color-queued)', border: 'rgba(107, 114, 128, 0.3)' };
+            }
+
+            // Calculate and display Stats & Filter Pill Count Badges
+            function updateFiltersAndStats() {
+                statTotalEl.textContent = companies.length;
+                countAll.textContent = companies.length;
+
+                const bounced = companies.filter(c => c.global_status.toLowerCase() === 'bounced').length;
+                const clicked = companies.filter(c => c.global_status.toLowerCase() === 'clicked').length;
+                const opened = companies.filter(c => c.global_status.toLowerCase() === 'opened').length;
+                const delivered = companies.filter(c => c.global_status.toLowerCase() === 'delivered').length;
+                const queued = companies.filter(c => c.global_status.toLowerCase() === 'queued').length;
+                const nolog = companies.filter(c => c.global_status.trim() === '-').length;
+
+                const submittedRespondent = companies.filter(c => c.survey_status.toUpperCase() === 'SUBMITTED RESPONDENT').length;
+                const openDocument = companies.filter(c => c.survey_status.toUpperCase() === 'OPEN').length;
+                const draftDocument = companies.filter(c => c.survey_status.toUpperCase() === 'DRAFT').length;
+
+                statBouncedEl.textContent = bounced;
+                statClickedEl.textContent = clicked;
+                statOpenedEl.textContent = opened;
+
+                document.getElementById('stat-submitted-respondent').textContent = submittedRespondent;
+                document.getElementById('stat-open-document').textContent = openDocument;
+                document.getElementById('stat-draft-document').textContent = draftDocument;
+
+                countBounced.textContent = bounced;
+                countClicked.textContent = clicked;
+                countOpened.textContent = opened;
+                countDelivered.textContent = delivered;
+                countQueued.textContent = queued;
+                countNolog.textContent = nolog;
+            }
+
+            // Render Pagination Buttons
+            function renderPagination(totalItems) {
+                paginationContainer.innerHTML = '';
+                const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+
+                if (totalPages <= 1) return; // No pagination needed if only 1 page
+
+                // Previous Button
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'page-btn';
+                prevBtn.innerHTML = '&laquo;';
+                prevBtn.disabled = currentPage === 1;
+                prevBtn.addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderList();
+                        window.scrollTo({ top: document.querySelector('.filter-panel').offsetTop - 20, behavior: 'smooth' });
+                    }
+                });
+                paginationContainer.appendChild(prevBtn);
+
+                // Page numbers
+                let startPage = Math.max(1, currentPage - 2);
+                let endPage = Math.min(totalPages, currentPage + 2);
+
+                if (startPage > 1) {
+                    const firstBtn = document.createElement('button');
+                    firstBtn.className = 'page-btn';
+                    firstBtn.textContent = '1';
+                    firstBtn.addEventListener('click', () => {
+                        currentPage = 1;
+                        renderList();
+                    });
+                    paginationContainer.appendChild(firstBtn);
+
+                    if (startPage > 2) {
+                        const dots = document.createElement('span');
+                        dots.className = 'page-btn';
+                        dots.textContent = '...';
+                        dots.style.cursor = 'default';
+                        dots.style.border = 'none';
+                        dots.style.background = 'none';
+                        paginationContainer.appendChild(dots);
+                    }
+                }
+
+                for (let i = startPage; i <= endPage; i++) {
+                    const pageBtn = document.createElement('button');
+                    pageBtn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+                    pageBtn.textContent = i;
+                    pageBtn.addEventListener('click', () => {
+                        currentPage = i;
+                        renderList();
+                        window.scrollTo({ top: document.querySelector('.filter-panel').offsetTop - 20, behavior: 'smooth' });
+                    });
+                    paginationContainer.appendChild(pageBtn);
+                }
+
+                if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                        const dots = document.createElement('span');
+                        dots.className = 'page-btn';
+                        dots.textContent = '...';
+                        dots.style.cursor = 'default';
+                        dots.style.border = 'none';
+                        dots.style.background = 'none';
+                        paginationContainer.appendChild(dots);
+                    }
+
+                    const lastBtn = document.createElement('button');
+                    lastBtn.className = 'page-btn';
+                    lastBtn.textContent = totalPages;
+                    lastBtn.addEventListener('click', () => {
+                        currentPage = totalPages;
+                        renderList();
+                    });
+                    paginationContainer.appendChild(lastBtn);
+                }
+
+                // Next Button
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'page-btn';
+                nextBtn.innerHTML = '&raquo;';
+                nextBtn.disabled = currentPage === totalPages;
+                nextBtn.addEventListener('click', () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderList();
+                        window.scrollTo({ top: document.querySelector('.filter-panel').offsetTop - 20, behavior: 'smooth' });
+                    }
+                });
+                paginationContainer.appendChild(nextBtn);
+            }
+
+            // Render Company List
+            function renderList() {
+                companyListContainer.innerHTML = '';
+                
+                // Filter
+                let filtered = companies.filter(comp => {
+                    const matchesSearch = 
+                        comp.company_name.toLowerCase().includes(searchQuery) ||
+                        comp.code.toLowerCase().includes(searchQuery) ||
+                        comp.email.toLowerCase().includes(searchQuery);
+                    
+                    const matchesFilter = 
+                        activeFilter === 'all' || 
+                        comp.global_status.toLowerCase() === activeFilter;
+                        
+                    const matchesSurveyFilter = 
+                        activeSurveyFilter === 'all' || 
+                        comp.survey_status.toUpperCase() === activeSurveyFilter.toUpperCase();
+                        
+                    const prefix = comp.code ? comp.code.substring(0, 4) : '';
+                    const matchesKabkotFilter = 
+                        activeKabkotFilter === 'all' || 
+                        (activeKabkotFilter === 'other' ? !kabkotMapping[prefix] : prefix === activeKabkotFilter);
+                        
+                    return matchesSearch && matchesFilter && matchesSurveyFilter && matchesKabkotFilter;
+                });
+
+                // Sort
+                filtered.sort((a, b) => {
+                    if (activeSort === 'name-asc') {
+                        return a.company_name.localeCompare(b.company_name);
+                    } else if (activeSort === 'name-desc') {
+                        return b.company_name.localeCompare(a.company_name);
+                    } else if (activeSort === 'status-severity') {
+                        const severity = { 'bounced': 0, 'queued': 1, 'delivered': 2, 'opened': 3, 'clicked': 4 };
+                        const sevA = severity[a.global_status.toLowerCase()] ?? 5;
+                        const sevB = severity[b.global_status.toLowerCase()] ?? 5;
+                        return sevA - sevB;
+                    } else if (activeSort === 'survey-status-asc') {
+                        const severity = { 'draft': 1, 'open': 2, 'submitted': 3, 'approved': 4 };
+                        const sevA = severity[a.survey_status.toLowerCase()] ?? 5;
+                        const sevB = severity[b.survey_status.toLowerCase()] ?? 5;
+                        if (sevA !== sevB) return sevA - sevB;
+                        return a.company_name.localeCompare(b.company_name);
+                    } else if (activeSort === 'survey-status-desc') {
+                        const severity = { 'draft': 1, 'open': 2, 'submitted': 3, 'approved': 4 };
+                        const sevA = severity[a.survey_status.toLowerCase()] ?? 5;
+                        const sevB = severity[b.survey_status.toLowerCase()] ?? 5;
+                        if (sevA !== sevB) return sevB - sevA;
+                        return a.company_name.localeCompare(b.company_name);
+                    }
+                    return 0;
+                });
+
+                // Update pagination buttons based on total items
+                renderPagination(filtered.length);
+
+                // Slice data for current page
+                const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+                const endIndex = startIndex + ITEMS_PER_PAGE;
+                const pageItems = filtered.slice(startIndex, endIndex);
+
+                if (filtered.length === 0) {
+                    companyListContainer.innerHTML = `
+                        <div class="empty-state">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <h3>Tidak ada data ditemukan</h3>
+                            <p>Coba gunakan kata kunci pencarian lain atau pilih filter status berbeda.</p>
+                        </div>
+                    `;
+                    paginationContainer.innerHTML = '';
+                    return;
+                }
+
+                pageItems.forEach(comp => {
+                    const card = document.createElement('div');
+                    card.className = 'company-card';
+                    
+                    const statusStyle = getStatusStyle(comp.global_status);
+                    
+                    // Create History List HTML
+                    let historyHTML = '';
+                    if (comp.history.length > 0) {
+                        historyHTML = `
+                            <div class="timeline-section">
+                                <div class="timeline-title">
+                                    <!-- Clock / History Icon -->
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    Riwayat Log Pengiriman
+                                </div>
+                                <div class="timeline-list">
+                                    ${comp.history.map(item => {
+                                        const stepStyle = getStatusStyle(item.status);
+                                        return `
+                                            <div class="timeline-item" style="--node-color: ${stepStyle.color}">
+                                                <div class="timeline-left">
+                                                    <span class="timeline-badge" style="--badge-bg: ${stepStyle.bg}; --badge-color: ${stepStyle.color}">${item.status}</span>
+                                                    <span class="timeline-email">${comp.email}</span>
+                                                </div>
+                                                <div class="timeline-time">${item.timestamp}</div>
+                                            </div>
+                                        `;
+                                    }).join('')}
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        historyHTML = `
+                            <div class="timeline-section" style="color: var(--text-muted); font-size: 0.85rem; font-style: italic;">
+                                Tidak ada data log email yang tercatat.
+                            </div>
+                        `;
+                    }
+
+                    const surveyStyle = getSurveyStatusStyle(comp.survey_status);
+
+                    card.innerHTML = `
+                        <div class="company-header">
+                            <div class="company-info">
+                                <div class="company-name-row">
+                                    <div class="company-name">${highlightText(comp.company_name, searchQuery)}</div>
+                                </div>
+                                <div class="company-meta">
+                                    <span class="code-badge">${highlightText(comp.code, searchQuery)}</span>
+                                    <span class="code-badge" style="background-color: rgba(99, 102, 241, 0.08); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.15); font-weight: 700;">
+                                        ${(comp.code && typeof comp.code === 'string') ? (kabkotMapping[comp.code.substring(0, 4)] || 'Lainnya') : 'Lainnya'}
+                                    </span>
+                                    <span class="code-badge" style="background-color: ${surveyStyle.bg}; color: ${surveyStyle.color}; border: 1px solid ${surveyStyle.border}; font-weight: 700; text-transform: uppercase;">
+                                        ${comp.survey_status}
+                                    </span>
+                                    <span class="company-email-text">${highlightText(comp.email, searchQuery)}</span>
+                                </div>
+                            </div>
+                            <div class="right-badges">
+                                <span class="company-status-badge" style="--badge-bg: ${statusStyle.bg}; --badge-color: ${statusStyle.color}; --badge-border: ${statusStyle.border}">
+                                    ${comp.global_status}
+                                </span>
+                                <div class="toggle-icon">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="details-wrapper">
+                            ${historyHTML}
+                        </div>
+                    `;
+
+                    // Handle Accordion Toggle Click
+                    card.addEventListener('click', (e) => {
+                        if (e.target.closest('a') || e.target.closest('button')) return;
+                        
+                        const isExpanded = card.classList.contains('expanded');
+                        const details = card.querySelector('.details-wrapper');
+                        
+                        // Close other cards for clean UI
+                        document.querySelectorAll('.company-card.expanded').forEach(c => {
+                            if (c !== card) {
+                                c.classList.remove('expanded');
+                                const otherDetails = c.querySelector('.details-wrapper');
+                                otherDetails.style.overflow = 'hidden';
+                                otherDetails.style.maxHeight = null;
+                            }
+                        });
+
+                        card.classList.toggle('expanded');
+                        
+                        if (!isExpanded) {
+                            // First set to scrollHeight so it transitions smoothly
+                            details.style.maxHeight = details.scrollHeight + "px";
+                            
+                            // Once the transition finishes, set max-height to none and overflow to visible to prevent clipping
+                            details.addEventListener('transitionend', function handler() {
+                                if (card.classList.contains('expanded')) {
+                                    details.style.maxHeight = 'none';
+                                    details.style.overflow = 'visible';
+                                }
+                                details.removeEventListener('transitionend', handler);
+                            });
+                        } else {
+                            // To collapse, set back to scrollHeight, hide overflow, then next tick set to null
+                            details.style.overflow = 'hidden';
+                            details.style.maxHeight = details.scrollHeight + "px";
+                            details.offsetHeight; // Force repaint
+                            details.style.maxHeight = null;
+                        }
+                    });
+                    
+                    companyListContainer.appendChild(card);
+                });
+            }
+
+            // Listeners
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value.toLowerCase().trim();
+                currentPage = 1; // Reset to first page
+                renderList();
+            });
+
+            sortSelect.addEventListener('change', (e) => {
+                activeSort = e.target.value;
+                currentPage = 1; // Reset to first page
+                renderList();
+            });
+
+            surveyFilterSelect.addEventListener('change', (e) => {
+                activeSurveyFilter = e.target.value;
+                currentPage = 1; // Reset to first page
+                renderList();
+            });
+
+            if (kabkotFilterSelect) {
+                kabkotFilterSelect.addEventListener('change', (e) => {
+                    activeKabkotFilter = e.target.value;
+                    currentPage = 1; // Reset to first page
+                    renderList();
+                });
+            }
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', () => {
+                    pills.forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                    activeFilter = pill.getAttribute('data-filter');
+                    currentPage = 1; // Reset to first page
+                    renderList();
+                });
+            });
+
+            // Asynchronously fetch data from Supabase or fallback to data.js
+            async function fetchDataAndRender() {
+                companyListContainer.innerHTML = `
+                    <div style="text-align: center; padding: 4rem 2rem; color: var(--text-secondary);">
+                        <svg style="animation: spin 1s linear infinite; margin: 0 auto 1rem; width: 32px; height: 32px; color: var(--primary);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle style="opacity: 0.25;" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path style="opacity: 0.75;" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <style>
+                            @keyframes spin {
+                                from { transform: rotate(0deg); }
+                                to { transform: rotate(360deg); }
+                            }
+                        </style>
+                        <h3>Memuat data terbaru...</h3>
+                    </div>
+                `;
+                
+                let sourceData = [];
+                let isSupabaseUsed = false;
+                
+                if (supabaseClient) {
+                    try {
+                        let allData = [];
+                        let fromOffset = 0;
+                        const limitVal = 1000;
+                        let keepFetching = true;
+
+                        while (keepFetching) {
+                            const { data, error } = await supabaseClient
+                                .from('email_logs')
+                                .select('*')
+                                .range(fromOffset, fromOffset + limitVal - 1);
+
+                            if (error) throw error;
+
+                            if (data && data.length > 0) {
+                                allData = allData.concat(data);
+                                fromOffset += limitVal;
+                                if (data.length < limitVal) {
+                                    keepFetching = false;
+                                }
+                            } else {
+                                keepFetching = false;
+                            }
+                        }
+
+                        if (allData.length > 0) {
+                            sourceData = allData;
+                            isSupabaseUsed = true;
+                            console.log(`Loaded ${allData.length} records dynamically from Supabase.`);
+                        }
+                    } catch (e) {
+                        console.warn("Supabase fetch failed, falling back to local data.js:", e);
+                    }
+                }
+                
+                if (sourceData.length === 0) {
+                    sourceData = window.EMAIL_DATA || [];
+                    console.log(`Loaded ${sourceData.length} records from local data.js.`);
+                }
+                
+                companies = processGroupedData(sourceData);
+                
+                // Update Last Updated Timestamp text
+                const lastUpdatedEl = document.getElementById('last-updated-text');
+                if (isSupabaseUsed) {
+                    const timestamps = sourceData.map(r => new Date(r.created_at)).filter(d => !isNaN(d));
+                    if (timestamps.length > 0) {
+                        const latestTime = new Date(Math.max(...timestamps));
+                        const formatted = latestTime.toLocaleString('id-ID', { 
+                            day: '2-digit', 
+                            month: 'short', 
+                            year: 'numeric', 
+                            hour: '2-digit', 
+                            minute: '2-digit', 
+                            second: '2-digit' 
+                        });
+                        lastUpdatedEl.textContent = `Terakhir Diperbarui: ${formatted} (Live DB)`;
+                    } else {
+                        lastUpdatedEl.textContent = `Terakhir Diperbarui: Baru saja (Live DB)`;
+                    }
+                } else if (window.LAST_UPDATED) {
+                    lastUpdatedEl.textContent = `Terakhir Diperbarui: ${window.LAST_UPDATED}`;
+                } else {
+                    lastUpdatedEl.textContent = `Terakhir Diperbarui: Hari ini (Lokal)`;
+                }
+                
+                currentPage = 1; // Reset page on refresh/fetch
+                updateFiltersAndStats();
+                renderList();
+            }
+
+            // Refresh button handler
+            const refreshBtn = document.getElementById('btn-refresh');
+            if (refreshBtn) {
+                refreshBtn.addEventListener('click', () => {
+                    fetchDataAndRender();
+                });
+            }
+
+            // Initial Execution
+            fetchDataAndRender();
+        });
+    </script>
+</body>
+</html>

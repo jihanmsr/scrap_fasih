@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="dark">
 
+<html data-theme="dark" lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fasih Email Delivery Dashboard</title>
-    <meta name="description"
-        content="Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Supabase JS Library -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-    <!-- Vanilla CSS Styles -->
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fasih Email Delivery Dashboard</title>
+<meta content="Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB" name="description"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Supabase JS Library -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Vanilla CSS Styles -->
+<style>
         :root[data-theme="dark"] {
             --bg-color: #0b0f19;
             --bg-gradient: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
@@ -105,8 +101,10 @@
             color: var(--text-primary);
             font-family: 'Plus Jakarta Sans', sans-serif;
             min-height: 100vh;
-            padding: 2.5rem 1.5rem;
+            margin: 0;
+            padding: 0;
             line-height: 1.5;
+            overflow: hidden;
         }
 
         .container {
@@ -1053,482 +1051,758 @@
                 min-width: 100px;
             }
         }
-    </style>
+    
+        /* App Layout Styles */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .app-layout {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            background-color: var(--bg-color);
+        }
+        
+        .sidebar {
+            width: 280px;
+            background-color: var(--card-bg);
+            border-right: 1px solid var(--card-border);
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem 1rem;
+            z-index: 10;
+        }
+
+        .sidebar .brand-title {
+            margin-bottom: 2rem;
+            padding-left: 0.5rem;
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .sidebar-nav .btn-tab {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0.875rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .sidebar-nav .btn-tab:hover {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--primary);
+        }
+
+        .sidebar-nav .btn-tab.active {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .main-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content > header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 1.5rem;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .main-content > header .brand-title h1 {
+            font-size: 1.8rem;
+            color: var(--text);
+            margin: 0 0 0.5rem 0;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+        }
+
+        .main-content > header .brand-title p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Override old dashboard container */
+        .dashboard-container {
+            max-width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .app-layout {
+                flex-direction: column;
+                height: auto;
+                overflow: auto;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid var(--card-border);
+                padding: 1rem;
+            }
+
+            .sidebar .brand-title {
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            .sidebar-nav {
+                flex-direction: row;
+                overflow-x: auto;
+                gap: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+
+            .sidebar-nav .btn-tab {
+                padding: 0.5rem 0.875rem;
+                font-size: 0.85rem;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+
+            .sidebar-footer {
+                display: none !important;
+            }
+
+            .main-content {
+                padding: 1.5rem 1rem;
+                overflow-y: visible;
+                height: auto;
+            }
+        }
+</style>
 </head>
-
 <body>
-
-    <div class="container">
-
+<div class="app-layout">
+    <aside class="sidebar">
+        <div class="brand-title">
+            <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 800; color: var(--primary); margin: 0; letter-spacing: -0.025em;">Fasih SM</h2>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 5px 0 0 0; font-weight: 500;">Sensus Ekonomi 2026</p>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="btn-tab active" id="tab-btn-se_umum" onclick="switchTab('se_umum')">
+                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                    <line x1="18" x2="18" y1="20" y2="10"></line>
+                    <line x1="12" x2="12" y1="20" y2="4"></line>
+                    <line x1="6" x2="6" y1="20" y2="14"></line>
+                </svg>
+                Sensus Ekonomi 2026 (Semua Usaha)
+            </button>
+            <button class="btn-tab" id="tab-btn-se_ub" onclick="switchTab('se_ub')">
+                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                    <line x1="18" x2="18" y1="20" y2="10"></line>
+                    <line x1="12" x2="12" y1="20" y2="4"></line>
+                    <line x1="6" x2="6" y1="20" y2="14"></line>
+                </svg>
+                Sensus Ekonomi 2026 (UB)
+            </button>
+            <button class="btn-tab" id="tab-btn-email" onclick="switchTab('email')">
+                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Tracker Pengiriman Email UB
+            </button>
+            <button class="btn-tab" id="tab-btn-assign" onclick="switchTab('assign')">
+                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Status Assign Petugas
+            </button>
+        </nav>
+        
+        <div class="sidebar-footer" style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--card-border); text-align: center;">
+            <div id="last-updated-text" style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">
+                Memuat status...
+            </div>
+        </div>
+    </aside>
+    <main class="main-content">
         <header>
             <div class="brand-title">
-                <h1 id="main-header">Dashboard Rekap</h1>
-                <p id="main-subheader">Rekap Progress Pendataan Sensus Ekonomi 2026 & Sensus Ekonomi UB</p>
-                <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; font-weight: 500;"
-                    id="last-updated-text">
-                    Terakhir Diperbarui: -
-                </p>
+                <h1 id="main-header" style="font-size: 1.75rem; font-weight: 800; font-family: 'Outfit', sans-serif;">Fasih Email Delivery</h1>
+                <p id="main-subheader" style="color: var(--text-secondary); font-size: 0.95rem;">Monitoring Status Pengiriman Email Sensus Ekonomi 2026 - UB</p>
             </div>
             <div class="header-actions">
-                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Theme">
+                <button aria-label="Toggle Theme" class="theme-toggle" id="theme-toggle-btn">
                     <!-- Sun Icon (for light theme) -->
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                    <svg class="sun-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                     </svg>
                     <!-- Moon Icon (for dark theme) -->
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    <svg class="moon-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                     </svg>
                 </button>
                 <button class="btn-action" id="btn-refresh" title="Muat Ulang Halaman">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round">
+                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
                         <polyline points="23 4 23 10 17 10"></polyline>
                         <polyline points="1 20 1 14 7 14"></polyline>
                         <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
                     </svg>
                     Refresh
                 </button>
-                <a href="./bounced_emails.xlsx" class="btn-action" id="btn-download-xlsx" download
-                    style="display: none;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round">
+                <a class="btn-action" download="" href="./bounced_emails.xlsx" id="btn-download-xlsx" style="display: none;">
+                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                         <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                        <line x1="12" x2="12" y1="15" y2="3"></line>
                     </svg>
                     Unduh Excel Bounced
                 </a>
-                <button class="btn-action" id="btn-download-backup-csv" title="Unduh Backup Data UB (CSV)"
-                    style="display: none;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round">
+                <button class="btn-action" id="btn-download-backup-csv" style="display: none;" title="Unduh Backup Data UB (CSV)">
+                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                         <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                        <line x1="12" x2="12" y1="15" y2="3"></line>
                     </svg>
                     Unduh CSV Backup UB
                 </button>
             </div>
         </header>
-
-        <!-- Tabs Navigation -->
-        <div class="tabs-navigation">
-            <button id="tab-btn-se_umum" class="btn-tab active" onclick="switchTab('se_umum')">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
-                    <line x1="18" y1="20" x2="18" y2="10"></line>
-                    <line x1="12" y1="20" x2="12" y2="4"></line>
-                    <line x1="6" y1="20" x2="6" y2="14"></line>
-                </svg>
-                Sensus Ekonomi 2026 (Semua Usaha)
-            </button>
-            <button id="tab-btn-se_ub" class="btn-tab" onclick="switchTab('se_ub')">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
-                    <line x1="18" y1="20" x2="18" y2="10"></line>
-                    <line x1="12" y1="20" x2="12" y2="4"></line>
-                    <line x1="6" y1="20" x2="6" y2="14"></line>
-                </svg>
-                Sensus Ekonomi 2026 (UB)
-            </button>
-            <button id="tab-btn-email" class="btn-tab" onclick="switchTab('email')">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                Tracker Pengiriman Email UB
-            </button>
-        </div>
-
-        <!-- Tab Content: Email Tracker -->
-        <div id="tab-content-email" class="tab-content" style="display: none;">
-            <!-- Summary Stats Sections -->
-            <div class="stats-section">
-                <h3 class="section-title-stats">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
+<!-- Tab Content: Email Tracker -->
+<div class="tab-content" id="tab-content-email" style="display: none;">
+<!-- Summary Stats Sections -->
+<div class="stats-section">
+<h3 class="section-title-stats">
+<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.5rem;" viewbox="0 0 24 24" width="16">
+<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+<polyline points="22,6 12,13 2,6"></polyline>
+</svg>
                     Status Pengiriman Email
                 </h3>
-                <div class="stats-grid" id="stats-container">
-                    <div class="stat-card" style="--stat-color: var(--primary);">
-                        <span class="card-category-tag">Email</span>
-                        <div class="stat-label">Total Perusahaan</div>
-                        <div class="stat-value" id="stat-total-companies">0</div>
-                        <div class="stat-subtext">Semua record terdaftar</div>
-                    </div>
-                    <div class="stat-card" style="--stat-color: var(--color-bounced);">
-                        <span class="card-category-tag">Email</span>
-                        <div class="stat-label">Bounced Emails</div>
-                        <div class="stat-value" id="stat-bounced" style="color: var(--color-bounced);">0</div>
-                        <div class="stat-subtext">Gagal terkirim balik</div>
-                    </div>
-                    <div class="stat-card" style="--stat-color: var(--color-clicked);">
-                        <span class="card-category-tag">Email</span>
-                        <div class="stat-label">Link Clicked</div>
-                        <div class="stat-value" id="stat-clicked" style="color: var(--color-clicked);">0</div>
-                        <div class="stat-subtext">Responden membuka link</div>
-                    </div>
-                    <div class="stat-card" style="--stat-color: var(--color-opened);">
-                        <span class="card-category-tag">Email</span>
-                        <div class="stat-label">Opened Emails</div>
-                        <div class="stat-value" id="stat-opened" style="color: var(--color-opened);">0</div>
-                        <div class="stat-subtext">Dibaca oleh responden</div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Filter Controls -->
-            <div class="filter-panel">
-                <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem;">
-                    <div class="search-wrapper" style="flex: 2 1 300px;">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                        <input type="text" id="search-input" class="search-input"
-                            placeholder="Cari Nama Perusahaan, Kode Identitas, atau Email...">
-                    </div>
-                    <div style="display: flex; gap: 0.5rem; flex: 3 1 auto; flex-wrap: wrap;">
-                        <select id="kabkot-filter-select" class="sort-select" style="flex: 1 1 180px; height: 48px;">
-                            <option value="all">Semua Kabupaten/Kota</option>
-                            <option value="7201">Banggai</option>
-                            <option value="7207">Banggai Kepulauan</option>
-                            <option value="7211">Banggai Laut</option>
-                            <option value="7205">Buol</option>
-                            <option value="7203">Donggala</option>
-                            <option value="7206">Morowali</option>
-                            <option value="7212">Morowali Utara</option>
-                            <option value="7271">Palu</option>
-                            <option value="7208">Parigi Moutong</option>
-                            <option value="7202">Poso</option>
-                            <option value="7210">Sigi</option>
-                            <option value="7209">Tojo Una-Una</option>
-                            <option value="7204">Toli-Toli</option>
-                        </select>
-                        <select id="survey-filter-select" class="sort-select" style="flex: 1 1 180px; height: 48px;">
-                            <option value="all">Semua Status Dokumen</option>
-                            <option value="SUBMITTED RESPONDENT">SUBMITTED RESPONDENT</option>
-                            <option value="OPEN">OPEN</option>
-                            <option value="DRAFT">DRAFT</option>
-                            <option value="-">- (Tanpa Status)</option>
-                        </select>
-                        <select id="sort-select" class="sort-select" style="flex: 1 1 180px; height: 48px;">
-                            <option value="name-asc">Nama Perusahaan (A-Z)</option>
-                            <option value="name-desc">Nama Perusahaan (Z-A)</option>
-                            <option value="status-severity">Urutkan dari Bounced</option>
-                            <option value="survey-status-asc">Status Dokumen (Draft &rarr; Approved)</option>
-                            <option value="survey-status-desc">Status Dokumen (Approved &rarr; Draft)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="pills-group">
-                    <span class="filter-title">Filter Status:</span>
-                    <button class="pill active" data-filter="all" id="filter-all">
+<div class="stats-grid" id="stats-container">
+<div class="stat-card" style="--stat-color: var(--primary);">
+<span class="card-category-tag">Email</span>
+<div class="stat-label">Total Perusahaan</div>
+<div class="stat-value" id="stat-total-companies">0</div>
+<div class="stat-subtext">Semua record terdaftar</div>
+</div>
+<div class="stat-card" style="--stat-color: var(--color-bounced);">
+<span class="card-category-tag">Email</span>
+<div class="stat-label">Bounced Emails</div>
+<div class="stat-value" id="stat-bounced" style="color: var(--color-bounced);">0</div>
+<div class="stat-subtext">Gagal terkirim balik</div>
+</div>
+<div class="stat-card" style="--stat-color: var(--color-clicked);">
+<span class="card-category-tag">Email</span>
+<div class="stat-label">Link Clicked</div>
+<div class="stat-value" id="stat-clicked" style="color: var(--color-clicked);">0</div>
+<div class="stat-subtext">Responden membuka link</div>
+</div>
+<div class="stat-card" style="--stat-color: var(--color-opened);">
+<span class="card-category-tag">Email</span>
+<div class="stat-label">Opened Emails</div>
+<div class="stat-value" id="stat-opened" style="color: var(--color-opened);">0</div>
+<div class="stat-subtext">Dibaca oleh responden</div>
+</div>
+</div>
+</div>
+<!-- Filter Controls -->
+<div class="filter-panel">
+<div class="search-row" style="flex-wrap: wrap; gap: 0.75rem;">
+<div class="search-wrapper" style="flex: 2 1 300px;">
+<svg class="search-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<input class="search-input" id="search-input" placeholder="Cari Nama Perusahaan, Kode Identitas, atau Email..." type="text"/>
+</div>
+<div style="display: flex; gap: 0.5rem; flex: 3 1 auto; flex-wrap: wrap;">
+<select class="sort-select" id="kabkot-filter-select" style="flex: 1 1 180px; height: 48px;">
+<option value="all">Semua Kabupaten/Kota</option>
+<option value="7201">Banggai</option>
+<option value="7207">Banggai Kepulauan</option>
+<option value="7211">Banggai Laut</option>
+<option value="7205">Buol</option>
+<option value="7203">Donggala</option>
+<option value="7206">Morowali</option>
+<option value="7212">Morowali Utara</option>
+<option value="7271">Palu</option>
+<option value="7208">Parigi Moutong</option>
+<option value="7202">Poso</option>
+<option value="7210">Sigi</option>
+<option value="7209">Tojo Una-Una</option>
+<option value="7204">Toli-Toli</option>
+</select>
+<select class="sort-select" id="survey-filter-select" style="flex: 1 1 180px; height: 48px;">
+<option value="all">Semua Status Dokumen</option>
+<option value="SUBMITTED RESPONDENT">SUBMITTED RESPONDENT</option>
+<option value="OPEN">OPEN</option>
+<option value="DRAFT">DRAFT</option>
+<option value="-">- (Tanpa Status)</option>
+</select>
+<select class="sort-select" id="sort-select" style="flex: 1 1 180px; height: 48px;">
+<option value="name-asc">Nama Perusahaan (A-Z)</option>
+<option value="name-desc">Nama Perusahaan (Z-A)</option>
+<option value="status-severity">Urutkan dari Bounced</option>
+<option value="survey-status-asc">Status Dokumen (Draft → Approved)</option>
+<option value="survey-status-desc">Status Dokumen (Approved → Draft)</option>
+</select>
+</div>
+</div>
+<div class="pills-group">
+<span class="filter-title">Filter Status:</span>
+<button class="pill active" data-filter="all" id="filter-all">
                         Semua <span class="pill-count" id="count-all">0</span>
-                    </button>
-                    <button class="pill" data-filter="bounced" style="--pill-bg: var(--color-bounced)"
-                        id="filter-bounced">
+</button>
+<button class="pill" data-filter="bounced" id="filter-bounced" style="--pill-bg: var(--color-bounced)">
                         Bounced <span class="pill-count" id="count-bounced">0</span>
-                    </button>
-                    <button class="pill" data-filter="clicked" style="--pill-bg: var(--color-clicked)"
-                        id="filter-clicked">
+</button>
+<button class="pill" data-filter="clicked" id="filter-clicked" style="--pill-bg: var(--color-clicked)">
                         Clicked <span class="pill-count" id="count-clicked">0</span>
-                    </button>
-                    <button class="pill" data-filter="opened" style="--pill-bg: var(--color-opened)" id="filter-opened">
+</button>
+<button class="pill" data-filter="opened" id="filter-opened" style="--pill-bg: var(--color-opened)">
                         Opened <span class="pill-count" id="count-opened">0</span>
-                    </button>
-                    <button class="pill" data-filter="delivered" style="--pill-bg: var(--color-delivered)"
-                        id="filter-delivered">
+</button>
+<button class="pill" data-filter="delivered" id="filter-delivered" style="--pill-bg: var(--color-delivered)">
                         Delivered <span class="pill-count" id="count-delivered">0</span>
-                    </button>
-                    <button class="pill" data-filter="queued" style="--pill-bg: var(--color-queued)" id="filter-queued">
+</button>
+<button class="pill" data-filter="queued" id="filter-queued" style="--pill-bg: var(--color-queued)">
                         Queued <span class="pill-count" id="count-queued">0</span>
-                    </button>
-                    <button class="pill" data-filter="-" style="--pill-bg: var(--color-nolog)" id="filter-nolog">
+</button>
+<button class="pill" data-filter="-" id="filter-nolog" style="--pill-bg: var(--color-nolog)">
                         Belum Dikirim <span class="pill-count" id="count-nolog">0</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Main Dashboard List -->
-            <main>
-                <div class="company-list" id="company-list">
-                    <!-- Data dynamically loaded -->
-                </div>
-
-                <!-- Pagination Container -->
-                <div class="pagination" id="pagination">
-                    <!-- Pagination buttons dynamically loaded -->
-                </div>
-            </main>
-
-        </div><!-- End Tab Content: Email Tracker -->
-
-        <!-- Tab Content: Sensus Ekonomi Umum Dashboard -->
-        <div id="tab-content-se_umum" class="tab-content">
-            <!-- Welcome Section -->
-            <div
-                style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
-                <div>
-                    <h2
-                        style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">
-                        Analitik <span
-                            style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres
+</button>
+</div>
+</div>
+<!-- Main Dashboard List -->
+<main>
+<div class="company-list" id="company-list">
+<!-- Data dynamically loaded -->
+</div>
+<!-- Pagination Container -->
+<div class="pagination" id="pagination">
+<!-- Pagination buttons dynamically loaded -->
+</div>
+</main>
+</div><!-- End Tab Content: Email Tracker -->
+<!-- Tab Content: Sensus Ekonomi Umum Dashboard -->
+<div class="tab-content" id="tab-content-se_umum">
+<!-- Welcome Section -->
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+<div>
+<h2 style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">
+                        Analitik <span style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres
                             Harian</span> (Semua Usaha)</h2>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus Ekonomi
+<p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus Ekonomi
                         2026 di Sulawesi Tengah</p>
-                </div>
-                <div>
-                    <div
-                        style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 1rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <span
-                            style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; display: inline-block; animation: pulse 2s infinite;"></span>
-                        <span style="font-size: 0.75rem; font-weight: 700; color: #10b981;">LIVE SYNC ACTIVE</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stats Grid for SE Umum -->
-            <div class="stats-grid" id="se_umum-stats-container">
-                <div class="stat-card" style="--stat-color: var(--primary);">
-                    <span class="card-category-tag">Umum</span>
-                    <div class="stat-label">Total Usaha (Prelist)</div>
-                    <div class="stat-value" id="se_umum-stat-total-prelist">0</div>
-                    <div class="stat-subtext" id="se_umum-new-today-wrapper">
-                        <span style="color: var(--primary); font-weight: 700;" id="se_umum-stat-new-today">+0</span>
+</div>
+<div>
+<div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 1rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+<span style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; display: inline-block; animation: pulse 2s infinite;"></span>
+<span style="font-size: 0.75rem; font-weight: 700; color: #10b981;">LIVE SYNC ACTIVE</span>
+</div>
+</div>
+</div>
+<!-- Stats Grid for SE Umum -->
+<div class="stats-grid" id="se_umum-stats-container">
+<div class="stat-card" style="--stat-color: var(--primary);">
+<span class="card-category-tag">Umum</span>
+<div class="stat-label">Total Usaha (Prelist)</div>
+<div class="stat-value" id="se_umum-stat-total-prelist">0</div>
+<div class="stat-subtext" id="se_umum-new-today-wrapper">
+<span id="se_umum-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span>
                         hari ini
                     </div>
-                </div>
-                <div class="stat-card" style="--stat-color: #f59e0b;">
-                    <span class="card-category-tag">Umum</span>
-                    <div class="stat-label">Draft</div>
-                    <div class="stat-value" id="se_umum-stat-draft" style="color: #f59e0b;">0</div>
-                    <div class="stat-subtext">Dokumen berstatus draft</div>
-                </div>
-                <div class="stat-card" style="--stat-color: #3b82f6;">
-                    <span class="card-category-tag">Umum</span>
-                    <div class="stat-label">Open</div>
-                    <div class="stat-value" id="se_umum-stat-open" style="color: #3b82f6;">0</div>
-                    <div class="stat-subtext">Dokumen berstatus open</div>
-                </div>
-                <div class="stat-card" style="--stat-color: var(--color-delivered);">
-                    <span class="card-category-tag">Umum</span>
-                    <div class="stat-label">Submitted (Selesai)</div>
-                    <div class="stat-value" id="se_umum-stat-submitted" style="color: var(--color-delivered);">0</div>
-                    <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
-                        <div
-                            style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
-                            <div id="se_umum-progress-bar"
-                                style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
+</div>
+<div class="stat-card" style="--stat-color: #f59e0b;">
+<span class="card-category-tag">Umum</span>
+<div class="stat-label">Draft</div>
+<div class="stat-value" id="se_umum-stat-draft" style="color: #f59e0b;">0</div>
+<div class="stat-subtext">Dokumen berstatus draft</div>
+</div>
+<div class="stat-card" style="--stat-color: #3b82f6;">
+<span class="card-category-tag">Umum</span>
+<div class="stat-label">Open</div>
+<div class="stat-value" id="se_umum-stat-open" style="color: #3b82f6;">0</div>
+<div class="stat-subtext">Dokumen berstatus open</div>
+</div>
+<div class="stat-card" style="--stat-color: var(--color-delivered);">
+<span class="card-category-tag">Umum</span>
+<div class="stat-label">Submitted (Selesai)</div>
+<div class="stat-value" id="se_umum-stat-submitted" style="color: var(--color-delivered);">0</div>
+<div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
+<div style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
+<div id="se_umum-progress-bar" style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
+</div>
+<span id="se_umum-stat-percentage" style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
+</div>
+<div id="se_umum-stat-kenaikan" style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; font-weight: 600;">
+                        +0% hari ini | +0% kemarin
+                    </div>
+</div>
+<div class="stat-card" style="--stat-color: var(--color-bounced);">
+<span class="card-category-tag">Umum</span>
+<div class="stat-label">Sisa Usaha</div>
+<div class="stat-value" id="se_umum-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
+<div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
+<span>Progres Hari Ini: <span id="se_umum-stat-today-completed" style="font-weight:700;">0</span></span>
+<span id="se_umum-stat-vs-yesterday-wrapper"></span>
+</div>
+</div>
+</div>
+<!-- Chart Section -->
+<div class="stats-section" id="se_umum-chart-section" style="margin-top: 1rem;">
+<div class="stat-card" style="padding: 1.5rem; --stat-color: var(--primary);">
+<h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+<div style="display: flex; align-items: center; gap: 0.5rem;">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="color: var(--primary);" viewbox="0 0 24 24" width="18">
+<path d="M18 20V10"></path>
+<path d="M12 20V4"></path>
+<path d="M6 20V14"></path>
+</svg>
+                            Grafik Progres Capaian
                         </div>
-                        <span id="se_umum-stat-percentage"
-                            style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
-                    </div>
-                </div>
-                <div class="stat-card" style="--stat-color: var(--color-bounced);">
-                    <span class="card-category-tag">Umum</span>
-                    <div class="stat-label">Sisa Usaha</div>
-                    <div class="stat-value" id="se_umum-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
-                    <div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                        <span>Progres Hari Ini: <span id="se_umum-stat-today-completed"
-                                style="font-weight:700;">0</span></span>
-                        <span id="se_umum-stat-vs-yesterday-wrapper"></span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Table Section -->
-            <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
-                    <h3
-                        style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">
+<button class="btn-action" onclick="window.toggleChartType('se_umum')" style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 0.5rem;">
+                            🔄 Ganti Tipe Grafik
+                        </button>
+</h3>
+<div style="position: relative; height: 320px; width: 100%;">
+<canvas id="se_umum-chart"></canvas>
+</div>
+</div>
+</div>
+<!-- Table Section -->
+<div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
+<h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">
                         Rincian per Kabupaten/Kota</h3>
-                    <div class="search-wrapper" style="max-width: 300px; width: 100%;">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                        <input type="text" id="se_umum-search-input" class="search-input"
-                            placeholder="Cari kabupaten/kota...">
-                    </div>
-                </div>
-            </div>
-
-            <div class="ipas-table-wrapper">
-                <table class="ipas-table">
-                    <thead>
-                        <tr>
-                            <th style="font-family: 'Outfit', sans-serif;">Kabupaten/Kota</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Target</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b;">Draft</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6;">Open</th>
-                            <th
-                                style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered);">
+<div class="search-wrapper" style="max-width: 300px; width: 100%;">
+<svg class="search-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<input class="search-input" id="se_umum-search-input" placeholder="Cari kabupaten/kota..." type="text"/>
+</div>
+</div>
+</div>
+<div class="ipas-table-wrapper">
+<table class="ipas-table">
+<thead>
+<tr>
+<th style="font-family: 'Outfit', sans-serif;">Kabupaten/Kota</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Target</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b;">Draft</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6;">Open</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered);">
                                 Submitted</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">% Capaian</th>
-                            <th
-                                style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-bounced);">
+<th style="font-family: 'Outfit', sans-serif; text-align: center;">% Capaian</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-bounced);">
                                 Sisa Usaha</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini |
+<th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini |
                                 Kemarin)</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini |
+<th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini |
                                 Kemarin)</th>
-                        </tr>
-                    </thead>
-                    <tbody id="se_umum-table-body">
-                        <!-- Loaded dynamically -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Tab Content: Sensus Ekonomi UB Dashboard -->
-        <div id="tab-content-se_ub" class="tab-content" style="display: none;">
-            <!-- Welcome Section -->
-            <div
-                style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
-                <div>
-                    <h2
-                        style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">
-                        Analitik <span
-                            style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres
+</tr>
+</thead>
+<tbody id="se_umum-table-body">
+<!-- Loaded dynamically -->
+</tbody>
+</table>
+</div>
+</div>
+<!-- Tab Content: Sensus Ekonomi UB Dashboard -->
+<div class="tab-content" id="tab-content-se_ub" style="display: none;">
+<!-- Welcome Section -->
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+<div>
+<h2 style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">
+                        Analitik <span style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres
                             Harian</span> (UB)</h2>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus Ekonomi
+<p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus Ekonomi
                         2026 - UB di Sulawesi Tengah</p>
-                </div>
-                <div>
-                    <div
-                        style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 1rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <span
-                            style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; display: inline-block; animation: pulse 2s infinite;"></span>
-                        <span style="font-size: 0.75rem; font-weight: 700; color: #10b981;">LIVE SYNC ACTIVE</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stats Grid for SE UB -->
-            <div class="stats-grid" id="se_ub-stats-container">
-                <div class="stat-card" style="--stat-color: var(--primary);">
-                    <span class="card-category-tag">UB</span>
-                    <div class="stat-label">Total Usaha (Prelist)</div>
-                    <div class="stat-value" id="se_ub-stat-total-prelist">0</div>
-                    <div class="stat-subtext" id="se_ub-new-today-wrapper">
-                        <span style="color: var(--primary); font-weight: 700;" id="se_ub-stat-new-today">+0</span> hari
+</div>
+<div>
+<div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 1rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+<span style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; display: inline-block; animation: pulse 2s infinite;"></span>
+<span style="font-size: 0.75rem; font-weight: 700; color: #10b981;">LIVE SYNC ACTIVE</span>
+</div>
+</div>
+</div>
+<!-- Stats Grid for SE UB -->
+<div class="stats-grid" id="se_ub-stats-container">
+<div class="stat-card" style="--stat-color: var(--primary);">
+<span class="card-category-tag">UB</span>
+<div class="stat-label">Total Usaha (Prelist)</div>
+<div class="stat-value" id="se_ub-stat-total-prelist">0</div>
+<div class="stat-subtext" id="se_ub-new-today-wrapper">
+<span id="se_ub-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span> hari
                         ini
                     </div>
-                </div>
-                <div class="stat-card" style="--stat-color: #f59e0b;">
-                    <span class="card-category-tag">UB</span>
-                    <div class="stat-label">Draft</div>
-                    <div class="stat-value" id="se_ub-stat-draft" style="color: #f59e0b;">0</div>
-                    <div class="stat-subtext">Dokumen berstatus draft</div>
-                </div>
-                <div class="stat-card" style="--stat-color: #3b82f6;">
-                    <span class="card-category-tag">UB</span>
-                    <div class="stat-label">Open</div>
-                    <div class="stat-value" id="se_ub-stat-open" style="color: #3b82f6;">0</div>
-                    <div class="stat-subtext">Dokumen berstatus open</div>
-                </div>
-                <div class="stat-card" style="--stat-color: var(--color-delivered);">
-                    <span class="card-category-tag">UB</span>
-                    <div class="stat-label">Submitted (Selesai)</div>
-                    <div class="stat-value" id="se_ub-stat-submitted" style="color: var(--color-delivered);">0</div>
-                    <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
-                        <div
-                            style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
-                            <div id="se_ub-progress-bar"
-                                style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
+</div>
+<div class="stat-card" style="--stat-color: #f59e0b;">
+<span class="card-category-tag">UB</span>
+<div class="stat-label">Draft</div>
+<div class="stat-value" id="se_ub-stat-draft" style="color: #f59e0b;">0</div>
+<div class="stat-subtext">Dokumen berstatus draft</div>
+</div>
+<div class="stat-card" style="--stat-color: #3b82f6;">
+<span class="card-category-tag">UB</span>
+<div class="stat-label">Open</div>
+<div class="stat-value" id="se_ub-stat-open" style="color: #3b82f6;">0</div>
+<div class="stat-subtext">Dokumen berstatus open</div>
+</div>
+<div class="stat-card" style="--stat-color: var(--color-delivered);">
+<span class="card-category-tag">UB</span>
+<div class="stat-label">Submitted (Selesai)</div>
+<div class="stat-value" id="se_ub-stat-submitted" style="color: var(--color-delivered);">0</div>
+<div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
+<div style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
+<div id="se_ub-progress-bar" style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
+</div>
+<span id="se_ub-stat-percentage" style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
+</div>
+<div id="se_ub-stat-kenaikan" style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; font-weight: 600;">
+                        +0% hari ini | +0% kemarin
+                    </div>
+</div>
+<div class="stat-card" style="--stat-color: var(--color-bounced);">
+<span class="card-category-tag">UB</span>
+<div class="stat-label">Sisa Usaha</div>
+<div class="stat-value" id="se_ub-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
+<div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
+<span>Progres Hari Ini: <span id="se_ub-stat-today-completed" style="font-weight:700;">0</span></span>
+<span id="se_ub-stat-vs-yesterday-wrapper"></span>
+</div>
+</div>
+</div>
+<!-- Chart Section -->
+<div class="stats-section" id="se_ub-chart-section" style="margin-top: 1rem;">
+<div class="stat-card" style="padding: 1.5rem; --stat-color: var(--primary);">
+<h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+<div style="display: flex; align-items: center; gap: 0.5rem;">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="color: var(--primary);" viewbox="0 0 24 24" width="18">
+<path d="M18 20V10"></path>
+<path d="M12 20V4"></path>
+<path d="M6 20V14"></path>
+</svg>
+                            Grafik Progres Capaian
                         </div>
-                        <span id="se_ub-stat-percentage"
-                            style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
-                    </div>
-                </div>
-                <div class="stat-card" style="--stat-color: var(--color-bounced);">
-                    <span class="card-category-tag">UB</span>
-                    <div class="stat-label">Sisa Usaha</div>
-                    <div class="stat-value" id="se_ub-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
-                    <div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                        <span>Progres Hari Ini: <span id="se_ub-stat-today-completed"
-                                style="font-weight:700;">0</span></span>
-                        <span id="se_ub-stat-vs-yesterday-wrapper"></span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Table Section -->
-            <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
-                    <h3
-                        style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">
+<button class="btn-action" onclick="window.toggleChartType('se_ub')" style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 0.5rem;">
+                            🔄 Ganti Tipe Grafik
+                        </button>
+</h3>
+<div style="position: relative; height: 320px; width: 100%;">
+<canvas id="se_ub-chart"></canvas>
+</div>
+</div>
+</div>
+<!-- Table Section -->
+<div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
+<h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">
                         Rincian per Kabupaten/Kota</h3>
-                    <div class="search-wrapper" style="max-width: 300px; width: 100%;">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                        <input type="text" id="se_ub-search-input" class="search-input"
-                            placeholder="Cari kabupaten/kota...">
-                    </div>
-                </div>
-            </div>
-
-            <div class="ipas-table-wrapper">
-                <table class="ipas-table">
-                    <thead>
-                        <tr>
-                            <th style="font-family: 'Outfit', sans-serif;">Kabupaten/Kota</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Target</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b;">Draft</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6;">Open</th>
-                            <th
-                                style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered);">
+<div class="search-wrapper" style="max-width: 300px; width: 100%;">
+<svg class="search-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<input class="search-input" id="se_ub-search-input" placeholder="Cari kabupaten/kota..." type="text"/>
+</div>
+</div>
+</div>
+<div class="ipas-table-wrapper">
+<table class="ipas-table">
+<thead>
+<tr>
+<th style="font-family: 'Outfit', sans-serif;">Kabupaten/Kota</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Target</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b;">Draft</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6;">Open</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered);">
                                 Submitted</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">% Capaian</th>
-                            <th
-                                style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-bounced);">
+<th style="font-family: 'Outfit', sans-serif; text-align: center;">% Capaian</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-bounced);">
                                 Sisa Usaha</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini |
+<th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini |
                                 Kemarin)</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
-                            <th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini |
+<th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
+<th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini |
                                 Kemarin)</th>
-                        </tr>
-                    </thead>
-                    <tbody id="se_ub-table-body">
-                        <!-- Loaded dynamically -->
-                    </tbody>
-                </table>
+</tr>
+</thead>
+<tbody id="se_ub-table-body">
+<!-- Loaded dynamically -->
+</tbody>
+</table>
+</div>
+<!-- Submitted UB Companies Section -->
+<div class="stats-section" id="se_ub-submitted-companies-section" style="margin-top: 2.5rem;">
+<div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
+<h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0;">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="color: var(--color-delivered);" viewbox="0 0 24 24" width="18">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+                            Daftar Perusahaan UB yang Sudah Submit (<span id="se_ub-submitted-count">0</span>)
+                        </h3>
+<div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+<select class="sort-select" id="se_ub-submitted-kabkot-select" style="max-width: 200px; height: 38px; font-size: 0.8rem; padding: 0 1.75rem 0 0.75rem;">
+<option value="all">Semua Kabupaten/Kota</option>
+</select>
+<input class="search-input" id="se_ub-submitted-search" placeholder="Cari nama/kode..." style="max-width: 200px; padding: 0.5rem 1rem 0.5rem 2.25rem; font-size: 0.8rem; height: 38px;" type="text"/>
+</div>
+</div>
+</div>
+<div class="company-list" id="se_ub-submitted-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+<!-- Dynamically populated -->
+</div>
+</div>
+</div>
+<!-- Tab Content: Assign Petugas -->
+<div class="tab-content" id="tab-content-assign" style="display: none;">
+    <!-- Chart Section -->
+    <div class="stats-section" style="margin-top: 2rem;">
+        <h3 style="margin-top: 0; color: var(--text); font-size: 1.2rem; display: flex; align-items: center;">
+            <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="20">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            Status Assign Petugas (Semua Usaha)
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Assignment berdasarkan status penugasan tiap Kabupaten/Kota</p>
+        <div style="height: 400px; width: 100%;">
+            <canvas id="assignChart"></canvas>
+        </div>
+    </div>
+
+    <!-- SLS Details Section -->
+    <div class="stats-section" style="margin-top: 2.5rem;">
+        <h3 style="margin-top: 0; color: var(--text); font-size: 1.25rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700;">
+            <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="20">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="3" x2="9" y2="21"></line>
+                <line x1="15" y1="3" x2="15" y2="21"></line>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="3" y1="15" x2="21" y2="15"></line>
+            </svg>
+            Rincian Assignment per SLS (UB)
+        </h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 500;">
+            Daftar status penugasan petugas sensus sampai level Satuan Lingkungan Setempat (SLS) pada Sensus Ekonomi UB.
+        </p>
+        
+        <!-- SLS Summary Cards -->
+        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+            <div class="stat-card" style="--stat-color: var(--primary); padding: 1.25rem;">
+                <div class="stat-label" style="font-size: 0.8rem;">Total SLS (UB)</div>
+                <div class="stat-value" id="sls-stat-total" style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">0</div>
+                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-substat-total">Target Usaha: 0</div>
+            </div>
+            <div class="stat-card" style="--stat-color: var(--color-delivered); padding: 1.25rem;">
+                <div class="stat-label" style="font-size: 0.8rem;">Fully Assigned SLS</div>
+                <div class="stat-value" id="sls-stat-fully" style="color: var(--color-delivered); font-size: 1.8rem; font-weight: 800;">0</div>
+                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-fully">0.00% dari total SLS</div>
+            </div>
+            <div class="stat-card" style="--stat-color: #f59e0b; padding: 1.25rem;">
+                <div class="stat-label" style="font-size: 0.8rem;">Partially Assigned SLS</div>
+                <div class="stat-value" id="sls-stat-partially" style="color: #f59e0b; font-size: 1.8rem; font-weight: 800;">0</div>
+                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-partially">0.00% dari total SLS</div>
+            </div>
+            <div class="stat-card" style="--stat-color: #ef4444; padding: 1.25rem;">
+                <div class="stat-label" style="font-size: 0.8rem;">Unassigned SLS</div>
+                <div class="stat-value" id="sls-stat-unassigned" style="color: #ef4444; font-size: 1.8rem; font-weight: 800;">0</div>
+                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-unassigned">0.00% dari total SLS</div>
             </div>
         </div>
 
+        <!-- SLS Filters -->
+        <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+            <div style="flex: 1; min-width: 250px; position: relative;">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);" viewbox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                </svg>
+                <input type="text" id="sls-search-input" placeholder="Cari SLS, Desa, Kecamatan, Kabupaten, atau Petugas..." style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+                <select id="sls-kab-filter" style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                    <option value="all">Semua Kabupaten</option>
+                </select>
+                <select id="sls-kec-filter" style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                    <option value="all">Semua Kecamatan</option>
+                </select>
+                <select id="sls-desa-filter" style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                    <option value="all">Semua Desa</option>
+                </select>
+                <select id="sls-assignment-filter" style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
+                    <option value="all">Semua Status Assignment</option>
+                    <option value="fully_assigned">Sudah Diassign Semua</option>
+                    <option value="partially_assigned">Diassign Sebagian</option>
+                    <option value="unassigned">Belum Diassign Sama Sekali</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- SLS Table -->
+        <div class="ipas-table-wrapper" style="max-height: 500px; overflow-y: auto;">
+            <table class="ipas-table">
+                <thead>
+                    <tr id="sls-table-headers">
+                        <!-- Headers generated dynamically via renderSlsTableHeaders() -->
+                    </tr>
+                </thead>
+                <tbody id="sls-table-body">
+                    <tr>
+                        <td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat rincian SLS...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SLS Pagination Controls -->
+        <div id="sls-pagination" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
+            <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;" id="sls-pagination-info">
+                Menampilkan 0 - 0 dari 0 SLS
+            </div>
+            <div style="display: flex; gap: 0.35rem; align-items: center;" id="sls-pagination-buttons">
+                <!-- Pagination buttons generated dynamically -->
+            </div>
+        </div>
     </div>
 
-    <!-- Load Supabase configuration if present -->
-    <script src="supabase_config.js"></script>
-    <!-- Load data.js (holds data in window.EMAIL_DATA) -->
-    <script src="data.js"></script>
-    <!-- Load ipas_data.js (holds data in window.IPAS_DATA) -->
-    <script src="ipas_data.js"></script>
-
-    <!-- Javascript Logic -->
-    <script>
+</div>
+</main>
+</div>
+<!-- Load Supabase configuration if present -->
+<script src="supabase_config.js"></script>
+<!-- Load data.js (holds data in window.EMAIL_DATA) -->
+<script src="data.js"></script>
+<script src="assign_data.js"></script>
+<!-- Load ipas_data.js (holds data in window.IPAS_DATA) -->
+<script src="ipas_data.js"></script>
+<!-- Javascript Logic -->
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const rawData = window.EMAIL_DATA || [];
 
@@ -1614,6 +1888,9 @@
             }
 
             let companies = [];
+            let sourceData = [];
+            let se_umumData = window.IPAS_DATA ? window.IPAS_DATA.se_umum : [];
+            let se_ubData = window.IPAS_DATA ? window.IPAS_DATA.se_ub : [];
 
             // Group logs by company code
             function processGroupedData(dataArray) {
@@ -1680,7 +1957,7 @@
             // Status Badge Colors & Styling
             function getStatusStyle(status) {
                 const s = status.toLowerCase().trim();
-                if (s === 'bounced') return { bg: 'rgba(239, 68, 68, 0.1)', color: 'var(--color-bounced)', border: 'rgba(239, 68, 68, 0.3)' };
+                if (s === 'bounced' || s === 'permanent_fail' || s === 'permanent_failure') return { bg: 'rgba(239, 68, 68, 0.1)', color: 'var(--color-bounced)', border: 'rgba(239, 68, 68, 0.3)' };
                 if (s === 'clicked') return { bg: 'rgba(139, 92, 246, 0.1)', color: 'var(--color-clicked)', border: 'rgba(139, 92, 246, 0.3)' };
                 if (s === 'opened') return { bg: 'rgba(59, 130, 246, 0.1)', color: 'var(--color-opened)', border: 'rgba(59, 130, 246, 0.3)' };
                 if (s === 'delivered') return { bg: 'rgba(16, 185, 129, 0.1)', color: 'var(--color-delivered)', border: 'rgba(16, 185, 129, 0.3)' };
@@ -1693,7 +1970,10 @@
                 statTotalEl.textContent = companies.length;
                 countAll.textContent = companies.length;
 
-                const bounced = companies.filter(c => c.global_status.toLowerCase() === 'bounced').length;
+                const bounced = companies.filter(c => {
+                    const st = c.global_status.toLowerCase();
+                    return st === 'bounced' || st === 'permanent_fail' || st === 'permanent_failure';
+                }).length;
                 const clicked = companies.filter(c => c.global_status.toLowerCase() === 'clicked').length;
                 const opened = companies.filter(c => c.global_status.toLowerCase() === 'opened').length;
                 const delivered = companies.filter(c => c.global_status.toLowerCase() === 'delivered').length;
@@ -1818,7 +2098,8 @@
 
                     const matchesFilter =
                         activeFilter === 'all' ||
-                        comp.global_status.toLowerCase() === activeFilter;
+                        comp.global_status.toLowerCase() === activeFilter ||
+                        (activeFilter === 'bounced' && (comp.global_status.toLowerCase() === 'permanent_fail' || comp.global_status.toLowerCase() === 'permanent_failure'));
 
                     const matchesSurveyFilter =
                         activeSurveyFilter === 'all' ||
@@ -1839,7 +2120,7 @@
                     } else if (activeSort === 'name-desc') {
                         return b.company_name.localeCompare(a.company_name);
                     } else if (activeSort === 'status-severity') {
-                        const severity = { 'bounced': 0, 'queued': 1, 'delivered': 2, 'opened': 3, 'clicked': 4 };
+                        const severity = { 'bounced': 0, 'permanent_fail': 0, 'permanent_failure': 0, 'queued': 1, 'delivered': 2, 'opened': 3, 'clicked': 4 };
                         const sevA = severity[a.global_status.toLowerCase()] ?? 5;
                         const sevB = severity[b.global_status.toLowerCase()] ?? 5;
                         return sevA - sevB;
@@ -2051,6 +2332,20 @@
                 });
             }
 
+            // SLS Search & Filter Listeners
+            const slsSearchInput = document.getElementById('sls-search-input');
+            if (slsSearchInput) {
+                slsSearchInput.addEventListener('input', () => {
+                    renderSlsTable();
+                });
+            }
+            const slsAssignmentFilter = document.getElementById('sls-assignment-filter');
+            if (slsAssignmentFilter) {
+                slsAssignmentFilter.addEventListener('change', () => {
+                    renderSlsTable();
+                });
+            }
+
             // Sensus Ekonomi Table Sorting State
             window.seSorts = {
                 se_umum: { column: 'kabupaten', order: 'asc' },
@@ -2074,6 +2369,7 @@
 
             // Dynamic Table Headers Renderer
             window.renderSeTableHeaders = function (surveyType) {
+                const tabs = ['se_umum', 'se_ub', 'email', 'assign'];
                 const table = document.querySelector(`#tab-content-${surveyType} .ipas-table`);
                 if (!table) return;
                 const thead = table.querySelector('thead');
@@ -2140,6 +2436,12 @@
                     yesterday += item.yesterday_completed || 0;
                     newToday += item.new_usaha_today || 0;
                 });
+                
+                // Override prelist with PROVINSI_TOTAL if available
+                const provTotalKey = surveyType + "_prov_total";
+                if (ipasDataObj[provTotalKey]) {
+                    prelist = ipasDataObj[provTotalKey];
+                }
 
                 const persentase = prelist > 0 ? ((submitted / prelist) * 100).toFixed(2) : '0.00';
                 const sisa = prelist - submitted;
@@ -2154,6 +2456,14 @@
                 document.getElementById(`${surveyType}-stat-open`).textContent = formatNum(openVal);
                 document.getElementById(`${surveyType}-stat-submitted`).textContent = formatNum(submitted);
                 document.getElementById(`${surveyType}-stat-percentage`).textContent = persentase + '%';
+
+                // Kenaikan Persentase
+                const pctToday = prelist > 0 ? ((today / prelist) * 100).toFixed(2) : '0.00';
+                const pctYesterday = prelist > 0 ? ((yesterday / prelist) * 100).toFixed(2) : '0.00';
+                const kenaikanEl = document.getElementById(`${surveyType}-stat-kenaikan`);
+                if (kenaikanEl) {
+                    kenaikanEl.innerHTML = `<span style="color: var(--color-delivered);">+${pctToday}% hari ini</span> <span style="color: var(--card-border);">|</span> <span style="color: #f59e0b;">+${pctYesterday}% kemarin</span>`;
+                }
 
                 const progressBar = document.getElementById(`${surveyType}-progress-bar`);
                 if (progressBar) {
@@ -2171,7 +2481,6 @@
                         vsYesterdayWrapper.innerHTML = `<span style="color: var(--color-bounced); background-color: rgba(239, 68, 68, 0.1); padding: 0.15rem 0.45rem; border-radius: 0.5rem; font-weight: 700; font-size: 0.75rem;">▼ vs ${formatNum(yesterday)} kemarin</span>`;
                     }
                 }
-
                 // Render Table with Filtering & Sorting
                 const searchVal = (document.getElementById(`${surveyType}-search-input`).value || '').toLowerCase().trim();
                 const tbody = document.getElementById(`${surveyType}-table-body`);
@@ -2300,11 +2609,572 @@
                     `;
                     tbody.appendChild(row);
                 });
+
+                // Render Chart
+                if (!window.currentChartType) window.currentChartType = { se_umum: 'line', se_ub: 'line' };
+                
+                window.toggleChartType = function(type) {
+                    window.currentChartType[type] = window.currentChartType[type] === 'line' ? 'bar' : 'line';
+                    window.renderSeDashboard(type);
+                };
+
+                const ctx = document.getElementById(`${surveyType}-chart`);
+                if (ctx) {
+                    if (!window.seCharts) window.seCharts = {};
+                    if (window.seCharts[surveyType]) {
+                        window.seCharts[surveyType].destroy();
+                    }
+
+                    const cType = window.currentChartType[surveyType];
+                    let chartData = {};
+                    let chartOptions = {};
+
+                    if (cType === 'line') {
+                        const cumToday = submitted;
+                        const cumYesterday = submitted - today;
+                        const cum2DaysAgo = submitted - today - yesterday;
+
+                        chartData = {
+                            labels: ['H-2', 'Kemarin', 'Hari Ini'],
+                            datasets: [{
+                                label: 'Total Capaian Selesai (Kumulatif)',
+                                data: [cum2DaysAgo, cumYesterday, cumToday],
+                                borderColor: '#3b82f6',
+                                backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                                borderWidth: 3,
+                                pointBackgroundColor: '#0b1120',
+                                pointBorderColor: '#3b82f6',
+                                pointBorderWidth: 2,
+                                pointRadius: 6,
+                                pointHoverRadius: 8,
+                                fill: true,
+                                tension: 0.4
+                            }]
+                        };
+                        chartOptions = {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { labels: { color: 'var(--text-secondary, #64748b)', font: { family: "'Outfit', sans-serif" } } }
+                            },
+                            scales: {
+                                y: { grid: { color: 'var(--border-color, #e2e8f0)' }, ticks: { color: 'var(--text-secondary, #64748b)' } },
+                                x: { grid: { display: false }, ticks: { color: 'var(--text-secondary, #64748b)' } }
+                            }
+                        };
+                    } else {
+                        // Bar Chart Per Kabupaten (Stacked)
+                        const sortedForBar = [...surveyData].sort((a, b) => b.total_prelist - a.total_prelist);
+                        chartData = {
+                            labels: sortedForBar.map(i => i.kabupaten.replace(/\[\d+\] /g, '')),
+                            datasets: [
+                                {
+                                    label: 'Submitted (Selesai)',
+                                    data: sortedForBar.map(i => i.total_submitted || 0),
+                                    backgroundColor: 'rgba(16, 185, 129, 0.85)', // Green
+                                    borderRadius: 4
+                                },
+                                {
+                                    label: 'Sisa Usaha (Belum Selesai)',
+                                    data: sortedForBar.map(i => i.sisa_usaha || 0),
+                                    backgroundColor: 'rgba(239, 68, 68, 0.85)', // Red
+                                    borderRadius: 4
+                                }
+                            ]
+                        };
+                        chartOptions = {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { 
+                                    position: 'top',
+                                    labels: { color: 'var(--text-secondary, #64748b)', font: { family: "'Outfit', sans-serif" } } 
+                                }
+                            },
+                            scales: {
+                                y: { 
+                                    stacked: true,
+                                    grid: { color: 'var(--border-color, #e2e8f0)' }, 
+                                    ticks: { color: 'var(--text-secondary, #64748b)' } 
+                                },
+                                x: { 
+                                    stacked: true,
+                                    grid: { display: false }, 
+                                    ticks: { 
+                                        color: 'var(--text-secondary, #64748b)',
+                                        maxRotation: 45,
+                                        minRotation: 45
+                                    } 
+                                }
+                            }
+                        };
+                    }
+
+                    window.seCharts[surveyType] = new Chart(ctx.getContext('2d'), {
+                        type: cType,
+                        data: chartData,
+                        options: chartOptions
+                    });
+                }
             };
 
             // Helpers for dynamic loading last updated status
             let isSupabaseUsedGlobal = false;
             let lastUpdatedEmailTextGlobal = '';
+
+            let assignChartInstance = null;
+
+            function renderAssignChart() {
+                const ctx = document.getElementById('assignChart');
+                if (!ctx) return;
+                
+                if (assignChartInstance) {
+                    assignChartInstance.destroy();
+                }
+                
+                if (!window.ASSIGN_DATA || window.ASSIGN_DATA.length === 0) {
+                    console.warn("ASSIGN_DATA belum tersedia.");
+                    return;
+                }
+                
+                const labels = window.ASSIGN_DATA.map(d => d.nama_kab.replace(/\[\d+\] /, ''));
+                const assignedData = window.ASSIGN_DATA.map(d => d.assigned);
+                const notAssignedData = window.ASSIGN_DATA.map(d => d.have_not_assigned);
+                
+                assignChartInstance = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                                label: 'Assigned',
+                                data: assignedData,
+                                backgroundColor: 'rgba(239, 68, 68, 0.9)', // Red/Orange for Assigned
+                                borderRadius: 4,
+                            },
+                            {
+                                label: 'Have-not-assigned',
+                                data: notAssignedData,
+                                backgroundColor: 'rgba(245, 158, 11, 0.9)', // Yellow/Orange for Have Not Assigned
+                                borderRadius: 4,
+                            }
+                        ]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: { family: "'Inter', sans-serif", size: 12 },
+                                    usePointStyle: true,
+                                    padding: 20
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                                titleFont: { family: "'Inter', sans-serif", size: 13 },
+                                bodyFont: { family: "'Inter', sans-serif", size: 12 },
+                                padding: 12,
+                                cornerRadius: 8
+                            }
+                        },
+                        scales: {
+                            x: {
+                                stacked: true,
+                                grid: { color: 'rgba(148, 163, 184, 0.1)' }
+                            },
+                            y: {
+                                stacked: true,
+                                grid: { display: false }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // SLS state
+            window.slsSort = { column: 'kab_name', order: 'asc' };
+            window.slsCurrentPage = 1;
+            const SLS_ITEMS_PER_PAGE = 25;
+
+            // Header sort trigger
+            window.sortSlsTable = function(column) {
+                const current = window.slsSort;
+                if (current.column === column) {
+                    current.order = current.order === 'asc' ? 'desc' : 'asc';
+                } else {
+                    current.column = column;
+                    current.order = 'asc';
+                }
+                window.slsCurrentPage = 1; // reset page on sort
+                renderSlsTable();
+            };
+
+            // Populates select dropdown elements dynamically
+            let isSlsFiltersPopulated = false;
+            function populateSlsFilters() {
+                if (!window.ASSIGN_SLS_DATA || window.ASSIGN_SLS_DATA.length === 0 || isSlsFiltersPopulated) return;
+
+                const kabSelect = document.getElementById('sls-kab-filter');
+                if (!kabSelect) return;
+
+                // Extract unique regions
+                const uniqueKabs = [...new Set(window.ASSIGN_SLS_DATA.map(i => i.kab_name))].sort();
+                
+                kabSelect.innerHTML = '<option value="all">Semua Kabupaten</option>' + 
+                    uniqueKabs.map(k => `<option value="${k}">${k}</option>`).join('');
+
+                // Register cascade change listeners
+                kabSelect.addEventListener('change', () => {
+                    updateKecOptions();
+                    window.slsCurrentPage = 1;
+                    renderSlsTable();
+                });
+
+                const kecSelect = document.getElementById('sls-kec-filter');
+                kecSelect.addEventListener('change', () => {
+                    updateDesaOptions();
+                    window.slsCurrentPage = 1;
+                    renderSlsTable();
+                });
+
+                const desaSelect = document.getElementById('sls-desa-filter');
+                desaSelect.addEventListener('change', () => {
+                    window.slsCurrentPage = 1;
+                    renderSlsTable();
+                });
+
+                isSlsFiltersPopulated = true;
+                updateKecOptions();
+            }
+
+            function updateKecOptions() {
+                const kabVal = document.getElementById('sls-kab-filter').value;
+                const kecSelect = document.getElementById('sls-kec-filter');
+                if (!kecSelect) return;
+
+                if (kabVal === 'all') {
+                    kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>';
+                    kecSelect.disabled = true;
+                    updateDesaOptions();
+                    return;
+                }
+
+                kecSelect.disabled = false;
+                const filteredSls = window.ASSIGN_SLS_DATA.filter(i => i.kab_name === kabVal);
+                const uniqueKecs = [...new Set(filteredSls.map(i => i.kec_name))].sort();
+
+                kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>' +
+                    uniqueKecs.map(k => `<option value="${k}">${k}</option>`).join('');
+                
+                updateDesaOptions();
+            }
+
+            function updateDesaOptions() {
+                const kabVal = document.getElementById('sls-kab-filter').value;
+                const kecVal = document.getElementById('sls-kec-filter').value;
+                const desaSelect = document.getElementById('sls-desa-filter');
+                if (!desaSelect) return;
+
+                if (kecVal === 'all') {
+                    desaSelect.innerHTML = '<option value="all">Semua Desa</option>';
+                    desaSelect.disabled = true;
+                    return;
+                }
+
+                desaSelect.disabled = false;
+                const filteredSls = window.ASSIGN_SLS_DATA.filter(i => i.kab_name === kabVal && i.kec_name === kecVal);
+                const uniqueDesas = [...new Set(filteredSls.map(i => i.desa_name))].sort();
+
+                desaSelect.innerHTML = '<option value="all">Semua Desa</option>' +
+                    uniqueDesas.map(d => `<option value="${d}">${d}</option>`).join('');
+            }
+
+            function renderSlsTableHeaders() {
+                const headerRow = document.getElementById('sls-table-headers');
+                if (!headerRow) return;
+
+                const getIcon = (col) => {
+                    if (window.slsSort.column !== col) return ' ↕';
+                    return window.slsSort.order === 'asc' ? ' ▲' : ' ▼';
+                };
+
+                headerRow.innerHTML = `
+                    <th onclick="sortSlsTable('kab_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Kabupaten${getIcon('kab_name')}</th>
+                    <th onclick="sortSlsTable('kec_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Kecamatan${getIcon('kec_name')}</th>
+                    <th onclick="sortSlsTable('desa_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Desa${getIcon('desa_name')}</th>
+                    <th onclick="sortSlsTable('sls_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">SLS Code & Name${getIcon('sls_name')}</th>
+                    <th onclick="sortSlsTable('total')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none;">Total Target${getIcon('total')}</th>
+                    <th onclick="sortSlsTable('assigned')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-delivered); cursor: pointer; user-select: none;">Assigned${getIcon('assigned')}</th>
+                    <th onclick="sortSlsTable('unassigned')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-bounced); cursor: pointer; user-select: none;">Unassigned${getIcon('unassigned')}</th>
+                    <th style="font-family: 'Outfit', sans-serif; user-select: none;">Status & Petugas</th>
+                `;
+            }
+
+            function renderSlsTable() {
+                const tbody = document.getElementById('sls-table-body');
+                if (!tbody) return;
+                
+                if (!window.ASSIGN_SLS_DATA || window.ASSIGN_SLS_DATA.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data SLS belum tersedia. Pastikan sinkronisasi data sedang berjalan.</td></tr>`;
+                    return;
+                }
+
+                // Populate regional options first time data is available
+                populateSlsFilters();
+
+                // 1. Get filter inputs
+                const searchVal = (document.getElementById('sls-search-input').value || '').toLowerCase().trim();
+                const kabFilter = document.getElementById('sls-kab-filter').value;
+                const kecFilter = document.getElementById('sls-kec-filter').value;
+                const desaFilter = document.getElementById('sls-desa-filter').value;
+                const assignmentFilter = document.getElementById('sls-assignment-filter').value;
+
+                // 2. Filter logic
+                const filtered = window.ASSIGN_SLS_DATA.filter(item => {
+                    // Region cascading filters
+                    if (kabFilter !== 'all' && item.kab_name !== kabFilter) return false;
+                    if (kecFilter !== 'all' && item.kec_name !== kecFilter) return false;
+                    if (desaFilter !== 'all' && item.desa_name !== desaFilter) return false;
+
+                    // Assignment status filter
+                    if (assignmentFilter === 'fully_assigned' && item.unassigned !== 0) return false;
+                    if (assignmentFilter === 'partially_assigned' && !(item.assigned > 0 && item.unassigned > 0)) return false;
+                    if (assignmentFilter === 'unassigned' && item.assigned !== 0) return false;
+
+                    // Search val
+                    if (searchVal) {
+                        const matchText = (item.sls_code + ' ' + item.sls_name + ' ' + item.desa_name + ' ' + item.kec_name + ' ' + item.kab_name + ' ' + (item.officers || []).join(' ')).toLowerCase();
+                        if (!matchText.includes(searchVal)) return false;
+                    }
+
+                    return true;
+                });
+
+                // 3. Render statistics for the region-filtered or active set of data
+                const statsBase = window.ASSIGN_SLS_DATA.filter(item => {
+                    if (kabFilter !== 'all' && item.kab_name !== kabFilter) return false;
+                    if (kecFilter !== 'all' && item.kec_name !== kecFilter) return false;
+                    if (desaFilter !== 'all' && item.desa_name !== desaFilter) return false;
+                    return true;
+                });
+
+                const totalSls = statsBase.length;
+                const fullyAssigned = statsBase.filter(i => i.unassigned === 0).length;
+                const partiallyAssigned = statsBase.filter(i => i.assigned > 0 && i.unassigned > 0).length;
+                const unassigned = statsBase.filter(i => i.assigned === 0).length;
+                const totalTarget = statsBase.reduce((sum, i) => sum + (i.total || 0), 0);
+
+                // Update summary card values
+                const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
+                document.getElementById('sls-stat-total').textContent = formatNum(totalSls);
+                document.getElementById('sls-substat-total').textContent = `Target Usaha: ${formatNum(totalTarget)}`;
+                
+                document.getElementById('sls-stat-fully').textContent = formatNum(fullyAssigned);
+                document.getElementById('sls-pct-fully').textContent = totalSls > 0 ? `${((fullyAssigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00% dari total SLS';
+
+                document.getElementById('sls-stat-partially').textContent = formatNum(partiallyAssigned);
+                document.getElementById('sls-pct-partially').textContent = totalSls > 0 ? `${((partiallyAssigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00% dari total SLS';
+
+                document.getElementById('sls-stat-unassigned').textContent = formatNum(unassigned);
+                document.getElementById('sls-pct-unassigned').textContent = totalSls > 0 ? `${((unassigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00% dari total SLS';
+
+                // 4. Sort logic
+                const col = window.slsSort.column;
+                const order = window.slsSort.order === 'asc' ? 1 : -1;
+                filtered.sort((a, b) => {
+                    let valA = a[col];
+                    let valB = b[col];
+                    if (typeof valA === 'string') {
+                        return valA.localeCompare(valB) * order;
+                    }
+                    return ((valA || 0) - (valB || 0)) * order;
+                });
+
+                // Update headers (shows active sort icon)
+                renderSlsTableHeaders();
+
+                if (filtered.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary);">Tidak ada data SLS yang cocok dengan filter pencarian.</td></tr>`;
+                    document.getElementById('sls-pagination-info').textContent = 'Menampilkan 0 - 0 dari 0 SLS';
+                    document.getElementById('sls-pagination-buttons').innerHTML = '';
+                    return;
+                }
+
+                // 5. Pagination logic
+                const totalFiltered = filtered.length;
+                const maxPage = Math.ceil(totalFiltered / SLS_ITEMS_PER_PAGE);
+                if (window.slsCurrentPage > maxPage) window.slsCurrentPage = maxPage;
+                if (window.slsCurrentPage < 1) window.slsCurrentPage = 1;
+
+                const startIdx = (window.slsCurrentPage - 1) * SLS_ITEMS_PER_PAGE;
+                const endIdx = Math.min(startIdx + SLS_ITEMS_PER_PAGE, totalFiltered);
+                const slicedData = filtered.slice(startIdx, endIdx);
+
+                document.getElementById('sls-pagination-info').textContent = `Menampilkan ${formatNum(startIdx + 1)} - ${formatNum(endIdx)} dari ${formatNum(totalFiltered)} SLS`;
+
+                // Render table rows
+                tbody.innerHTML = slicedData.map(item => {
+                    let badge = '';
+                    if (item.unassigned === 0) {
+                        badge = '<span style="background-color: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 600;">Fully Assigned</span>';
+                    } else if (item.assigned === 0) {
+                        badge = '<span style="background-color: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 600;">Unassigned</span>';
+                    } else {
+                        badge = '<span style="background-color: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 600;">Partially Assigned</span>';
+                    }
+                    
+                    const officers = item.officers && item.officers.length > 0 ? item.officers.join(', ') : '-';
+                    
+                    // Highlight search query
+                    const hl = (txt) => highlightText(txt, searchVal);
+
+                    return `
+                        <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.2s;">
+                            <td style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">${hl(item.kab_name)}</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">${hl(item.kec_name)}</td>
+                            <td style="padding: 1rem; color: var(--text-secondary);">${hl(item.desa_name)}</td>
+                            <td style="padding: 1rem; font-weight: 600; color: var(--text);">${hl(item.sls_name)} <span style="font-size: 0.75rem; font-weight: 400; color: var(--text-secondary); display:block;">${hl(item.sls_code)}</span></td>
+                            <td style="padding: 1rem; text-align: center; font-weight: 600;">${item.total}</td>
+                            <td style="padding: 1rem; text-align: center; color: #10b981; font-weight: 600;">${item.assigned}</td>
+                            <td style="padding: 1rem; text-align: center; color: #ef4444; font-weight: 600;">${item.unassigned}</td>
+                            <td style="padding: 1rem;">
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <div>${badge}</div>
+                                    <span style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem; display: block;">${hl(officers)}</span>
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+
+                // Render pagination buttons
+                renderSlsPaginationButtons(maxPage);
+            }
+
+            function renderSlsPaginationButtons(maxPage) {
+                const btnContainer = document.getElementById('sls-pagination-buttons');
+                if (!btnContainer) return;
+                btnContainer.innerHTML = '';
+
+                const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
+                const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
+
+                // First & Prev buttons
+                if (window.slsCurrentPage > 1) {
+                    const prevBtn = document.createElement('button');
+                    prevBtn.innerHTML = '&lt;';
+                    prevBtn.style.cssText = btnStyle;
+                    prevBtn.addEventListener('click', () => {
+                        window.slsCurrentPage--;
+                        renderSlsTable();
+                    });
+                    btnContainer.appendChild(prevBtn);
+                }
+
+                // Logic to display limited page range
+                let startPage = Math.max(1, window.slsCurrentPage - 2);
+                let endPage = Math.min(maxPage, window.slsCurrentPage + 2);
+
+                if (startPage > 1) {
+                    const page1 = document.createElement('button');
+                    page1.textContent = '1';
+                    page1.style.cssText = btnStyle;
+                    page1.addEventListener('click', () => {
+                        window.slsCurrentPage = 1;
+                        renderSlsTable();
+                    });
+                    btnContainer.appendChild(page1);
+
+                    if (startPage > 2) {
+                        const dots = document.createElement('span');
+                        dots.textContent = '...';
+                        dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                        btnContainer.appendChild(dots);
+                    }
+                }
+
+                for (let i = startPage; i <= endPage; i++) {
+                    const btn = document.createElement('button');
+                    btn.textContent = i;
+                    if (i === window.slsCurrentPage) {
+                        btn.style.cssText = activeStyle;
+                    } else {
+                        btn.style.cssText = btnStyle;
+                        btn.addEventListener('click', () => {
+                            window.slsCurrentPage = i;
+                            renderSlsTable();
+                        });
+                    }
+                    btnContainer.appendChild(btn);
+                }
+
+                if (endPage < maxPage) {
+                    if (endPage < maxPage - 1) {
+                        const dots = document.createElement('span');
+                        dots.textContent = '...';
+                        dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                        btnContainer.appendChild(dots);
+                    }
+
+                    const pageLast = document.createElement('button');
+                    pageLast.textContent = maxPage;
+                    pageLast.style.cssText = btnStyle;
+                    pageLast.addEventListener('click', () => {
+                        window.slsCurrentPage = maxPage;
+                        renderSlsTable();
+                    });
+                    btnContainer.appendChild(pageLast);
+                }
+
+                // Next & Last buttons
+                if (window.slsCurrentPage < maxPage) {
+                    const nextBtn = document.createElement('button');
+                    nextBtn.innerHTML = '&gt;';
+                    nextBtn.style.cssText = btnStyle;
+                    nextBtn.addEventListener('click', () => {
+                        window.slsCurrentPage++;
+                        renderSlsTable();
+                    });
+                    btnContainer.appendChild(nextBtn);
+                }
+            }
+
+            // Interval to check for updates from other scripts
+            setInterval(() => {
+                const searchVal = (document.getElementById('search-input').value || '').toLowerCase().trim();
+                const filterVal = document.getElementById('status-filter').value;
+                const activeTab = localStorage.getItem('active_tab') || 'se_umum';
+                
+                // Only reload email data if we are NOT using Supabase (Supabase has realtime if we want, but polling is simpler for now)
+                if (!isSupabaseUsedGlobal && typeof window.EMAIL_DATA !== 'undefined' && window.EMAIL_DATA !== sourceData) {
+                    sourceData = window.EMAIL_DATA;
+                    updateFiltersAndStats();
+                    renderList();
+                    if(activeTab === 'email') window.updateLastUpdatedText(activeTab);
+                }
+                
+                // Reload IPAS data if updated
+                if (typeof window.IPAS_DATA !== 'undefined') {
+                    if (window.IPAS_DATA.se_umum && window.IPAS_DATA.se_umum !== se_umumData) {
+                        se_umumData = window.IPAS_DATA.se_umum;
+                        if(activeTab === 'se_umum') renderSeDashboard('se_umum');
+                    }
+                    if (window.IPAS_DATA.se_ub && window.IPAS_DATA.se_ub !== se_ubData) {
+                        se_ubData = window.IPAS_DATA.se_ub;
+                        if(activeTab === 'se_ub') renderSeDashboard('se_ub');
+                    }
+                }
+                
+                // Reload Assign data if updated
+                if (typeof window.ASSIGN_DATA !== 'undefined' && activeTab === 'assign') {
+                    renderAssignChart();
+                    renderSlsTable();
+                }
+            }, 5000);
 
             window.updateLastUpdatedText = function (tabId) {
                 const lastUpdatedEl = document.getElementById('last-updated-text');
@@ -2383,6 +3253,11 @@
                     if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
                     if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
                     renderSeDashboard('se_ub');
+                } else if (tabId === 'assign') {
+                    mainHeader.textContent = 'Dashboard Assign Petugas';
+                    mainSubheader.textContent = 'Status penugasan petugas pada masing-masing wilayah';
+                    renderAssignChart();
+                    renderSlsTable();
                 } else {
                     mainHeader.textContent = 'Fasih Email Dashboard';
                     mainSubheader.textContent = 'Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB';
@@ -2505,6 +3380,11 @@
                 // Refresh last updated text for currently active tab
                 const activeTab = localStorage.getItem('active_tab') || 'se_umum';
                 window.updateLastUpdatedText(activeTab);
+                
+                if (activeTab === 'assign') {
+                    renderAssignChart();
+                    renderSlsTable();
+                }
             }
 
             // Refresh button handler
@@ -2562,5 +3442,4 @@
         });
     </script>
 </body>
-
 </html>
