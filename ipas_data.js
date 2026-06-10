@@ -1,5 +1,5 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-10T18:09:20.296488+08:00",
+  "updated_at": "2026-06-10T18:19:07.856163+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
