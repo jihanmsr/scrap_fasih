@@ -3,6 +3,7 @@ import csv
 import json
 import time
 import logging
+import shutil
 import subprocess
 import socket
 import pandas as pd
@@ -34,6 +35,22 @@ def check_port_open(port=9222):
 	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 		return s.connect_ex(('localhost', port)) == 0
 
+def cleanup_chrome_cache(user_data_dir):
+    cache_dirs = [
+        os.path.join(user_data_dir, "Default", "Cache"),
+        os.path.join(user_data_dir, "Default", "Code Cache"),
+        os.path.join(user_data_dir, "Default", "GPUCache"),
+        os.path.join(user_data_dir, "Default", "Service Worker", "CacheStorage"),
+    ]
+    for path in cache_dirs:
+        if os.path.exists(path):
+            try:
+                shutil.rmtree(path)
+                logging.info(f"Membersihkan cache Chrome: {path}")
+            except Exception as e:
+                logging.warning(f"Gagal membersihkan cache Chrome {path}: {e}")
+
+
 def launch_chrome_if_needed():
 	port = 9222
 	if check_port_open(port):
@@ -54,6 +71,7 @@ def launch_chrome_if_needed():
 	
 	abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
 	os.makedirs(abs_user_data_dir, exist_ok=True)
+	cleanup_chrome_cache(abs_user_data_dir)
 	
 	cmd = [
 		chrome_path,
@@ -75,90 +93,164 @@ def launch_chrome_if_needed():
 	logging.error("Gagal mendeteksi port 9222 setelah meluncurkan Chrome.")
 
 def get_authenticated_context(p):
-	launch_chrome_if_needed()
-	
-	logging.info("Menyambung ke browser via CDP di port 9222...")
-	browser = p.chromium.connect_over_cdp("http://localhost:9222")
-	context = browser.contexts[0]
-	
-	target_data_url = "https://fasih-sm.bps.go.id/app/surveys/ecddb52e-f392-403c-a963-47391f217010/37526b20-81c8-42f5-a895-6190137d7394/data"
-	
-	# Cari tab aktif yang sudah membuka fasih-sm
-	page = None
-	for p_page in context.pages:
-		if "fasih-sm.bps.go.id" in p_page.url:
-			page = p_page
-			logging.info(f"Menemukan tab aktif dengan URL target: {page.url}")
-			break
-			
-	if not page:
-		logging.info("Tidak menemukan tab aktif. Membuat tab baru...")
-		page = context.new_page()
-		logging.info(f"Mencoba membuka halaman target langsung: {target_data_url}")
-		try:
-			page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
-		except Exception as e:
-			logging.warning(f"Navigasi awal ke target langsung lambat/timeout: {e}")
-		time.sleep(3)
-	
-	# Memantau redirect SSO selama beberapa detik pertama
-	logging.info("Memantau status login dan redirect...")
-	for _ in range(8):
-		current_url = page.url
-		if "sso" in current_url.lower() or "login" in current_url.lower() or "fasih-sm.bps.go.id" not in current_url:
-			break
-		time.sleep(1)
-	
-	current_url = page.url
-	if "sso" in current_url.lower() or "login" in current_url.lower() or "fasih-sm.bps.go.id" not in current_url:
-		print("\n" + "="*70)
-		print("Sesi belum aktif atau memerlukan login SSO BPS.")
-		print("SILAKAN LOGIN SSO DI BROWSER CHROMIUM YANG TERBUKA.")
-		print("Setelah login berhasil, script akan otomatis mendeteksi dan navigasi.")
-		print("Atau, jika sudah masuk, Anda bisa menekan ENTER di terminal ini.")
-		print("="*70 + "\n")
-		
-		# Deteksi otomatis login, atau tunggu ENTER
-		import select
-		import sys
-		
-		while True:
-			if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
-				sys.stdin.readline() # consume input
-				logging.info("Konfirmasi manual diterima via ENTER.")
-				break
-				
-			try:
-				current_url = page.url
-				if "fasih-sm.bps.go.id" in current_url and "sso" not in current_url.lower() and "login" not in current_url.lower():
-					logging.info("Login terdeteksi secara otomatis!")
-					break
-			except Exception:
-				pass
-				
-			logging.info("Menunggu login SSO di browser (atau tekan ENTER jika sudah login)...")
-			time.sleep(3)
-			
-	# Setelah login (atau jika sesi sudah aktif), pastikan kita di target_data_url
-	time.sleep(3)
-	if page.url != target_data_url:
-		logging.info(f"Mengalihkan ke halaman target data: {target_data_url}")
-		try:
-			page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
-			time.sleep(5)
-		except Exception as e:
-			logging.warning(f"Timeout saat membuka halaman target: {e}")
+    abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
+    os.makedirs(abs_user_data_dir, exist_ok=True)
+    chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
 
-	# Deteksi halaman error BPS dan muat ulang jika ditemukan
-	try:
-		if "error" in page.title().lower() or page.locator("text=There's some error").count() > 0 or page.locator("text=unexpected condition").count() > 0:
-			logging.warning("Mendeteksi halaman error BPS ('There's some error'). Mencoba memuat ulang...")
-			page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
-			time.sleep(5)
-	except Exception as e:
-		logging.warning(f"Gagal memeriksa/memuat ulang halaman error: {e}")
-	
-	return browser, context, page
+    browser = None
+    context = None
+    page = None
+
+    if check_port_open(9222):
+        logging.info("Remote debugging port 9222 terdeteksi. Mencoba sambung via CDP...")
+        try:
+            browser = p.chromium.connect_over_cdp("http://localhost:9222")
+            context = browser.contexts[0] if browser.contexts else browser.new_context()
+            page = context.pages[0] if context.pages else context.new_page()
+            logging.info("Berhasil tersambung ke browser via CDP.")
+        except Exception as e:
+            logging.warning(f"Gagal connect_over_cdp: {e}. Menggunakan Playwright persistent context sebagai fallback.")
+            browser = None
+
+    def try_launch_persistent():
+        return p.chromium.launch_persistent_context(
+            user_data_dir=abs_user_data_dir,
+            headless=False,
+            executable_path=chrome_path,
+            args=["--no-first-run", "--no-default-browser-check", "--disable-background-networking", "--disable-background-timer-throttling"]
+        )
+
+    if page is None:
+        logging.info("Meluncurkan browser melalui Playwright persistent context...")
+        try:
+            context = try_launch_persistent()
+            page = context.pages[0] if context.pages else context.new_page()
+        except Exception as e:
+            logging.warning(f"Playwright persistent context gagal diluncurkan: {e}")
+            cleanup_chrome_cache(abs_user_data_dir)
+            logging.info("Membersihkan cache user data dan mencoba ulang.")
+            try:
+                context = try_launch_persistent()
+                page = context.pages[0] if context.pages else context.new_page()
+            except Exception as e2:
+                logging.warning(f"Gagal meluncurkan Playwright persistent context setelah retry: {e2}")
+                logging.info("Coba buka browser Playwright headful sebagai fallback...")
+                try:
+                    browser = p.chromium.launch(headless=False)
+                    context = browser.new_context()
+                    page = context.new_page()
+                    logging.info("Browser Playwright headful berhasil diluncurkan.")
+                except Exception as e3:
+                    logging.warning(f"Playwright headful launch gagal: {e3}")
+                    logging.info("Mode manual: tunggu user buka Chrome manual di port 9222...")
+                    print("\n" + "="*70)
+                    print("MANUAL MODE - BUKA CHROME DENGAN REMOTE DEBUGGING")
+                    print("="*70)
+                    print("Buka terminal baru dan jalankan perintah ini:")
+                    print(f'  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --remote-debugging-port=9222 --user-data-dir="{abs_user_data_dir}"')
+                    print()
+                    print("Setelah Chrome terbuka, login ke fasih-sm.bps.go.id")
+                    print("Lalu kembali ke terminal ini dan tekan ENTER.")
+                    print("="*70 + "\n")
+                    import sys
+                    sys.stdin.readline()
+                    logging.info("Mencoba koneksi CDP setelah setup manual...")
+                    for attempt in range(10):
+                        time.sleep(2)
+                        if check_port_open(9222):
+                            try:
+                                browser = p.chromium.connect_over_cdp("http://localhost:9222")
+                                context = browser.contexts[0] if browser.contexts else browser.new_context()
+                                page = context.pages[0] if context.pages else context.new_page()
+                                logging.info("Berhasil connect via CDP setelah manual setup!")
+                                break
+                            except Exception as cdp_err:
+                                logging.warning(f"CDP connect attempt {attempt+1} gagal: {cdp_err}")
+                                continue
+                    if page is None:
+                        logging.error("Tidak bisa connect CDP setelah manual setup. Exiting.")
+                        raise RuntimeError("Browser setup failed after manual attempt")
+        if page is not None and context is not None:
+            page = context.pages[0] if context.pages else context.new_page()
+            logging.info("Playwright context berhasil diluncurkan.")
+
+    target_data_url = "https://fasih-sm.bps.go.id/app/surveys/ecddb52e-f392-403c-a963-47391f217010/37526b20-81c8-42f5-a895-6190137d7394/data"
+
+    # Cari tab aktif yang sudah membuka fasih-sm
+    current_page = None
+    for p_page in context.pages:
+        if "fasih-sm.bps.go.id" in p_page.url:
+            current_page = p_page
+            logging.info(f"Menemukan tab aktif dengan URL target: {current_page.url}")
+            break
+
+    if not current_page:
+        logging.info("Tidak menemukan tab aktif. Membuat tab baru...")
+        current_page = context.new_page()
+        logging.info(f"Mencoba membuka halaman target langsung: {target_data_url}")
+        try:
+            current_page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
+        except Exception as e:
+            logging.warning(f"Navigasi awal ke target langsung lambat/timeout: {e}")
+        time.sleep(3)
+
+    # Memantau redirect SSO selama beberapa detik pertama
+    logging.info("Memantau status login dan redirect...")
+    for _ in range(8):
+        current_url = current_page.url
+        if "sso" in current_url.lower() or "login" in current_url.lower() or "fasih-sm.bps.go.id" not in current_url:
+            break
+        time.sleep(1)
+
+    current_url = current_page.url
+    if "sso" in current_url.lower() or "login" in current_url.lower() or "fasih-sm.bps.go.id" not in current_url:
+        print("\n" + "="*70)
+        print("Sesi belum aktif atau memerlukan login SSO BPS.")
+        print("SILAKAN LOGIN SSO DI BROWSER CHROMIUM YANG TERBUKA.")
+        print("Setelah login berhasil, script akan otomatis mendeteksi dan navigasi.")
+        print("Atau, jika sudah masuk, Anda bisa menekan ENTER di terminal ini.")
+        print("="*70 + "\n")
+
+        import select
+        import sys
+
+        while True:
+            if sys.stdin in select.select([sys.stdin], [], [], 0)[0]:
+                sys.stdin.readline()
+                logging.info("Konfirmasi manual diterima via ENTER.")
+                break
+
+            try:
+                current_url = current_page.url
+                if "fasih-sm.bps.go.id" in current_url and "sso" not in current_url.lower() and "login" not in current_url.lower():
+                    logging.info("Login terdeteksi secara otomatis!")
+                    break
+            except Exception:
+                pass
+
+            logging.info("Menunggu login SSO di browser (atau tekan ENTER jika sudah login)...")
+            time.sleep(3)
+
+    # Setelah login (atau jika sesi sudah aktif), pastikan kita di target_data_url
+    time.sleep(3)
+    if current_page.url != target_data_url:
+        logging.info(f"Mengalihkan ke halaman target data: {target_data_url}")
+        try:
+            current_page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
+            time.sleep(5)
+        except Exception as e:
+            logging.warning(f"Timeout saat membuka halaman target: {e}")
+
+    # Deteksi halaman error BPS dan muat ulang jika ditemukan
+    try:
+        if "error" in current_page.title().lower() or current_page.locator("text=There's some error").count() > 0 or current_page.locator("text=unexpected condition").count() > 0:
+            logging.warning("Mendeteksi halaman error BPS ('There's some error'). Mencoba memuat ulang...")
+            current_page.goto(target_data_url, timeout=60000, wait_until="domcontentloaded")
+            time.sleep(5)
+    except Exception as e:
+        logging.warning(f"Gagal memeriksa/memuat ulang halaman error: {e}")
+
+    return browser, context, current_page
 
 def save_local_js(all_records):
     try:
@@ -171,8 +263,8 @@ def save_local_js(all_records):
                 js_file.write(f"window.EMAIL_DATA = {json.dumps(js_data, ensure_ascii=False, indent=2)};\n")
                 js_file.write(f"window.LAST_UPDATED = '{now_str}';\n")
             
-            # Rekap Excel Bounced
-            bounced_emails = df[df['global_status'].str.lower() == 'bounced']['email'].unique()
+            # Rekap Excel Bounced / Permanent Fail
+            bounced_emails = df[df['global_status'].fillna('').str.lower().isin(['bounced', 'permanent_fail', 'permanent_failure'])]['email'].unique()
             df_bounced = df[df['email'].isin(bounced_emails)]
             df_bounced.to_excel(OUTPUT_BOUNCED_EXCEL, index=False)
     except Exception as e:
@@ -324,9 +416,16 @@ def get_valid_session(context, page):
 def scrape_via_api():
     # Muat data yang sudah ada di CSV
     existing_companies = {}
+    csv_source = OUTPUT_CSV
     if os.path.exists(OUTPUT_CSV):
+        csv_source = OUTPUT_CSV
+    elif os.path.exists("backup_" + OUTPUT_CSV):
+        csv_source = "backup_" + OUTPUT_CSV
+        logging.info(f"Main CSV tidak ditemukan. Menggunakan backup CSV: {csv_source}")
+
+    if os.path.exists(csv_source):
         try:
-            with open(OUTPUT_CSV, mode="r", encoding="utf-8") as f:
+            with open(csv_source, mode="r", encoding="utf-8") as f:
                 reader = csv.reader(f)
                 header = next(reader, None)
                 for row in reader:
@@ -352,9 +451,9 @@ def scrape_via_api():
                             "timestamp": timestamp,
                             "order": order
                         })
-            logging.info(f"Berhasil memuat data historis untuk {len(existing_companies)} perusahaan dari CSV.")
+            logging.info(f"Berhasil memuat data historis untuk {len(existing_companies)} perusahaan dari {csv_source}.")
         except Exception as e:
-            logging.warning(f"Gagal membaca CSV lama: {e}")
+            logging.warning(f"Gagal membaca CSV lama ({csv_source}): {e}")
 
     with sync_playwright() as p:
         browser, context, page = get_authenticated_context(p)
@@ -550,15 +649,27 @@ def scrape_via_api():
 
             # 1. Cek apakah perusahaan sudah berstatus final di data lokal
             has_valid_history = False
-            if not FORCE_RE_SCRAPE and code in existing_companies:
-                # Jika sudah pernah di-scrap dan status globalnya bukan queued/bouncing/deferred (misal delivered/clicked/opened/bounced)
-                histories = existing_companies[code]
-                if histories and histories[0]["global_status"] not in ["-", "queued", "deferred"]:
-                    has_valid_history = True
-                    # Update status dokumen survei jika ada perubahan
-                    for h in histories:
-                        h["survey_status"] = survey_status
-                    all_records.extend(histories)
+            if not FORCE_RE_SCRAPE:
+                if code in existing_companies:
+                    histories = existing_companies[code]
+                    if histories and histories[0]["global_status"] in ["delivered", "opened", "clicked", "permanent_fail", "permanent_failure"]:
+                        has_valid_history = True
+                        for h in histories:
+                            h["survey_status"] = survey_status
+                        all_records.extend(histories)
+                else:
+                    # Deteksi apabila BPS merubah ID namun perusahaannya sama
+                    for old_code, old_histories in existing_companies.items():
+                        if old_histories and old_histories[0]["company_name"].lower().strip() == company_name.lower().strip():
+                            if old_histories[0]["global_status"] in ["delivered", "opened", "clicked", "permanent_fail", "permanent_failure"]:
+                                has_valid_history = True
+                                # Kita gunakan KODE BARU, tapi dengan mempertahankan riwayat lamanya
+                                for h in old_histories:
+                                    h["code"] = code
+                                    h["survey_status"] = survey_status
+                                all_records.extend(old_histories)
+                            break
+              
             
             if has_valid_history:
                 logging.info(f"[{idx+1}/{len(companies_data)}] Skip (Sudah ada di cache): {code} | {company_name}")
@@ -793,12 +904,16 @@ def scrape_via_api():
             import shutil
             shutil.move("backup_" + OUTPUT_CSV, OUTPUT_CSV)
 
-        # --- TAMBAHAN PENTING: KEMBALIKAN PERUSAHAAN YANG HILANG DARI API ---
-        # BPS kadang menyembunyikan perusahaan dari API datatable mereka (karena filter target, selesai, dsb)
-        # Kita harus memasukkan kembali data mereka dari existing_companies agar tidak terhapus di Supabase
+     # --- TAMBAHAN PENTING: KEMBALIKAN PERUSAHAAN YANG HILANG DARI API ---
+        seen_company_names_lower = {comp.get("company_name", "").lower().strip() for comp in all_records}
+
         for code_exist, histories in existing_companies.items():
-            if code_exist not in seen_codes and histories:
-                # Masukkan semua riwayat untuk perusahaan tersebut agar tidak terhapus
+            if not histories:
+                continue
+            comp_name_exist = histories[0]["company_name"].lower().strip()
+            
+            # Kembalikan hanya jika Kode DAN Nama Perusahaan belum ada di data baru (mencegah duplikasi)
+            if code_exist not in seen_codes and comp_name_exist not in seen_company_names_lower:
                 all_records.extend(histories)
 
         # Simpan HASIL AKHIR (lengkap) ke Supabase dan data.js

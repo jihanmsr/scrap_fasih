@@ -1,19 +1,19 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-09T13:46:30.013349+08:00",
+  "updated_at": "2026-06-09T13:57:37.778735+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
       "total_prelist": 43705,
-      "total_draft": 149,
+      "total_draft": 148,
       "total_open": 43489,
-      "total_submitted": 67,
+      "total_submitted": 68,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 0.15,
-      "sisa_usaha": 43638,
-      "today_completed": 5,
+      "persentase": 0.16,
+      "sisa_usaha": 43637,
+      "today_completed": 6,
       "yesterday_completed": 2,
-      "last_2_days_completed": 8,
+      "last_2_days_completed": 9,
       "new_usaha_today": 13,
       "new_usaha_yesterday": 11
     },

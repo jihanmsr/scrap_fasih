@@ -446,6 +446,88 @@
             margin-bottom: 2rem;
         }
 
+        .company-table-wrapper {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .table-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0.5rem 1rem;
+            border-bottom: 1px solid var(--card-border);
+            margin-bottom: 0.75rem;
+        }
+
+        .table-note {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        .company-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 960px;
+        }
+
+        .company-table th,
+        .company-table td {
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid var(--card-border);
+            text-align: left;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            vertical-align: middle;
+        }
+
+        .company-table th {
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        .company-table tbody tr:hover {
+            background: var(--card-hover-bg);
+        }
+
+        .company-table tbody tr:nth-child(even) {
+            background: rgba(99, 102, 241, 0.02);
+        }
+
+        .survey-status-badge {
+            padding: 0.35rem 0.7rem;
+            border-radius: 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .company-table td .company-status-badge {
+            min-width: 110px;
+            display: inline-block;
+        }
+
+        .company-table td span {
+            display: inline-block;
+            max-width: 100%;
+            white-space: normal;
+        }
+
         /* Search query highlight style */
         .highlight {
             background-color: rgba(99, 102, 241, 0.25);
@@ -1313,6 +1395,12 @@
 <div class="stat-value" id="stat-bounced" style="color: var(--color-bounced);">0</div>
 <div class="stat-subtext">Gagal terkirim balik</div>
 </div>
+<div class="stat-card" style="--stat-color: var(--color-bounced);">
+<span class="card-category-tag">Email</span>
+<div class="stat-label">Permanent Fail</div>
+<div class="stat-value" id="stat-permanent" style="color: var(--color-bounced);">0</div>
+<div class="stat-subtext">Gagal permanen</div>
+</div>
 <div class="stat-card" style="--stat-color: var(--color-clicked);">
 <span class="card-category-tag">Email</span>
 <div class="stat-label">Link Clicked</div>
@@ -1360,6 +1448,9 @@
 <option value="DRAFT">DRAFT</option>
 <option value="-">- (Tanpa Status)</option>
 </select>
+<button class="btn-action" id="toggle-view-mode" style="min-width: 170px; height: 48px; background-color: rgba(59, 130, 246, 0.09); color: var(--primary); border-color: rgba(59, 130, 246, 0.24);">
+    📋 Tabel / Kartu
+</button>
 <select class="sort-select" id="sort-select" style="flex: 1 1 180px; height: 48px;">
 <option value="name-asc">Nama Perusahaan (A-Z)</option>
 <option value="name-desc">Nama Perusahaan (Z-A)</option>
@@ -1376,6 +1467,9 @@
 </button>
 <button class="pill" data-filter="bounced" id="filter-bounced" style="--pill-bg: var(--color-bounced)">
                         Bounced <span class="pill-count" id="count-bounced">0</span>
+</button>
+<button class="pill" data-filter="permanent_fail" id="filter-permanent_fail" style="--pill-bg: var(--color-bounced)">
+                        Permanent Fail <span class="pill-count" id="count-permanent_fail">0</span>
 </button>
 <button class="pill" data-filter="clicked" id="filter-clicked" style="--pill-bg: var(--color-clicked)">
                         Clicked <span class="pill-count" id="count-clicked">0</span>
@@ -1398,6 +1492,28 @@
 <main>
 <div class="company-list" id="company-list">
 <!-- Data dynamically loaded -->
+</div>
+<div class="company-table-wrapper" id="company-table-wrapper" style="display: none;">
+    <div class="table-toolbar">
+        <div class="table-note">Mode tabel memudahkan seleksi dan pemantauan status email UB secara keseluruhan.</div>
+    </div>
+    <div class="table-scroll">
+        <table class="company-table">
+            <thead>
+                <tr>
+                    <th>Kode</th>
+                    <th>Perusahaan</th>
+                    <th>Email</th>
+                    <th>Status Email</th>
+                    <th>Status Dokumen</th>
+                    <th>Kab/Kota</th>
+                    <th>Waktu Terakhir</th>
+                    <th>Log Terakhir</th>
+                </tr>
+            </thead>
+            <tbody id="company-table-body"></tbody>
+        </table>
+    </div>
 </div>
 <!-- Pagination Container -->
 <div class="pagination" id="pagination">
@@ -1679,6 +1795,10 @@
 </div>
 <!-- Tab Content: Assign Petugas -->
 <div class="tab-content" id="tab-content-assign" style="display: none;">
+    <div class="tabs-navigation" style="justify-content: center; margin-top: 1.5rem; margin-bottom: 0.5rem; border-bottom: none;">
+        <button class="btn-tab active" id="subtab-btn-se2026" onclick="filterAssignData('se2026')" style="background-color: var(--primary); color: white;">Petugas SE2026 (Umum)</button>
+        <button class="btn-tab" id="subtab-btn-ub" onclick="filterAssignData('ub')">Petugas UB</button>
+    </div>
     <!-- Chart Section -->
     <div class="stats-section" style="margin-top: 2rem;">
         <h3 style="margin-top: 0; color: var(--text); font-size: 1.2rem; display: flex; align-items: center;">
@@ -1688,9 +1808,9 @@
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
-            Status Assign Petugas (Semua Usaha)
+            <span id="assign-chart-title">Status Penugasan Petugas (SE Umum + SE UB)</span>
         </h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Assignment berdasarkan status penugasan tiap Kabupaten/Kota</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Rekap penugasan petugas sensus berdasarkan kabupaten/kota — gabungan Sensus Ekonomi Semua Usaha dan Usaha Besar</p>
         <div style="height: 400px; width: 100%;">
             <canvas id="assignChart"></canvas>
         </div>
@@ -1706,33 +1826,60 @@
                 <line x1="3" y1="9" x2="21" y2="9"></line>
                 <line x1="3" y1="15" x2="21" y2="15"></line>
             </svg>
-            Rincian Assignment per SLS (UB)
+            <span id="assign-sls-title">Rincian Assignment per SLS</span>
         </h3>
         <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 500;">
-            Daftar status penugasan petugas sensus sampai level Satuan Lingkungan Setempat (SLS) pada Sensus Ekonomi UB.
+            Daftar status penugasan petugas sensus sampai level Satuan Lingkungan Setempat (SLS) untuk Sensus Ekonomi.
         </p>
         
         <!-- SLS Summary Cards -->
         <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
             <div class="stat-card" style="--stat-color: var(--primary); padding: 1.25rem;">
-                <div class="stat-label" style="font-size: 0.8rem;">Total SLS (UB)</div>
+                <div class="stat-label" style="font-size: 0.8rem;">Total SLS</div>
                 <div class="stat-value" id="sls-stat-total" style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">0</div>
                 <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-substat-total">Target Usaha: 0</div>
             </div>
             <div class="stat-card" style="--stat-color: var(--color-delivered); padding: 1.25rem;">
-                <div class="stat-label" style="font-size: 0.8rem;">Fully Assigned SLS</div>
+                <div class="stat-label" style="font-size: 0.8rem;">SLS Sudah Ditugaskan</div>
                 <div class="stat-value" id="sls-stat-fully" style="color: var(--color-delivered); font-size: 1.8rem; font-weight: 800;">0</div>
                 <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-fully">0.00% dari total SLS</div>
             </div>
             <div class="stat-card" style="--stat-color: #f59e0b; padding: 1.25rem;">
-                <div class="stat-label" style="font-size: 0.8rem;">Partially Assigned SLS</div>
+                <div class="stat-label" style="font-size: 0.8rem;">SLS Sebagian Ditugaskan</div>
                 <div class="stat-value" id="sls-stat-partially" style="color: #f59e0b; font-size: 1.8rem; font-weight: 800;">0</div>
                 <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-partially">0.00% dari total SLS</div>
             </div>
             <div class="stat-card" style="--stat-color: #ef4444; padding: 1.25rem;">
-                <div class="stat-label" style="font-size: 0.8rem;">Unassigned SLS</div>
+                <div class="stat-label" style="font-size: 0.8rem;">SLS Belum Ditugaskan</div>
                 <div class="stat-value" id="sls-stat-unassigned" style="color: #ef4444; font-size: 1.8rem; font-weight: 800;">0</div>
                 <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-unassigned">0.00% dari total SLS</div>
+            </div>
+        </div>
+
+        <!-- Tabel Ringkasan per Kabupaten -->
+        <div style="margin-bottom: 2rem;">
+            <h4 style="font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16" style="color: var(--primary);"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
+                Ringkasan per Kabupaten/Kota
+            </h4>
+            <div style="overflow-x: auto; border-radius: 0.75rem; border: 1px solid var(--card-border);">
+                <table style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.875rem;">
+                    <thead>
+                        <tr style="background-color: var(--card-bg); border-bottom: 2px solid var(--card-border);">
+                            <th style="padding: 0.75rem 1rem; text-align: left; font-weight: 700; color: var(--text); white-space: nowrap;">Kabupaten/Kota</th>
+                            <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--primary); white-space: nowrap;">Total SLS</th>
+                            <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #10b981; white-space: nowrap;">Sudah Ditugaskan</th>
+                            <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #f59e0b; white-space: nowrap;">Sebagian Ditugaskan</th>
+                            <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #ef4444; white-space: nowrap;">Belum Ditugaskan</th>
+                            <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text-secondary); white-space: nowrap;">Total Usaha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kab-summary-tbody">
+                        <tr>
+                            <td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat data ringkasan kabupaten...</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -1756,10 +1903,10 @@
                     <option value="all">Semua Desa</option>
                 </select>
                 <select id="sls-assignment-filter" style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
-                    <option value="all">Semua Status Assignment</option>
-                    <option value="fully_assigned">Sudah Diassign Semua</option>
-                    <option value="partially_assigned">Diassign Sebagian</option>
-                    <option value="unassigned">Belum Diassign Sama Sekali</option>
+                    <option value="all">Semua Status Penugasan</option>
+                    <option value="fully_assigned">Sudah Ditugaskan Semua</option>
+                    <option value="partially_assigned">Sebagian Ditugaskan</option>
+                    <option value="unassigned">Belum Ditugaskan</option>
                 </select>
             </div>
         </div>
@@ -1822,17 +1969,45 @@
             const pills = document.querySelectorAll('.pill');
             const companyListContainer = document.getElementById('company-list');
             const paginationContainer = document.getElementById('pagination');
+            const viewModeToggleBtn = document.getElementById('toggle-view-mode');
+            const companyTableWrapper = document.getElementById('company-table-wrapper');
+            const companyTableBody = document.getElementById('company-table-body');
             const themeToggleBtn = document.getElementById('theme-toggle-btn');
             const htmlElement = document.documentElement;
+
+            // View mode state
+            let viewMode = localStorage.getItem('viewMode') || 'card';
+
+            function updateViewMode() {
+                const isTable = viewMode === 'table';
+                if (companyTableWrapper) companyTableWrapper.style.display = isTable ? 'block' : 'none';
+                if (companyListContainer) companyListContainer.style.display = isTable ? 'none' : 'flex';
+                if (viewModeToggleBtn) {
+                    viewModeToggleBtn.textContent = isTable ? '📇 Mode Kartu' : '📋 Mode Tabel';
+                }
+            }
+
+            if (viewModeToggleBtn) {
+                viewModeToggleBtn.addEventListener('click', () => {
+                    viewMode = viewMode === 'card' ? 'table' : 'card';
+                    localStorage.setItem('viewMode', viewMode);
+                    updateViewMode();
+                    renderList();
+                });
+            }
+
+            updateViewMode();
 
             // Stats & Badge count elements
             const statTotalEl = document.getElementById('stat-total-companies');
             const statBouncedEl = document.getElementById('stat-bounced');
+            const statPermanentEl = document.getElementById('stat-permanent');
             const statClickedEl = document.getElementById('stat-clicked');
             const statOpenedEl = document.getElementById('stat-opened');
 
             const countAll = document.getElementById('count-all');
             const countBounced = document.getElementById('count-bounced');
+            const countPermanent = document.getElementById('count-permanent_fail');
             const countClicked = document.getElementById('count-clicked');
             const countOpened = document.getElementById('count-opened');
             const countDelivered = document.getElementById('count-delivered');
@@ -1970,9 +2145,10 @@
                 statTotalEl.textContent = companies.length;
                 countAll.textContent = companies.length;
 
-                const bounced = companies.filter(c => {
+                const bounced = companies.filter(c => c.global_status.toLowerCase() === 'bounced').length;
+                const permanentFails = companies.filter(c => {
                     const st = c.global_status.toLowerCase();
-                    return st === 'bounced' || st === 'permanent_fail' || st === 'permanent_failure';
+                    return st === 'permanent_fail' || st === 'permanent_failure';
                 }).length;
                 const clicked = companies.filter(c => c.global_status.toLowerCase() === 'clicked').length;
                 const opened = companies.filter(c => c.global_status.toLowerCase() === 'opened').length;
@@ -1980,10 +2156,12 @@
                 const queued = companies.filter(c => c.global_status.toLowerCase() === 'queued').length;
                 const nolog = companies.filter(c => c.global_status.trim() === '-').length;
                 statBouncedEl.textContent = bounced;
+                if (statPermanentEl) statPermanentEl.textContent = permanentFails;
                 statClickedEl.textContent = clicked;
                 statOpenedEl.textContent = opened;
 
                 countBounced.textContent = bounced;
+                if (countPermanent) countPermanent.textContent = permanentFails;
                 countClicked.textContent = clicked;
                 countOpened.textContent = opened;
                 countDelivered.textContent = delivered;
@@ -2099,7 +2277,7 @@
                     const matchesFilter =
                         activeFilter === 'all' ||
                         comp.global_status.toLowerCase() === activeFilter ||
-                        (activeFilter === 'bounced' && (comp.global_status.toLowerCase() === 'permanent_fail' || comp.global_status.toLowerCase() === 'permanent_failure'));
+                        (activeFilter === 'permanent_fail' && (comp.global_status.toLowerCase() === 'permanent_fail' || comp.global_status.toLowerCase() === 'permanent_failure'));
 
                     const matchesSurveyFilter =
                         activeSurveyFilter === 'all' ||
@@ -2149,6 +2327,15 @@
                 const pageItems = filtered.slice(startIndex, endIndex);
 
                 if (filtered.length === 0) {
+                    if (viewMode === 'table' && companyTableBody) {
+                        companyTableBody.innerHTML = `
+                            <tr>
+                                <td colspan="8" style="text-align: center; padding: 2.5rem 1rem; color: var(--text-secondary);">
+                                    Tidak ada data perusahaan yang cocok. Coba ubah kata kunci atau filter status.
+                                </td>
+                            </tr>
+                        `;
+                    }
                     companyListContainer.innerHTML = `
                         <div class="empty-state">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -2162,123 +2349,145 @@
                     return;
                 }
 
-                pageItems.forEach(comp => {
-                    const card = document.createElement('div');
-                    card.className = 'company-card';
+                if (viewMode === 'table') {
+                    if (companyTableWrapper) companyTableWrapper.style.display = 'block';
+                    if (companyListContainer) companyListContainer.style.display = 'none';
+                    if (companyTableBody) {
+                        const tableRows = pageItems.map(comp => {
+                            const statusStyle = getStatusStyle(comp.global_status);
+                            const surveyStyle = getSurveyStatusStyle(comp.survey_status);
+                            const kabkotName = (comp.code && typeof comp.code === 'string') ? (kabkotMapping[comp.code.substring(0, 4)] || 'Lainnya') : 'Lainnya';
+                            const lastLog = comp.history.length ? comp.history[comp.history.length - 1] : {status: '-', timestamp: '-'};
 
-                    const statusStyle = getStatusStyle(comp.global_status);
-
-                    // Create History List HTML
-                    let historyHTML = '';
-                    if (comp.history.length > 0) {
-                        historyHTML = `
-                            <div class="timeline-section">
-                                <div class="timeline-title">
-                                    <!-- Clock / History Icon -->
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                    Riwayat Log Pengiriman
-                                </div>
-                                <div class="timeline-list">
-                                    ${comp.history.map(item => {
-                            const stepStyle = getStatusStyle(item.status);
                             return `
-                                            <div class="timeline-item" style="--node-color: ${stepStyle.color}">
-                                                <div class="timeline-left">
-                                                    <span class="timeline-badge" style="--badge-bg: ${stepStyle.bg}; --badge-color: ${stepStyle.color}">${item.status}</span>
-                                                    <span class="timeline-email">${comp.email}</span>
-                                                </div>
-                                                <div class="timeline-time">${item.timestamp}</div>
-                                            </div>
-                                        `;
-                        }).join('')}
-                                </div>
-                            </div>
-                        `;
-                    } else {
-                        historyHTML = `
-                            <div class="timeline-section" style="color: var(--text-muted); font-size: 0.85rem; font-style: italic;">
-                                Tidak ada data log email yang tercatat.
-                            </div>
-                        `;
+                                <tr>
+                                    <td>${highlightText(comp.code, searchQuery)}</td>
+                                    <td style="font-weight: 700;">${highlightText(comp.company_name, searchQuery)}</td>
+                                    <td>${highlightText(comp.email, searchQuery)}</td>
+                                    <td><span class="company-status-badge" style="--badge-bg: ${statusStyle.bg}; --badge-color: ${statusStyle.color}; --badge-border: ${statusStyle.border};">${comp.global_status}</span></td>
+                                    <td><span class="survey-status-badge" style="background-color: ${surveyStyle.bg}; color: ${surveyStyle.color}; border: 1px solid ${surveyStyle.border};">${comp.survey_status}</span></td>
+                                    <td>${kabkotName}</td>
+                                    <td>${lastLog.timestamp}</td>
+                                    <td>${lastLog.status}</td>
+                                </tr>
+                            `;
+                        }).join('');
+                        companyTableBody.innerHTML = tableRows;
                     }
+                } else {
+                    if (companyTableWrapper) companyTableWrapper.style.display = 'none';
+                    if (companyListContainer) companyListContainer.style.display = 'flex';
+                    pageItems.forEach(comp => {
+                        const card = document.createElement('div');
+                        card.className = 'company-card';
 
-                    const surveyStyle = getSurveyStatusStyle(comp.survey_status);
-
-                    card.innerHTML = `
-                        <div class="company-header">
-                            <div class="company-info">
-                                <div class="company-name-row">
-                                    <div class="company-name">${highlightText(comp.company_name, searchQuery)}</div>
+                        const statusStyle = getStatusStyle(comp.global_status);
+                        let historyHTML = '';
+                        if (comp.history.length > 0) {
+                            historyHTML = `
+                                <div class="timeline-section">
+                                    <div class="timeline-title">
+                                        <!-- Clock / History Icon -->
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        Riwayat Log Pengiriman
+                                    </div>
+                                    <div class="timeline-list">
+                                        ${comp.history.map(item => {
+                                            const stepStyle = getStatusStyle(item.status);
+                                            return `
+                                                <div class="timeline-item" style="--node-color: ${stepStyle.color}">
+                                                    <div class="timeline-left">
+                                                        <span class="timeline-badge" style="--badge-bg: ${stepStyle.bg}; --badge-color: ${stepStyle.color}">${item.status}</span>
+                                                        <span class="timeline-email">${comp.email}</span>
+                                                    </div>
+                                                    <div class="timeline-time">${item.timestamp}</div>
+                                                </div>
+                                            `;
+                                        }).join('')}
+                                    </div>
                                 </div>
-                                <div class="company-meta">
-                                    <span class="code-badge">${highlightText(comp.code, searchQuery)}</span>
-                                    <span class="code-badge" style="background-color: rgba(99, 102, 241, 0.08); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.15); font-weight: 700;">
-                                        ${(comp.code && typeof comp.code === 'string') ? (kabkotMapping[comp.code.substring(0, 4)] || 'Lainnya') : 'Lainnya'}
+                            `;
+                        } else {
+                            historyHTML = `
+                                <div class="timeline-section" style="color: var(--text-muted); font-size: 0.85rem; font-style: italic;">
+                                    Tidak ada data log email yang tercatat.
+                                </div>
+                            `;
+                        }
+
+                        const surveyStyle = getSurveyStatusStyle(comp.survey_status);
+                        card.innerHTML = `
+                            <div class="company-header">
+                                <div class="company-info">
+                                    <div class="company-name-row">
+                                        <div class="company-name">${highlightText(comp.company_name, searchQuery)}</div>
+                                    </div>
+                                    <div class="company-meta">
+                                        <span class="code-badge">${highlightText(comp.code, searchQuery)}</span>
+                                        <span class="code-badge" style="background-color: rgba(99, 102, 241, 0.08); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.15); font-weight: 700;">
+                                            ${(comp.code && typeof comp.code === 'string') ? (kabkotMapping[comp.code.substring(0, 4)] || 'Lainnya') : 'Lainnya'}
+                                        </span>
+                                        <span class="code-badge" style="background-color: ${surveyStyle.bg}; color: ${surveyStyle.color}; border: 1px solid ${surveyStyle.border}; font-weight: 700; text-transform: uppercase;">
+                                            ${comp.survey_status}
+                                        </span>
+                                        <span class="company-email-text">${highlightText(comp.email, searchQuery)}</span>
+                                    </div>
+                                </div>
+                                <div class="right-badges">
+                                    <span class="company-status-badge" style="--badge-bg: ${statusStyle.bg}; --badge-color: ${statusStyle.color}; --badge-border: ${statusStyle.border}">
+                                        ${comp.global_status}
                                     </span>
-                                    <span class="code-badge" style="background-color: ${surveyStyle.bg}; color: ${surveyStyle.color}; border: 1px solid ${surveyStyle.border}; font-weight: 700; text-transform: uppercase;">
-                                        ${comp.survey_status}
-                                    </span>
-                                    <span class="company-email-text">${highlightText(comp.email, searchQuery)}</span>
+                                    <div class="toggle-icon">
+                                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="right-badges">
-                                <span class="company-status-badge" style="--badge-bg: ${statusStyle.bg}; --badge-color: ${statusStyle.color}; --badge-border: ${statusStyle.border}">
-                                    ${comp.global_status}
-                                </span>
-                                <div class="toggle-icon">
-                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </div>
+                            <div class="details-wrapper">
+                                ${historyHTML}
                             </div>
-                        </div>
-                        <div class="details-wrapper">
-                            ${historyHTML}
-                        </div>
-                    `;
+                        `;
 
-                    // Handle Accordion Toggle Click
-                    card.addEventListener('click', (e) => {
-                        if (e.target.closest('a') || e.target.closest('button')) return;
+                        card.addEventListener('click', (e) => {
+                            if (e.target.closest('a') || e.target.closest('button')) return;
 
-                        const isExpanded = card.classList.contains('expanded');
-                        const details = card.querySelector('.details-wrapper');
+                            const isExpanded = card.classList.contains('expanded');
+                            const details = card.querySelector('.details-wrapper');
 
-                        // Close other cards for clean UI
-                        document.querySelectorAll('.company-card.expanded').forEach(c => {
-                            if (c !== card) {
-                                c.classList.remove('expanded');
-                                const otherDetails = c.querySelector('.details-wrapper');
-                                otherDetails.style.overflow = 'hidden';
-                                otherDetails.style.maxHeight = null;
+                            document.querySelectorAll('.company-card.expanded').forEach(c => {
+                                if (c !== card) {
+                                    c.classList.remove('expanded');
+                                    const otherDetails = c.querySelector('.details-wrapper');
+                                    otherDetails.style.overflow = 'hidden';
+                                    otherDetails.style.maxHeight = null;
+                                }
+                            });
+
+                            card.classList.toggle('expanded');
+
+                            if (!isExpanded) {
+                                details.style.maxHeight = details.scrollHeight + "px";
+                                details.addEventListener('transitionend', function handler() {
+                                    if (card.classList.contains('expanded')) {
+                                        details.style.maxHeight = 'none';
+                                        details.style.overflow = 'visible';
+                                    }
+                                    details.removeEventListener('transitionend', handler);
+                                });
+                            } else {
+                                details.style.overflow = 'hidden';
+                                details.style.maxHeight = details.scrollHeight + "px";
+                                details.offsetHeight;
+                                details.style.maxHeight = null;
                             }
                         });
 
-                        card.classList.toggle('expanded');
-
-                        if (!isExpanded) {
-                            // First set to scrollHeight so it transitions smoothly
-                            details.style.maxHeight = details.scrollHeight + "px";
-
-                            // Once the transition finishes, set max-height to none and overflow to visible to prevent clipping
-                            details.addEventListener('transitionend', function handler() {
-                                if (card.classList.contains('expanded')) {
-                                    details.style.maxHeight = 'none';
-                                    details.style.overflow = 'visible';
-                                }
-                                details.removeEventListener('transitionend', handler);
-                            });
-                        } else {
-                            // To collapse, set back to scrollHeight, hide overflow, then next tick set to null
-                            details.style.overflow = 'hidden';
-                            details.style.maxHeight = details.scrollHeight + "px";
-                            details.offsetHeight; // Force repaint
-                            details.style.maxHeight = null;
-                        }
+                        companyListContainer.appendChild(card);
                     });
+                }
 
-                    companyListContainer.appendChild(card);
-                });
+                return;
             }
 
             // Listeners
@@ -2611,7 +2820,7 @@
                 });
 
                 // Render Chart
-                if (!window.currentChartType) window.currentChartType = { se_umum: 'line', se_ub: 'line' };
+                if (!window.currentChartType) window.currentChartType = { se_umum: 'bar', se_ub: 'bar' };
                 
                 window.toggleChartType = function(type) {
                     window.currentChartType[type] = window.currentChartType[type] === 'line' ? 'bar' : 'line';
@@ -2721,6 +2930,73 @@
             // Helpers for dynamic loading last updated status
             let isSupabaseUsedGlobal = false;
             let lastUpdatedEmailTextGlobal = '';
+
+            // Render tabel ringkasan per kabupaten
+            function renderKabSummaryTable() {
+                const tbody = document.getElementById('kab-summary-tbody');
+                if (!tbody) return;
+
+                if (!window.ASSIGN_SLS_DATA || window.ASSIGN_SLS_DATA.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data belum tersedia. Jalankan scrape_assign.py untuk memuat data.</td></tr>`;
+                    return;
+                }
+
+                // Group by kabupaten
+                const kabMap = {};
+                window.ASSIGN_SLS_DATA.forEach(item => {
+                    const kab = item.kab_name || 'LAINNYA';
+                    if (!kabMap[kab]) {
+                        kabMap[kab] = { totalSls: 0, sudah: 0, sebagian: 0, belum: 0, totalUsaha: 0 };
+                    }
+                    kabMap[kab].totalSls += 1;
+                    kabMap[kab].totalUsaha += (item.total || 0);
+                    if (item.unassigned === 0) {
+                        kabMap[kab].sudah += 1;
+                    } else if (item.assigned === 0) {
+                        kabMap[kab].belum += 1;
+                    } else {
+                        kabMap[kab].sebagian += 1;
+                    }
+                });
+
+                const fmt = (n) => new Intl.NumberFormat('id-ID').format(n || 0);
+                const sortedKabs = Object.keys(kabMap).sort();
+
+                // Totals row
+                const totals = { totalSls: 0, sudah: 0, sebagian: 0, belum: 0, totalUsaha: 0 };
+                sortedKabs.forEach(k => {
+                    totals.totalSls   += kabMap[k].totalSls;
+                    totals.sudah      += kabMap[k].sudah;
+                    totals.sebagian   += kabMap[k].sebagian;
+                    totals.belum      += kabMap[k].belum;
+                    totals.totalUsaha += kabMap[k].totalUsaha;
+                });
+
+                const rowStyle = 'border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;';
+                const tdBase  = 'padding: 0.6rem 1rem;';
+
+                tbody.innerHTML = sortedKabs.map((kab, idx) => {
+                    const d = kabMap[kab];
+                    const bgColor = idx % 2 === 0 ? '' : 'background-color: rgba(99,102,241,0.03);';
+                    return `
+                    <tr style="${rowStyle} ${bgColor}">
+                        <td style="${tdBase} font-weight: 600; color: var(--text);">${kab.replace(/\[\d+\] /, '')}</td>
+                        <td style="${tdBase} text-align: center; font-weight: 700; color: var(--primary);">${fmt(d.totalSls)}</td>
+                        <td style="${tdBase} text-align: center; color: #10b981; font-weight: 600;">${fmt(d.sudah)}</td>
+                        <td style="${tdBase} text-align: center; color: #f59e0b; font-weight: 600;">${fmt(d.sebagian)}</td>
+                        <td style="${tdBase} text-align: center; color: #ef4444; font-weight: 600;">${fmt(d.belum)}</td>
+                        <td style="${tdBase} text-align: center; color: var(--text-secondary);">${fmt(d.totalUsaha)}</td>
+                    </tr>`;
+                }).join('') + `
+                <tr style="border-top: 2px solid var(--card-border); background-color: var(--card-bg); font-weight: 800;">
+                    <td style="${tdBase} color: var(--text);">TOTAL</td>
+                    <td style="${tdBase} text-align: center; color: var(--primary);">${fmt(totals.totalSls)}</td>
+                    <td style="${tdBase} text-align: center; color: #10b981;">${fmt(totals.sudah)}</td>
+                    <td style="${tdBase} text-align: center; color: #f59e0b;">${fmt(totals.sebagian)}</td>
+                    <td style="${tdBase} text-align: center; color: #ef4444;">${fmt(totals.belum)}</td>
+                    <td style="${tdBase} text-align: center; color: var(--text-secondary);">${fmt(totals.totalUsaha)}</td>
+                </tr>`;
+            }
 
             let assignChartInstance = null;
 
@@ -2906,10 +3182,10 @@
                     <th onclick="sortSlsTable('kab_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Kabupaten${getIcon('kab_name')}</th>
                     <th onclick="sortSlsTable('kec_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Kecamatan${getIcon('kec_name')}</th>
                     <th onclick="sortSlsTable('desa_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Desa${getIcon('desa_name')}</th>
-                    <th onclick="sortSlsTable('sls_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">SLS Code & Name${getIcon('sls_name')}</th>
+                    <th onclick="sortSlsTable('sls_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Kode & Nama SLS${getIcon('sls_name')}</th>
                     <th onclick="sortSlsTable('total')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none;">Total Target${getIcon('total')}</th>
-                    <th onclick="sortSlsTable('assigned')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-delivered); cursor: pointer; user-select: none;">Assigned${getIcon('assigned')}</th>
-                    <th onclick="sortSlsTable('unassigned')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-bounced); cursor: pointer; user-select: none;">Unassigned${getIcon('unassigned')}</th>
+                    <th onclick="sortSlsTable('assigned')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-delivered); cursor: pointer; user-select: none;">Ditugaskan${getIcon('assigned')}</th>
+                    <th onclick="sortSlsTable('unassigned')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-bounced); cursor: pointer; user-select: none;">Belum Ditugaskan${getIcon('unassigned')}</th>
                     <th style="font-family: 'Outfit', sans-serif; user-select: none;">Status & Petugas</th>
                 `;
             }
@@ -2967,6 +3243,8 @@
                 const partiallyAssigned = statsBase.filter(i => i.assigned > 0 && i.unassigned > 0).length;
                 const unassigned = statsBase.filter(i => i.assigned === 0).length;
                 const totalTarget = statsBase.reduce((sum, i) => sum + (i.total || 0), 0);
+                const totalAssignedUsaha = statsBase.reduce((sum, i) => sum + (i.assigned || 0), 0);
+                const totalUnassignedUsaha = statsBase.reduce((sum, i) => sum + (i.unassigned || 0), 0);
 
                 // Update summary card values
                 const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
@@ -2974,13 +3252,17 @@
                 document.getElementById('sls-substat-total').textContent = `Target Usaha: ${formatNum(totalTarget)}`;
                 
                 document.getElementById('sls-stat-fully').textContent = formatNum(fullyAssigned);
-                document.getElementById('sls-pct-fully').textContent = totalSls > 0 ? `${((fullyAssigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00% dari total SLS';
+                document.getElementById('sls-pct-fully').innerHTML = 
+                    (totalSls > 0 ? `${((fullyAssigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00%') +
+                    `<span style="display:block; margin-top: 0.25rem; font-weight: 700; color: #10b981; font-size: 0.75rem;">Usaha Ditugaskan: ${formatNum(totalAssignedUsaha)}</span>`;
 
                 document.getElementById('sls-stat-partially').textContent = formatNum(partiallyAssigned);
                 document.getElementById('sls-pct-partially').textContent = totalSls > 0 ? `${((partiallyAssigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00% dari total SLS';
 
                 document.getElementById('sls-stat-unassigned').textContent = formatNum(unassigned);
-                document.getElementById('sls-pct-unassigned').textContent = totalSls > 0 ? `${((unassigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00% dari total SLS';
+                document.getElementById('sls-pct-unassigned').innerHTML = 
+                    (totalSls > 0 ? `${((unassigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00%') +
+                    `<span style="display:block; margin-top: 0.25rem; font-weight: 700; color: #ef4444; font-size: 0.75rem;">Usaha Belum Ditugaskan: ${formatNum(totalUnassignedUsaha)}</span>`;
 
                 // 4. Sort logic
                 const col = window.slsSort.column;
@@ -3020,11 +3302,11 @@
                 tbody.innerHTML = slicedData.map(item => {
                     let badge = '';
                     if (item.unassigned === 0) {
-                        badge = '<span style="background-color: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 600;">Fully Assigned</span>';
+                        badge = '<span style="background-color: rgba(16, 185, 129, 0.1); color: #10b981; padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 600;">Sudah Ditugaskan</span>';
                     } else if (item.assigned === 0) {
-                        badge = '<span style="background-color: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 600;">Unassigned</span>';
+                        badge = '<span style="background-color: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 600;">Belum Ditugaskan</span>';
                     } else {
-                        badge = '<span style="background-color: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 600;">Partially Assigned</span>';
+                        badge = '<span style="background-color: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 600;">Sebagian Ditugaskan</span>';
                     }
                     
                     const officers = item.officers && item.officers.length > 0 ? item.officers.join(', ') : '-';
@@ -3146,12 +3428,16 @@
             // Interval to check for updates from other scripts
             setInterval(() => {
                 const searchVal = (document.getElementById('search-input').value || '').toLowerCase().trim();
-                const filterVal = document.getElementById('status-filter').value;
+                const statusFilterEl = document.getElementById('status-filter');
+                const filterVal = statusFilterEl ? statusFilterEl.value : null;
                 const activeTab = localStorage.getItem('active_tab') || 'se_umum';
                 
                 // Only reload email data if we are NOT using Supabase (Supabase has realtime if we want, but polling is simpler for now)
                 if (!isSupabaseUsedGlobal && typeof window.EMAIL_DATA !== 'undefined' && window.EMAIL_DATA !== sourceData) {
                     sourceData = window.EMAIL_DATA;
+                    // --- BARIS YANG DITAMBAHKAN ---
+                    companies = processGroupedData(sourceData); 
+                    // -----------------------------
                     updateFiltersAndStats();
                     renderList();
                     if(activeTab === 'email') window.updateLastUpdatedText(activeTab);
@@ -3172,6 +3458,7 @@
                 // Reload Assign data if updated
                 if (typeof window.ASSIGN_DATA !== 'undefined' && activeTab === 'assign') {
                     renderAssignChart();
+                    renderKabSummaryTable();
                     renderSlsTable();
                 }
             }, 5000);
@@ -3210,6 +3497,11 @@
                     }
                 }
             };
+
+            // Bind functions to window so they are globally accessible by filterAssignData in assign_data.js
+            window.renderAssignChart = renderAssignChart;
+            window.renderKabSummaryTable = renderKabSummaryTable;
+            window.renderSlsTable = renderSlsTable;
 
             // Switch Tab function
             window.switchTab = function (tabId) {
@@ -3254,10 +3546,16 @@
                     if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
                     renderSeDashboard('se_ub');
                 } else if (tabId === 'assign') {
-                    mainHeader.textContent = 'Dashboard Assign Petugas';
-                    mainSubheader.textContent = 'Status penugasan petugas pada masing-masing wilayah';
-                    renderAssignChart();
-                    renderSlsTable();
+                    mainHeader.textContent = 'Dashboard Penugasan Petugas';
+                    mainSubheader.textContent = 'Status penugasan petugas sensus pada masing-masing wilayah (SE Umum + SE UB)';
+                    const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+                    if (typeof filterAssignData === 'function') {
+                        filterAssignData(activeSubtab);
+                    } else {
+                        renderAssignChart();
+                        renderKabSummaryTable();
+                        renderSlsTable();
+                    }
                 } else {
                     mainHeader.textContent = 'Fasih Email Dashboard';
                     mainSubheader.textContent = 'Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB';
@@ -3351,6 +3649,15 @@
                     document.head.appendChild(script);
                 });
 
+                // Dynamically reload assign_data.js
+                await new Promise((resolve) => {
+                    const script = document.createElement('script');
+                    script.src = 'assign_data.js?v=' + Date.now();
+                    script.onload = () => resolve();
+                    script.onerror = () => resolve();
+                    document.head.appendChild(script);
+                });
+
                 companies = processGroupedData(sourceData);
 
                 // Generate last updated text templates
@@ -3382,8 +3689,13 @@
                 window.updateLastUpdatedText(activeTab);
                 
                 if (activeTab === 'assign') {
-                    renderAssignChart();
-                    renderSlsTable();
+                    const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+                    if (typeof filterAssignData === 'function') {
+                        filterAssignData(activeSubtab);
+                    } else {
+                        renderAssignChart();
+                        renderSlsTable();
+                    }
                 }
             }
 

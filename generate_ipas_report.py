@@ -2,8 +2,13 @@ import asyncio
 import json
 from dotenv import load_dotenv
 import os
+import time
 import logging
-import os
+import datetime
+import socket
+import subprocess
+import shutil
+from playwright.async_api import async_playwright
 
 load_dotenv()
 SUPABASE_URL = os.getenv("SUPABASE_URL")
@@ -17,28 +22,144 @@ if SUPABASE_URL and SUPABASE_KEY and "MASUKKAN" not in SUPABASE_URL:
         logging.info("Koneksi Supabase berhasil diinisialisasi.")
     except Exception as e:
         logging.error(f"Gagal menginisialisasi Supabase: {e}")
-import datetime
-import os
-from playwright.async_api import async_playwright
+
+USER_DATA_DIR = "playwright_chrome_profile"
+
+def check_port_open(port=9222):
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            return s.connect_ex(('localhost', port)) == 0
+    except:
+        return False
+
+def cleanup_chrome_cache(user_data_dir):
+    cache_dirs = [
+        os.path.join(user_data_dir, "Default", "Cache"),
+        os.path.join(user_data_dir, "Default", "Code Cache"),
+        os.path.join(user_data_dir, "Default", "GPUCache"),
+        os.path.join(user_data_dir, "Default", "Service Worker", "CacheStorage"),
+    ]
+    for path in cache_dirs:
+        if os.path.exists(path):
+            try:
+                shutil.rmtree(path)
+                print(f"[INFO] Membersihkan cache Chrome: {path}")
+            except Exception as e:
+                print(f"[WARNING] Gagal membersihkan cache Chrome {path}: {e}")
+
+def launch_chrome_if_needed():
+    port = 9222
+    if check_port_open(port):
+        print("[INFO] Chrome remote debugging port 9222 sudah aktif. Menggunakan instansi yang ada.")
+        return
+    
+    print("[INFO] Chrome remote debugging port 9222 tidak aktif. Mencoba meluncurkan browser...")
+    chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
+    
+    # Hapus lock file jika ada agar Chrome bisa berjalan lancar
+    lock_file = os.path.join(USER_DATA_DIR, "SingletonLock")
+    if os.path.lexists(lock_file):
+        try:
+            os.remove(lock_file)
+            print("[INFO] File SingletonLock berhasil dihapus untuk mencegah error lock profile.")
+        except Exception as e:
+            print(f"[WARNING] Gagal menghapus SingletonLock: {e}")
+    
+    abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
+    os.makedirs(abs_user_data_dir, exist_ok=True)
+    cleanup_chrome_cache(abs_user_data_dir)
+    
+    cmd = [
+        chrome_path,
+        f"--remote-debugging-port={port}",
+        f"--user-data-dir={abs_user_data_dir}",
+        "--no-first-run",
+        "--no-default-browser-check"
+    ]
+    
+    # Launch Chrome in detached mode
+    subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    
+    # Tunggu sampai port siap
+    for _ in range(15):
+        time.sleep(1)
+        if check_port_open(port):
+            print("[INFO] Browser Chrome berhasil diluncurkan dan siap di port 9222.")
+            return
+    print("[ERROR] Gagal mendeteksi port 9222 setelah meluncurkan Chrome.")
+
+async def get_authenticated_context(p):
+    abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
+    os.makedirs(abs_user_data_dir, exist_ok=True)
+    chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
+
+    browser = None
+    context = None
+    page = None
+
+    if check_port_open(9222):
+        print("[INFO] Remote debugging port 9222 terdeteksi. Mencoba sambung via CDP...")
+        try:
+            browser = await p.chromium.connect_over_cdp("http://127.0.0.1:9222")
+            context = browser.contexts[0] if browser.contexts else browser.new_context()
+            page = context.pages[0] if context.pages else context.new_page()
+            print("[INFO] Berhasil tersambung ke browser via CDP.")
+        except Exception as e:
+            print(f"[WARNING] Gagal connect_over_cdp: {e}. Menggunakan Playwright persistent context sebagai fallback.")
+            browser = None
+
+    async def try_launch_persistent():
+        return await p.chromium.launch_persistent_context(
+            user_data_dir=abs_user_data_dir,
+            headless=False,
+            executable_path=chrome_path,
+            args=["--no-first-run", "--no-default-browser-check", "--disable-background-networking", "--disable-background-timer-throttling"]
+        )
+
+    if page is None:
+        print("[INFO] Meluncurkan browser melalui Playwright persistent context...")
+        try:
+            context = await try_launch_persistent()
+            page = context.pages[0] if context.pages else await context.new_page()
+        except Exception as e:
+            print(f"[WARNING] Playwright persistent context gagal diluncurkan: {e}")
+            cleanup_chrome_cache(abs_user_data_dir)
+            print("[INFO] Membersihkan cache user data dan mencoba ulang.")
+            try:
+                context = await try_launch_persistent()
+                page = context.pages[0] if context.pages else await context.new_page()
+            except Exception as e2:
+                print(f"[WARNING] Gagal meluncurkan Playwright persistent context setelah retry: {e2}")
+                print("[INFO] Coba buka browser Playwright headful sebagai fallback...")
+                try:
+                    browser = await p.chromium.launch(headless=False)
+                    context = await browser.new_context()
+                    page = await context.new_page()
+                    print("[INFO] Browser Playwright headful berhasil diluncurkan.")
+                except Exception as e3:
+                    print(f"[ERROR] Playwright headful launch gagal: {e3}")
+                    raise RuntimeError("Browser setup failed completely")
+
+    return browser, context, page
 
 async def generate_report():
+    launch_chrome_if_needed()
     async with async_playwright() as p:
         try:
-            browser = await p.chromium.connect_over_cdp("http://localhost:9222")
-            print("Berhasil menyambung ke browser Chrome.")
+            browser, context, page = await get_authenticated_context(p)
         except Exception as e:
-            print("Gagal connect ke chrome:", e)
+            print("Gagal mendapatkan browser context:", e)
             return
 
-        page = None
-        for pg in browser.contexts[0].pages:
-            if "fasih-sm.bps.go.id" in pg.url:
-                page = pg
+        # Cari tab aktif yang sudah membuka fasih-sm
+        for p_page in context.pages:
+            if "fasih-sm.bps.go.id" in p_page.url:
+                page = p_page
+                print(f"Menemukan tab aktif FASIH: {page.url}")
                 break
         
-        if not page:
-            print("Tab FASIH tidak ditemukan. Membuat tab baru...")
-            page = await browser.contexts[0].new_page()
+        if page.url == "about:blank":
+            print("Tab FASIH tidak ditemukan. Navigasi...")
             try:
                 await page.goto("https://fasih-sm.bps.go.id/app/surveys/a0429e96-51a5-477b-a415-485f9c153004/fd68e454-ba45-4b85-8205-f3bf777ded24/data", timeout=60000, wait_until="domcontentloaded")
             except Exception as e:
