@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 
 <html data-theme="dark" lang="id">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Fasih Email Delivery Dashboard</title>
-<meta content="Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB" name="description"/>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Supabase JS Library -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<!-- Chart.js Library -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<!-- Vanilla CSS Styles -->
-<style>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Fasih Email Delivery Dashboard</title>
+    <meta content="Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB"
+        name="description" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Supabase JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Vanilla CSS Styles -->
+    <style>
         :root[data-theme="dark"] {
             --bg-color: #0b0f19;
             --bg-gradient: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
@@ -1133,20 +1137,20 @@
                 min-width: 100px;
             }
         }
-    
+
         /* App Layout Styles */
         body {
             margin: 0;
             padding: 0;
         }
-        
+
         .app-layout {
             display: flex;
             height: 100vh;
             overflow: hidden;
             background-color: var(--bg-color);
         }
-        
+
         .sidebar {
             width: 280px;
             background-color: var(--card-bg);
@@ -1202,7 +1206,7 @@
             flex-direction: column;
         }
 
-        .main-content > header {
+        .main-content>header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1213,7 +1217,7 @@
             box-shadow: none;
         }
 
-        .main-content > header .brand-title h1 {
+        .main-content>header .brand-title h1 {
             font-size: 1.8rem;
             color: var(--text);
             margin: 0 0 0.5rem 0;
@@ -1221,7 +1225,7 @@
             font-weight: 800;
         }
 
-        .main-content > header .brand-title p {
+        .main-content>header .brand-title p {
             font-size: 0.95rem;
             color: var(--text-secondary);
             margin: 0;
@@ -1282,678 +1286,838 @@
                 height: auto;
             }
         }
-</style>
+    </style>
 </head>
+
 <body>
-<div class="app-layout">
-    <aside class="sidebar">
-        <div class="brand-title">
-            <h2 style="font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 800; color: var(--primary); margin: 0; letter-spacing: -0.025em;">Fasih SM</h2>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 5px 0 0 0; font-weight: 500;">Sensus Ekonomi 2026</p>
-        </div>
-        <nav class="sidebar-nav">
-            <button class="btn-tab active" id="tab-btn-se_umum" onclick="switchTab('se_umum')">
-                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
-                    <line x1="18" x2="18" y1="20" y2="10"></line>
-                    <line x1="12" x2="12" y1="20" y2="4"></line>
-                    <line x1="6" x2="6" y1="20" y2="14"></line>
-                </svg>
-                Sensus Ekonomi 2026 (Semua Usaha)
-            </button>
-            <button class="btn-tab" id="tab-btn-se_ub" onclick="switchTab('se_ub')">
-                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
-                    <line x1="18" x2="18" y1="20" y2="10"></line>
-                    <line x1="12" x2="12" y1="20" y2="4"></line>
-                    <line x1="6" x2="6" y1="20" y2="14"></line>
-                </svg>
-                Sensus Ekonomi 2026 (UB)
-            </button>
-            <button class="btn-tab" id="tab-btn-email" onclick="switchTab('email')">
-                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                Tracker Pengiriman Email UB
-            </button>
-            <button class="btn-tab" id="tab-btn-assign" onclick="switchTab('assign')">
-                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-                Status Assign Petugas
-            </button>
-        </nav>
-        
-        <div class="sidebar-footer" style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--card-border); text-align: center;">
-            <div id="last-updated-text" style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">
-                Memuat status...
-            </div>
-        </div>
-    </aside>
-    <main class="main-content">
-        <header>
+    <div class="app-layout">
+        <aside class="sidebar">
             <div class="brand-title">
-                <h1 id="main-header" style="font-size: 1.75rem; font-weight: 800; font-family: 'Outfit', sans-serif;">Fasih Email Delivery</h1>
-                <p id="main-subheader" style="color: var(--text-secondary); font-size: 0.95rem;">Monitoring Status Pengiriman Email Sensus Ekonomi 2026 - UB</p>
+                <h2
+                    style="font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 800; color: var(--primary); margin: 0; letter-spacing: -0.025em;">
+                    Fasih SM</h2>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 5px 0 0 0; font-weight: 500;">Sensus
+                    Ekonomi 2026</p>
             </div>
-            <div class="header-actions">
-                <button aria-label="Toggle Theme" class="theme-toggle" id="theme-toggle-btn">
-                    <!-- Sun Icon (for light theme) -->
-                    <svg class="sun-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            <nav class="sidebar-nav">
+                <button class="btn-tab active" id="tab-btn-se_umum" onclick="switchTab('se_umum')">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <line x1="18" x2="18" y1="20" y2="10"></line>
+                        <line x1="12" x2="12" y1="20" y2="4"></line>
+                        <line x1="6" x2="6" y1="20" y2="14"></line>
                     </svg>
-                    <!-- Moon Icon (for dark theme) -->
-                    <svg class="moon-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                    </svg>
+                    Sensus Ekonomi 2026 (Semua Usaha)
                 </button>
-                <button class="btn-action" id="btn-refresh" title="Muat Ulang Halaman">
-                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
-                        <polyline points="23 4 23 10 17 10"></polyline>
-                        <polyline points="1 20 1 14 7 14"></polyline>
-                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                <button class="btn-tab" id="tab-btn-se_ub" onclick="switchTab('se_ub')">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <line x1="18" x2="18" y1="20" y2="10"></line>
+                        <line x1="12" x2="12" y1="20" y2="4"></line>
+                        <line x1="6" x2="6" y1="20" y2="14"></line>
                     </svg>
-                    Refresh
+                    Sensus Ekonomi 2026 (UB)
                 </button>
-                <a class="btn-action" download="" href="./bounced_emails.xlsx" id="btn-download-xlsx" style="display: none;">
-                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" x2="12" y1="15" y2="3"></line>
+                <button class="btn-tab" id="tab-btn-email" onclick="switchTab('email')">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
-                    Unduh Excel Bounced
-                </a>
-                <button class="btn-action" id="btn-download-backup-csv" style="display: none;" title="Unduh Backup Data UB (CSV)">
-                    <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" x2="12" y1="15" y2="3"></line>
-                    </svg>
-                    Unduh CSV Backup UB
+                    Tracker Pengiriman Email UB
                 </button>
+                <button class="btn-tab" id="tab-btn-assign" onclick="switchTab('assign')">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Status Assign Petugas
+                </button>
+            </nav>
+
+            <div class="sidebar-footer"
+                style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--card-border); text-align: center;">
+                <div id="last-updated-text" style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">
+                    Memuat status...
+                </div>
             </div>
-        </header>
-<!-- Tab Content: Email Tracker -->
-<div class="tab-content" id="tab-content-email" style="display: none;">
-<!-- Summary Stats Sections -->
-<div class="stats-section">
-<h3 class="section-title-stats">
-<svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.5rem;" viewbox="0 0 24 24" width="16">
-<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-<polyline points="22,6 12,13 2,6"></polyline>
-</svg>
-                    Status Pengiriman Email
-                </h3>
-<div class="stats-grid" id="stats-container">
-<div class="stat-card" style="--stat-color: var(--primary);">
-<span class="card-category-tag">Email</span>
-<div class="stat-label">Total Perusahaan</div>
-<div class="stat-value" id="stat-total-companies">0</div>
-<div class="stat-subtext">Semua record terdaftar</div>
-</div>
-<div class="stat-card" style="--stat-color: var(--color-bounced);">
-<span class="card-category-tag">Email</span>
-<div class="stat-label">Bounced Emails</div>
-<div class="stat-value" id="stat-bounced" style="color: var(--color-bounced);">0</div>
-<div class="stat-subtext">Gagal terkirim balik</div>
-</div>
-<div class="stat-card" style="--stat-color: var(--color-bounced);">
-<span class="card-category-tag">Email</span>
-<div class="stat-label">Permanent Fail</div>
-<div class="stat-value" id="stat-permanent" style="color: var(--color-bounced);">0</div>
-<div class="stat-subtext">Gagal permanen</div>
-</div>
-<div class="stat-card" style="--stat-color: var(--color-clicked);">
-<span class="card-category-tag">Email</span>
-<div class="stat-label">Link Clicked</div>
-<div class="stat-value" id="stat-clicked" style="color: var(--color-clicked);">0</div>
-<div class="stat-subtext">Responden membuka link</div>
-</div>
-<div class="stat-card" style="--stat-color: var(--color-opened);">
-<span class="card-category-tag">Email</span>
-<div class="stat-label">Opened Emails</div>
-<div class="stat-value" id="stat-opened" style="color: var(--color-opened);">0</div>
-<div class="stat-subtext">Dibaca oleh responden</div>
-</div>
-</div>
-</div>
-<!-- Filter Controls -->
-<div class="filter-panel">
-<div class="search-row" style="flex-wrap: wrap; gap: 0.75rem;">
-<div class="search-wrapper" style="flex: 2 1 300px;">
-<svg class="search-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
-</svg>
-<input class="search-input" id="search-input" placeholder="Cari Nama Perusahaan, Kode Identitas, atau Email..." type="text"/>
-</div>
-<div style="display: flex; gap: 0.5rem; flex: 3 1 auto; flex-wrap: wrap;">
-<select class="sort-select" id="kabkot-filter-select" style="flex: 1 1 180px; height: 48px;">
-<option value="all">Semua Kabupaten/Kota</option>
-<option value="7201">Banggai</option>
-<option value="7207">Banggai Kepulauan</option>
-<option value="7211">Banggai Laut</option>
-<option value="7205">Buol</option>
-<option value="7203">Donggala</option>
-<option value="7206">Morowali</option>
-<option value="7212">Morowali Utara</option>
-<option value="7271">Palu</option>
-<option value="7208">Parigi Moutong</option>
-<option value="7202">Poso</option>
-<option value="7210">Sigi</option>
-<option value="7209">Tojo Una-Una</option>
-<option value="7204">Toli-Toli</option>
-</select>
-<select class="sort-select" id="survey-filter-select" style="flex: 1 1 180px; height: 48px;">
-<option value="all">Semua Status Dokumen</option>
-<option value="SUBMITTED RESPONDENT">SUBMITTED RESPONDENT</option>
-<option value="OPEN">OPEN</option>
-<option value="DRAFT">DRAFT</option>
-<option value="-">- (Tanpa Status)</option>
-</select>
-<button class="btn-action" id="toggle-view-mode" style="min-width: 170px; height: 48px; background-color: rgba(59, 130, 246, 0.09); color: var(--primary); border-color: rgba(59, 130, 246, 0.24);">
-    📋 Tabel / Kartu
-</button>
-<select class="sort-select" id="sort-select" style="flex: 1 1 180px; height: 48px;">
-<option value="name-asc">Nama Perusahaan (A-Z)</option>
-<option value="name-desc">Nama Perusahaan (Z-A)</option>
-<option value="status-severity">Urutkan dari Bounced</option>
-<option value="survey-status-asc">Status Dokumen (Draft → Approved)</option>
-<option value="survey-status-desc">Status Dokumen (Approved → Draft)</option>
-</select>
-</div>
-</div>
-<div class="pills-group">
-<span class="filter-title">Filter Status:</span>
-<button class="pill active" data-filter="all" id="filter-all">
-                        Semua <span class="pill-count" id="count-all">0</span>
-</button>
-<button class="pill" data-filter="bounced" id="filter-bounced" style="--pill-bg: var(--color-bounced)">
-                        Bounced <span class="pill-count" id="count-bounced">0</span>
-</button>
-<button class="pill" data-filter="permanent_fail" id="filter-permanent_fail" style="--pill-bg: var(--color-bounced)">
-                        Permanent Fail <span class="pill-count" id="count-permanent_fail">0</span>
-</button>
-<button class="pill" data-filter="clicked" id="filter-clicked" style="--pill-bg: var(--color-clicked)">
-                        Clicked <span class="pill-count" id="count-clicked">0</span>
-</button>
-<button class="pill" data-filter="opened" id="filter-opened" style="--pill-bg: var(--color-opened)">
-                        Opened <span class="pill-count" id="count-opened">0</span>
-</button>
-<button class="pill" data-filter="delivered" id="filter-delivered" style="--pill-bg: var(--color-delivered)">
-                        Delivered <span class="pill-count" id="count-delivered">0</span>
-</button>
-<button class="pill" data-filter="queued" id="filter-queued" style="--pill-bg: var(--color-queued)">
-                        Queued <span class="pill-count" id="count-queued">0</span>
-</button>
-<button class="pill" data-filter="-" id="filter-nolog" style="--pill-bg: var(--color-nolog)">
-                        Belum Dikirim <span class="pill-count" id="count-nolog">0</span>
-</button>
-</div>
-</div>
-<!-- Main Dashboard List -->
-<main>
-<div class="company-list" id="company-list">
-<!-- Data dynamically loaded -->
-</div>
-<div class="company-table-wrapper" id="company-table-wrapper" style="display: none;">
-    <div class="table-toolbar">
-        <div class="table-note">Mode tabel memudahkan seleksi dan pemantauan status email UB secara keseluruhan.</div>
-    </div>
-    <div class="table-scroll">
-        <table class="company-table">
-            <thead>
-                <tr>
-                    <th>Kode</th>
-                    <th>Perusahaan</th>
-                    <th>Email</th>
-                    <th>Status Email</th>
-                    <th>Status Dokumen</th>
-                    <th>Kab/Kota</th>
-                    <th>Waktu Terakhir</th>
-                    <th>Log Terakhir</th>
-                </tr>
-            </thead>
-            <tbody id="company-table-body"></tbody>
-        </table>
-    </div>
-</div>
-<!-- Pagination Container -->
-<div class="pagination" id="pagination">
-<!-- Pagination buttons dynamically loaded -->
-</div>
-</main>
-</div><!-- End Tab Content: Email Tracker -->
-<!-- Tab Content: Sensus Ekonomi Umum Dashboard -->
-<div class="tab-content" id="tab-content-se_umum">
-<!-- Welcome Section -->
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
-<div>
-<h2 style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">
-                        Analitik <span style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres
-                            Harian</span> (Semua Usaha)</h2>
-<p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus Ekonomi
-                        2026 di Sulawesi Tengah</p>
-</div>
-<div>
-<div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 1rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-<span style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; display: inline-block; animation: pulse 2s infinite;"></span>
-<span style="font-size: 0.75rem; font-weight: 700; color: #10b981;">LIVE SYNC ACTIVE</span>
-</div>
-</div>
-</div>
-<!-- Stats Grid for SE Umum -->
-<div class="stats-grid" id="se_umum-stats-container">
-<div class="stat-card" style="--stat-color: var(--primary);">
-<span class="card-category-tag">Umum</span>
-<div class="stat-label">Total Usaha (Prelist)</div>
-<div class="stat-value" id="se_umum-stat-total-prelist">0</div>
-<div class="stat-subtext" id="se_umum-new-today-wrapper">
-<span id="se_umum-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span>
-                        hari ini
-                    </div>
-</div>
-<div class="stat-card" style="--stat-color: #f59e0b;">
-<span class="card-category-tag">Umum</span>
-<div class="stat-label">Draft</div>
-<div class="stat-value" id="se_umum-stat-draft" style="color: #f59e0b;">0</div>
-<div class="stat-subtext">Dokumen berstatus draft</div>
-</div>
-<div class="stat-card" style="--stat-color: #3b82f6;">
-<span class="card-category-tag">Umum</span>
-<div class="stat-label">Open</div>
-<div class="stat-value" id="se_umum-stat-open" style="color: #3b82f6;">0</div>
-<div class="stat-subtext">Dokumen berstatus open</div>
-</div>
-<div class="stat-card" style="--stat-color: var(--color-delivered);">
-<span class="card-category-tag">Umum</span>
-<div class="stat-label">Submitted (Selesai)</div>
-<div class="stat-value" id="se_umum-stat-submitted" style="color: var(--color-delivered);">0</div>
-<div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
-<div style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
-<div id="se_umum-progress-bar" style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
-</div>
-<span id="se_umum-stat-percentage" style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
-</div>
-<div id="se_umum-stat-kenaikan" style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; font-weight: 600;">
-                        +0% hari ini | +0% kemarin
-                    </div>
-</div>
-<div class="stat-card" style="--stat-color: var(--color-bounced);">
-<span class="card-category-tag">Umum</span>
-<div class="stat-label">Sisa Usaha</div>
-<div class="stat-value" id="se_umum-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
-<div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
-<span>Progres Hari Ini: <span id="se_umum-stat-today-completed" style="font-weight:700;">0</span></span>
-<span id="se_umum-stat-vs-yesterday-wrapper"></span>
-</div>
-</div>
-</div>
-<!-- Chart Section -->
-<div class="stats-section" id="se_umum-chart-section" style="margin-top: 1rem;">
-<div class="stat-card" style="padding: 1.5rem; --stat-color: var(--primary);">
-<h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
-<div style="display: flex; align-items: center; gap: 0.5rem;">
-<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="color: var(--primary);" viewbox="0 0 24 24" width="18">
-<path d="M18 20V10"></path>
-<path d="M12 20V4"></path>
-<path d="M6 20V14"></path>
-</svg>
-                            Grafik Progres Capaian
+        </aside>
+        <main class="main-content">
+            <header>
+                <div class="brand-title">
+                    <h1 id="main-header"
+                        style="font-size: 1.75rem; font-weight: 800; font-family: 'Outfit', sans-serif;">Fasih Email
+                        Delivery</h1>
+                    <p id="main-subheader" style="color: var(--text-secondary); font-size: 0.95rem;">Monitoring Status
+                        Pengiriman Email Sensus Ekonomi 2026 - UB</p>
+                </div>
+                <div class="header-actions">
+                    <button aria-label="Toggle Theme" class="theme-toggle" id="theme-toggle-btn">
+                        <!-- Sun Icon (for light theme) -->
+                        <svg class="sun-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <!-- Moon Icon (for dark theme) -->
+                        <svg class="moon-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                    </button>
+                    <button class="btn-action" id="btn-refresh" title="Muat Ulang Halaman">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                        Refresh
+                    </button>
+                    <a class="btn-action" download="" href="./bounced_emails.xlsx" id="btn-download-xlsx"
+                        style="display: none;">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" x2="12" y1="15" y2="3"></line>
+                        </svg>
+                        Unduh Excel Bounced
+                    </a>
+                    <button class="btn-action" id="btn-download-backup-csv" style="display: none;"
+                        title="Unduh Backup Data UB (CSV)">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" x2="12" y1="15" y2="3"></line>
+                        </svg>
+                        Unduh CSV Backup UB
+                    </button>
+                </div>
+            </header>
+            <!-- Tab Content: Email Tracker -->
+            <div class="tab-content" id="tab-content-email" style="display: none;">
+                <!-- Summary Stats Sections -->
+                <div class="stats-section">
+                    <h3 class="section-title-stats">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.5rem;" viewbox="0 0 24 24"
+                            width="16">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Status Pengiriman Email
+                    </h3>
+                    <div class="stats-grid" id="stats-container">
+                        <div class="stat-card" style="--stat-color: var(--primary);">
+                            <span class="card-category-tag">Email</span>
+                            <div class="stat-label">Total Perusahaan</div>
+                            <div class="stat-value" id="stat-total-companies">0</div>
+                            <div class="stat-subtext">Semua record terdaftar</div>
                         </div>
-<button class="btn-action" onclick="window.toggleChartType('se_umum')" style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 0.5rem;">
-                            🔄 Ganti Tipe Grafik
-                        </button>
-</h3>
-<div style="position: relative; height: 320px; width: 100%;">
-<canvas id="se_umum-chart"></canvas>
-</div>
-</div>
-</div>
-<!-- Table Section -->
-<div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
-<h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">
-                        Rincian per Kabupaten/Kota</h3>
-<div class="search-wrapper" style="max-width: 300px; width: 100%;">
-<svg class="search-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
-</svg>
-<input class="search-input" id="se_umum-search-input" placeholder="Cari kabupaten/kota..." type="text"/>
-</div>
-</div>
-</div>
-<div class="ipas-table-wrapper">
-<table class="ipas-table">
-<thead>
-<tr>
-<th style="font-family: 'Outfit', sans-serif;">Kabupaten/Kota</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Target</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b;">Draft</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6;">Open</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered);">
-                                Submitted</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: center;">% Capaian</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-bounced);">
-                                Sisa Usaha</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini |
-                                Kemarin)</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini |
-                                Kemarin)</th>
-</tr>
-</thead>
-<tbody id="se_umum-table-body">
-<!-- Loaded dynamically -->
-</tbody>
-</table>
-</div>
-</div>
-<!-- Tab Content: Sensus Ekonomi UB Dashboard -->
-<div class="tab-content" id="tab-content-se_ub" style="display: none;">
-<!-- Welcome Section -->
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
-<div>
-<h2 style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">
-                        Analitik <span style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres
-                            Harian</span> (UB)</h2>
-<p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus Ekonomi
-                        2026 - UB di Sulawesi Tengah</p>
-</div>
-<div>
-<div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 1rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-<span style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; display: inline-block; animation: pulse 2s infinite;"></span>
-<span style="font-size: 0.75rem; font-weight: 700; color: #10b981;">LIVE SYNC ACTIVE</span>
-</div>
-</div>
-</div>
-<!-- Stats Grid for SE UB -->
-<div class="stats-grid" id="se_ub-stats-container">
-<div class="stat-card" style="--stat-color: var(--primary);">
-<span class="card-category-tag">UB</span>
-<div class="stat-label">Total Usaha (Prelist)</div>
-<div class="stat-value" id="se_ub-stat-total-prelist">0</div>
-<div class="stat-subtext" id="se_ub-new-today-wrapper">
-<span id="se_ub-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span> hari
-                        ini
-                    </div>
-</div>
-<div class="stat-card" style="--stat-color: #f59e0b;">
-<span class="card-category-tag">UB</span>
-<div class="stat-label">Draft</div>
-<div class="stat-value" id="se_ub-stat-draft" style="color: #f59e0b;">0</div>
-<div class="stat-subtext">Dokumen berstatus draft</div>
-</div>
-<div class="stat-card" style="--stat-color: #3b82f6;">
-<span class="card-category-tag">UB</span>
-<div class="stat-label">Open</div>
-<div class="stat-value" id="se_ub-stat-open" style="color: #3b82f6;">0</div>
-<div class="stat-subtext">Dokumen berstatus open</div>
-</div>
-<div class="stat-card" style="--stat-color: var(--color-delivered);">
-<span class="card-category-tag">UB</span>
-<div class="stat-label">Submitted (Selesai)</div>
-<div class="stat-value" id="se_ub-stat-submitted" style="color: var(--color-delivered);">0</div>
-<div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
-<div style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
-<div id="se_ub-progress-bar" style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
-</div>
-<span id="se_ub-stat-percentage" style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
-</div>
-<div id="se_ub-stat-kenaikan" style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; font-weight: 600;">
-                        +0% hari ini | +0% kemarin
-                    </div>
-</div>
-<div class="stat-card" style="--stat-color: var(--color-bounced);">
-<span class="card-category-tag">UB</span>
-<div class="stat-label">Sisa Usaha</div>
-<div class="stat-value" id="se_ub-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
-<div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
-<span>Progres Hari Ini: <span id="se_ub-stat-today-completed" style="font-weight:700;">0</span></span>
-<span id="se_ub-stat-vs-yesterday-wrapper"></span>
-</div>
-</div>
-</div>
-<!-- Chart Section -->
-<div class="stats-section" id="se_ub-chart-section" style="margin-top: 1rem;">
-<div class="stat-card" style="padding: 1.5rem; --stat-color: var(--primary);">
-<h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
-<div style="display: flex; align-items: center; gap: 0.5rem;">
-<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="color: var(--primary);" viewbox="0 0 24 24" width="18">
-<path d="M18 20V10"></path>
-<path d="M12 20V4"></path>
-<path d="M6 20V14"></path>
-</svg>
-                            Grafik Progres Capaian
+                        <div class="stat-card" style="--stat-color: var(--color-bounced);">
+                            <span class="card-category-tag">Email</span>
+                            <div class="stat-label">Bounced Emails</div>
+                            <div class="stat-value" id="stat-bounced" style="color: var(--color-bounced);">0</div>
+                            <div class="stat-subtext">Gagal terkirim balik</div>
                         </div>
-<button class="btn-action" onclick="window.toggleChartType('se_ub')" style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 0.5rem;">
-                            🔄 Ganti Tipe Grafik
+                        <div class="stat-card" style="--stat-color: var(--color-bounced);">
+                            <span class="card-category-tag">Email</span>
+                            <div class="stat-label">Permanent Fail</div>
+                            <div class="stat-value" id="stat-permanent" style="color: var(--color-bounced);">0</div>
+                            <div class="stat-subtext">Gagal permanen</div>
+                        </div>
+                        <div class="stat-card" style="--stat-color: var(--color-clicked);">
+                            <span class="card-category-tag">Email</span>
+                            <div class="stat-label">Link Clicked</div>
+                            <div class="stat-value" id="stat-clicked" style="color: var(--color-clicked);">0</div>
+                            <div class="stat-subtext">Responden membuka link</div>
+                        </div>
+                        <div class="stat-card" style="--stat-color: var(--color-opened);">
+                            <span class="card-category-tag">Email</span>
+                            <div class="stat-label">Opened Emails</div>
+                            <div class="stat-value" id="stat-opened" style="color: var(--color-opened);">0</div>
+                            <div class="stat-subtext">Dibaca oleh responden</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Filter Controls -->
+                <div class="filter-panel">
+                    <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem;">
+                        <div class="search-wrapper" style="flex: 2 1 300px;">
+                            <svg class="search-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2.5"></path>
+                            </svg>
+                            <input class="search-input" id="search-input"
+                                placeholder="Cari Nama Perusahaan, Kode Identitas, atau Email..." type="text" />
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; flex: 3 1 auto; flex-wrap: wrap;">
+                            <select class="sort-select" id="kabkot-filter-select"
+                                style="flex: 1 1 180px; height: 48px;">
+                                <option value="all">Semua Kabupaten/Kota</option>
+                                <option value="7201">Banggai</option>
+                                <option value="7207">Banggai Kepulauan</option>
+                                <option value="7211">Banggai Laut</option>
+                                <option value="7205">Buol</option>
+                                <option value="7203">Donggala</option>
+                                <option value="7206">Morowali</option>
+                                <option value="7212">Morowali Utara</option>
+                                <option value="7271">Palu</option>
+                                <option value="7208">Parigi Moutong</option>
+                                <option value="7202">Poso</option>
+                                <option value="7210">Sigi</option>
+                                <option value="7209">Tojo Una-Una</option>
+                                <option value="7204">Toli-Toli</option>
+                            </select>
+                            <select class="sort-select" id="survey-filter-select"
+                                style="flex: 1 1 180px; height: 48px;">
+                                <option value="all">Semua Status Dokumen</option>
+                                <option value="SUBMITTED RESPONDENT">SUBMITTED RESPONDENT</option>
+                                <option value="OPEN">OPEN</option>
+                                <option value="DRAFT">DRAFT</option>
+                                <option value="-">- (Tanpa Status)</option>
+                            </select>
+                            <button class="btn-action" id="toggle-view-mode"
+                                style="min-width: 170px; height: 48px; background-color: rgba(59, 130, 246, 0.09); color: var(--primary); border-color: rgba(59, 130, 246, 0.24);">
+                                📋 Tabel / Kartu
+                            </button>
+                            <select class="sort-select" id="sort-select" style="flex: 1 1 180px; height: 48px;">
+                                <option value="name-asc">Nama Perusahaan (A-Z)</option>
+                                <option value="name-desc">Nama Perusahaan (Z-A)</option>
+                                <option value="status-severity">Urutkan dari Bounced</option>
+                                <option value="survey-status-asc">Status Dokumen (Draft → Approved)</option>
+                                <option value="survey-status-desc">Status Dokumen (Approved → Draft)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pills-group">
+                        <span class="filter-title">Filter Status:</span>
+                        <button class="pill active" data-filter="all" id="filter-all">
+                            Semua <span class="pill-count" id="count-all">0</span>
                         </button>
-</h3>
-<div style="position: relative; height: 320px; width: 100%;">
-<canvas id="se_ub-chart"></canvas>
-</div>
-</div>
-</div>
-<!-- Table Section -->
-<div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
-<h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">
-                        Rincian per Kabupaten/Kota</h3>
-<div class="search-wrapper" style="max-width: 300px; width: 100%;">
-<svg class="search-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
-</svg>
-<input class="search-input" id="se_ub-search-input" placeholder="Cari kabupaten/kota..." type="text"/>
-</div>
-</div>
-</div>
-<div class="ipas-table-wrapper">
-<table class="ipas-table">
-<thead>
-<tr>
-<th style="font-family: 'Outfit', sans-serif;">Kabupaten/Kota</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Target</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b;">Draft</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6;">Open</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered);">
-                                Submitted</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: center;">% Capaian</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-bounced);">
-                                Sisa Usaha</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini |
-                                Kemarin)</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
-<th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini |
-                                Kemarin)</th>
-</tr>
-</thead>
-<tbody id="se_ub-table-body">
-<!-- Loaded dynamically -->
-</tbody>
-</table>
-</div>
-<!-- Submitted UB Companies Section -->
-<div class="stats-section" id="se_ub-submitted-companies-section" style="margin-top: 2.5rem;">
-<div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
-<h3 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0;">
-<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="color: var(--color-delivered);" viewbox="0 0 24 24" width="18">
-<polyline points="20 6 9 17 4 12"></polyline>
-</svg>
-                            Daftar Perusahaan UB yang Sudah Submit (<span id="se_ub-submitted-count">0</span>)
+                        <button class="pill" data-filter="bounced" id="filter-bounced"
+                            style="--pill-bg: var(--color-bounced)">
+                            Bounced <span class="pill-count" id="count-bounced">0</span>
+                        </button>
+                        <button class="pill" data-filter="permanent_fail" id="filter-permanent_fail"
+                            style="--pill-bg: var(--color-bounced)">
+                            Permanent Fail <span class="pill-count" id="count-permanent_fail">0</span>
+                        </button>
+                        <button class="pill" data-filter="clicked" id="filter-clicked"
+                            style="--pill-bg: var(--color-clicked)">
+                            Clicked <span class="pill-count" id="count-clicked">0</span>
+                        </button>
+                        <button class="pill" data-filter="opened" id="filter-opened"
+                            style="--pill-bg: var(--color-opened)">
+                            Opened <span class="pill-count" id="count-opened">0</span>
+                        </button>
+                        <button class="pill" data-filter="delivered" id="filter-delivered"
+                            style="--pill-bg: var(--color-delivered)">
+                            Delivered <span class="pill-count" id="count-delivered">0</span>
+                        </button>
+                        <button class="pill" data-filter="queued" id="filter-queued"
+                            style="--pill-bg: var(--color-queued)">
+                            Queued <span class="pill-count" id="count-queued">0</span>
+                        </button>
+                        <button class="pill" data-filter="-" id="filter-nolog" style="--pill-bg: var(--color-nolog)">
+                            Belum Dikirim <span class="pill-count" id="count-nolog">0</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Main Dashboard List -->
+                <main>
+                    <div class="company-list" id="company-list">
+                        <!-- Data dynamically loaded -->
+                    </div>
+                    <div class="company-table-wrapper" id="company-table-wrapper" style="display: none;">
+                        <div class="table-toolbar">
+                            <div class="table-note">Mode tabel memudahkan seleksi dan pemantauan status email UB secara
+                                keseluruhan.</div>
+                        </div>
+                        <div class="table-scroll">
+                            <table class="company-table">
+                                <thead>
+                                    <tr>
+                                        <th>Kode</th>
+                                        <th>Perusahaan</th>
+                                        <th>Email</th>
+                                        <th>Status Email</th>
+                                        <th>Status Dokumen</th>
+                                        <th>Kab/Kota</th>
+                                        <th>Waktu Terakhir</th>
+                                        <th>Log Terakhir</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="company-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Pagination Container -->
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination buttons dynamically loaded -->
+                    </div>
+                </main>
+            </div><!-- End Tab Content: Email Tracker -->
+            <!-- Tab Content: Sensus Ekonomi Umum Dashboard -->
+            <div class="tab-content" id="tab-content-se_umum">
+                <!-- Welcome Section -->
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div>
+                        <h2
+                            style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">
+                            Analitik <span
+                                style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres
+                                Harian</span> (Semua Usaha)</h2>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus
+                            Ekonomi
+                            2026 di Sulawesi Tengah</p>
+                    </div>
+                    <div>
+                        <div
+                            style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 1rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span
+                                style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; display: inline-block; animation: pulse 2s infinite;"></span>
+                            <span style="font-size: 0.75rem; font-weight: 700; color: #10b981;">LIVE SYNC ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stats Grid for SE Umum -->
+                <div class="stats-grid" id="se_umum-stats-container">
+                    <div class="stat-card" style="--stat-color: var(--primary);">
+                        <span class="card-category-tag">Umum</span>
+                        <div class="stat-label">Total Usaha (Prelist)</div>
+                        <div class="stat-value" id="se_umum-stat-total-prelist">0</div>
+                        <div class="stat-subtext" id="se_umum-new-today-wrapper">
+                            <span id="se_umum-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span>
+                            hari ini
+                        </div>
+                    </div>
+                    <div class="stat-card" style="--stat-color: #f59e0b;">
+                        <span class="card-category-tag">Umum</span>
+                        <div class="stat-label">Draft</div>
+                        <div class="stat-value" id="se_umum-stat-draft" style="color: #f59e0b;">0</div>
+                        <div class="stat-subtext">Dokumen berstatus draft</div>
+                    </div>
+                    <div class="stat-card" style="--stat-color: #3b82f6;">
+                        <span class="card-category-tag">Umum</span>
+                        <div class="stat-label">Open</div>
+                        <div class="stat-value" id="se_umum-stat-open" style="color: #3b82f6;">0</div>
+                        <div class="stat-subtext">Dokumen berstatus open</div>
+                    </div>
+                    <div class="stat-card" style="--stat-color: var(--color-delivered);">
+                        <span class="card-category-tag">Umum</span>
+                        <div class="stat-label">Submitted (Selesai)</div>
+                        <div class="stat-value" id="se_umum-stat-submitted" style="color: var(--color-delivered);">0
+                        </div>
+                        <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
+                            <div
+                                style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
+                                <div id="se_umum-progress-bar"
+                                    style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
+                            </div>
+                            <span id="se_umum-stat-percentage"
+                                style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
+                        </div>
+                        <div id="se_umum-stat-kenaikan"
+                            style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; font-weight: 600;">
+                            +0% hari ini | +0% kemarin
+                        </div>
+                    </div>
+                    <div class="stat-card" style="--stat-color: var(--color-bounced);">
+                        <span class="card-category-tag">Umum</span>
+                        <div class="stat-label">Sisa Usaha</div>
+                        <div class="stat-value" id="se_umum-stat-sisa-usaha" style="color: var(--color-bounced);">0
+                        </div>
+                        <div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <span>Progres Hari Ini: <span id="se_umum-stat-today-completed"
+                                    style="font-weight:700;">0</span></span>
+                            <span id="se_umum-stat-vs-yesterday-wrapper"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chart Section -->
+                <div class="stats-section" id="se_umum-chart-section" style="margin-top: 1rem;">
+                    <div class="stat-card" style="padding: 1.5rem; --stat-color: var(--primary);">
+                        <h3
+                            style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2.5" style="color: var(--primary);"
+                                    viewbox="0 0 24 24" width="18">
+                                    <path d="M18 20V10"></path>
+                                    <path d="M12 20V4"></path>
+                                    <path d="M6 20V14"></path>
+                                </svg>
+                                Grafik Progres Capaian
+                            </div>
+                            <button class="btn-action" onclick="window.toggleChartType('se_umum')"
+                                style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 0.5rem;">
+                                🔄 Ganti Tipe Grafik
+                            </button>
                         </h3>
-<div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-<select class="sort-select" id="se_ub-submitted-kabkot-select" style="max-width: 200px; height: 38px; font-size: 0.8rem; padding: 0 1.75rem 0 0.75rem;">
-<option value="all">Semua Kabupaten/Kota</option>
-</select>
-<input class="search-input" id="se_ub-submitted-search" placeholder="Cari nama/kode..." style="max-width: 200px; padding: 0.5rem 1rem 0.5rem 2.25rem; font-size: 0.8rem; height: 38px;" type="text"/>
-</div>
-</div>
-</div>
-<div class="company-list" id="se_ub-submitted-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-<!-- Dynamically populated -->
-</div>
-</div>
-</div>
-<!-- Tab Content: Assign Petugas -->
-<div class="tab-content" id="tab-content-assign" style="display: none;">
-    <div class="tabs-navigation" style="justify-content: center; margin-top: 1.5rem; margin-bottom: 0.5rem; border-bottom: none;">
-        <button class="btn-tab active" id="subtab-btn-se2026" onclick="filterAssignData('se2026')" style="background-color: var(--primary); color: white;">Petugas SE2026 (Umum)</button>
-        <button class="btn-tab" id="subtab-btn-ub" onclick="filterAssignData('ub')">Petugas UB</button>
+                        <div style="position: relative; height: 320px; width: 100%;">
+                            <canvas id="se_umum-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table Section -->
+                <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
+                        <h3
+                            style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">
+                            Rincian per Kabupaten/Kota</h3>
+                        <div class="search-wrapper" style="max-width: 300px; width: 100%;">
+                            <svg class="search-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2.5"></path>
+                            </svg>
+                            <input class="search-input" id="se_umum-search-input" placeholder="Cari kabupaten/kota..."
+                                type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="ipas-table-wrapper">
+                    <table class="ipas-table">
+                        <thead>
+                            <tr>
+                                <th style="font-family: 'Outfit', sans-serif;">Kabupaten/Kota</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Target</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b;">Draft
+                                </th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6;">Open
+                                </th>
+                                <th
+                                    style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered);">
+                                    Submitted</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: center;">% Capaian</th>
+                                <th
+                                    style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-bounced);">
+                                    Sisa Usaha</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini |
+                                    Kemarin)</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini
+                                    |
+                                    Kemarin)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="se_umum-table-body">
+                            <!-- Loaded dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Tab Content: Sensus Ekonomi UB Dashboard -->
+            <div class="tab-content" id="tab-content-se_ub" style="display: none;">
+                <!-- Welcome Section -->
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div>
+                        <h2
+                            style="font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem;">
+                            Analitik <span
+                                style="background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progres
+                                Harian</span> (UB)</h2>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Pemantauan penyelesaian Sensus
+                            Ekonomi
+                            2026 - UB di Sulawesi Tengah</p>
+                    </div>
+                    <div>
+                        <div
+                            style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 1rem; border-radius: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span
+                                style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981; display: inline-block; animation: pulse 2s infinite;"></span>
+                            <span style="font-size: 0.75rem; font-weight: 700; color: #10b981;">LIVE SYNC ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Stats Grid for SE UB -->
+                <div class="stats-grid" id="se_ub-stats-container">
+                    <div class="stat-card" style="--stat-color: var(--primary);">
+                        <span class="card-category-tag">UB</span>
+                        <div class="stat-label">Total Usaha (Prelist)</div>
+                        <div class="stat-value" id="se_ub-stat-total-prelist">0</div>
+                        <div class="stat-subtext" id="se_ub-new-today-wrapper">
+                            <span id="se_ub-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span>
+                            hari
+                            ini
+                        </div>
+                    </div>
+                    <div class="stat-card" style="--stat-color: #f59e0b;">
+                        <span class="card-category-tag">UB</span>
+                        <div class="stat-label">Draft</div>
+                        <div class="stat-value" id="se_ub-stat-draft" style="color: #f59e0b;">0</div>
+                        <div class="stat-subtext">Dokumen berstatus draft</div>
+                    </div>
+                    <div class="stat-card" style="--stat-color: #3b82f6;">
+                        <span class="card-category-tag">UB</span>
+                        <div class="stat-label">Open</div>
+                        <div class="stat-value" id="se_ub-stat-open" style="color: #3b82f6;">0</div>
+                        <div class="stat-subtext">Dokumen berstatus open</div>
+                    </div>
+                    <div class="stat-card" style="--stat-color: var(--color-delivered);">
+                        <span class="card-category-tag">UB</span>
+                        <div class="stat-label">Submitted (Selesai)</div>
+                        <div class="stat-value" id="se_ub-stat-submitted" style="color: var(--color-delivered);">0</div>
+                        <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
+                            <div
+                                style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
+                                <div id="se_ub-progress-bar"
+                                    style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
+                            </div>
+                            <span id="se_ub-stat-percentage"
+                                style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
+                        </div>
+                        <div id="se_ub-stat-kenaikan"
+                            style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; font-weight: 600;">
+                            +0% hari ini | +0% kemarin
+                        </div>
+                    </div>
+                    <div class="stat-card" style="--stat-color: var(--color-bounced);">
+                        <span class="card-category-tag">UB</span>
+                        <div class="stat-label">Sisa Usaha</div>
+                        <div class="stat-value" id="se_ub-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
+                        <div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                            <span>Progres Hari Ini: <span id="se_ub-stat-today-completed"
+                                    style="font-weight:700;">0</span></span>
+                            <span id="se_ub-stat-vs-yesterday-wrapper"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chart Section -->
+                <div class="stats-section" id="se_ub-chart-section" style="margin-top: 1rem;">
+                    <div class="stat-card" style="padding: 1.5rem; --stat-color: var(--primary);">
+                        <h3
+                            style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2.5" style="color: var(--primary);"
+                                    viewbox="0 0 24 24" width="18">
+                                    <path d="M18 20V10"></path>
+                                    <path d="M12 20V4"></path>
+                                    <path d="M6 20V14"></path>
+                                </svg>
+                                Grafik Progres Capaian
+                            </div>
+                            <button class="btn-action" onclick="window.toggleChartType('se_ub')"
+                                style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 0.5rem;">
+                                🔄 Ganti Tipe Grafik
+                            </button>
+                        </h3>
+                        <div style="position: relative; height: 320px; width: 100%;">
+                            <canvas id="se_ub-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table Section -->
+                <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
+                        <h3
+                            style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">
+                            Rincian per Kabupaten/Kota</h3>
+                        <div class="search-wrapper" style="max-width: 300px; width: 100%;">
+                            <svg class="search-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2.5"></path>
+                            </svg>
+                            <input class="search-input" id="se_ub-search-input" placeholder="Cari kabupaten/kota..."
+                                type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="ipas-table-wrapper">
+                    <table class="ipas-table">
+                        <thead>
+                            <tr>
+                                <th style="font-family: 'Outfit', sans-serif;">Kabupaten/Kota</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: right;">Total Target</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b;">Draft
+                                </th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6;">Open
+                                </th>
+                                <th
+                                    style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered);">
+                                    Submitted</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: center;">% Capaian</th>
+                                <th
+                                    style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-bounced);">
+                                    Sisa Usaha</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini |
+                                    Kemarin)</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
+                                <th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini
+                                    |
+                                    Kemarin)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="se_ub-table-body">
+                            <!-- Loaded dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Submitted UB Companies Section -->
+                <div class="stats-section" id="se_ub-submitted-companies-section" style="margin-top: 2.5rem;">
+                    <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
+                            <h3
+                                style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0;">
+                                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2.5" style="color: var(--color-delivered);"
+                                    viewbox="0 0 24 24" width="18">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Daftar Perusahaan UB yang Sudah Submit (<span id="se_ub-submitted-count">0</span>)
+                            </h3>
+                            <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                                <select class="sort-select" id="se_ub-submitted-kabkot-select"
+                                    style="max-width: 200px; height: 38px; font-size: 0.8rem; padding: 0 1.75rem 0 0.75rem;">
+                                    <option value="all">Semua Kabupaten/Kota</option>
+                                </select>
+                                <input class="search-input" id="se_ub-submitted-search" placeholder="Cari nama/kode..."
+                                    style="max-width: 200px; padding: 0.5rem 1rem 0.5rem 2.25rem; font-size: 0.8rem; height: 38px;"
+                                    type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company-list" id="se_ub-submitted-list"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+            </div>
+            <!-- Tab Content: Assign Petugas -->
+            <div class="tab-content" id="tab-content-assign" style="display: none;">
+                <div class="tabs-navigation"
+                    style="justify-content: center; margin-top: 1.5rem; margin-bottom: 0.5rem; border-bottom: none;">
+                    <button class="btn-tab active" id="subtab-btn-se2026" onclick="filterAssignData('se2026')"
+                        style="background-color: var(--primary); color: white;">Petugas SE2026 (Umum)</button>
+                    <button class="btn-tab" id="subtab-btn-ub" onclick="filterAssignData('ub')">Petugas UB</button>
+                </div>
+                <!-- Chart Section -->
+                <div class="stats-section" style="margin-top: 2rem;">
+                    <h3
+                        style="margin-top: 0; color: var(--text); font-size: 1.2rem; display: flex; align-items: center;">
+                        <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5"
+                            style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="20">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span id="assign-chart-title">Status Penugasan Petugas</span>
+                    </h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Rekap penugasan
+                        petugas sensus berdasarkan kabupaten/kota — gabungan Sensus Ekonomi Semua Usaha dan Usaha Besar
+                    </p>
+                    <div style="height: 400px; width: 100%;">
+                        <canvas id="assignChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- SLS Details Section -->
+                <div class="stats-section" style="margin-top: 2.5rem;">
+                    <h3
+                        style="margin-top: 0; color: var(--text); font-size: 1.25rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700;">
+                        <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5"
+                            style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="20">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="3" x2="9" y2="21"></line>
+                            <line x1="15" y1="3" x2="15" y2="21"></line>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="3" y1="15" x2="21" y2="15"></line>
+                        </svg>
+                        <span id="assign-sls-title">Rincian Assignment per SLS</span>
+                    </h3>
+                    <p
+                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 500;">
+                        Daftar status penugasan petugas sensus sampai level Satuan Lingkungan Setempat (SLS) untuk
+                        Sensus Ekonomi.
+                    </p>
+
+                    <!-- SLS Summary Cards -->
+                    <div class="stats-grid"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="stat-card" style="--stat-color: var(--primary); padding: 1.25rem;">
+                            <div class="stat-label" style="font-size: 0.8rem;">Total SLS</div>
+                            <div class="stat-value" id="sls-stat-total"
+                                style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">0</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
+                                id="sls-substat-total">Target Usaha: 0</div>
+                        </div>
+                        <div class="stat-card" style="--stat-color: var(--color-delivered); padding: 1.25rem;">
+                            <div class="stat-label" style="font-size: 0.8rem;">SLS Sudah Ditugaskan</div>
+                            <div class="stat-value" id="sls-stat-fully"
+                                style="color: var(--color-delivered); font-size: 1.8rem; font-weight: 800;">0</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
+                                id="sls-pct-fully">0.00% dari total SLS</div>
+                        </div>
+                        <div class="stat-card" style="--stat-color: #f59e0b; padding: 1.25rem;">
+                            <div class="stat-label" style="font-size: 0.8rem;">SLS Sebagian Ditugaskan</div>
+                            <div class="stat-value" id="sls-stat-partially"
+                                style="color: #f59e0b; font-size: 1.8rem; font-weight: 800;">0</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
+                                id="sls-pct-partially">0.00% dari total SLS</div>
+                        </div>
+                        <div class="stat-card" style="--stat-color: #ef4444; padding: 1.25rem;">
+                            <div class="stat-label" style="font-size: 0.8rem;">SLS Belum Ditugaskan</div>
+                            <div class="stat-value" id="sls-stat-unassigned"
+                                style="color: #ef4444; font-size: 1.8rem; font-weight: 800;">0</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
+                                id="sls-pct-unassigned">0.00% dari total SLS</div>
+                        </div>
+                    </div>
+
+                    <!-- Tabel Ringkasan per Kabupaten -->
+                    <div style="margin-bottom: 2rem;">
+                        <h4
+                            style="font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"
+                                style="color: var(--primary);">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="9" y1="3" x2="9" y2="21"></line>
+                                <line x1="15" y1="3" x2="15" y2="21"></line>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="3" y1="15" x2="21" y2="15"></line>
+                            </svg>
+                            Ringkasan per Kabupaten/Kota
+                        </h4>
+                        <div style="overflow-x: auto; border-radius: 0.75rem; border: 1px solid var(--card-border);">
+                            <table
+                                style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.875rem;">
+                                <thead>
+                                    <tr
+                                        style="background-color: var(--card-bg); border-bottom: 2px solid var(--card-border);">
+                                        <th
+                                            style="padding: 0.75rem 1rem; text-align: left; font-weight: 700; color: var(--text); white-space: nowrap;">
+                                            Kabupaten/Kota</th>
+                                        <th
+                                            style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--primary); white-space: nowrap;">
+                                            Total SLS</th>
+                                        <th
+                                            style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #10b981; white-space: nowrap;">
+                                            Sudah Ditugaskan</th>
+                                        <th
+                                            style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #f59e0b; white-space: nowrap;">
+                                            Sebagian Ditugaskan</th>
+                                        <th
+                                            style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #ef4444; white-space: nowrap;">
+                                            Belum Ditugaskan</th>
+                                        <th
+                                            style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text-secondary); white-space: nowrap;">
+                                            Total Usaha</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="kab-summary-tbody">
+                                    <tr>
+                                        <td colspan="6"
+                                            style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                                            Memuat data ringkasan kabupaten...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- SLS Filters -->
+                    <div class="filter-panel"
+                        style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                        <div style="flex: 1; min-width: 250px; position: relative;">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2.5"
+                                style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
+                                viewbox="0 0 24 24">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                            </svg>
+                            <input type="text" id="sls-search-input"
+                                placeholder="Cari SLS, Desa, Kecamatan, Kabupaten, atau Petugas..."
+                                style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+                            <select id="sls-kab-filter"
+                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                                <option value="all">Semua Kabupaten</option>
+                            </select>
+                            <select id="sls-kec-filter"
+                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                                <option value="all">Semua Kecamatan</option>
+                            </select>
+                            <select id="sls-desa-filter"
+                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                                <option value="all">Semua Desa</option>
+                            </select>
+                            <select id="sls-assignment-filter"
+                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
+                                <option value="all">Semua Status Penugasan</option>
+                                <option value="fully_assigned">Sudah Ditugaskan Semua</option>
+                                <option value="partially_assigned">Sebagian Ditugaskan</option>
+                                <option value="unassigned">Belum Ditugaskan</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- SLS Table -->
+                    <div class="ipas-table-wrapper" style="max-height: 500px; overflow-y: auto;">
+                        <table class="ipas-table">
+                            <thead>
+                                <tr id="sls-table-headers">
+                                    <!-- Headers generated dynamically via renderSlsTableHeaders() -->
+                                </tr>
+                            </thead>
+                            <tbody id="sls-table-body">
+                                <tr>
+                                    <td colspan="8"
+                                        style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat
+                                        rincian SLS...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- SLS Pagination Controls -->
+                    <div id="sls-pagination"
+                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
+                        <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;"
+                            id="sls-pagination-info">
+                            Menampilkan 0 - 0 dari 0 SLS
+                        </div>
+                        <div style="display: flex; gap: 0.35rem; align-items: center;" id="sls-pagination-buttons">
+                            <!-- Pagination buttons generated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
     </div>
-    <!-- Chart Section -->
-    <div class="stats-section" style="margin-top: 2rem;">
-        <h3 style="margin-top: 0; color: var(--text); font-size: 1.2rem; display: flex; align-items: center;">
-            <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="20">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-            <span id="assign-chart-title">Status Penugasan Petugas (SE Umum + SE UB)</span>
-        </h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Rekap penugasan petugas sensus berdasarkan kabupaten/kota — gabungan Sensus Ekonomi Semua Usaha dan Usaha Besar</p>
-        <div style="height: 400px; width: 100%;">
-            <canvas id="assignChart"></canvas>
-        </div>
-    </div>
-
-    <!-- SLS Details Section -->
-    <div class="stats-section" style="margin-top: 2.5rem;">
-        <h3 style="margin-top: 0; color: var(--text); font-size: 1.25rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700;">
-            <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="20">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="9" y1="3" x2="9" y2="21"></line>
-                <line x1="15" y1="3" x2="15" y2="21"></line>
-                <line x1="3" y1="9" x2="21" y2="9"></line>
-                <line x1="3" y1="15" x2="21" y2="15"></line>
-            </svg>
-            <span id="assign-sls-title">Rincian Assignment per SLS</span>
-        </h3>
-        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 500;">
-            Daftar status penugasan petugas sensus sampai level Satuan Lingkungan Setempat (SLS) untuk Sensus Ekonomi.
-        </p>
-        
-        <!-- SLS Summary Cards -->
-        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-            <div class="stat-card" style="--stat-color: var(--primary); padding: 1.25rem;">
-                <div class="stat-label" style="font-size: 0.8rem;">Total SLS</div>
-                <div class="stat-value" id="sls-stat-total" style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">0</div>
-                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-substat-total">Target Usaha: 0</div>
-            </div>
-            <div class="stat-card" style="--stat-color: var(--color-delivered); padding: 1.25rem;">
-                <div class="stat-label" style="font-size: 0.8rem;">SLS Sudah Ditugaskan</div>
-                <div class="stat-value" id="sls-stat-fully" style="color: var(--color-delivered); font-size: 1.8rem; font-weight: 800;">0</div>
-                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-fully">0.00% dari total SLS</div>
-            </div>
-            <div class="stat-card" style="--stat-color: #f59e0b; padding: 1.25rem;">
-                <div class="stat-label" style="font-size: 0.8rem;">SLS Sebagian Ditugaskan</div>
-                <div class="stat-value" id="sls-stat-partially" style="color: #f59e0b; font-size: 1.8rem; font-weight: 800;">0</div>
-                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-partially">0.00% dari total SLS</div>
-            </div>
-            <div class="stat-card" style="--stat-color: #ef4444; padding: 1.25rem;">
-                <div class="stat-label" style="font-size: 0.8rem;">SLS Belum Ditugaskan</div>
-                <div class="stat-value" id="sls-stat-unassigned" style="color: #ef4444; font-size: 1.8rem; font-weight: 800;">0</div>
-                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-unassigned">0.00% dari total SLS</div>
-            </div>
-        </div>
-
-        <!-- Tabel Ringkasan per Kabupaten -->
-        <div style="margin-bottom: 2rem;">
-            <h4 style="font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16" style="color: var(--primary);"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
-                Ringkasan per Kabupaten/Kota
-            </h4>
-            <div style="overflow-x: auto; border-radius: 0.75rem; border: 1px solid var(--card-border);">
-                <table style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.875rem;">
-                    <thead>
-                        <tr style="background-color: var(--card-bg); border-bottom: 2px solid var(--card-border);">
-                            <th style="padding: 0.75rem 1rem; text-align: left; font-weight: 700; color: var(--text); white-space: nowrap;">Kabupaten/Kota</th>
-                            <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--primary); white-space: nowrap;">Total SLS</th>
-                            <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #10b981; white-space: nowrap;">Sudah Ditugaskan</th>
-                            <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #f59e0b; white-space: nowrap;">Sebagian Ditugaskan</th>
-                            <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #ef4444; white-space: nowrap;">Belum Ditugaskan</th>
-                            <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text-secondary); white-space: nowrap;">Total Usaha</th>
-                        </tr>
-                    </thead>
-                    <tbody id="kab-summary-tbody">
-                        <tr>
-                            <td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat data ringkasan kabupaten...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- SLS Filters -->
-        <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-            <div style="flex: 1; min-width: 250px; position: relative;">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);" viewbox="0 0 24 24">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
-                </svg>
-                <input type="text" id="sls-search-input" placeholder="Cari SLS, Desa, Kecamatan, Kabupaten, atau Petugas..." style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
-            </div>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
-                <select id="sls-kab-filter" style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                    <option value="all">Semua Kabupaten</option>
-                </select>
-                <select id="sls-kec-filter" style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                    <option value="all">Semua Kecamatan</option>
-                </select>
-                <select id="sls-desa-filter" style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                    <option value="all">Semua Desa</option>
-                </select>
-                <select id="sls-assignment-filter" style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
-                    <option value="all">Semua Status Penugasan</option>
-                    <option value="fully_assigned">Sudah Ditugaskan Semua</option>
-                    <option value="partially_assigned">Sebagian Ditugaskan</option>
-                    <option value="unassigned">Belum Ditugaskan</option>
-                </select>
-            </div>
-        </div>
-        
-        <!-- SLS Table -->
-        <div class="ipas-table-wrapper" style="max-height: 500px; overflow-y: auto;">
-            <table class="ipas-table">
-                <thead>
-                    <tr id="sls-table-headers">
-                        <!-- Headers generated dynamically via renderSlsTableHeaders() -->
-                    </tr>
-                </thead>
-                <tbody id="sls-table-body">
-                    <tr>
-                        <td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat rincian SLS...</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- SLS Pagination Controls -->
-        <div id="sls-pagination" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
-            <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;" id="sls-pagination-info">
-                Menampilkan 0 - 0 dari 0 SLS
-            </div>
-            <div style="display: flex; gap: 0.35rem; align-items: center;" id="sls-pagination-buttons">
-                <!-- Pagination buttons generated dynamically -->
-            </div>
-        </div>
-    </div>
-
-</div>
-</main>
-</div>
-<!-- Load Supabase configuration if present -->
-<script src="supabase_config.js"></script>
-<!-- Load data.js (holds data in window.EMAIL_DATA) -->
-<script src="data.js"></script>
-<script src="assign_data.js"></script>
-<!-- Load ipas_data.js (holds data in window.IPAS_DATA) -->
-<script src="ipas_data.js"></script>
-<!-- Javascript Logic -->
-<script>
+    <!-- Load Supabase configuration if present -->
+    <script src="supabase_config.js"></script>
+    <!-- Load data.js (holds data in window.EMAIL_DATA) -->
+    <script src="data.js"></script>
+    <script src="assign_data.js"></script>
+    <!-- Load ipas_data.js (holds data in window.IPAS_DATA) -->
+    <script src="ipas_data.js"></script>
+    <!-- Javascript Logic -->
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Helper to get CSS theme colors resolved for Chart.js
             function getThemeColor(varName, fallback) {
@@ -2059,7 +2223,7 @@
                 const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
                 htmlElement.setAttribute('data-theme', newTheme);
                 localStorage.setItem('theme', newTheme);
-                
+
                 // Re-render charts to update colors for the new theme
                 setTimeout(() => {
                     const activeTab = localStorage.getItem('active_tab') || 'se_umum';
@@ -2377,7 +2541,7 @@
                             const statusStyle = getStatusStyle(comp.global_status);
                             const surveyStyle = getSurveyStatusStyle(comp.survey_status);
                             const kabkotName = (comp.code && typeof comp.code === 'string') ? (kabkotMapping[comp.code.substring(0, 4)] || 'Lainnya') : 'Lainnya';
-                            const lastLog = comp.history.length ? comp.history[comp.history.length - 1] : {status: '-', timestamp: '-'};
+                            const lastLog = comp.history.length ? comp.history[comp.history.length - 1] : { status: '-', timestamp: '-' };
 
                             return `
                                 <tr>
@@ -2413,8 +2577,8 @@
                                     </div>
                                     <div class="timeline-list">
                                         ${comp.history.map(item => {
-                                            const stepStyle = getStatusStyle(item.status);
-                                            return `
+                                const stepStyle = getStatusStyle(item.status);
+                                return `
                                                 <div class="timeline-item" style="--node-color: ${stepStyle.color}">
                                                     <div class="timeline-left">
                                                         <span class="timeline-badge" style="--badge-bg: ${stepStyle.bg}; --badge-color: ${stepStyle.color}">${item.status}</span>
@@ -2423,7 +2587,7 @@
                                                     <div class="timeline-time">${item.timestamp}</div>
                                                 </div>
                                             `;
-                                        }).join('')}
+                            }).join('')}
                                     </div>
                                 </div>
                             `;
@@ -2665,7 +2829,7 @@
                     yesterday += item.yesterday_completed || 0;
                     newToday += item.new_usaha_today || 0;
                 });
-                
+
                 // Override prelist with PROVINSI_TOTAL if available
                 const provTotalKey = surveyType + "_prov_total";
                 if (ipasDataObj[provTotalKey]) {
@@ -2841,8 +3005,8 @@
 
                 // Render Chart
                 if (!window.currentChartType) window.currentChartType = { se_umum: 'bar', se_ub: 'bar' };
-                
-                window.toggleChartType = function(type) {
+
+                window.toggleChartType = function (type) {
                     window.currentChartType[type] = window.currentChartType[type] === 'line' ? 'bar' : 'line';
                     window.renderSeDashboard(type);
                 };
@@ -2919,25 +3083,25 @@
                             responsive: true,
                             maintainAspectRatio: false,
                             plugins: {
-                                legend: { 
+                                legend: {
                                     position: 'top',
-                                    labels: { color: textColor, font: { family: "'Outfit', sans-serif" } } 
+                                    labels: { color: textColor, font: { family: "'Outfit', sans-serif" } }
                                 }
                             },
                             scales: {
-                                y: { 
+                                y: {
                                     stacked: true,
-                                    grid: { color: gridColor }, 
-                                    ticks: { color: textColor } 
+                                    grid: { color: gridColor },
+                                    ticks: { color: textColor }
                                 },
-                                x: { 
+                                x: {
                                     stacked: true,
-                                    grid: { display: false }, 
-                                    ticks: { 
+                                    grid: { display: false },
+                                    ticks: {
                                         color: textColor,
                                         maxRotation: 45,
                                         minRotation: 45
-                                    } 
+                                    }
                                 }
                             }
                         };
@@ -2998,17 +3162,17 @@
                 // Totals row
                 const totals = { totalSls: 0, sudah: 0, sebagian: 0, belum: 0, totalUsaha: 0 };
                 sortedKabs.forEach(k => {
-                    totals.totalSls   += kabMap[k].totalSls;
-                    totals.sudah      += kabMap[k].sudah;
-                    totals.sebagian   += kabMap[k].sebagian;
-                    totals.belum      += kabMap[k].belum;
-                    
+                    totals.totalSls += kabMap[k].totalSls;
+                    totals.sudah += kabMap[k].sudah;
+                    totals.sebagian += kabMap[k].sebagian;
+                    totals.belum += kabMap[k].belum;
+
                     const cleanKey = k.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
                     totals.totalUsaha += (officialKabMap[cleanKey] || kabMap[k].totalUsaha);
                 });
 
                 const rowStyle = 'border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;';
-                const tdBase  = 'padding: 0.6rem 1rem;';
+                const tdBase = 'padding: 0.6rem 1rem;';
 
                 tbody.innerHTML = sortedKabs.map((kab, idx) => {
                     const d = kabMap[kab];
@@ -3040,77 +3204,77 @@
             function renderAssignChart() {
                 const ctx = document.getElementById('assignChart');
                 if (!ctx) return;
-                
+
                 if (assignChartInstance) {
                     assignChartInstance.destroy();
                 }
-                
+
                 if (!window.ASSIGN_DATA || window.ASSIGN_DATA.length === 0) {
                     console.warn("ASSIGN_DATA belum tersedia.");
                     return;
                 }
-                
+
                 const labels = window.ASSIGN_DATA.map(d => d.nama_kab.replace(/\[\d+\] /, ''));
                 const assignedData = window.ASSIGN_DATA.map(d => d.assigned);
                 const notAssignedData = window.ASSIGN_DATA.map(d => d.have_not_assigned);
-                
-                        const textColor = getThemeColor('--text-secondary', '#9ca3af');
-                        const gridColor = getThemeColor('--card-border', 'rgba(255, 255, 255, 0.08)');
-                        assignChartInstance = new Chart(ctx, {
-                            type: 'bar',
-                            data: {
-                                labels: labels,
-                                datasets: [
-                                    {
-                                        label: 'Assigned',
-                                        data: assignedData,
-                                        backgroundColor: 'rgba(239, 68, 68, 0.9)', // Red/Orange for Assigned
-                                        borderRadius: 4,
-                                    },
-                                    {
-                                        label: 'Have-not-assigned',
-                                        data: notAssignedData,
-                                        backgroundColor: 'rgba(245, 158, 11, 0.9)', // Yellow/Orange for Have Not Assigned
-                                        borderRadius: 4,
-                                    }
-                                ]
+
+                const textColor = getThemeColor('--text-secondary', '#9ca3af');
+                const gridColor = getThemeColor('--card-border', 'rgba(255, 255, 255, 0.08)');
+                assignChartInstance = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                                label: 'Assigned',
+                                data: assignedData,
+                                backgroundColor: 'rgba(239, 68, 68, 0.9)', // Red/Orange for Assigned
+                                borderRadius: 4,
                             },
-                            options: {
-                                indexAxis: 'y',
-                                responsive: true,
-                                maintainAspectRatio: false,
-                                plugins: {
-                                    legend: {
-                                        position: 'bottom',
-                                        labels: {
-                                            color: textColor,
-                                            font: { family: "'Inter', sans-serif", size: 12 },
-                                            usePointStyle: true,
-                                            padding: 20
-                                        }
-                                    },
-                                    tooltip: {
-                                        backgroundColor: 'rgba(15, 23, 42, 0.9)',
-                                        titleFont: { family: "'Inter', sans-serif", size: 13 },
-                                        bodyFont: { family: "'Inter', sans-serif", size: 12 },
-                                        padding: 12,
-                                        cornerRadius: 8
-                                    }
-                                },
-                                scales: {
-                                    x: {
-                                        stacked: true,
-                                        grid: { color: gridColor },
-                                        ticks: { color: textColor }
-                                    },
-                                    y: {
-                                        stacked: true,
-                                        grid: { display: false },
-                                        ticks: { color: textColor }
-                                    }
-                                }
+                            {
+                                label: 'Have-not-assigned',
+                                data: notAssignedData,
+                                backgroundColor: 'rgba(245, 158, 11, 0.9)', // Yellow/Orange for Have Not Assigned
+                                borderRadius: 4,
                             }
-                        });
+                        ]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: textColor,
+                                    font: { family: "'Inter', sans-serif", size: 12 },
+                                    usePointStyle: true,
+                                    padding: 20
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                                titleFont: { family: "'Inter', sans-serif", size: 13 },
+                                bodyFont: { family: "'Inter', sans-serif", size: 12 },
+                                padding: 12,
+                                cornerRadius: 8
+                            }
+                        },
+                        scales: {
+                            x: {
+                                stacked: true,
+                                grid: { color: gridColor },
+                                ticks: { color: textColor }
+                            },
+                            y: {
+                                stacked: true,
+                                grid: { display: false },
+                                ticks: { color: textColor }
+                            }
+                        }
+                    }
+                });
             }
 
             // SLS state
@@ -3119,7 +3283,7 @@
             const SLS_ITEMS_PER_PAGE = 25;
 
             // Header sort trigger
-            window.sortSlsTable = function(column) {
+            window.sortSlsTable = function (column) {
                 const current = window.slsSort;
                 if (current.column === column) {
                     current.order = current.order === 'asc' ? 'desc' : 'asc';
@@ -3141,8 +3305,8 @@
 
                 // Extract unique regions
                 const uniqueKabs = [...new Set(window.ASSIGN_SLS_DATA.map(i => i.kab_name))].sort();
-                
-                kabSelect.innerHTML = '<option value="all">Semua Kabupaten</option>' + 
+
+                kabSelect.innerHTML = '<option value="all">Semua Kabupaten</option>' +
                     uniqueKabs.map(k => `<option value="${k}">${k}</option>`).join('');
 
                 // Register cascade change listeners
@@ -3187,7 +3351,7 @@
 
                 kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>' +
                     uniqueKecs.map(k => `<option value="${k}">${k}</option>`).join('');
-                
+
                 updateDesaOptions();
             }
 
@@ -3235,7 +3399,7 @@
             function renderSlsTable() {
                 const tbody = document.getElementById('sls-table-body');
                 if (!tbody) return;
-                
+
                 if (!window.ASSIGN_SLS_DATA || window.ASSIGN_SLS_DATA.length === 0) {
                     tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data SLS belum tersedia. Pastikan sinkronisasi data sedang berjalan.</td></tr>`;
                     return;
@@ -3315,9 +3479,9 @@
                 const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
                 document.getElementById('sls-stat-total').textContent = formatNum(totalSls);
                 document.getElementById('sls-substat-total').textContent = `Target Usaha: ${formatNum(finalTotalTarget)}`;
-                
+
                 document.getElementById('sls-stat-fully').textContent = formatNum(fullyAssigned);
-                document.getElementById('sls-pct-fully').innerHTML = 
+                document.getElementById('sls-pct-fully').innerHTML =
                     (totalSls > 0 ? `${((fullyAssigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00%') +
                     `<span style="display:block; margin-top: 0.25rem; font-weight: 700; color: #10b981; font-size: 0.75rem;">Usaha Ditugaskan: ${formatNum(finalTotalAssignedUsaha)}</span>`;
 
@@ -3325,7 +3489,7 @@
                 document.getElementById('sls-pct-partially').textContent = totalSls > 0 ? `${((partiallyAssigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00% dari total SLS';
 
                 document.getElementById('sls-stat-unassigned').textContent = formatNum(unassigned);
-                document.getElementById('sls-pct-unassigned').innerHTML = 
+                document.getElementById('sls-pct-unassigned').innerHTML =
                     (totalSls > 0 ? `${((unassigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00%') +
                     `<span style="display:block; margin-top: 0.25rem; font-weight: 700; color: #ef4444; font-size: 0.75rem;">Usaha Belum Ditugaskan: ${formatNum(finalTotalUnassignedUsaha)}</span>`;
 
@@ -3373,9 +3537,9 @@
                     } else {
                         badge = '<span style="background-color: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 600;">Sebagian Ditugaskan</span>';
                     }
-                    
+
                     const officers = item.officers && item.officers.length > 0 ? item.officers.join(', ') : '-';
-                    
+
                     // Highlight search query
                     const hl = (txt) => highlightText(txt, searchVal);
 
@@ -3496,30 +3660,30 @@
                 const statusFilterEl = document.getElementById('status-filter');
                 const filterVal = statusFilterEl ? statusFilterEl.value : null;
                 const activeTab = localStorage.getItem('active_tab') || 'se_umum';
-                
+
                 // Only reload email data if we are NOT using Supabase (Supabase has realtime if we want, but polling is simpler for now)
                 if (!isSupabaseUsedGlobal && typeof window.EMAIL_DATA !== 'undefined' && window.EMAIL_DATA !== sourceData) {
                     sourceData = window.EMAIL_DATA;
                     // --- BARIS YANG DITAMBAHKAN ---
-                    companies = processGroupedData(sourceData); 
+                    companies = processGroupedData(sourceData);
                     // -----------------------------
                     updateFiltersAndStats();
                     renderList();
-                    if(activeTab === 'email') window.updateLastUpdatedText(activeTab);
+                    if (activeTab === 'email') window.updateLastUpdatedText(activeTab);
                 }
-                
+
                 // Reload IPAS data if updated
                 if (typeof window.IPAS_DATA !== 'undefined') {
                     if (window.IPAS_DATA.se_umum && window.IPAS_DATA.se_umum !== se_umumData) {
                         se_umumData = window.IPAS_DATA.se_umum;
-                        if(activeTab === 'se_umum') renderSeDashboard('se_umum');
+                        if (activeTab === 'se_umum') renderSeDashboard('se_umum');
                     }
                     if (window.IPAS_DATA.se_ub && window.IPAS_DATA.se_ub !== se_ubData) {
                         se_ubData = window.IPAS_DATA.se_ub;
-                        if(activeTab === 'se_ub') renderSeDashboard('se_ub');
+                        if (activeTab === 'se_ub') renderSeDashboard('se_ub');
                     }
                 }
-                
+
                 // Reload Assign data if updated
                 if (typeof window.ASSIGN_DATA !== 'undefined' && activeTab === 'assign') {
                     renderAssignChart();
@@ -3752,7 +3916,7 @@
                 // Refresh last updated text for currently active tab
                 const activeTab = localStorage.getItem('active_tab') || 'se_umum';
                 window.updateLastUpdatedText(activeTab);
-                
+
                 if (activeTab === 'assign') {
                     const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
                     if (typeof filterAssignData === 'function') {
@@ -3819,4 +3983,5 @@
         });
     </script>
 </body>
+
 </html>
