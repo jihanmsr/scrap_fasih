@@ -831,7 +831,7 @@
         }
 
         /* Responsive adjustments */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             body {
                 padding: 1.5rem 1rem;
             }
@@ -1234,7 +1234,7 @@
             margin: 0;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             body {
                 overflow: auto !important;
             }
@@ -1955,6 +1955,12 @@
 <!-- Javascript Logic -->
 <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Helper to get CSS theme colors resolved for Chart.js
+            function getThemeColor(varName, fallback) {
+                const val = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+                return val || fallback;
+            }
+
             const rawData = window.EMAIL_DATA || [];
 
             // Helper to highlight matching search query text
@@ -2053,6 +2059,16 @@
                 const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
                 htmlElement.setAttribute('data-theme', newTheme);
                 localStorage.setItem('theme', newTheme);
+                
+                // Re-render charts to update colors for the new theme
+                setTimeout(() => {
+                    const activeTab = localStorage.getItem('active_tab') || 'se_umum';
+                    if (activeTab === 'se_umum') renderSeDashboard('se_umum');
+                    else if (activeTab === 'se_ub') renderSeDashboard('se_ub');
+                    else if (activeTab === 'assign') {
+                        renderAssignChart();
+                    }
+                }, 50);
             });
 
             // Initialize Supabase Client if credentials are provided
@@ -2864,15 +2880,17 @@
                                 tension: 0.4
                             }]
                         };
+                        const textColor = getThemeColor('--text-secondary', '#64748b');
+                        const gridColor = getThemeColor('--card-border', '#e2e8f0');
                         chartOptions = {
                             responsive: true,
                             maintainAspectRatio: false,
                             plugins: {
-                                legend: { labels: { color: 'var(--text-secondary, #64748b)', font: { family: "'Outfit', sans-serif" } } }
+                                legend: { labels: { color: textColor, font: { family: "'Outfit', sans-serif" } } }
                             },
                             scales: {
-                                y: { grid: { color: 'var(--border-color, #e2e8f0)' }, ticks: { color: 'var(--text-secondary, #64748b)' } },
-                                x: { grid: { display: false }, ticks: { color: 'var(--text-secondary, #64748b)' } }
+                                y: { grid: { color: gridColor }, ticks: { color: textColor } },
+                                x: { grid: { display: false }, ticks: { color: textColor } }
                             }
                         };
                     } else {
@@ -2895,26 +2913,28 @@
                                 }
                             ]
                         };
+                        const textColor = getThemeColor('--text-secondary', '#64748b');
+                        const gridColor = getThemeColor('--card-border', '#e2e8f0');
                         chartOptions = {
                             responsive: true,
                             maintainAspectRatio: false,
                             plugins: {
                                 legend: { 
                                     position: 'top',
-                                    labels: { color: 'var(--text-secondary, #64748b)', font: { family: "'Outfit', sans-serif" } } 
+                                    labels: { color: textColor, font: { family: "'Outfit', sans-serif" } } 
                                 }
                             },
                             scales: {
                                 y: { 
                                     stacked: true,
-                                    grid: { color: 'var(--border-color, #e2e8f0)' }, 
-                                    ticks: { color: 'var(--text-secondary, #64748b)' } 
+                                    grid: { color: gridColor }, 
+                                    ticks: { color: textColor } 
                                 },
                                 x: { 
                                     stacked: true,
                                     grid: { display: false }, 
                                     ticks: { 
-                                        color: 'var(--text-secondary, #64748b)',
+                                        color: textColor,
                                         maxRotation: 45,
                                         minRotation: 45
                                     } 
@@ -3034,58 +3054,63 @@
                 const assignedData = window.ASSIGN_DATA.map(d => d.assigned);
                 const notAssignedData = window.ASSIGN_DATA.map(d => d.have_not_assigned);
                 
-                assignChartInstance = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: labels,
-                        datasets: [
-                            {
-                                label: 'Assigned',
-                                data: assignedData,
-                                backgroundColor: 'rgba(239, 68, 68, 0.9)', // Red/Orange for Assigned
-                                borderRadius: 4,
+                        const textColor = getThemeColor('--text-secondary', '#9ca3af');
+                        const gridColor = getThemeColor('--card-border', 'rgba(255, 255, 255, 0.08)');
+                        assignChartInstance = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: labels,
+                                datasets: [
+                                    {
+                                        label: 'Assigned',
+                                        data: assignedData,
+                                        backgroundColor: 'rgba(239, 68, 68, 0.9)', // Red/Orange for Assigned
+                                        borderRadius: 4,
+                                    },
+                                    {
+                                        label: 'Have-not-assigned',
+                                        data: notAssignedData,
+                                        backgroundColor: 'rgba(245, 158, 11, 0.9)', // Yellow/Orange for Have Not Assigned
+                                        borderRadius: 4,
+                                    }
+                                ]
                             },
-                            {
-                                label: 'Have-not-assigned',
-                                data: notAssignedData,
-                                backgroundColor: 'rgba(245, 158, 11, 0.9)', // Yellow/Orange for Have Not Assigned
-                                borderRadius: 4,
-                            }
-                        ]
-                    },
-                    options: {
-                        indexAxis: 'y',
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: {
-                            legend: {
-                                position: 'bottom',
-                                labels: {
-                                    font: { family: "'Inter', sans-serif", size: 12 },
-                                    usePointStyle: true,
-                                    padding: 20
+                            options: {
+                                indexAxis: 'y',
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                plugins: {
+                                    legend: {
+                                        position: 'bottom',
+                                        labels: {
+                                            color: textColor,
+                                            font: { family: "'Inter', sans-serif", size: 12 },
+                                            usePointStyle: true,
+                                            padding: 20
+                                        }
+                                    },
+                                    tooltip: {
+                                        backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                                        titleFont: { family: "'Inter', sans-serif", size: 13 },
+                                        bodyFont: { family: "'Inter', sans-serif", size: 12 },
+                                        padding: 12,
+                                        cornerRadius: 8
+                                    }
+                                },
+                                scales: {
+                                    x: {
+                                        stacked: true,
+                                        grid: { color: gridColor },
+                                        ticks: { color: textColor }
+                                    },
+                                    y: {
+                                        stacked: true,
+                                        grid: { display: false },
+                                        ticks: { color: textColor }
+                                    }
                                 }
-                            },
-                            tooltip: {
-                                backgroundColor: 'rgba(15, 23, 42, 0.9)',
-                                titleFont: { family: "'Inter', sans-serif", size: 13 },
-                                bodyFont: { family: "'Inter', sans-serif", size: 12 },
-                                padding: 12,
-                                cornerRadius: 8
                             }
-                        },
-                        scales: {
-                            x: {
-                                stacked: true,
-                                grid: { color: 'rgba(148, 163, 184, 0.1)' }
-                            },
-                            y: {
-                                stacked: true,
-                                grid: { display: false }
-                            }
-                        }
-                    }
-                });
+                        });
             }
 
             // SLS state
