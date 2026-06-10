@@ -2945,6 +2945,15 @@
                     return;
                 }
 
+                // Get correct totals from ASSIGN_DATA (fetched from Report API, uncapped)
+                const officialKabMap = {};
+                if (window.ASSIGN_DATA) {
+                    window.ASSIGN_DATA.forEach(d => {
+                        const cleanKey = d.nama_kab.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+                        officialKabMap[cleanKey] = d.total || 0;
+                    });
+                }
+
                 // Group by kabupaten
                 const kabMap = {};
                 window.ASSIGN_SLS_DATA.forEach(item => {
@@ -2973,7 +2982,9 @@
                     totals.sudah      += kabMap[k].sudah;
                     totals.sebagian   += kabMap[k].sebagian;
                     totals.belum      += kabMap[k].belum;
-                    totals.totalUsaha += kabMap[k].totalUsaha;
+                    
+                    const cleanKey = k.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+                    totals.totalUsaha += (officialKabMap[cleanKey] || kabMap[k].totalUsaha);
                 });
 
                 const rowStyle = 'border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;';
@@ -2981,6 +2992,8 @@
 
                 tbody.innerHTML = sortedKabs.map((kab, idx) => {
                     const d = kabMap[kab];
+                    const cleanKey = kab.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+                    const officialTotalUsaha = officialKabMap[cleanKey] || d.totalUsaha;
                     const bgColor = idx % 2 === 0 ? '' : 'background-color: rgba(99,102,241,0.03);';
                     return `
                     <tr style="${rowStyle} ${bgColor}">
@@ -2989,7 +3002,7 @@
                         <td style="${tdBase} text-align: center; color: #10b981; font-weight: 600;">${fmt(d.sudah)}</td>
                         <td style="${tdBase} text-align: center; color: #f59e0b; font-weight: 600;">${fmt(d.sebagian)}</td>
                         <td style="${tdBase} text-align: center; color: #ef4444; font-weight: 600;">${fmt(d.belum)}</td>
-                        <td style="${tdBase} text-align: center; color: var(--text-secondary);">${fmt(d.totalUsaha)}</td>
+                        <td style="${tdBase} text-align: center; color: var(--text-secondary);">${fmt(officialTotalUsaha)}</td>
                     </tr>`;
                 }).join('') + `
                 <tr style="border-top: 2px solid var(--card-border); background-color: var(--card-bg); font-weight: 800;">
@@ -3250,15 +3263,38 @@
                 const totalAssignedUsaha = statsBase.reduce((sum, i) => sum + (i.assigned || 0), 0);
                 const totalUnassignedUsaha = statsBase.reduce((sum, i) => sum + (i.unassigned || 0), 0);
 
+                // Read official, uncapped stats from ASSIGN_DATA based on active filters
+                let officialTotalTarget = 0;
+                let officialTotalAssigned = 0;
+                let officialTotalUnassigned = 0;
+                let useOfficialStats = (kecFilter === 'all' && desaFilter === 'all');
+
+                if (useOfficialStats && window.ASSIGN_DATA) {
+                    window.ASSIGN_DATA.forEach(d => {
+                        if (kabFilter !== 'all') {
+                            const cleanKabFilter = kabFilter.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+                            const cleanKabName = d.nama_kab.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+                            if (cleanKabName !== cleanKabFilter) return;
+                        }
+                        officialTotalTarget += d.total || 0;
+                        officialTotalAssigned += d.assigned || 0;
+                        officialTotalUnassigned += d.have_not_assigned || 0;
+                    });
+                }
+
+                const finalTotalTarget = useOfficialStats ? officialTotalTarget : totalTarget;
+                const finalTotalAssignedUsaha = useOfficialStats ? officialTotalAssigned : totalAssignedUsaha;
+                const finalTotalUnassignedUsaha = useOfficialStats ? officialTotalUnassigned : totalUnassignedUsaha;
+
                 // Update summary card values
                 const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
                 document.getElementById('sls-stat-total').textContent = formatNum(totalSls);
-                document.getElementById('sls-substat-total').textContent = `Target Usaha: ${formatNum(totalTarget)}`;
+                document.getElementById('sls-substat-total').textContent = `Target Usaha: ${formatNum(finalTotalTarget)}`;
                 
                 document.getElementById('sls-stat-fully').textContent = formatNum(fullyAssigned);
                 document.getElementById('sls-pct-fully').innerHTML = 
                     (totalSls > 0 ? `${((fullyAssigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00%') +
-                    `<span style="display:block; margin-top: 0.25rem; font-weight: 700; color: #10b981; font-size: 0.75rem;">Usaha Ditugaskan: ${formatNum(totalAssignedUsaha)}</span>`;
+                    `<span style="display:block; margin-top: 0.25rem; font-weight: 700; color: #10b981; font-size: 0.75rem;">Usaha Ditugaskan: ${formatNum(finalTotalAssignedUsaha)}</span>`;
 
                 document.getElementById('sls-stat-partially').textContent = formatNum(partiallyAssigned);
                 document.getElementById('sls-pct-partially').textContent = totalSls > 0 ? `${((partiallyAssigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00% dari total SLS';
@@ -3266,7 +3302,7 @@
                 document.getElementById('sls-stat-unassigned').textContent = formatNum(unassigned);
                 document.getElementById('sls-pct-unassigned').innerHTML = 
                     (totalSls > 0 ? `${((unassigned / totalSls) * 100).toFixed(2)}% dari total SLS` : '0.00%') +
-                    `<span style="display:block; margin-top: 0.25rem; font-weight: 700; color: #ef4444; font-size: 0.75rem;">Usaha Belum Ditugaskan: ${formatNum(totalUnassignedUsaha)}</span>`;
+                    `<span style="display:block; margin-top: 0.25rem; font-weight: 700; color: #ef4444; font-size: 0.75rem;">Usaha Belum Ditugaskan: ${formatNum(finalTotalUnassignedUsaha)}</span>`;
 
                 // 4. Sort logic
                 const col = window.slsSort.column;
