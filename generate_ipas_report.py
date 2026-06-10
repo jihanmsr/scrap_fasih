@@ -171,9 +171,67 @@ async def generate_report():
         from urllib.parse import unquote
         xsrf_token = unquote(xsrf_token_raw)
         
-        if not xsrf_token:
-            print("Gagal mendapatkan XSRF-TOKEN. Pastikan Anda sudah login.")
-            return
+        datatable_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
+
+        async def fetch_api_safely(url, payload, token):
+            try:
+                res = await page.evaluate("""
+                    async ({url, payload, token}) => {
+                        try {
+                            const r = await fetch(url, {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+                                body: JSON.stringify(payload)
+                            });
+                            if (!r.ok) return { error: `HTTP ${r.status}: ${await r.text()}` };
+                            const text = await r.text();
+                            try {
+                                return JSON.parse(text);
+                            } catch(e) {
+                                return { error: "Invalid JSON", text: text.substring(0, 200) };
+                            }
+                        } catch(e) {
+                            return { error: e.toString() };
+                        }
+                    }
+                """, {"url": url, "payload": payload, "token": token})
+                return res
+            except Exception as e:
+                return {"error": str(e)}
+
+        async def check_session_valid(token):
+            if not token:
+                return False
+            test_payload = {
+                "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
+                "assignmentExtraParam": {
+                    "region1Id": "a00c8aef-afc4-4d4f-b80d-789a15450ef9",
+                    "surveyPeriodId": "37526b20-81c8-42f5-a895-6190137d7394",
+                    "assignmentErrorStatusType": -1
+                }
+            }
+            res = await fetch_api_safely(datatable_url, test_payload, token)
+            if not res or "error" in res:
+                return False
+            return "searchData" in res or "searchAggregation" in res
+
+        # Ensure session is valid
+        while True:
+            is_valid = await check_session_valid(xsrf_token)
+            if is_valid:
+                break
+                
+            print("\n" + "="*70)
+            print("SESI LOGIN KADALUARSA ATAU BELUM LOGIN")
+            print("Silakan login/re-login FASIH di browser Chrome.")
+            print("Jika sudah di Dashboard, silakan tekan ENTER di bawah ini.")
+            print("="*70)
+            await asyncio.to_thread(input, ">> TEKAN [ENTER] SETELAH LOGIN... <<\n")
+            
+            # Re-fetch cookies
+            cookies = await page.context.cookies()
+            xsrf_token_raw = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), "")
+            xsrf_token = unquote(xsrf_token_raw)
 
         # Define surveys
         surveys = {
@@ -260,17 +318,7 @@ async def generate_report():
                     "assignmentErrorStatusType": -1
                 }
             }
-            res_prov = await page.evaluate(f"""
-                async () => {{
-                    try {{
-                        const r = await fetch('{datatable_url}', {{ 
-                            method: "POST", headers: {{ "Content-Type": "application/json", "X-XSRF-TOKEN": '{xsrf_token}' }},
-                            body: JSON.stringify({json.dumps(payload_prov)})
-                        }});
-                        return await r.json();
-                    }} catch(e) {{ return null; }}
-                }}
-            """)
+            res_prov = await fetch_api_safely(datatable_url, payload_prov, xsrf_token)
             prov_total = 0
             if res_prov and "searchAggregation" in res_prov:
                 prov_total = sum(i["docCount"] for i in res_prov["searchAggregation"])
@@ -288,16 +336,10 @@ async def generate_report():
                         "filterTargetType": ""
                     }
                 }
-                res = await page.evaluate("""
-                    async ({url, payload, token}) => {
-                        const r = await fetch(url, {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
-                            body: JSON.stringify(payload)
-                        });
-                        return await r.json();
-                    }
-                """, {"url": datatable_url, "payload": payload, "token": xsrf_token})
+                res = await fetch_api_safely(datatable_url, payload, xsrf_token)
+                if not res or "error" in res:
+                    print(f"  [ERROR] Gagal memproses {kab['name']}: {res.get('error') if res else 'Unknown error'}")
+                    continue
                 
                 agg = res.get("searchAggregation", [])
                 
@@ -363,16 +405,10 @@ async def generate_report():
                             "filterTargetType": ""
                         }
                     }
-                    res = await page.evaluate("""
-                        async ({url, payload, token}) => {
-                            const r = await fetch(url, {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
-                                body: JSON.stringify(payload)
-                            });
-                            return await r.json();
-                        }
-                    """, {"url": datatable_url, "payload": payload, "token": xsrf_token})
+                    res = await fetch_api_safely(datatable_url, payload, xsrf_token)
+                    if not res or "error" in res:
+                        print(f"  [ERROR] Gagal mengambil rincian harian status {status} (start: {start}): {res.get('error') if res else 'Unknown error'}")
+                        break
                     
                     records_part = res.get("searchData", [])
                     if not records_part:
