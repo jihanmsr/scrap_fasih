@@ -5,7 +5,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 43834,
         "assigned": 42327,
         "have_not_assigned": 1507,
-        "timestamp": "2026-06-12T06:19:51.642487"
+        "timestamp": "2026-06-12T06:52:00.182161"
     },
     {
         "kode_kab": "7202",
@@ -13,7 +13,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 138111,
         "assigned": 136302,
         "have_not_assigned": 1809,
-        "timestamp": "2026-06-12T06:19:51.642450"
+        "timestamp": "2026-06-12T06:52:00.182131"
     },
     {
         "kode_kab": "7203",
@@ -21,7 +21,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 47729,
         "assigned": 47729,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-12T06:19:51.642483"
+        "timestamp": "2026-06-12T06:52:00.182158"
     },
     {
         "kode_kab": "7204",
@@ -29,7 +29,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 105395,
         "assigned": 21991,
         "have_not_assigned": 83404,
-        "timestamp": "2026-06-12T06:19:51.642461"
+        "timestamp": "2026-06-12T06:52:00.182139"
     },
     {
         "kode_kab": "7205",
@@ -37,7 +37,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 105502,
         "assigned": 105498,
         "have_not_assigned": 4,
-        "timestamp": "2026-06-12T06:19:51.642456"
+        "timestamp": "2026-06-12T06:52:00.182135"
     },
     {
         "kode_kab": "7206",
@@ -45,7 +45,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 75959,
         "assigned": 75919,
         "have_not_assigned": 40,
-        "timestamp": "2026-06-12T06:19:51.642470"
+        "timestamp": "2026-06-12T06:52:00.182147"
     },
     {
         "kode_kab": "7207",
@@ -53,7 +53,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 57327,
         "assigned": 56339,
         "have_not_assigned": 988,
-        "timestamp": "2026-06-12T06:19:51.642479"
+        "timestamp": "2026-06-12T06:52:00.182154"
     },
     {
         "kode_kab": "7208",
@@ -61,7 +61,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 169384,
         "assigned": 169270,
         "have_not_assigned": 114,
-        "timestamp": "2026-06-12T06:19:51.642402"
+        "timestamp": "2026-06-12T06:52:00.182100"
     },
     {
         "kode_kab": "7209",
@@ -69,7 +69,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 57912,
         "assigned": 57908,
         "have_not_assigned": 4,
-        "timestamp": "2026-06-12T06:19:51.642474"
+        "timestamp": "2026-06-12T06:52:00.182150"
     },
     {
         "kode_kab": "7210",
@@ -77,7 +77,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 105041,
         "assigned": 104818,
         "have_not_assigned": 223,
-        "timestamp": "2026-06-12T06:19:51.642466"
+        "timestamp": "2026-06-12T06:52:00.182143"
     },
     {
         "kode_kab": "7211",
@@ -85,7 +85,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 27552,
         "assigned": 27190,
         "have_not_assigned": 362,
-        "timestamp": "2026-06-12T06:19:51.642496"
+        "timestamp": "2026-06-12T06:52:00.182169"
     },
     {
         "kode_kab": "7212",
@@ -93,7 +93,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 42448,
         "assigned": 42448,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-12T06:19:51.642492"
+        "timestamp": "2026-06-12T06:52:00.182165"
     },
     {
         "kode_kab": "7271",
@@ -101,7 +101,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 164079,
         "assigned": 164020,
         "have_not_assigned": 59,
-        "timestamp": "2026-06-12T06:19:51.642442"
+        "timestamp": "2026-06-12T06:52:00.182124"
     }
 ];
 window.ASSIGN_DATA_UB   = [
@@ -111,7 +111,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 6,
         "assigned": 0,
         "have_not_assigned": 6,
-        "timestamp": "2026-06-12T06:19:52.076589"
+        "timestamp": "2026-06-12T06:52:00.418149"
     },
     {
         "kode_kab": "7202",
@@ -119,7 +119,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 172,
         "assigned": 3,
         "have_not_assigned": 169,
-        "timestamp": "2026-06-12T06:19:52.076420"
+        "timestamp": "2026-06-12T06:52:00.418118"
     },
     {
         "kode_kab": "7203",
@@ -127,7 +127,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 161,
         "assigned": 1,
         "have_not_assigned": 160,
-        "timestamp": "2026-06-12T06:19:52.076427"
+        "timestamp": "2026-06-12T06:52:00.418121"
     },
     {
         "kode_kab": "7204",
@@ -135,7 +135,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 92,
         "assigned": 0,
         "have_not_assigned": 92,
-        "timestamp": "2026-06-12T06:19:52.076434"
+        "timestamp": "2026-06-12T06:52:00.418124"
     },
     {
         "kode_kab": "7205",
@@ -143,7 +143,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 57,
         "assigned": 1,
         "have_not_assigned": 56,
-        "timestamp": "2026-06-12T06:19:52.076455"
+        "timestamp": "2026-06-12T06:52:00.418134"
     },
     {
         "kode_kab": "7206",
@@ -151,7 +151,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 58,
         "assigned": 0,
         "have_not_assigned": 58,
-        "timestamp": "2026-06-12T06:19:52.076448"
+        "timestamp": "2026-06-12T06:52:00.418131"
     },
     {
         "kode_kab": "7207",
@@ -159,7 +159,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 17,
         "assigned": 0,
         "have_not_assigned": 17,
-        "timestamp": "2026-06-12T06:19:52.076468"
+        "timestamp": "2026-06-12T06:52:00.418140"
     },
     {
         "kode_kab": "7208",
@@ -167,7 +167,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 65,
         "assigned": 65,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-12T06:19:52.076441"
+        "timestamp": "2026-06-12T06:52:00.418128"
     },
     {
         "kode_kab": "7209",
@@ -175,7 +175,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 15,
         "assigned": 0,
         "have_not_assigned": 15,
-        "timestamp": "2026-06-12T06:19:52.076475"
+        "timestamp": "2026-06-12T06:52:00.418143"
     },
     {
         "kode_kab": "7210",
@@ -183,7 +183,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 22,
         "assigned": 18,
         "have_not_assigned": 4,
-        "timestamp": "2026-06-12T06:19:52.076461"
+        "timestamp": "2026-06-12T06:52:00.418137"
     },
     {
         "kode_kab": "7211",
@@ -191,7 +191,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 7,
         "assigned": 0,
         "have_not_assigned": 7,
-        "timestamp": "2026-06-12T06:19:52.076527"
+        "timestamp": "2026-06-12T06:52:00.418146"
     },
     {
         "kode_kab": "7212",
@@ -199,7 +199,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 173,
         "assigned": 0,
         "have_not_assigned": 173,
-        "timestamp": "2026-06-12T06:19:52.076409"
+        "timestamp": "2026-06-12T06:52:00.418113"
     },
     {
         "kode_kab": "7271",
@@ -207,7 +207,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 419,
         "assigned": 0,
         "have_not_assigned": 419,
-        "timestamp": "2026-06-12T06:19:52.076361"
+        "timestamp": "2026-06-12T06:52:00.418098"
     }
 ];
 window.ASSIGN_SLS_DATA_UMUM = [
@@ -173473,7 +173473,7599 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "officers": []
     }
 ];
-window.ASSIGN_SLS_DATA_UB   = [];
+window.ASSIGN_SLS_DATA_UB   = [
+    {
+        "sls_code": "72110400020004",
+        "sls_name": "DUSUN 4",
+        "desa_name": "LAMPA",
+        "kec_name": "BANGGAI",
+        "kab_name": "[11] BANGGAI LAUT",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72010400140007",
+        "sls_name": "RT 06 DUSUN 03",
+        "desa_name": "BAKA",
+        "kec_name": "TINANGKUNG",
+        "kab_name": "[01] BANGGAI KEPULAUAN",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72010400140003",
+        "sls_name": "RT 02 DUSUN 02",
+        "desa_name": "BAKA",
+        "kec_name": "TINANGKUNG",
+        "kab_name": "[01] BANGGAI KEPULAUAN",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72010400160001",
+        "sls_name": "RT 01 LINGKUNGAN 01",
+        "desa_name": "SALAKAN",
+        "kec_name": "TINANGKUNG",
+        "kab_name": "[01] BANGGAI KEPULAUAN",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72010400150003",
+        "sls_name": "RT 03 RW 02 DUSUN 01",
+        "desa_name": "BONGGANAN",
+        "kec_name": "TINANGKUNG",
+        "kab_name": "[01] BANGGAI KEPULAUAN",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020520045001",
+        "sls_name": "KAWASAN NON PERMUKIMAN",
+        "desa_name": "BIAK",
+        "kec_name": "LUWUK UTARA",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 1,
+        "unassigned": 1,
+        "officers": [
+            "Mutiara Indryan (mutiara.indryan)"
+        ]
+    },
+    {
+        "sls_code": "72110400030008",
+        "sls_name": "RT 8 RW 3",
+        "desa_name": "LOMPIO",
+        "kec_name": "BANGGAI",
+        "kab_name": "[11] BANGGAI LAUT",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400040009",
+        "sls_name": "RT 001 RW 03",
+        "desa_name": "KAYUMALUE NGAPA",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700060004",
+        "sls_name": "RT 04 RW 02",
+        "desa_name": "GEBANG REJO",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050800130002",
+        "sls_name": "RT 02 DUSUN 01",
+        "desa_name": "LOLI OGE",
+        "kec_name": "BANAWA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Hidayat - (hidayat3)"
+        ]
+    },
+    {
+        "sls_code": "72090510050005",
+        "sls_name": "RT 005 RW 001 LINGKUNGAN 1",
+        "desa_name": "UENTANAGA ATAS",
+        "kec_name": "RATOLINDO",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100040016",
+        "sls_name": "RT 003 RW 05",
+        "desa_name": "UJUNA",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030400070001",
+        "sls_name": "RT 01 DUSUN 01",
+        "desa_name": "AMBUNU",
+        "kec_name": "BUNGKU BARAT",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Sabrina Syayidatul (sabrinasyayidatul)"
+        ]
+    },
+    {
+        "sls_code": "72080240050004",
+        "sls_name": "DUSUN 004",
+        "desa_name": "PELAWA BARU",
+        "kec_name": "PARIGI TENGAH",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080110010006",
+        "sls_name": "DUSUN VI",
+        "desa_name": "TOLAI",
+        "kec_name": "TORUE",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080610030004",
+        "sls_name": "DUSUN 4",
+        "desa_name": "KOTANAGAYA",
+        "kec_name": "BOLANO LAMBUNU",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080600250001",
+        "sls_name": "DUSUN I",
+        "desa_name": "SEJOLI",
+        "kec_name": "MOUTONG",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200150012",
+        "sls_name": "RT 12 RW 5",
+        "desa_name": "MASIGI",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080600020005",
+        "sls_name": "DUSUN V",
+        "desa_name": "MOUTONG TENGAH",
+        "kec_name": "MOUTONG",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080400100001",
+        "sls_name": "DUSUN I MAGISALAP",
+        "desa_name": "TINOMBO",
+        "kec_name": "TINOMBO",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 3,
+        "assigned": 3,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080600020002",
+        "sls_name": "DUSUN II",
+        "desa_name": "MOUTONG TENGAH",
+        "kec_name": "MOUTONG",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200160001",
+        "sls_name": "RT 001 RW 001",
+        "desa_name": "BANTAYA",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080300090002",
+        "sls_name": "DUSUN 2 KAMSER",
+        "desa_name": "AMPIBABO",
+        "kec_name": "AMPIBABO",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080110010004",
+        "sls_name": "DUSUN IV",
+        "desa_name": "TOLAI",
+        "kec_name": "TORUE",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080510030001",
+        "sls_name": "DUSUN SUMBERSARI 1",
+        "desa_name": "KOTARAYA",
+        "kec_name": "MEPANGA",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080110010002",
+        "sls_name": "DUSUN II",
+        "desa_name": "TOLAI",
+        "kec_name": "TORUE",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200190001",
+        "sls_name": "RT 1 DUSUN 01",
+        "desa_name": "BAMBALEMO",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200170003",
+        "sls_name": "RT 3 RW 2",
+        "desa_name": "KAMPAL",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080310080001",
+        "sls_name": "DUSUN 001 TOMBI",
+        "desa_name": "TOVALO",
+        "kec_name": "KASIMBAR",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 2,
+        "assigned": 2,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080230050004",
+        "sls_name": "RT 001 DUSUN 003",
+        "desa_name": "TOBOLI",
+        "kec_name": "PARIGI UTARA",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080610330005",
+        "sls_name": "DUSUN 5",
+        "desa_name": "ANUTAPURA",
+        "kec_name": "BOLANO LAMBUNU",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 2,
+        "assigned": 2,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200170005",
+        "sls_name": "RT 5 RW 3",
+        "desa_name": "KAMPAL",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 3,
+        "assigned": 3,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080100170001",
+        "sls_name": "RT 1 DUSUN 1",
+        "desa_name": "TALIABO",
+        "kec_name": "SAUSU",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080400260002",
+        "sls_name": "DUSUN II TOIRANTE",
+        "desa_name": "SIAVU",
+        "kec_name": "TINOMBO",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080410030004",
+        "sls_name": "DUSUN SULAMBAI",
+        "desa_name": "MANINILI",
+        "kec_name": "TINOMBO SELATAN",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080510070005",
+        "sls_name": "DUSUN 5",
+        "desa_name": "SUMBER AGUNG",
+        "kec_name": "MEPANGA",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080510120005",
+        "sls_name": "DUSUN V",
+        "desa_name": "KOTA RAYA SELATAN",
+        "kec_name": "MEPANGA",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 3,
+        "assigned": 3,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080510150001",
+        "sls_name": "DUSUN 1 MEKAR SARI",
+        "desa_name": "OGOMOLOS",
+        "kec_name": "MEPANGA",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080610160005",
+        "sls_name": "DUSUN 5",
+        "desa_name": "GUNUNGSARI",
+        "kec_name": "BOLANO LAMBUNU",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080600280002",
+        "sls_name": "DUSUN II",
+        "desa_name": "AEDAN RAYA",
+        "kec_name": "MOUTONG",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200150004",
+        "sls_name": "RT 4 RW 1",
+        "desa_name": "MASIGI",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080100020004",
+        "sls_name": "DUSUN IV",
+        "desa_name": "SAUSU PEORE",
+        "kec_name": "SAUSU",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080630020002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "SRITABAANG",
+        "kec_name": "BOLANO",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200160003",
+        "sls_name": "RT 003 RW 002",
+        "desa_name": "BANTAYA",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 2,
+        "assigned": 2,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080310030002",
+        "sls_name": "DUSUN 002 MANDAR",
+        "desa_name": "KASIMBAR",
+        "kec_name": "KASIMBAR",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080400100002",
+        "sls_name": "DUSUN II SINGGALANG",
+        "desa_name": "TINOMBO",
+        "kec_name": "TINOMBO",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080300150001",
+        "sls_name": "DUSUN I",
+        "desa_name": "AMPIBABO UTARA",
+        "kec_name": "AMPIBABO",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200150001",
+        "sls_name": "RT 1 RW 1",
+        "desa_name": "MASIGI",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080210030002",
+        "sls_name": "RT 002 DUSUN 1",
+        "desa_name": "SUMBERSARI",
+        "kec_name": "PARIGI SELATAN",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200160004",
+        "sls_name": "RT 004 RW 002",
+        "desa_name": "BANTAYA",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200170002",
+        "sls_name": "RT 2 RW 1",
+        "desa_name": "KAMPAL",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080320030003",
+        "sls_name": "DUSUN 03",
+        "desa_name": "TORIBULU",
+        "kec_name": "TORIBULU",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080640040004",
+        "sls_name": "DUSUN 4",
+        "desa_name": "PERSATUAN SEJATI",
+        "kec_name": "ONGKA MALINO",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080210030003",
+        "sls_name": "RT 003 DUSUN 1",
+        "desa_name": "SUMBERSARI",
+        "kec_name": "PARIGI SELATAN",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080110010007",
+        "sls_name": "DUSUN VII",
+        "desa_name": "TOLAI",
+        "kec_name": "TORUE",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080300150002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "AMPIBABO UTARA",
+        "kec_name": "AMPIBABO",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080110060002",
+        "sls_name": "DUSUN II LINGGASARI",
+        "desa_name": "TOLAI BARAT",
+        "kec_name": "TORUE",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 2,
+        "assigned": 2,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200160002",
+        "sls_name": "RT 002 RW 001",
+        "desa_name": "BANTAYA",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080100040016",
+        "sls_name": "RT 02 DUSUN V",
+        "desa_name": "SAUSU TRANS",
+        "kec_name": "SAUSU",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080200130003",
+        "sls_name": "RT 3 RW 01",
+        "desa_name": "MAESA",
+        "kec_name": "PARIGI",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080110010003",
+        "sls_name": "DUSUN III",
+        "desa_name": "TOLAI",
+        "kec_name": "TORUE",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080210030005",
+        "sls_name": "RT 001 DUSUN 2",
+        "desa_name": "SUMBERSARI",
+        "kec_name": "PARIGI SELATAN",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 2,
+        "assigned": 2,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080240012001",
+        "sls_name": "HUTAN",
+        "desa_name": "PETAPA",
+        "kec_name": "PARIGI TENGAH",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080510030003",
+        "sls_name": "DUSUN MUKTISARI 1",
+        "desa_name": "KOTARAYA",
+        "kec_name": "MEPANGA",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080610030003",
+        "sls_name": "DUSUN 3",
+        "desa_name": "KOTANAGAYA",
+        "kec_name": "BOLANO LAMBUNU",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080300200003",
+        "sls_name": "DUSUN 3 DOLO",
+        "desa_name": "AMPIBABO TIMUR",
+        "kec_name": "AMPIBABO",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72080000000000",
+        "sls_name": "-",
+        "desa_name": "-",
+        "kec_name": "-",
+        "kab_name": "[08] PARIGI MOUTONG",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Irwan - (irwan8)"
+        ]
+    },
+    {
+        "sls_code": "72020540030006",
+        "sls_name": "RT 006 RW 03 DUSUN 002",
+        "desa_name": "KOYOAN",
+        "kec_name": "NAMBO",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72101200110005",
+        "sls_name": "RT 5 DUSUN 2",
+        "desa_name": "LOLU",
+        "kec_name": "SIGI BIROMARU",
+        "kab_name": "[10] SIGI",
+        "total": 2,
+        "assigned": 2,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72101300080030",
+        "sls_name": "RT 24 DUSUN 05",
+        "desa_name": "TINGGEDE",
+        "kec_name": "MARAWOLA",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72100700040005",
+        "sls_name": "RT 001 DUSUN 002",
+        "desa_name": "PAKULI",
+        "kec_name": "GUMBASA",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72101200120018",
+        "sls_name": "RT 2 DUSUN 5",
+        "desa_name": "KALUKUBULA",
+        "kec_name": "SIGI BIROMARU",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72101100060006",
+        "sls_name": "RT 006 DUSUN 3",
+        "desa_name": "KOTA PULU",
+        "kec_name": "DOLO",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72101200130015",
+        "sls_name": "RT 15 DUSUN 3",
+        "desa_name": "MPANAU",
+        "kec_name": "SIGI BIROMARU",
+        "kab_name": "[10] SIGI",
+        "total": 4,
+        "assigned": 4,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72100600130006",
+        "sls_name": "RT 006 DUSUN 002",
+        "desa_name": "MAKMUR",
+        "kec_name": "PALOLO",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72101100110005",
+        "sls_name": "RT 005 DUSUN 1",
+        "desa_name": "KABOBONA",
+        "kec_name": "DOLO",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72101200130003",
+        "sls_name": "RT 3 DUSUN 1",
+        "desa_name": "MPANAU",
+        "kec_name": "SIGI BIROMARU",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72100600130005",
+        "sls_name": "RT 005 DUSUN 002",
+        "desa_name": "MAKMUR",
+        "kec_name": "PALOLO",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72101300080014",
+        "sls_name": "RT 014 DUSUN 3",
+        "desa_name": "TINGGEDE",
+        "kec_name": "MARAWOLA",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72100300110002",
+        "sls_name": "RT 002 DUSUN 001",
+        "desa_name": "BOLAPAPU",
+        "kec_name": "KULAWI",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72100300110001",
+        "sls_name": "RT 001 DUSUN 001",
+        "desa_name": "BOLAPAPU",
+        "kec_name": "KULAWI",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72101210060005",
+        "sls_name": "RT 5 DUSUN 1",
+        "desa_name": "SIDERA",
+        "kec_name": "SIGI KOTA",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": [
+            "Shawa (shawazahma)"
+        ]
+    },
+    {
+        "sls_code": "72020520090011",
+        "sls_name": "RT 11 LINGKUNGAN 4",
+        "desa_name": "KILONGAN PERMAI",
+        "kec_name": "LUWUK UTARA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710410030012",
+        "sls_name": "RT 012 RW 006",
+        "desa_name": "BAIYA",
+        "kec_name": "TAWAELI",
+        "kab_name": "[71] PALU",
+        "total": 10,
+        "assigned": 0,
+        "unassigned": 10,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500042001",
+        "sls_name": "HUTAN",
+        "desa_name": "KOYA",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500120007",
+        "sls_name": "RT 7",
+        "desa_name": "BUNGIN",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 2,
+        "unassigned": 0,
+        "officers": [
+            "Mutiara Indryan (mutiara.indryan)"
+        ]
+    },
+    {
+        "sls_code": "72020200195001",
+        "sls_name": "TERBANGUN BUKAN PEMUKIMAN",
+        "desa_name": "USO",
+        "kec_name": "BATUI",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72090510070003",
+        "sls_name": "RT 03 RW 02 LINGKUNGAN 01",
+        "desa_name": "UENTANAGA BAWAH",
+        "kec_name": "RATOLINDO",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72090510070001",
+        "sls_name": "RT 01 RW 01 LINGKUNGAN 01",
+        "desa_name": "UENTANAGA BAWAH",
+        "kec_name": "RATOLINDO",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72090500150002",
+        "sls_name": "RT 4 RW 1 LINGKUNGAN 1",
+        "desa_name": "LABIABAE",
+        "kec_name": "AMPANA KOTA",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72070110050015",
+        "sls_name": "RT 15 RW 03",
+        "desa_name": "LEOK II",
+        "kec_name": "BIAU",
+        "kab_name": "[07] BUOL",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310070002",
+        "sls_name": "RT 002 RW 001",
+        "desa_name": "LAYANA INDAH",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710000000000",
+        "sls_name": "-",
+        "desa_name": "-",
+        "kec_name": "-",
+        "kab_name": "[71] PALU",
+        "total": 13,
+        "assigned": 0,
+        "unassigned": 13,
+        "officers": []
+    },
+    {
+        "sls_code": "72710410032001",
+        "sls_name": "HUTAN DAN SEBAGIAN WILAYAH KEK",
+        "desa_name": "BAIYA",
+        "kec_name": "TAWAELI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710410040003",
+        "sls_name": "RT 001 RW 002",
+        "desa_name": "PANTOLOAN",
+        "kec_name": "TAWAELI",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310080031",
+        "sls_name": "RT 006 RW 006",
+        "desa_name": "TALISE VALANGGUNI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210050005",
+        "sls_name": "DUSUN 5",
+        "desa_name": "FATUFIA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300030017",
+        "sls_name": "RT 02 RW 04",
+        "desa_name": "BESUSU TIMUR",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210052001",
+        "sls_name": "KAWASAN HUTAN",
+        "desa_name": "FATUFIA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 4,
+        "assigned": 0,
+        "unassigned": 4,
+        "officers": []
+    },
+    {
+        "sls_code": "72110400040004",
+        "sls_name": "RT 4 RW 02",
+        "desa_name": "TANO BONUNUNGAN",
+        "kec_name": "BANGGAI",
+        "kab_name": "[11] BANGGAI LAUT",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72040110050014",
+        "sls_name": "RT 14 DUSUN 05",
+        "desa_name": "TOINASA",
+        "kec_name": "PAMONA BARAT",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160029",
+        "sls_name": "RT 001 RW V",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72060500080011",
+        "sls_name": "RT 02 DUSUN MANGGURIBA",
+        "desa_name": "LALOS",
+        "kec_name": "GALANG",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160034",
+        "sls_name": "RT 001 RW VI",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160039",
+        "sls_name": "RT 002 RW VII",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 5,
+        "assigned": 0,
+        "unassigned": 5,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700110002",
+        "sls_name": "RT 002 RW 001",
+        "desa_name": "GEBANGREJO BARAT",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72070110030003",
+        "sls_name": "RT 03 RW 01",
+        "desa_name": "BUOL",
+        "kec_name": "BIAU",
+        "kab_name": "[07] BUOL",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160046",
+        "sls_name": "RT 002 RW VIII",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400140025",
+        "sls_name": "RT 3 RW 12",
+        "desa_name": "PANASAKAN",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160031",
+        "sls_name": "RT 003 RW V",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040300090017",
+        "sls_name": "RT 18 RW 04",
+        "desa_name": "SANGELE",
+        "kec_name": "PAMONA PUSALEMBA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700120009",
+        "sls_name": "RT 021B RW 05",
+        "desa_name": "KAYAMANYA SENTRAL",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700100006",
+        "sls_name": "RT 006 RW 02",
+        "desa_name": "GEBANGREJO TIMUR",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 4,
+        "assigned": 0,
+        "unassigned": 4,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400140011",
+        "sls_name": "RT 1 RW 3",
+        "desa_name": "PANASAKAN",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400180002",
+        "sls_name": "RT 2 RW 1",
+        "desa_name": "TAMBUN",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400140020",
+        "sls_name": "RT 2 RW 7",
+        "desa_name": "PANASAKAN",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72070310020012",
+        "sls_name": "RT 07 SUSUN CCM",
+        "desa_name": "WINANGUN",
+        "kec_name": "BUKAL",
+        "kab_name": "[07] BUOL",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060500080004",
+        "sls_name": "RT 01 DUSUN BATU BANGGA",
+        "desa_name": "LALOS",
+        "kec_name": "GALANG",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72070110030033",
+        "sls_name": "RT 33 RW 08",
+        "desa_name": "BUOL",
+        "kec_name": "BIAU",
+        "kab_name": "[07] BUOL",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72070110060010",
+        "sls_name": "RT 010 RW 006",
+        "desa_name": "LEOK 1",
+        "kec_name": "BIAU",
+        "kab_name": "[07] BUOL",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72110400040008",
+        "sls_name": "RT 8 RW 4",
+        "desa_name": "TANO BONUNUNGAN",
+        "kec_name": "BANGGAI",
+        "kab_name": "[11] BANGGAI LAUT",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72070110040005",
+        "sls_name": "RT 5 RW 1",
+        "desa_name": "KALI",
+        "kec_name": "BIAU",
+        "kab_name": "[07] BUOL",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100070015",
+        "sls_name": "RT 002 RW 06",
+        "desa_name": "KAMONJI",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100080011",
+        "sls_name": "RT 001 RW 07",
+        "desa_name": "BALAROA",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500110008",
+        "sls_name": "RT 008 RW 003 LINGKUNGAN 2",
+        "desa_name": "SOHO",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500230002",
+        "sls_name": "RT 002 RW 001 LINGKUNGAN 001",
+        "desa_name": "KARATON",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500230007",
+        "sls_name": "RT 007 RW 004 LINGKUNGAN 002",
+        "desa_name": "KARATON",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 5,
+        "assigned": 0,
+        "unassigned": 5,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100110017",
+        "sls_name": "RT 001 RW 04",
+        "desa_name": "LERE",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110040004",
+        "sls_name": "RT 004 RW 001",
+        "desa_name": "TAWANJUKA",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100080010",
+        "sls_name": "RT 003 RW 06",
+        "desa_name": "BALAROA",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500260003",
+        "sls_name": "RT 3 RW 2 LINGKUNGAN 1",
+        "desa_name": "BUNGIN TIMUR",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020510050009",
+        "sls_name": "RT 9 DUSUN 4",
+        "desa_name": "HUNDUHON",
+        "kec_name": "LUWUK TIMUR",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020520010002",
+        "sls_name": "RT 02 LINGKUNGAN 1",
+        "desa_name": "KILONGAN",
+        "kec_name": "LUWUK UTARA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110030005",
+        "sls_name": "RT 005 RW 001",
+        "desa_name": "PALUPI",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500230016",
+        "sls_name": "RT 016 LINGKUNGAN 003",
+        "desa_name": "KARATON",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710120030020",
+        "sls_name": "RT 003 RW 005",
+        "desa_name": "SILAE",
+        "kec_name": "ULUJADI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020520040002",
+        "sls_name": "RT 2 DUSUN 1",
+        "desa_name": "BIAK",
+        "kec_name": "LUWUK UTARA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110020006",
+        "sls_name": "RT 001 RW 03",
+        "desa_name": "PENGAWU",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020520040005",
+        "sls_name": "RT 5 DUSUN 2",
+        "desa_name": "BIAK",
+        "kec_name": "LUWUK UTARA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500230010",
+        "sls_name": "RT 010 RW 005 LINGKUNGAN 003",
+        "desa_name": "KARATON",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100040008",
+        "sls_name": "RT 001 RW 03",
+        "desa_name": "UJUNA",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020400060002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "ULING",
+        "kec_name": "KINTOM",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100040015",
+        "sls_name": "RT 002 RW 05",
+        "desa_name": "UJUNA",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090005",
+        "sls_name": "RT 5 RW 2",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100040020",
+        "sls_name": "RT 002 RW 07",
+        "desa_name": "UJUNA",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100050008",
+        "sls_name": "RT 001 RW 03",
+        "desa_name": "BARU",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 6,
+        "assigned": 0,
+        "unassigned": 6,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090030",
+        "sls_name": "RT 30 RW 13",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090029",
+        "sls_name": "RT 29 RW 12",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100070006",
+        "sls_name": "RT 001 RW 03",
+        "desa_name": "KAMONJI",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500110007",
+        "sls_name": "RT 007 RW 003 LINGKUNGAN 2",
+        "desa_name": "SOHO",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090036",
+        "sls_name": "RT 36 RW 16",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110020003",
+        "sls_name": "RT 001 RW 02",
+        "desa_name": "PENGAWU",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100070011",
+        "sls_name": "RT 001 RW 05",
+        "desa_name": "KAMONJI",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500230011",
+        "sls_name": "RT 011 RW 005 LINGKUNGAN 003",
+        "desa_name": "KARATON",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110040013",
+        "sls_name": "RT 002 RW 004",
+        "desa_name": "TAWANJUKA",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110060014",
+        "sls_name": "RT 04 RW 004",
+        "desa_name": "NUNU",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710120010022",
+        "sls_name": "RT 002 RW 005",
+        "desa_name": "DONGGALA KODI",
+        "kec_name": "ULUJADI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530010001",
+        "sls_name": "RT 1 DUSUN 1",
+        "desa_name": "BUBUNG",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100060001",
+        "sls_name": "RT 001 RW 001",
+        "desa_name": "SIRANINDI",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 4,
+        "assigned": 0,
+        "unassigned": 4,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090022",
+        "sls_name": "RT 22 RW 9",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090009",
+        "sls_name": "RT 9 RW 4",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 9,
+        "assigned": 0,
+        "unassigned": 9,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100060003",
+        "sls_name": "RT 003 RW 001",
+        "desa_name": "SIRANINDI",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090031",
+        "sls_name": "RT 31 RW 13",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100070001",
+        "sls_name": "RT 001 RW 01",
+        "desa_name": "KAMONJI",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090033",
+        "sls_name": "RT 33 RW 14",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090034",
+        "sls_name": "RT 34 RW 15",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100070008",
+        "sls_name": "RT 001 RW 04",
+        "desa_name": "KAMONJI",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500100002",
+        "sls_name": "RT 2 RW 1 LINGKUNGAN 1",
+        "desa_name": "BARU",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110050013",
+        "sls_name": "RT 005 RW 003",
+        "desa_name": "BOYAOGE",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530020001",
+        "sls_name": "RT 1 RW 1 LINGKUNGAN 1",
+        "desa_name": "MAAHAS",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110030022",
+        "sls_name": "RT 001 RW 004",
+        "desa_name": "PALUPI",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530020007",
+        "sls_name": "RT 7 RW 3 LINGKUNGAN 3",
+        "desa_name": "MAAHAS",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530020014",
+        "sls_name": "RT 14 RW 5 LINGKUNGAN 4",
+        "desa_name": "MAAHAS",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710120050009",
+        "sls_name": "RT 002 RW 004",
+        "desa_name": "BULURI",
+        "kec_name": "ULUJADI",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200040008",
+        "sls_name": "RT 04 RW 02",
+        "desa_name": "BIROBULI SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110060002",
+        "sls_name": "RT 02 RW 01",
+        "desa_name": "NUNU",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710120040002",
+        "sls_name": "RT 002 RW 001",
+        "desa_name": "TIPO",
+        "kec_name": "ULUJADI",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530030010",
+        "sls_name": "RT 10 RW 5 LINGKUNGAN 3",
+        "desa_name": "SIMPONG",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530030008",
+        "sls_name": "RT 8 RW 4 LINGKUNGAN 2",
+        "desa_name": "SIMPONG",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070001",
+        "sls_name": "RT 01 RW 01",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530070006",
+        "sls_name": "RT 6 RW 2 LINGKUNGAN 2",
+        "desa_name": "TOMBANG PERMAI",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070015",
+        "sls_name": "RT 02 RW 05",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530090005",
+        "sls_name": "RT 5 RW 2 LINGKUNGAN 2",
+        "desa_name": "JOLE",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020540030002",
+        "sls_name": "RT 002 RW 01 DUSUN 001",
+        "desa_name": "KOYOAN",
+        "kec_name": "NAMBO",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200080033",
+        "sls_name": "RT 02 RW 09",
+        "desa_name": "TATURA UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530090002",
+        "sls_name": "RT 2 RW 1 LINGKUNGAN 1",
+        "desa_name": "JOLE",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530050007",
+        "sls_name": "RT 7 RW 4 LINGKUNGAN 2",
+        "desa_name": "TANJUNG TUWIS",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200040028",
+        "sls_name": "RT 02 RW 06",
+        "desa_name": "BIROBULI SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200080035",
+        "sls_name": "RT 01 RW 10",
+        "desa_name": "TATURA UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070003",
+        "sls_name": "RW 03 RW 01",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200080034",
+        "sls_name": "RT 03 RW 09",
+        "desa_name": "TATURA UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070005",
+        "sls_name": "RT 01 RW 02",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72710120030023",
+        "sls_name": "RT 006 RW 02",
+        "desa_name": "SILAE",
+        "kec_name": "ULUJADI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710120040003",
+        "sls_name": "RT 001 RW 002",
+        "desa_name": "TIPO",
+        "kec_name": "ULUJADI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530020008",
+        "sls_name": "RT 8 RW 3 LINGKUNGAN 3",
+        "desa_name": "MAAHAS",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020510040002",
+        "sls_name": "RT 02",
+        "desa_name": "UWEDIKAN",
+        "kec_name": "LUWUK TIMUR",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200040004",
+        "sls_name": "RT 04 RW 01",
+        "desa_name": "BIROBULI SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200040029",
+        "sls_name": "RT 01 RW 06",
+        "desa_name": "BIROBULI SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070008",
+        "sls_name": "RT 01 RW 03",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020600190001",
+        "sls_name": "RT 1 RW 001 LINGKUNGAN 1",
+        "desa_name": "PAGIMANA",
+        "kec_name": "PAGIMANA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710120010018",
+        "sls_name": "RT 002 RW 004",
+        "desa_name": "DONGGALA KODI",
+        "kec_name": "ULUJADI",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070027",
+        "sls_name": "RT 01 RW 08",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020610090002",
+        "sls_name": "RT 2 DUSUN 1",
+        "desa_name": "BUALEMO B",
+        "kec_name": "BUALEMO",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710120020031",
+        "sls_name": "RT 004 RW 003",
+        "desa_name": "KABONENA",
+        "kec_name": "ULUJADI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070004",
+        "sls_name": "RT 04 RW 01",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530050008",
+        "sls_name": "RT 8 RW 4 LINGKUNGAN 2",
+        "desa_name": "TANJUNG TUWIS",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070024",
+        "sls_name": "RT 02 RW 07",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070030",
+        "sls_name": "RT 04 RW 08",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020510070007",
+        "sls_name": "DUSUN 1",
+        "desa_name": "KAYUTANYO",
+        "kec_name": "LUWUK TIMUR",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110050008",
+        "sls_name": "RT 005 RW 002",
+        "desa_name": "BOYAOGE",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020520040007",
+        "sls_name": "RT 7 DUSUN 2",
+        "desa_name": "BIAK",
+        "kec_name": "LUWUK UTARA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710120030003",
+        "sls_name": "RT 003 RW 001",
+        "desa_name": "SILAE",
+        "kec_name": "ULUJADI",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070038",
+        "sls_name": "RT 04 RW 010",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070042",
+        "sls_name": "RT 03 RW 011",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530072001",
+        "sls_name": "WILAYAH HUTAN SEMAK",
+        "desa_name": "TOMBANG PERMAI",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72121000140001",
+        "sls_name": "DUSUN 1",
+        "desa_name": "MENYO E",
+        "kec_name": "MAMOSALATO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100040014",
+        "sls_name": "RT 001 RW 05",
+        "desa_name": "UJUNA",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090004",
+        "sls_name": "RT 4 RW 2",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100050009",
+        "sls_name": "RT 002 RW 03",
+        "desa_name": "BARU",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090017",
+        "sls_name": "RT 17 RW 7",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 4,
+        "assigned": 0,
+        "unassigned": 4,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100060005",
+        "sls_name": "RT 001 RW 002",
+        "desa_name": "SIRANINDI",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100060002",
+        "sls_name": "RT 002 RW 001",
+        "desa_name": "SIRANINDI",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100060006",
+        "sls_name": "RT 002 RW 002",
+        "desa_name": "SIRANINDI",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500100011",
+        "sls_name": "RT 11 RW 6 LINGKUNGAN 3",
+        "desa_name": "BARU",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500110002",
+        "sls_name": "RT 002 RW 002 LINGKUNGAN 1",
+        "desa_name": "SOHO",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100110012",
+        "sls_name": "RT 001 RW 03",
+        "desa_name": "LERE",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500120002",
+        "sls_name": "RT 2",
+        "desa_name": "BUNGIN",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500120006",
+        "sls_name": "RT 6",
+        "desa_name": "BUNGIN",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100110027",
+        "sls_name": "RT 004 RW 05",
+        "desa_name": "LERE",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020310110003",
+        "sls_name": "DUSUN 3",
+        "desa_name": "PETAK",
+        "kec_name": "NUHON",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090008",
+        "sls_name": "RT 8 RW 3",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090007",
+        "sls_name": "RT 7 RW 3",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090019",
+        "sls_name": "RT 19 RW 8",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500090003",
+        "sls_name": "RT 3 RW 1",
+        "desa_name": "LUWUK",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020320082002",
+        "sls_name": "HUTAN",
+        "desa_name": "DODA BUNTA",
+        "kec_name": "SIMPANG RAYA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530090003",
+        "sls_name": "RT 3 RW 1 LINGKUNGAN 1",
+        "desa_name": "JOLE",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070041",
+        "sls_name": "RT 02 RW 011",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210040003",
+        "sls_name": "DUSUN 3",
+        "desa_name": "LABOTA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070011",
+        "sls_name": "RT 01 RW 04",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070029",
+        "sls_name": "RT 03 RW 08",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020820090001",
+        "sls_name": "DUSUN 1",
+        "desa_name": "BATU MANDI",
+        "kec_name": "BALANTAK UTARA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210042002",
+        "sls_name": "KAWASAN HUTAN",
+        "desa_name": "LABOTA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 9,
+        "assigned": 0,
+        "unassigned": 9,
+        "officers": []
+    },
+    {
+        "sls_code": "72020710010010",
+        "sls_name": "RT 10 DUSUN 2",
+        "desa_name": "TANGEBAN",
+        "kec_name": "MASAMA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300010001",
+        "sls_name": "RT 01 RW 01",
+        "desa_name": "BESUSU BARAT",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020710060003",
+        "sls_name": "RT 3 DUSUN 2",
+        "desa_name": "MINANGANDALA",
+        "kec_name": "MASAMA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020820020002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "TEKU",
+        "kec_name": "BALANTAK UTARA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300010020",
+        "sls_name": "RT 03 RW 08",
+        "desa_name": "BESUSU BARAT",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200090001",
+        "sls_name": "RT 01 RW 01",
+        "desa_name": "TATURA SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200090016",
+        "sls_name": "RT 01 RW 04",
+        "desa_name": "TATURA SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200080037",
+        "sls_name": "RT 03 RW 10",
+        "desa_name": "TATURA UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210050002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "FATUFIA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530030011",
+        "sls_name": "RT 11 RW 6 LINGKUNGAN 3",
+        "desa_name": "SIMPONG",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530030012",
+        "sls_name": "RT 12 RW 6 LINGKUNGAN 3",
+        "desa_name": "SIMPONG",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200080038",
+        "sls_name": "RT 04 RW 03",
+        "desa_name": "TATURA UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530020012",
+        "sls_name": "RT 12 RW 5 LINGKUNGAN 4",
+        "desa_name": "MAAHAS",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300010014",
+        "sls_name": "RT 01 RW 06",
+        "desa_name": "BESUSU BARAT",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160050",
+        "sls_name": "RT 001 RW IX",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400140005",
+        "sls_name": "RT 1 RW 11",
+        "desa_name": "PANASAKAN",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72051020020003",
+        "sls_name": "DUSUN 3",
+        "desa_name": "OTI",
+        "kec_name": "SINDUE TOBATA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040710020003",
+        "sls_name": "RT 03 RW 01",
+        "desa_name": "KASINTUWU",
+        "kec_name": "POSO KOTA UTARA",
+        "kab_name": "[04] POSO",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72040720030004",
+        "sls_name": "RT 04 RW 02",
+        "desa_name": "KAWUA",
+        "kec_name": "POSO KOTA SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040720030009",
+        "sls_name": "RT 09 RW 05",
+        "desa_name": "KAWUA",
+        "kec_name": "POSO KOTA SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160053",
+        "sls_name": "RT 004 RW II",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060600060008",
+        "sls_name": "RT 3 DUSUN BABANDANG",
+        "desa_name": "LAULALANG",
+        "kec_name": "TOLITOLI UTARA",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050800210009",
+        "sls_name": "RT 01 RW 03",
+        "desa_name": "GANTI",
+        "kec_name": "BANAWA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050800260007",
+        "sls_name": "RT 003 RW 003",
+        "desa_name": "BOYA",
+        "kec_name": "BANAWA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051000030002",
+        "sls_name": "DUSUN II BUNTINA",
+        "desa_name": "TOAYA",
+        "kec_name": "SINDUE",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060100040002",
+        "sls_name": "RT 1 DUSUN PASAR",
+        "desa_name": "BANGKIR",
+        "kec_name": "DAMPAL SELATAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060200020012",
+        "sls_name": "RT II DUSUN SAMBUA",
+        "desa_name": "OGOTUA",
+        "kec_name": "DAMPAL UTARA",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060200030007",
+        "sls_name": "RT 10 DUSUN SUKA DAMAI",
+        "desa_name": "BAMBAPULA",
+        "kec_name": "DAMPAL UTARA",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060500020002",
+        "sls_name": "RT 1 DUSUN NELAYAN",
+        "desa_name": "SANDANA",
+        "kec_name": "GALANG",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050810190003",
+        "sls_name": "DUSUN III POMEMPE",
+        "desa_name": "TANAHMPULU",
+        "kec_name": "BANAWA SELATAN",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050900090003",
+        "sls_name": "DUSUN 3 DONDORANO",
+        "desa_name": "LABUAN PANIMBA",
+        "kec_name": "LABUAN",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051010020002",
+        "sls_name": "DUSUN 002",
+        "desa_name": "SALOYA",
+        "kec_name": "SINDUE TOMBUSABORA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160025",
+        "sls_name": "RT 005 RW III",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060300100003",
+        "sls_name": "RT 01 DUSUN SENTOSA",
+        "desa_name": "TINABOGAN",
+        "kec_name": "DONDO",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160051",
+        "sls_name": "RT 002 RW IX",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060100030004",
+        "sls_name": "RT 001  DUSUN TANJUNG 2",
+        "desa_name": "SONI",
+        "kec_name": "DAMPAL SELATAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160019",
+        "sls_name": "RT 002 RW II",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160024",
+        "sls_name": "RT 004 RW III",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72090510190004",
+        "sls_name": "RT 04 RW 02 LINGKUNGAN 01",
+        "desa_name": "MUARA TOBA",
+        "kec_name": "RATOLINDO",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72060410070011",
+        "sls_name": "RT 1 DUSUN SALUSU",
+        "desa_name": "LAMPASIO",
+        "kec_name": "LAMPASIO",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050810100005",
+        "sls_name": "DUSUN V LINO",
+        "desa_name": "TOLONGANO",
+        "kec_name": "BANAWA SELATAN",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051200090001",
+        "sls_name": "DUSUN 001",
+        "desa_name": "TOMPE",
+        "kec_name": "SIRENJA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051400140003",
+        "sls_name": "RT 001 DUSUN 002",
+        "desa_name": "LONG",
+        "kec_name": "DAMPELAS",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051600070002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "BALUKANG",
+        "kec_name": "SOJOL",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051610040004",
+        "sls_name": "DUSUN 004",
+        "desa_name": "OGOAMAS I",
+        "kec_name": "SOJOL UTARA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400150022",
+        "sls_name": "RT 7 RW 4",
+        "desa_name": "SIDOARJO",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72060500070005",
+        "sls_name": "RT 7 RW IV DUSUN KEKOT",
+        "desa_name": "GINUNGGUNG",
+        "kec_name": "GALANG",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020610090001",
+        "sls_name": "RT 1 DUSUN 1",
+        "desa_name": "BUALEMO B",
+        "kec_name": "BUALEMO",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200080030",
+        "sls_name": "RT 02 RW 08",
+        "desa_name": "TATURA UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030110042001",
+        "sls_name": "HUTAN",
+        "desa_name": "MATARAPE",
+        "kec_name": "SOMBORI KEPULAUAN",
+        "kab_name": "[03] MOROWALI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020600310002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "SIUNA",
+        "kec_name": "PAGIMANA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020600310001",
+        "sls_name": "DUSUN 1",
+        "desa_name": "SIUNA",
+        "kec_name": "PAGIMANA",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210050004",
+        "sls_name": "DUSUN 4",
+        "desa_name": "FATUFIA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 19,
+        "assigned": 0,
+        "unassigned": 19,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300020007",
+        "sls_name": "RT 07 RW 02",
+        "desa_name": "BESUSU TENGAH",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210074001",
+        "sls_name": "PEMUKIMAN PEKERJA PABRIK",
+        "desa_name": "BAHOMAKMUR",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210045004",
+        "sls_name": "PERUSAHAAN",
+        "desa_name": "LABOTA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300010012",
+        "sls_name": "RT 01 RW 05",
+        "desa_name": "BESUSU BARAT",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200090023",
+        "sls_name": "RT 04 RW 05",
+        "desa_name": "TATURA SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300010011",
+        "sls_name": "RT 02 RW 04",
+        "desa_name": "BESUSU BARAT",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020800200008",
+        "sls_name": "RT 0002 RW 02 LINGKUNGAN 02",
+        "desa_name": "BALANTAK",
+        "kec_name": "BALANTAK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070010",
+        "sls_name": "RT 03 RW 03",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300020010",
+        "sls_name": "RT 10 RW 03",
+        "desa_name": "BESUSU TENGAH",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210062001",
+        "sls_name": "HUTAN",
+        "desa_name": "KEUREA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040001",
+        "sls_name": "RT 001 RW 01",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020600190003",
+        "sls_name": "RT 3 RW 001 LINGKUNGAN 1",
+        "desa_name": "PAGIMANA",
+        "kec_name": "PAGIMANA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300020005",
+        "sls_name": "RT 05 RW 01",
+        "desa_name": "BESUSU TENGAH",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300020011",
+        "sls_name": "RT 11 RW 03",
+        "desa_name": "BESUSU TENGAH",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300030010",
+        "sls_name": "RT 05 RW 02",
+        "desa_name": "BESUSU TIMUR",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200090017",
+        "sls_name": "RT 02 RW 04",
+        "desa_name": "TATURA SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530070005",
+        "sls_name": "RT 5 RW 2 LINGKUNGAN 2",
+        "desa_name": "TOMBANG PERMAI",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710100110014",
+        "sls_name": "RT 003 RW 03",
+        "desa_name": "LERE",
+        "kec_name": "PALU BARAT",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110020026",
+        "sls_name": "RT 006 RW 06",
+        "desa_name": "PENGAWU",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530010004",
+        "sls_name": "RT 4 DUSUN 1",
+        "desa_name": "BUBUNG",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72101200120012",
+        "sls_name": "RT 1 DUSUN 4",
+        "desa_name": "KALUKUBULA",
+        "kec_name": "SIGI BIROMARU",
+        "kab_name": "[10] SIGI",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72120200081002",
+        "sls_name": "KEBUN",
+        "desa_name": "BETELEME",
+        "kec_name": "LEMBO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 6,
+        "assigned": 0,
+        "unassigned": 6,
+        "officers": []
+    },
+    {
+        "sls_code": "72120100070006",
+        "sls_name": "RT VI DUSUN 2",
+        "desa_name": "PAMBAREA",
+        "kec_name": "MORI ATAS",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72070110040002",
+        "sls_name": "RT 2 RW 1",
+        "desa_name": "KALI",
+        "kec_name": "BIAU",
+        "kab_name": "[07] BUOL",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72090100030001",
+        "sls_name": "DUSUN 1",
+        "desa_name": "BAMBALO",
+        "kec_name": "TOJO BARAT",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72090510070006",
+        "sls_name": "RT 06 RW 03 LINGKUNGAN 02",
+        "desa_name": "UENTANAGA BAWAH",
+        "kec_name": "RATOLINDO",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400010005",
+        "sls_name": "DUSUN 03",
+        "desa_name": "MOLORES",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400110005",
+        "sls_name": "DUSUN 04",
+        "desa_name": "TOMPIRA",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72120200080011",
+        "sls_name": "RT 02 DUSUN 5",
+        "desa_name": "BETELEME",
+        "kec_name": "LEMBO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400090002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "TOWARA",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72070510010005",
+        "sls_name": "RT 5 RW 2 DUSUN 2",
+        "desa_name": "BODI",
+        "kec_name": "PALELEH BARAT",
+        "kab_name": "[07] BUOL",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120000000000",
+        "sls_name": "-",
+        "desa_name": "-",
+        "kec_name": "-",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120100100001",
+        "sls_name": "RT I DUSUN I",
+        "desa_name": "TAENDE",
+        "kec_name": "MORI ATAS",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 8,
+        "assigned": 0,
+        "unassigned": 8,
+        "officers": []
+    },
+    {
+        "sls_code": "72120100130005",
+        "sls_name": "RT V DUSUN III",
+        "desa_name": "PEONEA",
+        "kec_name": "MORI ATAS",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060500010006",
+        "sls_name": "RT 3 DUSUN PABBIRING",
+        "desa_name": "OGOMOLI",
+        "kec_name": "GALANG",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160036",
+        "sls_name": "RT 004 RW VI",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050410050006",
+        "sls_name": "DUSUN 06",
+        "desa_name": "LALUNDU",
+        "kec_name": "RIO PAKAVA",
+        "kab_name": "[05] DONGGALA",
+        "total": 4,
+        "assigned": 0,
+        "unassigned": 4,
+        "officers": []
+    },
+    {
+        "sls_code": "72050910100003",
+        "sls_name": "DUSUN 3",
+        "desa_name": "WANI LUMBUMPETIGO",
+        "kec_name": "TANANTOVEA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040710020006",
+        "sls_name": "RT 06 RW 02",
+        "desa_name": "KASINTUWU",
+        "kec_name": "POSO KOTA UTARA",
+        "kab_name": "[04] POSO",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72040710070003",
+        "sls_name": "RT 03 RW 01",
+        "desa_name": "LAWANGA TAWONGAN",
+        "kec_name": "POSO KOTA UTARA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040720050005",
+        "sls_name": "RT 05 RW 02",
+        "desa_name": "SAYO",
+        "kec_name": "POSO KOTA SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72040710020002",
+        "sls_name": "RT 02 RW 01",
+        "desa_name": "KASINTUWU",
+        "kec_name": "POSO KOTA UTARA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050000000000",
+        "sls_name": "-",
+        "desa_name": "-",
+        "kec_name": "-",
+        "kab_name": "[05] DONGGALA",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310060002",
+        "sls_name": "RT 002 RW 001",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700120008",
+        "sls_name": "RT 021A RW 05",
+        "desa_name": "KAYAMANYA SENTRAL",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400010001",
+        "sls_name": "RT 001 RW 01",
+        "desa_name": "MAMBORO",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400010002",
+        "sls_name": "RT 002 RW 01",
+        "desa_name": "MAMBORO",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400040002",
+        "sls_name": "RT 002 RW 01",
+        "desa_name": "KAYUMALUE NGAPA",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710410030009",
+        "sls_name": "RT 009 RW 005",
+        "desa_name": "BAIYA",
+        "kec_name": "TAWAELI",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72040100170003",
+        "sls_name": "RT 03 DUSUN 1",
+        "desa_name": "PENDOLO",
+        "kec_name": "PAMONA SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310020032",
+        "sls_name": "RT 004 RW 09",
+        "desa_name": "TANAMODINDI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310060027",
+        "sls_name": "RT 003 RW 010",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040500030009",
+        "sls_name": "RT 09 RW 4",
+        "desa_name": "MAPANE",
+        "kec_name": "POSO PESISIR",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700110001",
+        "sls_name": "RT 001 RW 001",
+        "desa_name": "GEBANGREJO BARAT",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400020015",
+        "sls_name": "RT 001 RW 005",
+        "desa_name": "TAIPA",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700110003",
+        "sls_name": "RT 003 RW 001",
+        "desa_name": "GEBANGREJO BARAT",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 4,
+        "assigned": 0,
+        "unassigned": 4,
+        "officers": []
+    },
+    {
+        "sls_code": "72030420050010",
+        "sls_name": "RT 10 DUSUN 05",
+        "desa_name": "EMEA",
+        "kec_name": "WITA PONDA",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051400090009",
+        "sls_name": "RT 009 DUSUN 005",
+        "desa_name": "MALONAS",
+        "kec_name": "DAMPELAS",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040200050012",
+        "sls_name": "RT 12 DUSUN III",
+        "desa_name": "GINTU",
+        "kec_name": "LORE SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040310040004",
+        "sls_name": "RT 04 DUSUN II",
+        "desa_name": "KAMBA",
+        "kec_name": "PAMONA TIMUR",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700070009",
+        "sls_name": "RT 09 RW 02",
+        "desa_name": "MOENGKO",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400040005",
+        "sls_name": "RT 001 RW 02",
+        "desa_name": "KAYUMALUE NGAPA",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040710010006",
+        "sls_name": "RT 06 RW 02",
+        "desa_name": "BONESOMPE",
+        "kec_name": "POSO KOTA UTARA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051200070009",
+        "sls_name": "DUSUN 003 RT 9",
+        "desa_name": "BALENTUMA",
+        "kec_name": "SIRENJA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700120006",
+        "sls_name": "RT 020C RW 05",
+        "desa_name": "KAYAMANYA SENTRAL",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040720050006",
+        "sls_name": "RT 06 RW 02",
+        "desa_name": "SAYO",
+        "kec_name": "POSO KOTA SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050800310001",
+        "sls_name": "RT 1 DUSUN 1",
+        "desa_name": "LOLI SALURAN",
+        "kec_name": "BANAWA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051310040001",
+        "sls_name": "DUSUN 001",
+        "desa_name": "KETONG",
+        "kec_name": "BALAESANG TANJUNG",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060310070012",
+        "sls_name": "RT 12 DUSUN IV",
+        "desa_name": "PAGAITAN",
+        "kec_name": "OGODEIDE",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710410010003",
+        "sls_name": "RT 001 RW 002",
+        "desa_name": "PANAU",
+        "kec_name": "TAWAELI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050800240003",
+        "sls_name": "RT 3 RW 002",
+        "desa_name": "TANJUNG BATU",
+        "kec_name": "BANAWA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040320060013",
+        "sls_name": "RT 10 DUSUN 4",
+        "desa_name": "SULEWANA",
+        "kec_name": "PAMONA UTARA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310080016",
+        "sls_name": "RT 002 RW 004",
+        "desa_name": "TALISE VALANGGUNI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700070006",
+        "sls_name": "RT 06 RW 02",
+        "desa_name": "MOENGKO",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050800240002",
+        "sls_name": "RT 2 RW 001",
+        "desa_name": "TANJUNG BATU",
+        "kec_name": "BANAWA",
+        "kab_name": "[05] DONGGALA",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72050800260003",
+        "sls_name": "RT 001 RW 002",
+        "desa_name": "BOYA",
+        "kec_name": "BANAWA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310065002",
+        "sls_name": "KAMPUS UNIVERSITAS TADULAKO",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400030001",
+        "sls_name": "RT 001 RW 01",
+        "desa_name": "KAYUMALUE PAJEKO",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030400020002",
+        "sls_name": "RT 04 DUSUN 1",
+        "desa_name": "WOSU",
+        "kec_name": "BUNGKU BARAT",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300050025",
+        "sls_name": "RT 003 RW 07",
+        "desa_name": "LOLU SELATAN",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310070020",
+        "sls_name": "RT 0020 RW 003",
+        "desa_name": "LAYANA INDAH",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700090002",
+        "sls_name": "RT 009 RW 01",
+        "desa_name": "KAYAMANYA",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310080012",
+        "sls_name": "RT 003 RW 003",
+        "desa_name": "TALISE VALANGGUNI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310080022",
+        "sls_name": "RT 003 RW 005",
+        "desa_name": "TALISE VALANGGUNI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400040003",
+        "sls_name": "RT 003 RW 01",
+        "desa_name": "KAYUMALUE NGAPA",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400020003",
+        "sls_name": "RT 003 RW 001",
+        "desa_name": "TAIPA",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040300090013",
+        "sls_name": "RT 14 RW 03",
+        "desa_name": "SANGELE",
+        "kec_name": "PAMONA PUSALEMBA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160041",
+        "sls_name": "RT 001 RW VII",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400170018",
+        "sls_name": "RT 07 RW III",
+        "desa_name": "NALU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060610030006",
+        "sls_name": "RT 006 DUSUN PAGASINAN",
+        "desa_name": "KAPAS",
+        "kec_name": "DAKO PEMEAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060610040001",
+        "sls_name": "RT 001 DUSUN BABANA",
+        "desa_name": "LINGADAN",
+        "kec_name": "DAKO PEMEAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160013",
+        "sls_name": "RT 005 RW XI",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72060410072003",
+        "sls_name": "RAWA",
+        "desa_name": "LAMPASIO",
+        "kec_name": "LAMPASIO",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050900100003",
+        "sls_name": "DUSUN 3 LUMBU",
+        "desa_name": "LABUAN",
+        "kec_name": "LABUAN",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400190012",
+        "sls_name": "RT 13 RW 7 DUSUN LIMEONGAN",
+        "desa_name": "BUNTUNA",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710410040019",
+        "sls_name": "RT 002 RW 008",
+        "desa_name": "PANTOLOAN",
+        "kec_name": "TAWAELI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400180013",
+        "sls_name": "RT 2 RW 5",
+        "desa_name": "TAMBUN",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530020015",
+        "sls_name": "RT 15 RW 5 LINGKUNGAN 4",
+        "desa_name": "MAAHAS",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020720100001",
+        "sls_name": "DUSUN 1",
+        "desa_name": "SOBOL BARU",
+        "kec_name": "MANTOH",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020800200005",
+        "sls_name": "RT 0001 RW 01 LINGKUNGAN 02",
+        "desa_name": "BALANTAK",
+        "kec_name": "BALANTAK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020600190008",
+        "sls_name": "RT 8 RW 004 LINGKUNGAN 2",
+        "desa_name": "PAGIMANA",
+        "kec_name": "PAGIMANA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020600190010",
+        "sls_name": "RT 10 RW 005 LINGKUNGAN 3",
+        "desa_name": "PAGIMANA",
+        "kec_name": "PAGIMANA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200090022",
+        "sls_name": "RT 03 RW 05",
+        "desa_name": "TATURA SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210050001",
+        "sls_name": "DUSUN 1",
+        "desa_name": "FATUFIA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300020003",
+        "sls_name": "RT 03 RW 02",
+        "desa_name": "BESUSU TENGAH",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 4,
+        "assigned": 0,
+        "unassigned": 4,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110040016",
+        "sls_name": "RT 002 RW 005",
+        "desa_name": "TAWANJUKA",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020520090004",
+        "sls_name": "RT 04 LINGKUNGAN 2",
+        "desa_name": "KILONGAN PERMAI",
+        "kec_name": "LUWUK UTARA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710120060001",
+        "sls_name": "RT 001 RW 001",
+        "desa_name": "WATUSAMPU",
+        "kec_name": "ULUJADI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200090006",
+        "sls_name": "RT 01 RW 02",
+        "desa_name": "TATURA SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300010017",
+        "sls_name": "RT 02 RW 07",
+        "desa_name": "BESUSU BARAT",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040002",
+        "sls_name": "RT 002 RW 01",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300240004",
+        "sls_name": "RT 004 DUSUN 003",
+        "desa_name": "BENTE",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 6,
+        "assigned": 0,
+        "unassigned": 6,
+        "officers": []
+    },
+    {
+        "sls_code": "72030220030004",
+        "sls_name": "DUSUN 4",
+        "desa_name": "LAROENAI",
+        "kec_name": "BUNGKU PESISIR",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300020009",
+        "sls_name": "RT 09 RW 03",
+        "desa_name": "BESUSU TENGAH",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300020013",
+        "sls_name": "RT 13 RW 03",
+        "desa_name": "BESUSU TENGAH",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 4,
+        "assigned": 0,
+        "unassigned": 4,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300030009",
+        "sls_name": "RT 04 RW 02",
+        "desa_name": "BESUSU TIMUR",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210060013",
+        "sls_name": "RT 2 DUSUN 4",
+        "desa_name": "KEUREA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030220032001",
+        "sls_name": "HUTAN",
+        "desa_name": "LAROENAI",
+        "kec_name": "BUNGKU PESISIR",
+        "kab_name": "[03] MOROWALI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040008",
+        "sls_name": "RT 004 RW 03",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040005",
+        "sls_name": "RT 001 RW 03",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72030400050005",
+        "sls_name": "RT 6 DUSUN 3",
+        "desa_name": "TOFOGARO",
+        "kec_name": "BUNGKU BARAT",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300210013",
+        "sls_name": "RT 007 DUSUN 003",
+        "desa_name": "MATANSALA",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040100170001",
+        "sls_name": "RT 01 DUSUN 1",
+        "desa_name": "PENDOLO",
+        "kec_name": "PAMONA SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72040300080002",
+        "sls_name": "RT 02 RW 1",
+        "desa_name": "TENTENA",
+        "kec_name": "PAMONA PUSALEMBA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310020023",
+        "sls_name": "RT 001 RW 07",
+        "desa_name": "TANAMODINDI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72040300090004",
+        "sls_name": "RT 04 RW 01",
+        "desa_name": "SANGELE",
+        "kec_name": "PAMONA PUSALEMBA",
+        "kab_name": "[04] POSO",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310060039",
+        "sls_name": "RT 001 RW 014",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310070008",
+        "sls_name": "RT 008 RW 003",
+        "desa_name": "LAYANA INDAH",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700070010",
+        "sls_name": "RT 10 RW 02",
+        "desa_name": "MOENGKO",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300050005",
+        "sls_name": "RT 001 RW 02",
+        "desa_name": "LOLU SELATAN",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030420070006",
+        "sls_name": "RT 006 DUSUN 003",
+        "desa_name": "UNGKAYA",
+        "kec_name": "WITA PONDA",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040300080010",
+        "sls_name": "RT 10 RW 3",
+        "desa_name": "TENTENA",
+        "kec_name": "PAMONA PUSALEMBA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040300090006",
+        "sls_name": "RT 07 RW 02",
+        "desa_name": "SANGELE",
+        "kec_name": "PAMONA PUSALEMBA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310060004",
+        "sls_name": "RT 001 RW 002",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310060006",
+        "sls_name": "RT 003 RW 002",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040013",
+        "sls_name": "RT 003 RW 04",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300260004",
+        "sls_name": "RT 04 DUSUN 02",
+        "desa_name": "BAHOMOLEO",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030310041001",
+        "sls_name": "KEBUN",
+        "desa_name": "ULULERE",
+        "kec_name": "BUNGKU TIMUR",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040027",
+        "sls_name": "RT 004 RW 08",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500120010",
+        "sls_name": "RT 10",
+        "desa_name": "BUNGIN",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020500260006",
+        "sls_name": "RT 6 RW 3 LINGKUNGAN 2",
+        "desa_name": "BUNGIN TIMUR",
+        "kec_name": "LUWUK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710110030001",
+        "sls_name": "RT 001 RW 001",
+        "desa_name": "PALUPI",
+        "kec_name": "TATANGA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300020012",
+        "sls_name": "RT 12 RW 03",
+        "desa_name": "BESUSU TENGAH",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300030007",
+        "sls_name": "RT 02 RW 02",
+        "desa_name": "BESUSU TIMUR",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040004",
+        "sls_name": "RT 002 RW 02",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 5,
+        "assigned": 0,
+        "unassigned": 5,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300030018",
+        "sls_name": "RT 03 RW 04",
+        "desa_name": "BESUSU TIMUR",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300030019",
+        "sls_name": "RT 04 RW 04",
+        "desa_name": "BESUSU TIMUR",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300170005",
+        "sls_name": "RT 4 RW 2",
+        "desa_name": "MARSAOLEH",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300220010",
+        "sls_name": "RT 10 DUSUN 5",
+        "desa_name": "BAHORURU",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040015",
+        "sls_name": "RT 001 RW 05",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 4,
+        "assigned": 0,
+        "unassigned": 4,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300210012",
+        "sls_name": "RT 006 DUSUN 002",
+        "desa_name": "MATANSALA",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210120001",
+        "sls_name": "RT 1 DUSUN 1",
+        "desa_name": "LELE",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300030020",
+        "sls_name": "RT 05 RW 04",
+        "desa_name": "BESUSU TIMUR",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040018",
+        "sls_name": "RT 001 RW 06",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030220041001",
+        "sls_name": "PERKEBUNAN",
+        "desa_name": "BULELENG",
+        "kec_name": "BUNGKU PESISIR",
+        "kab_name": "[03] MOROWALI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040014",
+        "sls_name": "RT 004 RW 04",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300240005",
+        "sls_name": "RT 005 DUSUN 004",
+        "desa_name": "BENTE",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030220022001",
+        "sls_name": "HUTAN",
+        "desa_name": "SAMBALAGI",
+        "kec_name": "BUNGKU PESISIR",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030220040003",
+        "sls_name": "DUSUN 3",
+        "desa_name": "BULELENG",
+        "kec_name": "BUNGKU PESISIR",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300210014",
+        "sls_name": "RT 008 DUSUN 003",
+        "desa_name": "MATANSALA",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300020014",
+        "sls_name": "RT 14 RW 03",
+        "desa_name": "BESUSU TENGAH",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210060011",
+        "sls_name": "RT 2 DUSUN 3",
+        "desa_name": "KEUREA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210080006",
+        "sls_name": "DUSUN 6",
+        "desa_name": "BAHODOPI",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300170003",
+        "sls_name": "RT 2 RW 2",
+        "desa_name": "MARSAOLEH",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310030009",
+        "sls_name": "RT 004 RW 002",
+        "desa_name": "LASOANI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310060011",
+        "sls_name": "RT 002 RW 004",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310060013",
+        "sls_name": "RT 002 RW 005",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040520060002",
+        "sls_name": "RT 02 DUSUN 01",
+        "desa_name": "BAKTI AGUNG",
+        "kec_name": "POSO PESISIR UTARA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700090001",
+        "sls_name": "RT 003 RW 02",
+        "desa_name": "KAYAMANYA",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310080004",
+        "sls_name": "RT 001 RW 002",
+        "desa_name": "TALISE VALANGGUNI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310010005",
+        "sls_name": "RT 005 RW 01",
+        "desa_name": "TALISE",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72030420070007",
+        "sls_name": "RT 007 DUSUN 004",
+        "desa_name": "UNGKAYA",
+        "kec_name": "WITA PONDA",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040100210002",
+        "sls_name": "RT 2 DUSUN I",
+        "desa_name": "PASIR PUTIH",
+        "kec_name": "PAMONA SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300250004",
+        "sls_name": "RT 04 DUSUN 2",
+        "desa_name": "BAHOMOHONI",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040010",
+        "sls_name": "RT 006 RW 03",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030400052002",
+        "sls_name": "HUTAN",
+        "desa_name": "TOFOGARO",
+        "kec_name": "BUNGKU BARAT",
+        "kab_name": "[03] MOROWALI",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72090510190008",
+        "sls_name": "RT 08 RW 04 LINGKUNGAN 02",
+        "desa_name": "MUARA TOBA",
+        "kec_name": "RATOLINDO",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120200081003",
+        "sls_name": "KEBUN",
+        "desa_name": "BETELEME",
+        "kec_name": "LEMBO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120300010007",
+        "sls_name": "RT 07 DUSUN 004",
+        "desa_name": "DOLUPO KARYA",
+        "kec_name": "LEMBO RAYA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72120200010005",
+        "sls_name": "RT 05 DUSUN 2",
+        "desa_name": "WAWOPADA",
+        "kec_name": "LEMBO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400060003",
+        "sls_name": "DUSUN 2",
+        "desa_name": "MOLINO",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72070500060002",
+        "sls_name": "RT 002 RW 1 DUSUN 1",
+        "desa_name": "PALELEH",
+        "kec_name": "PALELEH",
+        "kab_name": "[07] BUOL",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051610040002",
+        "sls_name": "DUSUN 002",
+        "desa_name": "OGOAMAS I",
+        "kec_name": "SOJOL UTARA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500080004",
+        "sls_name": "LINGKUNGAN 2",
+        "desa_name": "BAHONTULA",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72060100030011",
+        "sls_name": "RT 001 DUSUN KAMPUNG TENGAH",
+        "desa_name": "SONI",
+        "kec_name": "DAMPAL SELATAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500080001",
+        "sls_name": "LINGKUNGAN  3",
+        "desa_name": "BAHONTULA",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 6,
+        "assigned": 0,
+        "unassigned": 6,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500030007",
+        "sls_name": "RT 01 DUSUN 04",
+        "desa_name": "KOROLOLAKI",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 5,
+        "assigned": 0,
+        "unassigned": 5,
+        "officers": []
+    },
+    {
+        "sls_code": "72120200080009",
+        "sls_name": "RT 02 DUSUN 4",
+        "desa_name": "BETELEME",
+        "kec_name": "LEMBO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72090500150006",
+        "sls_name": "RT 5 RW 2 LINGKUNGAN 2",
+        "desa_name": "LABIABAE",
+        "kec_name": "AMPANA KOTA",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72090200270001",
+        "sls_name": "DUSUN 1",
+        "desa_name": "BAHARI",
+        "kec_name": "TOJO",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72090200180004",
+        "sls_name": "DUSUN 004",
+        "desa_name": "UEKULI",
+        "kec_name": "TOJO",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050800260009",
+        "sls_name": "RT 002 RW 004",
+        "desa_name": "BOYA",
+        "kec_name": "BANAWA",
+        "kab_name": "[05] DONGGALA",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72051010040003",
+        "sls_name": "DUSUN 003",
+        "desa_name": "BATUSUYA",
+        "kec_name": "SINDUE TOMBUSABORA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051300100005",
+        "sls_name": "DUSUN 05",
+        "desa_name": "TAMBU",
+        "kec_name": "BALAESANG",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040510040010",
+        "sls_name": "RT 10 DUSUN 4",
+        "desa_name": "TANGKURA",
+        "kec_name": "POSO PESISIR SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310010021",
+        "sls_name": "RT 002 RW 04",
+        "desa_name": "TALISE",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040300050018",
+        "sls_name": "RT 18 RW 07",
+        "desa_name": "PAMONA",
+        "kec_name": "PAMONA PUSALEMBA",
+        "kab_name": "[04] POSO",
+        "total": 4,
+        "assigned": 0,
+        "unassigned": 4,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310020007",
+        "sls_name": "RT 002 RW 02",
+        "desa_name": "TANAMODINDI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310060012",
+        "sls_name": "RT 001 RW 005",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310060025",
+        "sls_name": "RT 001 RW 010",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040700110004",
+        "sls_name": "RT 004 RW 002",
+        "desa_name": "GEBANGREJO BARAT",
+        "kec_name": "POSO KOTA",
+        "kab_name": "[04] POSO",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72051010010003",
+        "sls_name": "DUSUN 003",
+        "desa_name": "TIBO",
+        "kec_name": "SINDUE TOMBUSABORA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050410100001",
+        "sls_name": "DUSUN 001",
+        "desa_name": "BONEMARAWA",
+        "kec_name": "RIO PAKAVA",
+        "kab_name": "[05] DONGGALA",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72050800220007",
+        "sls_name": "RT 002 RW 002",
+        "desa_name": "GUNUNG BALE",
+        "kec_name": "BANAWA",
+        "kab_name": "[05] DONGGALA",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72050810030002",
+        "sls_name": "DUSUN II",
+        "desa_name": "WATATU",
+        "kec_name": "BANAWA SELATAN",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051300080004",
+        "sls_name": "DUSUN 04",
+        "desa_name": "LABEAN",
+        "kec_name": "BALAESANG",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051400040009",
+        "sls_name": "RT 001 DUSUN 004",
+        "desa_name": "SABANG",
+        "kec_name": "DAMPELAS",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050900070002",
+        "sls_name": "DUSUN 02 SURUDEKA",
+        "desa_name": "LABUAN LELEA",
+        "kec_name": "LABUAN",
+        "kab_name": "[05] DONGGALA",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72051300080003",
+        "sls_name": "DUSUN 03",
+        "desa_name": "LABEAN",
+        "kec_name": "BALAESANG",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060100010003",
+        "sls_name": "RT 001 DUSUN KAMPUNG BARU",
+        "desa_name": "KOMBO",
+        "kec_name": "DAMPAL SELATAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051020020001",
+        "sls_name": "DUSUN 1",
+        "desa_name": "OTI",
+        "kec_name": "SINDUE TOBATA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051310020003",
+        "sls_name": "DUSUN 003",
+        "desa_name": "MALEI",
+        "kec_name": "BALAESANG TANJUNG",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400130002",
+        "sls_name": "RT 2 RW 1",
+        "desa_name": "TUWELEY",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400020001",
+        "sls_name": "RT 001 RW 001",
+        "desa_name": "TAIPA",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050810040004",
+        "sls_name": "DUSUN IV TAIPAMBALI",
+        "desa_name": "SURUMANA",
+        "kec_name": "BANAWA SELATAN",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300050023",
+        "sls_name": "RT 001 RW 07",
+        "desa_name": "LOLU SELATAN",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040710020004",
+        "sls_name": "RT 04 RW 02",
+        "desa_name": "KASINTUWU",
+        "kec_name": "POSO KOTA UTARA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040720052001",
+        "sls_name": "HUTAN",
+        "desa_name": "SAYO",
+        "kec_name": "POSO KOTA SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040710010015",
+        "sls_name": "RT 15 RW 04",
+        "desa_name": "BONESOMPE",
+        "kec_name": "POSO KOTA UTARA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300050032",
+        "sls_name": "RT 004 RW 09",
+        "desa_name": "LOLU SELATAN",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050810190001",
+        "sls_name": "DUSUN I",
+        "desa_name": "TANAHMPULU",
+        "kec_name": "BANAWA SELATAN",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400020011",
+        "sls_name": "RT 001 RW 004",
+        "desa_name": "TAIPA",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050820050003",
+        "sls_name": "DUSUN 02",
+        "desa_name": "LIMBORO",
+        "kec_name": "BANAWA TENGAH",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040710040003",
+        "sls_name": "RT 03 RW 01",
+        "desa_name": "LAWANGA",
+        "kec_name": "POSO KOTA UTARA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050410020022",
+        "sls_name": "DUSUN 6",
+        "desa_name": "MINTI MAKMUR",
+        "kec_name": "RIO PAKAVA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040200050011",
+        "sls_name": "RT 11 DUSUN III",
+        "desa_name": "GINTU",
+        "kec_name": "LORE SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040400190001",
+        "sls_name": "RT 01 DUSUN 01",
+        "desa_name": "WUASA",
+        "kec_name": "LORE UTARA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310080006",
+        "sls_name": "RT 003 RW 002",
+        "desa_name": "TALISE VALANGGUNI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040710060003",
+        "sls_name": "RT 03 RW 01 LINGKUNGAN 1",
+        "desa_name": "MADALE",
+        "kec_name": "POSO KOTA UTARA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72050800240004",
+        "sls_name": "RT 4 RW 002",
+        "desa_name": "TANJUNG BATU",
+        "kec_name": "BANAWA",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040020",
+        "sls_name": "RT 003 RW 06",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72040320060016",
+        "sls_name": "RT 13 DUSUN 4",
+        "desa_name": "SULEWANA",
+        "kec_name": "PAMONA UTARA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040017",
+        "sls_name": "RT 003 RW 05",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310080025",
+        "sls_name": "RT 006 RW 005",
+        "desa_name": "TALISE VALANGGUNI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051000170005",
+        "sls_name": "DUSUN 5",
+        "desa_name": "TOAYA VUNTA",
+        "kec_name": "SINDUE",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72051400040010",
+        "sls_name": "RT 002 DUSUN 004",
+        "desa_name": "SABANG",
+        "kec_name": "DAMPELAS",
+        "kab_name": "[05] DONGGALA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060100030014",
+        "sls_name": "RT 002 DUSUN KAMPUNG TENGAH",
+        "desa_name": "SONI",
+        "kec_name": "DAMPAL SELATAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310010030",
+        "sls_name": "RT 006 RW 05",
+        "desa_name": "TALISE",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310020016",
+        "sls_name": "RT 001 RW 05",
+        "desa_name": "TANAMODINDI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310080002",
+        "sls_name": "RT 002 RW 001",
+        "desa_name": "TALISE VALANGGUNI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710400040014",
+        "sls_name": "RT 002 RW 04",
+        "desa_name": "KAYUMALUE NGAPA",
+        "kec_name": "PALU UTARA",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300050033",
+        "sls_name": "RT 001 RW 10",
+        "desa_name": "LOLU SELATAN",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030410030002",
+        "sls_name": "RT 2 DUSUN 1",
+        "desa_name": "BAHONSUAI",
+        "kec_name": "BUMI RAYA",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310010007",
+        "sls_name": "RT 001 RW 02",
+        "desa_name": "TALISE",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710410020012",
+        "sls_name": "RT 012 RW 004",
+        "desa_name": "LAMBARA",
+        "kec_name": "TAWAELI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400120005",
+        "sls_name": "DUSUN 05",
+        "desa_name": "BUNTA",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72120700082001",
+        "sls_name": "HUTAN",
+        "desa_name": "ERA",
+        "kec_name": "MORI UTARA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72090510070004",
+        "sls_name": "RT 04 RW 02 LINGKUNGAN 01",
+        "desa_name": "UENTANAGA BAWAH",
+        "kec_name": "RATOLINDO",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400180001",
+        "sls_name": "RT 1 RW 1",
+        "desa_name": "TAMBUN",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120800012001",
+        "sls_name": "HUTAN",
+        "desa_name": "TAMAINUSI",
+        "kec_name": "SOYO JAYA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 6,
+        "assigned": 0,
+        "unassigned": 6,
+        "officers": []
+    },
+    {
+        "sls_code": "72120900160004",
+        "sls_name": "RT 04 DUSUN 2",
+        "desa_name": "OPO",
+        "kec_name": "BUNGKU UTARA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120100020003",
+        "sls_name": "RT III DUSUN II",
+        "desa_name": "LEE",
+        "kec_name": "MORI ATAS",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120100060003",
+        "sls_name": "RT 03 DUSUN 1",
+        "desa_name": "TOMATA",
+        "kec_name": "MORI ATAS",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400031001",
+        "sls_name": "KAWASAN PERKEBUNAN",
+        "desa_name": "MOHONI",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120200080010",
+        "sls_name": "RT 01 DUSUN 5",
+        "desa_name": "BETELEME",
+        "kec_name": "LEMBO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400120002",
+        "sls_name": "DUSUN 02",
+        "desa_name": "BUNTA",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72090400070006",
+        "sls_name": "RT 006 RW 002 DUSUN KARYA MAKMUR",
+        "desa_name": "URUNDAKA",
+        "kec_name": "AMPANA TETE",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400100001",
+        "sls_name": "DUSUN 04",
+        "desa_name": "BUNGINTIMBE",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72020300210012",
+        "sls_name": "RT 02 RW 06 LINGKUNGAN 6",
+        "desa_name": "BUNTA SATU",
+        "kec_name": "BUNTA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72090500150003",
+        "sls_name": "RT 6 RW 1 LINGKUNGAN 1",
+        "desa_name": "LABIABAE",
+        "kec_name": "AMPANA KOTA",
+        "kab_name": "[09] TOJO UNA-UNA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400060002",
+        "sls_name": "DUSUN 3",
+        "desa_name": "MOLINO",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 4,
+        "assigned": 0,
+        "unassigned": 4,
+        "officers": []
+    },
+    {
+        "sls_code": "72120200080003",
+        "sls_name": "RT 03 DUSUN 1",
+        "desa_name": "BETELEME",
+        "kec_name": "LEMBO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020300430004",
+        "sls_name": "RT 1 RW 1 LINGKUNGAN 2",
+        "desa_name": "SALABENDA",
+        "kec_name": "BUNTA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500030005",
+        "sls_name": "RT 01 DUSUN 03",
+        "desa_name": "KOROLOLAKI",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400122004",
+        "sls_name": "KAWASAN HUTAN",
+        "desa_name": "BUNTA",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400064001",
+        "sls_name": "KAWASAN PERUMAHAN PERUSAHAAN",
+        "desa_name": "MOLINO",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020200230012",
+        "sls_name": "RT 12 RW 6 LINGKUNGAN 3",
+        "desa_name": "BAKUNG",
+        "kec_name": "BATUI",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020300210002",
+        "sls_name": "RT 01 RW 02 LINGKUNGAN 2",
+        "desa_name": "BUNTA SATU",
+        "kec_name": "BUNTA",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400110001",
+        "sls_name": "DUSUN 01",
+        "desa_name": "TOMPIRA",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030310020006",
+        "sls_name": "RT 6 DUSUN 2",
+        "desa_name": "BAHOMOTEFE",
+        "kec_name": "BUNGKU TIMUR",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030000000000",
+        "sls_name": "-",
+        "desa_name": "-",
+        "kec_name": "-",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120600100004",
+        "sls_name": "DUSUN 4",
+        "desa_name": "TONTOWEA",
+        "kec_name": "PETASIA BARAT",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040000000000",
+        "sls_name": "-",
+        "desa_name": "-",
+        "kec_name": "-",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020100460004",
+        "sls_name": "RT 004 RW 002 LINGKUNGAN 002",
+        "desa_name": "CENDANA",
+        "kec_name": "TOILI",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020110110011",
+        "sls_name": "RT 2 DUSUN 6",
+        "desa_name": "SINDANG SARI",
+        "kec_name": "TOILI BARAT",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020120120001",
+        "sls_name": "RT 1 DUSUN 1",
+        "desa_name": "SUMBER HARJO",
+        "kec_name": "MOILONG",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400030002",
+        "sls_name": "DUSUN 02",
+        "desa_name": "MOHONI",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020130090002",
+        "sls_name": "RT 002 DUSUN 1",
+        "desa_name": "MULYA SARI",
+        "kec_name": "TOILI JAYA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020110170002",
+        "sls_name": "RT 02 DUSUN 1",
+        "desa_name": "MEKAR JAYA",
+        "kec_name": "TOILI BARAT",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500090002",
+        "sls_name": "LINGKUNGAN 02",
+        "desa_name": "BAHOUE",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 13,
+        "assigned": 0,
+        "unassigned": 13,
+        "officers": []
+    },
+    {
+        "sls_code": "72020120090004",
+        "sls_name": "RT 3 DUSUN 2",
+        "desa_name": "SALUAN",
+        "kec_name": "MOILONG",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500090003",
+        "sls_name": "LINGKUNGAN 03",
+        "desa_name": "BAHOUE",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 7,
+        "assigned": 0,
+        "unassigned": 7,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500100005",
+        "sls_name": "DUSUN 05",
+        "desa_name": "GANDA GANDA",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72120800010003",
+        "sls_name": "RT 003 DUSUN 1",
+        "desa_name": "TAMAINUSI",
+        "kec_name": "SOYO JAYA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 3,
+        "assigned": 0,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72121000030004",
+        "sls_name": "RT 04 DUSUN 2",
+        "desa_name": "MOMO",
+        "kec_name": "MAMOSALATO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120900150003",
+        "sls_name": "RT 03 DUSUN 2",
+        "desa_name": "SILITI",
+        "kec_name": "BUNGKU UTARA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72121000012001",
+        "sls_name": "HUTAN RAKYAT",
+        "desa_name": "KOLO ATAS",
+        "kec_name": "MAMOSALATO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020120100002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "MOILONG",
+        "kec_name": "MOILONG",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020120081002",
+        "sls_name": "KEBUN",
+        "desa_name": "TOILI",
+        "kec_name": "MOILONG",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120900070005",
+        "sls_name": "DUSUN 5 RT 09",
+        "desa_name": "BATURUBE",
+        "kec_name": "BUNGKU UTARA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020110070003",
+        "sls_name": "DUSUN 2 RT 1",
+        "desa_name": "KARYA MAKMUR",
+        "kec_name": "TOILI BARAT",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020200140004",
+        "sls_name": "RT 004 RW 002 LINGKUNGAN 1",
+        "desa_name": "BATUI",
+        "kec_name": "BATUI",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020310080003",
+        "sls_name": "DUSUN 3",
+        "desa_name": "TOMEANG",
+        "kec_name": "NUHON",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020200140007",
+        "sls_name": "RT 007 RW 004 LINGKUNGAN 2",
+        "desa_name": "BATUI",
+        "kec_name": "BATUI",
+        "kab_name": "[02] BANGGAI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72121000080003",
+        "sls_name": "RT 03 DUSUN 2",
+        "desa_name": "TAMBALE",
+        "kec_name": "MAMOSALATO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020110110005",
+        "sls_name": "RT 1 DUSUN 3",
+        "desa_name": "SINDANG SARI",
+        "kec_name": "TOILI BARAT",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400100006",
+        "sls_name": "DUSUN 06",
+        "desa_name": "BUNGINTIMBE",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72121000051001",
+        "sls_name": "PERTANIAN",
+        "desa_name": "TANANAGAYA",
+        "kec_name": "MAMOSALATO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120300101001",
+        "sls_name": "PERKEBUNAN",
+        "desa_name": "PA AWARU",
+        "kec_name": "LEMBO RAYA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400110004",
+        "sls_name": "DUSUN O5",
+        "desa_name": "TOMPIRA",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120300070006",
+        "sls_name": "RT 06 DUSUN 3",
+        "desa_name": "PETUMBEA",
+        "kec_name": "LEMBO RAYA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400020002",
+        "sls_name": "DUSUN 1",
+        "desa_name": "KEUNO",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500020004",
+        "sls_name": "DUSUN 04",
+        "desa_name": "KOROLOLAMA",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020120060010",
+        "sls_name": "RT 2 DUSUN 5",
+        "desa_name": "MULYOHARJO",
+        "kec_name": "MOILONG",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500020001",
+        "sls_name": "DUSUN 01",
+        "desa_name": "KOROLOLAMA",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020110140001",
+        "sls_name": "RT 01 DUSUN 1",
+        "desa_name": "PANDAN WANGI",
+        "kec_name": "TOILI BARAT",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120200140005",
+        "sls_name": "RT 05 DUSUN 3",
+        "desa_name": "KOROWOU",
+        "kec_name": "LEMBO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400100002",
+        "sls_name": "DUSUN 03",
+        "desa_name": "BUNGINTIMBE",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020100260004",
+        "sls_name": "RT 001 DUSUN 002",
+        "desa_name": "RUSA KENCANA",
+        "kec_name": "TOILI",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400103003",
+        "sls_name": "KAWASAN HUTAN",
+        "desa_name": "BUNGINTIMBE",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500060001",
+        "sls_name": "DUSUN 1",
+        "desa_name": "TANAUGE",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020210090004",
+        "sls_name": "RT 004 DUSUN 2",
+        "desa_name": "PAISUBOLOLI",
+        "kec_name": "BATUI SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120700030003",
+        "sls_name": "RT 3 DUSUN I",
+        "desa_name": "WAWONDULA",
+        "kec_name": "MORI UTARA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72121000061001",
+        "sls_name": "PERSAWAHAN",
+        "desa_name": "TANA SUMPU",
+        "kec_name": "MAMOSALATO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020110100004",
+        "sls_name": "RT 2 DUSUN 2",
+        "desa_name": "BUKIT MAKARTI",
+        "kec_name": "TOILI BARAT",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020200140001",
+        "sls_name": "RT 001 RW 001 LINGKUNGAN 1",
+        "desa_name": "BATUI",
+        "kec_name": "BATUI",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020100200006",
+        "sls_name": "RT 006 DUSUN 2",
+        "desa_name": "TIRTA KENCANA",
+        "kec_name": "TOILI",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020210050007",
+        "sls_name": "RT 003 DUSUN 2",
+        "desa_name": "SUKAMAJU I",
+        "kec_name": "BATUI SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020300210009",
+        "sls_name": "RT 02 RW 03 LINGKUNGAN 3",
+        "desa_name": "BUNTA SATU",
+        "kec_name": "BUNTA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020300351001",
+        "sls_name": "PERKEBUNAN NIPA",
+        "desa_name": "TUNTUNG",
+        "kec_name": "BUNTA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020130080005",
+        "sls_name": "RT 005 DUSUN 002",
+        "desa_name": "MARGA KENCANA",
+        "kec_name": "TOILI JAYA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020310030002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "BALAANG",
+        "kec_name": "NUHON",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020310010002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "BANGKETA",
+        "kec_name": "NUHON",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72121000070004",
+        "sls_name": "RT 04 DUSUN 2",
+        "desa_name": "PANDAUKE",
+        "kec_name": "MAMOSALATO",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020310050007",
+        "sls_name": "RT 06",
+        "desa_name": "SUMBER AGUNG",
+        "kec_name": "NUHON",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020130030008",
+        "sls_name": "RT 008 DUSUN 002",
+        "desa_name": "BUKIT JAYA",
+        "kec_name": "TOILI JAYA",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500070001",
+        "sls_name": "LINGKUNGAN I",
+        "desa_name": "KOLONODALE",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120600080003",
+        "sls_name": "DUSUN 3",
+        "desa_name": "TIU",
+        "kec_name": "PETASIA BARAT",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120800010002",
+        "sls_name": "RT 002 DUSUN 1",
+        "desa_name": "TAMAINUSI",
+        "kec_name": "SOYO JAYA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72010600060005",
+        "sls_name": "RT 05 LINGKUNGAN 3",
+        "desa_name": "BULAGI SATU",
+        "kec_name": "BULAGI",
+        "kab_name": "[01] BANGGAI KEPULAUAN",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120600020002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "ONEPUTE",
+        "kec_name": "PETASIA BARAT",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120500080005",
+        "sls_name": "LINGKUNGAN 6",
+        "desa_name": "BAHONTULA",
+        "kec_name": "PETASIA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020100200003",
+        "sls_name": "RT 003 DUSUN 1",
+        "desa_name": "TIRTA KENCANA",
+        "kec_name": "TOILI",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120700074001",
+        "sls_name": "PERKEBUNAN SAWIT PERUSAHAAN",
+        "desa_name": "PELERU",
+        "kec_name": "MORI UTARA",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400060001",
+        "sls_name": "DUSUN 4",
+        "desa_name": "MOLINO",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72120400102002",
+        "sls_name": "KAWASAN PEMUKIMAN PEREMPANGAN",
+        "desa_name": "BUNGINTIMBE",
+        "kec_name": "PETASIA TIMUR",
+        "kab_name": "[12] MOROWALI UTARA",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300170001",
+        "sls_name": "RT 1 RW 1",
+        "desa_name": "MARSAOLEH",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300200006",
+        "sls_name": "RT IV RW II",
+        "desa_name": "MATANO",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300250003",
+        "sls_name": "RT 03 DUSUN 2",
+        "desa_name": "BAHOMOHONI",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030310060005",
+        "sls_name": "RT 5 DUSUN 2",
+        "desa_name": "GERESA",
+        "kec_name": "BUNGKU TIMUR",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210080001",
+        "sls_name": "DUSUN 1",
+        "desa_name": "BAHODOPI",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040011",
+        "sls_name": "RT 001 RW 04",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030310011001",
+        "sls_name": "SAWAH",
+        "desa_name": "ONEPUTE JAYA",
+        "kec_name": "BUNGKU TIMUR",
+        "kab_name": "[03] MOROWALI",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300280001",
+        "sls_name": "RT 001 DUSUN 1",
+        "desa_name": "LANONA",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030310020005",
+        "sls_name": "RT 5 DUSUN 2",
+        "desa_name": "BAHOMOTEFE",
+        "kec_name": "BUNGKU TIMUR",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310010011",
+        "sls_name": "RT 005 RW 02",
+        "desa_name": "TALISE",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040019",
+        "sls_name": "RT 002 RW 06",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030400050006",
+        "sls_name": "RT 5 DUSUN 2",
+        "desa_name": "TOFOGARO",
+        "kec_name": "BUNGKU BARAT",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030300211001",
+        "sls_name": "LAHAN PERTANIAN MASYARAKAT",
+        "desa_name": "MATANSALA",
+        "kec_name": "BUNGKU TENGAH",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710410030011",
+        "sls_name": "RT 011 RW 006",
+        "desa_name": "BAIYA",
+        "kec_name": "TAWAELI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310010019",
+        "sls_name": "RT 007 RW 03",
+        "desa_name": "TALISE",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040310110005",
+        "sls_name": "RT 05 DUSUN 03",
+        "desa_name": "MATIALEMBA",
+        "kec_name": "PAMONA TIMUR",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300050031",
+        "sls_name": "RT 003 RW 09",
+        "desa_name": "LOLU SELATAN",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030420020004",
+        "sls_name": "RT 07 DUSUN 04",
+        "desa_name": "SAMPEANTABA",
+        "kec_name": "WITA PONDA",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710410010001",
+        "sls_name": "RT 001 RW 001",
+        "desa_name": "PANAU",
+        "kec_name": "TAWAELI",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310010012",
+        "sls_name": "RT 006 RW 02",
+        "desa_name": "TALISE",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310020014",
+        "sls_name": "RT 002 RW 04",
+        "desa_name": "TANAMODINDI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040300090008",
+        "sls_name": "RT 08 RW 02",
+        "desa_name": "SANGELE",
+        "kec_name": "PAMONA PUSALEMBA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040720050004",
+        "sls_name": "RT 04 RW 02",
+        "desa_name": "SAYO",
+        "kec_name": "POSO KOTA SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310020020",
+        "sls_name": "RT 002 RW 06",
+        "desa_name": "TANAMODINDI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300050028",
+        "sls_name": "RT 003 RW 08",
+        "desa_name": "LOLU SELATAN",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300050041",
+        "sls_name": "RT 005 RW 11",
+        "desa_name": "LOLU SELATAN",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310020010",
+        "sls_name": "RT 001 RW 03",
+        "desa_name": "TANAMODINDI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040300080009",
+        "sls_name": "RT 09 RW 3",
+        "desa_name": "TENTENA",
+        "kec_name": "PAMONA PUSALEMBA",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040300090007",
+        "sls_name": "RT 09 RW 02",
+        "desa_name": "SANGELE",
+        "kec_name": "PAMONA PUSALEMBA",
+        "kab_name": "[04] POSO",
+        "total": 2,
+        "assigned": 0,
+        "unassigned": 2,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310010028",
+        "sls_name": "RT 004 RW 05",
+        "desa_name": "TALISE",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210060012",
+        "sls_name": "RT 1 DUSUN 4",
+        "desa_name": "KEUREA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310010023",
+        "sls_name": "RT 004 RW 04",
+        "desa_name": "TALISE",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310030001",
+        "sls_name": "RT 001 RW 001",
+        "desa_name": "LASOANI",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030400055002",
+        "sls_name": "PERUSAHAAN",
+        "desa_name": "TOFOGARO",
+        "kec_name": "BUNGKU BARAT",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300040030",
+        "sls_name": "RT 002 RW 09",
+        "desa_name": "LOLU UTARA",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72040100210003",
+        "sls_name": "RT 3 DUSUN II",
+        "desa_name": "PASIR PUTIH",
+        "kec_name": "PAMONA SELATAN",
+        "kab_name": "[04] POSO",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310010031",
+        "sls_name": "RT 001 RW 06",
+        "desa_name": "TALISE",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020610050002",
+        "sls_name": "RT 2 DUSUN 1",
+        "desa_name": "TOIBA",
+        "kec_name": "BUALEMO",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020800200007",
+        "sls_name": "RT 0001 RW 02 LINGKUNGAN 02",
+        "desa_name": "BALANTAK",
+        "kec_name": "BALANTAK",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200090019",
+        "sls_name": "RT 04 RW 04",
+        "desa_name": "TATURA SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200090024",
+        "sls_name": "RT 01 RW 06",
+        "desa_name": "TATURA SELATAN",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710300010006",
+        "sls_name": "RT 03 RW 02",
+        "desa_name": "BESUSU BARAT",
+        "kec_name": "PALU TIMUR",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070036",
+        "sls_name": "RT 02 RW 010",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72030210040002",
+        "sls_name": "DUSUN 2",
+        "desa_name": "LABOTA",
+        "kec_name": "BAHODOPI",
+        "kab_name": "[03] MOROWALI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72020530030009",
+        "sls_name": "RT 9 RW 5 LINGKUNGAN 3",
+        "desa_name": "SIMPONG",
+        "kec_name": "LUWUK SELATAN",
+        "kab_name": "[02] BANGGAI",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72710200070002",
+        "sls_name": "RT 02 RW 01",
+        "desa_name": "BIROBULI UTARA",
+        "kec_name": "PALU SELATAN",
+        "kab_name": "[71] PALU",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    }
+];
 window.PETUGAS_DATA_UMUM = [
     {
         "userId": "cb75b347-d56a-430e-8bdd-e64e37eb0be8",
@@ -177265,7 +184857,7 @@ window.PETUGAS_DATA_UMUM = [
         "email": "agrithagitha885@gmail.com",
         "roleId": "93bcf446-c4c1-4462-8ed0-4b0f7ae89e52",
         "roleName": "Pengawas",
-        "totalRegions": 42,
+        "totalRegions": 46,
         "regions": [
             {
                 "regionCode": "7210030012000100",
@@ -181082,8 +188674,8 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "6931c5bb-ad73-4bac-9809-a9c7190436d5"
             },
             {
-                "regionCode": "7271000000000000",
-                "regionName": "-",
+                "regionCode": "7271010011002101",
+                "regionName": "RT 005 RW 04",
                 "level": 6,
                 "allocationId": "6931c5bb-ad73-4bac-9809-a9c7190436d5"
             }
@@ -184408,6 +192000,12 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "c9c8cc27-9e72-4d86-9e58-7099ce12fac6"
             },
             {
+                "regionCode": "7271000000000000",
+                "regionName": "-",
+                "level": 6,
+                "allocationId": "c9c8cc27-9e72-4d86-9e58-7099ce12fac6"
+            },
+            {
                 "regionCode": "7271010008001101",
                 "regionName": "RT 001 RW 07",
                 "level": 6,
@@ -184416,12 +192014,6 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7271010008001300",
                 "regionName": "RT 003 RW 07",
-                "level": 6,
-                "allocationId": "c9c8cc27-9e72-4d86-9e58-7099ce12fac6"
-            },
-            {
-                "regionCode": "7271010008001200",
-                "regionName": "RT 002 RW 07",
                 "level": 6,
                 "allocationId": "c9c8cc27-9e72-4d86-9e58-7099ce12fac6"
             }
@@ -197238,8 +204830,8 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "6f133c05-cffd-4030-a1b0-629df5f7b5ca"
             },
             {
-                "regionCode": "7271000000000000",
-                "regionName": "-",
+                "regionCode": "7271012002003200",
+                "regionName": "RT 004 RW 007",
                 "level": 6,
                 "allocationId": "6f133c05-cffd-4030-a1b0-629df5f7b5ca"
             }
@@ -198148,12 +205740,6 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "de13b813-7a27-407e-b6dd-8cf4ad540581"
             },
             {
-                "regionCode": "7271000000000000",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "de13b813-7a27-407e-b6dd-8cf4ad540581"
-            },
-            {
                 "regionCode": "7271031002000602",
                 "regionName": "RT 001 RW 02",
                 "level": 6,
@@ -198161,6 +205747,12 @@ window.PETUGAS_DATA_UMUM = [
             },
             {
                 "regionCode": "7271031002000701",
+                "regionName": "RT 002 RW 02",
+                "level": 6,
+                "allocationId": "de13b813-7a27-407e-b6dd-8cf4ad540581"
+            },
+            {
+                "regionCode": "7271031002000702",
                 "regionName": "RT 002 RW 02",
                 "level": 6,
                 "allocationId": "de13b813-7a27-407e-b6dd-8cf4ad540581"
@@ -200720,12 +208312,6 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "707d12d6-23ba-4620-b98b-9b82d02a4995"
             },
             {
-                "regionCode": "7205120009000302",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "707d12d6-23ba-4620-b98b-9b82d02a4995"
-            },
-            {
                 "regionCode": "7205160004000700",
                 "regionName": "RT 007 DUSUN III",
                 "level": 6,
@@ -200734,6 +208320,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7205160006000402",
                 "regionName": "DUSUN 004",
+                "level": 6,
+                "allocationId": "707d12d6-23ba-4620-b98b-9b82d02a4995"
+            },
+            {
+                "regionCode": "7205120009000302",
+                "regionName": "-",
                 "level": 6,
                 "allocationId": "707d12d6-23ba-4620-b98b-9b82d02a4995"
             }
@@ -206582,12 +214174,6 @@ window.PETUGAS_DATA_UMUM = [
         "totalRegions": 5,
         "regions": [
             {
-                "regionCode": "7271000000000000",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "fa8199aa-463b-48fe-8c8a-3b2c4aa4003f"
-            },
-            {
                 "regionCode": "7271011004001402",
                 "regionName": "RT 003 RW 004",
                 "level": 6,
@@ -206608,6 +214194,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7271011005000100",
                 "regionName": "RT 001 RW 001",
+                "level": 6,
+                "allocationId": "fa8199aa-463b-48fe-8c8a-3b2c4aa4003f"
+            },
+            {
+                "regionCode": "7271000000000000",
+                "regionName": "-",
                 "level": 6,
                 "allocationId": "fa8199aa-463b-48fe-8c8a-3b2c4aa4003f"
             }
@@ -221538,14 +229130,14 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "2cc1bed5-3b62-4594-9ee5-c015d5392bde"
             },
             {
-                "regionCode": "7202060002000100",
-                "regionName": "DUSUN 1",
+                "regionCode": "7202000000000000",
+                "regionName": "-",
                 "level": 6,
                 "allocationId": "2cc1bed5-3b62-4594-9ee5-c015d5392bde"
             },
             {
-                "regionCode": "7202060002100100",
-                "regionName": "KEBUN",
+                "regionCode": "7202060002000100",
+                "regionName": "DUSUN 1",
                 "level": 6,
                 "allocationId": "2cc1bed5-3b62-4594-9ee5-c015d5392bde"
             }
@@ -232660,14 +240252,14 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "38738550-8d1c-4c72-86bb-c89368b516fd"
             },
             {
-                "regionCode": "7202040003000200",
-                "regionName": "RT 2 DUSUN 2",
+                "regionCode": "7202000000000000",
+                "regionName": "-",
                 "level": 6,
                 "allocationId": "38738550-8d1c-4c72-86bb-c89368b516fd"
             },
             {
-                "regionCode": "7202040003000300",
-                "regionName": "RT 3 DUSUN 3",
+                "regionCode": "7202040003000200",
+                "regionName": "RT 2 DUSUN 2",
                 "level": 6,
                 "allocationId": "38738550-8d1c-4c72-86bb-c89368b516fd"
             }
@@ -250904,14 +258496,14 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "6d9d6680-b609-4cea-ace2-7e7047b80da9"
             },
             {
-                "regionCode": "7205120009000302",
-                "regionName": "-",
+                "regionCode": "7205161003000400",
+                "regionName": "DUSUN 004",
                 "level": 6,
                 "allocationId": "6d9d6680-b609-4cea-ace2-7e7047b80da9"
             },
             {
-                "regionCode": "7205161003000400",
-                "regionName": "DUSUN 004",
+                "regionCode": "7205120009000302",
+                "regionName": "-",
                 "level": 6,
                 "allocationId": "6d9d6680-b609-4cea-ace2-7e7047b80da9"
             }
@@ -258012,6 +265604,12 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "48051625-534b-46f1-8886-87e277c81260"
             },
             {
+                "regionCode": "7205120009000302",
+                "regionName": "-",
+                "level": 6,
+                "allocationId": "48051625-534b-46f1-8886-87e277c81260"
+            },
+            {
                 "regionCode": "7205160006000401",
                 "regionName": "DUSUN 004",
                 "level": 6,
@@ -258020,12 +265618,6 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7205160006000403",
                 "regionName": "DUSUN 004",
-                "level": 6,
-                "allocationId": "48051625-534b-46f1-8886-87e277c81260"
-            },
-            {
-                "regionCode": "7205120009000302",
-                "regionName": "-",
                 "level": 6,
                 "allocationId": "48051625-534b-46f1-8886-87e277c81260"
             }
@@ -259466,12 +267058,6 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "687e2458-9b28-45b7-93c9-3ca0ca7d68ba"
             },
             {
-                "regionCode": "7202000000000000",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "687e2458-9b28-45b7-93c9-3ca0ca7d68ba"
-            },
-            {
                 "regionCode": "7202012006000200",
                 "regionName": "RT 2 DUSUN 1",
                 "level": 6,
@@ -259480,6 +267066,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7202012006000100",
                 "regionName": "RT 1 DUSUN 1",
+                "level": 6,
+                "allocationId": "687e2458-9b28-45b7-93c9-3ca0ca7d68ba"
+            },
+            {
+                "regionCode": "7202012006000300",
+                "regionName": "RT 1 DUSUN 2",
                 "level": 6,
                 "allocationId": "687e2458-9b28-45b7-93c9-3ca0ca7d68ba"
             }
@@ -266734,12 +274326,6 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "bf6c19ce-2c6a-4be0-9cb5-d0c0b2337778"
             },
             {
-                "regionCode": "7205120009000302",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "bf6c19ce-2c6a-4be0-9cb5-d0c0b2337778"
-            },
-            {
                 "regionCode": "7205080027000200",
                 "regionName": "RT 02 RW 01",
                 "level": 6,
@@ -266754,6 +274340,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7205080027000400",
                 "regionName": "RT 01 RW 02",
+                "level": 6,
+                "allocationId": "bf6c19ce-2c6a-4be0-9cb5-d0c0b2337778"
+            },
+            {
+                "regionCode": "7205080027000600",
+                "regionName": "RT 03 RW 02",
                 "level": 6,
                 "allocationId": "bf6c19ce-2c6a-4be0-9cb5-d0c0b2337778"
             }
@@ -269176,12 +276768,6 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "8e08f5aa-f08f-496e-a225-4d4838dc4407"
             },
             {
-                "regionCode": "7202000000000000",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "8e08f5aa-f08f-496e-a225-4d4838dc4407"
-            },
-            {
                 "regionCode": "7202050008000700",
                 "regionName": "RT 7 DUSUN 003",
                 "level": 6,
@@ -269190,6 +276776,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7202050012000200",
                 "regionName": "RT 2",
+                "level": 6,
+                "allocationId": "8e08f5aa-f08f-496e-a225-4d4838dc4407"
+            },
+            {
+                "regionCode": "7202050012000700",
+                "regionName": "RT 7",
                 "level": 6,
                 "allocationId": "8e08f5aa-f08f-496e-a225-4d4838dc4407"
             }
@@ -273280,8 +280872,8 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "20524cb3-5c51-44e9-94f7-3159860f7c19"
             },
             {
-                "regionCode": "7202000000000000",
-                "regionName": "-",
+                "regionCode": "7202052003000200",
+                "regionName": "RT 2 DUSUN 2",
                 "level": 6,
                 "allocationId": "20524cb3-5c51-44e9-94f7-3159860f7c19"
             }
@@ -277430,12 +285022,6 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "984e67ed-bc26-4aa9-ac59-077449c752f5"
             },
             {
-                "regionCode": "7271000000000000",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "984e67ed-bc26-4aa9-ac59-077449c752f5"
-            },
-            {
                 "regionCode": "7271020007002600",
                 "regionName": "RT 04 RW 07",
                 "level": 6,
@@ -277444,6 +285030,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7271020007002702",
                 "regionName": "RT 01 RW 08",
+                "level": 6,
+                "allocationId": "984e67ed-bc26-4aa9-ac59-077449c752f5"
+            },
+            {
+                "regionCode": "7271020007002800",
+                "regionName": "RT 02 RW 08",
                 "level": 6,
                 "allocationId": "984e67ed-bc26-4aa9-ac59-077449c752f5"
             }
@@ -282406,12 +289998,6 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "156af427-7442-4ed9-8137-b918b067c1f2"
             },
             {
-                "regionCode": "7271000000000000",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "156af427-7442-4ed9-8137-b918b067c1f2"
-            },
-            {
                 "regionCode": "7271030004003100",
                 "regionName": "RT 003 RW 09",
                 "level": 6,
@@ -282420,6 +290006,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7271030004002500",
                 "regionName": "RT 002 RW 08",
+                "level": 6,
+                "allocationId": "156af427-7442-4ed9-8137-b918b067c1f2"
+            },
+            {
+                "regionCode": "7271030005000200",
+                "regionName": "RT 002 RW 01",
                 "level": 6,
                 "allocationId": "156af427-7442-4ed9-8137-b918b067c1f2"
             }

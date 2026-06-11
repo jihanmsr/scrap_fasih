@@ -10,6 +10,18 @@ from dotenv import load_dotenv
 from playwright.async_api import async_playwright
 
 load_dotenv()
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+supabase = None
+if SUPABASE_URL and SUPABASE_KEY and "MASUKKAN" not in SUPABASE_URL:
+    try:
+        from supabase import create_client
+        supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+        print("[INFO] Koneksi Supabase berhasil diinisialisasi untuk scrape_assign.")
+    except Exception as e:
+        print(f"[ERROR] Gagal menginisialisasi Supabase di scrape_assign: {e}")
+
 USER_DATA_DIR = "playwright_chrome_profile"
 
 def check_port_open(port=9222):
@@ -438,6 +450,75 @@ async def fetch_sls_by_report_api(context, token, survey_period_id, region1_id, 
     print(f"     ✅ Berhasil menarik total {len(processed_sls)} SLS untuk {label}.")
     return processed_sls
 
+async def fetch_sls_ub_via_datatable(context, token, survey_period_id, region1_id, kab_region_map, label):
+    print(f"\n[{label}] Menarik rincian per SLS dari DATATABLE API (Provinsi)...")
+    sls_dict = {}
+
+    start = 0
+    length = 1000
+    
+    while True:
+        payload_dt = {
+            "start": start, "length": length, "columns": [{"data": "id"}], "order": [],
+            "search": {"value": "", "regex": False},
+            "assignmentExtraParam": {
+                "region1Id": region1_id, 
+                "surveyPeriodId": survey_period_id, 
+                "assignmentErrorStatusType": -1, 
+                "filterTargetType": ""
+            }
+        }
+        
+        res_dt = await evaluate_fetch_with_retry(context, token, DATATABLE_URL, payload_dt)
+
+        if not res_dt or "searchData" not in res_dt: break
+        records = res_dt["searchData"]
+        if not records: break
+
+        for comp in records:
+            region = comp.get("region", {})
+            lvl1 = region.get("level1", {}) or {}
+            lvl2 = lvl1.get("level2", {}) or {}
+            lvl3 = lvl2.get("level3", {}) or {}
+            lvl4 = lvl3.get("level4", {}) or {}
+            lvl5 = lvl4.get("level5", {}) or {}
+
+            # Ambil nama kabupaten
+            kab_code = lvl2.get("fullCode")
+            kab_name = kab_region_map.get(kab_code, {}).get("name", lvl2.get("name", "LAINNYA"))
+
+            sls_code = lvl5.get("fullCode", "LAINNYA")
+            if sls_code not in sls_dict:
+                sls_dict[sls_code] = {
+                    "sls_code": sls_code, 
+                    "sls_name": lvl5.get("name", "LAINNYA"),
+                    "desa_name": lvl4.get("name", "LAINNYA"), 
+                    "kec_name": lvl3.get("name", "LAINNYA"),
+                    "kab_name": kab_name, 
+                    "total": 0, "assigned": 0, "unassigned": 0, "officers": set()
+                }
+
+            sls_dict[sls_code]["total"] += 1
+            officer = comp.get("currentUserUsername")
+            if officer:
+                sls_dict[sls_code]["assigned"] += 1
+                ofc_name = comp.get("currentUserFullname", "-")
+                sls_dict[sls_code]["officers"].add(f"{ofc_name} ({officer})" if ofc_name != "-" else officer)
+            else:
+                sls_dict[sls_code]["unassigned"] += 1
+
+        start += length
+        if start >= res_dt.get("totalHit", 0): break
+
+    # Convert set ke list untuk JSON serialization
+    processed_sls = []
+    for data in sls_dict.values():
+        data["officers"] = list(data["officers"])
+        processed_sls.append(data)
+        
+    print(f"     ✅ Berhasil menarik total {len(processed_sls)} SLS untuk {label}.")
+    return processed_sls
+
 async def fetch_petugas(context, token, survey_period_id, label):
     print(f"\n[{label}] Menarik rincian Petugas dari API...")
     users = []
@@ -565,9 +646,9 @@ async def scrape_assign():
         processed_data_umum = await fetch_report(context, token, SURVEY_CONFIGS[0]["survey_period_id"], SURVEY_CONFIGS[0]["region1_id"], "SE Umum")
         processed_data_ub = await fetch_report(context, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], "SE UB")
 
-        # 2. Tarik Rincian Agregat SLS (By Kecamatan / Desa Report API)
+        # 2. Tarik Rincian Agregat SLS (By Kecamatan / Desa Report API for Umum, Datatable for UB)
         processed_sls_umum = await fetch_sls_by_report_api(context, token, SURVEY_CONFIGS[0]["survey_period_id"], SURVEY_CONFIGS[0]["region1_id"], SURVEY_CONFIGS[0]["kab_region_map"], "SE Umum")
-        processed_sls_ub = await fetch_sls_by_report_api(context, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], SURVEY_CONFIGS[1]["kab_region_map"], "SE UB")
+        processed_sls_ub = await fetch_sls_ub_via_datatable(context, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], SURVEY_CONFIGS[1]["kab_region_map"], "SE UB")
 
         # 3. Tarik Petugas dan Wilayah Tugasnya
         processed_petugas_umum = await fetch_petugas(context, token, SURVEY_CONFIGS[0]["survey_period_id"], "SE Umum")
@@ -635,6 +716,28 @@ function filterAssignData(type) {
         with open("assign_data.js", "w", encoding="utf-8") as f:
             f.write(js_content)
         print("\n✅ DONE! Data Assign Petugas dan Rincian SLS berhasil ditarik dan file assign_data.js diperbarui.")
+
+        # Upload to Supabase dashboard_store
+        if supabase:
+            try:
+                print("Mengunggah data Assign/SLS/Petugas ke Supabase...")
+                assign_db_obj = {
+                    "updated_at": datetime.now().isoformat(),
+                    "assign_data_umum": processed_data_umum,
+                    "assign_data_ub": processed_data_ub,
+                    "assign_sls_data_umum": processed_sls_umum,
+                    "assign_sls_data_ub": processed_sls_ub,
+                    "petugas_data_umum": processed_petugas_umum,
+                    "petugas_data_ub": processed_petugas_ub
+                }
+                # delete existing
+                supabase.table("dashboard_store").delete().eq("key", "assign_data").execute()
+                # insert new
+                supabase.table("dashboard_store").insert({"key": "assign_data", "value": assign_db_obj}).execute()
+                print("Berhasil mengunggah data Assign/SLS/Petugas ke Supabase.")
+            except Exception as e:
+                print(f"Gagal mengunggah data Assign ke Supabase: {e}")
+
         await page.close()
 
 def main():

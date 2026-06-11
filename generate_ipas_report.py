@@ -531,6 +531,18 @@ async def generate_report():
             
         print("\nLaporan rekap Sensus Ekonomi berhasil di-generate ke ipas_data.js!")
 
+        # Upload to Supabase dashboard_store
+        if supabase:
+            try:
+                print("Mengunggah data IPAS ke Supabase...")
+                # delete existing
+                supabase.table("dashboard_store").delete().eq("key", "ipas_data").execute()
+                # insert new
+                supabase.table("dashboard_store").insert({"key": "ipas_data", "value": final_js_obj}).execute()
+                print("Berhasil mengunggah data IPAS ke Supabase.")
+            except Exception as e:
+                print(f"Gagal mengunggah data IPAS ke Supabase: {e}")
+
 async def main_loop():
     delay_seconds = 300 # 5 minutes
     while True:

@@ -1236,7 +1236,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // SLS state
     window.slsSort = { column: 'kab_name', order: 'asc' };
     window.slsCurrentPage = 1;
-    const SLS_ITEMS_PER_PAGE = 25;
+    let SLS_ITEMS_PER_PAGE = 25;
+    window.changeSlsLimit = function(val) {
+        SLS_ITEMS_PER_PAGE = parseInt(val) || 25;
+        window.slsCurrentPage = 1;
+        renderSlsTable();
+    };
 
     // Header sort trigger
     window.sortSlsTable = function (column) {
@@ -1630,7 +1635,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- DAFTAR PETUGAS TABLE ---
     window.petugasCurrentPage = 1;
-    const petugasRowsPerPage = 50;
+    let petugasRowsPerPage = 50;
+    window.petugasSort = { column: 'username', order: 'asc' };
+
+    window.changePetugasLimit = function (val) {
+        petugasRowsPerPage = parseInt(val) || 50;
+        window.petugasCurrentPage = 1;
+        window.renderPetugasTable();
+    };
+
+    window.sortPetugasTable = function (column) {
+        const current = window.petugasSort;
+        if (current.column === column) {
+            current.order = current.order === 'asc' ? 'desc' : 'asc';
+        } else {
+            current.column = column;
+            current.order = 'asc';
+        }
+        window.petugasCurrentPage = 1;
+        
+        // Update header indicators
+        ['username', 'roleName', 'totalRegions'].forEach(col => {
+            const el = document.getElementById(`petugas-sort-${col}`);
+            if (el) {
+                if (current.column === col) {
+                    el.innerText = current.order === 'asc' ? ' ▲' : ' ▼';
+                } else {
+                    el.innerText = ' ↕';
+                }
+            }
+        });
+        
+        window.renderPetugasTable();
+    };
 
     window.renderPetugasTable = function () {
         const petugasData = window.PETUGAS_DATA || [];
@@ -1641,8 +1678,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const searchInputEl = document.getElementById('petugas-search-input');
         const searchVal = searchInputEl ? searchInputEl.value.toLowerCase().trim() : '';
 
+        const roleFilterEl = document.getElementById('petugas-role-filter');
+        const roleFilterVal = roleFilterEl ? roleFilterEl.value : 'all';
+
+        const kabFilterEl = document.getElementById('petugas-kab-filter');
+        const kabFilterVal = kabFilterEl ? kabFilterEl.value : 'all';
+
         // Filter and Sort
         let filteredData = petugasData.filter(item => {
+            // Search filter
             if (searchVal) {
                 const uNameStr = item.username || '';
                 const emailStr = item.email || '';
@@ -1651,11 +1695,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 const matchText = (uNameStr + ' ' + emailStr + ' ' + roleStr + ' ' + regionsStr).toLowerCase();
                 if (!matchText.includes(searchVal)) return false;
             }
+
+            // Role filter
+            if (roleFilterVal !== 'all') {
+                if (item.roleName !== roleFilterVal) return false;
+            }
+
+            // Kabupaten filter
+            if (kabFilterVal !== 'all') {
+                const hasMatchingRegion = (item.regions || []).some(r => {
+                    if (!r.regionCode) return false;
+                    if (r.regionCode === '72') return true; // Provincial covers all
+                    return r.regionCode.startsWith(kabFilterVal);
+                });
+                if (!hasMatchingRegion) return false;
+            }
+
             return true;
         });
 
-        // Default sort by username
-        filteredData.sort((a, b) => (a.username || '').localeCompare(b.username || ''));
+        // Apply sort
+        const col = window.petugasSort.column;
+        const order = window.petugasSort.order === 'asc' ? 1 : -1;
+        filteredData.sort((a, b) => {
+            let valA = a[col];
+            let valB = b[col];
+            if (col === 'totalRegions') {
+                valA = a.regions ? a.regions.length : 0;
+                valB = b.regions ? b.regions.length : 0;
+                return (valA - valB) * order;
+            }
+            if (typeof valA === 'string') {
+                return (valA || '').localeCompare(valB || '') * order;
+            }
+            return ((valA || 0) - (valB || 0)) * order;
+        });
 
         const totalItems = filteredData.length;
         if (totalItems === 0) {
@@ -1798,6 +1872,188 @@ document.addEventListener('DOMContentLoaded', () => {
             btnContainer.appendChild(nextBtn);
         }
     }
+
+    // --- CSV DOWNLOAD UTILITIES ---
+    function exportToCSV(filename, headers, rows) {
+        let csvContent = "\ufeff"; // BOM for Excel UTF-8 support
+        csvContent += headers.map(h => `"${h.replace(/"/g, '""')}"`).join(",") + "\n";
+        
+        rows.forEach(row => {
+            csvContent += row.map(cell => {
+                const str = String(cell === null || cell === undefined ? "" : cell);
+                return `"${str.replace(/"/g, '""')}"`;
+            }).join(",") + "\n";
+        });
+        
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.setAttribute("href", url);
+        link.setAttribute("download", filename);
+        link.style.visibility = 'hidden';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    window.downloadKabSummaryCSV = function () {
+        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+        const rawData = window.ASSIGN_DATA || [];
+        if (rawData.length === 0) {
+            alert("Tidak ada data kabupaten untuk diunduh.");
+            return;
+        }
+        
+        const headers = ["No", "Kode Kabupaten", "Kabupaten/Kota", "Total Target", "Sudah Ditugaskan", "Belum Ditugaskan", "Persentase (%)"];
+        let totalUsaha = 0, totalSudah = 0, totalBelum = 0;
+        
+        const rows = rawData.map((d, idx) => {
+            const total = d.total || 0;
+            const assigned = d.assigned || 0;
+            const unassigned = d.have_not_assigned || 0;
+            totalUsaha += total;
+            totalSudah += assigned;
+            totalBelum += unassigned;
+            
+            const pct = total > 0 ? ((assigned / total) * 100).toFixed(2) : "0.00";
+            const name = d.nama_kab.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+            
+            return [idx + 1, d.kode_kab, name, total, assigned, unassigned, pct];
+        });
+
+        // Add total row
+        const totalPct = totalUsaha > 0 ? ((totalSudah / totalUsaha) * 100).toFixed(2) : "0.00";
+        rows.push(["", "", "TOTAL", totalUsaha, totalSudah, totalBelum, totalPct]);
+
+        const prefix = activeSubtab === 'ub' ? 'UB' : 'Umum';
+        exportToCSV(`rekap_kabupaten_${prefix.toLowerCase()}.csv`, headers, rows);
+    };
+
+    window.downloadSlsCSV = function () {
+        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+        const slsData = window.ASSIGN_SLS_DATA || [];
+        if (slsData.length === 0) {
+            alert("Tidak ada data SLS untuk diunduh.");
+            return;
+        }
+
+        // Apply filters exactly like renderSlsTable
+        const searchInput = document.getElementById('sls-search-input');
+        const searchVal = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const kabVal = document.getElementById('sls-kab-filter') ? document.getElementById('sls-kab-filter').value : 'all';
+        const kecVal = document.getElementById('sls-kec-filter') ? document.getElementById('sls-kec-filter').value : 'all';
+        const desaVal = document.getElementById('sls-desa-filter') ? document.getElementById('sls-desa-filter').value : 'all';
+        const assignVal = document.getElementById('sls-assignment-filter') ? document.getElementById('sls-assignment-filter').value : 'all';
+
+        let filtered = slsData.filter(item => {
+            if (kabVal !== 'all' && item.kab_name && !item.kab_name.includes(kabVal)) return false;
+            if (kecVal !== 'all' && item.kec_name !== kecVal) return false;
+            if (desaVal !== 'all' && item.desa_name !== desaVal) return false;
+            
+            if (assignVal !== 'all') {
+                if (assignVal === 'fully_assigned' && item.unassigned !== 0) return false;
+                if (assignVal === 'unassigned' && item.assigned !== 0) return false;
+                if (assignVal === 'partially_assigned' && (item.assigned === 0 || item.unassigned === 0)) return false;
+            }
+
+            if (searchVal) {
+                const matchText = (item.kab_name + ' ' + item.kec_name + ' ' + item.desa_name + ' ' + item.sls_name + ' ' + item.sls_code + ' ' + (item.officers || []).join(' ')).toLowerCase();
+                if (!matchText.includes(searchVal)) return false;
+            }
+            return true;
+        });
+
+        // Apply sort
+        const col = window.slsSort.column;
+        const order = window.slsSort.order === 'asc' ? 1 : -1;
+        filtered.sort((a, b) => {
+            let valA = a[col];
+            let valB = b[col];
+            if (typeof valA === 'string') {
+                return valA.localeCompare(valB) * order;
+            }
+            return ((valA || 0) - (valB || 0)) * order;
+        });
+
+        const headers = ["Kabupaten", "Kecamatan", "Desa", "Kode SLS", "Nama SLS", "Total Target", "Ditugaskan", "Belum Ditugaskan", "Status", "Petugas"];
+        const rows = filtered.map(item => {
+            let status = 'Sebagian Ditugaskan';
+            if (item.unassigned === 0) status = 'Sudah Ditugaskan';
+            else if (item.assigned === 0) status = 'Belum Ditugaskan';
+
+            const officers = item.officers && item.officers.length > 0 ? item.officers.join(', ') : '-';
+            return [item.kab_name, item.kec_name, item.desa_name, item.sls_code, item.sls_name, item.total, item.assigned, item.unassigned, status, officers];
+        });
+
+        const prefix = activeSubtab === 'ub' ? 'UB' : 'Umum';
+        exportToCSV(`rincian_sls_${prefix.toLowerCase()}.csv`, headers, rows);
+    };
+
+    window.downloadPetugasCSV = function () {
+        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+        const petugasData = window.PETUGAS_DATA || [];
+        if (petugasData.length === 0) {
+            alert("Tidak ada data petugas untuk diunduh.");
+            return;
+        }
+
+        const searchInputEl = document.getElementById('petugas-search-input');
+        const searchVal = searchInputEl ? searchInputEl.value.toLowerCase().trim() : '';
+
+        const roleFilterEl = document.getElementById('petugas-role-filter');
+        const roleFilterVal = roleFilterEl ? roleFilterEl.value : 'all';
+
+        const kabFilterEl = document.getElementById('petugas-kab-filter');
+        const kabFilterVal = kabFilterEl ? kabFilterEl.value : 'all';
+
+        let filteredData = petugasData.filter(item => {
+            if (searchVal) {
+                const uNameStr = item.username || '';
+                const emailStr = item.email || '';
+                const roleStr = item.roleName || '';
+                const regionsStr = (item.regions || []).map(r => r.regionName).join(' ');
+                const matchText = (uNameStr + ' ' + emailStr + ' ' + roleStr + ' ' + regionsStr).toLowerCase();
+                if (!matchText.includes(searchVal)) return false;
+            }
+
+            if (roleFilterVal !== 'all' && item.roleName !== roleFilterVal) return false;
+
+            if (kabFilterVal !== 'all') {
+                const hasMatchingRegion = (item.regions || []).some(r => {
+                    if (!r.regionCode) return false;
+                    if (r.regionCode === '72') return true;
+                    return r.regionCode.startsWith(kabFilterVal);
+                });
+                if (!hasMatchingRegion) return false;
+            }
+            return true;
+        });
+
+        const col = window.petugasSort.column;
+        const order = window.petugasSort.order === 'asc' ? 1 : -1;
+        filteredData.sort((a, b) => {
+            let valA = a[col];
+            let valB = b[col];
+            if (col === 'totalRegions') {
+                valA = a.regions ? a.regions.length : 0;
+                valB = b.regions ? b.regions.length : 0;
+                return (valA - valB) * order;
+            }
+            if (typeof valA === 'string') {
+                return (valA || '').localeCompare(valB || '') * order;
+            }
+            return ((valA || 0) - (valB || 0)) * order;
+        });
+
+        const headers = ["No", "Username", "Email", "Peran", "Jumlah Wilayah Tugas", "Daftar Wilayah Tugas"];
+        const rows = filteredData.map((item, idx) => {
+            const regionsStr = (item.regions || []).map(r => `${r.regionName} (${r.regionCode})`).join('; ');
+            return [idx + 1, item.username || '-', item.email || '-', item.roleName || '-', item.regions ? item.regions.length : 0, regionsStr];
+        });
+
+        const prefix = activeSubtab === 'ub' ? 'UB' : 'Umum';
+        exportToCSV(`daftar_petugas_${prefix.toLowerCase()}.csv`, headers, rows);
+    };
 
     // Interval to check for updates from other scripts
     setInterval(() => {
@@ -2182,23 +2438,79 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(`Loaded ${sourceData.length} records from local data.js.`);
         }
 
-        // Dynamically reload IPAS ipas_data.js
-        await new Promise((resolve) => {
-            const script = document.createElement('script');
-            script.src = 'ipas_data.js?v=' + Date.now();
-            script.onload = () => resolve();
-            script.onerror = () => resolve();
-            document.head.appendChild(script);
-        });
+        let ipasLoadedFromDb = false;
+        let assignLoadedFromDb = false;
 
-        // Dynamically reload assign_data.js
-        await new Promise((resolve) => {
-            const script = document.createElement('script');
-            script.src = 'assign_data.js?v=' + Date.now();
-            script.onload = () => resolve();
-            script.onerror = () => resolve();
-            document.head.appendChild(script);
-        });
+        if (supabaseClient) {
+            try {
+                const { data: ipasDbData, error: ipasError } = await supabaseClient
+                    .from('dashboard_store')
+                    .select('value')
+                    .eq('key', 'ipas_data')
+                    .single();
+                if (!ipasError && ipasDbData && ipasDbData.value) {
+                    window.IPAS_DATA = ipasDbData.value;
+                    ipasLoadedFromDb = true;
+                    console.log("Loaded IPAS_DATA from Supabase.");
+                }
+            } catch (e) {
+                console.warn("Failed to fetch IPAS_DATA from Supabase:", e);
+            }
+
+            try {
+                const { data: assignDbData, error: assignError } = await supabaseClient
+                    .from('dashboard_store')
+                    .select('value')
+                    .eq('key', 'assign_data')
+                    .single();
+                if (!assignError && assignDbData && assignDbData.value) {
+                    const assignVal = assignDbData.value;
+                    window.ASSIGN_DATA_UMUM = assignVal.assign_data_umum || [];
+                    window.ASSIGN_DATA_UB = assignVal.assign_data_ub || [];
+                    window.ASSIGN_SLS_DATA_UMUM = assignVal.assign_sls_data_umum || [];
+                    window.ASSIGN_SLS_DATA_UB = assignVal.assign_sls_data_ub || [];
+                    window.PETUGAS_DATA_UMUM = assignVal.petugas_data_umum || [];
+                    window.PETUGAS_DATA_UB = assignVal.petugas_data_ub || [];
+                    
+                    const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+                    if (activeSubtab === 'se2026') {
+                        window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM;
+                        window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM;
+                        window.PETUGAS_DATA = window.PETUGAS_DATA_UMUM;
+                    } else {
+                        window.ASSIGN_DATA = window.ASSIGN_DATA_UB;
+                        window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UB;
+                        window.PETUGAS_DATA = window.PETUGAS_DATA_UB;
+                    }
+                    assignLoadedFromDb = true;
+                    console.log("Loaded ASSIGN_DATA from Supabase.");
+                }
+            } catch (e) {
+                console.warn("Failed to fetch ASSIGN_DATA from Supabase:", e);
+            }
+        }
+
+        if (!ipasLoadedFromDb) {
+            // Dynamically reload IPAS ipas_data.js
+            await new Promise((resolve) => {
+                const script = document.createElement('script');
+                script.src = 'ipas_data.js?v=' + Date.now();
+                script.onload = () => resolve();
+                script.onerror = () => resolve();
+                document.head.appendChild(script);
+            });
+        }
+
+        if (!assignLoadedFromDb) {
+            // Dynamically reload assign_data.js
+            await new Promise((resolve) => {
+                const script = document.createElement('script');
+                script.src = 'assign_data.js?v=' + Date.now();
+                script.onload = () => resolve();
+                script.onerror = () => resolve();
+                document.head.appendChild(script);
+            });
+        }
 
         companies = processGroupedData(sourceData);
 
