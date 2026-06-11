@@ -15,6 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
         return text.replace(regex, '<mark class="highlight">$1</mark>');
     }
 
+    // Helper to calculate percentage and round down (floor) to prevent false 100.00%
+    function floorPct(val, total) {
+        if (!total || total <= 0) return '0.00';
+        if (val >= total) return '100.00';
+        const pct = (val / total) * 100;
+        const floored = Math.floor(pct * 100) / 100;
+        if (floored >= 100 && val < total) {
+            return '99.99';
+        }
+        return floored.toFixed(2);
+    }
+
     // UI elements
     const searchInput = document.getElementById('search-input');
     const sortSelect = document.getElementById('sort-select');
@@ -725,7 +737,7 @@ document.addEventListener('DOMContentLoaded', () => {
             prelist = ipasDataObj[provTotalKey];
         }
 
-        const persentase = prelist > 0 ? ((submitted / prelist) * 100).toFixed(2) : '0.00';
+        const persentase = floorPct(submitted, prelist);
         const sisa = prelist - submitted;
 
         // Format helper
@@ -1031,8 +1043,8 @@ document.addEventListener('DOMContentLoaded', () => {
             totalSudah += assigned;
             totalBelum += unassigned;
 
-            const pct = total > 0 ? ((assigned / total) * 100) : 0;
-            const pctText = pct.toFixed(2);
+            const pctText = floorPct(assigned, total);
+            const pct = parseFloat(pctText);
 
             let pctBgColor = '#047857'; // Green (high)
             if (pct < 50) {
@@ -1057,7 +1069,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </tr>`;
         }).join('');
 
-        const totalPct = totalUsaha > 0 ? ((totalSudah / totalUsaha) * 100) : 0;
+        const totalPctText = floorPct(totalSudah, totalUsaha);
+        const totalPct = parseFloat(totalPctText);
         let totalPctBgColor = '#047857';
         if (totalPct < 50) {
             totalPctBgColor = '#b91c1c';
@@ -1073,7 +1086,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td style="${tdBase} text-align: right; font-family: monospace; color: var(--text-secondary);">${fmt(totalUsaha)}</td>
             <td style="${tdBase} text-align: right; font-family: monospace; color: #10b981;">${fmt(totalSudah)}</td>
             <td style="${tdBase} text-align: right; font-family: monospace; color: #ef4444;">${fmt(totalBelum)}</td>
-            <td style="${tdBase} text-align: center; background-color: ${totalPctBgColor}; color: white; font-weight: 800; font-family: monospace;">${totalPct.toFixed(2)}</td>
+            <td style="${tdBase} text-align: center; background-color: ${totalPctBgColor}; color: white; font-weight: 800; font-family: monospace;">${totalPctText}</td>
         </tr>`;
     }
 
@@ -1194,10 +1207,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 totalTargets += (d.total || 0);
             });
 
-            const pct = totalTargets > 0 ? (totalAssigned / totalTargets) * 100 : 0;
+            const pctText = floorPct(totalAssigned, totalTargets);
+            const pct = parseFloat(pctText);
 
             const pctCenter = document.getElementById('gauge-percent-center');
-            if (pctCenter) pctCenter.innerText = pct.toFixed(2) + '%';
+            if (pctCenter) pctCenter.innerText = pctText + '%';
 
             const statsDetails = document.getElementById('gauge-stats-details');
             if (statsDetails) {
@@ -1914,15 +1928,14 @@ document.addEventListener('DOMContentLoaded', () => {
             totalUsaha += total;
             totalSudah += assigned;
             totalBelum += unassigned;
-            
-            const pct = total > 0 ? ((assigned / total) * 100).toFixed(2) : "0.00";
+            const pct = floorPct(assigned, total);
             const name = d.nama_kab.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
             
             return [idx + 1, d.kode_kab, name, total, assigned, unassigned, pct];
         });
 
         // Add total row
-        const totalPct = totalUsaha > 0 ? ((totalSudah / totalUsaha) * 100).toFixed(2) : "0.00";
+        const totalPct = floorPct(totalSudah, totalUsaha);
         rows.push(["", "", "TOTAL", totalUsaha, totalSudah, totalBelum, totalPct]);
 
         const prefix = activeSubtab === 'ub' ? 'UB' : 'Umum';
