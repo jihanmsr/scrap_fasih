@@ -876,7 +876,51 @@
                         <div style="display: flex; gap: 0.35rem; align-items: center;" id="sls-pagination-buttons">
                         </div>
                     </div>
+                <div class="stats-section" style="margin-top: 3rem;">
+                    <h3 style="margin-top: 0; color: var(--text); font-size: 1.2rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700;">
+                        <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="20">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span id="petugas-title">Daftar Petugas dan Wilayah Tugas</span>
+                    </h3>
+                    
+                    <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                        <div style="flex: 1; min-width: 250px; position: relative;">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);" viewbox="0 0 24 24">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                            </svg>
+                            <input type="text" id="petugas-search-input" placeholder="Cari nama pengguna, email, peran..." style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
+                        </div>
+                    </div>
+
+                    <div class="ipas-table-wrapper" style="max-height: 500px; overflow-y: auto;">
+                        <table class="ipas-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 60px; text-align: center;">No</th>
+                                    <th>Pengguna</th>
+                                    <th style="width: 150px;">Peran</th>
+                                    <th>Wilayah</th>
+                                </tr>
+                            </thead>
+                            <tbody id="petugas-table-body">
+                                <tr>
+                                    <td colspan="4" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat rincian petugas...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div id="petugas-pagination" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
+                        <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;" id="petugas-pagination-info">Menampilkan 0 - 0 dari 0 Petugas</div>
+                        <div style="display: flex; gap: 0.35rem; align-items: center;" id="petugas-pagination-buttons"></div>
+                    </div>
                 </div>
+            </div>
         </main>
     </div>
     <div class="modal-overlay" id="businesses-modal">

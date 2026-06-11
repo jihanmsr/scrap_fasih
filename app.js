@@ -609,6 +609,14 @@ document.addEventListener('DOMContentLoaded', () => {
             renderSlsTable();
         });
     }
+
+    const petugasSearchInput = document.getElementById('petugas-search-input');
+    if (petugasSearchInput) {
+        petugasSearchInput.addEventListener('input', () => {
+            window.petugasCurrentPage = 1;
+            renderPetugasTable();
+        });
+    }
     const slsAssignmentFilter = document.getElementById('sls-assignment-filter');
     if (slsAssignmentFilter) {
         slsAssignmentFilter.addEventListener('change', () => {
@@ -853,7 +861,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const encodedBusinessesJSON = encodeURIComponent(JSON.stringify(item.new_businesses || []));
 
             const penambahanBadge = (item.new_usaha_today > 0 || item.new_usaha_yesterday > 0)
-                ? `<span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 700; background-color: rgba(255, 255, 255, 0.05); color: var(--text-secondary); border: 1px solid var(--card-border); opacity: 0.85;">
+                ? `<span onclick="openNewBusinessesModal('${kabupatenEscaped}', '${encodedBusinessesJSON}')" style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 700; background-color: rgba(99, 102, 241, 0.15); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.3); opacity: 0.95; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundColor='rgba(99, 102, 241, 0.25)';" onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='rgba(99, 102, 241, 0.15)';">
                     +${item.new_usaha_today} | +${item.new_usaha_yesterday}
                    </span>`
                 : `<span style="color: var(--text-muted); font-size: 0.85rem;">-</span>`;
@@ -1038,7 +1046,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const bgColor = idx % 2 === 0 ? '' : 'background-color: rgba(99,102,241,0.03);';
 
             return `
-            <tr style="${rowStyle} ${bgColor}">
+            <tr onclick="focusKabSls('${namaKabClean}')" style="${rowStyle} ${bgColor} cursor: pointer; transition: background-color 0.15s;" onmouseover="this.style.backgroundColor='rgba(99, 102, 241, 0.08)';" onmouseout="this.style.backgroundColor='${idx % 2 === 0 ? '' : 'rgba(99, 102, 241, 0.03)'}';">
                 <td style="${tdBase} text-align: center; color: var(--text-secondary); font-weight: 500;">${idx + 1}</td>
                 <td style="${tdBase} text-align: center; font-family: monospace; font-size: 0.85rem; color: var(--text-secondary);">${d.kode_kab}</td>
                 <td style="${tdBase} font-weight: 600; color: var(--text);">${namaKabClean}</td>
@@ -1068,6 +1076,31 @@ document.addEventListener('DOMContentLoaded', () => {
             <td style="${tdBase} text-align: center; background-color: ${totalPctBgColor}; color: white; font-weight: 800; font-family: monospace;">${totalPct.toFixed(2)}</td>
         </tr>`;
     }
+
+    window.focusKabSls = function (kabName) {
+        const kabSelect = document.getElementById('sls-kab-filter');
+        if (!kabSelect) return;
+
+        let matchedVal = 'all';
+        for (let i = 0; i < kabSelect.options.length; i++) {
+            const optText = kabSelect.options[i].text.toUpperCase();
+            const optVal = kabSelect.options[i].value.toUpperCase();
+            const target = kabName.toUpperCase();
+            if (optText.includes(target) || target.includes(optText) || optVal.includes(target) || target.includes(optVal)) {
+                matchedVal = kabSelect.options[i].value;
+                break;
+            }
+        }
+
+        kabSelect.value = matchedVal;
+        kabSelect.dispatchEvent(new Event('change'));
+
+        const slsSearchInput = document.getElementById('sls-search-input');
+        if (slsSearchInput) {
+            slsSearchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            slsSearchInput.focus();
+        }
+    };
 
     let assignChartInstance = null;
     let progressGaugeInstance = null;
@@ -1590,6 +1623,177 @@ document.addEventListener('DOMContentLoaded', () => {
             nextBtn.addEventListener('click', () => {
                 window.slsCurrentPage++;
                 renderSlsTable();
+            });
+            btnContainer.appendChild(nextBtn);
+        }
+    }
+
+    // --- DAFTAR PETUGAS TABLE ---
+    window.petugasCurrentPage = 1;
+    const petugasRowsPerPage = 50;
+
+    window.renderPetugasTable = function () {
+        const petugasData = window.PETUGAS_DATA || [];
+        const tbody = document.getElementById('petugas-table-body');
+        const paginationInfo = document.getElementById('petugas-pagination-info');
+        if (!tbody || !paginationInfo) return;
+
+        const searchInputEl = document.getElementById('petugas-search-input');
+        const searchVal = searchInputEl ? searchInputEl.value.toLowerCase().trim() : '';
+
+        // Filter and Sort
+        let filteredData = petugasData.filter(item => {
+            if (searchVal) {
+                const uNameStr = item.username || '';
+                const emailStr = item.email || '';
+                const roleStr = item.roleName || '';
+                const regionsStr = (item.regions || []).map(r => r.regionName).join(' ');
+                const matchText = (uNameStr + ' ' + emailStr + ' ' + roleStr + ' ' + regionsStr).toLowerCase();
+                if (!matchText.includes(searchVal)) return false;
+            }
+            return true;
+        });
+
+        // Default sort by username
+        filteredData.sort((a, b) => (a.username || '').localeCompare(b.username || ''));
+
+        const totalItems = filteredData.length;
+        if (totalItems === 0) {
+            tbody.innerHTML = `<tr><td colspan="4" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data petugas yang cocok.</td></tr>`;
+            paginationInfo.innerText = `Menampilkan 0 - 0 dari 0 Petugas`;
+            renderPetugasPaginationButtons(0);
+            return;
+        }
+
+        const maxPage = Math.ceil(totalItems / petugasRowsPerPage);
+        if (window.petugasCurrentPage > maxPage) window.petugasCurrentPage = maxPage;
+        if (window.petugasCurrentPage < 1) window.petugasCurrentPage = 1;
+
+        const startIdx = (window.petugasCurrentPage - 1) * petugasRowsPerPage;
+        const endIdx = Math.min(startIdx + petugasRowsPerPage, totalItems);
+
+        paginationInfo.innerText = `Menampilkan ${startIdx + 1} - ${endIdx} dari ${totalItems} Petugas`;
+
+        const pageData = filteredData.slice(startIdx, endIdx);
+
+        tbody.innerHTML = pageData.map((item, index) => {
+            const rowNumber = startIdx + index + 1;
+            
+            const hl = (txt) => highlightText(txt, searchVal);
+            
+            const regionBadges = (item.regions || []).map(r => {
+                const badgeTxt = r.regionName && r.regionName !== '-' ? r.regionName : 'LAINNYA';
+                const codeTxt = r.regionCode ? ` (${r.regionCode})` : '';
+                return `<span style="display: inline-flex; align-items: center; background: rgba(99, 102, 241, 0.08); color: var(--text-primary); border: 1px solid rgba(99, 102, 241, 0.2); padding: 0.2rem 0.6rem; border-radius: 1rem; font-size: 0.75rem; white-space: nowrap; margin: 0.15rem;">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width: 12px; height: 12px; margin-right: 0.35rem; color: var(--primary);" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    ${hl(badgeTxt + codeTxt)}
+                </span>`;
+            }).join('');
+            
+            const wilHtml = regionBadges || '<span style="color:var(--text-muted); font-size:0.8rem;">Tidak ada wilayah tugas</span>';
+
+            return `
+                <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.2s;">
+                    <td style="padding: 1rem; color: var(--text-secondary); text-align: center; font-weight: 500;">${rowNumber}</td>
+                    <td style="padding: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--card-hover-bg); border: 1px solid var(--card-border); display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            </div>
+                            <div style="display: flex; flex-direction: column;">
+                                <span style="font-weight: 600; color: var(--text-primary);">${hl(item.username || '-')}</span>
+                                <span style="font-size: 0.8rem; color: var(--text-secondary);">${hl(item.email || '-')}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="padding: 1rem;">
+                        <span style="display: inline-block; padding: 0.25rem 0.6rem; border-radius: 0.5rem; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); color: #f59e0b; font-size: 0.75rem; font-weight: 700;">
+                            ${hl(item.roleName || '-')}
+                        </span>
+                    </td>
+                    <td style="padding: 1rem;">
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                            ${wilHtml}
+                        </div>
+                    </td>
+                </tr>
+            `;
+        }).join('');
+
+        renderPetugasPaginationButtons(maxPage);
+    };
+
+    function renderPetugasPaginationButtons(maxPage) {
+        const btnContainer = document.getElementById('petugas-pagination-buttons');
+        if (!btnContainer) return;
+        btnContainer.innerHTML = '';
+
+        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
+        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
+
+        if (window.petugasCurrentPage > 1) {
+            const prevBtn = document.createElement('button');
+            prevBtn.innerHTML = '&lt;';
+            prevBtn.style.cssText = btnStyle;
+            prevBtn.addEventListener('click', () => {
+                window.petugasCurrentPage--;
+                renderPetugasTable();
+            });
+            btnContainer.appendChild(prevBtn);
+        }
+
+        let startPage = Math.max(1, window.petugasCurrentPage - 2);
+        let endPage = Math.min(maxPage, window.petugasCurrentPage + 2);
+
+        if (startPage > 1) {
+            const page1 = document.createElement('button');
+            page1.textContent = '1';
+            page1.style.cssText = btnStyle;
+            page1.addEventListener('click', () => { window.petugasCurrentPage = 1; renderPetugasTable(); });
+            btnContainer.appendChild(page1);
+
+            if (startPage > 2) {
+                const dots = document.createElement('span');
+                dots.textContent = '...';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                btnContainer.appendChild(dots);
+            }
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            const btn = document.createElement('button');
+            btn.textContent = i;
+            if (i === window.petugasCurrentPage) {
+                btn.style.cssText = activeStyle;
+            } else {
+                btn.style.cssText = btnStyle;
+                btn.addEventListener('click', () => { window.petugasCurrentPage = i; renderPetugasTable(); });
+            }
+            btnContainer.appendChild(btn);
+        }
+
+        if (endPage < maxPage) {
+            if (endPage < maxPage - 1) {
+                const dots = document.createElement('span');
+                dots.textContent = '...';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                btnContainer.appendChild(dots);
+            }
+
+            const pageLast = document.createElement('button');
+            pageLast.textContent = maxPage;
+            pageLast.style.cssText = btnStyle;
+            pageLast.addEventListener('click', () => { window.petugasCurrentPage = maxPage; renderPetugasTable(); });
+            btnContainer.appendChild(pageLast);
+        }
+
+        if (window.petugasCurrentPage < maxPage) {
+            const nextBtn = document.createElement('button');
+            nextBtn.innerHTML = '&gt;';
+            nextBtn.style.cssText = btnStyle;
+            nextBtn.addEventListener('click', () => {
+                window.petugasCurrentPage++;
+                renderPetugasTable();
             });
             btnContainer.appendChild(nextBtn);
         }

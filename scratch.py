@@ -27,7 +27,7 @@ async def main():
                 return await r.json();
             }
         """, {
-            "url": "https://fasih-sm.bps.go.id/app/api/survey-user/api/v1/allocations-view/by-user?surveyRoleId=7bcf696d-9c0e-4e1a-b58f-eacc79bfb499&surveyPeriodId=37526b20-81c8-42f5-a895-6190137d7394&page=0&size=10",
+            "url": "https://fasih-sm.bps.go.id/app/api/survey-user/api/v1/allocations-view/by-user?surveyPeriodId=37526b20-81c8-42f5-a895-6190137d7394&page=0&size=10",
             "token": token
         })
         print(json.dumps(res, indent=2))

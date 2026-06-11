@@ -37,6 +37,26 @@ def check_port_open(port=9223):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         return s.connect_ex(('localhost', port)) == 0
 
+import requests
+
+def create_http_session(cookies, xsrf_token):
+    session = requests.Session()
+    for c in cookies:
+        session.cookies.set(
+            c['name'],
+            c['value'],
+            domain=c.get('domain', 'fasih-sm.bps.go.id'),
+            path=c.get('path', '/')
+        )
+    headers = {
+        "Content-Type": "application/json",
+        "X-XSRF-TOKEN": xsrf_token,
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/json, text/plain, */*"
+    }
+    session.headers.update(headers)
+    return session
+
 def cleanup_chrome_cache(user_data_dir):
     cache_dirs = [
         os.path.join(user_data_dir, "Default", "Cache"),
@@ -480,30 +500,27 @@ def scrape_via_api():
             survey_period_id = match.group(2)
             logging.info(f"Mendeteksi surveyPeriodId secara dinamis dari URL: {survey_period_id}")
 
+        # Inisialisasi HTTP session untuk request cepat lewat python requests
+        http_session = create_http_session(cookies, xsrf_token)
+
         # Resolve Kabupaten/Kota UUIDs programmatically without opening the filter UI
         logging.info("Membaca UUID untuk Kabupaten/Kota secara programmatik dari BPS...")
         kab_map = {}
         try:
-            uuid_map = page.evaluate("""
-                async (token) => {
-                    const kabCodes = ["7201", "7202", "7203", "7204", "7205", "7206", "7207", "7208", "7209", "7210", "7211", "7212", "7271"];
-                    const map = {};
-                    for (const code of kabCodes) {
-                        try {
-                            const url = `https://fasih-sm.bps.go.id/app/api/region/api/v1/region/custom-by-smallest-code-and-level?groupId=6b0b053f-aa43-4855-ac8f-26857b735c93&smallestLevelFullCode=${code}&level=2`;
-                            const res = await fetch(url, { headers: { "X-XSRF-TOKEN": token } });
-                            const json = await res.json();
-                            if (json && json.success && json.data) {
-                                const level2 = json.data.level1.level2;
-                                if (level2) {
-                                    map[level2.code] = { "id": level2.id, "name": level2.name };
-                                }
-                            }
-                        } catch (e) {}
-                    }
-                    return map;
-                }
-            """, xsrf_token)
+            kab_codes = ["7201", "7202", "7203", "7204", "7205", "7206", "7207", "7208", "7209", "7210", "7211", "7212", "7271"]
+            uuid_map = {}
+            for code in kab_codes:
+                url = f"https://fasih-sm.bps.go.id/app/api/region/api/v1/region/custom-by-smallest-code-and-level?groupId=6b0b053f-aa43-4855-ac8f-26857b735c93&smallestLevelFullCode={code}&level=2"
+                try:
+                    res = http_session.get(url, timeout=10)
+                    if res.status_code == 200:
+                        json_data = res.json()
+                        if json_data and json_data.get("success") and json_data.get("data"):
+                            level2 = json_data["data"].get("level1", {}).get("level2")
+                            if level2:
+                                uuid_map[level2["code"]] = { "id": level2["id"], "name": level2["name"] }
+                except Exception as e:
+                    logging.warning(f"Error fetching region UUID {code}: {e}")
 
             # Map the resolved codes to our local names list
             kab_names_static = {
@@ -572,20 +589,12 @@ def scrape_via_api():
                 }
 
                 try:
-                    res_eval = page.evaluate("""
-                        async ({url, payload, token}) => {
-                            const r = await fetch(url, {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type": "application/json",
-                                    "X-XSRF-TOKEN": token
-                                },
-                                body: JSON.stringify(payload)
-                            });
-                            if (!r.ok) return { status: r.status, text: await r.text() };
-                            return { status: r.status, json: await r.json() };
-                        }
-                    """, {"url": datatable_url, "payload": payload, "token": xsrf_token})
+                    res = http_session.post(datatable_url, json=payload, timeout=20)
+                    status_code = res.status_code
+                    if status_code == 200:
+                        res_eval = {"status": 200, "json": res.json()}
+                    else:
+                        res_eval = {"status": status_code}
                 except Exception as e:
                     logging.error(f"Gagal memanggil API Datatable untuk {kab_name} (start: {start_index}): {e}")
                     break
@@ -593,7 +602,7 @@ def scrape_via_api():
                 if res_eval.get("status") == 401:
                     logging.warning(f"Sesi kadaluarsa (HTTP 401) saat memanggil API Datatable untuk {kab_name}. Meminta re-autentikasi...")
                     xsrf_token, cookies = get_valid_session(context, page)
-                    cookie_header = "; ".join([f"{c['name']}={c['value']}" for c in cookies])
+                    http_session = create_http_session(cookies, xsrf_token)
                     continue
 
                 if res_eval.get("status") != 200:
@@ -613,9 +622,9 @@ def scrape_via_api():
                 start_index += page_length
                 
                 if start_index >= total_hits_part:
-                    break
+                     break
                     
-                time.sleep(0.3)
+                time.sleep(0.1)
 
         companies_data = all_companies_data
         total_hits = len(companies_data)
@@ -698,24 +707,15 @@ def scrape_via_api():
                     }
                 }
 
-                # Retry mechanism if connection resets (panggilan via browser fetch)
+                # Retry mechanism if connection resets (panggilan via requests)
                 res_eval_email = None
                 for attempt in range(1, 4):
                     try:
-                        res_eval_email = page.evaluate("""
-                            async ({url, payload, token}) => {
-                                const r = await fetch(url, {
-                                    method: "POST",
-                                    headers: {
-                                        "Content-Type": "application/json",
-                                        "X-XSRF-TOKEN": token
-                                    },
-                                    body: JSON.stringify(payload)
-                                });
-                                if (!r.ok) return { status: r.status };
-                                return { status: r.status, json: await r.json() };
-                            }
-                        """, {"url": email_datatable_url, "payload": email_payload, "token": xsrf_token})
+                        res = http_session.post(email_datatable_url, json=email_payload, timeout=15)
+                        if res.status_code == 200:
+                            res_eval_email = {"status": 200, "json": res.json()}
+                        else:
+                            res_eval_email = {"status": res.status_code}
                         break
                     except Exception as ex:
                         logging.warning(f"Percobaan {attempt} gagal untuk {code}: {ex}")
@@ -726,19 +726,11 @@ def scrape_via_api():
                 res_eval_events = None
                 for attempt in range(1, 4):
                     try:
-                        res_eval_events = page.evaluate("""
-                            async ({url, token}) => {
-                                const r = await fetch(url, {
-                                    method: "GET",
-                                    headers: {
-                                        "Accept": "application/json",
-                                        "X-XSRF-TOKEN": token
-                                    }
-                                });
-                                if (!r.ok) return { status: r.status };
-                                return { status: r.status, json: await r.json() };
-                            }
-                        """, {"url": email_events_url, "token": xsrf_token})
+                        res = http_session.get(email_events_url, timeout=15)
+                        if res.status_code == 200:
+                            res_eval_events = {"status": 200, "json": res.json()}
+                        else:
+                            res_eval_events = {"status": res.status_code}
                         break
                     except Exception as ex:
                         logging.warning(f"Percobaan events {attempt} gagal untuk {code}: {ex}")
@@ -751,7 +743,7 @@ def scrape_via_api():
                 if status_email == 401 or status_events == 401:
                     logging.warning(f"Sesi kadaluarsa (HTTP 401) saat mengambil riwayat email untuk {code}. Meminta re-autentikasi...")
                     xsrf_token, cookies = get_valid_session(context, page)
-                    cookie_header = "; ".join([f"{c['name']}={c['value']}" for c in cookies])
+                    http_session = create_http_session(cookies, xsrf_token)
                     continue
                 else:
                     break

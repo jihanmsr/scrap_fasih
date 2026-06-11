@@ -438,6 +438,54 @@ async def fetch_sls_by_report_api(context, token, survey_period_id, region1_id, 
     print(f"     ✅ Berhasil menarik total {len(processed_sls)} SLS untuk {label}.")
     return processed_sls
 
+async def fetch_petugas(context, token, survey_period_id, label):
+    print(f"\n[{label}] Menarik rincian Petugas dari API...")
+    users = []
+    page_idx = 0
+    size = 100
+    
+    target_page = None
+    for p in context.pages:
+        if "fasih-sm.bps.go.id" in p.url:
+            target_page = p
+            break
+    if not target_page:
+        target_page = context.pages[0] if context.pages else await context.new_page()
+
+    while True:
+        url = f"https://fasih-sm.bps.go.id/app/api/survey-user/api/v1/allocations-view/by-user?surveyPeriodId={survey_period_id}&page={page_idx}&size={size}"
+        try:
+            res = await target_page.evaluate("""
+                async ({url, token}) => {
+                    const r = await fetch(url, {
+                        headers: { "Accept": "application/json", "X-XSRF-TOKEN": token }
+                    });
+                    if(!r.ok) return {error: r.statusText, status: r.status};
+                    return await r.json();
+                }
+            """, {"url": url, "token": token})
+            
+            if "error" in res or not res.get("success"):
+                print(f"     [Error] Gagal fetch page {page_idx}: {res}")
+                break
+                
+            data = res.get("data", {})
+            content = data.get("content", [])
+            users.extend(content)
+            
+            print(f"     -> Terambil {len(content)} petugas dari page {page_idx+1}/{data.get('totalPages', 1)}")
+            
+            if data.get("isLast", True):
+                break
+            page_idx += 1
+            await asyncio.sleep(0.5)
+        except Exception as e:
+            print(f"     [Exception] {e}")
+            break
+
+    print(f"     ✅ Total {len(users)} petugas berhasil ditarik.")
+    return users
+
 async def get_authenticated_context(p):
     abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
     os.makedirs(abs_user_data_dir, exist_ok=True)
@@ -521,19 +569,27 @@ async def scrape_assign():
         processed_sls_umum = await fetch_sls_by_report_api(context, token, SURVEY_CONFIGS[0]["survey_period_id"], SURVEY_CONFIGS[0]["region1_id"], SURVEY_CONFIGS[0]["kab_region_map"], "SE Umum")
         processed_sls_ub = await fetch_sls_by_report_api(context, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], SURVEY_CONFIGS[1]["kab_region_map"], "SE UB")
 
+        # 3. Tarik Petugas dan Wilayah Tugasnya
+        processed_petugas_umum = await fetch_petugas(context, token, SURVEY_CONFIGS[0]["survey_period_id"], "SE Umum")
+        processed_petugas_ub = await fetch_petugas(context, token, SURVEY_CONFIGS[1]["survey_period_id"], "SE UB")
+
         js_content  = f"window.ASSIGN_DATA_UMUM = {json.dumps(processed_data_umum, indent=4, ensure_ascii=False)};\n"
         js_content += f"window.ASSIGN_DATA_UB   = {json.dumps(processed_data_ub,   indent=4, ensure_ascii=False)};\n"
         js_content += f"window.ASSIGN_SLS_DATA_UMUM = {json.dumps(processed_sls_umum, indent=4, ensure_ascii=False)};\n"
         js_content += f"window.ASSIGN_SLS_DATA_UB   = {json.dumps(processed_sls_ub,   indent=4, ensure_ascii=False)};\n"
+        js_content += f"window.PETUGAS_DATA_UMUM = {json.dumps(processed_petugas_umum, indent=4, ensure_ascii=False)};\n"
+        js_content += f"window.PETUGAS_DATA_UB   = {json.dumps(processed_petugas_ub,   indent=4, ensure_ascii=False)};\n"
         
         js_content += """
 const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
 if (activeSubtab === 'se2026') {
     window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM || [];
     window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM || [];
+    window.PETUGAS_DATA = window.PETUGAS_DATA_UMUM || [];
 } else {
     window.ASSIGN_DATA = window.ASSIGN_DATA_UB || [];
     window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UB || [];
+    window.PETUGAS_DATA = window.PETUGAS_DATA_UB || [];
 }
 
 function filterAssignData(type) {
@@ -552,6 +608,7 @@ function filterAssignData(type) {
         
         window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM;
         window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM;
+        window.PETUGAS_DATA = window.PETUGAS_DATA_UMUM;
     } else {
         if(btnUB) { btnUB.style.backgroundColor = 'var(--primary)'; btnUB.style.color = 'white'; }
         if(btnUmum) { btnUmum.style.backgroundColor = 'transparent'; btnUmum.style.color = 'var(--text-secondary)'; }
@@ -560,6 +617,7 @@ function filterAssignData(type) {
 
         window.ASSIGN_DATA = window.ASSIGN_DATA_UB;
         window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UB;
+        window.PETUGAS_DATA = window.PETUGAS_DATA_UB;
     }
 
     if (typeof renderAssignChart === 'function') renderAssignChart();
@@ -567,6 +625,10 @@ function filterAssignData(type) {
     if (typeof renderSlsTable === 'function') {
         window.slsCurrentPage = 1;
         renderSlsTable();
+    }
+    if (typeof renderPetugasTable === 'function') {
+        window.petugasCurrentPage = 1;
+        renderPetugasTable();
     }
 }
 """
