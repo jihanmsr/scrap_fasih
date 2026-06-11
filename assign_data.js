@@ -2,18 +2,18 @@ window.ASSIGN_DATA_UMUM = [
     {
         "kode_kab": "7201",
         "nama_kab": "[01] BANGGAI KEPULAUAN",
-        "total": 43823,
-        "assigned": 0,
-        "have_not_assigned": 43823,
-        "timestamp": "2026-06-11T17:14:36.437495"
+        "total": 43834,
+        "assigned": 42327,
+        "have_not_assigned": 1507,
+        "timestamp": "2026-06-12T05:44:49.064836"
     },
     {
         "kode_kab": "7202",
         "nama_kab": "[02] BANGGAI",
         "total": 138111,
-        "assigned": 136304,
-        "have_not_assigned": 1807,
-        "timestamp": "2026-06-11T17:14:36.437426"
+        "assigned": 136302,
+        "have_not_assigned": 1809,
+        "timestamp": "2026-06-12T05:44:49.064768"
     },
     {
         "kode_kab": "7203",
@@ -21,71 +21,71 @@ window.ASSIGN_DATA_UMUM = [
         "total": 47729,
         "assigned": 47729,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-11T17:14:36.437487"
+        "timestamp": "2026-06-12T05:44:49.064828"
     },
     {
         "kode_kab": "7204",
         "nama_kab": "[04] POSO",
-        "total": 105388,
-        "assigned": 13809,
-        "have_not_assigned": 91579,
-        "timestamp": "2026-06-11T17:14:36.437445"
+        "total": 105395,
+        "assigned": 21991,
+        "have_not_assigned": 83404,
+        "timestamp": "2026-06-12T05:44:49.064787"
     },
     {
         "kode_kab": "7205",
         "nama_kab": "[05] DONGGALA",
         "total": 105502,
-        "assigned": 105427,
-        "have_not_assigned": 75,
-        "timestamp": "2026-06-11T17:14:36.437436"
+        "assigned": 99577,
+        "have_not_assigned": 5925,
+        "timestamp": "2026-06-12T05:44:49.064778"
     },
     {
         "kode_kab": "7206",
         "nama_kab": "[06] TOLI-TOLI",
-        "total": 75960,
-        "assigned": 75824,
-        "have_not_assigned": 136,
-        "timestamp": "2026-06-11T17:14:36.437463"
+        "total": 75959,
+        "assigned": 75919,
+        "have_not_assigned": 40,
+        "timestamp": "2026-06-12T05:44:49.064803"
     },
     {
         "kode_kab": "7207",
         "nama_kab": "[07] BUOL",
         "total": 57327,
-        "assigned": 56358,
-        "have_not_assigned": 969,
-        "timestamp": "2026-06-11T17:14:36.437479"
+        "assigned": 56339,
+        "have_not_assigned": 988,
+        "timestamp": "2026-06-12T05:44:49.064820"
     },
     {
         "kode_kab": "7208",
         "nama_kab": "[08] PARIGI MOUTONG",
         "total": 169384,
-        "assigned": 169271,
-        "have_not_assigned": 113,
-        "timestamp": "2026-06-11T17:14:36.437350"
+        "assigned": 169270,
+        "have_not_assigned": 114,
+        "timestamp": "2026-06-12T05:44:49.064690"
     },
     {
         "kode_kab": "7209",
         "nama_kab": "[09] TOJO UNA-UNA",
         "total": 57912,
-        "assigned": 57910,
-        "have_not_assigned": 2,
-        "timestamp": "2026-06-11T17:14:36.437471"
+        "assigned": 57908,
+        "have_not_assigned": 4,
+        "timestamp": "2026-06-12T05:44:49.064812"
     },
     {
         "kode_kab": "7210",
         "nama_kab": "[10] SIGI",
         "total": 105041,
-        "assigned": 104803,
-        "have_not_assigned": 238,
-        "timestamp": "2026-06-11T17:14:36.437454"
+        "assigned": 104818,
+        "have_not_assigned": 223,
+        "timestamp": "2026-06-12T05:44:49.064795"
     },
     {
         "kode_kab": "7211",
         "nama_kab": "[11] BANGGAI LAUT",
         "total": 27552,
-        "assigned": 27194,
-        "have_not_assigned": 358,
-        "timestamp": "2026-06-11T17:14:36.437512"
+        "assigned": 27190,
+        "have_not_assigned": 362,
+        "timestamp": "2026-06-12T05:44:49.064852"
     },
     {
         "kode_kab": "7212",
@@ -93,15 +93,15 @@ window.ASSIGN_DATA_UMUM = [
         "total": 42448,
         "assigned": 42448,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-11T17:14:36.437504"
+        "timestamp": "2026-06-12T05:44:49.064844"
     },
     {
         "kode_kab": "7271",
         "nama_kab": "[71] PALU",
         "total": 164079,
-        "assigned": 164031,
-        "have_not_assigned": 48,
-        "timestamp": "2026-06-11T17:14:36.437411"
+        "assigned": 164020,
+        "have_not_assigned": 59,
+        "timestamp": "2026-06-12T05:44:49.064754"
     }
 ];
 window.ASSIGN_DATA_UB   = [
@@ -111,7 +111,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 6,
         "assigned": 0,
         "have_not_assigned": 6,
-        "timestamp": "2026-06-11T17:14:37.707347"
+        "timestamp": "2026-06-12T05:44:49.206816"
     },
     {
         "kode_kab": "7202",
@@ -119,7 +119,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 172,
         "assigned": 3,
         "have_not_assigned": 169,
-        "timestamp": "2026-06-11T17:14:37.707317"
+        "timestamp": "2026-06-12T05:44:49.206726"
     },
     {
         "kode_kab": "7203",
@@ -127,7 +127,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 161,
         "assigned": 1,
         "have_not_assigned": 160,
-        "timestamp": "2026-06-11T17:14:37.707321"
+        "timestamp": "2026-06-12T05:44:49.206736"
     },
     {
         "kode_kab": "7204",
@@ -135,7 +135,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 92,
         "assigned": 0,
         "have_not_assigned": 92,
-        "timestamp": "2026-06-11T17:14:37.707324"
+        "timestamp": "2026-06-12T05:44:49.206744"
     },
     {
         "kode_kab": "7205",
@@ -143,7 +143,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 57,
         "assigned": 1,
         "have_not_assigned": 56,
-        "timestamp": "2026-06-11T17:14:37.707333"
+        "timestamp": "2026-06-12T05:44:49.206771"
     },
     {
         "kode_kab": "7206",
@@ -151,7 +151,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 58,
         "assigned": 0,
         "have_not_assigned": 58,
-        "timestamp": "2026-06-11T17:14:37.707330"
+        "timestamp": "2026-06-12T05:44:49.206761"
     },
     {
         "kode_kab": "7207",
@@ -159,7 +159,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 17,
         "assigned": 0,
         "have_not_assigned": 17,
-        "timestamp": "2026-06-11T17:14:37.707338"
+        "timestamp": "2026-06-12T05:44:49.206791"
     },
     {
         "kode_kab": "7208",
@@ -167,7 +167,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 65,
         "assigned": 65,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-11T17:14:37.707327"
+        "timestamp": "2026-06-12T05:44:49.206753"
     },
     {
         "kode_kab": "7209",
@@ -175,7 +175,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 15,
         "assigned": 0,
         "have_not_assigned": 15,
-        "timestamp": "2026-06-11T17:14:37.707341"
+        "timestamp": "2026-06-12T05:44:49.206799"
     },
     {
         "kode_kab": "7210",
@@ -183,7 +183,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 22,
         "assigned": 18,
         "have_not_assigned": 4,
-        "timestamp": "2026-06-11T17:14:37.707336"
+        "timestamp": "2026-06-12T05:44:49.206782"
     },
     {
         "kode_kab": "7211",
@@ -191,7 +191,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 7,
         "assigned": 0,
         "have_not_assigned": 7,
-        "timestamp": "2026-06-11T17:14:37.707344"
+        "timestamp": "2026-06-12T05:44:49.206807"
     },
     {
         "kode_kab": "7212",
@@ -199,7 +199,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 173,
         "assigned": 0,
         "have_not_assigned": 173,
-        "timestamp": "2026-06-11T17:14:37.707312"
+        "timestamp": "2026-06-12T05:44:49.206713"
     },
     {
         "kode_kab": "7271",
@@ -207,7 +207,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 419,
         "assigned": 0,
         "have_not_assigned": 419,
-        "timestamp": "2026-06-11T17:14:37.707283"
+        "timestamp": "2026-06-12T05:44:49.206661"
     }
 ];
 window.ASSIGN_SLS_DATA_UMUM = [
@@ -217,9 +217,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "-",
         "kec_name": "-",
         "kab_name": "[01] BANGGAI KEPULAUAN",
-        "total": 255,
+        "total": 257,
         "assigned": 0,
-        "unassigned": 255,
+        "unassigned": 257,
         "officers": []
     },
     {
@@ -229,8 +229,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -240,8 +240,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -251,8 +251,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 69,
-        "assigned": 0,
-        "unassigned": 69,
+        "assigned": 69,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -262,8 +262,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -273,8 +273,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -284,8 +284,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -295,8 +295,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -306,8 +306,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -317,8 +317,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -328,8 +328,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -339,8 +339,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -350,8 +350,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -361,8 +361,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -372,8 +372,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -383,8 +383,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -394,8 +394,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -405,8 +405,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -427,8 +427,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -438,8 +438,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -449,8 +449,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -460,8 +460,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -471,8 +471,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -482,8 +482,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -493,8 +493,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -504,8 +504,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -515,8 +515,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -526,8 +526,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -537,8 +537,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 73,
-        "assigned": 0,
-        "unassigned": 73,
+        "assigned": 73,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -548,8 +548,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -559,8 +559,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -570,8 +570,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 70,
-        "assigned": 0,
-        "unassigned": 70,
+        "assigned": 70,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -581,8 +581,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 73,
-        "assigned": 0,
-        "unassigned": 73,
+        "assigned": 73,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -592,8 +592,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -603,8 +603,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -614,8 +614,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -625,8 +625,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -636,8 +636,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -647,8 +647,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -658,8 +658,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -669,8 +669,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -680,8 +680,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -691,8 +691,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -702,8 +702,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -713,8 +713,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -724,8 +724,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 108,
-        "assigned": 0,
-        "unassigned": 108,
+        "assigned": 108,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -735,8 +735,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 77,
-        "assigned": 0,
-        "unassigned": 77,
+        "assigned": 77,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -746,8 +746,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 82,
-        "assigned": 0,
-        "unassigned": 82,
+        "assigned": 82,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -757,8 +757,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 93,
-        "assigned": 0,
-        "unassigned": 93,
+        "assigned": 93,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -768,8 +768,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -801,8 +801,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -812,8 +812,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 75,
-        "assigned": 0,
-        "unassigned": 75,
+        "assigned": 75,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -823,8 +823,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 66,
-        "assigned": 0,
-        "unassigned": 66,
+        "assigned": 66,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -834,8 +834,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -867,8 +867,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 69,
-        "assigned": 0,
-        "unassigned": 69,
+        "assigned": 69,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -889,8 +889,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -900,8 +900,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 68,
-        "assigned": 0,
-        "unassigned": 68,
+        "assigned": 68,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -911,8 +911,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 108,
-        "assigned": 0,
-        "unassigned": 108,
+        "assigned": 108,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -944,8 +944,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -955,8 +955,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -966,8 +966,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 82,
-        "assigned": 0,
-        "unassigned": 82,
+        "assigned": 82,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -977,8 +977,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 70,
-        "assigned": 0,
-        "unassigned": 70,
+        "assigned": 70,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -988,8 +988,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 68,
-        "assigned": 0,
-        "unassigned": 68,
+        "assigned": 68,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -999,8 +999,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 64,
-        "assigned": 0,
-        "unassigned": 64,
+        "assigned": 64,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1010,8 +1010,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1021,8 +1021,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1032,8 +1032,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1043,8 +1043,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1054,8 +1054,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1065,8 +1065,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1087,8 +1087,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1098,8 +1098,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1109,8 +1109,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1120,8 +1120,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1131,8 +1131,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1142,8 +1142,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1153,8 +1153,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1164,8 +1164,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1175,8 +1175,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1186,8 +1186,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1197,8 +1197,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 74,
-        "assigned": 0,
-        "unassigned": 74,
+        "assigned": 74,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1208,8 +1208,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1219,8 +1219,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 76,
-        "assigned": 0,
-        "unassigned": 76,
+        "assigned": 76,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1230,8 +1230,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 64,
-        "assigned": 0,
-        "unassigned": 64,
+        "assigned": 64,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1241,8 +1241,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 75,
-        "assigned": 0,
-        "unassigned": 75,
+        "assigned": 75,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1252,8 +1252,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 4,
-        "assigned": 0,
-        "unassigned": 4,
+        "assigned": 4,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1263,8 +1263,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1274,8 +1274,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1285,8 +1285,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1296,8 +1296,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1307,8 +1307,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1318,8 +1318,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1329,8 +1329,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1340,8 +1340,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1351,8 +1351,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1362,8 +1362,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1373,8 +1373,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1384,8 +1384,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1395,8 +1395,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1406,8 +1406,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1417,8 +1417,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1428,8 +1428,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1439,8 +1439,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1450,8 +1450,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1461,8 +1461,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1472,8 +1472,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1483,8 +1483,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1494,8 +1494,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1505,8 +1505,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1516,8 +1516,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1527,8 +1527,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1538,8 +1538,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1549,8 +1549,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1560,8 +1560,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1571,8 +1571,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1582,8 +1582,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1593,8 +1593,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1604,8 +1604,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1615,8 +1615,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1626,8 +1626,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1637,8 +1637,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1648,8 +1648,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1659,8 +1659,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1670,8 +1670,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1681,8 +1681,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1692,8 +1692,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1703,8 +1703,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1714,8 +1714,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1725,8 +1725,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1736,8 +1736,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1747,8 +1747,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1758,8 +1758,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1769,8 +1769,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1780,8 +1780,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1791,8 +1791,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1802,8 +1802,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1813,8 +1813,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1824,8 +1824,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1835,8 +1835,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 65,
-        "assigned": 0,
-        "unassigned": 65,
+        "assigned": 65,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1846,8 +1846,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1857,8 +1857,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1868,8 +1868,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1879,8 +1879,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1890,8 +1890,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1901,8 +1901,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1912,8 +1912,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1923,8 +1923,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1933,9 +1933,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "KANALI",
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
-        "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "total": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1945,8 +1945,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1956,8 +1956,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1967,8 +1967,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1978,8 +1978,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -1989,8 +1989,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2000,8 +2000,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2011,8 +2011,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2022,8 +2022,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2033,8 +2033,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2044,8 +2044,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2055,8 +2055,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2066,8 +2066,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2077,8 +2077,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 79,
-        "assigned": 0,
-        "unassigned": 79,
+        "assigned": 79,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2088,8 +2088,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOTIKUM SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2099,8 +2099,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2110,8 +2110,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 111,
-        "assigned": 0,
-        "unassigned": 111,
+        "assigned": 111,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2121,8 +2121,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 164,
-        "assigned": 0,
-        "unassigned": 164,
+        "assigned": 164,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2132,8 +2132,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2143,8 +2143,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 86,
-        "assigned": 0,
-        "unassigned": 86,
+        "assigned": 86,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2154,8 +2154,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2165,8 +2165,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 181,
-        "assigned": 0,
-        "unassigned": 181,
+        "assigned": 181,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2176,8 +2176,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2187,8 +2187,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2198,8 +2198,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2209,8 +2209,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2220,8 +2220,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2231,8 +2231,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2242,8 +2242,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2253,8 +2253,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 18,
-        "assigned": 0,
-        "unassigned": 18,
+        "assigned": 18,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2264,8 +2264,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2275,8 +2275,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 23,
-        "assigned": 0,
-        "unassigned": 23,
+        "assigned": 23,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2286,8 +2286,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2297,8 +2297,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2308,8 +2308,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 17,
-        "assigned": 0,
-        "unassigned": 17,
+        "assigned": 17,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2319,8 +2319,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 78,
-        "assigned": 0,
-        "unassigned": 78,
+        "assigned": 78,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2330,8 +2330,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2341,8 +2341,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 93,
-        "assigned": 0,
-        "unassigned": 93,
+        "assigned": 93,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2352,8 +2352,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2363,8 +2363,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 136,
-        "assigned": 0,
-        "unassigned": 136,
+        "assigned": 136,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2373,9 +2373,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "BONGGANAN",
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
-        "total": 260,
-        "assigned": 0,
-        "unassigned": 260,
+        "total": 261,
+        "assigned": 174,
+        "unassigned": 87,
         "officers": []
     },
     {
@@ -2385,8 +2385,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 81,
-        "assigned": 0,
-        "unassigned": 81,
+        "assigned": 81,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2396,8 +2396,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 75,
-        "assigned": 0,
-        "unassigned": 75,
+        "assigned": 75,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2407,8 +2407,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 96,
-        "assigned": 0,
-        "unassigned": 96,
+        "assigned": 96,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2418,8 +2418,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 107,
-        "assigned": 0,
-        "unassigned": 107,
+        "assigned": 107,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2429,8 +2429,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 128,
-        "assigned": 0,
-        "unassigned": 128,
+        "assigned": 128,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2440,8 +2440,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 107,
-        "assigned": 0,
-        "unassigned": 107,
+        "assigned": 107,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2451,8 +2451,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 394,
-        "assigned": 0,
-        "unassigned": 394,
+        "assigned": 394,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2462,8 +2462,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 112,
-        "assigned": 0,
-        "unassigned": 112,
+        "assigned": 112,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2472,9 +2472,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "SALAKAN",
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
-        "total": 132,
-        "assigned": 0,
-        "unassigned": 132,
+        "total": 133,
+        "assigned": 133,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2484,8 +2484,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 118,
-        "assigned": 0,
-        "unassigned": 118,
+        "assigned": 118,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2495,8 +2495,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2506,8 +2506,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2517,8 +2517,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2528,8 +2528,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2539,8 +2539,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2550,8 +2550,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2561,8 +2561,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2572,8 +2572,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 10,
-        "assigned": 0,
-        "unassigned": 10,
+        "assigned": 10,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2583,8 +2583,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2594,8 +2594,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2605,8 +2605,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2616,8 +2616,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2627,8 +2627,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 70,
-        "assigned": 0,
-        "unassigned": 70,
+        "assigned": 70,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2638,8 +2638,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2649,8 +2649,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 72,
-        "assigned": 0,
-        "unassigned": 72,
+        "assigned": 72,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2660,8 +2660,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2671,8 +2671,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 72,
-        "assigned": 0,
-        "unassigned": 72,
+        "assigned": 72,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2682,8 +2682,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 68,
-        "assigned": 0,
-        "unassigned": 68,
+        "assigned": 68,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2693,8 +2693,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 76,
-        "assigned": 0,
-        "unassigned": 76,
+        "assigned": 76,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2704,8 +2704,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2715,8 +2715,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2726,8 +2726,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2737,8 +2737,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2748,8 +2748,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2759,8 +2759,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2770,8 +2770,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2781,8 +2781,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2792,8 +2792,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2803,8 +2803,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2814,8 +2814,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 12,
-        "assigned": 0,
-        "unassigned": 12,
+        "assigned": 12,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2825,8 +2825,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2836,8 +2836,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 6,
-        "assigned": 0,
-        "unassigned": 6,
+        "assigned": 6,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2847,8 +2847,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2858,8 +2858,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 78,
-        "assigned": 0,
-        "unassigned": 78,
+        "assigned": 78,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2869,8 +2869,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2880,8 +2880,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2891,8 +2891,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 6,
-        "assigned": 0,
-        "unassigned": 6,
+        "assigned": 6,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2902,8 +2902,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2913,8 +2913,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2924,8 +2924,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 81,
-        "assigned": 0,
-        "unassigned": 81,
+        "assigned": 81,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2935,8 +2935,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2946,8 +2946,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2957,8 +2957,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2968,8 +2968,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2979,8 +2979,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 105,
-        "assigned": 0,
-        "unassigned": 105,
+        "assigned": 105,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -2990,8 +2990,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3001,8 +3001,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3012,8 +3012,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3023,8 +3023,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3034,8 +3034,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3045,8 +3045,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3056,8 +3056,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 13,
-        "assigned": 0,
-        "unassigned": 13,
+        "assigned": 13,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3067,8 +3067,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3078,8 +3078,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3089,8 +3089,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3100,8 +3100,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3111,8 +3111,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3122,8 +3122,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3133,8 +3133,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3144,8 +3144,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 146,
-        "assigned": 0,
-        "unassigned": 146,
+        "assigned": 146,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3155,8 +3155,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 198,
-        "assigned": 0,
-        "unassigned": 198,
+        "assigned": 198,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3166,8 +3166,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 79,
-        "assigned": 0,
-        "unassigned": 79,
+        "assigned": 79,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3177,8 +3177,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 73,
-        "assigned": 0,
-        "unassigned": 73,
+        "assigned": 73,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3188,8 +3188,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3199,8 +3199,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 93,
-        "assigned": 0,
-        "unassigned": 93,
+        "assigned": 93,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3210,8 +3210,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 104,
-        "assigned": 0,
-        "unassigned": 104,
+        "assigned": 104,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3221,8 +3221,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 202,
-        "assigned": 0,
-        "unassigned": 202,
+        "assigned": 202,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3232,8 +3232,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3243,8 +3243,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 115,
-        "assigned": 0,
-        "unassigned": 115,
+        "assigned": 115,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3254,8 +3254,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 141,
-        "assigned": 0,
-        "unassigned": 141,
+        "assigned": 141,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3265,8 +3265,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 6,
-        "assigned": 0,
-        "unassigned": 6,
+        "assigned": 6,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3276,8 +3276,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3287,8 +3287,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3298,8 +3298,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 113,
-        "assigned": 0,
-        "unassigned": 113,
+        "assigned": 113,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3309,8 +3309,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 137,
-        "assigned": 0,
-        "unassigned": 137,
+        "assigned": 137,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3320,8 +3320,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 126,
-        "assigned": 0,
-        "unassigned": 126,
+        "assigned": 126,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3331,8 +3331,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 3,
-        "assigned": 0,
-        "unassigned": 3,
+        "assigned": 3,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3342,8 +3342,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 120,
-        "assigned": 0,
-        "unassigned": 120,
+        "assigned": 120,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3353,8 +3353,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 122,
-        "assigned": 0,
-        "unassigned": 122,
+        "assigned": 122,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3364,8 +3364,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3375,8 +3375,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 119,
-        "assigned": 0,
-        "unassigned": 119,
+        "assigned": 119,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3397,8 +3397,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3408,8 +3408,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3419,8 +3419,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3430,8 +3430,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 71,
-        "assigned": 0,
-        "unassigned": 71,
+        "assigned": 71,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3441,8 +3441,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3451,9 +3451,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "PAISUMOSONI",
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
-        "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "total": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3463,8 +3463,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 78,
-        "assigned": 0,
-        "unassigned": 78,
+        "assigned": 78,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3485,8 +3485,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3496,8 +3496,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3507,8 +3507,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 66,
-        "assigned": 0,
-        "unassigned": 66,
+        "assigned": 66,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3518,8 +3518,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3529,8 +3529,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3551,8 +3551,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 108,
-        "assigned": 0,
-        "unassigned": 108,
+        "assigned": 108,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3562,8 +3562,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 94,
-        "assigned": 0,
-        "unassigned": 94,
+        "assigned": 94,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3573,8 +3573,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 105,
-        "assigned": 0,
-        "unassigned": 105,
+        "assigned": 105,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3584,8 +3584,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3595,8 +3595,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3606,8 +3606,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3617,8 +3617,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3628,8 +3628,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3639,8 +3639,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3650,8 +3650,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3661,8 +3661,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3672,8 +3672,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3683,8 +3683,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3694,8 +3694,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 83,
-        "assigned": 0,
-        "unassigned": 83,
+        "assigned": 83,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3705,8 +3705,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3716,8 +3716,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 143,
-        "assigned": 0,
-        "unassigned": 143,
+        "assigned": 143,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3727,8 +3727,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3738,8 +3738,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 56,
-        "assigned": 0,
-        "unassigned": 56,
+        "assigned": 56,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3749,8 +3749,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 176,
-        "assigned": 0,
-        "unassigned": 176,
+        "assigned": 176,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3760,8 +3760,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3771,8 +3771,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 82,
-        "assigned": 0,
-        "unassigned": 82,
+        "assigned": 82,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3782,8 +3782,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3793,8 +3793,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3804,8 +3804,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3815,8 +3815,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3826,8 +3826,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 68,
-        "assigned": 0,
-        "unassigned": 68,
+        "assigned": 68,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3837,8 +3837,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3848,8 +3848,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3859,8 +3859,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3870,8 +3870,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3881,8 +3881,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 66,
-        "assigned": 0,
-        "unassigned": 66,
+        "assigned": 66,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3892,8 +3892,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3903,8 +3903,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 77,
-        "assigned": 0,
-        "unassigned": 77,
+        "assigned": 77,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3914,8 +3914,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 70,
-        "assigned": 0,
-        "unassigned": 70,
+        "assigned": 70,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3925,8 +3925,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 108,
-        "assigned": 0,
-        "unassigned": 108,
+        "assigned": 108,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3936,8 +3936,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3947,8 +3947,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3958,8 +3958,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 107,
-        "assigned": 0,
-        "unassigned": 107,
+        "assigned": 107,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3969,8 +3969,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 8,
-        "assigned": 0,
-        "unassigned": 8,
+        "assigned": 8,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3980,8 +3980,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 92,
-        "assigned": 0,
-        "unassigned": 92,
+        "assigned": 92,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -3991,8 +3991,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 76,
-        "assigned": 0,
-        "unassigned": 76,
+        "assigned": 76,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4002,8 +4002,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4013,8 +4013,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4024,8 +4024,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4035,8 +4035,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 23,
-        "assigned": 0,
-        "unassigned": 23,
+        "assigned": 23,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4046,8 +4046,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4057,8 +4057,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 66,
-        "assigned": 0,
-        "unassigned": 66,
+        "assigned": 66,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4068,8 +4068,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 96,
-        "assigned": 0,
-        "unassigned": 96,
+        "assigned": 96,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4079,8 +4079,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4090,8 +4090,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 70,
-        "assigned": 0,
-        "unassigned": 70,
+        "assigned": 70,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4101,8 +4101,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4112,8 +4112,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4123,8 +4123,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 8,
-        "assigned": 0,
-        "unassigned": 8,
+        "assigned": 8,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4134,8 +4134,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 23,
-        "assigned": 0,
-        "unassigned": 23,
+        "assigned": 23,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4145,8 +4145,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4156,8 +4156,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4167,8 +4167,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4178,8 +4178,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4189,8 +4189,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4200,8 +4200,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4211,8 +4211,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4222,8 +4222,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4233,8 +4233,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4244,8 +4244,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4255,8 +4255,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4266,8 +4266,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4277,8 +4277,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4288,8 +4288,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4299,8 +4299,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4310,8 +4310,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4321,8 +4321,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 66,
-        "assigned": 0,
-        "unassigned": 66,
+        "assigned": 66,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4332,8 +4332,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4343,8 +4343,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4354,8 +4354,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4365,8 +4365,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 82,
-        "assigned": 0,
-        "unassigned": 82,
+        "assigned": 82,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4376,8 +4376,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4387,8 +4387,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 64,
-        "assigned": 0,
-        "unassigned": 64,
+        "assigned": 64,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4398,8 +4398,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4409,8 +4409,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 64,
-        "assigned": 0,
-        "unassigned": 64,
+        "assigned": 64,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4420,8 +4420,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4442,8 +4442,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4453,8 +4453,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 98,
-        "assigned": 0,
-        "unassigned": 98,
+        "assigned": 98,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4464,8 +4464,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 74,
-        "assigned": 0,
-        "unassigned": 74,
+        "assigned": 74,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4475,8 +4475,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4486,8 +4486,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4497,8 +4497,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4508,8 +4508,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4519,8 +4519,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4530,8 +4530,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4541,8 +4541,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 65,
-        "assigned": 0,
-        "unassigned": 65,
+        "assigned": 65,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4552,8 +4552,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4563,8 +4563,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4574,8 +4574,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4585,8 +4585,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4596,8 +4596,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4607,8 +4607,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4618,8 +4618,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4629,8 +4629,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 68,
-        "assigned": 0,
-        "unassigned": 68,
+        "assigned": 68,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4640,8 +4640,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4651,8 +4651,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4662,8 +4662,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4673,8 +4673,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4684,8 +4684,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4695,8 +4695,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4706,8 +4706,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4717,8 +4717,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4728,8 +4728,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4739,8 +4739,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4750,8 +4750,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4761,8 +4761,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4772,8 +4772,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4783,8 +4783,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4794,8 +4794,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4805,8 +4805,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4816,8 +4816,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4827,8 +4827,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4838,8 +4838,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4849,8 +4849,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4860,8 +4860,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4871,8 +4871,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 11,
-        "assigned": 0,
-        "unassigned": 11,
+        "assigned": 11,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4882,8 +4882,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4893,8 +4893,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 18,
-        "assigned": 0,
-        "unassigned": 18,
+        "assigned": 18,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4904,8 +4904,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 14,
-        "assigned": 0,
-        "unassigned": 14,
+        "assigned": 14,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4915,8 +4915,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4926,8 +4926,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 137,
-        "assigned": 0,
-        "unassigned": 137,
+        "assigned": 137,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4937,8 +4937,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4948,8 +4948,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 81,
-        "assigned": 0,
-        "unassigned": 81,
+        "assigned": 81,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4959,8 +4959,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 162,
-        "assigned": 0,
-        "unassigned": 162,
+        "assigned": 162,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4970,8 +4970,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4981,8 +4981,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -4992,8 +4992,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5003,8 +5003,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5014,8 +5014,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5025,8 +5025,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5036,8 +5036,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 113,
-        "assigned": 0,
-        "unassigned": 113,
+        "assigned": 113,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5047,8 +5047,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 96,
-        "assigned": 0,
-        "unassigned": 96,
+        "assigned": 96,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5058,8 +5058,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5069,8 +5069,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5080,8 +5080,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5091,8 +5091,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 18,
-        "assigned": 0,
-        "unassigned": 18,
+        "assigned": 18,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5102,8 +5102,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5113,8 +5113,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 95,
-        "assigned": 0,
-        "unassigned": 95,
+        "assigned": 95,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5124,8 +5124,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 107,
-        "assigned": 0,
-        "unassigned": 107,
+        "assigned": 107,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5135,8 +5135,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5146,8 +5146,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5157,8 +5157,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5168,8 +5168,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 64,
-        "assigned": 0,
-        "unassigned": 64,
+        "assigned": 64,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5179,8 +5179,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5190,8 +5190,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5201,8 +5201,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5212,8 +5212,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5223,8 +5223,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 56,
-        "assigned": 0,
-        "unassigned": 56,
+        "assigned": 56,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5234,8 +5234,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5245,8 +5245,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5256,8 +5256,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 56,
-        "assigned": 0,
-        "unassigned": 56,
+        "assigned": 56,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5267,8 +5267,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5278,8 +5278,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5289,8 +5289,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5300,8 +5300,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5311,8 +5311,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5322,8 +5322,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 251,
-        "assigned": 0,
-        "unassigned": 251,
+        "assigned": 152,
+        "unassigned": 99,
         "officers": []
     },
     {
@@ -5333,8 +5333,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 111,
-        "assigned": 0,
-        "unassigned": 111,
+        "assigned": 111,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5344,8 +5344,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5355,8 +5355,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5366,8 +5366,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5377,8 +5377,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5388,8 +5388,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LIANG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5399,8 +5399,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5410,8 +5410,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5421,8 +5421,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 79,
-        "assigned": 0,
-        "unassigned": 79,
+        "assigned": 79,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5432,8 +5432,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5443,8 +5443,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5454,8 +5454,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5465,8 +5465,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5476,8 +5476,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5487,8 +5487,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5498,8 +5498,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5509,8 +5509,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5520,8 +5520,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5531,8 +5531,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 64,
-        "assigned": 0,
-        "unassigned": 64,
+        "assigned": 64,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5542,8 +5542,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5553,8 +5553,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5564,8 +5564,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5575,8 +5575,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5586,8 +5586,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5597,8 +5597,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 64,
-        "assigned": 0,
-        "unassigned": 64,
+        "assigned": 64,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5608,8 +5608,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5619,8 +5619,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5630,8 +5630,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 81,
-        "assigned": 0,
-        "unassigned": 81,
+        "assigned": 81,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5641,8 +5641,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5652,8 +5652,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5663,8 +5663,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5674,8 +5674,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5685,8 +5685,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5696,8 +5696,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5707,8 +5707,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5718,8 +5718,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5729,8 +5729,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5740,8 +5740,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5751,8 +5751,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 78,
-        "assigned": 0,
-        "unassigned": 78,
+        "assigned": 78,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5762,8 +5762,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5773,8 +5773,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5784,8 +5784,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5795,8 +5795,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5806,8 +5806,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5817,8 +5817,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5828,8 +5828,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5839,8 +5839,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5850,8 +5850,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5861,8 +5861,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5872,8 +5872,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5883,8 +5883,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 69,
-        "assigned": 0,
-        "unassigned": 69,
+        "assigned": 69,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5894,8 +5894,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5905,8 +5905,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5916,8 +5916,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 4,
-        "assigned": 0,
-        "unassigned": 4,
+        "assigned": 4,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5927,8 +5927,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 69,
-        "assigned": 0,
-        "unassigned": 69,
+        "assigned": 69,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5938,8 +5938,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 75,
-        "assigned": 0,
-        "unassigned": 75,
+        "assigned": 75,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5949,8 +5949,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5960,8 +5960,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5971,8 +5971,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 90,
-        "assigned": 0,
-        "unassigned": 90,
+        "assigned": 90,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5982,8 +5982,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 78,
-        "assigned": 0,
-        "unassigned": 78,
+        "assigned": 78,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -5993,8 +5993,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6004,8 +6004,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 88,
-        "assigned": 0,
-        "unassigned": 88,
+        "assigned": 88,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6015,8 +6015,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 75,
-        "assigned": 0,
-        "unassigned": 75,
+        "assigned": 75,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6026,8 +6026,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 3,
-        "assigned": 0,
-        "unassigned": 3,
+        "assigned": 3,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6037,8 +6037,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6048,8 +6048,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 14,
-        "assigned": 0,
-        "unassigned": 14,
+        "assigned": 14,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6059,8 +6059,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6070,8 +6070,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6081,8 +6081,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 75,
-        "assigned": 0,
-        "unassigned": 75,
+        "assigned": 75,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6092,8 +6092,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6103,8 +6103,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6114,8 +6114,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6125,8 +6125,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 98,
-        "assigned": 0,
-        "unassigned": 98,
+        "assigned": 98,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6136,8 +6136,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 82,
-        "assigned": 0,
-        "unassigned": 82,
+        "assigned": 82,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6147,8 +6147,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 23,
-        "assigned": 0,
-        "unassigned": 23,
+        "assigned": 23,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6158,8 +6158,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6169,8 +6169,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6180,8 +6180,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6191,8 +6191,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6202,8 +6202,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6213,8 +6213,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6224,8 +6224,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PELING TENGAH",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6235,8 +6235,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6246,8 +6246,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6257,8 +6257,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6268,8 +6268,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6279,8 +6279,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6290,8 +6290,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6301,8 +6301,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 64,
-        "assigned": 0,
-        "unassigned": 64,
+        "assigned": 64,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6312,8 +6312,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6323,8 +6323,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6334,8 +6334,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 64,
-        "assigned": 0,
-        "unassigned": 64,
+        "assigned": 64,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6345,8 +6345,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6356,8 +6356,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6367,8 +6367,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6378,8 +6378,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6389,8 +6389,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6400,8 +6400,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6411,8 +6411,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6422,8 +6422,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6433,8 +6433,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6444,8 +6444,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6455,8 +6455,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6466,8 +6466,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6477,8 +6477,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6488,8 +6488,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6499,8 +6499,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6510,8 +6510,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6521,8 +6521,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6532,8 +6532,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6543,8 +6543,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6554,8 +6554,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6565,8 +6565,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6576,8 +6576,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6587,8 +6587,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6598,8 +6598,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6609,8 +6609,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6620,8 +6620,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6631,8 +6631,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6642,8 +6642,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6653,8 +6653,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6664,8 +6664,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6675,8 +6675,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6686,8 +6686,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6697,8 +6697,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6708,8 +6708,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6719,8 +6719,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6730,8 +6730,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6741,8 +6741,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6752,8 +6752,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6763,8 +6763,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6774,8 +6774,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6785,8 +6785,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6796,8 +6796,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6807,8 +6807,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6818,8 +6818,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6829,8 +6829,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6840,8 +6840,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6851,8 +6851,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6862,8 +6862,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 80,
-        "assigned": 0,
-        "unassigned": 80,
+        "assigned": 80,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6872,9 +6872,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "BULAGI SATU",
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
-        "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "total": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6884,8 +6884,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 71,
-        "assigned": 0,
-        "unassigned": 71,
+        "assigned": 71,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6895,8 +6895,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 128,
-        "assigned": 0,
-        "unassigned": 128,
+        "assigned": 128,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6906,8 +6906,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 93,
-        "assigned": 0,
-        "unassigned": 93,
+        "assigned": 93,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6917,8 +6917,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6928,8 +6928,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6939,8 +6939,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6950,8 +6950,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6961,8 +6961,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6972,8 +6972,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6983,8 +6983,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -6994,8 +6994,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7005,8 +7005,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7016,8 +7016,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7027,8 +7027,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 56,
-        "assigned": 0,
-        "unassigned": 56,
+        "assigned": 56,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7038,8 +7038,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7049,8 +7049,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7060,8 +7060,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7071,8 +7071,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7082,8 +7082,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7093,8 +7093,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7104,8 +7104,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7115,8 +7115,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7126,8 +7126,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7137,8 +7137,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7148,8 +7148,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7159,8 +7159,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7170,8 +7170,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7181,8 +7181,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7192,8 +7192,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7203,8 +7203,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 16,
-        "assigned": 0,
-        "unassigned": 16,
+        "assigned": 16,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7214,8 +7214,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7225,8 +7225,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7236,8 +7236,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7247,8 +7247,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7258,8 +7258,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7269,8 +7269,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7280,8 +7280,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7291,8 +7291,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 68,
-        "assigned": 0,
-        "unassigned": 68,
+        "assigned": 68,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7302,8 +7302,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7313,8 +7313,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7324,8 +7324,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7335,8 +7335,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7346,8 +7346,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 68,
-        "assigned": 0,
-        "unassigned": 68,
+        "assigned": 68,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7357,8 +7357,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7368,8 +7368,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7379,8 +7379,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7390,8 +7390,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7401,8 +7401,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7412,8 +7412,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7423,8 +7423,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7434,8 +7434,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7445,8 +7445,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 90,
-        "assigned": 0,
-        "unassigned": 90,
+        "assigned": 90,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7456,8 +7456,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7467,8 +7467,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7478,8 +7478,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 15,
-        "assigned": 0,
-        "unassigned": 15,
+        "assigned": 15,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7489,8 +7489,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 18,
-        "assigned": 0,
-        "unassigned": 18,
+        "assigned": 18,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7500,8 +7500,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7511,8 +7511,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 18,
-        "assigned": 0,
-        "unassigned": 18,
+        "assigned": 18,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7522,8 +7522,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7533,8 +7533,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7544,8 +7544,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7555,8 +7555,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7566,8 +7566,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 18,
-        "assigned": 0,
-        "unassigned": 18,
+        "assigned": 18,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7577,8 +7577,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7588,8 +7588,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7599,8 +7599,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 10,
-        "assigned": 0,
-        "unassigned": 10,
+        "assigned": 10,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7610,8 +7610,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7621,8 +7621,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7632,8 +7632,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7643,8 +7643,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7654,8 +7654,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7665,8 +7665,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7676,8 +7676,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7687,8 +7687,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7698,8 +7698,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7709,8 +7709,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7720,8 +7720,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7731,8 +7731,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7742,8 +7742,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7753,8 +7753,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7764,8 +7764,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7775,8 +7775,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7786,8 +7786,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 75,
-        "assigned": 0,
-        "unassigned": 75,
+        "assigned": 75,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7797,8 +7797,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7808,8 +7808,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 82,
-        "assigned": 0,
-        "unassigned": 82,
+        "assigned": 82,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7819,8 +7819,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7830,8 +7830,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7841,8 +7841,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7852,8 +7852,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7863,8 +7863,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7874,8 +7874,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7885,8 +7885,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7896,8 +7896,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7907,8 +7907,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7918,8 +7918,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7929,8 +7929,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7940,8 +7940,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7951,8 +7951,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7962,8 +7962,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7973,8 +7973,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7984,8 +7984,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -7995,8 +7995,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 65,
-        "assigned": 0,
-        "unassigned": 65,
+        "assigned": 65,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8006,8 +8006,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8017,8 +8017,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8028,8 +8028,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8039,8 +8039,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8050,8 +8050,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8061,8 +8061,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 92,
-        "assigned": 0,
-        "unassigned": 92,
+        "assigned": 92,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8072,8 +8072,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8083,8 +8083,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 56,
-        "assigned": 0,
-        "unassigned": 56,
+        "assigned": 56,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8094,8 +8094,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8105,8 +8105,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8116,8 +8116,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8127,8 +8127,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8138,8 +8138,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8149,8 +8149,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8160,8 +8160,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8171,8 +8171,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8182,8 +8182,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8193,8 +8193,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 16,
-        "assigned": 0,
-        "unassigned": 16,
+        "assigned": 16,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8204,8 +8204,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8215,8 +8215,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8226,8 +8226,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8237,8 +8237,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8248,8 +8248,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8259,8 +8259,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 11,
-        "assigned": 0,
-        "unassigned": 11,
+        "assigned": 11,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8270,8 +8270,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8281,8 +8281,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8292,8 +8292,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8303,8 +8303,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8314,8 +8314,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8325,8 +8325,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8336,8 +8336,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8347,8 +8347,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8358,8 +8358,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8369,8 +8369,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8380,8 +8380,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8391,8 +8391,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8402,8 +8402,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8413,8 +8413,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8424,8 +8424,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8435,8 +8435,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8446,8 +8446,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 56,
-        "assigned": 0,
-        "unassigned": 56,
+        "assigned": 56,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8457,8 +8457,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8468,8 +8468,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8479,8 +8479,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8490,8 +8490,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8512,8 +8512,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8523,8 +8523,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8534,8 +8534,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8545,8 +8545,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8556,8 +8556,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8567,8 +8567,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8578,8 +8578,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8589,8 +8589,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8600,8 +8600,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 5,
-        "assigned": 0,
-        "unassigned": 5,
+        "assigned": 5,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8611,8 +8611,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8622,8 +8622,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8633,8 +8633,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8644,8 +8644,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8655,8 +8655,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8666,8 +8666,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8677,8 +8677,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 18,
-        "assigned": 0,
-        "unassigned": 18,
+        "assigned": 18,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8688,8 +8688,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 12,
-        "assigned": 0,
-        "unassigned": 12,
+        "assigned": 12,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8699,8 +8699,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 18,
-        "assigned": 0,
-        "unassigned": 18,
+        "assigned": 18,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8710,8 +8710,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 18,
-        "assigned": 0,
-        "unassigned": 18,
+        "assigned": 18,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8721,8 +8721,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8732,8 +8732,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8743,8 +8743,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8754,8 +8754,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8765,8 +8765,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8776,8 +8776,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8787,8 +8787,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8798,8 +8798,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8809,8 +8809,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8820,8 +8820,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8831,8 +8831,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8842,8 +8842,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8853,8 +8853,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8864,8 +8864,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8875,8 +8875,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8886,8 +8886,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8897,8 +8897,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8908,8 +8908,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8919,8 +8919,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8930,8 +8930,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 23,
-        "assigned": 0,
-        "unassigned": 23,
+        "assigned": 23,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8941,8 +8941,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 19,
-        "assigned": 0,
-        "unassigned": 19,
+        "assigned": 19,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8952,8 +8952,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8963,8 +8963,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8974,8 +8974,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8985,8 +8985,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 12,
-        "assigned": 0,
-        "unassigned": 12,
+        "assigned": 12,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -8996,8 +8996,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9007,8 +9007,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 18,
-        "assigned": 0,
-        "unassigned": 18,
+        "assigned": 18,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9018,8 +9018,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 17,
-        "assigned": 0,
-        "unassigned": 17,
+        "assigned": 17,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9029,8 +9029,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9040,8 +9040,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 23,
-        "assigned": 0,
-        "unassigned": 23,
+        "assigned": 23,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9051,8 +9051,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9062,8 +9062,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9073,8 +9073,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9084,8 +9084,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 17,
-        "assigned": 0,
-        "unassigned": 17,
+        "assigned": 17,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9095,8 +9095,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9106,8 +9106,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9117,8 +9117,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9128,8 +9128,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9139,8 +9139,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9150,8 +9150,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9161,8 +9161,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9172,8 +9172,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9183,8 +9183,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9194,8 +9194,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9205,8 +9205,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9216,8 +9216,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9227,8 +9227,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9238,8 +9238,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9249,8 +9249,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9260,8 +9260,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9271,8 +9271,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9282,8 +9282,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9293,8 +9293,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 23,
-        "assigned": 0,
-        "unassigned": 23,
+        "assigned": 23,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9304,8 +9304,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9315,8 +9315,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9326,8 +9326,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9337,8 +9337,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9348,8 +9348,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9359,8 +9359,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9370,8 +9370,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9381,8 +9381,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9392,8 +9392,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9403,8 +9403,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9414,8 +9414,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9425,8 +9425,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9436,8 +9436,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9447,8 +9447,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9458,8 +9458,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9513,8 +9513,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9535,8 +9535,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9546,8 +9546,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9557,8 +9557,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9579,8 +9579,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9601,8 +9601,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9612,8 +9612,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9623,8 +9623,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9634,8 +9634,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9645,8 +9645,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9656,8 +9656,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9667,8 +9667,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9678,8 +9678,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9689,8 +9689,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9700,8 +9700,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9711,8 +9711,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 70,
-        "assigned": 0,
-        "unassigned": 70,
+        "assigned": 70,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9722,8 +9722,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 3,
-        "assigned": 0,
-        "unassigned": 3,
+        "assigned": 3,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9733,8 +9733,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BULAGI UTARA",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9744,8 +9744,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 73,
-        "assigned": 0,
-        "unassigned": 73,
+        "assigned": 73,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9755,8 +9755,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9766,8 +9766,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9777,8 +9777,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9788,8 +9788,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9799,8 +9799,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9810,8 +9810,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9821,8 +9821,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9832,8 +9832,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9843,8 +9843,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9854,8 +9854,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9865,8 +9865,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9876,8 +9876,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9887,8 +9887,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 76,
-        "assigned": 0,
-        "unassigned": 76,
+        "assigned": 76,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9898,8 +9898,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9909,8 +9909,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9920,8 +9920,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9931,8 +9931,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9942,8 +9942,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9953,8 +9953,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 77,
-        "assigned": 0,
-        "unassigned": 77,
+        "assigned": 77,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9964,8 +9964,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 92,
-        "assigned": 0,
-        "unassigned": 92,
+        "assigned": 92,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9975,8 +9975,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9986,8 +9986,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -9997,8 +9997,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10008,8 +10008,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10019,8 +10019,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10030,8 +10030,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10041,8 +10041,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10052,8 +10052,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10063,8 +10063,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10074,8 +10074,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10085,8 +10085,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10096,8 +10096,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10107,8 +10107,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10118,8 +10118,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10129,8 +10129,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10140,8 +10140,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10151,8 +10151,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10162,8 +10162,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10173,8 +10173,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10184,8 +10184,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10195,8 +10195,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10206,8 +10206,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10217,8 +10217,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 73,
-        "assigned": 0,
-        "unassigned": 73,
+        "assigned": 73,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10228,8 +10228,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10239,8 +10239,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 7,
-        "assigned": 0,
-        "unassigned": 7,
+        "assigned": 7,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10250,8 +10250,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10261,8 +10261,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10272,8 +10272,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10283,8 +10283,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10294,8 +10294,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 78,
-        "assigned": 0,
-        "unassigned": 78,
+        "assigned": 78,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10305,8 +10305,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 89,
-        "assigned": 0,
-        "unassigned": 89,
+        "assigned": 89,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10316,8 +10316,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 120,
-        "assigned": 0,
-        "unassigned": 120,
+        "assigned": 120,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10327,8 +10327,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10338,8 +10338,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 93,
-        "assigned": 0,
-        "unassigned": 93,
+        "assigned": 93,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10349,8 +10349,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 70,
-        "assigned": 0,
-        "unassigned": 70,
+        "assigned": 70,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10360,8 +10360,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10371,8 +10371,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10382,8 +10382,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10393,8 +10393,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10404,8 +10404,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10415,8 +10415,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 73,
-        "assigned": 0,
-        "unassigned": 73,
+        "assigned": 73,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10426,8 +10426,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10437,8 +10437,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10448,8 +10448,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10459,8 +10459,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10470,8 +10470,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 13,
-        "assigned": 0,
-        "unassigned": 13,
+        "assigned": 13,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10492,8 +10492,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10503,8 +10503,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10514,8 +10514,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10525,8 +10525,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10536,8 +10536,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10547,8 +10547,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10558,8 +10558,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10569,8 +10569,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10580,8 +10580,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10591,8 +10591,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10601,9 +10601,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "PELING LALOMO",
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
-        "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "total": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10613,8 +10613,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10624,8 +10624,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10634,9 +10634,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "PELING LALOMO",
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
-        "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "total": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10646,8 +10646,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 25,
-        "assigned": 0,
-        "unassigned": 25,
+        "assigned": 25,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10657,8 +10657,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10668,8 +10668,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10679,8 +10679,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10690,8 +10690,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10701,8 +10701,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10712,8 +10712,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10723,8 +10723,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10734,8 +10734,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10789,8 +10789,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 177,
-        "assigned": 0,
-        "unassigned": 177,
+        "assigned": 177,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10800,8 +10800,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 169,
-        "assigned": 0,
-        "unassigned": 169,
+        "assigned": 169,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10811,8 +10811,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 115,
-        "assigned": 0,
-        "unassigned": 115,
+        "assigned": 115,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10822,8 +10822,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 175,
-        "assigned": 0,
-        "unassigned": 175,
+        "assigned": 175,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10833,8 +10833,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10844,8 +10844,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10855,8 +10855,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10866,8 +10866,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 29,
-        "assigned": 0,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10877,8 +10877,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10888,8 +10888,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10899,8 +10899,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10910,8 +10910,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10921,8 +10921,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 80,
-        "assigned": 0,
-        "unassigned": 80,
+        "assigned": 80,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10932,8 +10932,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10943,8 +10943,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10954,8 +10954,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 27,
-        "assigned": 0,
-        "unassigned": 27,
+        "assigned": 27,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10965,8 +10965,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10976,8 +10976,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 79,
-        "assigned": 0,
-        "unassigned": 79,
+        "assigned": 79,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10987,8 +10987,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 151,
-        "assigned": 0,
-        "unassigned": 151,
+        "assigned": 151,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -10998,8 +10998,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 103,
-        "assigned": 0,
-        "unassigned": 103,
+        "assigned": 103,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11009,8 +11009,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 79,
-        "assigned": 0,
-        "unassigned": 79,
+        "assigned": 79,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11020,8 +11020,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11031,8 +11031,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11042,8 +11042,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11053,8 +11053,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11064,8 +11064,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 56,
-        "assigned": 0,
-        "unassigned": 56,
+        "assigned": 56,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11075,8 +11075,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 73,
-        "assigned": 0,
-        "unassigned": 73,
+        "assigned": 73,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11086,8 +11086,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 17,
-        "assigned": 0,
-        "unassigned": 17,
+        "assigned": 17,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11097,8 +11097,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 87,
-        "assigned": 0,
-        "unassigned": 87,
+        "assigned": 87,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11108,8 +11108,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 111,
-        "assigned": 0,
-        "unassigned": 111,
+        "assigned": 111,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11119,8 +11119,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 74,
-        "assigned": 0,
-        "unassigned": 74,
+        "assigned": 74,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11130,8 +11130,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 71,
-        "assigned": 0,
-        "unassigned": 71,
+        "assigned": 71,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11141,8 +11141,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 85,
-        "assigned": 0,
-        "unassigned": 85,
+        "assigned": 85,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11152,8 +11152,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11163,8 +11163,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11174,8 +11174,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11185,8 +11185,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11196,8 +11196,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11207,8 +11207,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKO SELATAN",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -11636,8 +11636,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TOILI",
         "kab_name": "[02] BANGGAI",
         "total": 67,
-        "assigned": 67,
-        "unassigned": 0,
+        "assigned": 66,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -26695,8 +26695,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LUWUK SELATAN",
         "kab_name": "[02] BANGGAI",
         "total": 138,
-        "assigned": 138,
-        "unassigned": 0,
+        "assigned": 137,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -46363,8 +46363,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA SELATAN",
         "kab_name": "[04] POSO",
         "total": 97,
-        "assigned": 0,
-        "unassigned": 97,
+        "assigned": 97,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -46418,8 +46418,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA SELATAN",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -46473,8 +46473,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA SELATAN",
         "kab_name": "[04] POSO",
         "total": 99,
-        "assigned": 0,
-        "unassigned": 99,
+        "assigned": 99,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -46484,8 +46484,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA SELATAN",
         "kab_name": "[04] POSO",
         "total": 158,
-        "assigned": 0,
-        "unassigned": 158,
+        "assigned": 158,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -46638,8 +46638,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA SELATAN",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -46649,8 +46649,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA SELATAN",
         "kab_name": "[04] POSO",
         "total": 128,
-        "assigned": 0,
-        "unassigned": 128,
+        "assigned": 128,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -46737,8 +46737,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA SELATAN",
         "kab_name": "[04] POSO",
         "total": 120,
-        "assigned": 0,
-        "unassigned": 120,
+        "assigned": 120,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47617,8 +47617,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 2,
-        "assigned": 0,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47628,8 +47628,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47639,8 +47639,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47650,8 +47650,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47661,8 +47661,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47672,8 +47672,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47683,8 +47683,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47694,8 +47694,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47705,8 +47705,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47716,8 +47716,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47727,8 +47727,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 66,
-        "assigned": 0,
-        "unassigned": 66,
+        "assigned": 66,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47738,8 +47738,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47749,8 +47749,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47760,8 +47760,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 108,
-        "assigned": 0,
-        "unassigned": 108,
+        "assigned": 108,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47771,8 +47771,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47782,8 +47782,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47793,8 +47793,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47804,8 +47804,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47815,8 +47815,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47826,8 +47826,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 71,
-        "assigned": 0,
-        "unassigned": 71,
+        "assigned": 71,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47837,8 +47837,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47848,8 +47848,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 65,
-        "assigned": 0,
-        "unassigned": 65,
+        "assigned": 65,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47859,8 +47859,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47870,8 +47870,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 82,
-        "assigned": 0,
-        "unassigned": 82,
+        "assigned": 82,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47881,8 +47881,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 67,
-        "assigned": 0,
-        "unassigned": 67,
+        "assigned": 67,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47892,8 +47892,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47903,8 +47903,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47914,8 +47914,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47925,8 +47925,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47936,8 +47936,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47947,8 +47947,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 74,
-        "assigned": 0,
-        "unassigned": 74,
+        "assigned": 74,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47958,8 +47958,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 65,
-        "assigned": 0,
-        "unassigned": 65,
+        "assigned": 65,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47969,8 +47969,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47980,8 +47980,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -47991,8 +47991,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48002,8 +48002,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48013,8 +48013,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48024,8 +48024,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48035,8 +48035,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48046,8 +48046,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48057,8 +48057,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48068,8 +48068,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48079,8 +48079,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48090,8 +48090,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48101,8 +48101,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48112,8 +48112,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48123,8 +48123,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48133,9 +48133,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "TINDOLI",
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
-        "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "total": 64,
+        "assigned": 64,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48145,8 +48145,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48156,8 +48156,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48167,8 +48167,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48178,8 +48178,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48188,9 +48188,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "TINDOLI",
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
-        "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "total": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48200,8 +48200,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48211,8 +48211,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48222,8 +48222,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 56,
-        "assigned": 0,
-        "unassigned": 56,
+        "assigned": 56,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48233,8 +48233,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48244,8 +48244,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48255,8 +48255,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48266,8 +48266,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 103,
-        "assigned": 0,
-        "unassigned": 103,
+        "assigned": 103,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48277,8 +48277,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48288,8 +48288,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 3,
-        "assigned": 0,
-        "unassigned": 3,
+        "assigned": 3,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48299,8 +48299,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48310,8 +48310,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48321,8 +48321,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48332,8 +48332,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 97,
-        "assigned": 0,
-        "unassigned": 97,
+        "assigned": 97,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48343,8 +48343,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 144,
-        "assigned": 0,
-        "unassigned": 144,
+        "assigned": 144,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48354,8 +48354,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48365,8 +48365,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48376,8 +48376,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48387,8 +48387,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 68,
-        "assigned": 0,
-        "unassigned": 68,
+        "assigned": 68,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48398,8 +48398,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48409,8 +48409,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 65,
-        "assigned": 0,
-        "unassigned": 65,
+        "assigned": 65,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48420,8 +48420,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48431,8 +48431,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -48442,8 +48442,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PAMONA TENGGARA",
         "kab_name": "[04] POSO",
         "total": 87,
-        "assigned": 0,
-        "unassigned": 87,
+        "assigned": 87,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -54536,8 +54536,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -54547,8 +54547,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -54569,8 +54569,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 26,
-        "assigned": 0,
-        "unassigned": 26,
+        "assigned": 26,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -54602,8 +54602,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -54613,8 +54613,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -54635,8 +54635,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -54646,8 +54646,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -54789,8 +54789,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -54811,8 +54811,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -54877,8 +54877,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55042,8 +55042,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 38,
-        "assigned": 0,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55064,8 +55064,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55163,8 +55163,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55207,8 +55207,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TENGAH",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55218,8 +55218,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55229,8 +55229,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55240,8 +55240,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55251,8 +55251,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 85,
-        "assigned": 0,
-        "unassigned": 85,
+        "assigned": 85,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55262,8 +55262,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 98,
-        "assigned": 0,
-        "unassigned": 98,
+        "assigned": 98,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55273,8 +55273,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55284,8 +55284,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 82,
-        "assigned": 0,
-        "unassigned": 82,
+        "assigned": 82,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55295,8 +55295,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55306,8 +55306,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55317,8 +55317,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55328,8 +55328,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55339,8 +55339,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55350,8 +55350,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55361,8 +55361,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55372,8 +55372,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55383,8 +55383,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 85,
-        "assigned": 0,
-        "unassigned": 85,
+        "assigned": 85,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55394,8 +55394,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55405,8 +55405,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55416,8 +55416,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 77,
-        "assigned": 0,
-        "unassigned": 77,
+        "assigned": 77,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55427,8 +55427,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55438,8 +55438,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55449,8 +55449,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55460,8 +55460,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55471,8 +55471,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55482,8 +55482,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55493,8 +55493,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55504,8 +55504,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55515,8 +55515,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55526,8 +55526,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55537,8 +55537,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55548,8 +55548,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55559,8 +55559,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55570,8 +55570,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55581,8 +55581,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55592,8 +55592,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 72,
-        "assigned": 0,
-        "unassigned": 72,
+        "assigned": 72,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55603,8 +55603,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55614,8 +55614,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55625,8 +55625,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55636,8 +55636,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55647,8 +55647,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55658,8 +55658,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55669,8 +55669,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55680,8 +55680,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55691,8 +55691,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55702,8 +55702,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55713,8 +55713,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55724,8 +55724,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55735,8 +55735,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 58,
-        "assigned": 0,
-        "unassigned": 58,
+        "assigned": 58,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55746,8 +55746,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 56,
-        "assigned": 0,
-        "unassigned": 56,
+        "assigned": 56,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55757,8 +55757,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55768,8 +55768,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55779,8 +55779,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55790,8 +55790,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE TIMUR",
         "kab_name": "[04] POSO",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55801,8 +55801,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 81,
-        "assigned": 0,
-        "unassigned": 81,
+        "assigned": 81,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55812,8 +55812,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55823,8 +55823,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55834,8 +55834,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55845,8 +55845,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55856,8 +55856,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 73,
-        "assigned": 0,
-        "unassigned": 73,
+        "assigned": 73,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55867,8 +55867,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55878,8 +55878,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55889,8 +55889,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55900,8 +55900,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55911,8 +55911,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55922,8 +55922,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55933,8 +55933,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 59,
-        "assigned": 0,
-        "unassigned": 59,
+        "assigned": 59,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55944,8 +55944,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55955,8 +55955,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55966,8 +55966,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55977,8 +55977,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55988,8 +55988,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -55999,8 +55999,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56010,8 +56010,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56021,8 +56021,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56032,8 +56032,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 42,
-        "assigned": 0,
-        "unassigned": 42,
+        "assigned": 42,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56043,8 +56043,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56054,8 +56054,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 46,
-        "assigned": 0,
-        "unassigned": 46,
+        "assigned": 46,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56065,8 +56065,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56076,8 +56076,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56087,8 +56087,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56098,8 +56098,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56109,8 +56109,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56120,8 +56120,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56131,8 +56131,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 49,
-        "assigned": 0,
-        "unassigned": 49,
+        "assigned": 49,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56142,8 +56142,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56153,8 +56153,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56164,8 +56164,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56175,8 +56175,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56186,8 +56186,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56197,8 +56197,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56208,8 +56208,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 47,
-        "assigned": 0,
-        "unassigned": 47,
+        "assigned": 47,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56219,8 +56219,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56230,8 +56230,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56241,8 +56241,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56252,8 +56252,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 23,
-        "assigned": 0,
-        "unassigned": 23,
+        "assigned": 23,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56263,8 +56263,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56274,8 +56274,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 28,
-        "assigned": 0,
-        "unassigned": 28,
+        "assigned": 28,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56285,8 +56285,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 43,
-        "assigned": 0,
-        "unassigned": 43,
+        "assigned": 43,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56296,8 +56296,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -56307,8 +56307,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LORE PEORE",
         "kab_name": "[04] POSO",
         "total": 30,
-        "assigned": 0,
-        "unassigned": 30,
+        "assigned": 30,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -61630,9 +61630,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "KAYAMANYA",
         "kec_name": "POSO KOTA",
         "kab_name": "[04] POSO",
-        "total": 107,
+        "total": 108,
         "assigned": 0,
-        "unassigned": 107,
+        "unassigned": 108,
         "officers": []
     },
     {
@@ -63423,9 +63423,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "-",
         "kec_name": "-",
         "kab_name": "[05] DONGGALA",
-        "total": 8,
+        "total": 4,
         "assigned": 0,
-        "unassigned": 8,
+        "unassigned": 4,
         "officers": []
     },
     {
@@ -63720,8 +63720,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "TOWIORA",
         "kec_name": "RIO PAKAVA",
         "kab_name": "[05] DONGGALA",
-        "total": 83,
-        "assigned": 83,
+        "total": 84,
+        "assigned": 84,
         "unassigned": 0,
         "officers": []
     },
@@ -64744,8 +64744,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PINEMBANI",
         "kab_name": "[05] DONGGALA",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -64777,8 +64777,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PINEMBANI",
         "kab_name": "[05] DONGGALA",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -64799,8 +64799,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PINEMBANI",
         "kab_name": "[05] DONGGALA",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -64832,8 +64832,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PINEMBANI",
         "kab_name": "[05] DONGGALA",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -65085,8 +65085,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PINEMBANI",
         "kab_name": "[05] DONGGALA",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -65107,8 +65107,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PINEMBANI",
         "kab_name": "[05] DONGGALA",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -65173,8 +65173,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PINEMBANI",
         "kab_name": "[05] DONGGALA",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -65206,8 +65206,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PINEMBANI",
         "kab_name": "[05] DONGGALA",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -65294,8 +65294,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PINEMBANI",
         "kab_name": "[05] DONGGALA",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -66184,8 +66184,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "KABONGA KECIL",
         "kec_name": "BANAWA",
         "kab_name": "[05] DONGGALA",
-        "total": 200,
-        "assigned": 200,
+        "total": 201,
+        "assigned": 201,
         "unassigned": 0,
         "officers": []
     },
@@ -66283,8 +66283,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "GUNUNG BALE",
         "kec_name": "BANAWA",
         "kab_name": "[05] DONGGALA",
-        "total": 155,
-        "assigned": 155,
+        "total": 156,
+        "assigned": 156,
         "unassigned": 0,
         "officers": []
     },
@@ -66723,8 +66723,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "BOYA",
         "kec_name": "BANAWA",
         "kab_name": "[05] DONGGALA",
-        "total": 101,
-        "assigned": 101,
+        "total": 102,
+        "assigned": 102,
         "unassigned": 0,
         "officers": []
     },
@@ -70970,8 +70970,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SIRENJA",
         "kab_name": "[05] DONGGALA",
         "total": 231,
-        "assigned": 188,
-        "unassigned": 43,
+        "assigned": 231,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -70981,8 +70981,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SIRENJA",
         "kab_name": "[05] DONGGALA",
         "total": 74,
-        "assigned": 59,
-        "unassigned": 15,
+        "assigned": 74,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72257,8 +72257,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 233,
-        "assigned": 233,
-        "unassigned": 0,
+        "assigned": 232,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -72268,8 +72268,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 131,
-        "assigned": 131,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 131,
         "officers": []
     },
     {
@@ -72290,8 +72290,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 146,
-        "assigned": 146,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 146,
         "officers": []
     },
     {
@@ -72312,8 +72312,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 39,
-        "assigned": 39,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 39,
         "officers": []
     },
     {
@@ -72334,8 +72334,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 22,
-        "assigned": 22,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 22,
         "officers": []
     },
     {
@@ -72367,8 +72367,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 86,
-        "assigned": 86,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 86,
         "officers": []
     },
     {
@@ -72378,8 +72378,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 51,
-        "assigned": 51,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 51,
         "officers": []
     },
     {
@@ -72422,8 +72422,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 80,
-        "assigned": 80,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 80,
         "officers": []
     },
     {
@@ -72444,8 +72444,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 77,
-        "assigned": 77,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 77,
         "officers": []
     },
     {
@@ -72455,8 +72455,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 20,
-        "assigned": 20,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 20,
         "officers": []
     },
     {
@@ -72466,8 +72466,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 55,
-        "assigned": 55,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 55,
         "officers": []
     },
     {
@@ -72477,8 +72477,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 35,
-        "assigned": 35,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 35,
         "officers": []
     },
     {
@@ -72488,8 +72488,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 22,
-        "assigned": 22,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 22,
         "officers": []
     },
     {
@@ -72499,8 +72499,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 48,
-        "assigned": 48,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 48,
         "officers": []
     },
     {
@@ -72510,8 +72510,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 68,
-        "assigned": 68,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 68,
         "officers": []
     },
     {
@@ -72521,8 +72521,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 61,
-        "assigned": 61,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 61,
         "officers": []
     },
     {
@@ -72532,8 +72532,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 51,
-        "assigned": 51,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 51,
         "officers": []
     },
     {
@@ -72543,8 +72543,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 52,
-        "assigned": 52,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 52,
         "officers": []
     },
     {
@@ -72554,8 +72554,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 98,
-        "assigned": 98,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 98,
         "officers": []
     },
     {
@@ -72565,8 +72565,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 54,
-        "assigned": 54,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 54,
         "officers": []
     },
     {
@@ -72587,8 +72587,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 41,
-        "assigned": 41,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 41,
         "officers": []
     },
     {
@@ -72598,8 +72598,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 70,
-        "assigned": 70,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 70,
         "officers": []
     },
     {
@@ -72620,8 +72620,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 33,
-        "assigned": 33,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 33,
         "officers": []
     },
     {
@@ -72642,8 +72642,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 13,
-        "assigned": 13,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 13,
         "officers": []
     },
     {
@@ -72653,8 +72653,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 57,
-        "assigned": 57,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 57,
         "officers": []
     },
     {
@@ -72675,8 +72675,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 12,
-        "assigned": 12,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 12,
         "officers": []
     },
     {
@@ -72686,8 +72686,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 80,
-        "assigned": 80,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 80,
         "officers": []
     },
     {
@@ -72719,8 +72719,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 80,
-        "assigned": 80,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 80,
         "officers": []
     },
     {
@@ -72730,8 +72730,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 48,
-        "assigned": 48,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 48,
         "officers": []
     },
     {
@@ -72741,8 +72741,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 24,
-        "assigned": 24,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 24,
         "officers": []
     },
     {
@@ -72752,8 +72752,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 40,
-        "assigned": 40,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 40,
         "officers": []
     },
     {
@@ -72763,8 +72763,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 60,
-        "assigned": 60,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 60,
         "officers": []
     },
     {
@@ -72796,8 +72796,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 48,
-        "assigned": 48,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 48,
         "officers": []
     },
     {
@@ -72807,8 +72807,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 52,
-        "assigned": 52,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 52,
         "officers": []
     },
     {
@@ -72840,8 +72840,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 86,
-        "assigned": 86,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 86,
         "officers": []
     },
     {
@@ -72851,8 +72851,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 50,
-        "assigned": 50,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 50,
         "officers": []
     },
     {
@@ -72884,8 +72884,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 235,
-        "assigned": 235,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 235,
         "officers": []
     },
     {
@@ -72972,8 +72972,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 86,
-        "assigned": 86,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 86,
         "officers": []
     },
     {
@@ -73027,8 +73027,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 103,
-        "assigned": 103,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 103,
         "officers": []
     },
     {
@@ -73060,8 +73060,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 83,
-        "assigned": 83,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 83,
         "officers": []
     },
     {
@@ -73071,8 +73071,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 212,
-        "assigned": 212,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 212,
         "officers": []
     },
     {
@@ -73082,8 +73082,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 113,
-        "assigned": 113,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 113,
         "officers": []
     },
     {
@@ -73093,8 +73093,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 163,
-        "assigned": 163,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 163,
         "officers": []
     },
     {
@@ -73104,8 +73104,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 233,
-        "assigned": 233,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 233,
         "officers": []
     },
     {
@@ -73126,8 +73126,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 121,
-        "assigned": 121,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 121,
         "officers": []
     },
     {
@@ -73137,8 +73137,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 97,
-        "assigned": 97,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 97,
         "officers": []
     },
     {
@@ -73148,8 +73148,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 139,
-        "assigned": 139,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 139,
         "officers": []
     },
     {
@@ -73159,8 +73159,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 97,
-        "assigned": 97,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 97,
         "officers": []
     },
     {
@@ -73269,8 +73269,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 31,
-        "assigned": 31,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 31,
         "officers": []
     },
     {
@@ -73280,8 +73280,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 44,
-        "assigned": 44,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 44,
         "officers": []
     },
     {
@@ -73324,8 +73324,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 34,
-        "assigned": 34,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 34,
         "officers": []
     },
     {
@@ -73390,8 +73390,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 57,
-        "assigned": 57,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 57,
         "officers": []
     },
     {
@@ -73478,8 +73478,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 37,
-        "assigned": 37,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 37,
         "officers": []
     },
     {
@@ -73500,8 +73500,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 45,
-        "assigned": 45,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 45,
         "officers": []
     },
     {
@@ -73533,8 +73533,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 93,
-        "assigned": 93,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 93,
         "officers": []
     },
     {
@@ -73544,8 +73544,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 147,
-        "assigned": 147,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 147,
         "officers": []
     },
     {
@@ -73555,8 +73555,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 201,
-        "assigned": 201,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 201,
         "officers": []
     },
     {
@@ -73566,8 +73566,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 65,
-        "assigned": 65,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 65,
         "officers": []
     },
     {
@@ -73577,8 +73577,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 76,
-        "assigned": 76,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 76,
         "officers": []
     },
     {
@@ -73588,8 +73588,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 219,
-        "assigned": 219,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 219,
         "officers": []
     },
     {
@@ -73599,8 +73599,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 80,
-        "assigned": 80,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 80,
         "officers": []
     },
     {
@@ -73610,8 +73610,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 244,
-        "assigned": 244,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 244,
         "officers": []
     },
     {
@@ -73621,8 +73621,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 96,
-        "assigned": 96,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 96,
         "officers": []
     },
     {
@@ -73632,8 +73632,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 138,
-        "assigned": 138,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 138,
         "officers": []
     },
     {
@@ -73643,8 +73643,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 41,
-        "assigned": 41,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 41,
         "officers": []
     },
     {
@@ -73654,8 +73654,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 33,
-        "assigned": 33,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 33,
         "officers": []
     },
     {
@@ -73665,8 +73665,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 44,
-        "assigned": 44,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 44,
         "officers": []
     },
     {
@@ -73676,8 +73676,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 53,
-        "assigned": 53,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 53,
         "officers": []
     },
     {
@@ -73687,8 +73687,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 24,
-        "assigned": 24,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 24,
         "officers": []
     },
     {
@@ -73698,8 +73698,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 32,
-        "assigned": 32,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 32,
         "officers": []
     },
     {
@@ -73709,8 +73709,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 36,
-        "assigned": 36,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 36,
         "officers": []
     },
     {
@@ -73720,8 +73720,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 62,
-        "assigned": 62,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 62,
         "officers": []
     },
     {
@@ -73731,8 +73731,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 63,
-        "assigned": 63,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 63,
         "officers": []
     },
     {
@@ -73742,8 +73742,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 52,
-        "assigned": 52,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 52,
         "officers": []
     },
     {
@@ -73753,8 +73753,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 33,
-        "assigned": 33,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 33,
         "officers": []
     },
     {
@@ -73764,8 +73764,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 54,
-        "assigned": 54,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 54,
         "officers": []
     },
     {
@@ -73775,8 +73775,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 31,
-        "assigned": 31,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 31,
         "officers": []
     },
     {
@@ -73786,8 +73786,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 83,
-        "assigned": 83,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 83,
         "officers": []
     },
     {
@@ -74954,17 +74954,6 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "total": 72,
         "assigned": 72,
         "unassigned": 0,
-        "officers": []
-    },
-    {
-        "sls_code": "72060000000000",
-        "sls_name": "-",
-        "desa_name": "-",
-        "kec_name": "-",
-        "kab_name": "[06] TOLI-TOLI",
-        "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
         "officers": []
     },
     {
@@ -79220,8 +79209,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "OGODEIDE",
         "kab_name": "[06] TOLI-TOLI",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -79242,8 +79231,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "OGODEIDE",
         "kab_name": "[06] TOLI-TOLI",
         "total": 21,
-        "assigned": 0,
-        "unassigned": 21,
+        "assigned": 21,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -79275,8 +79264,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "OGODEIDE",
         "kab_name": "[06] TOLI-TOLI",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -79286,8 +79275,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "OGODEIDE",
         "kab_name": "[06] TOLI-TOLI",
         "total": 15,
-        "assigned": 0,
-        "unassigned": 15,
+        "assigned": 15,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -82349,6 +82338,17 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "officers": []
     },
     {
+        "sls_code": "72060400160056",
+        "sls_name": "RT 004 RW VII",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 33,
+        "assigned": 33,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
         "sls_code": "72060400160048",
         "sls_name": "RT 004 RW VIII",
         "desa_name": "BARU",
@@ -82378,6 +82378,17 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kab_name": "[06] TOLI-TOLI",
         "total": 54,
         "assigned": 54,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160008",
+        "sls_name": "RT 003 RW X",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 35,
+        "assigned": 35,
         "unassigned": 0,
         "officers": []
     },
@@ -82620,6 +82631,17 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kab_name": "[06] TOLI-TOLI",
         "total": 39,
         "assigned": 39,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
+        "sls_code": "72060400160024",
+        "sls_name": "RT 004 RW III",
+        "desa_name": "BARU",
+        "kec_name": "BAOLAN",
+        "kab_name": "[06] TOLI-TOLI",
+        "total": 34,
+        "assigned": 34,
         "unassigned": 0,
         "officers": []
     },
@@ -88801,8 +88823,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LAKEA",
         "kab_name": "[07] BUOL",
         "total": 69,
-        "assigned": 69,
-        "unassigned": 0,
+        "assigned": 68,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -89527,8 +89549,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BIAU",
         "kab_name": "[07] BUOL",
         "total": 62,
-        "assigned": 62,
-        "unassigned": 0,
+        "assigned": 61,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -89747,8 +89769,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BIAU",
         "kab_name": "[07] BUOL",
         "total": 88,
-        "assigned": 88,
-        "unassigned": 0,
+        "assigned": 87,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -90066,8 +90088,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BIAU",
         "kab_name": "[07] BUOL",
         "total": 64,
-        "assigned": 64,
-        "unassigned": 0,
+        "assigned": 63,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -90363,8 +90385,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BIAU",
         "kab_name": "[07] BUOL",
         "total": 97,
-        "assigned": 97,
-        "unassigned": 0,
+        "assigned": 96,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -90583,8 +90605,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BIAU",
         "kab_name": "[07] BUOL",
         "total": 87,
-        "assigned": 87,
-        "unassigned": 0,
+        "assigned": 86,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -90594,8 +90616,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BIAU",
         "kab_name": "[07] BUOL",
         "total": 117,
-        "assigned": 117,
-        "unassigned": 0,
+        "assigned": 116,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -91287,8 +91309,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "KARAMAT",
         "kab_name": "[07] BUOL",
         "total": 50,
-        "assigned": 50,
-        "unassigned": 0,
+        "assigned": 49,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -91441,8 +91463,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "KARAMAT",
         "kab_name": "[07] BUOL",
         "total": 31,
-        "assigned": 31,
-        "unassigned": 0,
+        "assigned": 30,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -92728,8 +92750,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "MOMUNU",
         "kab_name": "[07] BUOL",
         "total": 97,
-        "assigned": 97,
-        "unassigned": 0,
+        "assigned": 96,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -93245,8 +93267,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TILOAN",
         "kab_name": "[07] BUOL",
         "total": 63,
-        "assigned": 63,
-        "unassigned": 0,
+        "assigned": 62,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -94246,8 +94268,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BOKAT",
         "kab_name": "[07] BUOL",
         "total": 74,
-        "assigned": 74,
-        "unassigned": 0,
+        "assigned": 73,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -94312,8 +94334,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BOKAT",
         "kab_name": "[07] BUOL",
         "total": 75,
-        "assigned": 75,
-        "unassigned": 0,
+        "assigned": 74,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -94851,8 +94873,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BOKAT",
         "kab_name": "[07] BUOL",
         "total": 56,
-        "assigned": 56,
-        "unassigned": 0,
+        "assigned": 55,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -94928,8 +94950,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BOKAT",
         "kab_name": "[07] BUOL",
         "total": 63,
-        "assigned": 63,
-        "unassigned": 0,
+        "assigned": 62,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -96248,8 +96270,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BUKAL",
         "kab_name": "[07] BUOL",
         "total": 49,
-        "assigned": 49,
-        "unassigned": 0,
+        "assigned": 48,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -99163,8 +99185,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "GADUNG",
         "kab_name": "[07] BUOL",
         "total": 46,
-        "assigned": 46,
-        "unassigned": 0,
+        "assigned": 45,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -100164,8 +100186,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PALELEH",
         "kab_name": "[07] BUOL",
         "total": 113,
-        "assigned": 113,
-        "unassigned": 0,
+        "assigned": 112,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -101462,8 +101484,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PALELEH BARAT",
         "kab_name": "[07] BUOL",
         "total": 70,
-        "assigned": 70,
-        "unassigned": 0,
+        "assigned": 69,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -104883,8 +104905,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PARIGI",
         "kab_name": "[08] PARIGI MOUTONG",
         "total": 119,
-        "assigned": 119,
-        "unassigned": 0,
+        "assigned": 118,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -120976,8 +120998,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "ULUBONGKA",
         "kab_name": "[09] TOJO UNA-UNA",
         "total": 78,
-        "assigned": 78,
-        "unassigned": 0,
+        "assigned": 77,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -124881,8 +124903,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "AMPANA KOTA",
         "kab_name": "[09] TOJO UNA-UNA",
         "total": 139,
-        "assigned": 139,
-        "unassigned": 0,
+        "assigned": 138,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -138345,8 +138367,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 94,
-        "assigned": 79,
-        "unassigned": 15,
+        "assigned": 94,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -149477,8 +149499,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANGGAI",
         "kab_name": "[11] BANGGAI LAUT",
         "total": 187,
-        "assigned": 187,
-        "unassigned": 0,
+        "assigned": 186,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -149499,8 +149521,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANGGAI",
         "kab_name": "[11] BANGGAI LAUT",
         "total": 227,
-        "assigned": 227,
-        "unassigned": 0,
+        "assigned": 226,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -149598,8 +149620,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANGGAI",
         "kab_name": "[11] BANGGAI LAUT",
         "total": 129,
-        "assigned": 129,
-        "unassigned": 0,
+        "assigned": 128,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -149675,8 +149697,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANGGAI",
         "kab_name": "[11] BANGGAI LAUT",
         "total": 439,
-        "assigned": 439,
-        "unassigned": 0,
+        "assigned": 438,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -162149,8 +162171,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PALU BARAT",
         "kab_name": "[71] PALU",
         "total": 323,
-        "assigned": 323,
-        "unassigned": 0,
+        "assigned": 321,
+        "unassigned": 2,
         "officers": []
     },
     {
@@ -165108,8 +165130,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "ULUJADI",
         "kab_name": "[71] PALU",
         "total": 220,
-        "assigned": 220,
-        "unassigned": 0,
+        "assigned": 219,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -165636,8 +165658,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PALU SELATAN",
         "kab_name": "[71] PALU",
         "total": 185,
-        "assigned": 185,
-        "unassigned": 0,
+        "assigned": 184,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -165900,8 +165922,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PALU SELATAN",
         "kab_name": "[71] PALU",
         "total": 135,
-        "assigned": 135,
-        "unassigned": 0,
+        "assigned": 134,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -165933,8 +165955,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PALU SELATAN",
         "kab_name": "[71] PALU",
         "total": 309,
-        "assigned": 309,
-        "unassigned": 0,
+        "assigned": 308,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -166406,8 +166428,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PALU SELATAN",
         "kab_name": "[71] PALU",
         "total": 272,
-        "assigned": 272,
-        "unassigned": 0,
+        "assigned": 271,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -166901,8 +166923,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PALU SELATAN",
         "kab_name": "[71] PALU",
         "total": 191,
-        "assigned": 191,
-        "unassigned": 0,
+        "assigned": 190,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -168309,8 +168331,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PALU TIMUR",
         "kab_name": "[71] PALU",
         "total": 124,
-        "assigned": 124,
-        "unassigned": 0,
+        "assigned": 123,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -170470,6 +170492,17 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "officers": []
     },
     {
+        "sls_code": "72710310060032",
+        "sls_name": "RT 004 RW 011",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 25,
+        "assigned": 25,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
         "sls_code": "72710310060008",
         "sls_name": "RT 002 RW 003",
         "desa_name": "TONDO",
@@ -170536,6 +170569,28 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "officers": []
     },
     {
+        "sls_code": "72710310063006",
+        "sls_name": "LAHAN TERBUKA",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 10,
+        "assigned": 10,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310065003",
+        "sls_name": "SEKOLAH MENENGAH KEJURUAN S DAN PERKARANGAN",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 4,
+        "assigned": 4,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
         "sls_code": "72710310060022",
         "sls_name": "RT 002 RW 009",
         "desa_name": "TONDO",
@@ -170586,8 +170641,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "MANTIKULORE",
         "kab_name": "[71] PALU",
         "total": 293,
-        "assigned": 293,
-        "unassigned": 0,
+        "assigned": 292,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -170690,6 +170745,17 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "officers": []
     },
     {
+        "sls_code": "72710310060027",
+        "sls_name": "RT 003 RW 010",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 39,
+        "assigned": 39,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
         "sls_code": "72710310060011",
         "sls_name": "RT 002 RW 004",
         "desa_name": "TONDO",
@@ -170778,6 +170844,17 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "officers": []
     },
     {
+        "sls_code": "72710310060028",
+        "sls_name": "RT 004 RW 010",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 41,
+        "assigned": 41,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
         "sls_code": "72710310060015",
         "sls_name": "RT 002 RW 006",
         "desa_name": "TONDO",
@@ -170833,6 +170910,28 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "officers": []
     },
     {
+        "sls_code": "72710310060025",
+        "sls_name": "RT 001 RW 010",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 43,
+        "assigned": 43,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310060021",
+        "sls_name": "RT 001 RW 009",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 43,
+        "assigned": 43,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
         "sls_code": "72710310060036",
         "sls_name": "RT 002 RW 013",
         "desa_name": "TONDO",
@@ -170873,6 +170972,28 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kab_name": "[71] PALU",
         "total": 184,
         "assigned": 184,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310062001",
+        "sls_name": "BUKIT GONG PERDAMAIAN",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 27,
+        "assigned": 24,
+        "unassigned": 3,
+        "officers": []
+    },
+    {
+        "sls_code": "72710310065005",
+        "sls_name": "BELAKANG SEKOLAH SMKN 5 PALU",
+        "desa_name": "TONDO",
+        "kec_name": "MANTIKULORE",
+        "kab_name": "[71] PALU",
+        "total": 8,
+        "assigned": 8,
         "unassigned": 0,
         "officers": []
     },
@@ -173248,8 +173369,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TAWAELI",
         "kab_name": "[71] PALU",
         "total": 250,
-        "assigned": 250,
-        "unassigned": 0,
+        "assigned": 249,
+        "unassigned": 1,
         "officers": []
     },
     {
