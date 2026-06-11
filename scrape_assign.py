@@ -209,8 +209,9 @@ async def fetch_sls_companies(context, token, survey_period_id, region1_id, kab_
     all_companies = []
     for kab_code, kab_cfg in kab_region_map.items():
         start = 0
-        length = 100
+        length = 500 
         kab_total = 0
+        
         while True:
             payload_dt = {
                 "start": start, "length": length, "columns": [{"data": "id"}], "order": [],
@@ -222,9 +223,12 @@ async def fetch_sls_companies(context, token, survey_period_id, region1_id, kab_
             }
             res_dt = await evaluate_fetch_with_retry(context, token, DATATABLE_URL, payload_dt)
 
-            if not res_dt or "searchData" not in res_dt: break
+            if not res_dt or "searchData" not in res_dt: 
+                break
+                
             records = res_dt["searchData"]
-            if not records: break
+            if not records: 
+                break
 
             for r in records:
                 r["kab_code"] = kab_code
@@ -232,7 +236,10 @@ async def fetch_sls_companies(context, token, survey_period_id, region1_id, kab_
             all_companies.extend(records)
             kab_total += len(records)
             start += length
-            if start >= res_dt.get("totalHit", 0): break
+            
+           
+            if len(records) < length:
+                break
         
         print(f"  -> {kab_cfg['name']}: {kab_total} perusahaan ditarik")
     return all_companies

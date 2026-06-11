@@ -1,5 +1,5 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-11T10:51:08.485823+08:00",
+  "updated_at": "2026-06-11T11:17:46.918130+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
@@ -178,9 +178,9 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[04] POSO",
-      "total_prelist": 105378,
-      "total_draft": 68,
-      "total_open": 105276,
+      "total_prelist": 105389,
+      "total_draft": 78,
+      "total_open": 105277,
       "total_submitted": 33,
       "total_rejected": 1,
       "total_approved": 0,
@@ -188,7 +188,7 @@ window.IPAS_DATA = {
       "today_completed": 0,
       "yesterday_completed": 5,
       "two_days_ago_completed": 1,
-      "new_usaha_today": 0,
+      "new_usaha_today": 10,
       "new_usaha_yesterday": 7,
       "new_businesses": [
         {
@@ -220,6 +220,66 @@ window.IPAS_DATA = {
           "code": "7204 - SE26mq7fb5E81E",
           "date": "yesterday",
           "status": "SUBMITTED RESPONDENT"
+        },
+        {
+          "name": "Koperasi Payoanjaya Mitra Bahari",
+          "code": "7204 - SE26mq8wgc1CF0",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "KPN PERHIPTANI",
+          "code": "7204 - SE26mq8wk8E9C6",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "Koperasi konsumen kartika Sintuwu Maroso",
+          "code": "7204 - 1298000112484",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "KOPERASI PEGAWAI NEGERI PENGAYOMAN",
+          "code": "7204 - SE26mq8wfvCE43",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "KSPPS BMT KS 72 AMANAH",
+          "code": "7204 - 0802220013847",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "koperasi pedeka",
+          "code": "7204 - SE26mq8wghCBFA",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "KSP Pegawai Negeri Ikhtiar",
+          "code": "7204 - SE26mq8wq320F4",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "KOPERASI SERBA USAHA DANA DIPA",
+          "code": "7204 - SE26mq8whl3679",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "Koperasi Annisa cahaya mandiri",
+          "code": "7204 - SE26mq8wg28302",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "KOPERASI KONSUMEN PARTHA GRAHA MANDIRI",
+          "code": "7204 - SE26mq8wh63F31",
+          "date": "today",
+          "status": "DRAFT"
         },
         {
           "name": "Hotel wisata",
@@ -405,13 +465,13 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
       "total_prelist": 6,
-      "total_draft": 5,
+      "total_draft": 3,
       "total_open": 1,
-      "total_submitted": 0,
+      "total_submitted": 2,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 0.0,
-      "today_completed": 0,
+      "persentase": 33.33,
+      "today_completed": 2,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
@@ -611,6 +671,6 @@ window.IPAS_DATA = {
       "new_businesses": []
     }
   ],
-  "se_umum_prov_total": 1140255,
+  "se_umum_prov_total": 1140266,
   "se_ub_prov_total": 1264
 };
