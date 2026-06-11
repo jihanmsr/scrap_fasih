@@ -5,7 +5,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 43834,
         "assigned": 42327,
         "have_not_assigned": 1507,
-        "timestamp": "2026-06-12T05:44:49.064836"
+        "timestamp": "2026-06-12T05:59:36.691954"
     },
     {
         "kode_kab": "7202",
@@ -13,7 +13,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 138111,
         "assigned": 136302,
         "have_not_assigned": 1809,
-        "timestamp": "2026-06-12T05:44:49.064768"
+        "timestamp": "2026-06-12T05:59:36.691924"
     },
     {
         "kode_kab": "7203",
@@ -21,7 +21,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 47729,
         "assigned": 47729,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-12T05:44:49.064828"
+        "timestamp": "2026-06-12T05:59:36.691951"
     },
     {
         "kode_kab": "7204",
@@ -29,15 +29,15 @@ window.ASSIGN_DATA_UMUM = [
         "total": 105395,
         "assigned": 21991,
         "have_not_assigned": 83404,
-        "timestamp": "2026-06-12T05:44:49.064787"
+        "timestamp": "2026-06-12T05:59:36.691932"
     },
     {
         "kode_kab": "7205",
         "nama_kab": "[05] DONGGALA",
         "total": 105502,
-        "assigned": 99577,
-        "have_not_assigned": 5925,
-        "timestamp": "2026-06-12T05:44:49.064778"
+        "assigned": 100146,
+        "have_not_assigned": 5356,
+        "timestamp": "2026-06-12T05:59:36.691928"
     },
     {
         "kode_kab": "7206",
@@ -45,7 +45,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 75959,
         "assigned": 75919,
         "have_not_assigned": 40,
-        "timestamp": "2026-06-12T05:44:49.064803"
+        "timestamp": "2026-06-12T05:59:36.691940"
     },
     {
         "kode_kab": "7207",
@@ -53,7 +53,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 57327,
         "assigned": 56339,
         "have_not_assigned": 988,
-        "timestamp": "2026-06-12T05:44:49.064820"
+        "timestamp": "2026-06-12T05:59:36.691947"
     },
     {
         "kode_kab": "7208",
@@ -61,7 +61,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 169384,
         "assigned": 169270,
         "have_not_assigned": 114,
-        "timestamp": "2026-06-12T05:44:49.064690"
+        "timestamp": "2026-06-12T05:59:36.691887"
     },
     {
         "kode_kab": "7209",
@@ -69,7 +69,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 57912,
         "assigned": 57908,
         "have_not_assigned": 4,
-        "timestamp": "2026-06-12T05:44:49.064812"
+        "timestamp": "2026-06-12T05:59:36.691944"
     },
     {
         "kode_kab": "7210",
@@ -77,7 +77,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 105041,
         "assigned": 104818,
         "have_not_assigned": 223,
-        "timestamp": "2026-06-12T05:44:49.064795"
+        "timestamp": "2026-06-12T05:59:36.691936"
     },
     {
         "kode_kab": "7211",
@@ -85,7 +85,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 27552,
         "assigned": 27190,
         "have_not_assigned": 362,
-        "timestamp": "2026-06-12T05:44:49.064852"
+        "timestamp": "2026-06-12T05:59:36.691961"
     },
     {
         "kode_kab": "7212",
@@ -93,7 +93,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 42448,
         "assigned": 42448,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-12T05:44:49.064844"
+        "timestamp": "2026-06-12T05:59:36.691958"
     },
     {
         "kode_kab": "7271",
@@ -101,7 +101,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 164079,
         "assigned": 164020,
         "have_not_assigned": 59,
-        "timestamp": "2026-06-12T05:44:49.064754"
+        "timestamp": "2026-06-12T05:59:36.691917"
     }
 ];
 window.ASSIGN_DATA_UB   = [
@@ -111,7 +111,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 6,
         "assigned": 0,
         "have_not_assigned": 6,
-        "timestamp": "2026-06-12T05:44:49.206816"
+        "timestamp": "2026-06-12T05:59:37.950113"
     },
     {
         "kode_kab": "7202",
@@ -119,7 +119,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 172,
         "assigned": 3,
         "have_not_assigned": 169,
-        "timestamp": "2026-06-12T05:44:49.206726"
+        "timestamp": "2026-06-12T05:59:37.950065"
     },
     {
         "kode_kab": "7203",
@@ -127,7 +127,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 161,
         "assigned": 1,
         "have_not_assigned": 160,
-        "timestamp": "2026-06-12T05:44:49.206736"
+        "timestamp": "2026-06-12T05:59:37.950070"
     },
     {
         "kode_kab": "7204",
@@ -135,7 +135,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 92,
         "assigned": 0,
         "have_not_assigned": 92,
-        "timestamp": "2026-06-12T05:44:49.206744"
+        "timestamp": "2026-06-12T05:59:37.950074"
     },
     {
         "kode_kab": "7205",
@@ -143,7 +143,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 57,
         "assigned": 1,
         "have_not_assigned": 56,
-        "timestamp": "2026-06-12T05:44:49.206771"
+        "timestamp": "2026-06-12T05:59:37.950087"
     },
     {
         "kode_kab": "7206",
@@ -151,7 +151,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 58,
         "assigned": 0,
         "have_not_assigned": 58,
-        "timestamp": "2026-06-12T05:44:49.206761"
+        "timestamp": "2026-06-12T05:59:37.950083"
     },
     {
         "kode_kab": "7207",
@@ -159,7 +159,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 17,
         "assigned": 0,
         "have_not_assigned": 17,
-        "timestamp": "2026-06-12T05:44:49.206791"
+        "timestamp": "2026-06-12T05:59:37.950098"
     },
     {
         "kode_kab": "7208",
@@ -167,7 +167,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 65,
         "assigned": 65,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-12T05:44:49.206753"
+        "timestamp": "2026-06-12T05:59:37.950079"
     },
     {
         "kode_kab": "7209",
@@ -175,7 +175,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 15,
         "assigned": 0,
         "have_not_assigned": 15,
-        "timestamp": "2026-06-12T05:44:49.206799"
+        "timestamp": "2026-06-12T05:59:37.950103"
     },
     {
         "kode_kab": "7210",
@@ -183,7 +183,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 22,
         "assigned": 18,
         "have_not_assigned": 4,
-        "timestamp": "2026-06-12T05:44:49.206782"
+        "timestamp": "2026-06-12T05:59:37.950091"
     },
     {
         "kode_kab": "7211",
@@ -191,7 +191,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 7,
         "assigned": 0,
         "have_not_assigned": 7,
-        "timestamp": "2026-06-12T05:44:49.206807"
+        "timestamp": "2026-06-12T05:59:37.950107"
     },
     {
         "kode_kab": "7212",
@@ -199,7 +199,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 173,
         "assigned": 0,
         "have_not_assigned": 173,
-        "timestamp": "2026-06-12T05:44:49.206713"
+        "timestamp": "2026-06-12T05:59:37.950057"
     },
     {
         "kode_kab": "7271",
@@ -207,7 +207,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 419,
         "assigned": 0,
         "have_not_assigned": 419,
-        "timestamp": "2026-06-12T05:44:49.206661"
+        "timestamp": "2026-06-12T05:59:37.950025"
     }
 ];
 window.ASSIGN_SLS_DATA_UMUM = [
@@ -72257,8 +72257,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 233,
-        "assigned": 232,
-        "unassigned": 1,
+        "assigned": 233,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72268,8 +72268,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 131,
-        "assigned": 0,
-        "unassigned": 131,
+        "assigned": 131,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72290,8 +72290,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 146,
-        "assigned": 0,
-        "unassigned": 146,
+        "assigned": 146,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72312,8 +72312,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 39,
-        "assigned": 0,
-        "unassigned": 39,
+        "assigned": 39,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72334,8 +72334,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72367,8 +72367,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 86,
-        "assigned": 0,
-        "unassigned": 86,
+        "assigned": 86,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72378,8 +72378,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72422,8 +72422,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 80,
-        "assigned": 0,
-        "unassigned": 80,
+        "assigned": 80,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72444,8 +72444,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 77,
-        "assigned": 0,
-        "unassigned": 77,
+        "assigned": 77,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72455,8 +72455,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 20,
-        "assigned": 0,
-        "unassigned": 20,
+        "assigned": 20,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72466,8 +72466,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 55,
-        "assigned": 0,
-        "unassigned": 55,
+        "assigned": 55,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72477,8 +72477,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 35,
-        "assigned": 0,
-        "unassigned": 35,
+        "assigned": 35,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72488,8 +72488,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 22,
-        "assigned": 0,
-        "unassigned": 22,
+        "assigned": 22,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72499,8 +72499,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72510,8 +72510,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 68,
-        "assigned": 0,
-        "unassigned": 68,
+        "assigned": 68,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72521,8 +72521,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 61,
-        "assigned": 0,
-        "unassigned": 61,
+        "assigned": 61,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72532,8 +72532,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 51,
-        "assigned": 0,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72543,8 +72543,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72554,8 +72554,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 98,
-        "assigned": 0,
-        "unassigned": 98,
+        "assigned": 98,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72565,8 +72565,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72587,8 +72587,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72598,8 +72598,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 70,
-        "assigned": 0,
-        "unassigned": 70,
+        "assigned": 70,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72620,8 +72620,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72642,8 +72642,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 13,
-        "assigned": 0,
-        "unassigned": 13,
+        "assigned": 13,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72653,8 +72653,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72675,8 +72675,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 12,
-        "assigned": 0,
-        "unassigned": 12,
+        "assigned": 12,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72686,8 +72686,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 80,
-        "assigned": 0,
-        "unassigned": 80,
+        "assigned": 80,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72719,8 +72719,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 80,
-        "assigned": 0,
-        "unassigned": 80,
+        "assigned": 80,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72730,8 +72730,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72741,8 +72741,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72752,8 +72752,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 40,
-        "assigned": 0,
-        "unassigned": 40,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72763,8 +72763,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 60,
-        "assigned": 0,
-        "unassigned": 60,
+        "assigned": 60,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72796,8 +72796,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 48,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72807,8 +72807,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72840,8 +72840,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 86,
-        "assigned": 0,
-        "unassigned": 86,
+        "assigned": 86,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72851,8 +72851,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 50,
-        "assigned": 0,
-        "unassigned": 50,
+        "assigned": 50,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72884,8 +72884,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 235,
-        "assigned": 0,
-        "unassigned": 235,
+        "assigned": 235,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -72972,8 +72972,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 86,
-        "assigned": 0,
-        "unassigned": 86,
+        "assigned": 86,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73027,8 +73027,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 103,
-        "assigned": 0,
-        "unassigned": 103,
+        "assigned": 103,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73060,8 +73060,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 83,
-        "assigned": 0,
-        "unassigned": 83,
+        "assigned": 83,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73071,8 +73071,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 212,
-        "assigned": 0,
-        "unassigned": 212,
+        "assigned": 212,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73082,8 +73082,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 113,
-        "assigned": 0,
-        "unassigned": 113,
+        "assigned": 113,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73093,8 +73093,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 163,
-        "assigned": 0,
-        "unassigned": 163,
+        "assigned": 163,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73104,8 +73104,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 233,
-        "assigned": 0,
-        "unassigned": 233,
+        "assigned": 233,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73126,8 +73126,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 121,
-        "assigned": 0,
-        "unassigned": 121,
+        "assigned": 121,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73137,8 +73137,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 97,
-        "assigned": 0,
-        "unassigned": 97,
+        "assigned": 97,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73148,8 +73148,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 139,
-        "assigned": 0,
-        "unassigned": 139,
+        "assigned": 139,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73159,8 +73159,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 97,
-        "assigned": 0,
-        "unassigned": 97,
+        "assigned": 97,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73269,8 +73269,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73280,8 +73280,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73324,8 +73324,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 34,
-        "assigned": 0,
-        "unassigned": 34,
+        "assigned": 34,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73390,8 +73390,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 57,
-        "assigned": 0,
-        "unassigned": 57,
+        "assigned": 57,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73478,8 +73478,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 37,
-        "assigned": 0,
-        "unassigned": 37,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73500,8 +73500,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 45,
-        "assigned": 0,
-        "unassigned": 45,
+        "assigned": 45,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73533,8 +73533,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 93,
-        "assigned": 0,
-        "unassigned": 93,
+        "assigned": 93,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73544,8 +73544,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 147,
-        "assigned": 0,
-        "unassigned": 147,
+        "assigned": 147,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73555,8 +73555,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 201,
-        "assigned": 0,
-        "unassigned": 201,
+        "assigned": 201,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73566,8 +73566,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 65,
-        "assigned": 0,
-        "unassigned": 65,
+        "assigned": 65,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73577,8 +73577,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 76,
-        "assigned": 0,
-        "unassigned": 76,
+        "assigned": 76,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73588,8 +73588,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 219,
-        "assigned": 0,
-        "unassigned": 219,
+        "assigned": 219,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73599,8 +73599,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 80,
-        "assigned": 0,
-        "unassigned": 80,
+        "assigned": 80,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73610,8 +73610,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 244,
-        "assigned": 0,
-        "unassigned": 244,
+        "assigned": 244,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73621,8 +73621,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 96,
-        "assigned": 0,
-        "unassigned": 96,
+        "assigned": 96,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73632,8 +73632,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 138,
-        "assigned": 0,
-        "unassigned": 138,
+        "assigned": 138,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73643,8 +73643,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 41,
-        "assigned": 0,
-        "unassigned": 41,
+        "assigned": 41,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73654,8 +73654,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73665,8 +73665,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 44,
-        "assigned": 0,
-        "unassigned": 44,
+        "assigned": 44,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73676,8 +73676,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 53,
-        "assigned": 0,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73687,8 +73687,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 24,
-        "assigned": 0,
-        "unassigned": 24,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73698,8 +73698,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 32,
-        "assigned": 0,
-        "unassigned": 32,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73709,8 +73709,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 36,
-        "assigned": 0,
-        "unassigned": 36,
+        "assigned": 36,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73720,8 +73720,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 62,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73731,8 +73731,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 63,
-        "assigned": 0,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73742,8 +73742,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 52,
-        "assigned": 0,
-        "unassigned": 52,
+        "assigned": 52,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73753,8 +73753,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 33,
-        "assigned": 0,
-        "unassigned": 33,
+        "assigned": 33,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73764,8 +73764,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 54,
-        "assigned": 0,
-        "unassigned": 54,
+        "assigned": 54,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73775,8 +73775,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 31,
-        "assigned": 0,
-        "unassigned": 31,
+        "assigned": 31,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -73786,8 +73786,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DAMPELAS",
         "kab_name": "[05] DONGGALA",
         "total": 83,
-        "assigned": 0,
-        "unassigned": 83,
+        "assigned": 83,
+        "unassigned": 0,
         "officers": []
     },
     {

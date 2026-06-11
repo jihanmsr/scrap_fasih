@@ -879,31 +879,31 @@
                 </div>
         </main>
     </div>
-    <div class="modal-overlay" id="businesses-modal"></div>
-    <div class="modal-container">
-        <div class="modal-header">
-            <h3 class="modal-title" id="modal-title-text">Daftar Usaha Baru</h3>
-            <button class="modal-close-btn" onclick="closeNewBusinessesModal()" aria-label="Close modal">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-        </div>
-        <div class="modal-body">
-            <div class="modal-search-wrapper">
-                <svg class="modal-search-icon" width="16" height="16" fill="none" stroke="currentColor"
-                    stroke-width="2.5" viewBox="0 0 24 24">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="M21 21l-4.35-4.35"></path>
-                </svg>
-                <input class="modal-search-input" id="modal-search-input" placeholder="Cari nama usaha atau kode..."
-                    type="text" oninput="filterModalList()" />
+    <div class="modal-overlay" id="businesses-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title-text">Daftar Usaha Baru</h3>
+                <button class="modal-close-btn" onclick="closeNewBusinessesModal()" aria-label="Close modal">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
             </div>
-            <div id="modal-business-list"
-                style="border: 1px solid var(--card-border); border-radius: 0.75rem; overflow: hidden; background: rgba(0,0,0,0.05); max-height: 400px; overflow-y: auto;">
+            <div class="modal-body">
+                <div class="modal-search-wrapper">
+                    <svg class="modal-search-icon" width="16" height="16" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                    <input class="modal-search-input" id="modal-search-input" placeholder="Cari nama usaha atau kode..."
+                        type="text" oninput="filterModalList()" />
+                </div>
+                <div id="modal-business-list"
+                    style="border: 1px solid var(--card-border); border-radius: 0.75rem; overflow: hidden; background: rgba(0,0,0,0.05); max-height: 400px; overflow-y: auto;">
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
     <script src="supabase_config.js"></script>
