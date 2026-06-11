@@ -1,0 +1,831 @@
+{
+    "7201": {
+        "kab_name": "[01] BANGGAI KEPULAUAN",
+        "kecamatan": [
+            {
+                "id": "492b2c3e-189b-4147-9bef-722eff9e4613",
+                "name": "-"
+            },
+            {
+                "id": "815d35b4-fc43-43b5-b2ff-afc30f187298",
+                "name": "TOTIKUM"
+            },
+            {
+                "id": "8cdd076e-5e25-4eed-bf63-3fbd427ac3c6",
+                "name": "TOTIKUM SELATAN"
+            },
+            {
+                "id": "6db0d206-23a2-4a19-8e59-8910954bf137",
+                "name": "TINANGKUNG"
+            },
+            {
+                "id": "af7151a7-5b03-4f11-9420-67a0e5755163",
+                "name": "TINANGKUNG SELATAN"
+            },
+            {
+                "id": "08d262e1-dd9c-40a5-8891-0ea7c60556f1",
+                "name": "TINANGKUNG UTARA"
+            },
+            {
+                "id": "6d5f82d4-8d29-4d72-bf4e-ff30bea5556b",
+                "name": "LIANG"
+            },
+            {
+                "id": "10596e9c-277d-4bf7-87df-c3610b508787",
+                "name": "PELING TENGAH"
+            },
+            {
+                "id": "19a74969-792a-4808-b058-a64a911265c5",
+                "name": "BULAGI"
+            },
+            {
+                "id": "c6ba1730-dcc6-4481-8193-8b278f7af2c5",
+                "name": "BULAGI SELATAN"
+            },
+            {
+                "id": "c8975e22-e6a1-42e8-bec8-56f1ccc380d8",
+                "name": "BULAGI UTARA"
+            },
+            {
+                "id": "e82a8220-ba0f-4ffd-87c4-c0f134716259",
+                "name": "BUKO"
+            },
+            {
+                "id": "3df1a02f-6314-4442-bd6b-17eaa2895e1a",
+                "name": "BUKO SELATAN"
+            }
+        ]
+    },
+    "7202": {
+        "kab_name": "[02] BANGGAI",
+        "kecamatan": [
+            {
+                "id": "3ecfbffb-a081-4791-b1c6-a374042cd215",
+                "name": "-"
+            },
+            {
+                "id": "45bfeee6-ffa4-4015-b66c-277ac2385dd6",
+                "name": "TOILI"
+            },
+            {
+                "id": "e7d2c034-96e9-42b8-8581-9c94e821ccc6",
+                "name": "TOILI BARAT"
+            },
+            {
+                "id": "af347cf2-2e0c-46da-a90a-d33666fe2eae",
+                "name": "MOILONG"
+            },
+            {
+                "id": "fe467054-0aa6-4a68-976e-4865fddd905a",
+                "name": "TOILI JAYA"
+            },
+            {
+                "id": "369d51ff-11a4-4e80-b823-79cb11a55392",
+                "name": "BATUI"
+            },
+            {
+                "id": "ada23cb6-f47e-4048-ae3d-2653ee8cb180",
+                "name": "BATUI SELATAN"
+            },
+            {
+                "id": "f5258d9d-a53f-45e6-94fa-450b0ee5bf7f",
+                "name": "BUNTA"
+            },
+            {
+                "id": "47925987-8247-41b2-ac48-d5bcd780a49d",
+                "name": "NUHON"
+            },
+            {
+                "id": "97f3d4a0-a610-4046-888b-48faf72dcc17",
+                "name": "SIMPANG RAYA"
+            },
+            {
+                "id": "53621f5b-b1ad-439d-a884-efe0b6bb3b00",
+                "name": "KINTOM"
+            },
+            {
+                "id": "197a3800-64a8-410b-be92-0721ce1edd47",
+                "name": "LUWUK"
+            },
+            {
+                "id": "0f54399d-bc23-4624-bedf-fe72921745d4",
+                "name": "LUWUK TIMUR"
+            },
+            {
+                "id": "08e402a6-e6f9-4efa-b578-4a496126e8d3",
+                "name": "LUWUK UTARA"
+            },
+            {
+                "id": "0b69db88-e899-475e-81bd-94f54622baa4",
+                "name": "LUWUK SELATAN"
+            },
+            {
+                "id": "978f2d5d-ca81-4b14-8e41-41b629e2c873",
+                "name": "NAMBO"
+            },
+            {
+                "id": "1158aabf-3710-4ec4-8ab3-0021c2a7b48d",
+                "name": "PAGIMANA"
+            },
+            {
+                "id": "1679ee85-fe8d-448c-a282-ced46abd8926",
+                "name": "BUALEMO"
+            },
+            {
+                "id": "1605d7e5-945f-4116-be14-46d2bb7fe99f",
+                "name": "LOBU"
+            },
+            {
+                "id": "3d02a578-d341-416f-a926-7eac46e007e1",
+                "name": "LAMALA"
+            },
+            {
+                "id": "7995aa5d-7d7e-4c8c-9abc-51c995bb2d5b",
+                "name": "MASAMA"
+            },
+            {
+                "id": "7d9a0b7a-ba1f-49da-a671-45ed09979fb2",
+                "name": "MANTOH"
+            },
+            {
+                "id": "450c4990-c8a1-4d8b-8b87-a655c6f5c2b8",
+                "name": "BALANTAK"
+            },
+            {
+                "id": "800b984c-163e-4cd7-bcd5-eec3bc3387ef",
+                "name": "BALANTAK SELATAN"
+            },
+            {
+                "id": "f120d797-3b84-49b4-a302-f6d163dc2a7b",
+                "name": "BALANTAK UTARA"
+            }
+        ]
+    },
+    "7203": {
+        "kab_name": "[03] MOROWALI",
+        "kecamatan": [
+            {
+                "id": "8bab62a4-8f25-4dcb-82a6-72eb960a7ed1",
+                "name": "-"
+            },
+            {
+                "id": "287a90ba-d2ba-46ce-842c-52c854b005ad",
+                "name": "MENUI KEPULAUAN"
+            },
+            {
+                "id": "f35b95f3-eb56-4d69-a1ce-fccbf3d4464c",
+                "name": "SOMBORI KEPULAUAN"
+            },
+            {
+                "id": "bd8c5caf-274f-48a4-8237-3e59f41d2b09",
+                "name": "BUNGKU SELATAN"
+            },
+            {
+                "id": "ef6b143e-383e-4275-8d76-cfd7f124d160",
+                "name": "BAHODOPI"
+            },
+            {
+                "id": "88fce2d6-754f-48fb-90f4-d7a7c1891856",
+                "name": "BUNGKU PESISIR"
+            },
+            {
+                "id": "5a01cd1d-b702-485a-b67d-33d4c10e0d9a",
+                "name": "BUNGKU TENGAH"
+            },
+            {
+                "id": "8c1ff4fe-2afb-437d-9470-b92c19242ca9",
+                "name": "BUNGKU TIMUR"
+            },
+            {
+                "id": "b210ab89-5b54-44c8-a3af-8ea0313524b1",
+                "name": "BUNGKU BARAT"
+            },
+            {
+                "id": "0bf36300-6961-4bb9-946e-e906e38f8ca3",
+                "name": "BUMI RAYA"
+            },
+            {
+                "id": "1f5b8573-dd8a-49a5-b07d-da7c7064dd72",
+                "name": "WITA PONDA"
+            }
+        ]
+    },
+    "7204": {
+        "kab_name": "[04] POSO",
+        "kecamatan": [
+            {
+                "id": "87ecca4d-2435-48e4-9e41-84fcdd4f278b",
+                "name": "-"
+            },
+            {
+                "id": "2d49f072-a4b9-44a3-bc96-7b58fccd7cb1",
+                "name": "PAMONA SELATAN"
+            },
+            {
+                "id": "80b80a02-030d-44d5-bc49-941449e7b210",
+                "name": "PAMONA BARAT"
+            },
+            {
+                "id": "f72225ba-53ec-49fb-ac83-5ac62c9ae840",
+                "name": "PAMONA TENGGARA"
+            },
+            {
+                "id": "0bf0fa56-87b8-41f8-8f33-23cec2dec82a",
+                "name": "LORE SELATAN"
+            },
+            {
+                "id": "4521e2d6-2c13-4e33-b0d2-88c5521362b6",
+                "name": "LORE BARAT"
+            },
+            {
+                "id": "f0977b34-a484-463a-a661-91be193bfbda",
+                "name": "PAMONA PUSALEMBA"
+            },
+            {
+                "id": "e551c7f8-0656-4a55-b168-0b142205d03f",
+                "name": "PAMONA TIMUR"
+            },
+            {
+                "id": "9da7b709-4f49-4912-9394-e4acab997078",
+                "name": "PAMONA UTARA"
+            },
+            {
+                "id": "78d3ff5c-a22d-4898-8495-fdfd56229b6a",
+                "name": "LORE UTARA"
+            },
+            {
+                "id": "1ecba323-8867-4702-a813-21447b9daee5",
+                "name": "LORE TENGAH"
+            },
+            {
+                "id": "92c3c179-4230-4727-a1a5-4b2aaf0d86e8",
+                "name": "LORE TIMUR"
+            },
+            {
+                "id": "889774f2-ca53-4527-9157-eacef47130f8",
+                "name": "LORE PEORE"
+            },
+            {
+                "id": "9b9e0943-caf8-413a-8137-ea0d0b55d457",
+                "name": "POSO PESISIR"
+            },
+            {
+                "id": "12124e73-2ce5-4821-8bb3-13d614c0c00e",
+                "name": "POSO PESISIR SELATAN"
+            },
+            {
+                "id": "dfc213a9-a637-42cf-beea-6b0226cd67ae",
+                "name": "POSO PESISIR UTARA"
+            },
+            {
+                "id": "e7e58105-458f-4278-a070-e3619d05d41b",
+                "name": "LAGE"
+            },
+            {
+                "id": "d99a5e42-aa17-4f26-aab4-b0eff5e45e03",
+                "name": "POSO KOTA"
+            },
+            {
+                "id": "5c3b6cc3-1893-4785-b758-d1501b834647",
+                "name": "POSO KOTA UTARA"
+            },
+            {
+                "id": "43ded262-d778-4704-aa2e-2932db6c98b9",
+                "name": "POSO KOTA SELATAN"
+            }
+        ]
+    },
+    "7205": {
+        "kab_name": "[05] DONGGALA",
+        "kecamatan": [
+            {
+                "id": "00110964-40c3-488e-84a5-e11c9c3dfbe0",
+                "name": "-"
+            },
+            {
+                "id": "4f40cdd6-5d07-4521-8801-bd7f680ff72c",
+                "name": "RIO PAKAVA"
+            },
+            {
+                "id": "1aae7972-ee97-4cd0-8759-4f24a5bf1456",
+                "name": "PINEMBANI"
+            },
+            {
+                "id": "093f557f-6ee7-462b-921a-7f48359be640",
+                "name": "BANAWA"
+            },
+            {
+                "id": "168c5d87-5d05-4af4-8635-f4c7c2db83b4",
+                "name": "BANAWA SELATAN"
+            },
+            {
+                "id": "a5001026-827b-4cd8-9a4b-1fcba138e6c1",
+                "name": "BANAWA TENGAH"
+            },
+            {
+                "id": "9ca6f8ff-7855-47c4-b574-908b94885b42",
+                "name": "LABUAN"
+            },
+            {
+                "id": "5c8cbbde-3c0a-4099-a73d-6330f4994844",
+                "name": "TANANTOVEA"
+            },
+            {
+                "id": "4f18f752-a8b1-4326-9641-618e6921909b",
+                "name": "SINDUE"
+            },
+            {
+                "id": "d91b97ef-4d10-495f-a94d-decdac2f17f7",
+                "name": "SINDUE TOMBUSABORA"
+            },
+            {
+                "id": "d8e59f02-6dfb-40fd-af65-81c20d6cb73f",
+                "name": "SINDUE TOBATA"
+            },
+            {
+                "id": "a0703dae-6684-4769-88c6-bb648052f398",
+                "name": "SIRENJA"
+            },
+            {
+                "id": "491567bd-cd7f-4fd5-b9a4-4a08b894df7b",
+                "name": "BALAESANG"
+            },
+            {
+                "id": "ae2467bd-10d2-436b-87a9-ec49c78e49cf",
+                "name": "BALAESANG TANJUNG"
+            },
+            {
+                "id": "539972d4-028f-442b-95c1-4b4cb7fa9224",
+                "name": "DAMPELAS"
+            },
+            {
+                "id": "8421b303-1415-48dc-b8ef-1b808cac1372",
+                "name": "SOJOL"
+            },
+            {
+                "id": "cf6a1f78-8c15-4cef-b9ec-d6ff4019b5d9",
+                "name": "SOJOL UTARA"
+            }
+        ]
+    },
+    "7206": {
+        "kab_name": "[06] TOLI-TOLI",
+        "kecamatan": [
+            {
+                "id": "2a7ece50-b55b-44f5-9d24-b8810233d179",
+                "name": "-"
+            },
+            {
+                "id": "a7bf080a-3def-427c-a6c2-675b9161843b",
+                "name": "DAMPAL SELATAN"
+            },
+            {
+                "id": "511c910b-ed62-4816-b1ed-492abc67fe54",
+                "name": "DAMPAL UTARA"
+            },
+            {
+                "id": "a2937b90-81a6-4c92-b53b-44911931dbe6",
+                "name": "DONDO"
+            },
+            {
+                "id": "c6e474d6-064d-4afa-bde0-ff7fb454cdc3",
+                "name": "OGODEIDE"
+            },
+            {
+                "id": "66505253-c231-4272-9b94-dc6d3a71fd2a",
+                "name": "BASIDONDO"
+            },
+            {
+                "id": "1f4e43f8-9369-4617-80a1-26e4c366a490",
+                "name": "BAOLAN"
+            },
+            {
+                "id": "d607fcc3-89d5-44dc-bd31-7bd8321e0177",
+                "name": "LAMPASIO"
+            },
+            {
+                "id": "224cc036-712f-468a-a169-ca7e662d7bfa",
+                "name": "GALANG"
+            },
+            {
+                "id": "66294627-db5d-409e-bdc7-302d3bd7b4d7",
+                "name": "TOLITOLI UTARA"
+            },
+            {
+                "id": "b55f6be9-6f94-41f6-95b9-03467952b4b0",
+                "name": "DAKO PEMEAN"
+            }
+        ]
+    },
+    "7207": {
+        "kab_name": "[07] BUOL",
+        "kecamatan": [
+            {
+                "id": "e3ca15ac-26a5-46b6-96e0-c65c8013b9d8",
+                "name": "-"
+            },
+            {
+                "id": "9500a712-af0e-402d-aa10-de7305b3f0f9",
+                "name": "LAKEA"
+            },
+            {
+                "id": "65adffaa-4bb1-411e-894b-497d04d34415",
+                "name": "BIAU"
+            },
+            {
+                "id": "939ea2e7-0848-40a1-a6d8-fff5162b86bf",
+                "name": "KARAMAT"
+            },
+            {
+                "id": "1327182c-39b6-445a-99cb-f9f2064b707a",
+                "name": "MOMUNU"
+            },
+            {
+                "id": "8685eb3e-968f-4bf2-a4d3-51d7cac83480",
+                "name": "TILOAN"
+            },
+            {
+                "id": "a7ad0568-6cb5-4a81-aa91-c4e2eca8ca6b",
+                "name": "BOKAT"
+            },
+            {
+                "id": "05826f63-ec31-48d7-a062-ecef50f28cd1",
+                "name": "BUKAL"
+            },
+            {
+                "id": "b1862982-cfa7-4442-a701-5a2a3b250ffa",
+                "name": "BUNOBOGU"
+            },
+            {
+                "id": "6fabf945-8b2f-4368-b0e2-81ab1392dd7e",
+                "name": "GADUNG"
+            },
+            {
+                "id": "221d02af-3d4c-45e8-aa1c-153b4be77aad",
+                "name": "PALELEH"
+            },
+            {
+                "id": "84894353-d654-44f0-adbd-6c0f0233f743",
+                "name": "PALELEH BARAT"
+            }
+        ]
+    },
+    "7208": {
+        "kab_name": "[08] PARIGI MOUTONG",
+        "kecamatan": [
+            {
+                "id": "31c3f9e8-416c-4a59-8dde-e1b63266f6d1",
+                "name": "-"
+            },
+            {
+                "id": "7edaff7e-8716-46ed-9c95-4572b6118ea8",
+                "name": "SAUSU"
+            },
+            {
+                "id": "f8a0bc27-18ff-4713-9b8f-8a3a1adf8df7",
+                "name": "TORUE"
+            },
+            {
+                "id": "12585f97-0cbd-465d-8397-14f4d0cd14a2",
+                "name": "BALINGGI"
+            },
+            {
+                "id": "1118cb16-dd43-4601-9bc7-9635fb91b815",
+                "name": "PARIGI"
+            },
+            {
+                "id": "ebe507a5-cf3c-44d5-8608-91ab3da7b5a1",
+                "name": "PARIGI SELATAN"
+            },
+            {
+                "id": "28c874e7-1a40-44ee-ae9d-7a0d597f8004",
+                "name": "PARIGI BARAT"
+            },
+            {
+                "id": "e8a994c9-45e1-4c50-a81e-8c2a43909c92",
+                "name": "PARIGI UTARA"
+            },
+            {
+                "id": "fd134760-3a4b-4e3f-970e-0629934cf6c7",
+                "name": "PARIGI TENGAH"
+            },
+            {
+                "id": "12e93053-5586-46d4-adc5-205e654b9d88",
+                "name": "AMPIBABO"
+            },
+            {
+                "id": "e7ca4fb3-409f-42b0-a0ca-4c74df90c56c",
+                "name": "KASIMBAR"
+            },
+            {
+                "id": "b13929ff-7daa-46a7-8f3c-7c967b512580",
+                "name": "TORIBULU"
+            },
+            {
+                "id": "a5719653-4a62-478c-bc63-86a4c4e0e46d",
+                "name": "SINIU"
+            },
+            {
+                "id": "0d34a059-18b6-45da-9168-d4dea9488fd6",
+                "name": "TINOMBO"
+            },
+            {
+                "id": "a111edd6-85c3-4f88-8f2c-7c53cd83b0ac",
+                "name": "TINOMBO SELATAN"
+            },
+            {
+                "id": "59976328-9cd8-4890-b1a8-a78c6f02e454",
+                "name": "SIDOAN"
+            },
+            {
+                "id": "ef80a49e-9d83-467e-8995-206c1103af77",
+                "name": "TOMINI"
+            },
+            {
+                "id": "72a3039e-e0fa-40c3-bb2a-aab294784d68",
+                "name": "MEPANGA"
+            },
+            {
+                "id": "20faf16f-54f4-4829-91a2-a458cf0e45fd",
+                "name": "PALASA"
+            },
+            {
+                "id": "83d8e49d-1cd7-453f-8542-629d6f602ae2",
+                "name": "MOUTONG"
+            },
+            {
+                "id": "1dc08110-bfa6-4157-afcf-163a7a31ee13",
+                "name": "BOLANO LAMBUNU"
+            },
+            {
+                "id": "eef80b48-ab88-4243-b0ab-9bd61208f9ac",
+                "name": "TAOPA"
+            },
+            {
+                "id": "fa5a857c-f56b-4c61-a119-42d8a2632797",
+                "name": "BOLANO"
+            },
+            {
+                "id": "ad36f493-23a3-46bb-b036-508508581915",
+                "name": "ONGKA MALINO"
+            }
+        ]
+    },
+    "7209": {
+        "kab_name": "[09] TOJO UNA-UNA",
+        "kecamatan": [
+            {
+                "id": "c92cdfcd-c29d-4acf-9dc6-4321b97316e0",
+                "name": "-"
+            },
+            {
+                "id": "82804cbe-8c3d-4a4e-b06d-ea475721eb43",
+                "name": "TOJO BARAT"
+            },
+            {
+                "id": "a7e361b1-bdf4-4d57-882e-c410de209db2",
+                "name": "TOJO"
+            },
+            {
+                "id": "38034715-8fc4-4aa8-b887-752b8bd83417",
+                "name": "ULUBONGKA"
+            },
+            {
+                "id": "c5d104a9-0aa2-4ba8-a8c8-1c211de4f455",
+                "name": "AMPANA TETE"
+            },
+            {
+                "id": "ee81aba3-2a27-4035-a8ec-f46af32b90fb",
+                "name": "AMPANA KOTA"
+            },
+            {
+                "id": "7d333cb8-ca0e-4ded-8b02-ba02fa79bd9f",
+                "name": "RATOLINDO"
+            },
+            {
+                "id": "5a3ae331-c17a-4d95-9e2c-55e978d69bf1",
+                "name": "UNA - UNA"
+            },
+            {
+                "id": "b7c11a88-a917-46c7-9e85-1408fd8cedf9",
+                "name": "BATUDAKA"
+            },
+            {
+                "id": "807deb70-de48-4df9-9475-768b0e8612a0",
+                "name": "TOGEAN"
+            },
+            {
+                "id": "dab5d5a2-5e96-488f-8746-2bae6ad0b6d2",
+                "name": "WALEA KEPULAUAN"
+            },
+            {
+                "id": "f808173b-41fd-474c-a903-6b9fb7761137",
+                "name": "WALEA BESAR"
+            },
+            {
+                "id": "32084da8-c80a-49d7-85f6-b49fbde3306a",
+                "name": "TALATAKO"
+            }
+        ]
+    },
+    "7210": {
+        "kab_name": "[10] SIGI",
+        "kecamatan": [
+            {
+                "id": "7ef14221-c92c-4f7d-90d9-5680c82b708e",
+                "name": "-"
+            },
+            {
+                "id": "a33c878a-c4ce-4715-ab70-507111c528e9",
+                "name": "PIPIKORO"
+            },
+            {
+                "id": "596691eb-1b84-4e6d-b01b-19c0e367b590",
+                "name": "KULAWI SELATAN"
+            },
+            {
+                "id": "21cc28f2-e251-4908-9ce6-90e0a2f150cd",
+                "name": "KULAWI"
+            },
+            {
+                "id": "2cff5ba2-925a-4543-a8c3-c9657785dbca",
+                "name": "LINDU"
+            },
+            {
+                "id": "56ecc10a-f3bf-44fb-92c8-197bc17127c9",
+                "name": "NOKILALAKI"
+            },
+            {
+                "id": "be388afe-d903-4264-a8b8-37b4fda22a88",
+                "name": "PALOLO"
+            },
+            {
+                "id": "73a8378b-cd0b-4761-bde9-f8746044e41d",
+                "name": "GUMBASA"
+            },
+            {
+                "id": "fb9dcba4-ab2a-4dd7-898e-b987fd04ad46",
+                "name": "DOLO SELATAN"
+            },
+            {
+                "id": "8abf6762-528b-4387-ab8e-5bbfd1bd4ff1",
+                "name": "DOLO BARAT"
+            },
+            {
+                "id": "f46c850a-a828-405e-b077-fe937ebc9c87",
+                "name": "TANAMBULAVA"
+            },
+            {
+                "id": "a74c23ad-508c-476a-ad16-542172650e06",
+                "name": "DOLO"
+            },
+            {
+                "id": "4f84b7b6-595b-4892-adbd-db4c77d9c96d",
+                "name": "SIGI BIROMARU"
+            },
+            {
+                "id": "f58e07d8-4dad-4ecc-9297-e66165fcb191",
+                "name": "SIGI KOTA"
+            },
+            {
+                "id": "c8020894-4d15-433a-8de4-31ea83480352",
+                "name": "MARAWOLA"
+            },
+            {
+                "id": "dd954d13-92e1-418d-ad83-a7bd2cdea907",
+                "name": "MARAWOLA BARAT"
+            },
+            {
+                "id": "78a16357-c302-4f7c-9fa6-4c20c38ab82a",
+                "name": "KINOVARO"
+            }
+        ]
+    },
+    "7211": {
+        "kab_name": "[11] BANGGAI LAUT",
+        "kecamatan": [
+            {
+                "id": "f5157e2b-0109-45f8-83fa-1a2885e11397",
+                "name": "-"
+            },
+            {
+                "id": "3d771ffa-25dc-4292-a9d3-538f78762950",
+                "name": "BANGKURUNG"
+            },
+            {
+                "id": "f2cc29c8-27c6-4185-a483-bdb59588aa45",
+                "name": "LABOBO"
+            },
+            {
+                "id": "f7028561-08bc-4482-a1ad-da94b0aa612f",
+                "name": "BANGGAI UTARA"
+            },
+            {
+                "id": "2592bed7-1f8c-407a-8544-c19e8948d0e7",
+                "name": "BANGGAI"
+            },
+            {
+                "id": "de4d86dc-a229-4091-afc8-911fcad33aed",
+                "name": "BANGGAI TENGAH"
+            },
+            {
+                "id": "844993c2-c95c-4061-8d23-1e5c34a5e52c",
+                "name": "BANGGAI SELATAN"
+            },
+            {
+                "id": "0b6e5a9b-7b3c-48d6-a9dc-1ac26f7ab360",
+                "name": "BOKAN KEPULAUAN"
+            }
+        ]
+    },
+    "7212": {
+        "kab_name": "[12] MOROWALI UTARA",
+        "kecamatan": [
+            {
+                "id": "26073fb8-d432-49f8-9d4e-46ce5a50a619",
+                "name": "-"
+            },
+            {
+                "id": "160e97e7-69ec-42ec-b3ec-18b4cbdd3d07",
+                "name": "MORI ATAS"
+            },
+            {
+                "id": "eb697b73-5488-4054-8c44-6cf99c5073d1",
+                "name": "LEMBO"
+            },
+            {
+                "id": "cae529e3-1e24-40e7-933c-f6e929039a98",
+                "name": "LEMBO RAYA"
+            },
+            {
+                "id": "27551ce3-6793-439e-933e-2067627aacb0",
+                "name": "PETASIA TIMUR"
+            },
+            {
+                "id": "d073602c-65dc-42a5-8adb-9cb36538fc5c",
+                "name": "PETASIA"
+            },
+            {
+                "id": "dc9b357d-ce91-4147-bf8e-d791205a4b2a",
+                "name": "PETASIA BARAT"
+            },
+            {
+                "id": "52d02a96-c109-435d-afd8-4627b862e4ab",
+                "name": "MORI UTARA"
+            },
+            {
+                "id": "87884162-bc06-4844-8390-e6abdec7a955",
+                "name": "SOYO JAYA"
+            },
+            {
+                "id": "b298ed68-e867-42ba-aed0-31312ed37c05",
+                "name": "BUNGKU UTARA"
+            },
+            {
+                "id": "c0008bb8-abee-428f-8a6e-344476ad546f",
+                "name": "MAMOSALATO"
+            }
+        ]
+    },
+    "7271": {
+        "kab_name": "[71] PALU",
+        "kecamatan": [
+            {
+                "id": "167109dc-efb9-45a0-a2bf-23299e7e87f2",
+                "name": "-"
+            },
+            {
+                "id": "145b6633-6e57-44d8-b62c-9dbe124af04a",
+                "name": "PALU BARAT"
+            },
+            {
+                "id": "c3a96057-476b-4a0e-b08b-c5143d46ecfd",
+                "name": "TATANGA"
+            },
+            {
+                "id": "8ec30a25-67aa-421a-a887-f1b683ff2371",
+                "name": "ULUJADI"
+            },
+            {
+                "id": "2b67d591-f1f8-4bc5-b655-968adf0d20f9",
+                "name": "PALU SELATAN"
+            },
+            {
+                "id": "1eba08ca-b70b-45fc-b51c-3d4f697093ef",
+                "name": "PALU TIMUR"
+            },
+            {
+                "id": "9138f47c-c2c1-4e86-9faa-bec0250ff6b0",
+                "name": "MANTIKULORE"
+            },
+            {
+                "id": "aba62c3a-4e6b-4b9a-b494-e94666473193",
+                "name": "PALU UTARA"
+            },
+            {
+                "id": "fbe9ae12-e179-4253-9350-99782221afa6",
+                "name": "TAWAELI"
+            }
+        ]
+    }
+}

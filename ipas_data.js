@@ -1,5 +1,5 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-11T11:43:02.625054+08:00",
+  "updated_at": "2026-06-11T12:04:23.470037+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
@@ -163,8 +163,8 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[03] MOROWALI",
       "total_prelist": 47729,
-      "total_draft": 0,
-      "total_open": 47729,
+      "total_draft": 1,
+      "total_open": 47728,
       "total_submitted": 0,
       "total_rejected": 0,
       "total_approved": 0,
@@ -222,14 +222,14 @@ window.IPAS_DATA = {
           "status": "SUBMITTED RESPONDENT"
         },
         {
-          "name": "ksu dana dipa",
-          "code": "7204 - SE26mq8whl3679",
+          "name": "KPN PERHIPTANI",
+          "code": "7204 - SE26mq8wk8E9C6",
           "date": "today",
           "status": "DRAFT"
         },
         {
-          "name": "KPN PERHIPTANI",
-          "code": "7204 - SE26mq8wk8E9C6",
+          "name": "ksu dana dipa",
+          "code": "7204 - SE26mq8whl3679",
           "date": "today",
           "status": "DRAFT"
         },

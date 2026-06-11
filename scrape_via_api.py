@@ -25,15 +25,17 @@ if SUPABASE_URL and SUPABASE_KEY and "MASUKKAN" not in SUPABASE_URL:
     except Exception as e:
         logging.error(f"Gagal menginisialisasi Supabase: {e}")
 
-USER_DATA_DIR = "playwright_chrome_profile"
+# --- PERUBAHAN 1: NAMA FOLDER PROFIL DIBEDAKAN ---
+USER_DATA_DIR = "playwright_chrome_profile_email" 
 OUTPUT_CSV = "all_email_history.csv"
 OUTPUT_JS = "data.js"
 OUTPUT_BOUNCED_EXCEL = "bounced_emails.xlsx"
 FORCE_RE_SCRAPE = True
 
-def check_port_open(port=9222):
-	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-		return s.connect_ex(('localhost', port)) == 0
+# --- PERUBAHAN 2: PORT DIBEDAKAN MENJADI 9223 ---
+def check_port_open(port=9223):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        return s.connect_ex(('localhost', port)) == 0
 
 def cleanup_chrome_cache(user_data_dir):
     cache_dirs = [
@@ -52,45 +54,45 @@ def cleanup_chrome_cache(user_data_dir):
 
 
 def launch_chrome_if_needed():
-	port = 9222
-	if check_port_open(port):
-		logging.info("Chrome remote debugging port 9222 sudah aktif. Menggunakan instansi yang ada.")
-		return
-	
-	logging.info("Chrome remote debugging port 9222 tidak aktif. Mencoba meluncurkan browser...")
-	chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
-	
-	# Hapus lock file jika ada agar Chrome bisa berjalan lancar
-	lock_file = os.path.join(USER_DATA_DIR, "SingletonLock")
-	if os.path.exists(lock_file):
-		try:
-			os.remove(lock_file)
-			logging.info("File SingletonLock berhasil dihapus untuk mencegah error lock profile.")
-		except Exception as e:
-			logging.warning(f"Gagal menghapus SingletonLock: {e}")
-	
-	abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
-	os.makedirs(abs_user_data_dir, exist_ok=True)
-	cleanup_chrome_cache(abs_user_data_dir)
-	
-	cmd = [
-		chrome_path,
-		f"--remote-debugging-port={port}",
-		f"--user-data-dir={abs_user_data_dir}",
-		"--no-first-run",
-		"--no-default-browser-check"
-	]
-	
-	# Launch Chrome in detached mode
-	subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-	
-	# Tunggu sampai port siap
-	for _ in range(15):
-		time.sleep(1)
-		if check_port_open(port):
-			logging.info("Browser Chrome berhasil diluncurkan dan siap di port 9222.")
-			return
-	logging.error("Gagal mendeteksi port 9222 setelah meluncurkan Chrome.")
+    port = 9223 # GANTI PORT DI SINI JUGA
+    if check_port_open(port):
+        logging.info(f"Chrome remote debugging port {port} sudah aktif. Menggunakan instansi yang ada.")
+        return
+    
+    logging.info(f"Chrome remote debugging port {port} tidak aktif. Mencoba meluncurkan browser...")
+    chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
+    
+    # Hapus lock file jika ada agar Chrome bisa berjalan lancar
+    lock_file = os.path.join(USER_DATA_DIR, "SingletonLock")
+    if os.path.exists(lock_file):
+        try:
+            os.remove(lock_file)
+            logging.info("File SingletonLock berhasil dihapus untuk mencegah error lock profile.")
+        except Exception as e:
+            logging.warning(f"Gagal menghapus SingletonLock: {e}")
+    
+    abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
+    os.makedirs(abs_user_data_dir, exist_ok=True)
+    cleanup_chrome_cache(abs_user_data_dir)
+    
+    cmd = [
+        chrome_path,
+        f"--remote-debugging-port={port}",
+        f"--user-data-dir={abs_user_data_dir}",
+        "--no-first-run",
+        "--no-default-browser-check"
+    ]
+    
+    # Launch Chrome in detached mode
+    subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    
+    # Tunggu sampai port siap
+    for _ in range(15):
+        time.sleep(1)
+        if check_port_open(port):
+            logging.info(f"Browser Chrome berhasil diluncurkan dan siap di port {port}.")
+            return
+    logging.error(f"Gagal mendeteksi port {port} setelah meluncurkan Chrome.")
 
 def get_authenticated_context(p):
     abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
@@ -101,10 +103,10 @@ def get_authenticated_context(p):
     context = None
     page = None
 
-    if check_port_open(9222):
-        logging.info("Remote debugging port 9222 terdeteksi. Mencoba sambung via CDP...")
+    if check_port_open(9223):
+        logging.info("Remote debugging port 9223 terdeteksi. Mencoba sambung via CDP...")
         try:
-            browser = p.chromium.connect_over_cdp("http://localhost:9222")
+            browser = p.chromium.connect_over_cdp("http://localhost:9223") # GANTI PORT
             context = browser.contexts[0] if browser.contexts else browser.new_context()
             page = context.pages[0] if context.pages else context.new_page()
             logging.info("Berhasil tersambung ke browser via CDP.")
@@ -142,12 +144,12 @@ def get_authenticated_context(p):
                     logging.info("Browser Playwright headful berhasil diluncurkan.")
                 except Exception as e3:
                     logging.warning(f"Playwright headful launch gagal: {e3}")
-                    logging.info("Mode manual: tunggu user buka Chrome manual di port 9222...")
+                    logging.info("Mode manual: tunggu user buka Chrome manual di port 9223...")
                     print("\n" + "="*70)
                     print("MANUAL MODE - BUKA CHROME DENGAN REMOTE DEBUGGING")
                     print("="*70)
                     print("Buka terminal baru dan jalankan perintah ini:")
-                    print(f'  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --remote-debugging-port=9222 --user-data-dir="{abs_user_data_dir}"')
+                    print(f'  "{chrome_path}" --remote-debugging-port=9223 --user-data-dir="{abs_user_data_dir}"')
                     print()
                     print("Setelah Chrome terbuka, login ke fasih-sm.bps.go.id")
                     print("Lalu kembali ke terminal ini dan tekan ENTER.")
@@ -157,9 +159,9 @@ def get_authenticated_context(p):
                     logging.info("Mencoba koneksi CDP setelah setup manual...")
                     for attempt in range(10):
                         time.sleep(2)
-                        if check_port_open(9222):
+                        if check_port_open(9223):
                             try:
-                                browser = p.chromium.connect_over_cdp("http://localhost:9222")
+                                browser = p.chromium.connect_over_cdp("http://localhost:9223")
                                 context = browser.contexts[0] if browser.contexts else browser.new_context()
                                 page = context.pages[0] if context.pages else context.new_page()
                                 logging.info("Berhasil connect via CDP setelah manual setup!")
@@ -454,6 +456,9 @@ def scrape_via_api():
             logging.info(f"Berhasil memuat data historis untuk {len(existing_companies)} perusahaan dari {csv_source}.")
         except Exception as e:
             logging.warning(f"Gagal membaca CSV lama ({csv_source}): {e}")
+
+    # --- PERUBAHAN 3: launch_chrome_if_needed DIPANGGIL SEBELUM SYNC_PLAYWRIGHT ---
+    launch_chrome_if_needed()
 
     with sync_playwright() as p:
         browser, context, page = get_authenticated_context(p)

@@ -1,33 +1,63 @@
 window.EMAIL_DATA = [
   {
-    "code": "4b3d4210-f21f-43bc-90cb-365395f8d755",
-    "company_name": "BPR SYARIAH KHAIRAN INTI  <AGUS SUPRIADI>",
-    "survey_status": "DRAFT",
-    "email": "avatarcrue@gmail.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:19:15",
+    "code": "56519c6e-440d-43ca-b3ca-607e30043412",
+    "company_name": "BANK MANDIRI PERSERO TBK PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mmu.banggai-kepulauan@bankmandiri.co.id",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 01:50:58",
     "order": 1
   },
   {
-    "code": "4b3d4210-f21f-43bc-90cb-365395f8d755",
-    "company_name": "BPR SYARIAH KHAIRAN INTI  <AGUS SUPRIADI>",
-    "survey_status": "DRAFT",
-    "email": "avatarcrue@gmail.com",
-    "global_status": "Permanent_fail",
+    "code": "56519c6e-440d-43ca-b3ca-607e30043412",
+    "company_name": "BANK MANDIRI PERSERO TBK PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mmu.banggai-kepulauan@bankmandiri.co.id",
+    "global_status": "Delivered",
     "status": "Queued",
-    "timestamp": "02 Jun 2026, 11:35:03",
+    "timestamp": "02 Jun 2026, 01:50:58",
     "order": 2
   },
   {
     "code": "4b3d4210-f21f-43bc-90cb-365395f8d755",
-    "company_name": "BPR SYARIAH KHAIRAN INTI  <AGUS SUPRIADI>",
-    "survey_status": "DRAFT",
+    "company_name": "PTBPRSYARIAHKHAIRANINTIAMANAH",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "avatarcrue@gmail.com",
+    "global_status": "Permanent_fail",
+    "status": "Permanent_fail",
+    "timestamp": "11 Jun 2026, 14:00:36",
+    "order": 1
+  },
+  {
+    "code": "4b3d4210-f21f-43bc-90cb-365395f8d755",
+    "company_name": "PTBPRSYARIAHKHAIRANINTIAMANAH",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "avatarcrue@gmail.com",
+    "global_status": "Permanent_fail",
+    "status": "Permanent_fail",
+    "timestamp": "09 Jun 2026, 11:19:15",
+    "order": 2
+  },
+  {
+    "code": "4b3d4210-f21f-43bc-90cb-365395f8d755",
+    "company_name": "PTBPRSYARIAHKHAIRANINTIAMANAH",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "avatarcrue@gmail.com",
+    "global_status": "Permanent_fail",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 11:35:03",
+    "order": 3
+  },
+  {
+    "code": "4b3d4210-f21f-43bc-90cb-365395f8d755",
+    "company_name": "PTBPRSYARIAHKHAIRANINTIAMANAH",
+    "survey_status": "SUBMITTED RESPONDENT",
     "email": "avatarcrue@gmail.com",
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 11:35:02",
-    "order": 3
+    "order": 4
   },
   {
     "code": "f80c30d1-c8ce-4221-a098-abb94d627cbf",
@@ -78,26 +108,6 @@ window.EMAIL_DATA = [
     "status": "Permanent_fail",
     "timestamp": "11 Jun 2026, 10:53:00",
     "order": 1
-  },
-  {
-    "code": "56519c6e-440d-43ca-b3ca-607e30043412",
-    "company_name": "PT BANK MANDIRI PERSERO TBK",
-    "survey_status": "DRAFT",
-    "email": "mmu.banggai-kepulauan@bankmandiri.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:50:58",
-    "order": 1
-  },
-  {
-    "code": "56519c6e-440d-43ca-b3ca-607e30043412",
-    "company_name": "PT BANK MANDIRI PERSERO TBK",
-    "survey_status": "DRAFT",
-    "email": "mmu.banggai-kepulauan@bankmandiri.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:50:58",
-    "order": 2
   },
   {
     "code": "ec2ea21f-b88a-400a-8f3d-a03562ff60ad",
@@ -3728,6 +3738,1696 @@ window.EMAIL_DATA = [
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:07:11",
     "order": 4
+  },
+  {
+    "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
+    "company_name": "ZHONG YIE INDONESIA PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "zhongyieid@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 12:43:07",
+    "order": 1
+  },
+  {
+    "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
+    "company_name": "ZHONG YIE INDONESIA PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "zhongyieid@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 12:03:51",
+    "order": 2
+  },
+  {
+    "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
+    "company_name": "ZHONG YIE INDONESIA PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "zhongyieid@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 12:03:18",
+    "order": 3
+  },
+  {
+    "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
+    "company_name": "ZHONG YIE INDONESIA PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "zhongyieid@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "02 Jun 2026, 10:45:18",
+    "order": 4
+  },
+  {
+    "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
+    "company_name": "ZHONG YIE INDONESIA PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "zhongyieid@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 10:45:14",
+    "order": 5
+  },
+  {
+    "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
+    "company_name": "ZHONG YIE INDONESIA PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "zhongyieid@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 10:39:56",
+    "order": 6
+  },
+  {
+    "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
+    "company_name": "ZHONG YIE INDONESIA PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "zhongyieid@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 00:13:29",
+    "order": 7
+  },
+  {
+    "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
+    "company_name": "ZHONG YIE INDONESIA PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "zhongyieid@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 00:13:29",
+    "order": 8
+  },
+  {
+    "code": "929120fe-2eef-491b-ae50-d794d2208fb8",
+    "company_name": "PLENTY BUMI INTERNATIONAL",
+    "survey_status": "OPEN",
+    "email": "plentybumi.pt2@gmail.com",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "c90e11f1-172e-4c2a-8af0-69a538522ea0",
+    "company_name": "QING KOTA METAL INDONESIA, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "4edef9bf-4954-4e28-8ec1-b8de24caf4b2",
+    "company_name": "YONG WANG INDONESIA, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "64348838-c95b-4e73-8c90-1539e49a8fa6",
+    "company_name": "INDONESIA TSINGSHAN STAINLESS STEEL",
+    "survey_status": "OPEN",
+    "email": "secretariat@it-stainlesssteel.com",
+    "global_status": "Bounced",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 02:23:23",
+    "order": 1
+  },
+  {
+    "code": "64348838-c95b-4e73-8c90-1539e49a8fa6",
+    "company_name": "INDONESIA TSINGSHAN STAINLESS STEEL",
+    "survey_status": "OPEN",
+    "email": "secretariat@it-stainlesssteel.com",
+    "global_status": "Bounced",
+    "status": "Bounced",
+    "timestamp": "02 Jun 2026, 02:23:23",
+    "order": 2
+  },
+  {
+    "code": "0219fe15-1f5c-4cd7-96f0-734727640195",
+    "company_name": "HUA CHIN ALUMINUM  INDONESIA",
+    "survey_status": "OPEN",
+    "email": "secretariathuachinind@gmail.com",
+    "global_status": "Permanent_fail",
+    "status": "Permanent_fail",
+    "timestamp": "09 Jun 2026, 10:57:25",
+    "order": 1
+  },
+  {
+    "code": "0219fe15-1f5c-4cd7-96f0-734727640195",
+    "company_name": "HUA CHIN ALUMINUM  INDONESIA",
+    "survey_status": "OPEN",
+    "email": "secretariathuachinind@gmail.com",
+    "global_status": "Permanent_fail",
+    "status": "Bounced",
+    "timestamp": "01 Jun 2026, 22:48:15",
+    "order": 2
+  },
+  {
+    "code": "0219fe15-1f5c-4cd7-96f0-734727640195",
+    "company_name": "HUA CHIN ALUMINUM  INDONESIA",
+    "survey_status": "OPEN",
+    "email": "secretariathuachinind@gmail.com",
+    "global_status": "Permanent_fail",
+    "status": "Queued",
+    "timestamp": "01 Jun 2026, 22:48:15",
+    "order": 3
+  },
+  {
+    "code": "107b8e78-62cc-44d5-b354-ec7fbe946536",
+    "company_name": "NUSAJAYA PERSADATAMA MANDIRI, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "726f269b-46cf-4aec-9cde-f3cbdcd3b3ee",
+    "company_name": "DEZHIQING NEW ENERGY INDONESIA",
+    "survey_status": "OPEN",
+    "email": "dezhiqingnetindonesia@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 02:53:29",
+    "order": 1
+  },
+  {
+    "code": "726f269b-46cf-4aec-9cde-f3cbdcd3b3ee",
+    "company_name": "DEZHIQING NEW ENERGY INDONESIA",
+    "survey_status": "OPEN",
+    "email": "dezhiqingnetindonesia@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 02:53:25",
+    "order": 2
+  },
+  {
+    "code": "a2f631df-8df1-4f59-aa25-114c118cec0c",
+    "company_name": "ORACLE NICKEL INDUSTRY, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "c548ae79-8719-4940-915a-506ea9566cb7",
+    "company_name": "PT. MCC20 INDONESIA CONSTRUCTION",
+    "survey_status": "OPEN",
+    "email": "sunaijunmcc@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 02:09:59",
+    "order": 1
+  },
+  {
+    "code": "c548ae79-8719-4940-915a-506ea9566cb7",
+    "company_name": "PT. MCC20 INDONESIA CONSTRUCTION",
+    "survey_status": "OPEN",
+    "email": "sunaijunmcc@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 02:09:57",
+    "order": 2
+  },
+  {
+    "code": "45707692-4148-40a9-ba4b-2658fed0726e",
+    "company_name": "BINTANG DELAPAN TERMINAL",
+    "survey_status": "OPEN",
+    "email": "elisabethnovita20@gmail.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "09 Jun 2026, 11:17:44",
+    "order": 1
+  },
+  {
+    "code": "45707692-4148-40a9-ba4b-2658fed0726e",
+    "company_name": "BINTANG DELAPAN TERMINAL",
+    "survey_status": "OPEN",
+    "email": "elisabethnovita20@gmail.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "09 Jun 2026, 11:17:41",
+    "order": 2
+  },
+  {
+    "code": "45707692-4148-40a9-ba4b-2658fed0726e",
+    "company_name": "BINTANG DELAPAN TERMINAL",
+    "survey_status": "OPEN",
+    "email": "elisabethnovita20@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 02:07:31",
+    "order": 3
+  },
+  {
+    "code": "45707692-4148-40a9-ba4b-2658fed0726e",
+    "company_name": "BINTANG DELAPAN TERMINAL",
+    "survey_status": "OPEN",
+    "email": "elisabethnovita20@gmail.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 01:12:55",
+    "order": 4
+  },
+  {
+    "code": "45707692-4148-40a9-ba4b-2658fed0726e",
+    "company_name": "BINTANG DELAPAN TERMINAL",
+    "survey_status": "OPEN",
+    "email": "elisabethnovita20@gmail.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 01:12:51",
+    "order": 5
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "11 Jun 2026, 17:00:09",
+    "order": 1
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "09 Jun 2026, 11:02:35",
+    "order": 2
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "09 Jun 2026, 11:01:20",
+    "order": 3
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "09 Jun 2026, 10:59:12",
+    "order": 4
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "09 Jun 2026, 10:58:54",
+    "order": 5
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "09 Jun 2026, 10:58:53",
+    "order": 6
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "05 Jun 2026, 16:19:24",
+    "order": 7
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 08:04:45",
+    "order": 8
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 01:03:48",
+    "order": 9
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "01 Jun 2026, 22:58:35",
+    "order": 10
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "01 Jun 2026, 22:58:34",
+    "order": 11
+  },
+  {
+    "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
+    "company_name": "MERDEKA TSINGSHAN INDONESIA",
+    "survey_status": "OPEN",
+    "email": "taxes-mtisite@merdekacoppergold.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "01 Jun 2026, 22:58:30",
+    "order": 12
+  },
+  {
+    "code": "208ebcc6-9881-4752-a982-5d8825476be0",
+    "company_name": "TIGA BAJI, PT",
+    "survey_status": "OPEN",
+    "email": "aka-hamsah@yahoo.co.id",
+    "global_status": "Permanent_fail",
+    "status": "Permanent_fail",
+    "timestamp": "09 Jun 2026, 11:04:32",
+    "order": 1
+  },
+  {
+    "code": "208ebcc6-9881-4752-a982-5d8825476be0",
+    "company_name": "TIGA BAJI, PT",
+    "survey_status": "OPEN",
+    "email": "aka-hamsah@yahoo.co.id",
+    "global_status": "Permanent_fail",
+    "status": "Bounced",
+    "timestamp": "01 Jun 2026, 23:47:52",
+    "order": 2
+  },
+  {
+    "code": "208ebcc6-9881-4752-a982-5d8825476be0",
+    "company_name": "TIGA BAJI, PT",
+    "survey_status": "OPEN",
+    "email": "aka-hamsah@yahoo.co.id",
+    "global_status": "Permanent_fail",
+    "status": "Queued",
+    "timestamp": "01 Jun 2026, 23:47:52",
+    "order": 3
+  },
+  {
+    "code": "02099577-861a-405d-83f6-d50e7272a868",
+    "company_name": "SHUOSHI INDONESIA INVESTMENT II",
+    "survey_status": "OPEN",
+    "email": "suryadi@zhenshigroup.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "10 Jun 2026, 14:59:07",
+    "order": 1
+  },
+  {
+    "code": "02099577-861a-405d-83f6-d50e7272a868",
+    "company_name": "SHUOSHI INDONESIA INVESTMENT II",
+    "survey_status": "OPEN",
+    "email": "suryadi@zhenshigroup.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "09 Jun 2026, 10:57:26",
+    "order": 2
+  },
+  {
+    "code": "02099577-861a-405d-83f6-d50e7272a868",
+    "company_name": "SHUOSHI INDONESIA INVESTMENT II",
+    "survey_status": "OPEN",
+    "email": "suryadi@zhenshigroup.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "09 Jun 2026, 10:57:25",
+    "order": 3
+  },
+  {
+    "code": "02099577-861a-405d-83f6-d50e7272a868",
+    "company_name": "SHUOSHI INDONESIA INVESTMENT II",
+    "survey_status": "OPEN",
+    "email": "suryadi@zhenshigroup.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "04 Jun 2026, 14:43:13",
+    "order": 4
+  },
+  {
+    "code": "02099577-861a-405d-83f6-d50e7272a868",
+    "company_name": "SHUOSHI INDONESIA INVESTMENT II",
+    "survey_status": "OPEN",
+    "email": "suryadi@zhenshigroup.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "01 Jun 2026, 22:48:07",
+    "order": 5
+  },
+  {
+    "code": "02099577-861a-405d-83f6-d50e7272a868",
+    "company_name": "SHUOSHI INDONESIA INVESTMENT II",
+    "survey_status": "OPEN",
+    "email": "suryadi@zhenshigroup.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "01 Jun 2026, 22:48:07",
+    "order": 6
+  },
+  {
+    "code": "85e79276-c159-4086-81ae-9edd4f4fa2bc",
+    "company_name": "HENGJAYA NICKEL INDUSTRY",
+    "survey_status": "OPEN",
+    "email": "vinavictory.vina@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 03:45:21",
+    "order": 1
+  },
+  {
+    "code": "85e79276-c159-4086-81ae-9edd4f4fa2bc",
+    "company_name": "HENGJAYA NICKEL INDUSTRY",
+    "survey_status": "OPEN",
+    "email": "vinavictory.vina@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 03:45:18",
+    "order": 2
+  },
+  {
+    "code": "801ed6fe-8f08-43d4-aac0-699c81655850",
+    "company_name": "TSINGCHENG TECHNOLOGY INDONESIA",
+    "survey_status": "OPEN",
+    "email": "secretariat@tsing-cheng.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 03:33:22",
+    "order": 1
+  },
+  {
+    "code": "801ed6fe-8f08-43d4-aac0-699c81655850",
+    "company_name": "TSINGCHENG TECHNOLOGY INDONESIA",
+    "survey_status": "OPEN",
+    "email": "secretariat@tsing-cheng.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 03:33:15",
+    "order": 2
+  },
+  {
+    "code": "de2edddb-095f-42cb-bb5d-c099f092fe1d",
+    "company_name": "GREEN ECO NICKEL",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "e49208a9-420f-43df-946b-eede20bf3eb2",
+    "company_name": "NUSA KARYA MINERAL",
+    "survey_status": "OPEN",
+    "email": "alwi@bintangdelapan.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 22:48:16",
+    "order": 1
+  },
+  {
+    "code": "e49208a9-420f-43df-946b-eede20bf3eb2",
+    "company_name": "NUSA KARYA MINERAL",
+    "survey_status": "OPEN",
+    "email": "alwi@bintangdelapan.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 09:09:39",
+    "order": 2
+  },
+  {
+    "code": "e49208a9-420f-43df-946b-eede20bf3eb2",
+    "company_name": "NUSA KARYA MINERAL",
+    "survey_status": "OPEN",
+    "email": "alwi@bintangdelapan.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 09:09:31",
+    "order": 3
+  },
+  {
+    "code": "df965e5e-d457-436c-a65a-af7726c7ce2b",
+    "company_name": "MCC15 ENGINEERING AND CONSTRUCTION",
+    "survey_status": "OPEN",
+    "email": "mccmorowali@yahoo.com",
+    "global_status": "Bounced",
+    "status": "Bounced",
+    "timestamp": "02 Jun 2026, 08:55:13",
+    "order": 1
+  },
+  {
+    "code": "df965e5e-d457-436c-a65a-af7726c7ce2b",
+    "company_name": "MCC15 ENGINEERING AND CONSTRUCTION",
+    "survey_status": "OPEN",
+    "email": "mccmorowali@yahoo.com",
+    "global_status": "Bounced",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 08:52:30",
+    "order": 2
+  },
+  {
+    "code": "f74842c3-c4c4-4813-be26-0f1c7db21112",
+    "company_name": "PUTRA HARAPAN POMALAA",
+    "survey_status": "OPEN",
+    "email": "info.kwanco.php@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 10:15:17",
+    "order": 1
+  },
+  {
+    "code": "f74842c3-c4c4-4813-be26-0f1c7db21112",
+    "company_name": "PUTRA HARAPAN POMALAA",
+    "survey_status": "OPEN",
+    "email": "info.kwanco.php@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 10:15:12",
+    "order": 2
+  },
+  {
+    "code": "e77a0ba3-200c-40f8-b6f8-527e3dd21323",
+    "company_name": "INDONESIA MOROWALI INDUSTRIAL PARK PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "9af762e4-6cda-4ce9-83dc-0c854f3e3075",
+    "company_name": "TELUK METAL INDUSTRY, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "f0c6f56e-3160-4d1d-831a-49b75d941a95",
+    "company_name": "CAHAYA IDOLA TUNGGAL RONA ALAM",
+    "survey_status": "OPEN",
+    "email": "citracabang@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 09:51:39",
+    "order": 1
+  },
+  {
+    "code": "f0c6f56e-3160-4d1d-831a-49b75d941a95",
+    "company_name": "CAHAYA IDOLA TUNGGAL RONA ALAM",
+    "survey_status": "OPEN",
+    "email": "citracabang@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 09:51:25",
+    "order": 2
+  },
+  {
+    "code": "12f41738-4b5d-4812-a2ee-d58e07f2918d",
+    "company_name": "Vale Indonesia Tbk, Daerah Tambang Matarape",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "53e6550c-1ff6-41dd-9a27-ddfe78db1783",
+    "company_name": "SINERGI MOROWALI INDONESIA, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "0c6fcc80-9ea0-43b2-8775-cb18edc33d25",
+    "company_name": "BROLY NICKEL INDUSTRY",
+    "survey_status": "OPEN",
+    "email": "hengjayasite@yahoo.com",
+    "global_status": "Permanent_fail",
+    "status": "Permanent_fail",
+    "timestamp": "09 Jun 2026, 11:00:02",
+    "order": 1
+  },
+  {
+    "code": "0c6fcc80-9ea0-43b2-8775-cb18edc33d25",
+    "company_name": "BROLY NICKEL INDUSTRY",
+    "survey_status": "OPEN",
+    "email": "hengjayasite@yahoo.com",
+    "global_status": "Permanent_fail",
+    "status": "Bounced",
+    "timestamp": "01 Jun 2026, 23:06:38",
+    "order": 2
+  },
+  {
+    "code": "0c6fcc80-9ea0-43b2-8775-cb18edc33d25",
+    "company_name": "BROLY NICKEL INDUSTRY",
+    "survey_status": "OPEN",
+    "email": "hengjayasite@yahoo.com",
+    "global_status": "Permanent_fail",
+    "status": "Queued",
+    "timestamp": "01 Jun 2026, 23:06:35",
+    "order": 3
+  },
+  {
+    "code": "79a6a82e-dedb-4715-839c-0585d04d20f8",
+    "company_name": "QING FENG FERROCHROME",
+    "survey_status": "OPEN",
+    "email": "secretariat@qf-ferrochrome.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 03:16:09",
+    "order": 1
+  },
+  {
+    "code": "79a6a82e-dedb-4715-839c-0585d04d20f8",
+    "company_name": "QING FENG FERROCHROME",
+    "survey_status": "OPEN",
+    "email": "secretariat@qf-ferrochrome.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 03:16:03",
+    "order": 2
+  },
+  {
+    "code": "60e45ca7-8234-4e3c-89c0-887094a6f311",
+    "company_name": "HUAYUE NICKEL COBALT",
+    "survey_status": "OPEN",
+    "email": "huayuenickelsite@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "05 Jun 2026, 14:09:16",
+    "order": 1
+  },
+  {
+    "code": "60e45ca7-8234-4e3c-89c0-887094a6f311",
+    "company_name": "HUAYUE NICKEL COBALT",
+    "survey_status": "OPEN",
+    "email": "huayuenickelsite@gmail.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 02:15:13",
+    "order": 2
+  },
+  {
+    "code": "60e45ca7-8234-4e3c-89c0-887094a6f311",
+    "company_name": "HUAYUE NICKEL COBALT",
+    "survey_status": "OPEN",
+    "email": "huayuenickelsite@gmail.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 02:15:10",
+    "order": 3
+  },
+  {
+    "code": "cdd01d9c-a1a1-4eac-b0fe-b4f76c908db0",
+    "company_name": "DEXIN STEEL INDONESIA",
+    "survey_status": "OPEN",
+    "email": "irnc.nathania@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 07:49:02",
+    "order": 1
+  },
+  {
+    "code": "cdd01d9c-a1a1-4eac-b0fe-b4f76c908db0",
+    "company_name": "DEXIN STEEL INDONESIA",
+    "survey_status": "OPEN",
+    "email": "irnc.nathania@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 07:48:55",
+    "order": 2
+  },
+  {
+    "code": "e0f2666f-51ff-41c7-a770-9b4fac11c596",
+    "company_name": "XPV FLOW EQUIPMENT INDONESIA",
+    "survey_status": "OPEN",
+    "email": "xabfyn20240722@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 08:57:51",
+    "order": 1
+  },
+  {
+    "code": "e0f2666f-51ff-41c7-a770-9b4fac11c596",
+    "company_name": "XPV FLOW EQUIPMENT INDONESIA",
+    "survey_status": "OPEN",
+    "email": "xabfyn20240722@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 08:57:51",
+    "order": 2
+  },
+  {
+    "code": "415bb553-21bd-4786-b793-115ad93cc620",
+    "company_name": "BANK RAKYAT INDONESIA (PERSERO) PT TBK",
+    "survey_status": "OPEN",
+    "email": "n2025@corp.bri.co.id",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "09 Jun 2026, 11:16:30",
+    "order": 1
+  },
+  {
+    "code": "415bb553-21bd-4786-b793-115ad93cc620",
+    "company_name": "BANK RAKYAT INDONESIA (PERSERO) PT TBK",
+    "survey_status": "OPEN",
+    "email": "n2025@corp.bri.co.id",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "09 Jun 2026, 11:16:28",
+    "order": 2
+  },
+  {
+    "code": "415bb553-21bd-4786-b793-115ad93cc620",
+    "company_name": "BANK RAKYAT INDONESIA (PERSERO) PT TBK",
+    "survey_status": "OPEN",
+    "email": "n2025@corp.bri.co.id",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 01:01:15",
+    "order": 3
+  },
+  {
+    "code": "415bb553-21bd-4786-b793-115ad93cc620",
+    "company_name": "BANK RAKYAT INDONESIA (PERSERO) PT TBK",
+    "survey_status": "OPEN",
+    "email": "n2025@corp.bri.co.id",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 01:01:15",
+    "order": 4
+  },
+  {
+    "code": "f8c20745-5cb2-4b8d-b9f9-248122f791f7",
+    "company_name": "TSINGSHAN STEEL INDONESIA",
+    "survey_status": "OPEN",
+    "email": "tsi.nathania@gmail.com",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "880e4457-5ee6-40e2-997b-1db7e51671e9",
+    "company_name": "ZHONGTSING NEW ENERGY, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7ada42f5-ed09-4fa4-8c0a-4526f77b7f81",
+    "company_name": "PINTU AIR MAS MINERAL, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "b2fd11bc-1b1d-4ba6-9d82-f425f920f865",
+    "company_name": "ZHAO HUI NICKEL, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "035f9009-af5b-4bc8-a96b-b19d63b7f626",
+    "company_name": "Honch New Energy, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "47d56fbd-f8f5-49b8-9763-ae12d6be1be1",
+    "company_name": "PT Chengseng New Energy",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "1d4faad0-8f18-4586-8a7d-139cc7d3acb2",
+    "company_name": "HUANENG METAL INDUSTRY",
+    "survey_status": "OPEN",
+    "email": "huanengmetal41@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "09 Jun 2026, 11:03:49",
+    "order": 1
+  },
+  {
+    "code": "1d4faad0-8f18-4586-8a7d-139cc7d3acb2",
+    "company_name": "HUANENG METAL INDUSTRY",
+    "survey_status": "OPEN",
+    "email": "huanengmetal41@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "09 Jun 2026, 11:03:46",
+    "order": 2
+  },
+  {
+    "code": "1d4faad0-8f18-4586-8a7d-139cc7d3acb2",
+    "company_name": "HUANENG METAL INDUSTRY",
+    "survey_status": "OPEN",
+    "email": "huanengmetal41@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "01 Jun 2026, 23:41:22",
+    "order": 3
+  },
+  {
+    "code": "1d4faad0-8f18-4586-8a7d-139cc7d3acb2",
+    "company_name": "HUANENG METAL INDUSTRY",
+    "survey_status": "OPEN",
+    "email": "huanengmetal41@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "01 Jun 2026, 23:41:18",
+    "order": 4
+  },
+  {
+    "code": "34f198ce-857c-49be-aefa-65a832a4971b",
+    "company_name": "BANK MANDIRI KCP MOROWALI BAHODOPI, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "8128b0fc-31d5-43d8-92b7-849f5621138d",
+    "company_name": "BIMA CAKRA PERKASA MINERALINDO, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "70c6976e-c672-4b38-9f5d-161a2c28b228",
+    "company_name": "BANK NEGARA INDONESIA KCP BUNGKU",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "5cc194bb-172f-4cd5-a8d4-fd6a0ed7d3e7",
+    "company_name": "PT. Baoshuo Taman Industry Investment Group (#224)",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "b2cf42e6-965c-49fa-abac-9af54426d0cc",
+    "company_name": "BANK SYARIAH INDONESIA, PT",
+    "survey_status": "OPEN",
+    "email": "sapriliya@bsm.co.id",
+    "global_status": "Bounced",
+    "status": "Bounced",
+    "timestamp": "02 Jun 2026, 11:57:49",
+    "order": 1
+  },
+  {
+    "code": "b2cf42e6-965c-49fa-abac-9af54426d0cc",
+    "company_name": "BANK SYARIAH INDONESIA, PT",
+    "survey_status": "OPEN",
+    "email": "sapriliya@bsm.co.id",
+    "global_status": "Bounced",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 11:49:47",
+    "order": 2
+  },
+  {
+    "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
+    "company_name": "PENGGILINGAN PADI RIZKY ILLAHI",
+    "survey_status": "OPEN",
+    "email": "ungkaya.factory@simedarby.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 09:09:40",
+    "order": 1
+  },
+  {
+    "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
+    "company_name": "PENGGILINGAN PADI RIZKY ILLAHI",
+    "survey_status": "OPEN",
+    "email": "ungkaya.factory@simedarby.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 09:08:59",
+    "order": 2
+  },
+  {
+    "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
+    "company_name": "PENGGILINGAN PADI RIZKY ILLAHI",
+    "survey_status": "OPEN",
+    "email": "ungkaya.factory@simedarby.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "02 Jun 2026, 09:06:58",
+    "order": 3
+  },
+  {
+    "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
+    "company_name": "PENGGILINGAN PADI RIZKY ILLAHI",
+    "survey_status": "OPEN",
+    "email": "ungkaya.factory@simedarby.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 09:06:35",
+    "order": 4
+  },
+  {
+    "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
+    "company_name": "PENGGILINGAN PADI RIZKY ILLAHI",
+    "survey_status": "OPEN",
+    "email": "ungkaya.factory@simedarby.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 09:06:26",
+    "order": 5
+  },
+  {
+    "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
+    "company_name": "PENGGILINGAN PADI RIZKY ILLAHI",
+    "survey_status": "OPEN",
+    "email": "ungkaya.factory@simedarby.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 09:06:26",
+    "order": 6
+  },
+  {
+    "code": "0d404547-b0f9-40d6-a523-530358a15184",
+    "company_name": "BANK TABUNGAN NEGARA",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "OPEN",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "09 Jun 2026, 11:15:42",
+    "order": 1
+  },
+  {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "OPEN",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 03:18:30",
+    "order": 2
+  },
+  {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "OPEN",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 03:18:25",
+    "order": 3
+  },
+  {
+    "code": "7801850a-56fb-4ddc-81bb-1d147526dbc1",
+    "company_name": "MITRA ANDALAN MOROWALI",
+    "survey_status": "OPEN",
+    "email": "pt.mitraandalanmorowali@gmail.com",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "e8e361a9-ed34-4e33-9920-d63b7fb09f81",
+    "company_name": "BANK BRI UNIT PEHONDAA",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "e0e3282e-4685-4ad8-b636-6449ef659410",
+    "company_name": "HADJI KALLA",
+    "survey_status": "OPEN",
+    "email": "nur.salam.coning@kallagroup.co.id",
+    "global_status": "Permanent_fail",
+    "status": "Permanent_fail",
+    "timestamp": "02 Jun 2026, 08:57:43",
+    "order": 1
+  },
+  {
+    "code": "927a467f-2cbf-4588-b2d6-1fd59f32ded6",
+    "company_name": "Seawing New Energy, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "818cef17-e208-4e99-86b7-b48f3d0fa779",
+    "company_name": "PT Xinheng Metal Indonesia",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "8efbdf06-94bc-4658-b356-77b4a06a906d",
+    "company_name": "BANK MANDIRI (PERSERO)",
+    "survey_status": "OPEN",
+    "email": "morowali.bungku@bankmandiri.co.id",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 04:16:46",
+    "order": 1
+  },
+  {
+    "code": "8efbdf06-94bc-4658-b356-77b4a06a906d",
+    "company_name": "BANK MANDIRI (PERSERO)",
+    "survey_status": "OPEN",
+    "email": "morowali.bungku@bankmandiri.co.id",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 04:16:42",
+    "order": 2
+  },
+  {
+    "code": "dc9d1bea-5477-4fb6-87f1-8e7f0dbf2cfa",
+    "company_name": "VALE INDONESIA TBK PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "4bd0873b-6cfb-4e08-8276-cbfc1f114282",
+    "company_name": "Morowali Industri Sejahtera",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "a7f555f2-4414-44f6-b71f-57d5ed945fb0",
+    "company_name": "BANK PEMBANGUNAN DAERAH SULAWESI TENGAH",
+    "survey_status": "OPEN",
+    "email": "banksulteng.bungku@yahoo.co.id",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "c87e86b4-7dc5-4970-bfb9-0e82ae8aa6e8",
+    "company_name": "CIPTA PERSADA SAMBALAGI, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "f17ef478-faa5-4e7d-8797-9c2d22445d1c",
+    "company_name": "TITAH MINERAL INDONESIA",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "03f6f71d-0926-4be8-8cd6-6104ac0450d0",
+    "company_name": "OCEAN SKY METAL INDUSTRY, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "10e987d2-224d-4602-a5f1-3489a57cc580",
+    "company_name": "BANK MANDIRI CABANG MOROWALI BUNGKU",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "d588c179-aa90-480d-9316-8a6034af2ad6",
+    "company_name": "DECHO NEW ENERGY",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "fe311bf4-2d90-46e5-bdf4-1addeb728d57",
+    "company_name": "ZHENSHI INDONESIA INDUSTRIAL PARK",
+    "survey_status": "OPEN",
+    "email": "zhenshiindustrialpark@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 10:40:46",
+    "order": 1
+  },
+  {
+    "code": "fe311bf4-2d90-46e5-bdf4-1addeb728d57",
+    "company_name": "ZHENSHI INDONESIA INDUSTRIAL PARK",
+    "survey_status": "OPEN",
+    "email": "zhenshiindustrialpark@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 10:40:43",
+    "order": 2
+  },
+  {
+    "code": "3d6de5ed-9063-43d0-b805-5cfd1e65cd49",
+    "company_name": "BANK CENTRAL ASIA KCP MOROWALI, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "9818074f-7f62-4f6f-8a12-7b9ec153718e",
+    "company_name": "Detian Coking Indonesia",
+    "survey_status": "OPEN",
+    "email": "secretariat@detiancoking-ind.com",
+    "global_status": "Bounced",
+    "status": "Bounced",
+    "timestamp": "02 Jun 2026, 04:45:27",
+    "order": 1
+  },
+  {
+    "code": "9818074f-7f62-4f6f-8a12-7b9ec153718e",
+    "company_name": "Detian Coking Indonesia",
+    "survey_status": "OPEN",
+    "email": "secretariat@detiancoking-ind.com",
+    "global_status": "Bounced",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 04:43:12",
+    "order": 2
+  },
+  {
+    "code": "f137f885-fb23-4f7a-aa6d-f7a53b703e49",
+    "company_name": "AGRI BUMI KARYA, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
+    "company_name": "Artono Simanungkalit",
+    "survey_status": "OPEN",
+    "email": "transonlegal.tbr@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "11 Jun 2026, 08:41:12",
+    "order": 1
+  },
+  {
+    "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
+    "company_name": "Artono Simanungkalit",
+    "survey_status": "OPEN",
+    "email": "transonlegal.tbr@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "10 Jun 2026, 17:42:13",
+    "order": 2
+  },
+  {
+    "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
+    "company_name": "Artono Simanungkalit",
+    "survey_status": "OPEN",
+    "email": "transonlegal.tbr@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "10 Jun 2026, 15:22:04",
+    "order": 3
+  },
+  {
+    "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
+    "company_name": "Artono Simanungkalit",
+    "survey_status": "OPEN",
+    "email": "transonlegal.tbr@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "10 Jun 2026, 15:20:54",
+    "order": 4
+  },
+  {
+    "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
+    "company_name": "Artono Simanungkalit",
+    "survey_status": "OPEN",
+    "email": "transonlegal.tbr@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "10 Jun 2026, 15:16:04",
+    "order": 5
+  },
+  {
+    "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
+    "company_name": "Artono Simanungkalit",
+    "survey_status": "OPEN",
+    "email": "transonlegal.tbr@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "10 Jun 2026, 15:11:10",
+    "order": 6
+  },
+  {
+    "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
+    "company_name": "Artono Simanungkalit",
+    "survey_status": "OPEN",
+    "email": "transonlegal.tbr@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 17:17:08",
+    "order": 7
+  },
+  {
+    "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
+    "company_name": "Artono Simanungkalit",
+    "survey_status": "OPEN",
+    "email": "transonlegal.tbr@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 09:35:12",
+    "order": 8
+  },
+  {
+    "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
+    "company_name": "Artono Simanungkalit",
+    "survey_status": "OPEN",
+    "email": "transonlegal.tbr@gmail.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 09:20:43",
+    "order": 9
+  },
+  {
+    "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
+    "company_name": "Artono Simanungkalit",
+    "survey_status": "OPEN",
+    "email": "transonlegal.tbr@gmail.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 09:20:24",
+    "order": 10
+  },
+  {
+    "code": "2676b7e4-6dca-4e7f-991e-6ae27b0b0c85",
+    "company_name": "JEMBATAN MAS ENGINEERING",
+    "survey_status": "OPEN",
+    "email": "jembatanmas579@yahoo.com",
+    "global_status": "Permanent_fail",
+    "status": "Permanent_fail",
+    "timestamp": "09 Jun 2026, 11:08:56",
+    "order": 1
+  },
+  {
+    "code": "2676b7e4-6dca-4e7f-991e-6ae27b0b0c85",
+    "company_name": "JEMBATAN MAS ENGINEERING",
+    "survey_status": "OPEN",
+    "email": "jembatanmas579@yahoo.com",
+    "global_status": "Permanent_fail",
+    "status": "Permanent_fail",
+    "timestamp": "02 Jun 2026, 04:11:39",
+    "order": 2
+  },
+  {
+    "code": "f06b1770-44ac-4f73-9bba-ac5b8877f5da",
+    "company_name": "TEKNIK ALUM SERVIS, PT",
+    "survey_status": "OPEN",
+    "email": "agamtbw@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 09:50:55",
+    "order": 1
+  },
+  {
+    "code": "f06b1770-44ac-4f73-9bba-ac5b8877f5da",
+    "company_name": "TEKNIK ALUM SERVIS, PT",
+    "survey_status": "OPEN",
+    "email": "agamtbw@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 09:50:54",
+    "order": 2
+  },
+  {
+    "code": "7f30fdb9-3378-42da-a89e-f3c99fae9f90",
+    "company_name": "WALSIN NICKEL INDUSTRIAL INDONESIA",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "8f5e067f-860c-4808-84ca-bbe34520f80a",
+    "company_name": "TAMACO GRAHA KRIDA",
+    "survey_status": "OPEN",
+    "email": "tgk.lokasi@simedarbyplantation.com",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
+    "company_name": "CAHAYA BUKIT MOROWALI",
+    "survey_status": "OPEN",
+    "email": "pt.cahayabukitmorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "06 Jun 2026, 16:16:30",
+    "order": 1
+  },
+  {
+    "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
+    "company_name": "CAHAYA BUKIT MOROWALI",
+    "survey_status": "OPEN",
+    "email": "pt.cahayabukitmorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "06 Jun 2026, 16:16:26",
+    "order": 2
+  },
+  {
+    "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
+    "company_name": "CAHAYA BUKIT MOROWALI",
+    "survey_status": "OPEN",
+    "email": "pt.cahayabukitmorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "06 Jun 2026, 16:16:09",
+    "order": 3
+  },
+  {
+    "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
+    "company_name": "CAHAYA BUKIT MOROWALI",
+    "survey_status": "OPEN",
+    "email": "pt.cahayabukitmorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "06 Jun 2026, 16:15:46",
+    "order": 4
+  },
+  {
+    "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
+    "company_name": "CAHAYA BUKIT MOROWALI",
+    "survey_status": "OPEN",
+    "email": "pt.cahayabukitmorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 07:08:55",
+    "order": 5
+  },
+  {
+    "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
+    "company_name": "CAHAYA BUKIT MOROWALI",
+    "survey_status": "OPEN",
+    "email": "pt.cahayabukitmorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 07:08:51",
+    "order": 6
+  },
+  {
+    "code": "a5eefd78-29d0-491a-9a55-6d0e3cebf56f",
+    "company_name": "GIZAN INVESTMENT GRUP",
+    "survey_status": "OPEN",
+    "email": "ptgizaninvestmentgrup@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 06:14:08",
+    "order": 1
+  },
+  {
+    "code": "a5eefd78-29d0-491a-9a55-6d0e3cebf56f",
+    "company_name": "GIZAN INVESTMENT GRUP",
+    "survey_status": "OPEN",
+    "email": "ptgizaninvestmentgrup@gmail.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 05:32:29",
+    "order": 2
+  },
+  {
+    "code": "a5eefd78-29d0-491a-9a55-6d0e3cebf56f",
+    "company_name": "GIZAN INVESTMENT GRUP",
+    "survey_status": "OPEN",
+    "email": "ptgizaninvestmentgrup@gmail.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 05:32:25",
+    "order": 3
+  },
+  {
+    "code": "107e513c-c4c3-4b50-bc89-6723a3cb3b93",
+    "company_name": "KUTAI PALM PLANTATION,PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "dd003496-df61-4ee5-81ff-039a85045616",
+    "company_name": "KINARYA ALAM SEMESTA PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "80c030e4-e029-49b1-a942-8495eaf6afdd",
+    "company_name": "PT. BAHARI MOROWALI JAYA",
+    "survey_status": "OPEN",
+    "email": "ebungku@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 03:34:22",
+    "order": 1
+  },
+  {
+    "code": "80c030e4-e029-49b1-a942-8495eaf6afdd",
+    "company_name": "PT. BAHARI MOROWALI JAYA",
+    "survey_status": "OPEN",
+    "email": "ebungku@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 03:34:19",
+    "order": 2
+  },
+  {
+    "code": "a3fc0235-4078-4d30-934e-cddcfd337ea9",
+    "company_name": "PT SULAWESI NICKEL COBALT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "34907558-6371-45f6-b5ba-d416a14fb23c",
+    "company_name": "PT. MOROWALI MEGASIAR",
+    "survey_status": "OPEN",
+    "email": "syauqinayah@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "09 Jun 2026, 11:13:22",
+    "order": 1
+  },
+  {
+    "code": "34907558-6371-45f6-b5ba-d416a14fb23c",
+    "company_name": "PT. MOROWALI MEGASIAR",
+    "survey_status": "OPEN",
+    "email": "syauqinayah@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "09 Jun 2026, 11:13:18",
+    "order": 2
+  },
+  {
+    "code": "34907558-6371-45f6-b5ba-d416a14fb23c",
+    "company_name": "PT. MOROWALI MEGASIAR",
+    "survey_status": "OPEN",
+    "email": "syauqinayah@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 00:35:46",
+    "order": 3
+  },
+  {
+    "code": "34907558-6371-45f6-b5ba-d416a14fb23c",
+    "company_name": "PT. MOROWALI MEGASIAR",
+    "survey_status": "OPEN",
+    "email": "syauqinayah@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 00:35:42",
+    "order": 4
+  },
+  {
+    "code": "002155b1-8526-4b29-9f46-1bcf805b34ed",
+    "company_name": "CAHAYA SMELTER INDONESIA",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "6bad9ebe-910a-42f1-80d5-4952ea7bc219",
+    "company_name": "BANK MANDIRI TASPEN",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "caea2db4-feb6-4898-9bff-449bfb39015d",
+    "company_name": "YINXIANG MOROWALI TRADING",
+    "survey_status": "OPEN",
+    "email": "yinxiangmorowalitrading@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 07:39:56",
+    "order": 1
+  },
+  {
+    "code": "caea2db4-feb6-4898-9bff-449bfb39015d",
+    "company_name": "YINXIANG MOROWALI TRADING",
+    "survey_status": "OPEN",
+    "email": "yinxiangmorowalitrading@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 07:39:52",
+    "order": 2
+  },
+  {
+    "code": "9b9e29d1-fc1e-4b2d-99d7-838fde85299c",
+    "company_name": "INDONESIA RUIPU NICKEL AND CROME ALLOY, PT",
+    "survey_status": "OPEN",
+    "email": "smaalkhairatkolono@yahoo.co.id",
+    "global_status": "Bounced",
+    "status": "Bounced",
+    "timestamp": "02 Jun 2026, 04:58:35",
+    "order": 1
+  },
+  {
+    "code": "9b9e29d1-fc1e-4b2d-99d7-838fde85299c",
+    "company_name": "INDONESIA RUIPU NICKEL AND CROME ALLOY, PT",
+    "survey_status": "OPEN",
+    "email": "smaalkhairatkolono@yahoo.co.id",
+    "global_status": "Bounced",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 04:58:16",
+    "order": 2
   }
 ];
-window.LAST_UPDATED = '11 Jun 2026, 11:20:20';
+window.LAST_UPDATED = '11 Jun 2026, 17:15:58';

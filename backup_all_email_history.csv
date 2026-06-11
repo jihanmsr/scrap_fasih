@@ -1,14 +1,15 @@
 Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Status History,Timestamp History,Urutan History
-4b3d4210-f21f-43bc-90cb-365395f8d755,BPR SYARIAH KHAIRAN INTI  <AGUS SUPRIADI>,DRAFT,avatarcrue@gmail.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:19:15",1
-4b3d4210-f21f-43bc-90cb-365395f8d755,BPR SYARIAH KHAIRAN INTI  <AGUS SUPRIADI>,DRAFT,avatarcrue@gmail.com,Permanent_fail,Queued,"02 Jun 2026, 11:35:03",2
-4b3d4210-f21f-43bc-90cb-365395f8d755,BPR SYARIAH KHAIRAN INTI  <AGUS SUPRIADI>,DRAFT,avatarcrue@gmail.com,Permanent_fail,Bounced,"02 Jun 2026, 11:35:02",3
+56519c6e-440d-43ca-b3ca-607e30043412,BANK MANDIRI PERSERO TBK PT,SUBMITTED RESPONDENT,mmu.banggai-kepulauan@bankmandiri.co.id,Delivered,Delivered,"02 Jun 2026, 01:50:58",1
+56519c6e-440d-43ca-b3ca-607e30043412,BANK MANDIRI PERSERO TBK PT,SUBMITTED RESPONDENT,mmu.banggai-kepulauan@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 01:50:58",2
+4b3d4210-f21f-43bc-90cb-365395f8d755,PTBPRSYARIAHKHAIRANINTIAMANAH,SUBMITTED RESPONDENT,avatarcrue@gmail.com,Permanent_fail,Permanent_fail,"11 Jun 2026, 14:00:36",1
+4b3d4210-f21f-43bc-90cb-365395f8d755,PTBPRSYARIAHKHAIRANINTIAMANAH,SUBMITTED RESPONDENT,avatarcrue@gmail.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:19:15",2
+4b3d4210-f21f-43bc-90cb-365395f8d755,PTBPRSYARIAHKHAIRANINTIAMANAH,SUBMITTED RESPONDENT,avatarcrue@gmail.com,Permanent_fail,Queued,"02 Jun 2026, 11:35:03",3
+4b3d4210-f21f-43bc-90cb-365395f8d755,PTBPRSYARIAHKHAIRANINTIAMANAH,SUBMITTED RESPONDENT,avatarcrue@gmail.com,Permanent_fail,Bounced,"02 Jun 2026, 11:35:02",4
 f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n7763078@gmail.com,Delivered,Delivered,"11 Jun 2026, 10:53:56",1
 f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n7763078@gmail.com,Delivered,Queued,"11 Jun 2026, 10:53:53",2
 f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n7763078@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:18:10",3
 f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n7763078@gmail.com,Delivered,Queued,"02 Jun 2026, 10:18:07",4
 81b140d6-80f9-436f-81e4-bbfc8ae820d3,BPR MODERN EXPRESS PT,SUBMITTED RESPONDENT,bpr.381@lakadana.com,Permanent_fail,Permanent_fail,"11 Jun 2026, 10:53:00",1
-56519c6e-440d-43ca-b3ca-607e30043412,PT BANK MANDIRI PERSERO TBK,DRAFT,mmu.banggai-kepulauan@bankmandiri.co.id,Delivered,Delivered,"02 Jun 2026, 01:50:58",1
-56519c6e-440d-43ca-b3ca-607e30043412,PT BANK MANDIRI PERSERO TBK,DRAFT,mmu.banggai-kepulauan@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 01:50:58",2
 ec2ea21f-b88a-400a-8f3d-a03562ff60ad,BRI UNIT SALAKAN,DRAFT,n5164@corp.bri.com,Bounced,Bounced,"02 Jun 2026, 09:36:45",1
 ec2ea21f-b88a-400a-8f3d-a03562ff60ad,BRI UNIT SALAKAN,DRAFT,n5164@corp.bri.com,Bounced,Queued,"02 Jun 2026, 09:36:44",2
 ee8b681d-6b31-47d7-8d77-76c615ca2857,Bank BRI BULAGI,OPEN,-,-,-,-,0
@@ -372,3 +373,172 @@ c19f990c-72e2-4718-b0e5-0290c933350a,TONG YUAN SHENG XIAN,OPEN,tongyuanshengxian
 5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Opened,"03 Jun 2026, 19:18:02",2
 5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Queued,"02 Jun 2026, 02:07:11",3
 5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Delivered,"02 Jun 2026, 02:07:11",4
+2bcf903a-6244-4c7f-85d0-78ce0aeac06d,ZHONG YIE INDONESIA PT,SUBMITTED RESPONDENT,zhongyieid@gmail.com,Clicked,Opened,"02 Jun 2026, 12:43:07",1
+2bcf903a-6244-4c7f-85d0-78ce0aeac06d,ZHONG YIE INDONESIA PT,SUBMITTED RESPONDENT,zhongyieid@gmail.com,Clicked,Delivered,"02 Jun 2026, 12:03:51",2
+2bcf903a-6244-4c7f-85d0-78ce0aeac06d,ZHONG YIE INDONESIA PT,SUBMITTED RESPONDENT,zhongyieid@gmail.com,Clicked,Queued,"02 Jun 2026, 12:03:18",3
+2bcf903a-6244-4c7f-85d0-78ce0aeac06d,ZHONG YIE INDONESIA PT,SUBMITTED RESPONDENT,zhongyieid@gmail.com,Clicked,Clicked,"02 Jun 2026, 10:45:18",4
+2bcf903a-6244-4c7f-85d0-78ce0aeac06d,ZHONG YIE INDONESIA PT,SUBMITTED RESPONDENT,zhongyieid@gmail.com,Clicked,Opened,"02 Jun 2026, 10:45:14",5
+2bcf903a-6244-4c7f-85d0-78ce0aeac06d,ZHONG YIE INDONESIA PT,SUBMITTED RESPONDENT,zhongyieid@gmail.com,Clicked,Opened,"02 Jun 2026, 10:39:56",6
+2bcf903a-6244-4c7f-85d0-78ce0aeac06d,ZHONG YIE INDONESIA PT,SUBMITTED RESPONDENT,zhongyieid@gmail.com,Clicked,Delivered,"02 Jun 2026, 00:13:29",7
+2bcf903a-6244-4c7f-85d0-78ce0aeac06d,ZHONG YIE INDONESIA PT,SUBMITTED RESPONDENT,zhongyieid@gmail.com,Clicked,Queued,"02 Jun 2026, 00:13:29",8
+929120fe-2eef-491b-ae50-d794d2208fb8,PLENTY BUMI INTERNATIONAL,OPEN,plentybumi.pt2@gmail.com,-,-,-,0
+c90e11f1-172e-4c2a-8af0-69a538522ea0,"QING KOTA METAL INDONESIA, PT",OPEN,-,-,-,-,0
+4edef9bf-4954-4e28-8ec1-b8de24caf4b2,"YONG WANG INDONESIA, PT",OPEN,-,-,-,-,0
+64348838-c95b-4e73-8c90-1539e49a8fa6,INDONESIA TSINGSHAN STAINLESS STEEL,OPEN,secretariat@it-stainlesssteel.com,Bounced,Queued,"02 Jun 2026, 02:23:23",1
+64348838-c95b-4e73-8c90-1539e49a8fa6,INDONESIA TSINGSHAN STAINLESS STEEL,OPEN,secretariat@it-stainlesssteel.com,Bounced,Bounced,"02 Jun 2026, 02:23:23",2
+0219fe15-1f5c-4cd7-96f0-734727640195,HUA CHIN ALUMINUM  INDONESIA,OPEN,secretariathuachinind@gmail.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 10:57:25",1
+0219fe15-1f5c-4cd7-96f0-734727640195,HUA CHIN ALUMINUM  INDONESIA,OPEN,secretariathuachinind@gmail.com,Permanent_fail,Bounced,"01 Jun 2026, 22:48:15",2
+0219fe15-1f5c-4cd7-96f0-734727640195,HUA CHIN ALUMINUM  INDONESIA,OPEN,secretariathuachinind@gmail.com,Permanent_fail,Queued,"01 Jun 2026, 22:48:15",3
+107b8e78-62cc-44d5-b354-ec7fbe946536,"NUSAJAYA PERSADATAMA MANDIRI, PT",OPEN,-,-,-,-,0
+726f269b-46cf-4aec-9cde-f3cbdcd3b3ee,DEZHIQING NEW ENERGY INDONESIA,OPEN,dezhiqingnetindonesia@gmail.com,Delivered,Delivered,"02 Jun 2026, 02:53:29",1
+726f269b-46cf-4aec-9cde-f3cbdcd3b3ee,DEZHIQING NEW ENERGY INDONESIA,OPEN,dezhiqingnetindonesia@gmail.com,Delivered,Queued,"02 Jun 2026, 02:53:25",2
+a2f631df-8df1-4f59-aa25-114c118cec0c,"ORACLE NICKEL INDUSTRY, PT",OPEN,-,-,-,-,0
+c548ae79-8719-4940-915a-506ea9566cb7,PT. MCC20 INDONESIA CONSTRUCTION,OPEN,sunaijunmcc@gmail.com,Delivered,Delivered,"02 Jun 2026, 02:09:59",1
+c548ae79-8719-4940-915a-506ea9566cb7,PT. MCC20 INDONESIA CONSTRUCTION,OPEN,sunaijunmcc@gmail.com,Delivered,Queued,"02 Jun 2026, 02:09:57",2
+45707692-4148-40a9-ba4b-2658fed0726e,BINTANG DELAPAN TERMINAL,OPEN,elisabethnovita20@gmail.com,Opened,Delivered,"09 Jun 2026, 11:17:44",1
+45707692-4148-40a9-ba4b-2658fed0726e,BINTANG DELAPAN TERMINAL,OPEN,elisabethnovita20@gmail.com,Opened,Queued,"09 Jun 2026, 11:17:41",2
+45707692-4148-40a9-ba4b-2658fed0726e,BINTANG DELAPAN TERMINAL,OPEN,elisabethnovita20@gmail.com,Opened,Opened,"02 Jun 2026, 02:07:31",3
+45707692-4148-40a9-ba4b-2658fed0726e,BINTANG DELAPAN TERMINAL,OPEN,elisabethnovita20@gmail.com,Opened,Delivered,"02 Jun 2026, 01:12:55",4
+45707692-4148-40a9-ba4b-2658fed0726e,BINTANG DELAPAN TERMINAL,OPEN,elisabethnovita20@gmail.com,Opened,Queued,"02 Jun 2026, 01:12:51",5
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Opened,"11 Jun 2026, 17:00:09",1
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Opened,"09 Jun 2026, 11:02:35",2
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Opened,"09 Jun 2026, 11:01:20",3
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Clicked,"09 Jun 2026, 10:59:12",4
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Delivered,"09 Jun 2026, 10:58:54",5
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Queued,"09 Jun 2026, 10:58:53",6
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Opened,"05 Jun 2026, 16:19:24",7
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Opened,"02 Jun 2026, 08:04:45",8
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Opened,"02 Jun 2026, 01:03:48",9
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Clicked,"01 Jun 2026, 22:58:35",10
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Delivered,"01 Jun 2026, 22:58:34",11
+0805e63b-9edf-4a6e-9bee-dd93b16af937,MERDEKA TSINGSHAN INDONESIA,OPEN,taxes-mtisite@merdekacoppergold.com,Clicked,Queued,"01 Jun 2026, 22:58:30",12
+208ebcc6-9881-4752-a982-5d8825476be0,"TIGA BAJI, PT",OPEN,aka-hamsah@yahoo.co.id,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:04:32",1
+208ebcc6-9881-4752-a982-5d8825476be0,"TIGA BAJI, PT",OPEN,aka-hamsah@yahoo.co.id,Permanent_fail,Bounced,"01 Jun 2026, 23:47:52",2
+208ebcc6-9881-4752-a982-5d8825476be0,"TIGA BAJI, PT",OPEN,aka-hamsah@yahoo.co.id,Permanent_fail,Queued,"01 Jun 2026, 23:47:52",3
+02099577-861a-405d-83f6-d50e7272a868,SHUOSHI INDONESIA INVESTMENT II,OPEN,suryadi@zhenshigroup.com,Opened,Opened,"10 Jun 2026, 14:59:07",1
+02099577-861a-405d-83f6-d50e7272a868,SHUOSHI INDONESIA INVESTMENT II,OPEN,suryadi@zhenshigroup.com,Opened,Delivered,"09 Jun 2026, 10:57:26",2
+02099577-861a-405d-83f6-d50e7272a868,SHUOSHI INDONESIA INVESTMENT II,OPEN,suryadi@zhenshigroup.com,Opened,Queued,"09 Jun 2026, 10:57:25",3
+02099577-861a-405d-83f6-d50e7272a868,SHUOSHI INDONESIA INVESTMENT II,OPEN,suryadi@zhenshigroup.com,Opened,Opened,"04 Jun 2026, 14:43:13",4
+02099577-861a-405d-83f6-d50e7272a868,SHUOSHI INDONESIA INVESTMENT II,OPEN,suryadi@zhenshigroup.com,Opened,Delivered,"01 Jun 2026, 22:48:07",5
+02099577-861a-405d-83f6-d50e7272a868,SHUOSHI INDONESIA INVESTMENT II,OPEN,suryadi@zhenshigroup.com,Opened,Queued,"01 Jun 2026, 22:48:07",6
+85e79276-c159-4086-81ae-9edd4f4fa2bc,HENGJAYA NICKEL INDUSTRY,OPEN,vinavictory.vina@gmail.com,Delivered,Delivered,"02 Jun 2026, 03:45:21",1
+85e79276-c159-4086-81ae-9edd4f4fa2bc,HENGJAYA NICKEL INDUSTRY,OPEN,vinavictory.vina@gmail.com,Delivered,Queued,"02 Jun 2026, 03:45:18",2
+801ed6fe-8f08-43d4-aac0-699c81655850,TSINGCHENG TECHNOLOGY INDONESIA,OPEN,secretariat@tsing-cheng.com,Delivered,Delivered,"02 Jun 2026, 03:33:22",1
+801ed6fe-8f08-43d4-aac0-699c81655850,TSINGCHENG TECHNOLOGY INDONESIA,OPEN,secretariat@tsing-cheng.com,Delivered,Queued,"02 Jun 2026, 03:33:15",2
+de2edddb-095f-42cb-bb5d-c099f092fe1d,GREEN ECO NICKEL,OPEN,-,-,-,-,0
+e49208a9-420f-43df-946b-eede20bf3eb2,NUSA KARYA MINERAL,OPEN,alwi@bintangdelapan.com,Opened,Opened,"02 Jun 2026, 22:48:16",1
+e49208a9-420f-43df-946b-eede20bf3eb2,NUSA KARYA MINERAL,OPEN,alwi@bintangdelapan.com,Opened,Delivered,"02 Jun 2026, 09:09:39",2
+e49208a9-420f-43df-946b-eede20bf3eb2,NUSA KARYA MINERAL,OPEN,alwi@bintangdelapan.com,Opened,Queued,"02 Jun 2026, 09:09:31",3
+df965e5e-d457-436c-a65a-af7726c7ce2b,MCC15 ENGINEERING AND CONSTRUCTION,OPEN,mccmorowali@yahoo.com,Bounced,Bounced,"02 Jun 2026, 08:55:13",1
+df965e5e-d457-436c-a65a-af7726c7ce2b,MCC15 ENGINEERING AND CONSTRUCTION,OPEN,mccmorowali@yahoo.com,Bounced,Queued,"02 Jun 2026, 08:52:30",2
+f74842c3-c4c4-4813-be26-0f1c7db21112,PUTRA HARAPAN POMALAA,OPEN,info.kwanco.php@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:15:17",1
+f74842c3-c4c4-4813-be26-0f1c7db21112,PUTRA HARAPAN POMALAA,OPEN,info.kwanco.php@gmail.com,Delivered,Queued,"02 Jun 2026, 10:15:12",2
+e77a0ba3-200c-40f8-b6f8-527e3dd21323,INDONESIA MOROWALI INDUSTRIAL PARK PT,OPEN,-,-,-,-,0
+9af762e4-6cda-4ce9-83dc-0c854f3e3075,"TELUK METAL INDUSTRY, PT",OPEN,-,-,-,-,0
+f0c6f56e-3160-4d1d-831a-49b75d941a95,CAHAYA IDOLA TUNGGAL RONA ALAM,OPEN,citracabang@gmail.com,Delivered,Delivered,"02 Jun 2026, 09:51:39",1
+f0c6f56e-3160-4d1d-831a-49b75d941a95,CAHAYA IDOLA TUNGGAL RONA ALAM,OPEN,citracabang@gmail.com,Delivered,Queued,"02 Jun 2026, 09:51:25",2
+12f41738-4b5d-4812-a2ee-d58e07f2918d,"Vale Indonesia Tbk, Daerah Tambang Matarape",OPEN,-,-,-,-,0
+53e6550c-1ff6-41dd-9a27-ddfe78db1783,"SINERGI MOROWALI INDONESIA, PT",OPEN,-,-,-,-,0
+0c6fcc80-9ea0-43b2-8775-cb18edc33d25,BROLY NICKEL INDUSTRY,OPEN,hengjayasite@yahoo.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:00:02",1
+0c6fcc80-9ea0-43b2-8775-cb18edc33d25,BROLY NICKEL INDUSTRY,OPEN,hengjayasite@yahoo.com,Permanent_fail,Bounced,"01 Jun 2026, 23:06:38",2
+0c6fcc80-9ea0-43b2-8775-cb18edc33d25,BROLY NICKEL INDUSTRY,OPEN,hengjayasite@yahoo.com,Permanent_fail,Queued,"01 Jun 2026, 23:06:35",3
+79a6a82e-dedb-4715-839c-0585d04d20f8,QING FENG FERROCHROME,OPEN,secretariat@qf-ferrochrome.com,Delivered,Delivered,"02 Jun 2026, 03:16:09",1
+79a6a82e-dedb-4715-839c-0585d04d20f8,QING FENG FERROCHROME,OPEN,secretariat@qf-ferrochrome.com,Delivered,Queued,"02 Jun 2026, 03:16:03",2
+60e45ca7-8234-4e3c-89c0-887094a6f311,HUAYUE NICKEL COBALT,OPEN,huayuenickelsite@gmail.com,Opened,Opened,"05 Jun 2026, 14:09:16",1
+60e45ca7-8234-4e3c-89c0-887094a6f311,HUAYUE NICKEL COBALT,OPEN,huayuenickelsite@gmail.com,Opened,Delivered,"02 Jun 2026, 02:15:13",2
+60e45ca7-8234-4e3c-89c0-887094a6f311,HUAYUE NICKEL COBALT,OPEN,huayuenickelsite@gmail.com,Opened,Queued,"02 Jun 2026, 02:15:10",3
+cdd01d9c-a1a1-4eac-b0fe-b4f76c908db0,DEXIN STEEL INDONESIA,OPEN,irnc.nathania@gmail.com,Delivered,Delivered,"02 Jun 2026, 07:49:02",1
+cdd01d9c-a1a1-4eac-b0fe-b4f76c908db0,DEXIN STEEL INDONESIA,OPEN,irnc.nathania@gmail.com,Delivered,Queued,"02 Jun 2026, 07:48:55",2
+e0f2666f-51ff-41c7-a770-9b4fac11c596,XPV FLOW EQUIPMENT INDONESIA,OPEN,xabfyn20240722@gmail.com,Delivered,Delivered,"02 Jun 2026, 08:57:51",1
+e0f2666f-51ff-41c7-a770-9b4fac11c596,XPV FLOW EQUIPMENT INDONESIA,OPEN,xabfyn20240722@gmail.com,Delivered,Queued,"02 Jun 2026, 08:57:51",2
+415bb553-21bd-4786-b793-115ad93cc620,BANK RAKYAT INDONESIA (PERSERO) PT TBK,OPEN,n2025@corp.bri.co.id,Delivered,Queued,"09 Jun 2026, 11:16:30",1
+415bb553-21bd-4786-b793-115ad93cc620,BANK RAKYAT INDONESIA (PERSERO) PT TBK,OPEN,n2025@corp.bri.co.id,Delivered,Delivered,"09 Jun 2026, 11:16:28",2
+415bb553-21bd-4786-b793-115ad93cc620,BANK RAKYAT INDONESIA (PERSERO) PT TBK,OPEN,n2025@corp.bri.co.id,Delivered,Queued,"02 Jun 2026, 01:01:15",3
+415bb553-21bd-4786-b793-115ad93cc620,BANK RAKYAT INDONESIA (PERSERO) PT TBK,OPEN,n2025@corp.bri.co.id,Delivered,Delivered,"02 Jun 2026, 01:01:15",4
+f8c20745-5cb2-4b8d-b9f9-248122f791f7,TSINGSHAN STEEL INDONESIA,OPEN,tsi.nathania@gmail.com,-,-,-,0
+880e4457-5ee6-40e2-997b-1db7e51671e9,"ZHONGTSING NEW ENERGY, PT",OPEN,-,-,-,-,0
+7ada42f5-ed09-4fa4-8c0a-4526f77b7f81,"PINTU AIR MAS MINERAL, PT",OPEN,-,-,-,-,0
+b2fd11bc-1b1d-4ba6-9d82-f425f920f865,"ZHAO HUI NICKEL, PT",OPEN,-,-,-,-,0
+035f9009-af5b-4bc8-a96b-b19d63b7f626,"Honch New Energy, PT",OPEN,-,-,-,-,0
+47d56fbd-f8f5-49b8-9763-ae12d6be1be1,PT Chengseng New Energy,OPEN,-,-,-,-,0
+1d4faad0-8f18-4586-8a7d-139cc7d3acb2,HUANENG METAL INDUSTRY,OPEN,huanengmetal41@gmail.com,Delivered,Queued,"09 Jun 2026, 11:03:49",1
+1d4faad0-8f18-4586-8a7d-139cc7d3acb2,HUANENG METAL INDUSTRY,OPEN,huanengmetal41@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:03:46",2
+1d4faad0-8f18-4586-8a7d-139cc7d3acb2,HUANENG METAL INDUSTRY,OPEN,huanengmetal41@gmail.com,Delivered,Delivered,"01 Jun 2026, 23:41:22",3
+1d4faad0-8f18-4586-8a7d-139cc7d3acb2,HUANENG METAL INDUSTRY,OPEN,huanengmetal41@gmail.com,Delivered,Queued,"01 Jun 2026, 23:41:18",4
+34f198ce-857c-49be-aefa-65a832a4971b,"BANK MANDIRI KCP MOROWALI BAHODOPI, PT",OPEN,-,-,-,-,0
+8128b0fc-31d5-43d8-92b7-849f5621138d,"BIMA CAKRA PERKASA MINERALINDO, PT",OPEN,-,-,-,-,0
+70c6976e-c672-4b38-9f5d-161a2c28b228,BANK NEGARA INDONESIA KCP BUNGKU,OPEN,-,-,-,-,0
+5cc194bb-172f-4cd5-a8d4-fd6a0ed7d3e7,PT. Baoshuo Taman Industry Investment Group (#224),OPEN,-,-,-,-,0
+b2cf42e6-965c-49fa-abac-9af54426d0cc,"BANK SYARIAH INDONESIA, PT",OPEN,sapriliya@bsm.co.id,Bounced,Bounced,"02 Jun 2026, 11:57:49",1
+b2cf42e6-965c-49fa-abac-9af54426d0cc,"BANK SYARIAH INDONESIA, PT",OPEN,sapriliya@bsm.co.id,Bounced,Queued,"02 Jun 2026, 11:49:47",2
+e38c4b1f-7669-404c-a8bc-71acb239e029,PENGGILINGAN PADI RIZKY ILLAHI,OPEN,ungkaya.factory@simedarby.com,Clicked,Opened,"02 Jun 2026, 09:09:40",1
+e38c4b1f-7669-404c-a8bc-71acb239e029,PENGGILINGAN PADI RIZKY ILLAHI,OPEN,ungkaya.factory@simedarby.com,Clicked,Opened,"02 Jun 2026, 09:08:59",2
+e38c4b1f-7669-404c-a8bc-71acb239e029,PENGGILINGAN PADI RIZKY ILLAHI,OPEN,ungkaya.factory@simedarby.com,Clicked,Clicked,"02 Jun 2026, 09:06:58",3
+e38c4b1f-7669-404c-a8bc-71acb239e029,PENGGILINGAN PADI RIZKY ILLAHI,OPEN,ungkaya.factory@simedarby.com,Clicked,Opened,"02 Jun 2026, 09:06:35",4
+e38c4b1f-7669-404c-a8bc-71acb239e029,PENGGILINGAN PADI RIZKY ILLAHI,OPEN,ungkaya.factory@simedarby.com,Clicked,Delivered,"02 Jun 2026, 09:06:26",5
+e38c4b1f-7669-404c-a8bc-71acb239e029,PENGGILINGAN PADI RIZKY ILLAHI,OPEN,ungkaya.factory@simedarby.com,Clicked,Queued,"02 Jun 2026, 09:06:26",6
+0d404547-b0f9-40d6-a523-530358a15184,BANK TABUNGAN NEGARA,OPEN,-,-,-,-,0
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,OPEN,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"09 Jun 2026, 11:15:42",1
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,OPEN,pt.sumbermentarimorowali@gmail.com,Clicked,Delivered,"02 Jun 2026, 03:18:30",2
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,OPEN,pt.sumbermentarimorowali@gmail.com,Clicked,Queued,"02 Jun 2026, 03:18:25",3
+7801850a-56fb-4ddc-81bb-1d147526dbc1,MITRA ANDALAN MOROWALI,OPEN,pt.mitraandalanmorowali@gmail.com,-,-,-,0
+e8e361a9-ed34-4e33-9920-d63b7fb09f81,BANK BRI UNIT PEHONDAA,OPEN,-,-,-,-,0
+e0e3282e-4685-4ad8-b636-6449ef659410,HADJI KALLA,OPEN,nur.salam.coning@kallagroup.co.id,Permanent_fail,Permanent_fail,"02 Jun 2026, 08:57:43",1
+927a467f-2cbf-4588-b2d6-1fd59f32ded6,"Seawing New Energy, PT",OPEN,-,-,-,-,0
+818cef17-e208-4e99-86b7-b48f3d0fa779,PT Xinheng Metal Indonesia,OPEN,-,-,-,-,0
+8efbdf06-94bc-4658-b356-77b4a06a906d,BANK MANDIRI (PERSERO),OPEN,morowali.bungku@bankmandiri.co.id,Delivered,Delivered,"02 Jun 2026, 04:16:46",1
+8efbdf06-94bc-4658-b356-77b4a06a906d,BANK MANDIRI (PERSERO),OPEN,morowali.bungku@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 04:16:42",2
+dc9d1bea-5477-4fb6-87f1-8e7f0dbf2cfa,VALE INDONESIA TBK PT,OPEN,-,-,-,-,0
+4bd0873b-6cfb-4e08-8276-cbfc1f114282,Morowali Industri Sejahtera,OPEN,-,-,-,-,0
+a7f555f2-4414-44f6-b71f-57d5ed945fb0,BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,OPEN,banksulteng.bungku@yahoo.co.id,-,-,-,0
+c87e86b4-7dc5-4970-bfb9-0e82ae8aa6e8,"CIPTA PERSADA SAMBALAGI, PT",OPEN,-,-,-,-,0
+f17ef478-faa5-4e7d-8797-9c2d22445d1c,TITAH MINERAL INDONESIA,OPEN,-,-,-,-,0
+03f6f71d-0926-4be8-8cd6-6104ac0450d0,"OCEAN SKY METAL INDUSTRY, PT",OPEN,-,-,-,-,0
+10e987d2-224d-4602-a5f1-3489a57cc580,BANK MANDIRI CABANG MOROWALI BUNGKU,OPEN,-,-,-,-,0
+d588c179-aa90-480d-9316-8a6034af2ad6,DECHO NEW ENERGY,OPEN,-,-,-,-,0
+fe311bf4-2d90-46e5-bdf4-1addeb728d57,ZHENSHI INDONESIA INDUSTRIAL PARK,OPEN,zhenshiindustrialpark@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:40:46",1
+fe311bf4-2d90-46e5-bdf4-1addeb728d57,ZHENSHI INDONESIA INDUSTRIAL PARK,OPEN,zhenshiindustrialpark@gmail.com,Delivered,Queued,"02 Jun 2026, 10:40:43",2
+3d6de5ed-9063-43d0-b805-5cfd1e65cd49,"BANK CENTRAL ASIA KCP MOROWALI, PT",OPEN,-,-,-,-,0
+9818074f-7f62-4f6f-8a12-7b9ec153718e,Detian Coking Indonesia,OPEN,secretariat@detiancoking-ind.com,Bounced,Bounced,"02 Jun 2026, 04:45:27",1
+9818074f-7f62-4f6f-8a12-7b9ec153718e,Detian Coking Indonesia,OPEN,secretariat@detiancoking-ind.com,Bounced,Queued,"02 Jun 2026, 04:43:12",2
+f137f885-fb23-4f7a-aa6d-f7a53b703e49,"AGRI BUMI KARYA, PT",OPEN,-,-,-,-,0
+e793075a-b8c2-4c84-ba4c-3f5dc99d358d,Artono Simanungkalit,OPEN,transonlegal.tbr@gmail.com,Opened,Opened,"11 Jun 2026, 08:41:12",1
+e793075a-b8c2-4c84-ba4c-3f5dc99d358d,Artono Simanungkalit,OPEN,transonlegal.tbr@gmail.com,Opened,Opened,"10 Jun 2026, 17:42:13",2
+e793075a-b8c2-4c84-ba4c-3f5dc99d358d,Artono Simanungkalit,OPEN,transonlegal.tbr@gmail.com,Opened,Opened,"10 Jun 2026, 15:22:04",3
+e793075a-b8c2-4c84-ba4c-3f5dc99d358d,Artono Simanungkalit,OPEN,transonlegal.tbr@gmail.com,Opened,Opened,"10 Jun 2026, 15:20:54",4
+e793075a-b8c2-4c84-ba4c-3f5dc99d358d,Artono Simanungkalit,OPEN,transonlegal.tbr@gmail.com,Opened,Opened,"10 Jun 2026, 15:16:04",5
+e793075a-b8c2-4c84-ba4c-3f5dc99d358d,Artono Simanungkalit,OPEN,transonlegal.tbr@gmail.com,Opened,Opened,"10 Jun 2026, 15:11:10",6
+e793075a-b8c2-4c84-ba4c-3f5dc99d358d,Artono Simanungkalit,OPEN,transonlegal.tbr@gmail.com,Opened,Opened,"02 Jun 2026, 17:17:08",7
+e793075a-b8c2-4c84-ba4c-3f5dc99d358d,Artono Simanungkalit,OPEN,transonlegal.tbr@gmail.com,Opened,Opened,"02 Jun 2026, 09:35:12",8
+e793075a-b8c2-4c84-ba4c-3f5dc99d358d,Artono Simanungkalit,OPEN,transonlegal.tbr@gmail.com,Opened,Delivered,"02 Jun 2026, 09:20:43",9
+e793075a-b8c2-4c84-ba4c-3f5dc99d358d,Artono Simanungkalit,OPEN,transonlegal.tbr@gmail.com,Opened,Queued,"02 Jun 2026, 09:20:24",10
+2676b7e4-6dca-4e7f-991e-6ae27b0b0c85,JEMBATAN MAS ENGINEERING,OPEN,jembatanmas579@yahoo.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:08:56",1
+2676b7e4-6dca-4e7f-991e-6ae27b0b0c85,JEMBATAN MAS ENGINEERING,OPEN,jembatanmas579@yahoo.com,Permanent_fail,Permanent_fail,"02 Jun 2026, 04:11:39",2
+f06b1770-44ac-4f73-9bba-ac5b8877f5da,"TEKNIK ALUM SERVIS, PT",OPEN,agamtbw@gmail.com,Delivered,Delivered,"02 Jun 2026, 09:50:55",1
+f06b1770-44ac-4f73-9bba-ac5b8877f5da,"TEKNIK ALUM SERVIS, PT",OPEN,agamtbw@gmail.com,Delivered,Queued,"02 Jun 2026, 09:50:54",2
+7f30fdb9-3378-42da-a89e-f3c99fae9f90,WALSIN NICKEL INDUSTRIAL INDONESIA,OPEN,-,-,-,-,0
+8f5e067f-860c-4808-84ca-bbe34520f80a,TAMACO GRAHA KRIDA,OPEN,tgk.lokasi@simedarbyplantation.com,-,-,-,0
+c1642e10-01aa-4e62-a0b5-fc7e1c530d19,CAHAYA BUKIT MOROWALI,OPEN,pt.cahayabukitmorowali@gmail.com,Clicked,Clicked,"06 Jun 2026, 16:16:30",1
+c1642e10-01aa-4e62-a0b5-fc7e1c530d19,CAHAYA BUKIT MOROWALI,OPEN,pt.cahayabukitmorowali@gmail.com,Clicked,Clicked,"06 Jun 2026, 16:16:26",2
+c1642e10-01aa-4e62-a0b5-fc7e1c530d19,CAHAYA BUKIT MOROWALI,OPEN,pt.cahayabukitmorowali@gmail.com,Clicked,Opened,"06 Jun 2026, 16:16:09",3
+c1642e10-01aa-4e62-a0b5-fc7e1c530d19,CAHAYA BUKIT MOROWALI,OPEN,pt.cahayabukitmorowali@gmail.com,Clicked,Opened,"06 Jun 2026, 16:15:46",4
+c1642e10-01aa-4e62-a0b5-fc7e1c530d19,CAHAYA BUKIT MOROWALI,OPEN,pt.cahayabukitmorowali@gmail.com,Clicked,Delivered,"02 Jun 2026, 07:08:55",5
+c1642e10-01aa-4e62-a0b5-fc7e1c530d19,CAHAYA BUKIT MOROWALI,OPEN,pt.cahayabukitmorowali@gmail.com,Clicked,Queued,"02 Jun 2026, 07:08:51",6
+a5eefd78-29d0-491a-9a55-6d0e3cebf56f,GIZAN INVESTMENT GRUP,OPEN,ptgizaninvestmentgrup@gmail.com,Opened,Opened,"02 Jun 2026, 06:14:08",1
+a5eefd78-29d0-491a-9a55-6d0e3cebf56f,GIZAN INVESTMENT GRUP,OPEN,ptgizaninvestmentgrup@gmail.com,Opened,Delivered,"02 Jun 2026, 05:32:29",2
+a5eefd78-29d0-491a-9a55-6d0e3cebf56f,GIZAN INVESTMENT GRUP,OPEN,ptgizaninvestmentgrup@gmail.com,Opened,Queued,"02 Jun 2026, 05:32:25",3
+107e513c-c4c3-4b50-bc89-6723a3cb3b93,"KUTAI PALM PLANTATION,PT",OPEN,-,-,-,-,0
+dd003496-df61-4ee5-81ff-039a85045616,KINARYA ALAM SEMESTA PT,OPEN,-,-,-,-,0
+80c030e4-e029-49b1-a942-8495eaf6afdd,PT. BAHARI MOROWALI JAYA,OPEN,ebungku@gmail.com,Delivered,Delivered,"02 Jun 2026, 03:34:22",1
+80c030e4-e029-49b1-a942-8495eaf6afdd,PT. BAHARI MOROWALI JAYA,OPEN,ebungku@gmail.com,Delivered,Queued,"02 Jun 2026, 03:34:19",2
+a3fc0235-4078-4d30-934e-cddcfd337ea9,PT SULAWESI NICKEL COBALT,OPEN,-,-,-,-,0
+34907558-6371-45f6-b5ba-d416a14fb23c,PT. MOROWALI MEGASIAR,OPEN,syauqinayah@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:13:22",1
+34907558-6371-45f6-b5ba-d416a14fb23c,PT. MOROWALI MEGASIAR,OPEN,syauqinayah@gmail.com,Delivered,Queued,"09 Jun 2026, 11:13:18",2
+34907558-6371-45f6-b5ba-d416a14fb23c,PT. MOROWALI MEGASIAR,OPEN,syauqinayah@gmail.com,Delivered,Delivered,"02 Jun 2026, 00:35:46",3
+34907558-6371-45f6-b5ba-d416a14fb23c,PT. MOROWALI MEGASIAR,OPEN,syauqinayah@gmail.com,Delivered,Queued,"02 Jun 2026, 00:35:42",4
+002155b1-8526-4b29-9f46-1bcf805b34ed,CAHAYA SMELTER INDONESIA,OPEN,-,-,-,-,0
+6bad9ebe-910a-42f1-80d5-4952ea7bc219,BANK MANDIRI TASPEN,OPEN,-,-,-,-,0
+caea2db4-feb6-4898-9bff-449bfb39015d,YINXIANG MOROWALI TRADING,OPEN,yinxiangmorowalitrading@gmail.com,Delivered,Delivered,"02 Jun 2026, 07:39:56",1
+caea2db4-feb6-4898-9bff-449bfb39015d,YINXIANG MOROWALI TRADING,OPEN,yinxiangmorowalitrading@gmail.com,Delivered,Queued,"02 Jun 2026, 07:39:52",2
+9b9e29d1-fc1e-4b2d-99d7-838fde85299c,"INDONESIA RUIPU NICKEL AND CROME ALLOY, PT",OPEN,smaalkhairatkolono@yahoo.co.id,Bounced,Bounced,"02 Jun 2026, 04:58:35",1
+9b9e29d1-fc1e-4b2d-99d7-838fde85299c,"INDONESIA RUIPU NICKEL AND CROME ALLOY, PT",OPEN,smaalkhairatkolono@yahoo.co.id,Bounced,Queued,"02 Jun 2026, 04:58:16",2

@@ -5,8 +5,24 @@ import socket
 from urllib.parse import unquote
 from playwright.async_api import async_playwright
 
-USER_DATA_DIR = "playwright_chrome_profile_mapping" # Pakai folder beda jika harus launch baru
-PROV_ID = "5214ecb2-bef1-4a86-9446-451cf430928e" 
+PROV_GROUP_ID = "a45adac1-e711-4c15-b3f9-1f30fc151565"
+
+# Daftar Kode Kabupaten di Sulteng
+KAB_CODES = {
+    "7201": "[01] BANGGAI KEPULAUAN",
+    "7202": "[02] BANGGAI",
+    "7203": "[03] MOROWALI",
+    "7204": "[04] POSO",
+    "7205": "[05] DONGGALA",
+    "7206": "[06] TOLI-TOLI",
+    "7207": "[07] BUOL",
+    "7208": "[08] PARIGI MOUTONG",
+    "7209": "[09] TOJO UNA-UNA",
+    "7210": "[10] SIGI",
+    "7211": "[11] BANGGAI LAUT",
+    "7212": "[12] MOROWALI UTARA",
+    "7271": "[71] PALU"
+}
 
 def check_port_open(port=9222):
     try:
@@ -15,44 +31,36 @@ def check_port_open(port=9222):
     except:
         return False
 
-async def fetch_region_metadata(page, token, region_id):
-    url = f"https://fasih-sm.bps.go.id/app/api/region/api/v1/region-metadata?id={region_id}"
+async def fetch_kecamatan(page, token, kab_code):
+    url = f"https://fasih-sm.bps.go.id/app/api/region/api/v1/region/level3?groupId={PROV_GROUP_ID}&level2FullCode={kab_code}"
     try:
         res = await page.evaluate("""
             async ({url, token}) => {
-                const r = await fetch(url, {
-                    headers: { "X-XSRF-TOKEN": token }
-                });
-                if (!r.ok) return null;
-                return await r.json();
+                try {
+                    const r = await fetch(url, { headers: { "X-XSRF-TOKEN": token } });
+                    if (!r.ok) return { _error: `HTTP ${r.status}` };
+                    return await r.json();
+                } catch (err) {
+                    return { _error: err.toString() };
+                }
             }
         """, {"url": url, "token": token})
         return res
     except Exception as e:
-        print(f"Error fetching region {region_id}: {e}")
-        return None
+        return {"_error": str(e)}
 
 async def main():
     async with async_playwright() as p:
-        browser = None
-        context = None
-        page = None
+        if not check_port_open(9222):
+            print("[ERROR] Chrome tidak terdeteksi di port 9222.")
+            print("Pastikan script scrape utamamu sedang jalan atau jalankan Chrome dengan remote debugging.")
+            return
 
-        if check_port_open(9222):
-            print("Terhubung ke Chrome yang sudah jalan di background...")
-            browser = await p.chromium.connect_over_cdp("http://127.0.0.1:9222")
-            context = browser.contexts[0] if browser.contexts else await browser.new_context()
-            page = context.pages[0] if context.pages else await context.new_page()
-        else:
-            print("Meluncurkan browser sementara...")
-            browser = await p.chromium.launch_persistent_context(
-                user_data_dir=os.path.abspath(USER_DATA_DIR),
-                headless=False,
-                args=["--no-first-run", "--no-default-browser-check"]
-            )
-            context = browser
-            page = browser.pages[0] if browser.pages else await browser.new_page()
-            
+        print("Terhubung ke Chrome yang sudah jalan di background...")
+        browser = await p.chromium.connect_over_cdp("http://127.0.0.1:9222")
+        context = browser.contexts[0] if browser.contexts else await browser.new_context()
+        page = context.pages[0] if context.pages else await context.new_page()
+
         # Cari tab fasih yang aktif
         for p_page in context.pages:
             if "fasih-sm.bps.go.id" in p_page.url:
@@ -61,56 +69,52 @@ async def main():
 
         if "fasih-sm.bps.go.id" not in page.url:
             await page.goto("https://fasih-sm.bps.go.id/app/dashboard")
-            await asyncio.sleep(3) 
-        
+
+        # Ambil Token
         cookies = await context.cookies()
         token_raw = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), None)
         
         if not token_raw:
-            print("Gagal mendapatkan token. Pastikan tab FASIH sudah login, lalu jalankan ulang script ini.")
+            print("\n[WARNING] Token tidak ditemukan. Pastikan kamu sudah login ke FASIH di Chrome.")
             return
 
         token = unquote(token_raw)
-        print("Token didapat. Mulai mapping wilayah...")
-
-        # 1. Ambil data Kabupaten di dalam Provinsi Sulteng
-        prov_data = await fetch_region_metadata(page, token, PROV_ID)
-        if not prov_data or 'children' not in prov_data:
-            print("Gagal mengambil data provinsi.")
-            return
-
-        kab_list = prov_data['children']
-        print(f"Ditemukan {len(kab_list)} Kabupaten.")
+        print("\n[INFO] Token valid! Mulai menarik data Kecamatan...")
 
         full_map = {}
-        
-        # 2. Iterasi per Kabupaten untuk ambil Kecamatan
-        for kab in kab_list:
-            kab_id = kab['id']
-            kab_name = kab.get('name', 'Unknown')
-            print(f"  Memproses Kab: {kab_name}")
-            
-            kab_data = await fetch_region_metadata(page, token, kab_id)
-            kec_list = kab_data.get('children', []) if kab_data else []
-            
-            kec_map = []
-            for kec in kec_list:
-                kec_map.append({
-                    "id": kec['id'],
-                    "name": kec.get('name', 'Unknown')
-                })
-            
-            full_map[kab_id] = {
-                "name": kab_name,
-                "kecamatan": kec_map
-            }
-            await asyncio.sleep(0.5) 
 
-        # Simpan hasilnya
+        for code, name in KAB_CODES.items():
+            print(f"  -> Menarik Kecamatan untuk {name}...")
+            data = await fetch_kecamatan(page, token, code)
+            
+            if data and "_error" not in data:
+                # Menangani berbagai kemungkinan format response JSON
+                kecamatan_list = []
+                raw_list = data.get('data', []) if isinstance(data, dict) else (data if isinstance(data, list) else [])
+                
+                for kec in raw_list:
+                    kecamatan_list.append({
+                        "id": kec.get("id"),
+                        "name": kec.get("name")
+                    })
+                
+                full_map[code] = {
+                    "kab_name": name,
+                    "kecamatan": kecamatan_list
+                }
+            else:
+                print(f"     [GAGAL] {data.get('_error', 'Unknown Error')}")
+            
+            await asyncio.sleep(0.5) # Jeda sopan santun ke server
+
         with open("region_map_sulteng.json", "w") as f:
             json.dump(full_map, f, indent=4)
             
-        print("Pemetaan selesai. Tersimpan di region_map_sulteng.json")
+        print("\n✅ SELESAI! Data berhasil disimpan di region_map_sulteng.json")
+        
+        # Print sedikit contoh hasilnya biar kita bisa lihat bareng
+        print("\n[DEBUG] Contoh hasil (Kabupaten 7201):")
+        print(json.dumps(full_map.get("7201", {}), indent=2)[:500])
 
 if __name__ == "__main__":
     asyncio.run(main())
