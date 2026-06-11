@@ -1,5 +1,5 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-11T11:17:46.918130+08:00",
+  "updated_at": "2026-06-11T11:43:02.625054+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
@@ -178,9 +178,9 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[04] POSO",
-      "total_prelist": 105389,
+      "total_prelist": 105391,
       "total_draft": 78,
-      "total_open": 105277,
+      "total_open": 105279,
       "total_submitted": 33,
       "total_rejected": 1,
       "total_approved": 0,
@@ -222,14 +222,26 @@ window.IPAS_DATA = {
           "status": "SUBMITTED RESPONDENT"
         },
         {
-          "name": "Koperasi Payoanjaya Mitra Bahari",
-          "code": "7204 - SE26mq8wgc1CF0",
+          "name": "ksu dana dipa",
+          "code": "7204 - SE26mq8whl3679",
           "date": "today",
           "status": "DRAFT"
         },
         {
           "name": "KPN PERHIPTANI",
           "code": "7204 - SE26mq8wk8E9C6",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "KSPPS BMT KS 72AMANAH",
+          "code": "7204 - 0802220013847",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "Koperasi Payoanjaya Mitra Bahari",
+          "code": "7204 - SE26mq8wgc1CF0",
           "date": "today",
           "status": "DRAFT"
         },
@@ -246,12 +258,6 @@ window.IPAS_DATA = {
           "status": "DRAFT"
         },
         {
-          "name": "KSPPS BMT KS 72 AMANAH",
-          "code": "7204 - 0802220013847",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
           "name": "koperasi pedeka",
           "code": "7204 - SE26mq8wghCBFA",
           "date": "today",
@@ -260,12 +266,6 @@ window.IPAS_DATA = {
         {
           "name": "KSP Pegawai Negeri Ikhtiar",
           "code": "7204 - SE26mq8wq320F4",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KOPERASI SERBA USAHA DANA DIPA",
-          "code": "7204 - SE26mq8whl3679",
           "date": "today",
           "status": "DRAFT"
         },
@@ -671,6 +671,6 @@ window.IPAS_DATA = {
       "new_businesses": []
     }
   ],
-  "se_umum_prov_total": 1140266,
+  "se_umum_prov_total": 1140268,
   "se_ub_prov_total": 1264
 };
