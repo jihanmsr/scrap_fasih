@@ -849,14 +849,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const row = document.createElement('tr');
 
             const kabupatenEscaped = item.kabupaten.replace(/'/g, "\\'");
-            const newBusinessesJSON = JSON.stringify(item.new_businesses || []).replace(/"/g, '&quot;');
+            // FIX: Gunakan encodeURIComponent agar karakter aneh/tanda kutip di nama usaha tidak merusak HTML
+            const encodedBusinessesJSON = encodeURIComponent(JSON.stringify(item.new_businesses || []));
 
             const penambahanBadge = (item.new_usaha_today > 0 || item.new_usaha_yesterday > 0)
-                ? `<span class="badge-interactive" onclick="openNewBusinessesModal('${kabupatenEscaped}', '${newBusinessesJSON}')" style="cursor: pointer; display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; background-color: rgba(99, 102, 241, 0.1); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.3); transition: all 0.2s;" title="Klik untuk rincian target baru">
+                ? `<span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 700; background-color: rgba(255, 255, 255, 0.05); color: var(--text-secondary); border: 1px solid var(--card-border); opacity: 0.85;">
                     +${item.new_usaha_today} | +${item.new_usaha_yesterday}
                    </span>`
                 : `<span style="color: var(--text-muted); font-size: 0.85rem;">-</span>`;
-
             row.innerHTML = `
                 <td style="font-weight: 700; color: var(--text-primary);">${highlightText(item.kabupaten, searchVal)}</td>
                 <td style="text-align: right; font-family: monospace; font-weight: 500; color: #f59e0b;">${formatNum(item.total_draft)}</td>
@@ -1693,100 +1693,139 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Modal Functions
-    let activeModalBusinesses = [];
-    window.openNewBusinessesModal = function (kabupatenName, businessesJSON) {
-        const modal = document.getElementById('businesses-modal');
-        const titleText = document.getElementById('modal-title-text');
-        const searchInput = document.getElementById('modal-search-input');
-        if (!modal || !titleText || !searchInput) return;
+    // // Modal Functions
+    // let activeModalBusinesses = [];
 
-        // Clean name
-        const cleanKab = kabupatenName.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
-        titleText.innerText = `Penambahan Usaha: KAB. ${cleanKab}`;
-        searchInput.value = '';
+    // window.openNewBusinessesModal = function (kabupatenName, encodedBusinessesJSON) {
+    //     const modal = document.getElementById('businesses-modal');
+    //     const titleText = document.getElementById('modal-title-text');
+    //     const searchInput = document.getElementById('modal-search-input');
+    //     if (!modal || !titleText || !searchInput) return;
 
-        try {
-            activeModalBusinesses = typeof businessesJSON === 'string' ? JSON.parse(businessesJSON) : businessesJSON;
-        } catch (e) {
-            activeModalBusinesses = [];
-        }
+    //     // BRUTE FORCE CSS: Paksa modal overlay tampil
+    //     modal.style.display = 'flex';
+    //     modal.style.zIndex = '999999';
 
-        renderModalList();
-        modal.classList.add('active');
-    };
+    //     // BRUTE FORCE CSS: Paksa kotak putihnya tampil
+    //     const container = modal.querySelector('.modal-container');
+    //     if (container) {
+    //         container.style.display = 'flex';
+    //         container.style.flexDirection = 'column';
+    //         container.style.opacity = '1';
+    //         container.style.visibility = 'visible';
+    //         container.style.transform = 'none'; // Hilangkan efek transisi nyangkut
+    //     }
 
-    window.openProvincialNewBusinessesModal = function (surveyType) {
-        const modal = document.getElementById('businesses-modal');
-        const titleText = document.getElementById('modal-title-text');
-        const searchInput = document.getElementById('modal-search-input');
-        if (!modal || !titleText || !searchInput) return;
+    //     const cleanKab = (kabupatenName || "").replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+    //     titleText.innerText = `Penambahan Usaha: KAB. ${cleanKab}`;
+    //     searchInput.value = '';
 
-        titleText.innerText = `Penambahan Usaha: PROVINSI SULAWESI TENGAH (${surveyType === 'se_umum' ? 'Umum' : 'Usaha Besar'})`;
-        searchInput.value = '';
+    //     try {
+    //         // Decode kembali datanya
+    //         activeModalBusinesses = JSON.parse(decodeURIComponent(encodedBusinessesJSON));
+    //     } catch (e) {
+    //         try { activeModalBusinesses = JSON.parse(encodedBusinessesJSON); } catch (err) { activeModalBusinesses = []; }
+    //     }
 
-        const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
-        const surveyData = ipasDataObj[surveyType] || [];
+    //     renderModalList();
+    //     modal.classList.add('active');
+    // };
 
-        activeModalBusinesses = [];
-        surveyData.forEach(kab => {
-            const cleanKab = kab.kabupaten.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
-            const list = kab.new_businesses || [];
-            list.forEach(b => {
-                activeModalBusinesses.push({
-                    ...b,
-                    kabName: cleanKab
-                });
-            });
-        });
+    // window.openProvincialNewBusinessesModal = function (surveyType) {
+    //     const modal = document.getElementById('businesses-modal');
+    //     const titleText = document.getElementById('modal-title-text');
+    //     const searchInput = document.getElementById('modal-search-input');
+    //     if (!modal || !titleText || !searchInput) return;
 
-        renderModalList();
-        modal.classList.add('active');
-    };
+    //     modal.style.display = 'flex';
+    //     modal.style.zIndex = '999999';
 
-    window.closeNewBusinessesModal = function () {
-        const modal = document.getElementById('businesses-modal');
-        if (modal) modal.classList.remove('active');
-    };
+    //     const container = modal.querySelector('.modal-container');
+    //     if (container) {
+    //         container.style.display = 'flex';
+    //         container.style.flexDirection = 'column';
+    //         container.style.opacity = '1';
+    //         container.style.visibility = 'visible';
+    //         container.style.transform = 'none';
+    //     }
 
-    window.renderModalList = function () {
-        const container = document.getElementById('modal-business-list');
-        const searchInput = document.getElementById('modal-search-input');
-        if (!container || !searchInput) return;
+    //     titleText.innerText = `Penambahan Usaha: PROVINSI SULAWESI TENGAH (${surveyType === 'se_umum' ? 'Umum' : 'Usaha Besar'})`;
+    //     searchInput.value = '';
 
-        const q = searchInput.value.toLowerCase().trim();
-        const filtered = activeModalBusinesses.filter(b => {
-            return (b.name || '').toLowerCase().includes(q) || (b.code || '').toLowerCase().includes(q);
-        });
+    //     const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
+    //     const surveyData = ipasDataObj[surveyType] || [];
 
-        if (filtered.length === 0) {
-            container.innerHTML = `<div style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary); font-size: 0.9rem;">Tidak ada penambahan usaha baru yang ditemukan.</div>`;
-            return;
-        }
+    //     activeModalBusinesses = [];
+    //     surveyData.forEach(kab => {
+    //         const cleanKab = (kab.kabupaten || "").replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+    //         const list = kab.new_businesses || [];
+    //         list.forEach(b => {
+    //             if (b) activeModalBusinesses.push({ ...b, kabName: cleanKab });
+    //         });
+    //     });
 
-        container.innerHTML = filtered.map(b => {
-            const badgeColor = b.date === 'today' ? 'var(--color-delivered)' : '#f59e0b';
-            const badgeText = b.date === 'today' ? 'Hari Ini' : 'Kemarin';
-            const kabSub = b.kabName ? `<span style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 0.15rem 0.45rem; border-radius: 0.25rem; margin-right: 0.5rem;">${b.kabName}</span>` : '';
+    //     renderModalList();
+    //     modal.classList.add('active');
+    // };
 
-            return `
-                <div class="business-list-item">
-                    <div class="business-info">
-                        <span class="business-name">${b.name}</span>
-                        <span class="business-code">${b.code}</span>
-                    </div>
-                    <div class="business-badges">
-                        ${kabSub}
-                        <span style="background: rgba(255,255,255,0.05); padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; border: 1px solid var(--card-border);">${b.status || 'DRAFT'}</span>
-                        <span style="background: rgba(${b.date === 'today' ? '16,185,129,0.1' : '245,158,11,0.1'}); border: 1px solid rgba(${b.date === 'today' ? '16,185,129,0.3' : '245,158,11,0.3'}); padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 700; color: ${badgeColor};">${badgeText}</span>
-                    </div>
-                </div>
-            `;
-        }).join('');
-    };
+    // window.closeNewBusinessesModal = function () {
+    //     const modal = document.getElementById('businesses-modal');
+    //     if (modal) {
+    //         modal.classList.remove('active');
+    //         modal.style.display = 'none'; // Sembunyikan tuntas
+    //     }
+    // };
 
-    window.filterModalList = function () {
-        renderModalList();
-    };
+    // window.renderModalList = function () {
+    //     const container = document.getElementById('modal-business-list');
+    //     const searchInput = document.getElementById('modal-search-input');
+    //     if (!container || !searchInput) return;
+
+    //     const q = searchInput.value.toLowerCase().trim();
+    //     const filtered = activeModalBusinesses.filter(b => {
+    //         return (b.name || '').toLowerCase().includes(q) || (b.code || '').toLowerCase().includes(q);
+    //     });
+
+    //     if (filtered.length === 0) {
+    //         container.innerHTML = `<div style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary); font-size: 0.9rem;">Tidak ada penambahan usaha baru yang ditemukan.</div>`;
+    //         return;
+    //     }
+
+    //     // Generate list dengan inline CSS cantik
+    //     container.innerHTML = filtered.map(b => {
+    //         const isToday = b.date === 'today';
+    //         const badgeColor = isToday ? '#10b981' : '#f59e0b';
+    //         const badgeBg = isToday ? 'rgba(16,185,129,0.1)' : 'rgba(245,158,11,0.1)';
+    //         const badgeBorder = isToday ? 'rgba(16,185,129,0.3)' : 'rgba(245,158,11,0.3)';
+    //         const badgeText = isToday ? 'Hari Ini' : 'Kemarin';
+    //         const kabSub = b.kabName ? `<span style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 0.2rem 0.5rem; border-radius: 0.25rem; margin-right: 0.5rem; border: 1px solid var(--card-border);">${b.kabName}</span>` : '';
+
+    //         return `
+    //             <div style="padding: 1rem; border-bottom: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+    //                 <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+    //                     <span style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem;">${b.name || '-'}</span>
+    //                     <span style="font-family: monospace; color: var(--text-secondary); font-size: 0.85rem;">${b.code || '-'}</span>
+    //                 </div>
+    //                 <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+    //                     ${kabSub}
+    //                     <span style="background: rgba(255,255,255,0.05); padding: 0.25rem 0.6rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; border: 1px solid var(--card-border);">${b.status || 'DRAFT'}</span>
+    //                     <span style="background: ${badgeBg}; border: 1px solid ${badgeBorder}; padding: 0.25rem 0.6rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 800; color: ${badgeColor};">${badgeText}</span>
+    //                 </div>
+    //             </div>
+    //         `;
+    //     }).join('');
+    // };
+
+    // window.filterModalList = function () {
+    //     renderModalList();
+    // };
+    // TEMPORARY DISABLED FOR PRODUCTION MAINTENANCE
+    window.openNewBusinessesModal = function () { return false; };
+    window.openProvincialNewBusinessesModal = function () { return false; };
+    window.closeNewBusinessesModal = function () { return false; };
+    window.renderModalList = function () { return false; };
+    window.filterModalList = function () { return false; };
+    // (Kode bawahnya biarkan seperti semula: window.renderAssignChart = ...)
 
     // Escapement for modal click
     document.addEventListener('keydown', (e) => {
