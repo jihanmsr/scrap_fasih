@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Fasih Email Delivery Dashboard</title>
+    <title>Dashboard Monitoring Sensus Ekonomi 2026 - FASIH SM</title>
     <meta content="Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB"
         name="description" />
     <!-- Google Fonts -->
@@ -54,6 +54,13 @@
             --color-clicked: #8b5cf6;
             --color-bounced: #ef4444;
             --color-nolog: #6b7280;
+
+            /* Sidebar Theme Variables */
+            --sidebar-bg: linear-gradient(180deg, rgba(22, 28, 45, 0.98) 0%, rgba(11, 15, 25, 1) 100%);
+            --sidebar-border: rgba(255, 255, 255, 0.06);
+            --sidebar-item-hover-bg: rgba(99, 102, 241, 0.1);
+            --sidebar-item-active-bg: linear-gradient(90deg, var(--primary) 0%, rgba(99, 102, 241, 0.8) 100%);
+            --sidebar-glow: 0 4px 20px rgba(99, 102, 241, 0.25);
         }
 
         :root[data-theme="light"] {
@@ -90,6 +97,13 @@
             --color-clicked: #7c3aed;
             --color-bounced: #dc2626;
             --color-nolog: #64748b;
+
+            /* Sidebar Theme Variables */
+            --sidebar-bg: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            --sidebar-border: #e2e8f0;
+            --sidebar-item-hover-bg: rgba(79, 70, 229, 0.06);
+            --sidebar-item-active-bg: linear-gradient(90deg, var(--primary) 0%, #6366f1 100%);
+            --sidebar-glow: 0 4px 15px rgba(79, 70, 229, 0.15);
         }
 
         * {
@@ -1153,17 +1167,42 @@
 
         .sidebar {
             width: 280px;
-            background-color: var(--card-bg);
-            border-right: 1px solid var(--card-border);
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--sidebar-border);
             display: flex;
             flex-direction: column;
-            padding: 1.5rem 1rem;
+            padding: 2rem 1.25rem;
             z-index: 10;
+            transition: all 0.3s ease;
         }
 
         .sidebar .brand-title {
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             padding-left: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .sidebar .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar .logo-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 0.75rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #ef4444 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
         }
 
         .sidebar-nav {
@@ -1176,26 +1215,63 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            padding: 0.875rem 1rem;
-            border-radius: 0.5rem;
-            font-size: 0.95rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            border: none;
+            border: 1px solid transparent;
             background: transparent;
             color: var(--text-secondary);
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sidebar-nav .btn-tab svg {
+            transition: transform 0.2s ease, color 0.2s ease;
+            color: var(--text-muted);
+            margin-right: 0.75rem;
         }
 
         .sidebar-nav .btn-tab:hover {
-            background-color: rgba(59, 130, 246, 0.1);
+            background: var(--sidebar-item-hover-bg);
             color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        .sidebar-nav .btn-tab:hover svg {
+            color: var(--primary);
+            transform: scale(1.1);
         }
 
         .sidebar-nav .btn-tab.active {
-            background-color: var(--primary);
+            background: var(--sidebar-item-active-bg);
             color: white;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            box-shadow: var(--sidebar-glow);
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .sidebar-nav .btn-tab.active svg {
+            color: white;
+        }
+
+        /* Indicator bar on active */
+        .sidebar-nav .btn-tab::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 25%;
+            height: 50%;
+            width: 4px;
+            background-color: white;
+            border-radius: 0 4px 4px 0;
+            transform: scaleY(0);
+            transition: transform 0.2s ease;
+        }
+
+        .sidebar-nav .btn-tab.active::before {
+            transform: scaleY(1);
         }
 
         .main-content {
@@ -1204,6 +1280,21 @@
             padding: 2rem 3rem;
             display: flex;
             flex-direction: column;
+        }
+
+        .assign-charts-container {
+            display: grid;
+            grid-template-columns: 0.98fr 1.62fr;
+            gap: 1.5rem;
+            width: 100%;
+            margin-bottom: 2rem;
+            align-items: start;
+        }
+
+        @media (max-width: 1150px) {
+            .assign-charts-container {
+                grid-template-columns: 1fr !important;
+            }
         }
 
         .main-content>header {
@@ -1286,6 +1377,149 @@
                 height: auto;
             }
         }
+        /* Premium Glassmorphic Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 15, 25, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modal-container {
+            width: 90%;
+            max-width: 650px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-hover-border);
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-md), 0 0 40px rgba(99, 102, 241, 0.15);
+            display: flex;
+            flex-direction: column;
+            max-height: 85vh;
+            transform: scale(0.95) translateY(10px);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            overflow: hidden;
+        }
+        .modal-overlay.active .modal-container {
+            transform: scale(1) translateY(0);
+        }
+        .modal-header {
+            padding: 1.5rem 1.75rem;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin: 0;
+        }
+        .modal-close-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .modal-close-btn:hover {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+        }
+        .modal-body {
+            padding: 1.5rem 1.75rem;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+        .modal-search-wrapper {
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+        .modal-search-input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            border-radius: 0.75rem;
+            background: var(--input-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .modal-search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--input-focus-bg);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+        }
+        .modal-search-icon {
+            position: absolute;
+            left: 0.85rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+        .business-list-item {
+            padding: 1rem;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: background-color 0.15s;
+        }
+        .business-list-item:hover {
+            background: rgba(99, 102, 241, 0.03);
+        }
+        .business-list-item:last-child {
+            border-bottom: none;
+        }
+        .business-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        .business-name {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+        .business-code {
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .business-badges {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .badge-interactive:hover {
+            transform: scale(1.05);
+            background-color: rgba(99, 102, 241, 0.2) !important;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+        }
     </style>
 </head>
 
@@ -1293,11 +1527,15 @@
     <div class="app-layout">
         <aside class="sidebar">
             <div class="brand-title">
-                <h2
-                    style="font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 800; color: var(--primary); margin: 0; letter-spacing: -0.025em;">
-                    Fasih SM</h2>
-                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 5px 0 0 0; font-weight: 500;">Sensus
-                    Ekonomi 2026</p>
+                <div class="brand-logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <span style="font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.025em; background: linear-gradient(to right, var(--primary), #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">FASIH SM</span>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 2px 0 0 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding-left: 3px;">Sensus Ekonomi 2026</p>
             </div>
             <nav class="sidebar-nav">
                 <button class="btn-tab active" id="tab-btn-se_umum" onclick="switchTab('se_umum')">
@@ -1307,7 +1545,7 @@
                         <line x1="12" x2="12" y1="20" y2="4"></line>
                         <line x1="6" x2="6" y1="20" y2="14"></line>
                     </svg>
-                    Sensus Ekonomi 2026 (Semua Usaha)
+                    Sensus Ekonomi Umum
                 </button>
                 <button class="btn-tab" id="tab-btn-se_ub" onclick="switchTab('se_ub')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -1316,7 +1554,7 @@
                         <line x1="12" x2="12" y1="20" y2="4"></line>
                         <line x1="6" x2="6" y1="20" y2="14"></line>
                     </svg>
-                    Sensus Ekonomi 2026 (UB)
+                    Sensus Ekonomi Usaha Besar
                 </button>
                 <button class="btn-tab" id="tab-btn-email" onclick="switchTab('email')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -1324,7 +1562,7 @@
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
-                    Tracker Pengiriman Email UB
+                    Pemantauan Email Usaha Besar
                 </button>
                 <button class="btn-tab" id="tab-btn-assign" onclick="switchTab('assign')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -1334,12 +1572,12 @@
                         <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                         <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                     </svg>
-                    Status Assign Petugas
+                    Alokasi Penugasan Petugas
                 </button>
             </nav>
 
             <div class="sidebar-footer"
-                style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--card-border); text-align: center;">
+                style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--card-border); text-align: left; padding-left: 0.5rem;">
                 <div id="last-updated-text" style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">
                     Memuat status...
                 </div>
@@ -1347,12 +1585,16 @@
         </aside>
         <main class="main-content">
             <header>
-                <div class="brand-title">
-                    <h1 id="main-header"
-                        style="font-size: 1.75rem; font-weight: 800; font-family: 'Outfit', sans-serif;">Fasih Email
-                        Delivery</h1>
-                    <p id="main-subheader" style="color: var(--text-secondary); font-size: 0.95rem;">Monitoring Status
-                        Pengiriman Email Sensus Ekonomi 2026 - UB</p>
+                <div class="brand-title" style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div style="background: linear-gradient(135deg, var(--primary) 0%, #ef4444 100%); width: 42px; height: 42px; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3); flex-shrink: 0;">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 id="main-header" style="margin: 0; font-size: 1.75rem; font-weight: 800; font-family: 'Outfit', sans-serif;">Dashboard Sensus Ekonomi</h1>
+                        <p id="main-subheader" style="margin: 2px 0 0 0; color: var(--text-secondary); font-size: 0.95rem; font-weight: 500;">Sensus Ekonomi 2026 - FASIH SM</p>
+                    </div>
                 </div>
                 <div class="header-actions">
                     <button aria-label="Toggle Theme" class="theme-toggle" id="theme-toggle-btn">
@@ -1598,9 +1840,9 @@
                         <span class="card-category-tag">Umum</span>
                         <div class="stat-label">Total Usaha (Prelist)</div>
                         <div class="stat-value" id="se_umum-stat-total-prelist">0</div>
-                        <div class="stat-subtext" id="se_umum-new-today-wrapper">
+                        <div class="stat-subtext" id="se_umum-new-today-wrapper" style="cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_umum')" title="Klik untuk rincian penambahan usaha">
                             <span id="se_umum-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span>
-                            hari ini
+                            hari ini <svg style="display:inline-block; vertical-align:middle; margin-left:2px; opacity:0.6;" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg>
                         </div>
                     </div>
                     <div class="stat-card" style="--stat-color: #f59e0b;">
@@ -1750,10 +1992,9 @@
                         <span class="card-category-tag">UB</span>
                         <div class="stat-label">Total Usaha (Prelist)</div>
                         <div class="stat-value" id="se_ub-stat-total-prelist">0</div>
-                        <div class="stat-subtext" id="se_ub-new-today-wrapper">
+                        <div class="stat-subtext" id="se_ub-new-today-wrapper" style="cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_ub')" title="Klik untuk rincian penambahan usaha">
                             <span id="se_ub-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span>
-                            hari
-                            ini
+                            hari ini <svg style="display:inline-block; vertical-align:middle; margin-left:2px; opacity:0.6;" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg>
                         </div>
                     </div>
                     <div class="stat-card" style="--stat-color: #f59e0b;">
@@ -1906,13 +2147,13 @@
                 <div class="tabs-navigation"
                     style="justify-content: center; margin-top: 1.5rem; margin-bottom: 0.5rem; border-bottom: none;">
                     <button class="btn-tab active" id="subtab-btn-se2026" onclick="filterAssignData('se2026')"
-                        style="background-color: var(--primary); color: white;">Petugas SE2026 (Umum)</button>
-                    <button class="btn-tab" id="subtab-btn-ub" onclick="filterAssignData('ub')">Petugas UB</button>
+                        style="background-color: var(--primary); color: white;">Kategori Usaha Umum</button>
+                    <button class="btn-tab" id="subtab-btn-ub" onclick="filterAssignData('ub')">Kategori Usaha Besar (UB)</button>
                 </div>
                 <!-- Chart Section -->
                 <div class="stats-section" style="margin-top: 2rem;">
                     <h3
-                        style="margin-top: 0; color: var(--text); font-size: 1.2rem; display: flex; align-items: center;">
+                        style="margin-top: 0; color: var(--text); font-size: 1.2rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700;">
                         <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2.5"
                             style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="20">
@@ -1921,13 +2162,29 @@
                             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
-                        <span id="assign-chart-title">Status Penugasan Petugas</span>
+                        <span id="assign-chart-title">Status Alokasi Wilayah Tugas Petugas</span>
                     </h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Rekap penugasan
-                        petugas sensus berdasarkan kabupaten/kota — gabungan Sensus Ekonomi Semua Usaha dan Usaha Besar
+                    <p id="assign-chart-desc" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 500;">
+                        Visualisasi progres alokasi SLS kepada petugas sensus per Kabupaten/Kota dan rekap keseluruhan Provinsi Sulawesi Tengah.
                     </p>
-                    <div style="height: 400px; width: 100%;">
-                        <canvas id="assignChart"></canvas>
+                    <div class="assign-charts-container">
+                        <!-- Left Chart: Province overall progress -->
+                        <div style="height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.5rem; box-shadow: var(--shadow-sm); text-align: center; position: relative;">
+                            <h4 style="margin: 0 0 1.5rem 0; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Progres Alokasi Sulawesi Tengah</h4>
+                            <div style="position: relative; width: 220px; height: 110px; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 1.5rem;">
+                                <canvas id="progressGaugeChart" style="max-height: 110px; max-width: 220px;"></canvas>
+                                <div id="gauge-percent-center" style="position: absolute; bottom: 0; font-family: 'Outfit', sans-serif; font-size: 1.95rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">0.00%</div>
+                            </div>
+                            <div style="margin-top: 0.5rem;">
+                                <div id="gauge-stats-details" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); line-height: 1.4;">
+                                    0 dari 0 target usaha ditugaskan
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Chart: Detailed horizontal bar chart -->
+                        <div style="height: 400px; position: relative; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm);">
+                            <canvas id="assignChart"></canvas>
+                        </div>
                     </div>
                 </div>
 
@@ -2006,29 +2263,18 @@
                                 <thead>
                                     <tr
                                         style="background-color: var(--card-bg); border-bottom: 2px solid var(--card-border);">
-                                        <th
-                                            style="padding: 0.75rem 1rem; text-align: left; font-weight: 700; color: var(--text); white-space: nowrap;">
-                                            Kabupaten/Kota</th>
-                                        <th
-                                            style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--primary); white-space: nowrap;">
-                                            Total SLS</th>
-                                        <th
-                                            style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #10b981; white-space: nowrap;">
-                                            Sudah Ditugaskan</th>
-                                        <th
-                                            style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #f59e0b; white-space: nowrap;">
-                                            Sebagian Ditugaskan</th>
-                                        <th
-                                            style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #ef4444; white-space: nowrap;">
-                                            Belum Ditugaskan</th>
-                                        <th
-                                            style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text-secondary); white-space: nowrap;">
-                                            Total Usaha</th>
+                                        <th style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 60px;">No</th>
+                                        <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 120px;">Kode Kabupaten</th>
+                                        <th style="padding: 0.75rem 1rem; text-align: left; font-weight: 700; color: var(--text); white-space: nowrap;">Nama Kabupaten</th>
+                                        <th style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: var(--text-secondary); white-space: nowrap; width: 130px;">Total Usaha</th>
+                                        <th style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #10b981; white-space: nowrap; width: 110px;">Sudah</th>
+                                        <th style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #ef4444; white-space: nowrap; width: 110px;">Belum</th>
+                                        <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 110px;">Persentase</th>
                                     </tr>
                                 </thead>
                                 <tbody id="kab-summary-tbody">
                                     <tr>
-                                        <td colspan="6"
+                                        <td colspan="7"
                                             style="text-align: center; padding: 2rem; color: var(--text-secondary);">
                                             Memuat data ringkasan kabupaten...</td>
                                     </tr>
@@ -2762,7 +3008,6 @@
 
             // Dynamic Table Headers Renderer
             window.renderSeTableHeaders = function (surveyType) {
-                const tabs = ['se_umum', 'se_ub', 'email', 'assign'];
                 const table = document.querySelector(`#tab-content-${surveyType} .ipas-table`);
                 if (!table) return;
                 const thead = table.querySelector('thead');
@@ -2778,35 +3023,40 @@
 
                 thead.innerHTML = `
                     <tr>
-                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'kabupaten')" style="font-family: 'Outfit', sans-serif;">
+                        <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'kabupaten')" style="font-family: 'Outfit', sans-serif; vertical-align: middle;">
                             Kabupaten/Kota${getIcon('kabupaten')}
                         </th>
-                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'total_prelist')" style="font-family: 'Outfit', sans-serif; text-align: right;">
-                            Total Target${getIcon('total_prelist')}
-                        </th>
-                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'total_draft')" style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b;">
+                        <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'total_draft')" style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b; vertical-align: middle;">
                             Draft${getIcon('total_draft')}
                         </th>
-                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'total_open')" style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6;">
+                        <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'total_open')" style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6; vertical-align: middle;">
                             Open${getIcon('total_open')}
                         </th>
-                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'total_submitted')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered);">
-                            Submitted${getIcon('total_submitted')}
+                        <th colspan="4" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-delivered); border-bottom: 1px solid var(--card-border);">
+                            Submitted (Selesai)
                         </th>
-                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'persentase')" style="font-family: 'Outfit', sans-serif; text-align: center;">
+                        <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'persentase')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
                             % Capaian${getIcon('persentase')}
                         </th>
-                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'sisa_usaha')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-bounced);">
-                            Sisa Usaha${getIcon('sisa_usaha')}
+                        <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'total_prelist')" style="font-family: 'Outfit', sans-serif; text-align: right; vertical-align: middle;">
+                            Total Target${getIcon('total_prelist')}
                         </th>
-                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'today_completed')" style="font-family: 'Outfit', sans-serif; text-align: center;">
-                            Progres (Hari Ini | Kemarin)${getIcon('today_completed')}
-                        </th>
-                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'last_2_days_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-clicked);">
-                            Last 2 Days${getIcon('last_2_days_completed')}
-                        </th>
-                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'new_usaha_today')" style="font-family: 'Outfit', sans-serif; text-align: center;">
+                        <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'new_usaha_today')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
                             Penambahan${getIcon('new_usaha_today')}
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'total_submitted')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                            Total${getIcon('total_submitted')}
+                        </th>
+                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'today_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-opened); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                            Hari Ini${getIcon('today_completed')}
+                        </th>
+                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'yesterday_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b; font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                            Kemarin${getIcon('yesterday_completed')}
+                                        </th>
+                                        <th class="sortable" onclick="sortSeTable('${surveyType}', 'two_days_ago_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-clicked); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                            H-2${getIcon('two_days_ago_completed')}
                         </th>
                     </tr>
                 `;
@@ -2937,9 +3187,13 @@
                             valA = a.today_completed || 0;
                             valB = b.today_completed || 0;
                             break;
-                        case 'last_2_days_completed':
-                            valA = a.last_2_days_completed || 0;
-                            valB = b.last_2_days_completed || 0;
+                        case 'yesterday_completed':
+                            valA = a.yesterday_completed || 0;
+                            valB = b.yesterday_completed || 0;
+                            break;
+                        case 'two_days_ago_completed':
+                            valA = a.two_days_ago_completed || 0;
+                            valB = b.two_days_ago_completed || 0;
                             break;
                         case 'new_usaha_today':
                             valA = a.new_usaha_today || 0;
@@ -2963,41 +3217,33 @@
 
                     const row = document.createElement('tr');
 
-                    // Format badges
-                    const todayNewBadge = item.new_usaha_today > 0
-                        ? `<span style="color: var(--color-delivered); font-weight: 700;">+${formatNum(item.new_usaha_today)}</span>`
-                        : `<span style="color: var(--text-muted);">-</span>`;
-
-                    const yesterdayNewBadge = item.new_usaha_yesterday > 0
-                        ? `<span style="color: #f59e0b; opacity: 0.85;">+${formatNum(item.new_usaha_yesterday)}</span>`
-                        : `<span style="color: var(--text-muted);">-</span>`;
-
-                    const todayCompBadge = item.today_completed > 0
-                        ? `<span style="color: var(--color-opened); font-weight: 700;">▲ ${formatNum(item.today_completed)}</span>`
-                        : `<span style="color: var(--text-muted);">${formatNum(item.today_completed)}</span>`;
+                    const kabupatenEscaped = item.kabupaten.replace(/'/g, "\\'");
+                    const newBusinessesJSON = JSON.stringify(item.new_businesses || []).replace(/"/g, '&quot;');
+                    
+                    const penambahanBadge = (item.new_usaha_today > 0 || item.new_usaha_yesterday > 0)
+                        ? `<span class="badge-interactive" onclick="openNewBusinessesModal('${kabupatenEscaped}', '${newBusinessesJSON}')" style="cursor: pointer; display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; background-color: rgba(99, 102, 241, 0.1); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.3); transition: all 0.2s;" title="Klik untuk rincian target baru">
+                            +${item.new_usaha_today} | +${item.new_usaha_yesterday}
+                           </span>`
+                        : `<span style="color: var(--text-muted); font-size: 0.85rem;">-</span>`;
 
                     row.innerHTML = `
                         <td style="font-weight: 700; color: var(--text-primary);">${highlightText(item.kabupaten, searchVal)}</td>
-                        <td style="text-align: right; font-family: monospace; font-weight: 500;">${formatNum(item.total_prelist)}</td>
                         <td style="text-align: right; font-family: monospace; font-weight: 500; color: #f59e0b;">${formatNum(item.total_draft)}</td>
                         <td style="text-align: right; font-family: monospace; font-weight: 500; color: #3b82f6;">${formatNum(item.total_open)}</td>
+                        
                         <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-delivered);">${formatNum(item.total_submitted)}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 600; color: var(--color-opened);">${formatNum(item.today_completed)}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 600; color: #f59e0b;">${formatNum(item.yesterday_completed)}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 600; color: var(--color-clicked);">${formatNum(item.two_days_ago_completed)}</td>
+                        
                         <td style="text-align: center;">
                             <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; ${pctClass}">
                                 ${item.persentase}%
                             </span>
                         </td>
-                        <td style="text-align: right; font-family: monospace; font-weight: 500; color: var(--color-bounced);">${formatNum(item.sisa_usaha)}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 500; color: var(--text-secondary);">${formatNum(item.total_prelist)}</td>
                         <td style="text-align: center;">
-                            <div style="font-family: monospace; font-size: 0.85rem;">
-                                ${todayCompBadge} <span style="color: var(--card-border);">|</span> <span style="color: var(--text-secondary);">${formatNum(item.yesterday_completed)}</span>
-                            </div>
-                        </td>
-                        <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-clicked);">${formatNum(item.last_2_days_completed)}</td>
-                        <td style="text-align: center;">
-                            <div style="font-family: monospace; font-size: 0.85rem;">
-                                ${todayNewBadge} <span style="color: var(--card-border);">|</span> ${yesterdayNewBadge}
-                            </div>
+                            ${penambahanBadge}
                         </td>
                     `;
                     tbody.appendChild(row);
@@ -3124,82 +3370,76 @@
                 const tbody = document.getElementById('kab-summary-tbody');
                 if (!tbody) return;
 
-                if (!window.ASSIGN_SLS_DATA || window.ASSIGN_SLS_DATA.length === 0) {
-                    tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data belum tersedia. Jalankan scrape_assign.py untuk memuat data.</td></tr>`;
+                if (!window.ASSIGN_DATA || window.ASSIGN_DATA.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data alokasi belum tersedia. Silakan jalankan scrape_assign.py terlebih dahulu.</td></tr>`;
                     return;
                 }
 
-                // Get correct totals from ASSIGN_DATA (fetched from Report API, uncapped)
-                const officialKabMap = {};
-                if (window.ASSIGN_DATA) {
-                    window.ASSIGN_DATA.forEach(d => {
-                        const cleanKey = d.nama_kab.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
-                        officialKabMap[cleanKey] = d.total || 0;
-                    });
-                }
-
-                // Group by kabupaten
-                const kabMap = {};
-                window.ASSIGN_SLS_DATA.forEach(item => {
-                    const kab = item.kab_name || 'LAINNYA';
-                    if (!kabMap[kab]) {
-                        kabMap[kab] = { totalSls: 0, sudah: 0, sebagian: 0, belum: 0, totalUsaha: 0 };
-                    }
-                    kabMap[kab].totalSls += 1;
-                    kabMap[kab].totalUsaha += (item.total || 0);
-                    if (item.unassigned === 0) {
-                        kabMap[kab].sudah += 1;
-                    } else if (item.assigned === 0) {
-                        kabMap[kab].belum += 1;
-                    } else {
-                        kabMap[kab].sebagian += 1;
-                    }
-                });
-
                 const fmt = (n) => new Intl.NumberFormat('id-ID').format(n || 0);
-                const sortedKabs = Object.keys(kabMap).sort();
-
-                // Totals row
-                const totals = { totalSls: 0, sudah: 0, sebagian: 0, belum: 0, totalUsaha: 0 };
-                sortedKabs.forEach(k => {
-                    totals.totalSls += kabMap[k].totalSls;
-                    totals.sudah += kabMap[k].sudah;
-                    totals.sebagian += kabMap[k].sebagian;
-                    totals.belum += kabMap[k].belum;
-
-                    const cleanKey = k.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
-                    totals.totalUsaha += (officialKabMap[cleanKey] || kabMap[k].totalUsaha);
-                });
-
                 const rowStyle = 'border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;';
-                const tdBase = 'padding: 0.6rem 1rem;';
+                const tdBase = 'padding: 0.65rem 1.25rem; vertical-align: middle;';
 
-                tbody.innerHTML = sortedKabs.map((kab, idx) => {
-                    const d = kabMap[kab];
-                    const cleanKey = kab.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
-                    const officialTotalUsaha = officialKabMap[cleanKey] || d.totalUsaha;
+                let totalUsaha = 0;
+                let totalSudah = 0;
+                let totalBelum = 0;
+
+                const rowsHtml = window.ASSIGN_DATA.map((d, idx) => {
+                    const total = d.total || 0;
+                    const assigned = d.assigned || 0;
+                    const unassigned = d.have_not_assigned || 0;
+
+                    totalUsaha += total;
+                    totalSudah += assigned;
+                    totalBelum += unassigned;
+
+                    const pct = total > 0 ? ((assigned / total) * 100) : 0;
+                    const pctText = pct.toFixed(2);
+
+                    let pctBgColor = '#047857'; // Green (high)
+                    if (pct < 50) {
+                        pctBgColor = '#b91c1c'; // Red (low)
+                    } else if (pct < 80) {
+                        pctBgColor = '#b45309'; // Orange (mid)
+                    }
+
+                    // Parse name from "[01] BANGGAI KEPULAUAN" -> "BANGGAI KEPULAUAN"
+                    const namaKabClean = d.nama_kab.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
                     const bgColor = idx % 2 === 0 ? '' : 'background-color: rgba(99,102,241,0.03);';
+
                     return `
                     <tr style="${rowStyle} ${bgColor}">
-                        <td style="${tdBase} font-weight: 600; color: var(--text);">${kab.replace(/\[\d+\] /, '')}</td>
-                        <td style="${tdBase} text-align: center; font-weight: 700; color: var(--primary);">${fmt(d.totalSls)}</td>
-                        <td style="${tdBase} text-align: center; color: #10b981; font-weight: 600;">${fmt(d.sudah)}</td>
-                        <td style="${tdBase} text-align: center; color: #f59e0b; font-weight: 600;">${fmt(d.sebagian)}</td>
-                        <td style="${tdBase} text-align: center; color: #ef4444; font-weight: 600;">${fmt(d.belum)}</td>
-                        <td style="${tdBase} text-align: center; color: var(--text-secondary);">${fmt(officialTotalUsaha)}</td>
+                        <td style="${tdBase} text-align: center; color: var(--text-secondary); font-weight: 500;">${idx + 1}</td>
+                        <td style="${tdBase} text-align: center; font-family: monospace; font-size: 0.85rem; color: var(--text-secondary);">${d.kode_kab}</td>
+                        <td style="${tdBase} font-weight: 600; color: var(--text);">${namaKabClean}</td>
+                        <td style="${tdBase} text-align: right; font-family: monospace; font-weight: 600; color: var(--text-secondary);">${fmt(total)}</td>
+                        <td style="${tdBase} text-align: right; font-family: monospace; font-weight: 600; color: #10b981;">${fmt(assigned)}</td>
+                        <td style="${tdBase} text-align: right; font-family: monospace; font-weight: 600; color: #ef4444;">${fmt(unassigned)}</td>
+                        <td style="${tdBase} text-align: center; background-color: ${pctBgColor}; color: white; font-weight: 700; font-family: monospace;">${pctText}</td>
                     </tr>`;
-                }).join('') + `
+                }).join('');
+
+                const totalPct = totalUsaha > 0 ? ((totalSudah / totalUsaha) * 100) : 0;
+                let totalPctBgColor = '#047857';
+                if (totalPct < 50) {
+                    totalPctBgColor = '#b91c1c';
+                } else if (totalPct < 80) {
+                    totalPctBgColor = '#b45309';
+                }
+
+                tbody.innerHTML = rowsHtml + `
                 <tr style="border-top: 2px solid var(--card-border); background-color: var(--card-bg); font-weight: 800;">
+                    <td style="${tdBase} text-align: center; color: var(--text);"></td>
+                    <td style="${tdBase} text-align: center; color: var(--text);"></td>
                     <td style="${tdBase} color: var(--text);">TOTAL</td>
-                    <td style="${tdBase} text-align: center; color: var(--primary);">${fmt(totals.totalSls)}</td>
-                    <td style="${tdBase} text-align: center; color: #10b981;">${fmt(totals.sudah)}</td>
-                    <td style="${tdBase} text-align: center; color: #f59e0b;">${fmt(totals.sebagian)}</td>
-                    <td style="${tdBase} text-align: center; color: #ef4444;">${fmt(totals.belum)}</td>
-                    <td style="${tdBase} text-align: center; color: var(--text-secondary);">${fmt(totals.totalUsaha)}</td>
+                    <td style="${tdBase} text-align: right; font-family: monospace; color: var(--text-secondary);">${fmt(totalUsaha)}</td>
+                    <td style="${tdBase} text-align: right; font-family: monospace; color: #10b981;">${fmt(totalSudah)}</td>
+                    <td style="${tdBase} text-align: right; font-family: monospace; color: #ef4444;">${fmt(totalBelum)}</td>
+                    <td style="${tdBase} text-align: center; background-color: ${totalPctBgColor}; color: white; font-weight: 800; font-family: monospace;">${totalPct.toFixed(2)}</td>
                 </tr>`;
             }
 
             let assignChartInstance = null;
+            let progressGaugeInstance = null;
 
             function renderAssignChart() {
                 const ctx = document.getElementById('assignChart');
@@ -3226,15 +3466,15 @@
                         labels: labels,
                         datasets: [
                             {
-                                label: 'Assigned',
+                                label: 'Sudah Ditugaskan',
                                 data: assignedData,
-                                backgroundColor: 'rgba(239, 68, 68, 0.9)', // Red/Orange for Assigned
+                                backgroundColor: 'rgba(16, 185, 129, 0.9)', // Green
                                 borderRadius: 4,
                             },
                             {
-                                label: 'Have-not-assigned',
+                                label: 'Belum Ditugaskan',
                                 data: notAssignedData,
-                                backgroundColor: 'rgba(245, 158, 11, 0.9)', // Yellow/Orange for Have Not Assigned
+                                backgroundColor: 'rgba(239, 68, 68, 0.9)', // Red
                                 borderRadius: 4,
                             }
                         ]
@@ -3248,15 +3488,15 @@
                                 position: 'bottom',
                                 labels: {
                                     color: textColor,
-                                    font: { family: "'Inter', sans-serif", size: 12 },
+                                    font: { family: "'Outfit', sans-serif", size: 11 },
                                     usePointStyle: true,
-                                    padding: 20
+                                    padding: 15
                                 }
                             },
                             tooltip: {
                                 backgroundColor: 'rgba(15, 23, 42, 0.9)',
-                                titleFont: { family: "'Inter', sans-serif", size: 13 },
-                                bodyFont: { family: "'Inter', sans-serif", size: 12 },
+                                titleFont: { family: "'Outfit', sans-serif", size: 13 },
+                                bodyFont: { family: "'Outfit', sans-serif", size: 12 },
                                 padding: 12,
                                 cornerRadius: 8
                             }
@@ -3275,6 +3515,58 @@
                         }
                     }
                 });
+
+                // Update Speedometer Gauge Chart
+                const ctxGauge = document.getElementById('progressGaugeChart');
+                if (ctxGauge) {
+                    if (progressGaugeInstance) {
+                        progressGaugeInstance.destroy();
+                    }
+
+                    let totalAssigned = 0;
+                    let totalTargets = 0;
+                    window.ASSIGN_DATA.forEach(d => {
+                        totalAssigned += (d.assigned || 0);
+                        totalTargets += (d.total || 0);
+                    });
+
+                    const pct = totalTargets > 0 ? (totalAssigned / totalTargets) * 100 : 0;
+
+                    const pctCenter = document.getElementById('gauge-percent-center');
+                    if (pctCenter) pctCenter.innerText = pct.toFixed(2) + '%';
+
+                    const statsDetails = document.getElementById('gauge-stats-details');
+                    if (statsDetails) {
+                        statsDetails.innerHTML = `<span style="font-weight: 700; color: var(--text-primary); font-size: 1.15rem; display: block; margin-bottom: 0.25rem;">${new Intl.NumberFormat('id-ID').format(totalAssigned)}</span> dari ${new Intl.NumberFormat('id-ID').format(totalTargets)} target usaha telah ditugaskan`;
+                    }
+
+                    const accentColor = getThemeColor('--primary', '#6366f1');
+                    const trackColor = getThemeColor('--card-border', 'rgba(255, 255, 255, 0.08)');
+
+                    progressGaugeInstance = new Chart(ctxGauge, {
+                        type: 'doughnut',
+                        data: {
+                            datasets: [{
+                                data: [pct, Math.max(0, 100 - pct)],
+                                backgroundColor: [accentColor, trackColor],
+                                borderWidth: 0,
+                                borderRadius: pct > 0 ? 8 : 0,
+                                cutout: '82%',
+                                circumference: 180,
+                                rotation: 270
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { display: false },
+                                tooltip: { enabled: false }
+                            },
+                            events: []
+                        }
+                    });
+                }
             }
 
             // SLS state
@@ -3709,23 +4001,144 @@
                                 minute: '2-digit',
                                 second: '2-digit'
                             });
-                            lastUpdatedEl.textContent = `Terakhir Diperbarui: ${formatted} (BPS Sync)`;
+                            lastUpdatedEl.textContent = `Update Terakhir: ${formatted} (Sync BPS)`;
                         } catch (e) {
-                            lastUpdatedEl.textContent = `Terakhir Diperbarui: ${ipasDataObj.updated_at}`;
+                            lastUpdatedEl.textContent = `Update Terakhir: ${ipasDataObj.updated_at}`;
                         }
                     } else {
-                        lastUpdatedEl.textContent = `Terakhir Diperbarui: Baru saja (BPS Sync)`;
+                        lastUpdatedEl.textContent = `Update Terakhir: Baru saja (Sync BPS)`;
+                    }
+                } else if (tabId === 'assign') {
+                    const assignData = window.ASSIGN_DATA_UMUM || window.ASSIGN_DATA_UB || [];
+                    if (assignData.length > 0 && assignData[0].timestamp) {
+                        try {
+                            const d = new Date(assignData[0].timestamp);
+                            const formatted = d.toLocaleString('id-ID', {
+                                day: '2-digit',
+                                month: 'short',
+                                year: 'numeric',
+                                hour: '2-digit',
+                                minute: '2-digit',
+                                second: '2-digit'
+                            });
+                            lastUpdatedEl.textContent = `Update Terakhir: ${formatted} (Sync Petugas)`;
+                        } catch (e) {
+                            lastUpdatedEl.textContent = `Update Terakhir: ${assignData[0].timestamp}`;
+                        }
+                    } else {
+                        lastUpdatedEl.textContent = `Update Terakhir: Hari ini (Sync Petugas)`;
                     }
                 } else {
                     if (supabaseClient && isSupabaseUsedGlobal) {
-                        lastUpdatedEl.textContent = lastUpdatedEmailTextGlobal || `Terakhir Diperbarui: Baru saja (Live DB)`;
+                        lastUpdatedEl.textContent = lastUpdatedEmailTextGlobal || `Update Terakhir: Baru saja (Sync Email)`;
                     } else if (window.LAST_UPDATED) {
-                        lastUpdatedEl.textContent = `Terakhir Diperbarui: ${window.LAST_UPDATED}`;
+                        lastUpdatedEl.textContent = `Update Terakhir: ${window.LAST_UPDATED} (Sync Email)`;
                     } else {
-                        lastUpdatedEl.textContent = `Terakhir Diperbarui: Hari ini (Lokal)`;
+                        lastUpdatedEl.textContent = `Update Terakhir: Hari ini (Sync Email)`;
                     }
                 }
             };
+
+            // Modal Functions
+            let activeModalBusinesses = [];
+            window.openNewBusinessesModal = function (kabupatenName, businessesJSON) {
+                const modal = document.getElementById('businesses-modal');
+                const titleText = document.getElementById('modal-title-text');
+                const searchInput = document.getElementById('modal-search-input');
+                if (!modal || !titleText || !searchInput) return;
+
+                // Clean name
+                const cleanKab = kabupatenName.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+                titleText.innerText = `Penambahan Usaha: KAB. ${cleanKab}`;
+                searchInput.value = '';
+                
+                try {
+                    activeModalBusinesses = typeof businessesJSON === 'string' ? JSON.parse(businessesJSON) : businessesJSON;
+                } catch (e) {
+                    activeModalBusinesses = [];
+                }
+
+                renderModalList();
+                modal.classList.add('active');
+            };
+
+            window.openProvincialNewBusinessesModal = function (surveyType) {
+                const modal = document.getElementById('businesses-modal');
+                const titleText = document.getElementById('modal-title-text');
+                const searchInput = document.getElementById('modal-search-input');
+                if (!modal || !titleText || !searchInput) return;
+
+                titleText.innerText = `Penambahan Usaha: PROVINSI SULAWESI TENGAH (${surveyType === 'se_umum' ? 'Umum' : 'Usaha Besar'})`;
+                searchInput.value = '';
+
+                const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
+                const surveyData = ipasDataObj[surveyType] || [];
+                
+                activeModalBusinesses = [];
+                surveyData.forEach(kab => {
+                    const cleanKab = kab.kabupaten.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+                    const list = kab.new_businesses || [];
+                    list.forEach(b => {
+                        activeModalBusinesses.push({
+                            ...b,
+                            kabName: cleanKab
+                        });
+                    });
+                });
+
+                renderModalList();
+                modal.classList.add('active');
+            };
+
+            window.closeNewBusinessesModal = function () {
+                const modal = document.getElementById('businesses-modal');
+                if (modal) modal.classList.remove('active');
+            };
+
+            window.renderModalList = function () {
+                const container = document.getElementById('modal-business-list');
+                const searchInput = document.getElementById('modal-search-input');
+                if (!container || !searchInput) return;
+
+                const q = searchInput.value.toLowerCase().trim();
+                const filtered = activeModalBusinesses.filter(b => {
+                    return (b.name || '').toLowerCase().includes(q) || (b.code || '').toLowerCase().includes(q);
+                });
+
+                if (filtered.length === 0) {
+                    container.innerHTML = `<div style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary); font-size: 0.9rem;">Tidak ada penambahan usaha baru yang ditemukan.</div>`;
+                    return;
+                }
+
+                container.innerHTML = filtered.map(b => {
+                    const badgeColor = b.date === 'today' ? 'var(--color-delivered)' : '#f59e0b';
+                    const badgeText = b.date === 'today' ? 'Hari Ini' : 'Kemarin';
+                    const kabSub = b.kabName ? `<span style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 0.15rem 0.45rem; border-radius: 0.25rem; margin-right: 0.5rem;">${b.kabName}</span>` : '';
+                    
+                    return `
+                        <div class="business-list-item">
+                            <div class="business-info">
+                                <span class="business-name">${b.name}</span>
+                                <span class="business-code">${b.code}</span>
+                            </div>
+                            <div class="business-badges">
+                                ${kabSub}
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; border: 1px solid var(--card-border);">${b.status || 'DRAFT'}</span>
+                                <span style="background: rgba(${b.date === 'today' ? '16,185,129,0.1' : '245,158,11,0.1'}); border: 1px solid rgba(${b.date === 'today' ? '16,185,129,0.3' : '245,158,11,0.3'}); padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 700; color: ${badgeColor};">${badgeText}</span>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            };
+
+            window.filterModalList = function () {
+                renderModalList();
+            };
+
+            // Escapement for modal click
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeNewBusinessesModal();
+            });
 
             // Bind functions to window so they are globally accessible by filterAssignData in assign_data.js
             window.renderAssignChart = renderAssignChart;
@@ -3763,20 +4176,20 @@
                 const btnDownloadBackupCsv = document.getElementById('btn-download-backup-csv');
 
                 if (tabId === 'se_umum') {
-                    mainHeader.textContent = 'Dashboard Rekap - Umum';
-                    mainSubheader.textContent = 'Rekap Progress Pendataan Sensus Ekonomi 2026 (Semua Usaha)';
+                    mainHeader.textContent = 'Dashboard Sensus Ekonomi Umum';
+                    mainSubheader.textContent = 'Rekapitulasi progres pendataan Sensus Ekonomi 2026 untuk kategori Usaha Umum';
                     if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
                     if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
                     renderSeDashboard('se_umum');
                 } else if (tabId === 'se_ub') {
-                    mainHeader.textContent = 'Dashboard Rekap - UB';
-                    mainSubheader.textContent = 'Rekap Progress Pendataan Sensus Ekonomi 2026 (UB - Usaha Besar)';
+                    mainHeader.textContent = 'Dashboard Sensus Ekonomi Usaha Besar';
+                    mainSubheader.textContent = 'Rekapitulasi progres pendataan Sensus Ekonomi 2026 untuk kategori Usaha Besar (UB)';
                     if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
                     if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
                     renderSeDashboard('se_ub');
                 } else if (tabId === 'assign') {
-                    mainHeader.textContent = 'Dashboard Penugasan Petugas';
-                    mainSubheader.textContent = 'Status penugasan petugas sensus pada masing-masing wilayah (SE Umum + SE UB)';
+                    mainHeader.textContent = 'Status Alokasi Penugasan Petugas';
+                    mainSubheader.textContent = 'Rekap alokasi wilayah tugas SLS kepada petugas sensus di setiap Kabupaten/Kota';
                     const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
                     if (typeof filterAssignData === 'function') {
                         filterAssignData(activeSubtab);
@@ -3786,8 +4199,8 @@
                         renderSlsTable();
                     }
                 } else {
-                    mainHeader.textContent = 'Fasih Email Dashboard';
-                    mainSubheader.textContent = 'Dashboard monitoring status pengiriman email dan bounced emails Sensus Ekonomi 2026 - UB';
+                    mainHeader.textContent = 'Pemantauan Email Usaha Besar';
+                    mainSubheader.textContent = 'Daftar pemantauan status pengiriman email kuesioner kepada responden Usaha Besar (UB)';
                     if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'inline-flex';
                     if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'inline-flex';
                     renderList();
@@ -3982,6 +4395,31 @@
             });
         });
     </script>
+    <!-- Interactive Business Details Modal -->
+    <div class="modal-overlay" id="businesses-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title-text">Daftar Usaha Baru</h3>
+                <button class="modal-close-btn" onclick="closeNewBusinessesModal()" aria-label="Close modal">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-search-wrapper">
+                    <svg class="modal-search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                    <input class="modal-search-input" id="modal-search-input" placeholder="Cari nama usaha atau kode..." type="text" oninput="filterModalList()" />
+                </div>
+                <div id="modal-business-list" style="border: 1px solid var(--card-border); border-radius: 0.75rem; overflow: hidden; background: rgba(0,0,0,0.05); max-height: 400px; overflow-y: auto;">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

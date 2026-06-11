@@ -302,9 +302,10 @@ async def generate_report():
                     "total_approved": 0,
                     "today_completed": 0,
                     "yesterday_completed": 0,
-                    "last_2_days_completed": 0,
+                    "two_days_ago_completed": 0,
                     "new_usaha_today": 0,
-                    "new_usaha_yesterday": 0
+                    "new_usaha_yesterday": 0,
+                    "new_businesses": []
                 }
                 
             datatable_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
@@ -391,6 +392,7 @@ async def generate_report():
                         "columns": [
                             {"data": "id"},
                             {"data": "codeIdentity"},
+                            {"data": "data1"},
                             {"data": "dateCreated"},
                             {"data": "dateModified"},
                             {"data": "assignmentStatusAlias"}
@@ -452,29 +454,40 @@ async def generate_report():
                             
                             if mod_date == today:
                                 report_data[kab_name]["today_completed"] += 1
-                                report_data[kab_name]["last_2_days_completed"] += 1
                             elif mod_date == yesterday:
                                 report_data[kab_name]["yesterday_completed"] += 1
-                                report_data[kab_name]["last_2_days_completed"] += 1
                             elif mod_date == two_days_ago:
-                                report_data[kab_name]["last_2_days_completed"] += 1
+                                report_data[kab_name]["two_days_ago_completed"] += 1
                         except Exception as ex:
                             pass
                             
-                # Check creations (New Usahas)
-                if status_alias == "DRAFT":
-                    create_date_str = r.get("dateCreated")
-                    if create_date_str:
-                        try:
-                            dt = datetime.datetime.fromisoformat(create_date_str.replace("Z", "+00:00"))
-                            create_date = dt.astimezone(local_tz).date()
-                            
-                            if create_date == today:
-                                report_data[kab_name]["new_usaha_today"] += 1
-                            elif create_date == yesterday:
-                                report_data[kab_name]["new_usaha_yesterday"] += 1
-                        except Exception as ex:
-                            pass
+                # Check creations (New Usahas) on all fetched records
+                create_date_str = r.get("dateCreated")
+                if create_date_str:
+                    try:
+                        dt = datetime.datetime.fromisoformat(create_date_str.replace("Z", "+00:00"))
+                        create_date = dt.astimezone(local_tz).date()
+                        comp_name = r.get("data1") or "-"
+                        code_id = r.get("codeIdentity") or "-"
+                        
+                        if create_date == today:
+                            report_data[kab_name]["new_usaha_today"] += 1
+                            report_data[kab_name]["new_businesses"].append({
+                                "name": comp_name,
+                                "code": code_id,
+                                "date": "today",
+                                "status": status_alias
+                            })
+                        elif create_date == yesterday:
+                            report_data[kab_name]["new_usaha_yesterday"] += 1
+                            report_data[kab_name]["new_businesses"].append({
+                                "name": comp_name,
+                                "code": code_id,
+                                "date": "yesterday",
+                                "status": status_alias
+                            })
+                    except Exception as ex:
+                        pass
 
             # 4. Format percentages and sisa
             final_list = []
@@ -483,7 +496,6 @@ async def generate_report():
                 completed = stats["total_submitted"]
                 
                 pct = round((completed / prelist * 100) if prelist > 0 else 0.0, 2)
-                sisa = prelist - completed
                 
                 final_list.append({
                     "kabupaten": kab_name,
@@ -494,12 +506,12 @@ async def generate_report():
                     "total_rejected": stats["total_rejected"],
                     "total_approved": stats["total_approved"],
                     "persentase": pct,
-                    "sisa_usaha": sisa,
                     "today_completed": stats["today_completed"],
                     "yesterday_completed": stats["yesterday_completed"],
-                    "last_2_days_completed": stats["last_2_days_completed"],
+                    "two_days_ago_completed": stats["two_days_ago_completed"],
                     "new_usaha_today": stats["new_usaha_today"],
-                    "new_usaha_yesterday": stats["new_usaha_yesterday"]
+                    "new_usaha_yesterday": stats["new_usaha_yesterday"],
+                    "new_businesses": stats["new_businesses"]
                 })
             
             output_data[survey_key] = final_list

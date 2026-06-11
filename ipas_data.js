@@ -1,21 +1,148 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-10T18:19:07.856163+08:00",
+  "updated_at": "2026-06-11T10:06:05.567644+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
-      "total_prelist": 43820,
-      "total_draft": 157,
-      "total_open": 43585,
-      "total_submitted": 78,
+      "total_prelist": 43829,
+      "total_draft": 160,
+      "total_open": 43589,
+      "total_submitted": 80,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.18,
-      "sisa_usaha": 43742,
-      "today_completed": 8,
-      "yesterday_completed": 8,
-      "last_2_days_completed": 18,
-      "new_usaha_today": 15,
-      "new_usaha_yesterday": 11
+      "today_completed": 1,
+      "yesterday_completed": 9,
+      "two_days_ago_completed": 8,
+      "new_usaha_today": 2,
+      "new_usaha_yesterday": 19,
+      "new_businesses": [
+        {
+          "name": "TK NEGERI LUKSAGU",
+          "code": "7201 - SE26mq7ds32E37",
+          "date": "yesterday",
+          "status": "SUBMITTED RESPONDENT"
+        },
+        {
+          "name": "TK NEGERI LUKPANENTENG",
+          "code": "7201 - SE26mq7mdzCE2D",
+          "date": "yesterday",
+          "status": "SUBMITTED RESPONDENT"
+        },
+        {
+          "name": "TK Negeri Sampaka",
+          "code": "7201 - SE26mq7bam1194",
+          "date": "yesterday",
+          "status": "SUBMITTED RESPONDENT"
+        },
+        {
+          "name": "TK NEGERI PERCONTOHAN",
+          "code": "7201 - SE26mq7bzqCB49",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "TK linosti ",
+          "code": "7201 - SE26mq8sth5862",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "TK keapaucer paisubatu ",
+          "code": "7201 - SE26mq8pqm714C",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "SMP NEGERI 1 TOTIKUM",
+          "code": "7201 - SE26mq879x90B9",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "TK Negeri Bonbepuso",
+          "code": "7201 - SE26mq860s47EB",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "TK NEGERI BONEPUSO",
+          "code": "7201 - SE26mq7nrjD44D",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "TK linosti",
+          "code": "7201 - SE26mq7nozA993",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "SMP NEGERI 1 TOTIKUM",
+          "code": "7201 - SE26mq82jcEAFC",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "TK NEGERI BONEPUSO",
+          "code": "7201 - SE26mq7kywA084",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "TK Keapaucer Paisubatu ",
+          "code": "7201 - SE26mq7mgcCACF",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "TK linosti ",
+          "code": "7201 - SE26mq7f5q0FDE",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "Tk Negeri LUKSAGU",
+          "code": "7201 - SE26mq7fhw2135",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "TK negeri Bulagi",
+          "code": "7201 - SE26mq7f5gB9CB",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "KB. PLAMBOYAN BASOSOL",
+          "code": "7201 - SE26mq7f0u95E4",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "PAUD KB PERMATA BUNDA BULUNGKOBIT",
+          "code": "7201 - SE26mq7dyo0B12",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "TK Keapaucer Paisubatu ",
+          "code": "7201 - SE26mq7em679DC",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "SMP Negeri 1 Totikum",
+          "code": "7201 - SE26mq7eqkEA05",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "TK NEGERI PEMBINA SALAKAN",
+          "code": "7201 - SE26mq7cam97C6",
+          "date": "yesterday",
+          "status": "DRAFT"
+        }
+      ]
     },
     {
       "kabupaten": "[02] BANGGAI",
@@ -26,12 +153,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.0,
-      "sisa_usaha": 138107,
       "today_completed": 0,
-      "yesterday_completed": 2,
-      "last_2_days_completed": 2,
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 2,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 1
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[03] MOROWALI",
@@ -42,12 +169,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.0,
-      "sisa_usaha": 47729,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[04] POSO",
@@ -58,12 +185,55 @@ window.IPAS_DATA = {
       "total_rejected": 1,
       "total_approved": 0,
       "persentase": 0.03,
-      "sisa_usaha": 105345,
-      "today_completed": 5,
-      "yesterday_completed": 1,
-      "last_2_days_completed": 6,
-      "new_usaha_today": 2,
-      "new_usaha_yesterday": 0
+      "today_completed": 0,
+      "yesterday_completed": 5,
+      "two_days_ago_completed": 1,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 7,
+      "new_businesses": [
+        {
+          "name": "Hotel Alamanda",
+          "code": "7204 - SE26mq7en765FF",
+          "date": "yesterday",
+          "status": "SUBMITTED RESPONDENT"
+        },
+        {
+          "name": "MTsN 3 POSO",
+          "code": "7204 - SE26mq7gsu3104",
+          "date": "yesterday",
+          "status": "SUBMITTED RESPONDENT"
+        },
+        {
+          "name": "Hotel 99",
+          "code": "7204 - SE26mq7f750C52",
+          "date": "yesterday",
+          "status": "SUBMITTED RESPONDENT"
+        },
+        {
+          "name": "Kartika beach hotel",
+          "code": "7204 - SE26mq7fcmD31A",
+          "date": "yesterday",
+          "status": "SUBMITTED RESPONDENT"
+        },
+        {
+          "name": "Hotel Pandawa",
+          "code": "7204 - SE26mq7fb5E81E",
+          "date": "yesterday",
+          "status": "SUBMITTED RESPONDENT"
+        },
+        {
+          "name": "Hotel wisata",
+          "code": "7204 - SE26mq7ejo7D3D",
+          "date": "yesterday",
+          "status": "DRAFT"
+        },
+        {
+          "name": "Losmen Azzahra",
+          "code": "7204 - SE26mq7emiD989",
+          "date": "yesterday",
+          "status": "DRAFT"
+        }
+      ]
     },
     {
       "kabupaten": "[05] DONGGALA",
@@ -74,60 +244,81 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.01,
-      "sisa_usaha": 105497,
       "today_completed": 0,
-      "yesterday_completed": 4,
-      "last_2_days_completed": 4,
-      "new_usaha_today": 1,
-      "new_usaha_yesterday": 0
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 4,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 1,
+      "new_businesses": [
+        {
+          "name": "RISKA / RISKA, NANI",
+          "code": "7205081016000100 - RISKA / RISKA, NANI - 1 /  - 2 - 94351 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT"
+        }
+      ]
     },
     {
       "kabupaten": "[06] TOLI-TOLI",
-      "total_prelist": 75953,
+      "total_prelist": 75960,
       "total_draft": 2,
-      "total_open": 75951,
+      "total_open": 75958,
       "total_submitted": 0,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.0,
-      "sisa_usaha": 75953,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
-      "new_usaha_today": 1,
-      "new_usaha_yesterday": 0
+      "two_days_ago_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 1,
+      "new_businesses": [
+        {
+          "name": "Losmen 88 poso",
+          "code": "7206 - SE26mq7eka47D0",
+          "date": "yesterday",
+          "status": "DRAFT"
+        }
+      ]
     },
     {
       "kabupaten": "[07] BUOL",
-      "total_prelist": 57326,
-      "total_draft": 128,
+      "total_prelist": 57327,
+      "total_draft": 129,
       "total_open": 57152,
       "total_submitted": 46,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.08,
-      "sisa_usaha": 57280,
-      "today_completed": 18,
-      "yesterday_completed": 0,
-      "last_2_days_completed": 18,
-      "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "today_completed": 0,
+      "yesterday_completed": 19,
+      "two_days_ago_completed": 0,
+      "new_usaha_today": 1,
+      "new_usaha_yesterday": 0,
+      "new_businesses": [
+        {
+          "name": "ERPIN / NURLIAN",
+          "code": "7207011002000900 - ERPIN / NURLIAN - 56 /  - 1 - 94563 - 2. Tidak",
+          "date": "today",
+          "status": "DRAFT"
+        }
+      ]
     },
     {
       "kabupaten": "[08] PARIGI MOUTONG",
-      "total_prelist": 169384,
+      "total_prelist": 169385,
       "total_draft": 4,
-      "total_open": 169376,
-      "total_submitted": 3,
-      "total_rejected": 1,
+      "total_open": 169375,
+      "total_submitted": 4,
+      "total_rejected": 2,
       "total_approved": 0,
       "persentase": 0.0,
-      "sisa_usaha": 169381,
       "today_completed": 0,
-      "yesterday_completed": 2,
-      "last_2_days_completed": 2,
+      "yesterday_completed": 1,
+      "two_days_ago_completed": 2,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[09] TOJO UNA-UNA",
@@ -138,12 +329,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.01,
-      "sisa_usaha": 57908,
-      "today_completed": 3,
-      "yesterday_completed": 1,
-      "last_2_days_completed": 4,
+      "today_completed": 0,
+      "yesterday_completed": 3,
+      "two_days_ago_completed": 1,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[10] SIGI",
@@ -154,28 +345,28 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.02,
-      "sisa_usaha": 105023,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[11] BANGGAI LAUT",
-      "total_prelist": 27547,
+      "total_prelist": 27552,
       "total_draft": 4,
-      "total_open": 27518,
+      "total_open": 27523,
       "total_submitted": 25,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.09,
-      "sisa_usaha": 27522,
-      "today_completed": 0,
-      "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "today_completed": 2,
+      "yesterday_completed": 2,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[12] MOROWALI UTARA",
@@ -186,46 +377,46 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.0,
-      "sisa_usaha": 42448,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[71] PALU",
       "total_prelist": 164080,
-      "total_draft": 32,
-      "total_open": 164031,
+      "total_draft": 33,
+      "total_open": 164030,
       "total_submitted": 17,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.01,
-      "sisa_usaha": 164063,
       "today_completed": 0,
-      "yesterday_completed": 11,
-      "last_2_days_completed": 11,
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 11,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     }
   ],
   "se_ub": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
       "total_prelist": 6,
-      "total_draft": 0,
-      "total_open": 6,
+      "total_draft": 5,
+      "total_open": 1,
       "total_submitted": 0,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.0,
-      "sisa_usaha": 6,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[02] BANGGAI",
@@ -236,12 +427,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.58,
-      "sisa_usaha": 171,
       "today_completed": 0,
-      "yesterday_completed": 1,
-      "last_2_days_completed": 1,
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 1,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[03] MOROWALI",
@@ -252,12 +443,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.62,
-      "sisa_usaha": 160,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[04] POSO",
@@ -268,12 +459,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 2.17,
-      "sisa_usaha": 90,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[05] DONGGALA",
@@ -284,12 +475,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.0,
-      "sisa_usaha": 57,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[06] TOLI-TOLI",
@@ -300,12 +491,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 24.14,
-      "sisa_usaha": 44,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[07] BUOL",
@@ -316,12 +507,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 11.76,
-      "sisa_usaha": 15,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[08] PARIGI MOUTONG",
@@ -332,12 +523,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.0,
-      "sisa_usaha": 65,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[09] TOJO UNA-UNA",
@@ -348,12 +539,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 13.33,
-      "sisa_usaha": 13,
       "today_completed": 0,
-      "yesterday_completed": 1,
-      "last_2_days_completed": 1,
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 1,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[10] SIGI",
@@ -364,12 +555,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.0,
-      "sisa_usaha": 22,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[11] BANGGAI LAUT",
@@ -380,12 +571,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 28.57,
-      "sisa_usaha": 5,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 0,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[12] MOROWALI UTARA",
@@ -396,12 +587,12 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.58,
-      "sisa_usaha": 172,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "last_2_days_completed": 1,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[71] PALU",
@@ -412,14 +603,14 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 1.91,
-      "sisa_usaha": 411,
-      "today_completed": 1,
+      "today_completed": 0,
       "yesterday_completed": 1,
-      "last_2_days_completed": 2,
+      "two_days_ago_completed": 1,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 0
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     }
   ],
-  "se_umum_prov_total": 1140232,
+  "se_umum_prov_total": 1140255,
   "se_ub_prov_total": 1264
 };

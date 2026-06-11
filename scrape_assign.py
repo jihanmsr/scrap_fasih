@@ -142,27 +142,50 @@ SURVEY_CONFIGS = [
 DATATABLE_URL = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
 REPORT_URL    = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-user-assignment"
 
-async def fetch_report(page, token, survey_period_id, region1_id, label):
+async def evaluate_fetch_with_retry(context, token, url, payload):
+    for attempt in range(3):
+        # Cari tab aktif FASIH yang bisa digunakan untuk fetch
+        page = None
+        for p_page in context.pages:
+            if "fasih-sm.bps.go.id" in p_page.url:
+                page = p_page
+                break
+        if not page:
+            if context.pages:
+                page = context.pages[0]
+            else:
+                page = await context.new_page()
+
+        try:
+            res = await page.evaluate("""
+                async ({url, payload, token}) => {
+                    try {
+                        const r = await fetch(url, {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+                            body: JSON.stringify(payload)
+                        });
+                        if (!r.ok) return { error: `HTTP ${r.status}` };
+                        return await r.json();
+                    } catch (e) {
+                        return { error: e.toString() };
+                    }
+                }
+            """, {"url": url, "payload": payload, "token": token})
+            return res
+        except Exception as e:
+            print(f"[WARNING] Gagal melakukan request API (attempt {attempt+1}/3): {e}")
+            await asyncio.sleep(2)
+    return {"error": "Max retries exceeded"}
+
+async def fetch_report(context, token, survey_period_id, region1_id, label):
     print(f"[{label}] Menarik rekap dari REPORT API...")
     payload = {"surveyPeriodId": survey_period_id, "region1Id": region1_id}
-    res = await page.evaluate("""
-        async ({url, payload, token}) => {
-            try {
-                const r = await fetch(url, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
-                    body: JSON.stringify(payload)
-                });
-                if (!r.ok) return { error: `HTTP ${r.status}: ${await r.text()}` };
-                return await r.json();
-            } catch (e) {
-                return { error: e.toString() };
-            }
-        }
-    """, {"url": REPORT_URL, "payload": payload, "token": token})
+    res = await evaluate_fetch_with_retry(context, token, REPORT_URL, payload)
 
-    if isinstance(res, dict) and res.get("error"):
-        print(f"[ERROR] [{label}] Gagal tarik laporan: {res['error']}")
+    if not res or (isinstance(res, dict) and "error" in res):
+        err = res.get("error") if res else "Unknown error"
+        print(f"[ERROR] [{label}] Gagal tarik laporan: {err}")
         return {}
 
     result = {}
@@ -181,7 +204,7 @@ async def fetch_report(page, token, survey_period_id, region1_id, label):
         print(f"  -> {KAB_MAP[kode_kab]}: {total} Target | {assigned} Diassign")
     return result
 
-async def fetch_sls_companies(page, token, survey_period_id, region1_id, kab_region_map, label):
+async def fetch_sls_companies(context, token, survey_period_id, region1_id, kab_region_map, label):
     print(f"\n[{label}] Menarik rincian per SLS dari DATATABLE API...")
     all_companies = []
     for kab_code, kab_cfg in kab_region_map.items():
@@ -197,14 +220,7 @@ async def fetch_sls_companies(page, token, survey_period_id, region1_id, kab_reg
                     "surveyPeriodId": survey_period_id, "assignmentErrorStatusType": -1, "filterTargetType": ""
                 }
             }
-            res_dt = await page.evaluate("""
-                async ({url, payload, token}) => {
-                    try {
-                        const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token }, body: JSON.stringify(payload) });
-                        return await r.json();
-                    } catch (e) { return null; }
-                }
-            """, {"url": DATATABLE_URL, "payload": payload_dt, "token": token})
+            res_dt = await evaluate_fetch_with_retry(context, token, DATATABLE_URL, payload_dt)
 
             if not res_dt or "searchData" not in res_dt: break
             records = res_dt["searchData"]
@@ -234,8 +250,8 @@ async def get_authenticated_context(p):
         print("[INFO] Remote debugging port 9222 terdeteksi. Mencoba sambung via CDP...")
         try:
             browser = await p.chromium.connect_over_cdp("http://127.0.0.1:9222")
-            context = browser.contexts[0] if browser.contexts else browser.new_context()
-            page = context.pages[0] if context.pages else context.new_page()
+            context = browser.contexts[0] if browser.contexts else await browser.new_context()
+            page = context.pages[0] if context.pages else await context.new_page()
             print("[INFO] Berhasil tersambung ke browser via CDP.")
         except Exception as e:
             print(f"[WARNING] Gagal connect_over_cdp: {e}. Menggunakan Playwright persistent context sebagai fallback.")
@@ -297,17 +313,20 @@ async def scrape_assign():
             except: 
                 pass
 
-        print("\n" + "="*70)
-        print("MENUNGGU LOGIN...")
-        print("Silakan login FASIH di Chrome. Jika sudah di Dashboard, tekan ENTER di bawah.")
-        print("="*70)
-        
-        await asyncio.to_thread(input, ">> TEKAN [ENTER] DI SINI... <<\n")
-        print("\nMemproses penarikan API Sensus Umum dan UB...")
-        await asyncio.sleep(3)
-
         cookies = await context.cookies()
         token = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), None)
+        
+        if not token:
+            print("\n" + "="*70)
+            print("MENUNGGU LOGIN...")
+            print("Silakan login FASIH di Chrome. Jika sudah di Dashboard, tekan ENTER di bawah.")
+            print("="*70)
+            
+            await asyncio.to_thread(input, ">> TEKAN [ENTER] DI SINI... <<\n")
+            
+            cookies = await context.cookies()
+            token = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), None)
+            
         if not token:
             print("[ERROR] Token XSRF tidak ditemukan. Kamu belum login atau sesi habis.")
             return
@@ -321,7 +340,7 @@ async def scrape_assign():
         sls_per_survey = {}
         for cfg in SURVEY_CONFIGS:
             label = cfg["label"]
-            all_companies = await fetch_sls_companies(page, token, cfg["survey_period_id"], cfg["region1_id"], cfg["kab_region_map"], label)
+            all_companies = await fetch_sls_companies(context, token, cfg["survey_period_id"], cfg["region1_id"], cfg["kab_region_map"], label)
             
             # Compute report stats per kabupaten
             kab_report = {}
@@ -330,7 +349,7 @@ async def scrape_assign():
                 
             use_official_report = False
             try:
-                fetched_report = await fetch_report(page, token, cfg["survey_period_id"], cfg["region1_id"], label)
+                fetched_report = await fetch_report(context, token, cfg["survey_period_id"], cfg["region1_id"], label)
                 if fetched_report:
                     kab_report.update(fetched_report)
                     use_official_report = True
