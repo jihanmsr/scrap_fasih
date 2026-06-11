@@ -1377,6 +1377,7 @@
                 height: auto;
             }
         }
+
         /* Premium Glassmorphic Modal */
         .modal-overlay {
             position: fixed;
@@ -1395,10 +1396,12 @@
             pointer-events: none;
             transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .modal-overlay.active {
             opacity: 1;
             pointer-events: auto;
         }
+
         .modal-container {
             width: 90%;
             max-width: 650px;
@@ -1413,9 +1416,11 @@
             transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
             overflow: hidden;
         }
+
         .modal-overlay.active .modal-container {
             transform: scale(1) translateY(0);
         }
+
         .modal-header {
             padding: 1.5rem 1.75rem;
             border-bottom: 1px solid var(--card-border);
@@ -1423,6 +1428,7 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .modal-title {
             font-family: 'Outfit', sans-serif;
             font-size: 1.25rem;
@@ -1430,6 +1436,7 @@
             color: var(--text-primary);
             margin: 0;
         }
+
         .modal-close-btn {
             background: transparent;
             border: none;
@@ -1442,19 +1449,23 @@
             justify-content: center;
             transition: all 0.2s;
         }
+
         .modal-close-btn:hover {
             background: rgba(239, 68, 68, 0.1);
             color: #ef4444;
         }
+
         .modal-body {
             padding: 1.5rem 1.75rem;
             overflow-y: auto;
             flex-grow: 1;
         }
+
         .modal-search-wrapper {
             margin-bottom: 1.25rem;
             position: relative;
         }
+
         .modal-search-input {
             width: 100%;
             padding: 0.75rem 1rem 0.75rem 2.5rem;
@@ -1466,12 +1477,14 @@
             font-size: 0.9rem;
             transition: all 0.2s;
         }
+
         .modal-search-input:focus {
             outline: none;
             border-color: var(--primary);
             background: var(--input-focus-bg);
             box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
         }
+
         .modal-search-icon {
             position: absolute;
             left: 0.85rem;
@@ -1480,6 +1493,7 @@
             color: var(--text-muted);
             pointer-events: none;
         }
+
         .business-list-item {
             padding: 1rem;
             border-bottom: 1px solid var(--card-border);
@@ -1489,32 +1503,39 @@
             gap: 1rem;
             transition: background-color 0.15s;
         }
+
         .business-list-item:hover {
             background: rgba(99, 102, 241, 0.03);
         }
+
         .business-list-item:last-child {
             border-bottom: none;
         }
+
         .business-info {
             display: flex;
             flex-direction: column;
             gap: 0.25rem;
         }
+
         .business-name {
             font-weight: 700;
             color: var(--text-primary);
             font-size: 0.95rem;
         }
+
         .business-code {
             font-family: monospace;
             font-size: 0.8rem;
             color: var(--text-muted);
         }
+
         .business-badges {
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
+
         .badge-interactive:hover {
             transform: scale(1.05);
             background-color: rgba(99, 102, 241, 0.2) !important;
@@ -1529,13 +1550,18 @@
             <div class="brand-title">
                 <div class="brand-logo">
                     <div class="logo-icon">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                         </svg>
                     </div>
-                    <span style="font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.025em; background: linear-gradient(to right, var(--primary), #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">FASIH SM</span>
+                    <span
+                        style="font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.025em; background: linear-gradient(to right, var(--primary), #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">FASIH
+                        SM</span>
                 </div>
-                <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 2px 0 0 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding-left: 3px;">Sensus Ekonomi 2026</p>
+                <p
+                    style="font-size: 0.8rem; color: var(--text-secondary); margin: 2px 0 0 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding-left: 3px;">
+                    Sensus Ekonomi 2026</p>
             </div>
             <nav class="sidebar-nav">
                 <button class="btn-tab active" id="tab-btn-se_umum" onclick="switchTab('se_umum')">
@@ -1586,14 +1612,20 @@
         <main class="main-content">
             <header>
                 <div class="brand-title" style="display: flex; align-items: center; gap: 0.75rem;">
-                    <div style="background: linear-gradient(135deg, var(--primary) 0%, #ef4444 100%); width: 42px; height: 42px; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3); flex-shrink: 0;">
-                        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="24">
+                    <div
+                        style="background: linear-gradient(135deg, var(--primary) 0%, #ef4444 100%); width: 42px; height: 42px; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3); flex-shrink: 0;">
+                        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="24">
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                         </svg>
                     </div>
                     <div>
-                        <h1 id="main-header" style="margin: 0; font-size: 1.75rem; font-weight: 800; font-family: 'Outfit', sans-serif;">Dashboard Sensus Ekonomi</h1>
-                        <p id="main-subheader" style="margin: 2px 0 0 0; color: var(--text-secondary); font-size: 0.95rem; font-weight: 500;">Sensus Ekonomi 2026 - FASIH SM</p>
+                        <h1 id="main-header"
+                            style="margin: 0; font-size: 1.75rem; font-weight: 800; font-family: 'Outfit', sans-serif;">
+                            Dashboard Sensus Ekonomi</h1>
+                        <p id="main-subheader"
+                            style="margin: 2px 0 0 0; color: var(--text-secondary); font-size: 0.95rem; font-weight: 500;">
+                            Sensus Ekonomi 2026 - FASIH SM</p>
                     </div>
                 </div>
                 <div class="header-actions">
@@ -1840,9 +1872,18 @@
                         <span class="card-category-tag">Umum</span>
                         <div class="stat-label">Total Usaha (Prelist)</div>
                         <div class="stat-value" id="se_umum-stat-total-prelist">0</div>
-                        <div class="stat-subtext" id="se_umum-new-today-wrapper" style="cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_umum')" title="Klik untuk rincian penambahan usaha">
+                        <div class="stat-subtext" id="se_umum-new-today-wrapper" style="cursor: pointer;"
+                            onclick="openProvincialNewBusinessesModal('se_umum')"
+                            title="Klik untuk rincian penambahan usaha">
                             <span id="se_umum-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span>
-                            hari ini <svg style="display:inline-block; vertical-align:middle; margin-left:2px; opacity:0.6;" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg>
+                            hari ini <svg
+                                style="display:inline-block; vertical-align:middle; margin-left:2px; opacity:0.6;"
+                                width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25">
+                                </path>
+                            </svg>
                         </div>
                     </div>
                     <div class="stat-card" style="--stat-color: #f59e0b;">
@@ -1992,9 +2033,18 @@
                         <span class="card-category-tag">UB</span>
                         <div class="stat-label">Total Usaha (Prelist)</div>
                         <div class="stat-value" id="se_ub-stat-total-prelist">0</div>
-                        <div class="stat-subtext" id="se_ub-new-today-wrapper" style="cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_ub')" title="Klik untuk rincian penambahan usaha">
+                        <div class="stat-subtext" id="se_ub-new-today-wrapper" style="cursor: pointer;"
+                            onclick="openProvincialNewBusinessesModal('se_ub')"
+                            title="Klik untuk rincian penambahan usaha">
                             <span id="se_ub-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span>
-                            hari ini <svg style="display:inline-block; vertical-align:middle; margin-left:2px; opacity:0.6;" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg>
+                            hari ini <svg
+                                style="display:inline-block; vertical-align:middle; margin-left:2px; opacity:0.6;"
+                                width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25">
+                                </path>
+                            </svg>
                         </div>
                     </div>
                     <div class="stat-card" style="--stat-color: #f59e0b;">
@@ -2148,7 +2198,8 @@
                     style="justify-content: center; margin-top: 1.5rem; margin-bottom: 0.5rem; border-bottom: none;">
                     <button class="btn-tab active" id="subtab-btn-se2026" onclick="filterAssignData('se2026')"
                         style="background-color: var(--primary); color: white;">Kategori Usaha Umum</button>
-                    <button class="btn-tab" id="subtab-btn-ub" onclick="filterAssignData('ub')">Kategori Usaha Besar (UB)</button>
+                    <button class="btn-tab" id="subtab-btn-ub" onclick="filterAssignData('ub')">Kategori Usaha Besar
+                        (UB)</button>
                 </div>
                 <!-- Chart Section -->
                 <div class="stats-section" style="margin-top: 2rem;">
@@ -2164,196 +2215,167 @@
                         </svg>
                         <span id="assign-chart-title">Status Alokasi Wilayah Tugas Petugas</span>
                     </h3>
-                    <p id="assign-chart-desc" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 500;">
-                        Visualisasi progres alokasi SLS kepada petugas sensus per Kabupaten/Kota dan rekap keseluruhan Provinsi Sulawesi Tengah.
+                    <p id="assign-chart-desc"
+                        style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 500;">
+                        Visualisasi progres alokasi SLS kepada petugas sensus per Kabupaten/Kota dan rekap keseluruhan
+                        Provinsi Sulawesi Tengah.
                     </p>
                     <div class="assign-charts-container">
                         <!-- Left Chart: Province overall progress -->
-                        <div style="height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.5rem; box-shadow: var(--shadow-sm); text-align: center; position: relative;">
-                            <h4 style="margin: 0 0 1.5rem 0; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Progres Alokasi Sulawesi Tengah</h4>
-                            <div style="position: relative; width: 220px; height: 110px; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 1.5rem;">
+                        <div
+                            style="height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.5rem; box-shadow: var(--shadow-sm); text-align: center; position: relative;">
+                            <h4
+                                style="margin: 0 0 1.5rem 0; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
+                                Progres Alokasi Sulawesi Tengah</h4>
+                            <div
+                                style="position: relative; width: 220px; height: 110px; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 1.5rem;">
                                 <canvas id="progressGaugeChart" style="max-height: 110px; max-width: 220px;"></canvas>
-                                <div id="gauge-percent-center" style="position: absolute; bottom: 0; font-family: 'Outfit', sans-serif; font-size: 1.95rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">0.00%</div>
+                                <div id="gauge-percent-center"
+                                    style="position: absolute; bottom: 0; font-family: 'Outfit', sans-serif; font-size: 1.95rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">
+                                    0.00%</div>
                             </div>
                             <div style="margin-top: 0.5rem;">
-                                <div id="gauge-stats-details" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); line-height: 1.4;">
+                                <div id="gauge-stats-details"
+                                    style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); line-height: 1.4;">
                                     0 dari 0 target usaha ditugaskan
                                 </div>
                             </div>
                         </div>
                         <!-- Right Chart: Detailed horizontal bar chart -->
-                        <div style="height: 400px; position: relative; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm);">
+                        <div
+                            style="height: 400px; position: relative; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm);">
                             <canvas id="assignChart"></canvas>
                         </div>
                     </div>
                 </div>
 
-                <!-- SLS Details Section -->
-                <div class="stats-section" style="margin-top: 2.5rem;">
-                    <h3
-                        style="margin-top: 0; color: var(--text); font-size: 1.25rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700;">
-                        <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2.5"
-                            style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="20">
+
+                <!-- Tabel Ringkasan per Kabupaten -->
+                <div style="margin-bottom: 2rem;">
+                    <h4
+                        style="font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"
+                            style="color: var(--primary);">
                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                             <line x1="9" y1="3" x2="9" y2="21"></line>
                             <line x1="15" y1="3" x2="15" y2="21"></line>
                             <line x1="3" y1="9" x2="21" y2="9"></line>
                             <line x1="3" y1="15" x2="21" y2="15"></line>
                         </svg>
-                        <span id="assign-sls-title">Rincian Assignment per SLS</span>
-                    </h3>
-                    <p
-                        style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 500;">
-                        Daftar status penugasan petugas sensus sampai level Satuan Lingkungan Setempat (SLS) untuk
-                        Sensus Ekonomi.
-                    </p>
-
-                    <!-- SLS Summary Cards -->
-                    <div class="stats-grid"
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-                        <div class="stat-card" style="--stat-color: var(--primary); padding: 1.25rem;">
-                            <div class="stat-label" style="font-size: 0.8rem;">Total SLS</div>
-                            <div class="stat-value" id="sls-stat-total"
-                                style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">0</div>
-                            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
-                                id="sls-substat-total">Target Usaha: 0</div>
-                        </div>
-                        <div class="stat-card" style="--stat-color: var(--color-delivered); padding: 1.25rem;">
-                            <div class="stat-label" style="font-size: 0.8rem;">SLS Sudah Ditugaskan</div>
-                            <div class="stat-value" id="sls-stat-fully"
-                                style="color: var(--color-delivered); font-size: 1.8rem; font-weight: 800;">0</div>
-                            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
-                                id="sls-pct-fully">0.00% dari total SLS</div>
-                        </div>
-                        <div class="stat-card" style="--stat-color: #f59e0b; padding: 1.25rem;">
-                            <div class="stat-label" style="font-size: 0.8rem;">SLS Sebagian Ditugaskan</div>
-                            <div class="stat-value" id="sls-stat-partially"
-                                style="color: #f59e0b; font-size: 1.8rem; font-weight: 800;">0</div>
-                            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
-                                id="sls-pct-partially">0.00% dari total SLS</div>
-                        </div>
-                        <div class="stat-card" style="--stat-color: #ef4444; padding: 1.25rem;">
-                            <div class="stat-label" style="font-size: 0.8rem;">SLS Belum Ditugaskan</div>
-                            <div class="stat-value" id="sls-stat-unassigned"
-                                style="color: #ef4444; font-size: 1.8rem; font-weight: 800;">0</div>
-                            <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
-                                id="sls-pct-unassigned">0.00% dari total SLS</div>
-                        </div>
-                    </div>
-
-                    <!-- Tabel Ringkasan per Kabupaten -->
-                    <div style="margin-bottom: 2rem;">
-                        <h4
-                            style="font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="16"
-                                style="color: var(--primary);">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="9" y1="3" x2="9" y2="21"></line>
-                                <line x1="15" y1="3" x2="15" y2="21"></line>
-                                <line x1="3" y1="9" x2="21" y2="9"></line>
-                                <line x1="3" y1="15" x2="21" y2="15"></line>
-                            </svg>
-                            Ringkasan per Kabupaten/Kota
-                        </h4>
-                        <div style="overflow-x: auto; border-radius: 0.75rem; border: 1px solid var(--card-border);">
-                            <table
-                                style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.875rem;">
-                                <thead>
-                                    <tr
-                                        style="background-color: var(--card-bg); border-bottom: 2px solid var(--card-border);">
-                                        <th style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 60px;">No</th>
-                                        <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 120px;">Kode Kabupaten</th>
-                                        <th style="padding: 0.75rem 1rem; text-align: left; font-weight: 700; color: var(--text); white-space: nowrap;">Nama Kabupaten</th>
-                                        <th style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: var(--text-secondary); white-space: nowrap; width: 130px;">Total Usaha</th>
-                                        <th style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #10b981; white-space: nowrap; width: 110px;">Sudah</th>
-                                        <th style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #ef4444; white-space: nowrap; width: 110px;">Belum</th>
-                                        <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 110px;">Persentase</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="kab-summary-tbody">
-                                    <tr>
-                                        <td colspan="7"
-                                            style="text-align: center; padding: 2rem; color: var(--text-secondary);">
-                                            Memuat data ringkasan kabupaten...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- SLS Filters -->
-                    <div class="filter-panel"
-                        style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-                        <div style="flex: 1; min-width: 250px; position: relative;">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2.5"
-                                style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
-                                viewbox="0 0 24 24">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
-                            </svg>
-                            <input type="text" id="sls-search-input"
-                                placeholder="Cari SLS, Desa, Kecamatan, Kabupaten, atau Petugas..."
-                                style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
-                        </div>
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
-                            <select id="sls-kab-filter"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                                <option value="all">Semua Kabupaten</option>
-                            </select>
-                            <select id="sls-kec-filter"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                                <option value="all">Semua Kecamatan</option>
-                            </select>
-                            <select id="sls-desa-filter"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                                <option value="all">Semua Desa</option>
-                            </select>
-                            <select id="sls-assignment-filter"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
-                                <option value="all">Semua Status Penugasan</option>
-                                <option value="fully_assigned">Sudah Ditugaskan Semua</option>
-                                <option value="partially_assigned">Sebagian Ditugaskan</option>
-                                <option value="unassigned">Belum Ditugaskan</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- SLS Table -->
-                    <div class="ipas-table-wrapper" style="max-height: 500px; overflow-y: auto;">
-                        <table class="ipas-table">
+                        Ringkasan per Kabupaten/Kota
+                    </h4>
+                    <div style="overflow-x: auto; border-radius: 0.75rem; border: 1px solid var(--card-border);">
+                        <table
+                            style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.875rem;">
                             <thead>
-                                <tr id="sls-table-headers">
-                                    <!-- Headers generated dynamically via renderSlsTableHeaders() -->
+                                <tr
+                                    style="background-color: var(--card-bg); border-bottom: 2px solid var(--card-border);">
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 60px;">
+                                        No</th>
+                                    <th
+                                        style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 120px;">
+                                        Kode Kabupaten</th>
+                                    <th
+                                        style="padding: 0.75rem 1rem; text-align: left; font-weight: 700; color: var(--text); white-space: nowrap;">
+                                        Nama Kabupaten</th>
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: var(--text-secondary); white-space: nowrap; width: 130px;">
+                                        Total Usaha</th>
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #10b981; white-space: nowrap; width: 110px;">
+                                        Sudah</th>
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #ef4444; white-space: nowrap; width: 110px;">
+                                        Belum</th>
+                                    <th
+                                        style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 110px;">
+                                        Persentase</th>
                                 </tr>
                             </thead>
-                            <tbody id="sls-table-body">
+                            <tbody id="kab-summary-tbody">
                                 <tr>
-                                    <td colspan="8"
-                                        style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat
-                                        rincian SLS...</td>
+                                    <td colspan="7"
+                                        style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                                        Memuat data ringkasan kabupaten...</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                </div>
 
-                    <!-- SLS Pagination Controls -->
-                    <div id="sls-pagination"
-                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
-                        <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;"
-                            id="sls-pagination-info">
-                            Menampilkan 0 - 0 dari 0 SLS
-                        </div>
-                        <div style="display: flex; gap: 0.35rem; align-items: center;" id="sls-pagination-buttons">
-                            <!-- Pagination buttons generated dynamically -->
-                        </div>
+                <!-- SLS Filters -->
+                <div class="filter-panel"
+                    style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                    <div style="flex: 1; min-width: 250px; position: relative;">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2.5"
+                            style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
+                            viewbox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="sls-search-input"
+                            placeholder="Cari SLS, Desa, Kecamatan, Kabupaten, atau Petugas..."
+                            style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s;">
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+                        <select id="sls-kab-filter"
+                            style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                            <option value="all">Semua Kabupaten</option>
+                        </select>
+                        <select id="sls-kec-filter"
+                            style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                            <option value="all">Semua Kecamatan</option>
+                        </select>
+                        <select id="sls-desa-filter"
+                            style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                            <option value="all">Semua Desa</option>
+                        </select>
+                        <select id="sls-assignment-filter"
+                            style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
+                            <option value="all">Semua Status Penugasan</option>
+                            <option value="fully_assigned">Sudah Ditugaskan Semua</option>
+                            <option value="partially_assigned">Sebagian Ditugaskan</option>
+                            <option value="unassigned">Belum Ditugaskan</option>
+                        </select>
                     </div>
                 </div>
 
+                <!-- SLS Table -->
+                <div class="ipas-table-wrapper" style="max-height: 500px; overflow-y: auto;">
+                    <table class="ipas-table">
+                        <thead>
+                            <tr id="sls-table-headers">
+                                <!-- Headers generated dynamically via renderSlsTableHeaders() -->
+                            </tr>
+                        </thead>
+                        <tbody id="sls-table-body">
+                            <tr>
+                                <td colspan="8"
+                                    style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat
+                                    rincian SLS...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- SLS Pagination Controls -->
+                <div id="sls-pagination"
+                    style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
+                    <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;"
+                        id="sls-pagination-info">
+                        Menampilkan 0 - 0 dari 0 SLS
+                    </div>
+                    <div style="display: flex; gap: 0.35rem; align-items: center;" id="sls-pagination-buttons">
+                        <!-- Pagination buttons generated dynamically -->
+                    </div>
+                </div>
             </div>
-        </main>
+
+    </div>
+    </main>
     </div>
     <!-- Load Supabase configuration if present -->
     <script src="supabase_config.js"></script>
@@ -3219,7 +3241,7 @@
 
                     const kabupatenEscaped = item.kabupaten.replace(/'/g, "\\'");
                     const newBusinessesJSON = JSON.stringify(item.new_businesses || []).replace(/"/g, '&quot;');
-                    
+
                     const penambahanBadge = (item.new_usaha_today > 0 || item.new_usaha_yesterday > 0)
                         ? `<span class="badge-interactive" onclick="openNewBusinessesModal('${kabupatenEscaped}', '${newBusinessesJSON}')" style="cursor: pointer; display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; background-color: rgba(99, 102, 241, 0.1); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.3); transition: all 0.2s;" title="Klik untuk rincian target baru">
                             +${item.new_usaha_today} | +${item.new_usaha_yesterday}
@@ -4051,7 +4073,7 @@
                 const cleanKab = kabupatenName.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
                 titleText.innerText = `Penambahan Usaha: KAB. ${cleanKab}`;
                 searchInput.value = '';
-                
+
                 try {
                     activeModalBusinesses = typeof businessesJSON === 'string' ? JSON.parse(businessesJSON) : businessesJSON;
                 } catch (e) {
@@ -4073,7 +4095,7 @@
 
                 const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
                 const surveyData = ipasDataObj[surveyType] || [];
-                
+
                 activeModalBusinesses = [];
                 surveyData.forEach(kab => {
                     const cleanKab = kab.kabupaten.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
@@ -4114,7 +4136,7 @@
                     const badgeColor = b.date === 'today' ? 'var(--color-delivered)' : '#f59e0b';
                     const badgeText = b.date === 'today' ? 'Hari Ini' : 'Kemarin';
                     const kabSub = b.kabName ? `<span style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 0.15rem 0.45rem; border-radius: 0.25rem; margin-right: 0.5rem;">${b.kabName}</span>` : '';
-                    
+
                     return `
                         <div class="business-list-item">
                             <div class="business-info">
@@ -4401,20 +4423,24 @@
             <div class="modal-header">
                 <h3 class="modal-title" id="modal-title-text">Daftar Usaha Baru</h3>
                 <button class="modal-close-btn" onclick="closeNewBusinessesModal()" aria-label="Close modal">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                        viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="modal-search-wrapper">
-                    <svg class="modal-search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <svg class="modal-search-icon" width="16" height="16" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
                         <circle cx="11" cy="11" r="8"></circle>
                         <path d="M21 21l-4.35-4.35"></path>
                     </svg>
-                    <input class="modal-search-input" id="modal-search-input" placeholder="Cari nama usaha atau kode..." type="text" oninput="filterModalList()" />
+                    <input class="modal-search-input" id="modal-search-input" placeholder="Cari nama usaha atau kode..."
+                        type="text" oninput="filterModalList()" />
                 </div>
-                <div id="modal-business-list" style="border: 1px solid var(--card-border); border-radius: 0.75rem; overflow: hidden; background: rgba(0,0,0,0.05); max-height: 400px; overflow-y: auto;">
+                <div id="modal-business-list"
+                    style="border: 1px solid var(--card-border); border-radius: 0.75rem; overflow: hidden; background: rgba(0,0,0,0.05); max-height: 400px; overflow-y: auto;">
                     <!-- Loaded dynamically -->
                 </div>
             </div>
