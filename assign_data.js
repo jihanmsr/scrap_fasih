@@ -5,7 +5,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 43829,
         "assigned": 0,
         "have_not_assigned": 43829,
-        "timestamp": "2026-06-11T10:08:12.363283"
+        "timestamp": "2026-06-11T10:34:05.673347"
     },
     {
         "kode_kab": "7202",
@@ -13,7 +13,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 138111,
         "assigned": 136304,
         "have_not_assigned": 1807,
-        "timestamp": "2026-06-11T10:08:12.363299"
+        "timestamp": "2026-06-11T10:34:05.673374"
     },
     {
         "kode_kab": "7203",
@@ -21,7 +21,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 47729,
         "assigned": 47729,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-11T10:08:12.363301"
+        "timestamp": "2026-06-11T10:34:05.673377"
     },
     {
         "kode_kab": "7204",
@@ -29,7 +29,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 105378,
         "assigned": 8337,
         "have_not_assigned": 97041,
-        "timestamp": "2026-06-11T10:08:12.363302"
+        "timestamp": "2026-06-11T10:34:05.673379"
     },
     {
         "kode_kab": "7205",
@@ -37,7 +37,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 105503,
         "assigned": 105428,
         "have_not_assigned": 75,
-        "timestamp": "2026-06-11T10:08:12.363303"
+        "timestamp": "2026-06-11T10:34:05.673380"
     },
     {
         "kode_kab": "7206",
@@ -45,7 +45,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 75960,
         "assigned": 74835,
         "have_not_assigned": 1125,
-        "timestamp": "2026-06-11T10:08:12.363304"
+        "timestamp": "2026-06-11T10:34:05.673382"
     },
     {
         "kode_kab": "7207",
@@ -53,7 +53,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 57327,
         "assigned": 55558,
         "have_not_assigned": 1769,
-        "timestamp": "2026-06-11T10:08:12.363305"
+        "timestamp": "2026-06-11T10:34:05.673383"
     },
     {
         "kode_kab": "7208",
@@ -61,7 +61,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 169385,
         "assigned": 169272,
         "have_not_assigned": 113,
-        "timestamp": "2026-06-11T10:08:12.363306"
+        "timestamp": "2026-06-11T10:34:05.673385"
     },
     {
         "kode_kab": "7209",
@@ -69,7 +69,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 57912,
         "assigned": 57617,
         "have_not_assigned": 295,
-        "timestamp": "2026-06-11T10:08:12.363307"
+        "timestamp": "2026-06-11T10:34:05.673386"
     },
     {
         "kode_kab": "7210",
@@ -77,7 +77,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 105041,
         "assigned": 104786,
         "have_not_assigned": 255,
-        "timestamp": "2026-06-11T10:08:12.363308"
+        "timestamp": "2026-06-11T10:34:05.673388"
     },
     {
         "kode_kab": "7211",
@@ -85,7 +85,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 27552,
         "assigned": 26576,
         "have_not_assigned": 976,
-        "timestamp": "2026-06-11T10:08:12.363309"
+        "timestamp": "2026-06-11T10:34:05.673390"
     },
     {
         "kode_kab": "7212",
@@ -93,7 +93,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 42448,
         "assigned": 39472,
         "have_not_assigned": 2976,
-        "timestamp": "2026-06-11T10:08:12.363310"
+        "timestamp": "2026-06-11T10:34:05.673391"
     },
     {
         "kode_kab": "7271",
@@ -101,7 +101,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 164080,
         "assigned": 164031,
         "have_not_assigned": 49,
-        "timestamp": "2026-06-11T10:08:12.363311"
+        "timestamp": "2026-06-11T10:34:05.673393"
     }
 ];
 window.ASSIGN_DATA_UB   = [
@@ -111,7 +111,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 6,
         "assigned": 0,
         "have_not_assigned": 6,
-        "timestamp": "2026-06-11T10:08:12.363314"
+        "timestamp": "2026-06-11T10:34:05.673396"
     },
     {
         "kode_kab": "7202",
@@ -119,7 +119,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 172,
         "assigned": 3,
         "have_not_assigned": 169,
-        "timestamp": "2026-06-11T10:08:12.363315"
+        "timestamp": "2026-06-11T10:34:05.673398"
     },
     {
         "kode_kab": "7203",
@@ -127,7 +127,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 161,
         "assigned": 1,
         "have_not_assigned": 160,
-        "timestamp": "2026-06-11T10:08:12.363316"
+        "timestamp": "2026-06-11T10:34:05.673399"
     },
     {
         "kode_kab": "7204",
@@ -135,7 +135,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 92,
         "assigned": 0,
         "have_not_assigned": 92,
-        "timestamp": "2026-06-11T10:08:12.363317"
+        "timestamp": "2026-06-11T10:34:05.673401"
     },
     {
         "kode_kab": "7205",
@@ -143,7 +143,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 57,
         "assigned": 1,
         "have_not_assigned": 56,
-        "timestamp": "2026-06-11T10:08:12.363318"
+        "timestamp": "2026-06-11T10:34:05.673402"
     },
     {
         "kode_kab": "7206",
@@ -151,7 +151,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 58,
         "assigned": 0,
         "have_not_assigned": 58,
-        "timestamp": "2026-06-11T10:08:12.363319"
+        "timestamp": "2026-06-11T10:34:05.673404"
     },
     {
         "kode_kab": "7207",
@@ -159,7 +159,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 17,
         "assigned": 0,
         "have_not_assigned": 17,
-        "timestamp": "2026-06-11T10:08:12.363320"
+        "timestamp": "2026-06-11T10:34:05.673405"
     },
     {
         "kode_kab": "7208",
@@ -167,7 +167,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 65,
         "assigned": 65,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-11T10:08:12.363321"
+        "timestamp": "2026-06-11T10:34:05.673407"
     },
     {
         "kode_kab": "7209",
@@ -175,7 +175,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 15,
         "assigned": 0,
         "have_not_assigned": 15,
-        "timestamp": "2026-06-11T10:08:12.363322"
+        "timestamp": "2026-06-11T10:34:05.673408"
     },
     {
         "kode_kab": "7210",
@@ -183,7 +183,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 22,
         "assigned": 18,
         "have_not_assigned": 4,
-        "timestamp": "2026-06-11T10:08:12.363323"
+        "timestamp": "2026-06-11T10:34:05.673410"
     },
     {
         "kode_kab": "7211",
@@ -191,7 +191,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 7,
         "assigned": 0,
         "have_not_assigned": 7,
-        "timestamp": "2026-06-11T10:08:12.363324"
+        "timestamp": "2026-06-11T10:34:05.673411"
     },
     {
         "kode_kab": "7212",
@@ -199,7 +199,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 173,
         "assigned": 0,
         "have_not_assigned": 173,
-        "timestamp": "2026-06-11T10:08:12.363325"
+        "timestamp": "2026-06-11T10:34:05.673413"
     },
     {
         "kode_kab": "7271",
@@ -207,7 +207,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 419,
         "assigned": 0,
         "have_not_assigned": 419,
-        "timestamp": "2026-06-11T10:08:12.363326"
+        "timestamp": "2026-06-11T10:34:05.673414"
     }
 ];
 window.ASSIGN_SLS_DATA_UMUM = [
@@ -5075,8 +5075,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "assigned": 103,
         "unassigned": 0,
         "officers": [
-            "rizha (hmdrizha@gmail.com)",
-            " (anyafiffah@gmail.com)"
+            " (anyafiffah@gmail.com)",
+            "rizha (hmdrizha@gmail.com)"
         ]
     },
     {
@@ -5089,8 +5089,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "assigned": 42,
         "unassigned": 0,
         "officers": [
-            "SRIWAHYU NINGSIH (hi.whyuni31@gmail.com)",
-            " (anyafiffah@gmail.com)"
+            " (anyafiffah@gmail.com)",
+            "SRIWAHYU NINGSIH (hi.whyuni31@gmail.com)"
         ]
     },
     {
@@ -5195,8 +5195,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "assigned": 49,
         "unassigned": 0,
         "officers": [
-            "SRIWAHYU NINGSIH (hi.whyuni31@gmail.com)",
-            "Serlitaiyan (serlitaiyanratte@gmail.com)"
+            "Serlitaiyan (serlitaiyanratte@gmail.com)",
+            "SRIWAHYU NINGSIH (hi.whyuni31@gmail.com)"
         ]
     },
     {
@@ -6326,8 +6326,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "assigned": 2,
         "unassigned": 0,
         "officers": [
-            "Nurhayati (bundanona1990@gmail.com)",
-            "DWISEPTIANI (sdwi5238@gmail.com)"
+            "DWISEPTIANI (sdwi5238@gmail.com)",
+            "Nurhayati (bundanona1990@gmail.com)"
         ]
     },
     {
@@ -7237,8 +7237,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "assigned": 5,
         "unassigned": 0,
         "officers": [
-            "HAMDANAZIZ (hamdangaming557@gmail.com)",
-            "Mia (silvianimia35@gmail.com)"
+            "Mia (silvianimia35@gmail.com)",
+            "HAMDANAZIZ (hamdangaming557@gmail.com)"
         ]
     },
     {
@@ -10167,6 +10167,19 @@ window.ASSIGN_SLS_DATA_UMUM = [
         ]
     },
     {
+        "sls_code": "72100500050005",
+        "sls_name": "RT 003 DUSUN 2",
+        "desa_name": "BULILI",
+        "kec_name": "NOKILALAKI",
+        "kab_name": "SIGI",
+        "total": 57,
+        "assigned": 57,
+        "unassigned": 0,
+        "officers": [
+            "Rahmayuningsi (rahma01khairun@gmail.com)"
+        ]
+    },
+    {
         "sls_code": "72101210010009",
         "sls_name": "RT 1 DUSUN 5",
         "desa_name": "MARANATA",
@@ -10393,21 +10406,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "MARANATA",
         "kec_name": "SIGI KOTA",
         "kab_name": "SIGI",
-        "total": 71,
-        "assigned": 71,
-        "unassigned": 0,
-        "officers": [
-            "Muhammad (alifjaya0707@gmail.com)"
-        ]
-    },
-    {
-        "sls_code": "72101210010010",
-        "sls_name": "RT 2 DUSUN 5",
-        "desa_name": "MARANATA",
-        "kec_name": "SIGI KOTA",
-        "kab_name": "SIGI",
-        "total": 8,
-        "assigned": 8,
+        "total": 22,
+        "assigned": 22,
         "unassigned": 0,
         "officers": [
             "Muhammad (alifjaya0707@gmail.com)"
@@ -11194,17 +11194,6 @@ window.ASSIGN_SLS_DATA_UB   = [
         "officers": []
     },
     {
-        "sls_code": "72010400150003",
-        "sls_name": "RT 03 RW 02 DUSUN 01",
-        "desa_name": "BONGGANAN",
-        "kec_name": "TINANGKUNG",
-        "kab_name": "BANGGAI KEPULAUAN",
-        "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
-        "officers": []
-    },
-    {
         "sls_code": "72010400140003",
         "sls_name": "RT 02 DUSUN 02",
         "desa_name": "BAKA",
@@ -11219,6 +11208,17 @@ window.ASSIGN_SLS_DATA_UB   = [
         "sls_code": "72010400140007",
         "sls_name": "RT 06 DUSUN 03",
         "desa_name": "BAKA",
+        "kec_name": "TINANGKUNG",
+        "kab_name": "BANGGAI KEPULAUAN",
+        "total": 1,
+        "assigned": 0,
+        "unassigned": 1,
+        "officers": []
+    },
+    {
+        "sls_code": "72010400150003",
+        "sls_name": "RT 03 RW 02 DUSUN 01",
+        "desa_name": "BONGGANAN",
         "kec_name": "TINANGKUNG",
         "kab_name": "BANGGAI KEPULAUAN",
         "total": 1,

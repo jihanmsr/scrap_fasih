@@ -1,21 +1,33 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-11T10:06:05.567644+08:00",
+  "updated_at": "2026-06-11T10:45:49.592268+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
       "total_prelist": 43829,
-      "total_draft": 160,
+      "total_draft": 158,
       "total_open": 43589,
-      "total_submitted": 80,
+      "total_submitted": 82,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 0.18,
-      "today_completed": 1,
+      "persentase": 0.19,
+      "today_completed": 3,
       "yesterday_completed": 9,
       "two_days_ago_completed": 8,
       "new_usaha_today": 2,
       "new_usaha_yesterday": 19,
       "new_businesses": [
+        {
+          "name": "TK linosti ",
+          "code": "7201 - SE26mq8sth5862",
+          "date": "today",
+          "status": "SUBMITTED RESPONDENT"
+        },
+        {
+          "name": "TK keapaucer paisubatu ",
+          "code": "7201 - SE26mq8pqm714C",
+          "date": "today",
+          "status": "SUBMITTED RESPONDENT"
+        },
         {
           "name": "TK NEGERI LUKSAGU",
           "code": "7201 - SE26mq7ds32E37",
@@ -38,18 +50,6 @@ window.IPAS_DATA = {
           "name": "TK NEGERI PERCONTOHAN",
           "code": "7201 - SE26mq7bzqCB49",
           "date": "yesterday",
-          "status": "DRAFT"
-        },
-        {
-          "name": "TK linosti ",
-          "code": "7201 - SE26mq8sth5862",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "TK keapaucer paisubatu ",
-          "code": "7201 - SE26mq8pqm714C",
-          "date": "today",
           "status": "DRAFT"
         },
         {
