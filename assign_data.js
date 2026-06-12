@@ -5,7 +5,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 43838,
         "assigned": 42613,
         "have_not_assigned": 1225,
-        "timestamp": "2026-06-12T13:37:13.572304"
+        "timestamp": "2026-06-12T14:19:51.754511"
     },
     {
         "kode_kab": "7202",
@@ -13,7 +13,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 138111,
         "assigned": 137979,
         "have_not_assigned": 132,
-        "timestamp": "2026-06-12T13:37:13.572240"
+        "timestamp": "2026-06-12T14:19:51.754442"
     },
     {
         "kode_kab": "7203",
@@ -21,7 +21,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 47729,
         "assigned": 47384,
         "have_not_assigned": 345,
-        "timestamp": "2026-06-12T13:37:13.572297"
+        "timestamp": "2026-06-12T14:19:51.754503"
     },
     {
         "kode_kab": "7204",
@@ -29,23 +29,23 @@ window.ASSIGN_DATA_UMUM = [
         "total": 105395,
         "assigned": 21991,
         "have_not_assigned": 83404,
-        "timestamp": "2026-06-12T13:37:13.572259"
+        "timestamp": "2026-06-12T14:19:51.754460"
     },
     {
         "kode_kab": "7205",
         "nama_kab": "[05] DONGGALA",
         "total": 105502,
-        "assigned": 104740,
-        "have_not_assigned": 762,
-        "timestamp": "2026-06-12T13:37:13.572250"
+        "assigned": 105103,
+        "have_not_assigned": 399,
+        "timestamp": "2026-06-12T14:19:51.754451"
     },
     {
         "kode_kab": "7206",
         "nama_kab": "[06] TOLI-TOLI",
         "total": 75959,
-        "assigned": 75959,
-        "have_not_assigned": 0,
-        "timestamp": "2026-06-12T13:37:13.572275"
+        "assigned": 75942,
+        "have_not_assigned": 17,
+        "timestamp": "2026-06-12T14:19:51.754477"
     },
     {
         "kode_kab": "7207",
@@ -53,7 +53,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 57327,
         "assigned": 56722,
         "have_not_assigned": 605,
-        "timestamp": "2026-06-12T13:37:13.572289"
+        "timestamp": "2026-06-12T14:19:51.754494"
     },
     {
         "kode_kab": "7208",
@@ -61,7 +61,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 169384,
         "assigned": 169270,
         "have_not_assigned": 114,
-        "timestamp": "2026-06-12T13:37:13.571942"
+        "timestamp": "2026-06-12T14:19:51.754371"
     },
     {
         "kode_kab": "7209",
@@ -69,15 +69,15 @@ window.ASSIGN_DATA_UMUM = [
         "total": 57912,
         "assigned": 57908,
         "have_not_assigned": 4,
-        "timestamp": "2026-06-12T13:37:13.572282"
+        "timestamp": "2026-06-12T14:19:51.754486"
     },
     {
         "kode_kab": "7210",
         "nama_kab": "[10] SIGI",
         "total": 105041,
-        "assigned": 102436,
-        "have_not_assigned": 2605,
-        "timestamp": "2026-06-12T13:37:13.572267"
+        "assigned": 103346,
+        "have_not_assigned": 1695,
+        "timestamp": "2026-06-12T14:19:51.754469"
     },
     {
         "kode_kab": "7211",
@@ -85,15 +85,15 @@ window.ASSIGN_DATA_UMUM = [
         "total": 27552,
         "assigned": 27190,
         "have_not_assigned": 362,
-        "timestamp": "2026-06-12T13:37:13.572319"
+        "timestamp": "2026-06-12T14:19:51.754527"
     },
     {
         "kode_kab": "7212",
         "nama_kab": "[12] MOROWALI UTARA",
         "total": 42448,
-        "assigned": 37677,
-        "have_not_assigned": 4771,
-        "timestamp": "2026-06-12T13:37:13.572311"
+        "assigned": 37463,
+        "have_not_assigned": 4985,
+        "timestamp": "2026-06-12T14:19:51.754519"
     },
     {
         "kode_kab": "7271",
@@ -101,7 +101,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 164079,
         "assigned": 164020,
         "have_not_assigned": 59,
-        "timestamp": "2026-06-12T13:37:13.572212"
+        "timestamp": "2026-06-12T14:19:51.754429"
     }
 ];
 window.ASSIGN_DATA_UB   = [
@@ -111,7 +111,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 6,
         "assigned": 0,
         "have_not_assigned": 6,
-        "timestamp": "2026-06-12T13:37:20.955983"
+        "timestamp": "2026-06-12T14:19:53.324749"
     },
     {
         "kode_kab": "7202",
@@ -119,7 +119,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 172,
         "assigned": 3,
         "have_not_assigned": 169,
-        "timestamp": "2026-06-12T13:37:20.955900"
+        "timestamp": "2026-06-12T14:19:53.324666"
     },
     {
         "kode_kab": "7203",
@@ -127,7 +127,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 161,
         "assigned": 1,
         "have_not_assigned": 160,
-        "timestamp": "2026-06-12T13:37:20.955909"
+        "timestamp": "2026-06-12T14:19:53.324675"
     },
     {
         "kode_kab": "7204",
@@ -135,7 +135,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 92,
         "assigned": 0,
         "have_not_assigned": 92,
-        "timestamp": "2026-06-12T13:37:20.955918"
+        "timestamp": "2026-06-12T14:19:53.324684"
     },
     {
         "kode_kab": "7205",
@@ -143,7 +143,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 57,
         "assigned": 1,
         "have_not_assigned": 56,
-        "timestamp": "2026-06-12T13:37:20.955944"
+        "timestamp": "2026-06-12T14:19:53.324710"
     },
     {
         "kode_kab": "7206",
@@ -151,7 +151,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 58,
         "assigned": 0,
         "have_not_assigned": 58,
-        "timestamp": "2026-06-12T13:37:20.955936"
+        "timestamp": "2026-06-12T14:19:53.324701"
     },
     {
         "kode_kab": "7207",
@@ -159,7 +159,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 17,
         "assigned": 0,
         "have_not_assigned": 17,
-        "timestamp": "2026-06-12T13:37:20.955960"
+        "timestamp": "2026-06-12T14:19:53.324726"
     },
     {
         "kode_kab": "7208",
@@ -167,7 +167,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 65,
         "assigned": 65,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-12T13:37:20.955927"
+        "timestamp": "2026-06-12T14:19:53.324693"
     },
     {
         "kode_kab": "7209",
@@ -175,7 +175,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 15,
         "assigned": 0,
         "have_not_assigned": 15,
-        "timestamp": "2026-06-12T13:37:20.955967"
+        "timestamp": "2026-06-12T14:19:53.324733"
     },
     {
         "kode_kab": "7210",
@@ -183,7 +183,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 22,
         "assigned": 22,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-12T13:37:20.955952"
+        "timestamp": "2026-06-12T14:19:53.324718"
     },
     {
         "kode_kab": "7211",
@@ -191,7 +191,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 7,
         "assigned": 0,
         "have_not_assigned": 7,
-        "timestamp": "2026-06-12T13:37:20.955975"
+        "timestamp": "2026-06-12T14:19:53.324741"
     },
     {
         "kode_kab": "7212",
@@ -199,7 +199,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 173,
         "assigned": 0,
         "have_not_assigned": 173,
-        "timestamp": "2026-06-12T13:37:20.955887"
+        "timestamp": "2026-06-12T14:19:53.324652"
     },
     {
         "kode_kab": "7271",
@@ -207,7 +207,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 419,
         "assigned": 0,
         "have_not_assigned": 419,
-        "timestamp": "2026-06-12T13:37:20.955823"
+        "timestamp": "2026-06-12T14:19:53.324600"
     }
 ];
 window.ASSIGN_SLS_DATA_UMUM = [
@@ -74028,8 +74028,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 97,
-        "assigned": 37,
-        "unassigned": 60,
+        "assigned": 97,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -74050,8 +74050,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 544,
-        "assigned": 371,
-        "unassigned": 173,
+        "assigned": 544,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -74061,8 +74061,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 291,
-        "assigned": 128,
-        "unassigned": 163,
+        "assigned": 291,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -74358,8 +74358,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 117,
-        "assigned": 54,
-        "unassigned": 63,
+        "assigned": 63,
+        "unassigned": 54,
         "officers": []
     },
     {
@@ -74402,8 +74402,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 22,
-        "assigned": 10,
-        "unassigned": 12,
+        "assigned": 12,
+        "unassigned": 10,
         "officers": []
     },
     {
@@ -74424,8 +74424,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 116,
-        "assigned": 65,
-        "unassigned": 51,
+        "assigned": 51,
+        "unassigned": 65,
         "officers": []
     },
     {
@@ -74490,8 +74490,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 63,
-        "assigned": 25,
-        "unassigned": 38,
+        "assigned": 41,
+        "unassigned": 22,
         "officers": []
     },
     {
@@ -74501,8 +74501,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 147,
-        "assigned": 64,
-        "unassigned": 83,
+        "assigned": 81,
+        "unassigned": 66,
         "officers": []
     },
     {
@@ -74512,8 +74512,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 25,
-        "assigned": 12,
-        "unassigned": 13,
+        "assigned": 13,
+        "unassigned": 12,
         "officers": []
     },
     {
@@ -74523,8 +74523,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 86,
-        "assigned": 48,
-        "unassigned": 38,
+        "assigned": 38,
+        "unassigned": 48,
         "officers": []
     },
     {
@@ -74545,8 +74545,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 69,
-        "assigned": 43,
-        "unassigned": 26,
+        "assigned": 32,
+        "unassigned": 37,
         "officers": []
     },
     {
@@ -74633,8 +74633,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 37,
-        "assigned": 15,
-        "unassigned": 22,
+        "assigned": 37,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -74655,8 +74655,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "SOJOL",
         "kab_name": "[05] DONGGALA",
         "total": 38,
-        "assigned": 20,
-        "unassigned": 18,
+        "assigned": 24,
+        "unassigned": 14,
         "officers": []
     },
     {
@@ -83719,8 +83719,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LAMPASIO",
         "kab_name": "[06] TOLI-TOLI",
         "total": 23,
-        "assigned": 23,
-        "unassigned": 0,
+        "assigned": 12,
+        "unassigned": 11,
         "officers": []
     },
     {
@@ -83785,8 +83785,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LAMPASIO",
         "kab_name": "[06] TOLI-TOLI",
         "total": 18,
-        "assigned": 18,
-        "unassigned": 0,
+        "assigned": 12,
+        "unassigned": 6,
         "officers": []
     },
     {
@@ -139522,23 +139522,12 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 92,
-        "assigned": 45,
-        "unassigned": 47,
+        "assigned": 48,
+        "unassigned": 44,
         "officers": []
     },
     {
         "sls_code": "72100800061005",
-        "sls_name": "PERKEBUNAN",
-        "desa_name": "PULU",
-        "kec_name": "DOLO SELATAN",
-        "kab_name": "[10] SIGI",
-        "total": 1,
-        "assigned": 1,
-        "unassigned": 0,
-        "officers": []
-    },
-    {
-        "sls_code": "72100800061003",
         "sls_name": "PERKEBUNAN",
         "desa_name": "PULU",
         "kec_name": "DOLO SELATAN",
@@ -139549,14 +139538,25 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "officers": []
     },
     {
+        "sls_code": "72100800061003",
+        "sls_name": "PERKEBUNAN",
+        "desa_name": "PULU",
+        "kec_name": "DOLO SELATAN",
+        "kab_name": "[10] SIGI",
+        "total": 1,
+        "assigned": 1,
+        "unassigned": 0,
+        "officers": []
+    },
+    {
         "sls_code": "72100800060002",
         "sls_name": "RT 002 DUSUN 1",
         "desa_name": "PULU",
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 99,
-        "assigned": 46,
-        "unassigned": 53,
+        "assigned": 53,
+        "unassigned": 46,
         "officers": []
     },
     {
@@ -139577,8 +139577,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 1,
-        "assigned": 1,
-        "unassigned": 0,
+        "assigned": 0,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -139588,8 +139588,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 68,
-        "assigned": 39,
-        "unassigned": 29,
+        "assigned": 29,
+        "unassigned": 39,
         "officers": []
     },
     {
@@ -139599,8 +139599,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 6,
-        "assigned": 4,
-        "unassigned": 2,
+        "assigned": 2,
+        "unassigned": 4,
         "officers": []
     },
     {
@@ -139610,8 +139610,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 68,
-        "assigned": 68,
-        "unassigned": 0,
+        "assigned": 38,
+        "unassigned": 30,
         "officers": []
     },
     {
@@ -139621,8 +139621,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 72,
-        "assigned": 72,
-        "unassigned": 0,
+        "assigned": 42,
+        "unassigned": 30,
         "officers": []
     },
     {
@@ -139632,8 +139632,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -139643,8 +139643,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 88,
-        "assigned": 88,
-        "unassigned": 0,
+        "assigned": 54,
+        "unassigned": 34,
         "officers": []
     },
     {
@@ -139654,8 +139654,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -139665,8 +139665,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "DOLO SELATAN",
         "kab_name": "[10] SIGI",
         "total": 1,
-        "assigned": 0,
-        "unassigned": 1,
+        "assigned": 1,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -140842,8 +140842,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 151,
-        "assigned": 0,
-        "unassigned": 151,
+        "assigned": 78,
+        "unassigned": 73,
         "officers": []
     },
     {
@@ -140864,8 +140864,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 48,
-        "assigned": 0,
-        "unassigned": 48,
+        "assigned": 26,
+        "unassigned": 22,
         "officers": []
     },
     {
@@ -140875,8 +140875,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 209,
-        "assigned": 55,
-        "unassigned": 154,
+        "assigned": 97,
+        "unassigned": 112,
         "officers": []
     },
     {
@@ -140886,8 +140886,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 75,
-        "assigned": 0,
-        "unassigned": 75,
+        "assigned": 42,
+        "unassigned": 33,
         "officers": []
     },
     {
@@ -140908,8 +140908,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 258,
-        "assigned": 0,
-        "unassigned": 258,
+        "assigned": 144,
+        "unassigned": 114,
         "officers": []
     },
     {
@@ -140919,8 +140919,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 102,
-        "assigned": 3,
-        "unassigned": 99,
+        "assigned": 47,
+        "unassigned": 55,
         "officers": []
     },
     {
@@ -140930,8 +140930,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 133,
-        "assigned": 51,
-        "unassigned": 82,
+        "assigned": 66,
+        "unassigned": 67,
         "officers": []
     },
     {
@@ -140952,8 +140952,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 106,
-        "assigned": 2,
-        "unassigned": 104,
+        "assigned": 53,
+        "unassigned": 53,
         "officers": []
     },
     {
@@ -140963,8 +140963,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 57,
-        "assigned": 1,
-        "unassigned": 56,
+        "assigned": 25,
+        "unassigned": 32,
         "officers": []
     },
     {
@@ -140985,8 +140985,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 120,
-        "assigned": 5,
-        "unassigned": 115,
+        "assigned": 77,
+        "unassigned": 43,
         "officers": []
     },
     {
@@ -140996,8 +140996,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 192,
-        "assigned": 105,
-        "unassigned": 87,
+        "assigned": 102,
+        "unassigned": 90,
         "officers": []
     },
     {
@@ -141007,8 +141007,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 64,
-        "assigned": 0,
-        "unassigned": 64,
+        "assigned": 33,
+        "unassigned": 31,
         "officers": []
     },
     {
@@ -141018,8 +141018,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 116,
-        "assigned": 9,
-        "unassigned": 107,
+        "assigned": 63,
+        "unassigned": 53,
         "officers": []
     },
     {
@@ -141029,8 +141029,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 95,
-        "assigned": 1,
-        "unassigned": 94,
+        "assigned": 45,
+        "unassigned": 50,
         "officers": []
     },
     {
@@ -141040,8 +141040,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 69,
-        "assigned": 2,
-        "unassigned": 67,
+        "assigned": 30,
+        "unassigned": 39,
         "officers": []
     },
     {
@@ -141051,8 +141051,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 95,
-        "assigned": 33,
-        "unassigned": 62,
+        "assigned": 61,
+        "unassigned": 34,
         "officers": []
     },
     {
@@ -141062,8 +141062,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 62,
-        "assigned": 0,
-        "unassigned": 62,
+        "assigned": 39,
+        "unassigned": 23,
         "officers": []
     },
     {
@@ -141073,8 +141073,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 79,
-        "assigned": 0,
-        "unassigned": 79,
+        "assigned": 40,
+        "unassigned": 39,
         "officers": []
     },
     {
@@ -141084,8 +141084,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TANAMBULAVA",
         "kab_name": "[10] SIGI",
         "total": 149,
-        "assigned": 139,
-        "unassigned": 10,
+        "assigned": 72,
+        "unassigned": 77,
         "officers": []
     },
     {
@@ -154856,8 +154856,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PETASIA TIMUR",
         "kab_name": "[12] MOROWALI UTARA",
         "total": 110,
-        "assigned": 110,
-        "unassigned": 0,
+        "assigned": 57,
+        "unassigned": 53,
         "officers": []
     },
     {
@@ -154867,8 +154867,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PETASIA TIMUR",
         "kab_name": "[12] MOROWALI UTARA",
         "total": 224,
-        "assigned": 113,
-        "unassigned": 111,
+        "assigned": 0,
+        "unassigned": 224,
         "officers": []
     },
     {
@@ -154911,8 +154911,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "PETASIA TIMUR",
         "kab_name": "[12] MOROWALI UTARA",
         "total": 189,
-        "assigned": 189,
-        "unassigned": 0,
+        "assigned": 88,
+        "unassigned": 101,
         "officers": []
     },
     {
@@ -236402,12 +236402,6 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "ae3355b5-eeb1-489a-a508-723813973a0d"
             },
             {
-                "regionCode": "7202000000000000",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "ae3355b5-eeb1-489a-a508-723813973a0d"
-            },
-            {
                 "regionCode": "7202020008000200",
                 "regionName": "DUSUN 002",
                 "level": 6,
@@ -236416,6 +236410,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7202020008000100",
                 "regionName": "DUSUN 001",
+                "level": 6,
+                "allocationId": "ae3355b5-eeb1-489a-a508-723813973a0d"
+            },
+            {
+                "regionCode": "7202020013001500",
+                "regionName": "RT 015 RW 08 LINGKUNGAN 4",
                 "level": 6,
                 "allocationId": "ae3355b5-eeb1-489a-a508-723813973a0d"
             }
@@ -236436,12 +236436,6 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "67464e9d-f3bb-4822-b2d6-1ff08017767f"
             },
             {
-                "regionCode": "7202000000000000",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "67464e9d-f3bb-4822-b2d6-1ff08017767f"
-            },
-            {
                 "regionCode": "7202051005000600",
                 "regionName": "RT 4 DUSUN 2",
                 "level": 6,
@@ -236456,6 +236450,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7202051005000700",
                 "regionName": "RT 6 DUSUN 3",
+                "level": 6,
+                "allocationId": "67464e9d-f3bb-4822-b2d6-1ff08017767f"
+            },
+            {
+                "regionCode": "7202051005000800",
+                "regionName": "RT 7 DUSUN 3",
                 "level": 6,
                 "allocationId": "67464e9d-f3bb-4822-b2d6-1ff08017767f"
             }
@@ -248051,7 +248051,7 @@ window.PETUGAS_DATA_UMUM = [
         "email": "musliaditolis@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 9,
+        "totalRegions": 10,
         "regions": [
             {
                 "regionCode": "7206041003000100",
@@ -248958,13 +248958,13 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "a389a5fb-1e0f-4671-8e14-3e4111445f8b"
             },
             {
-                "regionCode": "7202052001000701",
-                "regionName": "RT 07 LINGKUNGAN 3",
+                "regionCode": "7202000000000000",
+                "regionName": "-",
                 "level": 6,
                 "allocationId": "a389a5fb-1e0f-4671-8e14-3e4111445f8b"
             },
             {
-                "regionCode": "7202052001000702",
+                "regionCode": "7202052001000701",
                 "regionName": "RT 07 LINGKUNGAN 3",
                 "level": 6,
                 "allocationId": "a389a5fb-1e0f-4671-8e14-3e4111445f8b"
@@ -251369,7 +251369,7 @@ window.PETUGAS_DATA_UMUM = [
         "email": "niluhulan@gmail.com",
         "roleId": "93bcf446-c4c1-4462-8ed0-4b0f7ae89e52",
         "roleName": "Pengawas",
-        "totalRegions": 74,
+        "totalRegions": 75,
         "regions": [
             {
                 "regionCode": "7206041001000500",
