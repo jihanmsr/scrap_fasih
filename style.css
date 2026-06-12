@@ -1218,9 +1218,24 @@ body {
     align-items: start;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .assign-charts-container {
         grid-template-columns: 1fr !important;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+    .stat-card {
+        padding: 1rem 0.75rem;
+        border-radius: 1rem;
+    }
+    .stat-value {
+        font-size: 1.6rem;
+    }
+    .stat-label {
+        font-size: 0.75rem;
     }
 }
 
