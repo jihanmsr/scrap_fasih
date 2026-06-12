@@ -585,12 +585,17 @@
                     </p>
                     <div class="assign-charts-container">
                         <div
-                            style="display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.5rem; box-shadow: var(--shadow-sm); text-align: center; position: relative;">
+                            style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.5rem; box-shadow: var(--shadow-sm); text-align: center; position: relative;">
                             
-                            <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                            <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px dashed var(--card-border);">
+                                <span style="font-weight: 800; font-family: 'Outfit', sans-serif; font-size: 1.1rem; color: var(--text-primary);">Progres</span>
+                                <span style="font-weight: 600; font-family: 'Outfit', sans-serif; font-size: 0.8rem; color: var(--primary); background: var(--pill-inactive-bg); padding: 0.25rem 0.75rem; border-radius: 1rem;">Sulawesi Tengah</span>
+                            </div>
+
+                            <div style="width: 100%; display: flex; flex-direction: column; align-items: center; flex: 1; justify-content: center;">
                                 <h4
                                     style="margin: 0 0 1rem 0; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
-                                    Progres Alokasi Sulawesi Tengah</h4>
+                                    Alokasi</h4>
                                 <div
                                     style="position: relative; width: 220px; height: 110px; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 0.5rem;">
                                     <canvas id="progressGaugeChart" style="max-height: 110px; max-width: 220px;"></canvas>
@@ -606,9 +611,9 @@
                                 </div>
                             </div>
 
-                            <div id="global-sync-progress-container-inner" style="display: none; width: 100%; flex-direction: column; align-items: center; border-top: 1px dashed var(--card-border); padding-top: 1.25rem; margin-top: 0.75rem;">
+                            <div id="global-sync-progress-container-inner" style="display: none; width: 100%; flex-direction: column; align-items: center; padding-top: 1.25rem; margin-top: 0.75rem; flex: 1; justify-content: center;">
                                 <h4 style="margin: 0 0 1rem 0; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
-                                    Progres Sync Sulawesi Tengah
+                                    Sync
                                 </h4>
                                 <div style="position: relative; width: 220px; height: 110px; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 0.5rem;">
                                     <canvas id="syncGaugeChart" style="max-height: 110px; max-width: 220px;"></canvas>

@@ -1184,13 +1184,21 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Aggregate sync data by Kabupaten
+        // Aggregate sync data by Kabupaten based on target usaha
         const syncByKab = {};
+        const slsTargetMap = {};
+        if (window.ASSIGN_SLS_DATA) {
+            window.ASSIGN_SLS_DATA.forEach(sls => {
+                const code = sls.sls_code || sls.sls_id;
+                slsTargetMap[code] = sls.total || 0;
+            });
+        }
+        
         if (window.SUPERSET_SYNC_SLS_DATA) {
             window.SUPERSET_SYNC_SLS_DATA.forEach(d => {
                 const kodeKab = d.sls_code ? d.sls_code.substring(0, 4) : '';
-                if (kodeKab) {
-                    syncByKab[kodeKab] = (syncByKab[kodeKab] || 0) + (d.sync_count || 0);
+                if (kodeKab && d.sync_count > 0) {
+                    syncByKab[kodeKab] = (syncByKab[kodeKab] || 0) + (slsTargetMap[d.sls_code] || 0);
                 }
             });
         }
@@ -1800,17 +1808,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         let totalSynced = 0;
+        const slsTargetMap = {};
+        
+        if (window.ASSIGN_SLS_DATA) {
+            window.ASSIGN_SLS_DATA.forEach(sls => {
+                const code = sls.sls_code || sls.sls_id;
+                slsTargetMap[code] = sls.total || 0;
+            });
+        }
+
         window.SUPERSET_SYNC_SLS_DATA.forEach(d => {
-            totalSynced += (d.sync_count || 0);
+            if (d.sync_count > 0) {
+                totalSynced += (slsTargetMap[d.sls_code] || 0);
+            }
         });
 
-        // Gunakan jumlah SLS aktif riil dari data penugasan (sekitar 15.751)
-        const totalSls = (window.ASSIGN_SLS_DATA && window.ASSIGN_SLS_DATA.length > 0) 
-                         ? window.ASSIGN_SLS_DATA.length 
-                         : window.SUPERSET_SYNC_SLS_DATA.length;
+        // Gunakan jumlah target usaha riil dari data penugasan
+        let totalTarget = 0;
+        if (window.ASSIGN_DATA) {
+            window.ASSIGN_DATA.forEach(kab => {
+                totalTarget += (kab.total || 0);
+            });
+        }
                          
-        const pct = totalSls > 0 ? ((totalSynced / totalSls) * 100).toFixed(2) : '0.00';
-        const textContent = `${new Intl.NumberFormat('id-ID').format(totalSynced)} dari ${new Intl.NumberFormat('id-ID').format(totalSls)} target SLS tersinkronisasi`;
+        const pct = totalTarget > 0 ? ((totalSynced / totalTarget) * 100).toFixed(2) : '0.00';
+        const textContent = `${new Intl.NumberFormat('id-ID').format(totalSynced)} dari ${new Intl.NumberFormat('id-ID').format(totalTarget)} target usaha tersinkronisasi`;
 
         if (syncContainerInner && syncTextInner && syncPercentCenter) {
             syncTextInner.textContent = textContent;
