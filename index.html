@@ -576,7 +576,7 @@
                             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
-                        <span id="assign-chart-title">Status Alokasi Wilayah Tugas Petugas</span>
+                        <span id="assign-chart-title">Status Assign Petugas (Semua Usaha)</span>
                     </h3>
                     <p id="assign-chart-desc"
                         style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 500;">
@@ -585,43 +585,49 @@
                     </p>
                     <div class="assign-charts-container">
                         <div
-                            style="height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.5rem; box-shadow: var(--shadow-sm); text-align: center; position: relative;">
-                            <h4
-                                style="margin: 0 0 1.5rem 0; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
-                                Progres Alokasi Sulawesi Tengah</h4>
-                            <div
-                                style="position: relative; width: 220px; height: 110px; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 1.5rem;">
-                                <canvas id="progressGaugeChart" style="max-height: 110px; max-width: 220px;"></canvas>
-                                <div id="gauge-percent-center"
-                                    style="position: absolute; bottom: 0; font-family: 'Outfit', sans-serif; font-size: 1.95rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">
-                                    0.00%</div>
-                            </div>
-                            <div style="margin-top: 0.5rem; margin-bottom: 1.5rem;">
-                                <div id="gauge-stats-details"
-                                    style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); line-height: 1.4;">
-                                    0 dari 0 target usaha ditugaskan
+                            style="display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.5rem; box-shadow: var(--shadow-sm); text-align: center; position: relative;">
+                            
+                            <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                                <h4
+                                    style="margin: 0 0 1rem 0; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
+                                    Progres Alokasi Sulawesi Tengah</h4>
+                                <div
+                                    style="position: relative; width: 220px; height: 110px; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 0.5rem;">
+                                    <canvas id="progressGaugeChart" style="max-height: 110px; max-width: 220px;"></canvas>
+                                    <div id="gauge-percent-center"
+                                        style="position: absolute; bottom: 0; font-family: 'Outfit', sans-serif; font-size: 1.95rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">
+                                        0.00%</div>
+                                </div>
+                                <div style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                                    <div id="gauge-stats-details"
+                                        style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); line-height: 1.4;">
+                                        0 dari 0 target usaha ditugaskan
+                                    </div>
                                 </div>
                             </div>
-                            <div id="global-sync-progress-container-inner" style="display: none; width: 100%; align-items: center; justify-content: space-between; background: rgba(234, 179, 8, 0.05); padding: 1rem 1.5rem; border-radius: 0.75rem; border: 1px solid rgba(234, 179, 8, 0.2); margin-top: 1rem;">
-                                <div style="flex: 1; text-align: left;">
-                                    <div style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
-                                        Progres Sync Sulawesi Tengah
+
+                            <div id="global-sync-progress-container-inner" style="display: none; width: 100%; flex-direction: column; align-items: center; border-top: 1px dashed var(--card-border); padding-top: 1.25rem; margin-top: 0.75rem;">
+                                <h4 style="margin: 0 0 1rem 0; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
+                                    Progres Sync Sulawesi Tengah
+                                </h4>
+                                <div style="position: relative; width: 220px; height: 110px; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 0.5rem;">
+                                    <canvas id="syncGaugeChart" style="max-height: 110px; max-width: 220px;"></canvas>
+                                    <div id="sync-gauge-percent-center" style="position: absolute; bottom: 0; font-family: 'Outfit', sans-serif; font-size: 1.95rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">
+                                        0.00%
                                     </div>
-                                    <div style="font-size: 0.8rem; color: var(--text-secondary);" id="global-sync-text-inner">
+                                </div>
+                                <div style="margin-top: 0.5rem;">
+                                    <div id="global-sync-text-inner" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); line-height: 1.4;">
                                         Menghitung data sinkronisasi...
-                                    </div>
-                                </div>
-                                <div style="width: 120px; height: 60px; position: relative; margin-left: 1rem;">
-                                    <canvas id="syncGaugeChart" style="max-height: 60px; max-width: 120px;"></canvas>
-                                    <div id="sync-gauge-percent-center" style="position: absolute; bottom: 0; width: 100%; text-align: center; font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 800; color: var(--text-primary);">
-                                        0%
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div
-                            style="height: 400px; position: relative; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm);">
-                            <canvas id="assignChart"></canvas>
+                            style="min-height: 450px; height: 100%; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+                            <div style="position: relative; flex: 1; width: 100%; min-height: 0; height: 100%;">
+                                <canvas id="assignChart"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>

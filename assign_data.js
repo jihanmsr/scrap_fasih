@@ -296805,8 +296805,8 @@ function filterAssignData(type) {
     if (type === 'se2026') {
         if(btnUmum) { btnUmum.style.backgroundColor = 'var(--primary)'; btnUmum.style.color = 'white'; }
         if(btnUB) { btnUB.style.backgroundColor = 'transparent'; btnUB.style.color = 'var(--text-secondary)'; }
-        if(chartTitle) chartTitle.innerText = "Status Assign Petugas (Semua Usaha - Umum)";
-        if(slsTitle) slsTitle.innerText = "Rincian Assignment per SLS (Umum)";
+        if(chartTitle) chartTitle.innerText = "Status Assign Petugas (Semua Usaha)";
+        if(slsTitle) slsTitle.innerText = "Rincian Assignment per SLS";
         
         window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM;
         window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM;

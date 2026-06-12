@@ -2855,7 +2855,7 @@ document.addEventListener('DOMContentLoaded', () => {
             container.style.transform = 'none';
         }
 
-        titleText.innerText = `Penambahan Usaha: PROVINSI SULAWESI TENGAH (${surveyType === 'se_umum' ? 'Umum' : 'Usaha Besar'})`;
+        titleText.innerText = `Penambahan Usaha: PROVINSI SULAWESI TENGAH (${surveyType === 'se_umum' ? 'SE2026' : 'Usaha Besar'})`;
         searchInput.value = '';
 
         const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
@@ -3307,6 +3307,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (typeof originalFilterAssignData === 'function') {
             originalFilterAssignData(type);
+            
+            const chartTitle = document.getElementById("assign-chart-title");
+            const slsTitle = document.getElementById("assign-sls-title");
+            if (type === 'se2026') {
+                if(chartTitle) chartTitle.innerText = "Status Assign Petugas (Semua Usaha)";
+                if(slsTitle) slsTitle.innerText = "Rincian Assignment per SLS";
+            }
         }
         
         renderSyncTable();
