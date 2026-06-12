@@ -629,6 +629,13 @@ document.addEventListener('DOMContentLoaded', () => {
             renderPetugasTable();
         });
     }
+    const syncSearchInput = document.getElementById('sync-search-input');
+    if (syncSearchInput) {
+        syncSearchInput.addEventListener('input', () => {
+            window.syncCurrentPage = 1;
+            renderSyncTable();
+        });
+    }
     const slsAssignmentFilter = document.getElementById('sls-assignment-filter');
     if (slsAssignmentFilter) {
         slsAssignmentFilter.addEventListener('change', () => {
@@ -1683,11 +1690,44 @@ document.addEventListener('DOMContentLoaded', () => {
         window.renderPetugasTable();
     };
 
+    function getOfficerSyncStats(regions) {
+        let totalSls = regions ? regions.length : 0;
+        let syncedSls = 0;
+        const syncData = window.SUPERSET_SYNC_SLS_DATA || [];
+        
+        if (!window.syncMapCache) {
+            window.syncMapCache = {};
+            syncData.forEach(d => {
+                if (d.sls_code) {
+                    window.syncMapCache[d.sls_code] = d.sync_count || 0;
+                }
+            });
+        }
+        
+        (regions || []).forEach(r => {
+            if (r.regionCode) {
+                const count = window.syncMapCache[r.regionCode] || 0;
+                if (count > 0) {
+                    syncedSls++;
+                }
+            }
+        });
+        
+        return {
+            total: totalSls,
+            synced: syncedSls,
+            percentage: totalSls > 0 ? ((syncedSls / totalSls) * 100).toFixed(2) : '0.00'
+        };
+    }
+
     window.renderPetugasTable = function () {
         const petugasData = window.PETUGAS_DATA || [];
         const tbody = document.getElementById('petugas-table-body');
         const paginationInfo = document.getElementById('petugas-pagination-info');
         if (!tbody || !paginationInfo) return;
+
+        // Clear sync map cache on render so it refreshes with new sync data
+        window.syncMapCache = null;
 
         const searchInputEl = document.getElementById('petugas-search-input');
         const searchVal = searchInputEl ? searchInputEl.value.toLowerCase().trim() : '';
@@ -1747,7 +1787,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const totalItems = filteredData.length;
         if (totalItems === 0) {
-            tbody.innerHTML = `<tr><td colspan="4" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data petugas yang cocok.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data petugas yang cocok.</td></tr>`;
             paginationInfo.innerText = `Menampilkan 0 - 0 dari 0 Petugas`;
             renderPetugasPaginationButtons(0);
             return;
@@ -1780,6 +1820,20 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const wilHtml = regionBadges || '<span style="color:var(--text-muted); font-size:0.8rem;">Tidak ada wilayah tugas</span>';
 
+            // Calculate Sync Stats for this officer
+            const syncStats = getOfficerSyncStats(item.regions);
+            const syncProgressHtml = `
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 0.15rem; width: 100%;">
+                    <div style="font-weight: 700; font-size: 0.85rem; color: ${parseFloat(syncStats.percentage) > 0 ? 'var(--color-delivered)' : 'var(--text-secondary)'};">
+                        ${syncStats.synced} / ${syncStats.total} SLS
+                    </div>
+                    <div style="width: 100%; max-width: 120px; height: 5px; background: rgba(0,0,0,0.1); border-radius: 3px; overflow: hidden; display: inline-block;">
+                        <div style="height: 100%; background: var(--color-delivered); width: ${syncStats.percentage}%;"></div>
+                    </div>
+                    <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">${syncStats.percentage}%</span>
+                </div>
+            `;
+
             return `
                 <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.2s;">
                     <td style="padding: 1rem; color: var(--text-secondary); text-align: center; font-weight: 500;">${rowNumber}</td>
@@ -1799,6 +1853,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${hl(item.roleName || '-')}
                         </span>
                     </td>
+                    <td style="padding: 1rem; text-align: center;">
+                        ${syncProgressHtml}
+                    </td>
                     <td style="padding: 1rem;">
                         <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
                             ${wilHtml}
@@ -1810,6 +1867,394 @@ document.addEventListener('DOMContentLoaded', () => {
 
         renderPetugasPaginationButtons(maxPage);
     };
+
+    // Superset Sync table rendering
+    // Superset Sync table rendering
+    window.syncCurrentPage = 1;
+    let SYNC_ITEMS_PER_PAGE = 25;
+    window.syncSort = { column: 'kab_name', order: 'asc' };
+    
+    window.changeSyncLimit = function(val) {
+        SYNC_ITEMS_PER_PAGE = parseInt(val) || 25;
+        window.syncCurrentPage = 1;
+        renderSyncTable();
+    };
+
+    window.sortSyncTable = function (column) {
+        const current = window.syncSort;
+        if (current.column === column) {
+            current.order = current.order === 'asc' ? 'desc' : 'asc';
+        } else {
+            current.column = column;
+            current.order = 'asc';
+        }
+        window.syncCurrentPage = 1; // reset page on sort
+        renderSyncTable();
+    };
+
+    let isSyncFiltersPopulated = false;
+    function populateSyncFilters() {
+        if (!window.ASSIGN_SLS_DATA || window.ASSIGN_SLS_DATA.length === 0 || isSyncFiltersPopulated) return;
+
+        const kabSelect = document.getElementById('sync-kab-filter');
+        if (!kabSelect) return;
+
+        // Extract unique regions
+        const uniqueKabs = [...new Set(window.ASSIGN_SLS_DATA.map(i => i.kab_name))].sort();
+
+        kabSelect.innerHTML = '<option value="all">Semua Kabupaten</option>' +
+            uniqueKabs.map(k => `<option value="${k}">${k}</option>`).join('');
+
+        // Register cascade change listeners
+        kabSelect.addEventListener('change', () => {
+            updateSyncKecOptions();
+            window.syncCurrentPage = 1;
+            renderSyncTable();
+        });
+
+        const kecSelect = document.getElementById('sync-kec-filter');
+        if (kecSelect) {
+            kecSelect.addEventListener('change', () => {
+                updateSyncDesaOptions();
+                window.syncCurrentPage = 1;
+                renderSyncTable();
+            });
+        }
+
+        const desaSelect = document.getElementById('sync-desa-filter');
+        if (desaSelect) {
+            desaSelect.addEventListener('change', () => {
+                window.syncCurrentPage = 1;
+                renderSyncTable();
+            });
+        }
+
+        const statusSelect = document.getElementById('sync-status-filter');
+        if (statusSelect) {
+            statusSelect.addEventListener('change', () => {
+                window.syncCurrentPage = 1;
+                renderSyncTable();
+            });
+        }
+
+        isSyncFiltersPopulated = true;
+        updateSyncKecOptions();
+    }
+
+    function updateSyncKecOptions() {
+        const kabVal = document.getElementById('sync-kab-filter')?.value || 'all';
+        const kecSelect = document.getElementById('sync-kec-filter');
+        if (!kecSelect) return;
+
+        if (kabVal === 'all') {
+            kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>';
+            kecSelect.disabled = true;
+            updateSyncDesaOptions();
+            return;
+        }
+
+        kecSelect.disabled = false;
+        const filteredSls = window.ASSIGN_SLS_DATA.filter(i => i.kab_name === kabVal);
+        const uniqueKecs = [...new Set(filteredSls.map(i => i.kec_name))].sort();
+
+        kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>' +
+            uniqueKecs.map(k => `<option value="${k}">${k}</option>`).join('');
+
+        updateSyncDesaOptions();
+    }
+
+    function updateSyncDesaOptions() {
+        const kabFilterEl = document.getElementById('sync-kab-filter');
+        const kecFilterEl = document.getElementById('sync-kec-filter');
+        if (!kabFilterEl || !kecFilterEl) return;
+        const kabVal = kabFilterEl.value;
+        const kecVal = kecFilterEl.value;
+
+        const desaSelect = document.getElementById('sync-desa-filter');
+        if (!desaSelect) return;
+
+        if (kecVal === 'all') {
+            desaSelect.innerHTML = '<option value="all">Semua Desa</option>';
+            desaSelect.disabled = true;
+            return;
+        }
+
+        desaSelect.disabled = false;
+        const filteredSls = window.ASSIGN_SLS_DATA.filter(i => i.kab_name === kabVal && i.kec_name === kecVal);
+        const uniqueDesas = [...new Set(filteredSls.map(i => i.desa_name))].sort();
+
+        desaSelect.innerHTML = '<option value="all">Semua Desa</option>' +
+            uniqueDesas.map(d => `<option value="${d}">${d}</option>`).join('');
+    }
+
+    function renderSyncTableHeaders() {
+        const headerRow = document.getElementById('sync-table-headers');
+        if (!headerRow) return;
+
+        const getIcon = (col) => {
+            if (window.syncSort.column !== col) return ' ↕';
+            return window.syncSort.order === 'asc' ? ' ▲' : ' ▼';
+        };
+
+        headerRow.innerHTML = `
+            <th style="width: 60px; text-align: center;">No</th>
+            <th onclick="window.sortSyncTable('kab_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Kabupaten${getIcon('kab_name')}</th>
+            <th onclick="window.sortSyncTable('kec_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Kecamatan${getIcon('kec_name')}</th>
+            <th onclick="window.sortSyncTable('desa_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Desa${getIcon('desa_name')}</th>
+            <th onclick="window.sortSyncTable('sls_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Kode & Nama SLS${getIcon('sls_name')}</th>
+            <th onclick="window.sortSyncTable('assign')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none; width: 130px;">Assign (Superset)${getIcon('assign')}</th>
+            <th onclick="window.sortSyncTable('sync_count')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none; width: 130px;">Sync (Superset)${getIcon('sync_count')}</th>
+            <th onclick="window.sortSyncTable('sync_status')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none; width: 120px;">Status${getIcon('sync_status')}</th>
+        `;
+    }
+
+    window.renderSyncTable = function() {
+        const tbody = document.getElementById('sync-table-body');
+        const paginationInfo = document.getElementById('sync-pagination-info');
+        if (!tbody || !paginationInfo) return;
+
+        if (!window.ASSIGN_SLS_DATA || window.ASSIGN_SLS_DATA.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data SLS belum tersedia. Pastikan sinkronisasi data sedang berjalan.</td></tr>`;
+            paginationInfo.innerText = `Menampilkan 0 - 0 dari 0 SLS`;
+            return;
+        }
+
+        populateSyncFilters();
+
+        const searchInputEl = document.getElementById('sync-search-input');
+        const searchVal = searchInputEl ? searchInputEl.value.toLowerCase().trim() : '';
+        const kabFilter = document.getElementById('sync-kab-filter')?.value || 'all';
+        const kecFilter = document.getElementById('sync-kec-filter')?.value || 'all';
+        const desaFilter = document.getElementById('sync-desa-filter')?.value || 'all';
+        const statusFilter = document.getElementById('sync-status-filter')?.value || 'all';
+
+        // Precalculate lookup map from superset sync data
+        const syncMap = new Map();
+        if (window.SUPERSET_SYNC_SLS_DATA) {
+            window.SUPERSET_SYNC_SLS_DATA.forEach(item => {
+                if (item && item.sls_code) {
+                    syncMap.set(item.sls_code, item);
+                }
+            });
+        }
+
+        // Left join into ASSIGN_SLS_DATA
+        const joinedData = window.ASSIGN_SLS_DATA.map(item => {
+            const syncInfo = syncMap.get(item.sls_code) || { assign: 0, sync_count: 0 };
+            return {
+                kab_name: item.kab_name || '',
+                kec_name: item.kec_name || '',
+                desa_name: item.desa_name || '',
+                sls_code: item.sls_code || '',
+                sls_name: item.sls_name || '',
+                assign: syncInfo.assign || 0,
+                sync_count: syncInfo.sync_count || 0,
+                sync_status: (syncInfo.sync_count || 0) > 0 ? 'synced' : 'not_synced'
+            };
+        });
+
+        // Filter
+        let filtered = joinedData.filter(item => {
+            if (kabFilter !== 'all' && item.kab_name !== kabFilter) return false;
+            if (kecFilter !== 'all' && item.kec_name !== kecFilter) return false;
+            if (desaFilter !== 'all' && item.desa_name !== desaFilter) return false;
+            
+            if (statusFilter !== 'all' && item.sync_status !== statusFilter) return false;
+
+            if (searchVal) {
+                const matchText = (item.kab_name + ' ' + item.kec_name + ' ' + item.desa_name + ' ' + item.sls_name + ' ' + item.sls_code).toLowerCase();
+                if (!matchText.includes(searchVal)) return false;
+            }
+            return true;
+        });
+
+        const totalItems = filtered.length;
+        if (totalItems === 0) {
+            tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data SLS Sync yang cocok dengan filter.</td></tr>`;
+            paginationInfo.innerText = `Menampilkan 0 - 0 dari 0 SLS`;
+            renderSyncPaginationButtons(0);
+            return;
+        }
+
+        // Sort
+        const col = window.syncSort.column;
+        const order = window.syncSort.order === 'asc' ? 1 : -1;
+        filtered.sort((a, b) => {
+            let valA = a[col];
+            let valB = b[col];
+            if (typeof valA === 'string') {
+                return valA.localeCompare(valB) * order;
+            }
+            return ((valA || 0) - (valB || 0)) * order;
+        });
+
+        // Render headers
+        renderSyncTableHeaders();
+
+        const maxPage = Math.ceil(totalItems / SYNC_ITEMS_PER_PAGE);
+        if (window.syncCurrentPage > maxPage) window.syncCurrentPage = maxPage;
+        if (window.syncCurrentPage < 1) window.syncCurrentPage = 1;
+
+        const startIdx = (window.syncCurrentPage - 1) * SYNC_ITEMS_PER_PAGE;
+        const endIdx = Math.min(startIdx + SYNC_ITEMS_PER_PAGE, totalItems);
+
+        paginationInfo.innerText = `Menampilkan ${startIdx + 1} - ${endIdx} dari ${totalItems} SLS`;
+
+        const pageData = filtered.slice(startIdx, endIdx);
+
+        tbody.innerHTML = pageData.map((item, index) => {
+            const rowNumber = startIdx + index + 1;
+            const hl = (txt) => highlightText(txt, searchVal);
+
+            const isSynced = item.sync_count > 0;
+            const statusBadge = isSynced
+                ? `<span style="display: inline-block; padding: 0.15rem 0.5rem; border-radius: 0.25rem; background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2); font-size: 0.75rem; font-weight: 700;">SYNCED</span>`
+                : `<span style="display: inline-block; padding: 0.15rem 0.5rem; border-radius: 0.25rem; background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); font-size: 0.75rem; font-weight: 700;">NOT SYNCED</span>`;
+
+            return `
+                <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;">
+                    <td style="padding: 0.75rem 1rem; text-align: center; color: var(--text-secondary); font-weight: 500;">${rowNumber}</td>
+                    <td style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">${hl(item.kab_name)}</td>
+                    <td style="padding: 1rem; color: var(--text-secondary);">${hl(item.kec_name)}</td>
+                    <td style="padding: 1rem; color: var(--text-secondary);">${hl(item.desa_name)}</td>
+                    <td style="padding: 1rem; font-weight: 600; color: var(--text);">${hl(item.sls_name)} <span style="font-size: 0.75rem; font-weight: 400; color: var(--text-secondary); display:block;">${hl(item.sls_code)}</span></td>
+                    <td style="padding: 0.75rem 1rem; text-align: center; font-family: monospace; font-weight: 700; color: var(--text-secondary);">${item.assign}</td>
+                    <td style="padding: 0.75rem 1rem; text-align: center; font-family: monospace; font-weight: 700; color: ${isSynced ? '#10b981' : 'var(--text-secondary)'};">${item.sync_count}</td>
+                    <td style="padding: 0.75rem 1rem; text-align: center;">${statusBadge}</td>
+                </tr>
+            `;
+        }).join('');
+
+        renderSyncPaginationButtons(maxPage);
+    };
+
+    window.downloadSyncCSV = function() {
+        if (!window.ASSIGN_SLS_DATA || window.ASSIGN_SLS_DATA.length === 0) {
+            alert("Tidak ada data SLS untuk diunduh.");
+            return;
+        }
+
+        const searchInputEl = document.getElementById('sync-search-input');
+        const searchVal = searchInputEl ? searchInputEl.value.toLowerCase().trim() : '';
+        const kabFilter = document.getElementById('sync-kab-filter')?.value || 'all';
+        const kecFilter = document.getElementById('sync-kec-filter')?.value || 'all';
+        const desaFilter = document.getElementById('sync-desa-filter')?.value || 'all';
+        const statusFilter = document.getElementById('sync-status-filter')?.value || 'all';
+
+        const syncMap = new Map();
+        if (window.SUPERSET_SYNC_SLS_DATA) {
+            window.SUPERSET_SYNC_SLS_DATA.forEach(item => {
+                if (item && item.sls_code) {
+                    syncMap.set(item.sls_code, item);
+                }
+            });
+        }
+
+        const joinedData = window.ASSIGN_SLS_DATA.map(item => {
+            const syncInfo = syncMap.get(item.sls_code) || { assign: 0, sync_count: 0 };
+            return {
+                kab_name: item.kab_name || '',
+                kec_name: item.kec_name || '',
+                desa_name: item.desa_name || '',
+                sls_code: item.sls_code || '',
+                sls_name: item.sls_name || '',
+                assign: syncInfo.assign || 0,
+                sync_count: syncInfo.sync_count || 0,
+                sync_status: (syncInfo.sync_count || 0) > 0 ? 'synced' : 'not_synced'
+            };
+        });
+
+        let filtered = joinedData.filter(item => {
+            if (kabFilter !== 'all' && item.kab_name !== kabFilter) return false;
+            if (kecFilter !== 'all' && item.kec_name !== kecFilter) return false;
+            if (desaFilter !== 'all' && item.desa_name !== desaFilter) return false;
+            if (statusFilter !== 'all' && item.sync_status !== statusFilter) return false;
+
+            if (searchVal) {
+                const matchText = (item.kab_name + ' ' + item.kec_name + ' ' + item.desa_name + ' ' + item.sls_name + ' ' + item.sls_code).toLowerCase();
+                if (!matchText.includes(searchVal)) return false;
+            }
+            return true;
+        });
+
+        const col = window.syncSort.column;
+        const order = window.syncSort.order === 'asc' ? 1 : -1;
+        filtered.sort((a, b) => {
+            let valA = a[col];
+            let valB = b[col];
+            if (typeof valA === 'string') {
+                return valA.localeCompare(valB) * order;
+            }
+            return ((valA || 0) - (valB || 0)) * order;
+        });
+
+        const headers = ["Kabupaten", "Kecamatan", "Desa", "Kode SLS", "Nama SLS", "Assign (Superset)", "Sync (Superset)", "Status"];
+        const rows = filtered.map(item => [
+            item.kab_name,
+            item.kec_name,
+            item.desa_name,
+            item.sls_code,
+            item.sls_name,
+            item.assign,
+            item.sync_count,
+            item.sync_status === 'synced' ? 'SYNCED' : 'NOT SYNCED'
+        ]);
+
+        let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
+        csvContent += [headers.join(",")].concat(rows.map(r => r.map(val => `"${String(val).replace(/"/g, '""')}"`).join(","))).join("\n");
+
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        
+        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+        link.setAttribute("download", `rincian_sync_capi_superset_${activeSubtab}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    function renderSyncPaginationButtons(maxPage) {
+        const btnContainer = document.getElementById('sync-pagination-buttons');
+        if (!btnContainer) return;
+        btnContainer.innerHTML = '';
+        if (maxPage <= 1) return;
+        
+        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
+        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
+        
+        // Prev button
+        const prev = document.createElement('button');
+        prev.style = btnStyle;
+        prev.innerHTML = '&laquo;';
+        prev.disabled = window.syncCurrentPage === 1;
+        prev.addEventListener('click', () => {
+            if (window.syncCurrentPage > 1) {
+                window.syncCurrentPage--;
+                renderSyncTable();
+            }
+        });
+        btnContainer.appendChild(prev);
+        
+        // Current Page button
+        const cur = document.createElement('button');
+        cur.style = activeStyle;
+        cur.innerText = window.syncCurrentPage;
+        btnContainer.appendChild(cur);
+        
+        // Next button
+        const next = document.createElement('button');
+        next.style = btnStyle;
+        next.innerHTML = '&raquo;';
+        next.disabled = window.syncCurrentPage === maxPage;
+        next.addEventListener('click', () => {
+            if (window.syncCurrentPage < maxPage) {
+                window.syncCurrentPage++;
+                renderSyncTable();
+            }
+        });
+        btnContainer.appendChild(next);
+    }
 
     function renderPetugasPaginationButtons(maxPage) {
         const btnContainer = document.getElementById('petugas-pagination-buttons');
@@ -2365,6 +2810,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderKabSummaryTable();
                 renderSlsTable();
             }
+            renderSyncTable();
         } else {
             if (mainHeader) mainHeader.textContent = 'Pemantauan Email Usaha Besar';
             if (mainSubheader) mainSubheader.textContent = 'Daftar pemantauan status pengiriman email kuesioner kepada responden Usaha Besar (UB)';
@@ -2453,6 +2899,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let ipasLoadedFromDb = false;
         let assignLoadedFromDb = false;
+        let syncLoadedFromDb = false;
 
         if (supabaseClient) {
             try {
@@ -2480,8 +2927,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     const assignVal = assignDbData.value;
                     window.ASSIGN_DATA_UMUM = assignVal.assign_data_umum || [];
                     window.ASSIGN_DATA_UB = assignVal.assign_data_ub || [];
-                    window.ASSIGN_SLS_DATA_UMUM = assignVal.assign_sls_data_umum || [];
-                    window.ASSIGN_SLS_DATA_UB = assignVal.assign_sls_data_ub || [];
+                    
+                    const decompressSls = (list) => {
+                        if (!list || !Array.isArray(list)) return [];
+                        if (list.length > 0 && !Array.isArray(list[0])) return list; // Already decompressed / old format
+                        return list.map(item => ({
+                            sls_code: item[0],
+                            sls_name: item[1],
+                            desa_name: item[2],
+                            kec_name: item[3],
+                            kab_name: item[4],
+                            total: item[5],
+                            assigned: item[6],
+                            unassigned: item[7],
+                            officers: item[8] || []
+                        }));
+                    };
+
+                    window.ASSIGN_SLS_DATA_UMUM = decompressSls(assignVal.assign_sls_data_umum);
+                    window.ASSIGN_SLS_DATA_UB = decompressSls(assignVal.assign_sls_data_ub);
                     window.PETUGAS_DATA_UMUM = assignVal.petugas_data_umum || [];
                     window.PETUGAS_DATA_UB = assignVal.petugas_data_ub || [];
                     
@@ -2501,6 +2965,21 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (e) {
                 console.warn("Failed to fetch ASSIGN_DATA from Supabase:", e);
             }
+
+            try {
+                const { data: syncDbData, error: syncError } = await supabaseClient
+                    .from('dashboard_store')
+                    .select('value')
+                    .eq('key', 'superset_sync_data')
+                    .single();
+                if (!syncError && syncDbData && syncDbData.value) {
+                    window.SUPERSET_SYNC_SLS_DATA = syncDbData.value;
+                    syncLoadedFromDb = true;
+                    console.log("Loaded SUPERSET_SYNC_SLS_DATA from Supabase.");
+                }
+            } catch (e) {
+                console.warn("Failed to fetch SUPERSET_SYNC_SLS_DATA from Supabase:", e);
+            }
         }
 
         if (!ipasLoadedFromDb) {
@@ -2519,6 +2998,17 @@ document.addEventListener('DOMContentLoaded', () => {
             await new Promise((resolve) => {
                 const script = document.createElement('script');
                 script.src = 'assign_data.js?v=' + Date.now();
+                script.onload = () => resolve();
+                script.onerror = () => resolve();
+                document.head.appendChild(script);
+            });
+        }
+
+        if (!syncLoadedFromDb) {
+            // Dynamically reload sync_data.js
+            await new Promise((resolve) => {
+                const script = document.createElement('script');
+                script.src = 'sync_data.js?v=' + Date.now();
                 script.onload = () => resolve();
                 script.onerror = () => resolve();
                 document.head.appendChild(script);
@@ -2562,6 +3052,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderAssignChart();
                 renderSlsTable();
             }
+            renderSyncTable();
         }
     }
 
@@ -2610,6 +3101,34 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.removeChild(link);
         });
     }
+    // Intercept filterAssignData to reset populated states and filters on subtab switch
+    const originalFilterAssignData = window.filterAssignData;
+    window.filterAssignData = function(type) {
+        // Reset populated state of filters so they rebuild with the correct subtab data
+        isSlsFiltersPopulated = false;
+        isSyncFiltersPopulated = false;
+        
+        // Reset filter select elements to "all"
+        const resetSelect = (id) => {
+            const el = document.getElementById(id);
+            if (el) el.value = 'all';
+        };
+        resetSelect('sls-kab-filter');
+        resetSelect('sls-kec-filter');
+        resetSelect('sls-desa-filter');
+        resetSelect('sls-assignment-filter');
+
+        resetSelect('sync-kab-filter');
+        resetSelect('sync-kec-filter');
+        resetSelect('sync-desa-filter');
+        resetSelect('sync-status-filter');
+
+        if (typeof originalFilterAssignData === 'function') {
+            originalFilterAssignData(type);
+        }
+        
+        renderSyncTable();
+    };
 
     // Initial Execution
     fetchDataAndRender().then(() => {

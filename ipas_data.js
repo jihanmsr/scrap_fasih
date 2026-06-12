@@ -1,11 +1,11 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-12T08:07:32.963586+08:00",
+  "updated_at": "2026-06-12T13:55:39.981074+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
-      "total_prelist": 43834,
-      "total_draft": 161,
-      "total_open": 43588,
+      "total_prelist": 43838,
+      "total_draft": 163,
+      "total_open": 43590,
       "total_submitted": 85,
       "total_rejected": 0,
       "total_approved": 0,
@@ -13,7 +13,7 @@ window.IPAS_DATA = {
       "today_completed": 0,
       "yesterday_completed": 48,
       "two_days_ago_completed": 6,
-      "new_usaha_today": 1,
+      "new_usaha_today": 3,
       "new_usaha_yesterday": 3,
       "new_businesses": [
         {
@@ -35,6 +35,18 @@ window.IPAS_DATA = {
           "status": "SUBMITTED RESPONDENT"
         },
         {
+          "name": "TK NEGERI PERTIWI SALAKAN",
+          "code": "7201 - SE26mqa7spF6E4",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "SMAN 1 TINANGKUNG",
+          "code": "7201 - SE26mqa7vi88D8",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
           "name": "TK NEGERI SEANO",
           "code": "7201 - SE26mqa01u557B",
           "date": "today",
@@ -45,8 +57,8 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[02] BANGGAI",
       "total_prelist": 138111,
-      "total_draft": 5,
-      "total_open": 138102,
+      "total_draft": 6,
+      "total_open": 138101,
       "total_submitted": 4,
       "total_rejected": 0,
       "total_approved": 0,
@@ -79,11 +91,11 @@ window.IPAS_DATA = {
       "total_prelist": 105395,
       "total_draft": 76,
       "total_open": 105285,
-      "total_submitted": 33,
-      "total_rejected": 1,
+      "total_submitted": 34,
+      "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.03,
-      "today_completed": 0,
+      "today_completed": 1,
       "yesterday_completed": 3,
       "two_days_ago_completed": 5,
       "new_usaha_today": 0,
@@ -513,6 +525,6 @@ window.IPAS_DATA = {
       "new_businesses": []
     }
   ],
-  "se_umum_prov_total": 1140273,
+  "se_umum_prov_total": 1140277,
   "se_ub_prov_total": 1264
 };

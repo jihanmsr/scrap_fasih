@@ -30,7 +30,7 @@ USER_DATA_DIR = "playwright_chrome_profile_email"
 OUTPUT_CSV = "all_email_history.csv"
 OUTPUT_JS = "data.js"
 OUTPUT_BOUNCED_EXCEL = "bounced_emails.xlsx"
-FORCE_RE_SCRAPE = True
+FORCE_RE_SCRAPE = False
 
 # --- PERUBAHAN 2: PORT DIBEDAKAN MENJADI 9223 ---
 def check_port_open(port=9223):
@@ -450,6 +450,7 @@ def scrape_via_api():
             with open(csv_source, mode="r", encoding="utf-8") as f:
                 reader = csv.reader(f)
                 header = next(reader, None)
+                name_to_records = {}
                 for row in reader:
                     if len(row) >= 8:
                         code = row[0]
@@ -461,9 +462,7 @@ def scrape_via_api():
                         timestamp = row[6]
                         order = int(row[7]) if row[7].isdigit() else 0
                         
-                        if code not in existing_companies:
-                            existing_companies[code] = []
-                        existing_companies[code].append({
+                        rec = {
                             "code": code,
                             "company_name": comp_name,
                             "survey_status": survey_status,
@@ -472,7 +471,20 @@ def scrape_via_api():
                             "status": status,
                             "timestamp": timestamp,
                             "order": order
-                        })
+                        }
+                        
+                        name_key = comp_name.lower().strip()
+                        if name_key not in name_to_records:
+                            name_to_records[name_key] = []
+                        name_to_records[name_key].append(rec)
+                        
+                for name_key, records in name_to_records.items():
+                    if not records: continue
+                    actual_code = records[0]["code"]
+                    for r in records:
+                        r["code"] = actual_code
+                    existing_companies[actual_code] = records
+                    
             logging.info(f"Berhasil memuat data historis untuk {len(existing_companies)} perusahaan dari {csv_source}.")
         except Exception as e:
             logging.warning(f"Gagal membaca CSV lama ({csv_source}): {e}")
@@ -663,26 +675,39 @@ def scrape_via_api():
 
             # 1. Cek apakah perusahaan sudah berstatus final di data lokal
             has_valid_history = False
+            
+            def is_final_history(hist_list):
+                if not hist_list:
+                    return False
+                # Jika status dokumen di BPS sudah submitted/approved, maka final
+                if survey_status in ["SUBMITTED RESPONDENT", "APPROVED"]:
+                    return True
+                # Jika status email sudah final gagal (bounced/permanent fail)
+                first_rec = hist_list[0]
+                g_status = str(first_rec.get("global_status", "")).lower().strip()
+                if g_status in ["bounced", "permanent_fail", "permanent_failure"]:
+                    return True
+                return False
+
             if not FORCE_RE_SCRAPE:
-                if code in existing_companies:
+                if code in existing_companies and is_final_history(existing_companies[code]):
                     histories = existing_companies[code]
-                    if histories and histories[0]["global_status"] in ["delivered", "opened", "clicked", "permanent_fail", "permanent_failure"]:
-                        has_valid_history = True
-                        for h in histories:
-                            h["survey_status"] = survey_status
-                        all_records.extend(histories)
+                    has_valid_history = True
+                    for h in histories:
+                        h["survey_status"] = survey_status
+                    all_records.extend(histories)
                 else:
                     # Deteksi apabila BPS merubah ID namun perusahaannya sama
                     for old_code, old_histories in existing_companies.items():
                         if old_histories and old_histories[0]["company_name"].lower().strip() == company_name.lower().strip():
-                            if old_histories[0]["global_status"] in ["delivered", "opened", "clicked", "permanent_fail", "permanent_failure"]:
+                            if is_final_history(old_histories):
                                 has_valid_history = True
                                 # Kita gunakan KODE BARU, tapi dengan mempertahankan riwayat lamanya
                                 for h in old_histories:
                                     h["code"] = code
                                     h["survey_status"] = survey_status
                                 all_records.extend(old_histories)
-                            break
+                                break
               
             
             if has_valid_history:
@@ -711,7 +736,7 @@ def scrape_via_api():
                 res_eval_email = None
                 for attempt in range(1, 4):
                     try:
-                        res = http_session.post(email_datatable_url, json=email_payload, timeout=15)
+                        res = http_session.post(email_datatable_url, json=email_payload, timeout=7)
                         if res.status_code == 200:
                             res_eval_email = {"status": 200, "json": res.json()}
                         else:
@@ -726,7 +751,7 @@ def scrape_via_api():
                 res_eval_events = None
                 for attempt in range(1, 4):
                     try:
-                        res = http_session.get(email_events_url, timeout=15)
+                        res = http_session.get(email_events_url, timeout=7)
                         if res.status_code == 200:
                             res_eval_events = {"status": 200, "json": res.json()}
                         else:
@@ -915,7 +940,7 @@ def scrape_via_api():
 
         # Simpan HASIL AKHIR (lengkap) ke Supabase dan data.js
         save_realtime_data(all_records)
-        logging.info(f"Scraping via API selesai putaran ini. Total records: {len(all_records)}. Menunggu 5 menit sebelum scrape berikutnya...")
+        logging.info(f"Scraping via API selesai putaran ini. Total records: {len(all_records)}. Menunggu 2 menit sebelum scrape berikutnya...")
 
 def main_loop():
     while True:
@@ -925,9 +950,9 @@ def main_loop():
         except Exception as e:
             logging.error(f"Terjadi kesalahan fatal pada siklus: {e}")
         
-        # Jeda 5 menit (300 detik)
-        logging.info("Menunggu 5 menit...")
-        time.sleep(300)
+        # Jeda 2 menit (120 detik)
+        logging.info("Menunggu 2 menit...")
+        time.sleep(120)
 
 if __name__ == "__main__":
     main_loop()

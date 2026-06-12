@@ -711,6 +711,10 @@ function filterAssignData(type) {
         window.petugasCurrentPage = 1;
         renderPetugasTable();
     }
+    if (typeof renderSyncTable === 'function') {
+        window.syncCurrentPage = 1;
+        renderSyncTable();
+    }
 }
 """
         with open("assign_data.js", "w", encoding="utf-8") as f:
@@ -720,13 +724,30 @@ function filterAssignData(type) {
         # Upload to Supabase dashboard_store
         if supabase:
             try:
-                print("Mengunggah data Assign/SLS/Petugas ke Supabase...")
+                print("Mengunggah data Assign/SLS/Petugas ke Supabase (dengan kompresi SLS)...")
+                
+                def compress_sls(sls_list):
+                    return [
+                        [
+                            item.get("sls_code"),
+                            item.get("sls_name"),
+                            item.get("desa_name"),
+                            item.get("kec_name"),
+                            item.get("kab_name"),
+                            item.get("total"),
+                            item.get("assigned"),
+                            item.get("unassigned"),
+                            item.get("officers", [])
+                        ]
+                        for item in sls_list
+                    ]
+
                 assign_db_obj = {
                     "updated_at": datetime.now().isoformat(),
                     "assign_data_umum": processed_data_umum,
                     "assign_data_ub": processed_data_ub,
-                    "assign_sls_data_umum": processed_sls_umum,
-                    "assign_sls_data_ub": processed_sls_ub,
+                    "assign_sls_data_umum": compress_sls(processed_sls_umum),
+                    "assign_sls_data_ub": compress_sls(processed_sls_ub),
                     "petugas_data_umum": processed_petugas_umum,
                     "petugas_data_ub": processed_petugas_ub
                 }
