@@ -822,48 +822,51 @@
                         </div>
                     </div>
 
-                    <div class="filter-panel"
-                        style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: row; gap: 0.5rem; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
-                        <select id="sls-kab-filter"
-                            style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                            <option value="all">Semua Kabupaten</option>
-                        </select>
-                        <select id="sls-kec-filter"
-                            style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                            <option value="all">Semua Kecamatan</option>
-                        </select>
-                        <select id="sls-desa-filter"
-                            style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                            <option value="all">Semua Desa</option>
-                        </select>
-                        <select id="sls-assignment-filter"
-                            style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
-                            <option value="all">Semua Status Penugasan</option>
-                            <option value="fully_assigned">Sudah Ditugaskan Semua</option>
-                            <option value="partially_assigned">Sebagian Ditugaskan</option>
-                            <option value="unassigned">Belum Ditugaskan</option>
-                        </select>
-                        <select id="sls-limit-select" onchange="window.changeSlsLimit(this.value)"
-                            style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
-                            <option value="10">10 baris</option>
-                            <option value="25" selected>25 baris</option>
-                            <option value="50">50 baris</option>
-                            <option value="100">100 baris</option>
-                        </select>
-                        <button class="btn-action" id="btn-download-sls" onclick="window.downloadSlsCSV()"
-                            style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
-                            Unduh CSV
-                        </button>
-                        <div style="width: 280px; position: relative;">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2.5"
-                                style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
-                                viewbox="0 0 24 24">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
-                            </svg>
-                            <input type="text" id="sls-search-input" placeholder="Cari SLS, Desa, Kec, Kab, Petugas..."
-                                style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
+                    <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+                        <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between;">
+                            <div style="display: flex; gap: 0.5rem; flex: 1 1 auto; flex-wrap: wrap;">
+                                <select id="sls-kab-filter"
+                                    style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                                    <option value="all">Semua Kabupaten</option>
+                                </select>
+                                <select id="sls-kec-filter"
+                                    style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                                    <option value="all">Semua Kecamatan</option>
+                                </select>
+                                <select id="sls-desa-filter"
+                                    style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                                    <option value="all">Semua Desa</option>
+                                </select>
+                                <select id="sls-assignment-filter"
+                                    style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
+                                    <option value="all">Semua Status Penugasan</option>
+                                    <option value="fully_assigned">Sudah Ditugaskan Semua</option>
+                                    <option value="partially_assigned">Sebagian Ditugaskan</option>
+                                    <option value="unassigned">Belum Ditugaskan</option>
+                                </select>
+                                <select id="sls-limit-select" onchange="window.changeSlsLimit(this.value)"
+                                    style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
+                                    <option value="10">10 baris</option>
+                                    <option value="25" selected>25 baris</option>
+                                    <option value="50">50 baris</option>
+                                    <option value="100">100 baris</option>
+                                </select>
+                                <button class="btn-action" id="btn-download-sls" onclick="window.downloadSlsCSV()"
+                                    style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
+                                    Unduh CSV
+                                </button>
+                            </div>
+                            <div class="search-wrapper" style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
+                                    viewbox="0 0 24 24">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                                </svg>
+                                <input type="text" id="sls-search-input" placeholder="Cari SLS, Desa, Kec, Kab, Petugas..."
+                                    style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
+                            </div>
                         </div>
                     </div>
 
@@ -907,56 +910,59 @@
                             <span id="petugas-title">Daftar Petugas dan Wilayah Tugas</span>
                         </h3>
 
-                        <div class="filter-panel"
-                            style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: row; gap: 0.5rem; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
-                            <select id="petugas-role-filter" onchange="window.renderPetugasTable()"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 150px;">
-                                <option value="all">Semua Peran</option>
-                                <option value="Pencacah">Pencacah</option>
-                                <option value="Pengawas">Pengawas</option>
-                                <option value="Admin Kabupaten">Admin Kabupaten</option>
-                                <option value="Admin Provinsi">Admin Provinsi</option>
-                                <option value="Viewer Kabupaten">Viewer Kabupaten</option>
-                                <option value="Viewer Provinsi">Viewer Provinsi</option>
-                            </select>
-                            <select id="petugas-kab-filter" onchange="window.renderPetugasTable()"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 165px;">
-                                <option value="all">Semua Kabupaten</option>
-                                <option value="7201">Banggai</option>
-                                <option value="7207">Banggai Kepulauan</option>
-                                <option value="7211">Banggai Laut</option>
-                                <option value="7205">Buol</option>
-                                <option value="7203">Donggala</option>
-                                <option value="7206">Morowali</option>
-                                <option value="7212">Morowali Utara</option>
-                                <option value="7271">Palu</option>
-                                <option value="7208">Parigi Moutong</option>
-                                <option value="7202">Poso</option>
-                                <option value="7210">Sigi</option>
-                                <option value="7209">Tojo Una-Una</option>
-                                <option value="7204">Toli-Toli</option>
-                            </select>
-                            <select id="petugas-limit-select" onchange="window.changePetugasLimit(this.value)"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
-                                <option value="10">10 baris</option>
-                                <option value="25">25 baris</option>
-                                <option value="50" selected>50 baris</option>
-                                <option value="100">100 baris</option>
-                            </select>
-                            <button class="btn-action" id="btn-download-petugas" onclick="window.downloadPetugasCSV()"
-                                style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
-                                Unduh CSV
-                            </button>
-                            <div style="width: 280px; position: relative;">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5"
-                                    style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
-                                    viewbox="0 0 24 24">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
-                                </svg>
-                                <input type="text" id="petugas-search-input" placeholder="Cari nama, email, peran..."
-                                    style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
+                        <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+                            <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; gap: 0.5rem; flex: 1 1 auto; flex-wrap: wrap;">
+                                    <select id="petugas-role-filter" onchange="window.renderPetugasTable()"
+                                        style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 150px;">
+                                        <option value="all">Semua Peran</option>
+                                        <option value="Pencacah">Pencacah</option>
+                                        <option value="Pengawas">Pengawas</option>
+                                        <option value="Admin Kabupaten">Admin Kabupaten</option>
+                                        <option value="Admin Provinsi">Admin Provinsi</option>
+                                        <option value="Viewer Kabupaten">Viewer Kabupaten</option>
+                                        <option value="Viewer Provinsi">Viewer Provinsi</option>
+                                    </select>
+                                    <select id="petugas-kab-filter" onchange="window.renderPetugasTable()"
+                                        style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 165px;">
+                                        <option value="all">Semua Kabupaten</option>
+                                        <option value="7201">Banggai</option>
+                                        <option value="7207">Banggai Kepulauan</option>
+                                        <option value="7211">Banggai Laut</option>
+                                        <option value="7205">Buol</option>
+                                        <option value="7203">Donggala</option>
+                                        <option value="7206">Morowali</option>
+                                        <option value="7212">Morowali Utara</option>
+                                        <option value="7271">Palu</option>
+                                        <option value="7208">Parigi Moutong</option>
+                                        <option value="7202">Poso</option>
+                                        <option value="7210">Sigi</option>
+                                        <option value="7209">Tojo Una-Una</option>
+                                        <option value="7204">Toli-Toli</option>
+                                    </select>
+                                    <select id="petugas-limit-select" onchange="window.changePetugasLimit(this.value)"
+                                        style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
+                                        <option value="10">10 baris</option>
+                                        <option value="25">25 baris</option>
+                                        <option value="50" selected>50 baris</option>
+                                        <option value="100">100 baris</option>
+                                    </select>
+                                    <button class="btn-action" id="btn-download-petugas" onclick="window.downloadPetugasCSV()"
+                                        style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
+                                        Unduh CSV
+                                    </button>
+                                </div>
+                                <div class="search-wrapper" style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2.5"
+                                        style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
+                                        viewbox="0 0 24 24">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                                    </svg>
+                                    <input type="text" id="petugas-search-input" placeholder="Cari nama, email, peran..."
+                                        style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
+                                </div>
                             </div>
                         </div>
 
@@ -1014,48 +1020,51 @@
                             style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 500;">
                             Data sinkronisasi SLS berdasarkan tarikan dari Superset BPS (se26_rekap_assign_sync).
                         </p>
-                        <div class="filter-panel"
-                            style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; flex-direction: row; gap: 0.5rem; flex-wrap: wrap; align-items: center; justify-content: flex-end;">
-                            <select id="sync-kab-filter"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                                <option value="all">Semua Kabupaten</option>
-                            </select>
-                            <select id="sync-kec-filter"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                                <option value="all">Semua Kecamatan</option>
-                            </select>
-                            <select id="sync-desa-filter"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
-                                <option value="all">Semua Desa</option>
-                            </select>
-                            <select id="sync-status-filter"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
-                                <option value="all">Semua Status Sync</option>
-                                <option value="synced">Synced (Ada Sync)</option>
-                                <option value="not_synced">Not Synced (0 Sync)</option>
-                            </select>
-                            <select id="sync-limit-select" onchange="window.changeSyncLimit(this.value)"
-                                style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
-                                <option value="10">10 baris</option>
-                                <option value="25" selected>25 baris</option>
-                                <option value="50">50 baris</option>
-                                <option value="100">100 baris</option>
-                            </select>
-                            <button class="btn-action" id="btn-download-sync" onclick="window.downloadSyncCSV()"
-                                style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
-                                Unduh CSV
-                            </button>
-                            <div style="width: 280px; position: relative;">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2.5"
-                                    style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
-                                    viewbox="0 0 24 24">
-                                    <circle cx="11" cy="11" r="8"></circle>
-                                    <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
-                                </svg>
-                                <input type="text" id="sync-search-input"
-                                    placeholder="Cari SLS, Desa, Kec, Kab, Kode..."
-                                    style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
+                        <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+                            <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between;">
+                                <div style="display: flex; gap: 0.5rem; flex: 1 1 auto; flex-wrap: wrap;">
+                                    <select id="sync-kab-filter"
+                                        style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                                        <option value="all">Semua Kabupaten</option>
+                                    </select>
+                                    <select id="sync-kec-filter"
+                                        style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                                        <option value="all">Semua Kecamatan</option>
+                                    </select>
+                                    <select id="sync-desa-filter"
+                                        style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px; min-width: 160px;">
+                                        <option value="all">Semua Desa</option>
+                                    </select>
+                                    <select id="sync-status-filter"
+                                        style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
+                                        <option value="all">Semua Status Sync</option>
+                                        <option value="synced">Synced (Ada Sync)</option>
+                                        <option value="not_synced">Not Synced (0 Sync)</option>
+                                    </select>
+                                    <select id="sync-limit-select" onchange="window.changeSyncLimit(this.value)"
+                                        style="padding: 0.75rem 1rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; cursor: pointer; height: 46px;">
+                                        <option value="10">10 baris</option>
+                                        <option value="25" selected>25 baris</option>
+                                        <option value="50">50 baris</option>
+                                        <option value="100">100 baris</option>
+                                    </select>
+                                    <button class="btn-action" id="btn-download-sync" onclick="window.downloadSyncCSV()"
+                                        style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
+                                        Unduh CSV
+                                    </button>
+                                </div>
+                                <div class="search-wrapper" style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2.5"
+                                        style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
+                                        viewbox="0 0 24 24">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                                    </svg>
+                                    <input type="text" id="sync-search-input"
+                                        placeholder="Cari SLS, Desa, Kec, Kab, Kode..."
+                                        style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
+                                </div>
                             </div>
                         </div>
                         <div class="ipas-table-wrapper" style="max-height: 500px; overflow-y: auto;">

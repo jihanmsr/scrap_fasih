@@ -7938,6 +7938,296 @@ window.EMAIL_DATA = [
     "status": "-",
     "timestamp": "-",
     "order": 0
+  },
+  {
+    "code": "b69637f2-5625-4fe5-afd6-02be83202053",
+    "company_name": "Suzuki Finance Indonesia, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "9733421a-054e-44a8-93d5-2c6ff58a7678",
+    "company_name": "Poso Media Vision. PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "94b6fde4-9b65-4eeb-b184-9d058b42c28c",
+    "company_name": "PT.Niaga Nusa Abadi Pos Poso",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "e550596a-5a86-4d16-998d-2e82a5db0a71",
+    "company_name": "ANEKA TRADING SEJATI, PT",
+    "survey_status": "OPEN",
+    "email": "ptatsposo@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 09:12:08",
+    "order": 1
+  },
+  {
+    "code": "e550596a-5a86-4d16-998d-2e82a5db0a71",
+    "company_name": "ANEKA TRADING SEJATI, PT",
+    "survey_status": "OPEN",
+    "email": "ptatsposo@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 09:12:08",
+    "order": 2
+  },
+  {
+    "code": "ecac719a-3eb0-4736-a2c2-8e349514c622",
+    "company_name": "PT. Mitra Distribusi Mandiri Poso",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "1ed117b2-c009-4c76-b43b-cd46ad0e8dee",
+    "company_name": "bank Perekonomian Rakyat (BPR) Palu Anugerah Cabang Poso, PT",
+    "survey_status": "OPEN",
+    "email": "bprpaluanugerahcabangposo@yahoo.co.id",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "09 Jun 2026, 11:04:11",
+    "order": 1
+  },
+  {
+    "code": "1ed117b2-c009-4c76-b43b-cd46ad0e8dee",
+    "company_name": "bank Perekonomian Rakyat (BPR) Palu Anugerah Cabang Poso, PT",
+    "survey_status": "OPEN",
+    "email": "bprpaluanugerahcabangposo@yahoo.co.id",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "09 Jun 2026, 11:04:01",
+    "order": 2
+  },
+  {
+    "code": "b05349ab-fae7-4c66-acdf-ea804ab98772",
+    "company_name": "Bank BTN",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "3d384461-62bb-4537-abb6-794eee1578b3",
+    "company_name": "PLN RAYON POSO PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "364bcaaf-555f-44fb-9010-780524552325",
+    "company_name": "SPBU SAYO",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "2ea412d1-93b7-41d3-8b88-95977a128462",
+    "company_name": "SEMESTA CIPTA KARYA UTAMA, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "1b41f07a-4805-4362-aa5b-cbc0ff02084d",
+    "company_name": "BANK BRI KCP UNIT MAPANE",
+    "survey_status": "OPEN",
+    "email": "n5203@corp.bri.co.id",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "09 Jun 2026, 11:03:20",
+    "order": 1
+  },
+  {
+    "code": "1b41f07a-4805-4362-aa5b-cbc0ff02084d",
+    "company_name": "BANK BRI KCP UNIT MAPANE",
+    "survey_status": "OPEN",
+    "email": "n5203@corp.bri.co.id",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "09 Jun 2026, 11:03:14",
+    "order": 2
+  },
+  {
+    "code": "1b41f07a-4805-4362-aa5b-cbc0ff02084d",
+    "company_name": "BANK BRI KCP UNIT MAPANE",
+    "survey_status": "OPEN",
+    "email": "n5203@corp.bri.co.id",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "01 Jun 2026, 23:38:29",
+    "order": 3
+  },
+  {
+    "code": "1b41f07a-4805-4362-aa5b-cbc0ff02084d",
+    "company_name": "BANK BRI KCP UNIT MAPANE",
+    "survey_status": "OPEN",
+    "email": "n5203@corp.bri.co.id",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "01 Jun 2026, 23:38:29",
+    "order": 4
+  },
+  {
+    "code": "1de821f6-276b-44a2-856f-511e85079ba2",
+    "company_name": "RAMA PUTRA MANDIRI <RPMR>, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "6bcb3b67-e0e8-4609-a728-529e2ad2ea1d",
+    "company_name": "ADIRA DINAMIKA MULTI FINANCE TBK",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "0e782a7f-e7cc-4a06-951b-4f43a908fb81",
+    "company_name": "MULTI KARYA, PT",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "de9c4922-5a79-4cb3-b41f-eeac625658a8",
+    "company_name": "RIU MAMBA KARYA SENTOSA",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "e8c52de7-62e0-4358-97a8-2d98de363c8a",
+    "company_name": "PT CIPTA LUCKMAN BASRY",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
+  },
+  {
+    "code": "df80536f-5125-46c8-aa0a-220b8d26441b",
+    "company_name": "BANK BPD",
+    "survey_status": "OPEN",
+    "email": "bsposo@yahoo.com",
+    "global_status": "Bounced",
+    "status": "Bounced",
+    "timestamp": "02 Jun 2026, 08:52:48",
+    "order": 1
+  },
+  {
+    "code": "df80536f-5125-46c8-aa0a-220b8d26441b",
+    "company_name": "BANK BPD",
+    "survey_status": "OPEN",
+    "email": "bsposo@yahoo.com",
+    "global_status": "Bounced",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 08:52:14",
+    "order": 2
+  },
+  {
+    "code": "fa325480-97ce-4ee3-9f37-e56ba6d5a578",
+    "company_name": "BANK MANDIRI (PERSERO)",
+    "survey_status": "OPEN",
+    "email": "bm-poso.rcvmsg_bg@bankmandiri.co.id",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 10:26:44",
+    "order": 1
+  },
+  {
+    "code": "fa325480-97ce-4ee3-9f37-e56ba6d5a578",
+    "company_name": "BANK MANDIRI (PERSERO)",
+    "survey_status": "OPEN",
+    "email": "bm-poso.rcvmsg_bg@bankmandiri.co.id",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 10:26:44",
+    "order": 2
+  },
+  {
+    "code": "865618f8-14f2-417e-8802-0c2589ccd447",
+    "company_name": "BANK BNI KCP POSO",
+    "survey_status": "OPEN",
+    "email": "ralphy.suawah@bni.co.id",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 03:46:54",
+    "order": 1
+  },
+  {
+    "code": "865618f8-14f2-417e-8802-0c2589ccd447",
+    "company_name": "BANK BNI KCP POSO",
+    "survey_status": "OPEN",
+    "email": "ralphy.suawah@bni.co.id",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 03:46:50",
+    "order": 2
+  },
+  {
+    "code": "70a583f6-cd3a-4261-9ccc-addbb37f1d19",
+    "company_name": "BRI UNIT MAROSO SAYO",
+    "survey_status": "OPEN",
+    "email": "n5204@corp.bri.co.id",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 02:47:44",
+    "order": 1
+  },
+  {
+    "code": "70a583f6-cd3a-4261-9ccc-addbb37f1d19",
+    "company_name": "BRI UNIT MAROSO SAYO",
+    "survey_status": "OPEN",
+    "email": "n5204@corp.bri.co.id",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 02:47:44",
+    "order": 2
   }
 ];
-window.LAST_UPDATED = '12 Jun 2026, 14:01:24';
+window.LAST_UPDATED = '12 Jun 2026, 14:03:36';
