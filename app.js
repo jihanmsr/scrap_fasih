@@ -1790,7 +1790,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateGlobalSyncProgress() {
         const syncContainerInner = document.getElementById('global-sync-progress-container-inner');
         const syncTextInner = document.getElementById('global-sync-text-inner');
-        const syncBarInner = document.getElementById('global-sync-bar-inner');
+        const syncPercentCenter = document.getElementById('sync-gauge-percent-center');
         
         if (!window.SUPERSET_SYNC_SLS_DATA || !window.ASSIGN_DATA) return;
         
@@ -1812,10 +1812,44 @@ document.addEventListener('DOMContentLoaded', () => {
         const pct = totalSls > 0 ? ((totalSynced / totalSls) * 100).toFixed(2) : '0.00';
         const textContent = `${new Intl.NumberFormat('id-ID').format(totalSynced)} dari ${new Intl.NumberFormat('id-ID').format(totalSls)} target SLS tersinkronisasi`;
 
-        if (syncContainerInner && syncTextInner && syncBarInner) {
-            syncTextInner.textContent = textContent + ` (${pct}%)`;
-            syncBarInner.style.width = pct + '%';
-            syncContainerInner.style.display = 'block';
+        if (syncContainerInner && syncTextInner && syncPercentCenter) {
+            syncTextInner.textContent = textContent;
+            syncPercentCenter.innerText = pct + '%';
+            syncContainerInner.style.display = 'flex';
+
+            const ctxSyncGauge = document.getElementById('syncGaugeChart');
+            if (ctxSyncGauge) {
+                if (window.syncGaugeInstance) {
+                    window.syncGaugeInstance.destroy();
+                }
+
+                const accentColor = getThemeColor('--color-warning', '#eab308'); // Yellow
+                const trackColor = getThemeColor('--card-border', 'rgba(255, 255, 255, 0.08)');
+
+                window.syncGaugeInstance = new Chart(ctxSyncGauge, {
+                    type: 'doughnut',
+                    data: {
+                        datasets: [{
+                            data: [parseFloat(pct), Math.max(0, 100 - parseFloat(pct))],
+                            backgroundColor: [accentColor, trackColor],
+                            borderWidth: 0,
+                            borderRadius: parseFloat(pct) > 0 ? 8 : 0,
+                            cutout: '80%',
+                            circumference: 180,
+                            rotation: 270
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: { enabled: false }
+                        },
+                        events: []
+                    }
+                });
+            }
         }
     }
 

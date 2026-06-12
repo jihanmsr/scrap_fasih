@@ -602,15 +602,20 @@
                                     0 dari 0 target usaha ditugaskan
                                 </div>
                             </div>
-                            <div id="global-sync-progress-container-inner" style="display: none; width: 100%; text-align: left; background: rgba(234, 179, 8, 0.05); padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(234, 179, 8, 0.2);">
-                                <div style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
-                                    Progres Sync Sulawesi Tengah
+                            <div id="global-sync-progress-container-inner" style="display: none; width: 100%; align-items: center; justify-content: space-between; background: rgba(234, 179, 8, 0.05); padding: 1rem 1.5rem; border-radius: 0.75rem; border: 1px solid rgba(234, 179, 8, 0.2); margin-top: 1rem;">
+                                <div style="flex: 1; text-align: left;">
+                                    <div style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
+                                        Progres Sync Sulawesi Tengah
+                                    </div>
+                                    <div style="font-size: 0.8rem; color: var(--text-secondary);" id="global-sync-text-inner">
+                                        Menghitung data sinkronisasi...
+                                    </div>
                                 </div>
-                                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;" id="global-sync-text-inner">
-                                    Menghitung data sinkronisasi...
-                                </div>
-                                <div style="height: 8px; background: rgba(0,0,0,0.05); border-radius: 4px; overflow: hidden; width: 100%;">
-                                    <div id="global-sync-bar-inner" style="height: 100%; background: #eab308; width: 0%; transition: width 0.5s;"></div>
+                                <div style="width: 120px; height: 60px; position: relative; margin-left: 1rem;">
+                                    <canvas id="syncGaugeChart" style="max-height: 60px; max-width: 120px;"></canvas>
+                                    <div id="sync-gauge-percent-center" style="position: absolute; bottom: 0; width: 100%; text-align: center; font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 800; color: var(--text-primary);">
+                                        0%
+                                    </div>
                                 </div>
                             </div>
                         </div>

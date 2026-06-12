@@ -2,10 +2,10 @@ window.ASSIGN_DATA_UMUM = [
     {
         "kode_kab": "7201",
         "nama_kab": "[01] BANGGAI KEPULAUAN",
-        "total": 43838,
-        "assigned": 42597,
-        "have_not_assigned": 1241,
-        "timestamp": "2026-06-12T15:38:57.897825"
+        "total": 43839,
+        "assigned": 42596,
+        "have_not_assigned": 1243,
+        "timestamp": "2026-06-12T16:19:46.667155"
     },
     {
         "kode_kab": "7202",
@@ -13,7 +13,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 138111,
         "assigned": 137979,
         "have_not_assigned": 132,
-        "timestamp": "2026-06-12T15:38:57.897787"
+        "timestamp": "2026-06-12T16:19:46.667105"
     },
     {
         "kode_kab": "7203",
@@ -21,7 +21,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 47729,
         "assigned": 47384,
         "have_not_assigned": 345,
-        "timestamp": "2026-06-12T15:38:57.897820"
+        "timestamp": "2026-06-12T16:19:46.667149"
     },
     {
         "kode_kab": "7204",
@@ -29,23 +29,23 @@ window.ASSIGN_DATA_UMUM = [
         "total": 105395,
         "assigned": 21991,
         "have_not_assigned": 83404,
-        "timestamp": "2026-06-12T15:38:57.897797"
+        "timestamp": "2026-06-12T16:19:46.667118"
     },
     {
         "kode_kab": "7205",
         "nama_kab": "[05] DONGGALA",
-        "total": 105502,
-        "assigned": 102724,
-        "have_not_assigned": 2778,
-        "timestamp": "2026-06-12T15:38:57.897792"
+        "total": 105501,
+        "assigned": 102157,
+        "have_not_assigned": 3344,
+        "timestamp": "2026-06-12T16:19:46.667112"
     },
     {
         "kode_kab": "7206",
         "nama_kab": "[06] TOLI-TOLI",
         "total": 75959,
-        "assigned": 75667,
-        "have_not_assigned": 292,
-        "timestamp": "2026-06-12T15:38:57.897806"
+        "assigned": 75748,
+        "have_not_assigned": 211,
+        "timestamp": "2026-06-12T16:19:46.667131"
     },
     {
         "kode_kab": "7207",
@@ -53,7 +53,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 57327,
         "assigned": 56722,
         "have_not_assigned": 605,
-        "timestamp": "2026-06-12T15:38:57.897815"
+        "timestamp": "2026-06-12T16:19:46.667142"
     },
     {
         "kode_kab": "7208",
@@ -61,7 +61,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 169384,
         "assigned": 169270,
         "have_not_assigned": 114,
-        "timestamp": "2026-06-12T15:38:57.897737"
+        "timestamp": "2026-06-12T16:19:46.667043"
     },
     {
         "kode_kab": "7209",
@@ -69,7 +69,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 57912,
         "assigned": 57908,
         "have_not_assigned": 4,
-        "timestamp": "2026-06-12T15:38:57.897811"
+        "timestamp": "2026-06-12T16:19:46.667136"
     },
     {
         "kode_kab": "7210",
@@ -77,7 +77,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 105041,
         "assigned": 104818,
         "have_not_assigned": 223,
-        "timestamp": "2026-06-12T15:38:57.897802"
+        "timestamp": "2026-06-12T16:19:46.667125"
     },
     {
         "kode_kab": "7211",
@@ -85,7 +85,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 27552,
         "assigned": 27147,
         "have_not_assigned": 405,
-        "timestamp": "2026-06-12T15:38:57.897834"
+        "timestamp": "2026-06-12T16:19:46.667167"
     },
     {
         "kode_kab": "7212",
@@ -93,7 +93,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 42448,
         "assigned": 39470,
         "have_not_assigned": 2978,
-        "timestamp": "2026-06-12T15:38:57.897829"
+        "timestamp": "2026-06-12T16:19:46.667161"
     },
     {
         "kode_kab": "7271",
@@ -101,7 +101,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 164079,
         "assigned": 164020,
         "have_not_assigned": 59,
-        "timestamp": "2026-06-12T15:38:57.897780"
+        "timestamp": "2026-06-12T16:19:46.667095"
     }
 ];
 window.ASSIGN_DATA_UB   = [
@@ -111,7 +111,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 6,
         "assigned": 0,
         "have_not_assigned": 6,
-        "timestamp": "2026-06-12T15:39:00.281793"
+        "timestamp": "2026-06-12T16:19:56.943321"
     },
     {
         "kode_kab": "7202",
@@ -119,7 +119,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 172,
         "assigned": 3,
         "have_not_assigned": 169,
-        "timestamp": "2026-06-12T15:39:00.281701"
+        "timestamp": "2026-06-12T16:19:56.943275"
     },
     {
         "kode_kab": "7203",
@@ -127,7 +127,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 161,
         "assigned": 1,
         "have_not_assigned": 160,
-        "timestamp": "2026-06-12T15:39:00.281711"
+        "timestamp": "2026-06-12T16:19:56.943281"
     },
     {
         "kode_kab": "7204",
@@ -135,7 +135,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 92,
         "assigned": 0,
         "have_not_assigned": 92,
-        "timestamp": "2026-06-12T15:39:00.281721"
+        "timestamp": "2026-06-12T16:19:56.943286"
     },
     {
         "kode_kab": "7205",
@@ -143,7 +143,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 57,
         "assigned": 1,
         "have_not_assigned": 56,
-        "timestamp": "2026-06-12T15:39:00.281748"
+        "timestamp": "2026-06-12T16:19:56.943299"
     },
     {
         "kode_kab": "7206",
@@ -151,7 +151,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 58,
         "assigned": 0,
         "have_not_assigned": 58,
-        "timestamp": "2026-06-12T15:39:00.281740"
+        "timestamp": "2026-06-12T16:19:56.943295"
     },
     {
         "kode_kab": "7207",
@@ -159,7 +159,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 17,
         "assigned": 0,
         "have_not_assigned": 17,
-        "timestamp": "2026-06-12T15:39:00.281767"
+        "timestamp": "2026-06-12T16:19:56.943308"
     },
     {
         "kode_kab": "7208",
@@ -167,7 +167,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 65,
         "assigned": 65,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-12T15:39:00.281730"
+        "timestamp": "2026-06-12T16:19:56.943290"
     },
     {
         "kode_kab": "7209",
@@ -175,7 +175,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 15,
         "assigned": 0,
         "have_not_assigned": 15,
-        "timestamp": "2026-06-12T15:39:00.281776"
+        "timestamp": "2026-06-12T16:19:56.943313"
     },
     {
         "kode_kab": "7210",
@@ -183,7 +183,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 22,
         "assigned": 22,
         "have_not_assigned": 0,
-        "timestamp": "2026-06-12T15:39:00.281757"
+        "timestamp": "2026-06-12T16:19:56.943304"
     },
     {
         "kode_kab": "7211",
@@ -191,7 +191,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 7,
         "assigned": 0,
         "have_not_assigned": 7,
-        "timestamp": "2026-06-12T15:39:00.281784"
+        "timestamp": "2026-06-12T16:19:56.943317"
     },
     {
         "kode_kab": "7212",
@@ -199,7 +199,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 173,
         "assigned": 0,
         "have_not_assigned": 173,
-        "timestamp": "2026-06-12T15:39:00.281689"
+        "timestamp": "2026-06-12T16:19:56.943268"
     },
     {
         "kode_kab": "7271",
@@ -207,7 +207,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 419,
         "assigned": 0,
         "have_not_assigned": 419,
-        "timestamp": "2026-06-12T15:39:00.281613"
+        "timestamp": "2026-06-12T16:19:56.943234"
     }
 ];
 window.ASSIGN_SLS_DATA_UMUM = [
@@ -217,9 +217,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "-",
         "kec_name": "-",
         "kab_name": "[01] BANGGAI KEPULAUAN",
-        "total": 261,
+        "total": 262,
         "assigned": 0,
-        "unassigned": 261,
+        "unassigned": 262,
         "officers": []
     },
     {
@@ -3177,8 +3177,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "TINANGKUNG",
         "kab_name": "[01] BANGGAI KEPULAUAN",
         "total": 73,
-        "assigned": 73,
-        "unassigned": 0,
+        "assigned": 72,
+        "unassigned": 1,
         "officers": []
     },
     {
@@ -66911,8 +66911,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANAWA SELATAN",
         "kab_name": "[05] DONGGALA",
         "total": 23,
-        "assigned": 23,
-        "unassigned": 0,
+        "assigned": 15,
+        "unassigned": 8,
         "officers": []
     },
     {
@@ -66944,8 +66944,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANAWA SELATAN",
         "kab_name": "[05] DONGGALA",
         "total": 81,
-        "assigned": 81,
-        "unassigned": 0,
+        "assigned": 31,
+        "unassigned": 50,
         "officers": []
     },
     {
@@ -66955,8 +66955,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANAWA SELATAN",
         "kab_name": "[05] DONGGALA",
         "total": 93,
-        "assigned": 93,
-        "unassigned": 0,
+        "assigned": 50,
+        "unassigned": 43,
         "officers": []
     },
     {
@@ -66966,8 +66966,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANAWA SELATAN",
         "kab_name": "[05] DONGGALA",
         "total": 25,
-        "assigned": 25,
-        "unassigned": 0,
+        "assigned": 12,
+        "unassigned": 13,
         "officers": []
     },
     {
@@ -67065,8 +67065,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANAWA SELATAN",
         "kab_name": "[05] DONGGALA",
         "total": 71,
-        "assigned": 71,
-        "unassigned": 0,
+        "assigned": 36,
+        "unassigned": 35,
         "officers": []
     },
     {
@@ -67076,8 +67076,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANAWA SELATAN",
         "kab_name": "[05] DONGGALA",
         "total": 88,
-        "assigned": 88,
-        "unassigned": 0,
+        "assigned": 40,
+        "unassigned": 48,
         "officers": []
     },
     {
@@ -67087,8 +67087,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANAWA SELATAN",
         "kab_name": "[05] DONGGALA",
         "total": 164,
-        "assigned": 164,
-        "unassigned": 0,
+        "assigned": 80,
+        "unassigned": 84,
         "officers": []
     },
     {
@@ -67560,8 +67560,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANAWA SELATAN",
         "kab_name": "[05] DONGGALA",
         "total": 249,
-        "assigned": 249,
-        "unassigned": 0,
+        "assigned": 114,
+        "unassigned": 135,
         "officers": []
     },
     {
@@ -67570,9 +67570,9 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "desa_name": "LUMBUTAROMBO",
         "kec_name": "BANAWA SELATAN",
         "kab_name": "[05] DONGGALA",
-        "total": 162,
-        "assigned": 162,
-        "unassigned": 0,
+        "total": 161,
+        "assigned": 88,
+        "unassigned": 73,
         "officers": []
     },
     {
@@ -67582,8 +67582,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "BANAWA SELATAN",
         "kab_name": "[05] DONGGALA",
         "total": 151,
-        "assigned": 151,
-        "unassigned": 0,
+        "assigned": 69,
+        "unassigned": 82,
         "officers": []
     },
     {
@@ -83950,8 +83950,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LAMPASIO",
         "kab_name": "[06] TOLI-TOLI",
         "total": 32,
-        "assigned": 20,
-        "unassigned": 12,
+        "assigned": 32,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -84060,8 +84060,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LAMPASIO",
         "kab_name": "[06] TOLI-TOLI",
         "total": 24,
-        "assigned": 17,
-        "unassigned": 7,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -84126,8 +84126,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LAMPASIO",
         "kab_name": "[06] TOLI-TOLI",
         "total": 40,
-        "assigned": 14,
-        "unassigned": 26,
+        "assigned": 40,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -84181,8 +84181,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "kec_name": "LAMPASIO",
         "kab_name": "[06] TOLI-TOLI",
         "total": 24,
-        "assigned": 7,
-        "unassigned": 17,
+        "assigned": 24,
+        "unassigned": 0,
         "officers": []
     },
     {
@@ -181222,12 +181222,6 @@ window.PETUGAS_DATA_UMUM = [
         "totalRegions": 3,
         "regions": [
             {
-                "regionCode": "7205081015000200",
-                "regionName": "DUSUN II SARONTINJO",
-                "level": 6,
-                "allocationId": "e107724f-b044-433f-a257-854a3f7e9310"
-            },
-            {
                 "regionCode": "7205120009000302",
                 "regionName": "-",
                 "level": 6,
@@ -181236,6 +181230,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7205081015000100",
                 "regionName": "DUSUN I KATIVELU",
+                "level": 6,
+                "allocationId": "e107724f-b044-433f-a257-854a3f7e9310"
+            },
+            {
+                "regionCode": "7205081003000101",
+                "regionName": "DUSUN I",
                 "level": 6,
                 "allocationId": "e107724f-b044-433f-a257-854a3f7e9310"
             }
@@ -181247,8 +181247,20 @@ window.PETUGAS_DATA_UMUM = [
         "email": "143perjalananbps101@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 2,
+        "totalRegions": 4,
         "regions": [
+            {
+                "regionCode": "7205081005000200",
+                "regionName": "DUSUN II LALOMBI",
+                "level": 6,
+                "allocationId": "7e696c24-63d6-42e9-a999-b17f125bcc2e"
+            },
+            {
+                "regionCode": "7205081005000500",
+                "regionName": "DUSUN V",
+                "level": 6,
+                "allocationId": "7e696c24-63d6-42e9-a999-b17f125bcc2e"
+            },
             {
                 "regionCode": "7205120009000302",
                 "regionName": "-",
@@ -181264,16 +181276,44 @@ window.PETUGAS_DATA_UMUM = [
         ]
     },
     {
+        "userId": "6b0bec13-2f84-498f-b0eb-a46fd57bb01d",
+        "username": "151perjalananbps101@gmail.com",
+        "email": "151perjalananbps101@gmail.com",
+        "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+        "roleName": "Pencacah",
+        "totalRegions": 3,
+        "regions": [
+            {
+                "regionCode": "7205081003000400",
+                "regionName": "DUSUN IV",
+                "level": 6,
+                "allocationId": "e41522e9-5754-44e9-8c3f-78f5236bb999"
+            },
+            {
+                "regionCode": "7205081004000100",
+                "regionName": "DUSUN I INPRES",
+                "level": 6,
+                "allocationId": "e41522e9-5754-44e9-8c3f-78f5236bb999"
+            },
+            {
+                "regionCode": "7205081004000400",
+                "regionName": "DUSUN IV TAIPAMBALI",
+                "level": 6,
+                "allocationId": "e41522e9-5754-44e9-8c3f-78f5236bb999"
+            }
+        ]
+    },
+    {
         "userId": "46370e13-931a-432c-a455-c000ada33881",
         "username": "153perjalananbps101@gmail.com",
         "email": "153perjalananbps101@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 4,
+        "totalRegions": 5,
         "regions": [
             {
-                "regionCode": "7205081019000300",
-                "regionName": "DUSUN III POMEMPE",
+                "regionCode": "7205120009000302",
+                "regionName": "-",
                 "level": 6,
                 "allocationId": "992391b7-ed52-488b-aee3-1e06dc31c7b9"
             },
@@ -181284,8 +181324,14 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "992391b7-ed52-488b-aee3-1e06dc31c7b9"
             },
             {
-                "regionCode": "7205120009000302",
-                "regionName": "-",
+                "regionCode": "7205081019000300",
+                "regionName": "DUSUN III POMEMPE",
+                "level": 6,
+                "allocationId": "992391b7-ed52-488b-aee3-1e06dc31c7b9"
+            },
+            {
+                "regionCode": "7205081001000500",
+                "regionName": "DUSUN V PELANTOA",
                 "level": 6,
                 "allocationId": "992391b7-ed52-488b-aee3-1e06dc31c7b9"
             },
@@ -181303,31 +181349,25 @@ window.PETUGAS_DATA_UMUM = [
         "email": "155perjalananbps101@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 4,
+        "totalRegions": 3,
         "regions": [
             {
                 "regionCode": "7205081002000100",
                 "regionName": "DUSUN I",
                 "level": 6,
-                "allocationId": "9eb69e55-3df4-4a93-b3c0-6981774c4981"
+                "allocationId": "8e47b154-bfda-487e-8ced-d076e29f8e43"
             },
             {
                 "regionCode": "7205081002000300",
                 "regionName": "DUSUN III",
                 "level": 6,
-                "allocationId": "9eb69e55-3df4-4a93-b3c0-6981774c4981"
-            },
-            {
-                "regionCode": "7205120009000302",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "9eb69e55-3df4-4a93-b3c0-6981774c4981"
+                "allocationId": "8e47b154-bfda-487e-8ced-d076e29f8e43"
             },
             {
                 "regionCode": "7205081002000200",
                 "regionName": "DUSUN II",
                 "level": 6,
-                "allocationId": "9eb69e55-3df4-4a93-b3c0-6981774c4981"
+                "allocationId": "8e47b154-bfda-487e-8ced-d076e29f8e43"
             }
         ]
     },
@@ -185792,14 +185832,14 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "55d8ab73-770b-4564-8250-99004c515b30"
             },
             {
-                "regionCode": "7205081003000203",
-                "regionName": "DUSUN II",
+                "regionCode": "7205081003000102",
+                "regionName": "DUSUN I",
                 "level": 6,
                 "allocationId": "55d8ab73-770b-4564-8250-99004c515b30"
             },
             {
-                "regionCode": "7205081003000500",
-                "regionName": "DUSUN V",
+                "regionCode": "7205081003000203",
+                "regionName": "DUSUN II",
                 "level": 6,
                 "allocationId": "55d8ab73-770b-4564-8250-99004c515b30"
             }
@@ -186424,6 +186464,46 @@ window.PETUGAS_DATA_UMUM = [
                 "regionName": "DUSUN 1",
                 "level": 6,
                 "allocationId": "77bfe390-6574-46ee-b25f-19e1b6343cd7"
+            }
+        ]
+    },
+    {
+        "userId": "59adf590-75ae-4bac-8f47-049bd650d14e",
+        "username": "ajjyusril22295@gmail.com",
+        "email": "ajjyusril22295@gmail.com",
+        "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+        "roleName": "Pencacah",
+        "totalRegions": 7,
+        "regions": [
+            {
+                "regionCode": "7205081001000200",
+                "regionName": "DUSUN II KONAE",
+                "level": 6,
+                "allocationId": "be3b7849-1fcb-435c-8230-aadfab9f226d"
+            },
+            {
+                "regionCode": "7205081014000200",
+                "regionName": "DUSUN 2 TINDUNGU",
+                "level": 6,
+                "allocationId": "be3b7849-1fcb-435c-8230-aadfab9f226d"
+            },
+            {
+                "regionCode": "7205081014000300",
+                "regionName": "DUSUN 3 POMPA",
+                "level": 6,
+                "allocationId": "be3b7849-1fcb-435c-8230-aadfab9f226d"
+            },
+            {
+                "regionCode": "7205081014000400",
+                "regionName": "DUSUN 4 JUNJUBOLO",
+                "level": 6,
+                "allocationId": "be3b7849-1fcb-435c-8230-aadfab9f226d"
+            },
+            {
+                "regionCode": "7205081014000600",
+                "regionName": "DUSUN 5 POMPOMAYA",
+                "level": 6,
+                "allocationId": "be3b7849-1fcb-435c-8230-aadfab9f226d"
             }
         ]
     },
@@ -194241,7 +194321,7 @@ window.PETUGAS_DATA_UMUM = [
         "email": "arnianti90@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 14,
+        "totalRegions": 15,
         "regions": [
             {
                 "regionCode": "7212080007000200",
@@ -196452,14 +196532,14 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "63aca9f9-c63f-41fe-a34d-b7242f894c6a"
             },
             {
-                "regionCode": "7202013001000500",
-                "regionName": "RT 005 DUSUN 002",
+                "regionCode": "7202013001000400",
+                "regionName": "RT 004 DUSUN 001",
                 "level": 6,
                 "allocationId": "63aca9f9-c63f-41fe-a34d-b7242f894c6a"
             },
             {
-                "regionCode": "7202013001000400",
-                "regionName": "RT 004 DUSUN 001",
+                "regionCode": "7202013001000500",
+                "regionName": "RT 005 DUSUN 002",
                 "level": 6,
                 "allocationId": "63aca9f9-c63f-41fe-a34d-b7242f894c6a"
             },
@@ -196594,6 +196674,40 @@ window.PETUGAS_DATA_UMUM = [
                 "regionName": "RT 04 RW 010",
                 "level": 6,
                 "allocationId": "6624f11a-d200-4976-817a-5294a9e6cb9f"
+            }
+        ]
+    },
+    {
+        "userId": "91477432-51ae-4774-8b5f-a0091ed795ce",
+        "username": "athira.husen@gmail.com",
+        "email": "athira.husen@gmail.com",
+        "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+        "roleName": "Pencacah",
+        "totalRegions": 4,
+        "regions": [
+            {
+                "regionCode": "7205081006000300",
+                "regionName": "DUSUN III",
+                "level": 6,
+                "allocationId": "58032be9-e47b-41f0-b145-f9354b5dde19"
+            },
+            {
+                "regionCode": "7205081008000200",
+                "regionName": "DUSUN II",
+                "level": 6,
+                "allocationId": "58032be9-e47b-41f0-b145-f9354b5dde19"
+            },
+            {
+                "regionCode": "7205081009000400",
+                "regionName": "DUSUN IV TANDOMI",
+                "level": 6,
+                "allocationId": "58032be9-e47b-41f0-b145-f9354b5dde19"
+            },
+            {
+                "regionCode": "7205081009000300",
+                "regionName": "DUSUN III",
+                "level": 6,
+                "allocationId": "58032be9-e47b-41f0-b145-f9354b5dde19"
             }
         ]
     },
@@ -213320,6 +213434,34 @@ window.PETUGAS_DATA_UMUM = [
         ]
     },
     {
+        "userId": "ffebdd93-d141-4496-8882-9af49b3af322",
+        "username": "febyfarhanah@gmail.com",
+        "email": "febyfarhanah@gmail.com",
+        "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+        "roleName": "Pencacah",
+        "totalRegions": 3,
+        "regions": [
+            {
+                "regionCode": "7205081009000100",
+                "regionName": "DUSUN I",
+                "level": 6,
+                "allocationId": "7d12e7f4-06e8-4d93-bd8c-09450b8d3972"
+            },
+            {
+                "regionCode": "7205081017000100",
+                "regionName": "DUSUN I",
+                "level": 6,
+                "allocationId": "7d12e7f4-06e8-4d93-bd8c-09450b8d3972"
+            },
+            {
+                "regionCode": "7205081009000200",
+                "regionName": "DUSUN II",
+                "level": 6,
+                "allocationId": "7d12e7f4-06e8-4d93-bd8c-09450b8d3972"
+            }
+        ]
+    },
+    {
         "userId": "5f44bf2d-75ed-45cc-958b-319613a262e6",
         "username": "felinevankombu@gmail.com",
         "email": "felinevankombu@gmail.com",
@@ -214823,7 +214965,7 @@ window.PETUGAS_DATA_UMUM = [
         "email": "firna.nathu@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 4,
+        "totalRegions": 5,
         "regions": [
             {
                 "regionCode": "7205081013000200",
@@ -214846,6 +214988,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7205081013000100",
                 "regionName": "DUSUN I MALINO",
+                "level": 6,
+                "allocationId": "3f77740d-9351-4a87-9252-446890f0208a"
+            },
+            {
+                "regionCode": "7205081014000100",
+                "regionName": "DUSUN 1 ONGULARA",
                 "level": 6,
                 "allocationId": "3f77740d-9351-4a87-9252-446890f0208a"
             }
@@ -224042,6 +224190,46 @@ window.PETUGAS_DATA_UMUM = [
         ]
     },
     {
+        "userId": "2fd7c1a3-3893-4e35-810e-898228e01d64",
+        "username": "ikelhamaa03@gmail.com",
+        "email": "ikelhamaa03@gmail.com",
+        "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+        "roleName": "Pencacah",
+        "totalRegions": 7,
+        "regions": [
+            {
+                "regionCode": "7202032008000200",
+                "regionName": "DUSUN 2",
+                "level": 6,
+                "allocationId": "3b4399d1-ab70-408e-b037-43d6d08a6a5b"
+            },
+            {
+                "regionCode": "7202032008000300",
+                "regionName": "DUSUN 3",
+                "level": 6,
+                "allocationId": "3b4399d1-ab70-408e-b037-43d6d08a6a5b"
+            },
+            {
+                "regionCode": "7202032008200200",
+                "regionName": "HUTAN",
+                "level": 6,
+                "allocationId": "3b4399d1-ab70-408e-b037-43d6d08a6a5b"
+            },
+            {
+                "regionCode": "7202032009000200",
+                "regionName": "DUSUN 02",
+                "level": 6,
+                "allocationId": "3b4399d1-ab70-408e-b037-43d6d08a6a5b"
+            },
+            {
+                "regionCode": "7202032008000100",
+                "regionName": "DUSUN 1",
+                "level": 6,
+                "allocationId": "3b4399d1-ab70-408e-b037-43d6d08a6a5b"
+            }
+        ]
+    },
+    {
         "userId": "d14c771d-abaf-44ae-8b87-10f3ac9c7121",
         "username": "iketutpujaastawadiputra@gmail.com",
         "email": "iketutpujaastawadiputra@gmail.com",
@@ -224817,7 +225005,7 @@ window.PETUGAS_DATA_UMUM = [
         "email": "imammoh760@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 4,
+        "totalRegions": 6,
         "regions": [
             {
                 "regionCode": "7205081010000400",
@@ -224828,6 +225016,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7205081011000300",
                 "regionName": "DUSUN III MAGAUTIBA",
+                "level": 6,
+                "allocationId": "33733053-2b4c-4cfe-96d8-e93d6f03b333"
+            },
+            {
+                "regionCode": "7205081011000101",
+                "regionName": "DUSUN I LENGGU",
                 "level": 6,
                 "allocationId": "33733053-2b4c-4cfe-96d8-e93d6f03b333"
             },
@@ -229843,7 +230037,7 @@ window.PETUGAS_DATA_UMUM = [
         "email": "jalangkoteibuudin26@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 15,
+        "totalRegions": 14,
         "regions": [
             {
                 "regionCode": "7206041007000900",
@@ -229864,14 +230058,14 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "5aaf6c08-933a-4dcc-a055-7e61d5a2defa"
             },
             {
-                "regionCode": "7206041007000200",
-                "regionName": "RT 2 DUSUN UJUNG",
+                "regionCode": "7206041007000500",
+                "regionName": "RT 5 DUSUN UJUNG",
                 "level": 6,
                 "allocationId": "5aaf6c08-933a-4dcc-a055-7e61d5a2defa"
             },
             {
-                "regionCode": "7206041007000500",
-                "regionName": "RT 5 DUSUN UJUNG",
+                "regionCode": "7206041007000600",
+                "regionName": "RT 6 DUSUN UJUNG",
                 "level": 6,
                 "allocationId": "5aaf6c08-933a-4dcc-a055-7e61d5a2defa"
             }
@@ -232297,39 +232491,27 @@ window.PETUGAS_DATA_UMUM = [
         "userId": "fc435086-7cd4-4f87-92ff-b59bbf2f9827",
         "username": "kasmianti0703@gmail.com",
         "email": "kasmianti0703@gmail.com",
-        "roleId": "93bcf446-c4c1-4462-8ed0-4b0f7ae89e52",
-        "roleName": "Pengawas",
-        "totalRegions": 23,
+        "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+        "roleName": "Pencacah",
+        "totalRegions": 3,
         "regions": [
             {
-                "regionCode": "7205081002000100",
+                "regionCode": "7205081006000100",
                 "regionName": "DUSUN I",
                 "level": 6,
-                "allocationId": "fcb73b4b-6047-44bb-8c89-af151468f31f"
+                "allocationId": "183fada8-191e-4e4f-b481-5ee192059982"
             },
             {
-                "regionCode": "7205081002000300",
-                "regionName": "DUSUN III",
-                "level": 6,
-                "allocationId": "fcb73b4b-6047-44bb-8c89-af151468f31f"
-            },
-            {
-                "regionCode": "7205081008000100",
-                "regionName": "DUSUN I",
-                "level": 6,
-                "allocationId": "fcb73b4b-6047-44bb-8c89-af151468f31f"
-            },
-            {
-                "regionCode": "7205081008000200",
+                "regionCode": "7205081006000200",
                 "regionName": "DUSUN II",
                 "level": 6,
-                "allocationId": "fcb73b4b-6047-44bb-8c89-af151468f31f"
+                "allocationId": "183fada8-191e-4e4f-b481-5ee192059982"
             },
             {
-                "regionCode": "7205081012000100",
-                "regionName": "DUSUN I",
+                "regionCode": "7205081008000300",
+                "regionName": "DUSUN III",
                 "level": 6,
-                "allocationId": "fcb73b4b-6047-44bb-8c89-af151468f31f"
+                "allocationId": "183fada8-191e-4e4f-b481-5ee192059982"
             }
         ]
     },
@@ -234862,6 +235044,12 @@ window.PETUGAS_DATA_UMUM = [
         "totalRegions": 29,
         "regions": [
             {
+                "regionCode": "7205120009000302",
+                "regionName": "-",
+                "level": 6,
+                "allocationId": "7a89af7a-171e-48aa-996f-bdf006ad1a43"
+            },
+            {
                 "regionCode": "7205081005000100",
                 "regionName": "DUSUN I MALEI",
                 "level": 6,
@@ -234882,12 +235070,6 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7205081007000100",
                 "regionName": "DUSUN 1",
-                "level": 6,
-                "allocationId": "7a89af7a-171e-48aa-996f-bdf006ad1a43"
-            },
-            {
-                "regionCode": "7205081007000200",
-                "regionName": "DUSUN 2",
                 "level": 6,
                 "allocationId": "7a89af7a-171e-48aa-996f-bdf006ad1a43"
             }
@@ -245096,6 +245278,46 @@ window.PETUGAS_DATA_UMUM = [
         ]
     },
     {
+        "userId": "e327fac2-5d48-453b-8f7f-b6ba8f6020f7",
+        "username": "mohikbal201102@gmail.com",
+        "email": "mohikbal201102@gmail.com",
+        "roleId": "93bcf446-c4c1-4462-8ed0-4b0f7ae89e52",
+        "roleName": "Pengawas",
+        "totalRegions": 24,
+        "regions": [
+            {
+                "regionCode": "7205081002000300",
+                "regionName": "DUSUN III",
+                "level": 6,
+                "allocationId": "35f7593c-202c-4812-9986-54647d531f89"
+            },
+            {
+                "regionCode": "7205081008000100",
+                "regionName": "DUSUN I",
+                "level": 6,
+                "allocationId": "35f7593c-202c-4812-9986-54647d531f89"
+            },
+            {
+                "regionCode": "7205081009000300",
+                "regionName": "DUSUN III",
+                "level": 6,
+                "allocationId": "35f7593c-202c-4812-9986-54647d531f89"
+            },
+            {
+                "regionCode": "7205081012000100",
+                "regionName": "DUSUN I",
+                "level": 6,
+                "allocationId": "35f7593c-202c-4812-9986-54647d531f89"
+            },
+            {
+                "regionCode": "7205081015000300",
+                "regionName": "DUSUN III TAMBAGA",
+                "level": 6,
+                "allocationId": "35f7593c-202c-4812-9986-54647d531f89"
+            }
+        ]
+    },
+    {
         "userId": "0f583b44-4326-4dbf-8ca4-4aa000845774",
         "username": "mohikhwan826@gmail.com",
         "email": "mohikhwan826@gmail.com",
@@ -246072,6 +246294,34 @@ window.PETUGAS_DATA_UMUM = [
                 "regionName": "DUSUN 02",
                 "level": 6,
                 "allocationId": "1a04de42-e7c5-4aa3-9d7f-d853ab4823bb"
+            }
+        ]
+    },
+    {
+        "userId": "ac388871-a346-4c7f-a733-d472182ea109",
+        "username": "mramdan045@gmail.com",
+        "email": "mramdan045@gmail.com",
+        "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+        "roleName": "Pencacah",
+        "totalRegions": 3,
+        "regions": [
+            {
+                "regionCode": "7205081008000100",
+                "regionName": "DUSUN I",
+                "level": 6,
+                "allocationId": "3ae1904c-e689-457e-bca3-d0f822bca3e5"
+            },
+            {
+                "regionCode": "7205081017000200",
+                "regionName": "DUSUN II",
+                "level": 6,
+                "allocationId": "3ae1904c-e689-457e-bca3-d0f822bca3e5"
+            },
+            {
+                "regionCode": "7205081017000300",
+                "regionName": "DUSUN III SALURIMI",
+                "level": 6,
+                "allocationId": "3ae1904c-e689-457e-bca3-d0f822bca3e5"
             }
         ]
     },
@@ -248340,6 +248590,34 @@ window.PETUGAS_DATA_UMUM = [
         ]
     },
     {
+        "userId": "2b3c1ac8-95f8-4ed0-a935-406725a8c6cc",
+        "username": "mutmainnahmasud95@gmail.com",
+        "email": "mutmainnahmasud95@gmail.com",
+        "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+        "roleName": "Pencacah",
+        "totalRegions": 3,
+        "regions": [
+            {
+                "regionCode": "7205081018000201",
+                "regionName": "DUSUN II LOMPIO",
+                "level": 6,
+                "allocationId": "0cf22b08-5a7c-4fe2-a411-d8351852b603"
+            },
+            {
+                "regionCode": "7205081018000300",
+                "regionName": "DUSUN III POLEGE",
+                "level": 6,
+                "allocationId": "0cf22b08-5a7c-4fe2-a411-d8351852b603"
+            },
+            {
+                "regionCode": "7205081018000100",
+                "regionName": "DUSUN I RORA",
+                "level": 6,
+                "allocationId": "0cf22b08-5a7c-4fe2-a411-d8351852b603"
+            }
+        ]
+    },
+    {
         "userId": "8683674d-e368-410c-9dff-e288f1ddcb59",
         "username": "muzdalifahlifa33@gmail.com",
         "email": "muzdalifahlifa33@gmail.com",
@@ -248419,8 +248697,14 @@ window.PETUGAS_DATA_UMUM = [
         "email": "mw6276478@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 2,
+        "totalRegions": 4,
         "regions": [
+            {
+                "regionCode": "7205120009000302",
+                "regionName": "-",
+                "level": 6,
+                "allocationId": "74b882c5-63c7-43ce-9994-faafd22b4e52"
+            },
             {
                 "regionCode": "7205081003000300",
                 "regionName": "DUSUN III",
@@ -248428,8 +248712,14 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "74b882c5-63c7-43ce-9994-faafd22b4e52"
             },
             {
-                "regionCode": "7205120009000302",
-                "regionName": "-",
+                "regionCode": "7205081004000200",
+                "regionName": "DUSUN II TAMMAOLA",
+                "level": 6,
+                "allocationId": "74b882c5-63c7-43ce-9994-faafd22b4e52"
+            },
+            {
+                "regionCode": "7205081004000300",
+                "regionName": "DUSUN III SURUMANA",
                 "level": 6,
                 "allocationId": "74b882c5-63c7-43ce-9994-faafd22b4e52"
             }
@@ -253495,31 +253785,25 @@ window.PETUGAS_DATA_UMUM = [
         "email": "nunungnurul18@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 4,
+        "totalRegions": 3,
         "regions": [
             {
                 "regionCode": "7205081012000100",
                 "regionName": "DUSUN I",
                 "level": 6,
-                "allocationId": "2b5969cc-fbf6-4ebc-bcd2-95f996450f16"
-            },
-            {
-                "regionCode": "7205120009000302",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "2b5969cc-fbf6-4ebc-bcd2-95f996450f16"
+                "allocationId": "6975199f-0b69-46fa-b6a7-13e3dd8bb626"
             },
             {
                 "regionCode": "7205081012000200",
                 "regionName": "DUSUN II",
                 "level": 6,
-                "allocationId": "2b5969cc-fbf6-4ebc-bcd2-95f996450f16"
+                "allocationId": "6975199f-0b69-46fa-b6a7-13e3dd8bb626"
             },
             {
                 "regionCode": "7205081012000300",
                 "regionName": "DUSUN III",
                 "level": 6,
-                "allocationId": "2b5969cc-fbf6-4ebc-bcd2-95f996450f16"
+                "allocationId": "6975199f-0b69-46fa-b6a7-13e3dd8bb626"
             }
         ]
     },
@@ -256412,6 +256696,40 @@ window.PETUGAS_DATA_UMUM = [
         ]
     },
     {
+        "userId": "8c12fb39-4004-4633-a3f7-57e4cf9a9591",
+        "username": "nursilva00@gmail.com",
+        "email": "nursilva00@gmail.com",
+        "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+        "roleName": "Pencacah",
+        "totalRegions": 4,
+        "regions": [
+            {
+                "regionCode": "7202013008000200",
+                "regionName": "RT 002 DUSUN 001",
+                "level": 6,
+                "allocationId": "4e2c283c-e110-4321-9336-b14660f46cfd"
+            },
+            {
+                "regionCode": "7202013008000300",
+                "regionName": "RT 003 DUSUN 001",
+                "level": 6,
+                "allocationId": "4e2c283c-e110-4321-9336-b14660f46cfd"
+            },
+            {
+                "regionCode": "7202013008000100",
+                "regionName": "RT 001 DUSUN 001",
+                "level": 6,
+                "allocationId": "4e2c283c-e110-4321-9336-b14660f46cfd"
+            },
+            {
+                "regionCode": "7202013008000600",
+                "regionName": "RT 006 DUSUN 002",
+                "level": 6,
+                "allocationId": "4e2c283c-e110-4321-9336-b14660f46cfd"
+            }
+        ]
+    },
+    {
         "userId": "faf54c50-974e-47b7-91ca-3e8876a8f4f5",
         "username": "nursukmadewi460@gmail.com",
         "email": "nursukmadewi460@gmail.com",
@@ -258978,6 +259296,28 @@ window.PETUGAS_DATA_UMUM = [
                 "regionName": "RT 06 DUSUN 3",
                 "level": 6,
                 "allocationId": "3b9e24a5-bb08-4592-8d39-aaebda35d89d"
+            }
+        ]
+    },
+    {
+        "userId": "6ad12dd8-02a5-4949-a4bc-97c24643cc5b",
+        "username": "pevitadewanto@gmail.com",
+        "email": "pevitadewanto@gmail.com",
+        "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+        "roleName": "Pencacah",
+        "totalRegions": 2,
+        "regions": [
+            {
+                "regionCode": "7205081005000300",
+                "regionName": "DUSUN III BATUROKO",
+                "level": 6,
+                "allocationId": "a670d868-89ea-4872-b74a-f5425c56f807"
+            },
+            {
+                "regionCode": "7205081007000100",
+                "regionName": "DUSUN 1",
+                "level": 6,
+                "allocationId": "a670d868-89ea-4872-b74a-f5425c56f807"
             }
         ]
     },
@@ -266597,7 +266937,7 @@ window.PETUGAS_DATA_UMUM = [
         "email": "risaismawati12@gmail.com",
         "roleId": "93bcf446-c4c1-4462-8ed0-4b0f7ae89e52",
         "roleName": "Pengawas",
-        "totalRegions": 43,
+        "totalRegions": 46,
         "regions": [
             {
                 "regionCode": "7202032002000100",
@@ -266847,7 +267187,7 @@ window.PETUGAS_DATA_UMUM = [
         "email": "riskaika1811@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 5,
+        "totalRegions": 6,
         "regions": [
             {
                 "regionCode": "7205120009000302",
@@ -266868,14 +267208,14 @@ window.PETUGAS_DATA_UMUM = [
                 "allocationId": "7b9fa72f-5791-4ef5-8589-63113eade9e4"
             },
             {
-                "regionCode": "7205081016000400",
-                "regionName": "DUSUN IV",
+                "regionCode": "7205081016000300",
+                "regionName": "DUSUN III",
                 "level": 6,
                 "allocationId": "7b9fa72f-5791-4ef5-8589-63113eade9e4"
             },
             {
-                "regionCode": "7205081016000300",
-                "regionName": "DUSUN III",
+                "regionCode": "7205081016000400",
+                "regionName": "DUSUN IV",
                 "level": 6,
                 "allocationId": "7b9fa72f-5791-4ef5-8589-63113eade9e4"
             }
@@ -282280,6 +282620,40 @@ window.PETUGAS_DATA_UMUM = [
         ]
     },
     {
+        "userId": "129bf982-2969-45f5-b9af-655ae6089997",
+        "username": "tasrifaadman@gmail.com",
+        "email": "tasrifaadman@gmail.com",
+        "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+        "roleName": "Pencacah",
+        "totalRegions": 4,
+        "regions": [
+            {
+                "regionCode": "7205081007000200",
+                "regionName": "DUSUN 2",
+                "level": 6,
+                "allocationId": "b8389270-9bb4-4d8e-bfeb-2f88dbe9c4ce"
+            },
+            {
+                "regionCode": "7205081007000300",
+                "regionName": "DUSUN 3 RANDO",
+                "level": 6,
+                "allocationId": "b8389270-9bb4-4d8e-bfeb-2f88dbe9c4ce"
+            },
+            {
+                "regionCode": "7205081007000400",
+                "regionName": "DUSUN 4 KAMALI",
+                "level": 6,
+                "allocationId": "b8389270-9bb4-4d8e-bfeb-2f88dbe9c4ce"
+            },
+            {
+                "regionCode": "7205081018000202",
+                "regionName": "DUSUN II LOMPIO",
+                "level": 6,
+                "allocationId": "b8389270-9bb4-4d8e-bfeb-2f88dbe9c4ce"
+            }
+        ]
+    },
+    {
         "userId": "9a3db803-b75c-4e8d-917e-37430d263e29",
         "username": "tasriktasrik68@gmail.com",
         "email": "tasriktasrik68@gmail.com",
@@ -283846,12 +284220,6 @@ window.PETUGAS_DATA_UMUM = [
         "totalRegions": 6,
         "regions": [
             {
-                "regionCode": "7205120009000302",
-                "regionName": "-",
-                "level": 6,
-                "allocationId": "839f76cb-9902-48af-977e-37a54f30f849"
-            },
-            {
                 "regionCode": "7205080022000100",
                 "regionName": "RT 001 RW 001",
                 "level": 6,
@@ -283872,6 +284240,12 @@ window.PETUGAS_DATA_UMUM = [
             {
                 "regionCode": "7205080022000400",
                 "regionName": "RT 004 RW 001",
+                "level": 6,
+                "allocationId": "839f76cb-9902-48af-977e-37a54f30f849"
+            },
+            {
+                "regionCode": "7205080022000500",
+                "regionName": "RT 005 RW 001",
                 "level": 6,
                 "allocationId": "839f76cb-9902-48af-977e-37a54f30f849"
             }
@@ -287333,31 +287707,37 @@ window.PETUGAS_DATA_UMUM = [
         "email": "wahmidwahmidsp@gmail.com",
         "roleId": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
         "roleName": "Pencacah",
-        "totalRegions": 4,
+        "totalRegions": 5,
         "regions": [
+            {
+                "regionCode": "7205081015000400",
+                "regionName": "DUSUN IV PUTIA",
+                "level": 6,
+                "allocationId": "0ac21334-15b3-46ee-8300-277e9355edc1"
+            },
             {
                 "regionCode": "7205081015000500",
                 "regionName": "DUSUN V LUMBULAMA",
                 "level": 6,
-                "allocationId": "463694ee-c23b-4f0a-a95a-5db7f64a02c5"
+                "allocationId": "0ac21334-15b3-46ee-8300-277e9355edc1"
             },
             {
                 "regionCode": "7205081015000600",
                 "regionName": "DUSUN VI UWEKEUH",
                 "level": 6,
-                "allocationId": "463694ee-c23b-4f0a-a95a-5db7f64a02c5"
+                "allocationId": "0ac21334-15b3-46ee-8300-277e9355edc1"
             },
             {
-                "regionCode": "7205120009000302",
-                "regionName": "-",
+                "regionCode": "7205081015000100",
+                "regionName": "DUSUN I KATIVELU",
                 "level": 6,
-                "allocationId": "463694ee-c23b-4f0a-a95a-5db7f64a02c5"
+                "allocationId": "0ac21334-15b3-46ee-8300-277e9355edc1"
             },
             {
                 "regionCode": "7205081015000300",
                 "regionName": "DUSUN III TAMBAGA",
                 "level": 6,
-                "allocationId": "463694ee-c23b-4f0a-a95a-5db7f64a02c5"
+                "allocationId": "0ac21334-15b3-46ee-8300-277e9355edc1"
             }
         ]
     },
