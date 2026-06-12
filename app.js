@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>${highlightText(comp.email, searchQuery)}</td>
                             <td><span class="company-status-badge" style="--badge-bg: ${statusStyle.bg}; --badge-color: ${statusStyle.color}; --badge-border: ${statusStyle.border};">${comp.global_status}</span></td>
                             <td><span class="survey-status-badge" style="background-color: ${surveyStyle.bg}; color: ${surveyStyle.color}; border: 1px solid ${surveyStyle.border};">${comp.survey_status}</span></td>
-                            <td>${kabkotName}</td>
+                            <td>${kabkotName === 'Lainnya' ? '-' : kabkotName}</td>
                             <td>${lastLog.timestamp}</td>
                             <td>${lastLog.status}</td>
                         </tr>
@@ -499,9 +499,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                             <div class="company-meta">
                                 <span class="code-badge">${highlightText(comp.code, searchQuery)}</span>
+                                ${(comp.code && typeof comp.code === 'string' && kabkotMapping[comp.code.substring(0, 4)]) ? `
                                 <span class="code-badge" style="background-color: rgba(99, 102, 241, 0.08); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.15); font-weight: 700;">
-                                    ${(comp.code && typeof comp.code === 'string') ? (kabkotMapping[comp.code.substring(0, 4)] || 'Lainnya') : 'Lainnya'}
-                                </span>
+                                    ${kabkotMapping[comp.code.substring(0, 4)]}
+                                </span>` : ''}
                                 <span class="code-badge" style="background-color: ${surveyStyle.bg}; color: ${surveyStyle.color}; border: 1px solid ${surveyStyle.border}; font-weight: 700; text-transform: uppercase;">
                                     ${comp.survey_status}
                                 </span>
@@ -2226,36 +2227,82 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
         
         // Prev button
-        const prev = document.createElement('button');
-        prev.style = btnStyle;
-        prev.innerHTML = '&laquo;';
-        prev.disabled = window.syncCurrentPage === 1;
-        prev.addEventListener('click', () => {
-            if (window.syncCurrentPage > 1) {
+        if (window.syncCurrentPage > 1) {
+            const prevBtn = document.createElement('button');
+            prevBtn.innerHTML = '&lt;';
+            prevBtn.style.cssText = btnStyle;
+            prevBtn.addEventListener('click', () => {
                 window.syncCurrentPage--;
                 renderSyncTable();
+            });
+            btnContainer.appendChild(prevBtn);
+        }
+        
+        // Logic to display limited page range
+        let startPage = Math.max(1, window.syncCurrentPage - 2);
+        let endPage = Math.min(maxPage, window.syncCurrentPage + 2);
+        
+        if (startPage > 1) {
+            const page1 = document.createElement('button');
+            page1.textContent = '1';
+            page1.style.cssText = btnStyle;
+            page1.addEventListener('click', () => {
+                window.syncCurrentPage = 1;
+                renderSyncTable();
+            });
+            btnContainer.appendChild(page1);
+            
+            if (startPage > 2) {
+                const dots = document.createElement('span');
+                dots.textContent = '...';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                btnContainer.appendChild(dots);
             }
-        });
-        btnContainer.appendChild(prev);
+        }
         
-        // Current Page button
-        const cur = document.createElement('button');
-        cur.style = activeStyle;
-        cur.innerText = window.syncCurrentPage;
-        btnContainer.appendChild(cur);
+        for (let i = startPage; i <= endPage; i++) {
+            const btn = document.createElement('button');
+            btn.textContent = i;
+            if (i === window.syncCurrentPage) {
+                btn.style.cssText = activeStyle;
+            } else {
+                btn.style.cssText = btnStyle;
+                btn.addEventListener('click', () => {
+                    window.syncCurrentPage = i;
+                    renderSyncTable();
+                });
+            }
+            btnContainer.appendChild(btn);
+        }
         
-        // Next button
-        const next = document.createElement('button');
-        next.style = btnStyle;
-        next.innerHTML = '&raquo;';
-        next.disabled = window.syncCurrentPage === maxPage;
-        next.addEventListener('click', () => {
-            if (window.syncCurrentPage < maxPage) {
+        if (endPage < maxPage) {
+            if (endPage < maxPage - 1) {
+                const dots = document.createElement('span');
+                dots.textContent = '...';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                btnContainer.appendChild(dots);
+            }
+            
+            const pageLast = document.createElement('button');
+            pageLast.textContent = maxPage;
+            pageLast.style.cssText = btnStyle;
+            pageLast.addEventListener('click', () => {
+                window.syncCurrentPage = maxPage;
+                renderSyncTable();
+            });
+            btnContainer.appendChild(pageLast);
+        }
+        
+        if (window.syncCurrentPage < maxPage) {
+            const nextBtn = document.createElement('button');
+            nextBtn.innerHTML = '&gt;';
+            nextBtn.style.cssText = btnStyle;
+            nextBtn.addEventListener('click', () => {
                 window.syncCurrentPage++;
                 renderSyncTable();
-            }
-        });
-        btnContainer.appendChild(next);
+            });
+            btnContainer.appendChild(nextBtn);
+        }
     }
 
     function renderPetugasPaginationButtons(maxPage) {
