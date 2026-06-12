@@ -432,7 +432,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tableRows = pageItems.map(comp => {
                     const statusStyle = getStatusStyle(comp.global_status);
                     const surveyStyle = getSurveyStatusStyle(comp.survey_status);
-                    const kabkotName = (comp.code && typeof comp.code === 'string') ? (kabkotMapping[comp.code.substring(0, 4)] || 'Lainnya') : 'Lainnya';
+                    let rawKab = comp.kab_name || '';
+                    if (rawKab && rawKab !== '-') {
+                        rawKab = rawKab.replace(/^\[\d+\]\s*/, '').trim();
+                        rawKab = rawKab.split(' ').map(w => w.charAt(0).toUpperCase() + w.substring(1).toLowerCase()).join(' ');
+                    } else {
+                        rawKab = '';
+                    }
+                    const kabkotName = rawKab || ((comp.code && typeof comp.code === 'string') ? (kabkotMapping[comp.code.substring(0, 4)] || 'Lainnya') : 'Lainnya');
                     const lastLog = comp.history.length ? comp.history[comp.history.length - 1] : { status: '-', timestamp: '-' };
 
                     return `
@@ -490,6 +497,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                 }
 
+                let rawKab = comp.kab_name || '';
+                if (rawKab && rawKab !== '-') {
+                    rawKab = rawKab.replace(/^\[\d+\]\s*/, '').trim();
+                    rawKab = rawKab.split(' ').map(w => w.charAt(0).toUpperCase() + w.substring(1).toLowerCase()).join(' ');
+                } else {
+                    rawKab = '';
+                }
+                const kabkotName = rawKab || ((comp.code && typeof comp.code === 'string') ? (kabkotMapping[comp.code.substring(0, 4)] || 'Lainnya') : 'Lainnya');
+
                 const surveyStyle = getSurveyStatusStyle(comp.survey_status);
                 card.innerHTML = `
                     <div class="company-header">
@@ -499,9 +515,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                             <div class="company-meta">
                                 <span class="code-badge">${highlightText(comp.code, searchQuery)}</span>
-                                ${(comp.code && typeof comp.code === 'string' && kabkotMapping[comp.code.substring(0, 4)]) ? `
+                                ${(kabkotName && kabkotName !== 'Lainnya') ? `
                                 <span class="code-badge" style="background-color: rgba(99, 102, 241, 0.08); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.15); font-weight: 700;">
-                                    ${kabkotMapping[comp.code.substring(0, 4)]}
+                                    ${kabkotName}
                                 </span>` : ''}
                                 <span class="code-badge" style="background-color: ${surveyStyle.bg}; color: ${surveyStyle.color}; border: 1px solid ${surveyStyle.border}; font-weight: 700; text-transform: uppercase;">
                                     ${comp.survey_status}

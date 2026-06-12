@@ -328,6 +328,10 @@ def save_realtime_data(all_records):
                     }
                     if "survey_status" in available_cols:
                         rec["survey_status"] = str(r.get("survey_status", "-"))
+                    if "kab_name" in available_cols:
+                        rec["kab_name"] = str(r.get("kab_name", "-"))
+                    elif "kabupaten" in available_cols:
+                        rec["kabupaten"] = str(r.get("kab_name", "-"))
                     db_records.append(rec)
                 
                 # Truncate and insert in batches
@@ -460,7 +464,8 @@ def scrape_via_api():
                         global_status = row[4]
                         status = row[5]
                         timestamp = row[6]
-                        order = int(row[7]) if row[7].isdigit() else 0
+                        order = int(row[7]) if (len(row) >= 8 and row[7].isdigit()) else 0
+                        kab_name = row[8] if len(row) >= 9 else "-"
                         
                         rec = {
                             "code": code,
@@ -470,7 +475,8 @@ def scrape_via_api():
                             "global_status": global_status,
                             "status": status,
                             "timestamp": timestamp,
-                            "order": order
+                            "order": order,
+                            "kab_name": kab_name
                         }
                         
                         name_key = comp_name.lower().strip()
@@ -627,9 +633,8 @@ def scrape_via_api():
                 
                 logging.info(f"  {kab_name}: Mendapatkan {len(companies_part)} perusahaan (start: {start_index}, totalHit: {total_hits_part}).")
                 
-                if not companies_part:
-                    break
-                    
+                for comp in companies_part:
+                    comp["kab_name"] = kab_name
                 all_companies_data.extend(companies_part)
                 start_index += page_length
                 
@@ -689,12 +694,16 @@ def scrape_via_api():
                     return True
                 return False
 
+            kab_name = comp.get("kab_name", "-")
+
             if not FORCE_RE_SCRAPE:
                 if code in existing_companies and is_final_history(existing_companies[code]):
                     histories = existing_companies[code]
                     has_valid_history = True
                     for h in histories:
                         h["survey_status"] = survey_status
+                        if "kab_name" not in h or h["kab_name"] == "-":
+                            h["kab_name"] = kab_name
                     all_records.extend(histories)
                 else:
                     # Deteksi apabila BPS merubah ID namun perusahaannya sama
@@ -706,6 +715,8 @@ def scrape_via_api():
                                 for h in old_histories:
                                     h["code"] = code
                                     h["survey_status"] = survey_status
+                                    if "kab_name" not in h or h["kab_name"] == "-":
+                                        h["kab_name"] = kab_name
                                 all_records.extend(old_histories)
                                 break
               
@@ -880,7 +891,8 @@ def scrape_via_api():
                     "global_status": "-",
                     "status": "-",
                     "timestamp": "-",
-                    "order": 0
+                    "order": 0,
+                    "kab_name": kab_name
                 })
             else:
                 best_score = -1
@@ -901,18 +913,20 @@ def scrape_via_api():
                         "global_status": last_status,
                         "status": status_hist,
                         "timestamp": time_hist,
-                        "order": order + 1
+                        "order": order + 1,
+                        "kab_name": kab_name
                     })
 
             # Tulis progress ke CSV setiap 20 perusahaan untuk backup lokal
             if (idx + 1) % 20 == 0 or (idx + 1) == len(companies_data):
                 with open("backup_" + OUTPUT_CSV, mode="w", newline="", encoding="utf-8") as csv_file:
                     writer = csv.writer(csv_file)
-                    writer.writerow(["Kode Identitas", "Nama Perusahaan", "Status Dokumen", "Email Tujuan", "Status terakhir", "Status History", "Timestamp History", "Urutan History"])
+                    writer.writerow(["Kode Identitas", "Nama Perusahaan", "Status Dokumen", "Email Tujuan", "Status terakhir", "Status History", "Timestamp History", "Urutan History", "Kabupaten/Kota"])
                     for r in all_records:
                         writer.writerow([
                             r["code"], r["company_name"], r["survey_status"], r["email"],
-                            r["global_status"], r["status"], r["timestamp"], r["order"]
+                            r["global_status"], r["status"], r["timestamp"], r["order"],
+                            r.get("kab_name", "-")
                         ])
                 logging.info(f"Progress dibackup ke backup_{OUTPUT_CSV} ({idx+1}/{len(companies_data)}).")
                 
