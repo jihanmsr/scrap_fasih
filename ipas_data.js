@@ -1,55 +1,37 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-12T15:45:42.038423+08:00",
+  "updated_at": "2026-06-13T07:46:09.925960+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
-      "total_prelist": 43838,
+      "total_prelist": 43839,
       "total_draft": 163,
-      "total_open": 43590,
+      "total_open": 43591,
       "total_submitted": 85,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.19,
       "today_completed": 0,
-      "yesterday_completed": 32,
-      "two_days_ago_completed": 8,
-      "new_usaha_today": 3,
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 9,
+      "new_usaha_today": 0,
       "new_usaha_yesterday": 3,
       "new_businesses": [
         {
-          "name": "KB. PLAMBOYAN BASOSOL",
-          "code": "7201 - SE26mq9hn23127",
-          "date": "yesterday",
-          "status": "SUBMITTED RESPONDENT"
-        },
-        {
-          "name": "TK linosti ",
-          "code": "7201 - SE26mq8sth5862",
-          "date": "yesterday",
-          "status": "SUBMITTED RESPONDENT"
-        },
-        {
-          "name": "TK keapaucer paisubatu ",
-          "code": "7201 - SE26mq8pqm714C",
-          "date": "yesterday",
-          "status": "SUBMITTED RESPONDENT"
-        },
-        {
           "name": "TK NEGERI PERTIWI SALAKAN",
           "code": "7201 - SE26mqa7spF6E4",
-          "date": "today",
+          "date": "yesterday",
           "status": "DRAFT"
         },
         {
           "name": "SMAN 1 TINANGKUNG",
           "code": "7201 - SE26mqa7vi88D8",
-          "date": "today",
+          "date": "yesterday",
           "status": "DRAFT"
         },
         {
           "name": "TK NEGERI SEANO",
           "code": "7201 - SE26mqa01u557B",
-          "date": "today",
+          "date": "yesterday",
           "status": "DRAFT"
         }
       ]
@@ -64,7 +46,7 @@ window.IPAS_DATA = {
       "total_approved": 0,
       "persentase": 0.0,
       "today_completed": 0,
-      "yesterday_completed": 0,
+      "yesterday_completed": 1,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
@@ -90,78 +72,17 @@ window.IPAS_DATA = {
       "kabupaten": "[04] POSO",
       "total_prelist": 105395,
       "total_draft": 75,
-      "total_open": 105285,
-      "total_submitted": 35,
+      "total_open": 105284,
+      "total_submitted": 36,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.03,
-      "today_completed": 2,
-      "yesterday_completed": 3,
-      "two_days_ago_completed": 5,
+      "today_completed": 0,
+      "yesterday_completed": 4,
+      "two_days_ago_completed": 2,
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 10,
-      "new_businesses": [
-        {
-          "name": "KSPPS BMT KS 72 AMANAH",
-          "code": "7204 - 0802220013847",
-          "date": "yesterday",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KPN PERHIPTANI",
-          "code": "7204 - SE26mq8wk8E9C6",
-          "date": "yesterday",
-          "status": "DRAFT"
-        },
-        {
-          "name": "ksu dana dipa",
-          "code": "7204 - SE26mq8whl3679",
-          "date": "yesterday",
-          "status": "DRAFT"
-        },
-        {
-          "name": "Koperasi Payoanjaya Mitra Bahari",
-          "code": "7204 - SE26mq8wgc1CF0",
-          "date": "yesterday",
-          "status": "DRAFT"
-        },
-        {
-          "name": "Koperasi konsumen kartika Sintuwu Maroso",
-          "code": "7204 - 1298000112484",
-          "date": "yesterday",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KOPERASI PEGAWAI NEGERI PENGAYOMAN",
-          "code": "7204 - SE26mq8wfvCE43",
-          "date": "yesterday",
-          "status": "DRAFT"
-        },
-        {
-          "name": "koperasi pedeka",
-          "code": "7204 - SE26mq8wghCBFA",
-          "date": "yesterday",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KSP Pegawai Negeri Ikhtiar",
-          "code": "7204 - SE26mq8wq320F4",
-          "date": "yesterday",
-          "status": "DRAFT"
-        },
-        {
-          "name": "Koperasi Annisa cahaya mandiri",
-          "code": "7204 - SE26mq8wg28302",
-          "date": "yesterday",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KOPERASI KONSUMEN PARTHA GRAHA MANDIRI",
-          "code": "7204 - SE26mq8wh63F31",
-          "date": "yesterday",
-          "status": "DRAFT"
-        }
-      ]
+      "new_usaha_yesterday": 0,
+      "new_businesses": []
     },
     {
       "kabupaten": "[05] DONGGALA",
@@ -172,8 +93,8 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.01,
-      "today_completed": 4,
-      "yesterday_completed": 0,
+      "today_completed": 0,
+      "yesterday_completed": 5,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
@@ -197,8 +118,8 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[07] BUOL",
-      "total_prelist": 57327,
-      "total_draft": 129,
+      "total_prelist": 57328,
+      "total_draft": 130,
       "total_open": 57152,
       "total_submitted": 46,
       "total_rejected": 0,
@@ -211,8 +132,8 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 1,
       "new_businesses": [
         {
-          "name": "ERPIN / NURLIAN",
-          "code": "7207011002000900 - ERPIN / NURLIAN - 56 /  - 1 - 94563 - 2. Tidak",
+          "name": "MOHAMMAD NADIR / ",
+          "code": "7207010011000300 - MOHAMMAD NADIR /  - 1 /  - Ervina1293@gmail.com - 1 - 94563 - 2. Tidak",
           "date": "yesterday",
           "status": "DRAFT"
         }
@@ -221,15 +142,15 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[08] PARIGI MOUTONG",
       "total_prelist": 169384,
-      "total_draft": 5,
-      "total_open": 169374,
+      "total_draft": 6,
+      "total_open": 169373,
       "total_submitted": 3,
       "total_rejected": 2,
       "total_approved": 0,
       "persentase": 0.0,
       "today_completed": 0,
-      "yesterday_completed": 1,
-      "two_days_ago_completed": 0,
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 1,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
       "new_businesses": []
@@ -237,14 +158,14 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[09] TOJO UNA-UNA",
       "total_prelist": 57912,
-      "total_draft": 3,
-      "total_open": 57905,
+      "total_draft": 4,
+      "total_open": 57904,
       "total_submitted": 4,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.01,
-      "today_completed": 1,
-      "yesterday_completed": 0,
+      "today_completed": 0,
+      "yesterday_completed": 1,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
@@ -284,15 +205,15 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[12] MOROWALI UTARA",
-      "total_prelist": 42448,
-      "total_draft": 4,
-      "total_open": 42443,
-      "total_submitted": 1,
+      "total_prelist": 42449,
+      "total_draft": 3,
+      "total_open": 42434,
+      "total_submitted": 12,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 0.0,
+      "persentase": 0.03,
       "today_completed": 0,
-      "yesterday_completed": 0,
+      "yesterday_completed": 1,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
@@ -308,8 +229,8 @@ window.IPAS_DATA = {
       "total_approved": 0,
       "persentase": 0.01,
       "today_completed": 0,
-      "yesterday_completed": 2,
-      "two_days_ago_completed": 0,
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 2,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
       "new_businesses": []
@@ -326,8 +247,8 @@ window.IPAS_DATA = {
       "total_approved": 0,
       "persentase": 66.67,
       "today_completed": 0,
-      "yesterday_completed": 4,
-      "two_days_ago_completed": 0,
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 4,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
       "new_businesses": []
@@ -511,20 +432,20 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[71] PALU",
       "total_prelist": 419,
-      "total_draft": 5,
-      "total_open": 406,
+      "total_draft": 6,
+      "total_open": 405,
       "total_submitted": 8,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 1.91,
       "today_completed": 0,
       "yesterday_completed": 0,
-      "two_days_ago_completed": 1,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
       "new_businesses": []
     }
   ],
-  "se_umum_prov_total": 1140277,
+  "se_umum_prov_total": 1140280,
   "se_ub_prov_total": 1264
 };

@@ -530,7 +530,7 @@ def scrape_via_api():
             for code in kab_codes:
                 url = f"https://fasih-sm.bps.go.id/app/api/region/api/v1/region/custom-by-smallest-code-and-level?groupId=6b0b053f-aa43-4855-ac8f-26857b735c93&smallestLevelFullCode={code}&level=2"
                 try:
-                    res = http_session.get(url, timeout=10)
+                    res = http_session.get(url, timeout=30)
                     if res.status_code == 200:
                         json_data = res.json()
                         if json_data and json_data.get("success") and json_data.get("data"):
@@ -607,7 +607,7 @@ def scrape_via_api():
                 }
 
                 try:
-                    res = http_session.post(datatable_url, json=payload, timeout=20)
+                    res = http_session.post(datatable_url, json=payload, timeout=60)
                     status_code = res.status_code
                     if status_code == 200:
                         res_eval = {"status": 200, "json": res.json()}
@@ -747,7 +747,7 @@ def scrape_via_api():
                 res_eval_email = None
                 for attempt in range(1, 4):
                     try:
-                        res = http_session.post(email_datatable_url, json=email_payload, timeout=7)
+                        res = http_session.post(email_datatable_url, json=email_payload, timeout=30)
                         if res.status_code == 200:
                             res_eval_email = {"status": 200, "json": res.json()}
                         else:
@@ -762,7 +762,7 @@ def scrape_via_api():
                 res_eval_events = None
                 for attempt in range(1, 4):
                     try:
-                        res = http_session.get(email_events_url, timeout=7)
+                        res = http_session.get(email_events_url, timeout=30)
                         if res.status_code == 200:
                             res_eval_events = {"status": 200, "json": res.json()}
                         else:
