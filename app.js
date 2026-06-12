@@ -1706,7 +1706,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         (regions || []).forEach(r => {
             if (r.regionCode) {
-                const count = window.syncMapCache[r.regionCode] || 0;
+                // FASIH regionCode is 16 digits, Superset sls_code is 14 digits
+                const sls14 = r.regionCode.substring(0, 14);
+                const count = window.syncMapCache[sls14] || 0;
                 if (count > 0) {
                     syncedSls++;
                 }
