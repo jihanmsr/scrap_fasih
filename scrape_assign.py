@@ -759,6 +759,94 @@ function filterAssignData(type) {
             except Exception as e:
                 print(f"Gagal mengunggah data Assign ke Supabase: {e}")
 
+        # ----------------------------------------------------
+        # FETCH SYNC DATA FROM SUPERSET
+        # ----------------------------------------------------
+        try:
+            print("\n[INFO] Mulai menarik data sinkronisasi dari Superset...")
+            dash_page = None
+            for p_page in context.pages:
+                if "fasih-dashboard.bps.go.id" in p_page.url:
+                    dash_page = p_page
+                    break
+            
+            if not dash_page:
+                dash_page = await context.new_page()
+                try:
+                    await dash_page.goto("https://fasih-dashboard.bps.go.id/superset/dashboard/se2026/", timeout=60000, wait_until="domcontentloaded")
+                except Exception as e:
+                    print(f"[WARNING] Navigasi lambat/timeout: {e}")
+            
+            for _ in range(5):
+                if "login" in dash_page.url.lower():
+                    print("\nSilakan login ke fasih-dashboard.bps.go.id di Chrome. Menunggu login...")
+                    await asyncio.sleep(5)
+                else:
+                    break
+                    
+            superset_data = await dash_page.evaluate("""
+                async () => {
+                    const url = 'https://fasih-dashboard.bps.go.id/api/v1/chart/data';
+                    const payload = {
+                        "datasource": {"id": 7047, "type": "table"},
+                        "force": false,
+                        "queries": [{
+                            "granularity": null,
+                            "filters": [],
+                            "extras": {"time_grain_sqla": "P1D", "having": "", "where": ""},
+                            "columns": [
+                                {"expressionType": "SQL", "label": "sls_code", "sqlExpression": "level_5_full_code"},
+                                {"expressionType": "SQL", "label": "sls_name", "sqlExpression": "level_5_name"}
+                            ],
+                            "metrics": [
+                                {"expressionType": "SQL", "hasCustomLabel": true, "label": "assign", "sqlExpression": "sum(case when assign = 1 THEN 1 ELSE 0 END)"},
+                                {"expressionType": "SQL", "hasCustomLabel": true, "label": "sync_count", "sqlExpression": "SUM(CASE WHEN sync_count_pencacah > 0 AND sync_count_pencacah IS NOT NULL THEN 1 ELSE 0 END)"}
+                            ],
+                            "row_limit": 50000
+                        }],
+                        "result_format": "json",
+                        "result_type": "full"
+                    };
+
+                    try {
+                        const r = await fetch(url, {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify(payload)
+                        });
+                        if (!r.ok) return { error: `HTTP ${r.status}: ${await r.text()}` };
+                        return await r.json();
+                    } catch (e) {
+                        return { error: e.toString() };
+                    }
+                }
+            """)
+            
+            if "error" not in superset_data and superset_data.get("result"):
+                result_data = superset_data["result"][0].get("data", [])
+                print(f"Berhasil menarik {len(result_data)} baris data SLS dari Superset.")
+                
+                js_content_sync = f"window.SUPERSET_SYNC_SLS_DATA = {json.dumps(result_data, indent=4, ensure_ascii=False)};\n"
+                with open("sync_data.js", "w", encoding="utf-8") as f:
+                    f.write(js_content_sync)
+                print("✅ Data disimpan ke sync_data.js")
+                
+                if supabase:
+                    try:
+                        supabase.table("dashboard_store").delete().eq("key", "superset_sync_data").execute()
+                        supabase.table("dashboard_store").insert({"key": "superset_sync_data", "value": result_data}).execute()
+                        print("Berhasil mengunggah data sync Superset ke Supabase.")
+                    except Exception as e:
+                        print(f"Gagal mengunggah ke Supabase: {e}")
+            else:
+                print(f"[ERROR] Gagal menarik data dari Superset: {superset_data.get('error', 'Unknown error')}")
+                
+            if dash_page != page:
+                await dash_page.close()
+                
+        except Exception as e:
+            print(f"[ERROR] Exception saat menarik data Superset: {e}")
+
         await page.close()
 
 def main():

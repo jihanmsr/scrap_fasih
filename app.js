@@ -743,7 +743,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const surveyData = ipasDataObj[surveyType] || [];
 
         // Calculate Summary
-        let prelist = 0, draft = 0, openVal = 0, submitted = 0, today = 0, yesterday = 0, newToday = 0;
+        let prelist = 0, draft = 0, openVal = 0, submitted = 0, today = 0, yesterday = 0, twoDaysAgo = 0, newToday = 0;
 
         surveyData.forEach(item => {
             prelist += item.total_prelist || 0;
@@ -752,7 +752,9 @@ document.addEventListener('DOMContentLoaded', () => {
             submitted += item.total_submitted || 0;
             today += item.today_completed || 0;
             yesterday += item.yesterday_completed || 0;
+            twoDaysAgo += item.two_days_ago_completed || 0;
             newToday += item.new_usaha_today || 0;
+            item.sisa_usaha = Math.max(0, (item.total_prelist || 0) - (item.total_submitted || 0));
         });
 
         // Override prelist with PROVINSI_TOTAL if available
@@ -768,12 +770,32 @@ document.addEventListener('DOMContentLoaded', () => {
         const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
 
         // Update stats elements
-        document.getElementById(`${surveyType}-stat-total-prelist`).textContent = formatNum(prelist);
-        document.getElementById(`${surveyType}-stat-new-today`).textContent = `+${formatNum(newToday)}`;
-        document.getElementById(`${surveyType}-stat-draft`).textContent = formatNum(draft);
-        document.getElementById(`${surveyType}-stat-open`).textContent = formatNum(openVal);
-        document.getElementById(`${surveyType}-stat-submitted`).textContent = formatNum(submitted);
-        document.getElementById(`${surveyType}-stat-percentage`).textContent = persentase + '%';
+        const prelistEl = document.getElementById(`${surveyType}-stat-total-prelist`);
+        if(prelistEl) prelistEl.textContent = formatNum(prelist);
+        
+        const newTodayEl = document.getElementById(`${surveyType}-stat-new-today`);
+        if(newTodayEl) newTodayEl.textContent = `+${formatNum(newToday)}`;
+        
+        const draftEl = document.getElementById(`${surveyType}-stat-draft`);
+        if(draftEl) draftEl.textContent = formatNum(draft);
+        
+        const openEl = document.getElementById(`${surveyType}-stat-open`);
+        if(openEl) openEl.textContent = formatNum(openVal);
+        
+        const submittedEl = document.getElementById(`${surveyType}-stat-submitted`);
+        if(submittedEl) submittedEl.textContent = formatNum(submitted);
+        
+        const percentEl = document.getElementById(`${surveyType}-stat-percentage`);
+        if(percentEl) percentEl.textContent = persentase + '%';
+
+        const todayEl = document.getElementById(`${surveyType}-stat-today`);
+        if(todayEl) todayEl.textContent = formatNum(today);
+
+        const yesterdayEl = document.getElementById(`${surveyType}-stat-yesterday`);
+        if(yesterdayEl) yesterdayEl.textContent = formatNum(yesterday);
+
+        const twoDaysEl = document.getElementById(`${surveyType}-stat-2days`);
+        if(twoDaysEl) twoDaysEl.textContent = formatNum(twoDaysAgo);
 
         // Kenaikan Persentase
         const pctToday = prelist > 0 ? ((today / prelist) * 100).toFixed(2) : '0.00';
@@ -788,8 +810,11 @@ document.addEventListener('DOMContentLoaded', () => {
             progressBar.style.width = persentase + '%';
         }
 
-        document.getElementById(`${surveyType}-stat-sisa-usaha`).textContent = formatNum(sisa);
-        document.getElementById(`${surveyType}-stat-today-completed`).textContent = formatNum(today);
+        const sisaUsahaEl = document.getElementById(`${surveyType}-stat-sisa-usaha`);
+        if (sisaUsahaEl) sisaUsahaEl.textContent = formatNum(sisa);
+        
+        const todayCompletedEl = document.getElementById(`${surveyType}-stat-today-completed`);
+        if (todayCompletedEl) todayCompletedEl.textContent = formatNum(today);
 
         const vsYesterdayWrapper = document.getElementById(`${surveyType}-stat-vs-yesterday-wrapper`);
         if (vsYesterdayWrapper) {
@@ -985,16 +1010,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     labels: sortedForBar.map(i => i.kabupaten.replace(/\[\d+\] /g, '')),
                     datasets: [
                         {
+                            label: 'Total Target',
+                            data: sortedForBar.map(i => i.total_prelist || 0),
+                            backgroundColor: 'rgba(239, 68, 68, 0.85)', // Red
+                            borderRadius: 4,
+                            grouped: false
+                        },
+                        {
                             label: 'Submitted (Selesai)',
                             data: sortedForBar.map(i => i.total_submitted || 0),
                             backgroundColor: 'rgba(16, 185, 129, 0.85)', // Green
-                            borderRadius: 4
-                        },
-                        {
-                            label: 'Sisa Usaha (Belum Selesai)',
-                            data: sortedForBar.map(i => i.sisa_usaha || 0),
-                            backgroundColor: 'rgba(239, 68, 68, 0.85)', // Red
-                            borderRadius: 4
+                            borderRadius: 4,
+                            minBarLength: 6,
+                            grouped: false
                         }
                     ]
                 };
@@ -1011,12 +1039,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     scales: {
                         y: {
-                            stacked: true,
+                            stacked: false,
                             grid: { color: gridColor },
                             ticks: { color: textColor }
                         },
                         x: {
-                            stacked: true,
+                            stacked: false,
                             grid: { display: false },
                             ticks: {
                                 color: textColor,
@@ -1141,6 +1169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let assignChartInstance = null;
     let progressGaugeInstance = null;
+    let syncGaugeInstance = null;
 
     function renderAssignChart() {
         const ctx = document.getElementById('assignChart');
@@ -1155,8 +1184,21 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Aggregate sync data by Kabupaten
+        const syncByKab = {};
+        if (window.SUPERSET_SYNC_SLS_DATA) {
+            window.SUPERSET_SYNC_SLS_DATA.forEach(d => {
+                const kodeKab = d.sls_code ? d.sls_code.substring(0, 4) : '';
+                if (kodeKab) {
+                    syncByKab[kodeKab] = (syncByKab[kodeKab] || 0) + (d.sync_count || 0);
+                }
+            });
+        }
+
         const labels = window.ASSIGN_DATA.map(d => d.nama_kab.replace(/\[\d+\] /, ''));
-        const assignedData = window.ASSIGN_DATA.map(d => d.assigned);
+        const syncedData = window.ASSIGN_DATA.map(d => syncByKab[d.kode_kab] || 0);
+        // Sudah ditugaskan tapi belum sync
+        const assignedOnlyData = window.ASSIGN_DATA.map((d, i) => Math.max(0, d.assigned - syncedData[i]));
         const notAssignedData = window.ASSIGN_DATA.map(d => d.have_not_assigned);
 
         const textColor = getThemeColor('--text-secondary', '#9ca3af');
@@ -1167,8 +1209,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 labels: labels,
                 datasets: [
                     {
-                        label: 'Sudah Ditugaskan',
-                        data: assignedData,
+                        label: 'Sudah Sync',
+                        data: syncedData,
+                        backgroundColor: 'rgba(234, 179, 8, 0.9)', // Yellow
+                        borderRadius: 4,
+                    },
+                    {
+                        label: 'Sudah Ditugaskan (Belum Sync)',
+                        data: assignedOnlyData,
                         backgroundColor: 'rgba(16, 185, 129, 0.9)', // Green
                         borderRadius: 4,
                     },
@@ -1739,6 +1787,38 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    function updateGlobalSyncProgress() {
+        const syncContainerInner = document.getElementById('global-sync-progress-container-inner');
+        const syncTextInner = document.getElementById('global-sync-text-inner');
+        const syncBarInner = document.getElementById('global-sync-bar-inner');
+        
+        if (!window.SUPERSET_SYNC_SLS_DATA || !window.ASSIGN_DATA) return;
+        
+        if (window.SUPERSET_SYNC_SLS_DATA.length === 0) {
+            if (syncTextInner) syncTextInner.textContent = "Data sinkronisasi belum tersedia.";
+            return;
+        }
+
+        let totalSynced = 0;
+        window.SUPERSET_SYNC_SLS_DATA.forEach(d => {
+            totalSynced += (d.sync_count || 0);
+        });
+
+        // Gunakan jumlah SLS aktif riil dari data penugasan (sekitar 15.751)
+        const totalSls = (window.ASSIGN_SLS_DATA && window.ASSIGN_SLS_DATA.length > 0) 
+                         ? window.ASSIGN_SLS_DATA.length 
+                         : window.SUPERSET_SYNC_SLS_DATA.length;
+                         
+        const pct = totalSls > 0 ? ((totalSynced / totalSls) * 100).toFixed(2) : '0.00';
+        const textContent = `${new Intl.NumberFormat('id-ID').format(totalSynced)} dari ${new Intl.NumberFormat('id-ID').format(totalSls)} target SLS tersinkronisasi`;
+
+        if (syncContainerInner && syncTextInner && syncBarInner) {
+            syncTextInner.textContent = textContent + ` (${pct}%)`;
+            syncBarInner.style.width = pct + '%';
+            syncContainerInner.style.display = 'block';
+        }
+    }
+
     window.renderPetugasTable = function () {
         const petugasData = window.PETUGAS_DATA || [];
         const tbody = document.getElementById('petugas-table-body');
@@ -2025,7 +2105,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <th onclick="window.sortSyncTable('sync_count')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none; width: 130px;">Sync (Superset)${getIcon('sync_count')}</th>
             <th onclick="window.sortSyncTable('sync_status')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none; width: 120px;">Status${getIcon('sync_status')}</th>
         `;
-    }
+        
+        // Populate global sync
+        updateGlobalSyncProgress();
+    };
 
     window.renderSyncTable = function() {
         const tbody = document.getElementById('sync-table-body');
@@ -2448,7 +2531,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalPct = floorPct(totalSudah, totalUsaha);
         rows.push(["", "", "TOTAL", totalUsaha, totalSudah, totalBelum, totalPct]);
 
-        const prefix = activeSubtab === 'ub' ? 'UB' : 'Umum';
+        const prefix = activeSubtab === 'ub' ? 'UB' : 'SE2026';
         exportToCSV(`rekap_kabupaten_${prefix.toLowerCase()}.csv`, headers, rows);
     };
 
@@ -2508,7 +2591,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return [item.kab_name, item.kec_name, item.desa_name, item.sls_code, item.sls_name, item.total, item.assigned, item.unassigned, status, officers];
         });
 
-        const prefix = activeSubtab === 'ub' ? 'UB' : 'Umum';
+        const prefix = activeSubtab === 'ub' ? 'UB' : 'SE2026';
         exportToCSV(`rincian_sls_${prefix.toLowerCase()}.csv`, headers, rows);
     };
 
@@ -2574,7 +2657,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return [idx + 1, item.username || '-', item.email || '-', item.roleName || '-', item.regions ? item.regions.length : 0, regionsStr];
         });
 
-        const prefix = activeSubtab === 'ub' ? 'UB' : 'Umum';
+        const prefix = activeSubtab === 'ub' ? 'UB' : 'SE2026';
         exportToCSV(`daftar_petugas_${prefix.toLowerCase()}.csv`, headers, rows);
     };
 
@@ -2851,8 +2934,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const btnDownloadBackupCsv = document.getElementById('btn-download-backup-csv');
 
         if (tabId === 'se_umum') {
-            if (mainHeader) mainHeader.textContent = 'Dashboard Sensus Ekonomi Umum';
-            if (mainSubheader) mainSubheader.textContent = 'Rekapitulasi progres pendataan Sensus Ekonomi 2026 untuk kategori Usaha Umum';
+            if (mainHeader) mainHeader.textContent = 'Dashboard Sensus Ekonomi 2026';
+            if (mainSubheader) mainSubheader.textContent = 'Rekapitulasi progres pendataan Sensus Ekonomi 2026';
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
             renderSeDashboard('se_umum');
@@ -3193,6 +3276,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         renderSyncTable();
+    };
+
+    window.toggleStatsDetail = function(section) {
+        const container = document.getElementById(`${section}-stats-expanded`);
+        const btn = document.getElementById(`${section}-toggle-detail`);
+        if (!container || !btn) return;
+        
+        if (container.style.display === 'none') {
+            container.style.display = 'flex';
+            btn.classList.add('expanded');
+            btn.innerHTML = 'Sembunyikan Detail ▲';
+        } else {
+            container.style.display = 'none';
+            btn.classList.remove('expanded');
+            btn.innerHTML = section === 'email' ? 'Lihat Kegagalan Email ▼' : 'Lihat Detail Dokumen ▼';
+        }
     };
 
     // Initial Execution

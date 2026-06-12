@@ -1,5 +1,5 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-12T14:33:29.042582+08:00",
+  "updated_at": "2026-06-12T15:45:42.038423+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
@@ -11,8 +11,8 @@ window.IPAS_DATA = {
       "total_approved": 0,
       "persentase": 0.19,
       "today_completed": 0,
-      "yesterday_completed": 48,
-      "two_days_ago_completed": 6,
+      "yesterday_completed": 32,
+      "two_days_ago_completed": 8,
       "new_usaha_today": 3,
       "new_usaha_yesterday": 3,
       "new_businesses": [
@@ -89,13 +89,13 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[04] POSO",
       "total_prelist": 105395,
-      "total_draft": 76,
+      "total_draft": 75,
       "total_open": 105285,
-      "total_submitted": 34,
+      "total_submitted": 35,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.03,
-      "today_completed": 1,
+      "today_completed": 2,
       "yesterday_completed": 3,
       "two_days_ago_completed": 5,
       "new_usaha_today": 0,
@@ -221,8 +221,8 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[08] PARIGI MOUTONG",
       "total_prelist": 169384,
-      "total_draft": 4,
-      "total_open": 169375,
+      "total_draft": 5,
+      "total_open": 169374,
       "total_submitted": 3,
       "total_rejected": 2,
       "total_approved": 0,
@@ -243,9 +243,9 @@ window.IPAS_DATA = {
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.01,
-      "today_completed": 0,
+      "today_completed": 1,
       "yesterday_completed": 0,
-      "two_days_ago_completed": 1,
+      "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
       "new_businesses": []
@@ -286,8 +286,8 @@ window.IPAS_DATA = {
       "kabupaten": "[12] MOROWALI UTARA",
       "total_prelist": 42448,
       "total_draft": 4,
-      "total_open": 42444,
-      "total_submitted": 0,
+      "total_open": 42443,
+      "total_submitted": 1,
       "total_rejected": 0,
       "total_approved": 0,
       "persentase": 0.0,

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -27,7 +27,7 @@
                     style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.25rem;">
                     <div style="display: flex; align-items: center; gap: 0.5rem;">
                         <div class="logo-icon"
-                            style="background: linear-gradient(135deg, var(--primary) 0%, #ef4444 100%); width: 32px; height: 32px; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2); flex-shrink: 0;">
+                            style="background: linear-gradient(135deg, var(--primary) 0%, #ef4444 100%); width: 32px; height: 32px; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 10px rgba(249, 115, 22, 0.2); flex-shrink: 0;">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
                                 stroke-width="2.5">
                                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -52,7 +52,7 @@
                         <line x1="12" x2="12" y1="20" y2="4"></line>
                         <line x1="6" x2="6" y1="20" y2="14"></line>
                     </svg>
-                    Sensus Ekonomi Umum
+                    Sensus Ekonomi 2026
                 </button>
                 <button class="btn-tab" id="tab-btn-se_ub" onclick="switchTab('se_ub')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -61,7 +61,7 @@
                         <line x1="12" x2="12" y1="20" y2="4"></line>
                         <line x1="6" x2="6" y1="20" y2="14"></line>
                     </svg>
-                    Sensus Ekonomi Usaha Besar
+                    Sensus Ekonomi UB
                 </button>
                 <button class="btn-tab" id="tab-btn-email" onclick="switchTab('email')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -69,7 +69,7 @@
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
-                    Pemantauan Email Usaha Besar
+                    Pemantauan Email UB
                 </button>
                 <button class="btn-tab" id="tab-btn-assign" onclick="switchTab('assign')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -79,7 +79,7 @@
                         <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                         <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                     </svg>
-                    Alokasi Penugasan Petugas
+                    Alokasi Petugas
                 </button>
             </nav>
 
@@ -114,10 +114,10 @@
                     <div>
                         <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
                             <h1 id="main-header"
-                                style="margin: 0; font-size: 1.75rem; font-weight: 800; font-family: 'Outfit', sans-serif;">
+                                style="margin: 0; font-size: 1.75rem; font-weight: 600; font-family: 'Poppins', sans-serif;">
                                 Dashboard Sensus Ekonomi</h1>
                             <div id="last-updated-text"
-                                style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 700; background: rgba(99, 102, 241, 0.06); padding: 0.5rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(99, 102, 241, 0.15); font-family: 'Outfit', sans-serif; display: inline-flex; align-items: center; gap: 0.35rem;">
+                                style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 700; background: rgba(249, 115, 22, 0.06); padding: 0.5rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(249, 115, 22, 0.15); font-family: 'Poppins', sans-serif; display: inline-flex; align-items: center; gap: 0.35rem;">
                                 Memuat status...
                             </div>
                         </div>
@@ -170,46 +170,37 @@
                         </svg>
                         Status Pengiriman Email
                     </h3>
-                    <div class="stats-grid" id="stats-container">
-                        <div class="stat-card tooltip-trigger"
-                            data-tooltip="Total Perusahaan: Jumlah seluruh perusahaan Usaha Besar terdaftar yang dikirimi kuesioner via email."
-                            style="--stat-color: var(--primary);">
-                            <span class="card-category-tag">Email</span>
+                    <div class="compact-stats" id="stats-container">
+                        <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
                             <div class="stat-label">Total Perusahaan</div>
                             <div class="stat-value" id="stat-total-companies">0</div>
-                            <div class="stat-subtext">Semua record terdaftar</div>
                         </div>
-                        <div class="stat-card tooltip-trigger"
-                            data-tooltip="Bounced Emails: Email kuesioner yang gagal dikirimkan dan memantul balik (karena kotak masuk penuh atau alamat salah)."
-                            style="--stat-color: var(--color-bounced);">
-                            <span class="card-category-tag">Email</span>
-                            <div class="stat-label">Bounced Emails</div>
-                            <div class="stat-value" id="stat-bounced" style="color: var(--color-bounced);">0</div>
-                            <div class="stat-subtext">Gagal terkirim balik</div>
+                        <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
+                            <div class="stat-label">Delivered</div>
+                            <div class="stat-value" id="stat-delivered">0</div>
                         </div>
-                        <div class="stat-card tooltip-trigger"
-                            data-tooltip="Permanent Fail: Kegagalan pengiriman email secara permanen karena alamat email salah atau domain tidak terdaftar."
-                            style="--stat-color: var(--color-bounced);">
-                            <span class="card-category-tag">Email</span>
-                            <div class="stat-label">Permanent Fail</div>
-                            <div class="stat-value" id="stat-permanent" style="color: var(--color-bounced);">0</div>
-                            <div class="stat-subtext">Gagal permanen</div>
-                        </div>
-                        <div class="stat-card tooltip-trigger"
-                            data-tooltip="Link Clicked: Responden yang telah menerima email dan mengklik tautan pengisian kuesioner."
-                            style="--stat-color: var(--color-clicked);">
-                            <span class="card-category-tag">Email</span>
-                            <div class="stat-label">Link Clicked</div>
-                            <div class="stat-value" id="stat-clicked" style="color: var(--color-clicked);">0</div>
-                            <div class="stat-subtext">Responden membuka link</div>
-                        </div>
-                        <div class="stat-card tooltip-trigger"
-                            data-tooltip="Opened Emails: Email kuesioner yang berhasil masuk ke kotak masuk dan dibuka/dibaca oleh responden."
-                            style="--stat-color: var(--color-opened);">
-                            <span class="card-category-tag">Email</span>
+                        <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
                             <div class="stat-label">Opened Emails</div>
-                            <div class="stat-value" id="stat-opened" style="color: var(--color-opened);">0</div>
-                            <div class="stat-subtext">Dibaca oleh responden</div>
+                            <div class="stat-value" id="stat-opened">0</div>
+                        </div>
+                        <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
+                            <div class="stat-label">Link Clicked</div>
+                            <div class="stat-value" id="stat-clicked">0</div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-toggle-detail" id="email-toggle-detail" onclick="toggleStatsDetail('email')">
+                        Lihat Kegagalan Email ▼
+                    </button>
+
+                    <div class="stats-expanded" id="email-stats-expanded" style="display: none;">
+                        <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
+                            <div class="stat-label">Bounced Emails</div>
+                            <div class="stat-value" id="stat-bounced">0</div>
+                        </div>
+                        <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
+                            <div class="stat-label">Permanent Fail</div>
+                            <div class="stat-value" id="stat-permanent">0</div>
                         </div>
                     </div>
                 </div>
@@ -330,80 +321,53 @@
             </div>
             <div class="tab-content" id="tab-content-se_umum">
 
-                <div class="stats-grid" id="se_umum-stats-container">
-                    <div class="stat-card tooltip-trigger"
-                        data-tooltip="Total Target: Jumlah seluruh target usaha umum (Prelist) yang terdaftar untuk disensus."
-                        style="--stat-color: var(--primary);">
-                        <span class="card-category-tag">Umum</span>
-                        <div class="stat-label">Total Usaha (Prelist)</div>
+                <div class="compact-stats" id="se_umum-stats-container">
+                    <div class="stat-card-compact" style="--stat-color: var(--primary);">
+                        <div class="stat-label">Total Target</div>
                         <div class="stat-value" id="se_umum-stat-total-prelist">0</div>
-                        <div class="stat-subtext" id="se_umum-new-today-wrapper" style="cursor: pointer;"
-                            onclick="openProvincialNewBusinessesModal('se_umum')"
-                            title="Klik untuk rincian penambahan usaha">
-                            <span id="se_umum-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span>
-                            hari ini <svg
-                                style="display:inline-block; vertical-align:middle; margin-left:2px; opacity:0.6;"
-                                width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25">
-                                </path>
-                            </svg>
+                    </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--color-opened);">
+                        <div class="stat-label">Submit Hari Ini</div>
+                        <div class="stat-value" id="se_umum-stat-today">0</div>
+                        <div class="stat-subtext" id="se_umum-new-today-wrapper" style="cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_umum')">
+                            <span id="se_umum-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span> usaha baru
                         </div>
                     </div>
-                    <div class="stat-card tooltip-trigger"
-                        data-tooltip="Draft: Kuesioner usaha umum yang telah mulai diisi oleh petugas tetapi baru disimpan sementara."
-                        style="--stat-color: #f59e0b;">
-                        <span class="card-category-tag">Umum</span>
-                        <div class="stat-label">Draft</div>
-                        <div class="stat-value" id="se_umum-stat-draft" style="color: #f59e0b;">0</div>
-                        <div class="stat-subtext">Dokumen berstatus draft</div>
+                    <div class="stat-card-compact" style="--stat-color: #f59e0b;">
+                        <div class="stat-label">Submit Kemarin</div>
+                        <div class="stat-value" id="se_umum-stat-yesterday">0</div>
                     </div>
-                    <div class="stat-card tooltip-trigger"
-                        data-tooltip="Open: Kuesioner usaha umum yang baru dibuka atau sedang dalam tahap pengerjaan aktif oleh petugas."
-                        style="--stat-color: #3b82f6;">
-                        <span class="card-category-tag">Umum</span>
+                    <div class="stat-card-compact" style="--stat-color: var(--color-clicked);">
+                        <div class="stat-label">Submit 2 Hari Lalu</div>
+                        <div class="stat-value" id="se_umum-stat-2days">0</div>
+                    </div>
+                </div>
+
+                <button class="btn-toggle-detail" id="se_umum-toggle-detail" onclick="toggleStatsDetail('se_umum')">
+                    Lihat Detail Dokumen ▼
+                </button>
+
+                <div class="stats-expanded" id="se_umum-stats-expanded" style="display: none;">
+                    <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
                         <div class="stat-label">Open</div>
-                        <div class="stat-value" id="se_umum-stat-open" style="color: #3b82f6;">0</div>
-                        <div class="stat-subtext">Dokumen berstatus open</div>
+                        <div class="stat-value" id="se_umum-stat-open">0</div>
                     </div>
-                    <div class="stat-card tooltip-trigger"
-                        data-tooltip="Submitted: Kuesioner usaha umum yang telah selesai diisi penuh dan berhasil disubmit ke server pusat."
-                        style="--stat-color: var(--color-delivered);">
-                        <span class="card-category-tag">Umum</span>
-                        <div class="stat-label">Submitted (Selesai)</div>
-                        <div class="stat-value" id="se_umum-stat-submitted" style="color: var(--color-delivered);">0
-                        </div>
-                        <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
-                            <div
-                                style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
-                                <div id="se_umum-progress-bar"
-                                    style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
-                            </div>
-                            <span id="se_umum-stat-percentage"
-                                style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
-                        </div>
-                        <div id="se_umum-stat-kenaikan"
-                            style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; font-weight: 600;">
-                            +0% hari ini | +0% kemarin
-                        </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
+                        <div class="stat-label">Draft</div>
+                        <div class="stat-value" id="se_umum-stat-draft">0</div>
                     </div>
-                    <div class="stat-card tooltip-trigger"
-                        data-tooltip="Sisa Usaha: Jumlah target usaha umum yang belum disubmit (Draft + Open + Belum Dikerjakan)."
-                        style="--stat-color: var(--color-bounced);">
-                        <span class="card-category-tag">Umum</span>
+                    <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
+                        <div class="stat-label">Total Selesai</div>
+                        <div class="stat-value" id="se_umum-stat-submitted">0</div>
+                        <div id="se_umum-stat-percentage" style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered); margin-top: 0.25rem;">0%</div>
+                    </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
                         <div class="stat-label">Sisa Usaha</div>
-                        <div class="stat-value" id="se_umum-stat-sisa-usaha" style="color: var(--color-bounced);">0
-                        </div>
-                        <div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <span>Progres Hari Ini: <span id="se_umum-stat-today-completed"
-                                    style="font-weight:700;">0</span></span>
-                            <span id="se_umum-stat-vs-yesterday-wrapper"></span>
-                        </div>
+                        <div class="stat-value" id="se_umum-stat-sisa-usaha">0</div>
                     </div>
                 </div>
                 <div class="stats-section" id="se_umum-chart-section" style="margin-top: 1rem;">
-                    <div class="stat-card" style="padding: 1.5rem; --stat-color: var(--primary);">
+                    <div class="stat-card" style="padding: 1.5rem; --stat-color: var(--text-secondary);">
                         <h3
                             style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
                             <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -475,78 +439,53 @@
             </div>
             <div class="tab-content" id="tab-content-se_ub" style="display: none;">
 
-                <div class="stats-grid" id="se_ub-stats-container">
-                    <div class="stat-card tooltip-trigger"
-                        data-tooltip="Total Target UB: Jumlah seluruh target perusahaan Usaha Besar (UB) yang terdaftar untuk disensus."
-                        style="--stat-color: var(--primary);">
-                        <span class="card-category-tag">UB</span>
-                        <div class="stat-label">Total Usaha (Prelist)</div>
+                <div class="compact-stats" id="se_ub-stats-container">
+                    <div class="stat-card-compact" style="--stat-color: var(--primary);">
+                        <div class="stat-label">Total Target</div>
                         <div class="stat-value" id="se_ub-stat-total-prelist">0</div>
-                        <div class="stat-subtext" id="se_ub-new-today-wrapper" style="cursor: pointer;"
-                            onclick="openProvincialNewBusinessesModal('se_ub')"
-                            title="Klik untuk rincian penambahan usaha">
-                            <span id="se_ub-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span>
-                            hari ini <svg
-                                style="display:inline-block; vertical-align:middle; margin-left:2px; opacity:0.6;"
-                                width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25">
-                                </path>
-                            </svg>
+                    </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--color-opened);">
+                        <div class="stat-label">Submit Hari Ini</div>
+                        <div class="stat-value" id="se_ub-stat-today">0</div>
+                        <div class="stat-subtext" id="se_ub-new-today-wrapper" style="cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_ub')">
+                            <span id="se_ub-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span> usaha baru
                         </div>
                     </div>
-                    <div class="stat-card tooltip-trigger"
-                        data-tooltip="Draft UB: Kuesioner perusahaan UB yang telah mulai diisi oleh petugas tetapi baru disimpan sementara."
-                        style="--stat-color: #f59e0b;">
-                        <span class="card-category-tag">UB</span>
-                        <div class="stat-label">Draft</div>
-                        <div class="stat-value" id="se_ub-stat-draft" style="color: #f59e0b;">0</div>
-                        <div class="stat-subtext">Dokumen berstatus draft</div>
+                    <div class="stat-card-compact" style="--stat-color: #f59e0b;">
+                        <div class="stat-label">Submit Kemarin</div>
+                        <div class="stat-value" id="se_ub-stat-yesterday">0</div>
                     </div>
-                    <div class="stat-card tooltip-trigger"
-                        data-tooltip="Open UB: Kuesioner perusahaan UB yang baru dibuka atau sedang dalam tahap pengerjaan aktif oleh petugas."
-                        style="--stat-color: #3b82f6;">
-                        <span class="card-category-tag">UB</span>
+                    <div class="stat-card-compact" style="--stat-color: var(--color-clicked);">
+                        <div class="stat-label">Submit 2 Hari Lalu</div>
+                        <div class="stat-value" id="se_ub-stat-2days">0</div>
+                    </div>
+                </div>
+
+                <button class="btn-toggle-detail" id="se_ub-toggle-detail" onclick="toggleStatsDetail('se_ub')">
+                    Lihat Detail Dokumen ▼
+                </button>
+
+                <div class="stats-expanded" id="se_ub-stats-expanded" style="display: none;">
+                    <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
                         <div class="stat-label">Open</div>
-                        <div class="stat-value" id="se_ub-stat-open" style="color: #3b82f6;">0</div>
-                        <div class="stat-subtext">Dokumen berstatus open</div>
+                        <div class="stat-value" id="se_ub-stat-open">0</div>
                     </div>
-                    <div class="stat-card tooltip-trigger"
-                        data-tooltip="Submitted UB: Kuesioner perusahaan UB yang telah selesai diisi penuh dan berhasil disubmit ke server pusat."
-                        style="--stat-color: var(--color-delivered);">
-                        <span class="card-category-tag">UB</span>
-                        <div class="stat-label">Submitted (Selesai)</div>
-                        <div class="stat-value" id="se_ub-stat-submitted" style="color: var(--color-delivered);">0</div>
-                        <div style="margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem; width: 100%;">
-                            <div
-                                style="flex-grow: 1; height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden;">
-                                <div id="se_ub-progress-bar"
-                                    style="height: 100%; background: var(--color-delivered); width: 0%;"></div>
-                            </div>
-                            <span id="se_ub-stat-percentage"
-                                style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered);">0%</span>
-                        </div>
-                        <div id="se_ub-stat-kenaikan"
-                            style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; font-weight: 600;">
-                            +0% hari ini | +0% kemarin
-                        </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
+                        <div class="stat-label">Draft</div>
+                        <div class="stat-value" id="se_ub-stat-draft">0</div>
                     </div>
-                    <div class="stat-card tooltip-trigger"
-                        data-tooltip="Sisa Usaha UB: Jumlah target perusahaan UB yang belum disubmit (Draft + Open + Belum Dikerjakan)."
-                        style="--stat-color: var(--color-bounced);">
-                        <span class="card-category-tag">UB</span>
+                    <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
+                        <div class="stat-label">Total Selesai</div>
+                        <div class="stat-value" id="se_ub-stat-submitted">0</div>
+                        <div id="se_ub-stat-percentage" style="font-size: 0.75rem; font-weight: 800; color: var(--color-delivered); margin-top: 0.25rem;">0%</div>
+                    </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
                         <div class="stat-label">Sisa Usaha</div>
-                        <div class="stat-value" id="se_ub-stat-sisa-usaha" style="color: var(--color-bounced);">0</div>
-                        <div class="stat-subtext" style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <span>Progres Hari Ini: <span id="se_ub-stat-today-completed"
-                                    style="font-weight:700;">0</span></span>
-                            <span id="se_ub-stat-vs-yesterday-wrapper"></span>
-                        </div>
+                        <div class="stat-value" id="se_ub-stat-sisa-usaha">0</div>
                     </div>
                 </div>
                 <div class="stats-section" id="se_ub-chart-section" style="margin-top: 1rem;">
-                    <div class="stat-card" style="padding: 1.5rem; --stat-color: var(--primary);">
+                    <div class="stat-card" style="padding: 1.5rem; --stat-color: var(--text-secondary);">
                         <h3
                             style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
                             <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -618,18 +557,15 @@
 
             </div>
             <div class="tab-content" id="tab-content-assign" style="display: none;">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
-                    <div class="tabs-navigation" style="justify-content: flex-start; margin: 0; border-bottom: none;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                    <div class="tabs-navigation" style="justify-content: flex-start; margin: 0; border-bottom: none; padding-bottom: 0;">
                         <button class="btn-tab active" id="subtab-btn-se2026" onclick="filterAssignData('se2026')"
-                            style="background-color: var(--primary); color: white; margin-bottom: 0;">Kategori Usaha
-                            Umum</button>
+                            style="background-color: var(--primary); color: white; margin-bottom: 0;">Usaha SE2026</button>
                         <button class="btn-tab" id="subtab-btn-ub" onclick="filterAssignData('ub')"
-                            style="margin-bottom: 0;">Kategori Usaha Besar (UB)</button>
+                            style="margin-bottom: 0;">Usaha Besar (UB)</button>
                     </div>
-
                 </div>
-                <div class="stats-section" style="margin-top: 2rem;">
+                <div class="stats-section">
                     <h3
                         style="margin-top: 0; color: var(--text); font-size: 1.2rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700;">
                         <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round"
@@ -660,10 +596,21 @@
                                     style="position: absolute; bottom: 0; font-family: 'Outfit', sans-serif; font-size: 1.95rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">
                                     0.00%</div>
                             </div>
-                            <div style="margin-top: 0.5rem;">
+                            <div style="margin-top: 0.5rem; margin-bottom: 1.5rem;">
                                 <div id="gauge-stats-details"
                                     style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); line-height: 1.4;">
                                     0 dari 0 target usaha ditugaskan
+                                </div>
+                            </div>
+                            <div id="global-sync-progress-container-inner" style="display: none; width: 100%; text-align: left; background: rgba(234, 179, 8, 0.05); padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(234, 179, 8, 0.2);">
+                                <div style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
+                                    Progres Sync Sulawesi Tengah
+                                </div>
+                                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.5rem;" id="global-sync-text-inner">
+                                    Menghitung data sinkronisasi...
+                                </div>
+                                <div style="height: 8px; background: rgba(0,0,0,0.05); border-radius: 4px; overflow: hidden; width: 100%;">
+                                    <div id="global-sync-bar-inner" style="height: 100%; background: #eab308; width: 0%; transition: width 0.5s;"></div>
                                 </div>
                             </div>
                         </div>
@@ -697,7 +644,7 @@
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
                         <div class="stat-card tooltip-trigger"
                             data-tooltip="Total SLS: Jumlah seluruh Satuan Lingkungan Setempat (SLS) yang menjadi target sensus di wilayah terpilih."
-                            style="--stat-color: var(--primary); padding: 1.25rem;">
+                            style="--stat-color: var(--text-secondary); padding: 1.25rem;">
                             <div class="stat-label" style="font-size: 0.8rem;">Total SLS</div>
                             <div class="stat-value" id="sls-stat-total"
                                 style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">0</div>
@@ -706,7 +653,7 @@
                         </div>
                         <div class="stat-card tooltip-trigger"
                             data-tooltip="SLS Sudah Ditugaskan: Semua target usaha di dalam SLS ini telah berhasil dialokasikan penuh ke petugas."
-                            style="--stat-color: var(--color-delivered); padding: 1.25rem;">
+                            style="--stat-color: var(--text-secondary); padding: 1.25rem;">
                             <div class="stat-label" style="font-size: 0.8rem;">SLS Sudah Ditugaskan</div>
                             <div class="stat-value" id="sls-stat-fully"
                                 style="color: var(--color-delivered); font-size: 1.8rem; font-weight: 800;">0</div>
@@ -715,7 +662,7 @@
                         </div>
                         <div class="stat-card tooltip-trigger"
                             data-tooltip="SLS Sebagian Ditugaskan: Baru sebagian target usaha di dalam SLS ini yang sudah dialokasikan ke petugas."
-                            style="--stat-color: #f59e0b; padding: 1.25rem;">
+                            style="--stat-color: var(--text-secondary); padding: 1.25rem;">
                             <div class="stat-label" style="font-size: 0.8rem;">SLS Sebagian Ditugaskan</div>
                             <div class="stat-value" id="sls-stat-partially"
                                 style="color: #f59e0b; font-size: 1.8rem; font-weight: 800;">0</div>
@@ -724,7 +671,7 @@
                         </div>
                         <div class="stat-card tooltip-trigger"
                             data-tooltip="SLS Belum Ditugaskan: Belum ada satu pun target usaha di dalam SLS ini yang dialokasikan ke petugas."
-                            style="--stat-color: #ef4444; padding: 1.25rem;">
+                            style="--stat-color: var(--text-secondary); padding: 1.25rem;">
                             <div class="stat-label" style="font-size: 0.8rem;">SLS Belum Ditugaskan</div>
                             <div class="stat-value" id="sls-stat-unassigned"
                                 style="color: #ef4444; font-size: 1.8rem; font-weight: 800;">0</div>
