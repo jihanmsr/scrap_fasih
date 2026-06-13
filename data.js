@@ -7,8 +7,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 09:36:45",
-    "order": 1,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 1
   },
   {
     "code": "ec2ea21f-b88a-400a-8f3d-a03562ff60ad",
@@ -18,8 +17,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:36:44",
-    "order": 2,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 2
   },
   {
     "code": "56519c6e-440d-43ca-b3ca-607e30043412",
@@ -29,8 +27,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "11 Jun 2026, 21:45:59",
-    "order": 1,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 1
   },
   {
     "code": "56519c6e-440d-43ca-b3ca-607e30043412",
@@ -40,8 +37,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "11 Jun 2026, 21:45:59",
-    "order": 2,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 2
   },
   {
     "code": "56519c6e-440d-43ca-b3ca-607e30043412",
@@ -51,8 +47,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:50:58",
-    "order": 3,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 3
   },
   {
     "code": "56519c6e-440d-43ca-b3ca-607e30043412",
@@ -62,8 +57,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:50:58",
-    "order": 4,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 4
   },
   {
     "code": "4b3d4210-f21f-43bc-90cb-365395f8d755",
@@ -73,8 +67,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "11 Jun 2026, 14:00:36",
-    "order": 1,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 1
   },
   {
     "code": "4b3d4210-f21f-43bc-90cb-365395f8d755",
@@ -84,8 +77,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:19:15",
-    "order": 2,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 2
   },
   {
     "code": "4b3d4210-f21f-43bc-90cb-365395f8d755",
@@ -95,8 +87,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:35:03",
-    "order": 3,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 3
   },
   {
     "code": "4b3d4210-f21f-43bc-90cb-365395f8d755",
@@ -106,8 +97,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 11:35:02",
-    "order": 4,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 4
   },
   {
     "code": "f80c30d1-c8ce-4221-a098-abb94d627cbf",
@@ -117,8 +107,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "11 Jun 2026, 10:53:56",
-    "order": 1,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 1
   },
   {
     "code": "f80c30d1-c8ce-4221-a098-abb94d627cbf",
@@ -128,8 +117,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "11 Jun 2026, 10:53:53",
-    "order": 2,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 2
   },
   {
     "code": "f80c30d1-c8ce-4221-a098-abb94d627cbf",
@@ -139,8 +127,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:18:10",
-    "order": 3,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 3
   },
   {
     "code": "f80c30d1-c8ce-4221-a098-abb94d627cbf",
@@ -150,8 +137,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:18:07",
-    "order": 4,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 4
   },
   {
     "code": "81b140d6-80f9-436f-81e4-bbfc8ae820d3",
@@ -161,8 +147,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "11 Jun 2026, 10:53:00",
-    "order": 1,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 1
   },
   {
     "code": "ee8b681d-6b31-47d7-8d77-76c615ca2857",
@@ -172,8 +157,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[01] BANGGAI KEPULAUAN"
+    "order": 0
   },
   {
     "code": "3a1c6cef-f7e6-424e-9f28-38913bff9917",
@@ -183,8 +167,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:14:53",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "3a1c6cef-f7e6-424e-9f28-38913bff9917",
@@ -194,8 +177,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:14:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "3a1c6cef-f7e6-424e-9f28-38913bff9917",
@@ -205,8 +187,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "05 Jun 2026, 11:00:02",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "3a1c6cef-f7e6-424e-9f28-38913bff9917",
@@ -216,8 +197,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 10:59:50",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "3a1c6cef-f7e6-424e-9f28-38913bff9917",
@@ -227,8 +207,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "05 Jun 2026, 09:29:47",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "3a1c6cef-f7e6-424e-9f28-38913bff9917",
@@ -238,8 +217,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "05 Jun 2026, 09:29:44",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
+    "order": 6
   },
   {
     "code": "3a1c6cef-f7e6-424e-9f28-38913bff9917",
@@ -249,8 +227,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:45:02",
-    "order": 7,
-    "kab_name": "[02] BANGGAI"
+    "order": 7
   },
   {
     "code": "3a1c6cef-f7e6-424e-9f28-38913bff9917",
@@ -260,8 +237,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:44:59",
-    "order": 8,
-    "kab_name": "[02] BANGGAI"
+    "order": 8
   },
   {
     "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
@@ -271,8 +247,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 08:15:35",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
@@ -282,8 +257,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "10 Jun 2026, 04:29:50",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
@@ -293,8 +267,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "10 Jun 2026, 04:29:47",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
@@ -304,8 +277,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:46:27",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
@@ -315,8 +287,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 09:18:48",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
@@ -326,8 +297,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:08:55",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
+    "order": 6
   },
   {
     "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
@@ -337,8 +307,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:08:51",
-    "order": 7,
-    "kab_name": "[02] BANGGAI"
+    "order": 7
   },
   {
     "code": "9c14f8ec-cab8-43b3-ac33-10f9fa18edd4",
@@ -348,8 +317,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 16:28:53",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "9c14f8ec-cab8-43b3-ac33-10f9fa18edd4",
@@ -359,8 +327,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "06 Jun 2026, 10:21:44",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "9c14f8ec-cab8-43b3-ac33-10f9fa18edd4",
@@ -370,8 +337,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "06 Jun 2026, 07:50:43",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "9c14f8ec-cab8-43b3-ac33-10f9fa18edd4",
@@ -381,8 +347,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "06 Jun 2026, 07:50:39",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "9c14f8ec-cab8-43b3-ac33-10f9fa18edd4",
@@ -392,8 +357,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "03 Jun 2026, 09:58:29",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "9c14f8ec-cab8-43b3-ac33-10f9fa18edd4",
@@ -403,8 +367,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 09:40:12",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
+    "order": 6
   },
   {
     "code": "9c14f8ec-cab8-43b3-ac33-10f9fa18edd4",
@@ -414,8 +377,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 09:33:32",
-    "order": 7,
-    "kab_name": "[02] BANGGAI"
+    "order": 7
   },
   {
     "code": "9c14f8ec-cab8-43b3-ac33-10f9fa18edd4",
@@ -425,8 +387,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:59:38",
-    "order": 8,
-    "kab_name": "[02] BANGGAI"
+    "order": 8
   },
   {
     "code": "9c14f8ec-cab8-43b3-ac33-10f9fa18edd4",
@@ -436,8 +397,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:59:27",
-    "order": 9,
-    "kab_name": "[02] BANGGAI"
+    "order": 9
   },
   {
     "code": "f38e29e5-fca6-406a-935d-c274f1b881e8",
@@ -447,8 +407,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -458,8 +417,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 16:16:19",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -469,8 +427,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 14:58:05",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -480,8 +437,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 14:57:28",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -491,8 +447,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 14:49:53",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -502,8 +457,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 14:09:35",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -513,8 +467,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 14:05:30",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
+    "order": 6
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -524,8 +477,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "18 May 2026, 13:16:19",
-    "order": 7,
-    "kab_name": "[02] BANGGAI"
+    "order": 7
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -535,8 +487,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "18 May 2026, 13:16:15",
-    "order": 8,
-    "kab_name": "[02] BANGGAI"
+    "order": 8
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -546,8 +497,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:15:22",
-    "order": 9,
-    "kab_name": "[02] BANGGAI"
+    "order": 9
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -557,8 +507,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:15:21",
-    "order": 10,
-    "kab_name": "[02] BANGGAI"
+    "order": 10
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -568,8 +517,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "05 Jun 2026, 15:45:11",
-    "order": 11,
-    "kab_name": "[02] BANGGAI"
+    "order": 11
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -579,8 +527,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "05 Jun 2026, 15:44:27",
-    "order": 12,
-    "kab_name": "[02] BANGGAI"
+    "order": 12
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -590,8 +537,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "05 Jun 2026, 15:43:30",
-    "order": 13,
-    "kab_name": "[02] BANGGAI"
+    "order": 13
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -601,8 +547,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:48:22",
-    "order": 14,
-    "kab_name": "[02] BANGGAI"
+    "order": 14
   },
   {
     "code": "3bc4f583-dc87-41fc-b3c7-3f194ac3eb99",
@@ -612,8 +557,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:48:21",
-    "order": 15,
-    "kab_name": "[02] BANGGAI"
+    "order": 15
   },
   {
     "code": "c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5",
@@ -623,8 +567,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "13 May 2026, 08:24:01",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5",
@@ -634,8 +577,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "13 May 2026, 08:24:01",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5",
@@ -645,8 +587,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 10:34:15",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5",
@@ -656,8 +597,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 10:33:34",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "8fac09d0-4295-48fe-8d17-60310e665fc6",
@@ -667,8 +607,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "f62f2427-1d03-4451-a7cf-c19d32a39d58",
@@ -678,8 +617,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:10:33",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "f62f2427-1d03-4451-a7cf-c19d32a39d58",
@@ -689,8 +627,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:10:33",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "53553f54-e73d-4dc5-8a26-4f7bb08494dd",
@@ -700,8 +637,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "d16a1c26-de84-4b76-b7c7-0693d4a7dd82",
@@ -711,8 +647,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:03:50",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "d16a1c26-de84-4b76-b7c7-0693d4a7dd82",
@@ -722,8 +657,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:03:36",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "f3049e89-d324-4bdb-973c-1d361982a220",
@@ -733,8 +667,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "70fe4e3d-79e4-4bcc-b07a-3aeb736f6e60",
@@ -744,8 +677,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "a1c78c72-91b9-49d3-8634-9806b2ffa2b9",
@@ -755,8 +687,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:19:34",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "a1c78c72-91b9-49d3-8634-9806b2ffa2b9",
@@ -766,8 +697,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:19:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "de997602-2a99-459c-a990-90f5c6c76661",
@@ -777,8 +707,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:48:30",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "de997602-2a99-459c-a990-90f5c6c76661",
@@ -788,8 +717,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:48:26",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "7d569bd1-12be-4570-88fc-be9484dc1c5b",
@@ -799,8 +727,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:25:52",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "7d569bd1-12be-4570-88fc-be9484dc1c5b",
@@ -810,8 +737,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:25:52",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "0adc8f64-61a1-429c-99ca-7ab89c15c7e7",
@@ -821,8 +747,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "1705bff0-bc40-4e1d-92eb-4525189c8545",
@@ -832,8 +757,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:02:24",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "1705bff0-bc40-4e1d-92eb-4525189c8545",
@@ -843,8 +767,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:02:20",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "1705bff0-bc40-4e1d-92eb-4525189c8545",
@@ -854,8 +777,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:31:47",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "1705bff0-bc40-4e1d-92eb-4525189c8545",
@@ -865,8 +787,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:31:46",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "111faa07-d06b-4cbe-9801-aa7ae976b53a",
@@ -876,8 +797,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:01:09",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "111faa07-d06b-4cbe-9801-aa7ae976b53a",
@@ -887,8 +807,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:01:08",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8d4d8991-c8c6-470a-8871-3784b76ca002",
@@ -898,8 +817,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:11:43",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8d4d8991-c8c6-470a-8871-3784b76ca002",
@@ -909,8 +827,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:11:42",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "f4b78cb7-31c7-48d8-b90f-0dfa54fdef91",
@@ -920,8 +837,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:06:16",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "f4b78cb7-31c7-48d8-b90f-0dfa54fdef91",
@@ -931,8 +847,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:06:12",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "0d4bfa96-7cd5-47d9-b366-e133f6ea27c4",
@@ -942,8 +857,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:00:04",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "0d4bfa96-7cd5-47d9-b366-e133f6ea27c4",
@@ -953,8 +867,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 23:07:49",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "0d4bfa96-7cd5-47d9-b366-e133f6ea27c4",
@@ -964,8 +877,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:07:49",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -975,8 +887,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:38:30",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -986,8 +897,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:38:27",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -997,8 +907,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:55:41",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -1008,8 +917,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:55:37",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -1019,8 +927,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:38:30",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -1030,8 +937,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:38:27",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -1041,8 +947,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:55:41",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -1052,8 +957,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:55:37",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "b4ee2897-afcd-405d-8fcd-569303e4101c",
@@ -1063,8 +967,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "d60ed869-54cf-461d-a6d2-c25ea86f7ca0",
@@ -1074,8 +977,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "45d8aaa8-049d-4c40-a809-fc663f7fd600",
@@ -1085,8 +987,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 15:24:06",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "45d8aaa8-049d-4c40-a809-fc663f7fd600",
@@ -1096,8 +997,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 15:17:39",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "45d8aaa8-049d-4c40-a809-fc663f7fd600",
@@ -1107,8 +1007,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:17:54",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "45d8aaa8-049d-4c40-a809-fc663f7fd600",
@@ -1118,8 +1017,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:17:44",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "45d8aaa8-049d-4c40-a809-fc663f7fd600",
@@ -1129,8 +1027,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "06 Jun 2026, 14:28:00",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "45d8aaa8-049d-4c40-a809-fc663f7fd600",
@@ -1140,8 +1037,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:14:08",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
+    "order": 6
   },
   {
     "code": "45d8aaa8-049d-4c40-a809-fc663f7fd600",
@@ -1151,8 +1047,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:14:04",
-    "order": 7,
-    "kab_name": "[02] BANGGAI"
+    "order": 7
   },
   {
     "code": "d6a425de-d1b7-4c11-b7fc-3d080d299cc9",
@@ -1162,8 +1057,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:24:25",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "d6a425de-d1b7-4c11-b7fc-3d080d299cc9",
@@ -1173,8 +1067,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:24:22",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "b2f61c47-acbc-4d19-998d-99e9610b6962",
@@ -1184,8 +1077,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "c5b60633-13fc-4352-a09f-e6b11e93fe60",
@@ -1195,8 +1087,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:23:56",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "c5b60633-13fc-4352-a09f-e6b11e93fe60",
@@ -1206,8 +1097,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:23:53",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8d8176e4-f26b-47da-9ba4-fecfec289afc",
@@ -1217,8 +1107,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "a236792e-99f7-464f-bc33-0f557c5d5e95",
@@ -1228,8 +1117,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 12:37:54",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "a236792e-99f7-464f-bc33-0f557c5d5e95",
@@ -1239,8 +1127,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:21:46",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "a236792e-99f7-464f-bc33-0f557c5d5e95",
@@ -1250,8 +1137,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:21:43",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "d2ab8e10-7d22-43fb-904d-03668eb0a52b",
@@ -1261,8 +1147,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:08:12",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "d2ab8e10-7d22-43fb-904d-03668eb0a52b",
@@ -1272,8 +1157,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:08:05",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "268b48c9-eefd-4ae2-8992-7aaf81afb207",
@@ -1283,8 +1167,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "75a0f26b-2075-47a5-8809-43bb39a105a8",
@@ -1294,8 +1177,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:02:16",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "75a0f26b-2075-47a5-8809-43bb39a105a8",
@@ -1305,8 +1187,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:02:15",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1316,8 +1197,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "18 May 2026, 12:28:36",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1327,8 +1207,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "18 May 2026, 12:28:36",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1338,8 +1217,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "09 Jun 2026, 10:55:43",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1349,8 +1227,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 10:55:42",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1360,8 +1237,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "03 Jun 2026, 06:48:05",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1371,8 +1247,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 11:52:51",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
+    "order": 6
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1382,8 +1257,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 11:31:06",
-    "order": 7,
-    "kab_name": "[02] BANGGAI"
+    "order": 7
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1393,8 +1267,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 08:27:55",
-    "order": 8,
-    "kab_name": "[02] BANGGAI"
+    "order": 8
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1404,8 +1277,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 08:09:44",
-    "order": 9,
-    "kab_name": "[02] BANGGAI"
+    "order": 9
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1415,8 +1287,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 06:39:41",
-    "order": 10,
-    "kab_name": "[02] BANGGAI"
+    "order": 10
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1426,8 +1297,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 06:39:28",
-    "order": 11,
-    "kab_name": "[02] BANGGAI"
+    "order": 11
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1437,8 +1307,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 04:10:23",
-    "order": 12,
-    "kab_name": "[02] BANGGAI"
+    "order": 12
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1448,8 +1317,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 02:43:00",
-    "order": 13,
-    "kab_name": "[02] BANGGAI"
+    "order": 13
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1459,8 +1327,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:42:36",
-    "order": 14,
-    "kab_name": "[02] BANGGAI"
+    "order": 14
   },
   {
     "code": "6df9756b-9e65-4ec3-9e4f-ab909b320692",
@@ -1470,8 +1337,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:42:36",
-    "order": 15,
-    "kab_name": "[02] BANGGAI"
+    "order": 15
   },
   {
     "code": "87ab3e43-e1be-4b02-af1e-14720ebfb03f",
@@ -1481,8 +1347,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 03:53:26",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "87ab3e43-e1be-4b02-af1e-14720ebfb03f",
@@ -1492,8 +1357,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:51:54",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "d0c5c8e7-9145-429c-8ad6-69c9bbc4d96f",
@@ -1503,8 +1367,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "d1a74a9b-b5ba-45d6-b16b-10d09e1ac33a",
@@ -1514,8 +1377,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:04:45",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "d1a74a9b-b5ba-45d6-b16b-10d09e1ac33a",
@@ -1525,8 +1387,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:04:44",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "4853f528-b5a5-4ef5-8b34-f1a976cf703c",
@@ -1536,8 +1397,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "c2ac99c4-f061-4255-b738-8a4f1097f752",
@@ -1547,8 +1407,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:14:08",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "c2ac99c4-f061-4255-b738-8a4f1097f752",
@@ -1558,8 +1417,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:14:04",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "d9e59bb7-a703-48ec-bb93-ea8545ff661b",
@@ -1569,8 +1427,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "2c943ff7-59aa-4e48-b699-81b8f2804cb1",
@@ -1580,8 +1437,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "c96f6f82-54fe-4ff8-acb0-1cea5f3454a1",
@@ -1591,8 +1447,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "fe354b24-00f6-45ef-99cc-1186e3d0fb30",
@@ -1602,8 +1457,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 10:41:29",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "fe354b24-00f6-45ef-99cc-1186e3d0fb30",
@@ -1613,8 +1467,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 10:41:26",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "fe354b24-00f6-45ef-99cc-1186e3d0fb30",
@@ -1624,8 +1477,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 10:41:25",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "fe354b24-00f6-45ef-99cc-1186e3d0fb30",
@@ -1635,8 +1487,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 10:40:54",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "fe354b24-00f6-45ef-99cc-1186e3d0fb30",
@@ -1646,8 +1497,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:40:50",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "fe354b24-00f6-45ef-99cc-1186e3d0fb30",
@@ -1657,8 +1507,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:40:46",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
+    "order": 6
   },
   {
     "code": "02a16a06-9450-4014-aee3-d7f553c7fc97",
@@ -1668,8 +1517,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 10:57:56",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "02a16a06-9450-4014-aee3-d7f553c7fc97",
@@ -1679,8 +1527,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 10:57:31",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "02a16a06-9450-4014-aee3-d7f553c7fc97",
@@ -1690,8 +1537,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:57:30",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "02a16a06-9450-4014-aee3-d7f553c7fc97",
@@ -1701,8 +1547,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:57:28",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "02a16a06-9450-4014-aee3-d7f553c7fc97",
@@ -1712,8 +1557,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 13:20:55",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "02a16a06-9450-4014-aee3-d7f553c7fc97",
@@ -1723,8 +1567,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "01 Jun 2026, 23:13:04",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
+    "order": 6
   },
   {
     "code": "02a16a06-9450-4014-aee3-d7f553c7fc97",
@@ -1734,8 +1577,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "01 Jun 2026, 22:55:19",
-    "order": 7,
-    "kab_name": "[02] BANGGAI"
+    "order": 7
   },
   {
     "code": "02a16a06-9450-4014-aee3-d7f553c7fc97",
@@ -1745,8 +1587,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:49:07",
-    "order": 8,
-    "kab_name": "[02] BANGGAI"
+    "order": 8
   },
   {
     "code": "02a16a06-9450-4014-aee3-d7f553c7fc97",
@@ -1756,8 +1597,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 22:49:06",
-    "order": 9,
-    "kab_name": "[02] BANGGAI"
+    "order": 9
   },
   {
     "code": "9d2debe6-0425-440b-b9eb-1ff896ecd0a7",
@@ -1767,8 +1607,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "941bb532-7c5e-4c33-baca-ee0b2d06fb62",
@@ -1778,8 +1617,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:33:23",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "941bb532-7c5e-4c33-baca-ee0b2d06fb62",
@@ -1789,8 +1627,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:32:41",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "77b64cb9-5c04-44c5-86ab-6f0e7be3dab1",
@@ -1800,8 +1637,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "9290453e-13b4-456c-b211-83f982a48974",
@@ -1811,8 +1647,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "24e0d144-de28-4d6f-a6ef-01de83de815c",
@@ -1822,8 +1657,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:08:09",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "24e0d144-de28-4d6f-a6ef-01de83de815c",
@@ -1833,8 +1667,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:07:44",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "65b2ed70-fdad-4475-b4f7-b2e8f0b8cff7",
@@ -1844,8 +1677,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:26:42",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "65b2ed70-fdad-4475-b4f7-b2e8f0b8cff7",
@@ -1855,8 +1687,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:26:42",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "d64d50a4-d330-4a6e-8daf-82558835744c",
@@ -1866,8 +1697,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "a81ceb9b-7fbb-435c-b8e6-35993eb1cbe9",
@@ -1877,8 +1707,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 13:29:07",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "a81ceb9b-7fbb-435c-b8e6-35993eb1cbe9",
@@ -1888,8 +1717,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 13:28:06",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "a81ceb9b-7fbb-435c-b8e6-35993eb1cbe9",
@@ -1899,8 +1727,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 05:41:25",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "a81ceb9b-7fbb-435c-b8e6-35993eb1cbe9",
@@ -1910,8 +1737,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:41:08",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "a81ceb9b-7fbb-435c-b8e6-35993eb1cbe9",
@@ -1921,8 +1747,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:41:04",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "e0138b9a-ff3e-40ce-b01d-d2f6c0169215",
@@ -1932,8 +1757,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 08:57:02",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "e0138b9a-ff3e-40ce-b01d-d2f6c0169215",
@@ -1943,8 +1767,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 08:56:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "e0138b9a-ff3e-40ce-b01d-d2f6c0169215",
@@ -1954,8 +1777,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 08:54:22",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "e0138b9a-ff3e-40ce-b01d-d2f6c0169215",
@@ -1965,8 +1787,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 08:54:04",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "e0138b9a-ff3e-40ce-b01d-d2f6c0169215",
@@ -1976,8 +1797,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:53:53",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "e0138b9a-ff3e-40ce-b01d-d2f6c0169215",
@@ -1987,8 +1807,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:53:53",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
+    "order": 6
   },
   {
     "code": "cba4927a-b46b-4215-9f20-80bba322c451",
@@ -1998,8 +1817,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 09:16:53",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "cba4927a-b46b-4215-9f20-80bba322c451",
@@ -2009,8 +1827,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:42:18",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "cba4927a-b46b-4215-9f20-80bba322c451",
@@ -2020,8 +1837,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:42:18",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "6108ce1b-67cc-4945-8791-150604266f06",
@@ -2031,8 +1847,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "6dd73fd9-a312-46d5-ab0f-7a709145c480",
@@ -2042,8 +1857,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "e599eb32-5086-4e95-acf7-310b4f996142",
@@ -2053,8 +1867,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:13:34",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "e599eb32-5086-4e95-acf7-310b4f996142",
@@ -2064,8 +1877,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:13:27",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "637464ef-6ef7-46a2-9e23-fe3938205659",
@@ -2075,8 +1887,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "c184ab8f-a822-4310-8082-153f45167adb",
@@ -2086,8 +1897,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "9a07b949-f83c-4c76-ab9f-1d27fc7a876e",
@@ -2097,8 +1907,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:50:54",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "9a07b949-f83c-4c76-ab9f-1d27fc7a876e",
@@ -2108,8 +1917,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:50:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "5a55a869-3306-4cb9-8e5c-cdc74ab99df0",
@@ -2119,8 +1927,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "606cebd1-f490-4e5f-8f3c-9dc1ad212732",
@@ -2130,8 +1937,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "b155054d-14de-4910-8bf9-97ba0adc3991",
@@ -2141,8 +1947,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "4966cadf-6834-4fbc-88dd-5bc1326a4159",
@@ -2152,8 +1957,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "b641314c-e90d-48e0-9bfc-d572d088ec70",
@@ -2163,8 +1967,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "abdc2fb8-1b33-4230-aa4a-456704f055ba",
@@ -2174,8 +1977,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "4b59181f-edbb-421a-b9e7-bea7f458a0ed",
@@ -2185,8 +1987,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "cc7c1fd8-a55b-429a-9bd5-9f6c3d96013e",
@@ -2196,8 +1997,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "35033fc8-219b-4506-9c21-0afa5018439d",
@@ -2207,8 +2007,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "a912bab8-16cc-407e-8879-0f4d949843c3",
@@ -2218,8 +2017,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "b069d5ee-8f3e-4666-a89c-3125410ed01a",
@@ -2229,8 +2027,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "03 Jun 2026, 10:30:09",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "b069d5ee-8f3e-4666-a89c-3125410ed01a",
@@ -2240,8 +2037,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:08:38",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "b069d5ee-8f3e-4666-a89c-3125410ed01a",
@@ -2251,8 +2047,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:08:34",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "e9dfb84f-5b4e-4237-9a61-151e41914f19",
@@ -2262,8 +2057,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:30:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "e9dfb84f-5b4e-4237-9a61-151e41914f19",
@@ -2273,8 +2067,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:30:13",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "7710c5c4-813c-4584-a6cc-45ffe0fd0cda",
@@ -2284,8 +2077,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:07:34",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "7710c5c4-813c-4584-a6cc-45ffe0fd0cda",
@@ -2295,8 +2087,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:07:31",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "eabde834-f9ff-4477-9762-a556b90e2a37",
@@ -2306,8 +2097,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "3f969ebb-cd83-47bb-988d-0cc42878fb3e",
@@ -2317,8 +2107,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "1d18cf6c-1bbe-41e7-8fcd-34539ffaa56c",
@@ -2328,8 +2117,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:03:46",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "1d18cf6c-1bbe-41e7-8fcd-34539ffaa56c",
@@ -2339,8 +2127,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:03:40",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "1d18cf6c-1bbe-41e7-8fcd-34539ffaa56c",
@@ -2350,8 +2137,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:41:07",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "1d18cf6c-1bbe-41e7-8fcd-34539ffaa56c",
@@ -2361,8 +2147,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:41:03",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "f0097235-734f-478c-9444-2c51db4b2533",
@@ -2372,8 +2157,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "98d5ee28-3246-4a25-8cf6-6b289c7bf0f9",
@@ -2383,8 +2167,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "4c017c65-6cea-4113-baf7-e2cec5c439de",
@@ -2394,8 +2177,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "3be11d4a-7ec7-4f1b-aa59-f9f76b287d15",
@@ -2405,8 +2187,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "a5e1b7a6-ee0f-4838-b731-5f19641f84cd",
@@ -2416,8 +2197,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "f11a6f3d-8e1d-4596-9a14-ebba67da0358",
@@ -2427,8 +2207,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "b04fbec4-c49b-4c46-b479-71be1f844372",
@@ -2438,8 +2217,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:08:27",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "b04fbec4-c49b-4c46-b479-71be1f844372",
@@ -2449,8 +2227,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:08:24",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "fb96eab6-3d43-4ca7-96be-d8ed573fd5e2",
@@ -2460,8 +2237,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "2769b4d8-e777-4235-94ef-ec17e8392705",
@@ -2471,8 +2247,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "292f439c-810d-4863-93f6-13a0ebd4cacb",
@@ -2482,8 +2257,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:09:29",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "292f439c-810d-4863-93f6-13a0ebd4cacb",
@@ -2493,8 +2267,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:09:27",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "292f439c-810d-4863-93f6-13a0ebd4cacb",
@@ -2504,8 +2277,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:07:19",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "292f439c-810d-4863-93f6-13a0ebd4cacb",
@@ -2515,8 +2287,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:07:15",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "ad44b721-71b3-4895-bb41-8fa42bae3a22",
@@ -2526,8 +2297,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "940423aa-4189-4868-828a-2e201b938a79",
@@ -2537,8 +2307,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:32:33",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "940423aa-4189-4868-828a-2e201b938a79",
@@ -2548,8 +2317,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:32:33",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "fdae453e-dd8f-46ef-b5c5-a5a50ba85dac",
@@ -2559,8 +2327,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:39:10",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "fdae453e-dd8f-46ef-b5c5-a5a50ba85dac",
@@ -2570,8 +2337,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:39:06",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "96d663ec-f298-4560-9b84-996b8de92249",
@@ -2581,8 +2347,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:39:27",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "96d663ec-f298-4560-9b84-996b8de92249",
@@ -2592,8 +2357,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:39:23",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "bcd04260-5f2a-4732-99e6-e2a415b8b206",
@@ -2603,8 +2367,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:50:12",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "bcd04260-5f2a-4732-99e6-e2a415b8b206",
@@ -2614,8 +2377,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 06:50:12",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "e6d7f8c6-c781-420c-ac7e-453b8e5ddff8",
@@ -2625,8 +2387,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "25542d02-b827-45f9-a96e-37b4778fc9ff",
@@ -2636,8 +2397,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "1048428f-2c5b-4025-85c1-8e9f849dc49c",
@@ -2647,8 +2407,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "4c883a72-e273-4297-8c73-0fa02490250f",
@@ -2658,8 +2417,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "19131aed-4f2e-465e-a7f6-9c0d50cbf975",
@@ -2669,8 +2427,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:02:57",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "19131aed-4f2e-465e-a7f6-9c0d50cbf975",
@@ -2680,8 +2437,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 23:34:59",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "19131aed-4f2e-465e-a7f6-9c0d50cbf975",
@@ -2691,8 +2447,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:34:56",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "34ccdc85-74b8-4bb7-a9ab-aed7dc8a98e3",
@@ -2702,8 +2457,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:13:16",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "34ccdc85-74b8-4bb7-a9ab-aed7dc8a98e3",
@@ -2713,8 +2467,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:13:16",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "34ccdc85-74b8-4bb7-a9ab-aed7dc8a98e3",
@@ -2724,8 +2477,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:36:04",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "34ccdc85-74b8-4bb7-a9ab-aed7dc8a98e3",
@@ -2735,8 +2487,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:36:00",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "7be895df-b96a-4941-a756-9949d4043f67",
@@ -2746,8 +2497,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "32dd0c74-1b36-4c99-8969-12c81b10647d",
@@ -2757,8 +2507,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "449c7238-f19b-4bcf-8760-7bfe6c345ba1",
@@ -2768,8 +2517,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "bb2b8af4-6b62-4e6b-b9d1-d5786b71f611",
@@ -2779,8 +2527,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "0e5475d3-5293-421b-8587-09059548e878",
@@ -2790,8 +2537,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "e2f6391b-aa7a-4ed2-b1d3-a8e53f2d6bc0",
@@ -2801,8 +2547,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:04:47",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "e2f6391b-aa7a-4ed2-b1d3-a8e53f2d6bc0",
@@ -2812,8 +2557,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:04:47",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "954c8c7d-db57-49d8-b7f9-1fc394226b68",
@@ -2823,8 +2567,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "80bc8f28-6dbb-463f-b093-947a17d9f1f1",
@@ -2834,8 +2577,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:34:18",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "80bc8f28-6dbb-463f-b093-947a17d9f1f1",
@@ -2845,8 +2587,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:34:18",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "936e1850-8ecb-4000-a393-adb7549456fe",
@@ -2856,8 +2597,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "3452370c-3b78-4ae4-9285-1439983cae34",
@@ -2867,8 +2607,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "9a2e726e-ab62-4722-adad-4a255c6ee775",
@@ -2878,8 +2617,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "f7959ff9-a3d7-40b5-8dda-be3d74e34980",
@@ -2889,8 +2627,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:04:32",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "f7959ff9-a3d7-40b5-8dda-be3d74e34980",
@@ -2900,8 +2637,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:04:28",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "de5b691c-d38b-4f24-959b-378f2360d049",
@@ -2911,8 +2647,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "b3309c61-58cc-455e-be9a-da71c8f65132",
@@ -2922,8 +2657,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "3900cc83-cbf3-4887-88f3-9bd4e4c1f21d",
@@ -2933,8 +2667,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "b56331c4-e73c-4bf5-ab8c-362dfc4a0810",
@@ -2944,8 +2677,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:28:28",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "b56331c4-e73c-4bf5-ab8c-362dfc4a0810",
@@ -2955,8 +2687,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:28:27",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "46407304-416e-44e9-94df-222375ae6f9d",
@@ -2966,8 +2697,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "253a2fd6-de72-4631-b128-f6a5a9e6f304",
@@ -2977,8 +2707,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:08:28",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "253a2fd6-de72-4631-b128-f6a5a9e6f304",
@@ -2988,8 +2717,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:08:24",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "253a2fd6-de72-4631-b128-f6a5a9e6f304",
@@ -2999,8 +2727,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:56:18",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "253a2fd6-de72-4631-b128-f6a5a9e6f304",
@@ -3010,8 +2737,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:56:14",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "53bacafc-c83e-42fb-999c-64991638841f",
@@ -3021,8 +2747,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 09:24:33",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "53bacafc-c83e-42fb-999c-64991638841f",
@@ -3032,8 +2757,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:45:24",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "53bacafc-c83e-42fb-999c-64991638841f",
@@ -3043,8 +2767,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:45:20",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "76914c4d-1b3b-41af-acc8-7d59e78caf36",
@@ -3054,8 +2777,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:05:22",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "76914c4d-1b3b-41af-acc8-7d59e78caf36",
@@ -3065,8 +2787,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:05:14",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "1211a41f-2b45-4deb-a1ec-6d4c43d57b55",
@@ -3076,8 +2797,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "8795c4b7-040c-4a62-b280-b41c1be119c6",
@@ -3087,8 +2807,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:51:37",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8795c4b7-040c-4a62-b280-b41c1be119c6",
@@ -3098,8 +2817,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:51:34",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "036e40ee-6f6b-4b91-8d83-e720f97b1266",
@@ -3109,8 +2827,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "bd38f44f-5677-417c-b02e-d5cc6b43f5af",
@@ -3120,8 +2837,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:35:57",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "bd38f44f-5677-417c-b02e-d5cc6b43f5af",
@@ -3131,8 +2847,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:35:57",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "ad213fd3-4513-4671-a80e-9fe29bce6bec",
@@ -3142,8 +2857,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "01d85912-207a-4319-b1fe-836cfe09ff74",
@@ -3153,8 +2867,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "fde82b8d-1417-4375-a2dc-a94ae91bb003",
@@ -3164,8 +2877,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "b3eabe44-4653-4782-bb26-eebec81f8ba9",
@@ -3175,8 +2887,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "108cb77b-505d-4bf8-a721-3ceafe0b597f",
@@ -3186,8 +2897,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "27899a80-d9c8-4259-b36d-11f66b9b0fdc",
@@ -3197,8 +2907,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "d77e0358-ab65-4aff-a3a2-cf28280c32f6",
@@ -3208,8 +2917,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:27:19",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "d77e0358-ab65-4aff-a3a2-cf28280c32f6",
@@ -3219,8 +2927,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:27:15",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "5ed2770d-9be6-4fc1-bf70-0d4e10c482c8",
@@ -3230,8 +2937,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 02:11:11",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "b164d4b8-0e3b-433d-96c3-19f077408cca",
@@ -3241,8 +2947,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "c3608558-ca9e-47fc-840a-bd6aec2c85d5",
@@ -3252,8 +2957,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "4e94d8cc-f501-4cce-8ed3-dce945df21dd",
@@ -3263,8 +2967,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "b0038ad6-c8d4-4697-88cf-f2a88c71d056",
@@ -3274,8 +2977,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "56f5b6d8-62dc-4116-90df-d87f8ebaac4f",
@@ -3285,8 +2987,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "335634d9-6d34-403d-b426-6755127f7973",
@@ -3296,8 +2997,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "068d4499-bea0-4aba-8c15-c7ddded5f467",
@@ -3307,8 +3007,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "b03d6dea-b9db-41df-af80-add783b25893",
@@ -3318,8 +3017,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "0ef2b020-010a-40f1-829a-a0d086441aca",
@@ -3329,8 +3027,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "45c99b24-af67-40d1-8739-a62954b98052",
@@ -3340,8 +3037,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:18:00",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "45c99b24-af67-40d1-8739-a62954b98052",
@@ -3351,8 +3047,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:17:54",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "45c99b24-af67-40d1-8739-a62954b98052",
@@ -3362,8 +3057,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:13:56",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "45c99b24-af67-40d1-8739-a62954b98052",
@@ -3373,8 +3067,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:13:56",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "7a4b0ead-67a1-4488-94f8-cc3915177bd4",
@@ -3384,8 +3077,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "7a90d095-73db-4508-bfaa-a92019b1e91b",
@@ -3395,8 +3087,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "6f13465f-b776-4a40-9fba-4d214ba4a1c6",
@@ -3406,8 +3097,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3417,8 +3107,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3428,8 +3117,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3439,8 +3127,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3450,8 +3137,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3461,8 +3147,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3472,8 +3157,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3483,8 +3167,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3494,8 +3177,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3505,8 +3187,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3516,8 +3197,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3527,8 +3207,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3538,8 +3217,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3549,8 +3227,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3560,8 +3237,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3571,8 +3247,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3582,8 +3257,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3593,8 +3267,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3604,8 +3277,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3615,8 +3287,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3626,8 +3297,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3637,8 +3307,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3648,8 +3317,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3659,8 +3327,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3670,8 +3337,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3681,8 +3347,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3692,8 +3357,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3703,8 +3367,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3714,8 +3377,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3725,8 +3387,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3736,8 +3397,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3747,8 +3407,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3758,8 +3417,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3769,8 +3427,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3780,8 +3437,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3791,8 +3447,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3802,8 +3457,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3813,8 +3467,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3824,8 +3477,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3835,8 +3487,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3846,8 +3497,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3857,8 +3507,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3868,8 +3517,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3879,8 +3527,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3890,8 +3537,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3901,8 +3547,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3912,8 +3557,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3923,8 +3567,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3934,8 +3577,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3945,8 +3587,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3956,8 +3597,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3967,8 +3607,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3978,8 +3617,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -3989,8 +3627,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -4000,8 +3637,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -4011,8 +3647,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -4022,8 +3657,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -4033,8 +3667,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -4044,8 +3677,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -4055,8 +3687,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -4066,8 +3697,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "67e72ce3-5454-4424-8275-70c5c60d951c",
@@ -4077,8 +3707,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "2e78150a-25c3-4885-b94c-721821e44450",
@@ -4088,8 +3717,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "3cc3b29f-8cf8-4f2c-8e29-b74fa6616568",
@@ -4099,8 +3727,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "4a8138ec-c731-45f7-becf-71ceca8327bf",
@@ -4110,8 +3737,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "e20f93b1-dbba-4b87-a347-1cf9e0bcfe80",
@@ -4121,8 +3747,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:00:26",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "e20f93b1-dbba-4b87-a347-1cf9e0bcfe80",
@@ -4132,8 +3757,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:00:26",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "fbc9a1c6-da91-4e21-8dc9-0b78f3d79d27",
@@ -4143,8 +3767,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:31:31",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "fbc9a1c6-da91-4e21-8dc9-0b78f3d79d27",
@@ -4154,8 +3777,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:31:31",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "6423e5a0-d49a-4955-b5ae-b0885cbbbf4f",
@@ -4165,8 +3787,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "0a245fdf-917c-445b-96ba-643b78b4ddea",
@@ -4176,8 +3797,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:59:29",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "0a245fdf-917c-445b-96ba-643b78b4ddea",
@@ -4187,8 +3807,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:59:24",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "0a245fdf-917c-445b-96ba-643b78b4ddea",
@@ -4198,8 +3817,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:03:04",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "0a245fdf-917c-445b-96ba-643b78b4ddea",
@@ -4209,8 +3827,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:03:00",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "ad55d177-41a1-444e-ae54-8c6807aee095",
@@ -4220,8 +3837,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 05:57:24",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "ad55d177-41a1-444e-ae54-8c6807aee095",
@@ -4231,8 +3847,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:57:20",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "ae92d2b2-916b-4fa3-a68f-fa2de9983f81",
@@ -4242,8 +3857,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "36f65e67-fafd-4966-a02d-87ea2a76311d",
@@ -4253,8 +3867,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "88078732-8fcf-48e3-806a-2bcd5cbdd7c4",
@@ -4264,8 +3877,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 04:24:01",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "88078732-8fcf-48e3-806a-2bcd5cbdd7c4",
@@ -4275,8 +3887,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 04:23:58",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "88078732-8fcf-48e3-806a-2bcd5cbdd7c4",
@@ -4286,8 +3897,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 04:20:05",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "88078732-8fcf-48e3-806a-2bcd5cbdd7c4",
@@ -4297,8 +3907,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:53:11",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "88078732-8fcf-48e3-806a-2bcd5cbdd7c4",
@@ -4308,8 +3917,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:53:10",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "9679805e-807b-423c-bb11-35df3e7375b4",
@@ -4319,8 +3927,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "3a090913-f1f1-462f-ab73-26e8b969b373",
@@ -4330,8 +3937,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "985d09f8-e283-4050-80c9-856599017bee",
@@ -4341,8 +3947,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "383dcfa5-2a6c-48c5-9e16-8fd4b2ae42d3",
@@ -4352,8 +3957,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "4d8a22df-45b6-47bc-81c2-024ce395d120",
@@ -4363,8 +3967,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "0b92a89c-e956-458c-af4e-ea43393c8f9b",
@@ -4374,8 +3977,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 22:54:06",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "0b92a89c-e956-458c-af4e-ea43393c8f9b",
@@ -4385,8 +3987,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:54:06",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "adcc9db5-653f-44aa-b87e-587893b1c4fa",
@@ -4396,8 +3997,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:59:24",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "adcc9db5-653f-44aa-b87e-587893b1c4fa",
@@ -4407,8 +4007,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:59:19",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "2155505c-bb3d-48ec-ba48-ac98edbdca95",
@@ -4418,8 +4017,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:05:04",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "2155505c-bb3d-48ec-ba48-ac98edbdca95",
@@ -4429,8 +4027,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 23:49:00",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "2155505c-bb3d-48ec-ba48-ac98edbdca95",
@@ -4440,8 +4037,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:48:57",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "d8d66396-569a-4f4f-8cf8-46d4cb76b3e6",
@@ -4451,8 +4047,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "c73ddb39-2566-4b0e-ac1d-2cef2270297b",
@@ -4462,8 +4057,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "658b6a82-0ca8-4bd8-8331-fcd27708eaee",
@@ -4473,8 +4067,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4484,8 +4077,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "12 Jun 2026, 12:47:31",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4495,8 +4087,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "12 Jun 2026, 12:47:30",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4506,8 +4097,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "12 Jun 2026, 12:42:01",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4517,8 +4107,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "12 Jun 2026, 12:42:00",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4528,8 +4117,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "12 Jun 2026, 12:40:20",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4539,8 +4127,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "12 Jun 2026, 12:40:19",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
+    "order": 6
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4550,8 +4137,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "07 Jun 2026, 16:33:16",
-    "order": 7,
-    "kab_name": "[02] BANGGAI"
+    "order": 7
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4561,8 +4147,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "07 Jun 2026, 16:29:46",
-    "order": 8,
-    "kab_name": "[02] BANGGAI"
+    "order": 8
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4572,8 +4157,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "07 Jun 2026, 16:18:03",
-    "order": 9,
-    "kab_name": "[02] BANGGAI"
+    "order": 9
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4583,8 +4167,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "06 Jun 2026, 20:03:16",
-    "order": 10,
-    "kab_name": "[02] BANGGAI"
+    "order": 10
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4594,8 +4177,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:25:28",
-    "order": 11,
-    "kab_name": "[02] BANGGAI"
+    "order": 11
   },
   {
     "code": "6550f247-54ae-43fb-be26-94d1af6be64a",
@@ -4605,8 +4187,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:25:14",
-    "order": 12,
-    "kab_name": "[02] BANGGAI"
+    "order": 12
   },
   {
     "code": "d844508c-ac9d-4926-8613-29024345bb1c",
@@ -4616,8 +4197,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "abbb91f7-66fb-497f-87e0-235b843068fd",
@@ -4627,8 +4207,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "18 May 2026, 12:37:49",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "abbb91f7-66fb-497f-87e0-235b843068fd",
@@ -4638,8 +4217,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 09:53:25",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "abbb91f7-66fb-497f-87e0-235b843068fd",
@@ -4649,8 +4227,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 05:51:24",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4660,8 +4237,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "21 May 2026, 09:34:14",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4671,8 +4247,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "21 May 2026, 09:34:04",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4682,8 +4257,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "21 May 2026, 09:34:01",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4693,8 +4267,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "21 May 2026, 09:30:38",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
+    "order": 4
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4704,8 +4277,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "21 May 2026, 09:30:34",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
+    "order": 5
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4715,8 +4287,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "21 May 2026, 09:30:31",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
+    "order": 6
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4726,8 +4297,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "21 May 2026, 09:28:33",
-    "order": 7,
-    "kab_name": "[02] BANGGAI"
+    "order": 7
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4737,8 +4307,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "21 May 2026, 09:28:16",
-    "order": 8,
-    "kab_name": "[02] BANGGAI"
+    "order": 8
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4748,8 +4317,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "21 May 2026, 09:27:59",
-    "order": 9,
-    "kab_name": "[02] BANGGAI"
+    "order": 9
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4759,8 +4327,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "21 May 2026, 09:27:56",
-    "order": 10,
-    "kab_name": "[02] BANGGAI"
+    "order": 10
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4770,8 +4337,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:14:04",
-    "order": 11,
-    "kab_name": "[02] BANGGAI"
+    "order": 11
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4781,8 +4347,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:13:51",
-    "order": 12,
-    "kab_name": "[02] BANGGAI"
+    "order": 12
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4792,8 +4357,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:57:21",
-    "order": 13,
-    "kab_name": "[02] BANGGAI"
+    "order": 13
   },
   {
     "code": "01ac5041-a231-433b-8f8b-94a2f9d237b4",
@@ -4803,8 +4367,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:57:15",
-    "order": 14,
-    "kab_name": "[02] BANGGAI"
+    "order": 14
   },
   {
     "code": "37c41cf4-75fc-4bff-8418-e0ea6aff6eb8",
@@ -4814,8 +4377,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "5ecd175d-72bb-4328-aefb-14089be91327",
@@ -4825,8 +4387,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "c19f990c-72e2-4718-b0e5-0290c933350a",
@@ -4836,8 +4397,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:09:55",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "c19f990c-72e2-4718-b0e5-0290c933350a",
@@ -4847,8 +4407,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:09:50",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "5c7786b1-7b40-47d3-b356-dc74e874af79",
@@ -4858,8 +4417,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "03 Jun 2026, 19:18:17",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "5c7786b1-7b40-47d3-b356-dc74e874af79",
@@ -4869,8 +4427,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "03 Jun 2026, 19:18:02",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "5c7786b1-7b40-47d3-b356-dc74e874af79",
@@ -4880,8 +4437,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:07:11",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "5c7786b1-7b40-47d3-b356-dc74e874af79",
@@ -4891,8 +4447,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:07:11",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
@@ -4902,8 +4457,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 12:43:07",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
@@ -4913,8 +4467,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 12:03:51",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
@@ -4924,8 +4477,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 12:03:18",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
@@ -4935,8 +4487,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 10:45:18",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
@@ -4946,8 +4497,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 10:45:14",
-    "order": 5,
-    "kab_name": "[03] MOROWALI"
+    "order": 5
   },
   {
     "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
@@ -4957,8 +4507,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 10:39:56",
-    "order": 6,
-    "kab_name": "[03] MOROWALI"
+    "order": 6
   },
   {
     "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
@@ -4968,8 +4517,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:13:29",
-    "order": 7,
-    "kab_name": "[03] MOROWALI"
+    "order": 7
   },
   {
     "code": "2bcf903a-6244-4c7f-85d0-78ce0aeac06d",
@@ -4979,8 +4527,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:13:29",
-    "order": 8,
-    "kab_name": "[03] MOROWALI"
+    "order": 8
   },
   {
     "code": "929120fe-2eef-491b-ae50-d794d2208fb8",
@@ -4990,8 +4537,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "c90e11f1-172e-4c2a-8af0-69a538522ea0",
@@ -5001,8 +4547,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "4edef9bf-4954-4e28-8ec1-b8de24caf4b2",
@@ -5012,8 +4557,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "64348838-c95b-4e73-8c90-1539e49a8fa6",
@@ -5023,8 +4567,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:23:23",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "64348838-c95b-4e73-8c90-1539e49a8fa6",
@@ -5034,8 +4577,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 02:23:23",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "0219fe15-1f5c-4cd7-96f0-734727640195",
@@ -5045,8 +4587,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 10:57:25",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "0219fe15-1f5c-4cd7-96f0-734727640195",
@@ -5056,8 +4597,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 22:48:15",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "0219fe15-1f5c-4cd7-96f0-734727640195",
@@ -5067,8 +4607,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:48:15",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "107b8e78-62cc-44d5-b354-ec7fbe946536",
@@ -5078,8 +4617,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "726f269b-46cf-4aec-9cde-f3cbdcd3b3ee",
@@ -5089,8 +4627,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:53:29",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "726f269b-46cf-4aec-9cde-f3cbdcd3b3ee",
@@ -5100,8 +4637,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:53:25",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "a2f631df-8df1-4f59-aa25-114c118cec0c",
@@ -5111,8 +4647,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "c548ae79-8719-4940-915a-506ea9566cb7",
@@ -5122,8 +4657,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:09:59",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "c548ae79-8719-4940-915a-506ea9566cb7",
@@ -5133,8 +4667,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:09:57",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "45707692-4148-40a9-ba4b-2658fed0726e",
@@ -5144,8 +4677,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:17:44",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "45707692-4148-40a9-ba4b-2658fed0726e",
@@ -5155,8 +4687,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:17:41",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "45707692-4148-40a9-ba4b-2658fed0726e",
@@ -5166,8 +4697,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 02:07:31",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "45707692-4148-40a9-ba4b-2658fed0726e",
@@ -5177,8 +4707,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:12:55",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "45707692-4148-40a9-ba4b-2658fed0726e",
@@ -5188,8 +4717,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:12:51",
-    "order": 5,
-    "kab_name": "[03] MOROWALI"
+    "order": 5
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5199,8 +4727,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 17:00:09",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5210,8 +4737,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:02:35",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5221,8 +4747,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:01:20",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5232,8 +4757,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "09 Jun 2026, 10:59:12",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5243,8 +4767,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:58:54",
-    "order": 5,
-    "kab_name": "[03] MOROWALI"
+    "order": 5
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5254,8 +4777,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:58:53",
-    "order": 6,
-    "kab_name": "[03] MOROWALI"
+    "order": 6
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5265,8 +4787,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 16:19:24",
-    "order": 7,
-    "kab_name": "[03] MOROWALI"
+    "order": 7
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5276,8 +4797,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 08:04:45",
-    "order": 8,
-    "kab_name": "[03] MOROWALI"
+    "order": 8
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5287,8 +4807,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 01:03:48",
-    "order": 9,
-    "kab_name": "[03] MOROWALI"
+    "order": 9
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5298,8 +4817,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "01 Jun 2026, 22:58:35",
-    "order": 10,
-    "kab_name": "[03] MOROWALI"
+    "order": 10
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5309,8 +4827,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 22:58:34",
-    "order": 11,
-    "kab_name": "[03] MOROWALI"
+    "order": 11
   },
   {
     "code": "0805e63b-9edf-4a6e-9bee-dd93b16af937",
@@ -5320,8 +4837,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:58:30",
-    "order": 12,
-    "kab_name": "[03] MOROWALI"
+    "order": 12
   },
   {
     "code": "208ebcc6-9881-4752-a982-5d8825476be0",
@@ -5331,8 +4847,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:04:32",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "208ebcc6-9881-4752-a982-5d8825476be0",
@@ -5342,8 +4857,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 23:47:52",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "208ebcc6-9881-4752-a982-5d8825476be0",
@@ -5353,8 +4867,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:47:52",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "02099577-861a-405d-83f6-d50e7272a868",
@@ -5364,8 +4877,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 14:59:07",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "02099577-861a-405d-83f6-d50e7272a868",
@@ -5375,8 +4887,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:57:26",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "02099577-861a-405d-83f6-d50e7272a868",
@@ -5386,8 +4897,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:57:25",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "02099577-861a-405d-83f6-d50e7272a868",
@@ -5397,8 +4907,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 14:43:13",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "02099577-861a-405d-83f6-d50e7272a868",
@@ -5408,8 +4917,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 22:48:07",
-    "order": 5,
-    "kab_name": "[03] MOROWALI"
+    "order": 5
   },
   {
     "code": "02099577-861a-405d-83f6-d50e7272a868",
@@ -5419,8 +4927,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:48:07",
-    "order": 6,
-    "kab_name": "[03] MOROWALI"
+    "order": 6
   },
   {
     "code": "85e79276-c159-4086-81ae-9edd4f4fa2bc",
@@ -5430,8 +4937,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:45:21",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "85e79276-c159-4086-81ae-9edd4f4fa2bc",
@@ -5441,8 +4947,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:45:18",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "801ed6fe-8f08-43d4-aac0-699c81655850",
@@ -5452,8 +4957,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:33:22",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "801ed6fe-8f08-43d4-aac0-699c81655850",
@@ -5463,8 +4967,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:33:15",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "de2edddb-095f-42cb-bb5d-c099f092fe1d",
@@ -5474,8 +4977,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "e49208a9-420f-43df-946b-eede20bf3eb2",
@@ -5485,8 +4987,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 22:48:16",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "e49208a9-420f-43df-946b-eede20bf3eb2",
@@ -5496,8 +4997,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:09:39",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "e49208a9-420f-43df-946b-eede20bf3eb2",
@@ -5507,8 +5007,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:09:31",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "df965e5e-d457-436c-a65a-af7726c7ce2b",
@@ -5518,8 +5017,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 08:55:13",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "df965e5e-d457-436c-a65a-af7726c7ce2b",
@@ -5529,8 +5027,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:52:30",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "f74842c3-c4c4-4813-be26-0f1c7db21112",
@@ -5540,8 +5037,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:15:17",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "f74842c3-c4c4-4813-be26-0f1c7db21112",
@@ -5551,8 +5047,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:15:12",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "e77a0ba3-200c-40f8-b6f8-527e3dd21323",
@@ -5562,8 +5057,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "9af762e4-6cda-4ce9-83dc-0c854f3e3075",
@@ -5573,8 +5067,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "f0c6f56e-3160-4d1d-831a-49b75d941a95",
@@ -5584,8 +5077,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:51:39",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "f0c6f56e-3160-4d1d-831a-49b75d941a95",
@@ -5595,8 +5087,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:51:25",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "12f41738-4b5d-4812-a2ee-d58e07f2918d",
@@ -5606,8 +5097,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "53e6550c-1ff6-41dd-9a27-ddfe78db1783",
@@ -5617,8 +5107,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "0c6fcc80-9ea0-43b2-8775-cb18edc33d25",
@@ -5628,8 +5117,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:00:02",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "0c6fcc80-9ea0-43b2-8775-cb18edc33d25",
@@ -5639,8 +5127,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 23:06:38",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "0c6fcc80-9ea0-43b2-8775-cb18edc33d25",
@@ -5650,8 +5137,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:06:35",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "79a6a82e-dedb-4715-839c-0585d04d20f8",
@@ -5661,8 +5147,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:16:09",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "79a6a82e-dedb-4715-839c-0585d04d20f8",
@@ -5672,8 +5157,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:16:03",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "60e45ca7-8234-4e3c-89c0-887094a6f311",
@@ -5683,8 +5167,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "12 Jun 2026, 11:30:26",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "60e45ca7-8234-4e3c-89c0-887094a6f311",
@@ -5694,8 +5177,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 14:09:16",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "60e45ca7-8234-4e3c-89c0-887094a6f311",
@@ -5705,8 +5187,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:15:13",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "60e45ca7-8234-4e3c-89c0-887094a6f311",
@@ -5716,8 +5197,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:15:10",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "cdd01d9c-a1a1-4eac-b0fe-b4f76c908db0",
@@ -5727,8 +5207,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:49:02",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "cdd01d9c-a1a1-4eac-b0fe-b4f76c908db0",
@@ -5738,8 +5217,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:48:55",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "e0f2666f-51ff-41c7-a770-9b4fac11c596",
@@ -5749,8 +5227,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:57:51",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "e0f2666f-51ff-41c7-a770-9b4fac11c596",
@@ -5760,8 +5237,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:57:51",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "415bb553-21bd-4786-b793-115ad93cc620",
@@ -5771,8 +5247,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:16:30",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "415bb553-21bd-4786-b793-115ad93cc620",
@@ -5782,8 +5257,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:16:28",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "415bb553-21bd-4786-b793-115ad93cc620",
@@ -5793,8 +5267,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:01:15",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "415bb553-21bd-4786-b793-115ad93cc620",
@@ -5804,8 +5277,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:01:15",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "f8c20745-5cb2-4b8d-b9f9-248122f791f7",
@@ -5815,8 +5287,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "880e4457-5ee6-40e2-997b-1db7e51671e9",
@@ -5826,8 +5297,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "7ada42f5-ed09-4fa4-8c0a-4526f77b7f81",
@@ -5837,8 +5307,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "b2fd11bc-1b1d-4ba6-9d82-f425f920f865",
@@ -5848,8 +5317,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "035f9009-af5b-4bc8-a96b-b19d63b7f626",
@@ -5859,8 +5327,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "47d56fbd-f8f5-49b8-9763-ae12d6be1be1",
@@ -5870,8 +5337,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "1d4faad0-8f18-4586-8a7d-139cc7d3acb2",
@@ -5881,8 +5347,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:03:49",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "1d4faad0-8f18-4586-8a7d-139cc7d3acb2",
@@ -5892,8 +5357,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:03:46",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "1d4faad0-8f18-4586-8a7d-139cc7d3acb2",
@@ -5903,8 +5367,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:41:22",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "1d4faad0-8f18-4586-8a7d-139cc7d3acb2",
@@ -5914,8 +5377,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:41:18",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "34f198ce-857c-49be-aefa-65a832a4971b",
@@ -5925,8 +5387,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "8128b0fc-31d5-43d8-92b7-849f5621138d",
@@ -5936,8 +5397,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "70c6976e-c672-4b38-9f5d-161a2c28b228",
@@ -5947,8 +5407,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "5cc194bb-172f-4cd5-a8d4-fd6a0ed7d3e7",
@@ -5958,8 +5417,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "b2cf42e6-965c-49fa-abac-9af54426d0cc",
@@ -5969,8 +5427,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 11:57:49",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "b2cf42e6-965c-49fa-abac-9af54426d0cc",
@@ -5980,8 +5437,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:49:47",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
@@ -5991,8 +5447,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 09:09:40",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
@@ -6002,8 +5457,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 09:08:59",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
@@ -6013,8 +5467,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 09:06:58",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
@@ -6024,8 +5477,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 09:06:35",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
@@ -6035,8 +5487,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:06:26",
-    "order": 5,
-    "kab_name": "[03] MOROWALI"
+    "order": 5
   },
   {
     "code": "e38c4b1f-7669-404c-a8bc-71acb239e029",
@@ -6046,8 +5497,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:06:26",
-    "order": 6,
-    "kab_name": "[03] MOROWALI"
+    "order": 6
   },
   {
     "code": "0d404547-b0f9-40d6-a523-530358a15184",
@@ -6057,8 +5507,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
@@ -6068,8 +5517,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "11 Jun 2026, 17:35:28",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
@@ -6079,8 +5527,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "11 Jun 2026, 17:35:24",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
@@ -6090,8 +5537,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "09 Jun 2026, 11:15:42",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
@@ -6101,8 +5547,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:18:30",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
@@ -6112,8 +5557,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:18:25",
-    "order": 5,
-    "kab_name": "[03] MOROWALI"
+    "order": 5
   },
   {
     "code": "7801850a-56fb-4ddc-81bb-1d147526dbc1",
@@ -6123,8 +5567,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "e8e361a9-ed34-4e33-9920-d63b7fb09f81",
@@ -6134,8 +5577,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "e0e3282e-4685-4ad8-b636-6449ef659410",
@@ -6145,8 +5587,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 08:57:43",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "927a467f-2cbf-4588-b2d6-1fd59f32ded6",
@@ -6156,8 +5597,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "818cef17-e208-4e99-86b7-b48f3d0fa779",
@@ -6167,8 +5607,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "8efbdf06-94bc-4658-b356-77b4a06a906d",
@@ -6178,8 +5617,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:16:46",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "8efbdf06-94bc-4658-b356-77b4a06a906d",
@@ -6189,8 +5627,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:16:42",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "dc9d1bea-5477-4fb6-87f1-8e7f0dbf2cfa",
@@ -6200,8 +5637,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "4bd0873b-6cfb-4e08-8276-cbfc1f114282",
@@ -6211,8 +5647,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "a7f555f2-4414-44f6-b71f-57d5ed945fb0",
@@ -6222,8 +5657,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "c87e86b4-7dc5-4970-bfb9-0e82ae8aa6e8",
@@ -6233,8 +5667,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "f17ef478-faa5-4e7d-8797-9c2d22445d1c",
@@ -6244,8 +5677,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "03f6f71d-0926-4be8-8cd6-6104ac0450d0",
@@ -6255,8 +5687,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "10e987d2-224d-4602-a5f1-3489a57cc580",
@@ -6266,8 +5697,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "d588c179-aa90-480d-9316-8a6034af2ad6",
@@ -6277,8 +5707,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "fe311bf4-2d90-46e5-bdf4-1addeb728d57",
@@ -6288,8 +5717,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:40:46",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "fe311bf4-2d90-46e5-bdf4-1addeb728d57",
@@ -6299,8 +5727,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:40:43",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "3d6de5ed-9063-43d0-b805-5cfd1e65cd49",
@@ -6310,8 +5737,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "9818074f-7f62-4f6f-8a12-7b9ec153718e",
@@ -6321,8 +5747,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:45:27",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "9818074f-7f62-4f6f-8a12-7b9ec153718e",
@@ -6332,8 +5757,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:43:12",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "f137f885-fb23-4f7a-aa6d-f7a53b703e49",
@@ -6343,8 +5767,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
@@ -6354,8 +5777,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 08:41:12",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
@@ -6365,8 +5787,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 17:42:13",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
@@ -6376,8 +5797,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 15:22:04",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
@@ -6387,8 +5807,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 15:20:54",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
@@ -6398,8 +5817,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 15:16:04",
-    "order": 5,
-    "kab_name": "[03] MOROWALI"
+    "order": 5
   },
   {
     "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
@@ -6409,8 +5827,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 15:11:10",
-    "order": 6,
-    "kab_name": "[03] MOROWALI"
+    "order": 6
   },
   {
     "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
@@ -6420,8 +5837,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 17:17:08",
-    "order": 7,
-    "kab_name": "[03] MOROWALI"
+    "order": 7
   },
   {
     "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
@@ -6431,8 +5847,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 09:35:12",
-    "order": 8,
-    "kab_name": "[03] MOROWALI"
+    "order": 8
   },
   {
     "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
@@ -6442,8 +5857,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:20:43",
-    "order": 9,
-    "kab_name": "[03] MOROWALI"
+    "order": 9
   },
   {
     "code": "e793075a-b8c2-4c84-ba4c-3f5dc99d358d",
@@ -6453,8 +5867,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:20:24",
-    "order": 10,
-    "kab_name": "[03] MOROWALI"
+    "order": 10
   },
   {
     "code": "2676b7e4-6dca-4e7f-991e-6ae27b0b0c85",
@@ -6464,8 +5877,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:08:56",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "2676b7e4-6dca-4e7f-991e-6ae27b0b0c85",
@@ -6475,8 +5887,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 04:11:39",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "f06b1770-44ac-4f73-9bba-ac5b8877f5da",
@@ -6486,8 +5897,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:50:55",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "f06b1770-44ac-4f73-9bba-ac5b8877f5da",
@@ -6497,8 +5907,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:50:54",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "7f30fdb9-3378-42da-a89e-f3c99fae9f90",
@@ -6508,8 +5917,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "8f5e067f-860c-4808-84ca-bbe34520f80a",
@@ -6519,8 +5927,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
@@ -6530,8 +5937,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "06 Jun 2026, 16:16:30",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
@@ -6541,8 +5947,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "06 Jun 2026, 16:16:26",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
@@ -6552,8 +5957,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "06 Jun 2026, 16:16:09",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
@@ -6563,8 +5967,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "06 Jun 2026, 16:15:46",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
@@ -6574,8 +5977,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:08:55",
-    "order": 5,
-    "kab_name": "[03] MOROWALI"
+    "order": 5
   },
   {
     "code": "c1642e10-01aa-4e62-a0b5-fc7e1c530d19",
@@ -6585,8 +5987,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:08:51",
-    "order": 6,
-    "kab_name": "[03] MOROWALI"
+    "order": 6
   },
   {
     "code": "a5eefd78-29d0-491a-9a55-6d0e3cebf56f",
@@ -6596,8 +5997,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 06:14:08",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "a5eefd78-29d0-491a-9a55-6d0e3cebf56f",
@@ -6607,8 +6007,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:32:29",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "a5eefd78-29d0-491a-9a55-6d0e3cebf56f",
@@ -6618,8 +6017,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:32:25",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "107e513c-c4c3-4b50-bc89-6723a3cb3b93",
@@ -6629,8 +6027,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "dd003496-df61-4ee5-81ff-039a85045616",
@@ -6640,8 +6037,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "80c030e4-e029-49b1-a942-8495eaf6afdd",
@@ -6651,8 +6047,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:34:22",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "80c030e4-e029-49b1-a942-8495eaf6afdd",
@@ -6662,8 +6057,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:34:19",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "a3fc0235-4078-4d30-934e-cddcfd337ea9",
@@ -6673,8 +6067,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "34907558-6371-45f6-b5ba-d416a14fb23c",
@@ -6684,8 +6077,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:13:22",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "34907558-6371-45f6-b5ba-d416a14fb23c",
@@ -6695,8 +6087,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:13:18",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "34907558-6371-45f6-b5ba-d416a14fb23c",
@@ -6706,8 +6097,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:35:46",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "34907558-6371-45f6-b5ba-d416a14fb23c",
@@ -6717,8 +6107,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:35:42",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "002155b1-8526-4b29-9f46-1bcf805b34ed",
@@ -6728,8 +6117,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "6bad9ebe-910a-42f1-80d5-4952ea7bc219",
@@ -6739,8 +6127,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "caea2db4-feb6-4898-9bff-449bfb39015d",
@@ -6750,8 +6137,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:39:56",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "caea2db4-feb6-4898-9bff-449bfb39015d",
@@ -6761,8 +6147,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:39:52",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "9b9e29d1-fc1e-4b2d-99d7-838fde85299c",
@@ -6772,8 +6157,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:58:35",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "9b9e29d1-fc1e-4b2d-99d7-838fde85299c",
@@ -6783,8 +6167,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:58:16",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "f72b0abc-81fb-4213-8eee-80ed36f46bf5",
@@ -6794,8 +6177,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "9887ec13-aa01-42c4-a092-2b6eabbc93ae",
@@ -6805,8 +6187,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "e0be1090-583e-4cf5-896c-25e6770dd9a9",
@@ -6816,8 +6197,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:56:28",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "e0be1090-583e-4cf5-896c-25e6770dd9a9",
@@ -6827,8 +6207,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:56:25",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "492e9273-4d45-4212-8e7d-bb93c3eaaa25",
@@ -6838,8 +6217,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:18:41",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "492e9273-4d45-4212-8e7d-bb93c3eaaa25",
@@ -6849,8 +6227,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:18:37",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "492e9273-4d45-4212-8e7d-bb93c3eaaa25",
@@ -6860,8 +6237,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:25:42",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "492e9273-4d45-4212-8e7d-bb93c3eaaa25",
@@ -6871,8 +6247,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:25:42",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "28d31b97-58f8-4fbf-ac6d-59ec9cfff360",
@@ -6882,8 +6257,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "baaee604-a66b-41a2-8626-15c665f69966",
@@ -6893,8 +6267,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:46:21",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "baaee604-a66b-41a2-8626-15c665f69966",
@@ -6904,8 +6277,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:43:02",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "4e3583e3-6dc7-4e64-9162-c0af6aa387e5",
@@ -6915,8 +6287,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "f281d6a0-3b91-4fc8-9175-5835561460dc",
@@ -6926,8 +6297,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "5a2a441a-9ca8-4e16-a451-3a34c523d387",
@@ -6937,8 +6307,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "4ef393e5-4f05-4e0a-93bf-272a08319538",
@@ -6948,8 +6317,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "9d10a3a8-40a1-4214-b205-e84137da89a1",
@@ -6959,8 +6327,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:03:04",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "9d10a3a8-40a1-4214-b205-e84137da89a1",
@@ -6970,8 +6337,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:03:04",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "b4dee202-0db6-407f-8980-e26a175e1c8e",
@@ -6981,8 +6347,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "e0505a05-f64c-47e5-8bfd-ed00c70e225d",
@@ -6992,8 +6357,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "af3fd6a8-e79c-46cd-8dc6-48ad8dd9958d",
@@ -7003,8 +6367,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "921a5236-23f3-4916-b674-217e51841df3",
@@ -7014,8 +6377,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 08:01:17",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "921a5236-23f3-4916-b674-217e51841df3",
@@ -7025,8 +6387,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 04:27:30",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "921a5236-23f3-4916-b674-217e51841df3",
@@ -7036,8 +6397,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:27:15",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "921a5236-23f3-4916-b674-217e51841df3",
@@ -7047,8 +6407,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:27:15",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "fea89e8c-c5f4-4168-87ee-4212371d11a6",
@@ -7058,8 +6417,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "c87d62b3-0fe7-4cad-ad15-8276f260030e",
@@ -7069,8 +6427,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:31:31",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "c87d62b3-0fe7-4cad-ad15-8276f260030e",
@@ -7080,8 +6437,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:31:23",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "181c4eeb-7d4a-47c8-a382-b11d0f25cda9",
@@ -7091,8 +6447,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "85709503-4d04-479c-8e68-cbe503a2dd1c",
@@ -7102,8 +6457,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:43:54",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "85709503-4d04-479c-8e68-cbe503a2dd1c",
@@ -7113,8 +6467,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:43:50",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "f8c79846-57b3-4404-a355-83014682b91c",
@@ -7124,8 +6477,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:46:49",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "f8c79846-57b3-4404-a355-83014682b91c",
@@ -7135,8 +6487,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 11:16:31",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "f8c79846-57b3-4404-a355-83014682b91c",
@@ -7146,8 +6497,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:21:44",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "f8c79846-57b3-4404-a355-83014682b91c",
@@ -7157,8 +6507,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:21:16",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "dc734288-640a-4eb2-9e5d-eeca105ba059",
@@ -7168,8 +6517,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 11:17:45",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "dc734288-640a-4eb2-9e5d-eeca105ba059",
@@ -7179,8 +6527,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:41:02",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "dc734288-640a-4eb2-9e5d-eeca105ba059",
@@ -7190,8 +6537,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:41:01",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "d0ddf7b7-b1eb-45cf-850c-e51b379a3d44",
@@ -7201,8 +6547,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "29c9cb5f-6c79-4194-a00a-2a3b301a0d35",
@@ -7212,8 +6557,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "09415d05-ed3c-4a3e-95b7-716ab76d3b88",
@@ -7223,8 +6567,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:59:17",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "09415d05-ed3c-4a3e-95b7-716ab76d3b88",
@@ -7234,8 +6577,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:59:14",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "09415d05-ed3c-4a3e-95b7-716ab76d3b88",
@@ -7245,8 +6587,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:01:44",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "09415d05-ed3c-4a3e-95b7-716ab76d3b88",
@@ -7256,8 +6597,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:01:43",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "0cbb9e07-6537-4127-a887-0b0408031e10",
@@ -7267,8 +6607,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:00:07",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "0cbb9e07-6537-4127-a887-0b0408031e10",
@@ -7278,8 +6617,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:00:06",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "0cbb9e07-6537-4127-a887-0b0408031e10",
@@ -7289,8 +6627,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:07:05",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "0cbb9e07-6537-4127-a887-0b0408031e10",
@@ -7300,8 +6637,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:07:01",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "e9d64732-f905-4014-8576-e1c9a5eddf20",
@@ -7311,8 +6647,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "ea0a042b-2eed-466c-b8a1-1574c59c661d",
@@ -7322,8 +6657,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:30:30",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "ea0a042b-2eed-466c-b8a1-1574c59c661d",
@@ -7333,8 +6667,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:30:26",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "cb72d3c8-349c-42f0-ae1c-f37055b7c837",
@@ -7344,8 +6677,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "def9fd02-6d9a-42b8-b724-b49b5be1f49c",
@@ -7355,8 +6687,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "e807b2d0-c9e8-4158-bc0a-301bcc232add",
@@ -7366,8 +6697,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:22:02",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "e807b2d0-c9e8-4158-bc0a-301bcc232add",
@@ -7377,8 +6707,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 09:22:02",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "98eee9fd-b0f2-478d-95f1-0e7f959bd9ed",
@@ -7388,8 +6717,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 15:01:55",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "e6d2547c-470d-4b47-a615-9f69cb9ae146",
@@ -7399,8 +6727,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "7dafb064-5ae9-4b5b-8a44-3c3c9ee13e69",
@@ -7410,8 +6737,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "4bd9e417-da24-423f-bfdd-0400d7910726",
@@ -7421,8 +6747,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "7a62e2d2-8a9d-4cac-bcbe-5d5519870646",
@@ -7432,8 +6757,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "02f3fec2-7857-4541-982d-73fdc305075d",
@@ -7443,8 +6767,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:57:41",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "02f3fec2-7857-4541-982d-73fdc305075d",
@@ -7454,8 +6777,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:57:38",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "02f3fec2-7857-4541-982d-73fdc305075d",
@@ -7465,8 +6787,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 22:49:30",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "02f3fec2-7857-4541-982d-73fdc305075d",
@@ -7476,8 +6797,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:49:27",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "9954b22c-763b-4c8b-9805-1d474de9a7de",
@@ -7487,8 +6807,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:48:02",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "9954b22c-763b-4c8b-9805-1d474de9a7de",
@@ -7498,8 +6817,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:48:01",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "76ec39c2-65cc-4d49-ab83-6a913d0f061b",
@@ -7509,8 +6827,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:07:19",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "76ec39c2-65cc-4d49-ab83-6a913d0f061b",
@@ -7520,8 +6837,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:07:19",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "c4b8f5a0-54e6-45a6-a733-8c468b487385",
@@ -7531,8 +6847,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "4f4fd6aa-74b1-4eb7-bc84-19aac03cf47e",
@@ -7542,8 +6857,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:20:22",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "4f4fd6aa-74b1-4eb7-bc84-19aac03cf47e",
@@ -7553,8 +6867,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:20:11",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "4f4fd6aa-74b1-4eb7-bc84-19aac03cf47e",
@@ -7564,8 +6877,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 15:46:40",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "4f4fd6aa-74b1-4eb7-bc84-19aac03cf47e",
@@ -7575,8 +6887,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 09:53:09",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "4f4fd6aa-74b1-4eb7-bc84-19aac03cf47e",
@@ -7586,8 +6897,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 05:21:50",
-    "order": 5,
-    "kab_name": "[03] MOROWALI"
+    "order": 5
   },
   {
     "code": "4f4fd6aa-74b1-4eb7-bc84-19aac03cf47e",
@@ -7597,8 +6907,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:37:17",
-    "order": 6,
-    "kab_name": "[03] MOROWALI"
+    "order": 6
   },
   {
     "code": "4f4fd6aa-74b1-4eb7-bc84-19aac03cf47e",
@@ -7608,8 +6917,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:37:13",
-    "order": 7,
-    "kab_name": "[03] MOROWALI"
+    "order": 7
   },
   {
     "code": "834737bf-3eeb-4777-9831-46d3445550d7",
@@ -7619,8 +6927,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:39:09",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "834737bf-3eeb-4777-9831-46d3445550d7",
@@ -7630,8 +6937,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:39:06",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "c9231df6-b43b-4c0d-9a22-c78bf1333aae",
@@ -7641,8 +6947,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "aec60a5e-102d-4f9e-9ddc-6d3ab1ba1193",
@@ -7652,8 +6957,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:02:50",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "aec60a5e-102d-4f9e-9ddc-6d3ab1ba1193",
@@ -7663,8 +6967,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:02:47",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "03b9377c-ba16-456a-9638-e4189ecd6d2d",
@@ -7674,8 +6977,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:57:54",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "03b9377c-ba16-456a-9638-e4189ecd6d2d",
@@ -7685,8 +6987,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:57:50",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "03b9377c-ba16-456a-9638-e4189ecd6d2d",
@@ -7696,8 +6997,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 22:50:51",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "03b9377c-ba16-456a-9638-e4189ecd6d2d",
@@ -7707,8 +7007,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:50:50",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "4c1429dc-0655-40db-9849-d2bc4b413ba2",
@@ -7718,8 +7017,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "09 Jun 2026, 11:19:40",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "4c1429dc-0655-40db-9849-d2bc4b413ba2",
@@ -7729,8 +7027,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:19:27",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "4c1429dc-0655-40db-9849-d2bc4b413ba2",
@@ -7740,8 +7037,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:19:24",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "4c1429dc-0655-40db-9849-d2bc4b413ba2",
@@ -7751,8 +7047,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:19:24",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "4c1429dc-0655-40db-9849-d2bc4b413ba2",
@@ -7762,8 +7057,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 01:44:27",
-    "order": 5,
-    "kab_name": "[03] MOROWALI"
+    "order": 5
   },
   {
     "code": "4c1429dc-0655-40db-9849-d2bc4b413ba2",
@@ -7773,8 +7067,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 01:44:26",
-    "order": 6,
-    "kab_name": "[03] MOROWALI"
+    "order": 6
   },
   {
     "code": "4c1429dc-0655-40db-9849-d2bc4b413ba2",
@@ -7784,8 +7077,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 01:44:02",
-    "order": 7,
-    "kab_name": "[03] MOROWALI"
+    "order": 7
   },
   {
     "code": "4c1429dc-0655-40db-9849-d2bc4b413ba2",
@@ -7795,8 +7087,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:32:04",
-    "order": 8,
-    "kab_name": "[03] MOROWALI"
+    "order": 8
   },
   {
     "code": "4c1429dc-0655-40db-9849-d2bc4b413ba2",
@@ -7806,8 +7097,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:32:03",
-    "order": 9,
-    "kab_name": "[03] MOROWALI"
+    "order": 9
   },
   {
     "code": "ac972c27-7ac9-41d9-9763-06cf8e0368cb",
@@ -7817,8 +7107,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "088e1d09-2f70-4d9f-9c3f-092aa89df934",
@@ -7828,8 +7117,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:59:06",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "088e1d09-2f70-4d9f-9c3f-092aa89df934",
@@ -7839,8 +7127,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:59:03",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "088e1d09-2f70-4d9f-9c3f-092aa89df934",
@@ -7850,8 +7137,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 22:59:55",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "088e1d09-2f70-4d9f-9c3f-092aa89df934",
@@ -7861,8 +7147,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:59:51",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "d84a7007-ea52-4a4e-9f13-1f85ffb0f03a",
@@ -7872,8 +7157,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:30:18",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "d84a7007-ea52-4a4e-9f13-1f85ffb0f03a",
@@ -7883,8 +7167,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:30:18",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "22df9424-5a77-4276-ab7d-9c4bc6b29108",
@@ -7894,8 +7177,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:06:55",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "22df9424-5a77-4276-ab7d-9c4bc6b29108",
@@ -7905,8 +7187,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 23:52:15",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "22df9424-5a77-4276-ab7d-9c4bc6b29108",
@@ -7916,8 +7197,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:52:11",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "be80714a-5137-4d04-a2c4-2f655fdff573",
@@ -7927,8 +7207,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "56e6adce-5c44-45ba-bfbe-7decaaa6131d",
@@ -7938,8 +7217,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:53:14",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "56e6adce-5c44-45ba-bfbe-7decaaa6131d",
@@ -7949,8 +7227,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:53:09",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "c081ce98-3822-48ae-8152-6d68876ff92d",
@@ -7960,8 +7237,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:05:26",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "c081ce98-3822-48ae-8152-6d68876ff92d",
@@ -7971,8 +7247,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:05:22",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "2ec384ba-8220-4aea-a93b-4b1e3003caa9",
@@ -7982,8 +7257,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "8ed77891-2bd5-4ed8-8bf2-69bdb45ca98d",
@@ -7993,8 +7267,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "9a652865-00fb-402a-b15e-7362ff84267a",
@@ -8004,8 +7277,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 09:14:00",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "9a652865-00fb-402a-b15e-7362ff84267a",
@@ -8015,8 +7287,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 04:52:47",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "9a652865-00fb-402a-b15e-7362ff84267a",
@@ -8026,8 +7297,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:52:29",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "9a652865-00fb-402a-b15e-7362ff84267a",
@@ -8037,8 +7307,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:52:29",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "db05fe89-a803-4a6f-9cc8-4fa01696d86c",
@@ -8048,8 +7317,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:36:08",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "db05fe89-a803-4a6f-9cc8-4fa01696d86c",
@@ -8059,8 +7327,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:36:04",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "0482ad22-c8ed-452d-abd2-d512507834fc",
@@ -8070,8 +7337,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -8081,8 +7347,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:38:30",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -8092,8 +7357,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:38:27",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -8103,8 +7367,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:55:41",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -8114,8 +7377,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:55:37",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -8125,8 +7387,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:38:30",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -8136,8 +7397,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:38:27",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -8147,8 +7407,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:55:41",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
@@ -8158,8 +7417,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:55:37",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "b58860b3-d502-48de-bf29-ebc5b51b0389",
@@ -8169,8 +7427,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 06:29:20",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "b58860b3-d502-48de-bf29-ebc5b51b0389",
@@ -8180,8 +7437,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:28:43",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "3831becf-a3f1-4670-bf5a-2857969b4734",
@@ -8191,8 +7447,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:14:03",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "3831becf-a3f1-4670-bf5a-2857969b4734",
@@ -8202,8 +7457,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:13:57",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "3831becf-a3f1-4670-bf5a-2857969b4734",
@@ -8213,8 +7467,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:42:10",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "3831becf-a3f1-4670-bf5a-2857969b4734",
@@ -8224,8 +7477,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:42:06",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "b5113d80-1e56-47a7-ad5a-db5658a80ac1",
@@ -8235,8 +7487,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 07:47:39",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "b5113d80-1e56-47a7-ad5a-db5658a80ac1",
@@ -8246,8 +7497,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:27:24",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "b5113d80-1e56-47a7-ad5a-db5658a80ac1",
@@ -8257,8 +7507,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:27:21",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "b17aa77d-4e2e-49a7-839a-c1345c757385",
@@ -8268,8 +7517,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:12:45",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "b17aa77d-4e2e-49a7-839a-c1345c757385",
@@ -8279,8 +7527,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:12:41",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "893f6add-f69a-44e0-b326-6d689295b01c",
@@ -8290,8 +7537,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "12 Jun 2026, 14:51:03",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "893f6add-f69a-44e0-b326-6d689295b01c",
@@ -8301,8 +7547,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "12 Jun 2026, 14:50:47",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "893f6add-f69a-44e0-b326-6d689295b01c",
@@ -8312,8 +7557,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:56:56",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "893f6add-f69a-44e0-b326-6d689295b01c",
@@ -8323,8 +7567,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:56:36",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "cf953441-4548-4748-b059-68c60a1c9312",
@@ -8334,8 +7577,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:54:53",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "cf953441-4548-4748-b059-68c60a1c9312",
@@ -8345,8 +7587,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:54:49",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "6be56753-ebe5-45f1-9b80-47579ccf0881",
@@ -8356,8 +7597,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:38:40",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "6be56753-ebe5-45f1-9b80-47579ccf0881",
@@ -8367,8 +7607,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:38:36",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "d8a9fda4-37d7-4dd5-81ea-09cf737f2931",
@@ -8378,8 +7617,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:30:51",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "d8a9fda4-37d7-4dd5-81ea-09cf737f2931",
@@ -8389,8 +7627,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:30:46",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "899c8629-301a-45b4-a708-a7348a9f54fd",
@@ -8400,8 +7637,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:58:25",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "899c8629-301a-45b4-a708-a7348a9f54fd",
@@ -8411,8 +7647,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:58:21",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "befe39ef-4187-40aa-9e99-fef88d32baa1",
@@ -8422,8 +7657,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 06:59:29",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "befe39ef-4187-40aa-9e99-fef88d32baa1",
@@ -8433,8 +7667,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:59:25",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "437a33b6-0518-4334-9628-291348a80424",
@@ -8444,8 +7677,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:17:15",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "437a33b6-0518-4334-9628-291348a80424",
@@ -8455,8 +7687,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:17:14",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "437a33b6-0518-4334-9628-291348a80424",
@@ -8466,8 +7697,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:06:24",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "437a33b6-0518-4334-9628-291348a80424",
@@ -8477,8 +7707,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:06:20",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "da030475-5815-44a4-8f44-5f9fd6f3022d",
@@ -8488,8 +7717,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "ce7a1281-9955-4975-b23e-90d84aa7f67e",
@@ -8499,8 +7727,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "20e344cc-0eac-494a-b282-0e8b671209b3",
@@ -8510,8 +7737,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "db3c7f51-5060-4023-b5c8-da77a80bd252",
@@ -8521,8 +7747,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "677918d6-d290-459a-b04e-ffb4b18e4c0d",
@@ -8532,8 +7757,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "235c2d8d-6cc4-4efd-aa58-41cdd4c605d0",
@@ -8543,8 +7767,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "1c5928c9-c3c1-40f9-ac0c-3fcb569df420",
@@ -8554,8 +7777,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "030a7bbd-3324-463b-a078-3449f91e7ed7",
@@ -8565,8 +7787,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:57:37",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
+    "order": 1
   },
   {
     "code": "030a7bbd-3324-463b-a078-3449f91e7ed7",
@@ -8576,8 +7797,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:57:37",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
+    "order": 2
   },
   {
     "code": "030a7bbd-3324-463b-a078-3449f91e7ed7",
@@ -8587,8 +7807,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 22:49:39",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
+    "order": 3
   },
   {
     "code": "030a7bbd-3324-463b-a078-3449f91e7ed7",
@@ -8598,8 +7817,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:49:38",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
+    "order": 4
   },
   {
     "code": "9dfa49ca-44db-45f3-8f7b-08b0b698d38f",
@@ -8609,8 +7827,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "94c5d444-50cb-4e2d-83ce-2a228f6d8a68",
@@ -8620,8 +7837,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[03] MOROWALI"
+    "order": 0
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8631,8 +7847,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 09:39:11",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8642,8 +7857,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 08:26:35",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8653,8 +7867,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 08:25:51",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8664,8 +7877,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 08:25:22",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8675,8 +7887,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 08:25:04",
-    "order": 5,
-    "kab_name": "[04] POSO"
+    "order": 5
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8686,8 +7897,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 08:22:52",
-    "order": 6,
-    "kab_name": "[04] POSO"
+    "order": 6
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8697,8 +7907,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 08:22:49",
-    "order": 7,
-    "kab_name": "[04] POSO"
+    "order": 7
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8708,8 +7917,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 07:30:04",
-    "order": 8,
-    "kab_name": "[04] POSO"
+    "order": 8
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8719,8 +7927,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 07:28:51",
-    "order": 9,
-    "kab_name": "[04] POSO"
+    "order": 9
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8730,8 +7937,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 07:28:30",
-    "order": 10,
-    "kab_name": "[04] POSO"
+    "order": 10
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8741,8 +7947,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "10 Jun 2026, 04:51:55",
-    "order": 11,
-    "kab_name": "[04] POSO"
+    "order": 11
   },
   {
     "code": "ae22783a-2ed3-441a-acd4-2c299721b928",
@@ -8752,8 +7957,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "10 Jun 2026, 04:51:52",
-    "order": 12,
-    "kab_name": "[04] POSO"
+    "order": 12
   },
   {
     "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
@@ -8763,8 +7967,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "28 May 2026, 16:54:49",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
@@ -8774,8 +7977,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "28 May 2026, 15:39:07",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
@@ -8785,8 +7987,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "28 May 2026, 15:39:04",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
@@ -8796,8 +7997,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "28 May 2026, 10:42:47",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
@@ -8807,8 +8007,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "28 May 2026, 10:42:43",
-    "order": 5,
-    "kab_name": "[04] POSO"
+    "order": 5
   },
   {
     "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
@@ -8818,8 +8017,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "25 May 2026, 16:28:14",
-    "order": 6,
-    "kab_name": "[04] POSO"
+    "order": 6
   },
   {
     "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
@@ -8829,8 +8027,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "25 May 2026, 16:28:10",
-    "order": 7,
-    "kab_name": "[04] POSO"
+    "order": 7
   },
   {
     "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
@@ -8840,8 +8037,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "22 May 2026, 16:39:35",
-    "order": 8,
-    "kab_name": "[04] POSO"
+    "order": 8
   },
   {
     "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
@@ -8851,8 +8047,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "22 May 2026, 16:39:10",
-    "order": 9,
-    "kab_name": "[04] POSO"
+    "order": 9
   },
   {
     "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
@@ -8862,8 +8057,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "22 May 2026, 16:37:55",
-    "order": 10,
-    "kab_name": "[04] POSO"
+    "order": 10
   },
   {
     "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
@@ -8873,8 +8067,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "22 May 2026, 16:37:52",
-    "order": 11,
-    "kab_name": "[04] POSO"
+    "order": 11
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -8884,8 +8077,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 18:29:28",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -8895,8 +8087,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 18:29:22",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -8906,8 +8097,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 18:29:21",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -8917,8 +8107,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 18:21:06",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -8928,8 +8117,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 17:20:44",
-    "order": 5,
-    "kab_name": "[04] POSO"
+    "order": 5
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -8939,8 +8127,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 17:20:30",
-    "order": 6,
-    "kab_name": "[04] POSO"
+    "order": 6
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -8950,8 +8137,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 17:19:41",
-    "order": 7,
-    "kab_name": "[04] POSO"
+    "order": 7
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -8961,8 +8147,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 17:16:54",
-    "order": 8,
-    "kab_name": "[04] POSO"
+    "order": 8
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -8972,8 +8157,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 17:16:28",
-    "order": 9,
-    "kab_name": "[04] POSO"
+    "order": 9
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -8983,8 +8167,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 17:16:25",
-    "order": 10,
-    "kab_name": "[04] POSO"
+    "order": 10
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -8994,8 +8177,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 16:56:17",
-    "order": 11,
-    "kab_name": "[04] POSO"
+    "order": 11
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9005,8 +8187,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 16:55:53",
-    "order": 12,
-    "kab_name": "[04] POSO"
+    "order": 12
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9016,8 +8197,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 16:53:37",
-    "order": 13,
-    "kab_name": "[04] POSO"
+    "order": 13
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9027,8 +8207,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 16:53:28",
-    "order": 14,
-    "kab_name": "[04] POSO"
+    "order": 14
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9038,8 +8217,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 16:53:05",
-    "order": 15,
-    "kab_name": "[04] POSO"
+    "order": 15
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9049,8 +8227,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 16:53:01",
-    "order": 16,
-    "kab_name": "[04] POSO"
+    "order": 16
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9060,8 +8237,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 16:53:01",
-    "order": 17,
-    "kab_name": "[04] POSO"
+    "order": 17
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9071,8 +8247,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 16:52:58",
-    "order": 18,
-    "kab_name": "[04] POSO"
+    "order": 18
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9082,8 +8257,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 16:36:57",
-    "order": 19,
-    "kab_name": "[04] POSO"
+    "order": 19
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9093,8 +8267,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 16:36:47",
-    "order": 20,
-    "kab_name": "[04] POSO"
+    "order": 20
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9104,8 +8277,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 16:02:57",
-    "order": 21,
-    "kab_name": "[04] POSO"
+    "order": 21
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9115,8 +8287,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 16:02:48",
-    "order": 22,
-    "kab_name": "[04] POSO"
+    "order": 22
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9126,8 +8297,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 16:02:44",
-    "order": 23,
-    "kab_name": "[04] POSO"
+    "order": 23
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9137,8 +8307,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 15:38:16",
-    "order": 24,
-    "kab_name": "[04] POSO"
+    "order": 24
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9148,8 +8317,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 15:38:09",
-    "order": 25,
-    "kab_name": "[04] POSO"
+    "order": 25
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9159,8 +8327,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 15:29:35",
-    "order": 26,
-    "kab_name": "[04] POSO"
+    "order": 26
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9170,8 +8337,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 15:29:25",
-    "order": 27,
-    "kab_name": "[04] POSO"
+    "order": 27
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9181,8 +8347,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 15:28:16",
-    "order": 28,
-    "kab_name": "[04] POSO"
+    "order": 28
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9192,8 +8357,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 15:28:16",
-    "order": 29,
-    "kab_name": "[04] POSO"
+    "order": 29
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9203,8 +8367,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 15:28:15",
-    "order": 30,
-    "kab_name": "[04] POSO"
+    "order": 30
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9214,8 +8377,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 09:27:39",
-    "order": 31,
-    "kab_name": "[04] POSO"
+    "order": 31
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9225,8 +8387,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 09:27:32",
-    "order": 32,
-    "kab_name": "[04] POSO"
+    "order": 32
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9236,8 +8397,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 09:27:22",
-    "order": 33,
-    "kab_name": "[04] POSO"
+    "order": 33
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9247,8 +8407,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 07:28:29",
-    "order": 34,
-    "kab_name": "[04] POSO"
+    "order": 34
   },
   {
     "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
@@ -9258,8 +8417,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 07:28:26",
-    "order": 35,
-    "kab_name": "[04] POSO"
+    "order": 35
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9269,8 +8427,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 11:05:27",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9280,8 +8437,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 11:04:58",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9291,8 +8447,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 11:04:54",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9302,8 +8457,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 10:18:39",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9313,8 +8467,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 09:11:02",
-    "order": 5,
-    "kab_name": "[04] POSO"
+    "order": 5
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9324,8 +8477,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 09:10:36",
-    "order": 6,
-    "kab_name": "[04] POSO"
+    "order": 6
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9335,8 +8487,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 08:49:14",
-    "order": 7,
-    "kab_name": "[04] POSO"
+    "order": 7
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9346,8 +8497,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 08:37:03",
-    "order": 8,
-    "kab_name": "[04] POSO"
+    "order": 8
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9357,8 +8507,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 08:36:59",
-    "order": 9,
-    "kab_name": "[04] POSO"
+    "order": 9
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9368,8 +8517,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 15:35:02",
-    "order": 10,
-    "kab_name": "[04] POSO"
+    "order": 10
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9379,8 +8527,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:16:16",
-    "order": 11,
-    "kab_name": "[04] POSO"
+    "order": 11
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9390,8 +8537,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:16:12",
-    "order": 12,
-    "kab_name": "[04] POSO"
+    "order": 12
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9401,8 +8547,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:16:02",
-    "order": 13,
-    "kab_name": "[04] POSO"
+    "order": 13
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9412,8 +8557,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "03 Jun 2026, 15:46:46",
-    "order": 14,
-    "kab_name": "[04] POSO"
+    "order": 14
   },
   {
     "code": "3fb13201-a272-43d1-bbb5-660e28a106b1",
@@ -9423,8 +8567,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "03 Jun 2026, 15:45:27",
-    "order": 15,
-    "kab_name": "[04] POSO"
+    "order": 15
   },
   {
     "code": "1096e92b-8235-4da9-be1a-feb17a62035e",
@@ -9434,8 +8577,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 11:07:33",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "1096e92b-8235-4da9-be1a-feb17a62035e",
@@ -9445,8 +8587,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 11:01:57",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "1096e92b-8235-4da9-be1a-feb17a62035e",
@@ -9456,8 +8597,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 11:01:53",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "1096e92b-8235-4da9-be1a-feb17a62035e",
@@ -9467,8 +8607,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 09:36:08",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "1096e92b-8235-4da9-be1a-feb17a62035e",
@@ -9478,8 +8617,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 08:36:53",
-    "order": 5,
-    "kab_name": "[04] POSO"
+    "order": 5
   },
   {
     "code": "1096e92b-8235-4da9-be1a-feb17a62035e",
@@ -9489,8 +8627,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 08:36:38",
-    "order": 6,
-    "kab_name": "[04] POSO"
+    "order": 6
   },
   {
     "code": "1096e92b-8235-4da9-be1a-feb17a62035e",
@@ -9500,8 +8637,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 08:32:03",
-    "order": 7,
-    "kab_name": "[04] POSO"
+    "order": 7
   },
   {
     "code": "1096e92b-8235-4da9-be1a-feb17a62035e",
@@ -9511,8 +8647,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 08:32:00",
-    "order": 8,
-    "kab_name": "[04] POSO"
+    "order": 8
   },
   {
     "code": "1096e92b-8235-4da9-be1a-feb17a62035e",
@@ -9522,8 +8657,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:01:03",
-    "order": 9,
-    "kab_name": "[04] POSO"
+    "order": 9
   },
   {
     "code": "1096e92b-8235-4da9-be1a-feb17a62035e",
@@ -9533,8 +8667,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:00:56",
-    "order": 10,
-    "kab_name": "[04] POSO"
+    "order": 10
   },
   {
     "code": "43f0676e-4022-4ff3-a1e3-d9738cb7bd41",
@@ -9544,8 +8677,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 11:11:44",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "43f0676e-4022-4ff3-a1e3-d9738cb7bd41",
@@ -9555,8 +8687,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 11:11:40",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "43f0676e-4022-4ff3-a1e3-d9738cb7bd41",
@@ -9566,8 +8697,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 11:10:36",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "43f0676e-4022-4ff3-a1e3-d9738cb7bd41",
@@ -9577,8 +8707,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 08:33:12",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "43f0676e-4022-4ff3-a1e3-d9738cb7bd41",
@@ -9588,8 +8717,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 08:33:09",
-    "order": 5,
-    "kab_name": "[04] POSO"
+    "order": 5
   },
   {
     "code": "43f0676e-4022-4ff3-a1e3-d9738cb7bd41",
@@ -9599,8 +8727,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 15:57:28",
-    "order": 6,
-    "kab_name": "[04] POSO"
+    "order": 6
   },
   {
     "code": "43f0676e-4022-4ff3-a1e3-d9738cb7bd41",
@@ -9610,8 +8737,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:17:24",
-    "order": 7,
-    "kab_name": "[04] POSO"
+    "order": 7
   },
   {
     "code": "43f0676e-4022-4ff3-a1e3-d9738cb7bd41",
@@ -9621,8 +8747,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:17:23",
-    "order": 8,
-    "kab_name": "[04] POSO"
+    "order": 8
   },
   {
     "code": "8ad71069-308a-454e-81c5-57648d8a929e",
@@ -9632,8 +8757,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "b69637f2-5625-4fe5-afd6-02be83202053",
@@ -9643,8 +8767,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "9733421a-054e-44a8-93d5-2c6ff58a7678",
@@ -9654,8 +8777,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "94b6fde4-9b65-4eeb-b184-9d058b42c28c",
@@ -9665,8 +8787,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "e550596a-5a86-4d16-998d-2e82a5db0a71",
@@ -9676,8 +8797,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:12:08",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "e550596a-5a86-4d16-998d-2e82a5db0a71",
@@ -9687,8 +8807,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:12:08",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "ecac719a-3eb0-4736-a2c2-8e349514c622",
@@ -9698,8 +8817,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "1ed117b2-c009-4c76-b43b-cd46ad0e8dee",
@@ -9709,8 +8827,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:04:11",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "1ed117b2-c009-4c76-b43b-cd46ad0e8dee",
@@ -9720,8 +8837,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:04:01",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "b05349ab-fae7-4c66-acdf-ea804ab98772",
@@ -9731,8 +8847,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "3d384461-62bb-4537-abb6-794eee1578b3",
@@ -9742,8 +8857,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "364bcaaf-555f-44fb-9010-780524552325",
@@ -9753,8 +8867,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "2ea412d1-93b7-41d3-8b88-95977a128462",
@@ -9764,8 +8877,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "1b41f07a-4805-4362-aa5b-cbc0ff02084d",
@@ -9775,8 +8887,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:03:20",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "1b41f07a-4805-4362-aa5b-cbc0ff02084d",
@@ -9786,8 +8897,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:03:14",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "1b41f07a-4805-4362-aa5b-cbc0ff02084d",
@@ -9797,8 +8907,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:38:29",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "1b41f07a-4805-4362-aa5b-cbc0ff02084d",
@@ -9808,8 +8917,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:38:29",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "1de821f6-276b-44a2-856f-511e85079ba2",
@@ -9819,8 +8927,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "6bcb3b67-e0e8-4609-a728-529e2ad2ea1d",
@@ -9830,8 +8937,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "0e782a7f-e7cc-4a06-951b-4f43a908fb81",
@@ -9841,8 +8947,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "de9c4922-5a79-4cb3-b41f-eeac625658a8",
@@ -9852,8 +8957,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "e8c52de7-62e0-4358-97a8-2d98de363c8a",
@@ -9863,8 +8967,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "df80536f-5125-46c8-aa0a-220b8d26441b",
@@ -9874,8 +8977,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 08:52:48",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "df80536f-5125-46c8-aa0a-220b8d26441b",
@@ -9885,8 +8987,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:52:14",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "fa325480-97ce-4ee3-9f37-e56ba6d5a578",
@@ -9896,8 +8997,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:26:44",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "fa325480-97ce-4ee3-9f37-e56ba6d5a578",
@@ -9907,8 +9007,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:26:44",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "865618f8-14f2-417e-8802-0c2589ccd447",
@@ -9918,8 +9017,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:46:54",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "865618f8-14f2-417e-8802-0c2589ccd447",
@@ -9929,8 +9027,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:46:50",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "70a583f6-cd3a-4261-9ccc-addbb37f1d19",
@@ -9940,8 +9037,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:47:44",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "70a583f6-cd3a-4261-9ccc-addbb37f1d19",
@@ -9951,8 +9047,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:47:44",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "ea4ea155-21a8-4a39-afcc-570423e7fc42",
@@ -9962,8 +9057,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "42db8562-2654-46aa-97cc-ab77eb2a8afa",
@@ -9973,8 +9067,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "01a28e03-beef-4f52-9493-fffa0ed33bb9",
@@ -9984,8 +9077,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "e674036e-bee0-47b7-bc94-a0c32bfa2d71",
@@ -9995,8 +9087,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 09:17:21",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "e674036e-bee0-47b7-bc94-a0c32bfa2d71",
@@ -10006,8 +9097,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:17:21",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "14bd0e3c-76eb-4267-baec-169e8c1dcf4f",
@@ -10017,8 +9107,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "be8d45b2-7f47-416f-a088-33f60b6069a6",
@@ -10028,8 +9117,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "e9d78724-e79e-44fa-a317-d689a93bc82b",
@@ -10039,8 +9127,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "db02e8ab-178a-48e8-a7fc-1396aaa8f47f",
@@ -10050,8 +9137,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "03cec3f4-6d9a-4378-b1ae-c574caf81f17",
@@ -10061,8 +9147,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "47c3d4ee-e6b2-4a49-bb9c-43d4045892bb",
@@ -10072,8 +9157,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "da9e8abc-aba2-4eb5-95be-d3758a031d5c",
@@ -10083,8 +9167,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "eaa35bbb-55a4-4d7b-ac91-454a222e7830",
@@ -10094,8 +9177,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "6500f980-32f5-40ca-9fd0-7f98712b9820",
@@ -10105,8 +9187,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "38f2c037-cd82-4058-9c88-f7398cd01acc",
@@ -10116,8 +9197,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "5fbc90ed-a9a2-4001-9fb5-f30091b635f4",
@@ -10127,8 +9207,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:12:38",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "5fbc90ed-a9a2-4001-9fb5-f30091b635f4",
@@ -10138,8 +9217,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:12:38",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "a01b4bf5-ddcf-46b7-8210-c9ba1d5005dd",
@@ -10149,8 +9227,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:13:24",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "a01b4bf5-ddcf-46b7-8210-c9ba1d5005dd",
@@ -10160,8 +9237,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:13:16",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "9fe472ea-eaa3-4317-b009-0872d29ed984",
@@ -10171,8 +9247,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:12:27",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "9fe472ea-eaa3-4317-b009-0872d29ed984",
@@ -10182,8 +9257,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:12:24",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "41b3f0c1-50fb-4245-bf2c-d239bd18c993",
@@ -10193,8 +9267,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "208bf278-60b9-4b3c-b3f9-dc9d7ce66e34",
@@ -10204,8 +9277,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "1a692571-d8df-4f52-8b56-f94ebe211826",
@@ -10215,8 +9287,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "8563889b-2096-4b94-92ba-1a17798019b6",
@@ -10226,8 +9297,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "26 May 2026, 08:30:37",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "8563889b-2096-4b94-92ba-1a17798019b6",
@@ -10237,8 +9307,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "26 May 2026, 08:30:33",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "8563889b-2096-4b94-92ba-1a17798019b6",
@@ -10248,8 +9317,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:43:50",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "8563889b-2096-4b94-92ba-1a17798019b6",
@@ -10259,8 +9327,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:43:46",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "a945e12f-d6fe-4dd9-aeed-db8f97a0a7df",
@@ -10270,8 +9337,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 04:39:40",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "a945e12f-d6fe-4dd9-aeed-db8f97a0a7df",
@@ -10281,8 +9347,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:39:32",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "a945e12f-d6fe-4dd9-aeed-db8f97a0a7df",
@@ -10292,8 +9357,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:39:32",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "3832c0b7-23b6-4ed8-aab4-3151bb051432",
@@ -10303,8 +9367,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:13:59",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "3832c0b7-23b6-4ed8-aab4-3151bb051432",
@@ -10314,8 +9377,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:13:59",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "3832c0b7-23b6-4ed8-aab4-3151bb051432",
@@ -10325,8 +9387,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:42:10",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "3832c0b7-23b6-4ed8-aab4-3151bb051432",
@@ -10336,8 +9397,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:42:06",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "e95af8b8-f1d5-4d09-ba86-3cb71b81c4c4",
@@ -10347,8 +9407,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10358,8 +9417,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10369,8 +9427,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10380,8 +9437,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10391,8 +9447,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10402,8 +9457,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10413,8 +9467,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10424,8 +9477,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10435,8 +9487,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10446,8 +9497,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10457,8 +9507,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10468,8 +9517,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10479,8 +9527,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10490,8 +9537,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10501,8 +9547,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10512,8 +9557,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10523,8 +9567,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10534,8 +9577,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10545,8 +9587,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10556,8 +9597,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10567,8 +9607,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10578,8 +9617,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10589,8 +9627,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10600,8 +9637,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10611,8 +9647,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10622,8 +9657,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10633,8 +9667,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10644,8 +9677,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10655,8 +9687,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10666,8 +9697,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10677,8 +9707,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10688,8 +9717,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10699,8 +9727,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10710,8 +9737,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10721,8 +9747,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10732,8 +9757,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10743,8 +9767,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10754,8 +9777,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10765,8 +9787,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10776,8 +9797,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10787,8 +9807,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10798,8 +9817,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10809,8 +9827,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10820,8 +9837,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10831,8 +9847,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10842,8 +9857,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10853,8 +9867,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10864,8 +9877,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10875,8 +9887,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10886,8 +9897,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10897,8 +9907,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10908,8 +9917,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10919,8 +9927,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10930,8 +9937,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10941,8 +9947,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10952,8 +9957,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10963,8 +9967,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10974,8 +9977,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10985,8 +9987,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -10996,8 +9997,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -11007,8 +10007,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "081008bc-6a02-4888-bfb2-2c1c805fa4ad",
@@ -11018,8 +10017,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "09 Jun 2026, 10:59:00",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "081008bc-6a02-4888-bfb2-2c1c805fa4ad",
@@ -11029,8 +10027,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:58:55",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "358e68c2-9ecd-47b3-85a5-e07045612b91",
@@ -11040,8 +10037,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:13:28",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "358e68c2-9ecd-47b3-85a5-e07045612b91",
@@ -11051,8 +10047,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:37:51",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "358e68c2-9ecd-47b3-85a5-e07045612b91",
@@ -11062,8 +10057,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:37:47",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "1295a559-080e-465f-8cc9-418211f624f4",
@@ -11073,8 +10067,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "b82d2a4f-6c97-4e37-9ef6-1c33c6ff5fb9",
@@ -11084,8 +10077,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:36:30",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "b82d2a4f-6c97-4e37-9ef6-1c33c6ff5fb9",
@@ -11095,8 +10087,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:36:29",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "4ca8d1fa-23ee-4fd2-a2a6-bab1de315e27",
@@ -11106,8 +10097,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:19:36",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "4ca8d1fa-23ee-4fd2-a2a6-bab1de315e27",
@@ -11117,8 +10107,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:19:29",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "4ca8d1fa-23ee-4fd2-a2a6-bab1de315e27",
@@ -11128,8 +10117,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 17:46:01",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "4ca8d1fa-23ee-4fd2-a2a6-bab1de315e27",
@@ -11139,8 +10127,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 08:35:03",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "4ca8d1fa-23ee-4fd2-a2a6-bab1de315e27",
@@ -11150,8 +10137,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:32:55",
-    "order": 5,
-    "kab_name": "[04] POSO"
+    "order": 5
   },
   {
     "code": "4ca8d1fa-23ee-4fd2-a2a6-bab1de315e27",
@@ -11161,8 +10147,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:32:55",
-    "order": 6,
-    "kab_name": "[04] POSO"
+    "order": 6
   },
   {
     "code": "e4de2fa1-decc-40d2-82f1-878e9bd3c5c8",
@@ -11172,8 +10157,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:10:40",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "e4de2fa1-decc-40d2-82f1-878e9bd3c5c8",
@@ -11183,8 +10167,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:10:35",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "da390de5-f744-458a-a9b6-926592d2d598",
@@ -11194,8 +10177,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "0f8515e1-9e79-4690-86bd-d56aa930c276",
@@ -11205,8 +10187,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:00:40",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "0f8515e1-9e79-4690-86bd-d56aa930c276",
@@ -11216,8 +10197,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:00:40",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "0f8515e1-9e79-4690-86bd-d56aa930c276",
@@ -11227,8 +10207,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:12:23",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "0f8515e1-9e79-4690-86bd-d56aa930c276",
@@ -11238,8 +10217,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:12:21",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "a9395659-41a1-4243-a16a-a3673d2d4d29",
@@ -11249,8 +10227,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "ca9d4095-c5de-49c3-9f02-d21a0684f086",
@@ -11260,8 +10237,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "0d9868fa-911c-4e6a-bfd3-61310ed391bd",
@@ -11271,8 +10247,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "9e3fbec4-42cd-41c0-9b1d-f442487ed552",
@@ -11282,8 +10257,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 05:08:43",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "9e3fbec4-42cd-41c0-9b1d-f442487ed552",
@@ -11293,8 +10267,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:07:16",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "cfb47ae9-d71e-449b-93c8-d12b06225fd6",
@@ -11304,8 +10277,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:55:44",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "cfb47ae9-d71e-449b-93c8-d12b06225fd6",
@@ -11315,8 +10287,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:55:41",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "b7bf4e3a-a806-4512-bd66-9d5372d0a917",
@@ -11326,8 +10297,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "4daafeff-cf76-427b-85bb-27d50d046811",
@@ -11337,8 +10307,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "5ba38a59-2bb2-4c26-8329-b57538ebf476",
@@ -11348,8 +10317,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:04:02",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "5ba38a59-2bb2-4c26-8329-b57538ebf476",
@@ -11359,8 +10327,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:03:54",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "b8a823a0-fcbf-4557-8210-afa268e5d311",
@@ -11370,8 +10337,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "c0fecb68-d684-44ea-8b94-3542a34d3d22",
@@ -11381,8 +10347,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "29431d71-af0e-4f3a-a85d-b0ea2ca0890b",
@@ -11392,8 +10357,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "6a9daead-2293-4250-9734-80b4c534f5cc",
@@ -11403,8 +10367,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:35:15",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "6a9daead-2293-4250-9734-80b4c534f5cc",
@@ -11414,8 +10377,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:35:14",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "7ee79091-10ea-447c-83ec-877438a0889d",
@@ -11425,8 +10387,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "85c5e13e-0a8c-464f-b304-3e5863235031",
@@ -11436,8 +10397,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "c1773669-d1a4-4431-b577-e821eeeddb65",
@@ -11447,8 +10407,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:09:07",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "c1773669-d1a4-4431-b577-e821eeeddb65",
@@ -11458,8 +10417,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:09:06",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "53c2a686-5a98-4429-b2da-33aa432fc747",
@@ -11469,8 +10427,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "dae379a4-e92e-44fd-8a5e-ac50251d23bf",
@@ -11480,8 +10437,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "4ad2d638-ba3b-4a4e-a1a3-12f0598b65c0",
@@ -11491,8 +10447,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "aec1d49e-e852-4c4d-bf97-2530254624aa",
@@ -11502,8 +10457,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:02:50",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "aec1d49e-e852-4c4d-bf97-2530254624aa",
@@ -11513,8 +10467,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:02:46",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "205908c6-ab4f-474a-ab9e-31946a5f8921",
@@ -11524,8 +10477,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "01b351f3-b52c-4516-a91c-00f58d08579d",
@@ -11535,8 +10487,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 10:57:14",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "01b351f3-b52c-4516-a91c-00f58d08579d",
@@ -11546,8 +10497,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:47:26",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "01b351f3-b52c-4516-a91c-00f58d08579d",
@@ -11557,8 +10507,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 22:47:26",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "0e793baf-c6bf-440a-8898-ecc479c23881",
@@ -11568,8 +10517,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:00:28",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "0e793baf-c6bf-440a-8898-ecc479c23881",
@@ -11579,8 +10527,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:00:27",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "0e793baf-c6bf-440a-8898-ecc479c23881",
@@ -11590,8 +10537,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:10:14",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "0e793baf-c6bf-440a-8898-ecc479c23881",
@@ -11601,8 +10547,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:10:10",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "df44b8ef-b7d0-4be9-a9d7-b7b5c0f71b31",
@@ -11612,8 +10557,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "deb25d42-1348-4bd8-9b44-1e2e65b741dc",
@@ -11623,8 +10567,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "ff38c4c9-6945-4c16-bf63-4329543ba082",
@@ -11634,8 +10577,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:44:13",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "ff38c4c9-6945-4c16-bf63-4329543ba082",
@@ -11645,8 +10587,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:44:01",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "6ab41c46-79f5-45cf-a60b-442b5038f7cc",
@@ -11656,8 +10597,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[04] POSO"
+    "order": 0
   },
   {
     "code": "c4a7e763-5944-4401-92a4-8bdc32c1ad47",
@@ -11667,8 +10607,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 15:42:53",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "c4a7e763-5944-4401-92a4-8bdc32c1ad47",
@@ -11678,8 +10617,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 15:42:15",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "c4a7e763-5944-4401-92a4-8bdc32c1ad47",
@@ -11689,8 +10627,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 15:38:42",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "c4a7e763-5944-4401-92a4-8bdc32c1ad47",
@@ -11700,8 +10637,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 15:35:21",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "c4a7e763-5944-4401-92a4-8bdc32c1ad47",
@@ -11711,8 +10647,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 08:35:57",
-    "order": 5,
-    "kab_name": "[04] POSO"
+    "order": 5
   },
   {
     "code": "c4a7e763-5944-4401-92a4-8bdc32c1ad47",
@@ -11722,8 +10657,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 08:35:53",
-    "order": 6,
-    "kab_name": "[04] POSO"
+    "order": 6
   },
   {
     "code": "c5208ce3-626e-4004-b23a-ac97b1802548",
@@ -11733,8 +10667,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "26 May 2026, 08:28:54",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "c5208ce3-626e-4004-b23a-ac97b1802548",
@@ -11744,8 +10677,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "26 May 2026, 08:28:07",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "c5208ce3-626e-4004-b23a-ac97b1802548",
@@ -11755,8 +10687,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "26 May 2026, 08:28:07",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "7880f953-35e8-4387-aac5-b4a94b0c3c2e",
@@ -11766,8 +10697,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "26 May 2026, 08:34:35",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "7880f953-35e8-4387-aac5-b4a94b0c3c2e",
@@ -11777,8 +10707,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "26 May 2026, 08:34:35",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "8b145334-c5f3-4703-8550-bd0fc0e22853",
@@ -11788,8 +10717,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "26 May 2026, 08:29:04",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "8b145334-c5f3-4703-8550-bd0fc0e22853",
@@ -11799,8 +10727,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "26 May 2026, 08:29:01",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "74e56a04-fcd1-4332-ba6e-1bfb657dc781",
@@ -11810,8 +10737,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "26 May 2026, 07:30:38",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "74e56a04-fcd1-4332-ba6e-1bfb657dc781",
@@ -11821,8 +10747,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "26 May 2026, 07:30:35",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11832,8 +10757,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Clicked",
     "timestamp": "31 May 2026, 12:04:58",
-    "order": 1,
-    "kab_name": "[04] POSO"
+    "order": 1
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11843,8 +10767,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Opened",
     "timestamp": "31 May 2026, 12:04:55",
-    "order": 2,
-    "kab_name": "[04] POSO"
+    "order": 2
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11854,8 +10777,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Opened",
     "timestamp": "31 May 2026, 12:04:51",
-    "order": 3,
-    "kab_name": "[04] POSO"
+    "order": 3
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11865,8 +10787,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Opened",
     "timestamp": "26 May 2026, 11:40:36",
-    "order": 4,
-    "kab_name": "[04] POSO"
+    "order": 4
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11876,8 +10797,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Delivered",
     "timestamp": "26 May 2026, 11:27:53",
-    "order": 5,
-    "kab_name": "[04] POSO"
+    "order": 5
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11887,8 +10807,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "26 May 2026, 11:27:52",
-    "order": 6,
-    "kab_name": "[04] POSO"
+    "order": 6
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11898,8 +10817,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "26 May 2026, 09:13:56",
-    "order": 7,
-    "kab_name": "[04] POSO"
+    "order": 7
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11909,8 +10827,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "26 May 2026, 08:30:14",
-    "order": 8,
-    "kab_name": "[04] POSO"
+    "order": 8
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11920,8 +10837,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 13:44:06",
-    "order": 9,
-    "kab_name": "[04] POSO"
+    "order": 9
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11931,8 +10847,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 11:54:52",
-    "order": 10,
-    "kab_name": "[04] POSO"
+    "order": 10
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11942,8 +10857,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:53:32",
-    "order": 11,
-    "kab_name": "[04] POSO"
+    "order": 11
   },
   {
     "code": "d61d41d8-08d5-40a5-9a4b-ec2cda0629c1",
@@ -11953,8 +10867,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:53:24",
-    "order": 12,
-    "kab_name": "[04] POSO"
+    "order": 12
   },
   {
     "code": "fd196827-2fec-4156-a5b2-e2384b448719",
@@ -11964,8 +10877,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:36:40",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "fd196827-2fec-4156-a5b2-e2384b448719",
@@ -11975,8 +10887,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:36:28",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "ba05087c-71d7-45b3-9477-1db68277f057",
@@ -11986,8 +10897,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "c5943835-8b35-457a-bee5-0e2f2ecb2541",
@@ -11997,8 +10907,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "62fefdc7-cb36-4296-9572-0a07d826f4cd",
@@ -12008,8 +10917,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "90ef05d8-ef2b-4c1e-9b48-98e24b9cd231",
@@ -12019,8 +10927,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "530c113f-8957-46cd-8337-c5754890cd34",
@@ -12030,8 +10937,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "66b93b8d-817c-4af4-9183-47792e43d54e",
@@ -12041,8 +10947,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 02:30:55",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "66b93b8d-817c-4af4-9183-47792e43d54e",
@@ -12052,8 +10957,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:29:47",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "1f417bc0-586c-4d1a-a810-d91499fbf4f9",
@@ -12063,8 +10967,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "905bc9cb-8e4d-4496-bbf6-84fb96137b70",
@@ -12074,8 +10977,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "562fa579-65f7-44d8-963c-97f98587e14c",
@@ -12085,8 +10987,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "a1362fb5-0632-43b6-aafb-912fddd72f2f",
@@ -12096,8 +10997,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "a77a7291-5e04-46db-b48b-6ecbd26676ed",
@@ -12107,8 +11007,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:38:35",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "a77a7291-5e04-46db-b48b-6ecbd26676ed",
@@ -12118,8 +11017,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:38:30",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "c0ae66b4-7e9e-47d1-b13c-6c9298c43529",
@@ -12129,8 +11027,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "ea12a85a-be91-4651-aa08-bcb34248ff86",
@@ -12140,8 +11037,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "9cd99355-2afa-4d7c-a8ba-2629a66bd2d7",
@@ -12151,8 +11047,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "b6c21085-5e3c-4d3b-bcb0-1e48c3bbaca7",
@@ -12162,8 +11057,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:31:35",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "b6c21085-5e3c-4d3b-bcb0-1e48c3bbaca7",
@@ -12173,8 +11067,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 06:31:35",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "93ee71b5-ad31-4ab1-93d7-3e41723295a0",
@@ -12184,8 +11077,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "26f9967d-2b79-4bf1-80bf-0aa14cf44972",
@@ -12195,8 +11087,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "72b7e09a-fc34-4669-ac23-502c821c50dd",
@@ -12206,8 +11097,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "3cc84397-fe65-4e3f-9d8f-b7c48989136c",
@@ -12217,8 +11107,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "bb78d0af-4d52-420b-8b3e-990c7b52195b",
@@ -12228,8 +11117,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:45:27",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "bb78d0af-4d52-420b-8b3e-990c7b52195b",
@@ -12239,8 +11127,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:45:23",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "901dc0c1-e311-4b09-b27f-f9804d300f19",
@@ -12250,8 +11137,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "e7e20949-1cc0-4702-b1ca-e9eb9d9d8510",
@@ -12261,8 +11147,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "5bbf5516-282e-4f89-88b8-6270f96507c5",
@@ -12272,8 +11157,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "15f31e98-1701-4d23-8de8-7493899a44db",
@@ -12283,8 +11167,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:02:07",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "15f31e98-1701-4d23-8de8-7493899a44db",
@@ -12294,8 +11177,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 23:30:02",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "15f31e98-1701-4d23-8de8-7493899a44db",
@@ -12305,8 +11187,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:29:34",
-    "order": 3,
-    "kab_name": "[05] DONGGALA"
+    "order": 3
   },
   {
     "code": "7fe2c027-067d-4cd0-b96b-145f87ef0f4a",
@@ -12316,8 +11197,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "70eb2461-e4ad-4889-972b-0af63b239e6a",
@@ -12327,8 +11207,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 16:52:39",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "70eb2461-e4ad-4889-972b-0af63b239e6a",
@@ -12338,8 +11217,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:48:12",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "70eb2461-e4ad-4889-972b-0af63b239e6a",
@@ -12349,8 +11227,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:48:12",
-    "order": 3,
-    "kab_name": "[05] DONGGALA"
+    "order": 3
   },
   {
     "code": "e92efd54-2d3e-439e-bd79-0980715c184c",
@@ -12360,8 +11237,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "c2d535c2-068c-4a17-8513-edfda57e8cd9",
@@ -12371,8 +11247,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "6a219834-e8b6-4705-9af6-a41909be7596",
@@ -12382,8 +11257,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:35:41",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "6a219834-e8b6-4705-9af6-a41909be7596",
@@ -12393,8 +11267,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:35:40",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "64c123f4-5362-4c9a-8897-26cd2a733a6d",
@@ -12404,8 +11277,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "bc8b8b7a-1a0e-4967-8ce1-1bc88e46d419",
@@ -12415,8 +11287,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "397e4d3c-da37-4b75-b26b-2dd78582482d",
@@ -12426,8 +11297,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "8d3e9626-0215-47a7-86cd-bf85990128c8",
@@ -12437,8 +11307,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:12:10",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "8d3e9626-0215-47a7-86cd-bf85990128c8",
@@ -12448,8 +11317,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:11:35",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "a0cc7d0d-9da4-44e7-aeee-e0d8a9d4c1cd",
@@ -12459,8 +11327,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:15:05",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "a0cc7d0d-9da4-44e7-aeee-e0d8a9d4c1cd",
@@ -12470,8 +11337,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:15:04",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "2095c8b6-ec24-4fd4-958d-630400e46706",
@@ -12481,8 +11347,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "1ff5b095-b7dd-4df5-802e-79815da26f1c",
@@ -12492,8 +11357,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "254bfb1a-e904-49b1-b63b-4c8d1d7d3379",
@@ -12503,8 +11367,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "cb0ccf47-8278-40a6-b69c-3a5a87ae7c82",
@@ -12514,8 +11377,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "c6b1ed6e-c382-4852-a9ac-83c58f8be05a",
@@ -12525,8 +11387,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 16:08:54",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "c6b1ed6e-c382-4852-a9ac-83c58f8be05a",
@@ -12536,8 +11397,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "03 Jun 2026, 22:47:23",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "c6b1ed6e-c382-4852-a9ac-83c58f8be05a",
@@ -12547,8 +11407,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:52:13",
-    "order": 3,
-    "kab_name": "[05] DONGGALA"
+    "order": 3
   },
   {
     "code": "c6b1ed6e-c382-4852-a9ac-83c58f8be05a",
@@ -12558,8 +11417,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:52:10",
-    "order": 4,
-    "kab_name": "[05] DONGGALA"
+    "order": 4
   },
   {
     "code": "78073c80-8128-4a1a-837c-283bb98211fe",
@@ -12569,8 +11427,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "48de5cb1-cc3f-45c8-b618-d8dee7d965bd",
@@ -12580,8 +11437,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "4c67cb0b-e9af-45a1-a0d0-1cb50b78ce2a",
@@ -12591,8 +11447,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:19:35",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "4c67cb0b-e9af-45a1-a0d0-1cb50b78ce2a",
@@ -12602,8 +11457,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:19:24",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "4c67cb0b-e9af-45a1-a0d0-1cb50b78ce2a",
@@ -12613,8 +11467,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:32:42",
-    "order": 3,
-    "kab_name": "[05] DONGGALA"
+    "order": 3
   },
   {
     "code": "4c67cb0b-e9af-45a1-a0d0-1cb50b78ce2a",
@@ -12624,8 +11477,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:32:30",
-    "order": 4,
-    "kab_name": "[05] DONGGALA"
+    "order": 4
   },
   {
     "code": "ef484185-e6e7-4f01-9878-37bfbbf7855f",
@@ -12635,8 +11487,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "ea13fcc7-8d64-44ad-b4e0-ec13db14cf0e",
@@ -12646,8 +11497,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "610277ff-8d97-41fb-9663-65a019b17673",
@@ -12657,8 +11507,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "0016e8a8-c037-400c-87a2-aced42f3d862",
@@ -12668,8 +11517,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "9955ae30-3ead-4d6a-8a67-b3766d18475d",
@@ -12679,8 +11527,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "fcafd0c3-327a-401a-9d22-51178bab7257",
@@ -12690,8 +11537,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "c76855d2-4b36-44ea-af7f-ab1b9837914a",
@@ -12701,8 +11547,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "4f682efa-6e32-4678-8901-0bf0d1bbb0c4",
@@ -12712,8 +11557,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "c3ade782-c19b-4380-a239-04e5179380c2",
@@ -12723,8 +11567,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "c0f50e92-dc07-4cf2-8cf6-ebe0abd15750",
@@ -12734,8 +11577,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "91b451dd-2b12-447a-bae2-832462c802ed",
@@ -12745,8 +11587,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "eeee3ec7-6e8b-4ba0-86e1-e4a35de9cc96",
@@ -12756,8 +11597,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 09:45:54",
-    "order": 1,
-    "kab_name": "[05] DONGGALA"
+    "order": 1
   },
   {
     "code": "eeee3ec7-6e8b-4ba0-86e1-e4a35de9cc96",
@@ -12767,8 +11607,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:45:51",
-    "order": 2,
-    "kab_name": "[05] DONGGALA"
+    "order": 2
   },
   {
     "code": "937d3a7f-7444-49de-8861-5ea9cb520a6a",
@@ -12778,8 +11617,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "17bf081f-83d5-41f9-aa9b-103d096e8e0a",
@@ -12789,8 +11627,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[05] DONGGALA"
+    "order": 0
   },
   {
     "code": "0e29c75e-22ad-4380-bda0-55c8fbdceb06",
@@ -12800,8 +11637,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "66646917-ee20-47c0-921d-70826ed7aa69",
@@ -12811,8 +11647,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "2e25a43d-7232-4905-bbb0-0b5cf6afbff0",
@@ -12822,8 +11657,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "0d524a26-c584-4626-8821-41daa1ad4cde",
@@ -12833,8 +11667,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12844,8 +11677,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 13:55:25",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12855,8 +11687,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 13:55:13",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12866,8 +11697,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 13:54:25",
-    "order": 3,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 3
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12877,8 +11707,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "27 May 2026, 13:54:10",
-    "order": 4,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 4
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12888,8 +11717,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 13:54:10",
-    "order": 5,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 5
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12899,8 +11727,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "27 May 2026, 13:54:04",
-    "order": 6,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 6
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12910,8 +11737,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "27 May 2026, 13:54:01",
-    "order": 7,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 7
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12921,8 +11747,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 13:27:48",
-    "order": 8,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 8
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12932,8 +11757,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 13:27:42",
-    "order": 9,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 9
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12943,8 +11767,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "27 May 2026, 13:27:39",
-    "order": 10,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 10
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12954,8 +11777,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "27 May 2026, 13:27:33",
-    "order": 11,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 11
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12965,8 +11787,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "27 May 2026, 13:27:30",
-    "order": 12,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 12
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12976,8 +11797,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 13:15:01",
-    "order": 13,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 13
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12987,8 +11807,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 13:14:52",
-    "order": 14,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 14
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -12998,8 +11817,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "27 May 2026, 13:14:49",
-    "order": 15,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 15
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13009,8 +11827,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "27 May 2026, 13:14:37",
-    "order": 16,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 16
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13020,8 +11837,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "27 May 2026, 13:14:34",
-    "order": 17,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 17
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13031,8 +11847,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 13:02:01",
-    "order": 18,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 18
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13042,8 +11857,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 13:01:58",
-    "order": 19,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 19
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13053,8 +11867,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "27 May 2026, 13:01:54",
-    "order": 20,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 20
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13064,8 +11877,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "27 May 2026, 13:01:48",
-    "order": 21,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 21
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13075,8 +11887,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "27 May 2026, 13:01:45",
-    "order": 22,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 22
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13086,8 +11897,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 12:21:50",
-    "order": 23,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 23
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13097,8 +11907,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "27 May 2026, 12:21:49",
-    "order": 24,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 24
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13108,8 +11917,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "27 May 2026, 12:21:46",
-    "order": 25,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 25
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13119,8 +11927,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 14:55:31",
-    "order": 26,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 26
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13130,8 +11937,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 14:50:30",
-    "order": 27,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 27
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13141,8 +11947,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 14:29:41",
-    "order": 28,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 28
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13152,8 +11957,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 14:29:35",
-    "order": 29,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 29
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13163,8 +11967,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 14:29:30",
-    "order": 30,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 30
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13174,8 +11977,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 14:29:27",
-    "order": 31,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 31
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13185,8 +11987,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 14:29:17",
-    "order": 32,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 32
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13196,8 +11997,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 14:28:01",
-    "order": 33,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 33
   },
   {
     "code": "ae83dca7-1926-4093-b6f6-a8c775c9d5b0",
@@ -13207,8 +12007,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 14:27:58",
-    "order": 34,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 34
   },
   {
     "code": "0435f1c6-149a-4ecc-b720-51a54e445ab1",
@@ -13218,8 +12017,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "3c454286-f2b3-4315-8d1e-a76c7d6e585b",
@@ -13229,8 +12027,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "fef6fb4d-fb8e-447e-b13f-8e46e0835031",
@@ -13240,8 +12037,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "fef6fb4d-fb8e-447e-b13f-8e46e0835031",
@@ -13251,8 +12047,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "fef6fb4d-fb8e-447e-b13f-8e46e0835031",
@@ -13262,8 +12057,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 0
   },
   {
     "code": "00f8e56c-dbc6-4b70-b24a-05a7d48c9fc8",
@@ -13273,8 +12067,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "5280a68f-c125-4a4f-bb24-84fa65395703",
@@ -13284,8 +12077,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "a2a88b85-7f0e-4a07-b893-84111bc57ebe",
@@ -13295,8 +12087,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "437ee7b1-e593-4303-9b5b-fc42b75bc96d",
@@ -13306,8 +12097,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "0a21ab4f-dd3d-4de6-99e9-d1898a2938a3",
@@ -13317,8 +12107,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13328,8 +12117,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
+    "order": 0
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13339,8 +12127,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:19:34",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13350,8 +12137,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:19:21",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13361,8 +12147,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 12:48:43",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13372,8 +12157,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 12:48:36",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13383,8 +12167,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 12:48:33",
-    "order": 3,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 3
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13394,8 +12177,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 12:48:33",
-    "order": 4,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 4
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13405,8 +12187,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 12:48:29",
-    "order": 5,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 5
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13416,8 +12197,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 12:46:26",
-    "order": 6,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 6
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13427,8 +12207,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 12:45:21",
-    "order": 7,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 7
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13438,8 +12217,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 12:45:18",
-    "order": 8,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 8
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13449,8 +12227,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 09:39:51",
-    "order": 9,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 9
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13460,8 +12237,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 09:39:47",
-    "order": 10,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 10
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13471,8 +12247,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 09:39:18",
-    "order": 11,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 11
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13482,8 +12257,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 09:39:18",
-    "order": 12,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 12
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13493,8 +12267,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 09:38:32",
-    "order": 13,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 13
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13504,8 +12277,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 09:36:58",
-    "order": 14,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 14
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13515,8 +12287,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 09:36:57",
-    "order": 15,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 15
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13526,8 +12297,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 09:19:32",
-    "order": 16,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 16
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13537,8 +12307,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 09:19:22",
-    "order": 17,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 17
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13548,8 +12317,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 09:19:19",
-    "order": 18,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 18
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13559,8 +12327,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 09:19:02",
-    "order": 19,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 19
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13570,8 +12337,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 09:18:58",
-    "order": 20,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 20
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13581,8 +12347,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 09:16:35",
-    "order": 21,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 21
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13592,8 +12357,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 09:16:26",
-    "order": 22,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 22
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13603,8 +12367,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 09:11:55",
-    "order": 23,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 23
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13614,8 +12377,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 09:11:52",
-    "order": 24,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 24
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13625,8 +12387,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 08:15:25",
-    "order": 25,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 25
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13636,8 +12397,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 08:15:16",
-    "order": 26,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 26
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13647,8 +12407,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 08:15:13",
-    "order": 27,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 27
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13658,8 +12417,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 08:15:06",
-    "order": 28,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 28
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13669,8 +12427,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 08:15:00",
-    "order": 29,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 29
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13680,8 +12437,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 08:14:59",
-    "order": 30,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 30
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13691,8 +12447,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "26 May 2026, 08:10:49",
-    "order": 31,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 31
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13702,8 +12457,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "26 May 2026, 08:10:46",
-    "order": 32,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 32
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13713,8 +12467,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 07:43:05",
-    "order": 33,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 33
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13724,8 +12477,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 07:42:56",
-    "order": 34,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 34
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13735,8 +12487,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "26 May 2026, 07:42:50",
-    "order": 35,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 35
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13746,8 +12497,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "22 May 2026, 15:45:10",
-    "order": 36,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 36
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13757,8 +12507,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "22 May 2026, 15:45:03",
-    "order": 37,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 37
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13768,8 +12517,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "22 May 2026, 15:44:54",
-    "order": 38,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 38
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13779,8 +12527,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "22 May 2026, 15:44:48",
-    "order": 39,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 39
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13790,8 +12537,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "22 May 2026, 15:44:38",
-    "order": 40,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 40
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13801,8 +12547,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "22 May 2026, 15:44:35",
-    "order": 41,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 41
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13812,8 +12557,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "22 May 2026, 15:35:16",
-    "order": 42,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 42
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13823,8 +12567,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "22 May 2026, 15:34:10",
-    "order": 43,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 43
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13834,8 +12577,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "22 May 2026, 15:34:10",
-    "order": 44,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 44
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13845,8 +12587,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "22 May 2026, 14:53:20",
-    "order": 45,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 45
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13856,8 +12597,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "22 May 2026, 14:52:05",
-    "order": 46,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 46
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13867,8 +12607,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "22 May 2026, 14:51:42",
-    "order": 47,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 47
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13878,8 +12617,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "22 May 2026, 14:51:16",
-    "order": 48,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 48
   },
   {
     "code": "00df1671-c389-48b7-81ce-303adae27900",
@@ -13889,8 +12627,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "22 May 2026, 14:51:16",
-    "order": 49,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 49
   },
   {
     "code": "4db15ad0-989b-4efc-8768-037436d1b174",
@@ -13900,8 +12637,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "e2d20a9c-1c32-42e2-a0cb-6567b585b199",
@@ -13911,8 +12647,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 09:04:21",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "e2d20a9c-1c32-42e2-a0cb-6567b585b199",
@@ -13922,8 +12657,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:04:02",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "83a7b7ea-1776-4755-a94f-49a91fa483ef",
@@ -13933,8 +12667,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "79639f51-b088-421b-b1b4-56bd717187ed",
@@ -13944,8 +12677,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "a93928ca-d5bc-4efb-aed0-bb2ae216bf58",
@@ -13955,8 +12687,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:43:54",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "a93928ca-d5bc-4efb-aed0-bb2ae216bf58",
@@ -13966,8 +12697,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:43:50",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "02047edf-6edf-4e25-81bb-2cb3c5d3cd7f",
@@ -13977,8 +12707,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "d8e40686-a2a8-4e55-b967-671e032fe3cc",
@@ -13988,8 +12717,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "955277e2-0af9-4d3d-892e-989d1b882c8f",
@@ -13999,8 +12727,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:35:25",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "955277e2-0af9-4d3d-892e-989d1b882c8f",
@@ -14010,8 +12737,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:35:17",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "473c508b-50ee-4e98-8cba-c1275460aa95",
@@ -14021,8 +12747,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "923ecb4f-f1f9-472f-b02e-890dccc99636",
@@ -14032,8 +12757,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "747727b1-bca2-46f5-a9e2-488558593617",
@@ -14043,8 +12767,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:57:27",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "747727b1-bca2-46f5-a9e2-488558593617",
@@ -14054,8 +12777,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:57:23",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "2b317579-3e25-4991-9f09-3eb4e4a69a8d",
@@ -14065,8 +12787,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "2eff7434-838b-4647-83e7-33d964ad1479",
@@ -14076,8 +12797,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "3a3d83de-f8ab-4c1e-b883-a6e93692354f",
@@ -14087,8 +12807,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:15:01",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "3a3d83de-f8ab-4c1e-b883-a6e93692354f",
@@ -14098,8 +12817,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:14:50",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "3a3d83de-f8ab-4c1e-b883-a6e93692354f",
@@ -14109,8 +12827,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:32:49",
-    "order": 3,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 3
   },
   {
     "code": "3a3d83de-f8ab-4c1e-b883-a6e93692354f",
@@ -14120,8 +12837,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:32:49",
-    "order": 4,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 4
   },
   {
     "code": "15dc8f43-088b-4013-b635-fba38279ab5d",
@@ -14131,8 +12847,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:02:11",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "15dc8f43-088b-4013-b635-fba38279ab5d",
@@ -14142,8 +12857,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:02:08",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "15dc8f43-088b-4013-b635-fba38279ab5d",
@@ -14153,8 +12867,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:25:33",
-    "order": 3,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 3
   },
   {
     "code": "15dc8f43-088b-4013-b635-fba38279ab5d",
@@ -14164,8 +12877,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:25:22",
-    "order": 4,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 4
   },
   {
     "code": "e6eac137-d1d8-4ad2-aa40-f07d1f344fae",
@@ -14175,8 +12887,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "a73e57cf-cffa-42db-bb78-f52900f7d0d8",
@@ -14186,8 +12897,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "11fd6f69-871d-4258-81f6-e2145ee9f73a",
@@ -14197,8 +12907,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:01:19",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "11fd6f69-871d-4258-81f6-e2145ee9f73a",
@@ -14208,8 +12917,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 23:16:31",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "11fd6f69-871d-4258-81f6-e2145ee9f73a",
@@ -14219,8 +12927,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:16:27",
-    "order": 3,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 3
   },
   {
     "code": "35d10422-e533-4934-8054-419bedcfc0fb",
@@ -14230,8 +12937,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "52d65a6c-ac1c-426e-afe8-6ff0ff2560db",
@@ -14241,8 +12947,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "74480f18-7928-403a-b016-ea2556e1f0ad",
@@ -14252,8 +12957,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "40811c0e-42fd-4cfc-9b07-5e2243a8cd42",
@@ -14263,8 +12967,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "666eae12-30bb-426a-85c1-e8e4dcaf9c34",
@@ -14274,8 +12977,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 11:40:40",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "666eae12-30bb-426a-85c1-e8e4dcaf9c34",
@@ -14285,8 +12987,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 11:40:29",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "666eae12-30bb-426a-85c1-e8e4dcaf9c34",
@@ -14296,8 +12997,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 11:39:50",
-    "order": 3,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 3
   },
   {
     "code": "666eae12-30bb-426a-85c1-e8e4dcaf9c34",
@@ -14307,8 +13007,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:39:42",
-    "order": 4,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 4
   },
   {
     "code": "666eae12-30bb-426a-85c1-e8e4dcaf9c34",
@@ -14318,8 +13017,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:39:42",
-    "order": 5,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 5
   },
   {
     "code": "8b970654-335e-411a-9d83-4d6b320e9112",
@@ -14329,8 +13027,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "f455e248-e952-4fc6-9076-0237c90636fd",
@@ -14340,8 +13037,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 10:08:22",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "f455e248-e952-4fc6-9076-0237c90636fd",
@@ -14351,8 +13047,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:04:58",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "206ed799-d1d8-4055-933c-7a59b7b4adf1",
@@ -14362,8 +13057,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:04:31",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "206ed799-d1d8-4055-933c-7a59b7b4adf1",
@@ -14373,8 +13067,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:04:23",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "206ed799-d1d8-4055-933c-7a59b7b4adf1",
@@ -14384,8 +13077,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:47:44",
-    "order": 3,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 3
   },
   {
     "code": "206ed799-d1d8-4055-933c-7a59b7b4adf1",
@@ -14395,8 +13087,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:47:40",
-    "order": 4,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 4
   },
   {
     "code": "709f7f2f-1c31-49fa-94e5-d68aac8d7cf1",
@@ -14406,8 +13097,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "8d9b8df5-3a6d-49d2-9c89-d3aec7e04a4e",
@@ -14417,8 +13107,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:51:11",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "8d9b8df5-3a6d-49d2-9c89-d3aec7e04a4e",
@@ -14428,8 +13117,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:51:10",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "6dbb7ca2-846d-452d-8d01-3cda5de5a2a1",
@@ -14439,8 +13127,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:42:03",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "6dbb7ca2-846d-452d-8d01-3cda5de5a2a1",
@@ -14450,8 +13137,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:42:03",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "9722d961-fc6c-4375-bc1e-928a54ce8268",
@@ -14461,8 +13147,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:47:36",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "9722d961-fc6c-4375-bc1e-928a54ce8268",
@@ -14472,8 +13157,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:47:31",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "b5e0a999-5851-4468-bda4-3db82c565f20",
@@ -14483,8 +13167,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "d5a0aa4e-cb3c-445f-938c-513839a89a63",
@@ -14494,8 +13177,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "46249f7c-65ee-4556-9cc3-33a7b8dcf238",
@@ -14505,8 +13187,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:17:52",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "46249f7c-65ee-4556-9cc3-33a7b8dcf238",
@@ -14516,8 +13197,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:17:43",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "46249f7c-65ee-4556-9cc3-33a7b8dcf238",
@@ -14527,8 +13207,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:14:35",
-    "order": 3,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 3
   },
   {
     "code": "46249f7c-65ee-4556-9cc3-33a7b8dcf238",
@@ -14538,8 +13217,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:14:35",
-    "order": 4,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 4
   },
   {
     "code": "bc4e2456-2a4a-48fb-b639-c830169d6d3a",
@@ -14549,8 +13227,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:46:07",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "bc4e2456-2a4a-48fb-b639-c830169d6d3a",
@@ -14560,8 +13237,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:46:04",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce",
@@ -14571,8 +13247,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:38:52",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce",
@@ -14582,8 +13257,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 11:38:32",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce",
@@ -14593,8 +13267,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:38:23",
-    "order": 3,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 3
   },
   {
     "code": "328274c1-1c9a-4803-98c0-72c1bed26664",
@@ -14604,8 +13277,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "d858d260-d53e-41d2-906c-df6bbcd1d526",
@@ -14615,8 +13287,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:53:38",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "d858d260-d53e-41d2-906c-df6bbcd1d526",
@@ -14626,8 +13297,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 11:53:36",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "bf59ad9c-5369-4438-bd8a-f72ddffaa938",
@@ -14637,8 +13307,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:00:54",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "bf59ad9c-5369-4438-bd8a-f72ddffaa938",
@@ -14648,8 +13317,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:00:24",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "b333a9fd-f8af-45da-855f-be3e1133f42d",
@@ -14659,8 +13327,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "392607f8-c0f1-4af2-9673-041f922128dd",
@@ -14670,8 +13337,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:15:12",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 1
   },
   {
     "code": "392607f8-c0f1-4af2-9673-041f922128dd",
@@ -14681,8 +13347,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:14:25",
-    "order": 2,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 2
   },
   {
     "code": "392607f8-c0f1-4af2-9673-041f922128dd",
@@ -14692,8 +13357,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:14:24",
-    "order": 3,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 3
   },
   {
     "code": "392607f8-c0f1-4af2-9673-041f922128dd",
@@ -14703,8 +13367,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 06:46:17",
-    "order": 4,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 4
   },
   {
     "code": "392607f8-c0f1-4af2-9673-041f922128dd",
@@ -14714,8 +13377,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 06:45:10",
-    "order": 5,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 5
   },
   {
     "code": "392607f8-c0f1-4af2-9673-041f922128dd",
@@ -14725,8 +13387,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:43:30",
-    "order": 6,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 6
   },
   {
     "code": "392607f8-c0f1-4af2-9673-041f922128dd",
@@ -14736,8 +13397,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:43:29",
-    "order": 7,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 7
   },
   {
     "code": "5fa4cc88-422c-4143-86a0-bc744e08b4c7",
@@ -14747,8 +13407,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "bc54b8c8-c190-4e7f-bfcb-fb344217f566",
@@ -14758,8 +13417,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "90663845-cac4-4dc1-82e4-80e9370cca89",
@@ -14769,8 +13427,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "92485781-f729-4e0d-a687-c8cae331417b",
@@ -14780,8 +13437,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
+    "order": 0
   },
   {
     "code": "aefc6985-5ca2-4729-807b-4e37c83d7b27",
@@ -14791,8 +13447,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 10:33:45",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "aefc6985-5ca2-4729-807b-4e37c83d7b27",
@@ -14802,8 +13457,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:33:42",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "aefc6985-5ca2-4729-807b-4e37c83d7b27",
@@ -14813,8 +13467,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:31:30",
-    "order": 3,
-    "kab_name": "[07] BUOL"
+    "order": 3
   },
   {
     "code": "aefc6985-5ca2-4729-807b-4e37c83d7b27",
@@ -14824,8 +13477,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:31:27",
-    "order": 4,
-    "kab_name": "[07] BUOL"
+    "order": 4
   },
   {
     "code": "aefc6985-5ca2-4729-807b-4e37c83d7b27",
@@ -14835,8 +13487,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:31:17",
-    "order": 5,
-    "kab_name": "[07] BUOL"
+    "order": 5
   },
   {
     "code": "aefc6985-5ca2-4729-807b-4e37c83d7b27",
@@ -14846,8 +13497,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "19 May 2026, 11:14:38",
-    "order": 6,
-    "kab_name": "[07] BUOL"
+    "order": 6
   },
   {
     "code": "aefc6985-5ca2-4729-807b-4e37c83d7b27",
@@ -14857,8 +13507,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "19 May 2026, 11:14:37",
-    "order": 7,
-    "kab_name": "[07] BUOL"
+    "order": 7
   },
   {
     "code": "aefc6985-5ca2-4729-807b-4e37c83d7b27",
@@ -14868,8 +13517,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 18:01:45",
-    "order": 8,
-    "kab_name": "[07] BUOL"
+    "order": 8
   },
   {
     "code": "aefc6985-5ca2-4729-807b-4e37c83d7b27",
@@ -14879,8 +13527,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 15:11:26",
-    "order": 9,
-    "kab_name": "[07] BUOL"
+    "order": 9
   },
   {
     "code": "aefc6985-5ca2-4729-807b-4e37c83d7b27",
@@ -14890,8 +13537,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "05 Jun 2026, 09:30:40",
-    "order": 10,
-    "kab_name": "[07] BUOL"
+    "order": 10
   },
   {
     "code": "aefc6985-5ca2-4729-807b-4e37c83d7b27",
@@ -14901,8 +13547,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "05 Jun 2026, 09:30:40",
-    "order": 11,
-    "kab_name": "[07] BUOL"
+    "order": 11
   },
   {
     "code": "a3316982-f667-455d-9165-ef6b6f3748c0",
@@ -14912,8 +13557,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 10:33:48",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "a3316982-f667-455d-9165-ef6b6f3748c0",
@@ -14923,8 +13567,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:33:42",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "a3316982-f667-455d-9165-ef6b6f3748c0",
@@ -14934,8 +13577,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "19 May 2026, 11:14:38",
-    "order": 3,
-    "kab_name": "[07] BUOL"
+    "order": 3
   },
   {
     "code": "a3316982-f667-455d-9165-ef6b6f3748c0",
@@ -14945,8 +13587,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "19 May 2026, 11:14:34",
-    "order": 4,
-    "kab_name": "[07] BUOL"
+    "order": 4
   },
   {
     "code": "d12ac6cd-bc61-4fe2-b870-bb1f644ea644",
@@ -14956,8 +13597,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "25 May 2026, 11:03:21",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "d12ac6cd-bc61-4fe2-b870-bb1f644ea644",
@@ -14967,8 +13607,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "25 May 2026, 10:26:46",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "d12ac6cd-bc61-4fe2-b870-bb1f644ea644",
@@ -14978,8 +13617,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 10:24:39",
-    "order": 3,
-    "kab_name": "[07] BUOL"
+    "order": 3
   },
   {
     "code": "d12ac6cd-bc61-4fe2-b870-bb1f644ea644",
@@ -14989,8 +13627,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "19 May 2026, 11:14:41",
-    "order": 4,
-    "kab_name": "[07] BUOL"
+    "order": 4
   },
   {
     "code": "d12ac6cd-bc61-4fe2-b870-bb1f644ea644",
@@ -15000,8 +13637,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "19 May 2026, 11:14:38",
-    "order": 5,
-    "kab_name": "[07] BUOL"
+    "order": 5
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15011,8 +13647,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 10:45:25",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15022,8 +13657,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:45:20",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15033,8 +13667,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:43:17",
-    "order": 3,
-    "kab_name": "[07] BUOL"
+    "order": 3
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15044,8 +13677,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "20 May 2026, 10:42:31",
-    "order": 4,
-    "kab_name": "[07] BUOL"
+    "order": 4
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15055,8 +13687,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "20 May 2026, 10:42:31",
-    "order": 5,
-    "kab_name": "[07] BUOL"
+    "order": 5
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15066,8 +13697,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 10:40:03",
-    "order": 6,
-    "kab_name": "[07] BUOL"
+    "order": 6
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15077,8 +13707,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:39:49",
-    "order": 7,
-    "kab_name": "[07] BUOL"
+    "order": 7
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15088,8 +13717,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:36:04",
-    "order": 8,
-    "kab_name": "[07] BUOL"
+    "order": 8
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15099,8 +13727,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:30:21",
-    "order": 9,
-    "kab_name": "[07] BUOL"
+    "order": 9
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15110,8 +13737,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "19 May 2026, 11:14:41",
-    "order": 10,
-    "kab_name": "[07] BUOL"
+    "order": 10
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15121,8 +13747,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "19 May 2026, 11:14:38",
-    "order": 11,
-    "kab_name": "[07] BUOL"
+    "order": 11
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15132,8 +13757,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:15:44",
-    "order": 12,
-    "kab_name": "[07] BUOL"
+    "order": 12
   },
   {
     "code": "f76727c7-39c9-4049-9683-e0aa1985b30b",
@@ -15143,8 +13767,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:15:33",
-    "order": 13,
-    "kab_name": "[07] BUOL"
+    "order": 13
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15154,8 +13777,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Clicked",
     "timestamp": "20 May 2026, 14:15:07",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15165,8 +13787,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Clicked",
     "timestamp": "20 May 2026, 14:14:58",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15176,8 +13797,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Opened",
     "timestamp": "20 May 2026, 14:14:51",
-    "order": 3,
-    "kab_name": "[07] BUOL"
+    "order": 3
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15187,8 +13807,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:38:58",
-    "order": 4,
-    "kab_name": "[07] BUOL"
+    "order": 4
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15198,8 +13817,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Clicked",
     "timestamp": "20 May 2026, 10:34:53",
-    "order": 5,
-    "kab_name": "[07] BUOL"
+    "order": 5
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15209,8 +13827,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:34:50",
-    "order": 6,
-    "kab_name": "[07] BUOL"
+    "order": 6
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15220,8 +13837,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Delivered",
     "timestamp": "20 May 2026, 10:34:40",
-    "order": 7,
-    "kab_name": "[07] BUOL"
+    "order": 7
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15231,8 +13847,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "20 May 2026, 10:34:40",
-    "order": 8,
-    "kab_name": "[07] BUOL"
+    "order": 8
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15242,8 +13857,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "19 May 2026, 11:14:37",
-    "order": 9,
-    "kab_name": "[07] BUOL"
+    "order": 9
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15253,8 +13867,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "19 May 2026, 11:14:37",
-    "order": 10,
-    "kab_name": "[07] BUOL"
+    "order": 10
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15264,8 +13877,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:49:05",
-    "order": 11,
-    "kab_name": "[07] BUOL"
+    "order": 11
   },
   {
     "code": "a9979a0c-403c-4acf-bb30-3023bbfba8b5",
@@ -15275,8 +13887,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:49:04",
-    "order": 12,
-    "kab_name": "[07] BUOL"
+    "order": 12
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15286,8 +13897,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 15:16:09",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15297,8 +13907,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 15:07:13",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15308,8 +13917,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "20 May 2026, 15:06:59",
-    "order": 3,
-    "kab_name": "[07] BUOL"
+    "order": 3
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15319,8 +13927,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "20 May 2026, 15:06:56",
-    "order": 4,
-    "kab_name": "[07] BUOL"
+    "order": 4
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15330,8 +13937,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 10:29:13",
-    "order": 5,
-    "kab_name": "[07] BUOL"
+    "order": 5
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15341,8 +13947,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:29:06",
-    "order": 6,
-    "kab_name": "[07] BUOL"
+    "order": 6
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15352,8 +13957,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 10:27:55",
-    "order": 7,
-    "kab_name": "[07] BUOL"
+    "order": 7
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15363,8 +13967,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 10:26:37",
-    "order": 8,
-    "kab_name": "[07] BUOL"
+    "order": 8
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15374,8 +13977,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:26:37",
-    "order": 9,
-    "kab_name": "[07] BUOL"
+    "order": 9
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15385,8 +13987,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 09:40:01",
-    "order": 10,
-    "kab_name": "[07] BUOL"
+    "order": 10
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15396,8 +13997,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 09:39:58",
-    "order": 11,
-    "kab_name": "[07] BUOL"
+    "order": 11
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15407,8 +14007,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 11:16:33",
-    "order": 12,
-    "kab_name": "[07] BUOL"
+    "order": 12
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15418,8 +14017,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:16:08",
-    "order": 13,
-    "kab_name": "[07] BUOL"
+    "order": 13
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15429,8 +14027,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "19 May 2026, 11:14:37",
-    "order": 14,
-    "kab_name": "[07] BUOL"
+    "order": 14
   },
   {
     "code": "18fc3e72-4081-4840-8dd6-769b4752fd37",
@@ -15440,8 +14037,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "19 May 2026, 11:14:34",
-    "order": 15,
-    "kab_name": "[07] BUOL"
+    "order": 15
   },
   {
     "code": "75b6fc99-ef00-42bd-8f54-fcab0ac2a238",
@@ -15451,8 +14047,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Clicked",
     "timestamp": "20 May 2026, 11:03:26",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "75b6fc99-ef00-42bd-8f54-fcab0ac2a238",
@@ -15462,8 +14057,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Opened",
     "timestamp": "20 May 2026, 11:03:04",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "75b6fc99-ef00-42bd-8f54-fcab0ac2a238",
@@ -15473,8 +14067,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Delivered",
     "timestamp": "20 May 2026, 11:02:47",
-    "order": 3,
-    "kab_name": "[07] BUOL"
+    "order": 3
   },
   {
     "code": "75b6fc99-ef00-42bd-8f54-fcab0ac2a238",
@@ -15484,8 +14077,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "20 May 2026, 11:02:44",
-    "order": 4,
-    "kab_name": "[07] BUOL"
+    "order": 4
   },
   {
     "code": "75b6fc99-ef00-42bd-8f54-fcab0ac2a238",
@@ -15495,8 +14087,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "19 May 2026, 11:14:34",
-    "order": 5,
-    "kab_name": "[07] BUOL"
+    "order": 5
   },
   {
     "code": "75b6fc99-ef00-42bd-8f54-fcab0ac2a238",
@@ -15506,8 +14097,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "19 May 2026, 11:14:34",
-    "order": 6,
-    "kab_name": "[07] BUOL"
+    "order": 6
   },
   {
     "code": "75b6fc99-ef00-42bd-8f54-fcab0ac2a238",
@@ -15517,8 +14107,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 15:04:30",
-    "order": 7,
-    "kab_name": "[07] BUOL"
+    "order": 7
   },
   {
     "code": "75b6fc99-ef00-42bd-8f54-fcab0ac2a238",
@@ -15528,8 +14117,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 14:33:40",
-    "order": 8,
-    "kab_name": "[07] BUOL"
+    "order": 8
   },
   {
     "code": "7a62fcfd-9d9b-4021-aad6-96e96a62c99f",
@@ -15539,8 +14127,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[07] BUOL"
+    "order": 0
   },
   {
     "code": "f1c703cf-fd3d-4184-b7ce-1c15170f5c50",
@@ -15550,8 +14137,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:55:22",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "f1c703cf-fd3d-4184-b7ce-1c15170f5c50",
@@ -15561,8 +14147,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:55:19",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "caa05dc5-3d37-4660-ac10-bb1784e2099f",
@@ -15572,8 +14157,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[07] BUOL"
+    "order": 0
   },
   {
     "code": "f3a8ff8e-fd1e-4a81-876c-cdd423c51304",
@@ -15583,8 +14167,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "19 May 2026, 11:14:42",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "f3a8ff8e-fd1e-4a81-876c-cdd423c51304",
@@ -15594,8 +14177,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "19 May 2026, 11:14:38",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "7caf507f-ded1-4591-bf6a-60996f83c71b",
@@ -15605,8 +14187,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "19 May 2026, 11:14:38",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "7caf507f-ded1-4591-bf6a-60996f83c71b",
@@ -15616,8 +14197,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "19 May 2026, 11:14:34",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15627,8 +14207,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "21 May 2026, 11:46:44",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15638,8 +14217,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "21 May 2026, 11:39:46",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15649,8 +14227,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "21 May 2026, 11:38:23",
-    "order": 3,
-    "kab_name": "[07] BUOL"
+    "order": 3
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15660,8 +14237,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "21 May 2026, 11:38:21",
-    "order": 4,
-    "kab_name": "[07] BUOL"
+    "order": 4
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15671,8 +14247,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "21 May 2026, 11:22:07",
-    "order": 5,
-    "kab_name": "[07] BUOL"
+    "order": 5
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15682,8 +14257,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "21 May 2026, 11:04:40",
-    "order": 6,
-    "kab_name": "[07] BUOL"
+    "order": 6
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15693,8 +14267,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "21 May 2026, 11:03:45",
-    "order": 7,
-    "kab_name": "[07] BUOL"
+    "order": 7
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15704,8 +14277,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "21 May 2026, 10:37:31",
-    "order": 8,
-    "kab_name": "[07] BUOL"
+    "order": 8
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15715,8 +14287,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "21 May 2026, 10:11:31",
-    "order": 9,
-    "kab_name": "[07] BUOL"
+    "order": 9
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15726,8 +14297,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "21 May 2026, 10:09:17",
-    "order": 10,
-    "kab_name": "[07] BUOL"
+    "order": 10
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15737,8 +14307,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "21 May 2026, 10:08:15",
-    "order": 11,
-    "kab_name": "[07] BUOL"
+    "order": 11
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15748,8 +14317,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "21 May 2026, 10:08:11",
-    "order": 12,
-    "kab_name": "[07] BUOL"
+    "order": 12
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15759,8 +14327,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "21 May 2026, 10:03:16",
-    "order": 13,
-    "kab_name": "[07] BUOL"
+    "order": 13
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15770,8 +14337,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "21 May 2026, 10:00:41",
-    "order": 14,
-    "kab_name": "[07] BUOL"
+    "order": 14
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15781,8 +14347,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "21 May 2026, 10:00:38",
-    "order": 15,
-    "kab_name": "[07] BUOL"
+    "order": 15
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15792,8 +14357,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "21 May 2026, 08:24:51",
-    "order": 16,
-    "kab_name": "[07] BUOL"
+    "order": 16
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15803,8 +14367,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "21 May 2026, 08:24:48",
-    "order": 17,
-    "kab_name": "[07] BUOL"
+    "order": 17
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15814,8 +14377,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:00:08",
-    "order": 18,
-    "kab_name": "[07] BUOL"
+    "order": 18
   },
   {
     "code": "0ceb03c6-f39f-46e0-8947-fd188082eed7",
@@ -15825,8 +14387,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:00:05",
-    "order": 19,
-    "kab_name": "[07] BUOL"
+    "order": 19
   },
   {
     "code": "ab25eee5-e4ee-4ecf-96aa-ca2bef3a4447",
@@ -15836,8 +14397,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[07] BUOL"
+    "order": 0
   },
   {
     "code": "b73b3d4c-be2f-4fc0-a732-e86f0c91fc6e",
@@ -15847,8 +14407,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "21 May 2026, 18:18:40",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "b73b3d4c-be2f-4fc0-a732-e86f0c91fc6e",
@@ -15858,8 +14417,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "21 May 2026, 08:24:52",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "b73b3d4c-be2f-4fc0-a732-e86f0c91fc6e",
@@ -15869,8 +14427,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "21 May 2026, 08:24:51",
-    "order": 3,
-    "kab_name": "[07] BUOL"
+    "order": 3
   },
   {
     "code": "3266144a-e1e8-481f-a863-d9ee0ed1a652",
@@ -15880,8 +14437,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "21 May 2026, 08:24:52",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "3266144a-e1e8-481f-a863-d9ee0ed1a652",
@@ -15891,8 +14447,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "21 May 2026, 08:24:48",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "3266144a-e1e8-481f-a863-d9ee0ed1a652",
@@ -15902,8 +14457,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:12:55",
-    "order": 3,
-    "kab_name": "[07] BUOL"
+    "order": 3
   },
   {
     "code": "3266144a-e1e8-481f-a863-d9ee0ed1a652",
@@ -15913,8 +14467,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 00:32:29",
-    "order": 4,
-    "kab_name": "[07] BUOL"
+    "order": 4
   },
   {
     "code": "3d6ecf4c-3367-44a3-bba8-18301108ae80",
@@ -15924,8 +14477,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "21 May 2026, 09:38:57",
-    "order": 1,
-    "kab_name": "[07] BUOL"
+    "order": 1
   },
   {
     "code": "3d6ecf4c-3367-44a3-bba8-18301108ae80",
@@ -15935,8 +14487,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "21 May 2026, 09:38:54",
-    "order": 2,
-    "kab_name": "[07] BUOL"
+    "order": 2
   },
   {
     "code": "3d6ecf4c-3367-44a3-bba8-18301108ae80",
@@ -15946,8 +14497,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "21 May 2026, 08:26:33",
-    "order": 3,
-    "kab_name": "[07] BUOL"
+    "order": 3
   },
   {
     "code": "3d6ecf4c-3367-44a3-bba8-18301108ae80",
@@ -15957,8 +14507,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "21 May 2026, 08:24:52",
-    "order": 4,
-    "kab_name": "[07] BUOL"
+    "order": 4
   },
   {
     "code": "3d6ecf4c-3367-44a3-bba8-18301108ae80",
@@ -15968,8 +14517,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "21 May 2026, 08:24:51",
-    "order": 5,
-    "kab_name": "[07] BUOL"
+    "order": 5
   },
   {
     "code": "3d6ecf4c-3367-44a3-bba8-18301108ae80",
@@ -15979,8 +14527,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:15:42",
-    "order": 6,
-    "kab_name": "[07] BUOL"
+    "order": 6
   },
   {
     "code": "3d6ecf4c-3367-44a3-bba8-18301108ae80",
@@ -15990,8 +14537,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:15:35",
-    "order": 7,
-    "kab_name": "[07] BUOL"
+    "order": 7
   },
   {
     "code": "4d1cc1cb-1121-4109-be20-1a19793afa6d",
@@ -16001,8 +14547,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:19:29",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "4d1cc1cb-1121-4109-be20-1a19793afa6d",
@@ -16012,8 +14557,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:19:29",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "4d1cc1cb-1121-4109-be20-1a19793afa6d",
@@ -16023,8 +14567,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:33:44",
-    "order": 3,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 3
   },
   {
     "code": "4d1cc1cb-1121-4109-be20-1a19793afa6d",
@@ -16034,8 +14577,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:33:40",
-    "order": 4,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 4
   },
   {
     "code": "c5b92842-2479-4459-9185-538b7b443f92",
@@ -16045,8 +14587,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:24:06",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "c5b92842-2479-4459-9185-538b7b443f92",
@@ -16056,8 +14597,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:24:03",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "4273bdac-173d-42e2-978d-fd6cafe26d2d",
@@ -16067,8 +14607,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "1bbcc4b3-06aa-4cd2-b554-ff9fd1755a65",
@@ -16078,8 +14617,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "d673ae1b-22c8-439c-bdcc-2a46c7e9927d",
@@ -16089,8 +14627,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:23:35",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "d673ae1b-22c8-439c-bdcc-2a46c7e9927d",
@@ -16100,8 +14637,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:23:34",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "2892e2bb-3f66-4a47-a6f3-c02c0622e41a",
@@ -16111,8 +14647,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "3f7e067e-eee9-4f79-957c-920de5e4f72f",
@@ -16122,8 +14657,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:16:05",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "3f7e067e-eee9-4f79-957c-920de5e4f72f",
@@ -16133,8 +14667,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:55:50",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "3f7e067e-eee9-4f79-957c-920de5e4f72f",
@@ -16144,8 +14677,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:55:50",
-    "order": 3,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 3
   },
   {
     "code": "c3a13720-d28b-4b33-ac5a-5f2618b561b7",
@@ -16155,8 +14687,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:17:15",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "c3a13720-d28b-4b33-ac5a-5f2618b561b7",
@@ -16166,8 +14697,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:16:48",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6",
@@ -16177,8 +14707,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:02:09",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6",
@@ -16188,8 +14717,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:02:09",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6",
@@ -16199,8 +14727,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:29:30",
-    "order": 3,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 3
   },
   {
     "code": "15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6",
@@ -16210,8 +14737,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:29:26",
-    "order": 4,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 4
   },
   {
     "code": "ac71c3fa-9051-43c9-960d-dc99f4c46a46",
@@ -16221,8 +14747,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "67c104b4-833f-4893-aa36-f56338418582",
@@ -16232,8 +14757,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "b936a96e-73b2-45aa-912f-c438c852d184",
@@ -16243,8 +14767,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "5aac7959-5c27-489b-a9dc-ffa53a25291b",
@@ -16254,8 +14777,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 02:01:57",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "5aac7959-5c27-489b-a9dc-ffa53a25291b",
@@ -16265,8 +14787,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:01:57",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "2484b5ea-88e3-4e0e-9112-2c99b157d483",
@@ -16276,8 +14797,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:08:17",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "2484b5ea-88e3-4e0e-9112-2c99b157d483",
@@ -16287,8 +14807,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:07:57",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "2484b5ea-88e3-4e0e-9112-2c99b157d483",
@@ -16298,8 +14817,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 07:58:11",
-    "order": 3,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 3
   },
   {
     "code": "2484b5ea-88e3-4e0e-9112-2c99b157d483",
@@ -16309,8 +14827,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 07:57:50",
-    "order": 4,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 4
   },
   {
     "code": "2484b5ea-88e3-4e0e-9112-2c99b157d483",
@@ -16320,8 +14837,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:54:31",
-    "order": 5,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 5
   },
   {
     "code": "2484b5ea-88e3-4e0e-9112-2c99b157d483",
@@ -16331,8 +14847,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:54:30",
-    "order": 6,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 6
   },
   {
     "code": "53371dda-e2fd-418b-b255-b54ac8ec4e8d",
@@ -16342,8 +14857,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "5a3ff3c1-3bb3-4cab-a368-0c7a39739993",
@@ -16353,8 +14867,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "b1fce708-a26b-4afd-bdaa-303929b9e467",
@@ -16364,8 +14877,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "aba9f055-9468-45af-b6b5-ad91f1e6ba84",
@@ -16375,8 +14887,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16386,8 +14897,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16397,8 +14907,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16408,8 +14917,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16419,8 +14927,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16430,8 +14937,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16441,8 +14947,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16452,8 +14957,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16463,8 +14967,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16474,8 +14977,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16485,8 +14987,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16496,8 +14997,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16507,8 +15007,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16518,8 +15017,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16529,8 +15027,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16540,8 +15037,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16551,8 +15047,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16562,8 +15057,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16573,8 +15067,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16584,8 +15077,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16595,8 +15087,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16606,8 +15097,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16617,8 +15107,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16628,8 +15117,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16639,8 +15127,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16650,8 +15137,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16661,8 +15147,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16672,8 +15157,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16683,8 +15167,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16694,8 +15177,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16705,8 +15187,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16716,8 +15197,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16727,8 +15207,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16738,8 +15217,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16749,8 +15227,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16760,8 +15237,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16771,8 +15247,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16782,8 +15257,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16793,8 +15267,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16804,8 +15277,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16815,8 +15287,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16826,8 +15297,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16837,8 +15307,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16848,8 +15317,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16859,8 +15327,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16870,8 +15337,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16881,8 +15347,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16892,8 +15357,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16903,8 +15367,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16914,8 +15377,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16925,8 +15387,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16936,8 +15397,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16947,8 +15407,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16958,8 +15417,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16969,8 +15427,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16980,8 +15437,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -16991,8 +15447,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -17002,8 +15457,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -17013,8 +15467,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
+    "order": 1
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -17024,8 +15477,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
+    "order": 2
   },
   {
     "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
@@ -17035,8 +15487,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
+    "order": 3
   },
   {
     "code": "9a3161da-b32c-4f4e-b514-fd328161bf67",
@@ -17046,8 +15497,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "51fc63d9-46bb-4773-b335-76d8589dddf4",
@@ -17057,8 +15507,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "487d79ac-cb64-4668-9531-ebc3f866653e",
@@ -17068,8 +15517,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:18:28",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "487d79ac-cb64-4668-9531-ebc3f866653e",
@@ -17079,8 +15527,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 01:23:29",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "487d79ac-cb64-4668-9531-ebc3f866653e",
@@ -17090,8 +15537,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:23:24",
-    "order": 3,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 3
   },
   {
     "code": "3320adff-ecdc-41be-a69f-a321c7adbcd6",
@@ -17101,8 +15547,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:12:59",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "3320adff-ecdc-41be-a69f-a321c7adbcd6",
@@ -17112,8 +15557,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:12:59",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "3320adff-ecdc-41be-a69f-a321c7adbcd6",
@@ -17123,8 +15567,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:33:27",
-    "order": 3,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 3
   },
   {
     "code": "3320adff-ecdc-41be-a69f-a321c7adbcd6",
@@ -17134,8 +15577,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:33:24",
-    "order": 4,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 4
   },
   {
     "code": "dfaa5d74-5f0a-4cef-8e31-b25d06082b6a",
@@ -17145,8 +15587,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "d664daf4-02b3-400f-949b-f3d1b3cf0bd0",
@@ -17156,8 +15597,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "e61578ba-1d28-40ca-ae49-a1468d44f863",
@@ -17167,8 +15607,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "57da4c20-331b-4763-981b-6e288f1eba20",
@@ -17178,8 +15617,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "7574d369-d840-48ec-8354-72ddcf7d317f",
@@ -17189,8 +15627,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "c0c136e4-4fb4-4813-9394-0c05234a2dfe",
@@ -17200,8 +15637,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "64f2f615-a461-4813-bef8-f305e17d42a6",
@@ -17211,8 +15647,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "cf344f14-7782-4891-b66c-7926dc9acce6",
@@ -17222,8 +15657,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "9cf37d9c-0715-4168-ac23-9ba4bb5afd09",
@@ -17233,8 +15667,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "a57a6e06-e82d-4125-b2b1-be1af66786ae",
@@ -17244,8 +15677,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "ed483ac5-1c8d-42e9-8159-71392b70a5c3",
@@ -17255,8 +15687,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "fb7cb7e9-fe35-4484-99ff-fbc3ab6ca709",
@@ -17266,8 +15697,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "456c29d8-19b8-4fb6-a0c7-59e5e23edd92",
@@ -17277,8 +15707,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "d900ba14-03aa-4cf1-8872-746118648c4f",
@@ -17288,8 +15717,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "751712a7-8d7e-4ea7-93be-51fae4a3cc01",
@@ -17299,8 +15727,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "dcefceea-fdc8-460d-b032-ac0959c05b92",
@@ -17310,8 +15737,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "3e075b21-e7b8-4b09-bbb0-a7155ccb1543",
@@ -17321,8 +15747,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:45:11",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "3e075b21-e7b8-4b09-bbb0-a7155ccb1543",
@@ -17332,8 +15757,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:45:02",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "a99daaac-c57c-4783-8cae-6161700025a6",
@@ -17343,8 +15767,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 05:46:05",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "a99daaac-c57c-4783-8cae-6161700025a6",
@@ -17354,8 +15777,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:45:34",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "7334afb1-bd34-490f-90c9-1fe49f5c8b29",
@@ -17365,8 +15787,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "c273e29b-e1fc-454c-b344-bb274549947e",
@@ -17376,8 +15797,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "ebe04c4e-3f3d-45c7-ac17-78dec7f90345",
@@ -17387,8 +15807,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "df79e9ef-4859-4f49-b08d-da3d88d4143b",
@@ -17398,8 +15817,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "8b7d6afd-d5e8-4946-aaea-ef7396a3e447",
@@ -17409,8 +15827,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:04:48",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "8b7d6afd-d5e8-4946-aaea-ef7396a3e447",
@@ -17420,8 +15837,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:04:47",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "b143ac48-18b1-461e-8107-1e44db563e43",
@@ -17431,8 +15847,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "29fee7f1-2d5e-4f91-92d6-4ecdf6565dda",
@@ -17442,8 +15857,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "92c708e6-8572-48d6-b3bb-9508decaa23d",
@@ -17453,8 +15867,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c",
@@ -17464,8 +15877,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:08:28",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c",
@@ -17475,8 +15887,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:03:41",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c",
@@ -17486,8 +15897,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:03:41",
-    "order": 3,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 3
   },
   {
     "code": "2d683d50-18e3-422f-a305-0001adca7b68",
@@ -17497,8 +15907,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "7000e791-f4e6-464d-933e-e65de2f34028",
@@ -17508,8 +15917,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "847d5d7f-9927-49ba-b75b-984b6ee41f8b",
@@ -17519,8 +15927,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "e0e167fe-12a0-4e2f-b3dd-6f28dcc2c546",
@@ -17530,8 +15937,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:57:43",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "e0e167fe-12a0-4e2f-b3dd-6f28dcc2c546",
@@ -17541,8 +15947,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:57:42",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "8e053414-c59a-43ac-b820-de312580eda8",
@@ -17552,8 +15957,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "839c5b46-1047-43c5-803c-7705ecd7519a",
@@ -17563,8 +15967,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "bd574b33-2488-4633-b3ac-375008e68655",
@@ -17574,8 +15977,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "0b807a76-8ae0-42d2-b741-49bbc23d9689",
@@ -17585,8 +15987,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "3b643efd-b49a-4b3e-84ba-b44a38b7c2ee",
@@ -17596,8 +15997,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "e1a49f73-b1f2-43df-9a9b-dd2dba23ee2e",
@@ -17607,8 +16007,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 09:00:10",
-    "order": 1,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 1
   },
   {
     "code": "e1a49f73-b1f2-43df-9a9b-dd2dba23ee2e",
@@ -17618,8 +16017,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:59:36",
-    "order": 2,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 2
   },
   {
     "code": "a6166dec-46e2-4678-840e-2bb25570d339",
@@ -17629,8 +16027,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "ecabaeb5-3d4c-4f8f-9bad-6d93c19de43d",
@@ -17640,8 +16037,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "9d47ca40-13b3-40d8-8a83-d3b38a08fe23",
@@ -17651,8 +16047,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "2461487e-8d45-46ad-9655-d7e54b9f1d00",
@@ -17662,8 +16057,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "6b4f842e-cbcf-4a55-a70e-cfac8126d236",
@@ -17673,8 +16067,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[08] PARIGI MOUTONG"
+    "order": 0
   },
   {
     "code": "afbd929f-ce57-4a46-a4e8-74a2d34363bd",
@@ -17684,8 +16077,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 10:10:38",
-    "order": 1,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 1
   },
   {
     "code": "afbd929f-ce57-4a46-a4e8-74a2d34363bd",
@@ -17695,8 +16087,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "10 Jun 2026, 04:54:31",
-    "order": 2,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 2
   },
   {
     "code": "afbd929f-ce57-4a46-a4e8-74a2d34363bd",
@@ -17706,8 +16097,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "10 Jun 2026, 04:54:31",
-    "order": 3,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 3
   },
   {
     "code": "3c2a23f4-6ead-4f40-afa1-4c05da726564",
@@ -17717,8 +16107,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 0
   },
   {
     "code": "e2f743d3-5b9a-4e7b-9f8b-460c00ab4cb5",
@@ -17728,8 +16117,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 09:06:32",
-    "order": 1,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 1
   },
   {
     "code": "e2f743d3-5b9a-4e7b-9f8b-460c00ab4cb5",
@@ -17739,8 +16127,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:04:47",
-    "order": 2,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 2
   },
   {
     "code": "c34da3cc-74e9-4689-9d29-058ac6449742",
@@ -17750,8 +16137,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "05 Jun 2026, 10:13:38",
-    "order": 1,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 1
   },
   {
     "code": "c34da3cc-74e9-4689-9d29-058ac6449742",
@@ -17761,8 +16147,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:17:08",
-    "order": 2,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 2
   },
   {
     "code": "c34da3cc-74e9-4689-9d29-058ac6449742",
@@ -17772,8 +16157,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:16:10",
-    "order": 3,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 3
   },
   {
     "code": "7d01ad5e-6f56-479e-8d14-a059be80a979",
@@ -17783,8 +16167,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:25:19",
-    "order": 1,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 1
   },
   {
     "code": "7d01ad5e-6f56-479e-8d14-a059be80a979",
@@ -17794,8 +16177,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:25:19",
-    "order": 2,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 2
   },
   {
     "code": "9837fb89-293e-49bb-bb82-352cfe031cbe",
@@ -17805,8 +16187,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 0
   },
   {
     "code": "a7a0b7fb-5b34-495e-83de-abe600f83bc4",
@@ -17816,8 +16197,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 15:29:21",
-    "order": 1,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 1
   },
   {
     "code": "a7a0b7fb-5b34-495e-83de-abe600f83bc4",
@@ -17827,8 +16207,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 15:28:59",
-    "order": 2,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 2
   },
   {
     "code": "a7a0b7fb-5b34-495e-83de-abe600f83bc4",
@@ -17838,8 +16217,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 13:46:13",
-    "order": 3,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 3
   },
   {
     "code": "a7a0b7fb-5b34-495e-83de-abe600f83bc4",
@@ -17849,8 +16227,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 11:53:49",
-    "order": 4,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 4
   },
   {
     "code": "a7a0b7fb-5b34-495e-83de-abe600f83bc4",
@@ -17860,8 +16237,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:39:02",
-    "order": 5,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 5
   },
   {
     "code": "a7a0b7fb-5b34-495e-83de-abe600f83bc4",
@@ -17871,8 +16247,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:39:02",
-    "order": 6,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 6
   },
   {
     "code": "0906ef59-4021-49b2-bafc-1df933f88949",
@@ -17882,8 +16257,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 10:59:15",
-    "order": 1,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 1
   },
   {
     "code": "0906ef59-4021-49b2-bafc-1df933f88949",
@@ -17893,8 +16267,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 23:01:16",
-    "order": 2,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 2
   },
   {
     "code": "0906ef59-4021-49b2-bafc-1df933f88949",
@@ -17904,8 +16277,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:01:16",
-    "order": 3,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 3
   },
   {
     "code": "0ad8d98c-7ef3-4c6a-9729-eb688956840d",
@@ -17915,8 +16287,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 10:59:38",
-    "order": 1,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 1
   },
   {
     "code": "0ad8d98c-7ef3-4c6a-9729-eb688956840d",
@@ -17926,8 +16297,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:04:03",
-    "order": 2,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 2
   },
   {
     "code": "0ad8d98c-7ef3-4c6a-9729-eb688956840d",
@@ -17937,8 +16307,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 23:04:03",
-    "order": 3,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 3
   },
   {
     "code": "d9695122-4c1e-43c2-a55a-d91cd91c979a",
@@ -17948,8 +16317,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 0
   },
   {
     "code": "4b2ce577-d811-4d8f-82e7-399647f20747",
@@ -17959,8 +16327,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 0
   },
   {
     "code": "609cf3a0-e1f6-40b5-9caa-a15aa695c4b9",
@@ -17970,8 +16337,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 0
   },
   {
     "code": "fd70b3f7-bf01-4b60-890f-965645713258",
@@ -17981,8 +16347,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 0
   },
   {
     "code": "18120f4f-db58-4532-8772-8b73ccf1235d",
@@ -17992,8 +16357,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:02:36",
-    "order": 1,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 1
   },
   {
     "code": "18120f4f-db58-4532-8772-8b73ccf1235d",
@@ -18003,8 +16367,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:02:35",
-    "order": 2,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 2
   },
   {
     "code": "18120f4f-db58-4532-8772-8b73ccf1235d",
@@ -18014,8 +16377,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:33:22",
-    "order": 3,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 3
   },
   {
     "code": "18120f4f-db58-4532-8772-8b73ccf1235d",
@@ -18025,8 +16387,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:33:21",
-    "order": 4,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 4
   },
   {
     "code": "54fcf7cb-c082-4ae0-b7e0-9ab1d403023d",
@@ -18036,8 +16397,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[09] TOJO UNA-UNA"
+    "order": 0
   },
   {
     "code": "9d2a27ff-8403-4253-98ef-ddba82e1b0aa",
@@ -18047,8 +16407,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "9adb7ec6-6f7e-403f-8fce-7eab2d506743",
@@ -18058,8 +16417,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:54:29",
-    "order": 1,
-    "kab_name": "[10] SIGI"
+    "order": 1
   },
   {
     "code": "9adb7ec6-6f7e-403f-8fce-7eab2d506743",
@@ -18069,8 +16427,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:54:25",
-    "order": 2,
-    "kab_name": "[10] SIGI"
+    "order": 2
   },
   {
     "code": "ee79afe7-e5dd-4935-aa80-fab4281fbee2",
@@ -18080,8 +16437,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "5459d0fb-02c2-4c3c-8211-208b1b77ea7c",
@@ -18091,8 +16447,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "ffba7cb2-4ed4-4a7a-a08d-8ecc72dc6924",
@@ -18102,8 +16457,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "23 May 2026, 11:23:18",
-    "order": 1,
-    "kab_name": "[10] SIGI"
+    "order": 1
   },
   {
     "code": "ffba7cb2-4ed4-4a7a-a08d-8ecc72dc6924",
@@ -18113,8 +16467,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "23 May 2026, 11:23:14",
-    "order": 2,
-    "kab_name": "[10] SIGI"
+    "order": 2
   },
   {
     "code": "ffba7cb2-4ed4-4a7a-a08d-8ecc72dc6924",
@@ -18124,8 +16477,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "23 May 2026, 11:22:34",
-    "order": 3,
-    "kab_name": "[10] SIGI"
+    "order": 3
   },
   {
     "code": "ffba7cb2-4ed4-4a7a-a08d-8ecc72dc6924",
@@ -18135,8 +16487,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "23 May 2026, 11:22:31",
-    "order": 4,
-    "kab_name": "[10] SIGI"
+    "order": 4
   },
   {
     "code": "ffba7cb2-4ed4-4a7a-a08d-8ecc72dc6924",
@@ -18146,8 +16497,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "21 May 2026, 10:30:36",
-    "order": 5,
-    "kab_name": "[10] SIGI"
+    "order": 5
   },
   {
     "code": "ffba7cb2-4ed4-4a7a-a08d-8ecc72dc6924",
@@ -18157,8 +16507,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "21 May 2026, 10:27:33",
-    "order": 6,
-    "kab_name": "[10] SIGI"
+    "order": 6
   },
   {
     "code": "ffba7cb2-4ed4-4a7a-a08d-8ecc72dc6924",
@@ -18168,8 +16517,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "21 May 2026, 10:27:09",
-    "order": 7,
-    "kab_name": "[10] SIGI"
+    "order": 7
   },
   {
     "code": "ffba7cb2-4ed4-4a7a-a08d-8ecc72dc6924",
@@ -18179,8 +16527,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "15 May 2026, 18:45:41",
-    "order": 8,
-    "kab_name": "[10] SIGI"
+    "order": 8
   },
   {
     "code": "ffba7cb2-4ed4-4a7a-a08d-8ecc72dc6924",
@@ -18190,8 +16537,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "15 May 2026, 18:45:38",
-    "order": 9,
-    "kab_name": "[10] SIGI"
+    "order": 9
   },
   {
     "code": "ffba7cb2-4ed4-4a7a-a08d-8ecc72dc6924",
@@ -18201,8 +16547,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 18:22:59",
-    "order": 10,
-    "kab_name": "[10] SIGI"
+    "order": 10
   },
   {
     "code": "f23b72e5-340a-4c2d-8817-a3a0c08966f4",
@@ -18212,8 +16557,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "bfec4f73-cd86-45e2-86c2-5aee97affbcb",
@@ -18223,8 +16567,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "b7748f86-561f-4641-a32d-630ef67a083f",
@@ -18234,8 +16577,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 06:33:41",
-    "order": 1,
-    "kab_name": "[10] SIGI"
+    "order": 1
   },
   {
     "code": "b7748f86-561f-4641-a32d-630ef67a083f",
@@ -18245,8 +16587,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:32:51",
-    "order": 2,
-    "kab_name": "[10] SIGI"
+    "order": 2
   },
   {
     "code": "b2cad260-b9b2-4c67-9940-bce394c05a88",
@@ -18256,8 +16597,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "a2c7ac44-26ff-4a16-ae16-0146852ba0a6",
@@ -18267,8 +16607,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "8c88c967-08c8-401b-af06-c0cd3f59d13c",
@@ -18278,8 +16617,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:08:44",
-    "order": 1,
-    "kab_name": "[10] SIGI"
+    "order": 1
   },
   {
     "code": "8c88c967-08c8-401b-af06-c0cd3f59d13c",
@@ -18289,8 +16627,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:08:41",
-    "order": 2,
-    "kab_name": "[10] SIGI"
+    "order": 2
   },
   {
     "code": "604ca713-6782-49b8-a699-56d519a985c3",
@@ -18300,8 +16637,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "55de4eef-028f-4552-bbf6-9bbdc06a7094",
@@ -18311,8 +16647,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "55baf412-aa9b-4350-9756-83e63798b454",
@@ -18322,8 +16657,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "499f57c1-5960-4469-9461-d519db098488",
@@ -18333,8 +16667,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:18:49",
-    "order": 1,
-    "kab_name": "[10] SIGI"
+    "order": 1
   },
   {
     "code": "499f57c1-5960-4469-9461-d519db098488",
@@ -18344,8 +16677,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:18:48",
-    "order": 2,
-    "kab_name": "[10] SIGI"
+    "order": 2
   },
   {
     "code": "499f57c1-5960-4469-9461-d519db098488",
@@ -18355,8 +16687,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:26:16",
-    "order": 3,
-    "kab_name": "[10] SIGI"
+    "order": 3
   },
   {
     "code": "499f57c1-5960-4469-9461-d519db098488",
@@ -18366,8 +16697,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:26:16",
-    "order": 4,
-    "kab_name": "[10] SIGI"
+    "order": 4
   },
   {
     "code": "41ab09fb-0ccc-4693-b31d-abf74dcbd20e",
@@ -18377,8 +16707,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:16:33",
-    "order": 1,
-    "kab_name": "[10] SIGI"
+    "order": 1
   },
   {
     "code": "41ab09fb-0ccc-4693-b31d-abf74dcbd20e",
@@ -18388,8 +16717,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:16:30",
-    "order": 2,
-    "kab_name": "[10] SIGI"
+    "order": 2
   },
   {
     "code": "41ab09fb-0ccc-4693-b31d-abf74dcbd20e",
@@ -18399,8 +16727,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:01:58",
-    "order": 3,
-    "kab_name": "[10] SIGI"
+    "order": 3
   },
   {
     "code": "41ab09fb-0ccc-4693-b31d-abf74dcbd20e",
@@ -18410,8 +16737,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:01:58",
-    "order": 4,
-    "kab_name": "[10] SIGI"
+    "order": 4
   },
   {
     "code": "3ceb120a-f80a-4be5-bd9a-bffd2cbe15ec",
@@ -18421,8 +16747,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "3c4d5cd6-28fd-4b1d-b514-9f81fa06efba",
@@ -18432,8 +16757,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 11:15:29",
-    "order": 1,
-    "kab_name": "[10] SIGI"
+    "order": 1
   },
   {
     "code": "3c4d5cd6-28fd-4b1d-b514-9f81fa06efba",
@@ -18443,8 +16767,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 00:49:31",
-    "order": 2,
-    "kab_name": "[10] SIGI"
+    "order": 2
   },
   {
     "code": "3c4d5cd6-28fd-4b1d-b514-9f81fa06efba",
@@ -18454,8 +16777,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:49:30",
-    "order": 3,
-    "kab_name": "[10] SIGI"
+    "order": 3
   },
   {
     "code": "33eb26bc-1d8b-4349-a858-a89611dd096f",
@@ -18465,8 +16787,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:13:14",
-    "order": 1,
-    "kab_name": "[10] SIGI"
+    "order": 1
   },
   {
     "code": "33eb26bc-1d8b-4349-a858-a89611dd096f",
@@ -18476,8 +16797,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:13:03",
-    "order": 2,
-    "kab_name": "[10] SIGI"
+    "order": 2
   },
   {
     "code": "33eb26bc-1d8b-4349-a858-a89611dd096f",
@@ -18487,8 +16807,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:34:46",
-    "order": 3,
-    "kab_name": "[10] SIGI"
+    "order": 3
   },
   {
     "code": "33eb26bc-1d8b-4349-a858-a89611dd096f",
@@ -18498,8 +16817,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:34:45",
-    "order": 4,
-    "kab_name": "[10] SIGI"
+    "order": 4
   },
   {
     "code": "21148be5-a48e-4f97-8375-d3c2010a3818",
@@ -18509,8 +16827,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "0d2fb1b1-89ae-4990-920d-ed1a9404afe1",
@@ -18520,8 +16837,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[10] SIGI"
+    "order": 0
   },
   {
     "code": "078e9d2b-761e-41df-b9bc-951fc9b24924",
@@ -18531,8 +16847,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 10:58:56",
-    "order": 1,
-    "kab_name": "[10] SIGI"
+    "order": 1
   },
   {
     "code": "078e9d2b-761e-41df-b9bc-951fc9b24924",
@@ -18542,8 +16857,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 22:58:30",
-    "order": 2,
-    "kab_name": "[10] SIGI"
+    "order": 2
   },
   {
     "code": "078e9d2b-761e-41df-b9bc-951fc9b24924",
@@ -18553,8 +16867,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:57:07",
-    "order": 3,
-    "kab_name": "[10] SIGI"
+    "order": 3
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18564,8 +16877,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 10:15:16",
-    "order": 1,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 1
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18575,8 +16887,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 10:15:13",
-    "order": 2,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 2
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18586,8 +16897,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 11:13:18",
-    "order": 3,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 3
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18597,8 +16907,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:13:14",
-    "order": 4,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 4
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18608,8 +16917,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 11:10:09",
-    "order": 5,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 5
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18619,8 +16927,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:09:36",
-    "order": 6,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 6
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18630,8 +16937,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:09:29",
-    "order": 7,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 7
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18641,8 +16947,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:09:23",
-    "order": 8,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 8
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18652,8 +16957,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:07:29",
-    "order": 9,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 9
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18663,8 +16967,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:07:01",
-    "order": 10,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 10
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18674,8 +16977,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:07:00",
-    "order": 11,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 11
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18685,8 +16987,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:06:17",
-    "order": 12,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 12
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18696,8 +16997,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:05:56",
-    "order": 13,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 13
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18707,8 +17007,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:05:48",
-    "order": 14,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 14
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18718,8 +17017,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:05:04",
-    "order": 15,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 15
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18729,8 +17027,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:04:47",
-    "order": 16,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 16
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18740,8 +17037,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:04:44",
-    "order": 17,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 17
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18751,8 +17047,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 11:04:24",
-    "order": 18,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 18
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18762,8 +17057,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:43:59",
-    "order": 19,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 19
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18773,8 +17067,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:43:08",
-    "order": 20,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 20
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18784,8 +17077,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:43:01",
-    "order": 21,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 21
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18795,8 +17087,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:41:24",
-    "order": 22,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 22
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18806,8 +17097,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:41:01",
-    "order": 23,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 23
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18817,8 +17107,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:35:18",
-    "order": 24,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 24
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18828,8 +17117,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:34:56",
-    "order": 25,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 25
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18839,8 +17127,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:34:36",
-    "order": 26,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 26
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18850,8 +17137,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:34:27",
-    "order": 27,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 27
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18861,8 +17147,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:34:20",
-    "order": 28,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 28
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18872,8 +17157,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:34:03",
-    "order": 29,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 29
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18883,8 +17167,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 10:33:59",
-    "order": 30,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 30
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18894,8 +17177,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 09:53:16",
-    "order": 31,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 31
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18905,8 +17187,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 09:52:59",
-    "order": 32,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 32
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18916,8 +17197,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "19 May 2026, 09:52:55",
-    "order": 33,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 33
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18927,8 +17207,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "19 May 2026, 09:52:52",
-    "order": 34,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 34
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18938,8 +17217,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "11 Jun 2026, 17:34:44",
-    "order": 35,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 35
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18949,8 +17227,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 17:34:43",
-    "order": 36,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 36
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18960,8 +17237,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 15:12:33",
-    "order": 37,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 37
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18971,8 +17247,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 15:11:42",
-    "order": 38,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 38
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18982,8 +17257,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 15:10:48",
-    "order": 39,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 39
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -18993,8 +17267,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 15:10:47",
-    "order": 40,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 40
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -19004,8 +17277,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 15:10:45",
-    "order": 41,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 41
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -19015,8 +17287,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 15:10:40",
-    "order": 42,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 42
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -19026,8 +17297,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:12:40",
-    "order": 43,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 43
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -19037,8 +17307,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:12:37",
-    "order": 44,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 44
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -19048,8 +17317,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "09 Jun 2026, 11:12:35",
-    "order": 45,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 45
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -19059,8 +17327,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:11:36",
-    "order": 46,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 46
   },
   {
     "code": "2ca69d29-e6dc-4612-9dc3-ccd2065888ee",
@@ -19070,8 +17337,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:11:24",
-    "order": 47,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 47
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19081,8 +17347,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "30 May 2026, 18:55:43",
-    "order": 1,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 1
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19092,8 +17357,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "30 May 2026, 10:45:33",
-    "order": 2,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 2
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19103,8 +17367,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 22:52:51",
-    "order": 3,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 3
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19114,8 +17377,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 22:47:02",
-    "order": 4,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 4
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19125,8 +17387,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "27 May 2026, 22:32:46",
-    "order": 5,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 5
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19136,8 +17397,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 20:28:44",
-    "order": 6,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 6
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19147,8 +17407,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 18:12:56",
-    "order": 7,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 7
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19158,8 +17417,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 17:47:10",
-    "order": 8,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 8
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19169,8 +17427,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 17:31:09",
-    "order": 9,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 9
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19180,8 +17437,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 17:29:03",
-    "order": 10,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 10
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19191,8 +17447,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 17:25:39",
-    "order": 11,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 11
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19202,8 +17457,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 13:25:39",
-    "order": 12,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 12
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19213,8 +17467,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "26 May 2026, 09:48:28",
-    "order": 13,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 13
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19224,8 +17477,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "25 May 2026, 11:43:22",
-    "order": 14,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 14
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19235,8 +17487,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "25 May 2026, 11:29:43",
-    "order": 15,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 15
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19246,8 +17497,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "25 May 2026, 06:29:23",
-    "order": 16,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 16
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19257,8 +17507,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "24 May 2026, 07:51:26",
-    "order": 17,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 17
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19268,8 +17517,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "23 May 2026, 20:19:03",
-    "order": 18,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 18
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19279,8 +17527,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "23 May 2026, 13:10:15",
-    "order": 19,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 19
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19290,8 +17537,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "23 May 2026, 12:15:01",
-    "order": 20,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 20
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19301,8 +17547,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "23 May 2026, 12:03:43",
-    "order": 21,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 21
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19312,8 +17557,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "23 May 2026, 12:01:57",
-    "order": 22,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 22
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19323,8 +17567,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "22 May 2026, 18:07:23",
-    "order": 23,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 23
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19334,8 +17577,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "22 May 2026, 18:04:02",
-    "order": 24,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 24
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19345,8 +17587,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "22 May 2026, 18:03:19",
-    "order": 25,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 25
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19356,8 +17597,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "22 May 2026, 09:26:04",
-    "order": 26,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 26
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19367,8 +17607,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "22 May 2026, 09:02:13",
-    "order": 27,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 27
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19378,8 +17617,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "22 May 2026, 09:02:09",
-    "order": 28,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 28
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19389,8 +17627,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 13:41:30",
-    "order": 29,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 29
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19400,8 +17637,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "06 Jun 2026, 02:14:16",
-    "order": 30,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 30
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19411,8 +17647,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 10:33:12",
-    "order": 31,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 31
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19422,8 +17657,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 10:31:54",
-    "order": 32,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 32
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19433,8 +17667,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 10:28:38",
-    "order": 33,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 33
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19444,8 +17677,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 09:30:30",
-    "order": 34,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 34
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19455,8 +17687,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 09:28:48",
-    "order": 35,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 35
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19466,8 +17697,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 09:28:00",
-    "order": 36,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 36
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19477,8 +17707,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 09:14:44",
-    "order": 37,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 37
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19488,8 +17717,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:30:01",
-    "order": 38,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 38
   },
   {
     "code": "c7babf50-a57b-4fc1-8fe7-e08f2b09f402",
@@ -19499,8 +17727,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:29:58",
-    "order": 39,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 39
   },
   {
     "code": "c7b87907-2b61-416e-99d5-70e9f6588744",
@@ -19510,8 +17737,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 0
   },
   {
     "code": "e2e50256-a645-451c-b016-04502c08f949",
@@ -19521,8 +17747,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 09:28:44",
-    "order": 1,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 1
   },
   {
     "code": "e2e50256-a645-451c-b016-04502c08f949",
@@ -19532,8 +17757,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 09:28:15",
-    "order": 2,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 2
   },
   {
     "code": "e2e50256-a645-451c-b016-04502c08f949",
@@ -19543,8 +17767,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 09:27:05",
-    "order": 3,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 3
   },
   {
     "code": "e2e50256-a645-451c-b016-04502c08f949",
@@ -19554,8 +17777,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 09:26:52",
-    "order": 4,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 4
   },
   {
     "code": "e2e50256-a645-451c-b016-04502c08f949",
@@ -19565,8 +17787,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "19 May 2026, 09:26:46",
-    "order": 5,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 5
   },
   {
     "code": "e2e50256-a645-451c-b016-04502c08f949",
@@ -19576,8 +17797,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "19 May 2026, 09:26:43",
-    "order": 6,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 6
   },
   {
     "code": "8791be19-f096-433c-b99d-562239538f9f",
@@ -19587,8 +17807,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 0
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19598,8 +17817,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "30 May 2026, 01:59:53",
-    "order": 1,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 1
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19609,8 +17827,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "27 May 2026, 18:47:25",
-    "order": 2,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 2
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19620,8 +17837,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "27 May 2026, 17:57:43",
-    "order": 3,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 3
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19631,8 +17847,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "27 May 2026, 17:57:13",
-    "order": 4,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 4
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19642,8 +17857,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "27 May 2026, 17:55:36",
-    "order": 5,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 5
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19653,8 +17867,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "23 May 2026, 12:23:22",
-    "order": 6,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 6
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19664,8 +17877,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 17:30:29",
-    "order": 7,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 7
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19675,8 +17887,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 09:41:12",
-    "order": 8,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 8
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19686,8 +17897,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 09:41:06",
-    "order": 9,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 9
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19697,8 +17907,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "19 May 2026, 09:40:59",
-    "order": 10,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 10
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19708,8 +17917,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "19 May 2026, 09:40:57",
-    "order": 11,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 11
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19719,8 +17927,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "18 May 2026, 14:49:27",
-    "order": 12,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 12
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19730,8 +17937,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "18 May 2026, 14:49:23",
-    "order": 13,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 13
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19741,8 +17947,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "18 May 2026, 14:25:44",
-    "order": 14,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 14
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19752,8 +17957,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "18 May 2026, 14:25:34",
-    "order": 15,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 15
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19763,8 +17967,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "18 May 2026, 14:25:31",
-    "order": 16,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 16
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19774,8 +17977,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "18 May 2026, 14:25:25",
-    "order": 17,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 17
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19785,8 +17987,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 06:24:51",
-    "order": 18,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 18
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19796,8 +17997,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 06:21:11",
-    "order": 19,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 19
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19807,8 +18007,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:00:53",
-    "order": 20,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 20
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19818,8 +18017,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:00:15",
-    "order": 21,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 21
   },
   {
     "code": "0d8ef23d-f885-473c-8e5c-a7f680dbca93",
@@ -19829,8 +18027,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:00:12",
-    "order": 22,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 22
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19840,8 +18037,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "22 May 2026, 18:50:23",
-    "order": 1,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 1
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19851,8 +18047,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "22 May 2026, 08:56:04",
-    "order": 2,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 2
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19862,8 +18057,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 16:31:13",
-    "order": 3,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 3
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19873,8 +18067,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "20 May 2026, 16:28:00",
-    "order": 4,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 4
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19884,8 +18077,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "20 May 2026, 09:18:37",
-    "order": 5,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 5
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19895,8 +18087,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 11:14:51",
-    "order": 6,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 6
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19906,8 +18097,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 09:33:18",
-    "order": 7,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 7
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19917,8 +18107,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 09:33:12",
-    "order": 8,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 8
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19928,8 +18117,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 09:28:05",
-    "order": 9,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 9
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19939,8 +18127,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 09:27:53",
-    "order": 10,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 10
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19950,8 +18137,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 09:27:43",
-    "order": 11,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 11
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19961,8 +18147,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 09:27:27",
-    "order": 12,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 12
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19972,8 +18157,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 09:27:14",
-    "order": 13,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 13
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19983,8 +18167,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 09:26:55",
-    "order": 14,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 14
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -19994,8 +18177,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 09:26:14",
-    "order": 15,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 15
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -20005,8 +18187,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "19 May 2026, 09:18:16",
-    "order": 16,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 16
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -20016,8 +18197,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "19 May 2026, 09:18:07",
-    "order": 17,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 17
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -20027,8 +18207,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "19 May 2026, 09:17:08",
-    "order": 18,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 18
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -20038,8 +18217,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "19 May 2026, 09:17:05",
-    "order": 19,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 19
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -20049,8 +18227,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 22:40:59",
-    "order": 20,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 20
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -20060,8 +18237,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:07:31",
-    "order": 21,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 21
   },
   {
     "code": "d2751b3a-8eaa-4a16-bf17-e59869e1015d",
@@ -20071,8 +18247,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:07:31",
-    "order": 22,
-    "kab_name": "[11] BANGGAI LAUT"
+    "order": 22
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20082,8 +18257,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 10:55:48",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20093,8 +18267,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 10:55:44",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20104,8 +18277,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 10:55:39",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20115,8 +18287,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:54:05",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20126,8 +18297,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:54:01",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20137,8 +18307,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "08 Jun 2026, 10:13:52",
-    "order": 6,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 6
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20148,8 +18317,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "08 Jun 2026, 10:13:50",
-    "order": 7,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 7
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20159,8 +18327,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "08 Jun 2026, 10:10:45",
-    "order": 8,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 8
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20170,8 +18337,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "08 Jun 2026, 10:08:16",
-    "order": 9,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 9
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20181,8 +18347,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "08 Jun 2026, 08:14:46",
-    "order": 10,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 10
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20192,8 +18357,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "07 Jun 2026, 17:24:02",
-    "order": 11,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 11
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20203,8 +18367,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "07 Jun 2026, 17:23:38",
-    "order": 12,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 12
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20214,8 +18377,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "07 Jun 2026, 17:23:37",
-    "order": 13,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 13
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20225,8 +18387,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "07 Jun 2026, 11:42:29",
-    "order": 14,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 14
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20236,8 +18397,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "07 Jun 2026, 11:42:26",
-    "order": 15,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 15
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20247,8 +18407,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "07 Jun 2026, 11:40:27",
-    "order": 16,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 16
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20258,8 +18417,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "07 Jun 2026, 11:40:24",
-    "order": 17,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 17
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20269,8 +18427,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 12:42:22",
-    "order": 18,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 18
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20280,8 +18437,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 10:24:04",
-    "order": 19,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 19
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20291,8 +18447,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 10:14:11",
-    "order": 20,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 20
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20302,8 +18457,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 00:53:05",
-    "order": 21,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 21
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20313,8 +18467,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:48:13",
-    "order": 22,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 22
   },
   {
     "code": "3baa532e-0433-47a0-8c46-cd9311980b74",
@@ -20324,8 +18477,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:48:09",
-    "order": 23,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 23
   },
   {
     "code": "1a6af0b9-7972-4eb3-a07c-c9cc248623f4",
@@ -20335,8 +18487,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "1106ba1c-0f3d-4323-8a91-e79190cbcb6e",
@@ -20346,8 +18497,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:01:08",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "1106ba1c-0f3d-4323-8a91-e79190cbcb6e",
@@ -20357,8 +18507,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:01:05",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "1106ba1c-0f3d-4323-8a91-e79190cbcb6e",
@@ -20368,8 +18517,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:14:44",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "1106ba1c-0f3d-4323-8a91-e79190cbcb6e",
@@ -20379,8 +18527,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:14:43",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "0eb9821f-97d6-4b89-9260-2db50b9a5f9b",
@@ -20390,8 +18537,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "82824ca4-ec8c-4c37-9d5c-f89a797e2f51",
@@ -20401,8 +18547,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:38:04",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "82824ca4-ec8c-4c37-9d5c-f89a797e2f51",
@@ -20412,8 +18557,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:38:00",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "e879bcf3-fbfe-41af-99c3-92c03367842e",
@@ -20423,8 +18567,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:24:25",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "e879bcf3-fbfe-41af-99c3-92c03367842e",
@@ -20434,8 +18577,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:24:21",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "b2e3d444-9bad-4316-a131-c9c29f50ce40",
@@ -20445,8 +18587,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 06:19:08",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "b2e3d444-9bad-4316-a131-c9c29f50ce40",
@@ -20456,8 +18597,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:19:08",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "f4849667-d8a6-450a-879f-f50f1c2fc23a",
@@ -20467,8 +18607,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:05:51",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "f4849667-d8a6-450a-879f-f50f1c2fc23a",
@@ -20478,8 +18617,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:05:47",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "1554944f-d74d-4eb9-ab17-de3ed0f7d277",
@@ -20489,8 +18627,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:02:01",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "1554944f-d74d-4eb9-ab17-de3ed0f7d277",
@@ -20500,8 +18637,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:02:01",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "1554944f-d74d-4eb9-ab17-de3ed0f7d277",
@@ -20511,8 +18647,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:25:18",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "1554944f-d74d-4eb9-ab17-de3ed0f7d277",
@@ -20522,8 +18657,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:25:18",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "7d8abec1-d8da-463f-837f-38a19560c84e",
@@ -20533,8 +18667,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:26:40",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "7d8abec1-d8da-463f-837f-38a19560c84e",
@@ -20544,8 +18677,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:26:39",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "0c8103e5-7229-4b3b-9809-5bd4cb99f573",
@@ -20555,8 +18687,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:00:03",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "0c8103e5-7229-4b3b-9809-5bd4cb99f573",
@@ -20566,8 +18697,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:00:01",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "0c8103e5-7229-4b3b-9809-5bd4cb99f573",
@@ -20577,8 +18707,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:06:46",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "0c8103e5-7229-4b3b-9809-5bd4cb99f573",
@@ -20588,8 +18717,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:06:42",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "2fa92ad0-c8a7-4662-b925-e5dd4e2628e1",
@@ -20599,8 +18727,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "8bc4aae4-7ed8-424e-8afa-484a6213e024",
@@ -20610,8 +18737,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:05:59",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "8bc4aae4-7ed8-424e-8afa-484a6213e024",
@@ -20621,8 +18747,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:05:59",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "55f762ee-5430-4a38-acfc-694f15c7d775",
@@ -20632,8 +18757,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:49:12",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "55f762ee-5430-4a38-acfc-694f15c7d775",
@@ -20643,8 +18767,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:49:11",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "2a80871f-7f5b-42aa-975d-8c1a1877245b",
@@ -20654,8 +18777,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "1d9cc5da-cc09-4fbd-8aac-7e26f3628c2a",
@@ -20665,8 +18787,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:03:54",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "1d9cc5da-cc09-4fbd-8aac-7e26f3628c2a",
@@ -20676,8 +18797,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:03:45",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "c16551af-cbee-494d-94e7-660d02c62450",
@@ -20687,8 +18807,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "75d37112-3dbf-4609-857c-9e6f1f948cd1",
@@ -20698,8 +18817,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "3829c268-a45b-4955-94e0-3fc256c0ba36",
@@ -20709,8 +18827,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "ebd603ef-7f74-4fd0-9de2-c21bccbb01c4",
@@ -20720,8 +18837,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:34:55",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "ebd603ef-7f74-4fd0-9de2-c21bccbb01c4",
@@ -20731,8 +18847,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:34:51",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "deab733e-671a-4081-93c5-1bff77e9275e",
@@ -20742,8 +18857,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 16:30:28",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "deab733e-671a-4081-93c5-1bff77e9275e",
@@ -20753,8 +18867,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:48:38",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "deab733e-671a-4081-93c5-1bff77e9275e",
@@ -20764,8 +18877,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:48:38",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "b2310bbd-c628-4684-8403-818782f28d3a",
@@ -20775,8 +18887,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 10:50:59",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "b2310bbd-c628-4684-8403-818782f28d3a",
@@ -20786,8 +18897,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 15:06:12",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "b2310bbd-c628-4684-8403-818782f28d3a",
@@ -20797,8 +18907,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 06:16:56",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "b2310bbd-c628-4684-8403-818782f28d3a",
@@ -20808,8 +18917,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:16:15",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "b2310bbd-c628-4684-8403-818782f28d3a",
@@ -20819,8 +18927,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:16:11",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "6172be04-5bfb-4ed8-b4f8-8bb997c37bac",
@@ -20830,8 +18937,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 02:17:19",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "6172be04-5bfb-4ed8-b4f8-8bb997c37bac",
@@ -20841,8 +18947,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:17:08",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "6172be04-5bfb-4ed8-b4f8-8bb997c37bac",
@@ -20852,8 +18957,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:17:04",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "1bc4f8a0-1e76-41ac-91cb-fa6997c36298",
@@ -20863,8 +18967,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "a8073f5b-2915-4e40-b01a-5126ff9e232d",
@@ -20874,8 +18977,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:40:19",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "a8073f5b-2915-4e40-b01a-5126ff9e232d",
@@ -20885,8 +18987,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:40:16",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "6ecb9c82-bcfe-45f1-81bd-b8263db68fd9",
@@ -20896,8 +18997,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:43:51",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "6ecb9c82-bcfe-45f1-81bd-b8263db68fd9",
@@ -20907,8 +19007,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:43:47",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "d1652395-e321-40c0-bffa-cd35d0c70629",
@@ -20918,8 +19017,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 08:16:07",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "d1652395-e321-40c0-bffa-cd35d0c70629",
@@ -20929,8 +19027,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:03:43",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "d1652395-e321-40c0-bffa-cd35d0c70629",
@@ -20940,8 +19037,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:03:36",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "df3046b4-68b5-434c-9531-b1f4e4bb005a",
@@ -20951,8 +19047,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 08:50:41",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "df3046b4-68b5-434c-9531-b1f4e4bb005a",
@@ -20962,8 +19057,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:50:41",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "28ecf941-aedf-427f-bd96-342269d41d12",
@@ -20973,8 +19067,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "d95a9cff-56dc-4972-97d5-0168460f1788",
@@ -20984,8 +19077,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "f7004b0c-a366-446e-a0c6-5d5c38d06f8a",
@@ -20995,8 +19087,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:13:26",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "f7004b0c-a366-446e-a0c6-5d5c38d06f8a",
@@ -21006,8 +19097,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:13:25",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "bbd28d86-0e18-46b1-a76b-b4369a5c019e",
@@ -21017,8 +19107,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:46:13",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "bbd28d86-0e18-46b1-a76b-b4369a5c019e",
@@ -21028,8 +19117,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:46:09",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "a365dbfe-2882-4403-9cf0-fe50192d3ef1",
@@ -21039,8 +19127,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "54c4beed-6e56-44c7-8ee4-75f5952add94",
@@ -21050,8 +19137,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:47:07",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "54c4beed-6e56-44c7-8ee4-75f5952add94",
@@ -21061,8 +19147,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:47:02",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "754d8525-ef65-4af3-98f1-2a68bab63155",
@@ -21072,8 +19157,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "e7172c9c-d6e0-4ede-88a1-82b8ad057bc0",
@@ -21083,8 +19167,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:19:11",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "e7172c9c-d6e0-4ede-88a1-82b8ad057bc0",
@@ -21094,8 +19177,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:19:09",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "4ca031b1-eec2-42b2-a180-8978ab437696",
@@ -21105,8 +19187,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:19:39",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "4ca031b1-eec2-42b2-a180-8978ab437696",
@@ -21116,8 +19197,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:19:33",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "4ca031b1-eec2-42b2-a180-8978ab437696",
@@ -21127,8 +19207,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:32:52",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "4ca031b1-eec2-42b2-a180-8978ab437696",
@@ -21138,8 +19217,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:32:47",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "a4b84ea9-ac5f-4edc-97ec-d5ee3e81750a",
@@ -21149,8 +19227,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "abc28462-7fa6-459e-8c02-3c4c5e5c5785",
@@ -21160,8 +19237,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "a8a6cac6-c2d5-4825-b135-987a006c71b9",
@@ -21171,8 +19247,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:42:28",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "a8a6cac6-c2d5-4825-b135-987a006c71b9",
@@ -21182,8 +19257,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:42:28",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "a63ba697-d077-4fe1-b290-954752ea512b",
@@ -21193,8 +19267,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:33:24",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "a63ba697-d077-4fe1-b290-954752ea512b",
@@ -21204,8 +19277,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:33:21",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "44af16c8-fee9-4df6-a974-e9529aeecb50",
@@ -21215,8 +19287,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:17:32",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "44af16c8-fee9-4df6-a974-e9529aeecb50",
@@ -21226,8 +19297,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:17:32",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "44af16c8-fee9-4df6-a974-e9529aeecb50",
@@ -21237,8 +19307,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:17:28",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "44af16c8-fee9-4df6-a974-e9529aeecb50",
@@ -21248,8 +19317,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 08:52:30",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "44af16c8-fee9-4df6-a974-e9529aeecb50",
@@ -21259,8 +19327,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 01:40:00",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "44af16c8-fee9-4df6-a974-e9529aeecb50",
@@ -21270,8 +19337,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 01:10:17",
-    "order": 6,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 6
   },
   {
     "code": "44af16c8-fee9-4df6-a974-e9529aeecb50",
@@ -21281,8 +19347,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:10:10",
-    "order": 7,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 7
   },
   {
     "code": "44af16c8-fee9-4df6-a974-e9529aeecb50",
@@ -21292,8 +19357,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:10:06",
-    "order": 8,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 8
   },
   {
     "code": "c1de28f3-570c-4ae7-bb3a-332da306d033",
@@ -21303,8 +19367,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:10:57",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "c1de28f3-570c-4ae7-bb3a-332da306d033",
@@ -21314,8 +19377,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:10:57",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "09f3c73a-6fc2-4596-991e-fe524a8e94c6",
@@ -21325,8 +19387,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:59:31",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "09f3c73a-6fc2-4596-991e-fe524a8e94c6",
@@ -21336,8 +19397,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:59:29",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "09f3c73a-6fc2-4596-991e-fe524a8e94c6",
@@ -21347,8 +19407,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 00:02:02",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "09f3c73a-6fc2-4596-991e-fe524a8e94c6",
@@ -21358,8 +19417,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:02:42",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "09f3c73a-6fc2-4596-991e-fe524a8e94c6",
@@ -21369,8 +19427,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:02:42",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "33cc9d96-40b8-43d2-b5b8-a1fa6a37e736",
@@ -21380,8 +19437,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:13:06",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "33cc9d96-40b8-43d2-b5b8-a1fa6a37e736",
@@ -21391,8 +19447,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:13:05",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "33cc9d96-40b8-43d2-b5b8-a1fa6a37e736",
@@ -21402,8 +19457,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 03:14:02",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "33cc9d96-40b8-43d2-b5b8-a1fa6a37e736",
@@ -21413,8 +19467,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:34:36",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "33cc9d96-40b8-43d2-b5b8-a1fa6a37e736",
@@ -21424,8 +19477,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:34:33",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "7b69696f-7e8e-4818-a505-28d4354d53a9",
@@ -21435,8 +19487,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:20:21",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "7b69696f-7e8e-4818-a505-28d4354d53a9",
@@ -21446,8 +19497,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:20:19",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "277ec278-c33e-468c-90ff-5bb3a1297e53",
@@ -21457,8 +19507,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:09:09",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "277ec278-c33e-468c-90ff-5bb3a1297e53",
@@ -21468,8 +19517,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:09:06",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "277ec278-c33e-468c-90ff-5bb3a1297e53",
@@ -21479,8 +19527,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:02:09",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "277ec278-c33e-468c-90ff-5bb3a1297e53",
@@ -21490,8 +19537,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:02:05",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "f128e00c-39ea-466b-8643-441a484a566a",
@@ -21501,8 +19547,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:53:06",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "f128e00c-39ea-466b-8643-441a484a566a",
@@ -21512,8 +19557,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:53:02",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "13083720-7c38-4ae8-aa38-4370cac90e72",
@@ -21523,8 +19567,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:01:23",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "13083720-7c38-4ae8-aa38-4370cac90e72",
@@ -21534,8 +19577,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:01:22",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "13083720-7c38-4ae8-aa38-4370cac90e72",
@@ -21545,8 +19587,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:20:11",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "13083720-7c38-4ae8-aa38-4370cac90e72",
@@ -21556,8 +19597,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:20:08",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "d7864a9a-d769-42d5-9760-3feede7020be",
@@ -21567,8 +19607,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:27:22",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "d7864a9a-d769-42d5-9760-3feede7020be",
@@ -21578,8 +19617,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:27:18",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "6046856e-e0f8-4271-9cb1-c555feb23153",
@@ -21589,8 +19627,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "a810867c-a438-40de-9762-2a01ea88143b",
@@ -21600,8 +19637,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:40:29",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "a810867c-a438-40de-9762-2a01ea88143b",
@@ -21611,8 +19647,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:40:25",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "16f0450b-ef0b-4f9a-98f3-3e0023207b7e",
@@ -21622,8 +19657,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:02:23",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "16f0450b-ef0b-4f9a-98f3-3e0023207b7e",
@@ -21633,8 +19667,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:02:20",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "16f0450b-ef0b-4f9a-98f3-3e0023207b7e",
@@ -21644,8 +19677,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:31:39",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "16f0450b-ef0b-4f9a-98f3-3e0023207b7e",
@@ -21655,8 +19687,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:31:39",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "358046b3-52f7-47ea-aba9-acf3a896a0d4",
@@ -21666,8 +19697,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:13:29",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "358046b3-52f7-47ea-aba9-acf3a896a0d4",
@@ -21677,8 +19707,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:13:27",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "358046b3-52f7-47ea-aba9-acf3a896a0d4",
@@ -21688,8 +19717,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:37:47",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "358046b3-52f7-47ea-aba9-acf3a896a0d4",
@@ -21699,8 +19727,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:37:42",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "a1991f78-a792-460f-a129-50ae286bcf2b",
@@ -21710,8 +19737,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:17:57",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "a1991f78-a792-460f-a129-50ae286bcf2b",
@@ -21721,8 +19747,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:17:57",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "964afb29-6bd2-4eed-80a6-cad68ec6908c",
@@ -21732,8 +19757,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 11:47:27",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "964afb29-6bd2-4eed-80a6-cad68ec6908c",
@@ -21743,8 +19767,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:47:26",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "0829529d-cd5a-4edf-83d1-af18106eaef1",
@@ -21754,8 +19777,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "09 Jun 2026, 10:59:03",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "0829529d-cd5a-4edf-83d1-af18106eaef1",
@@ -21765,8 +19787,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 22:59:43",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "0829529d-cd5a-4edf-83d1-af18106eaef1",
@@ -21776,8 +19797,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:58:46",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "09cd0a93-b525-40af-8d7a-e03eb2e2559b",
@@ -21787,8 +19807,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:59:26",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "09cd0a93-b525-40af-8d7a-e03eb2e2559b",
@@ -21798,8 +19817,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:59:21",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "09cd0a93-b525-40af-8d7a-e03eb2e2559b",
@@ -21809,8 +19827,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:02:32",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "09cd0a93-b525-40af-8d7a-e03eb2e2559b",
@@ -21820,8 +19837,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:02:32",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "5fbed422-30bc-4696-b7a8-258f50007cc1",
@@ -21831,8 +19847,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "b46d6165-bdc4-4835-9971-18a9fd67bcd7",
@@ -21842,8 +19857,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 10:54:04",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "b46d6165-bdc4-4835-9971-18a9fd67bcd7",
@@ -21853,8 +19867,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 18:13:05",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "b46d6165-bdc4-4835-9971-18a9fd67bcd7",
@@ -21864,8 +19877,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 06:24:52",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "b46d6165-bdc4-4835-9971-18a9fd67bcd7",
@@ -21875,8 +19887,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:24:43",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "b46d6165-bdc4-4835-9971-18a9fd67bcd7",
@@ -21886,8 +19897,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:24:40",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "c1c63d07-75e8-48c8-bd37-7da183e59e42",
@@ -21897,8 +19907,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:10:45",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "c1c63d07-75e8-48c8-bd37-7da183e59e42",
@@ -21908,8 +19917,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:10:42",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "e93fb6d2-22a1-4660-9122-6b56dfe0154c",
@@ -21919,8 +19927,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:55:07",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "e93fb6d2-22a1-4660-9122-6b56dfe0154c",
@@ -21930,30 +19937,17 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:55:06",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "a4b101d1-74b6-4281-af2f-fd8905fab56a",
     "company_name": "MIRNA KARYA KONSTRUKSINDO",
     "survey_status": "OPEN",
     "email": "mirnakaryakonstruksindocv@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 11:48:40",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
-  },
-  {
-    "code": "a4b101d1-74b6-4281-af2f-fd8905fab56a",
-    "company_name": "MIRNA KARYA KONSTRUKSINDO",
-    "survey_status": "OPEN",
-    "email": "mirnakaryakonstruksindocv@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 11:48:40",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
   },
   {
     "code": "ff7844bc-94de-4a8b-a083-4474ff8bbdd5",
@@ -21963,8 +19957,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:45:02",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "ff7844bc-94de-4a8b-a083-4474ff8bbdd5",
@@ -21974,8 +19967,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:45:01",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "7058c376-6ecd-42e9-bc37-bde84e1d7d62",
@@ -21985,8 +19977,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:46:52",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "7058c376-6ecd-42e9-bc37-bde84e1d7d62",
@@ -21996,8 +19987,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:46:47",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "d2dc561a-1b05-4a33-9b03-c32aed77b7e1",
@@ -22007,8 +19997,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:09:41",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "d2dc561a-1b05-4a33-9b03-c32aed77b7e1",
@@ -22018,8 +20007,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:09:34",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "0c3dbd4c-d11f-48e5-bcfa-44285820d37a",
@@ -22029,8 +20017,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:59:59",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "0c3dbd4c-d11f-48e5-bcfa-44285820d37a",
@@ -22040,8 +20027,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:59:51",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "0c3dbd4c-d11f-48e5-bcfa-44285820d37a",
@@ -22051,8 +20037,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:06:19",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "0c3dbd4c-d11f-48e5-bcfa-44285820d37a",
@@ -22062,8 +20047,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:06:18",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "50c05086-d1c5-4035-aefe-4b6ba4a8e60e",
@@ -22073,8 +20057,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:40:01",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "50c05086-d1c5-4035-aefe-4b6ba4a8e60e",
@@ -22084,8 +20067,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:40:01",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "32d977be-cb38-4df2-b0c2-1b3a1c9b2853",
@@ -22095,8 +20077,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:12:58",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "32d977be-cb38-4df2-b0c2-1b3a1c9b2853",
@@ -22106,8 +20087,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:12:58",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "32d977be-cb38-4df2-b0c2-1b3a1c9b2853",
@@ -22117,8 +20097,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:33:06",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "32d977be-cb38-4df2-b0c2-1b3a1c9b2853",
@@ -22128,8 +20107,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:33:06",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "11a0bebb-998a-4a63-8e66-6930fd7bf4d4",
@@ -22139,8 +20117,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:01:12",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "11a0bebb-998a-4a63-8e66-6930fd7bf4d4",
@@ -22150,8 +20127,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:01:10",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "11a0bebb-998a-4a63-8e66-6930fd7bf4d4",
@@ -22161,8 +20137,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:15:52",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "11a0bebb-998a-4a63-8e66-6930fd7bf4d4",
@@ -22172,8 +20147,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:15:49",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "f823be3f-1bfe-42c9-95c7-4fc13e33f634",
@@ -22183,8 +20157,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "c1ceb654-b223-4cc1-a882-0c2661c752df",
@@ -22194,8 +20167,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "aee9b4c8-7ccf-45b7-8e30-bef609bb81fb",
@@ -22205,8 +20177,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:03:46",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "aee9b4c8-7ccf-45b7-8e30-bef609bb81fb",
@@ -22216,8 +20187,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:02:58",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "dda2a354-72ef-4a0f-b8fe-5154631d3721",
@@ -22227,8 +20197,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:45:29",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "dda2a354-72ef-4a0f-b8fe-5154631d3721",
@@ -22238,8 +20207,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:45:28",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "6d70922f-566a-4f19-a35e-92218949b09c",
@@ -22249,8 +20217,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:41:43",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "6d70922f-566a-4f19-a35e-92218949b09c",
@@ -22260,8 +20227,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:41:39",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "e38169e7-169a-4ff2-bcb8-3d47361aa53e",
@@ -22271,8 +20237,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "e817ea64-40fc-42c4-85ee-8a8822589937",
@@ -22282,8 +20247,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:22:10",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "e817ea64-40fc-42c4-85ee-8a8822589937",
@@ -22293,8 +20257,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:22:10",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "7bae4a28-75bf-486c-aac3-fbf72d0bbc92",
@@ -22304,8 +20267,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 03:21:19",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "7bae4a28-75bf-486c-aac3-fbf72d0bbc92",
@@ -22315,8 +20277,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:21:19",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "6c80a929-7607-44dd-887a-bd5a22a5911d",
@@ -22326,8 +20287,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:39:43",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "6c80a929-7607-44dd-887a-bd5a22a5911d",
@@ -22337,8 +20297,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:39:39",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "63bcbee9-e0c4-49c2-98ad-2e8aebe6b65f",
@@ -22348,8 +20307,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:21:08",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "63bcbee9-e0c4-49c2-98ad-2e8aebe6b65f",
@@ -22359,8 +20317,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:21:05",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "db6fd665-58af-46d3-96bd-c71673cb2c95",
@@ -22370,8 +20327,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:37:19",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "db6fd665-58af-46d3-96bd-c71673cb2c95",
@@ -22381,8 +20337,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:37:16",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "7297f854-10ed-43a8-8eed-90168a7a56b8",
@@ -22392,8 +20347,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:53:45",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "7297f854-10ed-43a8-8eed-90168a7a56b8",
@@ -22403,8 +20357,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:53:41",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "4b8d0601-42a0-4575-b3c8-944c48c04c51",
@@ -22414,8 +20367,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "2d7775ab-3b35-41ff-af69-8da7746a2f69",
@@ -22425,8 +20377,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "3cabf32c-e0b1-4298-93c7-064538de9727",
@@ -22436,8 +20387,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:15:33",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "3cabf32c-e0b1-4298-93c7-064538de9727",
@@ -22447,8 +20397,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:15:27",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "3cabf32c-e0b1-4298-93c7-064538de9727",
@@ -22458,8 +20407,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:50:11",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "3cabf32c-e0b1-4298-93c7-064538de9727",
@@ -22469,8 +20417,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:50:06",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "65059c22-537a-45ff-8dc3-b8f8d4542153",
@@ -22480,8 +20427,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:24:51",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "65059c22-537a-45ff-8dc3-b8f8d4542153",
@@ -22491,8 +20437,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:24:47",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "a8f1b0e0-6bf8-4392-ba4c-29982d55b8e4",
@@ -22502,8 +20447,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "e6cadc06-58c7-4b03-87a5-6bec3f5b9e43",
@@ -22513,8 +20457,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:17:56",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "e6cadc06-58c7-4b03-87a5-6bec3f5b9e43",
@@ -22524,8 +20467,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:17:53",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "498d2f68-49d5-4367-bbb8-decbf6075992",
@@ -22535,8 +20477,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "a34c1f81-84a9-47c7-9835-8d33d1028ce0",
@@ -22546,8 +20487,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:25:23",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "a34c1f81-84a9-47c7-9835-8d33d1028ce0",
@@ -22557,8 +20497,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:25:23",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "ae3a7590-91d4-483d-864a-3e97ba71e36a",
@@ -22568,8 +20507,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:01:03",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "ae3a7590-91d4-483d-864a-3e97ba71e36a",
@@ -22579,8 +20517,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:00:41",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "5d7a4db2-87b6-4ddb-9dce-ba7a1a560e3d",
@@ -22590,8 +20527,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 09:55:32",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "5d7a4db2-87b6-4ddb-9dce-ba7a1a560e3d",
@@ -22601,8 +20537,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 09:55:25",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "5d7a4db2-87b6-4ddb-9dce-ba7a1a560e3d",
@@ -22612,8 +20547,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 09:55:19",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "5d7a4db2-87b6-4ddb-9dce-ba7a1a560e3d",
@@ -22623,8 +20557,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 11:38:24",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "5d7a4db2-87b6-4ddb-9dce-ba7a1a560e3d",
@@ -22634,8 +20567,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 11:38:20",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "bf80de69-7b3b-490c-8124-38ba829bd928",
@@ -22645,8 +20577,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:01:31",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "bf80de69-7b3b-490c-8124-38ba829bd928",
@@ -22656,8 +20587,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:01:30",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "d8a61490-1b0b-436d-a731-d6c2f6617751",
@@ -22667,8 +20597,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "2e96d1e8-7d9c-4ae5-8700-75e5422851c0",
@@ -22678,8 +20607,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:11:59",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "2e96d1e8-7d9c-4ae5-8700-75e5422851c0",
@@ -22689,8 +20617,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:11:57",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "2e96d1e8-7d9c-4ae5-8700-75e5422851c0",
@@ -22700,8 +20627,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:23:19",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "2e96d1e8-7d9c-4ae5-8700-75e5422851c0",
@@ -22711,8 +20637,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:23:15",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "abc0c74c-da4d-4b33-b76a-7871d91e2d9f",
@@ -22722,8 +20647,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "31f5b989-1180-46b1-aa65-84c62d21e471",
@@ -22733,8 +20657,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "927e3986-1ff1-437e-89e1-4d4c0640899b",
@@ -22744,8 +20667,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:28:03",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "927e3986-1ff1-437e-89e1-4d4c0640899b",
@@ -22755,8 +20677,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:27:59",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "d11fb3b3-d3c2-4ed0-9023-6e084591302e",
@@ -22766,8 +20687,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "59af4947-25c2-4289-95d2-8da8a9635e4d",
@@ -22777,8 +20697,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 15:00:08",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "59af4947-25c2-4289-95d2-8da8a9635e4d",
@@ -22788,8 +20707,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 13:07:40",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "59af4947-25c2-4289-95d2-8da8a9635e4d",
@@ -22799,8 +20717,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:00:32",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "59af4947-25c2-4289-95d2-8da8a9635e4d",
@@ -22810,8 +20727,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:00:32",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "99b83b45-ca61-487f-b4eb-7f20011215da",
@@ -22821,8 +20737,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "8dfe9383-36f5-46d4-8cc3-ad3f5fe48699",
@@ -22832,8 +20747,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "9430500a-c80a-426a-9105-19c0485ea15e",
@@ -22843,8 +20757,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "2877a43b-ddee-475c-bbcc-52beb9fc1dec",
@@ -22854,8 +20767,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:09:27",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "2877a43b-ddee-475c-bbcc-52beb9fc1dec",
@@ -22865,8 +20777,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:09:15",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "2877a43b-ddee-475c-bbcc-52beb9fc1dec",
@@ -22876,8 +20787,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:09:11",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "2877a43b-ddee-475c-bbcc-52beb9fc1dec",
@@ -22887,8 +20797,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:04:22",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "fbdea8c6-5f42-4fe5-9af9-efe29c8a8fca",
@@ -22898,8 +20807,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:32:05",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "fbdea8c6-5f42-4fe5-9af9-efe29c8a8fca",
@@ -22909,8 +20817,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:32:02",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "49b5bbf1-980c-4583-9e5d-39c20ade4f49",
@@ -22920,8 +20827,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "60949423-6c05-48fd-9338-3a14e7eff288",
@@ -22931,8 +20837,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:14:15",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "60949423-6c05-48fd-9338-3a14e7eff288",
@@ -22942,8 +20847,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:14:10",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "b7e0a507-0e5e-4b4f-9547-9577e7c34847",
@@ -22953,8 +20857,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:34:47",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "b7e0a507-0e5e-4b4f-9547-9577e7c34847",
@@ -22964,8 +20867,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:34:46",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "96030200-682c-4093-b136-8907d2532691",
@@ -22975,8 +20877,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:37:12",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "96030200-682c-4093-b136-8907d2532691",
@@ -22986,8 +20887,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:37:08",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "37de7be5-69dc-4053-9393-c1a6e6d774ff",
@@ -22997,8 +20897,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:13:58",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "37de7be5-69dc-4053-9393-c1a6e6d774ff",
@@ -23008,8 +20907,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:13:57",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "37de7be5-69dc-4053-9393-c1a6e6d774ff",
@@ -23019,8 +20917,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:41:35",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "37de7be5-69dc-4053-9393-c1a6e6d774ff",
@@ -23030,8 +20927,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:41:32",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "b5929352-5590-414b-8842-62ee2298dffe",
@@ -23041,8 +20937,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "7e5ec8e9-53bd-4601-a70b-ad3e351fee45",
@@ -23052,8 +20947,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:29:45",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "7e5ec8e9-53bd-4601-a70b-ad3e351fee45",
@@ -23063,8 +20957,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:29:42",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "eb00cc10-3b8a-4f6b-b1b1-17fc74b5775c",
@@ -23074,8 +20967,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:32:11",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "eb00cc10-3b8a-4f6b-b1b1-17fc74b5775c",
@@ -23085,8 +20977,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:32:10",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "b17fb089-cd69-4296-87cf-a59040e74f7b",
@@ -23096,8 +20987,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "f09d549b-acb6-41e8-b4c8-648d71ff277d",
@@ -23107,8 +20997,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:51:16",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "f09d549b-acb6-41e8-b4c8-648d71ff277d",
@@ -23118,74 +21007,27 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:51:08",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "0d3c4e2e-6ed9-415a-a9f1-9b80572facec",
     "company_name": "ZIMO INVESTASI INDONESIA",
     "survey_status": "OPEN",
     "email": "zimoinvestasiindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:00:07",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
-  },
-  {
-    "code": "0d3c4e2e-6ed9-415a-a9f1-9b80572facec",
-    "company_name": "ZIMO INVESTASI INDONESIA",
-    "survey_status": "OPEN",
-    "email": "zimoinvestasiindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:00:04",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
-  },
-  {
-    "code": "0d3c4e2e-6ed9-415a-a9f1-9b80572facec",
-    "company_name": "ZIMO INVESTASI INDONESIA",
-    "survey_status": "OPEN",
-    "email": "zimoinvestasiindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:07:45",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
-  },
-  {
-    "code": "0d3c4e2e-6ed9-415a-a9f1-9b80572facec",
-    "company_name": "ZIMO INVESTASI INDONESIA",
-    "survey_status": "OPEN",
-    "email": "zimoinvestasiindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:07:44",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
   },
   {
     "code": "d87c29ed-6fb0-4ace-95f8-36cd4eaa1181",
     "company_name": "BINTANG MINERAL SULAWESI PERKASA",
     "survey_status": "OPEN",
     "email": "bintangmineralsp@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:30:34",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
-  },
-  {
-    "code": "d87c29ed-6fb0-4ace-95f8-36cd4eaa1181",
-    "company_name": "BINTANG MINERAL SULAWESI PERKASA",
-    "survey_status": "OPEN",
-    "email": "bintangmineralsp@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:30:30",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
   },
   {
     "code": "235e8ef0-c8ab-4949-9ad7-c03ac86cb5b2",
@@ -23195,8 +21037,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:07:09",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "235e8ef0-c8ab-4949-9ad7-c03ac86cb5b2",
@@ -23206,8 +21047,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:07:08",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "235e8ef0-c8ab-4949-9ad7-c03ac86cb5b2",
@@ -23217,8 +21057,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:52:50",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "235e8ef0-c8ab-4949-9ad7-c03ac86cb5b2",
@@ -23228,8 +21067,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:52:45",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "fe87a252-3fe2-421e-ba54-aca88542f15b",
@@ -23239,8 +21077,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 20:34:09",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "fe87a252-3fe2-421e-ba54-aca88542f15b",
@@ -23250,8 +21087,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:42:31",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "fe87a252-3fe2-421e-ba54-aca88542f15b",
@@ -23261,74 +21097,37 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:42:27",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "ef6e1989-8f6c-4c85-9f94-0aa5f8d8f221",
     "company_name": "MOROWALI AGRO LESTARI",
     "survey_status": "OPEN",
     "email": "morowaliagrolestari@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:47:15",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
-  },
-  {
-    "code": "ef6e1989-8f6c-4c85-9f94-0aa5f8d8f221",
-    "company_name": "MOROWALI AGRO LESTARI",
-    "survey_status": "OPEN",
-    "email": "morowaliagrolestari@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:47:10",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
   },
   {
     "code": "fc875c1b-895a-4795-b00a-b6542bce3e32",
     "company_name": "HIQMAH MERONGA UTAMA",
     "survey_status": "OPEN",
     "email": "pthiqmahmeronga23@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 10:34:28",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
-  },
-  {
-    "code": "fc875c1b-895a-4795-b00a-b6542bce3e32",
-    "company_name": "HIQMAH MERONGA UTAMA",
-    "survey_status": "OPEN",
-    "email": "pthiqmahmeronga23@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 10:34:27",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
   },
   {
     "code": "5e349bc0-26b1-40e0-a094-a2042be82304",
     "company_name": "MOROWALI MINERAL JAYA",
     "survey_status": "OPEN",
     "email": "sulkarnainnatsirhse@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:10:07",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
-  },
-  {
-    "code": "5e349bc0-26b1-40e0-a094-a2042be82304",
-    "company_name": "MOROWALI MINERAL JAYA",
-    "survey_status": "OPEN",
-    "email": "sulkarnainnatsirhse@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:10:03",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
   },
   {
     "code": "4b5362a4-8f43-412f-ae2d-070b9ae86115",
@@ -23338,8 +21137,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 15:37:12",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "4b5362a4-8f43-412f-ae2d-070b9ae86115",
@@ -23349,8 +21147,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 15:37:11",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "4b5362a4-8f43-412f-ae2d-070b9ae86115",
@@ -23360,8 +21157,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:19:12",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "4b5362a4-8f43-412f-ae2d-070b9ae86115",
@@ -23371,8 +21167,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:19:08",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "4b5362a4-8f43-412f-ae2d-070b9ae86115",
@@ -23382,8 +21177,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "07 Jun 2026, 00:08:49",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "4b5362a4-8f43-412f-ae2d-070b9ae86115",
@@ -23393,8 +21187,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:30:54",
-    "order": 6,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 6
   },
   {
     "code": "4b5362a4-8f43-412f-ae2d-070b9ae86115",
@@ -23404,8 +21197,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:30:50",
-    "order": 7,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 7
   },
   {
     "code": "7c833057-666f-48d1-af95-c03b9471829a",
@@ -23415,8 +21207,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "35633f5d-1445-4793-ab0b-9bbae0f3d035",
@@ -23426,8 +21217,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:13:26",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "35633f5d-1445-4793-ab0b-9bbae0f3d035",
@@ -23437,8 +21227,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:13:24",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "35633f5d-1445-4793-ab0b-9bbae0f3d035",
@@ -23448,8 +21237,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:37:37",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "35633f5d-1445-4793-ab0b-9bbae0f3d035",
@@ -23459,8 +21247,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:37:32",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "08d3f59a-94ea-4888-a9f2-bba3ae4e06b3",
@@ -23470,8 +21257,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:59:12",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "08d3f59a-94ea-4888-a9f2-bba3ae4e06b3",
@@ -23481,8 +21267,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:59:08",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "08d3f59a-94ea-4888-a9f2-bba3ae4e06b3",
@@ -23492,8 +21277,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:00:54",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "08d3f59a-94ea-4888-a9f2-bba3ae4e06b3",
@@ -23503,8 +21287,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:00:51",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "17084d87-3406-40a2-8d58-30343e029959",
@@ -23514,8 +21297,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "01 Jun 2026, 23:00:08",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "17084d87-3406-40a2-8d58-30343e029959",
@@ -23525,8 +21307,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:00:04",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "09685aee-f7dc-4e98-bac5-36b87125a4a7",
@@ -23536,8 +21317,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:59:13",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "09685aee-f7dc-4e98-bac5-36b87125a4a7",
@@ -23547,8 +21327,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:59:11",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "09685aee-f7dc-4e98-bac5-36b87125a4a7",
@@ -23558,8 +21337,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:01:59",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "09685aee-f7dc-4e98-bac5-36b87125a4a7",
@@ -23569,8 +21347,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:01:55",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "9e03a53d-9e35-48db-89e0-2069b4615e71",
@@ -23580,8 +21357,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:07:01",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "9e03a53d-9e35-48db-89e0-2069b4615e71",
@@ -23591,8 +21367,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:06:57",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "ae05b575-ab39-4e12-9828-84d48fbe5f27",
@@ -23602,8 +21377,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 06:00:48",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "ae05b575-ab39-4e12-9828-84d48fbe5f27",
@@ -23613,8 +21387,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:00:23",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "ae05b575-ab39-4e12-9828-84d48fbe5f27",
@@ -23624,8 +21397,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:00:22",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "3cfaf0bd-b167-489f-a771-fcb5a99dd95e",
@@ -23635,8 +21407,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "94f82a18-545a-498b-8710-482cac09de10",
@@ -23646,8 +21417,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "6070a816-0287-4eae-9c0f-7ecd4b771d5a",
@@ -23657,8 +21427,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "3b73217a-83fd-49d7-a722-4a8c2e2498ad",
@@ -23668,8 +21437,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:15:14",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "3b73217a-83fd-49d7-a722-4a8c2e2498ad",
@@ -23679,8 +21447,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:15:13",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "3b73217a-83fd-49d7-a722-4a8c2e2498ad",
@@ -23690,8 +21457,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 09:54:48",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "3b73217a-83fd-49d7-a722-4a8c2e2498ad",
@@ -23701,8 +21467,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 09:54:45",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "3b73217a-83fd-49d7-a722-4a8c2e2498ad",
@@ -23712,8 +21477,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:47:51",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "3b73217a-83fd-49d7-a722-4a8c2e2498ad",
@@ -23723,8 +21487,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:47:47",
-    "order": 6,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 6
   },
   {
     "code": "99acd700-7ece-4d12-9326-98311d06d702",
@@ -23734,8 +21497,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 16:14:48",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "99acd700-7ece-4d12-9326-98311d06d702",
@@ -23745,8 +21507,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 13:34:51",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "99acd700-7ece-4d12-9326-98311d06d702",
@@ -23756,8 +21517,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 13:33:48",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "99acd700-7ece-4d12-9326-98311d06d702",
@@ -23767,8 +21527,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 13:33:36",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "99acd700-7ece-4d12-9326-98311d06d702",
@@ -23778,8 +21537,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:49:15",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "99acd700-7ece-4d12-9326-98311d06d702",
@@ -23789,8 +21547,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:49:11",
-    "order": 6,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 6
   },
   {
     "code": "a593a461-be22-443f-a960-257fd1010eb6",
@@ -23800,8 +21557,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "0c2895a8-619b-46d5-a1f6-157b25d3227f",
@@ -23811,8 +21567,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:00:00",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "0c2895a8-619b-46d5-a1f6-157b25d3227f",
@@ -23822,8 +21577,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:59:56",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "0c2895a8-619b-46d5-a1f6-157b25d3227f",
@@ -23833,8 +21587,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:06:14",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "0c2895a8-619b-46d5-a1f6-157b25d3227f",
@@ -23844,8 +21597,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:06:13",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "e314528e-7f9a-45a3-ad63-a5befa662ee9",
@@ -23855,8 +21607,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:05:07",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "e314528e-7f9a-45a3-ad63-a5befa662ee9",
@@ -23866,8 +21617,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:05:02",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "1eb1567b-9ed1-43b7-95ea-d54e59fced92",
@@ -23877,8 +21627,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:04:06",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "1eb1567b-9ed1-43b7-95ea-d54e59fced92",
@@ -23888,8 +21637,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:03:59",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "1eb1567b-9ed1-43b7-95ea-d54e59fced92",
@@ -23899,8 +21647,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "01 Jun 2026, 23:45:46",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "1eb1567b-9ed1-43b7-95ea-d54e59fced92",
@@ -23910,8 +21657,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:44:43",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "1eb1567b-9ed1-43b7-95ea-d54e59fced92",
@@ -23921,8 +21667,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:44:42",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "a9c1ea92-b831-423a-a89e-0e1eb39fded9",
@@ -23932,8 +21677,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:46:17",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "a9c1ea92-b831-423a-a89e-0e1eb39fded9",
@@ -23943,8 +21687,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:46:13",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "369c9992-9957-4077-9d82-579757ea3ff9",
@@ -23954,8 +21697,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:13:45",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "369c9992-9957-4077-9d82-579757ea3ff9",
@@ -23965,8 +21707,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:13:43",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "369c9992-9957-4077-9d82-579757ea3ff9",
@@ -23976,8 +21717,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:39:33",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "369c9992-9957-4077-9d82-579757ea3ff9",
@@ -23987,8 +21727,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:39:33",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "37d9665f-6a7f-4b22-9656-ea393ad04679",
@@ -23998,8 +21737,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:14:05",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "37d9665f-6a7f-4b22-9656-ea393ad04679",
@@ -24009,8 +21747,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:14:00",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "37d9665f-6a7f-4b22-9656-ea393ad04679",
@@ -24020,8 +21757,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 07:09:55",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "37d9665f-6a7f-4b22-9656-ea393ad04679",
@@ -24031,8 +21767,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:41:32",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "37d9665f-6a7f-4b22-9656-ea393ad04679",
@@ -24042,8 +21777,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:41:31",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "ee31f301-c5f1-4eaf-9d15-72011e133f7c",
@@ -24053,8 +21787,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "537616d8-daac-4f7c-b0ea-6c74338160c5",
@@ -24064,8 +21797,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:44:56",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "537616d8-daac-4f7c-b0ea-6c74338160c5",
@@ -24075,8 +21807,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:44:52",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "c04ad5ef-cca4-4ea7-a432-afdef7a92243",
@@ -24086,8 +21817,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:04:27",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "c04ad5ef-cca4-4ea7-a432-afdef7a92243",
@@ -24097,8 +21827,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:04:27",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "999b5271-7f1c-454a-be34-906f95024114",
@@ -24108,8 +21837,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:49:06",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "999b5271-7f1c-454a-be34-906f95024114",
@@ -24119,8 +21847,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:49:03",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "4759e798-3b14-4742-8d16-c6c624b80d5e",
@@ -24130,8 +21857,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "654a06f0-a90a-407e-bf5f-a6b80357bb7d",
@@ -24141,8 +21867,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "45577929-4bb8-4fad-a2e9-fe1c28a38e51",
@@ -24152,8 +21877,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:17:40",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "45577929-4bb8-4fad-a2e9-fe1c28a38e51",
@@ -24163,8 +21887,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:17:39",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "45577929-4bb8-4fad-a2e9-fe1c28a38e51",
@@ -24174,8 +21897,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "03 Jun 2026, 06:07:01",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "45577929-4bb8-4fad-a2e9-fe1c28a38e51",
@@ -24185,8 +21907,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 06:21:04",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "45577929-4bb8-4fad-a2e9-fe1c28a38e51",
@@ -24196,8 +21917,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:12:48",
-    "order": 5,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 5
   },
   {
     "code": "45577929-4bb8-4fad-a2e9-fe1c28a38e51",
@@ -24207,8 +21927,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:12:48",
-    "order": 6,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 6
   },
   {
     "code": "9dcc3d8b-a0aa-4d2b-b1f1-23c6c4c9b0eb",
@@ -24218,8 +21937,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:05:33",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "9dcc3d8b-a0aa-4d2b-b1f1-23c6c4c9b0eb",
@@ -24229,8 +21947,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:05:29",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "b4f0da62-4313-4a77-9955-42c743907138",
@@ -24240,8 +21957,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:26:36",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "b4f0da62-4313-4a77-9955-42c743907138",
@@ -24251,8 +21967,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:26:33",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "de1a0858-902e-48c3-ab57-d13e96e22fe6",
@@ -24262,8 +21977,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:46:22",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "de1a0858-902e-48c3-ab57-d13e96e22fe6",
@@ -24273,8 +21987,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:46:21",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "46104a47-8d6c-454d-ac44-3a6d91e2eedc",
@@ -24284,8 +21997,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:17:58",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "46104a47-8d6c-454d-ac44-3a6d91e2eedc",
@@ -24295,8 +22007,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:17:46",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "46104a47-8d6c-454d-ac44-3a6d91e2eedc",
@@ -24306,8 +22017,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 01:14:24",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "46104a47-8d6c-454d-ac44-3a6d91e2eedc",
@@ -24317,8 +22027,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 01:14:20",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "202ed4ef-9eed-4210-870e-5bc8841dea9b",
@@ -24328,8 +22037,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "d56577cf-8f16-4ff6-82ed-a20aeb5ca9c0",
@@ -24339,8 +22047,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:19:55",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "d56577cf-8f16-4ff6-82ed-a20aeb5ca9c0",
@@ -24350,8 +22057,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:19:52",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "59d300ea-0c41-4f96-8d25-d08d591980a6",
@@ -24361,8 +22067,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:00:47",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "59d300ea-0c41-4f96-8d25-d08d591980a6",
@@ -24372,8 +22077,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:00:44",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "feee97ea-c796-4996-a9df-5646e107f3c0",
@@ -24383,8 +22087,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 14:54:59",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "feee97ea-c796-4996-a9df-5646e107f3c0",
@@ -24394,8 +22097,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:43:09",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "feee97ea-c796-4996-a9df-5646e107f3c0",
@@ -24405,8 +22107,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:43:06",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "7ae34134-ebf5-45f6-ac4d-063ab5e4bad3",
@@ -24416,8 +22117,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:20:44",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "7ae34134-ebf5-45f6-ac4d-063ab5e4bad3",
@@ -24427,8 +22127,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:19:23",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "91640811-a82f-40c0-8a31-a7ca7ef6b6c3",
@@ -24438,8 +22137,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "8b8d9aee-f2e2-49e3-bc6d-c29b0d8411ac",
@@ -24449,8 +22147,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "ce91376a-e4d7-49b0-8437-e6d1302dabc0",
@@ -24460,8 +22157,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:51:45",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "ce91376a-e4d7-49b0-8437-e6d1302dabc0",
@@ -24471,8 +22167,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:50:16",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "0409b9f9-cbcd-460b-a8eb-846f8b91bf68",
@@ -24482,8 +22177,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 10:57:54",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "0409b9f9-cbcd-460b-a8eb-846f8b91bf68",
@@ -24493,8 +22187,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 10:57:48",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "0409b9f9-cbcd-460b-a8eb-846f8b91bf68",
@@ -24504,8 +22197,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 22:51:32",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 3
   },
   {
     "code": "0409b9f9-cbcd-460b-a8eb-846f8b91bf68",
@@ -24515,8 +22207,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:51:28",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 4
   },
   {
     "code": "784976ed-3a63-4553-981a-ce9128ffd9dc",
@@ -24526,8 +22217,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:11:02",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "784976ed-3a63-4553-981a-ce9128ffd9dc",
@@ -24537,8 +22227,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:10:58",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "d95f3009-3388-46bb-b4cf-ce816c98e8e9",
@@ -24548,8 +22237,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 08:33:00",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "d95f3009-3388-46bb-b4cf-ce816c98e8e9",
@@ -24559,8 +22247,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 08:32:56",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "6583f934-e069-4ce3-b09b-aac6387a8eb1",
@@ -24570,8 +22257,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:25:44",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "6583f934-e069-4ce3-b09b-aac6387a8eb1",
@@ -24581,8 +22267,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:25:41",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "c892e9b3-905e-4058-b5eb-76d2e5f86555",
@@ -24592,8 +22277,7 @@ window.EMAIL_DATA = [
     "global_status": "Queued",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:31:34",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "b882c37f-6252-432d-8b38-7dfa1df0cc1e",
@@ -24603,8 +22287,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:36:30",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "b882c37f-6252-432d-8b38-7dfa1df0cc1e",
@@ -24614,8 +22297,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:36:29",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "407b15e2-1a3a-4f6f-948c-e31bedf4c99f",
@@ -24625,52 +22307,17 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 0
   },
   {
     "code": "480d66e2-73be-40ff-a286-5faa567d5538",
     "company_name": "BERKAH JAYA MINERAL",
     "survey_status": "OPEN",
     "email": "berkahjayamineral99@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:18:27",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
-  },
-  {
-    "code": "480d66e2-73be-40ff-a286-5faa567d5538",
-    "company_name": "BERKAH JAYA MINERAL",
-    "survey_status": "OPEN",
-    "email": "berkahjayamineral99@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:18:26",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
-  },
-  {
-    "code": "480d66e2-73be-40ff-a286-5faa567d5538",
-    "company_name": "BERKAH JAYA MINERAL",
-    "survey_status": "OPEN",
-    "email": "berkahjayamineral99@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:22:45",
-    "order": 3,
-    "kab_name": "[12] MOROWALI UTARA"
-  },
-  {
-    "code": "480d66e2-73be-40ff-a286-5faa567d5538",
-    "company_name": "BERKAH JAYA MINERAL",
-    "survey_status": "OPEN",
-    "email": "berkahjayamineral99@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:22:44",
-    "order": 4,
-    "kab_name": "[12] MOROWALI UTARA"
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0
   },
   {
     "code": "ccb05db1-4c75-48a4-af8d-3afec698c2b0",
@@ -24680,8 +22327,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:45:53",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "ccb05db1-4c75-48a4-af8d-3afec698c2b0",
@@ -24691,8 +22337,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:44:51",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "bcdf405e-5d06-49fa-9caa-4c488898a9fd",
@@ -24702,8 +22347,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:50:47",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "bcdf405e-5d06-49fa-9caa-4c488898a9fd",
@@ -24713,8 +22357,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:50:22",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "c00f2d97-30dc-4bd8-ac8f-c85c44e54975",
@@ -24724,8 +22367,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:03:40",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "c00f2d97-30dc-4bd8-ac8f-c85c44e54975",
@@ -24735,8 +22377,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:03:36",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "9756afbe-dd5c-4eff-b8a2-d4380e5b8bfb",
@@ -24746,8 +22387,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:40:16",
-    "order": 1,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 1
   },
   {
     "code": "9756afbe-dd5c-4eff-b8a2-d4380e5b8bfb",
@@ -24757,8 +22397,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:40:15",
-    "order": 2,
-    "kab_name": "[12] MOROWALI UTARA"
+    "order": 2
   },
   {
     "code": "85c44a30-bdc8-4a83-b5f5-53b426b2bd70",
@@ -24768,8 +22407,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 03:44:55",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "85c44a30-bdc8-4a83-b5f5-53b426b2bd70",
@@ -24779,8 +22417,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:44:52",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24790,8 +22427,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 23:41:42",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24801,8 +22437,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 23:41:41",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24812,8 +22447,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "10 Jun 2026, 23:17:21",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24823,8 +22457,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "10 Jun 2026, 23:17:21",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24834,8 +22467,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "10 Jun 2026, 10:32:10",
-    "order": 5,
-    "kab_name": "[71] PALU"
+    "order": 5
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24845,8 +22477,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "10 Jun 2026, 10:32:09",
-    "order": 6,
-    "kab_name": "[71] PALU"
+    "order": 6
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24856,8 +22487,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "10 Jun 2026, 10:30:48",
-    "order": 7,
-    "kab_name": "[71] PALU"
+    "order": 7
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24867,8 +22497,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 10:30:36",
-    "order": 8,
-    "kab_name": "[71] PALU"
+    "order": 8
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24878,8 +22507,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "10 Jun 2026, 10:30:35",
-    "order": 9,
-    "kab_name": "[71] PALU"
+    "order": 9
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24889,8 +22517,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 06:48:48",
-    "order": 10,
-    "kab_name": "[71] PALU"
+    "order": 10
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24900,8 +22527,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 06:48:47",
-    "order": 11,
-    "kab_name": "[71] PALU"
+    "order": 11
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24911,8 +22537,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 06:48:32",
-    "order": 12,
-    "kab_name": "[71] PALU"
+    "order": 12
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24922,8 +22547,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 03:23:06",
-    "order": 13,
-    "kab_name": "[71] PALU"
+    "order": 13
   },
   {
     "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
@@ -24933,8 +22557,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:22:53",
-    "order": 14,
-    "kab_name": "[71] PALU"
+    "order": 14
   },
   {
     "code": "d0165086-104a-4500-b00b-2fc5d6b40f95",
@@ -24944,8 +22567,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Permanent_fail",
     "timestamp": "10 Jun 2026, 04:53:33",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "d0165086-104a-4500-b00b-2fc5d6b40f95",
@@ -24955,8 +22577,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:57:37",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "d0165086-104a-4500-b00b-2fc5d6b40f95",
@@ -24966,8 +22587,7 @@ window.EMAIL_DATA = [
     "global_status": "Permanent_fail",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:57:15",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "b1eb44fb-50d6-4b57-b951-33a652af9834",
@@ -24977,8 +22597,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   },
   {
     "code": "3b6fbcef-9446-4f18-beca-2107ad39ac18",
@@ -24988,8 +22607,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 11:15:18",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "3b6fbcef-9446-4f18-beca-2107ad39ac18",
@@ -24999,8 +22617,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:15:13",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "3b6fbcef-9446-4f18-beca-2107ad39ac18",
@@ -25010,8 +22627,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:15:11",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "3b6fbcef-9446-4f18-beca-2107ad39ac18",
@@ -25021,8 +22637,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "06 Jun 2026, 11:06:34",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "3b6fbcef-9446-4f18-beca-2107ad39ac18",
@@ -25032,8 +22647,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "06 Jun 2026, 11:06:32",
-    "order": 5,
-    "kab_name": "[71] PALU"
+    "order": 5
   },
   {
     "code": "c1e104fa-31ca-444c-b521-bdd8767c4905",
@@ -25043,8 +22657,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 07:11:36",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "c1e104fa-31ca-444c-b521-bdd8767c4905",
@@ -25054,8 +22667,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:11:00",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25065,8 +22677,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "06 Jun 2026, 07:49:17",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25076,8 +22687,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 12:25:33",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25087,8 +22697,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 12:24:18",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25098,8 +22707,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "04 Jun 2026, 12:23:16",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25109,8 +22717,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "04 Jun 2026, 12:23:11",
-    "order": 5,
-    "kab_name": "[71] PALU"
+    "order": 5
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25120,8 +22727,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "04 Jun 2026, 11:29:34",
-    "order": 6,
-    "kab_name": "[71] PALU"
+    "order": 6
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25131,8 +22737,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 11:29:27",
-    "order": 7,
-    "kab_name": "[71] PALU"
+    "order": 7
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25142,8 +22747,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 11:28:26",
-    "order": 8,
-    "kab_name": "[71] PALU"
+    "order": 8
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25153,8 +22757,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "04 Jun 2026, 11:18:58",
-    "order": 9,
-    "kab_name": "[71] PALU"
+    "order": 9
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25164,8 +22767,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "04 Jun 2026, 11:16:15",
-    "order": 10,
-    "kab_name": "[71] PALU"
+    "order": 10
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25175,8 +22777,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 11:16:12",
-    "order": 11,
-    "kab_name": "[71] PALU"
+    "order": 11
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25186,8 +22787,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 11:12:45",
-    "order": 12,
-    "kab_name": "[71] PALU"
+    "order": 12
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25197,8 +22797,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "04 Jun 2026, 11:12:45",
-    "order": 13,
-    "kab_name": "[71] PALU"
+    "order": 13
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25208,8 +22807,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "04 Jun 2026, 11:12:29",
-    "order": 14,
-    "kab_name": "[71] PALU"
+    "order": 14
   },
   {
     "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
@@ -25219,8 +22817,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "04 Jun 2026, 11:12:29",
-    "order": 15,
-    "kab_name": "[71] PALU"
+    "order": 15
   },
   {
     "code": "8dd95298-bef6-472e-9f59-9a50ee99cef1",
@@ -25230,8 +22827,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "04 Jun 2026, 11:41:24",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "8dd95298-bef6-472e-9f59-9a50ee99cef1",
@@ -25241,8 +22837,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "04 Jun 2026, 11:41:21",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "8dd95298-bef6-472e-9f59-9a50ee99cef1",
@@ -25252,8 +22847,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 04:12:55",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "8dd95298-bef6-472e-9f59-9a50ee99cef1",
@@ -25263,8 +22857,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 04:12:55",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "abcf8218-4b74-42f9-996a-ab3d2118937f",
@@ -25274,8 +22867,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "04 Jun 2026, 11:31:37",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "abcf8218-4b74-42f9-996a-ab3d2118937f",
@@ -25285,8 +22877,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "04 Jun 2026, 11:31:36",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "abcf8218-4b74-42f9-996a-ab3d2118937f",
@@ -25296,8 +22887,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:51:34",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "abcf8218-4b74-42f9-996a-ab3d2118937f",
@@ -25307,8 +22897,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:51:34",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "5fc7bd87-a8a3-42e6-95e5-cc8a33c45ad9",
@@ -25318,8 +22907,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 11:53:58",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "5fc7bd87-a8a3-42e6-95e5-cc8a33c45ad9",
@@ -25329,8 +22917,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 11:53:39",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "5fc7bd87-a8a3-42e6-95e5-cc8a33c45ad9",
@@ -25340,8 +22927,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 11:19:01",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "5fc7bd87-a8a3-42e6-95e5-cc8a33c45ad9",
@@ -25351,8 +22937,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 02:13:16",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "5fc7bd87-a8a3-42e6-95e5-cc8a33c45ad9",
@@ -25362,8 +22947,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "02 Jun 2026, 02:13:15",
-    "order": 5,
-    "kab_name": "[71] PALU"
+    "order": 5
   },
   {
     "code": "5fc7bd87-a8a3-42e6-95e5-cc8a33c45ad9",
@@ -25373,8 +22957,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 02:12:55",
-    "order": 6,
-    "kab_name": "[71] PALU"
+    "order": 6
   },
   {
     "code": "5fc7bd87-a8a3-42e6-95e5-cc8a33c45ad9",
@@ -25384,8 +22967,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:12:47",
-    "order": 7,
-    "kab_name": "[71] PALU"
+    "order": 7
   },
   {
     "code": "5fc7bd87-a8a3-42e6-95e5-cc8a33c45ad9",
@@ -25395,8 +22977,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:12:46",
-    "order": 8,
-    "kab_name": "[71] PALU"
+    "order": 8
   },
   {
     "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
@@ -25406,8 +22987,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 11:33:26",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
@@ -25417,8 +22997,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 11:33:13",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
@@ -25428,8 +23007,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "04 Jun 2026, 11:32:24",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
@@ -25439,8 +23017,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "04 Jun 2026, 11:30:04",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
@@ -25450,8 +23027,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "04 Jun 2026, 11:30:00",
-    "order": 5,
-    "kab_name": "[71] PALU"
+    "order": 5
   },
   {
     "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
@@ -25461,8 +23037,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:30:27",
-    "order": 6,
-    "kab_name": "[71] PALU"
+    "order": 6
   },
   {
     "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
@@ -25472,8 +23047,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:30:24",
-    "order": 7,
-    "kab_name": "[71] PALU"
+    "order": 7
   },
   {
     "code": "e52b5cf7-4524-44c2-bcd3-4449f046686a",
@@ -25483,8 +23057,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Clicked",
     "timestamp": "04 Jun 2026, 10:40:14",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "e52b5cf7-4524-44c2-bcd3-4449f046686a",
@@ -25494,8 +23067,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Bounced",
     "timestamp": "02 Jun 2026, 09:12:41",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "e52b5cf7-4524-44c2-bcd3-4449f046686a",
@@ -25505,8 +23077,7 @@ window.EMAIL_DATA = [
     "global_status": "Bounced",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:11:39",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
@@ -25516,8 +23087,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 14:30:52",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
@@ -25527,8 +23097,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 14:30:44",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
@@ -25538,8 +23107,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 14:30:43",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
@@ -25549,8 +23117,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 14:30:39",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
@@ -25560,8 +23127,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 14:30:33",
-    "order": 5,
-    "kab_name": "[71] PALU"
+    "order": 5
   },
   {
     "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
@@ -25571,8 +23137,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "04 Jun 2026, 11:19:25",
-    "order": 6,
-    "kab_name": "[71] PALU"
+    "order": 6
   },
   {
     "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
@@ -25582,8 +23147,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "04 Jun 2026, 11:19:20",
-    "order": 7,
-    "kab_name": "[71] PALU"
+    "order": 7
   },
   {
     "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
@@ -25593,8 +23157,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 05:33:35",
-    "order": 8,
-    "kab_name": "[71] PALU"
+    "order": 8
   },
   {
     "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
@@ -25604,8 +23167,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 05:33:32",
-    "order": 9,
-    "kab_name": "[71] PALU"
+    "order": 9
   },
   {
     "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
@@ -25615,8 +23177,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:40:18",
-    "order": 10,
-    "kab_name": "[71] PALU"
+    "order": 10
   },
   {
     "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
@@ -25626,8 +23187,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:40:15",
-    "order": 11,
-    "kab_name": "[71] PALU"
+    "order": 11
   },
   {
     "code": "01023561-d8f0-4e84-b475-f41547a905f1",
@@ -25637,8 +23197,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "03 Jun 2026, 16:46:45",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "01023561-d8f0-4e84-b475-f41547a905f1",
@@ -25648,8 +23207,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "03 Jun 2026, 16:46:41",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "01023561-d8f0-4e84-b475-f41547a905f1",
@@ -25659,8 +23217,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "03 Jun 2026, 07:48:29",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "01023561-d8f0-4e84-b475-f41547a905f1",
@@ -25670,8 +23227,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "03 Jun 2026, 07:48:29",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "01023561-d8f0-4e84-b475-f41547a905f1",
@@ -25681,8 +23237,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 08:47:43",
-    "order": 5,
-    "kab_name": "[71] PALU"
+    "order": 5
   },
   {
     "code": "01023561-d8f0-4e84-b475-f41547a905f1",
@@ -25692,8 +23247,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 22:46:17",
-    "order": 6,
-    "kab_name": "[71] PALU"
+    "order": 6
   },
   {
     "code": "01023561-d8f0-4e84-b475-f41547a905f1",
@@ -25703,8 +23257,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 22:46:13",
-    "order": 7,
-    "kab_name": "[71] PALU"
+    "order": 7
   },
   {
     "code": "3c83217f-3983-482a-a525-f6fc6485956b",
@@ -25714,8 +23267,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:15:32",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "3c83217f-3983-482a-a525-f6fc6485956b",
@@ -25725,8 +23277,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:15:23",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "3c83217f-3983-482a-a525-f6fc6485956b",
@@ -25736,8 +23287,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 00:49:54",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "3c83217f-3983-482a-a525-f6fc6485956b",
@@ -25747,8 +23297,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:49:51",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25758,8 +23307,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 21:55:07",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25769,8 +23317,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 21:54:24",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25780,8 +23327,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 21:49:58",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25791,8 +23337,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 16:04:02",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25802,8 +23347,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "11 Jun 2026, 16:03:58",
-    "order": 5,
-    "kab_name": "[71] PALU"
+    "order": 5
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25813,8 +23357,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "07 Jun 2026, 22:47:12",
-    "order": 6,
-    "kab_name": "[71] PALU"
+    "order": 6
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25824,8 +23367,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "07 Jun 2026, 22:47:04",
-    "order": 7,
-    "kab_name": "[71] PALU"
+    "order": 7
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25835,8 +23377,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "05 Jun 2026, 17:47:31",
-    "order": 8,
-    "kab_name": "[71] PALU"
+    "order": 8
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25846,8 +23387,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "03 Jun 2026, 11:17:02",
-    "order": 9,
-    "kab_name": "[71] PALU"
+    "order": 9
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25857,8 +23397,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 22:14:34",
-    "order": 10,
-    "kab_name": "[71] PALU"
+    "order": 10
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25868,8 +23407,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:47:33",
-    "order": 11,
-    "kab_name": "[71] PALU"
+    "order": 11
   },
   {
     "code": "bc2770cc-3655-4851-b05a-bf0c19903d27",
@@ -25879,8 +23417,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:47:29",
-    "order": 12,
-    "kab_name": "[71] PALU"
+    "order": 12
   },
   {
     "code": "1df7d309-26ad-43da-a1f6-ac248793f1df",
@@ -25890,8 +23427,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "09 Jun 2026, 11:03:59",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "1df7d309-26ad-43da-a1f6-ac248793f1df",
@@ -25901,8 +23437,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "09 Jun 2026, 11:03:53",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "1df7d309-26ad-43da-a1f6-ac248793f1df",
@@ -25912,8 +23447,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "01 Jun 2026, 23:42:57",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "1df7d309-26ad-43da-a1f6-ac248793f1df",
@@ -25923,8 +23457,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "01 Jun 2026, 23:42:52",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "7cf0a09d-ce1b-4743-81fb-50f662a5d35e",
@@ -25934,8 +23467,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   },
   {
     "code": "557aa677-0832-41c9-bf6b-39039c3f8d7a",
@@ -25945,8 +23477,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   },
   {
     "code": "1a386e91-732c-4012-a5b1-aceb022f286f",
@@ -25956,8 +23487,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   },
   {
     "code": "bdb836df-9bed-43d6-9edd-40013f305eba",
@@ -25967,8 +23497,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 06:54:37",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "bdb836df-9bed-43d6-9edd-40013f305eba",
@@ -25978,8 +23507,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 06:54:37",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "c1db7435-2418-4ccd-b6fa-179a4fd49221",
@@ -25989,8 +23517,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   },
   {
     "code": "ff2af26d-2b4a-4140-95ca-b39d6b8834c1",
@@ -26000,8 +23527,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 10:43:57",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "ff2af26d-2b4a-4140-95ca-b39d6b8834c1",
@@ -26011,8 +23537,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 10:43:56",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "1f4429e8-85bb-4287-a20e-2c72e2aafbb3",
@@ -26022,8 +23547,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   },
   {
     "code": "178deab3-12f3-4980-ba55-1d59ab6e0242",
@@ -26033,8 +23557,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   },
   {
     "code": "6b58d1d2-02e8-443d-8714-326abbd1debc",
@@ -26044,8 +23567,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:37:36",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "6b58d1d2-02e8-443d-8714-326abbd1debc",
@@ -26055,8 +23577,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:37:32",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "5aa8ab6e-971a-493a-bb22-ea0b06f9b229",
@@ -26066,8 +23587,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "09 Jun 2026, 16:14:50",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "5aa8ab6e-971a-493a-bb22-ea0b06f9b229",
@@ -26077,8 +23597,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Opened",
     "timestamp": "02 Jun 2026, 09:21:09",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "5aa8ab6e-971a-493a-bb22-ea0b06f9b229",
@@ -26088,8 +23607,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:01:57",
-    "order": 3,
-    "kab_name": "[71] PALU"
+    "order": 3
   },
   {
     "code": "5aa8ab6e-971a-493a-bb22-ea0b06f9b229",
@@ -26099,8 +23617,7 @@ window.EMAIL_DATA = [
     "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:01:57",
-    "order": 4,
-    "kab_name": "[71] PALU"
+    "order": 4
   },
   {
     "code": "ece561dc-54c1-455c-923b-12239ea4843d",
@@ -26110,8 +23627,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   },
   {
     "code": "748d3457-0dea-447a-80c8-f267486ce5b5",
@@ -26121,8 +23637,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:42:08",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "748d3457-0dea-447a-80c8-f267486ce5b5",
@@ -26132,8 +23647,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:42:04",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "c22f3e07-5129-4ccc-b6cb-b0511e73a7a8",
@@ -26143,8 +23657,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   },
   {
     "code": "efe27948-91b2-4439-ad24-b672e0dbba0e",
@@ -26154,8 +23667,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   },
   {
     "code": "43d8209f-8cba-415b-9a7f-1fe3308d8e01",
@@ -26165,8 +23677,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   },
   {
     "code": "bfd932b3-3191-4017-b5e7-bb33c8f98099",
@@ -26176,8 +23687,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 07:02:52",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "bfd932b3-3191-4017-b5e7-bb33c8f98099",
@@ -26187,8 +23697,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 07:02:48",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "eabc0cd9-7762-42af-adf6-d7d9a33dc333",
@@ -26198,8 +23707,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:31:53",
-    "order": 1,
-    "kab_name": "[71] PALU"
+    "order": 1
   },
   {
     "code": "eabc0cd9-7762-42af-adf6-d7d9a33dc333",
@@ -26209,8 +23717,7 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:31:50",
-    "order": 2,
-    "kab_name": "[71] PALU"
+    "order": 2
   },
   {
     "code": "9a18fb46-8fa6-4cce-bb2a-086adf0c02cf",
@@ -26220,7367 +23727,7 @@ window.EMAIL_DATA = [
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "52b25f36-fb13-49ac-aa06-082a0ac3d023",
-    "company_name": "PT Pegadaian (Persero), UPC BAYAOGE",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "49d4e5aa-df1b-4380-b5bf-59cb557fc6e8",
-    "company_name": "RM PADAIDI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e0be79ed-e3b1-4167-ada2-f9be1a5d998c",
-    "company_name": "ARBA SONS COMPANY",
-    "survey_status": "OPEN",
-    "email": "arbapalu@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 08:58:37",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e0be79ed-e3b1-4167-ada2-f9be1a5d998c",
-    "company_name": "ARBA SONS COMPANY",
-    "survey_status": "OPEN",
-    "email": "arbapalu@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:56:24",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "80e2882b-cd27-463a-ac09-5a189adf7251",
-    "company_name": "ALLTHEA CYRIL ILLONA HUMAIRAH",
-    "survey_status": "OPEN",
-    "email": "alltheacyrilillonahumairah@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:34:31",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "80e2882b-cd27-463a-ac09-5a189adf7251",
-    "company_name": "ALLTHEA CYRIL ILLONA HUMAIRAH",
-    "survey_status": "OPEN",
-    "email": "alltheacyrilillonahumairah@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:34:27",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c6c67bc5-ad2b-492e-86d0-9202c0107b90",
-    "company_name": "BANK MEGA TBK, PT KCP PALU MANONDA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "52d20581-50cf-475e-a3a4-c23ce82d88cb",
-    "company_name": "BANK BRI UNIT MANONDA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "85e4d242-60db-4226-b48e-d666b5117e93",
-    "company_name": "BUMI LAROBENU SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "bumilarobenusejahtera.pt@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:45:18",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "85e4d242-60db-4226-b48e-d666b5117e93",
-    "company_name": "BUMI LAROBENU SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "bumilarobenusejahtera.pt@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:45:15",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5484f623-ed40-4225-90de-070899923e83",
-    "company_name": "MEDIA SARANA KONSTRUKSI",
-    "survey_status": "OPEN",
-    "email": "mediasaranakonstruksii@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:46:37",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5484f623-ed40-4225-90de-070899923e83",
-    "company_name": "MEDIA SARANA KONSTRUKSI",
-    "survey_status": "OPEN",
-    "email": "mediasaranakonstruksii@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:46:33",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "cb9cf0d8-5427-43d3-bea9-984be52f3a88",
-    "company_name": "SIRTU KARYA UTAMA PT",
-    "survey_status": "OPEN",
-    "email": "ptsirtukaryautama@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "05 Jun 2026, 09:02:57",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "cb9cf0d8-5427-43d3-bea9-984be52f3a88",
-    "company_name": "SIRTU KARYA UTAMA PT",
-    "survey_status": "OPEN",
-    "email": "ptsirtukaryautama@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 07:41:46",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "cb9cf0d8-5427-43d3-bea9-984be52f3a88",
-    "company_name": "SIRTU KARYA UTAMA PT",
-    "survey_status": "OPEN",
-    "email": "ptsirtukaryautama@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:41:42",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "99e9b4b1-faeb-456e-a659-cff388bb123b",
-    "company_name": "KOPKAR WASKITA KARYA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "460b6980-1277-426e-b71e-27561e120f50",
-    "company_name": "FAREL JAYA TRANSPORT",
-    "survey_status": "OPEN",
-    "email": "jmc_palu@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:17:49",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "460b6980-1277-426e-b71e-27561e120f50",
-    "company_name": "FAREL JAYA TRANSPORT",
-    "survey_status": "OPEN",
-    "email": "jmc_palu@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 01:14:20",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "460b6980-1277-426e-b71e-27561e120f50",
-    "company_name": "FAREL JAYA TRANSPORT",
-    "survey_status": "OPEN",
-    "email": "jmc_palu@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:14:16",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "65f939bd-99fd-42e6-a03f-e5f9fcadc627",
-    "company_name": "SURYA SETIA SEJAHTERA,PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "11a64f4b-27ea-4483-af51-47c0b7340b08",
-    "company_name": "SETUNGGAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "cv_1perkasa@yahoo.co.id",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:01:09",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "11a64f4b-27ea-4483-af51-47c0b7340b08",
-    "company_name": "SETUNGGAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "cv_1perkasa@yahoo.co.id",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "01 Jun 2026, 23:17:00",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "11a64f4b-27ea-4483-af51-47c0b7340b08",
-    "company_name": "SETUNGGAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "cv_1perkasa@yahoo.co.id",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:15:52",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "60402c99-2bae-4c0d-8cd8-9889133d6b39",
-    "company_name": "CAKRAWALA LAUTAN MAS",
-    "survey_status": "OPEN",
-    "email": "ptcakrawalalautanmas@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:13:38",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "60402c99-2bae-4c0d-8cd8-9889133d6b39",
-    "company_name": "CAKRAWALA LAUTAN MAS",
-    "survey_status": "OPEN",
-    "email": "ptcakrawalalautanmas@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:13:37",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b6b573f5-8447-480d-b453-e42bcadf91d8",
-    "company_name": "BANK PERKREDITAN SULAWESI KARYA SENTOSA",
-    "survey_status": "OPEN",
-    "email": "bprsuksespalu@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 06:32:22",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b6b573f5-8447-480d-b453-e42bcadf91d8",
-    "company_name": "BANK PERKREDITAN SULAWESI KARYA SENTOSA",
-    "survey_status": "OPEN",
-    "email": "bprsuksespalu@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 06:31:43",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b6b573f5-8447-480d-b453-e42bcadf91d8",
-    "company_name": "BANK PERKREDITAN SULAWESI KARYA SENTOSA",
-    "survey_status": "OPEN",
-    "email": "bprsuksespalu@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 06:31:35",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b6b573f5-8447-480d-b453-e42bcadf91d8",
-    "company_name": "BANK PERKREDITAN SULAWESI KARYA SENTOSA",
-    "survey_status": "OPEN",
-    "email": "bprsuksespalu@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 06:31:34",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7100c79b-4f2f-4731-b6a8-895b02527392",
-    "company_name": "KPN SMAN 3",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c88c8eac-656a-40ff-a0f3-42d98b84494c",
-    "company_name": "KSU BELOTA PURA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2da3b7af-2093-4125-a6a1-7ee7fea558b0",
-    "company_name": "KPN PELITA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b29407d4-ecf8-4d06-b6f2-5798e219123e",
-    "company_name": "BPR PALU ANUGERAH, PT",
-    "survey_status": "OPEN",
-    "email": "bprpaluanugerah@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:33:36",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b29407d4-ecf8-4d06-b6f2-5798e219123e",
-    "company_name": "BPR PALU ANUGERAH, PT",
-    "survey_status": "OPEN",
-    "email": "bprpaluanugerah@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:33:36",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8577c31a-f9da-4c31-ba90-d98739294cfe",
-    "company_name": "FAUZAN RIZQI FELYSUW",
-    "survey_status": "OPEN",
-    "email": "ptfauzanrizqifelysuw@gmail.com",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "aefa296e-d96a-444e-a38a-e9fb1e2f7c13",
-    "company_name": "OCEAT MAJU BERSAMA",
-    "survey_status": "OPEN",
-    "email": "oceatmajubersama@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 06:03:40",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "aefa296e-d96a-444e-a38a-e9fb1e2f7c13",
-    "company_name": "OCEAT MAJU BERSAMA",
-    "survey_status": "OPEN",
-    "email": "oceatmajubersama@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 06:03:39",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5d84f0dd-76e2-48bc-a62a-853bf1b56063",
-    "company_name": "ANUGRAH JAYA PERKASA, CV",
-    "survey_status": "OPEN",
-    "email": "ajptipo@gmail.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 02:09:06",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5d84f0dd-76e2-48bc-a62a-853bf1b56063",
-    "company_name": "ANUGRAH JAYA PERKASA, CV",
-    "survey_status": "OPEN",
-    "email": "ajptipo@gmail.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:09:05",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "73bfe4e6-53cc-4cb7-823e-66a2887d2d98",
-    "company_name": "WATU MERIBA JAYA, PT",
-    "survey_status": "OPEN",
-    "email": "pt.watumeribajaya@yahoo.co.id",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "05 Jun 2026, 14:39:16",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "73bfe4e6-53cc-4cb7-823e-66a2887d2d98",
-    "company_name": "WATU MERIBA JAYA, PT",
-    "survey_status": "OPEN",
-    "email": "pt.watumeribajaya@yahoo.co.id",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:55:49",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "73bfe4e6-53cc-4cb7-823e-66a2887d2d98",
-    "company_name": "WATU MERIBA JAYA, PT",
-    "survey_status": "OPEN",
-    "email": "pt.watumeribajaya@yahoo.co.id",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:55:38",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c376b2fd-de12-4da7-b07f-f27625d8f67d",
-    "company_name": "BRIUNIT TATURA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e9b14286-7d94-487b-914b-34df2ce6d525",
-    "company_name": "BANK PERKREDITAN RAKYAT SULAWESI MITRA ABADI",
-    "survey_status": "OPEN",
-    "email": "bprsulawesi001@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 16:38:28",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e9b14286-7d94-487b-914b-34df2ce6d525",
-    "company_name": "BANK PERKREDITAN RAKYAT SULAWESI MITRA ABADI",
-    "survey_status": "OPEN",
-    "email": "bprsulawesi001@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 09:29:52",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e9b14286-7d94-487b-914b-34df2ce6d525",
-    "company_name": "BANK PERKREDITAN RAKYAT SULAWESI MITRA ABADI",
-    "survey_status": "OPEN",
-    "email": "bprsulawesi001@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:29:44",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e9b14286-7d94-487b-914b-34df2ce6d525",
-    "company_name": "BANK PERKREDITAN RAKYAT SULAWESI MITRA ABADI",
-    "survey_status": "OPEN",
-    "email": "bprsulawesi001@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:29:44",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "29996465-6021-421e-b020-65e07c3e45d9",
-    "company_name": "TABUR BONI PALUMARA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "4fcbc54d-a75f-4a8b-89ee-82422fda3582",
-    "company_name": "RSU ANUTAPURA PALU",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "dc1bd863-f4e4-4204-be90-d01c35771184",
-    "company_name": "KPN DALA LOMPE SINGGANI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "aca33a74-84ba-48f0-8435-0df89fb19e45",
-    "company_name": "MEUBEL JATI INDAH",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "fd94f6f0-bc16-44b6-b687-016a42a6398f",
-    "company_name": "PRIMA ARTHA SEJAHTERA BPR",
-    "survey_status": "OPEN",
-    "email": "bprpaspalu@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 10:39:02",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "fd94f6f0-bc16-44b6-b687-016a42a6398f",
-    "company_name": "PRIMA ARTHA SEJAHTERA BPR",
-    "survey_status": "OPEN",
-    "email": "bprpaspalu@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 10:38:58",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6f7ca280-52df-4bc2-9f75-9d5fc89c8993",
-    "company_name": "KPN KPSDA (SD 22)",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d73eb594-2301-4e62-ad58-0b0442fb4ceb",
-    "company_name": "KPN PANGAYOMAN",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d1ff8517-d7fd-4b34-b6a9-6a049f140e5f",
-    "company_name": "BERKAH BATU SENTOSA",
-    "survey_status": "OPEN",
-    "email": "berkahbatu07@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:06:28",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d1ff8517-d7fd-4b34-b6a9-6a049f140e5f",
-    "company_name": "BERKAH BATU SENTOSA",
-    "survey_status": "OPEN",
-    "email": "berkahbatu07@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:06:20",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f3e71b63-081f-4e6c-91f1-ad568c92ecb2",
-    "company_name": "PT Pegadaian (Persero), UPC BALAROA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d83f7347-15e7-4f18-8ef0-a4921b36d1d4",
-    "company_name": "NUSA LUKINDO DWIKARYA",
-    "survey_status": "OPEN",
-    "email": "ptnusalukindodwikarya@gmail.com",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c926488a-3754-4d4a-b2e8-0cadf5f4180d",
-    "company_name": "XIN LEI KUANG YEINDONESIA",
-    "survey_status": "OPEN",
-    "email": "xinleikuangyeindonesia@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 15:12:43",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "53a44088-5b6b-4b31-8d1f-fff42c22ced3",
-    "company_name": "CLIPAN FINANCE CAB PALU,PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "08774397-b04b-4481-9d1a-fbbd4726669b",
-    "company_name": "THE CLIFF TOGEAN",
-    "survey_status": "OPEN",
-    "email": "pttct@proton.me",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 10:59:09",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "08774397-b04b-4481-9d1a-fbbd4726669b",
-    "company_name": "THE CLIFF TOGEAN",
-    "survey_status": "OPEN",
-    "email": "pttct@proton.me",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "01 Jun 2026, 23:00:27",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "08774397-b04b-4481-9d1a-fbbd4726669b",
-    "company_name": "THE CLIFF TOGEAN",
-    "survey_status": "OPEN",
-    "email": "pttct@proton.me",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 22:59:43",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8b887f37-ffa2-4cd3-bf03-b85500208e85",
-    "company_name": "PELUMASINDO PRIMA GEMILANG",
-    "survey_status": "OPEN",
-    "email": "ppg.palu@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "09 Jun 2026, 16:14:33",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8b887f37-ffa2-4cd3-bf03-b85500208e85",
-    "company_name": "PELUMASINDO PRIMA GEMILANG",
-    "survey_status": "OPEN",
-    "email": "ppg.palu@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 09:55:31",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8b887f37-ffa2-4cd3-bf03-b85500208e85",
-    "company_name": "PELUMASINDO PRIMA GEMILANG",
-    "survey_status": "OPEN",
-    "email": "ppg.palu@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 04:04:52",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8b887f37-ffa2-4cd3-bf03-b85500208e85",
-    "company_name": "PELUMASINDO PRIMA GEMILANG",
-    "survey_status": "OPEN",
-    "email": "ppg.palu@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:04:51",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "413a5547-4082-4d5e-b066-fb9cf20f7ec5",
-    "company_name": "Bank Rakyat Indonesia",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "44c630b9-c380-4704-abd8-4e7077f518ce",
-    "company_name": "CV NIAGA JAYA",
-    "survey_status": "OPEN",
-    "email": "niagajaya52@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:17:31",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "44c630b9-c380-4704-abd8-4e7077f518ce",
-    "company_name": "CV NIAGA JAYA",
-    "survey_status": "OPEN",
-    "email": "niagajaya52@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 01:10:45",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "44c630b9-c380-4704-abd8-4e7077f518ce",
-    "company_name": "CV NIAGA JAYA",
-    "survey_status": "OPEN",
-    "email": "niagajaya52@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:10:14",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "be69e95a-6272-4ec1-9b87-a83d2145d912",
-    "company_name": "BANK PANIN PT TBK",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "17e7eeef-f4c3-4abb-9310-666ffe6109e9",
-    "company_name": "BANK MANDIRI (PERSERO)",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7e055a3a-d422-4229-87ff-913a6e4b9a98",
-    "company_name": "BANK MANDIRI PERSERO TBK PT CABANG IMAM BONJOL",
-    "survey_status": "OPEN",
-    "email": "paluimambonjol@bankmandiri.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:28:14",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7e055a3a-d422-4229-87ff-913a6e4b9a98",
-    "company_name": "BANK MANDIRI PERSERO TBK PT CABANG IMAM BONJOL",
-    "survey_status": "OPEN",
-    "email": "paluimambonjol@bankmandiri.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:28:14",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6663b331-00f4-45f0-8a2f-49a13c3c3d4d",
-    "company_name": "KSU HASANAH AL CHAERAT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "509a56d4-ea6d-48f0-b2f9-487fa7f06478",
-    "company_name": "NESINDO ENERGI WAHANA",
-    "survey_status": "OPEN",
-    "email": "nesindoenergiwahana2022@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:39:56",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "509a56d4-ea6d-48f0-b2f9-487fa7f06478",
-    "company_name": "NESINDO ENERGI WAHANA",
-    "survey_status": "OPEN",
-    "email": "nesindoenergiwahana2022@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:39:53",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "938438eb-bab0-4a0f-9557-eba4b0d191ae",
-    "company_name": "BANK BRI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "17226f0c-26e3-40dd-b11d-eb1eb557cecd",
-    "company_name": "BANK MANDIRI SYARIAH",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ef9c8eb6-48b2-4b9b-af8b-8f48326d4207",
-    "company_name": "BANK MUAMALAT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "51131eab-42f7-42bc-82fb-aadf4f4e07fc",
-    "company_name": "MULIA JAYA KARYA, PT",
-    "survey_status": "OPEN",
-    "email": "atap.indahpalu@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:40:28",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "51131eab-42f7-42bc-82fb-aadf4f4e07fc",
-    "company_name": "MULIA JAYA KARYA, PT",
-    "survey_status": "OPEN",
-    "email": "atap.indahpalu@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:40:24",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "db7b6343-2399-4758-b965-dc6540b0b149",
-    "company_name": "BNI UNIT MANONDA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7f72ae76-2e98-4c6b-8447-5f35ae25b037",
-    "company_name": "DUTA KIATY SUKMA PT",
-    "survey_status": "OPEN",
-    "email": "ptdkspalu71@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:31:46",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7f72ae76-2e98-4c6b-8447-5f35ae25b037",
-    "company_name": "DUTA KIATY SUKMA PT",
-    "survey_status": "OPEN",
-    "email": "ptdkspalu71@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:31:42",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e2c06f53-33e1-4afe-bf03-4ffb09a6dac0",
-    "company_name": "VIOLA TEKNIK ELEKTRO",
-    "survey_status": "OPEN",
-    "email": "violateknikelektro@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:03:24",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e2c06f53-33e1-4afe-bf03-4ffb09a6dac0",
-    "company_name": "VIOLA TEKNIK ELEKTRO",
-    "survey_status": "OPEN",
-    "email": "violateknikelektro@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:03:23",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "de19440b-1c67-4d84-b2d7-7b312745c2c7",
-    "company_name": "WAHYU VARIASI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "a512b3e6-c0f7-4c9d-9e59-eb9837b3fe85",
-    "company_name": "MACINDO MITRA RAYA, PT",
-    "survey_status": "OPEN",
-    "email": "macindoraya@yahoo.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 05:30:38",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "a512b3e6-c0f7-4c9d-9e59-eb9837b3fe85",
-    "company_name": "MACINDO MITRA RAYA, PT",
-    "survey_status": "OPEN",
-    "email": "macindoraya@yahoo.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 05:30:37",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1830ec24-76b9-443c-94ec-c4c7a1d67c5e",
-    "company_name": "SUPER JAYA BAN",
-    "survey_status": "OPEN",
-    "email": "superjayaban47@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:02:37",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1830ec24-76b9-443c-94ec-c4c7a1d67c5e",
-    "company_name": "SUPER JAYA BAN",
-    "survey_status": "OPEN",
-    "email": "superjayaban47@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:02:36",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1830ec24-76b9-443c-94ec-c4c7a1d67c5e",
-    "company_name": "SUPER JAYA BAN",
-    "survey_status": "OPEN",
-    "email": "superjayaban47@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:33:32",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1830ec24-76b9-443c-94ec-c4c7a1d67c5e",
-    "company_name": "SUPER JAYA BAN",
-    "survey_status": "OPEN",
-    "email": "superjayaban47@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:33:29",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "524474db-afb8-4471-bb59-4f8db0cab3aa",
-    "company_name": "LANGIT TIMUR REZEKI",
-    "survey_status": "OPEN",
-    "email": "langittimurrezeki@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:42:53",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "524474db-afb8-4471-bb59-4f8db0cab3aa",
-    "company_name": "LANGIT TIMUR REZEKI",
-    "survey_status": "OPEN",
-    "email": "langittimurrezeki@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:42:52",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "276a3095-cd62-4755-a75f-655ffbdde31b",
-    "company_name": "Bank BRI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "daac7207-688e-43c4-9a17-711e647888b3",
-    "company_name": "Bank BRI UNIT Imam Bonjol Palu",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d7973221-1479-48e2-b809-27bd846f69af",
-    "company_name": "BANK BNI 46 PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c51a0c28-2027-4c77-9a59-c8866b277bd2",
-    "company_name": "INVERO PRIMALAND PROPERTY",
-    "survey_status": "OPEN",
-    "email": "inveroprimaland@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "06 Jun 2026, 22:44:18",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c51a0c28-2027-4c77-9a59-c8866b277bd2",
-    "company_name": "INVERO PRIMALAND PROPERTY",
-    "survey_status": "OPEN",
-    "email": "inveroprimaland@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 07:22:35",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c51a0c28-2027-4c77-9a59-c8866b277bd2",
-    "company_name": "INVERO PRIMALAND PROPERTY",
-    "survey_status": "OPEN",
-    "email": "inveroprimaland@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 07:21:36",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c51a0c28-2027-4c77-9a59-c8866b277bd2",
-    "company_name": "INVERO PRIMALAND PROPERTY",
-    "survey_status": "OPEN",
-    "email": "inveroprimaland@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:21:35",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f59006b8-9594-4607-a98e-11829135dd05",
-    "company_name": "DINAMIS ABADI, CV",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "de7c34f4-fd42-4dcd-9cc5-b0f8b4e810fa",
-    "company_name": "KSU GOTONG ROYONG",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f0da5fac-27f0-4acc-a9a3-3186d93e71ae",
-    "company_name": "Garuda Indonesia (Persero) Tbk, Kantor Cabang Palu",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "39240d1f-8e70-4195-9f2f-f0673a4de774",
-    "company_name": "BANK MANDIRI (PERSERO)",
-    "survey_status": "OPEN",
-    "email": "ntan.rakhmannisa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:14:31",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "39240d1f-8e70-4195-9f2f-f0673a4de774",
-    "company_name": "BANK MANDIRI (PERSERO)",
-    "survey_status": "OPEN",
-    "email": "ntan.rakhmannisa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:14:19",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "39240d1f-8e70-4195-9f2f-f0673a4de774",
-    "company_name": "BANK MANDIRI (PERSERO)",
-    "survey_status": "OPEN",
-    "email": "ntan.rakhmannisa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 00:43:30",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "39240d1f-8e70-4195-9f2f-f0673a4de774",
-    "company_name": "BANK MANDIRI (PERSERO)",
-    "survey_status": "OPEN",
-    "email": "ntan.rakhmannisa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:43:29",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2c7771a1-abc2-4855-bcf6-a00646cbefd8",
-    "company_name": "BANK BRI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "cd5a32a0-2319-49bf-afe6-6ffa1c7d712a",
-    "company_name": "ANUGRAH JAYA HOUSEWARES",
-    "survey_status": "OPEN",
-    "email": "anugrahjayaperkasa@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 07:48:23",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "cd5a32a0-2319-49bf-afe6-6ffa1c7d712a",
-    "company_name": "ANUGRAH JAYA HOUSEWARES",
-    "survey_status": "OPEN",
-    "email": "anugrahjayaperkasa@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:47:46",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "600ff35d-6d4a-44c2-8605-15621ae39a14",
-    "company_name": "KSU PERDANA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "bbdd06b7-dec9-47cb-8405-86f3e0fb42ff",
-    "company_name": "BANK MANDIRI 9PERSERO) TBK KCP PALU BASUKI RAHMAT",
-    "survey_status": "OPEN",
-    "email": "palubasukirahmat@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 10:43:20",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "bbdd06b7-dec9-47cb-8405-86f3e0fb42ff",
-    "company_name": "BANK MANDIRI 9PERSERO) TBK KCP PALU BASUKI RAHMAT",
-    "survey_status": "OPEN",
-    "email": "palubasukirahmat@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 06:46:45",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "bbdd06b7-dec9-47cb-8405-86f3e0fb42ff",
-    "company_name": "BANK MANDIRI 9PERSERO) TBK KCP PALU BASUKI RAHMAT",
-    "survey_status": "OPEN",
-    "email": "palubasukirahmat@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 06:46:21",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3913cc23-0307-45ae-91db-afd356fdd4a1",
-    "company_name": "KPN PENGAYOMAN",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2a1d2b51-e308-47da-8bdb-a0612df97beb",
-    "company_name": "SWISS-BELLHOTEL INTERNATIONAL, PT",
-    "survey_status": "OPEN",
-    "email": "palu@swiss-belhotel.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "09 Jun 2026, 11:11:28",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2a1d2b51-e308-47da-8bdb-a0612df97beb",
-    "company_name": "SWISS-BELLHOTEL INTERNATIONAL, PT",
-    "survey_status": "OPEN",
-    "email": "palu@swiss-belhotel.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:09:46",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2a1d2b51-e308-47da-8bdb-a0612df97beb",
-    "company_name": "SWISS-BELLHOTEL INTERNATIONAL, PT",
-    "survey_status": "OPEN",
-    "email": "palu@swiss-belhotel.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:09:44",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2a1d2b51-e308-47da-8bdb-a0612df97beb",
-    "company_name": "SWISS-BELLHOTEL INTERNATIONAL, PT",
-    "survey_status": "OPEN",
-    "email": "palu@swiss-belhotel.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 07:51:48",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2a1d2b51-e308-47da-8bdb-a0612df97beb",
-    "company_name": "SWISS-BELLHOTEL INTERNATIONAL, PT",
-    "survey_status": "OPEN",
-    "email": "palu@swiss-belhotel.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 00:10:09",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2a1d2b51-e308-47da-8bdb-a0612df97beb",
-    "company_name": "SWISS-BELLHOTEL INTERNATIONAL, PT",
-    "survey_status": "OPEN",
-    "email": "palu@swiss-belhotel.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:10:08",
-    "order": 6,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c4911ad2-5e1f-4b52-b082-4c5af5048697",
-    "company_name": "Bank SMBC Indonesia PT TBK KC Palu",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e0fcb183-704d-49fc-9131-c7e4804fcf06",
-    "company_name": "PT Bumi Sarana Utama, Kantor Cabang Palu",
-    "survey_status": "OPEN",
-    "email": "palu@bsukalla.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:57:51",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e0fcb183-704d-49fc-9131-c7e4804fcf06",
-    "company_name": "PT Bumi Sarana Utama, Kantor Cabang Palu",
-    "survey_status": "OPEN",
-    "email": "palu@bsukalla.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 08:57:51",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "57c342e1-e4b5-4892-89be-d8b5e96d9fb1",
-    "company_name": "SEHAT MAKMUR BANGSA SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "newspacebarpalu@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:54:24",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "57c342e1-e4b5-4892-89be-d8b5e96d9fb1",
-    "company_name": "SEHAT MAKMUR BANGSA SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "newspacebarpalu@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:54:21",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "967625fb-0929-4df2-9f46-b445b12cc6f6",
-    "company_name": "PALU GRAND HERO, PT",
-    "survey_status": "OPEN",
-    "email": "grandherotax@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:38:44",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "967625fb-0929-4df2-9f46-b445b12cc6f6",
-    "company_name": "PALU GRAND HERO, PT",
-    "survey_status": "OPEN",
-    "email": "grandherotax@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 04:38:43",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "98364c7b-3fd9-4ee6-909a-622f43e0a103",
-    "company_name": "TATA LOGAM LESTARI, PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6a272e4e-e92f-40c6-966d-dfab399b21fb",
-    "company_name": "TANJUNG DALAO SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "pttanjungdalaosejahtera@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:35:45",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6a272e4e-e92f-40c6-966d-dfab399b21fb",
-    "company_name": "TANJUNG DALAO SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "pttanjungdalaosejahtera@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:35:41",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d3a91668-d108-45d0-85f7-3da9134afcef",
-    "company_name": "SINERGI INVESTASI DEVELOPMENT",
-    "survey_status": "OPEN",
-    "email": "ptsinergiinvestasidevelop@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:12:28",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d3a91668-d108-45d0-85f7-3da9134afcef",
-    "company_name": "SINERGI INVESTASI DEVELOPMENT",
-    "survey_status": "OPEN",
-    "email": "ptsinergiinvestasidevelop@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:12:23",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e499e8cb-d944-4cfe-890c-3615dc030e12",
-    "company_name": "BANK PAN INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "selvie.octaviyanti2@panin.co.id",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "02 Jun 2026, 09:10:08",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e499e8cb-d944-4cfe-890c-3615dc030e12",
-    "company_name": "BANK PAN INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "selvie.octaviyanti2@panin.co.id",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:10:08",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e499e8cb-d944-4cfe-890c-3615dc030e12",
-    "company_name": "BANK PAN INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "selvie.octaviyanti2@panin.co.id",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:10:04",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "da83cd8c-7cdd-4cc8-8c49-7342fbaa564e",
-    "company_name": "ELISABET",
-    "survey_status": "OPEN",
-    "email": "khenelis2@gmail.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 08:35:20",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "da83cd8c-7cdd-4cc8-8c49-7342fbaa564e",
-    "company_name": "ELISABET",
-    "survey_status": "OPEN",
-    "email": "khenelis2@gmail.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:34:32",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6eed6422-8e3d-4da4-8fd9-4c19274be95d",
-    "company_name": "BANK INDONESIA PROVINSI SULAWESI TENGAH",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9085ae4a-1e31-46f9-909b-c5e601aa3b0c",
-    "company_name": "HASRAT ABADI PT",
-    "survey_status": "OPEN",
-    "email": "crc.mka@hasjrat.co.id",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:22:11",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9085ae4a-1e31-46f9-909b-c5e601aa3b0c",
-    "company_name": "HASRAT ABADI PT",
-    "survey_status": "OPEN",
-    "email": "crc.mka@hasjrat.co.id",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 04:22:11",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b7fe5ff5-8437-47f8-b7bb-30b09aa04bee",
-    "company_name": "KPN SITUVU",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "50679331-64b5-4406-88f8-cf42c85890c2",
-    "company_name": "NUR CAHAYA JAYA",
-    "survey_status": "OPEN",
-    "email": "pt.nurcahayajaya2022@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:39:10",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "50679331-64b5-4406-88f8-cf42c85890c2",
-    "company_name": "NUR CAHAYA JAYA",
-    "survey_status": "OPEN",
-    "email": "pt.nurcahayajaya2022@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:39:04",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d0e8874c-363b-4069-b1f6-5777196d941b",
-    "company_name": "KOPERASI KOSMANTU SMU I",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "96a37308-34c7-4c20-9311-417311c38937",
-    "company_name": "PEGADAIAN UPS LOLU, PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "cbc212fd-e7c5-4aaa-be67-680c0f2eece5",
-    "company_name": "KPN KEHUTANAN",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "07811ebb-0114-4730-8a10-78bcb2e8cee8",
-    "company_name": "PT BANK CENTRAL ASIA, TBK KCU PALU",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f1fe9913-bcb8-4824-b295-98566fe2541f",
-    "company_name": "TERRE MITRA PERSADA",
-    "survey_status": "OPEN",
-    "email": "teremitrapersada@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:56:16",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f1fe9913-bcb8-4824-b295-98566fe2541f",
-    "company_name": "TERRE MITRA PERSADA",
-    "survey_status": "OPEN",
-    "email": "teremitrapersada@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:56:12",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d299dfe3-339c-4b97-8fa1-3e4cfb001e72",
-    "company_name": "BANK CENTRAL ASIA CABANG PALU",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "020e81f6-9885-4789-ac90-f2c79fef3310",
-    "company_name": "PRIMADONA CV",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1c11cebf-70e1-414e-8bb6-5efd12c8de46",
-    "company_name": "B P J S KETENAGAKERJAAN",
-    "survey_status": "OPEN",
-    "email": "kacab.palu@bpjsketenagakerjaan.go.id",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:03:29",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1c11cebf-70e1-414e-8bb6-5efd12c8de46",
-    "company_name": "B P J S KETENAGAKERJAAN",
-    "survey_status": "OPEN",
-    "email": "kacab.palu@bpjsketenagakerjaan.go.id",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:03:23",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1c11cebf-70e1-414e-8bb6-5efd12c8de46",
-    "company_name": "B P J S KETENAGAKERJAAN",
-    "survey_status": "OPEN",
-    "email": "kacab.palu@bpjsketenagakerjaan.go.id",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 11:01:59",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1c11cebf-70e1-414e-8bb6-5efd12c8de46",
-    "company_name": "B P J S KETENAGAKERJAAN",
-    "survey_status": "OPEN",
-    "email": "kacab.palu@bpjsketenagakerjaan.go.id",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:39:37",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1c11cebf-70e1-414e-8bb6-5efd12c8de46",
-    "company_name": "B P J S KETENAGAKERJAAN",
-    "survey_status": "OPEN",
-    "email": "kacab.palu@bpjsketenagakerjaan.go.id",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:39:36",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6b1b4725-31fc-45ac-8db0-c64cc942dd9b",
-    "company_name": "MITRA BARU MARITIM",
-    "survey_status": "OPEN",
-    "email": "mitrabarumaritim@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:37:13",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6b1b4725-31fc-45ac-8db0-c64cc942dd9b",
-    "company_name": "MITRA BARU MARITIM",
-    "survey_status": "OPEN",
-    "email": "mitrabarumaritim@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:37:10",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "cfb47925-29b5-4c92-92e1-6a0e93a8e0e7",
-    "company_name": "BAROKAH GAMPING ARTOMORO",
-    "survey_status": "OPEN",
-    "email": "m.alamtimur@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 07:55:44",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "cfb47925-29b5-4c92-92e1-6a0e93a8e0e7",
-    "company_name": "BAROKAH GAMPING ARTOMORO",
-    "survey_status": "OPEN",
-    "email": "m.alamtimur@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:55:41",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ea7191bd-b548-4201-8fa6-e6681f75bd85",
-    "company_name": "BANK BRI UNIT PALU SELATAN",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "19868055-1cbf-47b2-bb23-7ead982e969f",
-    "company_name": "ASBUTON JAYA ABADI",
-    "survey_status": "OPEN",
-    "email": "felistheodorus@hotmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:03:01",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "19868055-1cbf-47b2-bb23-7ead982e969f",
-    "company_name": "ASBUTON JAYA ABADI",
-    "survey_status": "OPEN",
-    "email": "felistheodorus@hotmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:03:00",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "19868055-1cbf-47b2-bb23-7ead982e969f",
-    "company_name": "ASBUTON JAYA ABADI",
-    "survey_status": "OPEN",
-    "email": "felistheodorus@hotmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:35:43",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "19868055-1cbf-47b2-bb23-7ead982e969f",
-    "company_name": "ASBUTON JAYA ABADI",
-    "survey_status": "OPEN",
-    "email": "felistheodorus@hotmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:35:36",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "04f7d447-4187-4fdc-a1ec-cb4965c01edb",
-    "company_name": "PUTRA BARUS RAYA",
-    "survey_status": "OPEN",
-    "email": "putrabarusraya20@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 10:58:08",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "04f7d447-4187-4fdc-a1ec-cb4965c01edb",
-    "company_name": "PUTRA BARUS RAYA",
-    "survey_status": "OPEN",
-    "email": "putrabarusraya20@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 10:58:05",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "04f7d447-4187-4fdc-a1ec-cb4965c01edb",
-    "company_name": "PUTRA BARUS RAYA",
-    "survey_status": "OPEN",
-    "email": "putrabarusraya20@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 22:52:44",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "04f7d447-4187-4fdc-a1ec-cb4965c01edb",
-    "company_name": "PUTRA BARUS RAYA",
-    "survey_status": "OPEN",
-    "email": "putrabarusraya20@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 22:52:42",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "54b3cf5a-286c-44f3-8eba-9fa4203390ae",
-    "company_name": "INDONESIA JIANDA TRADING",
-    "survey_status": "OPEN",
-    "email": "daiyongzhi319@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:46:58",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "54b3cf5a-286c-44f3-8eba-9fa4203390ae",
-    "company_name": "INDONESIA JIANDA TRADING",
-    "survey_status": "OPEN",
-    "email": "daiyongzhi319@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:46:54",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c04e33ef-ad6a-4eb4-b260-c26db1506fd4",
-    "company_name": "MANDIRI AGRO LESTARI",
-    "survey_status": "OPEN",
-    "email": "cvmandiriagrolestari@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "11 Jun 2026, 17:18:44",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c04e33ef-ad6a-4eb4-b260-c26db1506fd4",
-    "company_name": "MANDIRI AGRO LESTARI",
-    "survey_status": "OPEN",
-    "email": "cvmandiriagrolestari@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "09 Jun 2026, 11:26:54",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c04e33ef-ad6a-4eb4-b260-c26db1506fd4",
-    "company_name": "MANDIRI AGRO LESTARI",
-    "survey_status": "OPEN",
-    "email": "cvmandiriagrolestari@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 07:05:22",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c04e33ef-ad6a-4eb4-b260-c26db1506fd4",
-    "company_name": "MANDIRI AGRO LESTARI",
-    "survey_status": "OPEN",
-    "email": "cvmandiriagrolestari@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:04:26",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ef616483-a46d-4617-b7aa-4851734b310f",
-    "company_name": "CITRA CINTA ABADI",
-    "survey_status": "OPEN",
-    "email": "citracintaabadi23@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 07:57:26",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ef616483-a46d-4617-b7aa-4851734b310f",
-    "company_name": "CITRA CINTA ABADI",
-    "survey_status": "OPEN",
-    "email": "citracintaabadi23@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:47:07",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ef616483-a46d-4617-b7aa-4851734b310f",
-    "company_name": "CITRA CINTA ABADI",
-    "survey_status": "OPEN",
-    "email": "citracintaabadi23@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:47:03",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3d43b84b-8e87-4a75-bb78-a0447ae717fa",
-    "company_name": "INDONESIA THOUSAND ISLANDS INTERNATIONAL",
-    "survey_status": "OPEN",
-    "email": "indonesiathousandislandinterna@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:15:39",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3d43b84b-8e87-4a75-bb78-a0447ae717fa",
-    "company_name": "INDONESIA THOUSAND ISLANDS INTERNATIONAL",
-    "survey_status": "OPEN",
-    "email": "indonesiathousandislandinterna@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:15:35",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3d43b84b-8e87-4a75-bb78-a0447ae717fa",
-    "company_name": "INDONESIA THOUSAND ISLANDS INTERNATIONAL",
-    "survey_status": "OPEN",
-    "email": "indonesiathousandislandinterna@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 00:51:04",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3d43b84b-8e87-4a75-bb78-a0447ae717fa",
-    "company_name": "INDONESIA THOUSAND ISLANDS INTERNATIONAL",
-    "survey_status": "OPEN",
-    "email": "indonesiathousandislandinterna@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:51:03",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f9194c34-486e-43e2-9243-2a33661c3c54",
-    "company_name": "RAYA PONSEL, CV",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "196883ff-6fac-4215-82ad-2eca8c1fe974",
-    "company_name": "BANK BRI UNIT TAWAELI",
-    "survey_status": "OPEN",
-    "email": "n3448@bricorp.co.id",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:02:57",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "196883ff-6fac-4215-82ad-2eca8c1fe974",
-    "company_name": "BANK BRI UNIT TAWAELI",
-    "survey_status": "OPEN",
-    "email": "n3448@bricorp.co.id",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "01 Jun 2026, 23:35:32",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "196883ff-6fac-4215-82ad-2eca8c1fe974",
-    "company_name": "BANK BRI UNIT TAWAELI",
-    "survey_status": "OPEN",
-    "email": "n3448@bricorp.co.id",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:35:32",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "a1be5437-c15a-4642-abb8-6d3504422157",
-    "company_name": "KPN SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5ec12215-4c41-402b-b7bb-62e4e02fe70b",
-    "company_name": "KOPINKRA MINA PALU MAJU",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d70afaff-937b-415c-91c2-d0a83a5c0f6c",
-    "company_name": "CARGILL INDONESIA, PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "71eb65d0-6f5e-4b8b-9930-25653dbd1469",
-    "company_name": "Bank Sulteng Tawaeli",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5946ebb9-0e1d-4a46-bb09-01582955c7d1",
-    "company_name": "SURYA ENERGY PALU",
-    "survey_status": "OPEN",
-    "email": "suryaenergypalu1@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:59:29",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5946ebb9-0e1d-4a46-bb09-01582955c7d1",
-    "company_name": "SURYA ENERGY PALU",
-    "survey_status": "OPEN",
-    "email": "suryaenergypalu1@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:59:29",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28c3c508-d464-4ffc-b539-73871e84c209",
-    "company_name": "HADJRIN",
-    "survey_status": "OPEN",
-    "email": "hadjrinartha@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:09:23",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28c3c508-d464-4ffc-b539-73871e84c209",
-    "company_name": "HADJRIN",
-    "survey_status": "OPEN",
-    "email": "hadjrinartha@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:09:22",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28c3c508-d464-4ffc-b539-73871e84c209",
-    "company_name": "HADJRIN",
-    "survey_status": "OPEN",
-    "email": "hadjrinartha@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 00:05:39",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28c3c508-d464-4ffc-b539-73871e84c209",
-    "company_name": "HADJRIN",
-    "survey_status": "OPEN",
-    "email": "hadjrinartha@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:05:35",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c7c33a75-5170-4536-8e62-54b8eb7a1535",
-    "company_name": "OLAM COCOA, PT",
-    "survey_status": "OPEN",
-    "email": "media@olamnet.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "02 Jun 2026, 07:30:42",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c7c33a75-5170-4536-8e62-54b8eb7a1535",
-    "company_name": "OLAM COCOA, PT",
-    "survey_status": "OPEN",
-    "email": "media@olamnet.com",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 07:30:11",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c7c33a75-5170-4536-8e62-54b8eb7a1535",
-    "company_name": "OLAM COCOA, PT",
-    "survey_status": "OPEN",
-    "email": "media@olamnet.com",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:30:06",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "df5b50cc-608f-4076-8f58-407f7a9e76ee",
-    "company_name": "PT Pegadaian (Persero), UPC TAWAELI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e0638266-282f-46d6-8242-d054733b161a",
-    "company_name": "RIZKI TOLITAMA SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "adhysetiawan6009@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "09 Jun 2026, 15:42:03",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e0638266-282f-46d6-8242-d054733b161a",
-    "company_name": "RIZKI TOLITAMA SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "adhysetiawan6009@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 12:16:07",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e0638266-282f-46d6-8242-d054733b161a",
-    "company_name": "RIZKI TOLITAMA SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "adhysetiawan6009@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:55:13",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e0638266-282f-46d6-8242-d054733b161a",
-    "company_name": "RIZKI TOLITAMA SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "adhysetiawan6009@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:55:13",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7058c14d-629b-4be3-9060-1fb0c938522c",
-    "company_name": "BANK BNI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "378ebc19-fd46-4557-91f9-cb71ad58fe6d",
-    "company_name": "SPBU KAYUMALUE",
-    "survey_status": "OPEN",
-    "email": "spbutawaeli74943313@gmail.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:13:52",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "378ebc19-fd46-4557-91f9-cb71ad58fe6d",
-    "company_name": "SPBU KAYUMALUE",
-    "survey_status": "OPEN",
-    "email": "spbutawaeli74943313@gmail.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:41:02",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "378ebc19-fd46-4557-91f9-cb71ad58fe6d",
-    "company_name": "SPBU KAYUMALUE",
-    "survey_status": "OPEN",
-    "email": "spbutawaeli74943313@gmail.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:41:01",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "a23882fd-9aaa-4444-a1fe-c10274a6dbc1",
-    "company_name": "ANUGERAHPERDANA",
-    "survey_status": "OPEN",
-    "email": "risky.anugerahperdana@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 05:22:20",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "a23882fd-9aaa-4444-a1fe-c10274a6dbc1",
-    "company_name": "ANUGERAHPERDANA",
-    "survey_status": "OPEN",
-    "email": "risky.anugerahperdana@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 05:21:43",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8f194159-aee6-4c39-8810-11d5c52d5a7a",
-    "company_name": "DONGGALA BINTANG LESTARI, PT",
-    "survey_status": "OPEN",
-    "email": "hrd.dblpalu@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 15:10:40",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8f194159-aee6-4c39-8810-11d5c52d5a7a",
-    "company_name": "DONGGALA BINTANG LESTARI, PT",
-    "survey_status": "OPEN",
-    "email": "hrd.dblpalu@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 15:10:34",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8f194159-aee6-4c39-8810-11d5c52d5a7a",
-    "company_name": "DONGGALA BINTANG LESTARI, PT",
-    "survey_status": "OPEN",
-    "email": "hrd.dblpalu@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:16:57",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8f194159-aee6-4c39-8810-11d5c52d5a7a",
-    "company_name": "DONGGALA BINTANG LESTARI, PT",
-    "survey_status": "OPEN",
-    "email": "hrd.dblpalu@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 04:16:57",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2bb3cd8c-c700-4e86-a0a1-6f479d94edca",
-    "company_name": "PEGADAIAN UNIT SIGMA PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "97cbfc74-d939-4167-9637-59a829ebefbf",
-    "company_name": "INTI MERCURY",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b5c4b9b2-3acd-4813-9ad3-7eb97cd19364",
-    "company_name": "JASUMA MITRA PERKASA, PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "38910d6c-5f3a-4009-b6ba-263894276b75",
-    "company_name": "JAPFA COMFEED INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "deo.jahar@japfa.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "09 Jun 2026, 11:14:24",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "38910d6c-5f3a-4009-b6ba-263894276b75",
-    "company_name": "JAPFA COMFEED INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "deo.jahar@japfa.com",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:14:15",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "38910d6c-5f3a-4009-b6ba-263894276b75",
-    "company_name": "JAPFA COMFEED INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "deo.jahar@japfa.com",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:14:06",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "38910d6c-5f3a-4009-b6ba-263894276b75",
-    "company_name": "JAPFA COMFEED INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "deo.jahar@japfa.com",
-    "global_status": "Clicked",
-    "status": "Opened",
-    "timestamp": "09 Jun 2026, 11:14:02",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "38910d6c-5f3a-4009-b6ba-263894276b75",
-    "company_name": "JAPFA COMFEED INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "deo.jahar@japfa.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "02 Jun 2026, 00:43:21",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "38910d6c-5f3a-4009-b6ba-263894276b75",
-    "company_name": "JAPFA COMFEED INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "deo.jahar@japfa.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "02 Jun 2026, 00:43:20",
-    "order": 6,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "38910d6c-5f3a-4009-b6ba-263894276b75",
-    "company_name": "JAPFA COMFEED INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "deo.jahar@japfa.com",
-    "global_status": "Clicked",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 00:42:55",
-    "order": 7,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "38910d6c-5f3a-4009-b6ba-263894276b75",
-    "company_name": "JAPFA COMFEED INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "deo.jahar@japfa.com",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 00:42:46",
-    "order": 8,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "38910d6c-5f3a-4009-b6ba-263894276b75",
-    "company_name": "JAPFA COMFEED INDONESIA TBK.",
-    "survey_status": "OPEN",
-    "email": "deo.jahar@japfa.com",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:42:43",
-    "order": 9,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "92865104-3653-4e96-bb06-65bc45e13891",
-    "company_name": "OGOSAKA",
-    "survey_status": "OPEN",
-    "email": "ogosaka@yahoo.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "12 Jun 2026, 05:20:06",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "92865104-3653-4e96-bb06-65bc45e13891",
-    "company_name": "OGOSAKA",
-    "survey_status": "OPEN",
-    "email": "ogosaka@yahoo.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "11 Jun 2026, 11:25:48",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "92865104-3653-4e96-bb06-65bc45e13891",
-    "company_name": "OGOSAKA",
-    "survey_status": "OPEN",
-    "email": "ogosaka@yahoo.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 23:19:43",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "92865104-3653-4e96-bb06-65bc45e13891",
-    "company_name": "OGOSAKA",
-    "survey_status": "OPEN",
-    "email": "ogosaka@yahoo.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 15:40:55",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "92865104-3653-4e96-bb06-65bc45e13891",
-    "company_name": "OGOSAKA",
-    "survey_status": "OPEN",
-    "email": "ogosaka@yahoo.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 15:34:06",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "bfa14499-c0dc-46fd-be08-4f61d59f07dd",
-    "company_name": "BORWITA CITRA PRIMA PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1ec06308-ea4f-4e77-a704-70de15e608be",
-    "company_name": "KPN SANATA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "de5c050b-1478-4b64-b17b-c5a3bf0f9417",
-    "company_name": "BUMI ALPHA MANDIRI",
-    "survey_status": "OPEN",
-    "email": "bumialphamandiri@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 08:56:07",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "de5c050b-1478-4b64-b17b-c5a3bf0f9417",
-    "company_name": "BUMI ALPHA MANDIRI",
-    "survey_status": "OPEN",
-    "email": "bumialphamandiri@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "09 Jun 2026, 10:58:39",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "de5c050b-1478-4b64-b17b-c5a3bf0f9417",
-    "company_name": "BUMI ALPHA MANDIRI",
-    "survey_status": "OPEN",
-    "email": "bumialphamandiri@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:47:33",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "de5c050b-1478-4b64-b17b-c5a3bf0f9417",
-    "company_name": "BUMI ALPHA MANDIRI",
-    "survey_status": "OPEN",
-    "email": "bumialphamandiri@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:47:30",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b12cfa10-8a84-4731-b76f-2dcb85dd3aa9",
-    "company_name": "Bank Syariah Indonesia KCP Paluta",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d2d99894-ccd7-4514-a345-02be0961b2c3",
-    "company_name": "CHUN INDO MAJU",
-    "survey_status": "OPEN",
-    "email": "chunindomaju24@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:09:33",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d2d99894-ccd7-4514-a345-02be0961b2c3",
-    "company_name": "CHUN INDO MAJU",
-    "survey_status": "OPEN",
-    "email": "chunindomaju24@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:09:33",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "fc54cddd-33fc-4006-b8de-d6bf0e9011eb",
-    "company_name": "BPR PALU LOKADANA UTAMA, PT",
-    "survey_status": "OPEN",
-    "email": "bprpalulokadana@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 10:34:01",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "fc54cddd-33fc-4006-b8de-d6bf0e9011eb",
-    "company_name": "BPR PALU LOKADANA UTAMA, PT",
-    "survey_status": "OPEN",
-    "email": "bprpalulokadana@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 10:33:19",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d24c5797-cf1d-44e8-be72-bbfa8d6d9be5",
-    "company_name": "INTIM REKAYASA KONSTRUKSI",
-    "survey_status": "OPEN",
-    "email": "pt.intimrekayasakonstruksi21@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "04 Jun 2026, 14:20:58",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d24c5797-cf1d-44e8-be72-bbfa8d6d9be5",
-    "company_name": "INTIM REKAYASA KONSTRUKSI",
-    "survey_status": "OPEN",
-    "email": "pt.intimrekayasakonstruksi21@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "04 Jun 2026, 14:20:55",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d24c5797-cf1d-44e8-be72-bbfa8d6d9be5",
-    "company_name": "INTIM REKAYASA KONSTRUKSI",
-    "survey_status": "OPEN",
-    "email": "pt.intimrekayasakonstruksi21@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:06:44",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d24c5797-cf1d-44e8-be72-bbfa8d6d9be5",
-    "company_name": "INTIM REKAYASA KONSTRUKSI",
-    "survey_status": "OPEN",
-    "email": "pt.intimrekayasakonstruksi21@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:06:41",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e3f66952-ca94-41a9-8371-44398d794b1b",
-    "company_name": "KOLASI ANUGERAH SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "kolasianugerahsejahtera@gmail.com",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "868e31cc-e193-46d3-b7c0-e31a8cbd1298",
-    "company_name": "HO CRISTIAN HADIRWAN HOASANA",
-    "survey_status": "OPEN",
-    "email": "cristianhadirwan01@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:47:50",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "868e31cc-e193-46d3-b7c0-e31a8cbd1298",
-    "company_name": "HO CRISTIAN HADIRWAN HOASANA",
-    "survey_status": "OPEN",
-    "email": "cristianhadirwan01@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:47:50",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "98cb945c-7393-4b8c-b531-8c7edc4516b0",
-    "company_name": "Bank BTN KC Palu",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "dcc680b8-a1ef-4fbe-b541-5c4044150f72",
-    "company_name": "KPN CAKTI BUDI BAKTI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "80d6c1c0-ba45-4ed2-bc2b-655895e3df27",
-    "company_name": "BNI CABANG PALU",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "58530812-7f89-44a7-813b-ee3ebf68929d",
-    "company_name": "PUPUK KALTIM PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ba0115a8-7b54-460b-9b7a-7ad7b2227507",
-    "company_name": "Bank Mandiri - Tadulako",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8c5eeb83-b1a0-497c-b20d-49a22a086f2b",
-    "company_name": "BANK MEGA TBK",
-    "survey_status": "OPEN",
-    "email": "i.ediwilianta@bankmega.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:07:53",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8c5eeb83-b1a0-497c-b20d-49a22a086f2b",
-    "company_name": "BANK MEGA TBK",
-    "survey_status": "OPEN",
-    "email": "i.ediwilianta@bankmega.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 04:07:53",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6e06309c-ca09-49e0-a865-38b51a8b4b72",
-    "company_name": "MEGAH SAMUDRA ABADI",
-    "survey_status": "OPEN",
-    "email": "megahsamudraabadipt@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:42:47",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6e06309c-ca09-49e0-a865-38b51a8b4b72",
-    "company_name": "MEGAH SAMUDRA ABADI",
-    "survey_status": "OPEN",
-    "email": "megahsamudraabadipt@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:42:46",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c7094f73-edae-4179-92d9-9bfb539d5809",
-    "company_name": "KOP. ABRI PRIMKOPAD DENBEKANG VII-44.02",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "83c0c58a-dd1c-4ca8-a3a6-d40f0f3dbbfc",
-    "company_name": "Bank BRI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6fe03662-86d2-4be4-8e4a-8bacdf38975f",
-    "company_name": "TORUKUNO PISON SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "pt.torukunopisonsejahtera@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:45:37",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6fe03662-86d2-4be4-8e4a-8bacdf38975f",
-    "company_name": "TORUKUNO PISON SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "pt.torukunopisonsejahtera@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:45:33",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c1b112ea-18c7-4bfb-ad07-a7040dbf7701",
-    "company_name": "KPN KOPERIND",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c5121ece-4145-48e1-92c7-208ebe4dc69f",
-    "company_name": "KOPKAR KOPTASPEN",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "33879b7c-1a96-488f-b3ae-083162745c56",
-    "company_name": "PT VARIA KENCANA",
-    "survey_status": "OPEN",
-    "email": "ptvariakencana@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:13:00",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "33879b7c-1a96-488f-b3ae-083162745c56",
-    "company_name": "PT VARIA KENCANA",
-    "survey_status": "OPEN",
-    "email": "ptvariakencana@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:34:13",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "33879b7c-1a96-488f-b3ae-083162745c56",
-    "company_name": "PT VARIA KENCANA",
-    "survey_status": "OPEN",
-    "email": "ptvariakencana@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:34:08",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "281524ee-0f95-4dd9-82e7-d877dbcb354e",
-    "company_name": "HANJAYA MANDALA SAMPOERNA ,TBK. PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3db45248-a7ff-4ef2-84c8-e002e14c0e7b",
-    "company_name": "PANNY KELAPA CEMERLANG",
-    "survey_status": "OPEN",
-    "email": "pannykelapacemerlang@gmail.com",
-    "global_status": "Clicked",
-    "status": "Opened",
-    "timestamp": "09 Jun 2026, 11:15:43",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3db45248-a7ff-4ef2-84c8-e002e14c0e7b",
-    "company_name": "PANNY KELAPA CEMERLANG",
-    "survey_status": "OPEN",
-    "email": "pannykelapacemerlang@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "09 Jun 2026, 11:15:42",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3db45248-a7ff-4ef2-84c8-e002e14c0e7b",
-    "company_name": "PANNY KELAPA CEMERLANG",
-    "survey_status": "OPEN",
-    "email": "pannykelapacemerlang@gmail.com",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:15:38",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3db45248-a7ff-4ef2-84c8-e002e14c0e7b",
-    "company_name": "PANNY KELAPA CEMERLANG",
-    "survey_status": "OPEN",
-    "email": "pannykelapacemerlang@gmail.com",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:15:35",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3db45248-a7ff-4ef2-84c8-e002e14c0e7b",
-    "company_name": "PANNY KELAPA CEMERLANG",
-    "survey_status": "OPEN",
-    "email": "pannykelapacemerlang@gmail.com",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 00:51:51",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3db45248-a7ff-4ef2-84c8-e002e14c0e7b",
-    "company_name": "PANNY KELAPA CEMERLANG",
-    "survey_status": "OPEN",
-    "email": "pannykelapacemerlang@gmail.com",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:51:48",
-    "order": 6,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2122c5b0-5336-40d1-b4cd-cabb95db2940",
-    "company_name": "SALIM JAYA/KARYA JAYA MEMBANGUN",
-    "survey_status": "OPEN",
-    "email": "cvsalimjaya2012@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "09 Jun 2026, 11:12:11",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2122c5b0-5336-40d1-b4cd-cabb95db2940",
-    "company_name": "SALIM JAYA/KARYA JAYA MEMBANGUN",
-    "survey_status": "OPEN",
-    "email": "cvsalimjaya2012@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:04:52",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2122c5b0-5336-40d1-b4cd-cabb95db2940",
-    "company_name": "SALIM JAYA/KARYA JAYA MEMBANGUN",
-    "survey_status": "OPEN",
-    "email": "cvsalimjaya2012@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:04:36",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2122c5b0-5336-40d1-b4cd-cabb95db2940",
-    "company_name": "SALIM JAYA/KARYA JAYA MEMBANGUN",
-    "survey_status": "OPEN",
-    "email": "cvsalimjaya2012@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "09 Jun 2026, 10:55:30",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2122c5b0-5336-40d1-b4cd-cabb95db2940",
-    "company_name": "SALIM JAYA/KARYA JAYA MEMBANGUN",
-    "survey_status": "OPEN",
-    "email": "cvsalimjaya2012@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 08:30:37",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2122c5b0-5336-40d1-b4cd-cabb95db2940",
-    "company_name": "SALIM JAYA/KARYA JAYA MEMBANGUN",
-    "survey_status": "OPEN",
-    "email": "cvsalimjaya2012@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:48:44",
-    "order": 6,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2122c5b0-5336-40d1-b4cd-cabb95db2940",
-    "company_name": "SALIM JAYA/KARYA JAYA MEMBANGUN",
-    "survey_status": "OPEN",
-    "email": "cvsalimjaya2012@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:48:40",
-    "order": 7,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8025095c-e56c-4ee2-b3ec-6f199e1da637",
-    "company_name": "Bank Syariah Indonesia",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c86819f0-c8e6-404f-92c0-775675f9c14d",
-    "company_name": "SPBU KARTINI",
-    "survey_status": "OPEN",
-    "email": "spbukartini@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 07:31:19",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c86819f0-c8e6-404f-92c0-775675f9c14d",
-    "company_name": "SPBU KARTINI",
-    "survey_status": "OPEN",
-    "email": "spbukartini@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:31:18",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8379c52d-8e9c-4cc2-92c4-2a3d67b574a4",
-    "company_name": "BANK KB BUKOPIN TBK",
-    "survey_status": "OPEN",
-    "email": "idham.halid@bukopin.co.id",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 03:39:29",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8379c52d-8e9c-4cc2-92c4-2a3d67b574a4",
-    "company_name": "BANK KB BUKOPIN TBK",
-    "survey_status": "OPEN",
-    "email": "idham.halid@bukopin.co.id",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:39:18",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "167aa0d6-6594-43be-9893-973baa81f744",
-    "company_name": "GRAHA VEGA TODEA",
-    "survey_status": "OPEN",
-    "email": "ptgrahavegatodea@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:02:11",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "167aa0d6-6594-43be-9893-973baa81f744",
-    "company_name": "GRAHA VEGA TODEA",
-    "survey_status": "OPEN",
-    "email": "ptgrahavegatodea@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:02:11",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "167aa0d6-6594-43be-9893-973baa81f744",
-    "company_name": "GRAHA VEGA TODEA",
-    "survey_status": "OPEN",
-    "email": "ptgrahavegatodea@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:30:54",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "167aa0d6-6594-43be-9893-973baa81f744",
-    "company_name": "GRAHA VEGA TODEA",
-    "survey_status": "OPEN",
-    "email": "ptgrahavegatodea@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:30:51",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b3b4650b-0963-4fd6-bfe0-08ef0f27b9e9",
-    "company_name": "MITRA ABADI CV",
-    "survey_status": "OPEN",
-    "email": "maol.palu@gmail.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 06:22:28",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b3b4650b-0963-4fd6-bfe0-08ef0f27b9e9",
-    "company_name": "MITRA ABADI CV",
-    "survey_status": "OPEN",
-    "email": "maol.palu@gmail.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 06:22:25",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5fe4f64c-66a6-4ffb-ac28-b952b50657fb",
-    "company_name": "HASANAH MEMBANGUN PROPERTI",
-    "survey_status": "OPEN",
-    "email": "pthasanahproperti@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:13:00",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5fe4f64c-66a6-4ffb-ac28-b952b50657fb",
-    "company_name": "HASANAH MEMBANGUN PROPERTI",
-    "survey_status": "OPEN",
-    "email": "pthasanahproperti@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:12:56",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksultengposo@mailnesia.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "kaslambunu@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "kaslambunu@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksultengposo@mailnesia.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "kaslambunu@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "kaslambunu@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksultengposo@mailnesia.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "kaslambunu@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "kaslambunu@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksultengposo@mailnesia.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "02 Jun 2026, 06:02:51",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "kaslambunu@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 04:02:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "kaslambunu@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:59:51",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:10:03",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:12:21",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "8a32e430-23b2-46ff-8b68-7dd7afb33862",
-    "company_name": "BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "banksulteng.toili@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:11:48",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "7f324b6a-49cf-4d17-9dec-9a23309280b6",
-    "company_name": "KPN SEMAFTA BHAKTI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3df73fa6-0f39-41a0-be79-8a3eb8ee8b94",
-    "company_name": "KPN ANDALAN",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "19e0ad13-d1a3-491c-bcb7-cd06d32c9f3d",
-    "company_name": "MATA AIR HARMONI",
-    "survey_status": "OPEN",
-    "email": "m4harmoni@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:03:06",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "19e0ad13-d1a3-491c-bcb7-cd06d32c9f3d",
-    "company_name": "MATA AIR HARMONI",
-    "survey_status": "OPEN",
-    "email": "m4harmoni@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:03:05",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "19e0ad13-d1a3-491c-bcb7-cd06d32c9f3d",
-    "company_name": "MATA AIR HARMONI",
-    "survey_status": "OPEN",
-    "email": "m4harmoni@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:36:15",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "19e0ad13-d1a3-491c-bcb7-cd06d32c9f3d",
-    "company_name": "MATA AIR HARMONI",
-    "survey_status": "OPEN",
-    "email": "m4harmoni@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:36:14",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28811ac8-739c-493d-8288-198002bc0a80",
-    "company_name": "BANK RAKYAT INDONESIA (PERSERO) TBK",
-    "survey_status": "OPEN",
-    "email": "n0060@corp.bri.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:09:17",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28811ac8-739c-493d-8288-198002bc0a80",
-    "company_name": "BANK RAKYAT INDONESIA (PERSERO) TBK",
-    "survey_status": "OPEN",
-    "email": "n0060@corp.bri.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:09:16",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28811ac8-739c-493d-8288-198002bc0a80",
-    "company_name": "BANK RAKYAT INDONESIA (PERSERO) TBK",
-    "survey_status": "OPEN",
-    "email": "n0060@corp.bri.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:10:40",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28811ac8-739c-493d-8288-198002bc0a80",
-    "company_name": "BANK RAKYAT INDONESIA (PERSERO) TBK",
-    "survey_status": "OPEN",
-    "email": "n0060@corp.bri.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:10:36",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28811ac8-739c-493d-8288-198002bc0a80",
-    "company_name": "BANK RAKYAT INDONESIA (PERSERO) TBK",
-    "survey_status": "OPEN",
-    "email": "n0060@corp.bri.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:04:26",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28811ac8-739c-493d-8288-198002bc0a80",
-    "company_name": "BANK RAKYAT INDONESIA (PERSERO) TBK",
-    "survey_status": "OPEN",
-    "email": "n0060@corp.bri.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 00:04:26",
-    "order": 6,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8e31a686-f02d-4da3-898c-bb368e2ca81f",
-    "company_name": "DANAMON INDONESIA,TBK PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "69a5f198-ae8c-415c-ab3e-0dcbe8208aa5",
-    "company_name": "PT. KIMIA FARMA APOTEK, KANTOR CABANG PALU",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6109883f-3347-4c5c-aa6e-30a6fa8f53a6",
-    "company_name": "SAMARA PROPERTI INDONESIA",
-    "survey_status": "OPEN",
-    "email": "pt.samaraproperti@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:15:33",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6109883f-3347-4c5c-aa6e-30a6fa8f53a6",
-    "company_name": "SAMARA PROPERTI INDONESIA",
-    "survey_status": "OPEN",
-    "email": "pt.samaraproperti@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:15:30",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1b69e1b2-c8c4-408b-9dcf-1572a3d121eb",
-    "company_name": "Bank Muamalat KC Palu",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9e09d7bf-d9c1-464f-a855-be176bc7ef11",
-    "company_name": "DONGGALA MINERAL UTAMA",
-    "survey_status": "OPEN",
-    "email": "donggalamineralutama@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 05:07:01",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9e09d7bf-d9c1-464f-a855-be176bc7ef11",
-    "company_name": "DONGGALA MINERAL UTAMA",
-    "survey_status": "OPEN",
-    "email": "donggalamineralutama@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 05:07:01",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f3222b49-a348-4c9b-9f73-c885db1cc8a3",
-    "company_name": "MAKMUR JAYA CELLULAR",
-    "survey_status": "OPEN",
-    "email": "firdhaandrianapipe@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 15:05:06",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "99a22554-671f-48c6-82b4-200aa6be4c75",
-    "company_name": "PT. BPD SULAWESI TENGAH",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f1e2c2b0-9c47-4d60-acde-3ec585274048",
-    "company_name": "KPN DISKES",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8d785756-8dec-48a2-a8cb-187a8d108946",
-    "company_name": "BANK DANAMON INDONESIA TBK",
-    "survey_status": "OPEN",
-    "email": "bditax.831.001@danamon.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 04:12:14",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8d785756-8dec-48a2-a8cb-187a8d108946",
-    "company_name": "BANK DANAMON INDONESIA TBK",
-    "survey_status": "OPEN",
-    "email": "bditax.831.001@danamon.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:12:14",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d58c4298-72be-48e9-abac-aad6809074df",
-    "company_name": "KPN KOPERTASI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "064dacdc-5180-43fe-b21d-f4e51b2325c3",
-    "company_name": "PT TELKOM INDONESIA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "570cfda3-bfd4-4e83-a91d-8d376379a514",
-    "company_name": "SOMBAR JAYA SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "ptsombarjayasejahtera@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:53:23",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "570cfda3-bfd4-4e83-a91d-8d376379a514",
-    "company_name": "SOMBAR JAYA SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "ptsombarjayasejahtera@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:53:22",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6322a9dd-acc0-4562-976a-8759543d0580",
-    "company_name": "KPN ADYAKSA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "163633d6-2858-4112-909a-3ff66558a1fc",
-    "company_name": "Bank Panin",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ac03e65d-d38a-4908-9b1e-33d9a439723d",
-    "company_name": "KPN ANUTAN",
-    "survey_status": "OPEN",
-    "email": "kprianutan@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 05:52:54",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ac03e65d-d38a-4908-9b1e-33d9a439723d",
-    "company_name": "KPN ANUTAN",
-    "survey_status": "OPEN",
-    "email": "kprianutan@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 05:52:21",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1671b6a7-6e55-405b-8d8d-5564cd259edf",
-    "company_name": "BANK PERMATA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e4e499a3-2f2c-4583-aa35-45c544591fca",
-    "company_name": "PT. BANK RAKYAT INDONESIA (Persero) Tbk., Kantor Cabang Palu",
-    "survey_status": "OPEN",
-    "email": "n0060@corp.bri.co.id",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "73e67eea-fcdf-4017-a0ab-58e63a037009",
-    "company_name": "BANK SINARMAS UNIT DEWI SARTIKA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c5aa7c32-33ee-4724-a865-f7d66dbbc11b",
-    "company_name": "RSUD UNDATA PROV. SULTENG",
-    "survey_status": "OPEN",
-    "email": "rsudundata@gmail.comsultengprov.co.id",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 07:23:53",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c5aa7c32-33ee-4724-a865-f7d66dbbc11b",
-    "company_name": "RSUD UNDATA PROV. SULTENG",
-    "survey_status": "OPEN",
-    "email": "rsudundata@gmail.comsultengprov.co.id",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:23:53",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "bb5e4e9a-66d8-41b5-8141-33f31d2ad4e3",
-    "company_name": "JAYA MAKMUR SAKTI",
-    "survey_status": "OPEN",
-    "email": "jmspalu16@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 06:44:44",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "bb5e4e9a-66d8-41b5-8141-33f31d2ad4e3",
-    "company_name": "JAYA MAKMUR SAKTI",
-    "survey_status": "OPEN",
-    "email": "jmspalu16@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 06:44:43",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1e1e584b-89fe-4fb2-8d45-4dcfda35864d",
-    "company_name": "PDAM KOTA PALU",
-    "survey_status": "OPEN",
-    "email": "pdamkotapalu@yahoo.co.id",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:03:54",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1e1e584b-89fe-4fb2-8d45-4dcfda35864d",
-    "company_name": "PDAM KOTA PALU",
-    "survey_status": "OPEN",
-    "email": "pdamkotapalu@yahoo.co.id",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:03:51",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1e1e584b-89fe-4fb2-8d45-4dcfda35864d",
-    "company_name": "PDAM KOTA PALU",
-    "survey_status": "OPEN",
-    "email": "pdamkotapalu@yahoo.co.id",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 07:24:53",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1e1e584b-89fe-4fb2-8d45-4dcfda35864d",
-    "company_name": "PDAM KOTA PALU",
-    "survey_status": "OPEN",
-    "email": "pdamkotapalu@yahoo.co.id",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:43:21",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1e1e584b-89fe-4fb2-8d45-4dcfda35864d",
-    "company_name": "PDAM KOTA PALU",
-    "survey_status": "OPEN",
-    "email": "pdamkotapalu@yahoo.co.id",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:43:18",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1156ce5f-623b-4b7f-ba4d-8e302a1b9ef1",
-    "company_name": "SULAWESI GLOBAL COMODITY",
-    "survey_status": "OPEN",
-    "email": "sulawesiglobalcomodity@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:01:11",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1156ce5f-623b-4b7f-ba4d-8e302a1b9ef1",
-    "company_name": "SULAWESI GLOBAL COMODITY",
-    "survey_status": "OPEN",
-    "email": "sulawesiglobalcomodity@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:01:11",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1156ce5f-623b-4b7f-ba4d-8e302a1b9ef1",
-    "company_name": "SULAWESI GLOBAL COMODITY",
-    "survey_status": "OPEN",
-    "email": "sulawesiglobalcomodity@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:15:35",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1156ce5f-623b-4b7f-ba4d-8e302a1b9ef1",
-    "company_name": "SULAWESI GLOBAL COMODITY",
-    "survey_status": "OPEN",
-    "email": "sulawesiglobalcomodity@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:15:31",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "a646f11b-8e46-4978-9363-bbffcdeacbc0",
-    "company_name": "LPM KRISYE PALU <KURSUS MENJAHIT>",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8130e06c-02c1-43bf-9183-eeaaab90454a",
-    "company_name": "PT. MEGA VISION TV KABEL",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "77bde768-6bf2-472e-bd8c-04d665a822d2",
-    "company_name": "CITRA BARKATAMA KARYA",
-    "survey_status": "OPEN",
-    "email": "ptcitrabarkatamakarya@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 03:10:04",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "77bde768-6bf2-472e-bd8c-04d665a822d2",
-    "company_name": "CITRA BARKATAMA KARYA",
-    "survey_status": "OPEN",
-    "email": "ptcitrabarkatamakarya@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:09:36",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b7d29bdf-a904-4877-952d-94442ea019a2",
-    "company_name": "BANK SYARIAH MANDIRI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c48c9313-ad3f-44a9-89ee-c860f752bc95",
-    "company_name": "INDO TAMBANG SENTOSA",
-    "survey_status": "OPEN",
-    "email": "its.oss@berkah-group.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 07:19:49",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c48c9313-ad3f-44a9-89ee-c860f752bc95",
-    "company_name": "INDO TAMBANG SENTOSA",
-    "survey_status": "OPEN",
-    "email": "its.oss@berkah-group.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:19:45",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "968055bd-cb61-426c-922b-3b12fa21026f",
-    "company_name": "KHAMONA MEGAH PROPERTY",
-    "survey_status": "OPEN",
-    "email": "khamonaproperty@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 04:38:48",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "968055bd-cb61-426c-922b-3b12fa21026f",
-    "company_name": "KHAMONA MEGAH PROPERTY",
-    "survey_status": "OPEN",
-    "email": "khamonaproperty@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:38:44",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3e97a68d-fd18-498a-b211-5836ad898e6c",
-    "company_name": "PT. Taspen Persero, Kantor Cabang Palu",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "435c8c27-de5c-4a97-a672-5bd16e36f2a1",
-    "company_name": "HAYCARB PALU MITRA PT",
-    "survey_status": "OPEN",
-    "email": "hpm-accountr@haycarbindo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:17:18",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "435c8c27-de5c-4a97-a672-5bd16e36f2a1",
-    "company_name": "HAYCARB PALU MITRA PT",
-    "survey_status": "OPEN",
-    "email": "hpm-accountr@haycarbindo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:06:09",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "435c8c27-de5c-4a97-a672-5bd16e36f2a1",
-    "company_name": "HAYCARB PALU MITRA PT",
-    "survey_status": "OPEN",
-    "email": "hpm-accountr@haycarbindo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 01:06:09",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "a4503560-91fa-4f17-b395-d9e7917d92df",
-    "company_name": "KPN TEKNOLOGI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "14654495-515c-436f-b243-d17ee2ee625d",
-    "company_name": "HYDROXIDE NICKEL INDONESIA",
-    "survey_status": "OPEN",
-    "email": "hydroxidenickelindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:01:51",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "14654495-515c-436f-b243-d17ee2ee625d",
-    "company_name": "HYDROXIDE NICKEL INDONESIA",
-    "survey_status": "OPEN",
-    "email": "hydroxidenickelindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:01:47",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7e2d5bd8-9388-4323-bf11-78fe55f1fc3d",
-    "company_name": "POMOLULU ANUGRAH MINERAL",
-    "survey_status": "OPEN",
-    "email": "ptpomoluluanugrahmineral@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:28:48",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7e2d5bd8-9388-4323-bf11-78fe55f1fc3d",
-    "company_name": "POMOLULU ANUGRAH MINERAL",
-    "survey_status": "OPEN",
-    "email": "ptpomoluluanugrahmineral@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:28:45",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7dfbdf87-0b8f-4e46-85b4-33ee22d7738f",
-    "company_name": "DING FENG INDOJAYA",
-    "survey_status": "OPEN",
-    "email": "dingfengindojaya@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:28:10",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7dfbdf87-0b8f-4e46-85b4-33ee22d7738f",
-    "company_name": "DING FENG INDOJAYA",
-    "survey_status": "OPEN",
-    "email": "dingfengindojaya@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:28:10",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "023658d4-db3a-4b07-aaa5-27c57c022671",
-    "company_name": "KAYU ENERGI BARU INDONESIA",
-    "survey_status": "OPEN",
-    "email": "ptkayuenergibaruindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 10:57:33",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "023658d4-db3a-4b07-aaa5-27c57c022671",
-    "company_name": "KAYU ENERGI BARU INDONESIA",
-    "survey_status": "OPEN",
-    "email": "ptkayuenergibaruindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 10:57:28",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "023658d4-db3a-4b07-aaa5-27c57c022671",
-    "company_name": "KAYU ENERGI BARU INDONESIA",
-    "survey_status": "OPEN",
-    "email": "ptkayuenergibaruindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 22:48:28",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "023658d4-db3a-4b07-aaa5-27c57c022671",
-    "company_name": "KAYU ENERGI BARU INDONESIA",
-    "survey_status": "OPEN",
-    "email": "ptkayuenergibaruindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 22:48:23",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "56f75602-d43a-4bec-81d8-cd5eace22450",
-    "company_name": "MANDIRI ARGO LESTARI CV",
-    "survey_status": "OPEN",
-    "email": "cvmandiriargolestari@gmail.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 11:37:42",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "56f75602-d43a-4bec-81d8-cd5eace22450",
-    "company_name": "MANDIRI ARGO LESTARI CV",
-    "survey_status": "OPEN",
-    "email": "cvmandiriargolestari@gmail.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 11:37:41",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "525f794a-4ae5-40a4-8b81-77b9f4e7bf7c",
-    "company_name": "COMEXTRA MAJORA, PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "114186ef-5a6a-444a-b344-d10314e3de7e",
-    "company_name": "Bank Bri",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "a64d2b85-a59c-4f10-9d0b-267d23a8a3b1",
-    "company_name": "HONG THAI INTERNATIONAL",
-    "survey_status": "OPEN",
-    "email": "internationalhongthai@gmail.com",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e14d53c8-eb70-443d-a246-7fea34a2cc2d",
-    "company_name": "ALFIAN CHANIAGO",
-    "survey_status": "OPEN",
-    "email": "chaniago1978a@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:59:15",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e14d53c8-eb70-443d-a246-7fea34a2cc2d",
-    "company_name": "ALFIAN CHANIAGO",
-    "survey_status": "OPEN",
-    "email": "chaniago1978a@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:59:11",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "0e1c08b5-2bf0-44ac-8296-b406d66cfc92",
-    "company_name": "SINARMAS MULTIFINANCE PALU, PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "82af770c-d99c-4f0f-ad1f-c4e27677cc40",
-    "company_name": "DELTA ENERALS SIGI",
-    "survey_status": "OPEN",
-    "email": "delta.eneralsigi@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:38:21",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "82af770c-d99c-4f0f-ad1f-c4e27677cc40",
-    "company_name": "DELTA ENERALS SIGI",
-    "survey_status": "OPEN",
-    "email": "delta.eneralsigi@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:38:16",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "95d5140a-e0af-47f5-87d3-9870ae5914eb",
-    "company_name": "KARS INTI AMANAH, PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "93142edf-61c1-47df-9e66-0d6a5f1616a7",
-    "company_name": "TRIOCELEBES MEDIA ENERGI",
-    "survey_status": "OPEN",
-    "email": "trio_mediaenergi@yahoo.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 04:30:27",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "93142edf-61c1-47df-9e66-0d6a5f1616a7",
-    "company_name": "TRIOCELEBES MEDIA ENERGI",
-    "survey_status": "OPEN",
-    "email": "trio_mediaenergi@yahoo.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:30:23",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "151378b7-b5dd-47e6-b98b-8a29c210dccb",
-    "company_name": "KOP. VETERAN PRIMKOPERI KARYADAMA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9ac85305-a022-49c9-9ebe-4783c860a834",
-    "company_name": "KPN KOPFU",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b34d5c6c-ca82-48fb-966b-361d8e96ca2c",
-    "company_name": "ARETHA YURI FALIHAH",
-    "survey_status": "OPEN",
-    "email": "muhammadnatsir1979@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 08:59:16",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b34d5c6c-ca82-48fb-966b-361d8e96ca2c",
-    "company_name": "ARETHA YURI FALIHAH",
-    "survey_status": "OPEN",
-    "email": "muhammadnatsir1979@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 06:21:08",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b34d5c6c-ca82-48fb-966b-361d8e96ca2c",
-    "company_name": "ARETHA YURI FALIHAH",
-    "survey_status": "OPEN",
-    "email": "muhammadnatsir1979@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 06:21:08",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "39f7fe0c-274e-4179-812f-d6cf9c3e3366",
-    "company_name": "PESTA PORA ABADI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b8697a5a-a5d7-475c-99f5-c7d062c5b4ea",
-    "company_name": "BATU HITAM JASA PERTAMBANGAN",
-    "survey_status": "OPEN",
-    "email": "batuhitamjasapertambangan@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 06:39:45",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b8697a5a-a5d7-475c-99f5-c7d062c5b4ea",
-    "company_name": "BATU HITAM JASA PERTAMBANGAN",
-    "survey_status": "OPEN",
-    "email": "batuhitamjasapertambangan@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 06:36:13",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "115f45e9-f381-4708-9a83-cbd47e63029a",
-    "company_name": "GRAPARI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "a5130b99-d267-4ce7-916f-d0f4719a4f79",
-    "company_name": "KOPABRI PRIMKOPAD DEPOM VII/2",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "13d6fcb9-8ce0-4a1e-95f1-aec964383baa",
-    "company_name": "PRIMA GELORA AGUNG LESTARI, PT",
-    "survey_status": "OPEN",
-    "email": "primagelora_palu@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:01:38",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "13d6fcb9-8ce0-4a1e-95f1-aec964383baa",
-    "company_name": "PRIMA GELORA AGUNG LESTARI, PT",
-    "survey_status": "OPEN",
-    "email": "primagelora_palu@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "01 Jun 2026, 23:26:06",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "13d6fcb9-8ce0-4a1e-95f1-aec964383baa",
-    "company_name": "PRIMA GELORA AGUNG LESTARI, PT",
-    "survey_status": "OPEN",
-    "email": "primagelora_palu@yahoo.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:23:45",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "adbf8a86-f932-4930-b226-8eaf4cd861ee",
-    "company_name": "ADIPURA  NOVEGA,CV",
-    "survey_status": "OPEN",
-    "email": "adipuranovega@gmail.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 05:59:58",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "adbf8a86-f932-4930-b226-8eaf4cd861ee",
-    "company_name": "ADIPURA  NOVEGA,CV",
-    "survey_status": "OPEN",
-    "email": "adipuranovega@gmail.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 05:59:12",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "29ccb04e-2f25-4def-bde5-31e09643779d",
-    "company_name": "KSU USAHA MAKMUR",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c8fc8bcd-106f-46cd-9179-506a6ec25edd",
-    "company_name": "NUSANTARA PALU ENERGI",
-    "survey_status": "OPEN",
-    "email": "energiptnusantarapalu@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 07:32:57",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c8fc8bcd-106f-46cd-9179-506a6ec25edd",
-    "company_name": "NUSANTARA PALU ENERGI",
-    "survey_status": "OPEN",
-    "email": "energiptnusantarapalu@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:32:53",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ca64349b-aaa8-4a54-9b4a-a083bc60a4de",
-    "company_name": "STARS MINERAL INDONESIA",
-    "survey_status": "OPEN",
-    "email": "starsmineralindonesia@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "09 Jun 2026, 20:26:03",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ca64349b-aaa8-4a54-9b4a-a083bc60a4de",
-    "company_name": "STARS MINERAL INDONESIA",
-    "survey_status": "OPEN",
-    "email": "starsmineralindonesia@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 07:38:46",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ca64349b-aaa8-4a54-9b4a-a083bc60a4de",
-    "company_name": "STARS MINERAL INDONESIA",
-    "survey_status": "OPEN",
-    "email": "starsmineralindonesia@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 07:38:22",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ca64349b-aaa8-4a54-9b4a-a083bc60a4de",
-    "company_name": "STARS MINERAL INDONESIA",
-    "survey_status": "OPEN",
-    "email": "starsmineralindonesia@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:38:18",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1065fa78-bf92-4c4d-b9c4-40641b15d153",
-    "company_name": "PT. ALFA INDUSTRI MANDIRI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "59f6a22f-aa98-4067-88e1-1bc5b7d6f1d0",
-    "company_name": "BANAWA MINERAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "banawamineralperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:00:59",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "59f6a22f-aa98-4067-88e1-1bc5b7d6f1d0",
-    "company_name": "BANAWA MINERAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "banawamineralperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:00:59",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "4977547b-9b36-40d3-8895-dc2ea08ce432",
-    "company_name": "PT Sofi Agro Industries",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "18b87183-5928-42f4-a9cb-9e78adfb4f11",
-    "company_name": "MINERAL SIUNA PERKASA",
-    "survey_status": "OPEN",
-    "email": "mineralsiunaperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:02:46",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "18b87183-5928-42f4-a9cb-9e78adfb4f11",
-    "company_name": "MINERAL SIUNA PERKASA",
-    "survey_status": "OPEN",
-    "email": "mineralsiunaperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:02:46",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "18b87183-5928-42f4-a9cb-9e78adfb4f11",
-    "company_name": "MINERAL SIUNA PERKASA",
-    "survey_status": "OPEN",
-    "email": "mineralsiunaperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:34:23",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "18b87183-5928-42f4-a9cb-9e78adfb4f11",
-    "company_name": "MINERAL SIUNA PERKASA",
-    "survey_status": "OPEN",
-    "email": "mineralsiunaperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:34:19",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6bfe769d-60dc-4a4a-bfed-040b06b9ee5e",
-    "company_name": "LEMBO MINERAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "lembomineralperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:38:48",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6bfe769d-60dc-4a4a-bfed-040b06b9ee5e",
-    "company_name": "LEMBO MINERAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "lembomineralperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:38:44",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9885acfd-84ea-4304-b52a-c858ccadbb7e",
-    "company_name": "BUNTA MINERAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "buntamineralperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 04:45:08",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9885acfd-84ea-4304-b52a-c858ccadbb7e",
-    "company_name": "BUNTA MINERAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "buntamineralperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:45:04",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1e7bc687-c762-4248-8ede-1c84084029cd",
-    "company_name": "BATU BUOL LESTARI",
-    "survey_status": "OPEN",
-    "email": "ptbatubuollestari@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:04:03",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1e7bc687-c762-4248-8ede-1c84084029cd",
-    "company_name": "BATU BUOL LESTARI",
-    "survey_status": "OPEN",
-    "email": "ptbatubuollestari@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:03:59",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1e7bc687-c762-4248-8ede-1c84084029cd",
-    "company_name": "BATU BUOL LESTARI",
-    "survey_status": "OPEN",
-    "email": "ptbatubuollestari@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:44:29",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1e7bc687-c762-4248-8ede-1c84084029cd",
-    "company_name": "BATU BUOL LESTARI",
-    "survey_status": "OPEN",
-    "email": "ptbatubuollestari@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:44:24",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "441091bb-7efb-4a0d-968b-961ce9785741",
-    "company_name": "TOUNA MINERAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "tounamineralperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:17:21",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "441091bb-7efb-4a0d-968b-961ce9785741",
-    "company_name": "TOUNA MINERAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "tounamineralperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:17:19",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "441091bb-7efb-4a0d-968b-961ce9785741",
-    "company_name": "TOUNA MINERAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "tounamineralperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:08:24",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "441091bb-7efb-4a0d-968b-961ce9785741",
-    "company_name": "TOUNA MINERAL PERKASA",
-    "survey_status": "OPEN",
-    "email": "tounamineralperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:08:20",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ba212e67-9a5f-4c64-b219-1c3adec0c34b",
-    "company_name": "PT Sarana Sulteng Ventura (SSTengV)",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6e0bea7b-00a8-47f3-a288-07c8372efbca",
-    "company_name": "PT Segar Jaya Mandiri",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3a4ae2c9-0120-48b3-87ee-e8151ec28771",
-    "company_name": "BANK MUAMALAT INDONESIA TBK PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e8d87c7d-476a-4b01-95cf-70fc5f619da8",
-    "company_name": "KPN KARYA BAKTI",
-    "survey_status": "OPEN",
-    "email": "kprikaryabhaktipalu@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:25:41",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e8d87c7d-476a-4b01-95cf-70fc5f619da8",
-    "company_name": "KPN KARYA BAKTI",
-    "survey_status": "OPEN",
-    "email": "kprikaryabhaktipalu@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:25:38",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "34d93b57-b395-4a20-822d-b6c832d8b611",
-    "company_name": "Bank Mandiri KCP Palu Mohammad Yamin",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "67c18e3a-974c-4049-ac69-62a76e74fc9d",
-    "company_name": "BANK MANDIRI (PERSERO)",
-    "survey_status": "OPEN",
-    "email": "mdrbns.palu_hsnudin@bankmandiri.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:31:26",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "67c18e3a-974c-4049-ac69-62a76e74fc9d",
-    "company_name": "BANK MANDIRI (PERSERO)",
-    "survey_status": "OPEN",
-    "email": "mdrbns.palu_hsnudin@bankmandiri.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:31:26",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "517038d6-454a-4f4d-8140-d8e011de78ef",
-    "company_name": "BANK MANDIRI TASPEN",
-    "survey_status": "OPEN",
-    "email": "ga.kc.palu@bankmantap.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 01:40:58",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "517038d6-454a-4f4d-8140-d8e011de78ef",
-    "company_name": "BANK MANDIRI TASPEN",
-    "survey_status": "OPEN",
-    "email": "ga.kc.palu@bankmantap.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:40:58",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "909125db-e722-4c37-a38d-f8eb013fd7d0",
-    "company_name": "KOPKAR SARANA MANDIRI SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d450c7aa-fe77-4208-bcff-59d63bc159d8",
-    "company_name": "BANK BRI UNIT KARTINI",
-    "survey_status": "OPEN",
-    "email": "n5184@corp.bri.co.id",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "43672ae3-532e-4002-99ca-56e67097c4ba",
-    "company_name": "WITADA BANGUN GEMILANG, PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "76bed43b-7b92-4a84-9ca0-1ff52435e615",
-    "company_name": "FITRAH ANUGERAH SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "scm.fitrahanugerahsejahtera@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:06:13",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "76bed43b-7b92-4a84-9ca0-1ff52435e615",
-    "company_name": "FITRAH ANUGERAH SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "scm.fitrahanugerahsejahtera@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:06:10",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "115b7d45-7116-4abe-a3ca-9c8105da34c0",
-    "company_name": "MANDIRI TUNAS FINANCE, PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "08f9295a-2309-48a0-8c09-7264d2e8083c",
-    "company_name": "KPN ANDINI BAKTI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "29ded7e4-10c1-43f6-8a6c-90c000656876",
-    "company_name": "BANK PERKREDITAN RAKYAT MODERN EXPRESS PALU",
-    "survey_status": "OPEN",
-    "email": "modernexpress24@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:09:41",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "29ded7e4-10c1-43f6-8a6c-90c000656876",
-    "company_name": "BANK PERKREDITAN RAKYAT MODERN EXPRESS PALU",
-    "survey_status": "OPEN",
-    "email": "modernexpress24@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:09:37",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "29ded7e4-10c1-43f6-8a6c-90c000656876",
-    "company_name": "BANK PERKREDITAN RAKYAT MODERN EXPRESS PALU",
-    "survey_status": "OPEN",
-    "email": "modernexpress24@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 00:09:51",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "29ded7e4-10c1-43f6-8a6c-90c000656876",
-    "company_name": "BANK PERKREDITAN RAKYAT MODERN EXPRESS PALU",
-    "survey_status": "OPEN",
-    "email": "modernexpress24@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:09:47",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2d19da45-a10e-4fbd-b434-20f2866522f3",
-    "company_name": "ARTAKINDO MULTI PERKASA",
-    "survey_status": "OPEN",
-    "email": "pt.artakindo.mp@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:11:23",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2d19da45-a10e-4fbd-b434-20f2866522f3",
-    "company_name": "ARTAKINDO MULTI PERKASA",
-    "survey_status": "OPEN",
-    "email": "pt.artakindo.mp@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:11:20",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2d19da45-a10e-4fbd-b434-20f2866522f3",
-    "company_name": "ARTAKINDO MULTI PERKASA",
-    "survey_status": "OPEN",
-    "email": "pt.artakindo.mp@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 00:17:54",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2d19da45-a10e-4fbd-b434-20f2866522f3",
-    "company_name": "ARTAKINDO MULTI PERKASA",
-    "survey_status": "OPEN",
-    "email": "pt.artakindo.mp@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:17:50",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e512f99e-031e-4903-a504-51f6a1a9b2f8",
-    "company_name": "KPN MANDIRI WASPADA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "661d39aa-2f4c-465e-9419-bb292f69c602",
-    "company_name": "TROFI ANUGERAH MANDIRI",
-    "survey_status": "OPEN",
-    "email": "trofianugerahmandiri@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:27:22",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "661d39aa-2f4c-465e-9419-bb292f69c602",
-    "company_name": "TROFI ANUGERAH MANDIRI",
-    "survey_status": "OPEN",
-    "email": "trofianugerahmandiri@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:27:18",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e34120a6-a1b3-4caa-8eff-011b24921320",
-    "company_name": "UNIVERSITAS TADULAKO",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f5cc63c7-473f-430f-92ed-08a5ef4b73c9",
-    "company_name": "BANK SINARMAS PT",
-    "survey_status": "OPEN",
-    "email": "sulaemanarasyid@banksinarmas.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "02 Jun 2026, 10:09:58",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f5cc63c7-473f-430f-92ed-08a5ef4b73c9",
-    "company_name": "BANK SINARMAS PT",
-    "survey_status": "OPEN",
-    "email": "sulaemanarasyid@banksinarmas.com",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 10:09:50",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f5cc63c7-473f-430f-92ed-08a5ef4b73c9",
-    "company_name": "BANK SINARMAS PT",
-    "survey_status": "OPEN",
-    "email": "sulaemanarasyid@banksinarmas.com",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 10:09:50",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b8dbfcb2-d97c-4183-907e-5d6835a7c115",
-    "company_name": "KPN MAKARTI MUKTI TAMA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9eeb98b5-ca18-44b3-af0b-1c3661e3c7b3",
-    "company_name": "UD ALAM RAYA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5cfe9a82-c495-4d0d-850e-6f9decb696be",
-    "company_name": "KOP. UNISMUH",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "492bfe46-0b93-4ad4-9820-c2f29c066038",
-    "company_name": "Bank Ina Perdana KC Palu",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5ea4ec2f-2d8c-4f78-86b2-30f2b8d606ff",
-    "company_name": "BULOG, PERUM",
-    "survey_status": "OPEN",
-    "email": "sekumasbulogsulteng@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 08:09:07",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5ea4ec2f-2d8c-4f78-86b2-30f2b8d606ff",
-    "company_name": "BULOG, PERUM",
-    "survey_status": "OPEN",
-    "email": "sekumasbulogsulteng@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 08:09:00",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5ea4ec2f-2d8c-4f78-86b2-30f2b8d606ff",
-    "company_name": "BULOG, PERUM",
-    "survey_status": "OPEN",
-    "email": "sekumasbulogsulteng@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 07:51:39",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5ea4ec2f-2d8c-4f78-86b2-30f2b8d606ff",
-    "company_name": "BULOG, PERUM",
-    "survey_status": "OPEN",
-    "email": "sekumasbulogsulteng@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:10:58",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5ea4ec2f-2d8c-4f78-86b2-30f2b8d606ff",
-    "company_name": "BULOG, PERUM",
-    "survey_status": "OPEN",
-    "email": "sekumasbulogsulteng@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:10:54",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "40232274-4968-4c3e-b8a3-0046cd16b562",
-    "company_name": "PT. KIMIA FARMA APOTEK, Kantor Cabang Palu",
-    "survey_status": "OPEN",
-    "email": "kimiafarmavetran93@gmail.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:16:13",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "40232274-4968-4c3e-b8a3-0046cd16b562",
-    "company_name": "PT. KIMIA FARMA APOTEK, Kantor Cabang Palu",
-    "survey_status": "OPEN",
-    "email": "kimiafarmavetran93@gmail.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:59:01",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "40232274-4968-4c3e-b8a3-0046cd16b562",
-    "company_name": "PT. KIMIA FARMA APOTEK, Kantor Cabang Palu",
-    "survey_status": "OPEN",
-    "email": "kimiafarmavetran93@gmail.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:59:01",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c6a84cfd-f554-47b8-a0aa-b5cbb5216258",
-    "company_name": "BANK BRI UNIT VETERAN",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d40d1515-c42a-4f43-a840-c0c0ef10225f",
-    "company_name": "BUNGKU MINERAL UTAMA",
-    "survey_status": "OPEN",
-    "email": "cv.bmubatuan@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:14:49",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d40d1515-c42a-4f43-a840-c0c0ef10225f",
-    "company_name": "BUNGKU MINERAL UTAMA",
-    "survey_status": "OPEN",
-    "email": "cv.bmubatuan@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:14:45",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5309fcbc-7225-4cb3-8524-47cf69be2a53",
-    "company_name": "INDOSAT OOREDOO, PT",
-    "survey_status": "OPEN",
-    "email": "ferdy@mitradm.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 01:44:11",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5309fcbc-7225-4cb3-8524-47cf69be2a53",
-    "company_name": "INDOSAT OOREDOO, PT",
-    "survey_status": "OPEN",
-    "email": "ferdy@mitradm.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:44:10",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "bb9b73aa-03c0-4109-9496-22528610e9e2",
-    "company_name": "KPN HARAPAN BARU",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "a51739da-c4f3-4597-8a54-a835ea80fde1",
-    "company_name": "KPN WAHANA CITRA SEJATI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "22b56d3c-3ff7-4a6b-889f-92a757aeba6b",
-    "company_name": "KOPABRI PRIMKOPAD DENKESYAH",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "10a5dc6a-e64c-4924-8314-e47958597428",
-    "company_name": "KOPINKRA LEMBAK KAILI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "dc09a344-63cc-4adc-a003-c2778cc1081e",
-    "company_name": "MAYBANK INDONESIA TBK, PT",
-    "survey_status": "OPEN",
-    "email": "yanis@maybank.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:39:18",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "dc09a344-63cc-4adc-a003-c2778cc1081e",
-    "company_name": "MAYBANK INDONESIA TBK, PT",
-    "survey_status": "OPEN",
-    "email": "yanis@maybank.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:39:18",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9d89857a-fe1e-4f0e-be2e-d6a9f2a6c386",
-    "company_name": "REVIMA PROPERTINDO RAYA",
-    "survey_status": "OPEN",
-    "email": "revimapropertiindoraya@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 05:04:56",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9d89857a-fe1e-4f0e-be2e-d6a9f2a6c386",
-    "company_name": "REVIMA PROPERTINDO RAYA",
-    "survey_status": "OPEN",
-    "email": "revimapropertiindoraya@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 05:04:40",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "98f9b794-a02b-4818-ad97-21174399bc9a",
-    "company_name": "KOPKAR BINA ADHIBERSAMA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "82c34db1-4a22-4ce5-8f33-350f4ab0be9e",
-    "company_name": "SUKIMAN NURDIN",
-    "survey_status": "OPEN",
-    "email": "alila.manggis@outlook.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:38:29",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "82c34db1-4a22-4ce5-8f33-350f4ab0be9e",
-    "company_name": "SUKIMAN NURDIN",
-    "survey_status": "OPEN",
-    "email": "alila.manggis@outlook.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:38:27",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7f66a1e2-080e-4aca-a794-a8e756499759",
-    "company_name": "CIPTA RIMBA MALAQBI",
-    "survey_status": "OPEN",
-    "email": "pt.ciptarimbamalaqbi@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:31:32",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7f66a1e2-080e-4aca-a794-a8e756499759",
-    "company_name": "CIPTA RIMBA MALAQBI",
-    "survey_status": "OPEN",
-    "email": "pt.ciptarimbamalaqbi@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:31:30",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "676be577-02f8-4de4-96f2-cdd4ef2c7f7a",
-    "company_name": "BERKAH PASIR UTAMA",
-    "survey_status": "OPEN",
-    "email": "berkahpasirutama@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:30:56",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "676be577-02f8-4de4-96f2-cdd4ef2c7f7a",
-    "company_name": "BERKAH PASIR UTAMA",
-    "survey_status": "OPEN",
-    "email": "berkahpasirutama@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:30:52",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "77fb4726-9f4d-4b7e-9d07-99e7ff1958ed",
-    "company_name": "BPD PROV SULAWESI TENGAH",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "711f3286-693b-4356-ae9c-f1fd783a1bd6",
-    "company_name": "PT. Nindya Karya (Persero), Kantor Cabang Sulawesi Tengah dan Sulawesi Barat",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "36b2fa93-bf1c-4084-93a7-0de8355e5f57",
-    "company_name": "PATRIOT BHAKTI NUSANTARA",
-    "survey_status": "OPEN",
-    "email": "pt.patriotbhaktinusantara@gmail.com",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:13:41",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "36b2fa93-bf1c-4084-93a7-0de8355e5f57",
-    "company_name": "PATRIOT BHAKTI NUSANTARA",
-    "survey_status": "OPEN",
-    "email": "pt.patriotbhaktinusantara@gmail.com",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 00:39:39",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "36b2fa93-bf1c-4084-93a7-0de8355e5f57",
-    "company_name": "PATRIOT BHAKTI NUSANTARA",
-    "survey_status": "OPEN",
-    "email": "pt.patriotbhaktinusantara@gmail.com",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:39:34",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "947b278b-f65c-43a1-81d9-5ad4672c6de3",
-    "company_name": "KOPABRI PRIMKOPAD YOINIF 711",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c1c73bf1-3d14-4e53-938a-1265db32fff3",
-    "company_name": "KPN KOPERIKAN",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "68cab4bb-142d-45ea-967e-07a5b856f6c1",
-    "company_name": "PT BPR PALU ANUGERAH",
-    "survey_status": "OPEN",
-    "email": "bprpaluanugerah@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 11:59:18",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "68cab4bb-142d-45ea-967e-07a5b856f6c1",
-    "company_name": "PT BPR PALU ANUGERAH",
-    "survey_status": "OPEN",
-    "email": "bprpaluanugerah@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 13:54:39",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "68cab4bb-142d-45ea-967e-07a5b856f6c1",
-    "company_name": "PT BPR PALU ANUGERAH",
-    "survey_status": "OPEN",
-    "email": "bprpaluanugerah@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 06:18:03",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "68cab4bb-142d-45ea-967e-07a5b856f6c1",
-    "company_name": "PT BPR PALU ANUGERAH",
-    "survey_status": "OPEN",
-    "email": "bprpaluanugerah@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 06:17:59",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "eccb49dc-b6af-486c-82e6-a03461a0e5f3",
-    "company_name": "OBS FOOD INDUSTRY INDONESIA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5f1924d8-9571-4565-9f01-45cd3f4952c6",
-    "company_name": "KPN ARGO KARYA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c0a68510-23cf-40ff-96f0-d23de92b7e1c",
-    "company_name": "Bank Panin Kcp Emmy Saelan",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8ded7032-f4e7-46f8-937f-8e843071a228",
-    "company_name": "KPN PERKAS",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c989c72a-634d-4f32-a375-2fa14dba5b30",
-    "company_name": "INTIMANUGRAH PERKASA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e658ed04-57f1-4911-8684-02d3fe577e6c",
-    "company_name": "SHARP ELETRONIK INDONESIA PT",
-    "survey_status": "OPEN",
-    "email": "webmaster@sharp-indonesia.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:59:13",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e658ed04-57f1-4911-8684-02d3fe577e6c",
-    "company_name": "SHARP ELETRONIK INDONESIA PT",
-    "survey_status": "OPEN",
-    "email": "webmaster@sharp-indonesia.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:59:05",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c84daca6-6da0-4820-934d-ff61ff8b866b",
-    "company_name": "SURYA MADISTRINDO, PT",
-    "survey_status": "OPEN",
-    "email": "fero@gmail.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:31:06",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c84daca6-6da0-4820-934d-ff61ff8b866b",
-    "company_name": "SURYA MADISTRINDO, PT",
-    "survey_status": "OPEN",
-    "email": "fero@gmail.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 07:31:06",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "deed2720-dd04-4dec-b3c5-a555893d7159",
-    "company_name": "KAZOKU SEJAHTERA ABADI",
-    "survey_status": "OPEN",
-    "email": "kazokuseabadi@gmail.com",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "4ffe0701-f2c0-4d6c-bf99-f0544e854791",
-    "company_name": "TELKOM PALU, PT",
-    "survey_status": "OPEN",
-    "email": "costumercare@telkom.co.id",
-    "global_status": "Permanent_fail",
-    "status": "Permanent_fail",
-    "timestamp": "09 Jun 2026, 11:20:25",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "4ffe0701-f2c0-4d6c-bf99-f0544e854791",
-    "company_name": "TELKOM PALU, PT",
-    "survey_status": "OPEN",
-    "email": "costumercare@telkom.co.id",
-    "global_status": "Permanent_fail",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 01:38:19",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "4ffe0701-f2c0-4d6c-bf99-f0544e854791",
-    "company_name": "TELKOM PALU, PT",
-    "survey_status": "OPEN",
-    "email": "costumercare@telkom.co.id",
-    "global_status": "Permanent_fail",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 01:38:19",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ef74de4d-272b-4bb1-8d87-00dc76a12cda",
-    "company_name": "KPN SETIA BUDI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c8d7ac5f-9f8c-4ee3-a664-fd33e764c2de",
-    "company_name": "BAHTERA GRUP",
-    "survey_status": "OPEN",
-    "email": "bahteragrupcv@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 07:32:41",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "c8d7ac5f-9f8c-4ee3-a664-fd33e764c2de",
-    "company_name": "BAHTERA GRUP",
-    "survey_status": "OPEN",
-    "email": "bahteragrupcv@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:32:37",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "af2a52e1-f524-4767-a5ed-722117b80fc4",
-    "company_name": "PERTAMBANGAN ALAM LESTARI",
-    "survey_status": "OPEN",
-    "email": "pertambanganalamlestari@gmail.com",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f1d8ca06-229a-46f5-8659-d02c9bc522b2",
-    "company_name": "KPN SWASEMBADA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2c92684f-575c-405d-bbd9-b34d58d6e957",
-    "company_name": "KANTOR POS PALUBARAT, PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "11c99a16-c885-4f66-8cb1-d82b7331585c",
-    "company_name": "KCP BANK BCA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "204923b0-3b65-41a9-8669-d1c97560677b",
-    "company_name": "BANK NEGARA INDONESIA (KANTOR KAS)",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "787be33a-b890-49b0-aa22-a15e5bd9e2fc",
-    "company_name": "ARTHA LESTARI, CV",
-    "survey_status": "OPEN",
-    "email": "arthalestari_palu@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 03:12:01",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "787be33a-b890-49b0-aa22-a15e5bd9e2fc",
-    "company_name": "ARTHA LESTARI, CV",
-    "survey_status": "OPEN",
-    "email": "arthalestari_palu@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:11:28",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d9a55771-a086-4956-9c92-7fe1492844ae",
-    "company_name": "BANK PERKREDITAN RAKYAT PRIMA ARTHA SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "bprpaspalu1@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:33:20",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d9a55771-a086-4956-9c92-7fe1492844ae",
-    "company_name": "BANK PERKREDITAN RAKYAT PRIMA ARTHA SEJAHTERA",
-    "survey_status": "OPEN",
-    "email": "bprpaspalu1@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:33:17",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "0af14ce7-9949-4c66-b162-0fab5357305f",
-    "company_name": "Bank BTPN Purna Bakti Cab. Palu",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "eca7827e-fe1c-47e7-a457-3e8e09db1514",
-    "company_name": "NURMAN ABADI",
-    "survey_status": "OPEN",
-    "email": "pt.nurmanabadi327@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:37:51",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "eca7827e-fe1c-47e7-a457-3e8e09db1514",
-    "company_name": "NURMAN ABADI",
-    "survey_status": "OPEN",
-    "email": "pt.nurmanabadi327@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:37:51",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5a4b886e-cc5d-49db-9a68-7fed88393cd9",
-    "company_name": "TREND GUEST HOUSE",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8fd5612b-5974-4a42-83e5-a9356dfc62a9",
-    "company_name": "BANK TABUNGAN NEGARA PT",
-    "survey_status": "OPEN",
-    "email": "kc.palu@btn.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 04:20:44",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8fd5612b-5974-4a42-83e5-a9356dfc62a9",
-    "company_name": "BANK TABUNGAN NEGARA PT",
-    "survey_status": "OPEN",
-    "email": "kc.palu@btn.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:20:27",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "dabeecaf-6c57-4d35-a7f4-78969b91c473",
-    "company_name": "BANK BNI SYARIAH",
-    "survey_status": "OPEN",
-    "email": "bnispalu@gmail.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 08:35:38",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "dabeecaf-6c57-4d35-a7f4-78969b91c473",
-    "company_name": "BANK BNI SYARIAH",
-    "survey_status": "OPEN",
-    "email": "bnispalu@gmail.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:35:37",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e6d62408-08bc-47f6-9fb9-4d96ff80aecc",
-    "company_name": "BERKAH BATUAN INTAN LOLI",
-    "survey_status": "OPEN",
-    "email": "berkahbatuanintanloli@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:18:05",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e6d62408-08bc-47f6-9fb9-4d96ff80aecc",
-    "company_name": "BERKAH BATUAN INTAN LOLI",
-    "survey_status": "OPEN",
-    "email": "berkahbatuanintanloli@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:18:01",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8967971d-1a7b-48f8-8292-8942d716f291",
-    "company_name": "GRAHA MINING UTAMA",
-    "survey_status": "OPEN",
-    "email": "gramintama@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:58:10",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8967971d-1a7b-48f8-8292-8942d716f291",
-    "company_name": "GRAHA MINING UTAMA",
-    "survey_status": "OPEN",
-    "email": "gramintama@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:58:02",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6c116b41-23e3-48b6-9c12-2790fa0103d1",
-    "company_name": "KARTU KREDIT BNI PALU",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "4abe852c-ea1e-45ab-8221-6275d304ce4e",
-    "company_name": "ATM BANK SULTENG KANTOR GUBERNUR",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "14f8004d-3303-447d-b292-38250182eb27",
-    "company_name": "NOBU NATIONAL BANK",
-    "survey_status": "OPEN",
-    "email": "kabagops_pds@nobubank.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:02:00",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "14f8004d-3303-447d-b292-38250182eb27",
-    "company_name": "NOBU NATIONAL BANK",
-    "survey_status": "OPEN",
-    "email": "kabagops_pds@nobubank.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:01:56",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "14f8004d-3303-447d-b292-38250182eb27",
-    "company_name": "NOBU NATIONAL BANK",
-    "survey_status": "OPEN",
-    "email": "kabagops_pds@nobubank.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:27:55",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "14f8004d-3303-447d-b292-38250182eb27",
-    "company_name": "NOBU NATIONAL BANK",
-    "survey_status": "OPEN",
-    "email": "kabagops_pds@nobubank.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:27:55",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "11 Jun 2026, 21:27:11",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "11 Jun 2026, 14:54:18",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:41:49",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:39:39",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:39:02",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:38:56",
-    "order": 6,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:38:44",
-    "order": 7,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:22:44",
-    "order": 8,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:20:43",
-    "order": 9,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:20:36",
-    "order": 10,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:20:05",
-    "order": 11,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Opened",
-    "timestamp": "03 Jun 2026, 01:11:10",
-    "order": 12,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:36:13",
-    "order": 13,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "OPEN",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:35:35",
-    "order": 14,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e957a2f6-5a9e-4447-89d8-9b38cd6998cb",
-    "company_name": "MULTI MANDIRI LESTARI",
-    "survey_status": "OPEN",
-    "email": "ferddyhermanto@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:28:08",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e957a2f6-5a9e-4447-89d8-9b38cd6998cb",
-    "company_name": "MULTI MANDIRI LESTARI",
-    "survey_status": "OPEN",
-    "email": "ferddyhermanto@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:28:07",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "f04cc311-17db-44ed-8174-5b3b74553403",
-    "company_name": "KOPKAR NINDYA KARYA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "98f70322-4528-41d1-8805-ba2b5bcc4aef",
-    "company_name": "Bank Mandiri KC Palu Samratulangi",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3fb3dd51-05cc-4939-b3bf-a2bc08b16735",
-    "company_name": "KOPKAR MAJU",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7b545ae2-e862-4db7-a043-76fbf92af1ba",
-    "company_name": "KOP. ABRI PRIMKOPAD KOREM 132",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "a742ed38-efc1-44eb-a456-f36a6f42fdf3",
-    "company_name": "KSP MITRA MANDIRI",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "74b50728-ef75-4894-b92a-dca3ebee8c16",
-    "company_name": "BANK MANDIRI SAMSAT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1d8a5e76-92bf-4e44-bd7a-e564e7691fd0",
-    "company_name": "PEGADAIAN (PERSERO), UPS SETIABUDI PT <Pegadaian Syariah>",
-    "survey_status": "OPEN",
-    "email": "cpspaluplasa@pegadaian.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:03:50",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1d8a5e76-92bf-4e44-bd7a-e564e7691fd0",
-    "company_name": "PEGADAIAN (PERSERO), UPS SETIABUDI PT <Pegadaian Syariah>",
-    "survey_status": "OPEN",
-    "email": "cpspaluplasa@pegadaian.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:03:49",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1d8a5e76-92bf-4e44-bd7a-e564e7691fd0",
-    "company_name": "PEGADAIAN (PERSERO), UPS SETIABUDI PT <Pegadaian Syariah>",
-    "survey_status": "OPEN",
-    "email": "cpspaluplasa@pegadaian.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:42:18",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1d8a5e76-92bf-4e44-bd7a-e564e7691fd0",
-    "company_name": "PEGADAIAN (PERSERO), UPS SETIABUDI PT <Pegadaian Syariah>",
-    "survey_status": "OPEN",
-    "email": "cpspaluplasa@pegadaian.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:42:18",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8d8afed8-e09b-4c0d-8845-ca6ccbda1257",
-    "company_name": "UTAMA MANDIRI PRATAMA",
-    "survey_status": "OPEN",
-    "email": "christiancornelis31@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 04:12:22",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "8d8afed8-e09b-4c0d-8845-ca6ccbda1257",
-    "company_name": "UTAMA MANDIRI PRATAMA",
-    "survey_status": "OPEN",
-    "email": "christiancornelis31@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:12:18",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "98429722-1717-4e46-b040-4afaf776d454",
-    "company_name": "GLORY MULTI PALU",
-    "survey_status": "OPEN",
-    "email": "cvglorymultipalu@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "05 Jun 2026, 11:27:42",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "98429722-1717-4e46-b040-4afaf776d454",
-    "company_name": "GLORY MULTI PALU",
-    "survey_status": "OPEN",
-    "email": "cvglorymultipalu@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 04:43:28",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "98429722-1717-4e46-b040-4afaf776d454",
-    "company_name": "GLORY MULTI PALU",
-    "survey_status": "OPEN",
-    "email": "cvglorymultipalu@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 04:43:28",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "b49e7890-8471-4111-a788-4ede85e514c6",
-    "company_name": "BANK MAYAPADA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2301db79-6c9c-478b-acff-a6b890713812",
-    "company_name": "TRIOCELEBES SEJAHTERA PT.",
-    "survey_status": "OPEN",
-    "email": "triosejahtera@yahoo.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:06:55",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2301db79-6c9c-478b-acff-a6b890713812",
-    "company_name": "TRIOCELEBES SEJAHTERA PT.",
-    "survey_status": "OPEN",
-    "email": "triosejahtera@yahoo.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:06:51",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2301db79-6c9c-478b-acff-a6b890713812",
-    "company_name": "TRIOCELEBES SEJAHTERA PT.",
-    "survey_status": "OPEN",
-    "email": "triosejahtera@yahoo.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "01 Jun 2026, 23:52:24",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "2301db79-6c9c-478b-acff-a6b890713812",
-    "company_name": "TRIOCELEBES SEJAHTERA PT.",
-    "survey_status": "OPEN",
-    "email": "triosejahtera@yahoo.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "01 Jun 2026, 23:52:16",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28114b55-f119-4625-a9b9-35163b81849e",
-    "company_name": "RUNYEAP PERDAGANGAN INDONESIA",
-    "survey_status": "OPEN",
-    "email": "runyeapperdaganganindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:09:21",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28114b55-f119-4625-a9b9-35163b81849e",
-    "company_name": "RUNYEAP PERDAGANGAN INDONESIA",
-    "survey_status": "OPEN",
-    "email": "runyeapperdaganganindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:09:17",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28114b55-f119-4625-a9b9-35163b81849e",
-    "company_name": "RUNYEAP PERDAGANGAN INDONESIA",
-    "survey_status": "OPEN",
-    "email": "runyeapperdaganganindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 00:03:44",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "28114b55-f119-4625-a9b9-35163b81849e",
-    "company_name": "RUNYEAP PERDAGANGAN INDONESIA",
-    "survey_status": "OPEN",
-    "email": "runyeapperdaganganindonesia@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 00:03:40",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5d2cc519-c73d-4f9f-9284-d41e2358ab23",
-    "company_name": "PT ASABRI (CABANG) PALU",
-    "survey_status": "OPEN",
-    "email": "kancab.palu@asabri.co.id",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "09 Jun 2026, 10:59:42",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5d2cc519-c73d-4f9f-9284-d41e2358ab23",
-    "company_name": "PT ASABRI (CABANG) PALU",
-    "survey_status": "OPEN",
-    "email": "kancab.palu@asabri.co.id",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "09 Jun 2026, 10:59:32",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5d2cc519-c73d-4f9f-9284-d41e2358ab23",
-    "company_name": "PT ASABRI (CABANG) PALU",
-    "survey_status": "OPEN",
-    "email": "kancab.palu@asabri.co.id",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "02 Jun 2026, 08:26:38",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5d2cc519-c73d-4f9f-9284-d41e2358ab23",
-    "company_name": "PT ASABRI (CABANG) PALU",
-    "survey_status": "OPEN",
-    "email": "kancab.palu@asabri.co.id",
-    "global_status": "Clicked",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 08:26:10",
-    "order": 4,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5d2cc519-c73d-4f9f-9284-d41e2358ab23",
-    "company_name": "PT ASABRI (CABANG) PALU",
-    "survey_status": "OPEN",
-    "email": "kancab.palu@asabri.co.id",
-    "global_status": "Clicked",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 08:04:08",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5d2cc519-c73d-4f9f-9284-d41e2358ab23",
-    "company_name": "PT ASABRI (CABANG) PALU",
-    "survey_status": "OPEN",
-    "email": "kancab.palu@asabri.co.id",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:08:26",
-    "order": 6,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "5d2cc519-c73d-4f9f-9284-d41e2358ab23",
-    "company_name": "PT ASABRI (CABANG) PALU",
-    "survey_status": "OPEN",
-    "email": "kancab.palu@asabri.co.id",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:08:26",
-    "order": 7,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "e8b4b25d-1bcd-42fd-85ad-1fd7cda24055",
-    "company_name": "JELAJAH LAUT NUSANTARA PALU, PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "d7ebc638-12ef-409e-96b3-77a77161bd70",
-    "company_name": "BANK SULTENG SAMSAT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "1275f207-3d7f-42d6-bfdc-932774a705ef",
-    "company_name": "PELABUHAN PANTOLOAN",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6d729900-1681-4a97-90e8-b4cf8ff5eac4",
-    "company_name": "KPN KARYA NIAGA",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6b23e1cf-7e3c-4f22-aa2e-69a38257ab85",
-    "company_name": "INFINITI KARYA ENERGI",
-    "survey_status": "OPEN",
-    "email": "infiniti.karyaenergi@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:37:17",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "6b23e1cf-7e3c-4f22-aa2e-69a38257ab85",
-    "company_name": "INFINITI KARYA ENERGI",
-    "survey_status": "OPEN",
-    "email": "infiniti.karyaenergi@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 02:37:13",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "50ecf4b2-c49f-460b-8b10-301b15c39424",
-    "company_name": "BOSOWA PT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ae2bea82-730f-4ccf-b7f1-ea77c7a2e537",
-    "company_name": "KPN KOSIDTANHUT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "dbb333b6-6440-42a1-9a20-0f477acd8015",
-    "company_name": "MAKASAR RAYA MOTOR PT",
-    "survey_status": "OPEN",
-    "email": "rrukmin@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 08:38:05",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "dbb333b6-6440-42a1-9a20-0f477acd8015",
-    "company_name": "MAKASAR RAYA MOTOR PT",
-    "survey_status": "OPEN",
-    "email": "rrukmin@yahoo.co.id",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:37:43",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "facd37a4-1806-4294-b683-b1a1da1a7775",
-    "company_name": "TRIOCELEBES UTAMA, PT",
-    "survey_status": "OPEN",
-    "email": "triocelebesutama@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 10:28:53",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "facd37a4-1806-4294-b683-b1a1da1a7775",
-    "company_name": "TRIOCELEBES UTAMA, PT",
-    "survey_status": "OPEN",
-    "email": "triocelebesutama@yahoo.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 10:28:18",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9f845cdd-c504-4fb6-b1bf-c3e170d52bb5",
-    "company_name": "BALINDO MANUNGGAL BERSAMA",
-    "survey_status": "OPEN",
-    "email": "hondabalindotax@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 22:20:53",
-    "order": 1,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9f845cdd-c504-4fb6-b1bf-c3e170d52bb5",
-    "company_name": "BALINDO MANUNGGAL BERSAMA",
-    "survey_status": "OPEN",
-    "email": "hondabalindotax@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 05:11:01",
-    "order": 2,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "9f845cdd-c504-4fb6-b1bf-c3e170d52bb5",
-    "company_name": "BALINDO MANUNGGAL BERSAMA",
-    "survey_status": "OPEN",
-    "email": "hondabalindotax@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 05:11:01",
-    "order": 3,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "3b1b059e-8983-4aa7-b87d-5b2352b9d62d",
-    "company_name": "PT BANK SULTENG",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "7b18e9ed-7614-47bb-bc78-3f068d7deab7",
-    "company_name": "KPN KOSPIN",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[71] PALU"
+    "order": 0
   }
 ];
-window.LAST_UPDATED = '13 Jun 2026, 09:01:09';
+window.LAST_UPDATED = '13 Jun 2026, 09:10:20';
