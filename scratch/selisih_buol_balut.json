@@ -1,0 +1,3382 @@
+{
+  "buol": {
+    "pencacah_regions_count": 618,
+    "pengawas_regions_count": 101,
+    "pencacah_not_pengawas": [
+      {
+        "code": "7207010009000200",
+        "name": "RT 02 DUSUN 1"
+      },
+      {
+        "code": "7207010009000300",
+        "name": "RT 03 DUSUN 1"
+      },
+      {
+        "code": "7207010009000500",
+        "name": "RT 04 DUSUN 2"
+      },
+      {
+        "code": "7207010009000600",
+        "name": "RT 05 DUSUN 2"
+      },
+      {
+        "code": "7207010009000900",
+        "name": "RT 07 DUSUN 3"
+      },
+      {
+        "code": "7207010009001300",
+        "name": "RT 11 DUSUN 4"
+      },
+      {
+        "code": "7207010009001400",
+        "name": "RT 10 DUSUN 4"
+      },
+      {
+        "code": "7207010009001600",
+        "name": "RT 12 DUSUN 4"
+      },
+      {
+        "code": "7207010010000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207010010000200",
+        "name": "RT 02 DUSUN 1"
+      },
+      {
+        "code": "7207010010000300",
+        "name": "RT 03 DUSUN 1"
+      },
+      {
+        "code": "7207010010000400",
+        "name": "RT 04 DUSUN 1"
+      },
+      {
+        "code": "7207010010000500",
+        "name": "RT 05 DUSUN 2"
+      },
+      {
+        "code": "7207010010000600",
+        "name": "RT 06 DUSUN 2"
+      },
+      {
+        "code": "7207010010000700",
+        "name": "RT 07 DUSUN 2"
+      },
+      {
+        "code": "7207010010000800",
+        "name": "RT 08 DUSUN 2"
+      },
+      {
+        "code": "7207010010000900",
+        "name": "RT 09 DUSUN 3"
+      },
+      {
+        "code": "7207010010001200",
+        "name": "RT 12 DUSUN 3"
+      },
+      {
+        "code": "7207010010100200",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207010011000100",
+        "name": "RT 001 RW 01 DUSUN 1"
+      },
+      {
+        "code": "7207010011000300",
+        "name": "RT 003 RW 01 DUSUN 1"
+      },
+      {
+        "code": "7207010011000500",
+        "name": "RT 005 RW 02 DUSUN 2"
+      },
+      {
+        "code": "7207010011000600",
+        "name": "RT 006 RW 02 DUSUN 2"
+      },
+      {
+        "code": "7207010011002400",
+        "name": "RT 010 RW 03 DUSUN 3"
+      },
+      {
+        "code": "7207010011002600",
+        "name": "RT 14 RW 4 DUSUN 4"
+      },
+      {
+        "code": "7207010011100200",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207010011200300",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207010012000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207010012000400",
+        "name": "RT 04 DUSUN 1"
+      },
+      {
+        "code": "7207010012000500",
+        "name": "RT 05 DUSUN 2"
+      },
+      {
+        "code": "7207010012000600",
+        "name": "RT 06 DUSUN 2"
+      },
+      {
+        "code": "7207010012000900",
+        "name": "RT 09 DUSUN 3"
+      },
+      {
+        "code": "7207010012001000",
+        "name": "RT 10 DUSUN 3"
+      },
+      {
+        "code": "7207010017000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207010017000500",
+        "name": "RT 05 DUSUN 2"
+      },
+      {
+        "code": "7207010017000800",
+        "name": "RT 08 DUSUN 2"
+      },
+      {
+        "code": "7207010018000500",
+        "name": "RT 05 DUSUN 2"
+      },
+      {
+        "code": "7207010019000400",
+        "name": "RT 04 RW 02 DUSUN 1"
+      },
+      {
+        "code": "7207010019000600",
+        "name": "RT 06 RW 03 DUSUN 2"
+      },
+      {
+        "code": "7207010019000700",
+        "name": "RT 07 RW 04 DUSUN 2"
+      },
+      {
+        "code": "7207010019000800",
+        "name": "RT 08 RW 04 DUSUN 2"
+      },
+      {
+        "code": "7207011001000101",
+        "name": "RT 1 RW 01"
+      },
+      {
+        "code": "7207011001000102",
+        "name": "RT 1 RW 01"
+      },
+      {
+        "code": "7207011001000103",
+        "name": "RT 1 RW 01"
+      },
+      {
+        "code": "7207011001000300",
+        "name": "RT 3 RW 02"
+      },
+      {
+        "code": "7207011001000400",
+        "name": "RT 4 RW 02"
+      },
+      {
+        "code": "7207011001000700",
+        "name": "RT 7 RW 04"
+      },
+      {
+        "code": "7207011002000100",
+        "name": "RT 01 RW 01"
+      },
+      {
+        "code": "7207011002000200",
+        "name": "RT 02 RW 01"
+      },
+      {
+        "code": "7207011002000300",
+        "name": "RT 03 RW 01"
+      },
+      {
+        "code": "7207011002000400",
+        "name": "RT 04 RW 01"
+      },
+      {
+        "code": "7207011002000500",
+        "name": "RT 05 RW 02"
+      },
+      {
+        "code": "7207011002000800",
+        "name": "RT 08 RW 02"
+      },
+      {
+        "code": "7207011002001000",
+        "name": "RT 10 RW 03"
+      },
+      {
+        "code": "7207011002001200",
+        "name": "RT 12 RW 03"
+      },
+      {
+        "code": "7207011002100100",
+        "name": "SAWAH KULANGO"
+      },
+      {
+        "code": "7207011002200400",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207011003000100",
+        "name": "RT 01 RW 01"
+      },
+      {
+        "code": "7207011003000200",
+        "name": "RT 02 RW 01"
+      },
+      {
+        "code": "7207011003000300",
+        "name": "RT 03 RW 01"
+      },
+      {
+        "code": "7207011003000400",
+        "name": "RT 04 RW 01"
+      },
+      {
+        "code": "7207011003000700",
+        "name": "RT 07 RW 02"
+      },
+      {
+        "code": "7207011003000800",
+        "name": "RT 08 RW 03"
+      },
+      {
+        "code": "7207011003000900",
+        "name": "RT 09 RW 03"
+      },
+      {
+        "code": "7207011003001000",
+        "name": "RT 10 RW 03"
+      },
+      {
+        "code": "7207011003001300",
+        "name": "RT 13 RW 04"
+      },
+      {
+        "code": "7207011003001500",
+        "name": "RT 15 RW 04"
+      },
+      {
+        "code": "7207011003001600",
+        "name": "RT 16 RW 04"
+      },
+      {
+        "code": "7207011003001800",
+        "name": "RT 18 RW 05"
+      },
+      {
+        "code": "7207011003002300",
+        "name": "RT 23 RW 06"
+      },
+      {
+        "code": "7207011003002400",
+        "name": "RT 24 RW 06"
+      },
+      {
+        "code": "7207011003002500",
+        "name": "RT 25 RW 06"
+      },
+      {
+        "code": "7207011003002600",
+        "name": "RT 26 RW 06"
+      },
+      {
+        "code": "7207011003002700",
+        "name": "RT 27 RW 06"
+      },
+      {
+        "code": "7207011003002800",
+        "name": "RT 28 RW 07"
+      },
+      {
+        "code": "7207011003003000",
+        "name": "RT 30 RW 07"
+      },
+      {
+        "code": "7207011003003100",
+        "name": "RT 31 RW 08"
+      },
+      {
+        "code": "7207011003600100",
+        "name": "RAWA 1"
+      },
+      {
+        "code": "7207011003600300",
+        "name": "RAWA 3"
+      },
+      {
+        "code": "7207011004000200",
+        "name": "RT 2 RW 1"
+      },
+      {
+        "code": "7207011004000300",
+        "name": "RT 3 RW 1"
+      },
+      {
+        "code": "7207011004000500",
+        "name": "RT 5 RW 1"
+      },
+      {
+        "code": "7207011004000901",
+        "name": "RT 9 RW 2"
+      },
+      {
+        "code": "7207011004000902",
+        "name": "RT 9 RW 2"
+      },
+      {
+        "code": "7207011004001100",
+        "name": "RT 11 RW 3"
+      },
+      {
+        "code": "7207011004001200",
+        "name": "RT 12 RW 3"
+      },
+      {
+        "code": "7207011004001300",
+        "name": "RT 13 RW 3"
+      },
+      {
+        "code": "7207011004001500",
+        "name": "RT 15 RW 3"
+      },
+      {
+        "code": "7207011004001600",
+        "name": "RT 16 RW 4"
+      },
+      {
+        "code": "7207011004001700",
+        "name": "RT 17 RW 4"
+      },
+      {
+        "code": "7207011004001800",
+        "name": "RT 18 RW 4"
+      },
+      {
+        "code": "7207011004200100",
+        "name": "HUTAN SEMAK BELUKAR"
+      },
+      {
+        "code": "7207011005000100",
+        "name": "RT 1 RW 01"
+      },
+      {
+        "code": "7207011005000200",
+        "name": "RT 2 RW 02"
+      },
+      {
+        "code": "7207011005000300",
+        "name": "RT 3 RW 02"
+      },
+      {
+        "code": "7207011005000402",
+        "name": "RT 4 RW 03"
+      },
+      {
+        "code": "7207011005000501",
+        "name": "RT 5 RW 04"
+      },
+      {
+        "code": "7207011005000502",
+        "name": "RT 5 RW 04"
+      },
+      {
+        "code": "7207011005000600",
+        "name": "RT 6 RW 04"
+      },
+      {
+        "code": "7207011005000700",
+        "name": "RT 7 RW 05"
+      },
+      {
+        "code": "7207011005000800",
+        "name": "RT 8 RW 06"
+      },
+      {
+        "code": "7207011005000900",
+        "name": "RT 9 RW 06"
+      },
+      {
+        "code": "7207011005001000",
+        "name": "RT 10 RW 07"
+      },
+      {
+        "code": "7207011005001100",
+        "name": "RT 11 RW 07"
+      },
+      {
+        "code": "7207011005001200",
+        "name": "RT 12 RW 08"
+      },
+      {
+        "code": "7207011005001301",
+        "name": "RT 13 RW 08"
+      },
+      {
+        "code": "7207011005001302",
+        "name": "RT 13 RW 08"
+      },
+      {
+        "code": "7207011005001400",
+        "name": "RT 14 RW 05"
+      },
+      {
+        "code": "7207011005001503",
+        "name": "RT 15 RW 03"
+      },
+      {
+        "code": "7207011005200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207011006000100",
+        "name": "RT 001 RW 001"
+      },
+      {
+        "code": "7207011006000200",
+        "name": "RT 002 RW 001"
+      },
+      {
+        "code": "7207011006000300",
+        "name": "RT 003 RW 002"
+      },
+      {
+        "code": "7207011006000400",
+        "name": "RT 004 RW 002"
+      },
+      {
+        "code": "7207011006000500",
+        "name": "RT 005 RW 003"
+      },
+      {
+        "code": "7207011006000600",
+        "name": "RT 006 RW 004"
+      },
+      {
+        "code": "7207011006000700",
+        "name": "RT 007 RW 004"
+      },
+      {
+        "code": "7207011006000800",
+        "name": "RT 008 RW 005"
+      },
+      {
+        "code": "7207011006000900",
+        "name": "RT 009 RW 005"
+      },
+      {
+        "code": "7207011006001000",
+        "name": "RT 010 RW 006"
+      },
+      {
+        "code": "7207011006001300",
+        "name": "RT 013 RW 007"
+      },
+      {
+        "code": "7207011006001400",
+        "name": "RT 014 RW 008"
+      },
+      {
+        "code": "7207011006001600",
+        "name": "RT 016 RW 009"
+      },
+      {
+        "code": "7207011006001700",
+        "name": "RT 017 RW 009"
+      },
+      {
+        "code": "7207011006001800",
+        "name": "RT 018 RW 010"
+      },
+      {
+        "code": "7207011006001900",
+        "name": "RT 019 RW 011"
+      },
+      {
+        "code": "7207011006002000",
+        "name": "RT 020 RW 011"
+      },
+      {
+        "code": "7207011007000200",
+        "name": "RT 2 RW 01"
+      },
+      {
+        "code": "7207011007000300",
+        "name": "RT 3 RW 01"
+      },
+      {
+        "code": "7207011007000500",
+        "name": "RT 5 RW 02"
+      },
+      {
+        "code": "7207011007000600",
+        "name": "RT 6 RW 02"
+      },
+      {
+        "code": "7207011007000700",
+        "name": "RT 7 RW 02"
+      },
+      {
+        "code": "7207011007000900",
+        "name": "RT 9 RW 03"
+      },
+      {
+        "code": "7207011007200300",
+        "name": "HUTAN 2"
+      },
+      {
+        "code": "7207012001000200",
+        "name": "RT 2 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207012001000400",
+        "name": "RT 4 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207012001100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207012002000100",
+        "name": "RT 1 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207012002000300",
+        "name": "RT 3 RW 2 DUSUN 1"
+      },
+      {
+        "code": "7207012002000400",
+        "name": "RT 4 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207012002000500",
+        "name": "RT 5 RW 3 DUSUN 2"
+      },
+      {
+        "code": "7207012002200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207012003000100",
+        "name": "RT 1 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207012003000200",
+        "name": "RT 2 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207012003000400",
+        "name": "RT 4 RW 2 DUSUN 1"
+      },
+      {
+        "code": "7207012003000500",
+        "name": "RT 5 RW 3 DUSUN 2"
+      },
+      {
+        "code": "7207012003000800",
+        "name": "RT 8 RW 4 DUSUN 2"
+      },
+      {
+        "code": "7207012003001000",
+        "name": "RT 10 RW 5 DUSUN 3"
+      },
+      {
+        "code": "7207012003001100",
+        "name": "RT 11 RW 6 DUSUN 3"
+      },
+      {
+        "code": "7207012003001200",
+        "name": "RT 12 RW 6 DUSUN 3"
+      },
+      {
+        "code": "7207012003001500",
+        "name": "RT 15 RW 8 DUSUN 4"
+      },
+      {
+        "code": "7207012004000100",
+        "name": "RT 1 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207012004000200",
+        "name": "RT 2 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207012004000400",
+        "name": "RT 4 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207012004100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207012005000100",
+        "name": "RT 001 DUSUN 1"
+      },
+      {
+        "code": "7207012005000200",
+        "name": "RT 002 DUSUN 1"
+      },
+      {
+        "code": "7207012005000300",
+        "name": "RT 003 DUSUN 1"
+      },
+      {
+        "code": "7207012005000500",
+        "name": "RT 005 DUSUN 2"
+      },
+      {
+        "code": "7207012005000600",
+        "name": "RT 006 DUSUN 2"
+      },
+      {
+        "code": "7207012005100100",
+        "name": "KEBUN WARGA"
+      },
+      {
+        "code": "7207012006000100",
+        "name": "RT 001 DUSUN 1"
+      },
+      {
+        "code": "7207012006000200",
+        "name": "RT 002 DUSUN 1"
+      },
+      {
+        "code": "7207012006000300",
+        "name": "RT 003 DUSUN 2"
+      },
+      {
+        "code": "7207012006000400",
+        "name": "RT 004 DUSUN 2"
+      },
+      {
+        "code": "7207012007000100",
+        "name": "RT 1 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207012007000200",
+        "name": "RT 2 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207012007000300",
+        "name": "RT 3 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207012007100100",
+        "name": "KEBUN WARGA"
+      },
+      {
+        "code": "7207020006000100",
+        "name": "RT 1 DUSUN 1"
+      },
+      {
+        "code": "7207020006000300",
+        "name": "RT 3 DUSUN 2"
+      },
+      {
+        "code": "7207020007000500",
+        "name": "RT 05 DUSUN 3"
+      },
+      {
+        "code": "7207020007000600",
+        "name": "RT 06 DUSUN 3"
+      },
+      {
+        "code": "7207020007100100",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207020007200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207020008000300",
+        "name": "RT 03 DUSUN 02"
+      },
+      {
+        "code": "7207020008000400",
+        "name": "RT 04 DUSUN 02"
+      },
+      {
+        "code": "7207020008100100",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207020009000100",
+        "name": "RT 01 DUSUN 01"
+      },
+      {
+        "code": "7207020009000200",
+        "name": "RT 02 DUSUN 01"
+      },
+      {
+        "code": "7207020009000300",
+        "name": "RT 03 DUSUN 01"
+      },
+      {
+        "code": "7207020009000700",
+        "name": "RT 006 DUSUN 02"
+      },
+      {
+        "code": "7207020010000100",
+        "name": "RT 001 DUSUN LAIDON"
+      },
+      {
+        "code": "7207020010000200",
+        "name": "RT 002 DUSUN LAIDON"
+      },
+      {
+        "code": "7207020010000400",
+        "name": "RT 004 DUSUN LANGUDON"
+      },
+      {
+        "code": "7207020010200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207020011000100",
+        "name": "RT 001 DUSUN SARANA"
+      },
+      {
+        "code": "7207020011000200",
+        "name": "RT 002 DUSUN SARANA"
+      },
+      {
+        "code": "7207020011000600",
+        "name": "RT 006 DUSUN POMBANG"
+      },
+      {
+        "code": "7207020011000800",
+        "name": "RT 008 DUSUN BUNDOBOGU"
+      },
+      {
+        "code": "7207020012000300",
+        "name": "RT 003 DUSUN BONGO"
+      },
+      {
+        "code": "7207020012000400",
+        "name": "RT 004 DUSUN SAKUYATI"
+      },
+      {
+        "code": "7207020012000600",
+        "name": "RT 006 DUSUN SAKUYATI"
+      },
+      {
+        "code": "7207020013100100",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207020014000300",
+        "name": "RT 03 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207020015000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207020015000200",
+        "name": "RT 02 DUSUN 1"
+      },
+      {
+        "code": "7207020015000300",
+        "name": "RT 04 DUSUN 2"
+      },
+      {
+        "code": "7207020015000500",
+        "name": "RT 05 DUSUN 2"
+      },
+      {
+        "code": "7207020015100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207020015200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207020016000200",
+        "name": "RT 003 DUSUN KINENI"
+      },
+      {
+        "code": "7207020016000600",
+        "name": "RT 008 DUSUN PANILAN"
+      },
+      {
+        "code": "7207020016001000",
+        "name": "RT 004 DUSUN KINENI"
+      },
+      {
+        "code": "7207020016001200",
+        "name": "RT 007 DUSUN PANILAN"
+      },
+      {
+        "code": "7207020016001400",
+        "name": "RT 010 DUSUN PANILAN"
+      },
+      {
+        "code": "7207020016001500",
+        "name": "RT 011 DUSUN PANILAN"
+      },
+      {
+        "code": "7207020016100200",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207020017000100",
+        "name": "RT 001 DUSUN 1"
+      },
+      {
+        "code": "7207020017000300",
+        "name": "RT 003 DUSUN 1"
+      },
+      {
+        "code": "7207020017000600",
+        "name": "RT 006 DUSUN 2"
+      },
+      {
+        "code": "7207020017000900",
+        "name": "RT 009 DUSUN 3"
+      },
+      {
+        "code": "7207020017200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207020018000200",
+        "name": "RT 2 DUSUN 2"
+      },
+      {
+        "code": "7207020018100100",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207020018200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207020019000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207020019100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207020021000300",
+        "name": "RT 003 DUSUN MEKAR"
+      },
+      {
+        "code": "7207020021000400",
+        "name": "RT 004 DUSUN MEKAR"
+      },
+      {
+        "code": "7207020021100100",
+        "name": "PERKEBUNAN"
+      },
+      {
+        "code": "7207020022000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207020022000200",
+        "name": "RT 02 DUSUN 1"
+      },
+      {
+        "code": "7207020022000400",
+        "name": "RT 04 DUSUN 2"
+      },
+      {
+        "code": "7207021001000100",
+        "name": "RT 001 DUSUN 1"
+      },
+      {
+        "code": "7207021001000200",
+        "name": "RT 002 DUSUN 1"
+      },
+      {
+        "code": "7207021001000700",
+        "name": "RT 005 DUSUN 3"
+      },
+      {
+        "code": "7207021001000800",
+        "name": "RT 006 DUSUN 3"
+      },
+      {
+        "code": "7207021001001100",
+        "name": "RT 004 DUSUN 2"
+      },
+      {
+        "code": "7207021001100100",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207021002000400",
+        "name": "RT 004 DUSUN 001"
+      },
+      {
+        "code": "7207021002000500",
+        "name": "RT 005 DUSUN 002"
+      },
+      {
+        "code": "7207021002000600",
+        "name": "RT 006 DUSUN 002"
+      },
+      {
+        "code": "7207021002000800",
+        "name": "RT 008 DUSUN 003"
+      },
+      {
+        "code": "7207021003000400",
+        "name": "RT 004 DUSUN 002 SUKA JAYA"
+      },
+      {
+        "code": "7207021003000800",
+        "name": "RT 005 DUSUN 003 SIDODADI"
+      },
+      {
+        "code": "7207021003001100",
+        "name": "RT 008 DUSUN 004 LIPUKU"
+      },
+      {
+        "code": "7207021003001800",
+        "name": "RT 006 DUSUN 003 SIDODADI"
+      },
+      {
+        "code": "7207021003001900",
+        "name": "RT 007 DUSUN 004 LIPUKU"
+      },
+      {
+        "code": "7207021003002000",
+        "name": "RT 009 DUSUN 005 KALAKA"
+      },
+      {
+        "code": "7207021003400400",
+        "name": "DIVISI 5 MESS"
+      },
+      {
+        "code": "7207021003400500",
+        "name": "DIVISI 1 MESS"
+      },
+      {
+        "code": "7207021004000300",
+        "name": "RT 003 DUSUN YAMOGU"
+      },
+      {
+        "code": "7207021004000400",
+        "name": "RT 004 DUSUN YAMOGU"
+      },
+      {
+        "code": "7207021004000500",
+        "name": "RT 005 DUSUN BIONGAN"
+      },
+      {
+        "code": "7207021004000600",
+        "name": "RT 006 DUSUN BIONGAN"
+      },
+      {
+        "code": "7207021004000700",
+        "name": "RT 007 DUSUN BIONGAN"
+      },
+      {
+        "code": "7207021004100100",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207021005000200",
+        "name": "RT 002 DUSUN RAWA MAKMUR"
+      },
+      {
+        "code": "7207021005000300",
+        "name": "RT 003 DUSUN KARYA BARU"
+      },
+      {
+        "code": "7207021005000500",
+        "name": "RT 005 DUSUN KARYA BARU"
+      },
+      {
+        "code": "7207021005100200",
+        "name": "LAHAN PERKEBUNAN"
+      },
+      {
+        "code": "7207021006000300",
+        "name": "RT 003 DUSUN TANAH MERAH"
+      },
+      {
+        "code": "7207021006000700",
+        "name": "RT 007 DUSUN MANGGADONG"
+      },
+      {
+        "code": "7207021006100200",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207021007000100",
+        "name": "RT 001 DUSUN DASIAMA"
+      },
+      {
+        "code": "7207021007000200",
+        "name": "RT 002 DUSUN DASIAMA"
+      },
+      {
+        "code": "7207021008000100",
+        "name": "RT 001 RW 001 DUSUN SIDODADI"
+      },
+      {
+        "code": "7207021008000200",
+        "name": "RT 002 RW 001 DUSUN SIDODADI"
+      },
+      {
+        "code": "7207021008000400",
+        "name": "RT 004 RW 002 DUSUN MEKAR JAYA"
+      },
+      {
+        "code": "7207021008000500",
+        "name": "RT 005 RW 003 DUSUN MANIALA"
+      },
+      {
+        "code": "7207021009000200",
+        "name": "RT 002 DUSUN 001"
+      },
+      {
+        "code": "7207021009000300",
+        "name": "RT 003 DUSUN 001"
+      },
+      {
+        "code": "7207021009000400",
+        "name": "RT 004 DUSUN 002"
+      },
+      {
+        "code": "7207030006000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207030006000200",
+        "name": "RT 02 DUSUN 1"
+      },
+      {
+        "code": "7207030006000300",
+        "name": "RT 03 DUSUN 2"
+      },
+      {
+        "code": "7207030006000400",
+        "name": "RT 04 DUSUN 2"
+      },
+      {
+        "code": "7207030006000500",
+        "name": "RT 05 DUSUN 3"
+      },
+      {
+        "code": "7207030006000600",
+        "name": "RT 06 DUSUN 3"
+      },
+      {
+        "code": "7207030006000800",
+        "name": "RT 08 DUSUN 2"
+      },
+      {
+        "code": "7207030007000100",
+        "name": "RT 01 DUSUN 01"
+      },
+      {
+        "code": "7207030007000500",
+        "name": "RT 05 DUSUN 03"
+      },
+      {
+        "code": "7207030007000800",
+        "name": "RT 08 DUSUN 04"
+      },
+      {
+        "code": "7207030007100100",
+        "name": "KEBUN 1"
+      },
+      {
+        "code": "7207030008000400",
+        "name": "RT 004 RW 002 DUSUN 2"
+      },
+      {
+        "code": "7207030008000600",
+        "name": "RT 009 RW 004 DUSUN 4"
+      },
+      {
+        "code": "7207030008001000",
+        "name": "RT 007 RW 003 DUSUN 3"
+      },
+      {
+        "code": "7207030008100100",
+        "name": "LAHAN KEBUN"
+      },
+      {
+        "code": "7207030009000200",
+        "name": "RT 02 DUSUN 01"
+      },
+      {
+        "code": "7207030010000300",
+        "name": "RT 03 RW 02 DUSUN 01"
+      },
+      {
+        "code": "7207030010000600",
+        "name": "RT 06 RW 03 DUSUN 02"
+      },
+      {
+        "code": "7207030010000700",
+        "name": "RT 07 RW 04 DUSUN 02"
+      },
+      {
+        "code": "7207030010100100",
+        "name": "KEBUN 1"
+      },
+      {
+        "code": "7207030010100200",
+        "name": "KEBUN 2"
+      },
+      {
+        "code": "7207030015000100",
+        "name": "RT 001 DUSUN 001"
+      },
+      {
+        "code": "7207030015000200",
+        "name": "RT 002 DUSUN 001"
+      },
+      {
+        "code": "7207030015000300",
+        "name": "RT 003 DUSUN 002"
+      },
+      {
+        "code": "7207030015000400",
+        "name": "RT 004 DUSUN 002"
+      },
+      {
+        "code": "7207030015000500",
+        "name": "RT 005 DUSUN 003"
+      },
+      {
+        "code": "7207030015000800",
+        "name": "RT 008 DUSUN 004"
+      },
+      {
+        "code": "7207030015100300",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207030016000101",
+        "name": "RT 001 RW 001 DUSUN 001"
+      },
+      {
+        "code": "7207030016000102",
+        "name": "RT 001 RW 001 DUSUN 001"
+      },
+      {
+        "code": "7207030016000200",
+        "name": "RT 002 RW 001 DUSUN 001"
+      },
+      {
+        "code": "7207030016000300",
+        "name": "RT 003 RW 002 DUSUN 002"
+      },
+      {
+        "code": "7207030016000400",
+        "name": "RT 004 RW 002 DUSUN 002"
+      },
+      {
+        "code": "7207030016000500",
+        "name": "RT 005 RW 003 DUSUN 003"
+      },
+      {
+        "code": "7207030016000600",
+        "name": "RT 006 RW 003 DUSUN 003"
+      },
+      {
+        "code": "7207030016100300",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207030017000200",
+        "name": "RT 002 DUSUN 001"
+      },
+      {
+        "code": "7207030017000500",
+        "name": "RT 005 DUSUN 002"
+      },
+      {
+        "code": "7207030018000700",
+        "name": "RT 006 DUSUN 03"
+      },
+      {
+        "code": "7207030018000800",
+        "name": "RT 008 DUSUN 03"
+      },
+      {
+        "code": "7207030018001000",
+        "name": "RT 009 DUSUN 04"
+      },
+      {
+        "code": "7207030018001200",
+        "name": "RT 011 DUSUN 04"
+      },
+      {
+        "code": "7207030018100100",
+        "name": "EMPANG 1"
+      },
+      {
+        "code": "7207030018100200",
+        "name": "SAWAH 1"
+      },
+      {
+        "code": "7207030018100500",
+        "name": "SAWAH 2"
+      },
+      {
+        "code": "7207030018200600",
+        "name": "HUTAN 2"
+      },
+      {
+        "code": "7207030019000200",
+        "name": "RT 02 DUSUN 01"
+      },
+      {
+        "code": "7207030019100200",
+        "name": "KEBUN 2"
+      },
+      {
+        "code": "7207030020000400",
+        "name": "RT 04 DUSUN 02"
+      },
+      {
+        "code": "7207030020100100",
+        "name": "KEBUN JAGUNG"
+      },
+      {
+        "code": "7207030021000200",
+        "name": "RT 02 DUSUN 01"
+      },
+      {
+        "code": "7207030021000300",
+        "name": "RT 03 DUSUN 02"
+      },
+      {
+        "code": "7207030021000400",
+        "name": "RT 04 DUSUN 02"
+      },
+      {
+        "code": "7207030021200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207030022000100",
+        "name": "RT 001 DUSUN 001"
+      },
+      {
+        "code": "7207030022000300",
+        "name": "RT 003 DUSUN 002"
+      },
+      {
+        "code": "7207030023000100",
+        "name": "RT 01 RW 01 DUSUN 01"
+      },
+      {
+        "code": "7207030023000500",
+        "name": "RT 05 RW 02 DUSUN 02"
+      },
+      {
+        "code": "7207030023000700",
+        "name": "RT 07 RW 03 DUSUN 03"
+      },
+      {
+        "code": "7207030023000900",
+        "name": "RT 09 RW 03 DUSUN 03"
+      },
+      {
+        "code": "7207030024000200",
+        "name": "RT 02 DUSUN 01"
+      },
+      {
+        "code": "7207030024000400",
+        "name": "RT 04 DUSUN 02"
+      },
+      {
+        "code": "7207031001000300",
+        "name": "RT 05 DUSUN SAKUYATI"
+      },
+      {
+        "code": "7207031001000500",
+        "name": "RT 07 DUSUN HIBRIDA"
+      },
+      {
+        "code": "7207031001000600",
+        "name": "RT 08 DUSUN HIBRIDA"
+      },
+      {
+        "code": "7207031001000700",
+        "name": "RT 10 DUSUN TABONE"
+      },
+      {
+        "code": "7207031001001000",
+        "name": "RT 06 DUSUN SAKUYATI"
+      },
+      {
+        "code": "7207031002000300",
+        "name": "RT 03 DUSUN RINJANI"
+      },
+      {
+        "code": "7207031002000500",
+        "name": "RT 04 DUSUN RINJANI"
+      },
+      {
+        "code": "7207031002001201",
+        "name": "RT 07 SUSUN CCM"
+      },
+      {
+        "code": "7207031002001202",
+        "name": "RT 07 SUSUN CCM"
+      },
+      {
+        "code": "7207031002001203",
+        "name": "RT 07 SUSUN CCM"
+      },
+      {
+        "code": "7207031002100100",
+        "name": "AREAL PERKEBUNAN"
+      },
+      {
+        "code": "7207031002100200",
+        "name": "AREAL PERSAWAHAN"
+      },
+      {
+        "code": "7207031002400300",
+        "name": "PEMUKIMAN"
+      },
+      {
+        "code": "7207031003000400",
+        "name": "RT 04 DUSUN KARYA MUKTI"
+      },
+      {
+        "code": "7207031003000500",
+        "name": "RT 05 DUSUN KARYA MUKTI"
+      },
+      {
+        "code": "7207031003000600",
+        "name": "RT 06 DUSUN KARYA MUKTI"
+      },
+      {
+        "code": "7207031003000700",
+        "name": "RT 07 DUSUN WANA JAYA"
+      },
+      {
+        "code": "7207031003000800",
+        "name": "RT 08 DUSUN WANA JAYA"
+      },
+      {
+        "code": "7207031004000100",
+        "name": "RT 001 DUSUN NUSA BUNGA"
+      },
+      {
+        "code": "7207031004000400",
+        "name": "RT 004 DUSUN KEMBANG"
+      },
+      {
+        "code": "7207031004000500",
+        "name": "RT 005 DUSUN KEMBANG"
+      },
+      {
+        "code": "7207031004000600",
+        "name": "RT 006 DUSUN KEMBANG"
+      },
+      {
+        "code": "7207031004000700",
+        "name": "RT 007 DUSUN KARANG ANYAR"
+      },
+      {
+        "code": "7207031004100100",
+        "name": "KEBUN WARGA"
+      },
+      {
+        "code": "7207031004100200",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207031005000300",
+        "name": "RT 03 DUSUN MALANDATI"
+      },
+      {
+        "code": "7207031005000400",
+        "name": "RT 04 DUSUN LATIHAN"
+      },
+      {
+        "code": "7207031005000600",
+        "name": "RT 06 DUSUN LATIHAN"
+      },
+      {
+        "code": "7207031005000800",
+        "name": "RT 08 DUSUN PANGKALAN"
+      },
+      {
+        "code": "7207031006000100",
+        "name": "RT 01 DUSUN 01"
+      },
+      {
+        "code": "7207031006000200",
+        "name": "RT 02 DUSUN 01"
+      },
+      {
+        "code": "7207031006000500",
+        "name": "RT 05 DUSUN 02"
+      },
+      {
+        "code": "7207031006000900",
+        "name": "RT 09 DUSUN 03"
+      },
+      {
+        "code": "7207031006001000",
+        "name": "RT 10 DUSUN 03"
+      },
+      {
+        "code": "7207031006001200",
+        "name": "RT 12 DUSUN 03"
+      },
+      {
+        "code": "7207031006100200",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207031007000200",
+        "name": "RT 2 DUSUN BOALEMO"
+      },
+      {
+        "code": "7207031007000500",
+        "name": "RT 5 DUSUN MAYARI"
+      },
+      {
+        "code": "7207031007100200",
+        "name": "PERKEBUNAN SAWIT"
+      },
+      {
+        "code": "7207031008000100",
+        "name": "RT 1 DUSUN 1"
+      },
+      {
+        "code": "7207031008000200",
+        "name": "RT 2 DUSUN 1"
+      },
+      {
+        "code": "7207031008000400",
+        "name": "RT 5 DUSUN 1"
+      },
+      {
+        "code": "7207031008000500",
+        "name": "RT 6 DUSUN 2"
+      },
+      {
+        "code": "7207031008000700",
+        "name": "RT 8 DUSUN 2"
+      },
+      {
+        "code": "7207031008100100",
+        "name": "PERKEBUNAN"
+      },
+      {
+        "code": "7207031009000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207031009000200",
+        "name": "RT 02 DUSUN 1"
+      },
+      {
+        "code": "7207031009000500",
+        "name": "RT 07 DUSUN 3"
+      },
+      {
+        "code": "7207031009000700",
+        "name": "RT 3 DUSUN 1"
+      },
+      {
+        "code": "7207031009000800",
+        "name": "RT 5 DUSUN 2"
+      },
+      {
+        "code": "7207031009000900",
+        "name": "RW 8 DUSUN 3"
+      },
+      {
+        "code": "7207031010001400",
+        "name": "RT 03 DUSUN BABAL"
+      },
+      {
+        "code": "7207031010001500",
+        "name": "RT 05 DUSUN DIVISI 2"
+      },
+      {
+        "code": "7207031010400200",
+        "name": "BARAK JOKO"
+      },
+      {
+        "code": "7207031011000200",
+        "name": "RT 002 DUSUN MEKAR JAYA"
+      },
+      {
+        "code": "7207031011000500",
+        "name": "RT 001 DUSUN SUMBER SARI"
+      },
+      {
+        "code": "7207031011000600",
+        "name": "RT 002 DUSUN SUMBER SARI"
+      },
+      {
+        "code": "7207031011000700",
+        "name": "RT 003 DUSUN SUMBER SARI"
+      },
+      {
+        "code": "7207031011001000",
+        "name": "RT 002 DUSUN MUKTI TAMA"
+      },
+      {
+        "code": "7207031011001100",
+        "name": "RT 003 DUSUN MUKTI TAMA"
+      },
+      {
+        "code": "7207031012100200",
+        "name": "LADANG"
+      },
+      {
+        "code": "7207031013000700",
+        "name": "RT 05 DUSUN 03 (SP 3)"
+      },
+      {
+        "code": "7207031013200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207031014000200",
+        "name": "RT 2 DUSUN 1"
+      },
+      {
+        "code": "7207031014000400",
+        "name": "RT 4 DUSUN 2"
+      },
+      {
+        "code": "7207031014100100",
+        "name": "PERKEBUNAN SAWIT"
+      },
+      {
+        "code": "7207040001000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207040001000600",
+        "name": "RT 06 DUSUN 2"
+      },
+      {
+        "code": "7207040001001400",
+        "name": "RT 011 DUSUN 4"
+      },
+      {
+        "code": "7207040001001700",
+        "name": "RT 02 DUSUN 1"
+      },
+      {
+        "code": "7207040001001800",
+        "name": "RT 05 DUSUN 2"
+      },
+      {
+        "code": "7207040001100100",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207040002000200",
+        "name": "RT 02 DUSUN BUKOTUK"
+      },
+      {
+        "code": "7207040002000500",
+        "name": "RT 05 DUSUN LIMBAU 1"
+      },
+      {
+        "code": "7207040002000800",
+        "name": "RT 07 DUSUN LIMBAU 1"
+      },
+      {
+        "code": "7207040002001200",
+        "name": "RT 10 DUSUN LIMBAU 2"
+      },
+      {
+        "code": "7207040003000100",
+        "name": "RT 01 DUSUN 01"
+      },
+      {
+        "code": "7207040003000400",
+        "name": "RT 04 DUSUN 02"
+      },
+      {
+        "code": "7207040003000600",
+        "name": "RT 06 DUSUN 03"
+      },
+      {
+        "code": "7207040003100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207040003200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207040005000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207040005000200",
+        "name": "RT 02 DUSUN 1"
+      },
+      {
+        "code": "7207040005000300",
+        "name": "RT 03 DUSUN 1"
+      },
+      {
+        "code": "7207040005000700",
+        "name": "RT 07 DUSUN 2"
+      },
+      {
+        "code": "7207040005000800",
+        "name": "RT 08 DUSUN 2"
+      },
+      {
+        "code": "7207040006000800",
+        "name": "RT 08 DUSUN 2"
+      },
+      {
+        "code": "7207040006001000",
+        "name": "RT 10 DUSUN 3"
+      },
+      {
+        "code": "7207040006001100",
+        "name": "RT 11 DUSUN 3"
+      },
+      {
+        "code": "7207040006001200",
+        "name": "RT 06 DUSUN 2"
+      },
+      {
+        "code": "7207040006100300",
+        "name": "TAMBAK"
+      },
+      {
+        "code": "7207040007001500",
+        "name": "RT 03 DUSUN  2"
+      },
+      {
+        "code": "7207040007001600",
+        "name": "RT 04 DUSUN 2"
+      },
+      {
+        "code": "7207040013000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207040013000200",
+        "name": "RT 02 DUSUN 1"
+      },
+      {
+        "code": "7207040013001300",
+        "name": "RT 03 DUSUN 1"
+      },
+      {
+        "code": "7207040013001400",
+        "name": "RT 04 DUSUN 2"
+      },
+      {
+        "code": "7207040013001600",
+        "name": "RT 06 DUSUN 3"
+      },
+      {
+        "code": "7207040013100300",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207040014000200",
+        "name": "RT 02 DUSUN 1"
+      },
+      {
+        "code": "7207040014000300",
+        "name": "RT 03 DUSUN 1"
+      },
+      {
+        "code": "7207040014001500",
+        "name": "RT 09 DUSUN 3"
+      },
+      {
+        "code": "7207040014100200",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207040014100300",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207040015001600",
+        "name": "RT 04 RW 02 DUSUN 2"
+      },
+      {
+        "code": "7207040015001800",
+        "name": "RT 06 RW 02 DUSUN 2"
+      },
+      {
+        "code": "7207040016001500",
+        "name": "RT 09 DUSUN 3"
+      },
+      {
+        "code": "7207040016100400",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207041001000100",
+        "name": "RT 1 DUSUN 1"
+      },
+      {
+        "code": "7207041001000200",
+        "name": "RT 2 DUSUN 1"
+      },
+      {
+        "code": "7207041001000300",
+        "name": "RT 3 DUSUN 1"
+      },
+      {
+        "code": "7207041001000500",
+        "name": "RT 5 DUSUN 2"
+      },
+      {
+        "code": "7207041001000600",
+        "name": "RT 6 DUSUN 2"
+      },
+      {
+        "code": "7207041001100200",
+        "name": "KEBUN 2"
+      },
+      {
+        "code": "7207041002000100",
+        "name": "RT 1 DUSUN 1"
+      },
+      {
+        "code": "7207041002000200",
+        "name": "RT 2 DUSUN 1"
+      },
+      {
+        "code": "7207041002000400",
+        "name": "RT 4 DUSUN 1"
+      },
+      {
+        "code": "7207041002000500",
+        "name": "RT 5 DUSUN 2"
+      },
+      {
+        "code": "7207041002000700",
+        "name": "RT 7 DUSUN 2"
+      },
+      {
+        "code": "7207041002000900",
+        "name": "RT 9 DUSUN 3"
+      },
+      {
+        "code": "7207041002001100",
+        "name": "RT 11 DUSUN 3"
+      },
+      {
+        "code": "7207041002600200",
+        "name": "LAUT"
+      },
+      {
+        "code": "7207041003000100",
+        "name": "RT 1 DUSUN 1"
+      },
+      {
+        "code": "7207041003000200",
+        "name": "RT 2 DUSUN 1"
+      },
+      {
+        "code": "7207041003100200",
+        "name": "KEBUN 1"
+      },
+      {
+        "code": "7207041003100400",
+        "name": "KEBUN 2"
+      },
+      {
+        "code": "7207041003500500",
+        "name": "CAMP 1"
+      },
+      {
+        "code": "7207041004000100",
+        "name": "RT 1 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207041004000300",
+        "name": "RT 3 RW 2 DUSUN 1"
+      },
+      {
+        "code": "7207041004000600",
+        "name": "RT 6 RW 3 DUSUN 2"
+      },
+      {
+        "code": "7207041004000700",
+        "name": "RT 7 RW 4 DUSUN 2"
+      },
+      {
+        "code": "7207041004001000",
+        "name": "RT 10 RW 5 DUSUN 3"
+      },
+      {
+        "code": "7207041004200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207041005000400",
+        "name": "RT 4 DUSUN 2"
+      },
+      {
+        "code": "7207041005000600",
+        "name": "RT 6 DUSUN 2"
+      },
+      {
+        "code": "7207041005100200",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207041006000100",
+        "name": "RT 1 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207041006000500",
+        "name": "RT 6 RW 3  DUSUN 2"
+      },
+      {
+        "code": "7207041006000600",
+        "name": "RT 8 RW 4 DUSUN 3"
+      },
+      {
+        "code": "7207041006000700",
+        "name": "RT 10 RW 4 DUSUN 3"
+      },
+      {
+        "code": "7207041006000900",
+        "name": "RT 5  DUSUN 2"
+      },
+      {
+        "code": "7207041006100100",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207041006100200",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207041007000200",
+        "name": "RT 3 DUSUN 1"
+      },
+      {
+        "code": "7207041007000300",
+        "name": "RT 2 DUSUN 1"
+      },
+      {
+        "code": "7207041007000500",
+        "name": "RT 5 DUSUN 2"
+      },
+      {
+        "code": "7207041007000900",
+        "name": "RT 8 DUSUN 3"
+      },
+      {
+        "code": "7207041007001200",
+        "name": "RT 10 DUSUN 3"
+      },
+      {
+        "code": "7207041007001300",
+        "name": "RT 12 DUSUN 4"
+      },
+      {
+        "code": "7207041007001600",
+        "name": "RT 13 DUSUN 4"
+      },
+      {
+        "code": "7207041007100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207041008000100",
+        "name": "RT 1 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207041008000300",
+        "name": "RT 3 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207041008000400",
+        "name": "RT 4 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207041008100100",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207041008200300",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207041009000400",
+        "name": "RT 4 RW 2 DUSUN 1"
+      },
+      {
+        "code": "7207041009000800",
+        "name": "RT 8 RW 4 DUSUN 2"
+      },
+      {
+        "code": "7207041010000200",
+        "name": "RT 3 DUSUN 1"
+      },
+      {
+        "code": "7207041010000300",
+        "name": "RT 4 DUSUN 2"
+      },
+      {
+        "code": "7207041010000500",
+        "name": "RT 6 DUSUN 2"
+      },
+      {
+        "code": "7207041011000100",
+        "name": "RT 1 DUSUN 1"
+      },
+      {
+        "code": "7207041011000500",
+        "name": "RT 2 DUSUN 2"
+      },
+      {
+        "code": "7207050005000100",
+        "name": "RT 001 RW 001 DUSUN 1"
+      },
+      {
+        "code": "7207050005100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207050005200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207050006000100",
+        "name": "RT 001 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207050006000200",
+        "name": "RT 002 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207050006000400",
+        "name": "RT 004 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207050006000500",
+        "name": "RT 005 RW 3 DUSUN 3"
+      },
+      {
+        "code": "7207050006000600",
+        "name": "RT 006 RW 3 DUSUN 3"
+      },
+      {
+        "code": "7207050006200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207050006200400",
+        "name": "HUTAN DI PULAU"
+      },
+      {
+        "code": "7207050007000100",
+        "name": "RT 001 RW 01 DUSUN 1"
+      },
+      {
+        "code": "7207050007000300",
+        "name": "RT 003 RW 02 DUSUN 2"
+      },
+      {
+        "code": "7207050007000400",
+        "name": "RT 004 RW 02 DUSUN 2"
+      },
+      {
+        "code": "7207050007200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207050008000100",
+        "name": "RT 01 DUSUN I"
+      },
+      {
+        "code": "7207050008000400",
+        "name": "RT 04 DUSUN II"
+      },
+      {
+        "code": "7207050008000500",
+        "name": "RT 05 DUSUN III"
+      },
+      {
+        "code": "7207050008000600",
+        "name": "RT 06 DUSUN III"
+      },
+      {
+        "code": "7207050008000700",
+        "name": "RT 07 DUSUN IV"
+      },
+      {
+        "code": "7207050008100200",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207050008200300",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207050009000400",
+        "name": "RT 004 RW 2 DUSUN II"
+      },
+      {
+        "code": "7207050009000500",
+        "name": "RT 005 RW 3 DUSUN III"
+      },
+      {
+        "code": "7207050009100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207050009200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207050010000500",
+        "name": "RT 010 DUSUN 4"
+      },
+      {
+        "code": "7207050010000800",
+        "name": "RT 008 DUSUN 3"
+      },
+      {
+        "code": "7207050010001200",
+        "name": "RT 011 DUSUN 4"
+      },
+      {
+        "code": "7207050010001300",
+        "name": "RT 012 DUSUN 4"
+      },
+      {
+        "code": "7207050010001400",
+        "name": "RT 005 DUSUN 2"
+      },
+      {
+        "code": "7207050011000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207050011000300",
+        "name": "RT 03 DUSUN 2"
+      },
+      {
+        "code": "7207050011000400",
+        "name": "RT 04 DUSUN 2"
+      },
+      {
+        "code": "7207050011100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207050012000100",
+        "name": "RT 01 RW 01 DUSUN I"
+      },
+      {
+        "code": "7207050012000400",
+        "name": "RT 04 RW 02 DUSUN II"
+      },
+      {
+        "code": "7207050012000500",
+        "name": "RT 05 RW 02 DUSUN II"
+      },
+      {
+        "code": "7207050012200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207050013000200",
+        "name": "RT 002 RW 001 DUSUN 1"
+      },
+      {
+        "code": "7207050013000400",
+        "name": "RT 004 RW 002 DUSUN 2"
+      },
+      {
+        "code": "7207050013000500",
+        "name": "RT 005 RW 003 DUSUN 3"
+      },
+      {
+        "code": "7207050014000300",
+        "name": "RT 003 RW 02 DUSUN 02"
+      },
+      {
+        "code": "7207050014100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207050015000200",
+        "name": "RT 002 DUSUN 1"
+      },
+      {
+        "code": "7207050015100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207050017000100",
+        "name": "RT 1 DUSUN 1"
+      },
+      {
+        "code": "7207050017000300",
+        "name": "RT 3 DUSUN 2"
+      },
+      {
+        "code": "7207050017000500",
+        "name": "RT 5 DUSUN 3"
+      },
+      {
+        "code": "7207050017000600",
+        "name": "RT 6 DUSUN 3"
+      },
+      {
+        "code": "7207050017100100",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207051001000100",
+        "name": "RT 1 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207051001000500",
+        "name": "RT 5 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207051001000600",
+        "name": "RT 6 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207051001000900",
+        "name": "RT 9 RW 3 DUSUN 3"
+      },
+      {
+        "code": "7207051001100100",
+        "name": "PERKEBUNAN 1"
+      },
+      {
+        "code": "7207051002000400",
+        "name": "RT 4 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207051002000500",
+        "name": "RT 5 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207051002000600",
+        "name": "RT 6 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207051003100100",
+        "name": "PERKEBUNAN"
+      },
+      {
+        "code": "7207051004000100",
+        "name": "RT 1 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207051004000200",
+        "name": "RT 2 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207051004000500",
+        "name": "RT 5 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207051004000600",
+        "name": "RT 6 RW 2 DUSUN 2"
+      },
+      {
+        "code": "7207051004100100",
+        "name": "PERKEBUNAN CENGKEH"
+      },
+      {
+        "code": "7207051004100200",
+        "name": "PERKEBUNAN PALAWIJA"
+      },
+      {
+        "code": "7207051004100300",
+        "name": "PERKEBUNAN KELAPA"
+      },
+      {
+        "code": "7207051005000100",
+        "name": "RT 1 DUSUN 1 POKOBO"
+      },
+      {
+        "code": "7207051005000200",
+        "name": "RT 2 DUSUN 1 BULANO"
+      },
+      {
+        "code": "7207051005000300",
+        "name": "RT 3 DUSUN 2 BULANO"
+      },
+      {
+        "code": "7207051005000600",
+        "name": "RT 6 DUSUN 3 MILAT"
+      },
+      {
+        "code": "7207051005000700",
+        "name": "RT 7 DUSUN 3 MILAT"
+      },
+      {
+        "code": "7207051005000800",
+        "name": "RT 8 DUSUN 4 BOTUDING"
+      },
+      {
+        "code": "7207051005000900",
+        "name": "RT 09 DUSUN 4 TIDOLOM"
+      },
+      {
+        "code": "7207051006000600",
+        "name": "RT 6 RW 3 DUSUN 003 TANGALAN"
+      },
+      {
+        "code": "7207051007000300",
+        "name": "RT 3 DUSUN 2"
+      },
+      {
+        "code": "7207051007000500",
+        "name": "RT 5 DUSUN 3"
+      },
+      {
+        "code": "7207051007100100",
+        "name": "WILAYAH PERTANIAN (PERKEBUNAN)"
+      }
+    ],
+    "pengawas_not_pencacah": [
+      {
+        "code": "7207010011002200",
+        "name": "RT 008 RW 02 DUSUN 2"
+      },
+      {
+        "code": "7207010011100100",
+        "name": "SAWAH"
+      },
+      {
+        "code": "7207010017100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207010017200200",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7207011001100100",
+        "name": "KEBUN KELAPA SAWIT"
+      },
+      {
+        "code": "7207011002000900",
+        "name": "RT 09 RW 03"
+      },
+      {
+        "code": "7207011003000600",
+        "name": "RT 06 RW 02"
+      },
+      {
+        "code": "7207011003003400",
+        "name": "RT 34 RW 08"
+      },
+      {
+        "code": "7207011004000100",
+        "name": "RT 1 RW 1"
+      },
+      {
+        "code": "7207011006100300",
+        "name": "KEBUN 2"
+      },
+      {
+        "code": "7207011006200200",
+        "name": "HUTAN 1"
+      },
+      {
+        "code": "7207011006200400",
+        "name": "HUTAN 2"
+      },
+      {
+        "code": "7207012006000600",
+        "name": "RT 006 DUSUN 3"
+      },
+      {
+        "code": "7207012006100100",
+        "name": "KEBUN WARGA"
+      },
+      {
+        "code": "7207012007000700",
+        "name": "RT 7 RW 4 DUSUN 4"
+      },
+      {
+        "code": "7207020006000400",
+        "name": "RT 4 DUSUN 2"
+      },
+      {
+        "code": "7207020007000100",
+        "name": "RT 01 DUSUN 1"
+      },
+      {
+        "code": "7207020007000300",
+        "name": "RT 03 DUSUN 2"
+      },
+      {
+        "code": "7207020017000500",
+        "name": "RT 005 DUSUN 2"
+      },
+      {
+        "code": "7207021002000100",
+        "name": "RT 001 DUSUN 001"
+      },
+      {
+        "code": "7207021006000200",
+        "name": "RT 002 DUSUN TANAH MERAH"
+      },
+      {
+        "code": "7207030015000600",
+        "name": "RT 006 DUSUN 003"
+      },
+      {
+        "code": "7207030018001300",
+        "name": "RT 005 DUSUN 02"
+      },
+      {
+        "code": "7207030023000300",
+        "name": "RT 03 RW 01 DUSUN 01"
+      },
+      {
+        "code": "7207031002001100",
+        "name": "RT 06 DUSUN BANYUMAS"
+      },
+      {
+        "code": "7207031010001300",
+        "name": "RT 02 DUSUN MALALAK"
+      },
+      {
+        "code": "7207031010100600",
+        "name": "PERKEBUNAN/SAWIT WARGA"
+      },
+      {
+        "code": "7207031010400400",
+        "name": "BARAK 35"
+      },
+      {
+        "code": "7207031013000100",
+        "name": "RT 01 DUSUN 01 (SP 1)"
+      },
+      {
+        "code": "7207031013000300",
+        "name": "RT 02 DUSUN 02 (SP 1)"
+      },
+      {
+        "code": "7207040002000100",
+        "name": "RT 01 DUSUN BUKOTUK"
+      },
+      {
+        "code": "7207040007100400",
+        "name": "TAMBAK/KEBUN"
+      },
+      {
+        "code": "7207040016001300",
+        "name": "RT 02 DUSUN 1"
+      },
+      {
+        "code": "7207040016100200",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207041003000700",
+        "name": "RT 7 RW 3 DUSUN 2"
+      },
+      {
+        "code": "7207041003000800",
+        "name": "RT 8 RW 5 DUSUN 3"
+      },
+      {
+        "code": "7207041004000400",
+        "name": "RT 4 RW 2 DUSUN 1"
+      },
+      {
+        "code": "7207041004000500",
+        "name": "RT 5 RW 3 DUSUN 2"
+      },
+      {
+        "code": "7207041009000100",
+        "name": "RT 1 RW 1 DUSUN 1"
+      },
+      {
+        "code": "7207041009000300",
+        "name": "RT 3 RW 2 DUSUN 1"
+      },
+      {
+        "code": "7207041009000500",
+        "name": "RT 5 RW 3 DUSUN 2"
+      },
+      {
+        "code": "7207050005000700",
+        "name": "RT 007 RW 003 DUSUN 3"
+      },
+      {
+        "code": "7207050007000200",
+        "name": "RT 002 RW 01 DUSUN 1"
+      },
+      {
+        "code": "7207050012100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7207050013000100",
+        "name": "RT 001 RW 001 DUSUN 1"
+      },
+      {
+        "code": "7207050013000300",
+        "name": "RT 003 RW 002 DUSUN 2"
+      },
+      {
+        "code": "7207051006000100",
+        "name": "RT 1 RW 1 DUSUN 001 LIANG"
+      },
+      {
+        "code": "7207051006000500",
+        "name": "RT 5 RW 3 DUSUN 003 TANGALAN"
+      },
+      {
+        "code": "7207051007000600",
+        "name": "RT 6 DUSUN 3"
+      }
+    ]
+  },
+  "banggai_laut": {
+    "pencacah_regions_count": 273,
+    "pengawas_regions_count": 55,
+    "pencacah_not_pengawas": [
+      {
+        "code": "7211000000000000",
+        "name": "-"
+      },
+      {
+        "code": "7211010001000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211010001000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211010001000400",
+        "name": "DUSUN 004"
+      },
+      {
+        "code": "7211010001200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211010002000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211010003200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211010004000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211010004000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211010004000400",
+        "name": "DUSUN 004"
+      },
+      {
+        "code": "7211010004200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211010005000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211010005000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211010006000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211010006000201",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211010006000202",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211010006000301",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211010006000302",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211010006100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7211010007000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211010007000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211010007000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211010008000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211010008000400",
+        "name": "DUSUN 004"
+      },
+      {
+        "code": "7211010008100100",
+        "name": "LADANG,KEBUN"
+      },
+      {
+        "code": "7211010009000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211010009200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211010010000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211010010200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211010011000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211010011000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211010011200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211010012000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211020001000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211020001000400",
+        "name": "DUSUN 004"
+      },
+      {
+        "code": "7211020001100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7211020002000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211020002000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211020003000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211020003000400",
+        "name": "DUSUN 004"
+      },
+      {
+        "code": "7211020004000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211020004000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211020004000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211020004100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7211020005000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211020005000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211020006000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211020006000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211020006100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7211020007000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211020007000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211020007100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7211020008000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211020008000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211020008000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211020008000400",
+        "name": "DUSUN 004"
+      },
+      {
+        "code": "7211020008100100",
+        "name": "KEBUN"
+      },
+      {
+        "code": "7211030001000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211030001000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211030001000500",
+        "name": "DUSUN 5"
+      },
+      {
+        "code": "7211030001000700",
+        "name": "DUSUN 7"
+      },
+      {
+        "code": "7211030002000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211030002000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211030002000400",
+        "name": "DUSUN 4"
+      },
+      {
+        "code": "7211030003000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211030003000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211030003000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211030004000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211030004000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211030004000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211030004000400",
+        "name": "DUSUN 4"
+      },
+      {
+        "code": "7211030004000500",
+        "name": "DUSUN 5"
+      },
+      {
+        "code": "7211030004100100",
+        "name": "PERKEBUNAN"
+      },
+      {
+        "code": "7211030005000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211030005000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211030005000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211030005100100",
+        "name": "PERKEBUNAN"
+      },
+      {
+        "code": "7211030006000100",
+        "name": "DUSUN 01"
+      },
+      {
+        "code": "7211030006000200",
+        "name": "DUSUN 02"
+      },
+      {
+        "code": "7211030006100100",
+        "name": "LAHAN PERKEBUNAN RAKYAT"
+      },
+      {
+        "code": "7211040001000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211040001000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211040001000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211040001000500",
+        "name": "DUSUN 5"
+      },
+      {
+        "code": "7211040002000301",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211040002000403",
+        "name": "DUSUN 4"
+      },
+      {
+        "code": "7211040002000501",
+        "name": "DUSUN 5"
+      },
+      {
+        "code": "7211040002000502",
+        "name": "DUSUN 5"
+      },
+      {
+        "code": "7211040003000100",
+        "name": "RT 1 RW 1"
+      },
+      {
+        "code": "7211040003000300",
+        "name": "RT 3 RW 1"
+      },
+      {
+        "code": "7211040003000600",
+        "name": "RT 6 RW 2"
+      },
+      {
+        "code": "7211040003000700",
+        "name": "RT 7 RW 3"
+      },
+      {
+        "code": "7211040003000800",
+        "name": "RT 8 RW 3"
+      },
+      {
+        "code": "7211040003001001",
+        "name": "RT 10 RW 4"
+      },
+      {
+        "code": "7211040003001002",
+        "name": "RT 10 RW 4"
+      },
+      {
+        "code": "7211040003001003",
+        "name": "RT 10 RW 4"
+      },
+      {
+        "code": "7211040003001100",
+        "name": "RT 11 RW 4"
+      },
+      {
+        "code": "7211040004000100",
+        "name": "RT 1 RW 01"
+      },
+      {
+        "code": "7211040004000400",
+        "name": "RT 4 RW 02"
+      },
+      {
+        "code": "7211040004000500",
+        "name": "RT 5 RW 03"
+      },
+      {
+        "code": "7211040004000600",
+        "name": "RT 6 RW 03"
+      },
+      {
+        "code": "7211040004000700",
+        "name": "RT 7 RW 4"
+      },
+      {
+        "code": "7211040004000800",
+        "name": "RT 8 RW 4"
+      },
+      {
+        "code": "7211040005000100",
+        "name": "RT 01 RW 01 LINGKUNGAN 1"
+      },
+      {
+        "code": "7211040005000200",
+        "name": "RT 02 RW 2 LINGKUNGAN 1"
+      },
+      {
+        "code": "7211040005000500",
+        "name": "RT 05 RW 1 LINGKUNGAN 1"
+      },
+      {
+        "code": "7211040005000700",
+        "name": "RT 07 RW 2 LINGKUNGAN 1"
+      },
+      {
+        "code": "7211040005000900",
+        "name": "RT 09 RW 3 LINGKUNGAN 2"
+      },
+      {
+        "code": "7211040005001000",
+        "name": "RT 10 RW 3 LINGKUNGAN 2"
+      },
+      {
+        "code": "7211040005001100",
+        "name": "RT 11 RW 4 LINGKUNGAN 2"
+      },
+      {
+        "code": "7211040005001200",
+        "name": "RT 12 RW 4 LINGKUNGAN 2"
+      },
+      {
+        "code": "7211040005001400",
+        "name": "RT 14 RW 3 LINGKUNGAN 2"
+      },
+      {
+        "code": "7211040005001500",
+        "name": "RT 15 RW 2 LINGKUNGAN 1"
+      },
+      {
+        "code": "7211040005001600",
+        "name": "RT 16 RW 4 LINGKUNGAN 2"
+      },
+      {
+        "code": "7211040005200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211040006000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211040006000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211040007000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211040007000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211040007000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211040007100100",
+        "name": "KEBUN DAN HUTAN"
+      },
+      {
+        "code": "7211040008000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211040008000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211040008000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211040009000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211040009000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211040009000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211040009000400",
+        "name": "DUSUN 4"
+      },
+      {
+        "code": "7211040009100100",
+        "name": "WILAYAH KEBUN DAN HUTAN"
+      },
+      {
+        "code": "7211040010000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211040010000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211040010000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211040010200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211050001000100",
+        "name": "DUSUN 01"
+      },
+      {
+        "code": "7211050001000200",
+        "name": "DUSUN 02"
+      },
+      {
+        "code": "7211050001000500",
+        "name": "DUSUN 05"
+      },
+      {
+        "code": "7211050002000100",
+        "name": "DUSUN 01"
+      },
+      {
+        "code": "7211050002000300",
+        "name": "DUSUN 03"
+      },
+      {
+        "code": "7211050003000300",
+        "name": "DUSUN 03"
+      },
+      {
+        "code": "7211050004000200",
+        "name": "DUSUN 02"
+      },
+      {
+        "code": "7211050004000300",
+        "name": "DUSUN 03"
+      },
+      {
+        "code": "7211050005000101",
+        "name": "DUSUN 01"
+      },
+      {
+        "code": "7211050005000102",
+        "name": "DUSUN 01"
+      },
+      {
+        "code": "7211050005000200",
+        "name": "DUSUN 02"
+      },
+      {
+        "code": "7211050005000301",
+        "name": "DUSUN 03"
+      },
+      {
+        "code": "7211050005000302",
+        "name": "DUSUN 03"
+      },
+      {
+        "code": "7211050005000303",
+        "name": "DUSUN 03"
+      },
+      {
+        "code": "7211050005000304",
+        "name": "DUSUN 03"
+      },
+      {
+        "code": "7211050005100100",
+        "name": "PERKEBUNAN"
+      },
+      {
+        "code": "7211050006000100",
+        "name": "DUSUN 01"
+      },
+      {
+        "code": "7211050006000200",
+        "name": "DUSUN 02"
+      },
+      {
+        "code": "7211050006000300",
+        "name": "DUSUN 03"
+      },
+      {
+        "code": "7211050007000100",
+        "name": "DUSUN 01"
+      },
+      {
+        "code": "7211050007000200",
+        "name": "DUSUN 02"
+      },
+      {
+        "code": "7211050007000300",
+        "name": "DUSUN 03"
+      },
+      {
+        "code": "7211050007000400",
+        "name": "DUSUN 04"
+      },
+      {
+        "code": "7211050008000100",
+        "name": "DUSUN 01"
+      },
+      {
+        "code": "7211050008000200",
+        "name": "DUSUN 02"
+      },
+      {
+        "code": "7211050008000300",
+        "name": "DUSUN 03"
+      },
+      {
+        "code": "7211060001000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211060002000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211060002000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211060002000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211060002000400",
+        "name": "DUSUN 4"
+      },
+      {
+        "code": "7211060002200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211060003000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211060003000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211060003000400",
+        "name": "DUSUN 4"
+      },
+      {
+        "code": "7211060003000500",
+        "name": "DUSUN 5"
+      },
+      {
+        "code": "7211060003000600",
+        "name": "DUSUN 6"
+      },
+      {
+        "code": "7211060003200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211060004000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211060004000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211060004200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211060005000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211060005000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211060005000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211060005200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211060006000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211060006000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211060006000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211060006200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211070001000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211070002000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211070002000400",
+        "name": "DUSUN 4"
+      },
+      {
+        "code": "7211070002200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211070003000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211070003000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211070003000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211070004000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211070004000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211070004000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211070005000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211070006000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211070007000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211070007000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211070007000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211070007200100",
+        "name": "HUTAN PERKEBUNAN"
+      },
+      {
+        "code": "7211070008000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211070008000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211070008000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211070008000400",
+        "name": "DUSUN 004"
+      },
+      {
+        "code": "7211070009200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211070010000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211070010000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211070010200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211070011000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211070011000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211070012000100",
+        "name": "DUSUN 001"
+      },
+      {
+        "code": "7211070012000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211070012000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211070012000400",
+        "name": "DUSUN 004"
+      },
+      {
+        "code": "7211070012200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211070013000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211070014000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211070014000200",
+        "name": "DUSUN 2"
+      },
+      {
+        "code": "7211070014200100",
+        "name": "HUTAN"
+      },
+      {
+        "code": "7211070015000200",
+        "name": "DUSUN 002"
+      },
+      {
+        "code": "7211070015000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211070015000400",
+        "name": "DUSUN 004"
+      },
+      {
+        "code": "7211070016000100",
+        "name": "DUSUN 1"
+      },
+      {
+        "code": "7211070016000200",
+        "name": "DUSUN 2"
+      }
+    ],
+    "pengawas_not_pencacah": [
+      {
+        "code": "7211010003000300",
+        "name": "DUSUN 003"
+      },
+      {
+        "code": "7211070001000300",
+        "name": "DUSUN 3"
+      },
+      {
+        "code": "7211070001000400",
+        "name": "DUSUN 4"
+      },
+      {
+        "code": "7211070001200100",
+        "name": "PULAU- PULAU ,LAUT DUSUN 1"
+      }
+    ]
+  }
+}

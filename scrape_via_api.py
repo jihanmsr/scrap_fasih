@@ -440,16 +440,15 @@ def get_valid_session(context, page):
             time.sleep(30)
 
 def scrape_via_api():
-    # Muat data yang sudah ada di CSV
+    # Muat data yang sudah ada di CSV (baca dari main CSV dan backup CSV jika ada)
     existing_companies = {}
-    csv_source = OUTPUT_CSV
+    csv_sources = []
     if os.path.exists(OUTPUT_CSV):
-        csv_source = OUTPUT_CSV
-    elif os.path.exists("backup_" + OUTPUT_CSV):
-        csv_source = "backup_" + OUTPUT_CSV
-        logging.info(f"Main CSV tidak ditemukan. Menggunakan backup CSV: {csv_source}")
+        csv_sources.append(OUTPUT_CSV)
+    if os.path.exists("backup_" + OUTPUT_CSV):
+        csv_sources.append("backup_" + OUTPUT_CSV)
 
-    if os.path.exists(csv_source):
+    for csv_source in csv_sources:
         try:
             with open(csv_source, mode="r", encoding="utf-8") as f:
                 reader = csv.reader(f)
@@ -489,11 +488,24 @@ def scrape_via_api():
                     actual_code = records[0]["code"]
                     for r in records:
                         r["code"] = actual_code
-                    existing_companies[actual_code] = records
-                    
+                    # Update or add if we have more/newer history entries
+                    if actual_code not in existing_companies or len(records) > len(existing_companies[actual_code]):
+                        existing_companies[actual_code] = records
+                        
             logging.info(f"Berhasil memuat data historis untuk {len(existing_companies)} perusahaan dari {csv_source}.")
         except Exception as e:
             logging.warning(f"Gagal membaca CSV lama ({csv_source}): {e}")
+
+    # Track progress dalam siklus berjalan agar bisa dilanjutkan jika force close
+    CYCLE_TRACKING_FILE = "completed_ids_in_cycle.json"
+    completed_ids = set()
+    if os.path.exists(CYCLE_TRACKING_FILE):
+        try:
+            with open(CYCLE_TRACKING_FILE, "r") as f:
+                completed_ids = set(json.load(f))
+            logging.info(f"Melanjutkan siklus: {len(completed_ids)} perusahaan sudah selesai diproses sebelumnya.")
+        except Exception as e:
+            logging.warning(f"Gagal memuat cycle tracking file: {e}")
 
     # --- PERUBAHAN 3: launch_chrome_if_needed DIPANGGIL SEBELUM SYNC_PLAYWRIGHT ---
     launch_chrome_if_needed()
@@ -695,6 +707,31 @@ def scrape_via_api():
                 return False
 
             kab_name = comp.get("kab_name", "-")
+
+            # 0. Cek apakah sudah diproses dalam siklus berjalan ini (crash recovery)
+            if code in completed_ids:
+                has_history = False
+                histories = []
+                if code in existing_companies:
+                    histories = existing_companies[code]
+                    has_history = True
+                else:
+                    # Cari berdasarkan nama perusahaan di cache lama
+                    for old_code, old_histories in existing_companies.items():
+                        if old_histories and old_histories[0]["company_name"].lower().strip() == company_name.lower().strip():
+                            histories = old_histories
+                            for h in histories:
+                                h["code"] = code
+                            has_history = True
+                            break
+                if has_history:
+                    for h in histories:
+                        h["survey_status"] = survey_status
+                        if "kab_name" not in h or h["kab_name"] == "-":
+                            h["kab_name"] = kab_name
+                    all_records.extend(histories)
+                    logging.info(f"[{idx+1}/{len(companies_data)}] Skip (Resumed from cycle backup): {code} | {company_name}")
+                    continue
 
             if not FORCE_RE_SCRAPE:
                 if code in existing_companies and is_final_history(existing_companies[code]):
@@ -917,9 +954,42 @@ def scrape_via_api():
                         "kab_name": kab_name
                     })
 
+            # Tambahkan ke completed_ids setelah selesai diproses
+            completed_ids.add(code)
+
             # Tulis progress ke CSV setiap 20 perusahaan untuk backup lokal
             if (idx + 1) % 20 == 0 or (idx + 1) == len(companies_data):
-                with open("backup_" + OUTPUT_CSV, mode="w", newline="", encoding="utf-8") as csv_file:
+                try:
+                    with open(CYCLE_TRACKING_FILE, "w") as f:
+                        json.dump(list(completed_ids), f)
+                except Exception as e:
+                    logging.warning(f"Gagal menulis cycle tracking file: {e}")
+
+                for target_path in [OUTPUT_CSV, "backup_" + OUTPUT_CSV]:
+                    try:
+                        with open(target_path, mode="w", newline="", encoding="utf-8") as csv_file:
+                            writer = csv.writer(csv_file)
+                            writer.writerow(["Kode Identitas", "Nama Perusahaan", "Status Dokumen", "Email Tujuan", "Status terakhir", "Status History", "Timestamp History", "Urutan History", "Kabupaten/Kota"])
+                            for r in all_records:
+                                writer.writerow([
+                                    r["code"], r["company_name"], r["survey_status"], r["email"],
+                                    r["global_status"], r["status"], r["timestamp"], r["order"],
+                                    r.get("kab_name", "-")
+                                ])
+                    except Exception as e:
+                        logging.warning(f"Gagal menulis progress ke {target_path}: {e}")
+                
+                logging.info(f"Progress disimpan ke {OUTPUT_CSV} ({idx+1}/{len(companies_data)}).")
+                
+                # Update dashboard lokal secara real-time!
+                save_local_js(all_records)
+                
+            time.sleep(0.1) # Jeda kecil agar ramah server
+
+        # Tulis progress ke CSV untuk terakhir kalinya di akhir putaran
+        for target_path in [OUTPUT_CSV, "backup_" + OUTPUT_CSV]:
+            try:
+                with open(target_path, mode="w", newline="", encoding="utf-8") as csv_file:
                     writer = csv.writer(csv_file)
                     writer.writerow(["Kode Identitas", "Nama Perusahaan", "Status Dokumen", "Email Tujuan", "Status terakhir", "Status History", "Timestamp History", "Urutan History", "Kabupaten/Kota"])
                     for r in all_records:
@@ -928,17 +998,16 @@ def scrape_via_api():
                             r["global_status"], r["status"], r["timestamp"], r["order"],
                             r.get("kab_name", "-")
                         ])
-                logging.info(f"Progress dibackup ke backup_{OUTPUT_CSV} ({idx+1}/{len(companies_data)}).")
-                
-                # Update dashboard lokal secara real-time!
-                save_local_js(all_records)
-                
-            time.sleep(0.1) # Jeda kecil agar ramah server
+            except Exception as e:
+                logging.warning(f"Gagal menulis final {target_path}: {e}")
 
-        # Pindahkan backup menjadi file utama
-        if os.path.exists("backup_" + OUTPUT_CSV):
-            import shutil
-            shutil.move("backup_" + OUTPUT_CSV, OUTPUT_CSV)
+        # Hapus cycle tracking file karena siklus telah selesai dengan sukses
+        if os.path.exists(CYCLE_TRACKING_FILE):
+            try:
+                os.remove(CYCLE_TRACKING_FILE)
+                logging.info("Siklus selesai penuh. Cycle tracking file berhasil dihapus.")
+            except Exception as e:
+                logging.warning(f"Gagal menghapus cycle tracking file: {e}")
 
      # --- TAMBAHAN PENTING: KEMBALIKAN PERUSAHAAN YANG HILANG DARI API ---
         seen_company_names_lower = {comp.get("company_name", "").lower().strip() for comp in all_records}
