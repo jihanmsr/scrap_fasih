@@ -406,38 +406,9 @@ def get_valid_session(context, page):
         print("Sesi BPS FASIH tidak aktif atau kadaluarsa (HTTP 401/XSRF-TOKEN tidak ditemukan).")
         print("SILAKAN LOGIN SSO ATAU REFRESH HALAMAN DI BROWSER CHROMIUM YANG TERBUKA.")
         print("Setelah login berhasil, script akan otomatis mendeteksi dan melanjutkan.")
-        print("Atau, Anda bisa menekan ENTER di terminal ini jika sudah login.")
         print("="*70 + "\n")
         
-        import select
-        import sys
-        
-        # Cek apakah stdin interaktif dan tidak EOF
-        has_stdin = False
-        try:
-            has_stdin = sys.stdin.isatty()
-        except Exception:
-            pass
-
-        if has_stdin:
-            # Tunggu login selama 30 detik lalu cek lagi
-            for _ in range(6):
-                try:
-                    r, _, _ = select.select([sys.stdin], [], [], 0)
-                    if r:
-                        line = sys.stdin.readline()
-                        if line == "":  # EOF
-                            has_stdin = False
-                            break
-                        logging.info("Konfirmasi manual diterima via ENTER.")
-                        break
-                except Exception:
-                    pass
-                time.sleep(5)
-        
-        if not has_stdin:
-            # Stdin tidak interaktif atau EOF, cukup sleep 30 detik
-            time.sleep(30)
+        time.sleep(15)
 
 def scrape_via_api():
     # Muat data yang sudah ada di CSV (baca dari main CSV dan backup CSV jika ada)
@@ -720,16 +691,18 @@ def scrape_via_api():
                     for old_code, old_histories in existing_companies.items():
                         if old_histories and old_histories[0]["company_name"].lower().strip() == company_name.lower().strip():
                             histories = old_histories
-                            for h in histories:
-                                h["code"] = code
                             has_history = True
                             break
                 if has_history:
+                    copied_histories = []
                     for h in histories:
-                        h["survey_status"] = survey_status
-                        if "kab_name" not in h or h["kab_name"] == "-":
-                            h["kab_name"] = kab_name
-                    all_records.extend(histories)
+                        h_copy = h.copy()
+                        h_copy["code"] = code
+                        h_copy["survey_status"] = survey_status
+                        if "kab_name" not in h_copy or h_copy["kab_name"] == "-":
+                            h_copy["kab_name"] = kab_name
+                        copied_histories.append(h_copy)
+                    all_records.extend(copied_histories)
                     logging.info(f"[{idx+1}/{len(companies_data)}] Skip (Resumed from cycle backup): {code} | {company_name}")
                     continue
 
@@ -737,11 +710,14 @@ def scrape_via_api():
                 if code in existing_companies and is_final_history(existing_companies[code]):
                     histories = existing_companies[code]
                     has_valid_history = True
+                    copied_histories = []
                     for h in histories:
-                        h["survey_status"] = survey_status
-                        if "kab_name" not in h or h["kab_name"] == "-":
-                            h["kab_name"] = kab_name
-                    all_records.extend(histories)
+                        h_copy = h.copy()
+                        h_copy["survey_status"] = survey_status
+                        if "kab_name" not in h_copy or h_copy["kab_name"] == "-":
+                            h_copy["kab_name"] = kab_name
+                        copied_histories.append(h_copy)
+                    all_records.extend(copied_histories)
                 else:
                     # Deteksi apabila BPS merubah ID namun perusahaannya sama
                     for old_code, old_histories in existing_companies.items():
@@ -749,12 +725,15 @@ def scrape_via_api():
                             if is_final_history(old_histories):
                                 has_valid_history = True
                                 # Kita gunakan KODE BARU, tapi dengan mempertahankan riwayat lamanya
+                                copied_histories = []
                                 for h in old_histories:
-                                    h["code"] = code
-                                    h["survey_status"] = survey_status
-                                    if "kab_name" not in h or h["kab_name"] == "-":
-                                        h["kab_name"] = kab_name
-                                all_records.extend(old_histories)
+                                    h_copy = h.copy()
+                                    h_copy["code"] = code
+                                    h_copy["survey_status"] = survey_status
+                                    if "kab_name" not in h_copy or h_copy["kab_name"] == "-":
+                                        h_copy["kab_name"] = kab_name
+                                    copied_histories.append(h_copy)
+                                all_records.extend(copied_histories)
                                 break
               
             
@@ -830,9 +809,12 @@ def scrape_via_api():
                 if code in existing_companies:
                     # Update status dokumen jika ada perubahan lalu masukkan ulang data lama
                     histories = existing_companies[code]
+                    copied_histories = []
                     for h in histories:
-                        h["survey_status"] = survey_status
-                    all_records.extend(histories)
+                        h_copy = h.copy()
+                        h_copy["survey_status"] = survey_status
+                        copied_histories.append(h_copy)
+                    all_records.extend(copied_histories)
                 else:
                     # Jika benar-benar baru dan gagal API
                     all_records.append({

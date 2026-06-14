@@ -216,17 +216,21 @@ async def generate_report():
             return "searchData" in res or "searchAggregation" in res
 
         # Ensure session is valid
+        first_expired = True
         while True:
             is_valid = await check_session_valid(xsrf_token)
             if is_valid:
                 break
                 
-            print("\n" + "="*70)
-            print("SESI LOGIN KADALUARSA ATAU BELUM LOGIN")
-            print("Silakan login/re-login FASIH di browser Chrome.")
-            print("Jika sudah di Dashboard, silakan tekan ENTER di bawah ini.")
-            print("="*70)
-            await asyncio.to_thread(input, ">> TEKAN [ENTER] SETELAH LOGIN... <<\n")
+            if first_expired:
+                print("\n" + "="*70)
+                print("SESI LOGIN KADALUARSA ATAU BELUM LOGIN")
+                print("Silakan login/re-login FASIH di browser Chrome...")
+                print("Script akan mendeteksi login Anda secara otomatis.")
+                print("="*70)
+                first_expired = False
+                
+            await asyncio.sleep(15)
             
             # Re-fetch cookies
             cookies = await page.context.cookies()

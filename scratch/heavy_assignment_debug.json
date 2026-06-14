@@ -1,0 +1,547 @@
+[
+  {
+    "id": "f83f395d-6367-468f-96ec-eabb3de93fce",
+    "surveyPeriodId": "fd68e454-ba45-4b85-8205-f3bf777ded24",
+    "mode": [
+      "CAPI"
+    ],
+    "assignmentErrorStatusType": 1,
+    "approvedByCreator": false,
+    "codeIdentity": "7201070019000200 - DTSEN - 36",
+    "assignmentStatusId": 0,
+    "assignmentStatusAlias": "OPEN",
+    "isTarikSample": false,
+    "data1": "NEGO KULUNGAN / MESNI LANTONA",
+    "data2": "DESA OLUSI",
+    "data6": "KELUARGA",
+    "dateCreated": "2026-06-08T05:40:38.542+00:00",
+    "isActive": true,
+    "sumError": 0,
+    "sumRemark": 0,
+    "sumClean": 0,
+    "done": false,
+    "secondary": false,
+    "strata": "PRIMARY",
+    "externalDone": false,
+    "listing": false,
+    "dateModified": "2026-06-13T03:41:22.512+00:00",
+    "assignmentResponsibility": [],
+    "assignmentResponsibilityAdmin": [],
+    "region": {
+      "id": "4f28e940-70ea-445a-b4b4-7bc552ada59b",
+      "groupId": "a45adac1-e711-4c15-b3f9-1f30fc151565",
+      "versionCode": 1.0,
+      "dateCreated": "2026-04-21T05:38:33.824+00:00",
+      "isActive": true,
+      "level1": {
+        "id": "5214ecb2-bef1-4a86-9446-451cf430928e",
+        "fullCode": "72",
+        "code": "72",
+        "name": "SULAWESI TENGAH",
+        "level2": {
+          "id": "bc32354f-1245-426f-b2cf-a5733e1295ad",
+          "fullCode": "7201",
+          "code": "01",
+          "name": "BANGGAI KEPULAUAN",
+          "level3": {
+            "id": "e82a8220-ba0f-4ffd-87c4-c0f134716259",
+            "fullCode": "7201070",
+            "code": "070",
+            "name": "BUKO",
+            "level4": {
+              "id": "8f270a6a-7759-4509-89ce-0e02b9f63fea",
+              "fullCode": "7201070019",
+              "code": "019",
+              "name": "OLUSI",
+              "level5": {
+                "id": "bf3fa40b-52f4-49d5-b9a3-abe5c1580acd",
+                "fullCode": "72010700190002",
+                "code": "0002",
+                "name": "RT 002 DUSUN 02",
+                "level6": {
+                  "id": "4f28e940-70ea-445a-b4b4-7bc552ada59b",
+                  "fullCode": "7201070019000200",
+                  "code": "00",
+                  "name": "RT 002 DUSUN 02"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "regionMetadata": {
+      "id": "a45adac1-e711-4c15-b3f9-1f30fc151565",
+      "levelCount": 6,
+      "smallestRegionLevel": "SUBSLS",
+      "groupName": "SE2026 SUBSLS",
+      "level": [
+        {
+          "id": 1,
+          "name": "PROVINSI"
+        },
+        {
+          "id": 2,
+          "name": "KABUPATEN/KOTA"
+        },
+        {
+          "id": 3,
+          "name": "KECAMATAN"
+        },
+        {
+          "id": 4,
+          "name": "DESA"
+        },
+        {
+          "id": 5,
+          "name": "SLS"
+        },
+        {
+          "id": 6,
+          "name": "SUBSLS"
+        }
+      ]
+    },
+    "sampleType": 1,
+    "isTarget": true,
+    "referencedTo": [],
+    "lockedByUser": false,
+    "lockedByAnother": false
+  },
+  {
+    "id": "e11a92af-7f99-4bce-9148-3e6490a02242",
+    "surveyPeriodId": "fd68e454-ba45-4b85-8205-f3bf777ded24",
+    "mode": [
+      "CAPI"
+    ],
+    "assignmentErrorStatusType": 1,
+    "approvedByCreator": false,
+    "codeIdentity": "7201070019000200 - DTSEN - 33",
+    "assignmentStatusId": 0,
+    "assignmentStatusAlias": "OPEN",
+    "isTarikSample": false,
+    "data1": "TAHAN BAKOTON / PILINA BALANDE",
+    "data2": "DESA OLUSI",
+    "data6": "KELUARGA",
+    "dateCreated": "2026-06-08T05:40:38.535+00:00",
+    "isActive": true,
+    "sumError": 0,
+    "sumRemark": 0,
+    "sumClean": 0,
+    "done": false,
+    "secondary": false,
+    "strata": "PRIMARY",
+    "externalDone": false,
+    "listing": false,
+    "dateModified": "2026-06-13T03:41:21.313+00:00",
+    "assignmentResponsibility": [],
+    "assignmentResponsibilityAdmin": [],
+    "region": {
+      "id": "4f28e940-70ea-445a-b4b4-7bc552ada59b",
+      "groupId": "a45adac1-e711-4c15-b3f9-1f30fc151565",
+      "versionCode": 1.0,
+      "dateCreated": "2026-04-21T05:38:33.824+00:00",
+      "isActive": true,
+      "level1": {
+        "id": "5214ecb2-bef1-4a86-9446-451cf430928e",
+        "fullCode": "72",
+        "code": "72",
+        "name": "SULAWESI TENGAH",
+        "level2": {
+          "id": "bc32354f-1245-426f-b2cf-a5733e1295ad",
+          "fullCode": "7201",
+          "code": "01",
+          "name": "BANGGAI KEPULAUAN",
+          "level3": {
+            "id": "e82a8220-ba0f-4ffd-87c4-c0f134716259",
+            "fullCode": "7201070",
+            "code": "070",
+            "name": "BUKO",
+            "level4": {
+              "id": "8f270a6a-7759-4509-89ce-0e02b9f63fea",
+              "fullCode": "7201070019",
+              "code": "019",
+              "name": "OLUSI",
+              "level5": {
+                "id": "bf3fa40b-52f4-49d5-b9a3-abe5c1580acd",
+                "fullCode": "72010700190002",
+                "code": "0002",
+                "name": "RT 002 DUSUN 02",
+                "level6": {
+                  "id": "4f28e940-70ea-445a-b4b4-7bc552ada59b",
+                  "fullCode": "7201070019000200",
+                  "code": "00",
+                  "name": "RT 002 DUSUN 02"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "regionMetadata": {
+      "id": "a45adac1-e711-4c15-b3f9-1f30fc151565",
+      "levelCount": 6,
+      "smallestRegionLevel": "SUBSLS",
+      "groupName": "SE2026 SUBSLS",
+      "level": [
+        {
+          "id": 1,
+          "name": "PROVINSI"
+        },
+        {
+          "id": 2,
+          "name": "KABUPATEN/KOTA"
+        },
+        {
+          "id": 3,
+          "name": "KECAMATAN"
+        },
+        {
+          "id": 4,
+          "name": "DESA"
+        },
+        {
+          "id": 5,
+          "name": "SLS"
+        },
+        {
+          "id": 6,
+          "name": "SUBSLS"
+        }
+      ]
+    },
+    "sampleType": 1,
+    "isTarget": true,
+    "referencedTo": [],
+    "lockedByUser": false,
+    "lockedByAnother": false
+  },
+  {
+    "id": "e3c095b1-d340-4e00-ab07-24ad511906d1",
+    "surveyPeriodId": "fd68e454-ba45-4b85-8205-f3bf777ded24",
+    "mode": [
+      "CAPI"
+    ],
+    "assignmentErrorStatusType": 1,
+    "approvedByCreator": false,
+    "codeIdentity": "7201070019000200 - DTSEN - 31",
+    "assignmentStatusId": 0,
+    "assignmentStatusAlias": "OPEN",
+    "isTarikSample": false,
+    "data1": "AGUSTINA KINABI / ISKAR YELENGGETE",
+    "data2": "DESA OLUSI",
+    "data6": "KELUARGA",
+    "dateCreated": "2026-06-08T05:40:38.531+00:00",
+    "isActive": true,
+    "sumError": 0,
+    "sumRemark": 0,
+    "sumClean": 0,
+    "done": false,
+    "secondary": false,
+    "strata": "PRIMARY",
+    "externalDone": false,
+    "listing": false,
+    "dateModified": "2026-06-13T03:41:08.756+00:00",
+    "assignmentResponsibility": [],
+    "assignmentResponsibilityAdmin": [],
+    "region": {
+      "id": "4f28e940-70ea-445a-b4b4-7bc552ada59b",
+      "groupId": "a45adac1-e711-4c15-b3f9-1f30fc151565",
+      "versionCode": 1.0,
+      "dateCreated": "2026-04-21T05:38:33.824+00:00",
+      "isActive": true,
+      "level1": {
+        "id": "5214ecb2-bef1-4a86-9446-451cf430928e",
+        "fullCode": "72",
+        "code": "72",
+        "name": "SULAWESI TENGAH",
+        "level2": {
+          "id": "bc32354f-1245-426f-b2cf-a5733e1295ad",
+          "fullCode": "7201",
+          "code": "01",
+          "name": "BANGGAI KEPULAUAN",
+          "level3": {
+            "id": "e82a8220-ba0f-4ffd-87c4-c0f134716259",
+            "fullCode": "7201070",
+            "code": "070",
+            "name": "BUKO",
+            "level4": {
+              "id": "8f270a6a-7759-4509-89ce-0e02b9f63fea",
+              "fullCode": "7201070019",
+              "code": "019",
+              "name": "OLUSI",
+              "level5": {
+                "id": "bf3fa40b-52f4-49d5-b9a3-abe5c1580acd",
+                "fullCode": "72010700190002",
+                "code": "0002",
+                "name": "RT 002 DUSUN 02",
+                "level6": {
+                  "id": "4f28e940-70ea-445a-b4b4-7bc552ada59b",
+                  "fullCode": "7201070019000200",
+                  "code": "00",
+                  "name": "RT 002 DUSUN 02"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "regionMetadata": {
+      "id": "a45adac1-e711-4c15-b3f9-1f30fc151565",
+      "levelCount": 6,
+      "smallestRegionLevel": "SUBSLS",
+      "groupName": "SE2026 SUBSLS",
+      "level": [
+        {
+          "id": 1,
+          "name": "PROVINSI"
+        },
+        {
+          "id": 2,
+          "name": "KABUPATEN/KOTA"
+        },
+        {
+          "id": 3,
+          "name": "KECAMATAN"
+        },
+        {
+          "id": 4,
+          "name": "DESA"
+        },
+        {
+          "id": 5,
+          "name": "SLS"
+        },
+        {
+          "id": 6,
+          "name": "SUBSLS"
+        }
+      ]
+    },
+    "sampleType": 1,
+    "isTarget": true,
+    "referencedTo": [],
+    "lockedByUser": false,
+    "lockedByAnother": false
+  },
+  {
+    "id": "6fdff96e-5de9-4006-a1f0-245d2605fd8c",
+    "surveyPeriodId": "fd68e454-ba45-4b85-8205-f3bf777ded24",
+    "mode": [
+      "CAPI"
+    ],
+    "assignmentErrorStatusType": 1,
+    "approvedByCreator": false,
+    "codeIdentity": "7201070019000200 - DTSEN - 30",
+    "assignmentStatusId": 0,
+    "assignmentStatusAlias": "OPEN",
+    "isTarikSample": false,
+    "data1": "IRWAN MUDA / PATRINA YALIMANG",
+    "data2": "DESA OLUSI",
+    "data6": "KELUARGA",
+    "dateCreated": "2026-06-08T05:40:38.529+00:00",
+    "isActive": true,
+    "sumError": 0,
+    "sumRemark": 0,
+    "sumClean": 0,
+    "done": false,
+    "secondary": false,
+    "strata": "PRIMARY",
+    "externalDone": false,
+    "listing": false,
+    "dateModified": "2026-06-13T03:41:08.512+00:00",
+    "assignmentResponsibility": [],
+    "assignmentResponsibilityAdmin": [],
+    "region": {
+      "id": "4f28e940-70ea-445a-b4b4-7bc552ada59b",
+      "groupId": "a45adac1-e711-4c15-b3f9-1f30fc151565",
+      "versionCode": 1.0,
+      "dateCreated": "2026-04-21T05:38:33.824+00:00",
+      "isActive": true,
+      "level1": {
+        "id": "5214ecb2-bef1-4a86-9446-451cf430928e",
+        "fullCode": "72",
+        "code": "72",
+        "name": "SULAWESI TENGAH",
+        "level2": {
+          "id": "bc32354f-1245-426f-b2cf-a5733e1295ad",
+          "fullCode": "7201",
+          "code": "01",
+          "name": "BANGGAI KEPULAUAN",
+          "level3": {
+            "id": "e82a8220-ba0f-4ffd-87c4-c0f134716259",
+            "fullCode": "7201070",
+            "code": "070",
+            "name": "BUKO",
+            "level4": {
+              "id": "8f270a6a-7759-4509-89ce-0e02b9f63fea",
+              "fullCode": "7201070019",
+              "code": "019",
+              "name": "OLUSI",
+              "level5": {
+                "id": "bf3fa40b-52f4-49d5-b9a3-abe5c1580acd",
+                "fullCode": "72010700190002",
+                "code": "0002",
+                "name": "RT 002 DUSUN 02",
+                "level6": {
+                  "id": "4f28e940-70ea-445a-b4b4-7bc552ada59b",
+                  "fullCode": "7201070019000200",
+                  "code": "00",
+                  "name": "RT 002 DUSUN 02"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "regionMetadata": {
+      "id": "a45adac1-e711-4c15-b3f9-1f30fc151565",
+      "levelCount": 6,
+      "smallestRegionLevel": "SUBSLS",
+      "groupName": "SE2026 SUBSLS",
+      "level": [
+        {
+          "id": 1,
+          "name": "PROVINSI"
+        },
+        {
+          "id": 2,
+          "name": "KABUPATEN/KOTA"
+        },
+        {
+          "id": 3,
+          "name": "KECAMATAN"
+        },
+        {
+          "id": 4,
+          "name": "DESA"
+        },
+        {
+          "id": 5,
+          "name": "SLS"
+        },
+        {
+          "id": 6,
+          "name": "SUBSLS"
+        }
+      ]
+    },
+    "sampleType": 1,
+    "isTarget": true,
+    "referencedTo": [],
+    "lockedByUser": false,
+    "lockedByAnother": false
+  },
+  {
+    "id": "9bb8e8cc-b343-4fed-bf26-1a329747c946",
+    "surveyPeriodId": "fd68e454-ba45-4b85-8205-f3bf777ded24",
+    "mode": [
+      "CAPI"
+    ],
+    "assignmentErrorStatusType": 1,
+    "approvedByCreator": false,
+    "codeIdentity": "7201070019000200 - DTSEN - 28",
+    "assignmentStatusId": 0,
+    "assignmentStatusAlias": "OPEN",
+    "isTarikSample": false,
+    "data1": "PIERSON KULUNGAN / TIEMI BULASING",
+    "data2": "DESA OLUSI",
+    "data6": "KELUARGA",
+    "dateCreated": "2026-06-08T05:40:38.527+00:00",
+    "isActive": true,
+    "sumError": 0,
+    "sumRemark": 0,
+    "sumClean": 0,
+    "done": false,
+    "secondary": false,
+    "strata": "PRIMARY",
+    "externalDone": false,
+    "listing": false,
+    "dateModified": "2026-06-13T03:40:52.435+00:00",
+    "assignmentResponsibility": [],
+    "assignmentResponsibilityAdmin": [],
+    "region": {
+      "id": "4f28e940-70ea-445a-b4b4-7bc552ada59b",
+      "groupId": "a45adac1-e711-4c15-b3f9-1f30fc151565",
+      "versionCode": 1.0,
+      "dateCreated": "2026-04-21T05:38:33.824+00:00",
+      "isActive": true,
+      "level1": {
+        "id": "5214ecb2-bef1-4a86-9446-451cf430928e",
+        "fullCode": "72",
+        "code": "72",
+        "name": "SULAWESI TENGAH",
+        "level2": {
+          "id": "bc32354f-1245-426f-b2cf-a5733e1295ad",
+          "fullCode": "7201",
+          "code": "01",
+          "name": "BANGGAI KEPULAUAN",
+          "level3": {
+            "id": "e82a8220-ba0f-4ffd-87c4-c0f134716259",
+            "fullCode": "7201070",
+            "code": "070",
+            "name": "BUKO",
+            "level4": {
+              "id": "8f270a6a-7759-4509-89ce-0e02b9f63fea",
+              "fullCode": "7201070019",
+              "code": "019",
+              "name": "OLUSI",
+              "level5": {
+                "id": "bf3fa40b-52f4-49d5-b9a3-abe5c1580acd",
+                "fullCode": "72010700190002",
+                "code": "0002",
+                "name": "RT 002 DUSUN 02",
+                "level6": {
+                  "id": "4f28e940-70ea-445a-b4b4-7bc552ada59b",
+                  "fullCode": "7201070019000200",
+                  "code": "00",
+                  "name": "RT 002 DUSUN 02"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "regionMetadata": {
+      "id": "a45adac1-e711-4c15-b3f9-1f30fc151565",
+      "levelCount": 6,
+      "smallestRegionLevel": "SUBSLS",
+      "groupName": "SE2026 SUBSLS",
+      "level": [
+        {
+          "id": 1,
+          "name": "PROVINSI"
+        },
+        {
+          "id": 2,
+          "name": "KABUPATEN/KOTA"
+        },
+        {
+          "id": 3,
+          "name": "KECAMATAN"
+        },
+        {
+          "id": 4,
+          "name": "DESA"
+        },
+        {
+          "id": 5,
+          "name": "SLS"
+        },
+        {
+          "id": 6,
+          "name": "SUBSLS"
+        }
+      ]
+    },
+    "sampleType": 1,
+    "isTarget": true,
+    "referencedTo": [],
+    "lockedByUser": false,
+    "lockedByAnother": false
+  }
+]

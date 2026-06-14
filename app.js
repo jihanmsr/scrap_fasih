@@ -653,6 +653,13 @@ document.addEventListener('DOMContentLoaded', () => {
             renderSyncTable();
         });
     }
+    const diffSearchInput = document.getElementById('diff-search-input');
+    if (diffSearchInput) {
+        diffSearchInput.addEventListener('input', () => {
+            window.diffCurrentPage = 1;
+            renderDiffTable();
+        });
+    }
     const slsAssignmentFilter = document.getElementById('sls-assignment-filter');
     if (slsAssignmentFilter) {
         slsAssignmentFilter.addEventListener('change', () => {
@@ -1749,7 +1756,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.petugasCurrentPage = 1;
         
         // Update header indicators
-        ['username', 'roleName', 'totalRegions'].forEach(col => {
+        ['username', 'roleName', 'totalRegions', 'workload'].forEach(col => {
             const el = document.getElementById(`petugas-sort-${col}`);
             if (el) {
                 if (current.column === col) {
@@ -1893,6 +1900,56 @@ document.addEventListener('DOMContentLoaded', () => {
         const kabFilterEl = document.getElementById('petugas-kab-filter');
         const kabFilterVal = kabFilterEl ? kabFilterEl.value : 'all';
 
+        const workloadFilterEl = document.getElementById('petugas-workload-filter');
+        const workloadFilterVal = workloadFilterEl ? workloadFilterEl.value : 'all';
+
+        // Precalculate workload (totalHH) for all officers based on active ASSIGN_SLS_DATA
+        const slsTotalMap = {};
+        if (window.ASSIGN_SLS_DATA) {
+            window.ASSIGN_SLS_DATA.forEach(sls => {
+                const code = sls.sls_code || sls.sls_id;
+                if (code) {
+                    slsTotalMap[code] = sls.total || 0;
+                }
+            });
+        }
+        petugasData.forEach(item => {
+            let totalHH = 0;
+            if (item.regions && item.regions.length > 0) {
+                item.regions.forEach(reg => {
+                    const code = reg.regionCode || '';
+                    const slsCode = code.length === 16 ? code.substring(0, 14) : code;
+                    totalHH += (slsTotalMap[slsCode] || 0);
+                });
+            }
+            item.totalHH = totalHH;
+        });
+
+        // Update overloaded pencacah warning alert
+        const totalOverloadedPencacah = petugasData.filter(item => item.roleName === 'Pencacah' && item.totalHH > 800).length;
+        const alertEl = document.getElementById('petugas-overload-alert');
+        if (alertEl) {
+            if (totalOverloadedPencacah > 0) {
+                alertEl.style.display = 'block';
+                alertEl.innerHTML = `
+                    <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 0.75rem; padding: 1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.75rem; font-family: 'Outfit', sans-serif;">
+                        <span style="font-size: 1.5rem; line-height: 1;">⚠️</span>
+                        <div style="flex: 1;">
+                            <div style="font-weight: 700; color: #f87171;">Peringatan Beban Kerja Berlebih!</div>
+                            <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.15rem;">
+                                Terdeteksi <strong>${totalOverloadedPencacah} Pencacah</strong> dengan beban kerja di atas <strong>800 target HH/listing</strong>. Hal ini dapat mempengaruhi kualitas pendataan sensus.
+                            </div>
+                        </div>
+                        <button class="btn-action" onclick="document.getElementById('petugas-workload-filter').value='overloaded'; document.getElementById('petugas-role-filter').value='Pencacah'; window.renderPetugasTable();" style="background: #ef4444; color: white; border: none; font-size: 0.8rem; padding: 0.5rem 0.75rem; border-radius: 0.5rem; height: auto; cursor: pointer;">
+                            Lihat Daftar
+                        </button>
+                    </div>
+                `;
+            } else {
+                alertEl.style.display = 'none';
+            }
+        }
+
         // Filter and Sort
         let filteredData = petugasData.filter(item => {
             // Search filter
@@ -1920,6 +1977,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!hasMatchingRegion) return false;
             }
 
+            // Workload filter
+            if (workloadFilterVal !== 'all') {
+                if (workloadFilterVal === 'overloaded' && item.totalHH <= 800) return false;
+                if (workloadFilterVal === 'medium' && (item.totalHH <= 500 || item.totalHH > 800)) return false;
+                if (workloadFilterVal === 'light' && item.totalHH > 500) return false;
+            }
+
             return true;
         });
 
@@ -1934,6 +1998,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 valB = b.regions ? b.regions.length : 0;
                 return (valA - valB) * order;
             }
+            if (col === 'workload' || col === 'totalHH') {
+                valA = a.totalHH || 0;
+                valB = b.totalHH || 0;
+                return (valA - valB) * order;
+            }
             if (typeof valA === 'string') {
                 return (valA || '').localeCompare(valB || '') * order;
             }
@@ -1942,7 +2011,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const totalItems = filteredData.length;
         if (totalItems === 0) {
-            tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data petugas yang cocok.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data petugas yang cocok.</td></tr>`;
             paginationInfo.innerText = `Menampilkan 0 - 0 dari 0 Petugas`;
             renderPetugasPaginationButtons(0);
             return;
@@ -1989,6 +2058,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
 
+            // Workload display with warning if > 800
+            let workloadBadge = '';
+            if (item.totalHH > 800) {
+                workloadBadge = `
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.15rem;">
+                        <span style="color: #ef4444; font-weight: 800; font-size: 0.9rem;">${new Intl.NumberFormat('id-ID').format(item.totalHH)} HH</span>
+                        <span style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); padding: 0.1rem 0.4rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.02em;">⚠️ OVERLOAD</span>
+                    </div>
+                `;
+            } else if (item.totalHH > 500) {
+                workloadBadge = `
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.15rem;">
+                        <span style="color: #f59e0b; font-weight: 700; font-size: 0.85rem;">${new Intl.NumberFormat('id-ID').format(item.totalHH)} HH</span>
+                        <span style="background: rgba(245, 158, 11, 0.1); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); padding: 0.1rem 0.4rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.02em;">SEDANG</span>
+                    </div>
+                `;
+            } else {
+                workloadBadge = `
+                    <span style="color: var(--text-primary); font-weight: 600; font-size: 0.85rem;">${new Intl.NumberFormat('id-ID').format(item.totalHH)} HH</span>
+                `;
+            }
+
             return `
                 <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.2s;">
                     <td style="padding: 1rem; color: var(--text-secondary); text-align: center; font-weight: 500;">${rowNumber}</td>
@@ -2010,6 +2101,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     </td>
                     <td style="padding: 1rem; text-align: center;">
                         ${syncProgressHtml}
+                    </td>
+                    <td style="padding: 1rem; text-align: center;">
+                        ${workloadBadge}
                     </td>
                     <td style="padding: 1rem;">
                         <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
@@ -2668,6 +2762,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const kabFilterEl = document.getElementById('petugas-kab-filter');
         const kabFilterVal = kabFilterEl ? kabFilterEl.value : 'all';
 
+        const workloadFilterEl = document.getElementById('petugas-workload-filter');
+        const workloadFilterVal = workloadFilterEl ? workloadFilterEl.value : 'all';
+
+        // Precalculate workload (totalHH)
+        const slsTotalMap = {};
+        if (window.ASSIGN_SLS_DATA) {
+            window.ASSIGN_SLS_DATA.forEach(sls => {
+                const code = sls.sls_code || sls.sls_id;
+                if (code) {
+                    slsTotalMap[code] = sls.total || 0;
+                }
+            });
+        }
+        petugasData.forEach(item => {
+            let totalHH = 0;
+            if (item.regions && item.regions.length > 0) {
+                item.regions.forEach(reg => {
+                    const code = reg.regionCode || '';
+                    const slsCode = code.length === 16 ? code.substring(0, 14) : code;
+                    totalHH += (slsTotalMap[slsCode] || 0);
+                });
+            }
+            item.totalHH = totalHH;
+        });
+
         let filteredData = petugasData.filter(item => {
             if (searchVal) {
                 const uNameStr = item.username || '';
@@ -2688,6 +2807,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 if (!hasMatchingRegion) return false;
             }
+
+            if (workloadFilterVal !== 'all') {
+                if (workloadFilterVal === 'overloaded' && item.totalHH <= 800) return false;
+                if (workloadFilterVal === 'medium' && (item.totalHH <= 500 || item.totalHH > 800)) return false;
+                if (workloadFilterVal === 'light' && item.totalHH > 500) return false;
+            }
+
             return true;
         });
 
@@ -2701,16 +2827,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 valB = b.regions ? b.regions.length : 0;
                 return (valA - valB) * order;
             }
+            if (col === 'workload' || col === 'totalHH') {
+                valA = a.totalHH || 0;
+                valB = b.totalHH || 0;
+                return (valA - valB) * order;
+            }
             if (typeof valA === 'string') {
                 return (valA || '').localeCompare(valB || '') * order;
             }
             return ((valA || 0) - (valB || 0)) * order;
         });
 
-        const headers = ["No", "Username", "Email", "Peran", "Jumlah Wilayah Tugas", "Daftar Wilayah Tugas"];
+        const headers = ["No", "Username", "Email", "Peran", "Beban Kerja (HH)", "Jumlah Wilayah Tugas", "Daftar Wilayah Tugas"];
         const rows = filteredData.map((item, idx) => {
             const regionsStr = (item.regions || []).map(r => `${r.regionName} (${r.regionCode})`).join('; ');
-            return [idx + 1, item.username || '-', item.email || '-', item.roleName || '-', item.regions ? item.regions.length : 0, regionsStr];
+            return [idx + 1, item.username || '-', item.email || '-', item.roleName || '-', item.totalHH || 0, item.regions ? item.regions.length : 0, regionsStr];
         });
 
         const prefix = activeSubtab === 'ub' ? 'UB' : 'SE2026';
@@ -3326,6 +3457,8 @@ document.addEventListener('DOMContentLoaded', () => {
         resetSelect('sync-kec-filter');
         resetSelect('sync-desa-filter');
         resetSelect('sync-status-filter');
+        
+        resetSelect('diff-kab-filter');
 
         if (typeof originalFilterAssignData === 'function') {
             originalFilterAssignData(type);
@@ -3339,6 +3472,349 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         renderSyncTable();
+        
+        window.diffCurrentPage = 1;
+        renderDiffTable();
+    };
+
+    // --- DIFFERENCE (SELISIH ALOKASI) TABLE ---
+    window.activeDiffTab = 'p_only';
+    window.diffCurrentPage = 1;
+    let diffRowsPerPage = 50;
+
+    window.switchDiffTab = function (tab) {
+        window.activeDiffTab = tab;
+        window.diffCurrentPage = 1;
+        
+        // Update tab buttons
+        const btnP = document.getElementById('btn-diff-p-only');
+        const btnW = document.getElementById('btn-diff-w-only');
+        
+        if (tab === 'p_only') {
+            if (btnP) {
+                btnP.style.backgroundColor = 'var(--primary)';
+                btnP.style.color = 'white';
+                btnP.style.border = 'none';
+            }
+            if (btnW) {
+                btnW.style.backgroundColor = 'transparent';
+                btnW.style.color = 'var(--text-secondary)';
+                btnW.style.border = '1px solid var(--card-border)';
+            }
+            const header = document.getElementById('diff-table-header-officer');
+            if (header) header.innerText = 'Pencacah';
+        } else {
+            if (btnW) {
+                btnW.style.backgroundColor = 'var(--primary)';
+                btnW.style.color = 'white';
+                btnW.style.border = 'none';
+            }
+            if (btnP) {
+                btnP.style.backgroundColor = 'transparent';
+                btnP.style.color = 'var(--text-secondary)';
+                btnP.style.border = '1px solid var(--card-border)';
+            }
+            const header = document.getElementById('diff-table-header-officer');
+            if (header) header.innerText = 'Pengawas';
+        }
+        
+        window.renderDiffTable();
+    };
+
+    window.changeDiffLimit = function (val) {
+        diffRowsPerPage = parseInt(val) || 50;
+        window.diffCurrentPage = 1;
+        window.renderDiffTable();
+    };
+
+    window.renderDiffTable = function () {
+        const petugasData = window.PETUGAS_DATA || [];
+        const tbody = document.getElementById('diff-table-body');
+        const paginationInfo = document.getElementById('diff-pagination-info');
+        if (!tbody || !paginationInfo) return;
+
+        // 1. Map all regions by role from window.PETUGAS_DATA
+        const pencacahRegions = {};
+        const pengawasRegions = {};
+
+        petugasData.forEach(p => {
+            const role = p.roleName;
+            const displayName = `${p.username} (${p.email})`;
+            if (p.regions) {
+                p.regions.forEach(r => {
+                    const code = r.regionCode;
+                    if (!code) return;
+
+                    if (role === 'Pencacah') {
+                        if (!pencacahRegions[code]) {
+                            pencacahRegions[code] = { name: r.regionName || 'LAINNYA', officers: new Set() };
+                        }
+                        pencacahRegions[code].officers.add(displayName);
+                    } else if (role === 'Pengawas') {
+                        if (!pengawasRegions[code]) {
+                            pengawasRegions[code] = { name: r.regionName || 'LAINNYA', officers: new Set() };
+                        }
+                        pengawasRegions[code].officers.add(displayName);
+                    }
+                });
+            }
+        });
+
+        // 2. Identify differences
+        const pencacahNotPengawas = [];
+        const pengawasNotPencacah = [];
+
+        for (const code in pencacahRegions) {
+            if (!pengawasRegions[code]) {
+                pencacahNotPengawas.push({
+                    code: code,
+                    name: pencacahRegions[code].name,
+                    officer: Array.from(pencacahRegions[code].officers).join(', ')
+                });
+            }
+        }
+
+        for (const code in pengawasRegions) {
+            if (!pencacahRegions[code]) {
+                pengawasNotPencacah.push({
+                    code: code,
+                    name: pengawasRegions[code].name,
+                    officer: Array.from(pengawasRegions[code].officers).join(', ')
+                });
+            }
+        }
+
+        // Apply filters to calculate counts for the selected Kabupaten/search query
+        const kabFilterEl = document.getElementById('diff-kab-filter');
+        const kabFilterVal = kabFilterEl ? kabFilterEl.value : 'all';
+
+        const searchInputEl = document.getElementById('diff-search-input');
+        const searchVal = searchInputEl ? searchInputEl.value.toLowerCase().trim() : '';
+
+        const filterItem = (item) => {
+            if (kabFilterVal !== 'all' && !item.code.startsWith(kabFilterVal)) {
+                return false;
+            }
+            if (searchVal) {
+                const matchText = (item.code + ' ' + item.name + ' ' + item.officer).toLowerCase();
+                if (!matchText.includes(searchVal)) return false;
+            }
+            return true;
+        };
+
+        const filteredPOnly = pencacahNotPengawas.filter(filterItem);
+        const filteredWOnly = pengawasNotPencacah.filter(filterItem);
+
+        // Update counts in pill buttons to reflect filtered state
+        const pOnlyCountEl = document.getElementById('count-diff-p-only');
+        const wOnlyCountEl = document.getElementById('count-diff-w-only');
+        if (pOnlyCountEl) pOnlyCountEl.innerText = filteredPOnly.length;
+        if (wOnlyCountEl) wOnlyCountEl.innerText = filteredWOnly.length;
+
+        // Choose source array based on active mismatch subtab
+        const filtered = window.activeDiffTab === 'p_only' ? filteredPOnly : filteredWOnly;
+
+        // Sort alphabetically by code
+        filtered.sort((a, b) => a.code.localeCompare(b.code));
+
+        const totalItems = filtered.length;
+        if (totalItems === 0) {
+            tbody.innerHTML = `<tr><td colspan="4" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data selisih alokasi yang cocok.</td></tr>`;
+            paginationInfo.innerText = `Menampilkan 0 - 0 dari 0 SLS`;
+            renderDiffPaginationButtons(0);
+            return;
+        }
+
+        const maxPage = Math.ceil(totalItems / diffRowsPerPage);
+        if (window.diffCurrentPage > maxPage) window.diffCurrentPage = maxPage;
+        if (window.diffCurrentPage < 1) window.diffCurrentPage = 1;
+
+        const startIdx = (window.diffCurrentPage - 1) * diffRowsPerPage;
+        const endIdx = Math.min(startIdx + diffRowsPerPage, totalItems);
+
+        paginationInfo.innerText = `Menampilkan ${startIdx + 1} - ${endIdx} dari ${totalItems} SLS`;
+
+        const pageData = filtered.slice(startIdx, endIdx);
+
+        tbody.innerHTML = pageData.map((item, index) => {
+            const rowNumber = startIdx + index + 1;
+            const hl = (txt) => highlightText(txt, searchVal);
+
+            return `
+                <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.2s;">
+                    <td style="padding: 1rem; color: var(--text-secondary); text-align: center; font-weight: 500;">${rowNumber}</td>
+                    <td style="padding: 1rem; font-family: monospace; font-weight: 600; color: var(--text-secondary);">${hl(item.code)}</td>
+                    <td style="padding: 1rem; font-weight: 600; color: var(--text);">${hl(item.name)}</td>
+                    <td style="padding: 1rem; color: var(--text-primary);">${hl(item.officer || '-')}</td>
+                </tr>
+            `;
+        }).join('');
+
+        renderDiffPaginationButtons(maxPage);
+    };
+
+    function renderDiffPaginationButtons(maxPage) {
+        const btnContainer = document.getElementById('diff-pagination-buttons');
+        if (!btnContainer) return;
+        btnContainer.innerHTML = '';
+
+        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
+        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
+
+        if (window.diffCurrentPage > 1) {
+            const prevBtn = document.createElement('button');
+            prevBtn.innerHTML = '&lt;';
+            prevBtn.style.cssText = btnStyle;
+            prevBtn.addEventListener('click', () => {
+                window.diffCurrentPage--;
+                renderDiffTable();
+            });
+            btnContainer.appendChild(prevBtn);
+        }
+
+        let startPage = Math.max(1, window.diffCurrentPage - 2);
+        let endPage = Math.min(maxPage, window.diffCurrentPage + 2);
+
+        if (startPage > 1) {
+            const page1 = document.createElement('button');
+            page1.textContent = '1';
+            page1.style.cssText = btnStyle;
+            page1.addEventListener('click', () => { window.diffCurrentPage = 1; renderDiffTable(); });
+            btnContainer.appendChild(page1);
+
+            if (startPage > 2) {
+                const dots = document.createElement('span');
+                dots.textContent = '...';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                btnContainer.appendChild(dots);
+            }
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            const btn = document.createElement('button');
+            btn.textContent = i;
+            if (i === window.diffCurrentPage) {
+                btn.style.cssText = activeStyle;
+            } else {
+                btn.style.cssText = btnStyle;
+                btn.addEventListener('click', () => { window.diffCurrentPage = i; renderDiffTable(); });
+            }
+            btnContainer.appendChild(btn);
+        }
+
+        if (endPage < maxPage) {
+            if (endPage < maxPage - 1) {
+                const dots = document.createElement('span');
+                dots.textContent = '...';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                btnContainer.appendChild(dots);
+            }
+
+            const pageLast = document.createElement('button');
+            pageLast.textContent = maxPage;
+            pageLast.style.cssText = btnStyle;
+            pageLast.addEventListener('click', () => { window.diffCurrentPage = maxPage; renderDiffTable(); });
+            btnContainer.appendChild(pageLast);
+        }
+
+        if (window.diffCurrentPage < maxPage) {
+            const nextBtn = document.createElement('button');
+            nextBtn.innerHTML = '&gt;';
+            nextBtn.style.cssText = btnStyle;
+            nextBtn.addEventListener('click', () => {
+                window.diffCurrentPage++;
+                renderDiffTable();
+            });
+            btnContainer.appendChild(nextBtn);
+        }
+    }
+
+    window.downloadDiffCSV = function () {
+        const petugasData = window.PETUGAS_DATA || [];
+        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+        const prefix = activeSubtab === 'ub' ? 'UB' : 'SE2026';
+
+        const pencacahRegions = {};
+        const pengawasRegions = {};
+
+        petugasData.forEach(p => {
+            const role = p.roleName;
+            const displayName = `${p.username} (${p.email})`;
+            if (p.regions) {
+                p.regions.forEach(r => {
+                    const code = r.regionCode;
+                    if (!code) return;
+
+                    if (role === 'Pencacah') {
+                        if (!pencacahRegions[code]) {
+                            pencacahRegions[code] = { name: r.regionName || 'LAINNYA', officers: new Set() };
+                        }
+                        pencacahRegions[code].officers.add(displayName);
+                    } else if (role === 'Pengawas') {
+                        if (!pengawasRegions[code]) {
+                            pengawasRegions[code] = { name: r.regionName || 'LAINNYA', officers: new Set() };
+                        }
+                        pengawasRegions[code].officers.add(displayName);
+                    }
+                });
+            }
+        });
+
+        const pencacahNotPengawas = [];
+        const pengawasNotPencacah = [];
+
+        for (const code in pencacahRegions) {
+            if (!pengawasRegions[code]) {
+                pencacahNotPengawas.push({
+                    code: code,
+                    name: pencacahRegions[code].name,
+                    officer: Array.from(pencacahRegions[code].officers).join('; ')
+                });
+            }
+        }
+
+        for (const code in pengawasRegions) {
+            if (!pencacahRegions[code]) {
+                pengawasNotPencacah.push({
+                    code: code,
+                    name: pengawasRegions[code].name,
+                    officer: Array.from(pengawasRegions[code].officers).join('; ')
+                });
+            }
+        }
+
+        const sourceArray = window.activeDiffTab === 'p_only' ? pencacahNotPengawas : pengawasNotPencacah;
+
+        const kabFilterEl = document.getElementById('diff-kab-filter');
+        const kabFilterVal = kabFilterEl ? kabFilterEl.value : 'all';
+
+        const searchInputEl = document.getElementById('diff-search-input');
+        const searchVal = searchInputEl ? searchInputEl.value.toLowerCase().trim() : '';
+
+        let filtered = sourceArray.filter(item => {
+            if (kabFilterVal !== 'all' && !item.code.startsWith(kabFilterVal)) {
+                return false;
+            }
+            if (searchVal) {
+                const matchText = (item.code + ' ' + item.name + ' ' + item.officer).toLowerCase();
+                if (!matchText.includes(searchVal)) return false;
+            }
+            return true;
+        });
+
+        filtered.sort((a, b) => a.code.localeCompare(b.code));
+
+        const roleHeader = window.activeDiffTab === 'p_only' ? "Pencacah" : "Pengawas";
+        const headers = ["No", "Kode SLS", "Nama SLS", `Petugas (${roleHeader})`];
+        const rows = filtered.map((item, idx) => [
+            idx + 1,
+            item.code,
+            item.name,
+            item.officer || '-'
+        ]);
+
+        const filePrefix = window.activeDiffTab === 'p_only' ? 'pencacah_saja' : 'pengawas_saja';
+        exportToCSV(`selisih_alokasi_${filePrefix}_${prefix.toLowerCase()}.csv`, headers, rows);
     };
 
     window.toggleStatsDetail = function(section) {

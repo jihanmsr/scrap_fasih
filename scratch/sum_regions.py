@@ -5,10 +5,32 @@ from urllib.parse import unquote
 
 async def run():
     async with async_playwright() as p:
-        browser = await p.chromium.connect_over_cdp("http://127.0.0.1:9223")
+        browser = None
+        for port in [9223, 9222]:
+            try:
+                browser = await p.chromium.connect_over_cdp(f"http://127.0.0.1:{port}")
+                break
+            except Exception:
+                pass
+        if not browser:
+            print("Could not connect to Chrome")
+            return
         context = browser.contexts[0]
-        page = context.pages[1]
-        
+        page = None
+        for p_page in context.pages:
+            if "fasih-sm.bps.go.id" in p_page.url:
+                page = p_page
+                break
+        if not page:
+            page = context.pages[0] if context.pages else await context.new_page()
+            
+        # Open a new tab and navigate to BPS to bypass CORS
+        page = await context.new_page()
+        try:
+            await page.goto("https://fasih-sm.bps.go.id/app/dashboard", wait_until="domcontentloaded", timeout=15000)
+        except Exception as e:
+            print(f"Navigation timed out/failed (using current origin): {e}")
+            
         cookies = await context.cookies()
         token = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), None)
         if token: token = unquote(token)
@@ -19,7 +41,7 @@ async def run():
         
         async def analyze(role_id, role_name, kab_code):
             # Fetch using by-user with regionSize=2000
-            # Since size=500 is larger than total users in either Buol or Balut, we can get all users in a single page (Buol Pencacah has 142, Pengawas has 22).
+            # Since size=500 is larger than total users in either Buol or Balut, we can get all users in a single page.
             url = f"https://fasih-sm.bps.go.id/app/api/survey-user/api/v1/allocations-view/by-user?surveyPeriodId={survey_period_id}&surveyRoleId={role_id}&page=0&size=500&regionCode={kab_code}&regionSize=2000"
             res = await page.evaluate(f"fetch('{url}', {{ headers: {{ 'Accept': 'application/json', 'X-XSRF-TOKEN': '{token}' }} }}).then(r => r.json())")
             
@@ -71,6 +93,22 @@ async def run():
         balut_p_not_w = balut_p_regions - balut_w_regions
         balut_w_not_p = balut_w_regions - balut_p_regions
         
+        print(f"\n--- BUOL DIFFERENCES ---")
+        print(f"Pencacah but not Pengawas ({len(buol_p_not_w)} regions):")
+        for k in sorted(buol_p_not_w):
+            print(f"  {k} : {buol_p['regions_dict'][k]}")
+        print(f"Pengawas but not Pencacah ({len(buol_w_not_p)} regions):")
+        for k in sorted(buol_w_not_p):
+            print(f"  {k} : {buol_w['regions_dict'][k]}")
+            
+        print(f"\n--- BALUT DIFFERENCES ---")
+        print(f"Pencacah but not Pengawas ({len(balut_p_not_w)} regions):")
+        for k in sorted(balut_p_not_w):
+            print(f"  {k} : {balut_p['regions_dict'][k]}")
+        print(f"Pengawas but not Pencacah ({len(balut_w_not_p)} regions):")
+        for k in sorted(balut_w_not_p):
+            print(f"  {k} : {balut_w['regions_dict'][k]}")
+            
         report = {
             "buol": {
                 "pencacah_regions_count": len(buol_p_regions),
@@ -88,5 +126,7 @@ async def run():
         
         with open("scratch/selisih_buol_balut.json", "w") as f:
             json.dump(report, f, indent=2)
+            
+        await page.close()
 
 asyncio.run(run())

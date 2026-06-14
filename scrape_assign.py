@@ -45,7 +45,7 @@ def cleanup_chrome_cache(user_data_dir):
             except Exception:
                 pass
 
-def launch_chrome_if_needed():
+def launch_chrome_if_needed(port=9222):
     if check_port_open(9223) or check_port_open(9222):
         print("[INFO] Chrome remote debugging aktif.")
         return
@@ -174,6 +174,7 @@ async def evaluate_fetch_with_retry(context, token, url, payload):
             """, {"url": url, "payload": payload, "token": token})
             return res
         except Exception as e:
+            print(f"[WARNING] evaluate_fetch_with_retry attempt {attempt+1} failed with exception: {e}")
             await asyncio.sleep(2)
     return {"error": "Max retries exceeded"}
 
@@ -183,7 +184,7 @@ async def fetch_report(context, token, survey_period_id, region1_id, label):
     res = await evaluate_fetch_with_retry(context, token, REPORT_URL, payload)
 
     if not res or (isinstance(res, dict) and "error" in res):
-        print(f"[ERROR] [{label}] Gagal tarik laporan resmi.")
+        print(f"[ERROR] [{label}] Gagal tarik laporan resmi. Detail: {res}")
         return []
 
     result = []
@@ -628,15 +629,18 @@ async def scrape_assign():
         cookies = await context.cookies()
         token = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), None)
         
-        if not token:
-            print("\nSilakan login FASIH di Chrome. Tekan ENTER jika sudah.")
-            await asyncio.to_thread(input, ">> TEKAN [ENTER] DI SINI... <<\n")
+        first_expired = True
+        while not token:
+            if first_expired:
+                print("\n" + "="*70)
+                print("[WARNING] Token FASIH tidak ditemukan atau sesi kadaluarsa.")
+                print("Silakan login/re-login FASIH di browser Chrome...")
+                print("Script akan mendeteksi token Anda secara otomatis.")
+                print("="*70)
+                first_expired = False
+            await asyncio.sleep(15)
             cookies = await context.cookies()
             token = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), None)
-            
-        if not token:
-            print("[ERROR] Token tidak ditemukan.")
-            return
 
         from urllib.parse import unquote
         token = unquote(token)
@@ -653,6 +657,17 @@ async def scrape_assign():
         # 3. Tarik Petugas dan Wilayah Tugasnya
         processed_petugas_umum = await fetch_petugas(context, token, SURVEY_CONFIGS[0]["survey_period_id"], "SE Umum")
         processed_petugas_ub = await fetch_petugas(context, token, SURVEY_CONFIGS[1]["survey_period_id"], "SE UB")
+
+        # Validasi data kosong sebelum melakukan overwrite
+        if not processed_data_umum:
+            print("[ERROR] processed_data_umum (rekap kabupaten SE Umum) kosong! Sinkronisasi dibatalkan demi keamanan data dashboard.")
+            return
+        if not processed_sls_umum:
+            print("[ERROR] processed_sls_umum (rincian SLS SE Umum) kosong! Sinkronisasi dibatalkan demi keamanan data dashboard.")
+            return
+        if not processed_petugas_umum:
+            print("[ERROR] processed_petugas_umum (data petugas SE Umum) kosong! Sinkronisasi dibatalkan demi keamanan data dashboard.")
+            return
 
         js_content  = f"window.ASSIGN_DATA_UMUM = {json.dumps(processed_data_umum, indent=4, ensure_ascii=False)};\n"
         js_content += f"window.ASSIGN_DATA_UB   = {json.dumps(processed_data_ub,   indent=4, ensure_ascii=False)};\n"

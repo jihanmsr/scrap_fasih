@@ -5,10 +5,31 @@ from urllib.parse import unquote
 
 async def run():
     async with async_playwright() as p:
-        browser = await p.chromium.connect_over_cdp("http://127.0.0.1:9223")
+        browser = None
+        for port in [9223, 9222]:
+            try:
+                browser = await p.chromium.connect_over_cdp(f"http://127.0.0.1:{port}")
+                break
+            except Exception:
+                pass
+        if not browser:
+            print("Could not connect to Chrome")
+            return
         context = browser.contexts[0]
-        page = context.pages[1]
-        
+        page = None
+        for p_page in context.pages:
+            if "fasih-sm.bps.go.id" in p_page.url:
+                page = p_page
+                break
+        if not page:
+            page = context.pages[0] if context.pages else await context.new_page()
+            
+        # Navigate to dashboard to bypass CORS
+        try:
+            await page.goto("https://fasih-sm.bps.go.id/app/dashboard", wait_until="domcontentloaded", timeout=15000)
+        except Exception:
+            pass
+            
         cookies = await context.cookies()
         token = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), None)
         if token: token = unquote(token)

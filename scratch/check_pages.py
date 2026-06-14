@@ -3,19 +3,16 @@ from playwright.async_api import async_playwright
 
 async def run():
     async with async_playwright() as p:
-        browser = None
-        for port in [9223, 9222]:
+        for port in [9222, 9223]:
             try:
                 browser = await p.chromium.connect_over_cdp(f"http://127.0.0.1:{port}")
-                print(f"Connected on port {port}")
-                break
+                print(f"\nPort {port} contexts: {len(browser.contexts)}")
+                for i, context in enumerate(browser.contexts):
+                    print(f"  Context {i} pages: {len(context.pages)}")
+                    for j, page in enumerate(context.pages):
+                        print(f"    Page {j}: '{page.title()}' - {page.url}")
+                await browser.close()
             except Exception as e:
-                print(f"Failed to connect on port {port}: {e}")
-        if not browser:
-            return
-        
-        context = browser.contexts[0]
-        for idx, page in enumerate(context.pages):
-            print(f"Page {idx}: URL={page.url} Title={await page.title()}")
+                print(f"Port {port} error: {e}")
 
 asyncio.run(run())
