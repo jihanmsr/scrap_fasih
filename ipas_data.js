@@ -1,15 +1,15 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-15T14:56:29.872814+08:00",
+  "updated_at": "2026-06-15T15:00:43.023403+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
       "total_prelist": 43851,
-      "total_draft": 191,
-      "total_open": 43541,
-      "total_submitted": 119,
+      "total_draft": 193,
+      "total_open": 43537,
+      "total_submitted": 121,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 0.27,
+      "persentase": 0.28,
       "today_completed": 3,
       "yesterday_completed": 45,
       "two_days_ago_completed": 3,
@@ -65,15 +65,15 @@ window.IPAS_DATA = {
       "kabupaten": "[02] BANGGAI",
       "total_prelist": 138174,
       "total_draft": 80,
-      "total_open": 137988,
-      "total_submitted": 105,
+      "total_open": 137987,
+      "total_submitted": 106,
       "total_rejected": 1,
       "total_approved": 0,
       "persentase": 0.08,
       "today_completed": 2,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
-      "new_usaha_today": 25,
+      "new_usaha_today": 26,
       "new_usaha_yesterday": 0,
       "new_usaha_overall": 10000,
       "new_businesses": [
@@ -92,6 +92,12 @@ window.IPAS_DATA = {
         {
           "name": "KASMAT DINA / ",
           "code": "7202081005000100 - KASMAT DINA /  - - /  - 0",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "YUSTIN DJIHANGAH / NOBON SAADIN",
+          "code": "7202030034000100 - YUSTIN DJIHANGAH / NOBON SAADIN - 1 /  - 0 - 2. Tidak",
           "date": "today",
           "status": "DRAFT"
         },
@@ -232,8 +238,8 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[03] MOROWALI",
       "total_prelist": 47733,
-      "total_draft": 5,
-      "total_open": 47721,
+      "total_draft": 6,
+      "total_open": 47720,
       "total_submitted": 7,
       "total_rejected": 0,
       "total_approved": 0,
@@ -248,13 +254,13 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[04] POSO",
-      "total_prelist": 105428,
-      "total_draft": 132,
-      "total_open": 105176,
-      "total_submitted": 120,
+      "total_prelist": 105429,
+      "total_draft": 131,
+      "total_open": 105171,
+      "total_submitted": 127,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 0.11,
+      "persentase": 0.12,
       "today_completed": 0,
       "yesterday_completed": 5,
       "two_days_ago_completed": 2,
@@ -339,8 +345,8 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[05] DONGGALA",
       "total_prelist": 105541,
-      "total_draft": 78,
-      "total_open": 105402,
+      "total_draft": 79,
+      "total_open": 105401,
       "total_submitted": 60,
       "total_rejected": 1,
       "total_approved": 0,
@@ -488,17 +494,17 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[06] TOLI-TOLI",
-      "total_prelist": 76006,
-      "total_draft": 106,
-      "total_open": 75853,
-      "total_submitted": 44,
+      "total_prelist": 76011,
+      "total_draft": 107,
+      "total_open": 75852,
+      "total_submitted": 49,
       "total_rejected": 3,
       "total_approved": 0,
       "persentase": 0.06,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
-      "new_usaha_today": 30,
+      "new_usaha_today": 29,
       "new_usaha_yesterday": 0,
       "new_usaha_overall": 10000,
       "new_businesses": [
@@ -523,12 +529,6 @@ window.IPAS_DATA = {
         {
           "name": "POP ICE NIARA ",
           "code": "7206030007000100 - POP ICE NIARA  - 1 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "AISA K / -",
-          "code": "7206050007000400 - AISA K / - - 1 /  - - - 1",
           "date": "today",
           "status": "DRAFT"
         },
@@ -687,12 +687,12 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[07] BUOL",
       "total_prelist": 57359,
-      "total_draft": 193,
-      "total_open": 57072,
-      "total_submitted": 94,
+      "total_draft": 194,
+      "total_open": 57070,
+      "total_submitted": 95,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 0.16,
+      "persentase": 0.17,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -788,10 +788,10 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[08] PARIGI MOUTONG",
-      "total_prelist": 169445,
-      "total_draft": 90,
-      "total_open": 169129,
-      "total_submitted": 214,
+      "total_prelist": 169446,
+      "total_draft": 92,
+      "total_open": 169125,
+      "total_submitted": 217,
       "total_rejected": 8,
       "total_approved": 4,
       "persentase": 0.13,
@@ -908,13 +908,13 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[09] TOJO UNA-UNA",
-      "total_prelist": 57945,
-      "total_draft": 49,
-      "total_open": 57777,
-      "total_submitted": 117,
+      "total_prelist": 57946,
+      "total_draft": 50,
+      "total_open": 57773,
+      "total_submitted": 121,
       "total_rejected": 2,
       "total_approved": 0,
-      "persentase": 0.2,
+      "persentase": 0.21,
       "today_completed": 0,
       "yesterday_completed": 1,
       "two_days_ago_completed": 1,
@@ -963,16 +963,16 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[10] SIGI",
       "total_prelist": 105031,
-      "total_draft": 68,
-      "total_open": 104803,
-      "total_submitted": 154,
+      "total_draft": 67,
+      "total_open": 104802,
+      "total_submitted": 156,
       "total_rejected": 3,
       "total_approved": 3,
       "persentase": 0.15,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
-      "new_usaha_today": 18,
+      "new_usaha_today": 17,
       "new_usaha_yesterday": 0,
       "new_usaha_overall": 10000,
       "new_businesses": [
@@ -985,12 +985,6 @@ window.IPAS_DATA = {
         {
           "name": "HATTANG / ",
           "code": "7210070002000300 - HATTANG /  - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "DEDY / NURLIA ",
-          "code": "7210100004000800 - DEDY / NURLIA  - 1 /  - 1 - 94364 - 2. Tidak",
           "date": "today",
           "status": "DRAFT"
         },
@@ -1166,20 +1160,38 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[71] PALU",
-      "total_prelist": 164212,
-      "total_draft": 144,
-      "total_open": 163876,
-      "total_submitted": 189,
-      "total_rejected": 3,
+      "total_prelist": 164215,
+      "total_draft": 148,
+      "total_open": 163869,
+      "total_submitted": 191,
+      "total_rejected": 7,
       "total_approved": 0,
       "persentase": 0.12,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
-      "new_usaha_today": 47,
+      "new_usaha_today": 52,
       "new_usaha_yesterday": 0,
       "new_usaha_overall": 10000,
       "new_businesses": [
+        {
+          "name": "SUDARWAN / ",
+          "code": "7271040009000101 - SUDARWAN /  - 11 /  - 0 - 2. Tidak",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "SUPRIADIN / ",
+          "code": "7271040001001000 - SUPRIADIN /  - 7 /  - 0",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "SYAMSUDDIN / NURLAILA",
+          "code": "7271031001002101 - SYAMSUDDIN / NURLAILA - 3 /  - 0",
+          "date": "today",
+          "status": "DRAFT"
+        },
         {
           "name": "ALWI / HESTIN",
           "code": "7271031006000502 - ALWI / HESTIN - 3 /  - 0",
@@ -1273,6 +1285,18 @@ window.IPAS_DATA = {
         {
           "name": "RANTI REKE / ",
           "code": "7271012003000900 - RANTI REKE /  - 4 /  - 0",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "ANISA POP ICE",
+          "code": "7271040009000101 - ANISA POP ICE - 7 /  - 1 - 2. Tidak",
+          "date": "today",
+          "status": "DRAFT"
+        },
+        {
+          "name": "MOH. ARIF SANDI / OLVITA JUNIATRIS WULO",
+          "code": "7271031001002400 - MOH. ARIF SANDI / OLVITA JUNIATRIS WULO - 2 /  - 0",
           "date": "today",
           "status": "DRAFT"
         },
@@ -1688,8 +1712,8 @@ window.IPAS_DATA = {
       "new_businesses": []
     }
   ],
-  "se_umum_prov_total": 0,
+  "se_umum_prov_total": 1140747,
   "se_ub_prov_total": 1264,
-  "se_umum_prov_new_total": 1140730,
+  "se_umum_prov_new_total": 130000,
   "se_ub_prov_new_total": 1264
 };

@@ -32560,4 +32560,4 @@ window.EMAIL_DATA = [
     "kab_name": "[01] BANGGAI KEPULAUAN"
   }
 ];
-window.LAST_UPDATED = '15 Jun 2026, 14:59:41';
+window.LAST_UPDATED = '15 Jun 2026, 15:00:42';
