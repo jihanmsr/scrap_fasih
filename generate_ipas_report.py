@@ -48,13 +48,14 @@ def cleanup_chrome_cache(user_data_dir):
                 print(f"[WARNING] Gagal membersihkan cache Chrome {path}: {e}")
 
 def launch_chrome_if_needed():
-    port = 9222
-    if check_port_open(port):
-        print("[INFO] Chrome remote debugging port 9222 sudah aktif. Menggunakan instansi yang ada.")
-        return
+    for port in [9223, 9222]:
+        if check_port_open(port):
+            print(f"[INFO] Chrome remote debugging port {port} sudah aktif. Menggunakan instansi yang ada.")
+            return
     
-    print("[INFO] Chrome remote debugging port 9222 tidak aktif. Mencoba meluncurkan browser...")
-    chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
+    port = 9222
+    print("[INFO] Chrome remote debugging port 9223 dan 9222 tidak aktif. Mencoba meluncurkan browser...")
+    chrome_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
     
     # Hapus lock file jika ada agar Chrome bisa berjalan lancar
     lock_file = os.path.join(USER_DATA_DIR, "SingletonLock")
@@ -84,29 +85,31 @@ def launch_chrome_if_needed():
     for _ in range(15):
         time.sleep(1)
         if check_port_open(port):
-            print("[INFO] Browser Chrome berhasil diluncurkan dan siap di port 9222.")
+            print(f"[INFO] Browser Chrome berhasil diluncurkan dan siap di port {port}.")
             return
     print("[ERROR] Gagal mendeteksi port 9222 setelah meluncurkan Chrome.")
 
 async def get_authenticated_context(p):
     abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
     os.makedirs(abs_user_data_dir, exist_ok=True)
-    chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
+    chrome_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
     browser = None
     context = None
     page = None
 
-    if check_port_open(9222):
-        print("[INFO] Remote debugging port 9222 terdeteksi. Mencoba sambung via CDP...")
-        try:
-            browser = await p.chromium.connect_over_cdp("http://127.0.0.1:9222")
-            context = browser.contexts[0] if browser.contexts else browser.new_context()
-            page = context.pages[0] if context.pages else context.new_page()
-            print("[INFO] Berhasil tersambung ke browser via CDP.")
-        except Exception as e:
-            print(f"[WARNING] Gagal connect_over_cdp: {e}. Menggunakan Playwright persistent context sebagai fallback.")
-            browser = None
+    for port in [9223, 9222]:
+        if check_port_open(port):
+            print(f"[INFO] Remote debugging port {port} terdeteksi. Mencoba sambung via CDP...")
+            try:
+                browser = await p.chromium.connect_over_cdp(f"http://127.0.0.1:{port}")
+                context = browser.contexts[0] if browser.contexts else browser.new_context()
+                page = context.pages[0] if context.pages else context.new_page()
+                print(f"[INFO] Berhasil tersambung ke browser via CDP di port {port}.")
+                break
+            except Exception as e:
+                print(f"[WARNING] Gagal connect_over_cdp di port {port}: {e}.")
+                browser = None
 
     async def try_launch_persistent():
         return await p.chromium.launch_persistent_context(
@@ -314,23 +317,9 @@ async def generate_report():
                 
             datatable_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
 
-            # Fetch PROVINCE TOTAL
-            payload_prov = {
-                "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
-                "assignmentExtraParam": {
-                    "region1Id": survey_cfg["prov_id"],
-                    "surveyPeriodId": period_id,
-                    "assignmentErrorStatusType": -1
-                }
-            }
-            res_prov = await fetch_api_safely(datatable_url, payload_prov, xsrf_token)
-            prov_total = 0
-            if res_prov and "searchAggregation" in res_prov:
-                prov_total = sum(i["docCount"] for i in res_prov["searchAggregation"])
-            output_data[f"{survey_key}_prov_total"] = prov_total
+            # We will calculate province total by summing the kabupaten targets below to avoid timeouts.
 
             for kab in survey_cfg["kabs"]:
-
                 payload = {
                     "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
                     "assignmentExtraParam": {
@@ -341,14 +330,33 @@ async def generate_report():
                         "filterTargetType": ""
                     }
                 }
-                res = await fetch_api_safely(datatable_url, payload, xsrf_token)
+                payload_nontarget = {
+                    "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
+                    "assignmentExtraParam": {
+                        "region1Id": survey_cfg["prov_id"],
+                        "region2Id": kab["id"],
+                        "surveyPeriodId": period_id,
+                        "assignmentErrorStatusType": -1,
+                        "filterTargetType": "non-target"
+                    }
+                }
+                
+                res, res_nontarget = await asyncio.gather(
+                    fetch_api_safely(datatable_url, payload, xsrf_token),
+                    fetch_api_safely(datatable_url, payload_nontarget, xsrf_token)
+                )
+                
                 if not res or "error" in res:
                     print(f"  [ERROR] Gagal memproses {kab['name']}: {res.get('error') if res else 'Unknown error'}")
                     continue
                 
+                nontarget_overall = 0
+                if res_nontarget and "totalHit" in res_nontarget:
+                    nontarget_overall = res_nontarget["totalHit"]
+                
                 agg = res.get("searchAggregation", [])
                 
-                total_prelist = 0
+                total_all = 0
                 draft = 0
                 open_count = 0
                 submitted = 0
@@ -358,7 +366,7 @@ async def generate_report():
                 for item in agg:
                     key = item.get("keyAggregation", "")
                     count = item.get("docCount", 0)
-                    total_prelist += count
+                    total_all += count
                     
                     if key == "DRAFT":
                         draft += count
@@ -371,8 +379,10 @@ async def generate_report():
                     elif "APPROVED" in key:
                         approved += count
                 
-                if total_prelist == 0:
-                    total_prelist = res.get("totalHit", 0)
+                if total_all == 0:
+                    total_all = res.get("totalHit", 0)
+                    
+                total_prelist = total_all
                     
                 report_data[kab["name"]]["total_prelist"] = total_prelist
                 report_data[kab["name"]]["total_draft"] = draft
@@ -380,8 +390,14 @@ async def generate_report():
                 report_data[kab["name"]]["total_submitted"] = submitted
                 report_data[kab["name"]]["total_rejected"] = rejected
                 report_data[kab["name"]]["total_approved"] = approved
-                print(f"  {kab['name']}: Prelist={total_prelist}, Draft={draft}, Open={open_count}, Submitted={submitted}")
+                report_data[kab["name"]]["new_usaha_overall"] = nontarget_overall
+                print(f"  {kab['name']}: Prelist={total_prelist}, UsahaBaruOverall={nontarget_overall}, Draft={draft}, Open={open_count}, Submitted={submitted}")
 
+            # Calculate province totals by summing up county/kabupaten totals
+            prov_original_total = sum(report_data[k["name"]]["total_prelist"] for k in survey_cfg["kabs"])
+            prov_new_total = sum(report_data[k["name"]]["new_usaha_overall"] for k in survey_cfg["kabs"])
+            output_data[f"{survey_key}_prov_total"] = prov_original_total
+            output_data[f"{survey_key}_prov_new_total"] = prov_new_total
             # 2. Fetch daily progress details province-wide
             active_statuses = ["SUBMITTED RESPONDENT", "DRAFT", "REJECTED BY Admin Kabupaten"]
             all_records = []
@@ -515,6 +531,7 @@ async def generate_report():
                     "two_days_ago_completed": stats["two_days_ago_completed"],
                     "new_usaha_today": stats["new_usaha_today"],
                     "new_usaha_yesterday": stats["new_usaha_yesterday"],
+                    "new_usaha_overall": stats.get("new_usaha_overall", 0),
                     "new_businesses": stats["new_businesses"]
                 })
             
@@ -528,7 +545,9 @@ async def generate_report():
             "se_umum": output_data["se_umum"],
             "se_ub": output_data["se_ub"],
             "se_umum_prov_total": output_data.get("se_umum_prov_total", 0),
-            "se_ub_prov_total": output_data.get("se_ub_prov_total", 0)
+            "se_ub_prov_total": output_data.get("se_ub_prov_total", 0),
+            "se_umum_prov_new_total": output_data.get("se_umum_prov_new_total", 0),
+            "se_ub_prov_new_total": output_data.get("se_ub_prov_new_total", 0)
         }
         with open("ipas_data.js", "w", encoding="utf-8") as f:
             f.write(f"window.IPAS_DATA = {json.dumps(final_js_obj, ensure_ascii=False, indent=2)};\n")

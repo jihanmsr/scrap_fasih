@@ -80,7 +80,7 @@ def launch_chrome_if_needed():
         return
     
     logging.info(f"Chrome remote debugging port {port} tidak aktif. Mencoba meluncurkan browser...")
-    chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
+    chrome_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
     
     # Hapus lock file jika ada agar Chrome bisa berjalan lancar
     lock_file = os.path.join(USER_DATA_DIR, "SingletonLock")
@@ -117,7 +117,7 @@ def launch_chrome_if_needed():
 def get_authenticated_context(p):
     abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
     os.makedirs(abs_user_data_dir, exist_ok=True)
-    chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
+    chrome_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
     browser = None
     context = None
@@ -424,7 +424,6 @@ def scrape_via_api():
             with open(csv_source, mode="r", encoding="utf-8") as f:
                 reader = csv.reader(f)
                 header = next(reader, None)
-                name_to_records = {}
                 for row in reader:
                     if len(row) >= 8:
                         code = row[0]
@@ -449,19 +448,20 @@ def scrape_via_api():
                             "kab_name": kab_name
                         }
                         
-                        name_key = comp_name.lower().strip()
-                        if name_key not in name_to_records:
-                            name_to_records[name_key] = []
-                        name_to_records[name_key].append(rec)
+                        if code not in existing_companies:
+                            existing_companies[code] = []
                         
-                for name_key, records in name_to_records.items():
-                    if not records: continue
-                    actual_code = records[0]["code"]
-                    for r in records:
-                        r["code"] = actual_code
-                    # Update or add if we have more/newer history entries
-                    if actual_code not in existing_companies or len(records) > len(existing_companies[actual_code]):
-                        existing_companies[actual_code] = records
+                        # Hanya tambahkan jika record ini belum ada di existing_companies[code]
+                        # untuk menghindari penumpukan duplikat saat membaca CSV + Backup CSV
+                        is_duplicate = False
+                        for existing_rec in existing_companies[code]:
+                            if (existing_rec["status"] == status and 
+                                existing_rec["timestamp"] == timestamp and 
+                                existing_rec["order"] == order):
+                                is_duplicate = True
+                                break
+                        if not is_duplicate:
+                            existing_companies[code].append(rec)
                         
             logging.info(f"Berhasil memuat data historis untuk {len(existing_companies)} perusahaan dari {csv_source}.")
         except Exception as e:
@@ -504,50 +504,24 @@ def scrape_via_api():
         # Inisialisasi HTTP session untuk request cepat lewat python requests
         http_session = create_http_session(cookies, xsrf_token)
 
-        # Resolve Kabupaten/Kota UUIDs programmatically without opening the filter UI
-        logging.info("Membaca UUID untuk Kabupaten/Kota secara programmatik dari BPS...")
-        kab_map = {}
-        try:
-            kab_codes = ["7201", "7202", "7203", "7204", "7205", "7206", "7207", "7208", "7209", "7210", "7211", "7212", "7271"]
-            uuid_map = {}
-            for code in kab_codes:
-                url = f"https://fasih-sm.bps.go.id/app/api/region/api/v1/region/custom-by-smallest-code-and-level?groupId=6b0b053f-aa43-4855-ac8f-26857b735c93&smallestLevelFullCode={code}&level=2"
-                try:
-                    res = http_session.get(url, timeout=30)
-                    if res.status_code == 200:
-                        json_data = res.json()
-                        if json_data and json_data.get("success") and json_data.get("data"):
-                            level2 = json_data["data"].get("level1", {}).get("level2")
-                            if level2:
-                                uuid_map[level2["code"]] = { "id": level2["id"], "name": level2["name"] }
-                except Exception as e:
-                    logging.warning(f"Error fetching region UUID {code}: {e}")
-
-            # Map the resolved codes to our local names list
-            kab_names_static = {
-                "01": "[01] BANGGAI KEPULAUAN",
-                "02": "[02] BANGGAI",
-                "03": "[03] MOROWALI",
-                "04": "[04] POSO",
-                "05": "[05] DONGGALA",
-                "06": "[06] TOLI-TOLI",
-                "07": "[07] BUOL",
-                "08": "[08] PARIGI MOUTONG",
-                "09": "[09] TOJO UNA-UNA",
-                "10": "[10] SIGI",
-                "11": "[11] BANGGAI LAUT",
-                "12": "[12] MOROWALI UTARA",
-                "71": "[71] PALU"
-            }
-            for code, name in kab_names_static.items():
-                if code in uuid_map:
-                    kab_map[name] = uuid_map[code]["id"]
-
-            logging.info(f"Berhasil memetakan {len(kab_map)} Kabupaten/Kota ke UUID: {list(kab_map.keys())}")
-        except Exception as e:
-            logging.error(f"Gagal memetakan wilayah secara otomatis: {e}")
-            input("Terjadi kesalahan saat memetakan wilayah. Tekan ENTER untuk keluar...")
-            return
+        # Use static, hardcoded region UUIDs to avoid slow and unreliable BPS API requests
+        logging.info("Menggunakan pemetaan wilayah statis (13 Kabupaten/Kota)...")
+        kab_map = {
+            "[01] BANGGAI KEPULAUAN": "9c9b2d79-9fb1-4ce7-b0f1-6b7bb5511beb",
+            "[02] BANGGAI": "34165dd5-372e-42fa-99c6-0cc19a9b4d0b",
+            "[03] MOROWALI": "48c4e5d0-5525-41a8-a4ba-2cc38cd9c424",
+            "[04] POSO": "e18368ae-d1cd-4d43-a74d-5b9ddac5dd22",
+            "[05] DONGGALA": "c075c4b4-7eb0-4d72-9c16-5103088fb5eb",
+            "[06] TOLI-TOLI": "d3a28bfa-b611-488b-8255-369da5cedbf7",
+            "[07] BUOL": "dfe4c643-3282-40db-a5fd-cb288a4f592d",
+            "[08] PARIGI MOUTONG": "f18109d2-fc8b-4b9c-886a-dc242d21206e",
+            "[09] TOJO UNA-UNA": "4d01eba1-5ae9-4603-82a6-2c831aea9905",
+            "[10] SIGI": "2a240d3a-67ee-45b2-ae78-4b4b3a909a90",
+            "[11] BANGGAI LAUT": "288c5680-f6d5-4783-a946-d5a06f547c02",
+            "[12] MOROWALI UTARA": "a5324f17-7a00-436f-b468-2fc59fcf605d",
+            "[71] PALU": "1acfedb4-276e-44d6-9e45-6d43588536d6"
+        }
+        logging.info(f"Berhasil memetakan {len(kab_map)} Kabupaten/Kota ke UUID.")
 
         # Panggil API Datatable untuk mengambil semua perusahaan dari semua wilayah
         logging.info("Memulai pemanggilan API Datatable untuk seluruh wilayah...")
@@ -722,19 +696,22 @@ def scrape_via_api():
                     # Deteksi apabila BPS merubah ID namun perusahaannya sama
                     for old_code, old_histories in existing_companies.items():
                         if old_histories and old_histories[0]["company_name"].lower().strip() == company_name.lower().strip():
-                            if is_final_history(old_histories):
-                                has_valid_history = True
-                                # Kita gunakan KODE BARU, tapi dengan mempertahankan riwayat lamanya
-                                copied_histories = []
-                                for h in old_histories:
-                                    h_copy = h.copy()
-                                    h_copy["code"] = code
-                                    h_copy["survey_status"] = survey_status
-                                    if "kab_name" not in h_copy or h_copy["kab_name"] == "-":
-                                        h_copy["kab_name"] = kab_name
-                                    copied_histories.append(h_copy)
-                                all_records.extend(copied_histories)
-                                break
+                            # Pastikan kabupaten/kota juga cocok agar tidak tertukar antar cabang di kabupaten berbeda
+                            old_kab = old_histories[0].get("kab_name", "-")
+                            if old_kab == "-" or old_kab == kab_name:
+                                if is_final_history(old_histories):
+                                    has_valid_history = True
+                                    # Kita gunakan KODE BARU, tapi dengan mempertahankan riwayat lamanya
+                                    copied_histories = []
+                                    for h in old_histories:
+                                        h_copy = h.copy()
+                                        h_copy["code"] = code
+                                        h_copy["survey_status"] = survey_status
+                                        if "kab_name" not in h_copy or h_copy["kab_name"] == "-":
+                                            h_copy["kab_name"] = kab_name
+                                        copied_histories.append(h_copy)
+                                    all_records.extend(copied_histories)
+                                    break
               
             
             if has_valid_history:
@@ -947,12 +924,32 @@ def scrape_via_api():
                 except Exception as e:
                     logging.warning(f"Gagal menulis cycle tracking file: {e}")
 
+                # Buat temporary copy untuk ditulis ke disk agar tidak memotong data yang belum diproses
+                write_records = list(all_records)
+                
+                # Masukkan data dari perusahaan yang belum diproses di siklus ini
+                processed_codes = {r["code"] for r in all_records}
+                for remaining_comp in companies_data[idx+1:]:
+                    rem_code = remaining_comp.get("id") or remaining_comp.get("codeIdentity")
+                    if rem_code and rem_code in existing_companies and rem_code not in processed_codes:
+                        write_records.extend(existing_companies[rem_code])
+                
+                # Masukkan data perusahaan historis yang tidak ada di data BPS saat ini
+                seen_company_names_lower = {comp.get("company_name", "").lower().strip() for comp in write_records}
+                seen_codes = {comp.get("code") for comp in write_records}
+                for code_exist, histories in existing_companies.items():
+                    if not histories:
+                        continue
+                    comp_name_exist = histories[0]["company_name"].lower().strip()
+                    if code_exist not in seen_codes and comp_name_exist not in seen_company_names_lower:
+                        write_records.extend(histories)
+
                 for target_path in [OUTPUT_CSV, "backup_" + OUTPUT_CSV]:
                     try:
                         with open(target_path, mode="w", newline="", encoding="utf-8") as csv_file:
                             writer = csv.writer(csv_file)
                             writer.writerow(["Kode Identitas", "Nama Perusahaan", "Status Dokumen", "Email Tujuan", "Status terakhir", "Status History", "Timestamp History", "Urutan History", "Kabupaten/Kota"])
-                            for r in all_records:
+                            for r in write_records:
                                 writer.writerow([
                                     r["code"], r["company_name"], r["survey_status"], r["email"],
                                     r["global_status"], r["status"], r["timestamp"], r["order"],
@@ -964,9 +961,19 @@ def scrape_via_api():
                 logging.info(f"Progress disimpan ke {OUTPUT_CSV} ({idx+1}/{len(companies_data)}).")
                 
                 # Update dashboard lokal secara real-time!
-                save_local_js(all_records)
+                save_local_js(write_records)
                 
             time.sleep(0.1) # Jeda kecil agar ramah server
+
+        # --- TAMBAHAN PENTING: KEMBALIKAN PERUSAHAAN YANG HILANG DARI API ---
+        seen_company_names_lower = {comp.get("company_name", "").lower().strip() for comp in all_records}
+        for code_exist, histories in existing_companies.items():
+            if not histories:
+                continue
+            comp_name_exist = histories[0]["company_name"].lower().strip()
+            # Kembalikan hanya jika Kode DAN Nama Perusahaan belum ada di data baru (mencegah duplikasi)
+            if code_exist not in seen_codes and comp_name_exist not in seen_company_names_lower:
+                all_records.extend(histories)
 
         # Tulis progress ke CSV untuk terakhir kalinya di akhir putaran
         for target_path in [OUTPUT_CSV, "backup_" + OUTPUT_CSV]:
@@ -990,18 +997,6 @@ def scrape_via_api():
                 logging.info("Siklus selesai penuh. Cycle tracking file berhasil dihapus.")
             except Exception as e:
                 logging.warning(f"Gagal menghapus cycle tracking file: {e}")
-
-     # --- TAMBAHAN PENTING: KEMBALIKAN PERUSAHAAN YANG HILANG DARI API ---
-        seen_company_names_lower = {comp.get("company_name", "").lower().strip() for comp in all_records}
-
-        for code_exist, histories in existing_companies.items():
-            if not histories:
-                continue
-            comp_name_exist = histories[0]["company_name"].lower().strip()
-            
-            # Kembalikan hanya jika Kode DAN Nama Perusahaan belum ada di data baru (mencegah duplikasi)
-            if code_exist not in seen_codes and comp_name_exist not in seen_company_names_lower:
-                all_records.extend(histories)
 
         # Simpan HASIL AKHIR (lengkap) ke Supabase dan data.js
         save_realtime_data(all_records)

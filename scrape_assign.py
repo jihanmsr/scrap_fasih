@@ -51,7 +51,7 @@ def launch_chrome_if_needed(port=9222):
         return
     
     print("[INFO] Meluncurkan Chrome browser...")
-    chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
+    chrome_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
     
     lock_file = os.path.join(USER_DATA_DIR, "SingletonLock")
     if os.path.lexists(lock_file):
@@ -146,42 +146,36 @@ except Exception as e:
     print("[ERROR] File region_map_sulteng_full.json tidak ditemukan. Harap jalankan scrape_regions_full.py terlebih dahulu.")
     REGION_MAP_FULL = {}
 
-async def evaluate_fetch_with_retry(context, token, url, payload):
-    for attempt in range(3):
-        page = None
-        for p_page in context.pages:
-            if "fasih-sm.bps.go.id" in p_page.url:
-                page = p_page
-                break
-        if not page:
-            page = context.pages[0] if context.pages else await context.new_page()
+async def evaluate_fetch_with_retry(cookie_dict, token, url, payload, timeout=20.0):
+    import httpx
+    headers = {
+        "Content-Type": "application/json",
+        "X-XSRF-TOKEN": token,
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
 
+    kec_info = payload.get("assignmentExtraParam", {}).get("region3Id", "unknown")
+    print(f"      [DEBUG-API] posting to {url} for kec {kec_info}...")
+
+    for attempt in range(3):
         try:
-            res = await page.evaluate("""
-                async ({url, payload, token}) => {
-                    try {
-                        const r = await fetch(url, {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
-                            body: JSON.stringify(payload)
-                        });
-                        if (!r.ok) return { error: `HTTP ${r.status}` };
-                        return await r.json();
-                    } catch (e) {
-                        return { error: e.toString() };
-                    }
-                }
-            """, {"url": url, "payload": payload, "token": token})
-            return res
+            async with httpx.AsyncClient(timeout=timeout, verify=False) as client:
+                response = await client.post(url, json=payload, headers=headers, cookies=cookie_dict)
+                print(f"      [DEBUG-API] response received for {kec_info} - status {response.status_code}")
+                if response.status_code == 200:
+                    return response.json()
+                else:
+                    print(f"[WARNING] HTTP {response.status_code} during API fetch to {url} (Attempt {attempt+1})")
+                    await asyncio.sleep(2)
         except Exception as e:
-            print(f"[WARNING] evaluate_fetch_with_retry attempt {attempt+1} failed with exception: {e}")
+            print(f"[WARNING] evaluate_fetch_with_retry (httpx) attempt {attempt+1} failed for {kec_info}: {type(e).__name__} - {e}")
             await asyncio.sleep(2)
     return {"error": "Max retries exceeded"}
 
-async def fetch_report(context, token, survey_period_id, region1_id, label):
+async def fetch_report(cookie_dict, token, survey_period_id, region1_id, label):
     print(f"\n[{label}] Menarik rekap RESMI tingkat Kabupaten dari REPORT API...")
     payload = {"surveyPeriodId": survey_period_id, "region1Id": region1_id}
-    res = await evaluate_fetch_with_retry(context, token, REPORT_URL, payload)
+    res = await evaluate_fetch_with_retry(cookie_dict, token, REPORT_URL, payload, timeout=90.0)
 
     if not res or (isinstance(res, dict) and "error" in res):
         print(f"[ERROR] [{label}] Gagal tarik laporan resmi. Detail: {res}")
@@ -212,8 +206,8 @@ async def fetch_report(context, token, survey_period_id, region1_id, label):
         
     return sorted(result, key=lambda x: x["kode_kab"])
 
-async def fetch_sls_by_kecamatan(context, token, survey_period_id, region1_id, kab_region_map, label):
-    print(f"\n[{label}] Menarik rincian per SLS dari DATATABLE API (By Kecamatan)...")
+async def fetch_sls_by_kecamatan(cookie_dict, token, survey_period_id, region1_id, kab_region_map, label):
+    print(f"\n[{label}] Menarik rincian per SLS dari DATATABLE API (By Kecamatan Paralel)...")
     sls_dict = {}
 
     # Inisialisasi semua SLS dari region_map_sulteng_full.json agar terdaftar lengkap
@@ -234,80 +228,133 @@ async def fetch_sls_by_kecamatan(context, token, survey_period_id, region1_id, k
                         "desa_name": desa_name,
                         "kec_name": kec_name,
                         "kab_name": kab_name,
-                        "total": 0, "assigned": 0, "unassigned": 0, "officers": set()
+                        "total": 0, "assigned": 0, "unassigned": 0, "sync_count": 0,
+                        "officers": set(), "officer_usernames": set()
                     }
 
+    kecs_to_query = []
     for kab_code, kab_cfg in kab_region_map.items():
         kab_name = kab_cfg["name"]
         kecamatan_list = REGION_MAP.get(kab_code, {}).get("kecamatan", [])
-        
-        print(f"  -> Memproses Kab. {kab_name} ({len(kecamatan_list)} Kecamatan)")
-
         for kec in kecamatan_list:
-            kec_id = kec["id"]
+            kecs_to_query.append({
+                "kab_id": kab_cfg["id"],
+                "kab_name": kab_name,
+                "kec_id": kec["id"],
+                "kec_name": kec["name"]
+            })
+
+    print(f"  -> Total Kecamatan yang akan di-query: {len(kecs_to_query)}")
+
+    sem = asyncio.Semaphore(3)
+    completed = 0
+
+    async def fetch_one_kec(k):
+        nonlocal completed
+        kec_id = k["kec_id"]
+        kab_id = k["kab_id"]
+        kab_name = k["kab_name"]
+        print(f"      [DEBUG] Starting fetch_one_kec for {k['kec_name']} ({kec_id})")
+        
+        async def do_fetch():
             start = 0
-            length = 1000 # Kita bisa request lebih besar karena sudah di-filter per kecamatan
-            
+            length = 1000
+            kec_records = []
             while True:
                 payload_dt = {
                     "start": start, "length": length, "columns": [{"data": "id"}], "order": [],
                     "search": {"value": "", "regex": False},
                     "assignmentExtraParam": {
                         "region1Id": region1_id, 
-                        "region2Id": kab_cfg["id"],
+                        "region2Id": kab_id,
                         "region3Id": kec_id,
                         "surveyPeriodId": survey_period_id, 
                         "assignmentErrorStatusType": -1, 
                         "filterTargetType": ""
                     }
                 }
-                
-                res_dt = await evaluate_fetch_with_retry(context, token, DATATABLE_URL, payload_dt)
+                for attempt in range(4):
+                    try:
+                        print(f"      [DEBUG] Waiting for semaphore for {k['kec_name']} ({kec_id}), attempt {attempt+1}")
+                        async with sem:
+                            print(f"      [DEBUG] Acquired semaphore for {k['kec_name']} ({kec_id})")
+                            res_dt = await evaluate_fetch_with_retry(cookie_dict, token, DATATABLE_URL, payload_dt)
+                        if res_dt and "searchData" in res_dt:
+                            records = res_dt["searchData"]
+                            if not records:
+                                return kec_records
+                            kec_records.extend(records)
+                            
+                            if len(records) < length:
+                                return kec_records
+                            start += length
+                            if start >= res_dt.get("totalHit", 0):
+                                return kec_records
+                            break
+                        elif res_dt and isinstance(res_dt, dict) and "error" in res_dt:
+                            print(f"      [DEBUG] API error for {k['kec_name']} ({kec_id}): {res_dt}")
+                            await asyncio.sleep(0.5 * (attempt + 1))
+                    except Exception as ex:
+                        print(f"      [DEBUG] Exception inside do_fetch for {k['kec_name']} ({kec_id}): {ex}")
+                        await asyncio.sleep(0.5 * (attempt + 1))
+                else:
+                    break
+            return kec_records
 
-                if not res_dt or "searchData" not in res_dt: break
-                records = res_dt["searchData"]
-                if not records: break
+        res = await do_fetch()
+        completed += 1
+        if completed % 10 == 0 or completed == len(kecs_to_query):
+            print(f"     Progress Kecamatan Datatable API: {completed}/{len(kecs_to_query)} Kecamatan selesai ({completed/len(kecs_to_query)*100:.1f}%)")
+        return res
 
-                # ON-THE-FLY AGGREGATION
-                for comp in records:
-                    region = comp.get("region", {})
-                    lvl2 = region.get("level1", {}).get("level2", {}) or {}
-                    lvl3 = lvl2.get("level3", {}) or {}
-                    lvl4 = lvl3.get("level4", {}) or {}
-                    lvl5 = lvl4.get("level5", {}) or {}
+    tasks = [fetch_one_kec(k) for k in kecs_to_query]
+    results = await asyncio.gather(*tasks)
 
-                    sls_code = lvl5.get("fullCode", "LAINNYA")
-                    if sls_code not in sls_dict:
-                        sls_dict[sls_code] = {
-                            "sls_code": sls_code, 
-                            "sls_name": lvl5.get("name", "LAINNYA"),
-                            "desa_name": lvl4.get("name", "LAINNYA"), 
-                            "kec_name": lvl3.get("name", "LAINNYA"),
-                            "kab_name": kab_name, 
-                            "total": 0, "assigned": 0, "unassigned": 0, "officers": set()
-                        }
+    # Aggregate results in main thread
+    for idx, kec_records in enumerate(results):
+        k = kecs_to_query[idx]
+        kab_name = k["kab_name"]
+        for comp in kec_records:
+            region = comp.get("region", {})
+            lvl2 = region.get("level1", {}).get("level2", {}) or {}
+            lvl3 = lvl2.get("level3", {}) or {}
+            lvl4 = lvl3.get("level4", {}) or {}
+            lvl5 = lvl4.get("level5", {}) or {}
 
-                    sls_dict[sls_code]["total"] += 1
-                    officer = comp.get("currentUserUsername")
-                    if officer:
-                        sls_dict[sls_code]["assigned"] += 1
-                        ofc_name = comp.get("currentUserFullname", "-")
-                        sls_dict[sls_code]["officers"].add(f"{ofc_name} ({officer})" if ofc_name != "-" else officer)
-                    else:
-                        sls_dict[sls_code]["unassigned"] += 1
+            sls_code = lvl5.get("fullCode", "LAINNYA")
+            if sls_code not in sls_dict:
+                sls_dict[sls_code] = {
+                    "sls_code": sls_code, 
+                    "sls_name": lvl5.get("name", "LAINNYA"),
+                    "desa_name": lvl4.get("name", "LAINNYA"), 
+                    "kec_name": lvl3.get("name", "LAINNYA"),
+                    "kab_name": kab_name, 
+                    "total": 0, "assigned": 0, "unassigned": 0, "sync_count": 0,
+                    "officers": set(), "officer_usernames": set()
+                }
 
-                start += length
-                if start >= res_dt.get("totalHit", 0): break
+            sls_dict[sls_code]["total"] += 1
+            
+            # Check if synced (SUBMITTED or APPROVED status)
+            status = comp.get("assignmentStatusAlias", "")
+            if status:
+                status_upper = status.upper()
+                if "SUBMITTED" in status_upper or "APPROVED" in status_upper:
+                    sls_dict[sls_code]["sync_count"] += 1
 
-    # Convert set ke list untuk JSON serialization
-    processed_sls = []
-    for data in sls_dict.values():
-        if data["total"] > 0:
-            data["officers"] = list(data["officers"])
-            processed_sls.append(data)
-        
+            officer = comp.get("currentUserUsername")
+            if officer:
+                sls_dict[sls_code]["assigned"] += 1
+                ofc_name = comp.get("currentUserFullname", "-")
+                sls_dict[sls_code]["officers"].add(f"{ofc_name} ({officer})" if ofc_name != "-" else officer)
+                sls_dict[sls_code]["officer_usernames"].add(officer)
+            else:
+                sls_dict[sls_code]["unassigned"] += 1
+
+    processed_sls = [data for data in sls_dict.values() if data["total"] > 0]
     print(f"     ✅ Berhasil mengenali total {len(processed_sls)} SLS untuk {label}.")
     return processed_sls
+
 
 
 async def fetch_sls_by_report_api(context, token, survey_period_id, region1_id, kab_region_map, label):
@@ -351,7 +398,7 @@ async def fetch_sls_by_report_api(context, token, survey_period_id, region1_id, 
                 
     print(f"  -> Total Desa yang akan di-query: {len(desas_to_query)}")
     
-    sem = asyncio.Semaphore(15)
+    sem = asyncio.Semaphore(3)
     
     async def fetch_one_desa(d):
         payload = {
@@ -451,7 +498,7 @@ async def fetch_sls_by_report_api(context, token, survey_period_id, region1_id, 
     print(f"     ✅ Berhasil menarik total {len(processed_sls)} SLS untuk {label}.")
     return processed_sls
 
-async def fetch_sls_ub_via_datatable(context, token, survey_period_id, region1_id, kab_region_map, label):
+async def fetch_sls_ub_via_datatable(cookie_dict, token, survey_period_id, region1_id, kab_region_map, label):
     print(f"\n[{label}] Menarik rincian per SLS dari DATATABLE API (Provinsi)...")
     sls_dict = {}
 
@@ -470,7 +517,7 @@ async def fetch_sls_ub_via_datatable(context, token, survey_period_id, region1_i
             }
         }
         
-        res_dt = await evaluate_fetch_with_retry(context, token, DATATABLE_URL, payload_dt)
+        res_dt = await evaluate_fetch_with_retry(cookie_dict, token, DATATABLE_URL, payload_dt, timeout=45.0)
 
         if not res_dt or "searchData" not in res_dt: break
         records = res_dt["searchData"]
@@ -496,27 +543,32 @@ async def fetch_sls_ub_via_datatable(context, token, survey_period_id, region1_i
                     "desa_name": lvl4.get("name", "LAINNYA"), 
                     "kec_name": lvl3.get("name", "LAINNYA"),
                     "kab_name": kab_name, 
-                    "total": 0, "assigned": 0, "unassigned": 0, "officers": set()
+                    "total": 0, "assigned": 0, "unassigned": 0, "sync_count": 0,
+                    "officers": set(), "officer_usernames": set()
                 }
 
             sls_dict[sls_code]["total"] += 1
+            
+            # Check if synced (SUBMITTED or APPROVED status)
+            status = comp.get("assignmentStatusAlias", "")
+            if status:
+                status_upper = status.upper()
+                if "SUBMITTED" in status_upper or "APPROVED" in status_upper:
+                    sls_dict[sls_code]["sync_count"] += 1
+
             officer = comp.get("currentUserUsername")
             if officer:
                 sls_dict[sls_code]["assigned"] += 1
                 ofc_name = comp.get("currentUserFullname", "-")
                 sls_dict[sls_code]["officers"].add(f"{ofc_name} ({officer})" if ofc_name != "-" else officer)
+                sls_dict[sls_code]["officer_usernames"].add(officer)
             else:
                 sls_dict[sls_code]["unassigned"] += 1
 
         start += length
         if start >= res_dt.get("totalHit", 0): break
 
-    # Convert set ke list untuk JSON serialization
-    processed_sls = []
-    for data in sls_dict.values():
-        data["officers"] = list(data["officers"])
-        processed_sls.append(data)
-        
+    processed_sls = list(sls_dict.values())
     print(f"     ✅ Berhasil menarik total {len(processed_sls)} SLS untuk {label}.")
     return processed_sls
 
@@ -571,7 +623,7 @@ async def fetch_petugas(context, token, survey_period_id, label):
 async def get_authenticated_context(p):
     abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
     os.makedirs(abs_user_data_dir, exist_ok=True)
-    chrome_path = "/Users/jihanmaisaroh/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
+    chrome_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
     for port in [9223, 9222]:
         if check_port_open(port):
@@ -610,6 +662,34 @@ async def get_authenticated_context(p):
     )
     return browser, context, context.pages[0] if context.pages else await context.new_page()
 
+async def check_session_valid(cookie_dict, token):
+    if not token:
+        return False
+    import httpx
+    url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
+    payload = {
+        "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
+        "assignmentExtraParam": {
+            "region1Id": "a00c8aef-afc4-4d4f-b80d-789a15450ef9",
+            "surveyPeriodId": "37526b20-81c8-42f5-a895-6190137d7394",
+            "assignmentErrorStatusType": -1
+        }
+    }
+    headers = {
+        "Content-Type": "application/json",
+        "X-XSRF-TOKEN": token,
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
+    try:
+        async with httpx.AsyncClient(timeout=10.0, verify=False) as client:
+            response = await client.post(url, json=payload, headers=headers, cookies=cookie_dict)
+            if response.status_code == 200:
+                res_json = response.json()
+                return "searchData" in res_json or "searchAggregation" in res_json
+    except Exception:
+        pass
+    return False
+
 async def scrape_assign():
     if not REGION_MAP: return
 
@@ -627,36 +707,80 @@ async def scrape_assign():
             except: pass
 
         cookies = await context.cookies()
-        token = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), None)
+        cookie_dict = {c["name"]: c["value"] for c in cookies}
+        token_raw = cookie_dict.get("XSRF-TOKEN", "")
         
         first_expired = True
-        while not token:
+        while True:
+            from urllib.parse import unquote
+            token = unquote(token_raw) if token_raw else ""
+            is_valid = await check_session_valid(cookie_dict, token) if token else False
+            if is_valid:
+                break
+                
             if first_expired:
                 print("\n" + "="*70)
-                print("[WARNING] Token FASIH tidak ditemukan atau sesi kadaluarsa.")
+                print("[WARNING] Sesi login FASIH kadaluarsa atau belum login.")
                 print("Silakan login/re-login FASIH di browser Chrome...")
-                print("Script akan mendeteksi token Anda secara otomatis.")
+                print("Script akan mendeteksi login Anda secara otomatis.")
                 print("="*70)
                 first_expired = False
+                
             await asyncio.sleep(15)
             cookies = await context.cookies()
-            token = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), None)
+            cookie_dict = {c["name"]: c["value"] for c in cookies}
+            token_raw = cookie_dict.get("XSRF-TOKEN", "")
 
         from urllib.parse import unquote
-        token = unquote(token)
-        print("[INFO] Token ditemukan! Memulai sinkronisasi...\n")
+        token = unquote(token_raw)
+        print("[INFO] Sesi login terverifikasi! Memulai sinkronisasi...\n")
 
         # 1. Tarik Rekap Cepat Kabupaten (Resmi)
-        processed_data_umum = await fetch_report(context, token, SURVEY_CONFIGS[0]["survey_period_id"], SURVEY_CONFIGS[0]["region1_id"], "SE Umum")
-        processed_data_ub = await fetch_report(context, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], "SE UB")
+        processed_data_umum = await fetch_report(cookie_dict, token, SURVEY_CONFIGS[0]["survey_period_id"], SURVEY_CONFIGS[0]["region1_id"], "SE Umum")
+        processed_data_ub = await fetch_report(cookie_dict, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], "SE UB")
 
         # 2. Tarik Rincian Agregat SLS (By Kecamatan / Desa Report API for Umum, Datatable for UB)
-        processed_sls_umum = await fetch_sls_by_report_api(context, token, SURVEY_CONFIGS[0]["survey_period_id"], SURVEY_CONFIGS[0]["region1_id"], SURVEY_CONFIGS[0]["kab_region_map"], "SE Umum")
-        processed_sls_ub = await fetch_sls_ub_via_datatable(context, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], SURVEY_CONFIGS[1]["kab_region_map"], "SE UB")
+        processed_sls_umum = await fetch_sls_by_kecamatan(cookie_dict, token, SURVEY_CONFIGS[0]["survey_period_id"], SURVEY_CONFIGS[0]["region1_id"], SURVEY_CONFIGS[0]["kab_region_map"], "SE Umum")
+        processed_sls_ub = await fetch_sls_ub_via_datatable(cookie_dict, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], SURVEY_CONFIGS[1]["kab_region_map"], "SE UB")
 
         # 3. Tarik Petugas dan Wilayah Tugasnya
         processed_petugas_umum = await fetch_petugas(context, token, SURVEY_CONFIGS[0]["survey_period_id"], "SE Umum")
         processed_petugas_ub = await fetch_petugas(context, token, SURVEY_CONFIGS[1]["survey_period_id"], "SE UB")
+
+        # Reconstruct regions for officers to fix BPS API 5-item truncation
+        def reconstruct_officer_regions(petugas_list, sls_list):
+            user_sls_map = {}
+            for sls in sls_list:
+                for username in sls.get("officer_usernames", []):
+                    if username not in user_sls_map:
+                        user_sls_map[username] = []
+                    user_sls_map[username].append({
+                        "regionCode": sls["sls_code"] + "00",
+                        "regionName": sls["sls_name"]
+                    })
+            
+            for officer in petugas_list:
+                username = officer.get("username")
+                if username in user_sls_map:
+                    officer["regions"] = user_sls_map[username]
+                    officer["totalRegions"] = len(user_sls_map[username])
+                else:
+                    officer["regions"] = []
+                    officer["totalRegions"] = 0
+
+        reconstruct_officer_regions(processed_petugas_umum, processed_sls_umum)
+        reconstruct_officer_regions(processed_petugas_ub, processed_sls_ub)
+
+        # Convert sets to lists and remove officer_usernames
+        for data in processed_sls_umum:
+            data["officers"] = list(data["officers"])
+            if "officer_usernames" in data:
+                del data["officer_usernames"]
+                
+        for data in processed_sls_ub:
+            data["officers"] = list(data["officers"])
+            if "officer_usernames" in data:
+                del data["officer_usernames"]
 
         # Validasi data kosong sebelum melakukan overwrite
         if not processed_data_umum:
@@ -752,6 +876,7 @@ function filterAssignData(type) {
                             item.get("total"),
                             item.get("assigned"),
                             item.get("unassigned"),
+                            item.get("sync_count", 0),
                             item.get("officers", [])
                         ]
                         for item in sls_list
@@ -862,6 +987,11 @@ function filterAssignData(type) {
         except Exception as e:
             print(f"[ERROR] Exception saat menarik data Superset: {e}")
 
+        if hasattr(context, "_http_client"):
+            try:
+                await context._http_client.aclose()
+            except:
+                pass
         await page.close()
 
 def main():

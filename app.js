@@ -723,9 +723,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'total_prelist')" style="font-family: 'Outfit', sans-serif; text-align: right; vertical-align: middle;">
                     Total Target${getIcon('total_prelist')}
                 </th>
-                <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'new_usaha_today')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
+                <!-- <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'new_usaha_today')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
                     Penambahan${getIcon('new_usaha_today')}
-                </th>
+                </th> -->
             </tr>
             <tr>
                 <th class="sortable" onclick="sortSeTable('${surveyType}', 'total_submitted')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
@@ -804,9 +804,38 @@ document.addEventListener('DOMContentLoaded', () => {
         const twoDaysEl = document.getElementById(`${surveyType}-stat-2days`);
         if(twoDaysEl) twoDaysEl.textContent = formatNum(twoDaysAgo);
 
-        // Kenaikan Persentase
+        // Calculate and set card percentages
         const pctToday = prelist > 0 ? ((today / prelist) * 100).toFixed(2) : '0.00';
         const pctYesterday = prelist > 0 ? ((yesterday / prelist) * 100).toFixed(2) : '0.00';
+        const pctTwoDays = prelist > 0 ? ((twoDaysAgo / prelist) * 100).toFixed(2) : '0.00';
+
+        const todayPctEl = document.getElementById(`${surveyType}-stat-today-pct`);
+        if(todayPctEl) todayPctEl.textContent = `(${pctToday}%)`;
+
+        const yesterdayPctEl = document.getElementById(`${surveyType}-stat-yesterday-pct`);
+        if(yesterdayPctEl) yesterdayPctEl.textContent = `(${pctYesterday}%)`;
+
+        const twoDaysPctEl = document.getElementById(`${surveyType}-stat-2days-pct`);
+        if(twoDaysPctEl) twoDaysPctEl.textContent = `(${pctTwoDays}%)`;
+
+        // Total Selesai card
+        const submittedMainEl = document.getElementById(`${surveyType}-stat-submitted-main`);
+        if(submittedMainEl) submittedMainEl.textContent = formatNum(submitted);
+        const percentMainEl = document.getElementById(`${surveyType}-stat-percentage-main`);
+        if(percentMainEl) percentMainEl.textContent = `(${persentase}%)`;
+
+        // Total Tambahan Usaha card (kumulatif)
+        let newOverall = 0;
+        surveyData.forEach(item => {
+            newOverall += item.new_usaha_overall || 0;
+        });
+        if (ipasDataObj[surveyType + "_prov_new_total"]) {
+            newOverall = ipasDataObj[surveyType + "_prov_new_total"];
+        }
+        const newOverallEl = document.getElementById(`${surveyType}-stat-new-overall`);
+        if(newOverallEl) newOverallEl.textContent = formatNum(newOverall);
+
+        // Kenaikan Persentase
         const kenaikanEl = document.getElementById(`${surveyType}-stat-kenaikan`);
         if (kenaikanEl) {
             kenaikanEl.innerHTML = `<span style="color: var(--color-delivered);">+${pctToday}% hari ini</span> <span style="color: var(--card-border);">|</span> <span style="color: #f59e0b;">+${pctYesterday}% kemarin</span>`;
@@ -949,9 +978,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     </span>
                 </td>
                 <td style="text-align: right; font-family: monospace; font-weight: 500; color: var(--text-secondary);">${formatNum(item.total_prelist)}</td>
-                <td style="text-align: center;">
+                <!-- <td style="text-align: center;">
                     ${penambahanBadge}
-                </td>
+                </td> -->
             `;
             tbody.appendChild(row);
         });
@@ -1770,25 +1799,113 @@ document.addEventListener('DOMContentLoaded', () => {
         window.renderPetugasTable();
     };
 
+    window.togglePetugasRow = function (rowEl, username) {
+        const escapedUser = username.replace(/[^a-zA-Z0-9]/g, '_');
+        const detailRow = document.getElementById(`petugas-detail-${escapedUser}`);
+        if (!detailRow) return;
+
+        if (detailRow.style.display === 'none') {
+            // Hide all other detailed rows
+            document.querySelectorAll('[id^="petugas-detail-"]').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Show this detailed row
+            detailRow.style.display = 'table-row';
+            
+            // Render the SLS list for this officer
+            const tbody = document.getElementById(`petugas-sls-tbody-${escapedUser}`);
+            if (tbody) {
+                const petugasData = window.PETUGAS_DATA || [];
+                const officer = petugasData.find(o => o.username === username);
+                if (officer && officer.regions) {
+                    const slsMap = new Map();
+                    if (window.ASSIGN_SLS_DATA) {
+                        window.ASSIGN_SLS_DATA.forEach(sls => {
+                            if (sls.sls_code) {
+                                slsMap.set(sls.sls_code, sls);
+                            }
+                        });
+                    }
+
+                    let rowsHtml = '';
+                    officer.regions.forEach((reg, idx) => {
+                        const sls14 = reg.regionCode ? reg.regionCode.substring(0, 14) : '';
+                        const slsInfo = slsMap.get(sls14) || {
+                            sls_code: sls14,
+                            sls_name: reg.regionName || '-',
+                            desa_name: '-',
+                            kec_name: '-',
+                            kab_name: '-',
+                            total: 0,
+                            assigned: 0,
+                            unassigned: 0
+                        };
+
+                        const syncCount = slsInfo.sync_count || 0;
+                        const totalTarget = slsInfo.total || 0;
+                        
+                        let syncStatusHtml = '';
+                        if (totalTarget > 0) {
+                            const pct = ((syncCount / totalTarget) * 100).toFixed(2);
+                            if (syncCount === totalTarget) {
+                                syncStatusHtml = `<span style="background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.15rem 0.5rem; border-radius: 0.25rem; font-size: 0.7rem; font-weight: 700;">Synced (${syncCount}/${totalTarget})</span>`;
+                            } else if (syncCount > 0) {
+                                syncStatusHtml = `<span style="background: rgba(245, 158, 11, 0.1); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.2); padding: 0.15rem 0.5rem; border-radius: 0.25rem; font-size: 0.7rem; font-weight: 700;">Partial (${syncCount}/${totalTarget})</span>`;
+                            } else {
+                                syncStatusHtml = `<span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 0.15rem 0.5rem; border-radius: 0.25rem; font-size: 0.7rem; font-weight: 700;">Not Synced (0/${totalTarget})</span>`;
+                            }
+                        } else {
+                            syncStatusHtml = `<span style="color: var(--text-muted); font-size: 0.7rem;">-</span>`;
+                        }
+
+                        rowsHtml += `
+                            <tr style="border-bottom: 1px solid var(--card-border); background: var(--card-bg);">
+                                <td style="padding: 0.5rem; text-align: center; color: var(--text-secondary);">${idx + 1}</td>
+                                <td style="padding: 0.5rem; font-weight: 600; color: var(--text-primary); font-family: monospace;">${slsInfo.sls_code}</td>
+                                <td style="padding: 0.5rem; color: var(--text-primary); font-weight: 500;">${slsInfo.sls_name}</td>
+                                <td style="padding: 0.5rem; color: var(--text-secondary);">${slsInfo.desa_name}</td>
+                                <td style="padding: 0.5rem; color: var(--text-secondary);">${slsInfo.kec_name}</td>
+                                <td style="padding: 0.5rem; color: var(--text-secondary);">${slsInfo.kab_name}</td>
+                                <td style="padding: 0.5rem; text-align: right; font-weight: 600; color: var(--text-primary);">${totalTarget}</td>
+                                <td style="padding: 0.5rem; text-align: center;">${syncStatusHtml}</td>
+                            </tr>
+                        `;
+                    });
+
+                    if (rowsHtml === '') {
+                        tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 1rem; color: var(--text-secondary);">Tidak ada SLS yang ditugaskan.</td></tr>`;
+                    } else {
+                        tbody.innerHTML = rowsHtml;
+                    }
+                } else {
+                    tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 1rem; color: var(--text-secondary);">Gagal memuat rincian SLS petugas.</td></tr>`;
+                }
+            }
+        } else {
+            detailRow.style.display = 'none';
+        }
+    };
+
     function getOfficerSyncStats(regions) {
         let totalSls = regions ? regions.length : 0;
         let syncedSls = 0;
-        const syncData = window.SUPERSET_SYNC_SLS_DATA || [];
         
-        if (!window.syncMapCache) {
-            window.syncMapCache = {};
-            syncData.forEach(d => {
-                if (d.sls_code) {
-                    window.syncMapCache[d.sls_code] = d.sync_count || 0;
+        // Build a lookup map of sync_count from active ASSIGN_SLS_DATA
+        const localSyncMap = {};
+        if (window.ASSIGN_SLS_DATA) {
+            window.ASSIGN_SLS_DATA.forEach(sls => {
+                const code = sls.sls_code || sls.sls_id;
+                if (code) {
+                    localSyncMap[code] = sls.sync_count || 0;
                 }
             });
         }
         
         (regions || []).forEach(r => {
             if (r.regionCode) {
-                // FASIH regionCode is 16 digits, Superset sls_code is 14 digits
                 const sls14 = r.regionCode.substring(0, 14);
-                const count = window.syncMapCache[sls14] || 0;
+                const count = localSyncMap[sls14] || 0;
                 if (count > 0) {
                     syncedSls++;
                 }
@@ -1807,28 +1924,38 @@ document.addEventListener('DOMContentLoaded', () => {
         const syncTextInner = document.getElementById('global-sync-text-inner');
         const syncPercentCenter = document.getElementById('sync-gauge-percent-center');
         
-        if (!window.SUPERSET_SYNC_SLS_DATA || !window.ASSIGN_DATA) return;
-        
-        if (window.SUPERSET_SYNC_SLS_DATA.length === 0) {
-            if (syncTextInner) syncTextInner.textContent = "Data sinkronisasi belum tersedia.";
-            return;
-        }
+        if (!window.ASSIGN_DATA) return;
 
         let totalSynced = 0;
-        const slsTargetMap = {};
+        let hasLocalSyncData = false;
         
         if (window.ASSIGN_SLS_DATA) {
             window.ASSIGN_SLS_DATA.forEach(sls => {
-                const code = sls.sls_code || sls.sls_id;
-                slsTargetMap[code] = sls.total || 0;
+                if (typeof sls.sync_count !== 'undefined') {
+                    totalSynced += (sls.sync_count || 0);
+                    hasLocalSyncData = true;
+                }
             });
         }
 
-        window.SUPERSET_SYNC_SLS_DATA.forEach(d => {
-            if (d.sync_count > 0) {
-                totalSynced += (slsTargetMap[d.sls_code] || 0);
+        if (!hasLocalSyncData) {
+            if (!window.SUPERSET_SYNC_SLS_DATA || window.SUPERSET_SYNC_SLS_DATA.length === 0) {
+                if (syncTextInner) syncTextInner.textContent = "Data sinkronisasi belum tersedia.";
+                return;
             }
-        });
+            const slsTargetMap = {};
+            if (window.ASSIGN_SLS_DATA) {
+                window.ASSIGN_SLS_DATA.forEach(sls => {
+                    const code = sls.sls_code || sls.sls_id;
+                    slsTargetMap[code] = sls.total || 0;
+                });
+            }
+            window.SUPERSET_SYNC_SLS_DATA.forEach(d => {
+                if (d.sync_count > 0) {
+                    totalSynced += (slsTargetMap[d.sls_code] || 0);
+                }
+            });
+        }
 
         // Gunakan jumlah target usaha riil dari data penugasan
         let totalTarget = 0;
@@ -2080,8 +2207,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
             }
 
+            const escapedUser = item.username.replace(/[^a-zA-Z0-9]/g, '_');
             return `
-                <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.2s;">
+                <tr onclick="window.togglePetugasRow(this, '${item.username}')" style="border-bottom: 1px solid var(--card-border); transition: background-color 0.2s; cursor: pointer;">
                     <td style="padding: 1rem; color: var(--text-secondary); text-align: center; font-weight: 500;">${rowNumber}</td>
                     <td style="padding: 1rem;">
                         <div style="display: flex; align-items: center; gap: 0.75rem;">
@@ -2108,6 +2236,35 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td style="padding: 1rem;">
                         <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
                             ${wilHtml}
+                        </div>
+                    </td>
+                </tr>
+                <tr id="petugas-detail-${escapedUser}" style="display: none; background: rgba(0,0,0,0.02); border-bottom: 1px solid var(--card-border);">
+                    <td colspan="6" style="padding: 1.25rem 1.5rem;">
+                        <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 1.25rem; box-shadow: var(--shadow-sm);">
+                            <h5 style="margin-top: 0; margin-bottom: 0.75rem; color: var(--text-primary); font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                                <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="width: 14px; height: 14px; color: var(--primary);"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                                Rincian Wilayah Tugas (SLS) untuk ${item.username}
+                            </h5>
+                            <div style="overflow-x: auto;">
+                                <table style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.8rem;">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid var(--card-border); text-align: left; background: rgba(0,0,0,0.01);">
+                                            <th style="padding: 0.5rem; width: 40px; text-align: center; color: var(--text-secondary);">No</th>
+                                            <th style="padding: 0.5rem; width: 130px; color: var(--text-secondary);">Kode SLS</th>
+                                            <th style="padding: 0.5rem; color: var(--text-secondary);">Nama SLS</th>
+                                            <th style="padding: 0.5rem; color: var(--text-secondary);">Desa / Kelurahan</th>
+                                            <th style="padding: 0.5rem; color: var(--text-secondary);">Kecamatan</th>
+                                            <th style="padding: 0.5rem; color: var(--text-secondary);">Kabupaten</th>
+                                            <th style="padding: 0.5rem; text-align: right; width: 80px; color: var(--text-secondary);">Target HH</th>
+                                            <th style="padding: 0.5rem; text-align: center; width: 120px; color: var(--text-secondary);">Status Sync</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="petugas-sls-tbody-${escapedUser}">
+                                        <tr><td colspan="8" style="text-align: center; padding: 1rem; color: var(--text-secondary);">Memuat rincian SLS...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </td>
                 </tr>
@@ -3266,17 +3423,35 @@ document.addEventListener('DOMContentLoaded', () => {
                     const decompressSls = (list) => {
                         if (!list || !Array.isArray(list)) return [];
                         if (list.length > 0 && !Array.isArray(list[0])) return list; // Already decompressed / old format
-                        return list.map(item => ({
-                            sls_code: item[0],
-                            sls_name: item[1],
-                            desa_name: item[2],
-                            kec_name: item[3],
-                            kab_name: item[4],
-                            total: item[5],
-                            assigned: item[6],
-                            unassigned: item[7],
-                            officers: item[8] || []
-                        }));
+                        return list.map(item => {
+                            if (item.length === 9) {
+                                return {
+                                    sls_code: item[0],
+                                    sls_name: item[1],
+                                    desa_name: item[2],
+                                    kec_name: item[3],
+                                    kab_name: item[4],
+                                    total: item[5],
+                                    assigned: item[6],
+                                    unassigned: item[7],
+                                    sync_count: 0,
+                                    officers: item[8] || []
+                                };
+                            } else {
+                                return {
+                                    sls_code: item[0],
+                                    sls_name: item[1],
+                                    desa_name: item[2],
+                                    kec_name: item[3],
+                                    kab_name: item[4],
+                                    total: item[5],
+                                    assigned: item[6],
+                                    unassigned: item[7],
+                                    sync_count: item[8],
+                                    officers: item[9] || []
+                                };
+                            }
+                        });
                     };
 
                     window.ASSIGN_SLS_DATA_UMUM = decompressSls(assignVal.assign_sls_data_umum);

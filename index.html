@@ -328,19 +328,39 @@
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--color-opened);">
                         <div class="stat-label">Submit Hari Ini</div>
-                        <div class="stat-value" id="se_umum-stat-today">0</div>
+                        <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                            <span id="se_umum-stat-today">0</span>
+                            <span id="se_umum-stat-today-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
+                        </div>
                         <div class="stat-subtext" id="se_umum-new-today-wrapper" style="cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_umum')">
                             <span id="se_umum-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span> usaha baru
                         </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: #f59e0b;">
                         <div class="stat-label">Submit Kemarin</div>
-                        <div class="stat-value" id="se_umum-stat-yesterday">0</div>
+                        <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                            <span id="se_umum-stat-yesterday">0</span>
+                            <span id="se_umum-stat-yesterday-pct" style="font-size: 0.8rem; font-weight: 700; color: #fbbf24;">(0.00%)</span>
+                        </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--color-clicked);">
                         <div class="stat-label">Submit 2 Hari Lalu</div>
-                        <div class="stat-value" id="se_umum-stat-2days">0</div>
+                        <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                            <span id="se_umum-stat-2days">0</span>
+                            <span id="se_umum-stat-2days-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-clicked);">(0.00%)</span>
+                        </div>
                     </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--color-delivered);">
+                        <div class="stat-label">Total Selesai</div>
+                        <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                            <span id="se_umum-stat-submitted-main">0</span>
+                            <span id="se_umum-stat-percentage-main" style="font-size: 0.85rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
+                        </div>
+                    </div>
+                    <!-- <div class="stat-card-compact" style="--stat-color: var(--primary);">
+                        <div class="stat-label">Total Tambahan Usaha</div>
+                        <div class="stat-value" id="se_umum-stat-new-overall">0</div>
+                    </div> -->
                 </div>
 
                 <button class="btn-toggle-detail" id="se_umum-toggle-detail" onclick="toggleStatsDetail('se_umum')">
@@ -427,9 +447,9 @@
                                 <th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini |
                                     Kemarin)</th>
                                 <th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
-                                <th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini
+                                <!-- <th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini
                                     |
-                                    Kemarin)</th>
+                                    Kemarin)</th> -->
                             </tr>
                         </thead>
                         <tbody id="se_umum-table-body">
@@ -446,19 +466,39 @@
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--color-opened);">
                         <div class="stat-label">Submit Hari Ini</div>
-                        <div class="stat-value" id="se_ub-stat-today">0</div>
+                        <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                            <span id="se_ub-stat-today">0</span>
+                            <span id="se_ub-stat-today-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
+                        </div>
                         <div class="stat-subtext" id="se_ub-new-today-wrapper" style="cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_ub')">
                             <span id="se_ub-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span> usaha baru
                         </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: #f59e0b;">
                         <div class="stat-label">Submit Kemarin</div>
-                        <div class="stat-value" id="se_ub-stat-yesterday">0</div>
+                        <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                            <span id="se_ub-stat-yesterday">0</span>
+                            <span id="se_ub-stat-yesterday-pct" style="font-size: 0.8rem; font-weight: 700; color: #fbbf24;">(0.00%)</span>
+                        </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--color-clicked);">
                         <div class="stat-label">Submit 2 Hari Lalu</div>
-                        <div class="stat-value" id="se_ub-stat-2days">0</div>
+                        <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                            <span id="se_ub-stat-2days">0</span>
+                            <span id="se_ub-stat-2days-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-clicked);">(0.00%)</span>
+                        </div>
                     </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--color-delivered);">
+                        <div class="stat-label">Total Selesai</div>
+                        <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                            <span id="se_ub-stat-submitted-main">0</span>
+                            <span id="se_ub-stat-percentage-main" style="font-size: 0.85rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
+                        </div>
+                    </div>
+                    <!-- <div class="stat-card-compact" style="--stat-color: var(--primary);">
+                        <div class="stat-label">Total Tambahan Usaha</div>
+                        <div class="stat-value" id="se_ub-stat-new-overall">0</div>
+                    </div> -->
                 </div>
 
                 <button class="btn-toggle-detail" id="se_ub-toggle-detail" onclick="toggleStatsDetail('se_ub')">
@@ -545,9 +585,9 @@
                                 <th style="font-family: 'Outfit', sans-serif; text-align: center;">Progres (Hari Ini |
                                     Kemarin)</th>
                                 <th style="font-family: 'Outfit', sans-serif; text-align: right;">Last 2 Days</th>
-                                <th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini
+                                <!-- <th style="font-family: 'Outfit', sans-serif; text-align: center;">Penambahan (Hari Ini
                                     |
-                                    Kemarin)</th>
+                                    Kemarin)</th> -->
                             </tr>
                         </thead>
                         <tbody id="se_ub-table-body">

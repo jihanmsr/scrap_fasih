@@ -1,3 +1,9 @@
-2026/06/14-18:18:11.241 361bf1 Reusing MANIFEST /Users/jihanmaisaroh/scrap_fasih/playwright_chrome_profile_email/Default/Local Storage/leveldb/MANIFEST-000001
-2026/06/14-18:18:11.247 361bf1 Recovering log #4
-2026/06/14-18:18:11.248 361bf1 Reusing old log /Users/jihanmaisaroh/scrap_fasih/playwright_chrome_profile_email/Default/Local Storage/leveldb/000004.log 
+2026/06/15-14:28:42.357 167280 Reusing MANIFEST /Users/jihanmaisaroh/scrap_fasih/playwright_chrome_profile_email/Default/Local Storage/leveldb/MANIFEST-000001
+2026/06/15-14:28:42.362 167280 Recovering log #10
+2026/06/15-14:28:42.365 167280 Reusing old log /Users/jihanmaisaroh/scrap_fasih/playwright_chrome_profile_email/Default/Local Storage/leveldb/000010.log 
+2026/06/15-14:30:11.638 1683d3 Level-0 table #14: started
+2026/06/15-14:30:11.648 1683d3 Level-0 table #14: 8376 bytes OK
+2026/06/15-14:30:11.669 1683d3 Delete type=0 #10
+2026/06/15-14:39:19.164 167284 Level-0 table #16: started
+2026/06/15-14:39:19.178 167284 Level-0 table #16: 6961 bytes OK
+2026/06/15-14:39:19.220 167284 Delete type=0 #13
