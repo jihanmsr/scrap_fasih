@@ -86,14 +86,14 @@ async def main():
                 data = res["result"][0].get("data", [])
                 print(f"Retrieved {len(data)} rows.")
                 std_sls = [r for r in data if r.get("level_5_name", "").startswith("[00")]
-                null_std_l5 = sum(1 for r in std_sls if r.get("level_5_full_code") is None)
-                null_std_l4 = sum(1 for r in std_sls if r.get("level_4_full_code") is None)
                 print(f"Standard SLS count: {len(std_sls)}")
-                print(f"Null level_5_full_code: {null_std_l5}")
-                print(f"Null level_4_full_code: {null_std_l4}")
-                if std_sls:
-                    print("Sample standard SLS:")
-                    print(json.dumps(std_sls[:10], indent=2))
+                for lvl in [1, 2, 3, 4, 5]:
+                    null_cnt = sum(1 for r in std_sls if r.get(f"level_{lvl}_full_code") is None)
+                    print(f"Null level_{lvl}_full_code: {null_cnt}")
+                null_l5_rows = [r for r in std_sls if r.get("level_5_full_code") is None]
+                if null_l5_rows:
+                    print("Sample standard SLS with null level_5_full_code:")
+                    print(json.dumps(null_l5_rows[:10], indent=2))
             else:
                 print("Error:", res)
         except Exception as e:

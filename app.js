@@ -1021,6 +1021,65 @@ document.addEventListener('DOMContentLoaded', () => {
             tbody.appendChild(row);
         });
 
+        // Calculate province totals for new businesses if not already summed
+        let newYesterday = 0;
+        let newRumahYesterday = 0;
+        surveyData.forEach(item => {
+            newYesterday += item.new_usaha_yesterday || 0;
+            newRumahYesterday += item.new_rumah_yesterday || 0;
+        });
+
+        // Add PROVINSI SULAWESI TENGAH row
+        const provRow = document.createElement('tr');
+        provRow.style.fontWeight = 'bold';
+        provRow.style.backgroundColor = 'rgba(99, 102, 241, 0.08)';
+        provRow.style.borderTop = '2px solid var(--card-border)';
+        provRow.style.borderBottom = '2px solid var(--card-border)';
+
+        let provPctClass = '';
+        if (persentase >= 80) {
+            provPctClass = 'background-color: rgba(16, 185, 129, 0.2); color: var(--color-delivered); border: 1px solid rgba(16, 185, 129, 0.4);';
+        } else if (persentase >= 50) {
+            provPctClass = 'background-color: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4);';
+        } else {
+            provPctClass = 'background-color: rgba(239, 68, 68, 0.2); color: var(--color-bounced); border: 1px solid rgba(239, 68, 68, 0.4);';
+        }
+
+        const provPenambahanBadge = `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;">
+                <span style="font-weight: 800; color: var(--primary); font-size: 0.95rem;">${formatNum(newOverall)}</span>
+                <span style="font-size: 0.7rem; font-weight: 600; color: var(--text-secondary);">+${newToday} hari ini | +${newYesterday} kmrn</span>
+            </div>`;
+
+        const provPenambahanRumahBadge = `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;">
+                <span style="font-weight: 800; color: #ec4899; font-size: 0.95rem;">${formatNum(newRumahOverall)}</span>
+                <span style="font-size: 0.7rem; font-weight: 600; color: var(--text-secondary);">+${newRumahToday} hari ini | +${newRumahYesterday} kmrn</span>
+            </div>`;
+
+        provRow.innerHTML = `
+            <td style="font-weight: 800; color: var(--text-primary);">[72] PROVINSI SULAWESI TENGAH</td>
+            <td style="text-align: right; font-family: monospace; font-weight: 700; color: #f59e0b;">${formatNum(draft)}</td>
+            <td style="text-align: right; font-family: monospace; font-weight: 700; color: #3b82f6;">${formatNum(openVal)}</td>
+            
+            <td style="text-align: right; font-family: monospace; font-weight: 800; color: var(--color-delivered);">${formatNum(submitted)}</td>
+            <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-opened);">${formatNum(today)}</td>
+            <td style="text-align: right; font-family: monospace; font-weight: 700; color: #f59e0b;">${formatNum(yesterday)}</td>
+            <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-clicked);">${formatNum(twoDaysAgo)}</td>
+            
+            <td style="text-align: center;">
+                <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; ${provPctClass}">
+                    ${persentase}%
+                </span>
+            </td>
+            <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--text-secondary);">${formatNum(prelist)}</td>
+            <td style="text-align: center;">
+                ${provPenambahanBadge}
+            </td>
+            <td style="text-align: center;">
+                ${provPenambahanRumahBadge}
+            </td>
+        `;
+        tbody.appendChild(provRow);
+
         // Render Chart
         if (!window.currentChartType) window.currentChartType = { se_umum: 'bar', se_ub: 'bar' };
 

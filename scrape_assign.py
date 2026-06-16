@@ -996,6 +996,9 @@ function filterAssignData(type) {
                             ],
                             "extras": {"time_grain_sqla": "P1D", "having": "", "where": ""},
                             "columns": [
+                                "level_2_full_code",
+                                "level_3_name",
+                                "level_4_name",
                                 "level_5_full_code",
                                 "level_5_name",
                                 "assign",
@@ -1030,11 +1033,28 @@ function filterAssignData(type) {
                 raw_rows = superset_data["result"][0].get("data", [])
                 print(f"Berhasil menarik {len(raw_rows)} baris data SLS dari Superset.")
                 
-                # Format dan rename keys
+                # Format dan rename keys dengan resolusi SLS code regex
                 result_data = []
                 for item in raw_rows:
+                    sls_code = item.get("level_5_full_code")
+                    if not sls_code:
+                        try:
+                            lvl2 = item.get("level_2_full_code") or ""
+                            lvl3_name = item.get("level_3_name") or ""
+                            lvl4_name = item.get("level_4_name") or ""
+                            lvl5_name = item.get("level_5_name") or ""
+                            
+                            m3 = re.search(r'\[(\d{3})\]', lvl3_name)
+                            m4 = re.search(r'\[(\d{3})\]', lvl4_name)
+                            m5 = re.search(r'\[(\d{4})\]', lvl5_name)
+                            
+                            if len(lvl2) == 4 and m3 and m4 and m5:
+                                sls_code = lvl2 + m3.group(1) + m4.group(1) + m5.group(1)
+                        except Exception:
+                            pass
+
                     result_data.append({
-                        "sls_code": item.get("level_5_full_code"),
+                        "sls_code": sls_code,
                         "sls_name": item.get("level_5_name"),
                         "assign": item.get("assign"),
                         "sync_count": item.get("sync_count_pencacah") or 0
