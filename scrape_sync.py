@@ -5,6 +5,7 @@ import time
 import socket
 import subprocess
 import shutil
+import re
 from datetime import datetime
 from dotenv import load_dotenv
 from playwright.async_api import async_playwright
@@ -70,6 +71,8 @@ async def scrape_sync_data():
             except Exception as e:
                 print(f"[WARNING] Navigasi lambat/timeout: {e}")
         
+        print(f"[INFO] Halaman aktif BPS Dashboard URL: {page.url}")
+        
         # Pantau status login
         for _ in range(5):
             if "login" in page.url.lower():
@@ -106,29 +109,28 @@ async def scrape_sync_data():
         # Panggil API Superset via page.evaluate agar cookie dan session terkirim otomatis oleh browser
         print("Menarik data SLS dari Superset API...")
         
-        # Kita buat query grouping berdasarkan level_5_full_code (kode SLS lengkap)
-        # Jika level_5_full_code tidak ada, Superset akan memberi error. Kita tangani dengan fallback query
         superset_data = await page.evaluate("""
-            async () => {
+            async ({csrfToken}) => {
                 const url = 'https://fasih-dashboard.bps.go.id/api/v1/chart/data';
                 
-                // Coba query dengan level_5_full_code (SLS level)
                 const payload = {
                     "datasource": {"id": 7047, "type": "table"},
                     "force": false,
                     "queries": [{
                         "granularity": null,
-                        "filters": [],
+                        "filters": [
+                            {"col": "level_1_full_code", "op": "==", "val": "72"}
+                        ],
                         "extras": {"time_grain_sqla": "P1D", "having": "", "where": ""},
                         "columns": [
-                            {"expressionType": "SQL", "label": "sls_code", "sqlExpression": "level_5_full_code"},
-                            {"expressionType": "SQL", "label": "sls_name", "sqlExpression": "level_5_name"}
+                            "level_5_full_code",
+                            "level_5_name",
+                            "assign",
+                            "sync_count_pencacah"
                         ],
-                        "metrics": [
-                            {"expressionType": "SQL", "hasCustomLabel": true, "label": "assign", "sqlExpression": "sum(case when assign = 1 THEN 1 ELSE 0 END)"},
-                            {"expressionType": "SQL", "hasCustomLabel": true, "label": "sync_count", "sqlExpression": "SUM(CASE WHEN sync_count_pencacah > 0 AND sync_count_pencacah IS NOT NULL THEN 1 ELSE 0 END)"}
-                        ],
-                        "row_limit": 50000
+                        "metrics": [],
+                        "row_limit": 50000,
+                        "query_mode": "scan"
                     }],
                     "result_format": "json",
                     "result_type": "full"
@@ -137,7 +139,10 @@ async def scrape_sync_data():
                 try {
                     const r = await fetch(url, {
                         method: "POST",
-                        headers: { "Content-Type": "application/json" },
+                        headers: { 
+                            "Content-Type": "application/json",
+                            "X-CSRFToken": csrfToken
+                        },
                         body: JSON.stringify(payload)
                     });
                     if (!r.ok) return { error: `HTTP ${r.status}: ${await r.text()}` };
@@ -146,17 +151,24 @@ async def scrape_sync_data():
                     return { error: e.toString() };
                 }
             }
-        """)
+        """, {"csrfToken": csrf_token})
         
         if "error" in superset_data or not superset_data.get("result"):
             print(f"[ERROR] Gagal menarik data dari Superset: {superset_data.get('error')}")
-            # Coba fallback jika kolom level_5_full_code salah
-            print("Mencoba fallback query dengan mendeteksi skema...")
-            # Kita bisa coba fallback level_2_name untuk memvalidasi
             return
             
-        result_data = superset_data["result"][0].get("data", [])
-        print(f"Berhasil menarik {len(result_data)} baris data SLS dari Superset.")
+        raw_rows = superset_data["result"][0].get("data", [])
+        print(f"Berhasil menarik {len(raw_rows)} baris data SLS dari Superset.")
+        
+        # Format dan rename keys
+        result_data = []
+        for item in raw_rows:
+            result_data.append({
+                "sls_code": item.get("level_5_full_code"),
+                "sls_name": item.get("level_5_name"),
+                "assign": item.get("assign"),
+                "sync_count": item.get("sync_count_pencacah") or 0
+            })
         
         # Simpan data sync per SLS ke local JS dan Supabase
         js_content = f"window.SUPERSET_SYNC_SLS_DATA = {json.dumps(result_data, indent=4, ensure_ascii=False)};\n"

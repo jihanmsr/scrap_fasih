@@ -5,6 +5,7 @@ import time
 import socket
 import subprocess
 import shutil
+import re
 from datetime import datetime
 from dotenv import load_dotenv
 from playwright.async_api import async_playwright
@@ -146,36 +147,52 @@ except Exception as e:
     print("[ERROR] File region_map_sulteng_full.json tidak ditemukan. Harap jalankan scrape_regions_full.py terlebih dahulu.")
     REGION_MAP_FULL = {}
 
-async def evaluate_fetch_with_retry(cookie_dict, token, url, payload, timeout=20.0):
-    import httpx
-    headers = {
-        "Content-Type": "application/json",
-        "X-XSRF-TOKEN": token,
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
-
+async def evaluate_fetch_with_retry(page, token, url, payload, timeout=20.0):
     kec_info = payload.get("assignmentExtraParam", {}).get("region3Id", "unknown")
     print(f"      [DEBUG-API] posting to {url} for kec {kec_info}...")
 
     for attempt in range(3):
         try:
-            async with httpx.AsyncClient(timeout=timeout, verify=False) as client:
-                response = await client.post(url, json=payload, headers=headers, cookies=cookie_dict)
-                print(f"      [DEBUG-API] response received for {kec_info} - status {response.status_code}")
-                if response.status_code == 200:
-                    return response.json()
-                else:
-                    print(f"[WARNING] HTTP {response.status_code} during API fetch to {url} (Attempt {attempt+1})")
-                    await asyncio.sleep(2)
+            res = await page.evaluate("""
+                async ({url, payload, token, timeoutMs}) => {
+                    const controller = new AbortController();
+                    const id = setTimeout(() => controller.abort(), timeoutMs);
+                    try {
+                        const r = await fetch(url, {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                                "X-XSRF-TOKEN": token
+                            },
+                            body: JSON.stringify(payload),
+                            signal: controller.signal
+                        });
+                        clearTimeout(id);
+                        if (!r.ok) return { _error: `HTTP ${r.status}` };
+                        return await r.json();
+                    } catch (e) {
+                        clearTimeout(id);
+                        return { _error: e.toString() };
+                    }
+                }
+            """, {"url": url, "payload": payload, "token": token, "timeoutMs": timeout * 1000})
+
+            if res and isinstance(res, dict) and "_error" in res:
+                print(f"[WARNING] evaluate_fetch_with_retry attempt {attempt+1} failed for {kec_info}: {res['_error']}")
+                await asyncio.sleep(2)
+            elif res:
+                print(f"      [DEBUG-API] response received for {kec_info}")
+                return res
         except Exception as e:
-            print(f"[WARNING] evaluate_fetch_with_retry (httpx) attempt {attempt+1} failed for {kec_info}: {type(e).__name__} - {e}")
+            print(f"[WARNING] evaluate_fetch_with_retry attempt {attempt+1} failed for {kec_info}: {type(e).__name__} - {e}")
             await asyncio.sleep(2)
     return {"error": "Max retries exceeded"}
 
-async def fetch_report(cookie_dict, token, survey_period_id, region1_id, label):
+async def fetch_report(page, token, survey_period_id, region1_id, label):
     print(f"\n[{label}] Menarik rekap RESMI tingkat Kabupaten dari REPORT API...")
     payload = {"surveyPeriodId": survey_period_id, "region1Id": region1_id}
-    res = await evaluate_fetch_with_retry(cookie_dict, token, REPORT_URL, payload, timeout=90.0)
+    res = await evaluate_fetch_with_retry(page, token, REPORT_URL, payload, timeout=90.0)
+
 
     if not res or (isinstance(res, dict) and "error" in res):
         print(f"[ERROR] [{label}] Gagal tarik laporan resmi. Detail: {res}")
@@ -206,7 +223,7 @@ async def fetch_report(cookie_dict, token, survey_period_id, region1_id, label):
         
     return sorted(result, key=lambda x: x["kode_kab"])
 
-async def fetch_sls_by_kecamatan(cookie_dict, token, survey_period_id, region1_id, kab_region_map, label):
+async def fetch_sls_by_kecamatan(page, token, survey_period_id, region1_id, kab_region_map, label):
     print(f"\n[{label}] Menarik rincian per SLS dari DATATABLE API (By Kecamatan Paralel)...")
     sls_dict = {}
 
@@ -278,7 +295,8 @@ async def fetch_sls_by_kecamatan(cookie_dict, token, survey_period_id, region1_i
                         print(f"      [DEBUG] Waiting for semaphore for {k['kec_name']} ({kec_id}), attempt {attempt+1}")
                         async with sem:
                             print(f"      [DEBUG] Acquired semaphore for {k['kec_name']} ({kec_id})")
-                            res_dt = await evaluate_fetch_with_retry(cookie_dict, token, DATATABLE_URL, payload_dt)
+                            res_dt = await evaluate_fetch_with_retry(page, token, DATATABLE_URL, payload_dt)
+                            await asyncio.sleep(1.0)
                         if res_dt and "searchData" in res_dt:
                             records = res_dt["searchData"]
                             if not records:
@@ -498,7 +516,7 @@ async def fetch_sls_by_report_api(context, token, survey_period_id, region1_id, 
     print(f"     ✅ Berhasil menarik total {len(processed_sls)} SLS untuk {label}.")
     return processed_sls
 
-async def fetch_sls_ub_via_datatable(cookie_dict, token, survey_period_id, region1_id, kab_region_map, label):
+async def fetch_sls_ub_via_datatable(page, token, survey_period_id, region1_id, kab_region_map, label):
     print(f"\n[{label}] Menarik rincian per SLS dari DATATABLE API (Provinsi)...")
     sls_dict = {}
 
@@ -517,7 +535,7 @@ async def fetch_sls_ub_via_datatable(cookie_dict, token, survey_period_id, regio
             }
         }
         
-        res_dt = await evaluate_fetch_with_retry(cookie_dict, token, DATATABLE_URL, payload_dt, timeout=45.0)
+        res_dt = await evaluate_fetch_with_retry(page, token, DATATABLE_URL, payload_dt, timeout=45.0)
 
         if not res_dt or "searchData" not in res_dt: break
         records = res_dt["searchData"]
@@ -662,10 +680,10 @@ async def get_authenticated_context(p):
     )
     return browser, context, context.pages[0] if context.pages else await context.new_page()
 
-async def check_session_valid(cookie_dict, token):
+async def check_session_valid(page, token):
     if not token:
+        print("[DEBUG] check_session_valid: Token is empty")
         return False
-    import httpx
     url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
     payload = {
         "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
@@ -675,19 +693,35 @@ async def check_session_valid(cookie_dict, token):
             "assignmentErrorStatusType": -1
         }
     }
-    headers = {
-        "Content-Type": "application/json",
-        "X-XSRF-TOKEN": token,
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
     try:
-        async with httpx.AsyncClient(timeout=10.0, verify=False) as client:
-            response = await client.post(url, json=payload, headers=headers, cookies=cookie_dict)
-            if response.status_code == 200:
-                res_json = response.json()
-                return "searchData" in res_json or "searchAggregation" in res_json
-    except Exception:
-        pass
+        res = await page.evaluate("""
+            async ({url, payload, token}) => {
+                const controller = new AbortController();
+                const id = setTimeout(() => controller.abort(), 45000);
+                try {
+                    const r = await fetch(url, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+                        body: JSON.stringify(payload),
+                        signal: controller.signal
+                    });
+                    clearTimeout(id);
+                    if (!r.ok) return { _error: `HTTP ${r.status}` };
+                    return await r.json();
+                } catch (e) {
+                    clearTimeout(id);
+                    return { _error: e.toString() };
+                }
+            }
+        """, {"url": url, "payload": payload, "token": token})
+        
+        if res and isinstance(res, dict):
+            if "_error" in res:
+                print(f"[DEBUG] check_session_valid failed: {res['_error']}")
+                return False
+            return "searchData" in res or "searchAggregation" in res
+    except Exception as e:
+        print(f"[DEBUG] check_session_valid exception: {e}")
     return False
 
 async def scrape_assign():
@@ -695,27 +729,30 @@ async def scrape_assign():
 
     launch_chrome_if_needed()
     async with async_playwright() as p:
-        browser, context, page = await get_authenticated_context(p)
+        browser, context, _ = await get_authenticated_context(p)
+        page = await context.new_page()
+        print(f"[DEBUG] Opened new page/tab for scrape_assign: {page}")
         
-        for p_page in context.pages:
-            if "fasih-sm.bps.go.id" in p_page.url:
-                page = p_page
-                break
-                
-        if page.url == "about:blank":
-            try: await page.goto("https://fasih-sm.bps.go.id/app/dashboard", timeout=60000, wait_until="domcontentloaded")
-            except: pass
+        print(f"[DEBUG] Navigating new page to https://fasih-sm.bps.go.id/app/dashboard")
+        try:
+            await page.goto("https://fasih-sm.bps.go.id/app/dashboard", timeout=60000, wait_until="domcontentloaded")
+            print(f"[DEBUG] Page navigated. page.url: {page.url}")
+        except Exception as e:
+            print(f"[DEBUG] Navigation failed: {e}")
 
         cookies = await context.cookies()
         cookie_dict = {c["name"]: c["value"] for c in cookies}
+        print(f"[DEBUG] Available cookies: {list(cookie_dict.keys())}")
         token_raw = cookie_dict.get("XSRF-TOKEN", "")
         
         first_expired = True
         while True:
             from urllib.parse import unquote
             token = unquote(token_raw) if token_raw else ""
-            is_valid = await check_session_valid(cookie_dict, token) if token else False
+            print(f"[DEBUG] Checking session validity with token length {len(token)}")
+            is_valid = await check_session_valid(page, token) if token else False
             if is_valid:
+                print("[DEBUG] Session is VALID!")
                 break
                 
             if first_expired:
@@ -736,12 +773,12 @@ async def scrape_assign():
         print("[INFO] Sesi login terverifikasi! Memulai sinkronisasi...\n")
 
         # 1. Tarik Rekap Cepat Kabupaten (Resmi)
-        processed_data_umum = await fetch_report(cookie_dict, token, SURVEY_CONFIGS[0]["survey_period_id"], SURVEY_CONFIGS[0]["region1_id"], "SE Umum")
-        processed_data_ub = await fetch_report(cookie_dict, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], "SE UB")
+        processed_data_umum = await fetch_report(page, token, SURVEY_CONFIGS[0]["survey_period_id"], SURVEY_CONFIGS[0]["region1_id"], "SE Umum")
+        processed_data_ub = await fetch_report(page, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], "SE UB")
 
         # 2. Tarik Rincian Agregat SLS (By Kecamatan / Desa Report API for Umum, Datatable for UB)
-        processed_sls_umum = await fetch_sls_by_kecamatan(cookie_dict, token, SURVEY_CONFIGS[0]["survey_period_id"], SURVEY_CONFIGS[0]["region1_id"], SURVEY_CONFIGS[0]["kab_region_map"], "SE Umum")
-        processed_sls_ub = await fetch_sls_ub_via_datatable(cookie_dict, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], SURVEY_CONFIGS[1]["kab_region_map"], "SE UB")
+        processed_sls_umum = await fetch_sls_by_kecamatan(page, token, SURVEY_CONFIGS[0]["survey_period_id"], SURVEY_CONFIGS[0]["region1_id"], SURVEY_CONFIGS[0]["kab_region_map"], "SE Umum")
+        processed_sls_ub = await fetch_sls_ub_via_datatable(page, token, SURVEY_CONFIGS[1]["survey_period_id"], SURVEY_CONFIGS[1]["region1_id"], SURVEY_CONFIGS[1]["kab_region_map"], "SE UB")
 
         # 3. Tarik Petugas dan Wilayah Tugasnya
         processed_petugas_umum = await fetch_petugas(context, token, SURVEY_CONFIGS[0]["survey_period_id"], "SE Umum")
@@ -924,25 +961,49 @@ function filterAssignData(type) {
                 else:
                     break
                     
+            # Ambil CSRF token dari html head/meta atau window
+            dash_csrf_token = await dash_page.evaluate("""() => {
+                const el = document.querySelector('input[name="csrf_token"]');
+                if (el) return el.value;
+                // Fallback cari di bootstrap data
+                const bootstrapEl = document.getElementById('app');
+                if (bootstrapEl) {
+                    const data = bootstrapEl.getAttribute('data-bootstrap');
+                    if (data) {
+                        try {
+                            const parsed = JSON.parse(data);
+                            return parsed.csrf_token;
+                        } catch(e) {}
+                    }
+                }
+                return '';
+            }""")
+            
+            if not dash_csrf_token:
+                cookies_list = await context.cookies()
+                dash_csrf_token = next((c["value"] for c in cookies_list if c["name"] == "referrer" or c["name"] == "session"), "")
+
             superset_data = await dash_page.evaluate("""
-                async () => {
+                async ({csrfToken}) => {
                     const url = 'https://fasih-dashboard.bps.go.id/api/v1/chart/data';
                     const payload = {
                         "datasource": {"id": 7047, "type": "table"},
                         "force": false,
                         "queries": [{
                             "granularity": null,
-                            "filters": [],
+                            "filters": [
+                                {"col": "level_1_full_code", "op": "==", "val": "72"}
+                            ],
                             "extras": {"time_grain_sqla": "P1D", "having": "", "where": ""},
                             "columns": [
-                                {"expressionType": "SQL", "label": "sls_code", "sqlExpression": "level_5_full_code"},
-                                {"expressionType": "SQL", "label": "sls_name", "sqlExpression": "level_5_name"}
+                                "level_5_full_code",
+                                "level_5_name",
+                                "assign",
+                                "sync_count_pencacah"
                             ],
-                            "metrics": [
-                                {"expressionType": "SQL", "hasCustomLabel": true, "label": "assign", "sqlExpression": "sum(case when assign = 1 THEN 1 ELSE 0 END)"},
-                                {"expressionType": "SQL", "hasCustomLabel": true, "label": "sync_count", "sqlExpression": "SUM(CASE WHEN sync_count_pencacah > 0 AND sync_count_pencacah IS NOT NULL THEN 1 ELSE 0 END)"}
-                            ],
-                            "row_limit": 50000
+                            "metrics": [],
+                            "row_limit": 50000,
+                            "query_mode": "scan"
                         }],
                         "result_format": "json",
                         "result_type": "full"
@@ -951,7 +1012,10 @@ function filterAssignData(type) {
                     try {
                         const r = await fetch(url, {
                             method: "POST",
-                            headers: { "Content-Type": "application/json" },
+                            headers: { 
+                                "Content-Type": "application/json",
+                                "X-CSRFToken": csrfToken
+                            },
                             body: JSON.stringify(payload)
                         });
                         if (!r.ok) return { error: `HTTP ${r.status}: ${await r.text()}` };
@@ -960,11 +1024,21 @@ function filterAssignData(type) {
                         return { error: e.toString() };
                     }
                 }
-            """)
+            """, {"csrfToken": dash_csrf_token})
             
             if "error" not in superset_data and superset_data.get("result"):
-                result_data = superset_data["result"][0].get("data", [])
-                print(f"Berhasil menarik {len(result_data)} baris data SLS dari Superset.")
+                raw_rows = superset_data["result"][0].get("data", [])
+                print(f"Berhasil menarik {len(raw_rows)} baris data SLS dari Superset.")
+                
+                # Format dan rename keys
+                result_data = []
+                for item in raw_rows:
+                    result_data.append({
+                        "sls_code": item.get("level_5_full_code"),
+                        "sls_name": item.get("level_5_name"),
+                        "assign": item.get("assign"),
+                        "sync_count": item.get("sync_count_pencacah") or 0
+                    })
                 
                 js_content_sync = f"window.SUPERSET_SYNC_SLS_DATA = {json.dumps(result_data, indent=4, ensure_ascii=False)};\n"
                 with open("sync_data.js", "w", encoding="utf-8") as f:

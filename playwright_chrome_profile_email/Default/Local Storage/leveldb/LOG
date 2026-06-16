@@ -1,9 +1,36 @@
-2026/06/15-14:28:42.357 167280 Reusing MANIFEST /Users/jihanmaisaroh/scrap_fasih/playwright_chrome_profile_email/Default/Local Storage/leveldb/MANIFEST-000001
-2026/06/15-14:28:42.362 167280 Recovering log #10
-2026/06/15-14:28:42.365 167280 Reusing old log /Users/jihanmaisaroh/scrap_fasih/playwright_chrome_profile_email/Default/Local Storage/leveldb/000010.log 
-2026/06/15-14:30:11.638 1683d3 Level-0 table #14: started
-2026/06/15-14:30:11.648 1683d3 Level-0 table #14: 8376 bytes OK
-2026/06/15-14:30:11.669 1683d3 Delete type=0 #10
-2026/06/15-14:39:19.164 167284 Level-0 table #16: started
-2026/06/15-14:39:19.178 167284 Level-0 table #16: 6961 bytes OK
-2026/06/15-14:39:19.220 167284 Delete type=0 #13
+2026/06/17-05:47:08.649 b1c9 Reusing MANIFEST /Users/jihanmaisaroh/scrap_fasih/playwright_chrome_profile_email/Default/Local Storage/leveldb/MANIFEST-000001
+2026/06/17-05:47:08.654 b1c9 Recovering log #15
+2026/06/17-05:47:08.654 b1c9 Reusing old log /Users/jihanmaisaroh/scrap_fasih/playwright_chrome_profile_email/Default/Local Storage/leveldb/000015.log 
+2026/06/17-06:19:05.867 b1cc Level-0 table #19: started
+2026/06/17-06:19:05.872 b1cc Level-0 table #19: 7935 bytes OK
+2026/06/17-06:19:05.881 b1cc Delete type=0 #15
+2026/06/17-06:19:05.884 b1cc Compacting 4@0 + 1@1 files
+2026/06/17-06:19:05.890 b1cc Generated table #20@0: 8 keys, 2741 bytes
+2026/06/17-06:19:05.890 b1cc Compacted 4@0 + 1@1 files => 2741 bytes
+2026/06/17-06:19:05.891 b1cc compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/06/17-06:19:05.892 b1cc Delete type=2 #14
+2026/06/17-06:19:05.892 b1cc Delete type=2 #16
+2026/06/17-06:19:05.892 b1cc Delete type=2 #11
+2026/06/17-06:19:05.892 b1cc Delete type=2 #8
+2026/06/17-06:19:05.892 b1cc Delete type=2 #19
+2026/06/17-07:03:43.716 b1cc Level-0 table #22: started
+2026/06/17-07:03:43.822 b1cc Level-0 table #22: 9554 bytes OK
+2026/06/17-07:03:43.904 b1cc Delete type=0 #18
+2026/06/17-07:03:57.256 b1cc Level-0 table #24: started
+2026/06/17-07:03:57.267 b1cc Level-0 table #24: 6404 bytes OK
+2026/06/17-07:03:57.273 b1cc Delete type=0 #21
+2026/06/17-07:04:20.505 b1cc Level-0 table #26: started
+2026/06/17-07:04:20.532 b1cc Level-0 table #26: 6644 bytes OK
+2026/06/17-07:04:20.574 b1cc Delete type=0 #23
+2026/06/17-07:05:51.664 b1cc Level-0 table #28: started
+2026/06/17-07:05:51.680 b1cc Level-0 table #28: 6872 bytes OK
+2026/06/17-07:05:51.692 b1cc Delete type=0 #25
+2026/06/17-07:05:51.696 b1c9 Compacting 4@0 + 1@1 files
+2026/06/17-07:05:51.699 b1c9 Generated table #29@0: 8 keys, 3595 bytes
+2026/06/17-07:05:51.699 b1c9 Compacted 4@0 + 1@1 files => 3595 bytes
+2026/06/17-07:05:51.700 b1c9 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/06/17-07:05:51.701 b1c9 Delete type=2 #28
+2026/06/17-07:05:51.701 b1c9 Delete type=2 #20
+2026/06/17-07:05:51.701 b1c9 Delete type=2 #22
+2026/06/17-07:05:51.701 b1c9 Delete type=2 #26
+2026/06/17-07:05:51.701 b1c9 Delete type=2 #24

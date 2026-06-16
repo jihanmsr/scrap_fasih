@@ -1,1490 +1,2047 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-15T15:00:43.023403+08:00",
+  "updated_at": "2026-06-17T07:35:17.383014+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
-      "total_prelist": 43851,
-      "total_draft": 193,
-      "total_open": 43537,
-      "total_submitted": 121,
-      "total_rejected": 0,
-      "total_approved": 0,
-      "persentase": 0.28,
-      "today_completed": 3,
-      "yesterday_completed": 45,
-      "two_days_ago_completed": 3,
-      "new_usaha_today": 7,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "total_prelist": 44074,
+      "total_draft": 586,
+      "total_open": 42961,
+      "total_submitted": 620,
+      "total_rejected": 42,
+      "total_approved": 51,
+      "persentase": 1.41,
+      "today_completed": 0,
+      "yesterday_completed": 2,
+      "two_days_ago_completed": 4,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 19,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 90,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "BANGUNAN KOSONG, RUMAH BARU ",
-          "code": "7201042004000100 - BANGUNAN KOSONG, RUMAH BARU  - 4 / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "AGUSTAN SAKULAT / ESTRIN TOTUONGO",
+          "code": "7201062010000300 - AGUSTAN SAKULAT / ESTRIN TOTUONGO - 1 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "IRENE MITAK / DEULIN MARCELLA CAHYAHMI",
+          "code": "7201030009000400 - IRENE MITAK /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MOH. ALFAJRIN SAIDI / SISKA PAWATA",
+          "code": "7201042002000100 - MOH. ALFAJRIN SAIDI / SISKA PAWATA - 3 /  - 3 - 4910748,15716562",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ABOO R. PILOK / ",
+          "code": "7201060004000200 - PDT. ABOO /  - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "SAPRIN TUOL / MEDIA BISALAE",
+          "code": "7201070008000300 - SAPRIN TUOL / MEDIA BISALAE - 3 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "APRIANUS KANTOLI / YESMIN YANGGOLO",
+          "code": "7201040012000100 - APRIANUS KANTOLI / YESMIN YANGGOLO - 1 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MOH. RIVALDY LADANI / RAFIKA S. KUNAK",
+          "code": "7201040016000100 - MOH. RIVALDY LADANI / RAFIKA S. KUNAK - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MUHIDIN JAMAN / RUHIYA BULANSE",
+          "code": "7201050019000100 - MUHIDIN JAMAN / RUHIYA BULANSE - 6 /  - 2",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "SUPRIANTO  / BINTANG ",
+          "code": "7201050019000100 - SUPRIANTO  / BINTANG  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "FITRIYANTI AMIR / KHEYLA PUTRYANTI AMIR",
+          "code": "7201041007000100 - FITRIYANTI AMIR / KHEYLA PUTRYANTI AMIR - 10 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "RM MAKAN DUA PANGERAN",
+          "code": "7201070015000300 - RM MAKAN DUA PANGERAN - 1 /  - watikitae04@gmail.com - 1 - 94881 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "DELING DELA / HENDRIKA SUHARDI",
+          "code": "7201031005001300 - DELING DELA / HENDRIKA SUHARDI - 5 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ASTUTI / TIDAK ADA",
+          "code": "7201040016000100 - ASTUTI / TIDAK ADA - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "IRSAN BAKALINGA / FITRIA S. MONGKISOI",
+          "code": "7201040020001200 - IRSAN BAKALINGA / FITRIA S. MONGKISOI - 4 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "KANTIN (RATI)",
+          "code": "7201040015000500 - KANTIN (RATI) - 29 /  - 1 - 1. Ya",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
           "name": "RUMAH KOSONG",
           "code": "7201060012000500 - RUMAH KOSONG - 2 /  - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ROSDI RAMLAN BELUNG / ",
-          "code": "7201041007000100 - ROSDI RAMLAN BELUNG /  - 1 /  - 0 - 94885 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RUSDIN / NUR HASANA",
+          "code": "7201042002000100 - RUSDIN / NUR HASANA - 8 /  - 2",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ARMAL / ",
-          "code": "7201031005003000 - ARMAL /  - 1 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "SOFYAN ONDEH / ",
+          "code": "7201040015001200 - SOFYAN ONDEH /  - 4 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "HASDI YABUBA / ZULHAMZAH YABUBA",
-          "code": "7201070014000300 - HASDI YABUBA / ZULHAMZAH YABUBA - 1 /  - 1 - 94781 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": " / ",
-          "code": "7201040012000900 -  /  - - /  - 0 - 94885 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "JUMANTO PAKANGGI / CHARLIENCI MILLUI",
-          "code": "7201040020000500 - JUMANTO PAKANGGI / CHARLIENCI MILLUI - 2 /  - 1 - 94785 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "PADLY LALU / AGNES LIDANO",
+          "code": "7201031007000100 - PADLY LALU / AGNES LIDANO - 5 /  - 2",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[02] BANGGAI",
-      "total_prelist": 138174,
-      "total_draft": 80,
-      "total_open": 137987,
-      "total_submitted": 106,
-      "total_rejected": 1,
-      "total_approved": 0,
-      "persentase": 0.08,
-      "today_completed": 2,
-      "yesterday_completed": 0,
-      "two_days_ago_completed": 0,
-      "new_usaha_today": 26,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "total_prelist": 139058,
+      "total_draft": 650,
+      "total_open": 136332,
+      "total_submitted": 2128,
+      "total_rejected": 57,
+      "total_approved": 200,
+      "persentase": 1.53,
+      "today_completed": 0,
+      "yesterday_completed": 2,
+      "two_days_ago_completed": 2,
+      "new_usaha_today": 3,
+      "new_usaha_yesterday": 39,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 213,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "NUR AFNY TAMALANDE / ",
-          "code": "7202031018000100 - NUR AFNY TAMALANDE /  - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "GUDANG DAMAR",
+          "code": "7202052001000401 - GUDANG DAMAR - 7 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "CHARTER ZAITUN  / NENGAH SURIYANI",
-          "code": "7202051005000400 - CHARTER ZAITUN  / NENGAH SURIYANI - 1 /  - 2 - 94723 - 2. Tidak",
+          "name": "RAHMAN HASAN / ",
+          "code": "7202050026000201 - RAHMAN HASAN /  - - /  - 0",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "KASMAT DINA / ",
-          "code": "7202081005000100 - KASMAT DINA /  - - /  - 0",
+          "name": "ARIANTO NENTO / SARINI LAPAPANG",
+          "code": "7202071001000100 - ARIANTO NENTO / SARINI LAPAPANG - 6 /  - 0",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "YUSTIN DJIHANGAH / NOBON SAADIN",
-          "code": "7202030034000100 - YUSTIN DJIHANGAH / NOBON SAADIN - 1 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MUIN / MAHREP",
+          "code": "7202061020000100 - MUIN / MAHREP - 1 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "YUSTIN DJIHANGAH / NOBON SAADIN",
-          "code": "7202030034000100 - YUSTIN DJIHANGAH / NOBON SAADIN - 1 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ARWIN SAOSANG / ZULHIJAH LAAPO",
+          "code": "7202050026000201 - ARWIN SAOSANG / ZULHIJAH LAAPO - - /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BURHANUDIN / MARHANI",
-          "code": "7202052001000401 - BURHANUDIN / MARHANI - 2 /  - 2",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "JUALAN NASI BUNGKUS ",
+          "code": "7202053002001100 -  /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "RATNO / ANDRIANI LATIF, BAIM PUTRA PRATAMA RATNO, DWI ABRISAM PUTRA RATNO, RAFKA PRADIPTA RATNO",
-          "code": "7202020019000800 - RATNO / ANDRIANI LATIF, BAIM PUTRA PRATAMA RATNO, DWI ABRISAM PUTRA RATNO, RAFKA PRADIPTA RATNO - 5 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "IRWAN S MOITO  / ",
+          "code": "7202053002001100 -  /  - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "RACHMAD HASIIL / ",
-          "code": "7202053006000700 - RACHMAD HASIIL /  - - /  - 0 - 94717 - 2. Tidak",
+          "name": "MUHAMAD SANUSI / SURYANI",
+          "code": "7202031005000100 - MUHAMAD SANUSI / SURYANI - 9 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ADEN RASAD / TIDAK ADA ",
+          "code": "7202050008000100 - ADEN RASAD / TIDAK ADA  - 13 /  - 0",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MARIA LABOBOTU / MICHA JHONATHAN SIDUN",
+          "code": "7202081005000100 - MARIA LABOBOTU / MICHA JHONATHAN SIDUN - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "RUKIYAH  / RUKIYAH ",
+          "code": "7202032004000600 -  /  - - /  - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "YEBTA MAISE / NURNA NINGSI",
+          "code": "7202040001000100 - YEBTA MAISE / NURNA NINGSI - - /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "HERNIMUS M / CORLINA ELISABET LEDDER",
+          "code": "7202040010000100 - HERLINUS /  - 8 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "DANI KHOIRIL / ",
+          "code": "7202053009000300 - DANI KHOIRIL /  - 4 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ECE YUNIANTI  / ",
+          "code": "7202053002001100 - ECE YUNIANTI  /  - 1 /  - 0 - 94711 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "BASIR TOIPAN / SITI AISYAH ",
+          "code": "7202050025000800 - BASIR TOIPAN / SITI AISYAH  - 3 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "LUWUK VAPE STORE ",
+          "code": "7202050009000500 - LUWUK VAPE STORE  - 5 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "WAWAN / ",
+          "code": "7202032001000500 - WAWAN /  - 7 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "SOL SEPATU KASINO",
+          "code": "7202053003000705 - SOL SEPATU KASINO - 4 /  - 0 - 17461100",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "RASID HASAN / YATI BAJO",
+          "code": "7202031002000100 - RASID / YATI BAJO - 1 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "I WAYAN GANGGA YUDHA P / NI PUTU YULI SUMARNI",
+          "code": "7202031013000400 - I WAYAN GANGGA YUDHA P / NI PUTU YULI SUMARNI - 14 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MASKANAH / ",
+          "code": "7202010024000400 - MASKANAH /  - 6 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "-",
+          "code": "7202012011000300 - 12 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "RAHMAN APOLOLO / SUMARTIN A PAULA",
+          "code": "7202051004000100 - RAHMAN APOLOLO / SUMARTIN A PAULA - 5 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "I MADE TRIANE / NI MADE JINIK",
+          "code": "7202031013000400 - I MADE TRIANE / NI MADE JINIK - 14 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "PATRIK W. DALIA PUNO / AFDAYATI",
+          "code": "7202051004000100 - PATRIK W. DALIA PUNO / AFDAYATI - 4 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MOHAMMAD NURSAM JAYA / NANDA AULIS",
+          "code": "7202052001000200 - MOHAMMAD NURSAM JAYA / NANDA AULIS - 10 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MUHAMAD ILHAM / ENY KAROLYA",
+          "code": "7202031013000400 - MUHAMAD ILHAM / ENY KAROLYA - 7 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "STEVEN MANDANG PARENGKUAN / ",
+          "code": "7202010023000600 - STEVEN MANDANG PARENGKUAN /  - 1 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MUH RAMLI / TIA FATMAHUL JANAH",
+          "code": "7202010045000700 - MUH RAMLI / TIA FATMAHUL JANAH - 7 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "BENGKEL CERIA MOTOR",
+          "code": "7202050026000201 - BENGKEL CERIA MOTOR - 1 /  - 1 - 94712 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "HERU HERMAWAN / NINGRUM HOIRIAH",
+          "code": "7202012001000100 - HERU HERMAWAN / NINGRUM HOIRIAH - 16 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "HENDI / ",
+          "code": "7202053006000700 - HENDI /  - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ABUNDENG / ",
+          "code": "7202050008000100 - ABUNDENG /  - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "RIZKI WALISAH / ",
+          "code": "7202050008000100 - RIZKI WALISAH /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ISTIKOMAH / ISTIKOMAH",
+          "code": "7202053010000900 - ISTIKOMAH / ISTIKOMAH - 5 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "JILLY KRISTIANTO ASABO / ",
+          "code": "7202050008000100 - JILLY KRISTIANTO ASABO /  - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "SETIONO / NOVITA",
+          "code": "7202012001000100 - SETIONO / NOVITA - 13 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "FELDIANTO / ",
+          "code": "7202053008000200 -  /  - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "AMIR TAMBONG / ",
+          "code": "7202020019000800 - AMIR TAMBONG /  - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
           "name": " / ",
-          "code": "7202040011100100 -  /  - 3 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "code": "7202050008000100 -  /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "VALENTINO OKTAVIAN SALIUKUM  / JETI YAMASITA SIPOY",
-          "code": "7202081005000200 - VALENTINO OKTAVIAN SALIUKUM  / JETI YAMASITA SIPOY - 1 /  - 1 - 94773 - 2. Tidak - 17462396",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "HAMID LAMATOLO / BECE SAWEDI ",
-          "code": "7202031015000300 - HAMID LAMATOLO / BECE SAWEDI  - 3 /  - 0 - 94754 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KIOS ICHA",
-          "code": "7202053007000100 - KIOS ICHA - 2 /  - 1 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KIOS EDGAR",
-          "code": "7202050011000100 - KIOS EDGAR - 1 /  - 1 - 94713 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "NURDIN BANAALI / ",
-          "code": "7202032009000100 - NURDIN BANAALI /  - - /  - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "WARUNG MAKAN SEDERHANA",
-          "code": "7202053007000100 - WARUNG MAKAN SEDERHANA - 1 /  - 1 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "BENGKEL SEPEDA MAS REHAN",
-          "code": "7202052008000100 - BENGKEL SEPEDA MAS REHAN - 646 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "TOKO CITRA RAYA SELL",
-          "code": "7202050009000100 - TOKO CITRA RAYA SELL - - /  - 1 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "ADRIANSYAH SY KITTA / NURHAYATI",
-          "code": "7202013010000100 - ADRIANSYAH SY KITTA / NURHAYATI - 1 /  - 1 - 94675 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "ONENG DORI / ",
-          "code": "7202070011000200 - ONENG DORI /  - 8 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KOPRA EDO",
-          "code": "7202040011100100 - KOPRA EDO - 2 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "HASNAH / ",
-          "code": "7202050009003100 - HASNAH /  - 1 /  - 0 - 94711 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "RISWANTO  / IKA MINDAH FITRIYANI",
-          "code": "7202013010000500 - RISWANTO  / IKA MINDAH FITRIYANI - 5 /  - Id@gmail.com - 1 - 94765 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "LASAMUDU / ",
-          "code": "7202050027000100 - LASAMUDU /  - 1 /  - 0 - 94715 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KOPRA SUMARNI",
-          "code": "7202040011100100 - KOPRA SUMARNI - 1 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "MASJID AL-JARIYAH",
-          "code": "7202061010000100 - MASJID AL-JARIYAH - 1 /  - 94752 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "ANDI ADRIYANTO A.NDOLOS / FATMA DG BADO",
-          "code": "7202052004000200 - ANDI ADRIYANTO A.NDOLOS / FATMA DG BADO - 2 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "TAMIL MUSAFIRIN / SITI ZUHRO",
+          "code": "7202031005000100 - TAMIL MUSAFIRIN / SITI ZUHRO - 8 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[03] MOROWALI",
-      "total_prelist": 47733,
-      "total_draft": 6,
-      "total_open": 47720,
-      "total_submitted": 7,
-      "total_rejected": 0,
-      "total_approved": 0,
-      "persentase": 0.01,
+      "total_prelist": 48154,
+      "total_draft": 231,
+      "total_open": 47484,
+      "total_submitted": 524,
+      "total_rejected": 9,
+      "total_approved": 49,
+      "persentase": 1.09,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
-      "new_usaha_today": 0,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
-      "new_businesses": []
+      "new_usaha_today": 1,
+      "new_usaha_yesterday": 15,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 169,
+      "new_rumah_overall": 0,
+      "new_businesses": [
+        {
+          "name": "YULITA MAHMUD / AIRA NABILA TANISHA",
+          "code": "7203030024000100 - YULITA MAHMUD / AIRA NABILA TANISHA - 4 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MAHMUD NDIBU / NORCE",
+          "code": "7203030024000100 - MAHMUD NDIBU / NORCE - 4 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "KANTOR DESA DAN BPD DESA PADABAHO",
+          "code": "7203021002000300 - KANTOR DESA DAN BPD DESA PADABAHO - 1 /  - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "TOKO SAYURAN JUMIATI",
+          "code": "7203021002000300 - TOKO SAYUR JUMIATI - 1 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "BAHTIAR / SUNARTIN",
+          "code": "7203031002000100 - BAHTIAR /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "HARUN MAHMUD / ",
+          "code": "7203030024000100 - HARUN MAHMUD /  - 4 /  - 0 - 2. Tidak",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "YUNUS / MULIYANTI",
+          "code": "7203042006000600 - YUNUS / MULIYANTI - 13 /  - - - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "RUSLAN / RATI PURWASI",
+          "code": "7203041003000501 - RUSLAN / RATI PURWASI - - /  - 2",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MISDI / PONISRI",
+          "code": "7203040008000100 - MISDI / PONISRI - 1 /  - 1 - 94977 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "SUDARMAYANTO / SUSANTI",
+          "code": "7203030025000201 - SUDARMAYANTO / SUSANTI - 12 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "HADISAN IRPAN / SUMASNI",
+          "code": "7203040008000100 - HADISAN IRPAN / SUMASNI - 2 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ARPIN / WARDA",
+          "code": "7203041009000100 - ARPIN / WARDA - 1 /  - 0 - 94976 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": " / ",
+          "code": "7203030024000100 - - /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "AMRIN / DAWIA",
+          "code": "7203020009000500 - AMRIN / DAWIA - 11 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "TAUFIK HIDAYAT / ",
+          "code": "7203040005000100 - TAUFIK HIDAYAT /  - 9 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "SERI / ",
+          "code": "7203020009000500 - SERI /  - 7 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        }
+      ]
     },
     {
       "kabupaten": "[04] POSO",
-      "total_prelist": 105429,
-      "total_draft": 131,
-      "total_open": 105171,
-      "total_submitted": 127,
-      "total_rejected": 0,
-      "total_approved": 0,
-      "persentase": 0.12,
+      "total_prelist": 105940,
+      "total_draft": 511,
+      "total_open": 103306,
+      "total_submitted": 2152,
+      "total_rejected": 125,
+      "total_approved": 237,
+      "persentase": 2.03,
       "today_completed": 0,
-      "yesterday_completed": 5,
-      "two_days_ago_completed": 2,
-      "new_usaha_today": 12,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "yesterday_completed": 2,
+      "two_days_ago_completed": 0,
+      "new_usaha_today": 1,
+      "new_usaha_yesterday": 21,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 111,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "LEDIYANTO / SRIANDRI YANI",
-          "code": "7204060013000100 - LEDIYANTO / SRIANDRI YANI - - /  - 1 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "KIOS FATHI",
+          "code": "7204050005000200 - KIOS FATHI - 6 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "PATTINIXON TANGAPO / SRI WAHYUNI MONOARFA",
-          "code": "7204031007000600 - PATTINIXON TANGAPO / SRI WAHYUNI MONOARFA - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "FERDINAND TIMBAROA / SINTA OKTAFYANI LAKAONI, SH",
+          "code": "7204050008000100 - FERDINAND TIMBAROA / SINTA OKTAFYANI LAKAONI, SH - - /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "RUMAH KOSONG DIBELAKANG MESJID ",
-          "code": "7204050013000500 - RUMAH KOSONG  /  - - / ",
+          "name": "AGUNG DWI SATRI NUGROHO / MARIA MARTABITA SOWOLINO",
+          "code": "7204030005001700 - AGUNG DWI SATRI NUGROHO / MARIA MARTABITA SOWOLINO - 6 /  - 1 - 2. Tidak - 17417072",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "RIBKA SOMPO / RIBKA SOMPO ",
-          "code": "7204011005001300 - RIBKA SOMPO / RIBKA SOMPO  - 1 /  - 0 - 94663 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "YANSEN KUNDIMANG / AGUNG AYU WIDHYANTARI",
+          "code": "7204030005001700 - YANSEN KUNDIMANG / AGUNG AYU WIDHYANTARI - 5 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "CHRISFANDI LABOKU / ",
-          "code": "7204031004000400 - CHRISFANDI LABOKU /  - 3 /  - 2 - 17390212",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "SOPHEE EXPRESS (SPX)",
+          "code": "7204030005001700 - SOPHEE EXPRESS (SPX) - 4 /  - 1 - 2. Tidak - 17417072",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MUSLIADI  / NURHALIA",
-          "code": "7204010001000300 - MUSLIADI  / NURHALIA - 3 /  - 0706240032484 - 3 - 2. Tidak - 1 / 18062711,1 / 18062711",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "HERLINA KOLEBA / RETNI KURNIAWATI PASUNU",
+          "code": "7204012008000300 - HERLINA KOLEBA / RETNI KURNIAWATI PASUNU - 1 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MARYATI / AMAN SANTOSO",
-          "code": "7204050013000500 - MARYATI / AMAN SANTOSO - 10 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "YANTHI / ALVA DIVANTARA DJAMAL",
+          "code": "7204060015000200 - YANTHI / ALVA DIVANTARA DJAMAL - 6 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "-",
-          "code": "7204070010000200 - - / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "TEMPAT WISATA DANAU ANOA BEACH",
+          "code": "7204010018000800 - TEMPAT WISATA - 4 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "FEBI MARSANDA BURUNGUJU / ",
-          "code": "7204012006000100 - FEBI MARSANDA BURUNGUJU /  - 2 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "TONI MUSA / EVA POANTU",
+          "code": "7204011005000300 - TONI MUSA / EVA POANTU - 3 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "RONALDO MERUKA / NURLIN SRI SADELI MANGKAPA, AVIERO AHZAREL MERUKA",
-          "code": "7204031004000400 - RONALDO MERUKA / NURLIN SRI SADELI MANGKAPA, AVIERO AHZAREL MERUKA - 1 /  - 1 - 94664 - 1. Ya",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ARDIAN CHRISTOPHER SAYOW / MEININGSI POANTU",
+          "code": "7204030010000500 - ARDIAN CHRISTOPHER SAYOW / MEININGSI POANTU - 2 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SUTRISNO RAHMAN  / VERANITA KATILI",
-          "code": "7204050010000300 - SUTRISNO RAHMAN  / VERANITA KATILI - 3 /  - 0 - 94652 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "AMIRUDIN D / AHLAMIAH ATHIRA",
+          "code": "7204010013000102 - AMIRUDIN D / AHLAMIAH ATHIRA - 5 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "-",
-          "code": "7204050013000500 - - / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ANUGRAH / NASRIANI",
+          "code": "7204070009000301 - ANUGRAH / NASRIANI - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MARZUKI EFENDI / MUNAWAROH",
+          "code": "7204010016000600 - MARZUKI EFENDI / MUNAWAROH - 5 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "M. IRWANSYAH / FITRIANI LAWIRA",
+          "code": "7204050003000600 - M. IRWANSYAH / FITRIANI LAWIRA - 10 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ASOSIAME  / HASNAH ",
+          "code": "7204050013000500 - ASOSIAME  / HASNAH  - 16 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ARCE YANSUN KAWAHE / ANI SETIANINGSIH",
+          "code": "7204030005000500 - ARCE YANSUN KAWAHE / ANI SETIANINGSIH - 13 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ZULKARNAEN KOLU / ",
+          "code": "7204030005000400 - ZULKARNAEN KOLU /  - 101 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "NAFRILT DOINGA / ISNA SILILIA RANGKA",
+          "code": "7204030003000100 - NAFRILT DOINGA / ISNA SILILIA RANGKA - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "DIMAN / SRI YUDIANINGSIH",
+          "code": "7204060014000200 - DIMAN / SRI YUDIANINGSIH - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "NILA PERMATASARI / ",
+          "code": "7204010013000300 - NILA PERMATASARI /  - 10 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ABD. RAHMAN KALNGKANAE / ",
+          "code": "7204071001000900 - ABD. RAHMAN KALNGKANAE /  - 6 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MAHDIN / SARNIATIN S UKE ",
+          "code": "7204050013000500 - MAHDIN / SARNIATIN S UKE  - 15 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[05] DONGGALA",
-      "total_prelist": 105541,
-      "total_draft": 79,
-      "total_open": 105401,
-      "total_submitted": 60,
-      "total_rejected": 1,
-      "total_approved": 0,
-      "persentase": 0.06,
+      "total_prelist": 106082,
+      "total_draft": 489,
+      "total_open": 104298,
+      "total_submitted": 1338,
+      "total_rejected": 126,
+      "total_approved": 269,
+      "persentase": 1.26,
       "today_completed": 0,
-      "yesterday_completed": 1,
-      "two_days_ago_completed": 1,
-      "new_usaha_today": 22,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 0,
+      "new_usaha_today": 3,
+      "new_usaha_yesterday": 30,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 113,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "RUMAH KEBUN ",
-          "code": "7205081015000400 - RUMAH KEBUN  - 3 / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MAFUL / ASNAWATI ",
+          "code": "7205100016000100 - KIOS ARSY  - 5 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "TK RINI SYARIF KARYA MUKTI",
-          "code": "7205140006000602 - TK RINI SYARIF KARYA MUKTI - 3 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "IMRAN / AWALIA NUR RAHMA DHANI",
+          "code": "7205080025000300 - IMRAN / AWALIA NUR RAHMA DHANI - 6 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SABRI / MARIANI ",
-          "code": "7205140003001700 - SABRI / MARIANI  - 2 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "IRWANDI  / NURUL AINUN",
+          "code": "7205100016000100 - IRWANDI  /  - 9 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SARANG BURUNG WALET ",
-          "code": "7205081015000400 - SARANG BURUNG WALET  - 2 / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "FIRSAN / MUSDALIFAH ",
+          "code": "7205100016000100 - FIRSAN /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "RUMAH KOSONG ",
-          "code": "7205081005000100 - RUMAH KOSONG  - 1 / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "SYARIFUDDIN  / HANIA",
+          "code": "7205100016000100 - SYARIFUDDIN  /  - 9 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MUHAMMAD MISBA / RRISKA ADINDA PUTRI",
-          "code": "7205041003002101 - MUHAMMAD MISBA / RRISKA ADINDA PUTRI - 7 /  - 2",
+          "name": "BAPAK MAULANA / IBU FITRIANI",
+          "code": "7205080025000300 - BAPAK MAULANA / IBU FITRIANI - 2 /  - 0",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SUANDI  / SULKAM ",
-          "code": "7205140003001700 - SUANDI  / SULKAM  - 1 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "PONIJAH / TRIANDINI",
+          "code": "7205140011000100 - PONIJAH / TRIANDINI - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "NURUL / ",
-          "code": "7205041003001900 - NURUL /  - 1 /  - 2",
+          "name": "FIRMAN  / HALIMA",
+          "code": "7205081002000100 - FIRMAN  / HALIMA - - /  - 2",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "-",
-          "code": "7205080024000600 - - / ",
+          "name": "SUWADDE  / ",
+          "code": "7205100016000100 - SUWADDE /  - 5 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "EDI / ASMIATI",
+          "code": "7205081009000100 - EDI / ASMIATI - 8 /  - 3",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "SUHERMAN / SINDI SAPTIASA PUTRI",
+          "code": "7205081016000400 - SUHERMAN / SINDI SAPTIASA PUTRI - - /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "AKRI ANTO / ANDO TANG",
+          "code": "7205041004001200 - AKRI ANTO / ANDO TANG - 6 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ARWAN / ASNAWATI",
+          "code": "7205082003000200 - ARWAN / ASNAWATI - 4 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MUH. JADIL / JUMRIANI",
+          "code": "7205041004001200 - MUH. JADIL / JUMRIANI - 5 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ANWAR / HUZAIMA",
+          "code": "7205082003000200 - ANWAR / HUZAIMA - 3 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "SULTAN / WIWIT PATIKASARI",
+          "code": "7205041004001200 - SULTAN / WIWIT PATIKASARI - 4 /  - 1 - 2. Tidak - 60929529",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "BUDYANTO EKO SHANDY PRAMUKA PUTRA / INDAH FITRIANA",
+          "code": "7205130011000400 - BUDYANTO EKO SHANDY PRAMUKA PUTRA / INDAH FITRIANA - 14 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ISKANDAR / AGUSTIN TRIATMAJATI",
+          "code": "7205130010000301 - ISKANDAR / AGUSTIN TRIATMAJATI - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "HARDIANSYAH LABABA / ",
+          "code": "7205081003000201 - HARDIANSYAH LABABA /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "AL MUDASIR / NI KETUT RISKI RAHAYU",
+          "code": "7205041005000500 - AL MUDASIR /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "AZNAWIR / SAFIRA",
+          "code": "7205082003000200 - AZNAWIR / SAFIRA - 1 /  - fira181094@gmail.com - 1 - 94341 - 2. Tidak - 55286063",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ABD MUIN / WERE",
+          "code": "7205081003000400 - ABD MUIN / WERE - 3 /  - 3",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "KAFE CERIA ",
+          "code": "7205130010000301 - KAFE CERIA  - 12 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "HERI / ",
+          "code": "7205100001000102 - HERI /  - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ARDIN  / NUR APRIANI",
+          "code": "7205080023000300 - ARDIN  / NUR APRIANI - 6 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ABD RAHMAN / CICI SANTRI",
+          "code": "7205080021000800 - ABD RAHMAN / CICI SANTRI - 16 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "AWALUDDIN  / NUR'AENI",
+          "code": "7205080027000900 - AWALUDDIN  / NUR'AENI - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7205080025000100 - BANGUNAN KOSONG - 12 / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7205080025000100 - BANGUNAN KOSONG - 1 / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ABD. LATIF / MARIAMA",
+          "code": "7205140008001200 - ABD. LATIF / MARIAMA - 2 /  - 2 - 94356 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
           "name": " / ",
-          "code": "7205080024000600 -  /  - - / ",
-          "date": "today",
-          "status": "DRAFT"
+          "code": "7205100003000200 -  /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "FERY T / IRAWATI",
-          "code": "7205140006000602 - FERY T / IRAWATI - 2 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "THELYOS OSCAR RUMAGIT / ",
+          "code": "7205130017000500 - THELYOS OSCAR RUMAGIT /  - 6 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "NURUL / ",
-          "code": "7205041003002101 - NURUL /  - 1 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "SITI AMINAH / USWATUN KHASANAH",
-          "code": "7205041005000500 - SITI AMINAH / USWATUN KHASANAH - 10 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": " / ",
-          "code": "7205120008000400 -  /  - - /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "RIFAL / IRMA",
-          "code": "7205120008000400 - RIFAL / IRMA - - /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KANTOR KOORDINATOR WILAYAH PENDIDIKAN",
-          "code": "7205160013000200 - KANTOR KOORDINATOR WILAYAH PENDIDIKAN - 3 / ",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "MEGAWATI / M AHZAMI JAZULI",
-          "code": "7205120008000400 - - /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "SAHARUDDIN / HARTATI",
-          "code": "7205041005000200 - SAHARUDDIN / HARTATI - 2 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "SAKFIR / NURATIN",
-          "code": "7205100021000300 - SAKFIR / NURATIN - 1 /  - 0 - 94353 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "FANDI / HERTIN",
-          "code": "7205100017000300 - FANDI / HERTIN - 1 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "RONI / NURBIYA",
-          "code": "7205081005000100 - RONI / NURBIYA - 4 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "SDN 9 DAMPELAS",
-          "code": "7205140006000602 - SDN 9 DAMPELAS - 1 /  - 1 - 94356 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "DIRWAN / ASTRI",
+          "code": "7205100007000900 - DIRWAN / ASTRI - 5 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[06] TOLI-TOLI",
-      "total_prelist": 76011,
-      "total_draft": 107,
-      "total_open": 75852,
-      "total_submitted": 49,
-      "total_rejected": 3,
-      "total_approved": 0,
-      "persentase": 0.06,
+      "total_prelist": 76617,
+      "total_draft": 605,
+      "total_open": 75158,
+      "total_submitted": 971,
+      "total_rejected": 82,
+      "total_approved": 44,
+      "persentase": 1.27,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
-      "new_usaha_today": 29,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 22,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 251,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "IMRAN SIDUPPA / NURAINI TIRAJOH",
-          "code": "7206040014001900 - IMRAN SIDUPPA / NURAINI TIRAJOH - 1 /  - 0 - 94511 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "SATILAH JUNO / DESKRIANA RAHMELIA",
+          "code": "7206040016004800 -  /  - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BARBER SHOP EB",
-          "code": "7206040014000200 - BARBER SHOP EB - 2 /  - 1 - 94512 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ASRI TAHA / NISMA ",
+          "code": "7206061001000600 - ASRI TAHA / NISMA  - 10 /  - 1 - - / 13339849",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": " / ",
-          "code": "7206050011002100 -  /  - - / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "AMIN MAKMUR / NURFIA Y",
+          "code": "7206061001000600 - AMIN MAKNUR / NURFIA Y - 11 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "POP ICE NIARA ",
-          "code": "7206030007000100 - POP ICE NIARA  - 1 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MASHURI / ",
+          "code": "7206060011000500 - MASHURI /  - 1 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "AISA K / -",
-          "code": "7206050007000400 - AISA K / - - 1 /  - - - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MAS'UD ARIF / AFNAN",
+          "code": "7206050008000401 - MAS'UD ARIF / AFNAN - 3 /  - jemzarif178@gmail.com - 1 - 1 / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "CONNY SIMOND FRANCIS / GLENN ARCOLIUS",
-          "code": "7206040014001800 - CONNY SIMOND FRANCIS / GLENN ARCOLIUS - 2 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "NURHARYATI / PUTRI DAMAYANTI",
+          "code": "7206040014000200 - NURHARYATI / PUTRI DAMAYANTI - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BUMIYADI / HERLINA",
-          "code": "7206020003000800 -  /  - - /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RIO RAMADHAN ILYAS M SAID / RINI SUSANTI",
+          "code": "7206040014000200 - RIO RAMADHAN ILYAS M SAID / RINI SUSANTI - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "PAHYAMAN LABILI / NURHAIDAH",
-          "code": "7206040014002300 - PAHYAMAN LABILI / NURHAIDAH - - /  - 0 - 94511 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RISAL / NURBAYA",
+          "code": "7206050008000401 - WARUNG BEGADANG - 2 /  - baya85840@gmail.com - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "GUSTAP SIKAPE / GUSTAP SIKAPE",
-          "code": "7206050014000500 - GUSTAP SIKAPE /  - 1 /  - 1 - 94561 - 1. Ya",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "JISMAN / DARISKA",
+          "code": "7206061004000900 - JISMAN / DARISKA - 1 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SAMSUDDIN / ",
-          "code": "7206010001001000 - SAMSUDDIN /  - 2 /  - 2 - 94554 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "NANDIS / ",
+          "code": "7206010003000500 - NANDIS /  - 5 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": " / ",
-          "code": "7206040018001200 -  /  - - / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "SUARDI / IRAWASA",
+          "code": "7206032002001300 - SUARDI / IRAWASA - 12 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "TEMPAT KOPRA PAK JONI",
-          "code": "7206050014000500 - TEMPAT KOPRA PAK JONI - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ZAINAL KASIM / FITRIANI RUSLAN",
+          "code": "7206040014000200 - ZAINAL KASIM / FITRIANI RUSLAN - 15 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "GUDANG PAK JONI",
-          "code": "7206050014000500 - GUDANG PAK JONI - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "K'NISA SALON (KARLINANG)",
+          "code": "7206050003000300 - K'NISA SALON (KARLINANG) - 6 /  - bundaq2787@gmail.com - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "AHMAR / DINI",
-          "code": "7206050005001500 - AHMAR / DINI - 3 /  - 1 - 97427046",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ALIMIN  / ",
+          "code": "7206020003001300 - ALIMIN  /  - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SYADRIANSYAH / DAHWIATI",
-          "code": "7206050007000900 - SYADRIANSYAH / DAHWIATI - 2 /  - keriting006@gmail.com - 2",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RUMAH KOSONG CET HIJAU",
+          "code": "7206050003001400 - RUMAH KOSONG CET HIJAU - 7 / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BANGUNAN MASAK MIRAS",
-          "code": "7206050014000500 - BANGUNAN MASAK MIRAS - - / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "BANGUNAN KOSONG",
+          "code": "7206030017000200 - BANGUNAN KOSONG - 3 / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "FITRIYA. M / MUFTIA",
-          "code": "7206040018001200 - FITRIYA. M / MUFTIA - 2 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "WARMAN / NURHIDAYATI",
+          "code": "7206040014000200 - WARMAN / NURHIDAYATI - 4 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ANSAR / NIKEN AYU RAHMAN ",
-          "code": "7206041008001000 - ANSAR / NIKEN AYU RAHMAN  - 3 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RUMAH KOSONG ",
+          "code": "7206061001000600 - RUMAH KOSONG  - 14 / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MOH REFKI / PUTRI SAROJA",
-          "code": "7206060011000800 - MOH REFKI / PUTRI SAROJA - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RISAN M MANASA / AIRA DIVIYA",
+          "code": "7206061001000600 - RISAN M MANASA / AIRA DIVIYA - 13 /  - 1 - 13339849",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "RUMAH KOSONG",
-          "code": "7206040017003101 - RUMAH KOSONG - - /  - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "HAKMAN / HASMIA",
+          "code": "7206030015000500 - HAKMAN / HASMIA - 1 /  - 1 - 94552 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "RUMAH KOSONG WARNA MERAH MUDA",
-          "code": "7206040016004900 - RUMAH KOSONG WARNA MERAH MUDA - 3 / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ADHAR / LASTRI",
+          "code": "7206050005000800 - ADHAR / LASTRI - 1 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "YUSRI",
-          "code": "7206060006001900 - YUSRI - 4 / ",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "TOKO BANGUNAN MAKMUR JAYA",
-          "code": "7206040014001300 - TOKO BANGUNAN MAKMUR JAYA - 5 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "JULIA  / _",
-          "code": "7206060011000800 - JULIA  / _ - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "MIRSADI  / HADRIANA K TACAALI",
-          "code": "7206060011000800 - MIRSADI  / HADRIANA K TACAALI - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "RUSMA. GANGKA / ",
-          "code": "7206040016000300 - RUSMA. GANGKA /  - - /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "ANDI IHSAN / ",
-          "code": "7206060007000202 - ANDI IHSAN /  - - / ",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "BAKSO GIRIMULYO",
-          "code": "7206040014001300 - BAKSO GIRIMULYO - - / ",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "-",
-          "code": "7206060006001900 - 1 /  - 94562 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MUNAFRI / MELDAYANTI",
+          "code": "7206061002001000 - MUNAFRI / MELDAYANTI - 8 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[07] BUOL",
-      "total_prelist": 57359,
-      "total_draft": 194,
-      "total_open": 57070,
-      "total_submitted": 95,
-      "total_rejected": 0,
-      "total_approved": 0,
-      "persentase": 0.17,
+      "total_prelist": 57738,
+      "total_draft": 570,
+      "total_open": 56371,
+      "total_submitted": 879,
+      "total_rejected": 78,
+      "total_approved": 19,
+      "persentase": 1.52,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
-      "new_usaha_today": 14,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "new_usaha_today": 2,
+      "new_usaha_yesterday": 9,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 164,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "KIOS ROSNAWATI",
-          "code": "7207020016000100 - KIOS ROSNAWATI - 8 /  - 1 - 27259773",
+          "name": "RUMAH KOSONG WARNA BIRU",
+          "code": "7207031003000600 - RUMAH KOSONG WARNA BIRU - 7 / ",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BENGKEL (ARFAN)",
-          "code": "7207011005001000 - BENGKEL (ARFAN) - 2 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MOH RIZKY H DJUPANDANG / ANISA B LAUDI",
+          "code": "7207051007000400 - MOH RIZKY H DJUPANDANG / MOH RIZKY H DJUPANDANG - 14 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "TAHER AHMAD / RAWATI S LAUDI",
-          "code": "7207051007000400 - TAHER AHMAD / RAWATI S LAUDI - 4 /  - 0 - 2. Tidak",
+          "name": "ELKO SUMBA / IRASTIAWATI S MADER",
+          "code": "7207011006001700 - ELKO SUMBA / IRASTIAWATI S MADER - 6 /  - 1 - 2. Tidak",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ANIS NANI / ",
-          "code": "7207050010000800 - ANIS NANI /  - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ASIS A MAARUF / ",
+          "code": "7207041002000900 - ASIS A MAARUF /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": " / ",
-          "code": "7207011005000401 -  /  - 1 /  - 0 - 94563 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "BENSIN ECERAN (ISMAIL Y MENTEMAS)",
+          "code": "7207011004000600 - BENSIN ECERAN ISMAIL Y. MENTEMAS - - /  - 1 - 15208271",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "PARTO R. KUMDAN / ALVIANI R. KUMDAN",
-          "code": "7207020016000900 - PARTO R. KUMDAN / ALVIANI R. KUMDAN - 4 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ZAITUN ABDULLAH / KARTINI D PUMGUNG",
+          "code": "7207051007000400 - ZAITUN ABDULLAH / KARTINI D PUMGUNG - 8 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "NISLAINI / MOH.ALFARIDZI",
-          "code": "7207040001000600 - NISLAINI / MOH.ALFARIDZI - - /  - 1. Ya",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MUSTARI A. PIOHATI / RISMANI",
+          "code": "7207040001000600 - MUSTARI A. PIOHATI / RISMANI - 2 /  - 0 - 1. Ya",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "HAIRUDIN HADI SUKARA / HALIMA M DJUPANDANG",
-          "code": "7207051007000400 - HAIRUDIN HADI SUKARA / HALIMA M DJUPANDANG - 1 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "BUDIANTO A.KAMILUN S.E / ROSINTA MOHTAR S.E",
+          "code": "7207011006000800 -  /  - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "KEDAI INSPIRASA (MUHAMAD SIDIQ)",
-          "code": "7207011004000901 - KEDAI INSPIRASA (MUHAMAD SIDIQ) - 2 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ABD RAHMAN FIKRI / ",
+          "code": "7207011005000401 - ABD RAHMAN FIKRI /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "AGUS A. HABIR / ",
-          "code": "7207011004000800 - AGUS A. HABIR /  - 3 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "TAUHID D KARIM / ",
+          "code": "7207011005000401 - TAUHID D KARIM /  - 8 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "IDRIS SY HADI / ",
-          "code": "7207040002001300 - IDRIS SY HADI /  - 5 /  - 1 - 32360227",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "BAENATI AHMAD / ",
-          "code": "7207040002001300 - BAENATI AHMAD /  - 6 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "SPPG",
-          "code": "7207011005001000 - SPPG - 1 / ",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KASMAN / ",
-          "code": "7207020008000300 - KASMAN /  - 1 /  - 1 - 94565 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "IWAN M.BAAT / ",
+          "code": "7207040002001300 - IWAN M.BAAT /  - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[08] PARIGI MOUTONG",
-      "total_prelist": 169446,
-      "total_draft": 92,
-      "total_open": 169125,
-      "total_submitted": 217,
-      "total_rejected": 8,
-      "total_approved": 4,
-      "persentase": 0.13,
-      "today_completed": 2,
+      "total_prelist": 170060,
+      "total_draft": 404,
+      "total_open": 167673,
+      "total_submitted": 2013,
+      "total_rejected": 189,
+      "total_approved": 233,
+      "persentase": 1.18,
+      "today_completed": 0,
       "yesterday_completed": 0,
-      "two_days_ago_completed": 0,
-      "new_usaha_today": 17,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "two_days_ago_completed": 2,
+      "new_usaha_today": 4,
+      "new_usaha_yesterday": 21,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 113,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "FIRDAUS / NASITA",
-          "code": "7208041018000200 - FIRDAUS / NASITA - 3 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "KIOS IRFA",
+          "code": "7208024006000100 - KIOS IRFA - 2 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BANGUNAN KOSONG KOMPLEKS MERANTI",
-          "code": "7208052001000100 - BANGUNAN KOSONG KOMPLEKS MERANTI - 14 / ",
+          "name": "ALIMU / TIDAK ADA",
+          "code": "7208031001000700 - ALIMU / TIDAK ADA - 8 /  - 0 - 2. Tidak",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "AMBOTANG  / ",
-          "code": "7208030005000100 - AMBOTANG  /  - 6 /  - 1",
+          "name": "SRILUBIS D. NUSI / NORMA",
+          "code": "7208031010000400 - SRILUBIS D. NUSI /  - 133 /  - 0 - 1. Ya",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "TOKO BRILINK NILUH GEDE INDRANI ",
-          "code": "7208020017000201 - TOKO BRILINK NILUH GEDE INDRANI  - 1 /  - 1 - 2. Tidak - 1 / 46785573",
+          "name": "KEDAI (AYU LESTARI)",
+          "code": "7208061001000600 - KEDAI (AYU LESTARI) - 5 /  - 1 - 2. Tidak",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ARU PAKAYA / ",
-          "code": "7208020016001200 - ARU PAKAYA /  - 6 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "SARANG WALET (FIRMANSAH)",
+          "code": "7208061001000600 - 3 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "KAMRUN. S / YUDISTIRA ",
-          "code": "7208050014000300 - KAMRUN. S / YUDISTIRA  - 2 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ODE / ",
+          "code": "7208024006000100 -  /  - - /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BANGUNAN KOSONG KOMPLEKS MERANTI",
-          "code": "7208052001000100 - BANGUNAN KOSONG KOMPLEKS MERANTI - 10 / ",
+          "name": "IPON / SRI MUNAWARA ",
+          "code": "7208041006000100 - IPON / SRI MUNAWARA  - 1 /  - 0 - 94463 - 2. Tidak",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MUSLAN / ",
-          "code": "7208033004000201 - MUSLAN /  - 6 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "NAJURUDIN MIDE / ROSLIAN",
+          "code": "7208024006000100 - NAJURUDIN MIDE / ROSLIAN - 4 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SUDIRMAN. M / ",
-          "code": "7208010017000600 - SUDIRMAN. M /  - 1 /  - 1 - 94472 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RAMADHAN MUIS / WINDA ACO",
+          "code": "7208041001000202 - RAMADHAN MUIS / WINDA ACO - - /  - 1 - 13067051",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "M.ISRAM / ANDRIANI NURDIN ",
-          "code": "7208040027000100 - M.ISRAM / ANDRIANI NURDIN  - 3 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ABD MALIK / NISMAWATI",
+          "code": "7208041001000202 - ABD MALIK / NISMAWATI - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MASJID AL-HIDAYAH",
-          "code": "7208030017000200 - MASJID AL-HIDAYAH - 1 /  - 94474 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "GEDUNG WALET",
+          "code": "7208041001000202 - GEDUNG WALET - 2 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MARCHY PANTOW / ",
-          "code": "7208021008000100 - MARCHY PANTOW /  - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "LUTFIN / KASMAWATI S. PEOLIN",
+          "code": "7208031009000400 - LUTFIN / KASMAWATI S. PEOLIN - 1 /  - 1 - 94474 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ELKANA LOKONG / IRA ROSDIANA LINGGI",
-          "code": "7208021006000400 - ELKANA LOKONG / IRA ROSDIANA LINGGI - 1 /  - 1 - 94471 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "FAUZI / MAS'AT",
+          "code": "7208041001000202 - FAUZI / MAS'AT - 1 /  - 3 - 94463 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "JUAL NASI KUNING DAN BARANG HARIAN <ELINDRA>",
-          "code": "7208040008000200 - JUAL NASI KUNING DAN BARANG HARIAN <ELINDRA> - 3 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RUMAH KOSONG",
+          "code": "7208042006000500 - RUMAH KOSONG - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SD INPRES 2 LEMO ",
-          "code": "7208030017000200 - SD INPRES 2 LEMO  - 2 / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ANTON / MELIANA",
+          "code": "7208020016001102 - ANTON / MELIANA - 10 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BUANG HAM LOWAY / WILSYE SOLANG",
-          "code": "7208021008000100 - BUANG HAM LOWAY / WILSYE SOLANG - 1 /  - 0 - 94371 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "FAHRUL / ",
+          "code": "7208041001000202 - FAHRUL /  - - /  - 0 - 2 - 16135260",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SUARDIN MARAHAKI / MUSLIMA",
-          "code": "7208041017000200 - SUARDIN MARAHAKI / MUSLIMA - 4 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MOH. NUZUL RAMLY / HASNA",
+          "code": "7208041001000202 - MOH. NUZUL RAMLY / HASNA - - /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "SARIFUDIN MURSIDIN / ROSMIA",
+          "code": "7208031006000500 - SARIFUDIN MURSIDIN / ROSMIA - 2 /  - 3 - 1. Ya",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "RASWAN / ",
+          "code": "7208030024000300 - RASWAN /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MULIA / MUH. RAHMAN",
+          "code": "7208030024000300 - MULIA / MUH. RAHMAN - 4 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "IMAM MAHROJI / MAEGAWATI",
+          "code": "7208010017000500 - IMAM MAHROJI / MAEGAWATI - 30 /  - Mega.bagala.200@gmail.com - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "YADIN / NUR IFTITAH RINI",
+          "code": "7208031005000301 - YADIN / NUR IFTITAH RINI - 1 /  - 0 - 1. Ya",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ALFAMIDI ALALAPAN",
+          "code": "7208052008000400 - ALFAMIDI ALALAPAN - - /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "KAMAL / AINANI",
+          "code": "7208050008000100 - KAMAL / AINANI - 2 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "UZAIR KASADI / NURIANI",
+          "code": "7208030010000500 - UZAIR KASADI / NURIANI - 12 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[09] TOJO UNA-UNA",
-      "total_prelist": 57946,
-      "total_draft": 50,
-      "total_open": 57773,
-      "total_submitted": 121,
-      "total_rejected": 2,
-      "total_approved": 0,
-      "persentase": 0.21,
+      "total_prelist": 58524,
+      "total_draft": 270,
+      "total_open": 56708,
+      "total_submitted": 1573,
+      "total_rejected": 162,
+      "total_approved": 296,
+      "persentase": 2.69,
       "today_completed": 0,
-      "yesterday_completed": 1,
-      "two_days_ago_completed": 1,
-      "new_usaha_today": 6,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 0,
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 11,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 226,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "IBNU SADIK / SUCIAWAN R BAKARI",
-          "code": "7209040017000400 - IBNU SADIK / 2 - - / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "GUNAWAN / ROSMITA M LALUKU ",
+          "code": "7209051007000101 - GUNAWAN / ROSMITA M LALUKU  - 9 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SDN 2 WAKAI",
-          "code": "7209060009000100 - SDN 2 WAKAI - 3 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "YOTAN TAUKOI / RATMIN HULOPI",
+          "code": "7209010002000500 - YOTAN TAUKOI / RATMIN HULOPI - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MELKIYANUS PURWANTO / RESTIKA MARETO",
-          "code": "7209010002000500 - MELKIYANUS PURWANTO / RESTIKA MARETO - 4 /  - tikamelky81@gmail.com - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "HARIS MUBARAQ MUSAGIMPU / RAEHANA LAGALA",
+          "code": "7209050002000800 - HARIS MUBARAQ MUSAGIMPU / RAEHANA LAGALA - 17 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ROSMEITA LASODI / ",
-          "code": "7209051005000400 - ROSMEITA LASODI /  - 5 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ARIPIN A. SUMAILA / YANTI H MOHA",
+          "code": "7209070006000400 - ARIPIN A. SUMAILA / YANTI H MOHA - 5 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "NASER TANGO / JAHAWIA PA'U",
-          "code": "7209050013000100 - NASER TANGO / JAHAWIA PA'U - 1 /  - 0 - 94683 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "HI NURDIN BAGINDA / ",
+          "code": "7209060009000800 - HI NURDIN BAGINDA /  - 4 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "WAJIB PAMULA/RUMIATI RATOLI / ",
-          "code": "7209050014000300 - WAJIB PAMULA/RUMIATI RATOLI /  - 1 /  - 0 - 94683 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ACI M. NADI / PARNI A. LAVEURA",
+          "code": "7209080008000100 - ACI M. NADI / PARNI A. LAVEURA - 9 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "TK NEGERI WAKAI",
+          "code": "7209060009000700 - TK NEGERI WAKAI - 7 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MOH AMSYIR ADWAN / ",
+          "code": "7209081003000100 - MOH AMSYIR ADWAN /  - 7 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MARTEN BAKARI / IRMA",
+          "code": "7209051007000101 - MARTEN BAKARI / IRMA - 4 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "WARUNG GADO GADO (MAMA WULAN)",
+          "code": "7209010010000100 - WARUNG GADO GADO (MAMA WULAN) - 3 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "JURI YATI RAUF / SITI NURHASANA AHMAD",
+          "code": "7209080008000100 - JURI YATI RAUF / SITI NURHASANA AHMAD - 4 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[10] SIGI",
-      "total_prelist": 105031,
-      "total_draft": 67,
-      "total_open": 104802,
-      "total_submitted": 156,
-      "total_rejected": 3,
-      "total_approved": 3,
-      "persentase": 0.15,
+      "total_prelist": 105479,
+      "total_draft": 323,
+      "total_open": 103708,
+      "total_submitted": 1489,
+      "total_rejected": 94,
+      "total_approved": 214,
+      "persentase": 1.41,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
-      "new_usaha_today": 17,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "new_usaha_today": 2,
+      "new_usaha_yesterday": 10,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 160,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "DWIKI WAHYU KARYANTO / RACHMA H RAMLI",
-          "code": "7210130011001300 - DWIKI WAHYU KARYANTO / RACHMA H RAMLI - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "BATAKO SAM",
+          "code": "7210120012003304 - BANGUNAN KOSONG - 2 / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "HATTANG / ",
-          "code": "7210070002000300 - HATTANG /  - - /  - 0",
+          "name": "ANGEL DAMA  / ARNI",
+          "code": "7210010002000100 - ANGEL DAMA  / ARNI - - /  - 0 - 2. Tidak",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MUHDIN LAUSELANG / ASMA",
-          "code": "7210120012001000 - MUHDIN LAUSELANG / ASMA - 1 /  - 0 - 94364 - 2. Tidak",
+          "name": "BERNIKE / KORNELIUS ",
+          "code": "7210010002000100 - BERNIKE / KORNELIUS  - 21 /  - 0 - 2. Tidak",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SD BALA KESELAMATAN PORELEA",
-          "code": "7210010013000200 - SD BALA KESELAMATAN PORELEA - 1 / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "NURIA / ",
+          "code": "7210150004000100 - NURIA /  - 6 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MUH AMIRSAN SYAMSUDDIN / ALFA INAR",
-          "code": "7210120001000200 - MUH AMIRSAN SYAMSUDDIN / ALFA INAR - 3 /  - alfainar459@gmail.com - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "HENDRIK SALUDO / YANTHI",
+          "code": "7210010002000100 - HENDRIK SALUDO / YANTHI - 15 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": " / ",
-          "code": "7210090012000100 -  /  - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "BAMBANG / YULIANTI",
+          "code": "7210130008001300 - BAMBANG / YULIANTI - 11 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "WESEMAN / LEHMAN",
-          "code": "7210020010000500 -  /  - 2 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "WAHYUDIN / FATNI",
+          "code": "7210080006000200 - WAHYUDIN / FATNI - 4 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "AHMAD YANI / ASTRIANA, MOH. ANDIKA, MOH. REZA",
-          "code": "7210070007000200 - AHMAD YANI / ASTRIANA, MOH. ANDIKA, MOH. REZA - - /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "ABDUL WAHAB / ANDI NILAWATI",
+          "code": "7210130008003300 - ABDUL WAHAB /  - 17 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "IRMAWATI POKE / ",
-          "code": "7210130011001300 - IRMAWATI POKE /  - 4 /  - 0 - 94363 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "LONES / EVI ",
+          "code": "7210121010000600 - LONES /  - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MUBIN LEMBANG / FATURAHMAN PASHA",
-          "code": "7210120013000600 - MUBIN LEMBANG / FATURAHMAN PASHA - 3 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "SURIANSYAH / SURIANSYAH",
+          "code": "7210090005000900 - SURIANSYAH / SURIANSYAH - 4 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "-",
-          "code": "7210020010000500 - - /  - 94363 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "LISWAN / MARYAM LABI",
+          "code": "7210130003001500 - LISWAN / MARYAM LABI - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": " / ",
-          "code": "7210090012000100 -  /  - - / ",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "NIKOLAS  / HERLINA ",
-          "code": "7210030011001000 - NIKOLAS  / HERLINA  - 6 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "MOH BAGOES SAPUTRA N.TOAPU / USWATUN HASANAH",
-          "code": "7210120013001700 - MOH BAGOES SAPUTRA N.TOAPU / USWATUN HASANAH - 3 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "LAMPA KAMUHA  / AGUSTINA ",
-          "code": "7210030011001000 - LAMPA KAMUHA  / AGUSTINA  - 4 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "FRANS  / ORNA",
-          "code": "7210030011001000 - FRANS  / ORNA - 5 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "MUBADIN  / NARMA ",
-          "code": "7210030011001000 - MUBADIN  / NARMA  - 2 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "WAWAN / ",
+          "code": "7210090010000300 - WAWAN /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[11] BANGGAI LAUT",
-      "total_prelist": 27559,
-      "total_draft": 13,
-      "total_open": 27510,
-      "total_submitted": 36,
-      "total_rejected": 0,
-      "total_approved": 0,
-      "persentase": 0.13,
-      "today_completed": 2,
+      "total_prelist": 27780,
+      "total_draft": 45,
+      "total_open": 27191,
+      "total_submitted": 566,
+      "total_rejected": 41,
+      "total_approved": 134,
+      "persentase": 2.04,
+      "today_completed": 0,
       "yesterday_completed": 0,
-      "two_days_ago_completed": 0,
-      "new_usaha_today": 4,
+      "two_days_ago_completed": 2,
+      "new_usaha_today": 1,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 116,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "AGUS P / HJ. IKA HARMIANTI",
-          "code": "7211040003000200 - AGUS P / HJ. IKA HARMIANTI - 3 /  - 2 - - / 4437206,- / 4437206",
+          "name": "NURJANAH / EKA PURNOMO",
+          "code": "7211020003000200 - NURJANAH / EKA PURNOMO - 6 /  - nuriahlipu@gmail.com - 2",
           "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": " / ",
-          "code": "7211050005000301 -  /  - 14 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "BANGUNAN KOSONG",
-          "code": "7211050005000301 - BANGUNAN KOSONG - 6 / ",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "BANGUNAN KOSONG",
-          "code": "7211050005000301 - BANGUNAN KOSONG - 4 / ",
-          "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[12] MOROWALI UTARA",
-      "total_prelist": 42452,
-      "total_draft": 15,
-      "total_open": 42408,
-      "total_submitted": 29,
-      "total_rejected": 0,
-      "total_approved": 0,
-      "persentase": 0.07,
+      "total_prelist": 42640,
+      "total_draft": 129,
+      "total_open": 42078,
+      "total_submitted": 496,
+      "total_rejected": 25,
+      "total_approved": 30,
+      "persentase": 1.16,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
-      "new_usaha_today": 3,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "new_usaha_today": 1,
+      "new_usaha_yesterday": 7,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 86,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "HAMZAH / ",
-          "code": "7212020008001203 - HAMZAH /  - 1 /  - 1 - 94966 - 2. Tidak",
+          "name": "SUPARNO / ",
+          "code": "7212080005000100 - SUPARNO /  - 1 /  - 0 - 1. Ya",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BADARUDDIN / ",
-          "code": "7212080001000100 - BADARUDDIN /  - 2 /  - 1 - 1. Ya",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "BAYU LESMANA / FUJI NURWAHIDAH",
+          "code": "7212050002000400 - BAYU LESMANA /  - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "DONI SABRIAN GALAENTO / YELISTA PA'O",
-          "code": "7212020010000600 - DONI SABRIAN GALAENTO / YELISTA PA'O - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "JUNIVER WOSO / NURIANA TONAPA",
+          "code": "7212020010000600 -  /  - 1 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "MOH HASAN / ",
+          "code": "7212070007000100 - MOH HASAN /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "SIONAL / ARMA ",
+          "code": "7212070007000100 - SIONAL /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ASWAN / AMELIA",
+          "code": "7212080001000100 - ASWAN / AMELIA - - /  - 1. Ya",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "GUSNA / AGUSRIADI",
+          "code": "7212070007000100 - GUSNA / AGUSRIADI - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "LOKWAN.LAMAMONGKO / ADELIN YULINA LILLIRANO",
+          "code": "7212020010000400 - LOKWAN.LAMAMONGKO / ADELIN YULINA LILLIRANO - 7 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[71] PALU",
-      "total_prelist": 164215,
-      "total_draft": 148,
-      "total_open": 163869,
-      "total_submitted": 191,
-      "total_rejected": 7,
-      "total_approved": 0,
-      "persentase": 0.12,
+      "total_prelist": 165505,
+      "total_draft": 514,
+      "total_open": 162998,
+      "total_submitted": 2087,
+      "total_rejected": 140,
+      "total_approved": 258,
+      "persentase": 1.26,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
-      "new_usaha_today": 52,
-      "new_usaha_yesterday": 0,
-      "new_usaha_overall": 10000,
+      "new_usaha_today": 2,
+      "new_usaha_yesterday": 29,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 404,
+      "new_rumah_overall": 0,
       "new_businesses": [
         {
-          "name": "SUDARWAN / ",
-          "code": "7271040009000101 - SUDARWAN /  - 11 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "NADIMA / SAPWAN",
+          "code": "7271041002000902 -  /  - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SUPRIADIN / ",
-          "code": "7271040001001000 - SUPRIADIN /  - 7 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "BEKAS APOTEK",
+          "code": "7271040004000100 - 8 - - / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SYAMSUDDIN / NURLAILA",
-          "code": "7271031001002101 - SYAMSUDDIN / NURLAILA - 3 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MUHAMMAD HAIKAL / NURNANINGSIH",
+          "code": "7271012002001100 - MUHAMMAD HAIKAL / NURNANINGSIH - 2 /  - 2 - 97436351",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ALWI / HESTIN",
-          "code": "7271031006000502 - ALWI / HESTIN - 3 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "SATRIA BINTANG PAMUNGKAS  / ",
+          "code": "7271031008000502 - SATRIA BINTANG PAMUNGKAS  /  - - /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "INDAH JAYA (IBU MEYTI)",
-          "code": "7271020005002401 - INDAH JAYA (IBU MEYTI) - 2 /  - 1 - 2. Tidak - 41995464",
+          "name": "BALAI NIKAH DAN MANASIK HAJI",
+          "code": "7271010008000400 - BALAI NIKAH DAN MANASIK HAJI - 9 / ",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "AHMAD SYAIFUDIN / AGUSTINA",
-          "code": "7271040009000101 - AHMAD SYAIFUDIN / AGUSTINA - 12 /  - 1 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MOHAMMAD ADITYA / CHAIRUNNISA",
+          "code": "7271020005002504 - MOHAMMAD ADITYA / CHAIRUNNISA - 2 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": " / ",
-          "code": "7271020008000101 -  /  - - / ",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "JUALAN UBI JALAR (HUSEN)",
+          "code": "7271010006000900 - JUALAN UBI JALAR (HUSEN) - 3 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "MOH MAULANA / TIDAK ADA",
-          "code": "7271031006001403 - MOH MAULANA /  - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "HARIYANTO / DELA",
+          "code": "7271012003002300 - HARYANTO  / DELA - 25 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ABDUL AZIZ / FEMY AYU PUTRI",
-          "code": "7271020008000101 - ABDUL AZIZ / FEMY AYU PUTRI - 6 /  - 0",
+          "name": "SUHARDI / ROSNA",
+          "code": "7271040009000500 - SUHARDI / ROSNA - 8 /  - 0",
           "date": "today",
-          "status": "DRAFT"
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BANGUNAN KOSONG ",
-          "code": "7271040001000300 - BANGUNAN KOSONG  - - /  - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MUH RIZALDI / NUNUNG",
+          "code": "7271020007002902 - MUH RIZALDI / NUNUNG - 17 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "FICKRAL MAULANA KRESNADY / GABRIELA WIASTI",
-          "code": "7271020009001901 - FICKRAL MAULANA KRESNADY / GABRIELA WIASTI - 1 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "IBRAHIM / WAHYUNI PAAR",
+          "code": "7271010008001500 -  /  - - /  - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "WENDY OKTAVIA MAKAPEDUA / ",
-          "code": "7271030004002900 - WENDY OKTAVIA MAKAPEDUA /  - 2 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "KIOS PINK",
+          "code": "7271020007002202 -  /  - 1 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BENGKEL RIDWAN",
-          "code": "7271012003000202 - BENGKEL RIDWAN - 2 /  - 2906250004571 - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "MAHFUD AR.KAMBAY / ",
+          "code": "7271012004001100 - MAHFUD AR.KAMBAY /  - 4 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ANDI MUKMIN / NOVITA SARI",
-          "code": "7271031002000402 - ANDI MUKMIN / NOVITA SARI - 1 /  - 0 - 94234 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "IHSAN / MASLINA",
+          "code": "7271031006005307 - IHSAN / MASLINA - 15 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "WARUNG MAMA ISMAIL",
-          "code": "7271030002000700 - WARUNG MAMA ISMAIL - - /  - 1 - 2. Tidak - - / 97439179",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RHEYNA CHRICTIE / ",
+          "code": "7271031006003200 - REINA /  - 6 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "FIRMAN SETIAWAN BUSTAMAN SAPPE / FIRDAYANA MOH ALI",
-          "code": "7271031001002101 - FIRMAN SETIAWAN BUSTAMAN SAPPE / FIRDAYANA MOH ALI - 2 /  - 2",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "BANGUNAN KOSONG ",
-          "code": "7271012004000300 - BANGUNAN KOSONG  - 3 / ",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "MOH FALATEHAN / SASITA ANGGRAINI",
-          "code": "7271040001000300 - MOH FALATEHAN / SASITA ANGGRAINI - - /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "RANTI REKE / ",
-          "code": "7271012003000900 - RANTI REKE /  - 4 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "ANISA POP ICE",
-          "code": "7271040009000101 - ANISA POP ICE - 7 /  - 1 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "MOH. ARIF SANDI / OLVITA JUNIATRIS WULO",
-          "code": "7271031001002400 - MOH. ARIF SANDI / OLVITA JUNIATRIS WULO - 2 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "ANISA POP ICE",
-          "code": "7271040009000101 - ANISA POP ICE - 7 /  - 1 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "MOH. ARIF SANDI / OLVITA JUNIATRIS WULO",
-          "code": "7271031001002400 - MOH. ARIF SANDI / OLVITA JUNIATRIS WULO - 2 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "GIAN SANDI / HAFSA",
-          "code": "7271020007000100 - GIAN SANDI / HAFSA - 3 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "LUKMAN / HAERIA SPAER",
-          "code": "7271040001000300 - LUKMAN / HAERIA SPAER - 2 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "RISWAN / NURNANINGSIH. P. LEMBAH",
-          "code": "7271012002000700 - RISWAN / NURNANINGSIH. P. LEMBAH - 3 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "OKTAVIANUS RANDE  / NOVITA SHARON PELAFU",
-          "code": "7271031006004902 - OKTAVIANUS RANDE  / NOVITA SHARON PELAFU - 2 /  - 2 - - / 26694532",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KIOS PUTRI",
-          "code": "7271030002000700 - KIOS PUTRI - - /  - 1 - 2. Tidak - - / 97439179",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "ACAN / DARSINI",
-          "code": "7271010006000900 - ACAN / DARSINI - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "MUHAMMAD ISMAIL / ANDI TENRI ANGKA",
-          "code": "7271040002000100 - MOH. ISMAIL / ANDI TENRI ANGKA - 4 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KIOS ADITYA CELL ",
-          "code": "7271031003003102 - KIOS ADITYA CELL  - 2 /  - ardhyardhy409@gmail.com - 1 - 1 / 42903395",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": " / ",
-          "code": "7271020007000100 -  /  - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "IDHAM / ",
-          "code": "7271020005000302 - IDHAM /  - 1 /  - 1 - 94122 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "JANRI IVAN JAN DJAYA / RATNA SARI DEWI SIRUNG",
-          "code": "7271031006200107 - JANRI IVAN JAN DJAYA / RATNA SARI DEWI SIRUNG - 1 /  - 1 - 94119 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "HAERUDDIN / RISSA AGUSTINA",
-          "code": "7271012001002000 - HAERUDDIN / RISSA AGUSTINA - 1 /  - 1 - 94226 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "ADRIANSYAH / NUR AFNI DWI PUTRI",
-          "code": "7271020005002800 - ADRIANSYAH / NUR AFNI DWI PUTRI - 1 /  - 1",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "TASRIM / MUHAMMAD FADEL",
-          "code": "7271020007000600 - TASRIM / MUHAMMAD FADEL - - /  - 0",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "KANIP / MUTIKA",
-          "code": "7271011005001900 - KANIP / MUTIKA - 2 /  - 1 - 94223 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "MOH FADIL AKBAR / FADILA ULUL AZMI",
-          "code": "7271031006005307 - MOH FADIL AKBAR / FADILA ULUL AZMI - 1 /  - 0 - 94119 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "RIDWAN TAHER / HAJIR M.TAHER",
-          "code": "7271012003002300 - RIDWAN TAHER / HAJIR M.TAHER - 4 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "TOKO AZ-ZAHRA",
-          "code": "7271040009001201 - TOKO AZ-ZAHRA - 1 /  - 0 - 94148 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "NUMA LAUNDRY",
-          "code": "7271011004000200 - NUMA LAUNDRY - 4 /  - numalaundry@gmail.com - 1",
-          "date": "today",
-          "status": "DRAFT"
-        },
-        {
-          "name": "SAMBAS SUHENDRA / ANDI KARIYATI",
-          "code": "7271020005002800 - SAMBAS SUHENDRA / ANDI KARIYATI - - /  - 0 - 94122 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "SISKA / ",
+          "code": "7271041003001200 - SISKA /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
           "name": "BANGUNAN KOSONG",
-          "code": "7271011006000200 - BANGUNAN KOSONG - - / ",
-          "date": "today",
-          "status": "DRAFT"
+          "code": "7271041003001101 - BANGUNAN KOSONG - 6 / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SOFYAN / WULANDARI",
-          "code": "7271031006004901 - SOFYAN / WULANDARI - 2 /  - 0",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RAHMAT / ICA NACALIA",
+          "code": "7271041003001102 - RAHMAT / ICA NACALIA - 11 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ALITA SHOP",
-          "code": "7271011004000200 - ALITA SHOP - 3 /  - nikomanggita@gmail.com - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "GUDANG KELAPA",
+          "code": "7271041003001101 - GUDANG KELAPA - 5 / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ASBIA / RYAND HIDAYAT",
-          "code": "7271012003002300 - ASBIA / RYAND HIDAYAT - 1 /  - 0 - 1. Ya",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RIVKA / RABILAL GIBRAN",
+          "code": "7271040004000100 - RIVKA / RABILAL GIBRAN - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "ANISA CELL",
-          "code": "7271030004000501 - ANISA CELL - 1 /  - 1 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "BENSIN ECERAN MUNAWIR",
+          "code": "7271040004000100 - BENSIN ECERAN NAWIR - 2 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "HADRATUL AMINAH / SOFYAN",
-          "code": "7271040004000100 - HADRATUL AMINAH / SOFYAN - 1 /  - 1 - 94146 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "KIOS SYAKILA",
+          "code": "7271020009001100 - KIOS SYAKILA - 1 /  - rusniandhy@gmail.com - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "SAL FRESH",
-          "code": "7271011004000200 - SAL FRESH - 2 /  - salfresh@gmail.com - 1",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "RIFAL PRANANDA / NUR AINI",
+          "code": "7271012002000400 - RIFAL PRANANDA / NUR AINI - 1 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "BANGUNAN KOSONG",
-          "code": "7271011006000200 - BANGUNAN KOSONG - 1 /  - 94222 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "YOGIE TIMOR LAKSONO, SH / DESI AMBARWATI GUNAWAN, A.MD. KEB",
+          "code": "7271040009001201 - YOGIE TIMOR LAKSONO, SH / DESI AMBARWATI GUNAWAN, A.MD.KEB - 22 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         },
         {
-          "name": "EKO SAPUTRA DWIPA / NI KETUT NILAWATI",
-          "code": "7271020007002902 - EKO SAPUTRA DWIPA / NI KETUT NILAWATI - 1 /  - 0 - 94231 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT"
+          "name": "BASUKI WIBOWO / ALWIYA",
+          "code": "7271041002000300 - BASUKI WIBOWO / ALWIYA - 19 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "NATHAN RANTEKALA / YULIANTI",
+          "code": "7271020005002700 - NATHAN RANTEKALA / YULIANTI - 6 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "AMBO UPE / BASE DARNAWATI",
+          "code": "7271040009000101 - AMBO UPE / BASE DARNAWATI - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "HERMAN TANRA / DAHLIA",
+          "code": "7271020005001202 - HERMAN TANRA / DAHLIA - 14 /  - 0108230018606 - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "PUTRI MANDIRI",
+          "code": "7271010011002000 - PUTRI MANDIRI - 7 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "ILHAM MANOPPO / ",
+          "code": "7271031006000201 - ILHAM MANOPPO /  - 7 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "RISNAWATI LAPADANGKU / UJANG NUGRAHA",
+          "code": "7271011006001900 - RISNAWATI LAPADANGKU / UJANG NUGRAHA - 7 /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
         }
       ]
     }
@@ -1492,77 +2049,89 @@ window.IPAS_DATA = {
   "se_ub": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
-      "total_prelist": 6,
-      "total_draft": 1,
-      "total_open": 1,
-      "total_submitted": 4,
+      "total_prelist": 10,
+      "total_draft": 2,
+      "total_open": 2,
+      "total_submitted": 8,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 66.67,
+      "persentase": 80.0,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 6,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 4,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[02] BANGGAI",
-      "total_prelist": 172,
-      "total_draft": 5,
-      "total_open": 166,
-      "total_submitted": 1,
+      "total_prelist": 173,
+      "total_draft": 10,
+      "total_open": 332,
+      "total_submitted": 2,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 0.58,
-      "today_completed": 1,
+      "persentase": 1.16,
+      "today_completed": 0,
       "yesterday_completed": 0,
-      "two_days_ago_completed": 0,
+      "two_days_ago_completed": 1,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 172,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 1,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[03] MOROWALI",
-      "total_prelist": 161,
-      "total_draft": 2,
-      "total_open": 158,
-      "total_submitted": 1,
+      "total_prelist": 162,
+      "total_draft": 4,
+      "total_open": 316,
+      "total_submitted": 2,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 0.62,
+      "persentase": 1.23,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 161,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 1,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[04] POSO",
-      "total_prelist": 92,
-      "total_draft": 4,
-      "total_open": 86,
-      "total_submitted": 2,
+      "total_prelist": 94,
+      "total_draft": 8,
+      "total_open": 172,
+      "total_submitted": 4,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 2.17,
+      "persentase": 4.26,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 92,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 2,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[05] DONGGALA",
       "total_prelist": 57,
       "total_draft": 0,
-      "total_open": 57,
+      "total_open": 114,
       "total_submitted": 0,
       "total_rejected": 0,
       "total_approved": 0,
@@ -1572,48 +2141,57 @@ window.IPAS_DATA = {
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 57,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 0,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[06] TOLI-TOLI",
-      "total_prelist": 58,
+      "total_prelist": 72,
       "total_draft": 0,
-      "total_open": 44,
-      "total_submitted": 14,
+      "total_open": 88,
+      "total_submitted": 28,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 24.14,
+      "persentase": 38.89,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 58,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 14,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[07] BUOL",
-      "total_prelist": 17,
-      "total_draft": 5,
-      "total_open": 10,
-      "total_submitted": 2,
+      "total_prelist": 19,
+      "total_draft": 10,
+      "total_open": 20,
+      "total_submitted": 4,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 11.76,
+      "persentase": 21.05,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 17,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 2,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[08] PARIGI MOUTONG",
       "total_prelist": 65,
       "total_draft": 0,
-      "total_open": 65,
+      "total_open": 130,
       "total_submitted": 0,
       "total_rejected": 0,
       "total_approved": 0,
@@ -1623,31 +2201,37 @@ window.IPAS_DATA = {
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 65,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 0,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[09] TOJO UNA-UNA",
-      "total_prelist": 15,
-      "total_draft": 2,
-      "total_open": 11,
-      "total_submitted": 2,
+      "total_prelist": 17,
+      "total_draft": 4,
+      "total_open": 22,
+      "total_submitted": 4,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 13.33,
+      "persentase": 23.53,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 15,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 2,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[10] SIGI",
       "total_prelist": 22,
       "total_draft": 0,
-      "total_open": 22,
+      "total_open": 44,
       "total_submitted": 0,
       "total_rejected": 0,
       "total_approved": 0,
@@ -1657,63 +2241,77 @@ window.IPAS_DATA = {
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 22,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 0,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[11] BANGGAI LAUT",
-      "total_prelist": 7,
-      "total_draft": 2,
-      "total_open": 2,
-      "total_submitted": 3,
+      "total_prelist": 10,
+      "total_draft": 4,
+      "total_open": 4,
+      "total_submitted": 6,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 42.86,
-      "today_completed": 1,
+      "persentase": 60.0,
+      "today_completed": 0,
       "yesterday_completed": 0,
-      "two_days_ago_completed": 0,
+      "two_days_ago_completed": 1,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 7,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 3,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[12] MOROWALI UTARA",
-      "total_prelist": 173,
+      "total_prelist": 174,
       "total_draft": 0,
-      "total_open": 172,
-      "total_submitted": 1,
+      "total_open": 344,
+      "total_submitted": 2,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 0.58,
+      "persentase": 1.15,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 173,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 1,
+      "new_rumah_overall": 0,
       "new_businesses": []
     },
     {
       "kabupaten": "[71] PALU",
-      "total_prelist": 419,
-      "total_draft": 8,
-      "total_open": 403,
-      "total_submitted": 8,
+      "total_prelist": 427,
+      "total_draft": 18,
+      "total_open": 804,
+      "total_submitted": 16,
       "total_rejected": 0,
       "total_approved": 0,
-      "persentase": 1.91,
+      "persentase": 3.75,
       "today_completed": 0,
-      "yesterday_completed": 4,
+      "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_usaha_overall": 419,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 8,
+      "new_rumah_overall": 0,
       "new_businesses": []
     }
   ],
-  "se_umum_prov_total": 1140747,
-  "se_ub_prov_total": 1264,
-  "se_umum_prov_new_total": 130000,
-  "se_ub_prov_new_total": 1264
+  "se_umum_prov_total": 1147651,
+  "se_ub_prov_total": 1302,
+  "se_umum_prov_new_total": 2216,
+  "se_ub_prov_new_total": 38,
+  "se_umum_prov_new_rumah_total": 0,
+  "se_ub_prov_new_rumah_total": 0
 };

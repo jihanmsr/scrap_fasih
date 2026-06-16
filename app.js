@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!total || total <= 0) return '0.00';
         if (val >= total) return '100.00';
         const pct = (val / total) * 100;
+        if (pct < 0.01 && pct > 0) {
+            return pct.toFixed(4);
+        }
         const floored = Math.floor(pct * 100) / 100;
         if (floored >= 100 && val < total) {
             return '99.99';
@@ -723,9 +726,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'total_prelist')" style="font-family: 'Outfit', sans-serif; text-align: right; vertical-align: middle;">
                     Total Target${getIcon('total_prelist')}
                 </th>
-                <!-- <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'new_usaha_today')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
-                    Penambahan${getIcon('new_usaha_today')}
-                </th> -->
+                <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'new_usaha_overall')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
+                    Tambahan Usaha${getIcon('new_usaha_overall')}
+                </th>
+                <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'new_rumah_overall')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
+                    Rumah Baru${getIcon('new_rumah_overall')}
+                </th>
             </tr>
             <tr>
                 <th class="sortable" onclick="sortSeTable('${surveyType}', 'total_submitted')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
@@ -750,17 +756,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const surveyData = ipasDataObj[surveyType] || [];
 
         // Calculate Summary
-        let prelist = 0, draft = 0, openVal = 0, submitted = 0, today = 0, yesterday = 0, twoDaysAgo = 0, newToday = 0;
+        let prelist = 0, draft = 0, openVal = 0, submitted = 0, rejected = 0, today = 0, yesterday = 0, twoDaysAgo = 0, newToday = 0, newRumahToday = 0;
 
         surveyData.forEach(item => {
             prelist += item.total_prelist || 0;
             draft += item.total_draft || 0;
             openVal += item.total_open || 0;
             submitted += item.total_submitted || 0;
+            rejected += item.total_rejected || 0;
             today += item.today_completed || 0;
             yesterday += item.yesterday_completed || 0;
             twoDaysAgo += item.two_days_ago_completed || 0;
             newToday += item.new_usaha_today || 0;
+            newRumahToday += item.new_rumah_today || 0;
             item.sisa_usaha = Math.max(0, (item.total_prelist || 0) - (item.total_submitted || 0));
         });
 
@@ -783,6 +791,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const newTodayEl = document.getElementById(`${surveyType}-stat-new-today`);
         if(newTodayEl) newTodayEl.textContent = `+${formatNum(newToday)}`;
         
+        const newRumahTodayEl = document.getElementById(`${surveyType}-stat-new-rumah-today`);
+        if(newRumahTodayEl) newRumahTodayEl.textContent = `+${formatNum(newRumahToday)}`;
+        
         const draftEl = document.getElementById(`${surveyType}-stat-draft`);
         if(draftEl) draftEl.textContent = formatNum(draft);
         
@@ -793,7 +804,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if(submittedEl) submittedEl.textContent = formatNum(submitted);
         
         const percentEl = document.getElementById(`${surveyType}-stat-percentage`);
-        if(percentEl) percentEl.textContent = persentase + '%';
+        if(percentEl) percentEl.textContent = `(${persentase}%)`;
+
+        const rejectedEl = document.getElementById(`${surveyType}-stat-rejected`);
+        if(rejectedEl) rejectedEl.textContent = formatNum(rejected);
 
         const todayEl = document.getElementById(`${surveyType}-stat-today`);
         if(todayEl) todayEl.textContent = formatNum(today);
@@ -804,10 +818,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const twoDaysEl = document.getElementById(`${surveyType}-stat-2days`);
         if(twoDaysEl) twoDaysEl.textContent = formatNum(twoDaysAgo);
 
-        // Calculate and set card percentages
-        const pctToday = prelist > 0 ? ((today / prelist) * 100).toFixed(2) : '0.00';
-        const pctYesterday = prelist > 0 ? ((yesterday / prelist) * 100).toFixed(2) : '0.00';
-        const pctTwoDays = prelist > 0 ? ((twoDaysAgo / prelist) * 100).toFixed(2) : '0.00';
+        // Calculate and set card percentages with dynamic precision for small numbers
+        const formatPctVal = (v, tot) => {
+            if (tot <= 0) return '0.00';
+            const pct = (v / tot) * 100;
+            if (pct > 0 && pct < 0.01) return pct.toFixed(4);
+            return pct.toFixed(2);
+        };
+        const pctToday = formatPctVal(today, prelist);
+        const pctYesterday = formatPctVal(yesterday, prelist);
+        const pctTwoDays = formatPctVal(twoDaysAgo, prelist);
 
         const todayPctEl = document.getElementById(`${surveyType}-stat-today-pct`);
         if(todayPctEl) todayPctEl.textContent = `(${pctToday}%)`;
@@ -818,22 +838,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const twoDaysPctEl = document.getElementById(`${surveyType}-stat-2days-pct`);
         if(twoDaysPctEl) twoDaysPctEl.textContent = `(${pctTwoDays}%)`;
 
-        // Total Selesai card
-        const submittedMainEl = document.getElementById(`${surveyType}-stat-submitted-main`);
-        if(submittedMainEl) submittedMainEl.textContent = formatNum(submitted);
-        const percentMainEl = document.getElementById(`${surveyType}-stat-percentage-main`);
-        if(percentMainEl) percentMainEl.textContent = `(${persentase}%)`;
-
         // Total Tambahan Usaha card (kumulatif)
         let newOverall = 0;
+        let newRumahOverall = 0;
         surveyData.forEach(item => {
             newOverall += item.new_usaha_overall || 0;
+            newRumahOverall += item.new_rumah_overall || 0;
         });
         if (ipasDataObj[surveyType + "_prov_new_total"]) {
             newOverall = ipasDataObj[surveyType + "_prov_new_total"];
         }
+        if (ipasDataObj[surveyType + "_prov_new_rumah_total"]) {
+            newRumahOverall = ipasDataObj[surveyType + "_prov_new_rumah_total"];
+        }
         const newOverallEl = document.getElementById(`${surveyType}-stat-new-overall`);
         if(newOverallEl) newOverallEl.textContent = formatNum(newOverall);
+        const newRumahOverallEl = document.getElementById(`${surveyType}-stat-new-rumah-overall`);
+        if(newRumahOverallEl) newRumahOverallEl.textContent = formatNum(newRumahOverall);
 
         // Kenaikan Persentase
         const kenaikanEl = document.getElementById(`${surveyType}-stat-kenaikan`);
@@ -931,6 +952,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     valA = a.two_days_ago_completed || 0;
                     valB = b.two_days_ago_completed || 0;
                     break;
+                case 'new_usaha_overall':
+                    valA = a.new_usaha_overall || 0;
+                    valB = b.new_usaha_overall || 0;
+                    break;
+                case 'new_rumah_overall':
+                    valA = a.new_rumah_overall || 0;
+                    valB = b.new_rumah_overall || 0;
+                    break;
                 case 'new_usaha_today':
                     valA = a.new_usaha_today || 0;
                     valB = b.new_usaha_today || 0;
@@ -954,14 +983,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const row = document.createElement('tr');
 
             const kabupatenEscaped = item.kabupaten.replace(/'/g, "\\'");
-            // FIX: Gunakan encodeURIComponent agar karakter aneh/tanda kutip di nama usaha tidak merusak HTML
             const encodedBusinessesJSON = encodeURIComponent(JSON.stringify(item.new_businesses || []));
 
-            const penambahanBadge = (item.new_usaha_today > 0 || item.new_usaha_yesterday > 0)
-                ? `<span onclick="openNewBusinessesModal('${kabupatenEscaped}', '${encodedBusinessesJSON}')" style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 700; background-color: rgba(99, 102, 241, 0.15); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.3); opacity: 0.95; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundColor='rgba(99, 102, 241, 0.25)';" onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='rgba(99, 102, 241, 0.15)';">
-                    +${item.new_usaha_today} | +${item.new_usaha_yesterday}
-                   </span>`
-                : `<span style="color: var(--text-muted); font-size: 0.85rem;">-</span>`;
+            const penambahanBadge = `<div onclick="openNewBusinessesModal('${kabupatenEscaped}', '${encodedBusinessesJSON}', 'usaha')" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
+                    <span style="font-weight: 800; color: var(--primary); font-size: 0.95rem;">${formatNum(item.new_usaha_overall)}</span>
+                    <span style="font-size: 0.7rem; font-weight: 600; color: var(--text-secondary);">+${item.new_usaha_today} hari ini | +${item.new_usaha_yesterday} kmrn</span>
+                </div>`;
+
+            const penambahanRumahBadge = `<div onclick="openNewBusinessesModal('${kabupatenEscaped}', '${encodedBusinessesJSON}', 'rumah')" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
+                    <span style="font-weight: 800; color: #ec4899; font-size: 0.95rem;">${formatNum(item.new_rumah_overall || 0)}</span>
+                    <span style="font-size: 0.7rem; font-weight: 600; color: var(--text-secondary);">+${item.new_rumah_today || 0} hari ini | +${item.new_rumah_yesterday || 0} kmrn</span>
+                </div>`;
+
             row.innerHTML = `
                 <td style="font-weight: 700; color: var(--text-primary);">${highlightText(item.kabupaten, searchVal)}</td>
                 <td style="text-align: right; font-family: monospace; font-weight: 500; color: #f59e0b;">${formatNum(item.total_draft)}</td>
@@ -978,9 +1011,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     </span>
                 </td>
                 <td style="text-align: right; font-family: monospace; font-weight: 500; color: var(--text-secondary);">${formatNum(item.total_prelist)}</td>
-                <!-- <td style="text-align: center;">
+                <td style="text-align: center;">
                     ${penambahanBadge}
-                </td> -->
+                </td>
+                <td style="text-align: center;">
+                    ${penambahanRumahBadge}
+                </td>
             `;
             tbody.appendChild(row);
         });
@@ -1207,6 +1243,28 @@ document.addEventListener('DOMContentLoaded', () => {
     let progressGaugeInstance = null;
     let syncGaugeInstance = null;
 
+    window.switchAssignSubtab = function(tabName) {
+        const sections = ['kab', 'sls', 'petugas'];
+        sections.forEach(s => {
+            const el = document.getElementById(`assign-${s}-section`);
+            const btn = document.getElementById(`assign-subtab-btn-${s}`);
+            if (el) {
+                el.style.display = s === tabName ? 'block' : 'none';
+            }
+            if (btn) {
+                if (s === tabName) {
+                    btn.classList.add('active');
+                    btn.style.backgroundColor = 'var(--primary)';
+                    btn.style.color = 'white';
+                } else {
+                    btn.classList.remove('active');
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                }
+            }
+        });
+    };
+
     function renderAssignChart() {
         const ctx = document.getElementById('assignChart');
         if (!ctx) return;
@@ -1220,30 +1278,58 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Aggregate sync data by Kabupaten based on target usaha
-        const syncByKab = {};
-        const slsTargetMap = {};
-        if (window.ASSIGN_SLS_DATA) {
+        // Aggregate SLS-level assignment and sync by Kabupaten
+        const slsStatsByKab = {};
+        
+        // Initialize for all kabupaten from window.ASSIGN_DATA
+        window.ASSIGN_DATA.forEach(d => {
+            slsStatsByKab[d.kode_kab] = { total: 0, assigned: 0, synced: 0 };
+        });
+
+        let hasLocalSls = false;
+        if (window.ASSIGN_SLS_DATA && window.ASSIGN_SLS_DATA.length > 0) {
+            hasLocalSls = true;
             window.ASSIGN_SLS_DATA.forEach(sls => {
                 const code = sls.sls_code || sls.sls_id;
-                slsTargetMap[code] = sls.total || 0;
+                const kodeKab = code ? code.substring(0, 4) : '';
+                if (kodeKab && slsStatsByKab[kodeKab]) {
+                    slsStatsByKab[kodeKab].total++;
+                    if ((sls.assigned || 0) > 0) {
+                        slsStatsByKab[kodeKab].assigned++;
+                    }
+                    if ((sls.sync_count || 0) > 0) {
+                        slsStatsByKab[kodeKab].synced++;
+                    }
+                }
             });
         }
-        
-        if (window.SUPERSET_SYNC_SLS_DATA) {
-            window.SUPERSET_SYNC_SLS_DATA.forEach(d => {
-                const kodeKab = d.sls_code ? d.sls_code.substring(0, 4) : '';
-                if (kodeKab && d.sync_count > 0) {
-                    syncByKab[kodeKab] = (syncByKab[kodeKab] || 0) + (slsTargetMap[d.sls_code] || 0);
+
+        if (!hasLocalSls && window.SUPERSET_SYNC_SLS_DATA && window.SUPERSET_SYNC_SLS_DATA.length > 0) {
+            window.SUPERSET_SYNC_SLS_DATA.forEach(sls => {
+                const code = sls.sls_code || sls.sls_id;
+                const kodeKab = code ? code.substring(0, 4) : '';
+                if (kodeKab && slsStatsByKab[kodeKab]) {
+                    slsStatsByKab[kodeKab].total++;
+                    slsStatsByKab[kodeKab].assigned++;
+                    if ((sls.sync_count || 0) > 0) {
+                        slsStatsByKab[kodeKab].synced++;
+                    }
                 }
             });
         }
 
         const labels = window.ASSIGN_DATA.map(d => d.nama_kab.replace(/\[\d+\] /, ''));
-        const syncedData = window.ASSIGN_DATA.map(d => syncByKab[d.kode_kab] || 0);
-        // Sudah ditugaskan tapi belum sync
-        const assignedOnlyData = window.ASSIGN_DATA.map((d, i) => Math.max(0, d.assigned - syncedData[i]));
-        const notAssignedData = window.ASSIGN_DATA.map(d => d.have_not_assigned);
+        const syncedData = window.ASSIGN_DATA.map(d => slsStatsByKab[d.kode_kab]?.synced || 0);
+        const assignedOnlyData = window.ASSIGN_DATA.map(d => {
+            const stats = slsStatsByKab[d.kode_kab];
+            if (!stats) return 0;
+            return Math.max(0, stats.assigned - stats.synced);
+        });
+        const notAssignedData = window.ASSIGN_DATA.map(d => {
+            const stats = slsStatsByKab[d.kode_kab];
+            if (!stats) return 0;
+            return Math.max(0, stats.total - stats.assigned);
+        });
 
         const textColor = getThemeColor('--text-secondary', '#9ca3af');
         const gridColor = getThemeColor('--card-border', 'rgba(255, 255, 255, 0.08)');
@@ -1309,21 +1395,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update Speedometer Gauge Chart
+        // Update Speedometer Gauge Chart (Alokasi)
         const ctxGauge = document.getElementById('progressGaugeChart');
         if (ctxGauge) {
             if (progressGaugeInstance) {
                 progressGaugeInstance.destroy();
             }
 
-            let totalAssigned = 0;
-            let totalTargets = 0;
-            window.ASSIGN_DATA.forEach(d => {
-                totalAssigned += (d.assigned || 0);
-                totalTargets += (d.total || 0);
+            let totalSls = 0;
+            let assignedSls = 0;
+            
+            Object.values(slsStatsByKab).forEach(stats => {
+                totalSls += stats.total;
+                assignedSls += stats.assigned;
             });
 
-            const pctText = floorPct(totalAssigned, totalTargets);
+            // Hardcoded fallback if no SLS data is loaded yet
+            if (totalSls === 0) {
+                totalSls = 17037;
+                assignedSls = 17037;
+            }
+
+            const pctText = floorPct(assignedSls, totalSls);
             const pct = parseFloat(pctText);
 
             const pctCenter = document.getElementById('gauge-percent-center');
@@ -1331,7 +1424,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const statsDetails = document.getElementById('gauge-stats-details');
             if (statsDetails) {
-                statsDetails.innerHTML = `<span style="font-weight: 700; color: var(--text-primary); font-size: 1.15rem; display: block; margin-bottom: 0.25rem;">${new Intl.NumberFormat('id-ID').format(totalAssigned)}</span> dari ${new Intl.NumberFormat('id-ID').format(totalTargets)} target usaha telah ditugaskan`;
+                statsDetails.innerHTML = `<span style="font-weight: 700; color: var(--text-primary); font-size: 1.15rem; display: block; margin-bottom: 0.25rem;">${new Intl.NumberFormat('id-ID').format(assignedSls)}</span> dari ${new Intl.NumberFormat('id-ID').format(totalSls)} SLS telah ditugaskan`;
             }
 
             const accentColor = getThemeColor('--primary', '#6366f1');
@@ -1361,6 +1454,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+        updateGlobalSyncProgress();
     }
 
     // SLS state
@@ -1919,6 +2013,39 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    function syncLocalSlsWithSupersetData() {
+        if (!window.SUPERSET_SYNC_SLS_DATA || window.SUPERSET_SYNC_SLS_DATA.length === 0) return;
+        
+        const syncMap = {};
+        window.SUPERSET_SYNC_SLS_DATA.forEach(item => {
+            if (item.sls_code) {
+                syncMap[item.sls_code] = item.sync_count;
+            }
+        });
+
+        const updateList = (list) => {
+            if (!list) return;
+            list.forEach(sls => {
+                const code = sls.sls_code;
+                if (code && typeof syncMap[code] !== 'undefined') {
+                    sls.sync_count = syncMap[code];
+                } else {
+                    sls.sync_count = 0;
+                }
+            });
+        };
+
+        updateList(window.ASSIGN_SLS_DATA_UMUM);
+        updateList(window.ASSIGN_SLS_DATA_UB);
+        
+        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+        if (activeSubtab === 'se2026') {
+            window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM;
+        } else {
+            window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UB;
+        }
+    }
+
     function updateGlobalSyncProgress() {
         const syncContainerInner = document.getElementById('global-sync-progress-container-inner');
         const syncTextInner = document.getElementById('global-sync-text-inner');
@@ -1926,14 +2053,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (!window.ASSIGN_DATA) return;
 
-        let totalSynced = 0;
+        let totalSls = 0;
+        let syncedSls = 0;
         let hasLocalSyncData = false;
         
-        if (window.ASSIGN_SLS_DATA) {
+        if (window.ASSIGN_SLS_DATA && window.ASSIGN_SLS_DATA.length > 0) {
+            totalSls = window.ASSIGN_SLS_DATA.length;
             window.ASSIGN_SLS_DATA.forEach(sls => {
                 if (typeof sls.sync_count !== 'undefined') {
-                    totalSynced += (sls.sync_count || 0);
                     hasLocalSyncData = true;
+                    if (sls.sync_count > 0) {
+                        syncedSls++;
+                    }
                 }
             });
         }
@@ -1943,30 +2074,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (syncTextInner) syncTextInner.textContent = "Data sinkronisasi belum tersedia.";
                 return;
             }
-            const slsTargetMap = {};
-            if (window.ASSIGN_SLS_DATA) {
-                window.ASSIGN_SLS_DATA.forEach(sls => {
-                    const code = sls.sls_code || sls.sls_id;
-                    slsTargetMap[code] = sls.total || 0;
-                });
-            }
+            totalSls = window.SUPERSET_SYNC_SLS_DATA.length;
             window.SUPERSET_SYNC_SLS_DATA.forEach(d => {
                 if (d.sync_count > 0) {
-                    totalSynced += (slsTargetMap[d.sls_code] || 0);
+                    syncedSls++;
                 }
             });
         }
-
-        // Gunakan jumlah target usaha riil dari data penugasan
-        let totalTarget = 0;
-        if (window.ASSIGN_DATA) {
-            window.ASSIGN_DATA.forEach(kab => {
-                totalTarget += (kab.total || 0);
-            });
-        }
                          
-        const pct = totalTarget > 0 ? ((totalSynced / totalTarget) * 100).toFixed(2) : '0.00';
-        const textContent = `${new Intl.NumberFormat('id-ID').format(totalSynced)} dari ${new Intl.NumberFormat('id-ID').format(totalTarget)} target usaha tersinkronisasi`;
+        const pct = totalSls > 0 ? ((syncedSls / totalSls) * 100).toFixed(2) : '0.00';
+        const textContent = `${new Intl.NumberFormat('id-ID').format(syncedSls)} dari ${new Intl.NumberFormat('id-ID').format(totalSls)} SLS tersinkronisasi (Real-time)`;
 
         if (syncContainerInner && syncTextInner && syncPercentCenter) {
             syncTextInner.textContent = textContent;
@@ -2064,7 +2181,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div style="flex: 1;">
                             <div style="font-weight: 700; color: #f87171;">Peringatan Beban Kerja Berlebih!</div>
                             <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.15rem;">
-                                Terdeteksi <strong>${totalOverloadedPencacah} Pencacah</strong> dengan beban kerja di atas <strong>800 target HH/listing</strong>. Hal ini dapat mempengaruhi kualitas pendataan sensus.
+                                Terdeteksi <strong>${totalOverloadedPencacah} Pencacah</strong> dengan beban kerja di atas <strong>800 target tugas</strong>. Hal ini dapat mempengaruhi kualitas pendataan sensus.
                             </div>
                         </div>
                         <button class="btn-action" onclick="document.getElementById('petugas-workload-filter').value='overloaded'; document.getElementById('petugas-role-filter').value='Pencacah'; window.renderPetugasTable();" style="background: #ef4444; color: white; border: none; font-size: 0.8rem; padding: 0.5rem 0.75rem; border-radius: 0.5rem; height: auto; cursor: pointer;">
@@ -2190,20 +2307,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (item.totalHH > 800) {
                 workloadBadge = `
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 0.15rem;">
-                        <span style="color: #ef4444; font-weight: 800; font-size: 0.9rem;">${new Intl.NumberFormat('id-ID').format(item.totalHH)} HH</span>
+                        <span style="color: #ef4444; font-weight: 800; font-size: 0.9rem;">${new Intl.NumberFormat('id-ID').format(item.totalHH)} target</span>
                         <span style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.25); padding: 0.1rem 0.4rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.02em;">⚠️ OVERLOAD</span>
                     </div>
                 `;
             } else if (item.totalHH > 500) {
                 workloadBadge = `
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 0.15rem;">
-                        <span style="color: #f59e0b; font-weight: 700; font-size: 0.85rem;">${new Intl.NumberFormat('id-ID').format(item.totalHH)} HH</span>
+                        <span style="color: #f59e0b; font-weight: 700; font-size: 0.85rem;">${new Intl.NumberFormat('id-ID').format(item.totalHH)} target</span>
                         <span style="background: rgba(245, 158, 11, 0.1); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); padding: 0.1rem 0.4rem; border-radius: 0.25rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.02em;">SEDANG</span>
                     </div>
                 `;
             } else {
                 workloadBadge = `
-                    <span style="color: var(--text-primary); font-weight: 600; font-size: 0.85rem;">${new Intl.NumberFormat('id-ID').format(item.totalHH)} HH</span>
+                    <span style="color: var(--text-primary); font-weight: 600; font-size: 0.85rem;">${new Intl.NumberFormat('id-ID').format(item.totalHH)} target</span>
                 `;
             }
 
@@ -2408,8 +2525,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <th onclick="window.sortSyncTable('kec_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Kecamatan${getIcon('kec_name')}</th>
             <th onclick="window.sortSyncTable('desa_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Desa${getIcon('desa_name')}</th>
             <th onclick="window.sortSyncTable('sls_name')" style="font-family: 'Outfit', sans-serif; cursor: pointer; user-select: none;">Kode & Nama SLS${getIcon('sls_name')}</th>
-            <th onclick="window.sortSyncTable('assign')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none; width: 130px;">Assign (Superset)${getIcon('assign')}</th>
-            <th onclick="window.sortSyncTable('sync_count')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none; width: 130px;">Sync (Superset)${getIcon('sync_count')}</th>
+            <th onclick="window.sortSyncTable('assign')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none; width: 130px;">Assign (Real-time)${getIcon('assign')}</th>
+            <th onclick="window.sortSyncTable('sync_count')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none; width: 130px;">Sync (Real-time)${getIcon('sync_count')}</th>
             <th onclick="window.sortSyncTable('sync_status')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none; width: 120px;">Status${getIcon('sync_status')}</th>
         `;
         
@@ -2437,28 +2554,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const desaFilter = document.getElementById('sync-desa-filter')?.value || 'all';
         const statusFilter = document.getElementById('sync-status-filter')?.value || 'all';
 
-        // Precalculate lookup map from superset sync data
-        const syncMap = new Map();
-        if (window.SUPERSET_SYNC_SLS_DATA) {
-            window.SUPERSET_SYNC_SLS_DATA.forEach(item => {
-                if (item && item.sls_code) {
-                    syncMap.set(item.sls_code, item);
-                }
-            });
-        }
-
-        // Left join into ASSIGN_SLS_DATA
+        // Map directly from ASSIGN_SLS_DATA (Real-time)
         const joinedData = window.ASSIGN_SLS_DATA.map(item => {
-            const syncInfo = syncMap.get(item.sls_code) || { assign: 0, sync_count: 0 };
             return {
                 kab_name: item.kab_name || '',
                 kec_name: item.kec_name || '',
                 desa_name: item.desa_name || '',
                 sls_code: item.sls_code || '',
                 sls_name: item.sls_name || '',
-                assign: syncInfo.assign || 0,
-                sync_count: syncInfo.sync_count || 0,
-                sync_status: (syncInfo.sync_count || 0) > 0 ? 'synced' : 'not_synced'
+                assign: item.assigned || 0,
+                sync_count: item.sync_count || 0,
+                sync_status: (item.sync_count || 0) > 0 ? 'synced' : 'not_synced'
             };
         });
 
@@ -2550,26 +2656,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const desaFilter = document.getElementById('sync-desa-filter')?.value || 'all';
         const statusFilter = document.getElementById('sync-status-filter')?.value || 'all';
 
-        const syncMap = new Map();
-        if (window.SUPERSET_SYNC_SLS_DATA) {
-            window.SUPERSET_SYNC_SLS_DATA.forEach(item => {
-                if (item && item.sls_code) {
-                    syncMap.set(item.sls_code, item);
-                }
-            });
-        }
-
         const joinedData = window.ASSIGN_SLS_DATA.map(item => {
-            const syncInfo = syncMap.get(item.sls_code) || { assign: 0, sync_count: 0 };
             return {
                 kab_name: item.kab_name || '',
                 kec_name: item.kec_name || '',
                 desa_name: item.desa_name || '',
                 sls_code: item.sls_code || '',
                 sls_name: item.sls_name || '',
-                assign: syncInfo.assign || 0,
-                sync_count: syncInfo.sync_count || 0,
-                sync_status: (syncInfo.sync_count || 0) > 0 ? 'synced' : 'not_synced'
+                assign: item.assigned || 0,
+                sync_count: item.sync_count || 0,
+                sync_status: (item.sync_count || 0) > 0 ? 'synced' : 'not_synced'
             };
         });
 
@@ -2597,7 +2693,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return ((valA || 0) - (valB || 0)) * order;
         });
 
-        const headers = ["Kabupaten", "Kecamatan", "Desa", "Kode SLS", "Nama SLS", "Assign (Superset)", "Sync (Superset)", "Status"];
+        const headers = ["Kabupaten", "Kecamatan", "Desa", "Kode SLS", "Nama SLS", "Assign (Real-time)", "Sync (Real-time)", "Status"];
         const rows = filtered.map(item => [
             item.kab_name,
             item.kec_name,
@@ -2617,7 +2713,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.setAttribute("href", encodedUri);
         
         const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
-        link.setAttribute("download", `rincian_sync_capi_superset_${activeSubtab}.csv`);
+        link.setAttribute("download", `rincian_sync_capi_realtime_${activeSubtab}.csv`);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -3109,14 +3205,16 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Modal Functions
-    // Modal Functions
     let activeModalBusinesses = [];
+    let modalFilterType = null; // 'usaha', 'rumah', or null
 
-    window.openNewBusinessesModal = function (kabupatenName, encodedBusinessesJSON) {
+    window.openNewBusinessesModal = function (kabupatenName, encodedBusinessesJSON, filterType) {
         const modal = document.getElementById('businesses-modal');
         const titleText = document.getElementById('modal-title-text');
         const searchInput = document.getElementById('modal-search-input');
         if (!modal || !titleText || !searchInput) return;
+
+        modalFilterType = filterType || null;
 
         // BRUTE FORCE CSS: Paksa modal overlay tampil
         modal.style.display = 'flex';
@@ -3133,7 +3231,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const cleanKab = (kabupatenName || "").replace(/\[\d+\]\s*/, '').trim().toUpperCase();
-        titleText.innerText = `Penambahan Usaha: KAB. ${cleanKab}`;
+        titleText.innerText = `${modalFilterType === 'rumah' ? 'Penambahan Rumah Baru' : 'Penambahan Usaha Baru'}: KAB. ${cleanKab}`;
         searchInput.value = '';
 
         try {
@@ -3147,11 +3245,13 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.classList.add('active');
     };
 
-    window.openProvincialNewBusinessesModal = function (surveyType) {
+    window.openProvincialNewBusinessesModal = function (surveyType, filterType) {
         const modal = document.getElementById('businesses-modal');
         const titleText = document.getElementById('modal-title-text');
         const searchInput = document.getElementById('modal-search-input');
         if (!modal || !titleText || !searchInput) return;
+
+        modalFilterType = filterType || null;
 
         modal.style.display = 'flex';
         modal.style.zIndex = '999999';
@@ -3165,7 +3265,7 @@ document.addEventListener('DOMContentLoaded', () => {
             container.style.transform = 'none';
         }
 
-        titleText.innerText = `Penambahan Usaha: PROVINSI SULAWESI TENGAH (${surveyType === 'se_umum' ? 'SE2026' : 'Usaha Besar'})`;
+        titleText.innerText = `${modalFilterType === 'rumah' ? 'Penambahan Rumah Baru' : 'Penambahan Usaha Baru'}: PROVINSI SULAWESI TENGAH (${surveyType === 'se_umum' ? 'SE2026' : 'Usaha Besar'})`;
         searchInput.value = '';
 
         const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
@@ -3199,11 +3299,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const q = searchInput.value.toLowerCase().trim();
         const filtered = activeModalBusinesses.filter(b => {
-            return (b.name || '').toLowerCase().includes(q) || (b.code || '').toLowerCase().includes(q);
+            const matchesSearch = (b.name || '').toLowerCase().includes(q) || (b.code || '').toLowerCase().includes(q);
+            if (!matchesSearch) return false;
+
+            if (modalFilterType === 'usaha') {
+                return b.type !== 'rumah';
+            } else if (modalFilterType === 'rumah') {
+                return b.type === 'rumah';
+            }
+            return true;
         });
 
         if (filtered.length === 0) {
-            container.innerHTML = `<div style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary); font-size: 0.9rem;">Tidak ada penambahan usaha baru yang ditemukan.</div>`;
+            container.innerHTML = `<div style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary); font-size: 0.9rem;">Tidak ada penambahan ${modalFilterType === 'rumah' ? 'rumah baru' : 'usaha baru'} yang ditemukan.</div>`;
             return;
         }
 
@@ -3215,6 +3323,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const badgeBorder = isToday ? 'rgba(16,185,129,0.3)' : 'rgba(245,158,11,0.3)';
             const badgeText = isToday ? 'Hari Ini' : 'Kemarin';
             const kabSub = b.kabName ? `<span style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 0.2rem 0.5rem; border-radius: 0.25rem; margin-right: 0.5rem; border: 1px solid var(--card-border);">${b.kabName}</span>` : '';
+            const typeBadgeColor = b.type === 'rumah' ? '#ec4899' : 'var(--primary)';
+            const typeBadgeBg = b.type === 'rumah' ? 'rgba(236,72,153,0.1)' : 'rgba(59,130,246,0.1)';
+            const typeBadgeText = b.type === 'rumah' ? 'RUMAH' : 'USAHA';
 
             return `
                 <div style="padding: 1rem; border-bottom: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
@@ -3224,6 +3335,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                         ${kabSub}
+                        <span style="background: ${typeBadgeBg}; padding: 0.25rem 0.6rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 800; color: ${typeBadgeColor}; text-transform: uppercase;">${typeBadgeText}</span>
                         <span style="background: rgba(255,255,255,0.05); padding: 0.25rem 0.6rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; border: 1px solid var(--card-border);">${b.status || 'DRAFT'}</span>
                         <span style="background: ${badgeBg}; border: 1px solid ${badgeBorder}; padding: 0.25rem 0.6rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 800; color: ${badgeColor};">${badgeText}</span>
                     </div>
@@ -3525,6 +3637,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // Sinkronisasi data local SLS dengan real-time Superset data
+        syncLocalSlsWithSupersetData();
+
         companies = processGroupedData(sourceData);
 
         // Generate last updated text templates
@@ -3645,6 +3760,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(slsTitle) slsTitle.innerText = "Rincian Assignment per SLS";
             }
         }
+
+        // Initialize/reset active subtab to 'kab' on survey type switch
+        window.switchAssignSubtab('kab');
         
         renderSyncTable();
         
@@ -4004,7 +4122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             container.style.display = 'none';
             btn.classList.remove('expanded');
-            btn.innerHTML = section === 'email' ? 'Lihat Kegagalan Email ▼' : 'Lihat Detail Dokumen ▼';
+            btn.innerHTML = section === 'email' ? 'Lihat Kegagalan Email ▼' : 'Lihat Detail Lainnya ▼';
         }
     };
 

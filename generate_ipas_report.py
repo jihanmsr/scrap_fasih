@@ -145,6 +145,20 @@ async def get_authenticated_context(p):
 
     return browser, context, page
 
+def is_tambahan(code_identity):
+    if not code_identity:
+        return False
+    parts = [p.strip() for p in code_identity.split(" - ")]
+    if len(parts) < 2:
+        return False
+    source = parts[1].upper()
+    known_sources = {"DTSEN", "UMK", "UM", "UMB", "UMKM", "SE2026", "SE26", "PDRB", "PAPI", "CAWI", "CAPI"}
+    if source in known_sources:
+        return False
+    if source.startswith("SE26") or source.startswith("SE2026"):
+        return False
+    return True
+
 async def generate_report():
     launch_chrome_if_needed()
     async with async_playwright() as p:
@@ -161,12 +175,12 @@ async def generate_report():
                 print(f"Menemukan tab aktif FASIH: {page.url}")
                 break
         
-        if page.url == "about:blank":
-            print("Tab FASIH tidak ditemukan. Navigasi...")
+        if "fasih-sm.bps.go.id" not in page.url:
+            print(f"Tab FASIH tidak aktif (URL saat ini: {page.url}). Navigasi...")
             try:
-                await page.goto("https://fasih-sm.bps.go.id/app/surveys/a0429e96-51a5-477b-a415-485f9c153004/fd68e454-ba45-4b85-8205-f3bf777ded24/data", timeout=60000, wait_until="domcontentloaded")
+                await page.goto("https://fasih-sm.bps.go.id/app/dashboard", timeout=60000, wait_until="domcontentloaded")
             except Exception as e:
-                print("Gagal navigasi ke data url:", e)
+                print("Gagal navigasi ke dashboard url:", e)
 
         cookies = await page.context.cookies()
         xsrf_token_raw = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), "")
@@ -176,16 +190,20 @@ async def generate_report():
         
         datatable_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
 
-        async def fetch_api_safely(url, payload, token):
+        async def fetch_api_safely(url, payload, token, timeout_seconds=120):
             try:
                 res = await page.evaluate("""
-                    async ({url, payload, token}) => {
+                    async ({url, payload, token, timeoutMs}) => {
+                        const controller = new AbortController();
+                        const id = setTimeout(() => controller.abort(), timeoutMs);
                         try {
                             const r = await fetch(url, {
                                 method: "POST",
                                 headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
-                                body: JSON.stringify(payload)
+                                body: JSON.stringify(payload),
+                                signal: controller.signal
                             });
+                            clearTimeout(id);
                             if (!r.ok) return { error: `HTTP ${r.status}: ${await r.text()}` };
                             const text = await r.text();
                             try {
@@ -194,10 +212,11 @@ async def generate_report():
                                 return { error: "Invalid JSON", text: text.substring(0, 200) };
                             }
                         } catch(e) {
+                            clearTimeout(id);
                             return { error: e.toString() };
                         }
                     }
-                """, {"url": url, "payload": payload, "token": token})
+                """, {"url": url, "payload": payload, "token": token, "timeoutMs": timeout_seconds * 1000})
                 return res
             except Exception as e:
                 return {"error": str(e)}
@@ -221,6 +240,11 @@ async def generate_report():
         # Ensure session is valid
         first_expired = True
         while True:
+            # Re-fetch cookies
+            cookies = await page.context.cookies()
+            xsrf_token_raw = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), "")
+            xsrf_token = unquote(xsrf_token_raw)
+
             is_valid = await check_session_valid(xsrf_token)
             if is_valid:
                 break
@@ -234,11 +258,6 @@ async def generate_report():
                 first_expired = False
                 
             await asyncio.sleep(15)
-            
-            # Re-fetch cookies
-            cookies = await page.context.cookies()
-            xsrf_token_raw = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), "")
-            xsrf_token = unquote(xsrf_token_raw)
 
         # Define surveys
         surveys = {
@@ -312,6 +331,10 @@ async def generate_report():
                     "two_days_ago_completed": 0,
                     "new_usaha_today": 0,
                     "new_usaha_yesterday": 0,
+                    "new_rumah_today": 0,
+                    "new_rumah_yesterday": 0,
+                    "new_usaha_overall": 0,
+                    "new_rumah_overall": 0,
                     "new_businesses": []
                 }
                 
@@ -327,11 +350,16 @@ async def generate_report():
                         "region2Id": kab["id"],
                         "surveyPeriodId": period_id,
                         "assignmentErrorStatusType": -1,
-                        "filterTargetType": ""
+                        "filterTargetType": "target"
                     }
                 }
                 payload_nontarget = {
-                    "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
+                    "start": 0, "length": 1000, "columns": [
+                        {"data": "id"},
+                        {"data": "codeIdentity"},
+                        {"data": "data6"},
+                        {"data": "assignmentStatusAlias"}
+                    ], "order": [], "search": {"value": "", "regex": False},
                     "assignmentExtraParam": {
                         "region1Id": survey_cfg["prov_id"],
                         "region2Id": kab["id"],
@@ -350,54 +378,102 @@ async def generate_report():
                     print(f"  [ERROR] Gagal memproses {kab['name']}: {res.get('error') if res else 'Unknown error'}")
                     continue
                 
-                nontarget_overall = 0
-                if res_nontarget and "totalHit" in res_nontarget:
-                    nontarget_overall = res_nontarget["totalHit"]
+                # 1. Parse targets (prelist)
+                prelist_target = 0
+                draft_target = 0
+                open_target = 0
+                submitted_target = 0
+                rejected_target = 0
+                approved_target = 0
                 
-                agg = res.get("searchAggregation", [])
-                
-                total_all = 0
-                draft = 0
-                open_count = 0
-                submitted = 0
-                rejected = 0
-                approved = 0
-                
-                for item in agg:
+                agg_target = res.get("searchAggregation", [])
+                for item in agg_target:
                     key = item.get("keyAggregation", "")
                     count = item.get("docCount", 0)
-                    total_all += count
-                    
+                    prelist_target += count
                     if key == "DRAFT":
-                        draft += count
+                        draft_target += count
                     elif key == "OPEN":
-                        open_count += count
+                        open_target += count
                     elif "SUBMITTED" in key:
-                        submitted += count
+                        submitted_target += count
                     elif "REJECTED" in key:
-                        rejected += count
+                        rejected_target += count
                     elif "APPROVED" in key:
-                        approved += count
+                        approved_target += count
                 
-                if total_all == 0:
-                    total_all = res.get("totalHit", 0)
+                if prelist_target == 0:
+                    prelist_target = res.get("totalHit", 0)
+
+                # 2. Parse non-targets (tambahan)
+                draft_nontarget = 0
+                open_nontarget = 0
+                submitted_nontarget = 0
+                rejected_nontarget = 0
+                approved_nontarget = 0
+                
+                tambahan_usaha = 0
+                tambahan_rumah_baru = 0
+                
+                nontarget_records = res_nontarget.get("searchData", []) if res_nontarget else []
+                
+                for item in nontarget_records:
+                    code_id = item.get("codeIdentity") or ""
+                    if not is_tambahan(code_id):
+                        continue
+                    status = item.get("assignmentStatusAlias", "")
+                    data6_val = str(item.get("data6") or "").upper()
+                    is_rumah = "KELUARGA" in data6_val
                     
-                total_prelist = total_all
-                    
+                    status_upper = status.upper()
+                    if status_upper == "DRAFT":
+                        draft_nontarget += 1
+                    elif status_upper == "OPEN":
+                        open_nontarget += 1
+                    elif "SUBMITTED" in status_upper:
+                        submitted_nontarget += 1
+                        if is_rumah:
+                            tambahan_rumah_baru += 1
+                        else:
+                            tambahan_usaha += 1
+                    elif "REJECTED" in status_upper:
+                        rejected_nontarget += 1
+                        if is_rumah:
+                            tambahan_rumah_baru += 1
+                        else:
+                            tambahan_usaha += 1
+                    elif "APPROVED" in status_upper:
+                        approved_nontarget += 1
+                        if is_rumah:
+                            tambahan_rumah_baru += 1
+                        else:
+                            tambahan_usaha += 1
+                
+                # Hitung metrik final gabungan
+                total_prelist = prelist_target + tambahan_usaha + tambahan_rumah_baru
+                total_draft = draft_target + draft_nontarget
+                total_open = open_target + open_nontarget
+                total_submitted = submitted_target + approved_target + rejected_target + tambahan_usaha + tambahan_rumah_baru
+                total_rejected = rejected_target + rejected_nontarget
+                total_approved = approved_target + approved_nontarget
+                
                 report_data[kab["name"]]["total_prelist"] = total_prelist
-                report_data[kab["name"]]["total_draft"] = draft
-                report_data[kab["name"]]["total_open"] = open_count
-                report_data[kab["name"]]["total_submitted"] = submitted
-                report_data[kab["name"]]["total_rejected"] = rejected
-                report_data[kab["name"]]["total_approved"] = approved
-                report_data[kab["name"]]["new_usaha_overall"] = nontarget_overall
-                print(f"  {kab['name']}: Prelist={total_prelist}, UsahaBaruOverall={nontarget_overall}, Draft={draft}, Open={open_count}, Submitted={submitted}")
+                report_data[kab["name"]]["total_draft"] = total_draft
+                report_data[kab["name"]]["total_open"] = total_open
+                report_data[kab["name"]]["total_submitted"] = total_submitted
+                report_data[kab["name"]]["total_rejected"] = total_rejected
+                report_data[kab["name"]]["total_approved"] = total_approved
+                report_data[kab["name"]]["new_usaha_overall"] = tambahan_usaha
+                report_data[kab["name"]]["new_rumah_overall"] = tambahan_rumah_baru
+                print(f"  {kab['name']}: Prelist={total_prelist}, UsahaBaruOverall={tambahan_usaha}, RumahBaruOverall={tambahan_rumah_baru}, Draft={total_draft}, Open={total_open}, Submitted={total_submitted}")
 
             # Calculate province totals by summing up county/kabupaten totals
             prov_original_total = sum(report_data[k["name"]]["total_prelist"] for k in survey_cfg["kabs"])
             prov_new_total = sum(report_data[k["name"]]["new_usaha_overall"] for k in survey_cfg["kabs"])
+            prov_new_rumah_total = sum(report_data[k["name"]]["new_rumah_overall"] for k in survey_cfg["kabs"])
             output_data[f"{survey_key}_prov_total"] = prov_original_total
             output_data[f"{survey_key}_prov_new_total"] = prov_new_total
+            output_data[f"{survey_key}_prov_new_rumah_total"] = prov_new_rumah_total
             # 2. Fetch daily progress details province-wide
             active_statuses = ["SUBMITTED RESPONDENT", "DRAFT", "REJECTED BY Admin Kabupaten"]
             all_records = []
@@ -452,12 +528,36 @@ async def generate_report():
             
             # 3. Calculate daily progress from timestamps
             print("Mengolah riwayat tanggal dan mengelompokkan ke Kabupaten...")
+            kab_id_to_name = {k["id"]: k["name"] for k in survey_cfg["kabs"]}
+            kab_code_to_name = {f"72{k['code']}": k["name"] for k in survey_cfg["kabs"]}
+            
             for r in all_records:
-                code_identity = r.get("codeIdentity")
-                if not code_identity or len(code_identity) < 4:
-                    continue
-                    
-                kab_name = code_to_name.get(code_identity[:4])
+                kab_name = None
+                
+                # Try getting from nested region object
+                region = r.get("region", {})
+                if region:
+                    lvl2 = region.get("level1", {}).get("level2", {}) or {}
+                    kab_id = lvl2.get("id")
+                    if kab_id and kab_id in kab_id_to_name:
+                        kab_name = kab_id_to_name[kab_id]
+                    else:
+                        kab_code = lvl2.get("fullCode")
+                        if kab_code and kab_code in kab_code_to_name:
+                            kab_name = kab_code_to_name[kab_code]
+                
+                # Fallback to codeIdentity regex/parsing
+                if not kab_name:
+                    code_identity = r.get("codeIdentity")
+                    if code_identity:
+                        import re
+                        match = re.search(r"\b(72\d{2})\b", code_identity)
+                        if match:
+                            kab_name = kab_code_to_name.get(match.group(1))
+                        else:
+                            if len(code_identity) >= 4:
+                                kab_name = kab_code_to_name.get(code_identity[:4])
+                
                 if not kab_name:
                     continue
                     
@@ -490,22 +590,34 @@ async def generate_report():
                         comp_name = r.get("data1") or "-"
                         code_id = r.get("codeIdentity") or "-"
                         
-                        if create_date == today:
-                            report_data[kab_name]["new_usaha_today"] += 1
-                            report_data[kab_name]["new_businesses"].append({
-                                "name": comp_name,
-                                "code": code_id,
-                                "date": "today",
-                                "status": status_alias
-                            })
-                        elif create_date == yesterday:
-                            report_data[kab_name]["new_usaha_yesterday"] += 1
-                            report_data[kab_name]["new_businesses"].append({
-                                "name": comp_name,
-                                "code": code_id,
-                                "date": "yesterday",
-                                "status": status_alias
-                            })
+                        if is_tambahan(code_id):
+                            data6_val = str(r.get("data6") or "").upper()
+                            is_rumah = "KELUARGA" in data6_val
+                            
+                            if create_date == today:
+                                if is_rumah:
+                                    report_data[kab_name]["new_rumah_today"] += 1
+                                else:
+                                    report_data[kab_name]["new_usaha_today"] += 1
+                                report_data[kab_name]["new_businesses"].append({
+                                    "name": comp_name,
+                                    "code": code_id,
+                                    "date": "today",
+                                    "status": status_alias,
+                                    "type": "rumah" if is_rumah else "usaha"
+                                })
+                            elif create_date == yesterday:
+                                if is_rumah:
+                                    report_data[kab_name]["new_rumah_yesterday"] += 1
+                                else:
+                                    report_data[kab_name]["new_usaha_yesterday"] += 1
+                                report_data[kab_name]["new_businesses"].append({
+                                    "name": comp_name,
+                                    "code": code_id,
+                                    "date": "yesterday",
+                                    "status": status_alias,
+                                    "type": "rumah" if is_rumah else "usaha"
+                                })
                     except Exception as ex:
                         pass
 
@@ -531,7 +643,10 @@ async def generate_report():
                     "two_days_ago_completed": stats["two_days_ago_completed"],
                     "new_usaha_today": stats["new_usaha_today"],
                     "new_usaha_yesterday": stats["new_usaha_yesterday"],
+                    "new_rumah_today": stats["new_rumah_today"],
+                    "new_rumah_yesterday": stats["new_rumah_yesterday"],
                     "new_usaha_overall": stats.get("new_usaha_overall", 0),
+                    "new_rumah_overall": stats.get("new_rumah_overall", 0),
                     "new_businesses": stats["new_businesses"]
                 })
             
@@ -547,7 +662,9 @@ async def generate_report():
             "se_umum_prov_total": output_data.get("se_umum_prov_total", 0),
             "se_ub_prov_total": output_data.get("se_ub_prov_total", 0),
             "se_umum_prov_new_total": output_data.get("se_umum_prov_new_total", 0),
-            "se_ub_prov_new_total": output_data.get("se_ub_prov_new_total", 0)
+            "se_ub_prov_new_total": output_data.get("se_ub_prov_new_total", 0),
+            "se_umum_prov_new_rumah_total": output_data.get("se_umum_prov_new_rumah_total", 0),
+            "se_ub_prov_new_rumah_total": output_data.get("se_ub_prov_new_rumah_total", 0)
         }
         with open("ipas_data.js", "w", encoding="utf-8") as f:
             f.write(f"window.IPAS_DATA = {json.dumps(final_js_obj, ensure_ascii=False, indent=2)};\n")

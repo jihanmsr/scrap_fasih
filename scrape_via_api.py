@@ -531,74 +531,92 @@ def scrape_via_api():
         for kab_name, kab_id in kab_map.items():
             logging.info(f"Memproses wilayah: {kab_name} (ID: {kab_id})...")
             
-            start_index = 0
-            page_length = 100
-            
-            while True:
-                payload = {
-                    "start": start_index,
-                    "length": page_length,
-                    "columns": [
-                        {"data": "id", "orderable": True},
-                        {"data": "codeIdentity", "orderable": True},
-                        {"data": "data1", "orderable": True},
-                        {"data": "data2", "orderable": True},
-                        {"data": "data3", "orderable": True},
-                        {"data": "data4", "orderable": True},
-                        {"data": "data5", "orderable": True},
-                        {"data": "data6", "orderable": True},
-                        {"data": "data7", "orderable": True},
-                        {"data": "data8", "orderable": True},
-                        {"data": "data9", "orderable": True},
-                        {"data": "data10", "orderable": True}
-                    ],
-                    "order": [],
-                    "search": {"value": "", "regex": False},
-                    "assignmentExtraParam": {
-                        "region1Id": "a00c8aef-afc4-4d4f-b80d-789a15450ef9",
-                        "region2Id": kab_id,
-                        "surveyPeriodId": survey_period_id,
-                        "assignmentErrorStatusType": -1,
-                        "filterTargetType": ""
+            for target_type in ["target", "non-target"]:
+                start_index = 0
+                page_length = 100
+                
+                while True:
+                    payload = {
+                        "start": start_index,
+                        "length": page_length,
+                        "columns": [
+                            {"data": "id", "orderable": True},
+                            {"data": "codeIdentity", "orderable": True},
+                            {"data": "data1", "orderable": True},
+                            {"data": "data2", "orderable": True},
+                            {"data": "data3", "orderable": True},
+                            {"data": "data4", "orderable": True},
+                            {"data": "data5", "orderable": True},
+                            {"data": "data6", "orderable": True},
+                            {"data": "data7", "orderable": True},
+                            {"data": "data8", "orderable": True},
+                            {"data": "data9", "orderable": True},
+                            {"data": "data10", "orderable": True}
+                        ],
+                        "order": [],
+                        "search": {"value": "", "regex": False},
+                        "assignmentExtraParam": {
+                            "region1Id": "a00c8aef-afc4-4d4f-b80d-789a15450ef9",
+                            "region2Id": kab_id,
+                            "surveyPeriodId": survey_period_id,
+                            "assignmentErrorStatusType": -1,
+                            "filterTargetType": target_type
+                        }
                     }
-                }
 
-                try:
-                    res = http_session.post(datatable_url, json=payload, timeout=60)
-                    status_code = res.status_code
-                    if status_code == 200:
-                        res_eval = {"status": 200, "json": res.json()}
-                    else:
-                        res_eval = {"status": status_code}
-                except Exception as e:
-                    logging.error(f"Gagal memanggil API Datatable untuk {kab_name} (start: {start_index}): {e}")
-                    break
+                    res_eval = None
+                    for attempt in range(1, 6):
+                        try:
+                            res = http_session.post(datatable_url, json=payload, timeout=60)
+                            status_code = res.status_code
+                            if status_code == 200:
+                                res_eval = {"status": 200, "json": res.json()}
+                                break
+                            elif status_code == 401:
+                                res_eval = {"status": 401}
+                                break
+                            else:
+                                logging.warning(f"Percobaan {attempt} API Datatable untuk {kab_name} (start: {start_index}) mendapat HTTP {status_code}. Mencoba lagi...")
+                                res_eval = {"status": status_code}
+                        except Exception as e:
+                            logging.warning(f"Percobaan {attempt} API Datatable untuk {kab_name} (start: {start_index}) gagal: {e}. Mencoba lagi...")
+                            res_eval = {"status": "error", "error": str(e)}
+                        time.sleep(3)
 
-                if res_eval.get("status") == 401:
-                    logging.warning(f"Sesi kadaluarsa (HTTP 401) saat memanggil API Datatable untuk {kab_name}. Meminta re-autentikasi...")
-                    xsrf_token, cookies = get_valid_session(context, page)
-                    http_session = create_http_session(cookies, xsrf_token)
-                    continue
+                    if res_eval is None:
+                        res_eval = {"status": "failed"}
 
-                if res_eval.get("status") != 200:
-                    logging.error(f"Gagal memanggil API Datatable untuk {kab_name}: HTTP {res_eval.get('status')}")
-                    break
+                    if res_eval.get("status") == 401:
+                        logging.warning(f"Sesi kadaluarsa (HTTP 401) saat memanggil API Datatable untuk {kab_name}. Meminta re-autentikasi...")
+                        xsrf_token, cookies = get_valid_session(context, page)
+                        http_session = create_http_session(cookies, xsrf_token)
+                        continue
 
-                res_json = res_eval.get("json", {})
-                companies_part = res_json.get("searchData", [])
-                total_hits_part = res_json.get("totalHit", 0)
-                
-                logging.info(f"  {kab_name}: Mendapatkan {len(companies_part)} perusahaan (start: {start_index}, totalHit: {total_hits_part}).")
-                
-                for comp in companies_part:
-                    comp["kab_name"] = kab_name
-                all_companies_data.extend(companies_part)
-                start_index += page_length
-                
-                if start_index >= total_hits_part:
-                     break
+                    if res_eval.get("status") != 200:
+                        logging.error(f"Gagal memanggil API Datatable untuk {kab_name} setelah 5 exclusion. Status: {res_eval.get('status')}")
+                        break
+
+                    res_json = res_eval.get("json", {})
+                    companies_part = res_json.get("searchData", [])
+                    total_hits_part = res_json.get("totalHit", 0)
                     
-                time.sleep(0.1)
+                    logging.info(f"  {kab_name} ({target_type}): Mendapatkan {len(companies_part)} perusahaan (start: {start_index}, totalHit: {total_hits_part}).")
+                    
+                    for comp in companies_part:
+                        comp["kab_name"] = kab_name
+                        if target_type == "non-target":
+                            status = comp.get("assignmentStatusAlias", "") or ""
+                            status_upper = status.upper()
+                            if not ("SUBMITTED" in status_upper or "APPROVED" in status_upper or "REJECTED" in status_upper):
+                                continue
+                        all_companies_data.append(comp)
+                        
+                    start_index += page_length
+                    
+                    if start_index >= total_hits_part:
+                         break
+                        
+                    time.sleep(0.1)
 
         companies_data = all_companies_data
         total_hits = len(companies_data)
@@ -963,7 +981,7 @@ def scrape_via_api():
                 # Update dashboard lokal secara real-time!
                 save_local_js(write_records)
                 
-            time.sleep(0.1) # Jeda kecil agar ramah server
+            time.sleep(1.5) # Jeda kecil agar ramah server
 
         # --- TAMBAHAN PENTING: KEMBALIKAN PERUSAHAAN YANG HILANG DARI API ---
         seen_company_names_lower = {comp.get("company_name", "").lower().strip() for comp in all_records}
