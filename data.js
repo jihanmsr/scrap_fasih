@@ -4356,83 +4356,6 @@ window.EMAIL_DATA = [
     "kab_name": "[02] BANGGAI"
   },
   {
-    "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
-    "company_name": "ALAM SUKSES BERJAYA",
-    "survey_status": "SUBMITTED RESPONDENT",
-    "email": "berkattbperkasa@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "10 Jun 2026, 08:15:35",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
-    "company_name": "ALAM SUKSES BERJAYA",
-    "survey_status": "SUBMITTED RESPONDENT",
-    "email": "berkattbperkasa@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "10 Jun 2026, 04:29:50",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
-    "company_name": "ALAM SUKSES BERJAYA",
-    "survey_status": "SUBMITTED RESPONDENT",
-    "email": "berkattbperkasa@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "10 Jun 2026, 04:29:47",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
-    "company_name": "ALAM SUKSES BERJAYA",
-    "survey_status": "SUBMITTED RESPONDENT",
-    "email": "berkattbperkasa@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "09 Jun 2026, 11:46:27",
-    "order": 4,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
-    "company_name": "ALAM SUKSES BERJAYA",
-    "survey_status": "SUBMITTED RESPONDENT",
-    "email": "berkattbperkasa@gmail.com",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 09:18:48",
-    "order": 5,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
-    "company_name": "ALAM SUKSES BERJAYA",
-    "survey_status": "SUBMITTED RESPONDENT",
-    "email": "berkattbperkasa@gmail.com",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:08:55",
-    "order": 6,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "e4269010-f6bd-4eef-84e4-7a5acd0ad51d",
-    "company_name": "ALAM SUKSES BERJAYA",
-    "survey_status": "SUBMITTED RESPONDENT",
-    "email": "berkattbperkasa@gmail.com",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:08:51",
-    "order": 7,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
     "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
     "company_name": "SUMBER MENTARI MOROWALI",
     "survey_status": "DRAFT",
@@ -26031,9 +25954,20 @@ window.EMAIL_DATA = [
     "survey_status": "DRAFT",
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "17 Jun 2026, 13:31:46",
+    "order": 1,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
+    "company_name": "FANDY GUNAWAN",
+    "survey_status": "DRAFT",
+    "email": "enclubofficial@gmail.com",
+    "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "15 Jun 2026, 11:46:06",
-    "order": 1,
+    "order": 2,
     "kab_name": "[71] PALU"
   },
   {
@@ -26044,7 +25978,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "15 Jun 2026, 11:44:54",
-    "order": 2,
+    "order": 3,
     "kab_name": "[71] PALU"
   },
   {
@@ -26055,7 +25989,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "15 Jun 2026, 11:44:50",
-    "order": 3,
+    "order": 4,
     "kab_name": "[71] PALU"
   },
   {
@@ -26066,7 +26000,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "15 Jun 2026, 11:42:03",
-    "order": 4,
+    "order": 5,
     "kab_name": "[71] PALU"
   },
   {
@@ -26077,17 +26011,6 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Clicked",
     "timestamp": "15 Jun 2026, 11:37:12",
-    "order": 5,
-    "kab_name": "[71] PALU"
-  },
-  {
-    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
-    "company_name": "FANDY GUNAWAN",
-    "survey_status": "DRAFT",
-    "email": "enclubofficial@gmail.com",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "15 Jun 2026, 11:37:09",
     "order": 6,
     "kab_name": "[71] PALU"
   },
@@ -26097,7 +26020,7 @@ window.EMAIL_DATA = [
     "survey_status": "DRAFT",
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
-    "status": "Queued",
+    "status": "Delivered",
     "timestamp": "15 Jun 2026, 11:37:09",
     "order": 7,
     "kab_name": "[71] PALU"
@@ -26108,8 +26031,8 @@ window.EMAIL_DATA = [
     "survey_status": "DRAFT",
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "15 Jun 2026, 11:31:23",
+    "status": "Queued",
+    "timestamp": "15 Jun 2026, 11:37:09",
     "order": 8,
     "kab_name": "[71] PALU"
   },
@@ -26120,7 +26043,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Delivered",
-    "timestamp": "15 Jun 2026, 11:31:19",
+    "timestamp": "15 Jun 2026, 11:31:23",
     "order": 9,
     "kab_name": "[71] PALU"
   },
@@ -26130,7 +26053,7 @@ window.EMAIL_DATA = [
     "survey_status": "DRAFT",
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
-    "status": "Queued",
+    "status": "Delivered",
     "timestamp": "15 Jun 2026, 11:31:19",
     "order": 10,
     "kab_name": "[71] PALU"
@@ -26141,8 +26064,8 @@ window.EMAIL_DATA = [
     "survey_status": "DRAFT",
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "15 Jun 2026, 11:20:22",
+    "status": "Queued",
+    "timestamp": "15 Jun 2026, 11:31:19",
     "order": 11,
     "kab_name": "[71] PALU"
   },
@@ -26153,7 +26076,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "13 Jun 2026, 12:17:26",
+    "timestamp": "15 Jun 2026, 11:20:22",
     "order": 12,
     "kab_name": "[71] PALU"
   },
@@ -26164,7 +26087,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "11 Jun 2026, 21:27:11",
+    "timestamp": "13 Jun 2026, 12:17:26",
     "order": 13,
     "kab_name": "[71] PALU"
   },
@@ -26175,7 +26098,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "11 Jun 2026, 14:54:18",
+    "timestamp": "11 Jun 2026, 21:27:11",
     "order": 14,
     "kab_name": "[71] PALU"
   },
@@ -26186,7 +26109,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:41:49",
+    "timestamp": "11 Jun 2026, 14:54:18",
     "order": 15,
     "kab_name": "[71] PALU"
   },
@@ -26197,7 +26120,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:39:39",
+    "timestamp": "11 Jun 2026, 13:41:49",
     "order": 16,
     "kab_name": "[71] PALU"
   },
@@ -26208,7 +26131,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:39:02",
+    "timestamp": "11 Jun 2026, 13:39:39",
     "order": 17,
     "kab_name": "[71] PALU"
   },
@@ -26219,7 +26142,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:38:56",
+    "timestamp": "11 Jun 2026, 13:39:02",
     "order": 18,
     "kab_name": "[71] PALU"
   },
@@ -26230,7 +26153,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:38:44",
+    "timestamp": "11 Jun 2026, 13:38:56",
     "order": 19,
     "kab_name": "[71] PALU"
   },
@@ -26241,7 +26164,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:22:44",
+    "timestamp": "11 Jun 2026, 13:38:44",
     "order": 20,
     "kab_name": "[71] PALU"
   },
@@ -26252,7 +26175,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:20:43",
+    "timestamp": "11 Jun 2026, 13:22:44",
     "order": 21,
     "kab_name": "[71] PALU"
   },
@@ -26263,7 +26186,7 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:20:36",
+    "timestamp": "11 Jun 2026, 13:20:43",
     "order": 22,
     "kab_name": "[71] PALU"
   },
@@ -26274,8 +26197,19 @@ window.EMAIL_DATA = [
     "email": "enclubofficial@gmail.com",
     "global_status": "Clicked",
     "status": "Clicked",
-    "timestamp": "11 Jun 2026, 13:20:05",
+    "timestamp": "11 Jun 2026, 13:20:36",
     "order": 23,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "ebef66e9-774d-478b-a0cf-df61337b9761",
+    "company_name": "FANDY GUNAWAN",
+    "survey_status": "DRAFT",
+    "email": "enclubofficial@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "11 Jun 2026, 13:20:05",
+    "order": 24,
     "kab_name": "[71] PALU"
   },
   {
@@ -26286,7 +26220,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Opened",
     "timestamp": "03 Jun 2026, 01:11:10",
-    "order": 24,
+    "order": 25,
     "kab_name": "[71] PALU"
   },
   {
@@ -26297,7 +26231,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 09:36:13",
-    "order": 25,
+    "order": 26,
     "kab_name": "[71] PALU"
   },
   {
@@ -26308,7 +26242,7 @@ window.EMAIL_DATA = [
     "global_status": "Clicked",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 09:35:35",
-    "order": 26,
+    "order": 27,
     "kab_name": "[71] PALU"
   },
   {
@@ -35176,6 +35110,666 @@ window.EMAIL_DATA = [
     "timestamp": "02 Jun 2026, 06:32:50",
     "order": 2,
     "kab_name": "[71] PALU"
+  },
+  {
+    "code": "8dd95298-bef6-472e-9f59-9a50ee99cef1",
+    "company_name": "WANHONG NONFERROUS RECYCLING UTILIZATION PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "wanhong.nru@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "04 Jun 2026, 11:41:24",
+    "order": 1,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "8dd95298-bef6-472e-9f59-9a50ee99cef1",
+    "company_name": "WANHONG NONFERROUS RECYCLING UTILIZATION PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "wanhong.nru@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "04 Jun 2026, 11:41:21",
+    "order": 2,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "8dd95298-bef6-472e-9f59-9a50ee99cef1",
+    "company_name": "WANHONG NONFERROUS RECYCLING UTILIZATION PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "wanhong.nru@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 04:12:55",
+    "order": 3,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "8dd95298-bef6-472e-9f59-9a50ee99cef1",
+    "company_name": "WANHONG NONFERROUS RECYCLING UTILIZATION PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "wanhong.nru@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 04:12:55",
+    "order": 4,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
+    "company_name": "GANDA PARADE ARTANA, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "gpartana2020@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "04 Jun 2026, 11:33:26",
+    "order": 1,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
+    "company_name": "GANDA PARADE ARTANA, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "gpartana2020@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "04 Jun 2026, 11:33:13",
+    "order": 2,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
+    "company_name": "GANDA PARADE ARTANA, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "gpartana2020@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "04 Jun 2026, 11:32:24",
+    "order": 3,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
+    "company_name": "GANDA PARADE ARTANA, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "gpartana2020@gmail.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "04 Jun 2026, 11:30:04",
+    "order": 4,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
+    "company_name": "GANDA PARADE ARTANA, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "gpartana2020@gmail.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "04 Jun 2026, 11:30:00",
+    "order": 5,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
+    "company_name": "GANDA PARADE ARTANA, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "gpartana2020@gmail.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 06:30:27",
+    "order": 6,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "b603267c-de6c-4b44-a6f2-dc7509d5bd10",
+    "company_name": "GANDA PARADE ARTANA, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "gpartana2020@gmail.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 06:30:24",
+    "order": 7,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "10 Jun 2026, 23:41:42",
+    "order": 1,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "10 Jun 2026, 23:41:41",
+    "order": 2,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "10 Jun 2026, 23:17:21",
+    "order": 3,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "10 Jun 2026, 23:17:21",
+    "order": 4,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "10 Jun 2026, 10:32:10",
+    "order": 5,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "10 Jun 2026, 10:32:09",
+    "order": 6,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "10 Jun 2026, 10:30:48",
+    "order": 7,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "10 Jun 2026, 10:30:36",
+    "order": 8,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "10 Jun 2026, 10:30:35",
+    "order": 9,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "02 Jun 2026, 06:48:48",
+    "order": 10,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "02 Jun 2026, 06:48:47",
+    "order": 11,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 06:48:32",
+    "order": 12,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 03:23:06",
+    "order": 13,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "7c76ecfe-4010-4674-844e-12f4e655ea40",
+    "company_name": "BETON INDUSTRI INDONESIA",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "pt.betonindustriind@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 03:22:53",
+    "order": 14,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "01023561-d8f0-4e84-b475-f41547a905f1",
+    "company_name": "KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "yyksbpd@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "03 Jun 2026, 16:46:45",
+    "order": 1,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "01023561-d8f0-4e84-b475-f41547a905f1",
+    "company_name": "KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "yyksbpd@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "03 Jun 2026, 16:46:41",
+    "order": 2,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "01023561-d8f0-4e84-b475-f41547a905f1",
+    "company_name": "KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "yyksbpd@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "03 Jun 2026, 07:48:29",
+    "order": 3,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "01023561-d8f0-4e84-b475-f41547a905f1",
+    "company_name": "KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "yyksbpd@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "03 Jun 2026, 07:48:29",
+    "order": 4,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "01023561-d8f0-4e84-b475-f41547a905f1",
+    "company_name": "KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "yyksbpd@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 08:47:43",
+    "order": 5,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "01023561-d8f0-4e84-b475-f41547a905f1",
+    "company_name": "KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "yyksbpd@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "01 Jun 2026, 22:46:17",
+    "order": 6,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "01023561-d8f0-4e84-b475-f41547a905f1",
+    "company_name": "KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "yyksbpd@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "01 Jun 2026, 22:46:13",
+    "order": 7,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
+    "company_name": "HONG THAI INTERNATIONAL, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "internationalhongthai@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "11 Jun 2026, 14:30:52",
+    "order": 1,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
+    "company_name": "HONG THAI INTERNATIONAL, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "internationalhongthai@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "11 Jun 2026, 14:30:44",
+    "order": 2,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
+    "company_name": "HONG THAI INTERNATIONAL, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "internationalhongthai@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "11 Jun 2026, 14:30:43",
+    "order": 3,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
+    "company_name": "HONG THAI INTERNATIONAL, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "internationalhongthai@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "11 Jun 2026, 14:30:39",
+    "order": 4,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
+    "company_name": "HONG THAI INTERNATIONAL, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "internationalhongthai@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "11 Jun 2026, 14:30:33",
+    "order": 5,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
+    "company_name": "HONG THAI INTERNATIONAL, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "internationalhongthai@gmail.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "04 Jun 2026, 11:19:25",
+    "order": 6,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
+    "company_name": "HONG THAI INTERNATIONAL, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "internationalhongthai@gmail.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "04 Jun 2026, 11:19:20",
+    "order": 7,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
+    "company_name": "HONG THAI INTERNATIONAL, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "internationalhongthai@gmail.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 05:33:35",
+    "order": 8,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
+    "company_name": "HONG THAI INTERNATIONAL, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "internationalhongthai@gmail.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 05:33:32",
+    "order": 9,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
+    "company_name": "HONG THAI INTERNATIONAL, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "internationalhongthai@gmail.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "01 Jun 2026, 23:40:18",
+    "order": 10,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "1c7ec86c-08de-428d-a272-031f985c2ff9",
+    "company_name": "HONG THAI INTERNATIONAL, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "internationalhongthai@gmail.com",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "01 Jun 2026, 23:40:15",
+    "order": 11,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "abcf8218-4b74-42f9-996a-ab3d2118937f",
+    "company_name": "ALFA INDUSTRI MANDIRI, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "ptalfaindustrimandiri@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "04 Jun 2026, 11:31:37",
+    "order": 1,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "d0165086-104a-4500-b00b-2fc5d6b40f95",
+    "company_name": "MANADO MOTOR, CV",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "soputraroland@yahoo.com",
+    "global_status": "Permanent_fail",
+    "status": "Permanent_fail",
+    "timestamp": "10 Jun 2026, 04:53:33",
+    "order": 1,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "d0165086-104a-4500-b00b-2fc5d6b40f95",
+    "company_name": "MANADO MOTOR, CV",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "soputraroland@yahoo.com",
+    "global_status": "Permanent_fail",
+    "status": "Bounced",
+    "timestamp": "02 Jun 2026, 07:57:37",
+    "order": 2,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "d0165086-104a-4500-b00b-2fc5d6b40f95",
+    "company_name": "MANADO MOTOR, CV",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "soputraroland@yahoo.com",
+    "global_status": "Permanent_fail",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 07:57:15",
+    "order": 3,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "04 Jun 2026, 12:24:18",
+    "order": 3,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "04 Jun 2026, 12:23:16",
+    "order": 4,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "04 Jun 2026, 12:23:11",
+    "order": 5,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "04 Jun 2026, 11:29:34",
+    "order": 6,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "04 Jun 2026, 11:29:27",
+    "order": 7,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "04 Jun 2026, 11:28:26",
+    "order": 8,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "04 Jun 2026, 11:18:58",
+    "order": 9,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "04 Jun 2026, 11:16:15",
+    "order": 10,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "04 Jun 2026, 11:16:12",
+    "order": 11,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "04 Jun 2026, 11:12:45",
+    "order": 12,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "04 Jun 2026, 11:12:45",
+    "order": 13,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "04 Jun 2026, 11:12:29",
+    "order": 14,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "46810e54-b17a-473d-8c2c-f5c2a7b7e559",
+    "company_name": "GANESHA GLOBAL IMPEX,PT ",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "jesysintyarulansari@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "04 Jun 2026, 11:12:29",
+    "order": 15,
+    "kab_name": "[71] PALU"
   }
 ];
-window.LAST_UPDATED = '17 Jun 2026, 13:21:50';
+window.LAST_UPDATED = '17 Jun 2026, 14:34:27';

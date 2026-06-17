@@ -903,6 +903,51 @@ document.addEventListener('DOMContentLoaded', () => {
         const rejectedEl = document.getElementById(`${surveyType}-stat-rejected`);
         if(rejectedEl) rejectedEl.textContent = formatNum(rejected);
 
+        // Build rejected breakdown by aggregating status breakdowns across all days/all data
+        const allRejectedBreakdown = {};
+        surveyData.forEach(item => {
+            // Collect from all breakdown objects to reconstruct rejected-type statuses
+            [item.today_completed_breakdown, item.yesterday_completed_breakdown, item.two_days_ago_completed_breakdown].forEach(bd => {
+                if (!bd) return;
+                Object.entries(bd).forEach(([st, val]) => {
+                    if (st.toUpperCase().includes('REJECTED')) {
+                        allRejectedBreakdown[st] = (allRejectedBreakdown[st] || 0) + val;
+                    }
+                });
+            });
+        });
+
+        // Update top Rejected card (wrapper) with popover breakdown
+        const rejectedWrapperEl = document.getElementById(`${surveyType}-stat-rejected-wrapper`);
+        if (rejectedWrapperEl) {
+            if (rejected <= 0) {
+                rejectedWrapperEl.innerHTML = `<span>0</span>`;
+            } else {
+                const hasBreakdown = Object.keys(allRejectedBreakdown).length > 0;
+                const itemsHTML = Object.entries(allRejectedBreakdown)
+                    .map(([status, val]) => `
+                        <div class="popover-item">
+                            <span class="popover-badge" style="background: rgba(239,68,68,0.15); color: #ef4444; border-color: rgba(239,68,68,0.3);">${status.replace('REJECTED BY ', 'Oleh ')}</span>
+                            <span class="popover-count">${formatNum(val)}</span>
+                        </div>
+                    `).join('');
+                rejectedWrapperEl.innerHTML = `
+                    <div class="daily-progress-wrapper">
+                        <span style="color: #ef4444; font-weight: 800;">${formatNum(rejected)}</span>
+                        ${hasBreakdown ? `<span class="daily-dropdown-trigger" onclick="window.toggleDailyPopover(event, this)" style="color: #ef4444; background: rgba(239,68,68,0.1); border-color: rgba(239,68,68,0.3);">▼</span>
+                        <div class="daily-popover">
+                            <div class="popover-header" style="color: #ef4444;">BREAKDOWN REJECTED</div>
+                            ${itemsHTML}
+                            <div class="popover-item" style="border-top: 1px dashed var(--card-border); margin-top: 0.25rem; padding-top: 0.25rem;">
+                                <span style="font-size: 0.7rem; color: var(--text-secondary);">Total</span>
+                                <span class="popover-count" style="color: #ef4444;">${formatNum(rejected)}</span>
+                            </div>
+                        </div>` : ''}
+                    </div>
+                `;
+            }
+        }
+
         const todayEl = document.getElementById(`${surveyType}-stat-today`);
         if(todayEl) todayEl.innerHTML = getDailyProgressCellHTML(today, todayBreakdown, 'SUBMIT HARI INI');
 
@@ -1369,7 +1414,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!tbody) return;
 
         if (!window.ASSIGN_DATA || window.ASSIGN_DATA.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data alokasi belum tersedia. Silakan jalankan scrape_assign.py terlebih dahulu.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data alokasi belum tersedia. Silakan jalankan scrape_assign.py terlebih dahulu.</td></tr>`;
             return;
         }
 
@@ -1377,9 +1422,39 @@ document.addEventListener('DOMContentLoaded', () => {
         const rowStyle = 'border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;';
         const tdBase = 'padding: 0.65rem 1.25rem; vertical-align: middle;';
 
+        // Aggregate SLS stats per kabupaten for %assign and %sync
+        const slsStatsByKab = {};
+        window.ASSIGN_DATA.forEach(d => {
+            slsStatsByKab[d.kode_kab] = { total: 0, assigned: 0, synced: 0 };
+        });
+        if (window.ASSIGN_SLS_DATA && window.ASSIGN_SLS_DATA.length > 0) {
+            window.ASSIGN_SLS_DATA.forEach(sls => {
+                const code = sls.sls_code || sls.sls_id;
+                const kodeKab = code ? code.substring(0, 4) : '';
+                if (kodeKab && slsStatsByKab[kodeKab]) {
+                    slsStatsByKab[kodeKab].total++;
+                    if ((sls.assigned || 0) > 0) slsStatsByKab[kodeKab].assigned++;
+                    if ((sls.sync_count || 0) > 0) slsStatsByKab[kodeKab].synced++;
+                }
+            });
+        } else if (window.SUPERSET_SYNC_SLS_DATA && window.SUPERSET_SYNC_SLS_DATA.length > 0) {
+            window.SUPERSET_SYNC_SLS_DATA.forEach(sls => {
+                const code = sls.sls_code || sls.sls_id;
+                const kodeKab = code ? code.substring(0, 4) : '';
+                if (kodeKab && slsStatsByKab[kodeKab]) {
+                    slsStatsByKab[kodeKab].total++;
+                    slsStatsByKab[kodeKab].assigned++;
+                    if ((sls.sync_count || 0) > 0) slsStatsByKab[kodeKab].synced++;
+                }
+            });
+        }
+
         let totalUsaha = 0;
         let totalSudah = 0;
         let totalBelum = 0;
+        let totalSlsAssigned = 0;
+        let totalSlsTotal = 0;
+        let totalSlsSynced = 0;
 
         const rowsHtml = window.ASSIGN_DATA.map((d, idx) => {
             const total = d.total || 0;
@@ -1390,29 +1465,41 @@ document.addEventListener('DOMContentLoaded', () => {
             totalSudah += assigned;
             totalBelum += unassigned;
 
-            const pctText = floorPct(assigned, total);
-            const pct = parseFloat(pctText);
+            const slsStats = slsStatsByKab[d.kode_kab] || { total: 0, assigned: 0, synced: 0 };
+            totalSlsTotal += slsStats.total;
+            totalSlsAssigned += slsStats.assigned;
+            totalSlsSynced += slsStats.synced;
 
-            let pctBgColor = '#047857'; // Green (high)
+            const pctAssignText = floorPct(assigned, total);
+            const pct = parseFloat(pctAssignText);
+
+            const pctSlsAssignText = floorPct(slsStats.assigned, slsStats.total);
+            const pctSlsSynced = floorPct(slsStats.synced, slsStats.total);
+            const pctSlsAssign = parseFloat(pctSlsAssignText);
+            const pctSlsSync = parseFloat(pctSlsSynced);
+
+            let pctBgColor = '#047857';
             if (pct < 50) {
-                pctBgColor = '#b91c1c'; // Red (low)
+                pctBgColor = '#b91c1c';
             } else if (pct < 80) {
-                pctBgColor = '#b45309'; // Orange (mid)
+                pctBgColor = '#b45309';
             }
 
-            // Parse name from "[01] BANGGAI KEPULAUAN" -> "BANGGAI KEPULAUAN"
+            let syncBgColor = pctSlsSync >= 80 ? '#047857' : pctSlsSync >= 50 ? '#b45309' : '#b91c1c';
+
             const namaKabClean = d.nama_kab.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
             const bgColor = idx % 2 === 0 ? '' : 'background-color: rgba(99,102,241,0.03);';
 
             return `
-            <tr onclick="focusKabSls('${namaKabClean}')" style="${rowStyle} ${bgColor} cursor: pointer; transition: background-color 0.15s;" onmouseover="this.style.backgroundColor='rgba(99, 102, 241, 0.08)';" onmouseout="this.style.backgroundColor='${idx % 2 === 0 ? '' : 'rgba(99, 102, 241, 0.03)'}';">
+            <tr onclick="focusKabSls('${namaKabClean}')" style="${rowStyle} ${bgColor} cursor: pointer; transition: background-color 0.15s;" onmouseover="this.style.backgroundColor='rgba(99, 102, 241, 0.08)';" onmouseout="this.style.backgroundColor='${idx % 2 === 0 ? '' : 'rgba(99, 102, 241, 0.03)'}'">
                 <td style="${tdBase} text-align: center; color: var(--text-secondary); font-weight: 500;">${idx + 1}</td>
                 <td style="${tdBase} text-align: center; font-family: monospace; font-size: 0.85rem; color: var(--text-secondary);">${d.kode_kab}</td>
                 <td style="${tdBase} font-weight: 600; color: var(--text);">${namaKabClean}</td>
                 <td style="${tdBase} text-align: right; font-family: monospace; font-weight: 600; color: var(--text-secondary);">${fmt(total)}</td>
                 <td style="${tdBase} text-align: right; font-family: monospace; font-weight: 600; color: #10b981;">${fmt(assigned)}</td>
                 <td style="${tdBase} text-align: right; font-family: monospace; font-weight: 600; color: #ef4444;">${fmt(unassigned)}</td>
-                <td style="${tdBase} text-align: center; background-color: ${pctBgColor}; color: white; font-weight: 700; font-family: monospace;">${pctText}</td>
+                <td style="${tdBase} text-align: center; background-color: ${pctBgColor}; color: white; font-weight: 700; font-family: monospace;">${pctAssignText}</td>
+                <td style="${tdBase} text-align: center; background-color: ${syncBgColor}; color: white; font-weight: 700; font-family: monospace;">${pctSlsSynced}</td>
             </tr>`;
         }).join('');
 
@@ -1425,6 +1512,13 @@ document.addEventListener('DOMContentLoaded', () => {
             totalPctBgColor = '#b45309';
         }
 
+        const totalPctSlsAssignText = floorPct(totalSlsAssigned, totalSlsTotal);
+        const totalPctSlsSyncText = floorPct(totalSlsSynced, totalSlsTotal);
+        const totalPctSlsAssign = parseFloat(totalPctSlsAssignText);
+        const totalPctSlsSync = parseFloat(totalPctSlsSyncText);
+        let totalAssignBgColor = totalPctSlsAssign >= 80 ? '#047857' : totalPctSlsAssign >= 50 ? '#b45309' : '#b91c1c';
+        let totalSyncBgColor = totalPctSlsSync >= 80 ? '#047857' : totalPctSlsSync >= 50 ? '#b45309' : '#b91c1c';
+
         tbody.innerHTML = rowsHtml + `
         <tr style="border-top: 2px solid var(--card-border); background-color: var(--card-bg); font-weight: 800;">
             <td style="${tdBase} text-align: center; color: var(--text);"></td>
@@ -1434,6 +1528,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td style="${tdBase} text-align: right; font-family: monospace; color: #10b981;">${fmt(totalSudah)}</td>
             <td style="${tdBase} text-align: right; font-family: monospace; color: #ef4444;">${fmt(totalBelum)}</td>
             <td style="${tdBase} text-align: center; background-color: ${totalPctBgColor}; color: white; font-weight: 800; font-family: monospace;">${totalPctText}</td>
+            <td style="${tdBase} text-align: center; background-color: ${totalSyncBgColor}; color: white; font-weight: 800; font-family: monospace;">${totalPctSlsSyncText}</td>
         </tr>`;
     }
 
@@ -3136,10 +3231,36 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("Tidak ada data kabupaten untuk diunduh.");
             return;
         }
-        
-        const headers = ["No", "Kode Kabupaten", "Kabupaten/Kota", "Total Target", "Sudah Ditugaskan", "Belum Ditugaskan", "Persentase (%)"];
+
+        // Aggregate SLS stats per kabupaten for %assign SLS and %sync
+        const slsStatsByKab = {};
+        rawData.forEach(d => { slsStatsByKab[d.kode_kab] = { total: 0, assigned: 0, synced: 0 }; });
+        if (window.ASSIGN_SLS_DATA && window.ASSIGN_SLS_DATA.length > 0) {
+            window.ASSIGN_SLS_DATA.forEach(sls => {
+                const code = sls.sls_code || sls.sls_id;
+                const kodeKab = code ? code.substring(0, 4) : '';
+                if (kodeKab && slsStatsByKab[kodeKab]) {
+                    slsStatsByKab[kodeKab].total++;
+                    if ((sls.assigned || 0) > 0) slsStatsByKab[kodeKab].assigned++;
+                    if ((sls.sync_count || 0) > 0) slsStatsByKab[kodeKab].synced++;
+                }
+            });
+        } else if (window.SUPERSET_SYNC_SLS_DATA) {
+            window.SUPERSET_SYNC_SLS_DATA.forEach(sls => {
+                const code = sls.sls_code || sls.sls_id;
+                const kodeKab = code ? code.substring(0, 4) : '';
+                if (kodeKab && slsStatsByKab[kodeKab]) {
+                    slsStatsByKab[kodeKab].total++;
+                    slsStatsByKab[kodeKab].assigned++;
+                    if ((sls.sync_count || 0) > 0) slsStatsByKab[kodeKab].synced++;
+                }
+            });
+        }
+
+        const headers = ["No", "Kode Kabupaten", "Kabupaten/Kota", "Total Target", "Sudah Ditugaskan", "Belum Ditugaskan", "% Assign HH", "% Assign SLS", "% Sync SLS"];
         let totalUsaha = 0, totalSudah = 0, totalBelum = 0;
-        
+        let totalSlsTotal = 0, totalSlsAssigned = 0, totalSlsSynced = 0;
+
         const rows = rawData.map((d, idx) => {
             const total = d.total || 0;
             const assigned = d.assigned || 0;
@@ -3149,13 +3270,22 @@ document.addEventListener('DOMContentLoaded', () => {
             totalBelum += unassigned;
             const pct = floorPct(assigned, total);
             const name = d.nama_kab.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
-            
-            return [idx + 1, d.kode_kab, name, total, assigned, unassigned, pct];
+
+            const slsStats = slsStatsByKab[d.kode_kab] || { total: 0, assigned: 0, synced: 0 };
+            totalSlsTotal += slsStats.total;
+            totalSlsAssigned += slsStats.assigned;
+            totalSlsSynced += slsStats.synced;
+            const pctSlsAssign = floorPct(slsStats.assigned, slsStats.total);
+            const pctSlsSync = floorPct(slsStats.synced, slsStats.total);
+
+            return [idx + 1, d.kode_kab, name, total, assigned, unassigned, pct, pctSlsAssign, pctSlsSync];
         });
 
         // Add total row
         const totalPct = floorPct(totalSudah, totalUsaha);
-        rows.push(["", "", "TOTAL", totalUsaha, totalSudah, totalBelum, totalPct]);
+        const totalPctSlsAssign = floorPct(totalSlsAssigned, totalSlsTotal);
+        const totalPctSlsSync = floorPct(totalSlsSynced, totalSlsTotal);
+        rows.push(["", "", "TOTAL", totalUsaha, totalSudah, totalBelum, totalPct, totalPctSlsAssign, totalPctSlsSync]);
 
         const prefix = activeSubtab === 'ub' ? 'UB' : 'SE2026';
         exportToCSV(`rekap_kabupaten_${prefix.toLowerCase()}.csv`, headers, rows);

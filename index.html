@@ -363,14 +363,6 @@
                             <span id="se_umum-stat-2days-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-clicked);">(0.00%)</span>
                         </div>
                     </div>
-                    <div class="stat-card-compact" style="--stat-color: var(--primary); cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_umum', 'all')">
-                        <div class="stat-label">Tambahan (Non-Target)</div>
-                        <div class="stat-value" id="se_umum-stat-new-overall-merged">0</div>
-                        <div class="stat-subtext" style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.2;">
-                            <span id="se_umum-stat-new-breakdown-subtext">0 usaha | 0 rumah</span>
-                            <br/><span id="se_umum-stat-new-today-subtext" style="color: var(--color-delivered);">+0 hari ini</span>
-                        </div>
-                    </div>
                 </div>
 
                 <button class="btn-toggle-detail" id="se_umum-toggle-detail" onclick="toggleStatsDetail('se_umum')">
@@ -384,7 +376,15 @@
                     </div>
                     <div class="stat-card-compact" style="--stat-color: #ef4444;">
                         <div class="stat-label">Rejected</div>
-                        <div class="stat-value" id="se_umum-stat-rejected">0</div>
+                        <div class="stat-value" id="se_umum-stat-rejected-wrapper">0</div>
+                    </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--primary); cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_umum', 'all')">
+                        <div class="stat-label">Tambahan (Non-Target)</div>
+                        <div class="stat-value" id="se_umum-stat-new-overall-merged">0</div>
+                        <div class="stat-subtext" style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.2;">
+                            <span id="se_umum-stat-new-breakdown-subtext">0 usaha | 0 rumah</span>
+                            <br/><span id="se_umum-stat-new-today-subtext" style="color: var(--color-delivered);">+0 hari ini</span>
+                        </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
                         <div class="stat-label">Sisa Usaha</div>
@@ -504,14 +504,6 @@
                             <span id="se_ub-stat-2days-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-clicked);">(0.00%)</span>
                         </div>
                     </div>
-                    <div class="stat-card-compact" style="--stat-color: var(--primary); cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_ub', 'all')">
-                        <div class="stat-label">Tambahan (Non-Target)</div>
-                        <div class="stat-value" id="se_ub-stat-new-overall-merged">0</div>
-                        <div class="stat-subtext" style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.2;">
-                            <span id="se_ub-stat-new-breakdown-subtext">0 usaha | 0 rumah</span>
-                            <br/><span id="se_ub-stat-new-today-subtext" style="color: var(--color-delivered);">+0 hari ini</span>
-                        </div>
-                    </div>
                 </div>
 
                 <button class="btn-toggle-detail" id="se_ub-toggle-detail" onclick="toggleStatsDetail('se_ub')">
@@ -525,7 +517,15 @@
                     </div>
                     <div class="stat-card-compact" style="--stat-color: #ef4444;">
                         <div class="stat-label">Rejected</div>
-                        <div class="stat-value" id="se_ub-stat-rejected">0</div>
+                        <div class="stat-value" id="se_ub-stat-rejected-wrapper">0</div>
+                    </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--primary); cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_ub', 'all')">
+                        <div class="stat-label">Tambahan (Non-Target)</div>
+                        <div class="stat-value" id="se_ub-stat-new-overall-merged">0</div>
+                        <div class="stat-subtext" style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.2;">
+                            <span id="se_ub-stat-new-breakdown-subtext">0 usaha | 0 rumah</span>
+                            <br/><span id="se_ub-stat-new-today-subtext" style="color: var(--color-delivered);">+0 hari ini</span>
+                        </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
                         <div class="stat-label">Sisa Usaha</div>
@@ -738,12 +738,15 @@
                                             Belum</th>
                                         <th
                                             style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 110px;">
-                                            Persentase</th>
+                                            % Assign</th>
+                                        <th
+                                            style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #6366f1; white-space: nowrap; width: 110px;">
+                                            % Sync</th>
                                     </tr>
                                 </thead>
                                 <tbody id="kab-summary-tbody">
                                     <tr>
-                                        <td colspan="7"
+                                        <td colspan="8"
                                             style="text-align: center; padding: 2rem; color: var(--text-secondary);">
                                             Memuat data ringkasan kabupaten...</td>
                                     </tr>

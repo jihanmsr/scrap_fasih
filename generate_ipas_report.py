@@ -230,36 +230,50 @@ async def generate_report():
         
         datatable_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
 
-        async def fetch_api_safely(url, payload, token, timeout_seconds=120):
-            try:
-                res = await page.evaluate("""
-                    async ({url, payload, token, timeoutMs}) => {
-                        const controller = new AbortController();
-                        const id = setTimeout(() => controller.abort(), timeoutMs);
-                        try {
-                            const r = await fetch(url, {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
-                                body: JSON.stringify(payload),
-                                signal: controller.signal
-                            });
-                            clearTimeout(id);
-                            if (!r.ok) return { error: `HTTP ${r.status}: ${await r.text()}` };
-                            const text = await r.text();
+        async def fetch_api_safely(url, payload, token, timeout_seconds=120, max_retries=3):
+            for attempt in range(1, max_retries + 1):
+                try:
+                    res = await page.evaluate("""
+                        async ({url, payload, token, timeoutMs}) => {
+                            const controller = new AbortController();
+                            const id = setTimeout(() => controller.abort(), timeoutMs);
                             try {
-                                return JSON.parse(text);
+                                const r = await fetch(url, {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+                                    body: JSON.stringify(payload),
+                                    signal: controller.signal
+                                });
+                                clearTimeout(id);
+                                if (!r.ok) return { error: `HTTP ${r.status}: ${await r.text()}`, status: r.status };
+                                const text = await r.text();
+                                try {
+                                    return JSON.parse(text);
+                                } catch(e) {
+                                    return { error: "Invalid JSON", text: text.substring(0, 200) };
+                                }
                             } catch(e) {
-                                return { error: "Invalid JSON", text: text.substring(0, 200) };
+                                clearTimeout(id);
+                                return { error: e.toString() };
                             }
-                        } catch(e) {
-                            clearTimeout(id);
-                            return { error: e.toString() };
                         }
-                    }
-                """, {"url": url, "payload": payload, "token": token, "timeoutMs": timeout_seconds * 1000})
-                return res
-            except Exception as e:
-                return {"error": str(e)}
+                    """, {"url": url, "payload": payload, "token": token, "timeoutMs": timeout_seconds * 1000})
+                    # Retry on 5xx server errors
+                    if isinstance(res, dict) and res.get("error"):
+                        status = res.get("status", 0)
+                        if status in (502, 503, 504) and attempt < max_retries:
+                            wait_sec = 10 * attempt
+                            print(f"    [RETRY {attempt}/{max_retries}] Server error {status}, menunggu {wait_sec}s...")
+                            await asyncio.sleep(wait_sec)
+                            continue
+                    return res
+                except Exception as e:
+                    if attempt < max_retries:
+                        wait_sec = 10 * attempt
+                        print(f"    [RETRY {attempt}/{max_retries}] Exception: {e}, menunggu {wait_sec}s...")
+                        await asyncio.sleep(wait_sec)
+                    else:
+                        return {"error": str(e)}
 
         async def check_session_valid(token):
             if not token:
@@ -392,7 +406,19 @@ async def generate_report():
                         "region1Id": survey_cfg["prov_id"],
                         "region2Id": kab["id"]
                     }
-                    res_report = await fetch_api_safely(report_url, payload_report, xsrf_token)
+                    res_report = None
+                    for retry_kab in range(3):
+                        res_report = await fetch_api_safely(report_url, payload_report, xsrf_token, timeout_seconds=180)
+                        if isinstance(res_report, dict) and res_report.get("error"):
+                            wait_sec = 15 * (retry_kab + 1)
+                            print(f"  [ERROR] Gagal memproses {kab['name']}: {res_report['error'][:80]}")
+                            if retry_kab < 2:
+                                print(f"  [RETRY {retry_kab+1}/3] Mencoba ulang dalam {wait_sec}s...")
+                                await asyncio.sleep(wait_sec)
+                            else:
+                                print(f"  [SKIP] {kab['name']} dilewati setelah 3x gagal.")
+                        else:
+                            break
                     if res_report and isinstance(res_report, list):
                         for item in res_report:
                             kec_key = item.get("key")
@@ -750,6 +776,20 @@ async def generate_report():
                         if k_item["kec_id"] == kec_id:
                             kec_stats = k_item
                             break
+
+                # Fallback: match by kec_name using levelRegions from the record (for UB survey where kec_ids may differ)
+                if not kec_stats and kab_name in report_data:
+                    level_regions = r.get("levelRegions") or []
+                    kec_name_from_region = None
+                    for lr in level_regions:
+                        if lr.get("level") == 3:
+                            kec_name_from_region = (lr.get("name") or "").upper().strip()
+                            break
+                    if kec_name_from_region:
+                        for k_item in report_data[kab_name]["kecamatan_list"]:
+                            if k_item["kec_name"].upper().strip() == kec_name_from_region:
+                                kec_stats = k_item
+                                break
 
                 # Count active target states at Kecamatan level if not OPEN
                 if is_target and kec_stats:
