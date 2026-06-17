@@ -1698,8 +1698,15 @@ body {
 
 /* Kecamatan Row Drill-down Styling */
 .kabupaten-row {
-    cursor: pointer;
+    cursor: default;
     transition: background-color 0.2s;
+}
+.expand-trigger {
+    cursor: pointer;
+    user-select: none;
+}
+.expand-trigger:hover {
+    color: var(--primary) !important;
 }
 .kabupaten-row:hover {
     background-color: rgba(99, 102, 241, 0.05) !important;
@@ -1732,7 +1739,40 @@ body {
     color: var(--text-secondary);
 }
 
-/* Daily Progress Popover Styling */
+/* Petugas Sub-row (under Kecamatan in SE Dashboard) */
+.petugas-sub-row {
+    font-size: 0.78rem !important;
+    transition: background-color 0.15s ease;
+}
+.petugas-sub-row:hover {
+    background-color: rgba(99, 102, 241, 0.04) !important;
+}
+.petugas-sub-row td {
+    padding: 0.4rem 0.75rem !important;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.07) !important;
+    vertical-align: middle;
+}
+
+/* SLS Detail Row (under expanded officer row in SE Dashboard) */
+.sls-detail-row {
+    font-size: 0.72rem !important;
+    transition: background-color 0.12s ease;
+    animation: fadeInRow 0.18s ease-out;
+}
+.sls-detail-row:hover {
+    background-color: rgba(99, 102, 241, 0.03) !important;
+}
+.sls-detail-row td {
+    padding: 0.28rem 0.75rem !important;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.04) !important;
+    vertical-align: middle;
+}
+@keyframes fadeInRow {
+    from { opacity: 0; transform: translateY(-3px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
 .daily-progress-wrapper {
     position: relative;
     display: inline-flex;

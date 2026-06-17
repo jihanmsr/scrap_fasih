@@ -11924,6 +11924,28 @@ window.EMAIL_DATA = [
     "kab_name": "[05] DONGGALA"
   },
   {
+    "code": "9722d961-fc6c-4375-bc1e-928a54ce8268",
+    "company_name": "CAKRAWALA MITRA BAHARI, PT",
+    "survey_status": "OPEN",
+    "email": "cakrawala.mitrabahari@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 11:47:36",
+    "order": 1,
+    "kab_name": "[06] TOLI-TOLI"
+  },
+  {
+    "code": "9722d961-fc6c-4375-bc1e-928a54ce8268",
+    "company_name": "CAKRAWALA MITRA BAHARI, PT",
+    "survey_status": "OPEN",
+    "email": "cakrawala.mitrabahari@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 11:47:31",
+    "order": 2,
+    "kab_name": "[06] TOLI-TOLI"
+  },
+  {
     "code": "66646917-ee20-47c0-921d-70826ed7aa69",
     "company_name": "BANDARA SULTAN BANTILAN",
     "survey_status": "SUBMITTED RESPONDENT",
@@ -12658,28 +12680,6 @@ window.EMAIL_DATA = [
     "status": "-",
     "timestamp": "-",
     "order": 0,
-    "kab_name": "[06] TOLI-TOLI"
-  },
-  {
-    "code": "9722d961-fc6c-4375-bc1e-928a54ce8268",
-    "company_name": "CAKRAWALA MITRA BAHARI, PT",
-    "survey_status": "OPEN",
-    "email": "cakrawala.mitrabahari@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 11:47:36",
-    "order": 1,
-    "kab_name": "[06] TOLI-TOLI"
-  },
-  {
-    "code": "9722d961-fc6c-4375-bc1e-928a54ce8268",
-    "company_name": "CAKRAWALA MITRA BAHARI, PT",
-    "survey_status": "OPEN",
-    "email": "cakrawala.mitrabahari@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 11:47:31",
-    "order": 2,
     "kab_name": "[06] TOLI-TOLI"
   },
   {
@@ -29440,9 +29440,9 @@ window.EMAIL_DATA = [
     "company_name": "TORUKUNO PISON SEJAHTERA",
     "survey_status": "OPEN",
     "email": "pt.torukunopisonsejahtera@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 02:45:37",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "17 Jun 2026, 16:08:06",
     "order": 1,
     "kab_name": "[71] PALU"
   },
@@ -29451,10 +29451,43 @@ window.EMAIL_DATA = [
     "company_name": "TORUKUNO PISON SEJAHTERA",
     "survey_status": "OPEN",
     "email": "pt.torukunopisonsejahtera@gmail.com",
-    "global_status": "Delivered",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "17 Jun 2026, 15:52:34",
+    "order": 2,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "6fe03662-86d2-4be4-8e4a-8bacdf38975f",
+    "company_name": "TORUKUNO PISON SEJAHTERA",
+    "survey_status": "OPEN",
+    "email": "pt.torukunopisonsejahtera@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "17 Jun 2026, 15:52:19",
+    "order": 3,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "6fe03662-86d2-4be4-8e4a-8bacdf38975f",
+    "company_name": "TORUKUNO PISON SEJAHTERA",
+    "survey_status": "OPEN",
+    "email": "pt.torukunopisonsejahtera@gmail.com",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 02:45:37",
+    "order": 4,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "6fe03662-86d2-4be4-8e4a-8bacdf38975f",
+    "company_name": "TORUKUNO PISON SEJAHTERA",
+    "survey_status": "OPEN",
+    "email": "pt.torukunopisonsejahtera@gmail.com",
+    "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 02:45:33",
-    "order": 2,
+    "order": 5,
     "kab_name": "[71] PALU"
   },
   {
@@ -32489,8 +32522,19 @@ window.EMAIL_DATA = [
     "email": "xinleikuangyeindonesia@gmail.com",
     "global_status": "Opened",
     "status": "Opened",
-    "timestamp": "10 Jun 2026, 15:12:43",
+    "timestamp": "17 Jun 2026, 19:43:06",
     "order": 1,
+    "kab_name": "[71] PALU"
+  },
+  {
+    "code": "c926488a-3754-4d4a-b2e8-0cadf5f4180d",
+    "company_name": "XIN LEI KUANG YEINDONESIA",
+    "survey_status": "OPEN",
+    "email": "xinleikuangyeindonesia@gmail.com",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "10 Jun 2026, 15:12:43",
+    "order": 2,
     "kab_name": "[71] PALU"
   },
   {
@@ -35772,4 +35816,4 @@ window.EMAIL_DATA = [
     "kab_name": "[71] PALU"
   }
 ];
-window.LAST_UPDATED = '17 Jun 2026, 14:34:27';
+window.LAST_UPDATED = '18 Jun 2026, 07:34:27';

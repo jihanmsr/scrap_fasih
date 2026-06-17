@@ -933,6 +933,16 @@ function filterAssignData(type) {
                 # insert new
                 supabase.table("dashboard_store").insert({"key": "assign_data", "value": assign_db_obj}).execute()
                 print("Berhasil mengunggah data Assign/SLS/Petugas ke Supabase.")
+                
+                # Upload daily historical key
+                today_str = datetime.now().strftime("%Y-%m-%d")
+                daily_key = f"assign_data:{today_str}"
+                try:
+                    supabase.table("dashboard_store").delete().eq("key", daily_key).execute()
+                    supabase.table("dashboard_store").insert({"key": daily_key, "value": assign_db_obj}).execute()
+                    print(f"Berhasil mengunggah data harian Assign/SLS/Petugas ({daily_key}) ke Supabase.")
+                except Exception as ex:
+                    print(f"Gagal mengunggah data harian Assign ke Supabase: {ex}")
             except Exception as e:
                 print(f"Gagal mengunggah data Assign ke Supabase: {e}")
 
@@ -1070,6 +1080,16 @@ function filterAssignData(type) {
                         supabase.table("dashboard_store").delete().eq("key", "superset_sync_data").execute()
                         supabase.table("dashboard_store").insert({"key": "superset_sync_data", "value": result_data}).execute()
                         print("Berhasil mengunggah data sync Superset ke Supabase.")
+                        
+                        # Upload daily historical sync key
+                        today_str = datetime.now().strftime("%Y-%m-%d")
+                        daily_sync_key = f"superset_sync_data:{today_str}"
+                        try:
+                            supabase.table("dashboard_store").delete().eq("key", daily_sync_key).execute()
+                            supabase.table("dashboard_store").insert({"key": daily_sync_key, "value": result_data}).execute()
+                            print(f"Berhasil mengunggah data sync harian ({daily_sync_key}) ke Supabase.")
+                        except Exception as ex:
+                            print(f"Gagal mengunggah data sync harian ke Supabase: {ex}")
                     except Exception as e:
                         print(f"Gagal mengunggah ke Supabase: {e}")
             else:

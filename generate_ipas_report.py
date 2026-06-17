@@ -159,6 +159,33 @@ def is_tambahan(code_identity):
         return False
     return True
 
+def extract_sls_code(code_identity):
+    if not code_identity:
+        return ""
+    parts = [p.strip() for p in code_identity.split(" - ")]
+    prefix = parts[0]
+    digits = "".join([c for c in prefix if c.isdigit()])
+    if digits.startswith("72"):
+        if len(digits) >= 14:
+            return digits[:14]
+    return ""
+
+def parse_bps_datetime(dt_str, local_tz):
+    if not dt_str:
+        return None
+    cleaned = dt_str.strip()
+    # BPS API returns genuine UTC times with +00:00 or Z suffix.
+    # Parse as true UTC, then convert to local WITA (+08:00).
+    if cleaned.endswith("Z"):
+        cleaned = cleaned[:-1] + "+00:00"
+    elif not ("+" in cleaned[10:] or (cleaned[10:].count("-") > 0)):
+        # No timezone info at all — assume UTC
+        cleaned = cleaned + "+00:00"
+    # If already has +00:00 or any other offset, parse as-is
+    
+    dt = datetime.datetime.fromisoformat(cleaned)
+    return dt.astimezone(local_tz)
+
 def classify_tambahan(code_identity, data1, data6):
     code_id_upper = (code_identity or "").upper()
     data1_upper = (data1 or "").upper()
@@ -392,6 +419,10 @@ async def generate_report():
             
             period_id = survey_cfg["period_id"]
             
+            # Initialize SLS status map and record IDs set
+            sls_status_map = {}
+            processed_record_ids = set()
+            
             # Fetch target totals at Kecamatan level via Report API
             kec_prelist_map = {}
             report_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-user-assignment"
@@ -583,6 +614,21 @@ async def generate_report():
                 
                 for item in nontarget_records:
                     code_id = item.get("codeIdentity") or ""
+                    
+                    # Accumulate to SLS status map
+                    rec_id = item.get("id")
+                    if rec_id and rec_id not in processed_record_ids:
+                        processed_record_ids.add(rec_id)
+                        sls_code = extract_sls_code(code_id)
+                        if sls_code:
+                            status_alias = item.get("assignmentStatusAlias") or ""
+                            if status_alias:
+                                is_t = not is_tambahan(code_id)
+                                key_type = "target" if is_t else "nontarget"
+                                if sls_code not in sls_status_map:
+                                    sls_status_map[sls_code] = {"target": {}, "nontarget": {}}
+                                sls_status_map[sls_code][key_type][status_alias] = sls_status_map[sls_code][key_type].get(status_alias, 0) + 1
+
                     if not is_tambahan(code_id):
                         continue
                     status = item.get("assignmentStatusAlias", "")
@@ -672,7 +718,11 @@ async def generate_report():
                 "DRAFT",
                 "REJECTED BY Pengawas",
                 "REJECTED BY Admin Kabupaten",
+                "REJECTED BY Admin Provinsi",
                 "APPROVED BY Pengawas",
+                "APPROVED BY Admin Kabupaten",
+                "APPROVED BY Admin Provinsi",
+                "APPROVED",
                 "REVOKED BY Pengawas"
             ]
             all_records = []
@@ -727,12 +777,100 @@ async def generate_report():
             yesterday = today - datetime.timedelta(days=1)
             two_days_ago = today - datetime.timedelta(days=2)
             
+            # Fetch historical snapshots from Supabase to pre-populate yesterday and two days ago completed
+            yesterday_str = yesterday.strftime("%Y-%m-%d")
+            two_days_ago_str = two_days_ago.strftime("%Y-%m-%d")
+            
+            yesterday_snapshot = None
+            two_days_ago_snapshot = None
+            
+            if supabase:
+                try:
+                    res_yest = supabase.table("dashboard_store").select("value").eq("key", f"ipas_data:{yesterday_str}").execute()
+                    if res_yest.data:
+                        yesterday_snapshot = res_yest.data[0].get("value")
+                        print(f"  [SUPABASE] Menemukan snapshot kemarin ({yesterday_str}) untuk {survey_key}")
+                except Exception as e:
+                    print(f"  [SUPABASE] Gagal mengambil snapshot kemarin: {e}")
+                    
+                try:
+                    res_two = supabase.table("dashboard_store").select("value").eq("key", f"ipas_data:{two_days_ago_str}").execute()
+                    if res_two.data:
+                        two_days_ago_snapshot = res_two.data[0].get("value")
+                        print(f"  [SUPABASE] Menemukan snapshot 2 hari lalu ({two_days_ago_str}) untuk {survey_key}")
+                except Exception as e:
+                    print(f"  [SUPABASE] Gagal mengambil snapshot 2 hari lalu: {e}")
+
+            # Pre-populate Kabupaten and Kecamatan from snapshots
+            has_yesterday_snapshot = False
+            has_two_days_ago_snapshot = False
+            
+            for k in survey_cfg["kabs"]:
+                kab_name = k["name"]
+                y_kab = None
+                t_kab = None
+                
+                if yesterday_snapshot and survey_key in yesterday_snapshot:
+                    y_kab = next((x for x in yesterday_snapshot[survey_key] if x.get("kabupaten") == kab_name), None)
+                if two_days_ago_snapshot and survey_key in two_days_ago_snapshot:
+                    t_kab = next((x for x in two_days_ago_snapshot[survey_key] if x.get("kabupaten") == kab_name), None)
+                    
+                if y_kab:
+                    has_yesterday_snapshot = True
+                    report_data[kab_name]["yesterday_completed"] = y_kab.get("today_completed", 0)
+                    report_data[kab_name]["yesterday_completed_breakdown"] = y_kab.get("today_completed_breakdown", {})
+                    
+                    # Copy to Kecamatan list
+                    for kec_s in report_data[kab_name]["kecamatan_list"]:
+                        y_kec = next((x for x in y_kab.get("kecamatan_list", []) if x.get("kec_id") == kec_s["kec_id"] or x.get("kec_name") == kec_s["kec_name"]), None)
+                        if y_kec:
+                            kec_s["yesterday_completed"] = y_kec.get("today_completed", 0)
+                            kec_s["yesterday_completed_breakdown"] = y_kec.get("today_completed_breakdown", {})
+                    
+                    if not t_kab:
+                        has_two_days_ago_snapshot = True
+                        report_data[kab_name]["two_days_ago_completed"] = y_kab.get("yesterday_completed", 0)
+                        report_data[kab_name]["two_days_ago_completed_breakdown"] = y_kab.get("yesterday_completed_breakdown", {})
+                        
+                        for kec_s in report_data[kab_name]["kecamatan_list"]:
+                            y_kec = next((x for x in y_kab.get("kecamatan_list", []) if x.get("kec_id") == kec_s["kec_id"] or x.get("kec_name") == kec_s["kec_name"]), None)
+                            if y_kec:
+                                kec_s["two_days_ago_completed"] = y_kec.get("yesterday_completed", 0)
+                                kec_s["two_days_ago_completed_breakdown"] = y_kec.get("yesterday_completed_breakdown", {})
+                                
+                if t_kab:
+                    has_two_days_ago_snapshot = True
+                    report_data[kab_name]["two_days_ago_completed"] = t_kab.get("today_completed", 0)
+                    report_data[kab_name]["two_days_ago_completed_breakdown"] = t_kab.get("today_completed_breakdown", {})
+                    
+                    for kec_s in report_data[kab_name]["kecamatan_list"]:
+                        t_kec = next((x for x in t_kab.get("kecamatan_list", []) if x.get("kec_id") == kec_s["kec_id"] or x.get("kec_name") == kec_s["kec_name"]), None)
+                        if t_kec:
+                            kec_s["two_days_ago_completed"] = t_kec.get("today_completed", 0)
+                            kec_s["two_days_ago_completed_breakdown"] = t_kec.get("today_completed_breakdown", {})
+            
             # 3. Calculate daily progress from timestamps
             print("Mengolah riwayat tanggal dan mengelompokkan ke Kabupaten & Kecamatan...")
             kab_id_to_name = {k["id"]: k["name"] for k in survey_cfg["kabs"]}
             kab_code_to_name = {f"72{k['code']}": k["name"] for k in survey_cfg["kabs"]}
             
             for r in all_records:
+                code_id = r.get("codeIdentity") or ""
+                
+                # Accumulate to SLS status map
+                rec_id = r.get("id")
+                if rec_id and rec_id not in processed_record_ids:
+                    processed_record_ids.add(rec_id)
+                    sls_code = extract_sls_code(code_id)
+                    if sls_code:
+                        status_alias = r.get("assignmentStatusAlias") or ""
+                        if status_alias:
+                            is_t = not is_tambahan(code_id)
+                            key_type = "target" if is_t else "nontarget"
+                            if sls_code not in sls_status_map:
+                                sls_status_map[sls_code] = {"target": {}, "nontarget": {}}
+                            sls_status_map[sls_code][key_type][status_alias] = sls_status_map[sls_code][key_type].get(status_alias, 0) + 1
+
                 kab_name = None
                 kec_id = None
                 
@@ -807,20 +945,14 @@ async def generate_report():
                         kec_stats["total_approved"] += 1
 
                 # Check completions
-                if status_alias in [
-                    "SUBMITTED RESPONDENT",
-                    "SUBMITTED BY Pencacah",
-                    "APPROVED BY Pengawas",
-                    "REJECTED BY Pengawas",
-                    "REJECTED BY Admin Kabupaten",
-                    "REVOKED BY Pengawas"
-                ]:
+                status_upper = (status_alias or "").upper()
+                if "SUBMITTED" in status_upper or "APPROVED" in status_upper or "REJECTED" in status_upper or "REVOKED" in status_upper:
                     mod_date_str = r.get("dateModified")
                     if mod_date_str:
                         try:
                             # Parse date and convert to WITA
-                            dt = datetime.datetime.fromisoformat(mod_date_str.replace("Z", "+00:00"))
-                            mod_date = dt.astimezone(local_tz).date()
+                            dt = parse_bps_datetime(mod_date_str, local_tz)
+                            mod_date = dt.date() if dt else None
                             
                             if mod_date == today:
                                 report_data[kab_name]["today_completed"] += 1
@@ -831,7 +963,7 @@ async def generate_report():
                                     kec_stats["today_completed"] += 1
                                     kbd = kec_stats.setdefault("today_completed_breakdown", {})
                                     kbd[status_alias] = kbd.get(status_alias, 0) + 1
-                            elif mod_date == yesterday:
+                            elif mod_date == yesterday and not has_yesterday_snapshot:
                                 report_data[kab_name]["yesterday_completed"] += 1
                                 bd = report_data[kab_name].setdefault("yesterday_completed_breakdown", {})
                                 bd[status_alias] = bd.get(status_alias, 0) + 1
@@ -840,7 +972,7 @@ async def generate_report():
                                     kec_stats["yesterday_completed"] += 1
                                     kbd = kec_stats.setdefault("yesterday_completed_breakdown", {})
                                     kbd[status_alias] = kbd.get(status_alias, 0) + 1
-                            elif mod_date == two_days_ago:
+                            elif mod_date == two_days_ago and not has_two_days_ago_snapshot:
                                 report_data[kab_name]["two_days_ago_completed"] += 1
                                 bd = report_data[kab_name].setdefault("two_days_ago_completed_breakdown", {})
                                 bd[status_alias] = bd.get(status_alias, 0) + 1
@@ -856,8 +988,8 @@ async def generate_report():
                 create_date_str = r.get("dateCreated")
                 if create_date_str:
                     try:
-                        dt = datetime.datetime.fromisoformat(create_date_str.replace("Z", "+00:00"))
-                        create_date = dt.astimezone(local_tz).date()
+                        dt = parse_bps_datetime(create_date_str, local_tz)
+                        create_date = dt.date() if dt else None
                         comp_name = r.get("data1") or "-"
                         code_id = r.get("codeIdentity") or "-"
                         if is_tambahan(code_id):
@@ -949,6 +1081,7 @@ async def generate_report():
                 })
             
             output_data[survey_key] = final_list
+            output_data[f"{survey_key}_sls_status"] = sls_status_map
 
         # Write to JS
         local_tz = datetime.timezone(datetime.timedelta(hours=8))
@@ -957,6 +1090,8 @@ async def generate_report():
             "updated_at": now_str,
             "se_umum": output_data["se_umum"],
             "se_ub": output_data["se_ub"],
+            "se_umum_sls_status": output_data.get("se_umum_sls_status", {}),
+            "se_ub_sls_status": output_data.get("se_ub_sls_status", {}),
             "se_umum_prov_total": output_data.get("se_umum_prov_total", 0),
             "se_ub_prov_total": output_data.get("se_ub_prov_total", 0),
             "se_umum_prov_new_total": output_data.get("se_umum_prov_new_total", 0),
@@ -978,6 +1113,16 @@ async def generate_report():
                 # insert new
                 supabase.table("dashboard_store").insert({"key": "ipas_data", "value": final_js_obj}).execute()
                 print("Berhasil mengunggah data IPAS ke Supabase.")
+                
+                # Upload daily historical key
+                today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+                daily_key = f"ipas_data:{today_str}"
+                try:
+                    supabase.table("dashboard_store").delete().eq("key", daily_key).execute()
+                    supabase.table("dashboard_store").insert({"key": daily_key, "value": final_js_obj}).execute()
+                    print(f"Berhasil mengunggah data IPAS harian ({daily_key}) ke Supabase.")
+                except Exception as ex:
+                    print(f"Gagal mengunggah data IPAS harian ke Supabase: {ex}")
             except Exception as e:
                 print(f"Gagal mengunggah data IPAS ke Supabase: {e}")
 

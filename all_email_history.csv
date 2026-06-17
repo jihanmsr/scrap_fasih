@@ -1083,6 +1083,8 @@ bb78d0af-4d52-420b-8b3e-990c7b52195b,AMINUDDIN H. ARSYAD,OPEN,arsyadaminudin17@g
 6a219834-e8b6-4705-9af6-a41909be7596,INDONESIA HENGXING TRADE DEVELOPMENT,OPEN,ptindonesiahengxing@gmail.com,Delivered,Queued,"02 Jun 2026, 02:35:40",2,[05] DONGGALA
 610277ff-8d97-41fb-9663-65a019b17673,"ADAS SEJAHTERA, PT",OPEN,-,-,-,-,0,[05] DONGGALA
 c3ade782-c19b-4380-a239-04e5179380c2,ADI RAMAT CV,OPEN,-,-,-,-,0,[05] DONGGALA
+9722d961-fc6c-4375-bc1e-928a54ce8268,"CAKRAWALA MITRA BAHARI, PT",OPEN,cakrawala.mitrabahari@gmail.com,Delivered,Delivered,"02 Jun 2026, 11:47:36",1,[06] TOLI-TOLI
+9722d961-fc6c-4375-bc1e-928a54ce8268,"CAKRAWALA MITRA BAHARI, PT",OPEN,cakrawala.mitrabahari@gmail.com,Delivered,Queued,"02 Jun 2026, 11:47:31",2,[06] TOLI-TOLI
 66646917-ee20-47c0-921d-70826ed7aa69,BANDARA SULTAN BANTILAN,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 0435f1c6-149a-4ecc-b720-51a54e445ab1,"WINGS ABADI, PT",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 00df1671-c389-48b7-81ce-303adae27900,PERTAMINA PATRA NIAGA,SUBMITTED RESPONDENT,patra.luwuk@outlook.com,Delivered,Delivered,"02 Jun 2026, 05:19:34",1,[06] TOLI-TOLI
@@ -1150,8 +1152,6 @@ bc4e2456-2a4a-48fb-b639-c830169d6d3a,PABRIK KELAPA SAWIT PT CITRA MULIA PERKASA,
 328274c1-1c9a-4803-98c0-72c1bed26664,BANK BRI UNIT TAMBUN,OPEN,-,-,-,-,0,[06] TOLI-TOLI
 35d10422-e533-4934-8054-419bedcfc0fb,"CELINDO CEMERLANG, CV",OPEN,-,-,-,-,0,[06] TOLI-TOLI
 92485781-f729-4e0d-a687-c8cae331417b,KPRI PENGAYOMAN LP,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-9722d961-fc6c-4375-bc1e-928a54ce8268,"CAKRAWALA MITRA BAHARI, PT",OPEN,cakrawala.mitrabahari@gmail.com,Delivered,Delivered,"02 Jun 2026, 11:47:36",1,[06] TOLI-TOLI
-9722d961-fc6c-4375-bc1e-928a54ce8268,"CAKRAWALA MITRA BAHARI, PT",OPEN,cakrawala.mitrabahari@gmail.com,Delivered,Queued,"02 Jun 2026, 11:47:31",2,[06] TOLI-TOLI
 83a7b7ea-1776-4755-a94f-49a91fa483ef,BANK BRI UNIT MALOSONG,OPEN,-,-,-,-,0,[06] TOLI-TOLI
 3a3d83de-f8ab-4c1e-b883-a6e93692354f,"KHALIFAH, PT",OPEN,lank.ghilank83@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:15:01",1,[06] TOLI-TOLI
 3a3d83de-f8ab-4c1e-b883-a6e93692354f,"KHALIFAH, PT",OPEN,lank.ghilank83@gmail.com,Delivered,Queued,"09 Jun 2026, 11:14:50",2,[06] TOLI-TOLI
@@ -2675,8 +2675,11 @@ d58c4298-72be-48e9-abac-aad6809074df,KPN KOPERTASI,OPEN,-,-,-,-,0,[71] PALU
 28ea349e-4050-42bd-b005-dff98a4a3dc6,"PT. KIMIA FARMA TRADING & DISTRIBUTION, Kantor Cabang Palu",OPEN,kftdpalu@kftd.co.id,Bounced,Queued,"02 Jun 2026, 00:06:21",6,[71] PALU
 909125db-e722-4c37-a38d-f8eb013fd7d0,KOPKAR SARANA MANDIRI SEJAHTERA,OPEN,-,-,-,-,0,[71] PALU
 a646f11b-8e46-4978-9363-bbffcdeacbc0,LPM KRISYE PALU <KURSUS MENJAHIT>,OPEN,-,-,-,-,0,[71] PALU
-6fe03662-86d2-4be4-8e4a-8bacdf38975f,TORUKUNO PISON SEJAHTERA,OPEN,pt.torukunopisonsejahtera@gmail.com,Delivered,Delivered,"02 Jun 2026, 02:45:37",1,[71] PALU
-6fe03662-86d2-4be4-8e4a-8bacdf38975f,TORUKUNO PISON SEJAHTERA,OPEN,pt.torukunopisonsejahtera@gmail.com,Delivered,Queued,"02 Jun 2026, 02:45:33",2,[71] PALU
+6fe03662-86d2-4be4-8e4a-8bacdf38975f,TORUKUNO PISON SEJAHTERA,OPEN,pt.torukunopisonsejahtera@gmail.com,Opened,Opened,"17 Jun 2026, 16:08:06",1,[71] PALU
+6fe03662-86d2-4be4-8e4a-8bacdf38975f,TORUKUNO PISON SEJAHTERA,OPEN,pt.torukunopisonsejahtera@gmail.com,Opened,Opened,"17 Jun 2026, 15:52:34",2,[71] PALU
+6fe03662-86d2-4be4-8e4a-8bacdf38975f,TORUKUNO PISON SEJAHTERA,OPEN,pt.torukunopisonsejahtera@gmail.com,Opened,Opened,"17 Jun 2026, 15:52:19",3,[71] PALU
+6fe03662-86d2-4be4-8e4a-8bacdf38975f,TORUKUNO PISON SEJAHTERA,OPEN,pt.torukunopisonsejahtera@gmail.com,Opened,Delivered,"02 Jun 2026, 02:45:37",4,[71] PALU
+6fe03662-86d2-4be4-8e4a-8bacdf38975f,TORUKUNO PISON SEJAHTERA,OPEN,pt.torukunopisonsejahtera@gmail.com,Opened,Queued,"02 Jun 2026, 02:45:33",5,[71] PALU
 83c0c58a-dd1c-4ca8-a3a6-d40f0f3dbbfc,Bank BRI,OPEN,-,-,-,-,0,[71] PALU
 517038d6-454a-4f4d-8140-d8e011de78ef,BANK MANDIRI TASPEN,OPEN,ga.kc.palu@bankmantap.co.id,Delivered,Delivered,"02 Jun 2026, 01:40:58",1,[71] PALU
 517038d6-454a-4f4d-8140-d8e011de78ef,BANK MANDIRI TASPEN,OPEN,ga.kc.palu@bankmantap.co.id,Delivered,Queued,"02 Jun 2026, 01:40:58",2,[71] PALU
@@ -2952,7 +2955,8 @@ aefa296e-d96a-444e-a38a-e9fb1e2f7c13,OCEAT MAJU BERSAMA,OPEN,oceatmajubersama@gm
 aefa296e-d96a-444e-a38a-e9fb1e2f7c13,OCEAT MAJU BERSAMA,OPEN,oceatmajubersama@gmail.com,Delivered,Queued,"02 Jun 2026, 06:03:39",2,[71] PALU
 5d84f0dd-76e2-48bc-a62a-853bf1b56063,"ANUGRAH JAYA PERKASA, CV",OPEN,ajptipo@gmail.com,Bounced,Bounced,"02 Jun 2026, 02:09:06",1,[71] PALU
 5d84f0dd-76e2-48bc-a62a-853bf1b56063,"ANUGRAH JAYA PERKASA, CV",OPEN,ajptipo@gmail.com,Bounced,Queued,"02 Jun 2026, 02:09:05",2,[71] PALU
-c926488a-3754-4d4a-b2e8-0cadf5f4180d,XIN LEI KUANG YEINDONESIA,OPEN,xinleikuangyeindonesia@gmail.com,Opened,Opened,"10 Jun 2026, 15:12:43",1,[71] PALU
+c926488a-3754-4d4a-b2e8-0cadf5f4180d,XIN LEI KUANG YEINDONESIA,OPEN,xinleikuangyeindonesia@gmail.com,Opened,Opened,"17 Jun 2026, 19:43:06",1,[71] PALU
+c926488a-3754-4d4a-b2e8-0cadf5f4180d,XIN LEI KUANG YEINDONESIA,OPEN,xinleikuangyeindonesia@gmail.com,Opened,Opened,"10 Jun 2026, 15:12:43",2,[71] PALU
 bdb836df-9bed-43d6-9edd-40013f305eba,MUSTAMIN PATANGA,OPEN,mustaminpatanga654@gmail.com,Delivered,Delivered,"02 Jun 2026, 06:54:37",1,[71] PALU
 bdb836df-9bed-43d6-9edd-40013f305eba,MUSTAMIN PATANGA,OPEN,mustaminpatanga654@gmail.com,Delivered,Queued,"02 Jun 2026, 06:54:37",2,[71] PALU
 aca33a74-84ba-48f0-8435-0df89fb19e45,MEUBEL JATI INDAH,OPEN,-,-,-,-,0,[71] PALU
