@@ -152,7 +152,7 @@ def is_tambahan(code_identity):
     if len(parts) < 2:
         return False
     source = parts[1].upper()
-    known_sources = {"DTSEN", "UMK", "UM", "UMB", "UMKM", "SE2026", "SE26", "PDRB", "PAPI", "CAWI", "CAPI"}
+    known_sources = {"DTSEN", "UMK", "UM", "UMB", "UMKM", "SE2026", "SE26", "PDRB", "PAPI", "CAWI", "CAPI", "UB"}
     if source in known_sources:
         return False
     if source.startswith("SE26") or source.startswith("SE2026"):
@@ -581,6 +581,16 @@ async def generate_report():
                                 kec_stats = k_item
                                 break
                     
+                    # Klasifikasikan jenis tambahan terlebih dahulu (berlaku untuk semua status)
+                    if is_rumah:
+                        tambahan_rumah_baru += 1
+                        if kec_stats:
+                            kec_stats["new_rumah_overall"] += 1
+                    else:
+                        tambahan_usaha += 1
+                        if kec_stats:
+                            kec_stats["new_usaha_overall"] += 1
+
                     if status_upper == "DRAFT":
                         draft_nontarget += 1
                         if kec_stats:
@@ -591,39 +601,15 @@ async def generate_report():
                             kec_stats["total_open"] += 1
                     elif "SUBMITTED" in status_upper:
                         submitted_nontarget += 1
-                        if is_rumah:
-                            tambahan_rumah_baru += 1
-                            if kec_stats:
-                                kec_stats["new_rumah_overall"] += 1
-                        else:
-                            tambahan_usaha += 1
-                            if kec_stats:
-                                kec_stats["new_usaha_overall"] += 1
                         if kec_stats:
                             kec_stats["total_submitted"] += 1
                     elif "REJECTED" in status_upper:
                         rejected_nontarget += 1
-                        if is_rumah:
-                            tambahan_rumah_baru += 1
-                            if kec_stats:
-                                kec_stats["new_rumah_overall"] += 1
-                        else:
-                            tambahan_usaha += 1
-                            if kec_stats:
-                                kec_stats["new_usaha_overall"] += 1
                         if kec_stats:
                             kec_stats["total_submitted"] += 1
                             kec_stats["total_rejected"] += 1
                     elif "APPROVED" in status_upper:
                         approved_nontarget += 1
-                        if is_rumah:
-                            tambahan_rumah_baru += 1
-                            if kec_stats:
-                                kec_stats["new_rumah_overall"] += 1
-                        else:
-                            tambahan_usaha += 1
-                            if kec_stats:
-                                kec_stats["new_usaha_overall"] += 1
                         if kec_stats:
                             kec_stats["total_submitted"] += 1
                             kec_stats["total_approved"] += 1
@@ -632,7 +618,7 @@ async def generate_report():
                 total_prelist = prelist_target + tambahan_usaha + tambahan_rumah_baru
                 total_draft = draft_target + draft_nontarget
                 total_open = open_target + open_nontarget
-                total_submitted = submitted_target + approved_target + rejected_target + tambahan_usaha + tambahan_rumah_baru
+                total_submitted = submitted_target + approved_target + rejected_target + (submitted_nontarget + rejected_nontarget + approved_nontarget)
                 total_rejected = rejected_target + rejected_nontarget
                 total_approved = approved_target + approved_nontarget
                 
