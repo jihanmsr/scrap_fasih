@@ -1,11 +1,11 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-17T08:00:13.000047+08:00",
+  "updated_at": "2026-06-17T08:08:07.711552+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
-      "total_prelist": 44075,
-      "total_draft": 589,
-      "total_open": 42960,
+      "total_prelist": 44076,
+      "total_draft": 592,
+      "total_open": 42959,
       "total_submitted": 620,
       "total_rejected": 40,
       "total_approved": 52,
@@ -13,13 +13,27 @@ window.IPAS_DATA = {
       "today_completed": 0,
       "yesterday_completed": 2,
       "two_days_ago_completed": 4,
-      "new_usaha_today": 1,
+      "new_usaha_today": 3,
       "new_usaha_yesterday": 19,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
       "new_usaha_overall": 90,
       "new_rumah_overall": 0,
       "new_businesses": [
+        {
+          "name": "SAYUR MASAK RUIDA",
+          "code": "7201030012000500 - SAYUR MASAK RUIDA - 5 /  - 1",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "FAJRI BALAHANTI / NURJULIA BALIHO ",
+          "code": "7201040015000500 - FAJRI BALAHANTI / NURJULIA BALIHO  - 6 /  - 0 - 1. Ya",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
         {
           "name": "KETERAMPILAN MENJAHIT ",
           "code": "7201041007000100 - KETERAMPILAN MENJAHIT  - 6 /  - 1",
@@ -164,23 +178,30 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[02] BANGGAI",
-      "total_prelist": 139060,
-      "total_draft": 647,
-      "total_open": 136323,
-      "total_submitted": 2141,
-      "total_rejected": 56,
-      "total_approved": 205,
+      "total_prelist": 139063,
+      "total_draft": 649,
+      "total_open": 136319,
+      "total_submitted": 2146,
+      "total_rejected": 57,
+      "total_approved": 208,
       "persentase": 1.54,
       "today_completed": 0,
       "yesterday_completed": 2,
       "two_days_ago_completed": 2,
       "new_usaha_today": 5,
-      "new_usaha_yesterday": 37,
+      "new_usaha_yesterday": 36,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 211,
+      "new_usaha_overall": 212,
       "new_rumah_overall": 0,
       "new_businesses": [
+        {
+          "name": "STEVEN MANDANG PARENGKUAN / ",
+          "code": "7202010023000600 - STEVEN MANDANG PARENGKUAN /  - 1 /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
         {
           "name": "MUHAMMAD NUR YUNUS / ",
           "code": "7202030043000300 - MUHAMAD NUR YUNUS /  - 4 /  - - - 1",
@@ -399,13 +420,6 @@ window.IPAS_DATA = {
           "type": "usaha"
         },
         {
-          "name": "STEVEN MANDANG PARENGKUAN / ",
-          "code": "7202010023000600 - STEVEN MANDANG PARENGKUAN /  - 1 /  - 1",
-          "date": "yesterday",
-          "status": "DRAFT",
-          "type": "usaha"
-        },
-        {
           "name": "MUH RAMLI / TIA FATMAHUL JANAH",
           "code": "7202010045000700 - MUH RAMLI / TIA FATMAHUL JANAH - 7 /  - 0",
           "date": "yesterday",
@@ -467,22 +481,15 @@ window.IPAS_DATA = {
           "date": "yesterday",
           "status": "DRAFT",
           "type": "usaha"
-        },
-        {
-          "name": "FELDIANTO / ",
-          "code": "7202053008000200 -  /  - - /  - 0 - 2. Tidak",
-          "date": "yesterday",
-          "status": "DRAFT",
-          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[03] MOROWALI",
-      "total_prelist": 48154,
-      "total_draft": 231,
+      "total_prelist": 48155,
+      "total_draft": 229,
       "total_open": 47484,
-      "total_submitted": 524,
+      "total_submitted": 526,
       "total_rejected": 10,
       "total_approved": 53,
       "persentase": 1.09,
@@ -490,12 +497,26 @@ window.IPAS_DATA = {
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 1,
-      "new_usaha_yesterday": 14,
+      "new_usaha_yesterday": 15,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 169,
+      "new_usaha_overall": 170,
       "new_rumah_overall": 0,
       "new_businesses": [
+        {
+          "name": "TOKO WIDIA EMAS ",
+          "code": "7203021008000112 - TOKO WIDIA EMAS  - 2 / ",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "CANDRA PRATAMA / ",
+          "code": "7203040005000100 - CANDRA PRATAMA /  - 12 /  - pratamacandra174@gmail.com - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
         {
           "name": "APOTEK KEMBAR FARMA 2",
           "code": "7203021008000112 - APOTIK KEMBAR FARMA 2 - 1 /  - 1 - 94974 - 2. Tidak",
@@ -593,25 +614,18 @@ window.IPAS_DATA = {
           "date": "yesterday",
           "status": "DRAFT",
           "type": "usaha"
-        },
-        {
-          "name": "AMRIN / DAWIA",
-          "code": "7203020009000500 - AMRIN / DAWIA - 11 /  - 0",
-          "date": "yesterday",
-          "status": "DRAFT",
-          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[04] POSO",
-      "total_prelist": 105943,
+      "total_prelist": 105945,
       "total_draft": 512,
-      "total_open": 103298,
-      "total_submitted": 2160,
+      "total_open": 103293,
+      "total_submitted": 2167,
       "total_rejected": 128,
       "total_approved": 239,
-      "persentase": 2.04,
+      "persentase": 2.05,
       "today_completed": 0,
       "yesterday_completed": 2,
       "two_days_ago_completed": 0,
@@ -773,23 +787,30 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[05] DONGGALA",
-      "total_prelist": 106085,
+      "total_prelist": 106087,
       "total_draft": 485,
-      "total_open": 104296,
-      "total_submitted": 1347,
+      "total_open": 104294,
+      "total_submitted": 1351,
       "total_rejected": 126,
       "total_approved": 280,
       "persentase": 1.27,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
-      "new_usaha_today": 3,
+      "new_usaha_today": 4,
       "new_usaha_yesterday": 28,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 116,
+      "new_usaha_overall": 117,
       "new_rumah_overall": 0,
       "new_businesses": [
+        {
+          "name": "IHWAN TONO / SRI NULFA",
+          "code": "7205140006000603 - IHWAN TONO / SRI NULFA - 21 /  - 0",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
         {
           "name": "MAFUL / ASNAWATI ",
           "code": "7205100016000100 - KIOS ARSY  - 5 /  - 1",
@@ -1194,9 +1215,9 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[07] BUOL",
       "total_prelist": 57739,
-      "total_draft": 566,
-      "total_open": 56368,
-      "total_submitted": 887,
+      "total_draft": 565,
+      "total_open": 56367,
+      "total_submitted": 889,
       "total_rejected": 77,
       "total_approved": 19,
       "persentase": 1.54,
@@ -1204,7 +1225,7 @@ window.IPAS_DATA = {
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 3,
-      "new_usaha_yesterday": 8,
+      "new_usaha_yesterday": 7,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
       "new_usaha_overall": 164,
@@ -1279,46 +1300,46 @@ window.IPAS_DATA = {
           "date": "yesterday",
           "status": "DRAFT",
           "type": "usaha"
-        },
-        {
-          "name": "IWAN M.BAAT / ",
-          "code": "7207040002001300 - IWAN M.BAAT /  - - / ",
-          "date": "yesterday",
-          "status": "DRAFT",
-          "type": "usaha"
         }
       ]
     },
     {
       "kabupaten": "[08] PARIGI MOUTONG",
-      "total_prelist": 170065,
-      "total_draft": 407,
-      "total_open": 167661,
-      "total_submitted": 2026,
-      "total_rejected": 195,
+      "total_prelist": 170068,
+      "total_draft": 410,
+      "total_open": 167660,
+      "total_submitted": 2028,
+      "total_rejected": 197,
       "total_approved": 237,
       "persentase": 1.19,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 2,
-      "new_usaha_today": 4,
+      "new_usaha_today": 5,
       "new_usaha_yesterday": 18,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 116,
+      "new_usaha_overall": 117,
       "new_rumah_overall": 0,
       "new_businesses": [
-        {
-          "name": "NAJURUDIN MIDE / ROSLIAN",
-          "code": "7208024006000100 - NAJURUDIN MIDE / ROSLIAN - 4 /  - 0",
-          "date": "yesterday",
-          "status": "DRAFT",
-          "type": "usaha"
-        },
         {
           "name": "KEDAI (AYU LESTARI)",
           "code": "7208061001000600 - KEDAI (AYU LESTARI) - 5 /  - 1 - 2. Tidak",
           "date": "today",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "BANGUNAN KOSONG ",
+          "code": "7208030005000100 - BANGUNAN KOSONG  - 20 / ",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "usaha"
+        },
+        {
+          "name": "NAJURUDIN MIDE / ROSLIAN",
+          "code": "7208024006000100 - NAJURUDIN MIDE / ROSLIAN - 4 /  - 0",
+          "date": "yesterday",
           "status": "DRAFT",
           "type": "usaha"
         },
@@ -1466,11 +1487,11 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[09] TOJO UNA-UNA",
-      "total_prelist": 58528,
-      "total_draft": 271,
+      "total_prelist": 58529,
+      "total_draft": 267,
       "total_open": 56704,
-      "total_submitted": 1580,
-      "total_rejected": 158,
+      "total_submitted": 1583,
+      "total_rejected": 160,
       "total_approved": 299,
       "persentase": 2.7,
       "today_completed": 0,
@@ -1480,7 +1501,7 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 11,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 226,
+      "new_usaha_overall": 227,
       "new_rumah_overall": 0,
       "new_businesses": [
         {
@@ -1566,9 +1587,9 @@ window.IPAS_DATA = {
       "kabupaten": "[10] SIGI",
       "total_prelist": 105479,
       "total_draft": 324,
-      "total_open": 103704,
-      "total_submitted": 1491,
-      "total_rejected": 90,
+      "total_open": 103703,
+      "total_submitted": 1492,
+      "total_rejected": 89,
       "total_approved": 214,
       "persentase": 1.41,
       "today_completed": 0,
@@ -1669,13 +1690,13 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[11] BANGGAI LAUT",
-      "total_prelist": 27780,
+      "total_prelist": 27783,
       "total_draft": 45,
-      "total_open": 27191,
-      "total_submitted": 566,
+      "total_open": 27189,
+      "total_submitted": 571,
       "total_rejected": 46,
       "total_approved": 138,
-      "persentase": 2.04,
+      "persentase": 2.06,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 2,
@@ -1683,7 +1704,7 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 116,
+      "new_usaha_overall": 118,
       "new_rumah_overall": 0,
       "new_businesses": [
         {
@@ -1698,8 +1719,8 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[12] MOROWALI UTARA",
       "total_prelist": 42642,
-      "total_draft": 130,
-      "total_open": 42072,
+      "total_draft": 131,
+      "total_open": 42071,
       "total_submitted": 503,
       "total_rejected": 25,
       "total_approved": 30,
@@ -1775,9 +1796,9 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[71] PALU",
       "total_prelist": 165504,
-      "total_draft": 510,
-      "total_open": 162997,
-      "total_submitted": 2090,
+      "total_draft": 509,
+      "total_open": 162995,
+      "total_submitted": 2093,
       "total_rejected": 142,
       "total_approved": 263,
       "persentase": 1.26,
@@ -1785,7 +1806,7 @@ window.IPAS_DATA = {
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
       "new_usaha_today": 2,
-      "new_usaha_yesterday": 29,
+      "new_usaha_yesterday": 28,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
       "new_usaha_overall": 403,
@@ -1997,13 +2018,6 @@ window.IPAS_DATA = {
         {
           "name": "PUTRI MANDIRI",
           "code": "7271010011002000 - PUTRI MANDIRI - 7 /  - 1",
-          "date": "yesterday",
-          "status": "DRAFT",
-          "type": "usaha"
-        },
-        {
-          "name": "ILHAM MANOPPO / ",
-          "code": "7271031006000201 - ILHAM MANOPPO /  - 7 /  - 0",
           "date": "yesterday",
           "status": "DRAFT",
           "type": "usaha"
@@ -2273,9 +2287,9 @@ window.IPAS_DATA = {
       "new_businesses": []
     }
   ],
-  "se_umum_prov_total": 1147676,
+  "se_umum_prov_total": 1147692,
   "se_ub_prov_total": 1302,
-  "se_umum_prov_new_total": 2223,
+  "se_umum_prov_new_total": 2230,
   "se_ub_prov_new_total": 38,
   "se_umum_prov_new_rumah_total": 0,
   "se_ub_prov_new_rumah_total": 0

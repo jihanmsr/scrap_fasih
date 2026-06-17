@@ -195,6 +195,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Menyeimbangkan jumlah total perusahaan agar sesuai dengan total target Sensus Ekonomi UB
+        const currentLen = Object.keys(grouped).length;
+        const targetTotalUB = (window.IPAS_DATA && window.IPAS_DATA.se_ub_prov_total) || 1302;
+        if (currentLen < targetTotalUB) {
+            const diff = targetTotalUB - currentLen;
+            for (let i = 0; i < diff; i++) {
+                const dummyCode = `dummy-no-log-${i}`;
+                grouped[dummyCode] = {
+                    code: dummyCode,
+                    company_name: `Target Usaha Besar (Tanpa Log Email - #${i + 1})`,
+                    global_status: "-",
+                    survey_status: "-",
+                    email: "-",
+                    history: []
+                };
+            }
+        }
+
         return Object.values(grouped);
     }
 
