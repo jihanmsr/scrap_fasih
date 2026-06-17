@@ -3404,11 +3404,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const typeBadgeBg = b.type === 'rumah' ? 'rgba(236,72,153,0.1)' : 'rgba(59,130,246,0.1)';
             const typeBadgeText = b.type === 'rumah' ? 'RUMAH' : 'USAHA';
 
+            // Parse SLS Code from codeIdentity (format: "SLS_CODE - NAME - ...")
+            const codeParts = (b.code || '').split(' - ');
+            const slsCode = codeParts[0] ? codeParts[0].trim() : '-';
+
             return `
                 <div style="padding: 1rem; border-bottom: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                     <div style="display: flex; flex-direction: column; gap: 0.25rem;">
                         <span style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem;">${b.name || '-'}</span>
-                        <span style="font-family: monospace; color: var(--text-secondary); font-size: 0.85rem;">${b.code || '-'}</span>
+                        <span style="font-family: monospace; color: var(--text-secondary); font-size: 0.85rem;">Kode SLS: ${slsCode}</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                         ${kabSub}
