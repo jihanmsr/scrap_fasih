@@ -729,6 +729,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'kabupaten')" style="font-family: 'Outfit', sans-serif; vertical-align: middle;">
                     Kabupaten/Kota${getIcon('kabupaten')}
                 </th>
+                <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'total_prelist')" style="font-family: 'Outfit', sans-serif; text-align: right; vertical-align: middle; color: var(--text-secondary);">
+                    Total Target${getIcon('total_prelist')}
+                </th>
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'total_draft')" style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b; vertical-align: middle;">
                     Draft${getIcon('total_draft')}
                 </th>
@@ -741,14 +744,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'persentase')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
                     % Capaian${getIcon('persentase')}
                 </th>
-                <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'total_prelist')" style="font-family: 'Outfit', sans-serif; text-align: right; vertical-align: middle;">
-                    Total Target${getIcon('total_prelist')}
-                </th>
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'new_usaha_overall')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
-                    Tambahan Usaha${getIcon('new_usaha_overall')}
-                </th>
-                <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'new_rumah_overall')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
-                    Rumah Baru${getIcon('new_rumah_overall')}
+                    Tambahan (Non-Target)${getIcon('new_usaha_overall')}
                 </th>
             </tr>
             <tr>
@@ -760,13 +757,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 </th>
                 <th class="sortable" onclick="sortSeTable('${surveyType}', 'yesterday_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b; font-size: 0.8rem; padding: 0.4rem 0.75rem;">
                     Kemarin${getIcon('yesterday_completed')}
-                                </th>
-                                <th class="sortable" onclick="sortSeTable('${surveyType}', 'two_days_ago_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-clicked); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                </th>
+                <th class="sortable" onclick="sortSeTable('${surveyType}', 'two_days_ago_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-clicked); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
                     H-2${getIcon('two_days_ago_completed')}
                 </th>
             </tr>
         `;
     };
+
+    window.toggleDailyPopover = function (event, element) {
+        event.stopPropagation();
+        const popover = element.nextElementSibling;
+        if (!popover) return;
+        const isActive = popover.classList.contains('active');
+        
+        // Close all other active popovers
+        document.querySelectorAll('.daily-popover.active').forEach(p => {
+            if (p !== popover) p.classList.remove('active');
+        });
+        
+        if (isActive) {
+            popover.classList.remove('active');
+        } else {
+            popover.classList.add('active');
+            
+            // Adjust position if offscreen
+            const rect = popover.getBoundingClientRect();
+            if (rect.left < 0) {
+                popover.style.left = '0';
+                popover.style.right = 'auto';
+            } else if (rect.right > window.innerWidth) {
+                popover.style.right = '0';
+                popover.style.left = 'auto';
+            }
+        }
+    };
+
+    // Close popovers on body click
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.daily-popover.active').forEach(p => {
+            p.classList.remove('active');
+        });
+    });
 
     // Sensus Ekonomi Dashboard Render Engine (Umum or UB)
     window.renderSeDashboard = function (surveyType) {
@@ -775,6 +807,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Calculate Summary
         let prelist = 0, draft = 0, openVal = 0, submitted = 0, rejected = 0, today = 0, yesterday = 0, twoDaysAgo = 0, newToday = 0, newRumahToday = 0;
+
+        let todayBreakdown = {};
+        let yesterdayBreakdown = {};
+        let twoDaysAgoBreakdown = {};
 
         surveyData.forEach(item => {
             prelist += item.total_prelist || 0;
@@ -788,6 +824,23 @@ document.addEventListener('DOMContentLoaded', () => {
             newToday += item.new_usaha_today || 0;
             newRumahToday += item.new_rumah_today || 0;
             item.sisa_usaha = Math.max(0, (item.total_prelist || 0) - (item.total_submitted || 0));
+
+            // Sum breakdowns for province
+            if (item.today_completed_breakdown) {
+                for (const [st, val] of Object.entries(item.today_completed_breakdown)) {
+                    todayBreakdown[st] = (todayBreakdown[st] || 0) + val;
+                }
+            }
+            if (item.yesterday_completed_breakdown) {
+                for (const [st, val] of Object.entries(item.yesterday_completed_breakdown)) {
+                    yesterdayBreakdown[st] = (yesterdayBreakdown[st] || 0) + val;
+                }
+            }
+            if (item.two_days_ago_completed_breakdown) {
+                for (const [st, val] of Object.entries(item.two_days_ago_completed_breakdown)) {
+                    twoDaysAgoBreakdown[st] = (twoDaysAgoBreakdown[st] || 0) + val;
+                }
+            }
         });
 
         // Override prelist with PROVINSI_TOTAL if available
@@ -801,6 +854,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Format helper
         const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
+
+        const getDailyProgressCellHTML = (count, breakdown, headerTitle) => {
+            if (!count || count <= 0) return `<span>0</span>`;
+            
+            const itemsHTML = Object.entries(breakdown || {})
+                .map(([status, val]) => `
+                    <div class="popover-item">
+                        <span class="popover-badge">${status}</span>
+                        <span class="popover-count">${formatNum(val)}</span>
+                    </div>
+                `).join('');
+                
+            return `
+                <div class="daily-progress-wrapper">
+                    <span>${formatNum(count)}</span>
+                    <span class="daily-dropdown-trigger" onclick="window.toggleDailyPopover(event, this)">▼</span>
+                    <div class="daily-popover">
+                        <div class="popover-header">${headerTitle}</div>
+                        ${itemsHTML || '<div style="color: var(--text-secondary); font-size: 0.75rem;">Tidak ada detail status</div>'}
+                    </div>
+                </div>
+            `;
+        };
 
         // Update stats elements
         const prelistEl = document.getElementById(`${surveyType}-stat-total-prelist`);
@@ -828,13 +904,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if(rejectedEl) rejectedEl.textContent = formatNum(rejected);
 
         const todayEl = document.getElementById(`${surveyType}-stat-today`);
-        if(todayEl) todayEl.textContent = formatNum(today);
+        if(todayEl) todayEl.innerHTML = getDailyProgressCellHTML(today, todayBreakdown, 'SUBMIT HARI INI');
 
         const yesterdayEl = document.getElementById(`${surveyType}-stat-yesterday`);
-        if(yesterdayEl) yesterdayEl.textContent = formatNum(yesterday);
+        if(yesterdayEl) yesterdayEl.innerHTML = getDailyProgressCellHTML(yesterday, yesterdayBreakdown, 'SUBMIT KEMARIN');
 
         const twoDaysEl = document.getElementById(`${surveyType}-stat-2days`);
-        if(twoDaysEl) twoDaysEl.textContent = formatNum(twoDaysAgo);
+        if(twoDaysEl) twoDaysEl.innerHTML = getDailyProgressCellHTML(twoDaysAgo, twoDaysAgoBreakdown, 'SUBMIT 2 HARI LALU');
 
         // Calculate and set card percentages with dynamic precision for small numbers
         const formatPctVal = (v, tot) => {
@@ -869,10 +945,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (ipasDataObj[surveyType + "_prov_new_rumah_total"]) {
             newRumahOverall = ipasDataObj[surveyType + "_prov_new_rumah_total"];
         }
-        const newOverallEl = document.getElementById(`${surveyType}-stat-new-overall`);
-        if(newOverallEl) newOverallEl.textContent = formatNum(newOverall);
-        const newRumahOverallEl = document.getElementById(`${surveyType}-stat-new-rumah-overall`);
-        if(newRumahOverallEl) newRumahOverallEl.textContent = formatNum(newRumahOverall);
+        const newOverallMergedEl = document.getElementById(`${surveyType}-stat-new-overall-merged`);
+        if (newOverallMergedEl) newOverallMergedEl.textContent = formatNum(newOverall + newRumahOverall);
+
+        const newBreakdownSubtextEl = document.getElementById(`${surveyType}-stat-new-breakdown-subtext`);
+        if (newBreakdownSubtextEl) {
+            newBreakdownSubtextEl.textContent = `${formatNum(newOverall)} usaha | ${formatNum(newRumahOverall)} rumah`;
+        }
+
+        const newTodaySubtextEl = document.getElementById(`${surveyType}-stat-new-today-subtext`);
+        if (newTodaySubtextEl) {
+            newTodaySubtextEl.textContent = `+${formatNum(newToday + newRumahToday)} hari ini`;
+        }
 
         // Kenaikan Persentase
         const kenaikanEl = document.getElementById(`${surveyType}-stat-kenaikan`);
@@ -914,7 +998,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (filtered.length === 0) {
             tbody.innerHTML = `
                 <tr>
-                    <td colspan="10" style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary);">
+                    <td colspan="11" style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary);">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin: 0 auto 0.5rem; opacity: 0.5;">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.008 1.24l.885 1.77a2.25 2.25 0 002.007 1.24h1.98a2.25 2.25 0 002.007-1.24l.885-1.77a2.25 2.25 0 012.007-1.24h3.86m-18 0h18"></path>
                         </svg>
@@ -988,6 +1072,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return sortSettings.order === 'asc' ? valA - valB : valB - valA;
         });
 
+        if (!window.expandedSeKabs) {
+            window.expandedSeKabs = { se_umum: {}, se_ub: {} };
+        }
+
         filtered.forEach(item => {
             let pctClass = '';
             if (item.persentase >= 80) {
@@ -999,44 +1087,105 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const row = document.createElement('tr');
+            const isExpanded = window.expandedSeKabs[surveyType][item.kabupaten] || false;
+            row.className = 'kabupaten-row' + (isExpanded ? ' expanded' : '');
+
+            row.addEventListener('click', (e) => {
+                // Ignore clicks on inner triggers
+                if (e.target.closest('.daily-progress-wrapper') || e.target.closest('div[onclick]') || e.target.closest('button')) return;
+                
+                window.expandedSeKabs[surveyType][item.kabupaten] = !isExpanded;
+                window.renderSeDashboard(surveyType);
+            });
 
             const kabupatenEscaped = item.kabupaten.replace(/'/g, "\\'");
             const encodedBusinessesJSON = encodeURIComponent(JSON.stringify(item.new_businesses || []));
 
-            const penambahanBadge = `<div onclick="openNewBusinessesModal('${kabupatenEscaped}', '${encodedBusinessesJSON}', 'usaha')" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
-                    <span style="font-weight: 800; color: var(--primary); font-size: 0.95rem;">${formatNum(item.new_usaha_overall)}</span>
-                    <span style="font-size: 0.7rem; font-weight: 600; color: var(--text-secondary);">+${item.new_usaha_today} hari ini | +${item.new_usaha_yesterday} kmrn</span>
+            const penambahanBadge = `<div onclick="openNewBusinessesModal('${kabupatenEscaped}', '${encodedBusinessesJSON}', 'all')" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;" onmouseover="this.style.opacity='0.8';' onmouseout="this.style.opacity='1';">
+                    <span style="font-weight: 800; color: var(--primary); font-size: 0.95rem;">${formatNum(item.new_usaha_overall + item.new_rumah_overall)}</span>
+                    <span style="font-size: 0.65rem; font-weight: 600; color: var(--text-secondary);">${item.new_usaha_overall} usaha | ${item.new_rumah_overall} rumah</span>
+                    <span style="font-size: 0.6rem; color: var(--text-muted);">+${item.new_usaha_today + item.new_rumah_today} hari ini</span>
                 </div>`;
 
-            const penambahanRumahBadge = `<div onclick="openNewBusinessesModal('${kabupatenEscaped}', '${encodedBusinessesJSON}', 'rumah')" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
-                    <span style="font-weight: 800; color: #ec4899; font-size: 0.95rem;">${formatNum(item.new_rumah_overall || 0)}</span>
-                    <span style="font-size: 0.7rem; font-weight: 600; color: var(--text-secondary);">+${item.new_rumah_today || 0} hari ini | +${item.new_rumah_yesterday || 0} kmrn</span>
-                </div>`;
+            const tdToday = getDailyProgressCellHTML(item.today_completed, item.today_completed_breakdown, 'HARI INI: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
+            const tdYesterday = getDailyProgressCellHTML(item.yesterday_completed, item.yesterday_completed_breakdown, 'KEMARIN: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
+            const tdTwoDays = getDailyProgressCellHTML(item.two_days_ago_completed, item.two_days_ago_completed_breakdown, 'H-2: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
 
             row.innerHTML = `
-                <td style="font-weight: 700; color: var(--text-primary);">${highlightText(item.kabupaten, searchVal)}</td>
+                <td style="font-weight: 700; color: var(--text-primary);">
+                    <span class="expand-chevron">▶</span>${highlightText(item.kabupaten, searchVal)}
+                </td>
+                <td style="text-align: right; font-family: monospace; font-weight: 500; color: var(--text-secondary);">${formatNum(item.total_prelist)}</td>
                 <td style="text-align: right; font-family: monospace; font-weight: 500; color: #f59e0b;">${formatNum(item.total_draft)}</td>
                 <td style="text-align: right; font-family: monospace; font-weight: 500; color: #3b82f6;">${formatNum(item.total_open)}</td>
                 
                 <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-delivered);">${formatNum(item.total_submitted)}</td>
-                <td style="text-align: right; font-family: monospace; font-weight: 600; color: var(--color-opened);">${formatNum(item.today_completed)}</td>
-                <td style="text-align: right; font-family: monospace; font-weight: 600; color: #f59e0b;">${formatNum(item.yesterday_completed)}</td>
-                <td style="text-align: right; font-family: monospace; font-weight: 600; color: var(--color-clicked);">${formatNum(item.two_days_ago_completed)}</td>
+                <td style="text-align: right; font-family: monospace;">${tdToday}</td>
+                <td style="text-align: right; font-family: monospace;">${tdYesterday}</td>
+                <td style="text-align: right; font-family: monospace;">${tdTwoDays}</td>
                 
                 <td style="text-align: center;">
                     <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; ${pctClass}">
                         ${item.persentase}%
                     </span>
                 </td>
-                <td style="text-align: right; font-family: monospace; font-weight: 500; color: var(--text-secondary);">${formatNum(item.total_prelist)}</td>
                 <td style="text-align: center;">
                     ${penambahanBadge}
                 </td>
-                <td style="text-align: center;">
-                    ${penambahanRumahBadge}
-                </td>
             `;
             tbody.appendChild(row);
+
+            // Render expanded Kecamatan sub-rows
+            if (isExpanded && item.kecamatan_list) {
+                item.kecamatan_list.forEach(kec => {
+                    let kPctClass = '';
+                    if (kec.persentase >= 80) {
+                        kPctClass = 'background-color: rgba(16, 185, 129, 0.1); color: var(--color-delivered); border: 1px solid rgba(16, 185, 129, 0.3);';
+                    } else if (kec.persentase >= 50) {
+                        kPctClass = 'background-color: rgba(245, 158, 11, 0.1); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3);';
+                    } else {
+                        kPctClass = 'background-color: rgba(239, 68, 68, 0.1); color: var(--color-bounced); border: 1px solid rgba(239, 68, 68, 0.3);';
+                    }
+
+                    const kecRow = document.createElement('tr');
+                    kecRow.className = 'kecamatan-row';
+
+                    const kecToday = getDailyProgressCellHTML(kec.today_completed, kec.today_completed_breakdown, 'HARI INI: KEC. ' + kec.kec_name);
+                    const kecYesterday = getDailyProgressCellHTML(kec.yesterday_completed, kec.yesterday_completed_breakdown, 'KEMARIN: KEC. ' + kec.kec_name);
+                    const kecTwoDays = getDailyProgressCellHTML(kec.two_days_ago_completed, kec.two_days_ago_completed_breakdown, 'H-2: KEC. ' + kec.kec_name);
+
+                    const kecEscaped = (item.kabupaten.replace(/\[\d+\] /, '') + ' - ' + kec.kec_name).replace(/'/g, "\\'");
+                    const encodedKecBusinessesJSON = encodeURIComponent(JSON.stringify(kec.new_businesses || []));
+
+                    const kecPenambahanBadge = `<div onclick="openNewBusinessesModal('${kecEscaped}', '${encodedKecBusinessesJSON}', 'all')" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
+                            <span style="font-weight: 800; color: var(--primary); font-size: 0.85rem;">${formatNum(kec.new_usaha_overall + kec.new_rumah_overall)}</span>
+                            <span style="font-size: 0.65rem; font-weight: 600; color: var(--text-secondary);">${kec.new_usaha_overall} usaha | ${kec.new_rumah_overall} rumah</span>
+                            <span style="font-size: 0.6rem; color: var(--text-muted);">+${kec.new_usaha_today + kec.new_rumah_today} hari ini</span>
+                        </div>`;
+
+                    kecRow.innerHTML = `
+                        <td style="font-weight: 600;">↳ ${kec.kec_name}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 500; color: var(--text-secondary);">${formatNum(kec.total_prelist)}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 500; color: #f59e0b;">${formatNum(kec.total_draft)}</td>
+                        <td style="text-align: right; font-family: monospace; font-weight: 500; color: #3b82f6;">${formatNum(kec.total_open)}</td>
+                        
+                        <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-delivered);">${formatNum(kec.total_submitted)}</td>
+                        <td style="text-align: right; font-family: monospace;">${kecToday}</td>
+                        <td style="text-align: right; font-family: monospace;">${kecYesterday}</td>
+                        <td style="text-align: right; font-family: monospace;">${kecTwoDays}</td>
+                        
+                        <td style="text-align: center;">
+                            <span style="display: inline-block; padding: 0.2rem 0.4rem; border-radius: 0.4rem; font-size: 0.7rem; font-weight: 800; ${kPctClass}">
+                                ${kec.persentase}%
+                            </span>
+                        </td>
+                        <td style="text-align: center;">
+                            ${kecPenambahanBadge}
+                        </td>
+                    `;
+                    tbody.appendChild(kecRow);
+                });
+            }
         });
 
         // Calculate province totals for new businesses if not already summed
@@ -1063,37 +1212,34 @@ document.addEventListener('DOMContentLoaded', () => {
             provPctClass = 'background-color: rgba(239, 68, 68, 0.2); color: var(--color-bounced); border: 1px solid rgba(239, 68, 68, 0.4);';
         }
 
-        const provPenambahanBadge = `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;">
-                <span style="font-weight: 800; color: var(--primary); font-size: 0.95rem;">${formatNum(newOverall)}</span>
-                <span style="font-size: 0.7rem; font-weight: 600; color: var(--text-secondary);">+${newToday} hari ini | +${newYesterday} kmrn</span>
+        const provPenambahanBadge = `<div onclick="openProvincialNewBusinessesModal('${surveyType}', 'all')" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
+                <span style="font-weight: 800; color: var(--primary); font-size: 0.95rem;">${formatNum(newOverall + newRumahOverall)}</span>
+                <span style="font-size: 0.65rem; font-weight: 600; color: var(--text-secondary);">${formatNum(newOverall)} usaha | ${formatNum(newRumahOverall)} rumah</span>
+                <span style="font-size: 0.65rem; font-weight: 600; color: var(--text-muted);">+${newToday + newRumahToday} hari ini | +${newYesterday + newRumahYesterday} kmrn</span>
             </div>`;
 
-        const provPenambahanRumahBadge = `<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;">
-                <span style="font-weight: 800; color: #ec4899; font-size: 0.95rem;">${formatNum(newRumahOverall)}</span>
-                <span style="font-size: 0.7rem; font-weight: 600; color: var(--text-secondary);">+${newRumahToday} hari ini | +${newRumahYesterday} kmrn</span>
-            </div>`;
+        const provTodayHTML = getDailyProgressCellHTML(today, todayBreakdown, 'HARI INI: SULAWESI TENGAH');
+        const provYesterdayHTML = getDailyProgressCellHTML(yesterday, yesterdayBreakdown, 'KEMARIN: SULAWESI TENGAH');
+        const provTwoDaysHTML = getDailyProgressCellHTML(twoDaysAgo, twoDaysAgoBreakdown, 'H-2: SULAWESI TENGAH');
 
         provRow.innerHTML = `
             <td style="font-weight: 800; color: var(--text-primary);">[72] PROVINSI SULAWESI TENGAH</td>
+            <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--text-secondary);">${formatNum(prelist)}</td>
             <td style="text-align: right; font-family: monospace; font-weight: 700; color: #f59e0b;">${formatNum(draft)}</td>
             <td style="text-align: right; font-family: monospace; font-weight: 700; color: #3b82f6;">${formatNum(openVal)}</td>
             
             <td style="text-align: right; font-family: monospace; font-weight: 800; color: var(--color-delivered);">${formatNum(submitted)}</td>
-            <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-opened);">${formatNum(today)}</td>
-            <td style="text-align: right; font-family: monospace; font-weight: 700; color: #f59e0b;">${formatNum(yesterday)}</td>
-            <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-clicked);">${formatNum(twoDaysAgo)}</td>
+            <td style="text-align: right; font-family: monospace;">${provTodayHTML}</td>
+            <td style="text-align: right; font-family: monospace;">${provYesterdayHTML}</td>
+            <td style="text-align: right; font-family: monospace;">${provTwoDaysHTML}</td>
             
             <td style="text-align: center;">
                 <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; ${provPctClass}">
                     ${persentase}%
                 </span>
             </td>
-            <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--text-secondary);">${formatNum(prelist)}</td>
             <td style="text-align: center;">
                 ${provPenambahanBadge}
-            </td>
-            <td style="text-align: center;">
-                ${provPenambahanRumahBadge}
             </td>
         `;
         tbody.appendChild(provRow);
@@ -3395,14 +3541,35 @@ document.addEventListener('DOMContentLoaded', () => {
         // Generate list dengan inline CSS cantik
         container.innerHTML = filtered.map(b => {
             const isToday = b.date === 'today';
-            const badgeColor = isToday ? '#10b981' : '#f59e0b';
-            const badgeBg = isToday ? 'rgba(16,185,129,0.1)' : 'rgba(245,158,11,0.1)';
-            const badgeBorder = isToday ? 'rgba(16,185,129,0.3)' : 'rgba(245,158,11,0.3)';
-            const badgeText = isToday ? 'Hari Ini' : 'Kemarin';
+            const isYesterday = b.date === 'yesterday';
+            const badgeColor = isToday ? '#10b981' : (isYesterday ? '#f59e0b' : 'var(--text-muted)');
+            const badgeBg = isToday ? 'rgba(16,185,129,0.1)' : (isYesterday ? 'rgba(245,158,11,0.1)' : 'rgba(255,255,255,0.05)');
+            const badgeBorder = isToday ? 'rgba(16,185,129,0.3)' : (isYesterday ? 'rgba(245,158,11,0.3)' : 'var(--card-border)');
+            const badgeText = isToday ? 'Hari Ini' : (isYesterday ? 'Kemarin' : 'Sebelumnya');
             const kabSub = b.kabName ? `<span style="font-size: 0.75rem; color: var(--text-secondary); background: rgba(255,255,255,0.05); padding: 0.2rem 0.5rem; border-radius: 0.25rem; margin-right: 0.5rem; border: 1px solid var(--card-border);">${b.kabName}</span>` : '';
             const typeBadgeColor = b.type === 'rumah' ? '#ec4899' : 'var(--primary)';
             const typeBadgeBg = b.type === 'rumah' ? 'rgba(236,72,153,0.1)' : 'rgba(59,130,246,0.1)';
             const typeBadgeText = b.type === 'rumah' ? 'RUMAH' : 'USAHA';
+
+            // Map jenis to colors
+            let jenisColor = 'var(--primary)';
+            let jenisBg = 'rgba(59,130,246,0.1)';
+            if (b.jenis) {
+                if (b.jenis.includes('Kosong')) {
+                    jenisColor = '#94a3b8';
+                    jenisBg = 'rgba(148, 163, 184, 0.1)';
+                } else if (b.jenis.includes('Keluarga Usaha')) {
+                    jenisColor = '#10b981';
+                    jenisBg = 'rgba(16, 185, 129, 0.1)';
+                } else if (b.jenis.includes('Keluarga')) {
+                    jenisColor = '#ec4899';
+                    jenisBg = 'rgba(236, 72, 153, 0.1)';
+                } else if (b.jenis.includes('UMKM')) {
+                    jenisColor = '#8b5cf6';
+                    jenisBg = 'rgba(139, 92, 246, 0.1)';
+                }
+            }
+            const jenisBadge = b.jenis ? `<span style="background: ${jenisBg}; padding: 0.25rem 0.6rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 800; color: ${jenisColor}; border: 1px solid ${jenisColor}33; text-transform: uppercase; margin-right: 0.25rem;">${b.jenis}</span>` : '';
 
             // Parse SLS Code from codeIdentity (format: "SLS_CODE - NAME - ...")
             const codeParts = (b.code || '').split(' - ');
@@ -3413,9 +3580,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div style="display: flex; flex-direction: column; gap: 0.25rem;">
                         <span style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem;">${b.name || '-'}</span>
                         <span style="font-family: monospace; color: var(--text-secondary); font-size: 0.85rem;">Kode SLS: ${slsCode}</span>
+                        ${b.kecName && b.kecName !== '-' ? `<span style="font-size: 0.75rem; color: var(--text-muted);">Kecamatan: ${b.kecName}</span>` : ''}
                     </div>
                     <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                         ${kabSub}
+                        ${jenisBadge}
                         <span style="background: ${typeBadgeBg}; padding: 0.25rem 0.6rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 800; color: ${typeBadgeColor}; text-transform: uppercase;">${typeBadgeText}</span>
                         <span style="background: rgba(255,255,255,0.05); padding: 0.25rem 0.6rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; border: 1px solid var(--card-border);">${b.status || 'DRAFT'}</span>
                         <span style="background: ${badgeBg}; border: 1px solid ${badgeBorder}; padding: 0.25rem 0.6rem; border-radius: 0.5rem; font-size: 0.7rem; font-weight: 800; color: ${badgeColor};">${badgeText}</span>

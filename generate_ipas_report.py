@@ -159,6 +159,46 @@ def is_tambahan(code_identity):
         return False
     return True
 
+def classify_tambahan(code_identity, data1, data6):
+    code_id_upper = (code_identity or "").upper()
+    data1_upper = (data1 or "").upper()
+    data6_upper = (data6 or "").upper()
+    
+    # Check if empty/kosong building
+    if "BANGUNAN KOSONG" in data1_upper or "RUMAH KOSONG" in data1_upper or "KOSONG" in data1_upper or "BANGUNAN KOSONG" in code_id_upper or "RUMAH KOSONG" in code_id_upper:
+        return "Bangunan/Rumah Kosong", False
+        
+    # Check if Keluarga Usaha (Household with business)
+    if "1. YA" in code_id_upper or "1.YA" in code_id_upper:
+        return "Keluarga Usaha", True
+        
+    # Check if Keluarga Bukan Usaha
+    if "2. TIDAK" in code_id_upper or "2.TIDAK" in code_id_upper:
+        return "Keluarga (Bukan Usaha)", False
+        
+    # Check if data6 has KELUARGA
+    if "KELUARGA" in data6_upper:
+        if "UMKM" in data6_upper or "UMB" in data6_upper:
+            return "Keluarga Usaha", True
+        return "Keluarga", False
+        
+    # If it contains slash / and seems like a person name
+    if "/" in data1_upper:
+        if "UMKM" in data6_upper or "UMB" in data6_upper:
+            return "Keluarga Usaha", True
+        return "Keluarga", False
+        
+    # Otherwise, it's a business/non-household
+    if "BANGUNAN_LAIN" in data6_upper or "BANGUNAN LAIN" in data6_upper:
+        return "Bangunan Lain / Usaha", True
+    if "UMKM" in data6_upper:
+        return "Usaha (UMKM)", True
+    if "UMB" in data6_upper:
+        return "Usaha (UMB)", True
+        
+    return "Usaha Baru", True
+
+
 async def generate_report():
     launch_chrome_if_needed()
     async with async_playwright() as p:
@@ -306,6 +346,29 @@ async def generate_report():
         # Mapping first 4 characters of codeIdentity to kabupaten name
         code_to_name = {f"72{k['code']}": k["name"] for k in surveys["se_umum"]["kabs"]}
         
+        # Load region_map_sulteng.json
+        region_map = {}
+        try:
+            with open("region_map_sulteng.json", "r", encoding="utf-8") as f:
+                region_map = json.load(f)
+            print("[INFO] region_map_sulteng.json berhasil dimuat.")
+        except Exception as e:
+            print(f"[WARNING] Gagal memuat region_map_sulteng.json: {e}")
+
+        # Build mapping from kec_id to kec_code using region_map_sulteng_full.json
+        kec_id_to_code = {}
+        try:
+            with open("region_map_sulteng_full.json", "r", encoding="utf-8") as f:
+                full_map = json.load(f)
+            for kab_code, kab_data in full_map.get("kabupaten", {}).items():
+                for kec_code, kec_data in kab_data.get("kecamatan", {}).items():
+                    kec_id = kec_data.get("kec_id")
+                    if kec_id:
+                        kec_id_to_code[kec_id] = kec_code
+            print(f"[INFO] region_map_sulteng_full.json loaded. Mapped {len(kec_id_to_code)} kecamatan UUIDs to codes.")
+        except Exception as e:
+            print(f"[WARNING] Gagal memuat region_map_sulteng_full.json: {e}")
+
         output_data = {}
         
         for survey_key, survey_cfg in surveys.items():
@@ -315,9 +378,80 @@ async def generate_report():
             
             period_id = survey_cfg["period_id"]
             
+            # Fetch target totals at Kecamatan level via Report API
+            kec_prelist_map = {}
+            report_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-user-assignment"
+            print("Mengambil rincian target Kecamatan dari Report API...")
+            for kab in survey_cfg["kabs"]:
+                import re
+                match = re.search(r"\[(\d+)\]", kab["name"])
+                kab_code = "72" + match.group(1) if match else ""
+                if kab_code:
+                    payload_report = {
+                        "surveyPeriodId": period_id,
+                        "region1Id": survey_cfg["prov_id"],
+                        "region2Id": kab["id"]
+                    }
+                    res_report = await fetch_api_safely(report_url, payload_report, xsrf_token)
+                    if res_report and isinstance(res_report, list):
+                        for item in res_report:
+                            kec_key = item.get("key")
+                            kec_lbl = item.get("label")
+                            values = item.get("values", [])
+                            total = 0
+                            for v in values:
+                                if v.get("label", "").lower() == "total":
+                                    total = v.get("value", 0)
+                                    break
+                            if kec_key:
+                                kec_prelist_map[kec_key] = total
+                            if kec_lbl:
+                                kec_prelist_map[kec_lbl] = total
+
             # Initialize final report dict
             report_data = {}
             for k in survey_cfg["kabs"]:
+                import re
+                match = re.search(r"\[(\d+)\]", k["name"])
+                kab_code = "72" + match.group(1) if match else ""
+                
+                kec_list_initial = []
+                kec_items = region_map.get(kab_code, {}).get("kecamatan", [])
+                for kec in kec_items:
+                    if kec["name"] == "-":
+                        continue
+                    
+                    kec_code = kec_id_to_code.get(kec["id"])
+                    total_prelist = 0
+                    if kec_code and kec_code in kec_prelist_map:
+                        total_prelist = kec_prelist_map[kec_code]
+                    else:
+                        total_prelist = kec_prelist_map.get(kec["id"], 0)
+
+                    kec_list_initial.append({
+                        "kec_name": kec["name"],
+                        "kec_id": kec["id"],
+                        "total_prelist": total_prelist,
+                        "total_draft": 0,
+                        "total_open": 0,
+                        "total_submitted": 0,
+                        "total_rejected": 0,
+                        "total_approved": 0,
+                        "today_completed": 0,
+                        "yesterday_completed": 0,
+                        "two_days_ago_completed": 0,
+                        "today_completed_breakdown": {},
+                        "yesterday_completed_breakdown": {},
+                        "two_days_ago_completed_breakdown": {},
+                        "new_usaha_today": 0,
+                        "new_usaha_yesterday": 0,
+                        "new_usaha_overall": 0,
+                        "new_rumah_today": 0,
+                        "new_rumah_yesterday": 0,
+                        "new_rumah_overall": 0,
+                        "new_businesses": []
+                    })
+
                 report_data[k["name"]] = {
                     "kabupaten": k["name"],
                     "total_prelist": 0,
@@ -329,18 +463,20 @@ async def generate_report():
                     "today_completed": 0,
                     "yesterday_completed": 0,
                     "two_days_ago_completed": 0,
+                    "today_completed_breakdown": {},
+                    "yesterday_completed_breakdown": {},
+                    "two_days_ago_completed_breakdown": {},
                     "new_usaha_today": 0,
                     "new_usaha_yesterday": 0,
                     "new_rumah_today": 0,
                     "new_rumah_yesterday": 0,
                     "new_usaha_overall": 0,
                     "new_rumah_overall": 0,
-                    "new_businesses": []
+                    "new_businesses": [],
+                    "kecamatan_list": kec_list_initial
                 }
                 
             datatable_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
-
-            # We will calculate province total by summing the kabupaten targets below to avoid timeouts.
 
             for kab in survey_cfg["kabs"]:
                 payload = {
@@ -357,8 +493,10 @@ async def generate_report():
                     "start": 0, "length": 1000, "columns": [
                         {"data": "id"},
                         {"data": "codeIdentity"},
+                        {"data": "data1"},
                         {"data": "data6"},
-                        {"data": "assignmentStatusAlias"}
+                        {"data": "assignmentStatusAlias"},
+                        {"data": "region"}
                     ], "order": [], "search": {"value": "", "regex": False},
                     "assignmentExtraParam": {
                         "region1Id": survey_cfg["prov_id"],
@@ -404,7 +542,7 @@ async def generate_report():
                 
                 if prelist_target == 0:
                     prelist_target = res.get("totalHit", 0)
-
+ 
                 # 2. Parse non-targets (tambahan)
                 draft_nontarget = 0
                 open_nontarget = 0
@@ -422,34 +560,75 @@ async def generate_report():
                     if not is_tambahan(code_id):
                         continue
                     status = item.get("assignmentStatusAlias", "")
+                    data1_val = item.get("data1") or ""
                     data6_val = str(item.get("data6") or "").upper()
-                    is_rumah = "KELUARGA" in data6_val
+                    jenis_lbl, is_usaha_derived = classify_tambahan(code_id, data1_val, data6_val)
+                    is_rumah = not is_usaha_derived
                     
                     status_upper = status.upper()
+                    
+                    # Track Kecamatan for non-targets
+                    kec_id = None
+                    n_region = item.get("region", {})
+                    if n_region:
+                        n_lvl3 = n_region.get("level1", {}).get("level2", {}).get("level3", {}) or {}
+                        kec_id = n_lvl3.get("id")
+                    
+                    kec_stats = None
+                    if kec_id:
+                        for k_item in report_data[kab["name"]]["kecamatan_list"]:
+                            if k_item["kec_id"] == kec_id:
+                                kec_stats = k_item
+                                break
+                    
                     if status_upper == "DRAFT":
                         draft_nontarget += 1
+                        if kec_stats:
+                            kec_stats["total_draft"] += 1
                     elif status_upper == "OPEN":
                         open_nontarget += 1
+                        if kec_stats:
+                            kec_stats["total_open"] += 1
                     elif "SUBMITTED" in status_upper:
                         submitted_nontarget += 1
                         if is_rumah:
                             tambahan_rumah_baru += 1
+                            if kec_stats:
+                                kec_stats["new_rumah_overall"] += 1
                         else:
                             tambahan_usaha += 1
+                            if kec_stats:
+                                kec_stats["new_usaha_overall"] += 1
+                        if kec_stats:
+                            kec_stats["total_submitted"] += 1
                     elif "REJECTED" in status_upper:
                         rejected_nontarget += 1
                         if is_rumah:
                             tambahan_rumah_baru += 1
+                            if kec_stats:
+                                kec_stats["new_rumah_overall"] += 1
                         else:
                             tambahan_usaha += 1
+                            if kec_stats:
+                                kec_stats["new_usaha_overall"] += 1
+                        if kec_stats:
+                            kec_stats["total_submitted"] += 1
+                            kec_stats["total_rejected"] += 1
                     elif "APPROVED" in status_upper:
                         approved_nontarget += 1
                         if is_rumah:
                             tambahan_rumah_baru += 1
+                            if kec_stats:
+                                kec_stats["new_rumah_overall"] += 1
                         else:
                             tambahan_usaha += 1
+                            if kec_stats:
+                                kec_stats["new_usaha_overall"] += 1
+                        if kec_stats:
+                            kec_stats["total_submitted"] += 1
+                            kec_stats["total_approved"] += 1
                 
-                # Hitung metrik final gabungan
+                # Hitung metrik final gabungan Kabupaten
                 total_prelist = prelist_target + tambahan_usaha + tambahan_rumah_baru
                 total_draft = draft_target + draft_nontarget
                 total_open = open_target + open_nontarget
@@ -497,9 +676,11 @@ async def generate_report():
                             {"data": "id"},
                             {"data": "codeIdentity"},
                             {"data": "data1"},
+                            {"data": "data6"},
                             {"data": "dateCreated"},
                             {"data": "dateModified"},
-                            {"data": "assignmentStatusAlias"}
+                            {"data": "assignmentStatusAlias"},
+                            {"data": "region"}
                         ],
                         "order": [],
                         "search": {"value": "", "regex": False},
@@ -535,12 +716,13 @@ async def generate_report():
             two_days_ago = today - datetime.timedelta(days=2)
             
             # 3. Calculate daily progress from timestamps
-            print("Mengolah riwayat tanggal dan mengelompokkan ke Kabupaten...")
+            print("Mengolah riwayat tanggal dan mengelompokkan ke Kabupaten & Kecamatan...")
             kab_id_to_name = {k["id"]: k["name"] for k in survey_cfg["kabs"]}
             kab_code_to_name = {f"72{k['code']}": k["name"] for k in survey_cfg["kabs"]}
             
             for r in all_records:
                 kab_name = None
+                kec_id = None
                 
                 # Try getting from nested region object
                 region = r.get("region", {})
@@ -553,6 +735,9 @@ async def generate_report():
                         kab_code = lvl2.get("fullCode")
                         if kab_code and kab_code in kab_code_to_name:
                             kab_name = kab_code_to_name[kab_code]
+                    
+                    lvl3 = lvl2.get("level3", {}) or {}
+                    kec_id = lvl3.get("id")
                 
                 # Fallback to codeIdentity regex/parsing
                 if not kab_name:
@@ -570,7 +755,31 @@ async def generate_report():
                     continue
                     
                 status_alias = r.get("assignmentStatusAlias")
+                is_target = not is_tambahan(r.get("codeIdentity") or "")
                 
+                # Find Kecamatan stats reference
+                kec_stats = None
+                if kec_id and kab_name in report_data:
+                    for k_item in report_data[kab_name]["kecamatan_list"]:
+                        if k_item["kec_id"] == kec_id:
+                            kec_stats = k_item
+                            break
+
+                # Count active target states at Kecamatan level if not OPEN
+                if is_target and kec_stats:
+                    if status_alias == "DRAFT":
+                        kec_stats["total_draft"] += 1
+                    elif status_alias in [
+                        "SUBMITTED RESPONDENT", "SUBMITTED BY Pencacah",
+                        "APPROVED BY Pengawas", "REJECTED BY Pengawas",
+                        "REJECTED BY Admin Kabupaten", "REVOKED BY Pengawas"
+                    ]:
+                        kec_stats["total_submitted"] += 1
+                    if "REJECTED" in (status_alias or ""):
+                        kec_stats["total_rejected"] += 1
+                    elif "APPROVED" in (status_alias or ""):
+                        kec_stats["total_approved"] += 1
+
                 # Check completions
                 if status_alias in [
                     "SUBMITTED RESPONDENT",
@@ -589,10 +798,31 @@ async def generate_report():
                             
                             if mod_date == today:
                                 report_data[kab_name]["today_completed"] += 1
+                                bd = report_data[kab_name].setdefault("today_completed_breakdown", {})
+                                bd[status_alias] = bd.get(status_alias, 0) + 1
+                                
+                                if kec_stats:
+                                    kec_stats["today_completed"] += 1
+                                    kbd = kec_stats.setdefault("today_completed_breakdown", {})
+                                    kbd[status_alias] = kbd.get(status_alias, 0) + 1
                             elif mod_date == yesterday:
                                 report_data[kab_name]["yesterday_completed"] += 1
+                                bd = report_data[kab_name].setdefault("yesterday_completed_breakdown", {})
+                                bd[status_alias] = bd.get(status_alias, 0) + 1
+                                
+                                if kec_stats:
+                                    kec_stats["yesterday_completed"] += 1
+                                    kbd = kec_stats.setdefault("yesterday_completed_breakdown", {})
+                                    kbd[status_alias] = kbd.get(status_alias, 0) + 1
                             elif mod_date == two_days_ago:
                                 report_data[kab_name]["two_days_ago_completed"] += 1
+                                bd = report_data[kab_name].setdefault("two_days_ago_completed_breakdown", {})
+                                bd[status_alias] = bd.get(status_alias, 0) + 1
+                                
+                                if kec_stats:
+                                    kec_stats["two_days_ago_completed"] += 1
+                                    kbd = kec_stats.setdefault("two_days_ago_completed_breakdown", {})
+                                    kbd[status_alias] = kbd.get(status_alias, 0) + 1
                         except Exception as ex:
                             pass
                             
@@ -604,35 +834,45 @@ async def generate_report():
                         create_date = dt.astimezone(local_tz).date()
                         comp_name = r.get("data1") or "-"
                         code_id = r.get("codeIdentity") or "-"
-                        
                         if is_tambahan(code_id):
                             data6_val = str(r.get("data6") or "").upper()
-                            is_rumah = "KELUARGA" in data6_val
+                            jenis_lbl, is_usaha_derived = classify_tambahan(code_id, comp_name, data6_val)
+                            is_rumah = not is_usaha_derived
                             
                             if create_date == today:
                                 if is_rumah:
                                     report_data[kab_name]["new_rumah_today"] += 1
+                                    if kec_stats:
+                                        kec_stats["new_rumah_today"] += 1
                                 else:
                                     report_data[kab_name]["new_usaha_today"] += 1
-                                report_data[kab_name]["new_businesses"].append({
-                                    "name": comp_name,
-                                    "code": code_id,
-                                    "date": "today",
-                                    "status": status_alias,
-                                    "type": "rumah" if is_rumah else "usaha"
-                                })
+                                    if kec_stats:
+                                        kec_stats["new_usaha_today"] += 1
                             elif create_date == yesterday:
                                 if is_rumah:
                                     report_data[kab_name]["new_rumah_yesterday"] += 1
+                                    if kec_stats:
+                                        kec_stats["new_rumah_yesterday"] += 1
                                 else:
                                     report_data[kab_name]["new_usaha_yesterday"] += 1
-                                report_data[kab_name]["new_businesses"].append({
-                                    "name": comp_name,
-                                    "code": code_id,
-                                    "date": "yesterday",
-                                    "status": status_alias,
-                                    "type": "rumah" if is_rumah else "usaha"
-                                })
+                                    if kec_stats:
+                                        kec_stats["new_usaha_yesterday"] += 1
+                            
+                            # Always append to new_businesses list
+                            date_lbl = "today" if create_date == today else ("yesterday" if create_date == yesterday else "older")
+                            biz_item = {
+                                "name": comp_name,
+                                "code": code_id,
+                                "date": date_lbl,
+                                "status": status_alias,
+                                "type": "rumah" if is_rumah else "usaha",
+                                "kecName": kec_stats["kec_name"] if kec_stats else "-",
+                                "jenis": jenis_lbl
+                            }
+                            report_data[kab_name]["new_businesses"].append(biz_item)
+                            if kec_stats:
+                                kec_stats.setdefault("new_businesses", []).append(biz_item)
+
                     except Exception as ex:
                         pass
 
@@ -643,6 +883,19 @@ async def generate_report():
                 completed = stats["total_submitted"]
                 
                 pct = round((completed / prelist * 100) if prelist > 0 else 0.0, 2)
+                
+                # Format Kecamatan list details
+                formatted_kecs = []
+                for kec_s in stats["kecamatan_list"]:
+                    # Calculate open targets
+                    k_prelist = kec_s["total_prelist"] + kec_s["new_usaha_overall"] + kec_s["new_rumah_overall"]
+                    k_draft = kec_s["total_draft"]
+                    k_sub = kec_s["total_submitted"]
+                    k_open = max(0, k_prelist - k_sub - k_draft)
+                    kec_s["total_prelist"] = k_prelist
+                    kec_s["total_open"] = k_open
+                    kec_s["persentase"] = round((k_sub / k_prelist * 100) if k_prelist > 0 else 0.0, 2)
+                    formatted_kecs.append(kec_s)
                 
                 final_list.append({
                     "kabupaten": kab_name,
@@ -656,13 +909,17 @@ async def generate_report():
                     "today_completed": stats["today_completed"],
                     "yesterday_completed": stats["yesterday_completed"],
                     "two_days_ago_completed": stats["two_days_ago_completed"],
+                    "today_completed_breakdown": stats.get("today_completed_breakdown", {}),
+                    "yesterday_completed_breakdown": stats.get("yesterday_completed_breakdown", {}),
+                    "two_days_ago_completed_breakdown": stats.get("two_days_ago_completed_breakdown", {}),
                     "new_usaha_today": stats["new_usaha_today"],
                     "new_usaha_yesterday": stats["new_usaha_yesterday"],
                     "new_rumah_today": stats["new_rumah_today"],
                     "new_rumah_yesterday": stats["new_rumah_yesterday"],
                     "new_usaha_overall": stats.get("new_usaha_overall", 0),
                     "new_rumah_overall": stats.get("new_rumah_overall", 0),
-                    "new_businesses": stats["new_businesses"]
+                    "new_businesses": stats["new_businesses"],
+                    "kecamatan_list": formatted_kecs
                 })
             
             output_data[survey_key] = final_list

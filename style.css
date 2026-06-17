@@ -1550,8 +1550,8 @@ body {
 .compact-stats {
     display: flex;
     gap: 1rem;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    overflow: visible;
     padding-bottom: 0.5rem;
     align-items: stretch;
 }
@@ -1694,4 +1694,120 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+/* Kecamatan Row Drill-down Styling */
+.kabupaten-row {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.kabupaten-row:hover {
+    background-color: rgba(99, 102, 241, 0.05) !important;
+}
+.expand-chevron {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    margin-right: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+.kabupaten-row.expanded .expand-chevron {
+    transform: rotate(90deg);
+}
+.kecamatan-row {
+    background-color: rgba(255, 255, 255, 0.01) !important;
+    font-size: 0.85rem !important;
+    border-left: 3px solid var(--primary);
+    transition: all 0.2s ease;
+}
+.kecamatan-row:hover {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+}
+.kecamatan-row td {
+    padding: 0.6rem 0.75rem !important;
+    border-bottom: 1px dashed var(--card-border) !important;
+}
+.kecamatan-row td:first-child {
+    padding-left: 2.25rem !important;
+    color: var(--text-secondary);
+}
+
+/* Daily Progress Popover Styling */
+.daily-progress-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+.daily-dropdown-trigger {
+    cursor: pointer;
+    font-size: 0.7rem;
+    padding: 0.1rem 0.25rem;
+    border-radius: 0.25rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border);
+    transition: all 0.15s ease;
+    user-select: none;
+}
+.daily-dropdown-trigger:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+.daily-popover {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+    width: 240px;
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+    padding: 0.75rem;
+    z-index: 99999;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    pointer-events: auto;
+}
+.daily-popover.active {
+    display: flex;
+}
+.popover-header {
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--primary);
+    border-bottom: 1px dashed var(--card-border);
+    padding-bottom: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.popover-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    gap: 0.5rem;
+}
+.popover-badge {
+    padding: 0.15rem 0.35rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    background: var(--pill-inactive-bg);
+    border: 1px solid var(--card-border);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+}
+.popover-count {
+    font-family: monospace;
+    font-weight: 700;
+    color: var(--text-primary);
 }

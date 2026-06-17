@@ -363,13 +363,13 @@
                             <span id="se_umum-stat-2days-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-clicked);">(0.00%)</span>
                         </div>
                     </div>
-                    <div class="stat-card-compact" style="--stat-color: #3b82f6; cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_umum', 'usaha')">
-                        <div class="stat-label">Tambahan Usaha</div>
-                        <div class="stat-value" id="se_umum-stat-new-overall">0</div>
-                    </div>
-                    <div class="stat-card-compact" style="--stat-color: #ec4899; cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_umum', 'rumah')">
-                        <div class="stat-label">Rumah Baru</div>
-                        <div class="stat-value" id="se_umum-stat-new-rumah-overall">0</div>
+                    <div class="stat-card-compact" style="--stat-color: var(--primary); cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_umum', 'all')">
+                        <div class="stat-label">Tambahan (Non-Target)</div>
+                        <div class="stat-value" id="se_umum-stat-new-overall-merged">0</div>
+                        <div class="stat-subtext" style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.2;">
+                            <span id="se_umum-stat-new-breakdown-subtext">0 usaha | 0 rumah</span>
+                            <br/><span id="se_umum-stat-new-today-subtext" style="color: var(--color-delivered);">+0 hari ini</span>
+                        </div>
                     </div>
                 </div>
 
@@ -504,13 +504,13 @@
                             <span id="se_ub-stat-2days-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-clicked);">(0.00%)</span>
                         </div>
                     </div>
-                    <div class="stat-card-compact" style="--stat-color: #3b82f6; cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_ub', 'usaha')">
-                        <div class="stat-label">Tambahan Usaha</div>
-                        <div class="stat-value" id="se_ub-stat-new-overall">0</div>
-                    </div>
-                    <div class="stat-card-compact" style="--stat-color: #ec4899; cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_ub', 'rumah')">
-                        <div class="stat-label">Rumah Baru</div>
-                        <div class="stat-value" id="se_ub-stat-new-rumah-overall">0</div>
+                    <div class="stat-card-compact" style="--stat-color: var(--primary); cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_ub', 'all')">
+                        <div class="stat-label">Tambahan (Non-Target)</div>
+                        <div class="stat-value" id="se_ub-stat-new-overall-merged">0</div>
+                        <div class="stat-subtext" style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.2;">
+                            <span id="se_ub-stat-new-breakdown-subtext">0 usaha | 0 rumah</span>
+                            <br/><span id="se_ub-stat-new-today-subtext" style="color: var(--color-delivered);">+0 hari ini</span>
+                        </div>
                     </div>
                 </div>
 
