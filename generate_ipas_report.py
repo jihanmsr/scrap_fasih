@@ -475,7 +475,15 @@ async def generate_report():
             output_data[f"{survey_key}_prov_new_total"] = prov_new_total
             output_data[f"{survey_key}_prov_new_rumah_total"] = prov_new_rumah_total
             # 2. Fetch daily progress details province-wide
-            active_statuses = ["SUBMITTED RESPONDENT", "DRAFT", "REJECTED BY Admin Kabupaten"]
+            active_statuses = [
+                "SUBMITTED RESPONDENT",
+                "SUBMITTED BY Pencacah",
+                "DRAFT",
+                "REJECTED BY Pengawas",
+                "REJECTED BY Admin Kabupaten",
+                "APPROVED BY Pengawas",
+                "REVOKED BY Pengawas"
+            ]
             all_records = []
             
             print("Mengambil rincian data progres harian tingkat provinsi...")
@@ -564,7 +572,14 @@ async def generate_report():
                 status_alias = r.get("assignmentStatusAlias")
                 
                 # Check completions
-                if status_alias in ["SUBMITTED RESPONDENT", "REJECTED BY Admin Kabupaten"]:
+                if status_alias in [
+                    "SUBMITTED RESPONDENT",
+                    "SUBMITTED BY Pencacah",
+                    "APPROVED BY Pengawas",
+                    "REJECTED BY Pengawas",
+                    "REJECTED BY Admin Kabupaten",
+                    "REVOKED BY Pengawas"
+                ]:
                     mod_date_str = r.get("dateModified")
                     if mod_date_str:
                         try:
