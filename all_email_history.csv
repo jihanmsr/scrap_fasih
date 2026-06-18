@@ -1,6 +1,6 @@
 Kode Identitas,Nama Perusahaan,Status Dokumen,Email Tujuan,Status terakhir,Status History,Timestamp History,Urutan History,Kabupaten/Kota
-ec2ea21f-b88a-400a-8f3d-a03562ff60ad,BRI UNIT SALAKAN,DRAFT,n5164@corp.bri.com,Bounced,Queued,"02 Jun 2026, 09:36:44",2,[01] BANGGAI KEPULAUAN
-ec2ea21f-b88a-400a-8f3d-a03562ff60ad,BRI UNIT SALAKAN,DRAFT,n5164@corp.bri.com,Bounced,Bounced,"02 Jun 2026, 09:36:45",1,[01] BANGGAI KEPULAUAN
+ec2ea21f-b88a-400a-8f3d-a03562ff60ad,BRI UNIT SALAKAN,SUBMITTED RESPONDENT,n5164@corp.bri.com,Bounced,Queued,"02 Jun 2026, 09:36:44",2,[01] BANGGAI KEPULAUAN
+ec2ea21f-b88a-400a-8f3d-a03562ff60ad,BRI UNIT SALAKAN,SUBMITTED RESPONDENT,n5164@corp.bri.com,Bounced,Bounced,"02 Jun 2026, 09:36:45",1,[01] BANGGAI KEPULAUAN
 f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n7763078@gmail.com,Delivered,Delivered,"11 Jun 2026, 10:53:56",1,[01] BANGGAI KEPULAUAN
 f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n7763078@gmail.com,Delivered,Queued,"11 Jun 2026, 10:53:53",2,[01] BANGGAI KEPULAUAN
 f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n7763078@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:18:10",3,[01] BANGGAI KEPULAUAN
@@ -15,6 +15,8 @@ f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n77630
 56519c6e-440d-43ca-b3ca-607e30043412,BANK MANDIRI PERSERO TBK PT,SUBMITTED RESPONDENT,mmu.banggai-kepulauan@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 01:50:58",4,[01] BANGGAI KEPULAUAN
 81b140d6-80f9-436f-81e4-bbfc8ae820d3,BPR MODERN EXPRESS PT,SUBMITTED RESPONDENT,bpr.381@lakadana.com,Permanent_fail,Permanent_fail,"11 Jun 2026, 10:53:00",1,[01] BANGGAI KEPULAUAN
 ee8b681d-6b31-47d7-8d77-76c615ca2857,Bank BRI BULAGI,OPEN,-,-,-,-,0,[01] BANGGAI KEPULAUAN
+ec2ea21f-b88a-400a-8f3d-a03562ff60ad,BRI UNIT SALAKAN,SUBMITTED RESPONDENT,n5164@corp.bri.com,Bounced,Queued,"02 Jun 2026, 09:36:44",2,[01] BANGGAI KEPULAUAN
+ec2ea21f-b88a-400a-8f3d-a03562ff60ad,BRI UNIT SALAKAN,SUBMITTED RESPONDENT,n5164@corp.bri.com,Bounced,Bounced,"02 Jun 2026, 09:36:45",1,[01] BANGGAI KEPULAUAN
 f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n7763078@gmail.com,Delivered,Delivered,"11 Jun 2026, 10:53:56",1,[01] BANGGAI KEPULAUAN
 f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n7763078@gmail.com,Delivered,Queued,"11 Jun 2026, 10:53:53",2,[01] BANGGAI KEPULAUAN
 f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n7763078@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:18:10",3,[01] BANGGAI KEPULAUAN
@@ -28,33 +30,60 @@ f80c30d1-c8ce-4221-a098-abb94d627cbf,BANK SULTENG PT,SUBMITTED RESPONDENT,n77630
 56519c6e-440d-43ca-b3ca-607e30043412,BANK MANDIRI PERSERO TBK PT,SUBMITTED RESPONDENT,mmu.banggai-kepulauan@bankmandiri.co.id,Delivered,Delivered,"02 Jun 2026, 01:50:58",3,[01] BANGGAI KEPULAUAN
 56519c6e-440d-43ca-b3ca-607e30043412,BANK MANDIRI PERSERO TBK PT,SUBMITTED RESPONDENT,mmu.banggai-kepulauan@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 01:50:58",4,[01] BANGGAI KEPULAUAN
 81b140d6-80f9-436f-81e4-bbfc8ae820d3,BPR MODERN EXPRESS PT,SUBMITTED RESPONDENT,bpr.381@lakadana.com,Permanent_fail,Permanent_fail,"11 Jun 2026, 10:53:00",1,[01] BANGGAI KEPULAUAN
-e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"10 Jun 2026, 08:15:35",1,[02] BANGGAI
-e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Delivered,"10 Jun 2026, 04:29:50",2,[02] BANGGAI
-e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Queued,"10 Jun 2026, 04:29:47",3,[02] BANGGAI
-e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"09 Jun 2026, 11:46:27",4,[02] BANGGAI
-e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"02 Jun 2026, 09:18:48",5,[02] BANGGAI
-e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Delivered,"02 Jun 2026, 09:08:55",6,[02] BANGGAI
-e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Queued,"02 Jun 2026, 09:08:51",7,[02] BANGGAI
-8fac09d0-4295-48fe-8d17-60310e665fc6,Kantor Pln Rayon Banggai,DRAFT,-,-,-,-,0,[02] BANGGAI
-3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Clicked,"13 Jun 2026, 15:09:10",1,[02] BANGGAI
-3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Opened,"13 Jun 2026, 15:08:55",2,[02] BANGGAI
-3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Delivered,"09 Jun 2026, 11:14:53",3,[02] BANGGAI
-3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Queued,"09 Jun 2026, 11:14:51",4,[02] BANGGAI
-3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Clicked,"05 Jun 2026, 11:00:02",5,[02] BANGGAI
-3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Opened,"05 Jun 2026, 10:59:50",6,[02] BANGGAI
-3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Delivered,"05 Jun 2026, 09:29:47",7,[02] BANGGAI
-3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Queued,"05 Jun 2026, 09:29:44",8,[02] BANGGAI
-3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Delivered,"02 Jun 2026, 00:45:02",9,[02] BANGGAI
-3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Queued,"02 Jun 2026, 00:44:59",10,[02] BANGGAI
-9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"09 Jun 2026, 16:28:53",1,[02] BANGGAI
-9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"06 Jun 2026, 10:21:44",2,[02] BANGGAI
-9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Clicked,"06 Jun 2026, 07:50:43",3,[02] BANGGAI
-9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"06 Jun 2026, 07:50:39",4,[02] BANGGAI
-9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"03 Jun 2026, 09:58:29",5,[02] BANGGAI
-9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"02 Jun 2026, 09:40:12",6,[02] BANGGAI
-9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"02 Jun 2026, 09:33:32",7,[02] BANGGAI
-9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Delivered,"02 Jun 2026, 04:59:38",8,[02] BANGGAI
-9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Queued,"02 Jun 2026, 04:59:27",9,[02] BANGGAI
+7d569bd1-12be-4570-88fc-be9484dc1c5b,DHARMA REJEKI ABADI,OPEN,ptdharmarejekiabadi@gmail.com,Delivered,Queued,"02 Jun 2026, 03:25:52",1,[02] BANGGAI
+7d569bd1-12be-4570-88fc-be9484dc1c5b,DHARMA REJEKI ABADI,OPEN,ptdharmarejekiabadi@gmail.com,Delivered,Delivered,"02 Jun 2026, 03:25:52",2,[02] BANGGAI
+f3049e89-d324-4bdb-973c-1d361982a220,PERTAMINA PERSERO PT,OPEN,-,-,-,-,0,[02] BANGGAI
+3f969ebb-cd83-47bb-988d-0cc42878fb3e,KPN KOPRIN,OPEN,-,-,-,-,0,[02] BANGGAI
+53553f54-e73d-4dc5-8a26-4f7bb08494dd,PT Mandiri Tunas Finance [MANDIRI TUNAS FINANCE],OPEN,-,-,-,-,0,[02] BANGGAI
+c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5,"MATRA ARONA BANGGAI, PT",DRAFT,mjamalsptra@gmail.com,Opened,Delivered,"13 May 2026, 08:24:01",1,[02] BANGGAI
+c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5,"MATRA ARONA BANGGAI, PT",DRAFT,mjamalsptra@gmail.com,Opened,Queued,"13 May 2026, 08:24:01",2,[02] BANGGAI
+c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5,"MATRA ARONA BANGGAI, PT",DRAFT,mjamalsptra@gmail.com,Opened,Opened,"02 Jun 2026, 10:34:15",3,[02] BANGGAI
+c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5,"MATRA ARONA BANGGAI, PT",DRAFT,mjamalsptra@gmail.com,Opened,Opened,"02 Jun 2026, 10:33:34",4,[02] BANGGAI
+9679805e-807b-423c-bb11-35df3e7375b4,"Perum BULOG, Subdivre Luwuk",OPEN,-,-,-,-,0,[02] BANGGAI
+d2ab8e10-7d22-43fb-904d-03668eb0a52b,BANK MANDIRI (PERSERO),DRAFT,luwuk@bankmandiri.co.id,Delivered,Delivered,"02 Jun 2026, 08:08:12",1,[02] BANGGAI
+d2ab8e10-7d22-43fb-904d-03668eb0a52b,BANK MANDIRI (PERSERO),DRAFT,luwuk@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 08:08:05",2,[02] BANGGAI
+53bacafc-c83e-42fb-999c-64991638841f,"RAMAI JAYA ABADI, PT",OPEN,ramaijayaabadi18@gmail.com,Opened,Opened,"02 Jun 2026, 09:24:33",1,[02] BANGGAI
+53bacafc-c83e-42fb-999c-64991638841f,"RAMAI JAYA ABADI, PT",OPEN,ramaijayaabadi18@gmail.com,Opened,Delivered,"02 Jun 2026, 01:45:24",2,[02] BANGGAI
+53bacafc-c83e-42fb-999c-64991638841f,"RAMAI JAYA ABADI, PT",OPEN,ramaijayaabadi18@gmail.com,Opened,Queued,"02 Jun 2026, 01:45:20",3,[02] BANGGAI
+0ef2b020-010a-40f1-829a-a0d086441aca,KOPONTREN HIDAYATULAH,OPEN,-,-,-,-,0,[02] BANGGAI
+0b92a89c-e956-458c-af4e-ea43393c8f9b,BANK MANDIRI (PERSERO) TBK KCP TOILI,OPEN,cma@bankmandiri.co.id,Delivered,Delivered,"01 Jun 2026, 22:54:06",1,[02] BANGGAI
+0b92a89c-e956-458c-af4e-ea43393c8f9b,BANK MANDIRI (PERSERO) TBK KCP TOILI,OPEN,cma@bankmandiri.co.id,Delivered,Queued,"01 Jun 2026, 22:54:06",2,[02] BANGGAI
+6f13465f-b776-4a40-9fba-4d214ba4a1c6,BIJIH NIKEL [ANUGERAH BUMI GEMILANG],OPEN,-,-,-,-,0,[02] BANGGAI
+76914c4d-1b3b-41af-acc8-7d59e78caf36,JAYA MAKMUR ABADI,OPEN,cvjayamakmurabadi8@gmail.com,Delivered,Delivered,"02 Jun 2026, 03:05:22",1,[02] BANGGAI
+76914c4d-1b3b-41af-acc8-7d59e78caf36,JAYA MAKMUR ABADI,OPEN,cvjayamakmurabadi8@gmail.com,Delivered,Queued,"02 Jun 2026, 03:05:14",2,[02] BANGGAI
+d77e0358-ab65-4aff-a3a2-cf28280c32f6,EP PT. Pertamania DONGGI MATINDOK FIELD,OPEN,keuangandmt@gmail.com,Delivered,Delivered,"02 Jun 2026, 08:27:19",1,[02] BANGGAI
+d77e0358-ab65-4aff-a3a2-cf28280c32f6,EP PT. Pertamania DONGGI MATINDOK FIELD,OPEN,keuangandmt@gmail.com,Delivered,Queued,"02 Jun 2026, 08:27:15",2,[02] BANGGAI
+46407304-416e-44e9-94df-222375ae6f9d,BANK BRI UNIT MAKAPA,OPEN,-,-,-,-,0,[02] BANGGAI
+108cb77b-505d-4bf8-a721-3ceafe0b597f,KUD SINAR HARAPAN,OPEN,-,-,-,-,0,[02] BANGGAI
+c3608558-ca9e-47fc-840a-bd6aec2c85d5,PERTAMBANGAN BIJIH NIKEL [GEMILANG BANGUN PERKASA],OPEN,-,-,-,-,0,[02] BANGGAI
+ad213fd3-4513-4671-a80e-9fe29bce6bec,BANK BPR,OPEN,-,-,-,-,0,[02] BANGGAI
+c73ddb39-2566-4b0e-ac1d-2cef2270297b,Pertambangan Bijih Nikel [ASINDO INTERNASIONAL PERDANA],OPEN,-,-,-,-,0,[02] BANGGAI
+d8d66396-569a-4f4f-8cf8-46d4cb76b3e6,"BANK NEGARA INDONESIA, PT (PERSERO) TBK UNIT TOILI",OPEN,-,-,-,-,0,[02] BANGGAI
+658b6a82-0ca8-4bd8-8331-fcd27708eaee,KSU AL- MUHAJIRIN,OPEN,-,-,-,-,0,[02] BANGGAI
+b56331c4-e73c-4bf5-ab8c-362dfc4a0810,REZKY ANNA JAYA,OPEN,cvrezkyannajaya@gmail.com,Delivered,Delivered,"02 Jun 2026, 06:28:28",1,[02] BANGGAI
+b56331c4-e73c-4bf5-ab8c-362dfc4a0810,REZKY ANNA JAYA,OPEN,cvrezkyannajaya@gmail.com,Delivered,Queued,"02 Jun 2026, 06:28:27",2,[02] BANGGAI
+5ed2770d-9be6-4fc1-bf70-0d4e10c482c8,BANK PERKREDITAN RAKYAT MITRA NIAGA BANGGAI,OPEN,toili@mailnesia.com,Permanent_fail,Permanent_fail,"02 Jun 2026, 02:11:11",1,[02] BANGGAI
+b0038ad6-c8d4-4697-88cf-f2a88c71d056,BANK MANDIRI PT,OPEN,-,-,-,-,0,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:47:31",1,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:47:30",2,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:42:01",3,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:42:00",4,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:40:20",5,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:40:19",6,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"07 Jun 2026, 16:33:16",7,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"07 Jun 2026, 16:29:46",8,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"07 Jun 2026, 16:18:03",9,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"06 Jun 2026, 20:03:16",10,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Delivered,"02 Jun 2026, 02:25:28",11,[02] BANGGAI
+6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Queued,"02 Jun 2026, 02:25:14",12,[02] BANGGAI
+2b350499-a5b6-45ce-97b3-88359725419f,BANK SULTENG,OPEN,banksulteng.toili@yahoo.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:10:03",1,[02] BANGGAI
+2b350499-a5b6-45ce-97b3-88359725419f,BANK SULTENG,OPEN,banksulteng.toili@yahoo.com,Permanent_fail,Bounced,"02 Jun 2026, 00:12:21",2,[02] BANGGAI
+2b350499-a5b6-45ce-97b3-88359725419f,BANK SULTENG,OPEN,banksulteng.toili@yahoo.com,Permanent_fail,Queued,"02 Jun 2026, 00:11:48",3,[02] BANGGAI
+335634d9-6d34-403d-b426-6755127f7973,"SAWINDO CEMERLANG. , PT",OPEN,-,-,-,-,0,[02] BANGGAI
+b164d4b8-0e3b-433d-96c3-19f077408cca,Minyak dan Gas Bumi [JOB PERTAMINA - MEDCO E&P TOMORI SULAWESI],OPEN,-,-,-,-,0,[02] BANGGAI
+d844508c-ac9d-4926-8613-29024345bb1c,KUD MAKMUR,OPEN,-,-,-,-,0,[02] BANGGAI
+b3eabe44-4653-4782-bb26-eebec81f8ba9,Bank BRI UNIT Batui,OPEN,-,-,-,-,0,[02] BANGGAI
+56f5b6d8-62dc-4116-90df-d87f8ebaac4f,PT BANK SULTENG,OPEN,-,-,-,-,0,[02] BANGGAI
 3bc4f583-dc87-41fc-b3c7-3f194ac3eb99,"DONGGI SENORO LNG, PT",DRAFT,relation.communication@dslng.com,Clicked,Opened,"19 May 2026, 16:16:19",1,[02] BANGGAI
 3bc4f583-dc87-41fc-b3c7-3f194ac3eb99,"DONGGI SENORO LNG, PT",DRAFT,relation.communication@dslng.com,Clicked,Clicked,"19 May 2026, 14:58:05",2,[02] BANGGAI
 3bc4f583-dc87-41fc-b3c7-3f194ac3eb99,"DONGGI SENORO LNG, PT",DRAFT,relation.communication@dslng.com,Clicked,Clicked,"19 May 2026, 14:57:28",3,[02] BANGGAI
@@ -70,26 +99,94 @@ e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,be
 3bc4f583-dc87-41fc-b3c7-3f194ac3eb99,"DONGGI SENORO LNG, PT",DRAFT,relation.communication@dslng.com,Clicked,Clicked,"05 Jun 2026, 15:43:30",13,[02] BANGGAI
 3bc4f583-dc87-41fc-b3c7-3f194ac3eb99,"DONGGI SENORO LNG, PT",DRAFT,relation.communication@dslng.com,Clicked,Delivered,"02 Jun 2026, 00:48:22",14,[02] BANGGAI
 3bc4f583-dc87-41fc-b3c7-3f194ac3eb99,"DONGGI SENORO LNG, PT",DRAFT,relation.communication@dslng.com,Clicked,Queued,"02 Jun 2026, 00:48:21",15,[02] BANGGAI
-292f439c-810d-4863-93f6-13a0ebd4cacb,TEKU JAYA MANDIRI,OPEN,akrimasamin99@gmail.com,Delivered,Queued,"09 Jun 2026, 11:09:29",1,[02] BANGGAI
-292f439c-810d-4863-93f6-13a0ebd4cacb,TEKU JAYA MANDIRI,OPEN,akrimasamin99@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:09:27",2,[02] BANGGAI
-292f439c-810d-4863-93f6-13a0ebd4cacb,TEKU JAYA MANDIRI,OPEN,akrimasamin99@gmail.com,Delivered,Delivered,"02 Jun 2026, 00:07:19",3,[02] BANGGAI
-292f439c-810d-4863-93f6-13a0ebd4cacb,TEKU JAYA MANDIRI,OPEN,akrimasamin99@gmail.com,Delivered,Queued,"02 Jun 2026, 00:07:15",4,[02] BANGGAI
-b04fbec4-c49b-4c46-b479-71be1f844372,"CIPTARINDO GEMATAMA, PT",OPEN,ciptarindo@gmail.com,Delivered,Delivered,"02 Jun 2026, 06:08:27",1,[02] BANGGAI
-b04fbec4-c49b-4c46-b479-71be1f844372,"CIPTARINDO GEMATAMA, PT",OPEN,ciptarindo@gmail.com,Delivered,Queued,"02 Jun 2026, 06:08:24",2,[02] BANGGAI
-985d09f8-e283-4050-80c9-856599017bee,SPBU PERTAMINA BALANTAK,OPEN,-,-,-,-,0,[02] BANGGAI
+b3309c61-58cc-455e-be9a-da71c8f65132,"BERKAT BERSAMA, CV",OPEN,-,-,-,-,0,[02] BANGGAI
+2155505c-bb3d-48ec-ba48-ac98edbdca95,REKAYASA INDUSTRI PT,OPEN,wandysendjaja@yahoo.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:05:04",1,[02] BANGGAI
+2155505c-bb3d-48ec-ba48-ac98edbdca95,REKAYASA INDUSTRI PT,OPEN,wandysendjaja@yahoo.com,Permanent_fail,Bounced,"01 Jun 2026, 23:49:00",2,[02] BANGGAI
+2155505c-bb3d-48ec-ba48-ac98edbdca95,REKAYASA INDUSTRI PT,OPEN,wandysendjaja@yahoo.com,Permanent_fail,Queued,"01 Jun 2026, 23:48:57",3,[02] BANGGAI
+383dcfa5-2a6c-48c5-9e16-8fd4b2ae42d3,PANCA AMARA UTAMA,OPEN,-,-,-,-,0,[02] BANGGAI
+4d8a22df-45b6-47bc-81c2-024ce395d120,Pertamina,OPEN,-,-,-,-,0,[02] BANGGAI
+01d85912-207a-4319-b1fe-836cfe09ff74,Bank Perkreditan Rakyat Palu Anugerah Kantor Kas Batui,OPEN,-,-,-,-,0,[02] BANGGAI
+4e94d8cc-f501-4cce-8ed3-dce945df21dd,BNI (PERSERO) PT,OPEN,-,-,-,-,0,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"10 Jun 2026, 08:15:35",1,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Delivered,"10 Jun 2026, 04:29:50",2,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Queued,"10 Jun 2026, 04:29:47",3,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"09 Jun 2026, 11:46:27",4,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"02 Jun 2026, 09:18:48",5,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Delivered,"02 Jun 2026, 09:08:55",6,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Queued,"02 Jun 2026, 09:08:51",7,[02] BANGGAI
+ad55d177-41a1-444e-ae54-8c6807aee095,TOTALINDO BANGGAI PERKASA,OPEN,totalindobatbperkasa@gmail.com,Bounced,Bounced,"02 Jun 2026, 05:57:24",1,[02] BANGGAI
+ad55d177-41a1-444e-ae54-8c6807aee095,TOTALINDO BANGGAI PERKASA,OPEN,totalindobatbperkasa@gmail.com,Bounced,Queued,"02 Jun 2026, 05:57:20",2,[02] BANGGAI
+8795c4b7-040c-4a62-b280-b41c1be119c6,ABDULLAH JAYA MANDIRI,OPEN,cv.abdullahjayamandiri@gmail.com,Delivered,Delivered,"02 Jun 2026, 03:51:37",1,[02] BANGGAI
+8795c4b7-040c-4a62-b280-b41c1be119c6,ABDULLAH JAYA MANDIRI,OPEN,cv.abdullahjayamandiri@gmail.com,Delivered,Queued,"02 Jun 2026, 03:51:34",2,[02] BANGGAI
+65b2ed70-fdad-4475-b4f7-b2e8f0b8cff7,"ALAM SUKSES BERSAMA, PT",OPEN,alamtbperkasa@gmail.com,Delivered,Queued,"02 Jun 2026, 02:26:42",1,[02] BANGGAI
+65b2ed70-fdad-4475-b4f7-b2e8f0b8cff7,"ALAM SUKSES BERSAMA, PT",OPEN,alamtbperkasa@gmail.com,Delivered,Delivered,"02 Jun 2026, 02:26:42",2,[02] BANGGAI
+3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Clicked,"13 Jun 2026, 15:09:10",1,[02] BANGGAI
+3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Opened,"13 Jun 2026, 15:08:55",2,[02] BANGGAI
+3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Delivered,"09 Jun 2026, 11:14:53",3,[02] BANGGAI
+3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Queued,"09 Jun 2026, 11:14:51",4,[02] BANGGAI
+3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Clicked,"05 Jun 2026, 11:00:02",5,[02] BANGGAI
+3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Opened,"05 Jun 2026, 10:59:50",6,[02] BANGGAI
+3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Delivered,"05 Jun 2026, 09:29:47",7,[02] BANGGAI
+3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Queued,"05 Jun 2026, 09:29:44",8,[02] BANGGAI
+3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Delivered,"02 Jun 2026, 00:45:02",9,[02] BANGGAI
+3a1c6cef-f7e6-424e-9f28-38913bff9917,"KELOLA MINA LAUT, PT",DRAFT,financeluwuka@gmail.com,Clicked,Queued,"02 Jun 2026, 00:44:59",10,[02] BANGGAI
+253a2fd6-de72-4631-b128-f6a5a9e6f304,MITRA LAGO PERKASA,OPEN,debrilawero8430@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:08:28",1,[02] BANGGAI
+253a2fd6-de72-4631-b128-f6a5a9e6f304,MITRA LAGO PERKASA,OPEN,debrilawero8430@gmail.com,Delivered,Queued,"09 Jun 2026, 11:08:24",2,[02] BANGGAI
+253a2fd6-de72-4631-b128-f6a5a9e6f304,MITRA LAGO PERKASA,OPEN,debrilawero8430@gmail.com,Delivered,Delivered,"01 Jun 2026, 23:56:18",3,[02] BANGGAI
+253a2fd6-de72-4631-b128-f6a5a9e6f304,MITRA LAGO PERKASA,OPEN,debrilawero8430@gmail.com,Delivered,Queued,"01 Jun 2026, 23:56:14",4,[02] BANGGAI
+67e72ce3-5454-4424-8275-70c5c60d951c,kantor [DELAPAN SEMBILAN ENERGI],OPEN,-,-,-,-,0,[02] BANGGAI
+1211a41f-2b45-4deb-a1ec-6d4c43d57b55,Pertambangan Bijih Nikel [KONAWE PANCA INDONESIA],OPEN,-,-,-,-,0,[02] BANGGAI
+036e40ee-6f6b-4b91-8d83-e720f97b1266,Bank BRI UNIT Toili,OPEN,-,-,-,-,0,[02] BANGGAI
+27899a80-d9c8-4259-b36d-11f66b9b0fdc,Bank BRI Teras Mulyoharjo,OPEN,-,-,-,-,0,[02] BANGGAI
 449c7238-f19b-4bcf-8760-7bfe6c345ba1,PLN (BROMTITO ATUBA),OPEN,-,-,-,-,0,[02] BANGGAI
-bb2b8af4-6b62-4e6b-b9d1-d5786b71f611,PLN BALANTAK,OPEN,-,-,-,-,0,[02] BANGGAI
-1048428f-2c5b-4025-85c1-8e9f849dc49c,Pertambangan Biji Nikel [MOHHAT],OPEN,-,-,-,-,0,[02] BANGGAI
-fb96eab6-3d43-4ca7-96be-d8ed573fd5e2,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Tangeban",OPEN,-,-,-,-,0,[02] BANGGAI
-3cc3b29f-8cf8-4f2c-8e29-b74fa6616568,KPN SABAR,OPEN,-,-,-,-,0,[02] BANGGAI
-3a090913-f1f1-462f-ab73-26e8b969b373,Bank BRI Unit Masama,OPEN,-,-,-,-,0,[02] BANGGAI
+3452370c-3b78-4ae4-9285-1439983cae34,"LAUTAN GUNUNG MAS, PT",OPEN,-,-,-,-,0,[02] BANGGAI
+cba4927a-b46b-4215-9f20-80bba322c451,KELAPA ASIA JAYA,OPEN,quanliuzeng@gmail.com,Opened,Opened,"10 Jun 2026, 09:16:53",1,[02] BANGGAI
+cba4927a-b46b-4215-9f20-80bba322c451,KELAPA ASIA JAYA,OPEN,quanliuzeng@gmail.com,Opened,Delivered,"02 Jun 2026, 07:42:18",2,[02] BANGGAI
+cba4927a-b46b-4215-9f20-80bba322c451,KELAPA ASIA JAYA,OPEN,quanliuzeng@gmail.com,Opened,Queued,"02 Jun 2026, 07:42:18",3,[02] BANGGAI
+9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"09 Jun 2026, 16:28:53",1,[02] BANGGAI
+9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"06 Jun 2026, 10:21:44",2,[02] BANGGAI
+9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Clicked,"06 Jun 2026, 07:50:43",3,[02] BANGGAI
+9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"06 Jun 2026, 07:50:39",4,[02] BANGGAI
+9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"03 Jun 2026, 09:58:29",5,[02] BANGGAI
+9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"02 Jun 2026, 09:40:12",6,[02] BANGGAI
+9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Opened,"02 Jun 2026, 09:33:32",7,[02] BANGGAI
+9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Delivered,"02 Jun 2026, 04:59:38",8,[02] BANGGAI
+9c14f8ec-cab8-43b3-ac33-10f9fa18edd4,KILONGAN JAYA SAKTI,DRAFT,kilonganjayasakti@gmail.com,Clicked,Queued,"02 Jun 2026, 04:59:27",9,[02] BANGGAI
+954c8c7d-db57-49d8-b7f9-1fc394226b68,"MULTI NABATI SULAWESI, PT",OPEN,-,-,-,-,0,[02] BANGGAI
+c184ab8f-a822-4310-8082-153f45167adb,LAMDONG JAYA,OPEN,lamdongjaya@gmail.com,Opened,Opened,"14 Jun 2026, 21:11:24",1,[02] BANGGAI
+c184ab8f-a822-4310-8082-153f45167adb,LAMDONG JAYA,OPEN,lamdongjaya@gmail.com,Opened,Opened,"14 Jun 2026, 21:08:28",2,[02] BANGGAI
+c184ab8f-a822-4310-8082-153f45167adb,LAMDONG JAYA,OPEN,lamdongjaya@gmail.com,Opened,Opened,"14 Jun 2026, 21:08:22",3,[02] BANGGAI
+1705bff0-bc40-4e1d-92eb-4525189c8545,INDOTROPIC FISHERY,OPEN,indotropic_lwk@yahoo.com,Delivered,Delivered,"09 Jun 2026, 11:02:24",1,[02] BANGGAI
+1705bff0-bc40-4e1d-92eb-4525189c8545,INDOTROPIC FISHERY,OPEN,indotropic_lwk@yahoo.com,Delivered,Queued,"09 Jun 2026, 11:02:20",2,[02] BANGGAI
+1705bff0-bc40-4e1d-92eb-4525189c8545,INDOTROPIC FISHERY,OPEN,indotropic_lwk@yahoo.com,Delivered,Delivered,"01 Jun 2026, 23:31:47",3,[02] BANGGAI
+1705bff0-bc40-4e1d-92eb-4525189c8545,INDOTROPIC FISHERY,OPEN,indotropic_lwk@yahoo.com,Delivered,Queued,"01 Jun 2026, 23:31:46",4,[02] BANGGAI
+0adc8f64-61a1-429c-99ca-7ab89c15c7e7,Pertamina,OPEN,-,-,-,-,0,[02] BANGGAI
+a1c78c72-91b9-49d3-8634-9806b2ffa2b9,PERTAMINA PATRA NIAGA,OPEN,patra.luwuk@outlook.com,Delivered,Delivered,"02 Jun 2026, 05:19:34",1,[02] BANGGAI
+a1c78c72-91b9-49d3-8634-9806b2ffa2b9,PERTAMINA PATRA NIAGA,OPEN,patra.luwuk@outlook.com,Delivered,Queued,"02 Jun 2026, 05:19:21",2,[02] BANGGAI
+637464ef-6ef7-46a2-9e23-fe3938205659,"LAUTAN INTERNATIONAL JAYA, PT",OPEN,-,-,-,-,0,[02] BANGGAI
+70fe4e3d-79e4-4bcc-b07a-3aeb736f6e60,Pertamina,OPEN,-,-,-,-,0,[02] BANGGAI
 2769b4d8-e777-4235-94ef-ec17e8392705,Pertambangan Bijih Nikel [ANUGERAH TOMPIRA NIKEL],OPEN,-,-,-,-,0,[02] BANGGAI
+3a090913-f1f1-462f-ab73-26e8b969b373,Bank BRI Unit Masama,OPEN,-,-,-,-,0,[02] BANGGAI
+fb96eab6-3d43-4ca7-96be-d8ed573fd5e2,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Tangeban",OPEN,-,-,-,-,0,[02] BANGGAI
+f4b78cb7-31c7-48d8-b90f-0dfa54fdef91,YAKUSA RIZKY PERKASA,OPEN,baeramdi@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:06:16",1,[02] BANGGAI
+f4b78cb7-31c7-48d8-b90f-0dfa54fdef91,YAKUSA RIZKY PERKASA,OPEN,baeramdi@gmail.com,Delivered,Queued,"02 Jun 2026, 10:06:12",2,[02] BANGGAI
 6dd73fd9-a312-46d5-ab0f-7a709145c480,PLN KECAMATAN BUALEMO,OPEN,-,-,-,-,0,[02] BANGGAI
 bcd04260-5f2a-4732-99e6-e2a415b8b206,BRI UNIT BUALEMO,OPEN,nbobs@corp.brico.id,Bounced,Queued,"02 Jun 2026, 06:50:12",1,[02] BANGGAI
 bcd04260-5f2a-4732-99e6-e2a415b8b206,BRI UNIT BUALEMO,OPEN,nbobs@corp.brico.id,Bounced,Bounced,"02 Jun 2026, 06:50:12",2,[02] BANGGAI
 36f65e67-fafd-4966-a02d-87ea2a76311d,SPBU Pertamina Bualemo,OPEN,-,-,-,-,0,[02] BANGGAI
 6423e5a0-d49a-4955-b5ae-b0885cbbbf4f,Pertambangan Bijih Nikel [ANUGERAH SUMBER BUMI],OPEN,-,-,-,-,0,[02] BANGGAI
 2e78150a-25c3-4885-b94c-721821e44450,"IMANI MATRA INFINITI, PT",OPEN,-,-,-,-,0,[02] BANGGAI
+b04fbec4-c49b-4c46-b479-71be1f844372,"CIPTARINDO GEMATAMA, PT",OPEN,ciptarindo@gmail.com,Delivered,Delivered,"02 Jun 2026, 06:08:27",1,[02] BANGGAI
+b04fbec4-c49b-4c46-b479-71be1f844372,"CIPTARINDO GEMATAMA, PT",OPEN,ciptarindo@gmail.com,Delivered,Queued,"02 Jun 2026, 06:08:24",2,[02] BANGGAI
+292f439c-810d-4863-93f6-13a0ebd4cacb,TEKU JAYA MANDIRI,OPEN,akrimasamin99@gmail.com,Delivered,Queued,"09 Jun 2026, 11:09:29",1,[02] BANGGAI
+292f439c-810d-4863-93f6-13a0ebd4cacb,TEKU JAYA MANDIRI,OPEN,akrimasamin99@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:09:27",2,[02] BANGGAI
+292f439c-810d-4863-93f6-13a0ebd4cacb,TEKU JAYA MANDIRI,OPEN,akrimasamin99@gmail.com,Delivered,Delivered,"02 Jun 2026, 00:07:19",3,[02] BANGGAI
+292f439c-810d-4863-93f6-13a0ebd4cacb,TEKU JAYA MANDIRI,OPEN,akrimasamin99@gmail.com,Delivered,Queued,"02 Jun 2026, 00:07:15",4,[02] BANGGAI
+985d09f8-e283-4050-80c9-856599017bee,SPBU PERTAMINA BALANTAK,OPEN,-,-,-,-,0,[02] BANGGAI
+1048428f-2c5b-4025-85c1-8e9f849dc49c,Pertambangan Biji Nikel [MOHHAT],OPEN,-,-,-,-,0,[02] BANGGAI
+3cc3b29f-8cf8-4f2c-8e29-b74fa6616568,KPN SABAR,OPEN,-,-,-,-,0,[02] BANGGAI
+bb2b8af4-6b62-4e6b-b9d1-d5786b71f611,PLN BALANTAK,OPEN,-,-,-,-,0,[02] BANGGAI
+8fac09d0-4295-48fe-8d17-60310e665fc6,Kantor Pln Rayon Banggai,DRAFT,-,-,-,-,0,[02] BANGGAI
 4a8138ec-c731-45f7-becf-71ceca8327bf,Pertambangan Bijih Nikel [MINERAL SIUNA PERKASA],OPEN,-,-,-,-,0,[02] BANGGAI
 e6d7f8c6-c781-420c-ac7e-453b8e5ddff8,PERTAMBANGAN BIJIH NIKEL [ANUGERAH BANGUN MAKMUR],OPEN,-,-,-,-,0,[02] BANGGAI
 e2f6391b-aa7a-4ed2-b1d3-a8e53f2d6bc0,SINAR RAYA,OPEN,cvsinarraya92@gmail.com,Delivered,Delivered,"02 Jun 2026, 09:04:47",1,[02] BANGGAI
@@ -98,11 +195,7 @@ e2f6391b-aa7a-4ed2-b1d3-a8e53f2d6bc0,SINAR RAYA,OPEN,cvsinarraya92@gmail.com,Del
 4c883a72-e273-4297-8c73-0fa02490250f,"PT Pegadaian (Persero), UPC PAGIMANA",OPEN,-,-,-,-,0,[02] BANGGAI
 ae92d2b2-916b-4fa3-a68f-fa2de9983f81,MANDALA FINANCE PT,OPEN,-,-,-,-,0,[02] BANGGAI
 0e5475d3-5293-421b-8587-09059548e878,KOPPAS MITRA,OPEN,-,-,-,-,0,[02] BANGGAI
-65b2ed70-fdad-4475-b4f7-b2e8f0b8cff7,"ALAM SUKSES BERSAMA, PT",OPEN,alamtbperkasa@gmail.com,Delivered,Queued,"02 Jun 2026, 02:26:42",1,[02] BANGGAI
-65b2ed70-fdad-4475-b4f7-b2e8f0b8cff7,"ALAM SUKSES BERSAMA, PT",OPEN,alamtbperkasa@gmail.com,Delivered,Delivered,"02 Jun 2026, 02:26:42",2,[02] BANGGAI
 6108ce1b-67cc-4945-8791-150604266f06,BRI UNIT PAGIMANA,OPEN,-,-,-,-,0,[02] BANGGAI
-ad55d177-41a1-444e-ae54-8c6807aee095,TOTALINDO BANGGAI PERKASA,OPEN,totalindobatbperkasa@gmail.com,Bounced,Bounced,"02 Jun 2026, 05:57:24",1,[02] BANGGAI
-ad55d177-41a1-444e-ae54-8c6807aee095,TOTALINDO BANGGAI PERKASA,OPEN,totalindobatbperkasa@gmail.com,Bounced,Queued,"02 Jun 2026, 05:57:20",2,[02] BANGGAI
 d64d50a4-d330-4a6e-8daf-82558835744c,AMANAH BAROKAH CONS,OPEN,abc22cons@gmail.com,-,-,-,0,[02] BANGGAI
 88078732-8fcf-48e3-806a-2bcd5cbdd7c4,ADIRA DINAMIKA MULTI FINANCE TBK.,OPEN,lukman.syarif@adira.co.id,Clicked,Clicked,"02 Jun 2026, 04:24:01",1,[02] BANGGAI
 88078732-8fcf-48e3-806a-2bcd5cbdd7c4,ADIRA DINAMIKA MULTI FINANCE TBK.,OPEN,lukman.syarif@adira.co.id,Clicked,Clicked,"02 Jun 2026, 04:23:58",2,[02] BANGGAI
@@ -129,10 +222,14 @@ f11a6f3d-8e1d-4596-9a14-ebba67da0358,BANGGAI SENTRAL SULAWESI -PERTAMINA EP TKJP
 01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Opened,"21 May 2026, 09:28:16",8,[02] BANGGAI
 01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Delivered,"21 May 2026, 09:27:59",9,[02] BANGGAI
 01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Queued,"21 May 2026, 09:27:56",10,[02] BANGGAI
-01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Delivered,"09 Jun 2026, 11:14:04",11,[02] BANGGAI
-01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Queued,"09 Jun 2026, 11:13:51",12,[02] BANGGAI
-01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Queued,"09 Jun 2026, 10:57:21",13,[02] BANGGAI
-01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Delivered,"09 Jun 2026, 10:57:15",14,[02] BANGGAI
+01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Opened,"18 Jun 2026, 14:13:40",11,[02] BANGGAI
+01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Opened,"18 Jun 2026, 14:13:38",12,[02] BANGGAI
+01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Opened,"18 Jun 2026, 14:13:30",13,[02] BANGGAI
+01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Opened,"18 Jun 2026, 14:13:13",14,[02] BANGGAI
+01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Delivered,"09 Jun 2026, 11:14:04",15,[02] BANGGAI
+01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Queued,"09 Jun 2026, 11:13:51",16,[02] BANGGAI
+01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Queued,"09 Jun 2026, 10:57:21",17,[02] BANGGAI
+01ac5041-a231-433b-8f8b-94a2f9d237b4,SANTIKA HOTEL,OPEN,alfiankhusnul@gmail.com,Clicked,Delivered,"09 Jun 2026, 10:57:15",18,[02] BANGGAI
 a81ceb9b-7fbb-435c-b8e6-35993eb1cbe9,CHELLENS,OPEN,cvchellens@gmail.com,Opened,Opened,"04 Jun 2026, 13:29:07",1,[02] BANGGAI
 a81ceb9b-7fbb-435c-b8e6-35993eb1cbe9,CHELLENS,OPEN,cvchellens@gmail.com,Opened,Opened,"04 Jun 2026, 13:28:06",2,[02] BANGGAI
 a81ceb9b-7fbb-435c-b8e6-35993eb1cbe9,CHELLENS,OPEN,cvchellens@gmail.com,Opened,Opened,"02 Jun 2026, 05:41:25",3,[02] BANGGAI
@@ -142,7 +239,6 @@ a81ceb9b-7fbb-435c-b8e6-35993eb1cbe9,CHELLENS,OPEN,cvchellens@gmail.com,Opened,Q
 96d663ec-f298-4560-9b84-996b8de92249,"TRAKINDO UTAMA, PT",OPEN,info_trakindo@gmail.com,Bounced,Queued,"02 Jun 2026, 04:39:23",2,[02] BANGGAI
 e599eb32-5086-4e95-acf7-310b4f996142,"SPBU PRAKARSA MANDIRI UTAMA, PT",OPEN,spbumpu@hotmail.com,Delivered,Delivered,"02 Jun 2026, 09:13:34",1,[02] BANGGAI
 e599eb32-5086-4e95-acf7-310b4f996142,"SPBU PRAKARSA MANDIRI UTAMA, PT",OPEN,spbumpu@hotmail.com,Delivered,Queued,"02 Jun 2026, 09:13:27",2,[02] BANGGAI
-9679805e-807b-423c-bb11-35df3e7375b4,"Perum BULOG, Subdivre Luwuk",OPEN,-,-,-,-,0,[02] BANGGAI
 fbc9a1c6-da91-4e21-8dc9-0b78f3d79d27,"PT Telekomunikasi Indonesia Seluler, GraPARIkios Luwuk",OPEN,hrgaluwuk.mmpp@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:31:31",1,[02] BANGGAI
 fbc9a1c6-da91-4e21-8dc9-0b78f3d79d27,"PT Telekomunikasi Indonesia Seluler, GraPARIkios Luwuk",OPEN,hrgaluwuk.mmpp@gmail.com,Delivered,Queued,"02 Jun 2026, 10:31:31",2,[02] BANGGAI
 940423aa-4189-4868-828a-2e201b938a79,BANK MANDIRI TASPEN,OPEN,astradaerick93@gmail.com,Delivered,Delivered,"02 Jun 2026, 04:32:33",1,[02] BANGGAI
@@ -157,9 +253,9 @@ abbb91f7-66fb-497f-87e0-235b843068fd,JOB PERTAMINA - MEDCO E&P TOMORI SULAWESI,O
 e20f93b1-dbba-4b87-a347-1cf9e0bcfe80,INDO NIKEL KARYA PRATAMA,OPEN,karyapratamaindonikel@gmail.com,Delivered,Delivered,"02 Jun 2026, 09:00:26",1,[02] BANGGAI
 e20f93b1-dbba-4b87-a347-1cf9e0bcfe80,INDO NIKEL KARYA PRATAMA,OPEN,karyapratamaindonikel@gmail.com,Delivered,Queued,"02 Jun 2026, 09:00:26",2,[02] BANGGAI
 ad44b721-71b3-4895-bb41-8fa42bae3a22,BANK BTN KCP LUWUK,OPEN,-,-,-,-,0,[02] BANGGAI
+32dd0c74-1b36-4c99-8969-12c81b10647d,BRI UNIT SIMPONG,OPEN,-,-,-,-,0,[02] BANGGAI
 941bb532-7c5e-4c33-baca-ee0b2d06fb62,ALL BERKEMBANG BERSAMA,OPEN,allswalayan@ymail.com,Bounced,Bounced,"02 Jun 2026, 04:33:23",1,[02] BANGGAI
 941bb532-7c5e-4c33-baca-ee0b2d06fb62,ALL BERKEMBANG BERSAMA,OPEN,allswalayan@ymail.com,Bounced,Queued,"02 Jun 2026, 04:32:41",2,[02] BANGGAI
-32dd0c74-1b36-4c99-8969-12c81b10647d,BRI UNIT SIMPONG,OPEN,-,-,-,-,0,[02] BANGGAI
 02a16a06-9450-4014-aee3-d7f553c7fc97,PT TOMPOTIKA RAYA,OPEN,trluwuk@gmail.com,Opened,Opened,"09 Jun 2026, 10:57:56",1,[02] BANGGAI
 02a16a06-9450-4014-aee3-d7f553c7fc97,PT TOMPOTIKA RAYA,OPEN,trluwuk@gmail.com,Opened,Opened,"09 Jun 2026, 10:57:31",2,[02] BANGGAI
 02a16a06-9450-4014-aee3-d7f553c7fc97,PT TOMPOTIKA RAYA,OPEN,trluwuk@gmail.com,Opened,Delivered,"09 Jun 2026, 10:57:30",3,[02] BANGGAI
@@ -174,7 +270,6 @@ ad44b721-71b3-4895-bb41-8fa42bae3a22,BANK BTN KCP LUWUK,OPEN,-,-,-,-,0,[02] BANG
 fdae453e-dd8f-46ef-b5c5-a5a50ba85dac,QHOIROUS,OPEN,cvqhoirous1975@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:39:10",1,[02] BANGGAI
 fdae453e-dd8f-46ef-b5c5-a5a50ba85dac,QHOIROUS,OPEN,cvqhoirous1975@gmail.com,Delivered,Queued,"02 Jun 2026, 10:39:06",2,[02] BANGGAI
 5ecd175d-72bb-4328-aefb-14089be91327,SWISS BELINN HOTEL [MALEO LUWUK HOTEL],OPEN,alfiankhusnul@gmail.com,-,-,-,0,[02] BANGGAI
-954c8c7d-db57-49d8-b7f9-1fc394226b68,"MULTI NABATI SULAWESI, PT",OPEN,-,-,-,-,0,[02] BANGGAI
 e0138b9a-ff3e-40ce-b01d-d2f6c0169215,BUSSAN AUTO FINANCE,OPEN,acc3k29@bussan.co.id,Clicked,Opened,"02 Jun 2026, 08:57:02",1,[02] BANGGAI
 e0138b9a-ff3e-40ce-b01d-d2f6c0169215,BUSSAN AUTO FINANCE,OPEN,acc3k29@bussan.co.id,Clicked,Opened,"02 Jun 2026, 08:56:21",2,[02] BANGGAI
 e0138b9a-ff3e-40ce-b01d-d2f6c0169215,BUSSAN AUTO FINANCE,OPEN,acc3k29@bussan.co.id,Clicked,Clicked,"02 Jun 2026, 08:54:22",3,[02] BANGGAI
@@ -192,29 +287,10 @@ c96f6f82-54fe-4ff8-acb0-1cea5f3454a1,FEDERAL INTERNATIONAL FINANCE,OPEN,-,-,-,-,
 34ccdc85-74b8-4bb7-a9ab-aed7dc8a98e3,SULAWESI MAKMUR SEJAHTERA,OPEN,sulawesimakmursejahtera@yahoo.com,Delivered,Queued,"09 Jun 2026, 11:13:16",2,[02] BANGGAI
 34ccdc85-74b8-4bb7-a9ab-aed7dc8a98e3,SULAWESI MAKMUR SEJAHTERA,OPEN,sulawesimakmursejahtera@yahoo.com,Delivered,Delivered,"02 Jun 2026, 00:36:04",3,[02] BANGGAI
 34ccdc85-74b8-4bb7-a9ab-aed7dc8a98e3,SULAWESI MAKMUR SEJAHTERA,OPEN,sulawesimakmursejahtera@yahoo.com,Delivered,Queued,"02 Jun 2026, 00:36:00",4,[02] BANGGAI
-c184ab8f-a822-4310-8082-153f45167adb,LAMDONG JAYA,OPEN,lamdongjaya@gmail.com,Opened,Opened,"14 Jun 2026, 21:11:24",1,[02] BANGGAI
-c184ab8f-a822-4310-8082-153f45167adb,LAMDONG JAYA,OPEN,lamdongjaya@gmail.com,Opened,Opened,"14 Jun 2026, 21:08:28",2,[02] BANGGAI
-c184ab8f-a822-4310-8082-153f45167adb,LAMDONG JAYA,OPEN,lamdongjaya@gmail.com,Opened,Opened,"14 Jun 2026, 21:08:22",3,[02] BANGGAI
 8d8176e4-f26b-47da-9ba4-fecfec289afc,PERTAMINA DPPU BUBUNG LUWUK,OPEN,-,-,-,-,0,[02] BANGGAI
-1705bff0-bc40-4e1d-92eb-4525189c8545,INDOTROPIC FISHERY,OPEN,indotropic_lwk@yahoo.com,Delivered,Delivered,"09 Jun 2026, 11:02:24",1,[02] BANGGAI
-1705bff0-bc40-4e1d-92eb-4525189c8545,INDOTROPIC FISHERY,OPEN,indotropic_lwk@yahoo.com,Delivered,Queued,"09 Jun 2026, 11:02:20",2,[02] BANGGAI
-1705bff0-bc40-4e1d-92eb-4525189c8545,INDOTROPIC FISHERY,OPEN,indotropic_lwk@yahoo.com,Delivered,Delivered,"01 Jun 2026, 23:31:47",3,[02] BANGGAI
-1705bff0-bc40-4e1d-92eb-4525189c8545,INDOTROPIC FISHERY,OPEN,indotropic_lwk@yahoo.com,Delivered,Queued,"01 Jun 2026, 23:31:46",4,[02] BANGGAI
-0adc8f64-61a1-429c-99ca-7ab89c15c7e7,Pertamina,OPEN,-,-,-,-,0,[02] BANGGAI
-a1c78c72-91b9-49d3-8634-9806b2ffa2b9,PERTAMINA PATRA NIAGA,OPEN,patra.luwuk@outlook.com,Delivered,Delivered,"02 Jun 2026, 05:19:34",1,[02] BANGGAI
-a1c78c72-91b9-49d3-8634-9806b2ffa2b9,PERTAMINA PATRA NIAGA,OPEN,patra.luwuk@outlook.com,Delivered,Queued,"02 Jun 2026, 05:19:21",2,[02] BANGGAI
-637464ef-6ef7-46a2-9e23-fe3938205659,"LAUTAN INTERNATIONAL JAYA, PT",OPEN,-,-,-,-,0,[02] BANGGAI
-70fe4e3d-79e4-4bcc-b07a-3aeb736f6e60,Pertamina,OPEN,-,-,-,-,0,[02] BANGGAI
-3452370c-3b78-4ae4-9285-1439983cae34,"LAUTAN GUNUNG MAS, PT",OPEN,-,-,-,-,0,[02] BANGGAI
 936e1850-8ecb-4000-a393-adb7549456fe,PT Kurnia Luwuk Sejati,OPEN,-,-,-,-,0,[02] BANGGAI
-f3049e89-d324-4bdb-973c-1d361982a220,PERTAMINA PERSERO PT,OPEN,-,-,-,-,0,[02] BANGGAI
 de997602-2a99-459c-a990-90f5c6c76661,LAUT SULINDAH SPBU,OPEN,spbulautsulindah@gmail.com,Delivered,Delivered,"02 Jun 2026, 08:48:30",1,[02] BANGGAI
 de997602-2a99-459c-a990-90f5c6c76661,LAUT SULINDAH SPBU,OPEN,spbulautsulindah@gmail.com,Delivered,Queued,"02 Jun 2026, 08:48:26",2,[02] BANGGAI
-cba4927a-b46b-4215-9f20-80bba322c451,KELAPA ASIA JAYA,OPEN,quanliuzeng@gmail.com,Opened,Opened,"10 Jun 2026, 09:16:53",1,[02] BANGGAI
-cba4927a-b46b-4215-9f20-80bba322c451,KELAPA ASIA JAYA,OPEN,quanliuzeng@gmail.com,Opened,Delivered,"02 Jun 2026, 07:42:18",2,[02] BANGGAI
-cba4927a-b46b-4215-9f20-80bba322c451,KELAPA ASIA JAYA,OPEN,quanliuzeng@gmail.com,Opened,Queued,"02 Jun 2026, 07:42:18",3,[02] BANGGAI
-7d569bd1-12be-4570-88fc-be9484dc1c5b,DHARMA REJEKI ABADI,OPEN,ptdharmarejekiabadi@gmail.com,Delivered,Queued,"02 Jun 2026, 03:25:52",1,[02] BANGGAI
-7d569bd1-12be-4570-88fc-be9484dc1c5b,DHARMA REJEKI ABADI,OPEN,ptdharmarejekiabadi@gmail.com,Delivered,Delivered,"02 Jun 2026, 03:25:52",2,[02] BANGGAI
 111faa07-d06b-4cbe-9801-aa7ae976b53a,INDOMOBIL FINANCE INDONESIA,OPEN,hilmawan.halid@indomobilfinance.com,Delivered,Delivered,"09 Jun 2026, 11:01:09",1,[02] BANGGAI
 111faa07-d06b-4cbe-9801-aa7ae976b53a,INDOMOBIL FINANCE INDONESIA,OPEN,hilmawan.halid@indomobilfinance.com,Delivered,Queued,"09 Jun 2026, 11:01:08",2,[02] BANGGAI
 8d4d8991-c8c6-470a-8871-3784b76ca002,"ASDP INDONESIA FERRY PERSERO, PT",OPEN,luwuk@indonesiaferry.co.id,Delivered,Delivered,"02 Jun 2026, 04:11:43",1,[02] BANGGAI
@@ -225,7 +301,6 @@ d6a425de-d1b7-4c11-b7fc-3d080d299cc9,"BANK SYARIAH INDONESIA, PT TBK KC LUWUK",O
 d6a425de-d1b7-4c11-b7fc-3d080d299cc9,"BANK SYARIAH INDONESIA, PT TBK KC LUWUK",OPEN,bankbsiluwuk@gmail.com,Delivered,Queued,"02 Jun 2026, 08:24:22",2,[02] BANGGAI
 c5b60633-13fc-4352-a09f-e6b11e93fe60,BANK SAMPAH INDUK BERLIAN,OPEN,anasholechah6196@gmail.com,Bounced,Bounced,"02 Jun 2026, 07:23:56",1,[02] BANGGAI
 c5b60633-13fc-4352-a09f-e6b11e93fe60,BANK SAMPAH INDUK BERLIAN,OPEN,anasholechah6196@gmail.com,Bounced,Queued,"02 Jun 2026, 07:23:53",2,[02] BANGGAI
-53553f54-e73d-4dc5-8a26-4f7bb08494dd,PT Mandiri Tunas Finance [MANDIRI TUNAS FINANCE],OPEN,-,-,-,-,0,[02] BANGGAI
 9d2debe6-0425-440b-b9eb-1ff896ecd0a7,Bank Muamalat KCP Palu - Luwuk,OPEN,-,-,-,-,0,[02] BANGGAI
 2c943ff7-59aa-4e48-b699-81b8f2804cb1,PT. SMS Finance Cabang Luwuk,OPEN,-,-,-,-,0,[02] BANGGAI
 d16a1c26-de84-4b76-b7c7-0693d4a7dd82,SINAR MITRA SEPADAN FINANCE,OPEN,apriadi.mamang@smsfinance.co.id,Delivered,Delivered,"02 Jun 2026, 08:03:50",1,[02] BANGGAI
@@ -296,13 +371,10 @@ ca7ed898-5339-4d22-8a89-b89adc186705,BANK PERKREDITAN RAKYAT PALU LOKADANA UTAMA
 1d18cf6c-1bbe-41e7-8fcd-34539ffaa56c,BANK NEGARA INDONESIA,OPEN,ismayaranita2@gmail.com,Delivered,Queued,"09 Jun 2026, 11:03:40",2,[02] BANGGAI
 1d18cf6c-1bbe-41e7-8fcd-34539ffaa56c,BANK NEGARA INDONESIA,OPEN,ismayaranita2@gmail.com,Delivered,Delivered,"01 Jun 2026, 23:41:07",3,[02] BANGGAI
 1d18cf6c-1bbe-41e7-8fcd-34539ffaa56c,BANK NEGARA INDONESIA,OPEN,ismayaranita2@gmail.com,Delivered,Queued,"01 Jun 2026, 23:41:03",4,[02] BANGGAI
-d2ab8e10-7d22-43fb-904d-03668eb0a52b,BANK MANDIRI (PERSERO),OPEN,luwuk@bankmandiri.co.id,Delivered,Delivered,"02 Jun 2026, 08:08:12",1,[02] BANGGAI
-d2ab8e10-7d22-43fb-904d-03668eb0a52b,BANK MANDIRI (PERSERO),OPEN,luwuk@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 08:08:05",2,[02] BANGGAI
 75a0f26b-2075-47a5-8809-43bb39a105a8,"BANK RAKYAT INDONESIA, PT (PERSERO) TBK KC LUWUK",OPEN,brikantorcabangluwuk@gmail.com,Delivered,Delivered,"02 Jun 2026, 03:02:16",1,[02] BANGGAI
 75a0f26b-2075-47a5-8809-43bb39a105a8,"BANK RAKYAT INDONESIA, PT (PERSERO) TBK KC LUWUK",OPEN,brikantorcabangluwuk@gmail.com,Delivered,Queued,"02 Jun 2026, 03:02:15",2,[02] BANGGAI
 f0097235-734f-478c-9444-2c51db4b2533,BANK SINAR MAS TBK PT,OPEN,-,-,-,-,0,[02] BANGGAI
 268b48c9-eefd-4ae2-8992-7aaf81afb207,KOPERASI KARYAWAN KOKABRI,OPEN,-,-,-,-,0,[02] BANGGAI
-3f969ebb-cd83-47bb-988d-0cc42878fb3e,KPN KOPRIN,OPEN,-,-,-,-,0,[02] BANGGAI
 a912bab8-16cc-407e-8879-0f4d949843c3,Mega Auto Finance. PT,OPEN,-,-,-,-,0,[02] BANGGAI
 5a55a869-3306-4cb9-8e5c-cdc74ab99df0,"SILVI ANDA ENERGI, PT",OPEN,-,-,-,-,0,[02] BANGGAI
 3be11d4a-7ec7-4f1b-aa59-f9f76b287d15,"BANK RAKYAT INDONESIA, PT (PERSERO) TBK UNIT LUWUK",OPEN,-,-,-,-,0,[02] BANGGAI
@@ -313,8 +385,6 @@ eabde834-f9ff-4477-9762-a556b90e2a37,"ARONA TELUK TOMINI, PT",OPEN,-,-,-,-,0,[02
 0d4bfa96-7cd5-47d9-b366-e133f6ea27c4,"BANK DANAMON INDONESIA, PT TBK KCP LUWUK",OPEN,bankdanamon.admin@gmail.com,Permanent_fail,Queued,"01 Jun 2026, 23:07:49",3,[02] BANGGAI
 fde82b8d-1417-4375-a2dc-a94ae91bb003,"PT Pegadaian (Persero), UPC NUHON",OPEN,-,-,-,-,0,[02] BANGGAI
 a5e1b7a6-ee0f-4838-b731-5f19641f84cd,KING AMEER HOTEL,OPEN,-,-,-,-,0,[02] BANGGAI
-f4b78cb7-31c7-48d8-b90f-0dfa54fdef91,YAKUSA RIZKY PERKASA,OPEN,baeramdi@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:06:16",1,[02] BANGGAI
-f4b78cb7-31c7-48d8-b90f-0dfa54fdef91,YAKUSA RIZKY PERKASA,OPEN,baeramdi@gmail.com,Delivered,Queued,"02 Jun 2026, 10:06:12",2,[02] BANGGAI
 45c99b24-af67-40d1-8739-a62954b98052,MANDIRI AMANAH BANGGAI,OPEN,cvmandiriamanagbanggai@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:18:00",1,[02] BANGGAI
 45c99b24-af67-40d1-8739-a62954b98052,MANDIRI AMANAH BANGGAI,OPEN,cvmandiriamanagbanggai@gmail.com,Delivered,Queued,"09 Jun 2026, 11:17:54",2,[02] BANGGAI
 45c99b24-af67-40d1-8739-a62954b98052,MANDIRI AMANAH BANGGAI,OPEN,cvmandiriamanagbanggai@gmail.com,Delivered,Delivered,"02 Jun 2026, 01:13:56",3,[02] BANGGAI
@@ -331,70 +401,19 @@ f7959ff9-a3d7-40b5-8dda-be3d74e34980,Pertambangan Bijih Nikel [LUWUK MINERAL PER
 bd38f44f-5677-417c-b02e-d5cc6b43f5af,BANK MANDIRI (PERSERO) TBK KCP BANGGAI BUNTA,OPEN,cma@bankmandiri.co.id,Delivered,Delivered,"02 Jun 2026, 06:35:57",1,[02] BANGGAI
 bd38f44f-5677-417c-b02e-d5cc6b43f5af,BANK MANDIRI (PERSERO) TBK KCP BANGGAI BUNTA,OPEN,cma@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 06:35:57",2,[02] BANGGAI
 3900cc83-cbf3-4887-88f3-9bd4e4c1f21d,"BANK RAKYAT INDONESIA, PT (PERSERO) TBK UNIT BUNTA",OPEN,-,-,-,-,0,[02] BANGGAI
-b3309c61-58cc-455e-be9a-da71c8f65132,"BERKAT BERSAMA, CV",OPEN,-,-,-,-,0,[02] BANGGAI
-d844508c-ac9d-4926-8613-29024345bb1c,KUD MAKMUR,OPEN,-,-,-,-,0,[02] BANGGAI
-335634d9-6d34-403d-b426-6755127f7973,"SAWINDO CEMERLANG. , PT",OPEN,-,-,-,-,0,[02] BANGGAI
-b164d4b8-0e3b-433d-96c3-19f077408cca,Minyak dan Gas Bumi [JOB PERTAMINA - MEDCO E&P TOMORI SULAWESI],OPEN,-,-,-,-,0,[02] BANGGAI
-2155505c-bb3d-48ec-ba48-ac98edbdca95,REKAYASA INDUSTRI PT,OPEN,wandysendjaja@yahoo.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:05:04",1,[02] BANGGAI
-2155505c-bb3d-48ec-ba48-ac98edbdca95,REKAYASA INDUSTRI PT,OPEN,wandysendjaja@yahoo.com,Permanent_fail,Bounced,"01 Jun 2026, 23:49:00",2,[02] BANGGAI
-2155505c-bb3d-48ec-ba48-ac98edbdca95,REKAYASA INDUSTRI PT,OPEN,wandysendjaja@yahoo.com,Permanent_fail,Queued,"01 Jun 2026, 23:48:57",3,[02] BANGGAI
-4d8a22df-45b6-47bc-81c2-024ce395d120,Pertamina,OPEN,-,-,-,-,0,[02] BANGGAI
-b3eabe44-4653-4782-bb26-eebec81f8ba9,Bank BRI UNIT Batui,OPEN,-,-,-,-,0,[02] BANGGAI
-383dcfa5-2a6c-48c5-9e16-8fd4b2ae42d3,PANCA AMARA UTAMA,OPEN,-,-,-,-,0,[02] BANGGAI
-56f5b6d8-62dc-4116-90df-d87f8ebaac4f,PT BANK SULTENG,OPEN,-,-,-,-,0,[02] BANGGAI
-01d85912-207a-4319-b1fe-836cfe09ff74,Bank Perkreditan Rakyat Palu Anugerah Kantor Kas Batui,OPEN,-,-,-,-,0,[02] BANGGAI
-4e94d8cc-f501-4cce-8ed3-dce945df21dd,BNI (PERSERO) PT,OPEN,-,-,-,-,0,[02] BANGGAI
-53bacafc-c83e-42fb-999c-64991638841f,"RAMAI JAYA ABADI, PT",OPEN,ramaijayaabadi18@gmail.com,Opened,Opened,"02 Jun 2026, 09:24:33",1,[02] BANGGAI
-53bacafc-c83e-42fb-999c-64991638841f,"RAMAI JAYA ABADI, PT",OPEN,ramaijayaabadi18@gmail.com,Opened,Delivered,"02 Jun 2026, 01:45:24",2,[02] BANGGAI
-53bacafc-c83e-42fb-999c-64991638841f,"RAMAI JAYA ABADI, PT",OPEN,ramaijayaabadi18@gmail.com,Opened,Queued,"02 Jun 2026, 01:45:20",3,[02] BANGGAI
-6f13465f-b776-4a40-9fba-4d214ba4a1c6,BIJIH NIKEL [ANUGERAH BUMI GEMILANG],OPEN,-,-,-,-,0,[02] BANGGAI
-0ef2b020-010a-40f1-829a-a0d086441aca,KOPONTREN HIDAYATULAH,OPEN,-,-,-,-,0,[02] BANGGAI
-0b92a89c-e956-458c-af4e-ea43393c8f9b,BANK MANDIRI (PERSERO) TBK KCP TOILI,OPEN,cma@bankmandiri.co.id,Delivered,Delivered,"01 Jun 2026, 22:54:06",1,[02] BANGGAI
-0b92a89c-e956-458c-af4e-ea43393c8f9b,BANK MANDIRI (PERSERO) TBK KCP TOILI,OPEN,cma@bankmandiri.co.id,Delivered,Queued,"01 Jun 2026, 22:54:06",2,[02] BANGGAI
-253a2fd6-de72-4631-b128-f6a5a9e6f304,MITRA LAGO PERKASA,OPEN,debrilawero8430@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:08:28",1,[02] BANGGAI
-253a2fd6-de72-4631-b128-f6a5a9e6f304,MITRA LAGO PERKASA,OPEN,debrilawero8430@gmail.com,Delivered,Queued,"09 Jun 2026, 11:08:24",2,[02] BANGGAI
-253a2fd6-de72-4631-b128-f6a5a9e6f304,MITRA LAGO PERKASA,OPEN,debrilawero8430@gmail.com,Delivered,Delivered,"01 Jun 2026, 23:56:18",3,[02] BANGGAI
-253a2fd6-de72-4631-b128-f6a5a9e6f304,MITRA LAGO PERKASA,OPEN,debrilawero8430@gmail.com,Delivered,Queued,"01 Jun 2026, 23:56:14",4,[02] BANGGAI
-8795c4b7-040c-4a62-b280-b41c1be119c6,ABDULLAH JAYA MANDIRI,OPEN,cv.abdullahjayamandiri@gmail.com,Delivered,Delivered,"02 Jun 2026, 03:51:37",1,[02] BANGGAI
-8795c4b7-040c-4a62-b280-b41c1be119c6,ABDULLAH JAYA MANDIRI,OPEN,cv.abdullahjayamandiri@gmail.com,Delivered,Queued,"02 Jun 2026, 03:51:34",2,[02] BANGGAI
-67e72ce3-5454-4424-8275-70c5c60d951c,kantor [DELAPAN SEMBILAN ENERGI],OPEN,-,-,-,-,0,[02] BANGGAI
-1211a41f-2b45-4deb-a1ec-6d4c43d57b55,Pertambangan Bijih Nikel [KONAWE PANCA INDONESIA],OPEN,-,-,-,-,0,[02] BANGGAI
-036e40ee-6f6b-4b91-8d83-e720f97b1266,Bank BRI UNIT Toili,OPEN,-,-,-,-,0,[02] BANGGAI
-27899a80-d9c8-4259-b36d-11f66b9b0fdc,Bank BRI Teras Mulyoharjo,OPEN,-,-,-,-,0,[02] BANGGAI
-76914c4d-1b3b-41af-acc8-7d59e78caf36,JAYA MAKMUR ABADI,OPEN,cvjayamakmurabadi8@gmail.com,Delivered,Delivered,"02 Jun 2026, 03:05:22",1,[02] BANGGAI
-76914c4d-1b3b-41af-acc8-7d59e78caf36,JAYA MAKMUR ABADI,OPEN,cvjayamakmurabadi8@gmail.com,Delivered,Queued,"02 Jun 2026, 03:05:14",2,[02] BANGGAI
-46407304-416e-44e9-94df-222375ae6f9d,BANK BRI UNIT MAKAPA,OPEN,-,-,-,-,0,[02] BANGGAI
-108cb77b-505d-4bf8-a721-3ceafe0b597f,KUD SINAR HARAPAN,OPEN,-,-,-,-,0,[02] BANGGAI
-d77e0358-ab65-4aff-a3a2-cf28280c32f6,EP PT. Pertamania DONGGI MATINDOK FIELD,OPEN,keuangandmt@gmail.com,Delivered,Delivered,"02 Jun 2026, 08:27:19",1,[02] BANGGAI
-d77e0358-ab65-4aff-a3a2-cf28280c32f6,EP PT. Pertamania DONGGI MATINDOK FIELD,OPEN,keuangandmt@gmail.com,Delivered,Queued,"02 Jun 2026, 08:27:15",2,[02] BANGGAI
-c3608558-ca9e-47fc-840a-bd6aec2c85d5,PERTAMBANGAN BIJIH NIKEL [GEMILANG BANGUN PERKASA],OPEN,-,-,-,-,0,[02] BANGGAI
-658b6a82-0ca8-4bd8-8331-fcd27708eaee,KSU AL- MUHAJIRIN,OPEN,-,-,-,-,0,[02] BANGGAI
-ad213fd3-4513-4671-a80e-9fe29bce6bec,BANK BPR,OPEN,-,-,-,-,0,[02] BANGGAI
-b0038ad6-c8d4-4697-88cf-f2a88c71d056,BANK MANDIRI PT,OPEN,-,-,-,-,0,[02] BANGGAI
-5ed2770d-9be6-4fc1-bf70-0d4e10c482c8,BANK PERKREDITAN RAKYAT MITRA NIAGA BANGGAI,OPEN,toili@mailnesia.com,Permanent_fail,Permanent_fail,"02 Jun 2026, 02:11:11",1,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:47:31",1,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:47:30",2,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:42:01",3,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:42:00",4,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:40:20",5,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"12 Jun 2026, 12:40:19",6,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"07 Jun 2026, 16:33:16",7,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"07 Jun 2026, 16:29:46",8,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"07 Jun 2026, 16:18:03",9,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Opened,"06 Jun 2026, 20:03:16",10,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Delivered,"02 Jun 2026, 02:25:28",11,[02] BANGGAI
-6550f247-54ae-43fb-be26-94d1af6be64a,DELAPAN SEMBILAN ENERGI,OPEN,delapansembilanenergi89@gmail.com,Opened,Queued,"02 Jun 2026, 02:25:14",12,[02] BANGGAI
-c73ddb39-2566-4b0e-ac1d-2cef2270297b,Pertambangan Bijih Nikel [ASINDO INTERNASIONAL PERDANA],OPEN,-,-,-,-,0,[02] BANGGAI
-b56331c4-e73c-4bf5-ab8c-362dfc4a0810,REZKY ANNA JAYA,OPEN,cvrezkyannajaya@gmail.com,Delivered,Delivered,"02 Jun 2026, 06:28:28",1,[02] BANGGAI
-b56331c4-e73c-4bf5-ab8c-362dfc4a0810,REZKY ANNA JAYA,OPEN,cvrezkyannajaya@gmail.com,Delivered,Queued,"02 Jun 2026, 06:28:27",2,[02] BANGGAI
-2b350499-a5b6-45ce-97b3-88359725419f,BANK SULTENG,OPEN,banksulteng.toili@yahoo.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:10:03",1,[02] BANGGAI
-2b350499-a5b6-45ce-97b3-88359725419f,BANK SULTENG,OPEN,banksulteng.toili@yahoo.com,Permanent_fail,Bounced,"02 Jun 2026, 00:12:21",2,[02] BANGGAI
-2b350499-a5b6-45ce-97b3-88359725419f,BANK SULTENG,OPEN,banksulteng.toili@yahoo.com,Permanent_fail,Queued,"02 Jun 2026, 00:11:48",3,[02] BANGGAI
-d8d66396-569a-4f4f-8cf8-46d4cb76b3e6,"BANK NEGARA INDONESIA, PT (PERSERO) TBK UNIT TOILI",OPEN,-,-,-,-,0,[02] BANGGAI
-c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5,"MATRA ARONA BANGGAI, PT",DRAFT,mjamalsptra@gmail.com,Opened,Delivered,"13 May 2026, 08:24:01",1,[02] BANGGAI
-c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5,"MATRA ARONA BANGGAI, PT",DRAFT,mjamalsptra@gmail.com,Opened,Queued,"13 May 2026, 08:24:01",2,[02] BANGGAI
-c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5,"MATRA ARONA BANGGAI, PT",DRAFT,mjamalsptra@gmail.com,Opened,Opened,"02 Jun 2026, 10:34:15",3,[02] BANGGAI
-c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5,"MATRA ARONA BANGGAI, PT",DRAFT,mjamalsptra@gmail.com,Opened,Opened,"02 Jun 2026, 10:33:34",4,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"10 Jun 2026, 08:15:35",1,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Delivered,"10 Jun 2026, 04:29:50",2,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Queued,"10 Jun 2026, 04:29:47",3,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"09 Jun 2026, 11:46:27",4,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"02 Jun 2026, 09:18:48",5,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Delivered,"02 Jun 2026, 09:08:55",6,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Queued,"02 Jun 2026, 09:08:51",7,[02] BANGGAI
+5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Clicked,"18 Jun 2026, 20:29:44",1,[03] MOROWALI
+5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Opened,"18 Jun 2026, 20:29:38",2,[03] MOROWALI
+5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Clicked,"03 Jun 2026, 19:18:17",3,[03] MOROWALI
+5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Opened,"03 Jun 2026, 19:18:02",4,[03] MOROWALI
+5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Queued,"02 Jun 2026, 02:07:11",5,[03] MOROWALI
+5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Delivered,"02 Jun 2026, 02:07:11",6,[03] MOROWALI
 7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"17 Jun 2026, 08:07:07",1,[03] MOROWALI
 7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"15 Jun 2026, 08:34:01",2,[03] MOROWALI
 7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"13 Jun 2026, 10:31:52",3,[03] MOROWALI
@@ -411,10 +430,6 @@ c17bc7bb-8b5b-4f6d-93ba-6ab631e321e5,"MATRA ARONA BANGGAI, PT",DRAFT,mjamalsptra
 2bcf903a-6244-4c7f-85d0-78ce0aeac06d,ZHONG YIE INDONESIA PT,SUBMITTED RESPONDENT,zhongyieid@gmail.com,Clicked,Opened,"02 Jun 2026, 10:39:56",6,[03] MOROWALI
 2bcf903a-6244-4c7f-85d0-78ce0aeac06d,ZHONG YIE INDONESIA PT,SUBMITTED RESPONDENT,zhongyieid@gmail.com,Clicked,Delivered,"02 Jun 2026, 00:13:29",7,[03] MOROWALI
 2bcf903a-6244-4c7f-85d0-78ce0aeac06d,ZHONG YIE INDONESIA PT,SUBMITTED RESPONDENT,zhongyieid@gmail.com,Clicked,Queued,"02 Jun 2026, 00:13:29",8,[03] MOROWALI
-5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Clicked,"03 Jun 2026, 19:18:17",1,[03] MOROWALI
-5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Opened,"03 Jun 2026, 19:18:02",2,[03] MOROWALI
-5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Queued,"02 Jun 2026, 02:07:11",3,[03] MOROWALI
-5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Delivered,"02 Jun 2026, 02:07:11",4,[03] MOROWALI
 80c030e4-e029-49b1-a942-8495eaf6afdd,PT. BAHARI MOROWALI JAYA,OPEN,ebungku@gmail.com,Delivered,Delivered,"02 Jun 2026, 03:34:22",1,[03] MOROWALI
 80c030e4-e029-49b1-a942-8495eaf6afdd,PT. BAHARI MOROWALI JAYA,OPEN,ebungku@gmail.com,Delivered,Queued,"02 Jun 2026, 03:34:19",2,[03] MOROWALI
 8f5e067f-860c-4808-84ca-bbe34520f80a,TAMACO GRAHA KRIDA,OPEN,tgk.lokasi@simedarbyplantation.com,-,-,-,0,[03] MOROWALI
@@ -977,34 +992,6 @@ ff38c4c9-6945-4c16-bf63-4329543ba082,PT. Gelifta Ana Abadi,OPEN,geliftaanaabadi@
 ff38c4c9-6945-4c16-bf63-4329543ba082,PT. Gelifta Ana Abadi,OPEN,geliftaanaabadi@gmail.com,Delivered,Queued,"02 Jun 2026, 10:44:01",2,[04] POSO
 deb25d42-1348-4bd8-9b44-1e2e65b741dc,"BANK MANDIRI TASPEN KK POSO, PT",OPEN,-,-,-,-,0,[04] POSO
 b7bf4e3a-a806-4512-bd66-9d5372d0a917,PT BORWITA PRIMA,OPEN,-,-,-,-,0,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Clicked,"26 May 2026, 16:36:57",19,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Opened,"26 May 2026, 16:36:47",20,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Clicked,"26 May 2026, 16:02:57",21,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Clicked,"26 May 2026, 16:02:48",22,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Opened,"26 May 2026, 16:02:44",23,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Clicked,"26 May 2026, 15:38:16",24,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Opened,"26 May 2026, 15:38:09",25,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Clicked,"26 May 2026, 15:29:35",26,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Opened,"26 May 2026, 15:29:25",27,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Delivered,"26 May 2026, 15:28:16",28,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Queued,"26 May 2026, 15:28:16",29,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Queued,"26 May 2026, 15:28:15",30,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Clicked,"26 May 2026, 09:27:39",31,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Opened,"26 May 2026, 09:27:32",32,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Clicked,"26 May 2026, 09:27:22",33,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Delivered,"26 May 2026, 07:28:29",34,[04] POSO
-e6c02667-dab5-45fe-9d46-af13a774053a,"ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",SUBMITTED RESPONDENT,mappangerangmangata1@gmail.com,Clicked,Queued,"26 May 2026, 07:28:26",35,[04] POSO
-c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Opened,"28 May 2026, 16:54:49",1,[04] POSO
-c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Delivered,"28 May 2026, 15:39:07",2,[04] POSO
-c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Queued,"28 May 2026, 15:39:04",3,[04] POSO
-c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Clicked,"28 May 2026, 10:42:47",4,[04] POSO
-c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Opened,"28 May 2026, 10:42:43",5,[04] POSO
-c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Clicked,"25 May 2026, 16:28:14",6,[04] POSO
-c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Opened,"25 May 2026, 16:28:10",7,[04] POSO
-c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Clicked,"22 May 2026, 16:39:35",8,[04] POSO
-c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Opened,"22 May 2026, 16:39:10",9,[04] POSO
-c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Delivered,"22 May 2026, 16:37:55",10,[04] POSO
-c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Queued,"22 May 2026, 16:37:52",11,[04] POSO
 fd196827-2fec-4156-a5b2-e2384b448719,LOLI PRATAMA MAJU,OPEN,lolipratamam@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:36:40",1,[05] DONGGALA
 fd196827-2fec-4156-a5b2-e2384b448719,LOLI PRATAMA MAJU,OPEN,lolipratamam@gmail.com,Delivered,Queued,"02 Jun 2026, 10:36:28",2,[05] DONGGALA
 c5943835-8b35-457a-bee5-0e2f2ecb2541,MALOMO 77,OPEN,-,-,-,-,0,[05] DONGGALA
@@ -1085,12 +1072,13 @@ bb78d0af-4d52-420b-8b3e-990c7b52195b,AMINUDDIN H. ARSYAD,OPEN,arsyadaminudin17@g
 c3ade782-c19b-4380-a239-04e5179380c2,ADI RAMAT CV,OPEN,-,-,-,-,0,[05] DONGGALA
 9722d961-fc6c-4375-bc1e-928a54ce8268,"CAKRAWALA MITRA BAHARI, PT",OPEN,cakrawala.mitrabahari@gmail.com,Delivered,Delivered,"02 Jun 2026, 11:47:36",1,[06] TOLI-TOLI
 9722d961-fc6c-4375-bc1e-928a54ce8268,"CAKRAWALA MITRA BAHARI, PT",OPEN,cakrawala.mitrabahari@gmail.com,Delivered,Queued,"02 Jun 2026, 11:47:31",2,[06] TOLI-TOLI
-66646917-ee20-47c0-921d-70826ed7aa69,BANDARA SULTAN BANTILAN,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-0435f1c6-149a-4ecc-b720-51a54e445ab1,"WINGS ABADI, PT",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+3c454286-f2b3-4315-8d1e-a76c7d6e585b,RUMAH SAKIT UMUM DAERAH MOKOPIDO,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 00df1671-c389-48b7-81ce-303adae27900,PERTAMINA PATRA NIAGA,SUBMITTED RESPONDENT,patra.luwuk@outlook.com,Delivered,Delivered,"02 Jun 2026, 05:19:34",1,[06] TOLI-TOLI
 00df1671-c389-48b7-81ce-303adae27900,PERTAMINA PATRA NIAGA,SUBMITTED RESPONDENT,patra.luwuk@outlook.com,Delivered,Queued,"02 Jun 2026, 05:19:21",2,[06] TOLI-TOLI
-437ee7b1-e593-4303-9b5b-fc42b75bc96d,UNIVERSITAS MADAKO,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-3c454286-f2b3-4315-8d1e-a76c7d6e585b,RUMAH SAKIT UMUM DAERAH MOKOPIDO,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+a2a88b85-7f0e-4a07-b893-84111bc57ebe,"KANTOR POS INDONESIA, PT PERSERO",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+fef6fb4d-fb8e-447e-b13f-8e46e0835031,"FEDERAL INTERNATIONAL FINANCE, PT",SUBMITTED RESPONDENT,-,-,-,-,0,[06] TOLI-TOLI
+0a21ab4f-dd3d-4de6-99e9-d1898a2938a3,"PERUSAHAAN LISTRIK NEGARA, PT PERSERO",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+00f8e56c-dbc6-4b70-b24a-05a7d48c9fc8,BANK SULTENG KANTOR CABANG TOLTIOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,Clicked,Clicked,"27 May 2026, 13:55:25",1,[06] TOLI-TOLI
 ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,Clicked,Clicked,"27 May 2026, 13:55:13",2,[06] TOLI-TOLI
 ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,Clicked,Clicked,"27 May 2026, 13:54:25",3,[06] TOLI-TOLI
@@ -1126,75 +1114,14 @@ ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOL
 ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,Clicked,Delivered,"26 May 2026, 14:28:01",33,[06] TOLI-TOLI
 ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,Clicked,Queued,"26 May 2026, 14:27:58",34,[06] TOLI-TOLI
 2e25a43d-7232-4905-bbb0-0b5cf6afbff0,"BANK MANDIRI, PT PERSERO TBK",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-0d524a26-c584-4626-8821-41daa1ad4cde,"BANK NEGARA INDONESIA, PT PERSERO TBK",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-00f8e56c-dbc6-4b70-b24a-05a7d48c9fc8,BANK SULTENG KANTOR CABANG TOLTIOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+437ee7b1-e593-4303-9b5b-fc42b75bc96d,UNIVERSITAS MADAKO,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 5280a68f-c125-4a4f-bb24-84fa65395703,"ADIRA DINAMIKA MULTI FINANCE, PT TBK",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 0e29c75e-22ad-4380-bda0-55c8fbdceb06,"BANK SYARIAH INDONESIA, PT PERSERO TBK",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-fef6fb4d-fb8e-447e-b13f-8e46e0835031,"FEDERAL INTERNATIONAL FINANCE, PT",SUBMITTED RESPONDENT,-,-,-,-,0,[06] TOLI-TOLI
-a2a88b85-7f0e-4a07-b893-84111bc57ebe,"KANTOR POS INDONESIA, PT PERSERO",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-0a21ab4f-dd3d-4de6-99e9-d1898a2938a3,"PERUSAHAAN LISTRIK NEGARA, PT PERSERO",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-74480f18-7928-403a-b016-ea2556e1f0ad,"PT. POS INDONESIA, KANTOR POS GALANG",OPEN,-,-,-,-,0,[06] TOLI-TOLI
-d5a0aa4e-cb3c-445f-938c-513839a89a63,ESAPUTLII PRAKARSA UTAMA,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-79639f51-b088-421b-b1b4-56bd717187ed,"pt POS INDONESIA , KC LAULALANG",OPEN,-,-,-,-,0,[06] TOLI-TOLI
-b5e0a999-5851-4468-bda4-3db82c565f20,INTI KARYA VANAME,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-206ed799-d1d8-4055-933c-7a59b7b4adf1,"ELRISMA TRI CITRA, PT",OPEN,pt_elrisma_tri_citra@yahoo.com,Delivered,Queued,"09 Jun 2026, 11:04:31",1,[06] TOLI-TOLI
-206ed799-d1d8-4055-933c-7a59b7b4adf1,"ELRISMA TRI CITRA, PT",OPEN,pt_elrisma_tri_citra@yahoo.com,Delivered,Delivered,"09 Jun 2026, 11:04:23",2,[06] TOLI-TOLI
-206ed799-d1d8-4055-933c-7a59b7b4adf1,"ELRISMA TRI CITRA, PT",OPEN,pt_elrisma_tri_citra@yahoo.com,Delivered,Delivered,"01 Jun 2026, 23:47:44",3,[06] TOLI-TOLI
-206ed799-d1d8-4055-933c-7a59b7b4adf1,"ELRISMA TRI CITRA, PT",OPEN,pt_elrisma_tri_citra@yahoo.com,Delivered,Queued,"01 Jun 2026, 23:47:40",4,[06] TOLI-TOLI
-f455e248-e952-4fc6-9076-0237c90636fd,KOPERASI KONSUMEN DHARMA MARITIM TOLITOLI,OPEN,koperasi_maritim@yahoo.com,Bounced,Bounced,"02 Jun 2026, 10:08:22",1,[06] TOLI-TOLI
-f455e248-e952-4fc6-9076-0237c90636fd,KOPERASI KONSUMEN DHARMA MARITIM TOLITOLI,OPEN,koperasi_maritim@yahoo.com,Bounced,Queued,"02 Jun 2026, 10:04:58",2,[06] TOLI-TOLI
-923ecb4f-f1f9-472f-b02e-890dccc99636,BANK BRI UNIT SANDANA,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Delivered,"02 Jun 2026, 11:38:52",1,[06] TOLI-TOLI
-5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Opened,"02 Jun 2026, 11:38:32",2,[06] TOLI-TOLI
-5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Queued,"02 Jun 2026, 11:38:23",3,[06] TOLI-TOLI
-bc4e2456-2a4a-48fb-b639-c830169d6d3a,PABRIK KELAPA SAWIT PT CITRA MULIA PERKASA,OPEN,hrdcmpten2024@gmail.com,Delivered,Delivered,"02 Jun 2026, 11:46:07",1,[06] TOLI-TOLI
-bc4e2456-2a4a-48fb-b639-c830169d6d3a,PABRIK KELAPA SAWIT PT CITRA MULIA PERKASA,OPEN,hrdcmpten2024@gmail.com,Delivered,Queued,"02 Jun 2026, 11:46:04",2,[06] TOLI-TOLI
-328274c1-1c9a-4803-98c0-72c1bed26664,BANK BRI UNIT TAMBUN,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-35d10422-e533-4934-8054-419bedcfc0fb,"CELINDO CEMERLANG, CV",OPEN,-,-,-,-,0,[06] TOLI-TOLI
-92485781-f729-4e0d-a687-c8cae331417b,KPRI PENGAYOMAN LP,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-83a7b7ea-1776-4755-a94f-49a91fa483ef,BANK BRI UNIT MALOSONG,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-3a3d83de-f8ab-4c1e-b883-a6e93692354f,"KHALIFAH, PT",OPEN,lank.ghilank83@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:15:01",1,[06] TOLI-TOLI
-3a3d83de-f8ab-4c1e-b883-a6e93692354f,"KHALIFAH, PT",OPEN,lank.ghilank83@gmail.com,Delivered,Queued,"09 Jun 2026, 11:14:50",2,[06] TOLI-TOLI
-3a3d83de-f8ab-4c1e-b883-a6e93692354f,"KHALIFAH, PT",OPEN,lank.ghilank83@gmail.com,Delivered,Delivered,"02 Jun 2026, 11:32:49",3,[06] TOLI-TOLI
-3a3d83de-f8ab-4c1e-b883-a6e93692354f,"KHALIFAH, PT",OPEN,lank.ghilank83@gmail.com,Delivered,Queued,"02 Jun 2026, 11:32:49",4,[06] TOLI-TOLI
-90663845-cac4-4dc1-82e4-80e9370cca89,BANK BTPN,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-6dbb7ca2-846d-452d-8d01-3cda5de5a2a1,"BFI FINANCE INDONESIA, PT",OPEN,bfi834001@bfi.co.id,Delivered,Delivered,"02 Jun 2026, 02:42:03",1,[06] TOLI-TOLI
-6dbb7ca2-846d-452d-8d01-3cda5de5a2a1,"BFI FINANCE INDONESIA, PT",OPEN,bfi834001@bfi.co.id,Delivered,Queued,"02 Jun 2026, 02:42:03",2,[06] TOLI-TOLI
-02047edf-6edf-4e25-81bb-2cb3c5d3cd7f,BANK BRI UNIT BAOLAN,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-4db15ad0-989b-4efc-8768-037436d1b174,"MANDALA MULTIFINANCE, PT KC TOLITOLI",OPEN,-,-,-,-,0,[06] TOLI-TOLI
-a93928ca-d5bc-4efb-aed0-bb2ae216bf58,BANK DANAMON INDONESIA,OPEN,julniatin.rundulemo@gmail.com,Delivered,Delivered,"02 Jun 2026, 05:43:54",1,[06] TOLI-TOLI
-a93928ca-d5bc-4efb-aed0-bb2ae216bf58,BANK DANAMON INDONESIA,OPEN,julniatin.rundulemo@gmail.com,Delivered,Queued,"02 Jun 2026, 05:43:50",2,[06] TOLI-TOLI
-40811c0e-42fd-4cfc-9b07-5e2243a8cd42,"GUNUNG SOJOL, FIRMA",OPEN,-,-,-,-,0,[06] TOLI-TOLI
-b333a9fd-f8af-45da-855f-be3e1133f42d,"mitra sepadan finance, pt cabang Tolitoli <SMS finance>  <Arif usumayadi >",OPEN,-,-,-,-,0,[06] TOLI-TOLI
-747727b1-bca2-46f5-a9e2-488558593617,"BUSSAN AUTO FINANCE (BAF), PT KC TOLITOLI",OPEN,luijius123@gmail.com,Delivered,Delivered,"02 Jun 2026, 02:57:27",1,[06] TOLI-TOLI
-747727b1-bca2-46f5-a9e2-488558593617,"BUSSAN AUTO FINANCE (BAF), PT KC TOLITOLI",OPEN,luijius123@gmail.com,Delivered,Queued,"02 Jun 2026, 02:57:23",2,[06] TOLI-TOLI
-709f7f2f-1c31-49fa-94e5-d68aac8d7cf1,"FAJAR INDAH KUSUMA, PT",OPEN,-,-,-,-,0,[06] TOLI-TOLI
-a73e57cf-cffa-42db-bb78-f52900f7d0d8,"WIYATA MANDALA, KOPERASI",OPEN,-,-,-,-,0,[06] TOLI-TOLI
-d858d260-d53e-41d2-906c-df6bbcd1d526,"GALAXI INDO PRATAMA, CV",OPEN,galaxiindopratamatolis@gmail.com,Bounced,Queued,"02 Jun 2026, 11:53:38",1,[06] TOLI-TOLI
-d858d260-d53e-41d2-906c-df6bbcd1d526,"GALAXI INDO PRATAMA, CV",OPEN,galaxiindopratamatolis@gmail.com,Bounced,Bounced,"02 Jun 2026, 11:53:36",2,[06] TOLI-TOLI
-2b317579-3e25-4991-9f09-3eb4e4a69a8d,MAKTO JAYA PT,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-11fd6f69-871d-4258-81f6-e2145ee9f73a,BANK PEREKONOMIAN RAKYAT (BPR) MODERN EXPRESS CABANG TOLTIOLI,OPEN,kc.tolitoli@bprpalulokadanautama.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:01:19",1,[06] TOLI-TOLI
-11fd6f69-871d-4258-81f6-e2145ee9f73a,BANK PEREKONOMIAN RAKYAT (BPR) MODERN EXPRESS CABANG TOLTIOLI,OPEN,kc.tolitoli@bprpalulokadanautama.com,Permanent_fail,Bounced,"01 Jun 2026, 23:16:31",2,[06] TOLI-TOLI
-11fd6f69-871d-4258-81f6-e2145ee9f73a,BANK PEREKONOMIAN RAKYAT (BPR) MODERN EXPRESS CABANG TOLTIOLI,OPEN,kc.tolitoli@bprpalulokadanautama.com,Permanent_fail,Queued,"01 Jun 2026, 23:16:27",3,[06] TOLI-TOLI
-46249f7c-65ee-4556-9cc3-33a7b8dcf238,"GUNA USAHA TOLIS, CV",OPEN,cv.gunausahatolis@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:17:52",1,[06] TOLI-TOLI
-46249f7c-65ee-4556-9cc3-33a7b8dcf238,"GUNA USAHA TOLIS, CV",OPEN,cv.gunausahatolis@gmail.com,Delivered,Queued,"09 Jun 2026, 11:17:43",2,[06] TOLI-TOLI
-46249f7c-65ee-4556-9cc3-33a7b8dcf238,"GUNA USAHA TOLIS, CV",OPEN,cv.gunausahatolis@gmail.com,Delivered,Delivered,"02 Jun 2026, 01:14:35",3,[06] TOLI-TOLI
-46249f7c-65ee-4556-9cc3-33a7b8dcf238,"GUNA USAHA TOLIS, CV",OPEN,cv.gunausahatolis@gmail.com,Delivered,Queued,"02 Jun 2026, 01:14:35",4,[06] TOLI-TOLI
-8b970654-335e-411a-9d83-4d6b320e9112,PUTRI TUNGGAL TOLIS,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-e2d20a9c-1c32-42e2-a0cb-6567b585b199,"BUTOL RAYA NUSANTARA, PT",OPEN,butolrayanusantara@yahoo.com,Bounced,Bounced,"02 Jun 2026, 09:04:21",1,[06] TOLI-TOLI
-e2d20a9c-1c32-42e2-a0cb-6567b585b199,"BUTOL RAYA NUSANTARA, PT",OPEN,butolrayanusantara@yahoo.com,Bounced,Queued,"02 Jun 2026, 09:04:02",2,[06] TOLI-TOLI
-e6eac137-d1d8-4ad2-aa40-f07d1f344fae,"KALANDA, PT",OPEN,-,-,-,-,0,[06] TOLI-TOLI
-52d65a6c-ac1c-426e-afe8-6ff0ff2560db,"SAMAS TOLITOLI, pt",OPEN,-,-,-,-,0,[06] TOLI-TOLI
-666eae12-30bb-426a-85c1-e8e4dcaf9c34,"MERATUS LINE, PT CABANG TOLITOLI",OPEN,warsini.warsini@meratusline.com,Clicked,Clicked,"02 Jun 2026, 11:40:40",1,[06] TOLI-TOLI
-666eae12-30bb-426a-85c1-e8e4dcaf9c34,"MERATUS LINE, PT CABANG TOLITOLI",OPEN,warsini.warsini@meratusline.com,Clicked,Clicked,"02 Jun 2026, 11:40:29",2,[06] TOLI-TOLI
-666eae12-30bb-426a-85c1-e8e4dcaf9c34,"MERATUS LINE, PT CABANG TOLITOLI",OPEN,warsini.warsini@meratusline.com,Clicked,Opened,"02 Jun 2026, 11:39:50",3,[06] TOLI-TOLI
-666eae12-30bb-426a-85c1-e8e4dcaf9c34,"MERATUS LINE, PT CABANG TOLITOLI",OPEN,warsini.warsini@meratusline.com,Clicked,Delivered,"02 Jun 2026, 11:39:42",4,[06] TOLI-TOLI
-666eae12-30bb-426a-85c1-e8e4dcaf9c34,"MERATUS LINE, PT CABANG TOLITOLI",OPEN,warsini.warsini@meratusline.com,Clicked,Queued,"02 Jun 2026, 11:39:42",5,[06] TOLI-TOLI
+0d524a26-c584-4626-8821-41daa1ad4cde,"BANK NEGARA INDONESIA, PT PERSERO TBK",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+66646917-ee20-47c0-921d-70826ed7aa69,BANDARA SULTAN BANTILAN,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+0435f1c6-149a-4ecc-b720-51a54e445ab1,"WINGS ABADI, PT",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 8d9b8df5-3a6d-49d2-9c89-d3aec7e04a4e,"CITRA MULIA PERKASA, PT",OPEN,hrdcmpten2024@gmail.com,Delivered,Delivered,"02 Jun 2026, 11:51:11",1,[06] TOLI-TOLI
 8d9b8df5-3a6d-49d2-9c89-d3aec7e04a4e,"CITRA MULIA PERKASA, PT",OPEN,hrdcmpten2024@gmail.com,Delivered,Queued,"02 Jun 2026, 11:51:10",2,[06] TOLI-TOLI
-5fa4cc88-422c-4143-86a0-bc744e08b4c7,"SUMBER CIPTA MULTI NIAGA, PT",OPEN,-,-,-,-,0,[06] TOLI-TOLI
-2eff7434-838b-4647-83e7-33d964ad1479,BANK BRI UNIT TINABOGAN,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-473c508b-50ee-4e98-8cba-c1275460aa95,ESAPUTLII PRAKARSA UTAMA,OPEN,-,-,-,-,0,[06] TOLI-TOLI
 392607f8-c0f1-4af2-9673-041f922128dd,"TAMAKI, CV",OPEN,warno2004kombo@gmail.com,Opened,Opened,"09 Jun 2026, 11:15:12",1,[06] TOLI-TOLI
 392607f8-c0f1-4af2-9673-041f922128dd,"TAMAKI, CV",OPEN,warno2004kombo@gmail.com,Opened,Queued,"09 Jun 2026, 11:14:25",2,[06] TOLI-TOLI
 392607f8-c0f1-4af2-9673-041f922128dd,"TAMAKI, CV",OPEN,warno2004kombo@gmail.com,Opened,Delivered,"09 Jun 2026, 11:14:24",3,[06] TOLI-TOLI
@@ -1202,22 +1129,83 @@ e6eac137-d1d8-4ad2-aa40-f07d1f344fae,"KALANDA, PT",OPEN,-,-,-,-,0,[06] TOLI-TOLI
 392607f8-c0f1-4af2-9673-041f922128dd,"TAMAKI, CV",OPEN,warno2004kombo@gmail.com,Opened,Opened,"02 Jun 2026, 06:45:10",5,[06] TOLI-TOLI
 392607f8-c0f1-4af2-9673-041f922128dd,"TAMAKI, CV",OPEN,warno2004kombo@gmail.com,Opened,Delivered,"02 Jun 2026, 00:43:30",6,[06] TOLI-TOLI
 392607f8-c0f1-4af2-9673-041f922128dd,"TAMAKI, CV",OPEN,warno2004kombo@gmail.com,Opened,Queued,"02 Jun 2026, 00:43:29",7,[06] TOLI-TOLI
-d8e40686-a2a8-4e55-b967-671e032fe3cc,BANK BRI UNIT BANGKIR,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+2eff7434-838b-4647-83e7-33d964ad1479,BANK BRI UNIT TINABOGAN,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+d5a0aa4e-cb3c-445f-938c-513839a89a63,ESAPUTLII PRAKARSA UTAMA,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+f455e248-e952-4fc6-9076-0237c90636fd,KOPERASI KONSUMEN DHARMA MARITIM TOLITOLI,OPEN,koperasi_maritim@yahoo.com,Bounced,Bounced,"02 Jun 2026, 10:08:22",1,[06] TOLI-TOLI
+f455e248-e952-4fc6-9076-0237c90636fd,KOPERASI KONSUMEN DHARMA MARITIM TOLITOLI,OPEN,koperasi_maritim@yahoo.com,Bounced,Queued,"02 Jun 2026, 10:04:58",2,[06] TOLI-TOLI
+92485781-f729-4e0d-a687-c8cae331417b,KPRI PENGAYOMAN LP,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+bf59ad9c-5369-4438-bd8a-f72ddffaa938,BANK SULTENG UNIT SONI,OPEN,febrialdin.rial@yahoo.co.id,Bounced,Bounced,"02 Jun 2026, 07:00:54",1,[06] TOLI-TOLI
+bf59ad9c-5369-4438-bd8a-f72ddffaa938,BANK SULTENG UNIT SONI,OPEN,febrialdin.rial@yahoo.co.id,Bounced,Queued,"02 Jun 2026, 07:00:24",2,[06] TOLI-TOLI
+473c508b-50ee-4e98-8cba-c1275460aa95,ESAPUTLII PRAKARSA UTAMA,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+79639f51-b088-421b-b1b4-56bd717187ed,"pt POS INDONESIA , KC LAULALANG",OPEN,-,-,-,-,0,[06] TOLI-TOLI
+83a7b7ea-1776-4755-a94f-49a91fa483ef,BANK BRI UNIT MALOSONG,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+a73e57cf-cffa-42db-bb78-f52900f7d0d8,"WIYATA MANDALA, KOPERASI",OPEN,-,-,-,-,0,[06] TOLI-TOLI
+206ed799-d1d8-4055-933c-7a59b7b4adf1,"ELRISMA TRI CITRA, PT",OPEN,pt_elrisma_tri_citra@yahoo.com,Delivered,Queued,"09 Jun 2026, 11:04:31",1,[06] TOLI-TOLI
+206ed799-d1d8-4055-933c-7a59b7b4adf1,"ELRISMA TRI CITRA, PT",OPEN,pt_elrisma_tri_citra@yahoo.com,Delivered,Delivered,"09 Jun 2026, 11:04:23",2,[06] TOLI-TOLI
+206ed799-d1d8-4055-933c-7a59b7b4adf1,"ELRISMA TRI CITRA, PT",OPEN,pt_elrisma_tri_citra@yahoo.com,Delivered,Delivered,"01 Jun 2026, 23:47:44",3,[06] TOLI-TOLI
+206ed799-d1d8-4055-933c-7a59b7b4adf1,"ELRISMA TRI CITRA, PT",OPEN,pt_elrisma_tri_citra@yahoo.com,Delivered,Queued,"01 Jun 2026, 23:47:40",4,[06] TOLI-TOLI
+46249f7c-65ee-4556-9cc3-33a7b8dcf238,"GUNA USAHA TOLIS, CV",OPEN,cv.gunausahatolis@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:17:52",1,[06] TOLI-TOLI
+46249f7c-65ee-4556-9cc3-33a7b8dcf238,"GUNA USAHA TOLIS, CV",OPEN,cv.gunausahatolis@gmail.com,Delivered,Queued,"09 Jun 2026, 11:17:43",2,[06] TOLI-TOLI
+46249f7c-65ee-4556-9cc3-33a7b8dcf238,"GUNA USAHA TOLIS, CV",OPEN,cv.gunausahatolis@gmail.com,Delivered,Delivered,"02 Jun 2026, 01:14:35",3,[06] TOLI-TOLI
+46249f7c-65ee-4556-9cc3-33a7b8dcf238,"GUNA USAHA TOLIS, CV",OPEN,cv.gunausahatolis@gmail.com,Delivered,Queued,"02 Jun 2026, 01:14:35",4,[06] TOLI-TOLI
+d858d260-d53e-41d2-906c-df6bbcd1d526,"GALAXI INDO PRATAMA, CV",OPEN,galaxiindopratamatolis@gmail.com,Bounced,Queued,"02 Jun 2026, 11:53:38",1,[06] TOLI-TOLI
+d858d260-d53e-41d2-906c-df6bbcd1d526,"GALAXI INDO PRATAMA, CV",OPEN,galaxiindopratamatolis@gmail.com,Bounced,Bounced,"02 Jun 2026, 11:53:36",2,[06] TOLI-TOLI
+923ecb4f-f1f9-472f-b02e-890dccc99636,BANK BRI UNIT SANDANA,OPEN,-,-,-,-,0,[06] TOLI-TOLI
 955277e2-0af9-4d3d-892e-989d1b882c8f,"POS INDONESIA, KC OGOTUA",OPEN,ismail@posindonesia.co.id,Delivered,Delivered,"02 Jun 2026, 04:35:25",1,[06] TOLI-TOLI
 955277e2-0af9-4d3d-892e-989d1b882c8f,"POS INDONESIA, KC OGOTUA",OPEN,ismail@posindonesia.co.id,Delivered,Queued,"02 Jun 2026, 04:35:17",2,[06] TOLI-TOLI
+e2d20a9c-1c32-42e2-a0cb-6567b585b199,"BUTOL RAYA NUSANTARA, PT",OPEN,butolrayanusantara@yahoo.com,Bounced,Bounced,"02 Jun 2026, 09:04:21",1,[06] TOLI-TOLI
+e2d20a9c-1c32-42e2-a0cb-6567b585b199,"BUTOL RAYA NUSANTARA, PT",OPEN,butolrayanusantara@yahoo.com,Bounced,Queued,"02 Jun 2026, 09:04:02",2,[06] TOLI-TOLI
+e6eac137-d1d8-4ad2-aa40-f07d1f344fae,"KALANDA, PT",OPEN,-,-,-,-,0,[06] TOLI-TOLI
+4db15ad0-989b-4efc-8768-037436d1b174,"MANDALA MULTIFINANCE, PT KC TOLITOLI",OPEN,-,-,-,-,0,[06] TOLI-TOLI
+90663845-cac4-4dc1-82e4-80e9370cca89,BANK BTPN,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+02047edf-6edf-4e25-81bb-2cb3c5d3cd7f,BANK BRI UNIT BAOLAN,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+a93928ca-d5bc-4efb-aed0-bb2ae216bf58,BANK DANAMON INDONESIA,OPEN,julniatin.rundulemo@gmail.com,Delivered,Delivered,"02 Jun 2026, 05:43:54",1,[06] TOLI-TOLI
+a93928ca-d5bc-4efb-aed0-bb2ae216bf58,BANK DANAMON INDONESIA,OPEN,julniatin.rundulemo@gmail.com,Delivered,Queued,"02 Jun 2026, 05:43:50",2,[06] TOLI-TOLI
+6dbb7ca2-846d-452d-8d01-3cda5de5a2a1,"BFI FINANCE INDONESIA, PT",OPEN,bfi834001@bfi.co.id,Delivered,Delivered,"02 Jun 2026, 02:42:03",1,[06] TOLI-TOLI
+6dbb7ca2-846d-452d-8d01-3cda5de5a2a1,"BFI FINANCE INDONESIA, PT",OPEN,bfi834001@bfi.co.id,Delivered,Queued,"02 Jun 2026, 02:42:03",2,[06] TOLI-TOLI
+666eae12-30bb-426a-85c1-e8e4dcaf9c34,"MERATUS LINE, PT CABANG TOLITOLI",OPEN,warsini.warsini@meratusline.com,Clicked,Clicked,"02 Jun 2026, 11:40:40",1,[06] TOLI-TOLI
+666eae12-30bb-426a-85c1-e8e4dcaf9c34,"MERATUS LINE, PT CABANG TOLITOLI",OPEN,warsini.warsini@meratusline.com,Clicked,Clicked,"02 Jun 2026, 11:40:29",2,[06] TOLI-TOLI
+666eae12-30bb-426a-85c1-e8e4dcaf9c34,"MERATUS LINE, PT CABANG TOLITOLI",OPEN,warsini.warsini@meratusline.com,Clicked,Opened,"02 Jun 2026, 11:39:50",3,[06] TOLI-TOLI
+666eae12-30bb-426a-85c1-e8e4dcaf9c34,"MERATUS LINE, PT CABANG TOLITOLI",OPEN,warsini.warsini@meratusline.com,Clicked,Delivered,"02 Jun 2026, 11:39:42",4,[06] TOLI-TOLI
+666eae12-30bb-426a-85c1-e8e4dcaf9c34,"MERATUS LINE, PT CABANG TOLITOLI",OPEN,warsini.warsini@meratusline.com,Clicked,Queued,"02 Jun 2026, 11:39:42",5,[06] TOLI-TOLI
+8b970654-335e-411a-9d83-4d6b320e9112,PUTRI TUNGGAL TOLIS,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+52d65a6c-ac1c-426e-afe8-6ff0ff2560db,"SAMAS TOLITOLI, pt",OPEN,-,-,-,-,0,[06] TOLI-TOLI
+bc54b8c8-c190-4e7f-bfcb-fb344217f566,PT MANDALA MULTIFINANCE <AZIIZ GALIH RUMEKSO>,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+2b317579-3e25-4991-9f09-3eb4e4a69a8d,MAKTO JAYA PT,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Delivered,"02 Jun 2026, 11:38:52",1,[06] TOLI-TOLI
+5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Opened,"02 Jun 2026, 11:38:32",2,[06] TOLI-TOLI
+5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Queued,"02 Jun 2026, 11:38:23",3,[06] TOLI-TOLI
+b5e0a999-5851-4468-bda4-3db82c565f20,INTI KARYA VANAME,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+709f7f2f-1c31-49fa-94e5-d68aac8d7cf1,"FAJAR INDAH KUSUMA, PT",OPEN,-,-,-,-,0,[06] TOLI-TOLI
+747727b1-bca2-46f5-a9e2-488558593617,"BUSSAN AUTO FINANCE (BAF), PT KC TOLITOLI",OPEN,luijius123@gmail.com,Delivered,Delivered,"02 Jun 2026, 02:57:27",1,[06] TOLI-TOLI
+747727b1-bca2-46f5-a9e2-488558593617,"BUSSAN AUTO FINANCE (BAF), PT KC TOLITOLI",OPEN,luijius123@gmail.com,Delivered,Queued,"02 Jun 2026, 02:57:23",2,[06] TOLI-TOLI
+40811c0e-42fd-4cfc-9b07-5e2243a8cd42,"GUNUNG SOJOL, FIRMA",OPEN,-,-,-,-,0,[06] TOLI-TOLI
+bc4e2456-2a4a-48fb-b639-c830169d6d3a,PABRIK KELAPA SAWIT PT CITRA MULIA PERKASA,OPEN,hrdcmpten2024@gmail.com,Delivered,Delivered,"02 Jun 2026, 11:46:07",1,[06] TOLI-TOLI
+bc4e2456-2a4a-48fb-b639-c830169d6d3a,PABRIK KELAPA SAWIT PT CITRA MULIA PERKASA,OPEN,hrdcmpten2024@gmail.com,Delivered,Queued,"02 Jun 2026, 11:46:04",2,[06] TOLI-TOLI
+b333a9fd-f8af-45da-855f-be3e1133f42d,"mitra sepadan finance, pt cabang Tolitoli <SMS finance>  <Arif usumayadi >",OPEN,-,-,-,-,0,[06] TOLI-TOLI
+5fa4cc88-422c-4143-86a0-bc744e08b4c7,"SUMBER CIPTA MULTI NIAGA, PT",OPEN,-,-,-,-,0,[06] TOLI-TOLI
+35d10422-e533-4934-8054-419bedcfc0fb,"CELINDO CEMERLANG, CV",OPEN,-,-,-,-,0,[06] TOLI-TOLI
+328274c1-1c9a-4803-98c0-72c1bed26664,BANK BRI UNIT TAMBUN,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+11fd6f69-871d-4258-81f6-e2145ee9f73a,BANK PEREKONOMIAN RAKYAT (BPR) MODERN EXPRESS CABANG TOLTIOLI,OPEN,kc.tolitoli@bprpalulokadanautama.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:01:19",1,[06] TOLI-TOLI
+11fd6f69-871d-4258-81f6-e2145ee9f73a,BANK PEREKONOMIAN RAKYAT (BPR) MODERN EXPRESS CABANG TOLTIOLI,OPEN,kc.tolitoli@bprpalulokadanautama.com,Permanent_fail,Bounced,"01 Jun 2026, 23:16:31",2,[06] TOLI-TOLI
+11fd6f69-871d-4258-81f6-e2145ee9f73a,BANK PEREKONOMIAN RAKYAT (BPR) MODERN EXPRESS CABANG TOLTIOLI,OPEN,kc.tolitoli@bprpalulokadanautama.com,Permanent_fail,Queued,"01 Jun 2026, 23:16:27",3,[06] TOLI-TOLI
+3a3d83de-f8ab-4c1e-b883-a6e93692354f,"KHALIFAH, PT",OPEN,lank.ghilank83@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:15:01",1,[06] TOLI-TOLI
+3a3d83de-f8ab-4c1e-b883-a6e93692354f,"KHALIFAH, PT",OPEN,lank.ghilank83@gmail.com,Delivered,Queued,"09 Jun 2026, 11:14:50",2,[06] TOLI-TOLI
+3a3d83de-f8ab-4c1e-b883-a6e93692354f,"KHALIFAH, PT",OPEN,lank.ghilank83@gmail.com,Delivered,Delivered,"02 Jun 2026, 11:32:49",3,[06] TOLI-TOLI
+3a3d83de-f8ab-4c1e-b883-a6e93692354f,"KHALIFAH, PT",OPEN,lank.ghilank83@gmail.com,Delivered,Queued,"02 Jun 2026, 11:32:49",4,[06] TOLI-TOLI
 15dc8f43-088b-4013-b635-fba38279ab5d,BANK MANDIRI UNIT SONI,OPEN,tolitolisoni@bankmandiri.co.id,Delivered,Queued,"09 Jun 2026, 11:02:11",1,[06] TOLI-TOLI
 15dc8f43-088b-4013-b635-fba38279ab5d,BANK MANDIRI UNIT SONI,OPEN,tolitolisoni@bankmandiri.co.id,Delivered,Delivered,"09 Jun 2026, 11:02:08",2,[06] TOLI-TOLI
 15dc8f43-088b-4013-b635-fba38279ab5d,BANK MANDIRI UNIT SONI,OPEN,tolitolisoni@bankmandiri.co.id,Delivered,Delivered,"02 Jun 2026, 11:25:33",3,[06] TOLI-TOLI
 15dc8f43-088b-4013-b635-fba38279ab5d,BANK MANDIRI UNIT SONI,OPEN,tolitolisoni@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 11:25:22",4,[06] TOLI-TOLI
-bc54b8c8-c190-4e7f-bfcb-fb344217f566,PT MANDALA MULTIFINANCE <AZIIZ GALIH RUMEKSO>,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-bf59ad9c-5369-4438-bd8a-f72ddffaa938,BANK SULTENG UNIT SONI,OPEN,febrialdin.rial@yahoo.co.id,Bounced,Bounced,"02 Jun 2026, 07:00:54",1,[06] TOLI-TOLI
-bf59ad9c-5369-4438-bd8a-f72ddffaa938,BANK SULTENG UNIT SONI,OPEN,febrialdin.rial@yahoo.co.id,Bounced,Queued,"02 Jun 2026, 07:00:24",2,[06] TOLI-TOLI
-66646917-ee20-47c0-921d-70826ed7aa69,BANDARA SULTAN BANTILAN,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-0435f1c6-149a-4ecc-b720-51a54e445ab1,"WINGS ABADI, PT",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+74480f18-7928-403a-b016-ea2556e1f0ad,"PT. POS INDONESIA, KANTOR POS GALANG",OPEN,-,-,-,-,0,[06] TOLI-TOLI
+d8e40686-a2a8-4e55-b967-671e032fe3cc,BANK BRI UNIT BANGKIR,OPEN,-,-,-,-,0,[06] TOLI-TOLI
+3c454286-f2b3-4315-8d1e-a76c7d6e585b,RUMAH SAKIT UMUM DAERAH MOKOPIDO,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 00df1671-c389-48b7-81ce-303adae27900,PERTAMINA PATRA NIAGA,SUBMITTED RESPONDENT,patra.luwuk@outlook.com,Delivered,Delivered,"02 Jun 2026, 05:19:34",1,[06] TOLI-TOLI
 00df1671-c389-48b7-81ce-303adae27900,PERTAMINA PATRA NIAGA,SUBMITTED RESPONDENT,patra.luwuk@outlook.com,Delivered,Queued,"02 Jun 2026, 05:19:21",2,[06] TOLI-TOLI
-437ee7b1-e593-4303-9b5b-fc42b75bc96d,UNIVERSITAS MADAKO,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-3c454286-f2b3-4315-8d1e-a76c7d6e585b,RUMAH SAKIT UMUM DAERAH MOKOPIDO,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+a2a88b85-7f0e-4a07-b893-84111bc57ebe,"KANTOR POS INDONESIA, PT PERSERO",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+fef6fb4d-fb8e-447e-b13f-8e46e0835031,"FEDERAL INTERNATIONAL FINANCE, PT",SUBMITTED RESPONDENT,-,-,-,-,0,[06] TOLI-TOLI
+0a21ab4f-dd3d-4de6-99e9-d1898a2938a3,"PERUSAHAAN LISTRIK NEGARA, PT PERSERO",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+00f8e56c-dbc6-4b70-b24a-05a7d48c9fc8,BANK SULTENG KANTOR CABANG TOLTIOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,Clicked,Clicked,"27 May 2026, 13:55:25",1,[06] TOLI-TOLI
 ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,Clicked,Clicked,"27 May 2026, 13:55:13",2,[06] TOLI-TOLI
 ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,Clicked,Clicked,"27 May 2026, 13:54:25",3,[06] TOLI-TOLI
@@ -1253,13 +1241,12 @@ ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOL
 ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,Clicked,Delivered,"26 May 2026, 14:28:01",33,[06] TOLI-TOLI
 ae83dca7-1926-4093-b6f6-a8c775c9d5b0,BANK RAKYAT INDONESIA KANTOR CABANG TOLITOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,Clicked,Queued,"26 May 2026, 14:27:58",34,[06] TOLI-TOLI
 2e25a43d-7232-4905-bbb0-0b5cf6afbff0,"BANK MANDIRI, PT PERSERO TBK",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-0d524a26-c584-4626-8821-41daa1ad4cde,"BANK NEGARA INDONESIA, PT PERSERO TBK",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-00f8e56c-dbc6-4b70-b24a-05a7d48c9fc8,BANK SULTENG KANTOR CABANG TOLTIOLI,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+437ee7b1-e593-4303-9b5b-fc42b75bc96d,UNIVERSITAS MADAKO,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 5280a68f-c125-4a4f-bb24-84fa65395703,"ADIRA DINAMIKA MULTI FINANCE, PT TBK",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 0e29c75e-22ad-4380-bda0-55c8fbdceb06,"BANK SYARIAH INDONESIA, PT PERSERO TBK",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-fef6fb4d-fb8e-447e-b13f-8e46e0835031,"FEDERAL INTERNATIONAL FINANCE, PT",SUBMITTED RESPONDENT,-,-,-,-,0,[06] TOLI-TOLI
-a2a88b85-7f0e-4a07-b893-84111bc57ebe,"KANTOR POS INDONESIA, PT PERSERO",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
-0a21ab4f-dd3d-4de6-99e9-d1898a2938a3,"PERUSAHAAN LISTRIK NEGARA, PT PERSERO",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+0d524a26-c584-4626-8821-41daa1ad4cde,"BANK NEGARA INDONESIA, PT PERSERO TBK",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+66646917-ee20-47c0-921d-70826ed7aa69,BANDARA SULTAN BANTILAN,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
+0435f1c6-149a-4ecc-b720-51a54e445ab1,"WINGS ABADI, PT",SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 a9979a0c-403c-4acf-bb30-3023bbfba8b5,BANK PEREKONOMIAN RAKYAT MODERN EXPRESS,DRAFT,fandhymadjid96@gmail.com,Bounced,Clicked,"20 May 2026, 14:15:07",1,[07] BUOL
 a9979a0c-403c-4acf-bb30-3023bbfba8b5,BANK PEREKONOMIAN RAKYAT MODERN EXPRESS,DRAFT,fandhymadjid96@gmail.com,Bounced,Clicked,"20 May 2026, 14:14:58",2,[07] BUOL
 a9979a0c-403c-4acf-bb30-3023bbfba8b5,BANK PEREKONOMIAN RAKYAT MODERN EXPRESS,DRAFT,fandhymadjid96@gmail.com,Bounced,Opened,"20 May 2026, 14:14:51",3,[07] BUOL
@@ -1396,6 +1383,7 @@ aefc6985-5ca2-4729-807b-4e37c83d7b27,"BANK SULAWESI TENGAH, PT",SUBMITTED RESPON
 aefc6985-5ca2-4729-807b-4e37c83d7b27,"BANK SULAWESI TENGAH, PT",SUBMITTED RESPONDENT,banksulteng.buol@yahoo.co.id,Clicked,Opened,"05 Jun 2026, 15:11:26",9,[07] BUOL
 aefc6985-5ca2-4729-807b-4e37c83d7b27,"BANK SULAWESI TENGAH, PT",SUBMITTED RESPONDENT,banksulteng.buol@yahoo.co.id,Clicked,Queued,"05 Jun 2026, 09:30:40",10,[07] BUOL
 aefc6985-5ca2-4729-807b-4e37c83d7b27,"BANK SULAWESI TENGAH, PT",SUBMITTED RESPONDENT,banksulteng.buol@yahoo.co.id,Clicked,Delivered,"05 Jun 2026, 09:30:40",11,[07] BUOL
+6b4f842e-cbcf-4a55-a70e-cfac8126d236,PT Pegadaian Persero UPC KOTARAYA,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 456c29d8-19b8-4fb6-a0c7-59e5e23edd92,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Moutong",OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 8a32e430-23b2-46ff-8b68-7dd7afb33862,BANK SULTENG,OPEN,banksultengposo@mailnesia.com,Permanent_fail,Permanent_fail,"02 Jun 2026, 06:02:51",1,[08] PARIGI MOUTONG
 8a32e430-23b2-46ff-8b68-7dd7afb33862,BANK SULTENG,OPEN,kaslambunu@yahoo.co.id,Bounced,Bounced,"02 Jun 2026, 04:02:15",1,[08] PARIGI MOUTONG
@@ -1494,7 +1482,6 @@ c5b92842-2479-4459-9185-538b7b443f92,BANK BNI PARIGI UNIT KUR,OPEN,nigustiayutas
 5aac7959-5c27-489b-a9dc-ffa53a25291b,"SAHABAT TANI, TOKO",OPEN,sonnykandou80@gmail.com,Bounced,Queued,"02 Jun 2026, 02:01:57",2,[08] PARIGI MOUTONG
 dfaa5d74-5f0a-4cef-8e31-b25d06082b6a,BRI UNIT SAUSU PT,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 fb7cb7e9-fe35-4484-99ff-fbc3ab6ca709,BPR BINARTA LUHUR,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
-6b4f842e-cbcf-4a55-a70e-cfac8126d236,PT Pegadaian Persero UPC KOTARAYA,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 839c5b46-1047-43c5-803c-7705ecd7519a,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Sausu",OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 afbd929f-ce57-4a46-a4e8-74a2d34363bd,"BANK PEMBANGUNAN DAERAH SULAWESI TENGAH, PT",SUBMITTED RESPONDENT,banksulteng.ampana@yahoo.co.id,Opened,Opened,"10 Jun 2026, 10:10:38",1,[09] TOJO UNA-UNA
 afbd929f-ce57-4a46-a4e8-74a2d34363bd,"BANK PEMBANGUNAN DAERAH SULAWESI TENGAH, PT",SUBMITTED RESPONDENT,banksulteng.ampana@yahoo.co.id,Opened,Queued,"10 Jun 2026, 04:54:31",2,[09] TOJO UNA-UNA

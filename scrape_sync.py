@@ -59,19 +59,29 @@ async def scrape_sync_data():
         
         # Cari tab aktif dashboard atau buka baru
         page = None
+        is_new_page = False
         for p_page in context.pages:
-            if "fasih-dashboard.bps.go.id" in p_page.url:
-                page = p_page
-                break
+            try:
+                if not p_page.is_closed() and "fasih-dashboard.bps.go.id" in p_page.url:
+                    page = p_page
+                    break
+            except Exception:
+                pass
         
         if not page:
             page = await context.new_page()
+            is_new_page = True
             try:
                 await page.goto("https://fasih-dashboard.bps.go.id/superset/dashboard/se2026/", timeout=60000, wait_until="domcontentloaded")
             except Exception as e:
                 print(f"[WARNING] Navigasi lambat/timeout: {e}")
         
-        print(f"[INFO] Halaman aktif BPS Dashboard URL: {page.url}")
+        current_url = ""
+        try:
+            current_url = page.url
+        except Exception:
+            pass
+        print(f"[INFO] Halaman aktif BPS Dashboard URL: {current_url}")
         
         # Pantau status login
         for _ in range(5):
@@ -204,8 +214,17 @@ async def scrape_sync_data():
             except Exception as e:
                 print(f"Gagal mengunggah ke Supabase: {e}")
 
+        if page and is_new_page:
+            try:
+                await page.close()
+            except Exception:
+                pass
+                
         if browser:
-            await browser.close()
+            try:
+                await browser.disconnect()
+            except Exception:
+                pass
 
 async def main():
     while True:

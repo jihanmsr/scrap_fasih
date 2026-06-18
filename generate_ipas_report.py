@@ -104,7 +104,20 @@ async def get_authenticated_context(p):
             try:
                 browser = await p.chromium.connect_over_cdp(f"http://127.0.0.1:{port}")
                 context = browser.contexts[0] if browser.contexts else browser.new_context()
-                page = context.pages[0] if context.pages else context.new_page()
+                
+                # Cari page yang tidak closed
+                page = None
+                if context.pages:
+                    for p_page in context.pages:
+                        try:
+                            if not p_page.is_closed():
+                                page = p_page
+                                break
+                        except Exception:
+                            pass
+                if page is None:
+                    page = await context.new_page()
+                    
                 print(f"[INFO] Berhasil tersambung ke browser via CDP di port {port}.")
                 break
             except Exception as e:
@@ -236,14 +249,34 @@ async def generate_report():
             return
 
         # Cari tab aktif yang sudah membuka fasih-sm
+        active_page = None
         for p_page in context.pages:
-            if "fasih-sm.bps.go.id" in p_page.url:
-                page = p_page
-                print(f"Menemukan tab aktif FASIH: {page.url}")
-                break
+            try:
+                if not p_page.is_closed() and "fasih-sm.bps.go.id" in p_page.url:
+                    active_page = p_page
+                    print(f"Menemukan tab aktif FASIH: {p_page.url}")
+                    break
+            except Exception:
+                pass
         
-        if "fasih-sm.bps.go.id" not in page.url:
-            print(f"Tab FASIH tidak aktif (URL saat ini: {page.url}). Navigasi...")
+        if active_page:
+            page = active_page
+        else:
+            try:
+                if page.is_closed():
+                    page = await context.new_page()
+            except Exception:
+                page = await context.new_page()
+                
+        # Periksa ulang url page saat ini secara aman
+        current_url = ""
+        try:
+            current_url = page.url
+        except Exception:
+            pass
+            
+        if "fasih-sm.bps.go.id" not in current_url:
+            print(f"Tab FASIH tidak aktif (URL saat ini: {current_url}). Navigasi...")
             try:
                 await page.goto("https://fasih-sm.bps.go.id/app/dashboard", timeout=60000, wait_until="domcontentloaded")
             except Exception as e:
@@ -798,6 +831,19 @@ async def generate_report():
                     if res_two.data:
                         two_days_ago_snapshot = res_two.data[0].get("value")
                         print(f"  [SUPABASE] Menemukan snapshot 2 hari lalu ({two_days_ago_str}) untuk {survey_key}")
+                    else:
+                        # Coba cari snapshot yang lebih lama (H-3, H-4) sebagai pengganti H-2
+                        for fallback_offset in [3, 4, 5]:
+                            fallback_date = today - datetime.timedelta(days=fallback_offset)
+                            fallback_str = fallback_date.strftime("%Y-%m-%d")
+                            try:
+                                res_fb = supabase.table("dashboard_store").select("value").eq("key", f"ipas_data:{fallback_str}").execute()
+                                if res_fb.data:
+                                    two_days_ago_snapshot = res_fb.data[0].get("value")
+                                    print(f"  [SUPABASE] H-2 tidak ada. Menggunakan snapshot H-{fallback_offset} ({fallback_str}) sebagai fallback H-2")
+                                    break
+                            except Exception:
+                                pass
                 except Exception as e:
                     print(f"  [SUPABASE] Gagal mengambil snapshot 2 hari lalu: {e}")
 
@@ -828,26 +874,27 @@ async def generate_report():
                             kec_s["yesterday_completed_breakdown"] = y_kec.get("today_completed_breakdown", {})
                     
                     if not t_kab:
-                        has_two_days_ago_snapshot = True
-                        report_data[kab_name]["two_days_ago_completed"] = y_kab.get("yesterday_completed", 0)
-                        report_data[kab_name]["two_days_ago_completed_breakdown"] = y_kab.get("yesterday_completed_breakdown", {})
+                        # Tidak ada snapshot H-2 langsung — biarkan dateModified counting yang akan hitung H-2
+                        # Jangan set has_two_days_ago_snapshot = True agar loop dateModified tetap berjalan
+                        # Hanya pre-seed dengan nilai dari yesterday snapshot jika ada (sebagai nilai minimum)
+                        # Nilai ini akan di-overwrite oleh dateModified counting jika lebih besar
+                        report_data[kab_name]["two_days_ago_is_estimate"] = True
                         
                         for kec_s in report_data[kab_name]["kecamatan_list"]:
-                            y_kec = next((x for x in y_kab.get("kecamatan_list", []) if x.get("kec_id") == kec_s["kec_id"] or x.get("kec_name") == kec_s["kec_name"]), None)
-                            if y_kec:
-                                kec_s["two_days_ago_completed"] = y_kec.get("yesterday_completed", 0)
-                                kec_s["two_days_ago_completed_breakdown"] = y_kec.get("yesterday_completed_breakdown", {})
+                            kec_s["two_days_ago_is_estimate"] = True
                                 
                 if t_kab:
                     has_two_days_ago_snapshot = True
                     report_data[kab_name]["two_days_ago_completed"] = t_kab.get("today_completed", 0)
                     report_data[kab_name]["two_days_ago_completed_breakdown"] = t_kab.get("today_completed_breakdown", {})
+                    report_data[kab_name]["two_days_ago_is_estimate"] = False
                     
                     for kec_s in report_data[kab_name]["kecamatan_list"]:
                         t_kec = next((x for x in t_kab.get("kecamatan_list", []) if x.get("kec_id") == kec_s["kec_id"] or x.get("kec_name") == kec_s["kec_name"]), None)
                         if t_kec:
                             kec_s["two_days_ago_completed"] = t_kec.get("today_completed", 0)
                             kec_s["two_days_ago_completed_breakdown"] = t_kec.get("today_completed_breakdown", {})
+                            kec_s["two_days_ago_is_estimate"] = False  
             
             # 3. Calculate daily progress from timestamps
             print("Mengolah riwayat tanggal dan mengelompokkan ke Kabupaten & Kecamatan...")
@@ -1067,6 +1114,7 @@ async def generate_report():
                     "today_completed": stats["today_completed"],
                     "yesterday_completed": stats["yesterday_completed"],
                     "two_days_ago_completed": stats["two_days_ago_completed"],
+                    "two_days_ago_is_estimate": stats.get("two_days_ago_is_estimate", False),
                     "today_completed_breakdown": stats.get("today_completed_breakdown", {}),
                     "yesterday_completed_breakdown": stats.get("yesterday_completed_breakdown", {}),
                     "two_days_ago_completed_breakdown": stats.get("two_days_ago_completed_breakdown", {}),

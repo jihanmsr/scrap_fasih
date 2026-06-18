@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="dark" lang="id">
+<html data-theme="light" lang="id">
 
 <head>
     <meta charset="utf-8" />
@@ -425,11 +425,18 @@
                 <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
                     <div
                         style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
-                        <h3
+                        <h3 id="se_umum-table-title"
                             style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">
                             Rincian per Kabupaten/Kota</h3>
                         
                         <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                            <!-- View Level Selector -->
+                            <select class="sort-select" id="se_umum-view-level" onchange="renderSeDashboard('se_umum')" style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--primary); background: rgba(99,102,241,0.08) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236366f1%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 165px;">
+                                <option value="kabupaten">🏙 Per Kabupaten/Kota</option>
+                                <option value="kecamatan">🏘 Per Kecamatan</option>
+                                <option value="petugas">👤 Per Petugas</option>
+                            </select>
+
                             <!-- Dropdown Filter Capaian -->
                             <select class="sort-select" id="se_umum-capaian-filter" onchange="renderSeDashboard('se_umum')" style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--text-primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 150px;">
                                 <option value="all">Semua Capaian</option>
@@ -438,12 +445,14 @@
                                 <option value="low">Capaian Rendah (< 50%)</option>
                             </select>
 
-                            <button class="btn-action" onclick="expandAllKabs('se_umum')" style="height: 38px; padding: 0 0.85rem; font-size: 0.8rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
-                                📂 Expand Semua
-                            </button>
-                            <button class="btn-action" onclick="collapseAllKabs('se_umum')" style="height: 38px; padding: 0 0.85rem; font-size: 0.8rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
-                                📁 Collapse Semua
-                            </button>
+                            <span id="se_umum-expand-collapse-btns">
+                                <button class="btn-action" onclick="expandAllKabs('se_umum')" style="height: 38px; padding: 0 0.85rem; font-size: 0.8rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                    📂 Expand Semua
+                                </button>
+                                <button class="btn-action" onclick="collapseAllKabs('se_umum')" style="height: 38px; padding: 0 0.85rem; font-size: 0.8rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                    📁 Collapse Semua
+                                </button>
+                            </span>
 
                             <div class="search-wrapper" style="max-width: 250px; width: 100%; margin: 0;">
                                 <svg class="search-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"
@@ -451,7 +460,7 @@
                                     <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round"
                                         stroke-linejoin="round" stroke-width="2.5"></path>
                                 </svg>
-                                <input class="search-input" id="se_umum-search-input" placeholder="Cari kab/kec..."
+                                <input class="search-input" id="se_umum-search-input" placeholder="Cari kab/kec/petugas..."
                                     type="text" style="height: 38px;" />
                             </div>
                         </div>
@@ -584,11 +593,18 @@
                 <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
                     <div
                         style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; width: 100%;">
-                        <h3
+                        <h3 id="se_ub-table-title"
                             style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">
                             Rincian per Kabupaten/Kota</h3>
                         
                         <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                            <!-- View Level Selector -->
+                            <select class="sort-select" id="se_ub-view-level" onchange="renderSeDashboard('se_ub')" style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--primary); background: rgba(99,102,241,0.08) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236366f1%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 165px;">
+                                <option value="kabupaten">🏙 Per Kabupaten/Kota</option>
+                                <option value="kecamatan">🏘 Per Kecamatan</option>
+                                <option value="petugas">👤 Per Petugas</option>
+                            </select>
+
                             <!-- Dropdown Filter Capaian -->
                             <select class="sort-select" id="se_ub-capaian-filter" onchange="renderSeDashboard('se_ub')" style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--text-primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 150px;">
                                 <option value="all">Semua Capaian</option>
@@ -597,12 +613,14 @@
                                 <option value="low">Capaian Rendah (< 50%)</option>
                             </select>
 
-                            <button class="btn-action" onclick="expandAllKabs('se_ub')" style="height: 38px; padding: 0 0.85rem; font-size: 0.8rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
-                                📂 Expand Semua
-                            </button>
-                            <button class="btn-action" onclick="collapseAllKabs('se_ub')" style="height: 38px; padding: 0 0.85rem; font-size: 0.8rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
-                                📁 Collapse Semua
-                            </button>
+                            <span id="se_ub-expand-collapse-btns">
+                                <button class="btn-action" onclick="expandAllKabs('se_ub')" style="height: 38px; padding: 0 0.85rem; font-size: 0.8rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                    📂 Expand Semua
+                                </button>
+                                <button class="btn-action" onclick="collapseAllKabs('se_ub')" style="height: 38px; padding: 0 0.85rem; font-size: 0.8rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                    📁 Collapse Semua
+                                </button>
+                            </span>
 
                             <div class="search-wrapper" style="max-width: 250px; width: 100%; margin: 0;">
                                 <svg class="search-icon" fill="none" stroke="currentColor" viewbox="0 0 24 24"
@@ -610,7 +628,7 @@
                                     <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round"
                                         stroke-linejoin="round" stroke-width="2.5"></path>
                                 </svg>
-                                <input class="search-input" id="se_ub-search-input" placeholder="Cari kab/kec..."
+                                <input class="search-input" id="se_ub-search-input" placeholder="Cari kab/kec/petugas..."
                                     type="text" style="height: 38px;" />
                             </div>
                         </div>

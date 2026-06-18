@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Theme Switcher Setup
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedTheme = localStorage.getItem('theme') || 'light';
     htmlElement.setAttribute('data-theme', savedTheme);
 
     themeToggleBtn.addEventListener('click', () => {
@@ -928,9 +928,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Format helper
         const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
 
-        const getDailyProgressCellHTML = (count, breakdown, headerTitle) => {
+        const getDailyProgressCellHTML = (count, breakdown, headerTitle, isEstimate) => {
             if (!count || count <= 0) return `<span>0</span>`;
             
+            const estimatePrefix = isEstimate ? `<span title="Data estimasi — snapshot H-2 tidak tersedia" style="color:#f59e0b;font-weight:800;cursor:help;margin-right:2px;">~</span>` : '';
             const itemsHTML = Object.entries(breakdown || {})
                 .map(([status, val]) => `
                     <div class="popover-item">
@@ -941,10 +942,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 
             return `
                 <div class="daily-progress-wrapper">
-                    <span>${formatNum(count)}</span>
+                    <span>${estimatePrefix}${formatNum(count)}</span>
                     <span class="daily-dropdown-trigger" onclick="window.toggleDailyPopover(event, this)">▼</span>
                     <div class="daily-popover">
-                        <div class="popover-header">${headerTitle}</div>
+                        <div class="popover-header">${headerTitle}${isEstimate ? ' <span style="color:#f59e0b;font-size:0.7rem;">(estimasi)</span>' : ''}</div>
                         ${itemsHTML || '<div style="color: var(--text-secondary); font-size: 0.75rem;">Tidak ada detail status</div>'}
                     </div>
                 </div>
@@ -1140,7 +1141,222 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Render dynamic sorting headers
+        // Read view level selector
+        const viewLevel = document.getElementById(`${surveyType}-view-level`)?.value || 'kabupaten';
+
+        // Update title and toggle expand/collapse visibility
+        const tableTitleEl = document.getElementById(`${surveyType}-table-title`);
+        const expandCollapseEl = document.getElementById(`${surveyType}-expand-collapse-btns`);
+        if (tableTitleEl) {
+            const titles = { kabupaten: '🏙 Rincian per Kabupaten/Kota', kecamatan: '🏘 Rincian per Kecamatan', petugas: '👤 Rincian per Petugas' };
+            tableTitleEl.textContent = titles[viewLevel] || titles.kabupaten;
+        }
+        if (expandCollapseEl) {
+            expandCollapseEl.style.display = viewLevel === 'kabupaten' ? '' : 'none';
+        }
+
+        // Dispatch to specialized renderer
+        if (viewLevel === 'kecamatan') {
+            renderKecamatanFlatList();
+            return;
+        }
+        if (viewLevel === 'petugas') {
+            renderPetugasFlatList();
+            return;
+        }
+
+        // ===== KECAMATAN FLAT LIST RENDERER =====
+        function renderKecamatanFlatList() {
+            // Build flat list of all kecamatan from all kabupaten
+            const allKecs = [];
+            surveyData.forEach(kab => {
+                (kab.kecamatan_list || []).forEach(kec => {
+                    if (!kec.kec_name || kec.kec_name === '-') return;
+                    // Apply search filter
+                    if (searchVal && !kec.kec_name.toLowerCase().includes(searchVal) && !kab.kabupaten.toLowerCase().includes(searchVal)) return;
+                    // Apply capaian filter
+                    const pct = parseFloat(kec.persentase) || 0;
+                    if (capaianFilterVal === 'high' && pct < 80) return;
+                    if (capaianFilterVal === 'med' && (pct < 50 || pct >= 80)) return;
+                    if (capaianFilterVal === 'low' && pct >= 50) return;
+                    allKecs.push({ ...kec, kab_name: kab.kabupaten });
+                });
+            });
+
+            // Render kecamatan-specific headers
+            const table = document.querySelector(`#tab-content-${surveyType} .ipas-table`);
+            const thead = table?.querySelector('thead');
+            if (thead) {
+                thead.innerHTML = `
+                    <tr>
+                        <th style="font-family:'Outfit',sans-serif;">Kabupaten/Kota</th>
+                        <th style="font-family:'Outfit',sans-serif;">Kecamatan</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--text-secondary);">Total Target</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:#f59e0b;">Draft</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:#3b82f6;">Open</th>
+                        <th colspan="4" style="font-family:'Outfit',sans-serif;text-align:center;color:var(--color-delivered);border-bottom:1px solid var(--card-border);">Submitted (Selesai)</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:center;">% Capaian</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2"></th>
+                        <th colspan="3"></th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-delivered);font-size:0.8rem;padding:0.4rem 0.75rem;">Total</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-opened);font-size:0.8rem;padding:0.4rem 0.75rem;">Hari Ini</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:#f59e0b;font-size:0.8rem;padding:0.4rem 0.75rem;">Kemarin</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-clicked);font-size:0.8rem;padding:0.4rem 0.75rem;">H-2</th>
+                        <th></th>
+                    </tr>
+                `;
+            }
+
+            tbody.innerHTML = '';
+            if (allKecs.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:3rem 1rem;color:var(--text-secondary);">Tidak ada data kecamatan yang cocok.</td></tr>`;
+                return;
+            }
+
+            // Sort by kabupaten then kecamatan name by default
+            allKecs.sort((a, b) => a.kab_name.localeCompare(b.kab_name) || a.kec_name.localeCompare(b.kec_name));
+
+            allKecs.forEach(kec => {
+                const pct = parseFloat(kec.persentase) || 0;
+                let pctClass = '';
+                if (pct >= 80) pctClass = 'background-color:rgba(16,185,129,0.1);color:var(--color-delivered);border:1px solid rgba(16,185,129,0.3);';
+                else if (pct >= 50) pctClass = 'background-color:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.3);';
+                else pctClass = 'background-color:rgba(239,68,68,0.1);color:var(--color-bounced);border:1px solid rgba(239,68,68,0.3);';
+
+                const tdToday = getDailyProgressCellHTML(kec.today_completed, kec.today_completed_breakdown, 'HARI INI: KEC. ' + kec.kec_name);
+                const tdYesterday = getDailyProgressCellHTML(kec.yesterday_completed, kec.yesterday_completed_breakdown, 'KEMARIN: KEC. ' + kec.kec_name);
+                const isEstimate = kec.two_days_ago_is_estimate;
+                const tdTwoDays = getDailyProgressCellHTML(kec.two_days_ago_completed, kec.two_days_ago_completed_breakdown, 'H-2: KEC. ' + kec.kec_name, isEstimate);
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td style="font-size:0.8rem;color:var(--text-secondary);font-weight:600;">${kec.kab_name.replace(/\[\d+\] /, '')}</td>
+                    <td style="font-weight:600;color:var(--text-primary);">${kec.kec_name}</td>
+                    <td style="text-align:right;font-family:monospace;color:var(--text-secondary);">${formatNum(kec.total_prelist)}</td>
+                    <td style="text-align:right;font-family:monospace;color:#f59e0b;">${formatNum(kec.total_draft)}</td>
+                    <td style="text-align:right;font-family:monospace;color:#3b82f6;">${formatNum(kec.total_open)}</td>
+                    <td style="text-align:right;font-family:monospace;font-weight:700;color:var(--color-delivered);">${formatNum(kec.total_submitted)}</td>
+                    <td style="text-align:right;font-family:monospace;">${tdToday}</td>
+                    <td style="text-align:right;font-family:monospace;">${tdYesterday}</td>
+                    <td style="text-align:right;font-family:monospace;">${tdTwoDays}</td>
+                    <td style="text-align:center;">
+                        <span style="display:inline-block;padding:0.2rem 0.5rem;border-radius:0.5rem;font-size:0.75rem;font-weight:700;${pctClass}">${pct}%</span>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // ===== PETUGAS FLAT LIST RENDERER =====
+        function renderPetugasFlatList() {
+            const allPetugas = window.PETUGAS_DATA || [];
+            // Filter by active subtab survey type
+            const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+            const petugasFiltered = allPetugas.filter(p => {
+                if (!searchVal) return true;
+                return (p.username || '').toLowerCase().includes(searchVal) ||
+                       (p.email || '').toLowerCase().includes(searchVal) ||
+                       (p.roleName || '').toLowerCase().includes(searchVal) ||
+                       (p.regions || []).some(r => (r.regionName || '').toLowerCase().includes(searchVal));
+            });
+
+            // Render petugas-specific headers
+            const table = document.querySelector(`#tab-content-${surveyType} .ipas-table`);
+            const thead = table?.querySelector('thead');
+            if (thead) {
+                thead.innerHTML = `
+                    <tr>
+                        <th style="font-family:'Outfit',sans-serif;">Petugas</th>
+                        <th style="font-family:'Outfit',sans-serif;">Role</th>
+                        <th style="font-family:'Outfit',sans-serif;">Kabupaten</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;">Total HH</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;">Jumlah SLS</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;">Progres Pengerjaan</th>
+                    </tr>
+                `;
+            }
+
+            tbody.innerHTML = '';
+            if (petugasFiltered.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:3rem 1rem;color:var(--text-secondary);">Tidak ada petugas yang cocok dengan pencarian.</td></tr>`;
+                return;
+            }
+
+            // Sort by totalHH desc by default
+            petugasFiltered.sort((a, b) => (b.totalHH || 0) - (a.totalHH || 0));
+
+            const slsStatusMap = window.IPAS_DATA ? (window.IPAS_DATA[surveyType + '_sls_status'] || {}) : {};
+
+            petugasFiltered.forEach(officer => {
+                const kabSet = new Set();
+                (officer.regions || []).forEach(r => {
+                    const code = r.regionCode || '';
+                    if (code.length >= 4) kabSet.add(code.substring(0, 4));
+                });
+
+                // Hitung progres dari SLS yang ditugaskan
+                let totalSls = (officer.regions || []).length;
+                let completedSls = 0;
+                let totalTarget = 0;
+                let completedTarget = 0;
+                (officer.regions || []).forEach(reg => {
+                    const sls14 = (reg.regionCode || '').substring(0, 14);
+                    const slsData = slsStatusMap[sls14] || { target: {}, nontarget: {} };
+                    const targetCounts = slsData.target || {};
+                    const slsTotal = Object.values(targetCounts).reduce((s, v) => s + v, 0);
+                    totalTarget += slsTotal;
+                    const slsDone = Object.entries(targetCounts)
+                        .filter(([st]) => st !== 'OPEN' && st !== 'DRAFT')
+                        .reduce((s, [, v]) => s + v, 0);
+                    completedTarget += slsDone;
+                    if (slsDone > 0 && slsTotal > 0) completedSls++;
+                });
+
+                const progPct = totalTarget > 0 ? Math.min(100, Math.round((completedTarget / totalTarget) * 100)) : 0;
+                const progColor = progPct >= 80 ? '#10b981' : progPct >= 50 ? '#f59e0b' : '#ef4444';
+                const progBarStyle = `height:6px;border-radius:3px;background:rgba(255,255,255,0.1);overflow:hidden;margin-top:4px;`;
+                const progFillStyle = `height:100%;border-radius:3px;background:${progColor};width:${progPct}%;transition:width 0.5s;`;
+                const progHTML = `
+                    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;">
+                        <span style="font-size:0.75rem;font-weight:700;color:${progColor};">${completedTarget}/${totalTarget} (${progPct}%)</span>
+                        <div style="${progBarStyle}width:100px;"><div style="${progFillStyle}"></div></div>
+                        <span style="font-size:0.65rem;color:var(--text-muted);">${completedSls}/${totalSls} SLS selesai</span>
+                    </div>`;
+
+                const roleBgColor = officer.roleName === 'Pencacah' ? 'rgba(99,102,241,0.15)' : 'rgba(245,158,11,0.15)';
+                const roleTextColor = officer.roleName === 'Pencacah' ? 'var(--primary)' : '#f59e0b';
+
+                const kabCodes = [...kabSet];
+                const kabLabels = kabCodes.map(code => {
+                    const found = (window.IPAS_DATA?.[surveyType] || []).find(k => {
+                        const match = k.kabupaten.match(/\[(\d+)\]/);
+                        return match && ('72' + match[1]) === code;
+                    });
+                    return found ? found.kabupaten.replace(/\[\d+\] /, '') : code;
+                }).join(', ');
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td style="font-weight:600;color:var(--text-primary);">
+                        <div style="display:flex;align-items:center;gap:0.4rem;">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:14px;height:14px;color:var(--primary);opacity:0.7;" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+                            ${officer.username || officer.email || '-'}
+                        </div>
+                        <div style="font-size:0.7rem;color:var(--text-muted);">${officer.email || ''}</div>
+                    </td>
+                    <td><span style="font-size:0.75rem;padding:0.15rem 0.5rem;border-radius:0.35rem;background:${roleBgColor};color:${roleTextColor};font-weight:700;">${officer.roleName || '-'}</span></td>
+                    <td style="font-size:0.8rem;color:var(--text-secondary);">${kabLabels || '-'}</td>
+                    <td style="text-align:right;font-family:monospace;font-weight:600;">${formatNum(officer.totalHH || 0)}</td>
+                    <td style="text-align:right;font-family:monospace;color:var(--text-secondary);">${formatNum(totalSls)}</td>
+                    <td style="text-align:right;">${progHTML}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Render dynamic sorting headers (only for kabupaten view)
         window.renderSeTableHeaders(surveyType);
 
         if (filtered.length === 0) {
@@ -1249,7 +1465,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const tdToday = getDailyProgressCellHTML(item.today_completed, item.today_completed_breakdown, 'HARI INI: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
             const tdYesterday = getDailyProgressCellHTML(item.yesterday_completed, item.yesterday_completed_breakdown, 'KEMARIN: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
-            const tdTwoDays = getDailyProgressCellHTML(item.two_days_ago_completed, item.two_days_ago_completed_breakdown, 'H-2: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
+            const tdTwoDays = getDailyProgressCellHTML(item.two_days_ago_completed, item.two_days_ago_completed_breakdown, 'H-2: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''), item.two_days_ago_is_estimate);
 
             row.innerHTML = `
                 <td style="font-weight: 700; color: var(--text-primary);">

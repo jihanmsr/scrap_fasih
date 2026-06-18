@@ -1287,11 +1287,13 @@ body {
         border-right: none;
         border-bottom: 1px solid var(--card-border);
         padding: 1rem;
+        position: relative;
     }
 
     .sidebar .brand-title {
         margin-bottom: 1rem;
         text-align: center;
+        padding-right: 2.5rem;
     }
 
     .sidebar-nav {
@@ -1309,6 +1311,26 @@ body {
     }
 
     .sidebar-footer {
+        display: block !important;
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        border-top: none !important;
+        width: auto !important;
+        background: transparent !important;
+    }
+
+    .sidebar-footer > div {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        width: auto !important;
+        box-shadow: none !important;
+    }
+
+    .sidebar-footer span {
         display: none !important;
     }
 
