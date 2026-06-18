@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (companyTableWrapper) companyTableWrapper.style.display = isTable ? 'block' : 'none';
         if (companyListContainer) companyListContainer.style.display = isTable ? 'none' : 'flex';
         if (viewModeToggleBtn) {
-            viewModeToggleBtn.textContent = isTable ? '📇 Mode Kartu' : '📋 Mode Tabel';
+            viewModeToggleBtn.textContent = isTable ? 'Mode Kartu' : 'Mode Tabel';
         }
     }
 
