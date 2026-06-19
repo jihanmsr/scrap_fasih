@@ -341,6 +341,171 @@ window.EMAIL_DATA = [
     "kab_name": "[01] BANGGAI KEPULAUAN"
   },
   {
+    "code": "d1a74a9b-b5ba-45d6-b16b-10d09e1ac33a",
+    "company_name": "MUJUR PUTRA PERKASA",
+    "survey_status": "OPEN",
+    "email": "pt.mujurputraperkasa@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 08:04:45",
+    "order": 1,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "d1a74a9b-b5ba-45d6-b16b-10d09e1ac33a",
+    "company_name": "MUJUR PUTRA PERKASA",
+    "survey_status": "OPEN",
+    "email": "pt.mujurputraperkasa@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 08:04:44",
+    "order": 2,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "a236792e-99f7-464f-bc33-0f557c5d5e95",
+    "company_name": "PT PEGADAIAN PERSERO CABANG LUWUK",
+    "survey_status": "OPEN",
+    "email": "cpp.luwuk@pegadaian.co.id",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "02 Jun 2026, 12:37:54",
+    "order": 1,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "a236792e-99f7-464f-bc33-0f557c5d5e95",
+    "company_name": "PT PEGADAIAN PERSERO CABANG LUWUK",
+    "survey_status": "OPEN",
+    "email": "cpp.luwuk@pegadaian.co.id",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 05:21:46",
+    "order": 2,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "a236792e-99f7-464f-bc33-0f557c5d5e95",
+    "company_name": "PT PEGADAIAN PERSERO CABANG LUWUK",
+    "survey_status": "OPEN",
+    "email": "cpp.luwuk@pegadaian.co.id",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 05:21:43",
+    "order": 3,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "b4ee2897-afcd-405d-8fcd-569303e4101c",
+    "company_name": "PT Unilever Indonesia Tbk, Kantor Utama Luwuk",
+    "survey_status": "OPEN",
+    "email": "-",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "f62f2427-1d03-4451-a7cf-c19d32a39d58",
+    "company_name": "MIDI UTAMA INDONESIA, TBK",
+    "survey_status": "OPEN",
+    "email": "tax_staff.btg832001@btg.mu.co.id",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 10:10:33",
+    "order": 1,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "f62f2427-1d03-4451-a7cf-c19d32a39d58",
+    "company_name": "MIDI UTAMA INDONESIA, TBK",
+    "survey_status": "OPEN",
+    "email": "tax_staff.btg832001@btg.mu.co.id",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 10:10:33",
+    "order": 2,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
+    "company_name": "BANK PERKREDITAN RAKYAT PALU LOKADANA UTAMA",
+    "survey_status": "OPEN",
+    "email": "kc.luwuk@bprpalulokadanautama.com",
+    "global_status": "Bounced",
+    "status": "Bounced",
+    "timestamp": "02 Jun 2026, 07:38:30",
+    "order": 1,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
+    "company_name": "BANK PERKREDITAN RAKYAT PALU LOKADANA UTAMA",
+    "survey_status": "OPEN",
+    "email": "kc.luwuk@bprpalulokadanautama.com",
+    "global_status": "Bounced",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 07:38:27",
+    "order": 2,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
+    "company_name": "BANK PERKREDITAN RAKYAT PALU LOKADANA UTAMA",
+    "survey_status": "OPEN",
+    "email": "kc.morowali@bprpalulokadanautama.com",
+    "global_status": "Bounced",
+    "status": "Bounced",
+    "timestamp": "02 Jun 2026, 07:55:41",
+    "order": 1,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
+    "company_name": "BANK PERKREDITAN RAKYAT PALU LOKADANA UTAMA",
+    "survey_status": "OPEN",
+    "email": "kc.morowali@bprpalulokadanautama.com",
+    "global_status": "Bounced",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 07:55:37",
+    "order": 2,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "98d5ee28-3246-4a25-8cf6-6b289c7bf0f9",
+    "company_name": "BANK PAN INDONESIA, PT TBK KCP LUWUK",
+    "survey_status": "OPEN",
+    "email": "isti.triyati@panin.co.id",
+    "global_status": "-",
+    "status": "-",
+    "timestamp": "-",
+    "order": 0,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "e9dfb84f-5b4e-4237-9a61-151e41914f19",
+    "company_name": "SAMUDRA KARYA UTAMA",
+    "survey_status": "OPEN",
+    "email": "cvsamudrakaryautama@gmail.com",
+    "global_status": "Delivered",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 09:30:15",
+    "order": 1,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
+    "code": "e9dfb84f-5b4e-4237-9a61-151e41914f19",
+    "company_name": "SAMUDRA KARYA UTAMA",
+    "survey_status": "OPEN",
+    "email": "cvsamudrakaryautama@gmail.com",
+    "global_status": "Delivered",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 09:30:13",
+    "order": 2,
+    "kab_name": "[02] BANGGAI"
+  },
+  {
     "code": "7d569bd1-12be-4570-88fc-be9484dc1c5b",
     "company_name": "DHARMA REJEKI ABADI",
     "survey_status": "OPEN",
@@ -3399,28 +3564,6 @@ window.EMAIL_DATA = [
     "kab_name": "[02] BANGGAI"
   },
   {
-    "code": "e9dfb84f-5b4e-4237-9a61-151e41914f19",
-    "company_name": "SAMUDRA KARYA UTAMA",
-    "survey_status": "OPEN",
-    "email": "cvsamudrakaryautama@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 09:30:15",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "e9dfb84f-5b4e-4237-9a61-151e41914f19",
-    "company_name": "SAMUDRA KARYA UTAMA",
-    "survey_status": "OPEN",
-    "email": "cvsamudrakaryautama@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 09:30:13",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
     "code": "7710c5c4-813c-4584-a6cc-45ffe0fd0cda",
     "company_name": "BULAVA TIMUR",
     "survey_status": "OPEN",
@@ -3439,28 +3582,6 @@ window.EMAIL_DATA = [
     "global_status": "Delivered",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 03:07:31",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "f62f2427-1d03-4451-a7cf-c19d32a39d58",
-    "company_name": "MIDI UTAMA INDONESIA, TBK",
-    "survey_status": "OPEN",
-    "email": "tax_staff.btg832001@btg.mu.co.id",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 10:10:33",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "f62f2427-1d03-4451-a7cf-c19d32a39d58",
-    "company_name": "MIDI UTAMA INDONESIA, TBK",
-    "survey_status": "OPEN",
-    "email": "tax_staff.btg832001@btg.mu.co.id",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 10:10:33",
     "order": 2,
     "kab_name": "[02] BANGGAI"
   },
@@ -3608,28 +3729,6 @@ window.EMAIL_DATA = [
     "kab_name": "[02] BANGGAI"
   },
   {
-    "code": "d1a74a9b-b5ba-45d6-b16b-10d09e1ac33a",
-    "company_name": "MUJUR PUTRA PERKASA",
-    "survey_status": "OPEN",
-    "email": "pt.mujurputraperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 08:04:45",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "d1a74a9b-b5ba-45d6-b16b-10d09e1ac33a",
-    "company_name": "MUJUR PUTRA PERKASA",
-    "survey_status": "OPEN",
-    "email": "pt.mujurputraperkasa@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 08:04:44",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
     "code": "c2ac99c4-f061-4255-b738-8a4f1097f752",
     "company_name": "ARIEFANDA PUTRA BROTHERS",
     "survey_status": "OPEN",
@@ -3685,52 +3784,8 @@ window.EMAIL_DATA = [
     "kab_name": "[02] BANGGAI"
   },
   {
-    "code": "a236792e-99f7-464f-bc33-0f557c5d5e95",
-    "company_name": "PT PEGADAIAN PERSERO CABANG LUWUK",
-    "survey_status": "OPEN",
-    "email": "cpp.luwuk@pegadaian.co.id",
-    "global_status": "Opened",
-    "status": "Opened",
-    "timestamp": "02 Jun 2026, 12:37:54",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "a236792e-99f7-464f-bc33-0f557c5d5e95",
-    "company_name": "PT PEGADAIAN PERSERO CABANG LUWUK",
-    "survey_status": "OPEN",
-    "email": "cpp.luwuk@pegadaian.co.id",
-    "global_status": "Opened",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 05:21:46",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "a236792e-99f7-464f-bc33-0f557c5d5e95",
-    "company_name": "PT PEGADAIAN PERSERO CABANG LUWUK",
-    "survey_status": "OPEN",
-    "email": "cpp.luwuk@pegadaian.co.id",
-    "global_status": "Opened",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 05:21:43",
-    "order": 3,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
     "code": "d0c5c8e7-9145-429c-8ad6-69c9bbc4d96f",
     "company_name": "KPN RAHAMAT",
-    "survey_status": "OPEN",
-    "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "b4ee2897-afcd-405d-8fcd-569303e4101c",
-    "company_name": "PT Unilever Indonesia Tbk, Kantor Utama Luwuk",
     "survey_status": "OPEN",
     "email": "-",
     "global_status": "-",
@@ -3982,65 +4037,10 @@ window.EMAIL_DATA = [
     "kab_name": "[02] BANGGAI"
   },
   {
-    "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
-    "company_name": "BANK PERKREDITAN RAKYAT PALU LOKADANA UTAMA",
-    "survey_status": "OPEN",
-    "email": "kc.luwuk@bprpalulokadanautama.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 07:38:30",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
-    "company_name": "BANK PERKREDITAN RAKYAT PALU LOKADANA UTAMA",
-    "survey_status": "OPEN",
-    "email": "kc.luwuk@bprpalulokadanautama.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:38:27",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
-    "company_name": "BANK PERKREDITAN RAKYAT PALU LOKADANA UTAMA",
-    "survey_status": "OPEN",
-    "email": "kc.morowali@bprpalulokadanautama.com",
-    "global_status": "Bounced",
-    "status": "Bounced",
-    "timestamp": "02 Jun 2026, 07:55:41",
-    "order": 1,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "ca7ed898-5339-4d22-8a89-b89adc186705",
-    "company_name": "BANK PERKREDITAN RAKYAT PALU LOKADANA UTAMA",
-    "survey_status": "OPEN",
-    "email": "kc.morowali@bprpalulokadanautama.com",
-    "global_status": "Bounced",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 07:55:37",
-    "order": 2,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
     "code": "35033fc8-219b-4506-9c21-0afa5018439d",
     "company_name": "PT. BANK MEGA TBK, KANTOR CABANG LUWUK BANGGAI",
     "survey_status": "OPEN",
     "email": "-",
-    "global_status": "-",
-    "status": "-",
-    "timestamp": "-",
-    "order": 0,
-    "kab_name": "[02] BANGGAI"
-  },
-  {
-    "code": "98d5ee28-3246-4a25-8cf6-6b289c7bf0f9",
-    "company_name": "BANK PAN INDONESIA, PT TBK KCP LUWUK",
-    "survey_status": "OPEN",
-    "email": "isti.triyati@panin.co.id",
     "global_status": "-",
     "status": "-",
     "timestamp": "-",
@@ -4499,6 +4499,105 @@ window.EMAIL_DATA = [
     "kab_name": "[02] BANGGAI"
   },
   {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "DRAFT",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "19 Jun 2026, 08:46:47",
+    "order": 1,
+    "kab_name": "[03] MOROWALI"
+  },
+  {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "DRAFT",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "17 Jun 2026, 08:07:07",
+    "order": 2,
+    "kab_name": "[03] MOROWALI"
+  },
+  {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "DRAFT",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "15 Jun 2026, 08:34:01",
+    "order": 3,
+    "kab_name": "[03] MOROWALI"
+  },
+  {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "DRAFT",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "13 Jun 2026, 10:31:52",
+    "order": 4,
+    "kab_name": "[03] MOROWALI"
+  },
+  {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "DRAFT",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "11 Jun 2026, 17:35:28",
+    "order": 5,
+    "kab_name": "[03] MOROWALI"
+  },
+  {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "DRAFT",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "11 Jun 2026, 17:35:24",
+    "order": 6,
+    "kab_name": "[03] MOROWALI"
+  },
+  {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "DRAFT",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "09 Jun 2026, 11:15:42",
+    "order": 7,
+    "kab_name": "[03] MOROWALI"
+  },
+  {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "DRAFT",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 03:18:30",
+    "order": 8,
+    "kab_name": "[03] MOROWALI"
+  },
+  {
+    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
+    "company_name": "SUMBER MENTARI MOROWALI",
+    "survey_status": "DRAFT",
+    "email": "pt.sumbermentarimorowali@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "02 Jun 2026, 03:18:25",
+    "order": 9,
+    "kab_name": "[03] MOROWALI"
+  },
+  {
     "code": "5c7786b1-7b40-47d3-b356-dc74e874af79",
     "company_name": "CHINA EQUIPMENT RENTAL",
     "survey_status": "DRAFT",
@@ -4562,94 +4661,6 @@ window.EMAIL_DATA = [
     "status": "Delivered",
     "timestamp": "02 Jun 2026, 02:07:11",
     "order": 6,
-    "kab_name": "[03] MOROWALI"
-  },
-  {
-    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
-    "company_name": "SUMBER MENTARI MOROWALI",
-    "survey_status": "DRAFT",
-    "email": "pt.sumbermentarimorowali@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "17 Jun 2026, 08:07:07",
-    "order": 1,
-    "kab_name": "[03] MOROWALI"
-  },
-  {
-    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
-    "company_name": "SUMBER MENTARI MOROWALI",
-    "survey_status": "DRAFT",
-    "email": "pt.sumbermentarimorowali@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "15 Jun 2026, 08:34:01",
-    "order": 2,
-    "kab_name": "[03] MOROWALI"
-  },
-  {
-    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
-    "company_name": "SUMBER MENTARI MOROWALI",
-    "survey_status": "DRAFT",
-    "email": "pt.sumbermentarimorowali@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "13 Jun 2026, 10:31:52",
-    "order": 3,
-    "kab_name": "[03] MOROWALI"
-  },
-  {
-    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
-    "company_name": "SUMBER MENTARI MOROWALI",
-    "survey_status": "DRAFT",
-    "email": "pt.sumbermentarimorowali@gmail.com",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "11 Jun 2026, 17:35:28",
-    "order": 4,
-    "kab_name": "[03] MOROWALI"
-  },
-  {
-    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
-    "company_name": "SUMBER MENTARI MOROWALI",
-    "survey_status": "DRAFT",
-    "email": "pt.sumbermentarimorowali@gmail.com",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "11 Jun 2026, 17:35:24",
-    "order": 5,
-    "kab_name": "[03] MOROWALI"
-  },
-  {
-    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
-    "company_name": "SUMBER MENTARI MOROWALI",
-    "survey_status": "DRAFT",
-    "email": "pt.sumbermentarimorowali@gmail.com",
-    "global_status": "Clicked",
-    "status": "Clicked",
-    "timestamp": "09 Jun 2026, 11:15:42",
-    "order": 6,
-    "kab_name": "[03] MOROWALI"
-  },
-  {
-    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
-    "company_name": "SUMBER MENTARI MOROWALI",
-    "survey_status": "DRAFT",
-    "email": "pt.sumbermentarimorowali@gmail.com",
-    "global_status": "Clicked",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 03:18:30",
-    "order": 7,
-    "kab_name": "[03] MOROWALI"
-  },
-  {
-    "code": "7a913cb7-c5d4-4cb6-99bc-64f0d749efc3",
-    "company_name": "SUMBER MENTARI MOROWALI",
-    "survey_status": "DRAFT",
-    "email": "pt.sumbermentarimorowali@gmail.com",
-    "global_status": "Clicked",
-    "status": "Queued",
-    "timestamp": "02 Jun 2026, 03:18:25",
-    "order": 8,
     "kab_name": "[03] MOROWALI"
   },
   {
@@ -10920,6 +10931,314 @@ window.EMAIL_DATA = [
     "status": "-",
     "timestamp": "-",
     "order": 0,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "26 May 2026, 16:36:57",
+    "order": 19,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "26 May 2026, 16:36:47",
+    "order": 20,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "26 May 2026, 16:02:57",
+    "order": 21,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "26 May 2026, 16:02:48",
+    "order": 22,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "26 May 2026, 16:02:44",
+    "order": 23,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "26 May 2026, 15:38:16",
+    "order": 24,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "26 May 2026, 15:38:09",
+    "order": 25,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "26 May 2026, 15:29:35",
+    "order": 26,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "26 May 2026, 15:29:25",
+    "order": 27,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "26 May 2026, 15:28:16",
+    "order": 28,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "26 May 2026, 15:28:16",
+    "order": 29,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "26 May 2026, 15:28:15",
+    "order": 30,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "26 May 2026, 09:27:39",
+    "order": 31,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "26 May 2026, 09:27:32",
+    "order": 32,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "26 May 2026, 09:27:22",
+    "order": 33,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "26 May 2026, 07:28:29",
+    "order": 34,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "e6c02667-dab5-45fe-9d46-af13a774053a",
+    "company_name": "ASURANSI UMUM BUMIPUTERA MUDA 1967, PT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "mappangerangmangata1@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "26 May 2026, 07:28:26",
+    "order": 35,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
+    "company_name": "CIPTA TORAU RESORT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "cipta.torauresort@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "28 May 2026, 16:54:49",
+    "order": 1,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
+    "company_name": "CIPTA TORAU RESORT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "cipta.torauresort@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "28 May 2026, 15:39:07",
+    "order": 2,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
+    "company_name": "CIPTA TORAU RESORT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "cipta.torauresort@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "28 May 2026, 15:39:04",
+    "order": 3,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
+    "company_name": "CIPTA TORAU RESORT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "cipta.torauresort@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "28 May 2026, 10:42:47",
+    "order": 4,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
+    "company_name": "CIPTA TORAU RESORT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "cipta.torauresort@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "28 May 2026, 10:42:43",
+    "order": 5,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
+    "company_name": "CIPTA TORAU RESORT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "cipta.torauresort@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "25 May 2026, 16:28:14",
+    "order": 6,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
+    "company_name": "CIPTA TORAU RESORT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "cipta.torauresort@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "25 May 2026, 16:28:10",
+    "order": 7,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
+    "company_name": "CIPTA TORAU RESORT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "cipta.torauresort@gmail.com",
+    "global_status": "Clicked",
+    "status": "Clicked",
+    "timestamp": "22 May 2026, 16:39:35",
+    "order": 8,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
+    "company_name": "CIPTA TORAU RESORT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "cipta.torauresort@gmail.com",
+    "global_status": "Clicked",
+    "status": "Opened",
+    "timestamp": "22 May 2026, 16:39:10",
+    "order": 9,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
+    "company_name": "CIPTA TORAU RESORT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "cipta.torauresort@gmail.com",
+    "global_status": "Clicked",
+    "status": "Delivered",
+    "timestamp": "22 May 2026, 16:37:55",
+    "order": 10,
+    "kab_name": "[04] POSO"
+  },
+  {
+    "code": "c830640d-a252-41a0-99bd-cb594fbb3478",
+    "company_name": "CIPTA TORAU RESORT",
+    "survey_status": "SUBMITTED RESPONDENT",
+    "email": "cipta.torauresort@gmail.com",
+    "global_status": "Clicked",
+    "status": "Queued",
+    "timestamp": "22 May 2026, 16:37:52",
+    "order": 11,
     "kab_name": "[04] POSO"
   },
   {
@@ -20717,9 +21036,9 @@ window.EMAIL_DATA = [
     "company_name": "MAELO MOROWALI MANDIRI",
     "survey_status": "OPEN",
     "email": "cvmaelomorowalimandiri@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "09 Jun 2026, 11:13:58",
+    "global_status": "Opened",
+    "status": "Opened",
+    "timestamp": "18 Jun 2026, 22:35:30",
     "order": 1,
     "kab_name": "[12] MOROWALI UTARA"
   },
@@ -20728,9 +21047,9 @@ window.EMAIL_DATA = [
     "company_name": "MAELO MOROWALI MANDIRI",
     "survey_status": "OPEN",
     "email": "cvmaelomorowalimandiri@gmail.com",
-    "global_status": "Delivered",
-    "status": "Queued",
-    "timestamp": "09 Jun 2026, 11:13:57",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "09 Jun 2026, 11:13:58",
     "order": 2,
     "kab_name": "[12] MOROWALI UTARA"
   },
@@ -20739,9 +21058,9 @@ window.EMAIL_DATA = [
     "company_name": "MAELO MOROWALI MANDIRI",
     "survey_status": "OPEN",
     "email": "cvmaelomorowalimandiri@gmail.com",
-    "global_status": "Delivered",
-    "status": "Delivered",
-    "timestamp": "02 Jun 2026, 00:41:35",
+    "global_status": "Opened",
+    "status": "Queued",
+    "timestamp": "09 Jun 2026, 11:13:57",
     "order": 3,
     "kab_name": "[12] MOROWALI UTARA"
   },
@@ -20750,10 +21069,21 @@ window.EMAIL_DATA = [
     "company_name": "MAELO MOROWALI MANDIRI",
     "survey_status": "OPEN",
     "email": "cvmaelomorowalimandiri@gmail.com",
-    "global_status": "Delivered",
+    "global_status": "Opened",
+    "status": "Delivered",
+    "timestamp": "02 Jun 2026, 00:41:35",
+    "order": 4,
+    "kab_name": "[12] MOROWALI UTARA"
+  },
+  {
+    "code": "37de7be5-69dc-4053-9393-c1a6e6d774ff",
+    "company_name": "MAELO MOROWALI MANDIRI",
+    "survey_status": "OPEN",
+    "email": "cvmaelomorowalimandiri@gmail.com",
+    "global_status": "Opened",
     "status": "Queued",
     "timestamp": "02 Jun 2026, 00:41:32",
-    "order": 4,
+    "order": 5,
     "kab_name": "[12] MOROWALI UTARA"
   },
   {
@@ -35673,4 +36003,4 @@ window.EMAIL_DATA = [
     "kab_name": "[71] PALU"
   }
 ];
-window.LAST_UPDATED = '19 Jun 2026, 07:57:57';
+window.LAST_UPDATED = '19 Jun 2026, 11:35:17';

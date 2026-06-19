@@ -758,11 +758,18 @@ async def generate_report():
                 "APPROVED",
                 "REVOKED BY Pengawas"
             ]
+            # WITA Timezone for Sulawesi Tengah
+            local_tz = datetime.timezone(datetime.timedelta(hours=8))
+            today = datetime.datetime.now(local_tz).date()
+            yesterday = today - datetime.timedelta(days=1)
+            two_days_ago = today - datetime.timedelta(days=2)
+
             all_records = []
             
             print("Mengambil rincian data progres harian tingkat provinsi...")
             for status in active_statuses:
                 start = 0
+                status_records_count = 0
                 while True:
                     payload = {
                         "start": start,
@@ -777,7 +784,7 @@ async def generate_report():
                             {"data": "assignmentStatusAlias"},
                             {"data": "region"}
                         ],
-                        "order": [],
+                        "order": [{"column": 5, "dir": "desc"}],
                         "search": {"value": "", "regex": False},
                         "assignmentExtraParam": {
                             "region1Id": survey_cfg["prov_id"],
@@ -797,18 +804,33 @@ async def generate_report():
                         break
                         
                     all_records.extend(records_part)
+                    status_records_count += len(records_part)
+                    
+                    # Early break optimization: check if oldest record in this batch is older than two_days_ago.
+                    # Since we sort by dateModified desc, once we see a record older than two_days_ago,
+                    # all subsequent records in next batches will also be older.
+                    should_stop = False
+                    for r in records_part:
+                        dm_str = r.get("dateModified")
+                        if dm_str:
+                            try:
+                                dt = parse_bps_datetime(dm_str, local_tz)
+                                if dt and dt.date() < two_days_ago:
+                                    should_stop = True
+                                    break
+                            except Exception:
+                                pass
+                    
+                    if should_stop:
+                        print(f"  [EARLY BREAK] Stop fetch status {status} at start={start} because records became older than {two_days_ago}")
+                        break
+                        
                     start += 100
                     if start >= res.get("totalHit", 0):
                         break
                     await asyncio.sleep(0.1)
                     
-                print(f"  Selesai fetch status {status}: {len(all_records)} total records so far.")
-
-            # WITA Timezone for Sulawesi Tengah
-            local_tz = datetime.timezone(datetime.timedelta(hours=8))
-            today = datetime.datetime.now(local_tz).date()
-            yesterday = today - datetime.timedelta(days=1)
-            two_days_ago = today - datetime.timedelta(days=2)
+                print(f"  Selesai fetch status {status}: {status_records_count} records (Accumulated total: {len(all_records)} so far)")
             
             # Fetch historical snapshots from Supabase to pre-populate yesterday and two days ago completed
             yesterday_str = yesterday.strftime("%Y-%m-%d")

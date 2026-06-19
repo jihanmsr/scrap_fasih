@@ -660,6 +660,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const assignSlsSearchInput = document.getElementById('assign-sls-search-input');
+    if (assignSlsSearchInput) {
+        assignSlsSearchInput.addEventListener('input', () => {
+            window.renderGranularAssignmentsTable(true);
+        });
+    }
+
     const petugasSearchInput = document.getElementById('petugas-search-input');
     if (petugasSearchInput) {
         petugasSearchInput.addEventListener('input', () => {
@@ -703,6 +710,27 @@ document.addEventListener('DOMContentLoaded', () => {
             current.column = column;
             current.order = 'desc';
             if (column === 'kabupaten') {
+                current.order = 'asc';
+            }
+        }
+        window.renderSeDashboard(surveyType);
+    };
+
+    // Petugas Table Sorting State
+    window.petugasSorts = {
+        se_umum: { column: 'progres', order: 'desc' },
+        se_ub: { column: 'progres', order: 'desc' }
+    };
+
+    // Petugas Table Header Sort Click Handler
+    window.sortPetugasTable = function (surveyType, column) {
+        const current = window.petugasSorts[surveyType];
+        if (current.column === column) {
+            current.order = current.order === 'asc' ? 'desc' : 'asc';
+        } else {
+            current.column = column;
+            current.order = 'desc';
+            if (column === 'petugas' || column === 'role' || column === 'kabupaten') {
                 current.order = 'asc';
             }
         }
@@ -1148,11 +1176,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const tableTitleEl = document.getElementById(`${surveyType}-table-title`);
         const expandCollapseEl = document.getElementById(`${surveyType}-expand-collapse-btns`);
         if (tableTitleEl) {
-            const titles = { kabupaten: '🏙 Rincian per Kabupaten/Kota', kecamatan: '🏘 Rincian per Kecamatan', petugas: '👤 Rincian per Petugas' };
+            const titles = { kabupaten: 'Rincian per Kabupaten/Kota', kecamatan: 'Rincian per Kecamatan', petugas: 'Rincian per Petugas' };
             tableTitleEl.textContent = titles[viewLevel] || titles.kabupaten;
         }
         if (expandCollapseEl) {
             expandCollapseEl.style.display = viewLevel === 'kabupaten' ? '' : 'none';
+        }
+        const roleFilterEl = document.getElementById(`${surveyType}-role-filter`);
+        if (roleFilterEl) {
+            roleFilterEl.style.display = viewLevel === 'petugas' ? '' : 'none';
         }
 
         // Dispatch to specialized renderer
@@ -1194,36 +1226,43 @@ document.addEventListener('DOMContentLoaded', () => {
                         <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--text-secondary);">Total Target</th>
                         <th style="font-family:'Outfit',sans-serif;text-align:right;color:#f59e0b;">Draft</th>
                         <th style="font-family:'Outfit',sans-serif;text-align:right;color:#3b82f6;">Open</th>
-                        <th colspan="4" style="font-family:'Outfit',sans-serif;text-align:center;color:var(--color-delivered);border-bottom:1px solid var(--card-border);">Submitted (Selesai)</th>
+                        <th colspan="4" style="font-family:'Outfit',sans-serif;text-align:center;color:var(--color-delivered);border-bottom:2px solid rgba(16,185,129,0.3);">Submitted (Selesai)</th>
                         <th style="font-family:'Outfit',sans-serif;text-align:center;">% Capaian</th>
                     </tr>
                     <tr>
-                        <th colspan="2"></th>
-                        <th colspan="3"></th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-delivered);font-size:0.8rem;padding:0.4rem 0.75rem;">Total</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-opened);font-size:0.8rem;padding:0.4rem 0.75rem;">Hari Ini</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:#f59e0b;font-size:0.8rem;padding:0.4rem 0.75rem;">Kemarin</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-clicked);font-size:0.8rem;padding:0.4rem 0.75rem;">H-2</th>
-                        <th></th>
+                        <th style="padding:0.3rem 0;"></th>
+                        <th style="padding:0.3rem 0;"></th>
+                        <th style="padding:0.3rem 0;"></th>
+                        <th style="padding:0.3rem 0;"></th>
+                        <th style="padding:0.3rem 0;"></th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-delivered);font-size:0.8rem;padding:0.3rem 0.75rem;">Total</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-opened);font-size:0.8rem;padding:0.3rem 0.75rem;">Hari Ini</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:#f59e0b;font-size:0.8rem;padding:0.3rem 0.75rem;">Kemarin</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-clicked);font-size:0.8rem;padding:0.3rem 0.75rem;">H-2</th>
+                        <th style="padding:0.3rem 0;"></th>
                     </tr>
                 `;
             }
 
             tbody.innerHTML = '';
             if (allKecs.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:3rem 1rem;color:var(--text-secondary);">Tidak ada data kecamatan yang cocok.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align:center;padding:3rem 1rem;color:var(--text-secondary);">Tidak ada kecamatan yang cocok dengan pencarian.</td></tr>`;
                 return;
             }
 
-            // Sort by kabupaten then kecamatan name by default
-            allKecs.sort((a, b) => a.kab_name.localeCompare(b.kab_name) || a.kec_name.localeCompare(b.kec_name));
+            // Sort by persentase desc, then total_prelist desc
+            allKecs.sort((a, b) => {
+                const pctA = parseFloat(a.persentase) || 0;
+                const pctB = parseFloat(b.persentase) || 0;
+                if (pctA !== pctB) return pctB - pctA;
+                return (b.total_prelist || 0) - (a.total_prelist || 0);
+            });
 
             allKecs.forEach(kec => {
                 const pct = parseFloat(kec.persentase) || 0;
-                let pctClass = '';
-                if (pct >= 80) pctClass = 'background-color:rgba(16,185,129,0.1);color:var(--color-delivered);border:1px solid rgba(16,185,129,0.3);';
-                else if (pct >= 50) pctClass = 'background-color:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.3);';
-                else pctClass = 'background-color:rgba(239,68,68,0.1);color:var(--color-bounced);border:1px solid rgba(239,68,68,0.3);';
+                const pctClass = pct >= 80 ? 'background-color:rgba(16,185,129,0.1);color:#10b981;border:1px solid rgba(16,185,129,0.2);' :
+                                 pct >= 50 ? 'background-color:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2);' :
+                                             'background-color:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2);';
 
                 const tdToday = getDailyProgressCellHTML(kec.today_completed, kec.today_completed_breakdown, 'HARI INI: KEC. ' + kec.kec_name);
                 const tdYesterday = getDailyProgressCellHTML(kec.yesterday_completed, kec.yesterday_completed_breakdown, 'KEMARIN: KEC. ' + kec.kec_name);
@@ -1252,44 +1291,36 @@ document.addEventListener('DOMContentLoaded', () => {
         // ===== PETUGAS FLAT LIST RENDERER =====
         function renderPetugasFlatList() {
             const allPetugas = window.PETUGAS_DATA || [];
-            // Filter by active subtab survey type
-            const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
-            const petugasFiltered = allPetugas.filter(p => {
-                if (!searchVal) return true;
-                return (p.username || '').toLowerCase().includes(searchVal) ||
-                       (p.email || '').toLowerCase().includes(searchVal) ||
-                       (p.roleName || '').toLowerCase().includes(searchVal) ||
-                       (p.regions || []).some(r => (r.regionName || '').toLowerCase().includes(searchVal));
-            });
+            const roleFilterVal = document.getElementById(`${surveyType}-role-filter`)?.value || 'all';
+            const capaianFilterVal = document.getElementById(`${surveyType}-capaian-filter`)?.value || 'all';
+            const slsStatusMap = window.IPAS_DATA ? (window.IPAS_DATA[surveyType + '_sls_status'] || {}) : {};
 
-            // Render petugas-specific headers
+            // Render dynamic sorting indicator helper
+            const getIcon = (col) => {
+                const sort = window.petugasSorts[surveyType];
+                if (sort.column === col) {
+                    return sort.order === 'asc' ? ' ▲' : ' ▼';
+                }
+                return ' ⇅';
+            };
+
+            // Render petugas-specific headers with sort triggers
             const table = document.querySelector(`#tab-content-${surveyType} .ipas-table`);
             const thead = table?.querySelector('thead');
             if (thead) {
                 thead.innerHTML = `
                     <tr>
-                        <th style="font-family:'Outfit',sans-serif;">Petugas</th>
-                        <th style="font-family:'Outfit',sans-serif;">Role</th>
-                        <th style="font-family:'Outfit',sans-serif;">Kabupaten</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;">Total HH</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;">Jumlah SLS</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;">Progres Pengerjaan</th>
+                        <th class="sortable" onclick="sortPetugasTable('${surveyType}', 'petugas')" style="font-family:'Outfit',sans-serif;">Petugas${getIcon('petugas')}</th>
+                        <th class="sortable" onclick="sortPetugasTable('${surveyType}', 'role')" style="font-family:'Outfit',sans-serif;">Role${getIcon('role')}</th>
+                        <th class="sortable" onclick="sortPetugasTable('${surveyType}', 'kabupaten')" style="font-family:'Outfit',sans-serif;">Kabupaten${getIcon('kabupaten')}</th>
+                        <th class="sortable" onclick="sortPetugasTable('${surveyType}', 'jumlah_sls')" style="font-family:'Outfit',sans-serif;text-align:right;">Jumlah SLS${getIcon('jumlah_sls')}</th>
+                        <th class="sortable" onclick="sortPetugasTable('${surveyType}', 'progres')" style="font-family:'Outfit',sans-serif;text-align:right;">Progres Pengerjaan${getIcon('progres')}</th>
                     </tr>
                 `;
             }
 
-            tbody.innerHTML = '';
-            if (petugasFiltered.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:3rem 1rem;color:var(--text-secondary);">Tidak ada petugas yang cocok dengan pencarian.</td></tr>`;
-                return;
-            }
-
-            // Sort by totalHH desc by default
-            petugasFiltered.sort((a, b) => (b.totalHH || 0) - (a.totalHH || 0));
-
-            const slsStatusMap = window.IPAS_DATA ? (window.IPAS_DATA[surveyType + '_sls_status'] || {}) : {};
-
-            petugasFiltered.forEach(officer => {
+            // Map and calculate progress statistics for filtering and sorting
+            const petugasProcessed = allPetugas.map(officer => {
                 const kabSet = new Set();
                 (officer.regions || []).forEach(r => {
                     const code = r.regionCode || '';
@@ -1315,18 +1346,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 const progPct = totalTarget > 0 ? Math.min(100, Math.round((completedTarget / totalTarget) * 100)) : 0;
-                const progColor = progPct >= 80 ? '#10b981' : progPct >= 50 ? '#f59e0b' : '#ef4444';
-                const progBarStyle = `height:6px;border-radius:3px;background:rgba(255,255,255,0.1);overflow:hidden;margin-top:4px;`;
-                const progFillStyle = `height:100%;border-radius:3px;background:${progColor};width:${progPct}%;transition:width 0.5s;`;
-                const progHTML = `
-                    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;">
-                        <span style="font-size:0.75rem;font-weight:700;color:${progColor};">${completedTarget}/${totalTarget} (${progPct}%)</span>
-                        <div style="${progBarStyle}width:100px;"><div style="${progFillStyle}"></div></div>
-                        <span style="font-size:0.65rem;color:var(--text-muted);">${completedSls}/${totalSls} SLS selesai</span>
-                    </div>`;
-
-                const roleBgColor = officer.roleName === 'Pencacah' ? 'rgba(99,102,241,0.15)' : 'rgba(245,158,11,0.15)';
-                const roleTextColor = officer.roleName === 'Pencacah' ? 'var(--primary)' : '#f59e0b';
 
                 const kabCodes = [...kabSet];
                 const kabLabels = kabCodes.map(code => {
@@ -1337,19 +1356,103 @@ document.addEventListener('DOMContentLoaded', () => {
                     return found ? found.kabupaten.replace(/\[\d+\] /, '') : code;
                 }).join(', ');
 
+                return {
+                    ...officer,
+                    kabLabels,
+                    totalSls,
+                    completedSls,
+                    totalTarget,
+                    completedTarget,
+                    progPct
+                };
+            });
+
+            // Filter petugas array
+            const petugasFiltered = petugasProcessed.filter(p => {
+                // Search filter
+                if (searchVal) {
+                    const searchLower = searchVal.toLowerCase();
+                    const matchSearch = (p.username || '').toLowerCase().includes(searchLower) ||
+                                       (p.email || '').toLowerCase().includes(searchLower) ||
+                                       (p.roleName || '').toLowerCase().includes(searchLower) ||
+                                       (p.kabLabels || '').toLowerCase().includes(searchLower);
+                    if (!matchSearch) return false;
+                }
+
+                // Role filter
+                if (roleFilterVal !== 'all' && p.roleName !== roleFilterVal) return false;
+
+                // Capaian filter
+                if (capaianFilterVal === 'high' && p.progPct < 80) return false;
+                if (capaianFilterVal === 'med' && (p.progPct < 50 || p.progPct >= 80)) return false;
+                if (capaianFilterVal === 'low' && p.progPct >= 50) return false;
+
+                return true;
+            });
+
+            tbody.innerHTML = '';
+            if (petugasFiltered.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:3rem 1rem;color:var(--text-secondary);">Tidak ada petugas yang cocok dengan pencarian / filter.</td></tr>`;
+                return;
+            }
+
+            // Sort filtered petugas array
+            const pSort = window.petugasSorts[surveyType];
+            petugasFiltered.sort((a, b) => {
+                let valA, valB;
+                if (pSort.column === 'petugas') {
+                    valA = a.username || a.email || '';
+                    valB = b.username || b.email || '';
+                    return pSort.order === 'asc' ? valA.localeCompare(valB) : valB.localeCompare(valA);
+                } else if (pSort.column === 'role') {
+                    valA = a.roleName || '';
+                    valB = b.roleName || '';
+                    return pSort.order === 'asc' ? valA.localeCompare(valB) : valB.localeCompare(valA);
+                } else if (pSort.column === 'kabupaten') {
+                    valA = a.kabLabels || '';
+                    valB = b.kabLabels || '';
+                    return pSort.order === 'asc' ? valA.localeCompare(valB) : valB.localeCompare(valA);
+                } else if (pSort.column === 'jumlah_sls') {
+                    valA = a.totalSls || 0;
+                    valB = b.totalSls || 0;
+                    return pSort.order === 'asc' ? valA - valB : valB - valA;
+                } else if (pSort.column === 'progres') {
+                    valA = a.progPct || 0;
+                    valB = b.progPct || 0;
+                    if (valA !== valB) {
+                        return pSort.order === 'asc' ? valA - valB : valB - valA;
+                    }
+                    valA = a.totalTarget || 0;
+                    valB = b.totalTarget || 0;
+                    return pSort.order === 'asc' ? valA - valB : valB - valA;
+                }
+                return 0;
+            });
+
+            petugasFiltered.forEach(officer => {
+                const progPct = officer.progPct;
+                const progColor = progPct >= 80 ? '#10b981' : progPct >= 50 ? '#f59e0b' : '#ef4444';
+                const progBarStyle = `height:6px;border-radius:3px;background:rgba(255,255,255,0.1);overflow:hidden;margin-top:4px;`;
+                const progFillStyle = `height:100%;border-radius:3px;background:${progColor};width:${progPct}%;transition:width 0.5s;`;
+                const progHTML = `
+                    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;">
+                        <span style="font-size:0.75rem;font-weight:700;color:${progColor};">${officer.completedTarget}/${officer.totalTarget} (${progPct}%)</span>
+                        <div style="${progBarStyle}width:100px;"><div style="${progFillStyle}"></div></div>
+                        <span style="font-size:0.65rem;color:var(--text-muted);">${officer.completedSls}/${officer.totalSls} SLS selesai</span>
+                    </div>`;
+
+                const roleBgColor = officer.roleName === 'Pencacah' ? 'rgba(99,102,241,0.15)' : 'rgba(245,158,11,0.15)';
+                const roleTextColor = officer.roleName === 'Pencacah' ? 'var(--primary)' : '#f59e0b';
+
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td style="font-weight:600;color:var(--text-primary);">
-                        <div style="display:flex;align-items:center;gap:0.4rem;">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:14px;height:14px;color:var(--primary);opacity:0.7;" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
-                            ${officer.username || officer.email || '-'}
-                        </div>
+                        ${officer.username || officer.email || '-'}
                         <div style="font-size:0.7rem;color:var(--text-muted);">${officer.email || ''}</div>
                     </td>
                     <td><span style="font-size:0.75rem;padding:0.15rem 0.5rem;border-radius:0.35rem;background:${roleBgColor};color:${roleTextColor};font-weight:700;">${officer.roleName || '-'}</span></td>
-                    <td style="font-size:0.8rem;color:var(--text-secondary);">${kabLabels || '-'}</td>
-                    <td style="text-align:right;font-family:monospace;font-weight:600;">${formatNum(officer.totalHH || 0)}</td>
-                    <td style="text-align:right;font-family:monospace;color:var(--text-secondary);">${formatNum(totalSls)}</td>
+                    <td style="font-size:0.8rem;color:var(--text-secondary);">${officer.kabLabels || '-'}</td>
+                    <td style="text-align:right;font-family:monospace;color:var(--text-secondary);">${formatNum(officer.totalSls)}</td>
                     <td style="text-align:right;">${progHTML}</td>
                 `;
                 tbody.appendChild(row);
@@ -1457,7 +1560,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const kabupatenEscaped = item.kabupaten.replace(/'/g, "\\'");
             const encodedBusinessesJSON = encodeURIComponent(JSON.stringify(item.new_businesses || []));
 
-            const penambahanBadge = `<div onclick="openNewBusinessesModal('${kabupatenEscaped}', '${encodedBusinessesJSON}', 'all')" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;" onmouseover="this.style.opacity='0.8';' onmouseout="this.style.opacity='1';">
+            const penambahanBadge = `<div onclick="openNewBusinessesModal('${kabupatenEscaped}', '${encodedBusinessesJSON}', 'all')" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
                     <span style="font-weight: 800; color: var(--primary); font-size: 0.95rem;">${formatNum(item.new_usaha_overall + item.new_rumah_overall)}</span>
                     <span style="font-size: 0.65rem; font-weight: 600; color: var(--text-secondary);">${item.new_usaha_overall} usaha | ${item.new_rumah_overall} rumah</span>
                     <span style="font-size: 0.6rem; color: var(--text-muted);">+${item.new_usaha_today + item.new_rumah_today} hari ini</span>
@@ -1601,165 +1704,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                     tbody.appendChild(kecRow);
 
-                    // Render petugas sub-rows for this kecamatan
-                    const kecCode7 = kecNameToCode[kec.kec_name.toUpperCase()] || '';
-                    const officersInKec = kecCode7 ? (petugasByKecCode[kecCode7] || []) : [];
-
-                    if (officersInKec.length > 0) {
-                        // Precalculate workload per officer for this kab
-                        // Use the survey-type-specific SLS dataset (not the tab-dependent global)
-                        const assignSlsSource = surveyType === 'se_umum' ? window.ASSIGN_SLS_DATA_UMUM : window.ASSIGN_SLS_DATA_UB;
-                        const slsTotalMap = {};
-                        if (assignSlsSource) {
-                            assignSlsSource.forEach(sls => {
-                                const code = sls.sls_code || sls.sls_id;
-                                if (code) slsTotalMap[code.length === 16 ? code.substring(0, 14) : code] = sls.total || 0;
-                            });
-                        }
-
-                        officersInKec.forEach(officer => {
-                            // Calculate workload for this officer (all SLS in this kec)
-                            let officerHH = 0;
-                            const kecSlsCodes = [];
-                            (officer.regions || []).forEach(reg => {
-                                const code = reg.regionCode || '';
-                                if (code.startsWith(kecCode7)) {
-                                    const slsKey = code.length === 16 ? code.substring(0, 14) : code;
-                                    officerHH += (slsTotalMap[slsKey] || 0);
-                                    if (!kecSlsCodes.includes(slsKey)) kecSlsCodes.push(slsKey);
-                                }
-                            });
-
-                            // Calculate sync stats for this officer's SLS in this kec
-                            let syncedCount = 0;
-                            let totalSlsInKec = kecSlsCodes.length;
-                            if (assignSlsSource) {
-                                assignSlsSource.forEach(sls => {
-                                    const code = sls.sls_code || sls.sls_id || '';
-                                    const slsKey = code.length === 16 ? code.substring(0, 14) : code;
-                                    if (kecSlsCodes.includes(slsKey) && (sls.sync_count || 0) > 0) syncedCount++;
-                                });
-                            }
-                            const syncPct = totalSlsInKec > 0 ? Math.round((syncedCount / totalSlsInKec) * 100) : 0;
-                            const syncColor = syncPct >= 80 ? '#10b981' : syncPct >= 50 ? '#f59e0b' : '#ef4444';
-
-                            const roleBadgeColor = officer.roleName === 'Pencacah' ? 'rgba(99,102,241,0.15)' : 'rgba(245,158,11,0.15)';
-                            const roleTextColor = officer.roleName === 'Pencacah' ? 'var(--primary)' : '#f59e0b';
-
-                            // Officer expansion state
-                            if (!window.expandedSeOfficers) window.expandedSeOfficers = {};
-                            const officerKey = `${surveyType}:${kecCode7}:${officer.username || officer.userId}`;
-                            const isOfficerExpanded = window.expandedSeOfficers[officerKey] || false;
-
-                            const petugasRow = document.createElement('tr');
-                            petugasRow.className = 'petugas-sub-row';
-                            petugasRow.style.cssText = 'background: rgba(99,102,241,0.03); border-bottom: 1px solid rgba(99,102,241,0.08); cursor: pointer;';
-                            petugasRow.innerHTML = `
-                                <td style="font-size: 0.8rem; color: var(--text-secondary); padding-left: 3rem;">
-                                    <span style="display: inline-flex; align-items: center; gap: 0.4rem;">
-                                        <span style="color: var(--primary); font-size: 0.6rem; transition: transform 0.2s; display: inline-block; ${isOfficerExpanded ? 'transform: rotate(90deg);' : ''}">▶</span>
-                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width: 11px; height: 11px; color: var(--primary); opacity: 0.6;" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
-                                        <span style="font-weight: 600; color: var(--text)">${officer.username || officer.email || '-'}</span>
-                                        <span style="font-size: 0.7rem; padding: 0.1rem 0.4rem; border-radius: 0.35rem; background: ${roleBadgeColor}; color: ${roleTextColor}; font-weight: 700;">${officer.roleName || ''}</span>
-                                    </span>
-                                </td>
-                                <td colspan="3" style="font-size: 0.78rem; color: var(--text-secondary); text-align: right; font-family: monospace;">
-                                    ${officerHH > 0 ? `<span style="color: var(--text); font-weight: 600;">${formatNum(officerHH)}</span> target` : '<span style="color: var(--text-muted);">—</span>'}
-                                </td>
-                                <td colspan="4" style="font-size: 0.78rem; text-align: left; padding: 0.5rem 0.75rem;">
-                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <div style="flex: 1; max-width: 100px; height: 4px; background: rgba(0,0,0,0.1); border-radius: 2px; overflow: hidden;">
-                                            <div style="height: 100%; background: ${syncColor}; width: ${syncPct}%;"></div>
-                                        </div>
-                                        <span style="font-weight: 700; color: ${syncColor}; font-size: 0.75rem;">${syncedCount}/${totalSlsInKec} sync (${syncPct}%)</span>
-                                    </div>
-                                </td>
-                                <td></td><td></td>
-                            `;
-
-                            petugasRow.addEventListener('click', () => {
-                                window.expandedSeOfficers[officerKey] = !isOfficerExpanded;
-                                window.renderSeDashboard(surveyType);
-                            });
-
-                            tbody.appendChild(petugasRow);
-
-                            // Render SLS detail rows if officer is expanded
-                            if (isOfficerExpanded && kecSlsCodes.length > 0) {
-                                const slsStatusData = (window.IPAS_DATA || {})[surveyType + '_sls_status'] || {};
-
-                                // Build SLS name & total map from the survey-specific SLS source
-                                const slsNameMap = {};
-                                const slsTotalLocal = {};
-                                if (assignSlsSource) {
-                                    assignSlsSource.forEach(sls => {
-                                        const code = sls.sls_code || sls.sls_id || '';
-                                        const key = code.length === 16 ? code.substring(0, 14) : code;
-                                        if (key) {
-                                            slsNameMap[key] = sls.sls_name || sls.name || '';
-                                            slsTotalLocal[key] = sls.total || 0;
-                                        }
-                                    });
-                                }
-
-                                const statusConfig = [
-                                    { key: 'OPEN', label: 'OPEN', color: '#64748b', bg: 'rgba(100,116,139,0.12)', isOpen: true },
-                                    { key: 'DRAFT', label: 'DRAFT', color: '#f59e0b', bg: 'rgba(245,158,11,0.12)' },
-                                    { key: 'SUBMITTED BY Pencacah', label: 'SUBMIT', color: '#3b82f6', bg: 'rgba(59,130,246,0.12)' },
-                                    { key: 'SUBMITTED RESPONDENT', label: 'RESP', color: '#6366f1', bg: 'rgba(99,102,241,0.12)' },
-                                    { key: 'REJECTED BY Pengawas', label: 'REJECTED', color: '#ef4444', bg: 'rgba(239,68,68,0.12)' },
-                                    { key: 'REJECTED BY Admin Kabupaten', label: 'REJ.KAB', color: '#dc2626', bg: 'rgba(220,38,38,0.12)' },
-                                    { key: 'REVOKED BY Pengawas', label: 'REVOKED', color: '#ea580c', bg: 'rgba(234,88,12,0.12)' },
-                                    { key: 'APPROVED BY Pengawas', label: 'APV.PWS', color: '#10b981', bg: 'rgba(16,185,129,0.12)' },
-                                    { key: 'APPROVED BY Admin Kabupaten', label: 'APV.KAB', color: '#059669', bg: 'rgba(5,150,105,0.12)' },
-                                    { key: 'APPROVED BY Admin Provinsi', label: 'APV.PROV', color: '#047857', bg: 'rgba(4,120,87,0.12)' },
-                                ];
-
-                                kecSlsCodes.forEach(slsKey => {
-                                    const slsData = slsStatusData[slsKey] || {};
-                                    const targetStatuses = slsData.target || {};
-                                    const nontargetStatuses = slsData.nontarget || {};
-                                    const prelist = slsTotalLocal[slsKey] || slsTotalMap[slsKey] || 0;
-
-                                    // OPEN count = max(0, prelist - sum of all active target statuses)
-                                    const activeTargetSum = Object.values(targetStatuses).reduce((a, b) => a + b, 0);
-                                    const openCount = Math.max(0, prelist - activeTargetSum);
-
-                                    // Build status pills
-                                    const pillsHTML = statusConfig.map(sc => {
-                                        let count = 0;
-                                        if (sc.isOpen) {
-                                            count = openCount;
-                                        } else {
-                                            count = (targetStatuses[sc.key] || 0) + (nontargetStatuses[sc.key] || 0);
-                                        }
-                                        if (count <= 0) return '';
-                                        return `<span style="display: inline-flex; align-items: center; gap: 0.2rem; padding: 0.1rem 0.4rem; border-radius: 0.75rem; font-size: 0.67rem; font-weight: 700; background: ${sc.bg}; color: ${sc.color}; border: 1px solid ${sc.color}40; white-space: nowrap;">${sc.label} <span style="font-weight: 800;">${count}</span></span>`;
-                                    }).filter(Boolean).join(' ');
-
-                                    const slsName = slsNameMap[slsKey] || '—';
-
-                                    const slsRow = document.createElement('tr');
-                                    slsRow.className = 'sls-detail-row';
-                                    slsRow.style.cssText = 'background: rgba(99,102,241,0.012); border-bottom: 1px solid rgba(99,102,241,0.045);';
-                                    slsRow.innerHTML = `
-                                        <td colspan="2" style="font-size: 0.72rem; padding: 0.3rem 0.75rem 0.3rem 5rem; color: var(--text-secondary); vertical-align: middle;">
-                                            <span style="font-family: monospace; font-size: 0.68rem; color: var(--primary); opacity: 0.7; margin-right: 0.35rem;">${slsKey}</span>
-                                            <span style="color: var(--text); font-weight: 500;">${slsName}</span>
-                                        </td>
-                                        <td colspan="7" style="padding: 0.3rem 0.75rem; text-align: left; vertical-align: middle;">
-                                            <div style="display: flex; flex-wrap: wrap; gap: 0.25rem; align-items: center;">
-                                                ${pillsHTML || '<span style="color: var(--text-muted); font-size: 0.68rem; font-style: italic;">belum ada data status</span>'}
-                                            </div>
-                                        </td>
-                                        <td></td>
-                                    `;
-                                    tbody.appendChild(slsRow);
-                                });
-                            }
-                        });
-
-                    }
+                    // Petugas sub-rows removed from this view — see tab Petugas for detail per petugas
                 });
             }
         });
@@ -2131,9 +2076,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof renderSlsTable === 'function') renderSlsTable();
             if (typeof window.renderSyncTable === 'function') window.renderSyncTable();
         }
-        // When Tab 2 (Assignment) is activated, render Kab Summary
+        // When Tab 2 (Assignment) is activated, render Kab Summary and load granular assignments data
         if (tabName === 'sls') {
             if (typeof renderKabSummaryTable === 'function') renderKabSummaryTable();
+            if (typeof loadGranularAssignmentsData === 'function') loadGranularAssignmentsData();
         }
     };
 
@@ -4517,6 +4463,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Switch Tab function
     window.switchTab = function (tabId) {
+        if (tabId === 'timeline') {
+            tabId = 'se_umum';
+        }
         // Hide all tab contents
         document.querySelectorAll('.tab-content').forEach(el => {
             el.style.display = 'none';
@@ -4557,6 +4506,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
             renderSeDashboard('se_ub');
+        } else if (tabId === 'timeline') {
+            if (mainHeader) mainHeader.textContent = 'Tren Submit & Progres Harian';
+            if (mainSubheader) mainSubheader.textContent = 'Analisis tren pengiriman data kuesioner per hari';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            window.updateTimelineView();
         } else if (tabId === 'assign') {
             if (mainHeader) mainHeader.textContent = 'Status Alokasi Penugasan Petugas';
             if (mainSubheader) mainSubheader.textContent = 'Rekap alokasi wilayah tugas SLS kepada petugas sensus di setiap Kabupaten/Kota';
@@ -4716,12 +4671,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const ipasKey = snapshotDate === 'live' ? 'ipas_data' : `ipas_data:${snapshotDate}`;
         const assignKey = snapshotDate === 'live' ? 'assign_data' : `assign_data:${snapshotDate}`;
         const syncKey = snapshotDate === 'live' ? 'superset_sync_data' : `superset_sync_data:${snapshotDate}`;
+        const timelineKey = snapshotDate === 'live' ? 'daily_submission_stats' : `daily_submission_stats:${snapshotDate}`;
+
+        let timelineLoadedFromDb = false;
 
         if (snapshotDate !== 'live') {
             // Set loaded flags to true to prevent local script reloading fallbacks
             ipasLoadedFromDb = true;
             assignLoadedFromDb = true;
             syncLoadedFromDb = true;
+            timelineLoadedFromDb = true;
             
             // Clear current data first in case snapshot date has missing tables
             window.IPAS_DATA = null;
@@ -4732,6 +4691,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.PETUGAS_DATA_UMUM = [];
             window.PETUGAS_DATA_UB = [];
             window.SUPERSET_SYNC_SLS_DATA = [];
+            window.DAILY_SUBMISSION_STATS = [];
         }
 
         if (supabaseClient) {
@@ -4834,6 +4794,22 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (e) {
                 console.warn(`Failed to fetch SUPERSET_SYNC_SLS_DATA (${syncKey}) from Supabase:`, e);
             }
+
+            try {
+                const { data: timelineDbData, error: timelineError } = await withTimeout(supabaseClient
+                    .from('dashboard_store')
+                    .select('value')
+                    .eq('key', timelineKey)
+                    .single()
+                );
+                if (!timelineError && timelineDbData && timelineDbData.value) {
+                    window.DAILY_SUBMISSION_STATS = timelineDbData.value;
+                    timelineLoadedFromDb = true;
+                    console.log(`Loaded DAILY_SUBMISSION_STATS (${timelineKey}) from Supabase.`);
+                }
+            } catch (e) {
+                console.warn(`Failed to fetch DAILY_SUBMISSION_STATS (${timelineKey}) from Supabase:`, e);
+            }
         }
 
         if (!ipasLoadedFromDb) {
@@ -4863,6 +4839,17 @@ document.addEventListener('DOMContentLoaded', () => {
             await new Promise((resolve) => {
                 const script = document.createElement('script');
                 script.src = 'sync_data.js?v=' + Date.now();
+                script.onload = () => resolve();
+                script.onerror = () => resolve();
+                document.head.appendChild(script);
+            });
+        }
+
+        if (!timelineLoadedFromDb) {
+            // Dynamically reload daily_submission_stats.js
+            await new Promise((resolve) => {
+                const script = document.createElement('script');
+                script.src = 'daily_submission_stats.js?v=' + Date.now();
                 script.onload = () => resolve();
                 script.onerror = () => resolve();
                 document.head.appendChild(script);
@@ -4901,7 +4888,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Refresh last updated text for all tabs
         window.updateLastUpdatedText();
 
-        if (activeTab === 'assign') {
+        const activeTab = localStorage.getItem('active_tab') || 'se_umum';
+        if (activeTab === 'timeline') {
+            window.updateTimelineView();
+        } else if (activeTab === 'assign') {
             const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
             if (typeof filterAssignData === 'function') {
                 filterAssignData(activeSubtab);
@@ -5345,6 +5335,689 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const filePrefix = window.activeDiffTab === 'p_only' ? 'pencacah_saja' : 'pengawas_saja';
         exportToCSV(`selisih_alokasi_${filePrefix}_${prefix.toLowerCase()}.csv`, headers, rows);
+    };
+
+    window.toggleStatsDetail = function(section) {
+        const container = document.getElementById(`${section}-stats-expanded`);
+        const btn = document.getElementById(`${section}-toggle-detail`);
+        if (!container || !btn) return;
+        
+        if (container.style.display === 'none') {
+            container.style.display = 'flex';
+            btn.classList.add('expanded');
+            btn.innerHTML = 'Sembunyikan Detail ▲';
+        } else {
+            container.style.display = 'none';
+            btn.classList.remove('expanded');
+            btn.innerHTML = section === 'email' ? 'Lihat Kegagalan Email ▼' : 'Lihat Detail Lainnya ▼';
+        }
+    };
+
+    // =========================================================================
+    // DAILY SUBMISSION TIMELINE & GRANULAR LOOKUP LOGIC
+    // =========================================================================
+
+    let dailySubmissionChartInstance = null;
+
+    function renderDailySubmissionChart(dates, counts) {
+        const ctx = document.getElementById('dailySubmissionChart');
+        if (!ctx) return;
+        
+        if (dailySubmissionChartInstance) {
+            dailySubmissionChartInstance.destroy();
+        }
+        
+        const isDark = document.body.classList.contains('dark-theme');
+        const textColor = isDark ? '#e2e8f0' : '#475569';
+        const borderColor = isDark ? '#f97316' : '#ea580c';
+        
+        dailySubmissionChartInstance = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    label: 'Jumlah Submit Sensus',
+                    data: counts,
+                    borderColor: borderColor,
+                    backgroundColor: isDark ? 'rgba(249, 115, 22, 0.15)' : 'rgba(234, 88, 12, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.3,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    pointBackgroundColor: borderColor,
+                    pointBorderColor: '#ffffff',
+                    pointBorderWidth: 1.5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        padding: 10,
+                        backgroundColor: isDark ? '#1e293b' : '#ffffff',
+                        titleColor: isDark ? '#ffffff' : '#0f172a',
+                        bodyColor: isDark ? '#cbd5e1' : '#334155',
+                        borderColor: isDark ? '#334155' : '#e2e8f0',
+                        borderWidth: 1,
+                        titleFont: { family: 'Outfit', weight: 'bold' },
+                        bodyFont: { family: 'Outfit' }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: textColor, font: { family: 'Outfit', size: 11 } }
+                    },
+                    y: {
+                        grid: { color: isDark ? '#334155' : '#e2e8f0', drawBorder: false },
+                        ticks: { color: textColor, font: { family: 'Outfit', size: 11 }, beginAtZero: true, precision: 0 }
+                    }
+                }
+            }
+        });
+    }
+
+    function renderTimelineTable(dates, dateMap, kabFilter, typeFilter) {
+        const tbody = document.getElementById('timeline-table-body');
+        if (!tbody) return;
+        
+        if (!window.DAILY_SUBMISSION_STATS || window.DAILY_SUBMISSION_STATS.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data progres harian.</td></tr>`;
+            return;
+        }
+        
+        const filtered = window.DAILY_SUBMISSION_STATS.filter(r => {
+            if (kabFilter !== 'all') {
+                const cleanFilter = kabFilter.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                if ((r.kab_name || '').toUpperCase() !== cleanFilter) return false;
+            }
+            if (typeFilter !== 'all' && r.survey_type !== typeFilter) return false;
+            return true;
+        });
+        
+        filtered.sort((a, b) => b.date.localeCompare(a.date) || a.kab_name.localeCompare(b.kab_name));
+        
+        if (filtered.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data untuk filter terpilih.</td></tr>`;
+            return;
+        }
+        
+        const fmt = (n) => new Intl.NumberFormat('id-ID').format(n || 0);
+        let rowsHtml = '';
+        
+        filtered.forEach((r, index) => {
+            const surveyLabel = r.survey_type === 'se_umum' ? 'SE Umum' : 'SE UB';
+            const badgeClass = r.survey_type === 'se_umum' ? 'table-badge-umum' : 'table-badge-ub';
+            
+            rowsHtml += `
+                <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;">
+                    <td style="padding: 0.75rem 1.25rem; text-align: center; vertical-align: middle; font-weight: 600; color: var(--text-secondary);">${index + 1}</td>
+                    <td style="padding: 0.75rem 1.25rem; text-align: center; vertical-align: middle; font-weight: 700; color: var(--text-primary);">${r.date}</td>
+                    <td style="padding: 0.75rem 1.25rem; text-align: left; vertical-align: middle; font-weight: 600; color: var(--text-primary);">${r.kab_name}</td>
+                    <td style="padding: 0.75rem 1.25rem; text-align: center; vertical-align: middle;">
+                        <span class="table-badge ${badgeClass}">${surveyLabel}</span>
+                    </td>
+                    <td style="padding: 0.75rem 1.25rem; text-align: right; vertical-align: middle; font-weight: 800; color: var(--primary); font-family: monospace; font-size: 0.95rem;">${fmt(r.count)}</td>
+                </tr>
+            `;
+        });
+        
+        tbody.innerHTML = rowsHtml;
+    }
+
+    window.updateTimelineView = function() {
+        const kabFilter = document.getElementById('timeline-kab-filter')?.value || 'all';
+        const typeFilter = document.getElementById('timeline-type-filter')?.value || 'all';
+        
+        if (!window.DAILY_SUBMISSION_STATS || !Array.isArray(window.DAILY_SUBMISSION_STATS) || window.DAILY_SUBMISSION_STATS.length === 0) {
+            // Show empty state in KPI and table
+            const statTotal = document.getElementById('timeline-stat-total');
+            const statAvg = document.getElementById('timeline-stat-avg');
+            const statPeakDay = document.getElementById('timeline-stat-peak-day');
+            const substatPeakVal = document.getElementById('timeline-substat-peak-val');
+            if (statTotal) statTotal.innerText = '0';
+            if (statAvg) statAvg.innerText = '0';
+            if (statPeakDay) statPeakDay.innerText = '-';
+            if (substatPeakVal) substatPeakVal.innerText = '0 submit';
+            renderDailySubmissionChart([], []);
+            const tbody = document.getElementById('timeline-table-body');
+            if (tbody) tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:2rem;color:var(--text-secondary);">Data progres harian belum tersedia. Jalankan scrape_granular_assignments.py terlebih dahulu.</td></tr>`;
+            return;
+        }
+        
+        const filtered = window.DAILY_SUBMISSION_STATS.filter(r => {
+            if (kabFilter !== 'all') {
+                // Dropdown values are like "[01] BANGGAI KEPULAUAN", data has "BANGGAI KEPULAUAN"
+                const cleanFilter = kabFilter.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                if ((r.kab_name || '').toUpperCase() !== cleanFilter) return false;
+            }
+            if (typeFilter !== 'all' && r.survey_type !== typeFilter) return false;
+            return true;
+        });
+        
+        const dateMap = {};
+        filtered.forEach(r => {
+            const d = r.date;
+            if (!dateMap[d]) dateMap[d] = 0;
+            dateMap[d] += (r.count || 0);
+        });
+        
+        const sortedDates = Object.keys(dateMap).sort();
+        const sortedCounts = sortedDates.map(d => dateMap[d]);
+        
+        let total = 0;
+        let peakDay = '-';
+        let peakVal = 0;
+        
+        sortedDates.forEach((d, idx) => {
+            const val = sortedCounts[idx];
+            total += val;
+            if (val > peakVal) {
+                peakVal = val;
+                peakDay = d;
+            }
+        });
+        
+        const avg = sortedDates.length > 0 ? (total / sortedDates.length).toFixed(1) : 0;
+        
+        const statTotal = document.getElementById('timeline-stat-total');
+        const statAvg = document.getElementById('timeline-stat-avg');
+        const statPeakDay = document.getElementById('timeline-stat-peak-day');
+        const substatPeakVal = document.getElementById('timeline-substat-peak-val');
+        
+        const fmt = (n) => new Intl.NumberFormat('id-ID').format(n || 0);
+        
+        if (statTotal) statTotal.innerText = fmt(total);
+        if (statAvg) statAvg.innerText = fmt(avg);
+        if (statPeakDay) statPeakDay.innerText = peakDay;
+        if (substatPeakVal) substatPeakVal.innerText = `${fmt(peakVal)} submit`;
+        
+        renderDailySubmissionChart(sortedDates, sortedCounts);
+        renderTimelineTable(sortedDates, dateMap, kabFilter, typeFilter);
+    };
+
+    // --- GRANULAR DATA UTILITIES ---
+
+    window.decompressAndParseGranular = function(compressedBase64) {
+        try {
+            console.log("Decompressing granular data...");
+            const binaryString = atob(compressedBase64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            const decompressed = pako.ungzip(bytes, { to: 'string' });
+            const payload = JSON.parse(decompressed);
+            
+            const regions = payload.regions || [];
+            const petugas = payload.petugas || [];
+            const statuses = payload.statuses || [];
+            const targets = payload.targets || [];
+            
+            console.log(`Rebuilding ${targets.length} targets...`);
+            const rebuilt = targets.map((t) => {
+                const regIdx = t[5];
+                const petIdx = t[4];
+                const statIdx = t[3];
+                
+                const reg = regIdx >= 0 && regIdx < regions.length ? regions[regIdx] : ["-", "-", "-", "-", "-", "-", "-", "-"];
+                const pet = petIdx >= 0 && petIdx < petugas.length ? petugas[petIdx] : ["-", "-"];
+                const stat = statIdx >= 0 && statIdx < statuses.length ? statuses[statIdx] : "OPEN";
+                
+                return {
+                    id: t[0],
+                    codeIdentity: t[1],
+                    data1: t[2],
+                    status: stat,
+                    petugas_username: pet[0],
+                    petugas_fullname: pet[1],
+                    kab_code: reg[0],
+                    kab_name: reg[1],
+                    kec_code: reg[2],
+                    kec_name: reg[3],
+                    desa_code: reg[4],
+                    desa_name: reg[5],
+                    sls_code: reg[6],
+                    sls_name: reg[7],
+                    dateModifiedEpoch: t[6],
+                    survey_type: t[7] === 0 ? 'se_umum' : 'se_ub'
+                };
+            });
+            
+            console.log("Decompression success. Rebuilt targets:", rebuilt.length);
+            return rebuilt;
+        } catch (e) {
+            console.error("Failed to decompress or rebuild granular data:", e);
+            return [];
+        }
+    };
+
+    let isGranularLoading = false;
+    window.GRANULAR_ASSIGNMENTS_DATA = null;
+
+    async function loadGranularAssignmentsData() {
+        const tbody = document.getElementById('assign-sls-table-body');
+        if (window.GRANULAR_ASSIGNMENTS_DATA) {
+            window.renderGranularAssignmentsTable();
+            return;
+        }
+        
+        if (isGranularLoading) return;
+        isGranularLoading = true;
+        
+        if (tbody) {
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="8" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
+                        <svg style="animation: spin 1s linear infinite; margin: 0 auto 1rem; width: 24px; height: 24px; color: var(--primary);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle style="opacity: 0.25;" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path style="opacity: 0.75;" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Memuat rincian data target assignment...
+                    </td>
+                </tr>
+            `;
+        }
+
+        const snapshotSelect = document.getElementById('select-snapshot-date');
+        const snapshotDate = snapshotSelect ? snapshotSelect.value : 'live';
+        const granularKey = snapshotDate === 'live' ? 'granular_assignments' : `granular_assignments:${snapshotDate}`;
+
+        let compressedData = null;
+
+        if (supabaseClient) {
+            try {
+                console.log(`Fetching granular data (${granularKey}) from Supabase...`);
+                const { data, error } = await supabaseClient
+                    .from('dashboard_store')
+                    .select('value')
+                    .eq('key', granularKey)
+                    .single();
+                    
+                if (!error && data && data.value && data.value.compressed_data) {
+                    compressedData = data.value.compressed_data;
+                    console.log("Successfully fetched granular data from Supabase.");
+                }
+            } catch (e) {
+                console.warn("Failed to fetch granular data from Supabase:", e);
+            }
+        }
+
+        if (!compressedData) {
+            if (typeof window.COMPRESSED_GRANULAR_ASSIGNMENTS !== 'undefined' && window.COMPRESSED_GRANULAR_ASSIGNMENTS) {
+                compressedData = window.COMPRESSED_GRANULAR_ASSIGNMENTS;
+                console.log("Using preloaded window.COMPRESSED_GRANULAR_ASSIGNMENTS.");
+            } else {
+                console.log("Loading granular_assignments.js fallback script...");
+                await new Promise((resolve) => {
+                    const script = document.createElement('script');
+                    script.src = 'granular_assignments.js?v=' + Date.now();
+                    script.onload = () => resolve();
+                    script.onerror = () => resolve();
+                    document.head.appendChild(script);
+                });
+                if (typeof window.COMPRESSED_GRANULAR_ASSIGNMENTS !== 'undefined' && window.COMPRESSED_GRANULAR_ASSIGNMENTS) {
+                    compressedData = window.COMPRESSED_GRANULAR_ASSIGNMENTS;
+                    console.log("Successfully loaded granular data from script fallback.");
+                }
+            }
+        }
+
+        if (compressedData) {
+            window.GRANULAR_ASSIGNMENTS_DATA = window.decompressAndParseGranular(compressedData);
+            isGranularLoading = false;
+            // Trigger filters initialization for default "all"
+            window.updateGranularFilters('kab');
+        } else {
+            isGranularLoading = false;
+            if (tbody) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                            Gagal memuat rincian data assignment dari database maupun file lokal. Harap jalankan scrape_granular_assignments.py terlebih dahulu.
+                        </td>
+                    </tr>
+                `;
+            }
+        }
+    }
+
+    // --- GRANULAR TABLE FILTERS, SORT & RENDER ---
+
+    window.granularCurrentPage = 1;
+    window.granularPageLimit = 50;
+    window.granularSortField = 'kab';
+    window.granularSortAsc = true;
+    
+    window.changeGranularLimit = function(limit) {
+        window.granularPageLimit = parseInt(limit);
+        window.renderGranularAssignmentsTable(true);
+    };
+
+    window.sortGranularTable = function(field) {
+        if (window.granularSortField === field) {
+            window.granularSortAsc = !window.granularSortAsc;
+        } else {
+            window.granularSortField = field;
+            window.granularSortAsc = true;
+        }
+        
+        const fields = ['kab', 'kec', 'desa', 'sls', 'petugas', 'target', 'status'];
+        fields.forEach(f => {
+            const el = document.getElementById(`granular-sort-${f}`);
+            if (el) {
+                if (f === field) {
+                    el.innerText = window.granularSortAsc ? '▲' : '▼';
+                } else {
+                    el.innerText = '↕';
+                }
+            }
+        });
+        
+        window.renderGranularAssignmentsTable(false);
+    };
+
+    window.updateGranularFilters = function(changedLevel) {
+        const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        const kecSelect = document.getElementById('assign-sls-kec-filter');
+        const desaSelect = document.getElementById('assign-sls-desa-filter');
+        const slsSelect = document.getElementById('assign-sls-sls-filter');
+        const statusSelect = document.getElementById('assign-sls-status-filter');
+        
+        if (!window.GRANULAR_ASSIGNMENTS_DATA) return;
+        
+        if (changedLevel === 'kab') {
+            if (kabVal === 'all') {
+                if (kecSelect) { kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>'; kecSelect.disabled = true; }
+                if (desaSelect) { desaSelect.innerHTML = '<option value="all">Semua Desa</option>'; desaSelect.disabled = true; }
+                if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
+            } else {
+                const kecs = new Set();
+                window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
+                    if (r.kab_name === kabVal && r.kec_name && r.kec_name !== '-') {
+                        kecs.add(r.kec_name);
+                    }
+                });
+                const sortedKecs = Array.from(kecs).sort();
+                if (kecSelect) {
+                    kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>' + 
+                        sortedKecs.map(k => `<option value="${k}">${k}</option>`).join('');
+                    kecSelect.disabled = false;
+                }
+                if (desaSelect) { desaSelect.innerHTML = '<option value="all">Semua Desa</option>'; desaSelect.disabled = true; }
+                if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
+            }
+        } else if (changedLevel === 'kec') {
+            const kecVal = kecSelect?.value || 'all';
+            if (kecVal === 'all') {
+                if (desaSelect) { desaSelect.innerHTML = '<option value="all">Semua Desa</option>'; desaSelect.disabled = true; }
+                if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
+            } else {
+                const desas = new Set();
+                window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
+                    if (r.kab_name === kabVal && r.kec_name === kecVal && r.desa_name && r.desa_name !== '-') {
+                        desas.add(r.desa_name);
+                    }
+                });
+                const sortedDesas = Array.from(desas).sort();
+                if (desaSelect) {
+                    desaSelect.innerHTML = '<option value="all">Semua Desa</option>' + 
+                        sortedDesas.map(d => `<option value="${d}">${d}</option>`).join('');
+                    desaSelect.disabled = false;
+                }
+                if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
+            }
+        } else if (changedLevel === 'desa') {
+            const kecVal = kecSelect?.value || 'all';
+            const desaVal = desaSelect?.value || 'all';
+            if (desaVal === 'all') {
+                if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
+            } else {
+                const slss = new Set();
+                window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
+                    if (r.kab_name === kabVal && r.kec_name === kecVal && r.desa_name === desaVal && r.sls_name && r.sls_name !== '-') {
+                        slss.add(`${r.sls_code} - ${r.sls_name}`);
+                    }
+                });
+                const sortedSlss = Array.from(slss).sort();
+                if (slsSelect) {
+                    slsSelect.innerHTML = '<option value="all">Semua SLS</option>' + 
+                        sortedSlss.map(s => `<option value="${s.split(' - ')[0]}">${s}</option>`).join('');
+                    slsSelect.disabled = false;
+                }
+            }
+        }
+        
+        if (changedLevel === 'kab') {
+            const uniqueStatuses = new Set();
+            window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
+                if (r.status) uniqueStatuses.add(r.status);
+            });
+            if (statusSelect) {
+                statusSelect.innerHTML = '<option value="all">Semua Status</option>' + 
+                    Array.from(uniqueStatuses).sort().map(s => `<option value="${s}">${s}</option>`).join('');
+            }
+        }
+        
+        window.renderGranularAssignmentsTable(true);
+    };
+
+    window.renderGranularAssignmentsTable = function(resetPage = true) {
+        const tbody = document.getElementById('assign-sls-table-body');
+        if (!tbody) return;
+        
+        if (!window.GRANULAR_ASSIGNMENTS_DATA) {
+            tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Rincian data target assignment belum dimuat. Silakan ubah filter Kabupaten/Kota.</td></tr>`;
+            return;
+        }
+        
+        if (resetPage) {
+            window.granularCurrentPage = 1;
+        }
+        
+        const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
+        const desaVal = document.getElementById('assign-sls-desa-filter')?.value || 'all';
+        const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
+        const statusVal = document.getElementById('assign-sls-status-filter')?.value || 'all';
+        const searchVal = document.getElementById('assign-sls-search-input')?.value.toLowerCase().trim() || '';
+        
+        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+        const surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
+
+        let filtered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
+            if (r.survey_type !== surveyTypeFilter) return false;
+            
+            if (kabVal !== 'all' && r.kab_name !== kabVal) return false;
+            if (kecVal !== 'all' && r.kec_name !== kecVal) return false;
+            if (desaVal !== 'all' && r.desa_name !== desaVal) return false;
+            if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
+            if (statusVal !== 'all' && r.status !== statusVal) return false;
+            
+            if (searchVal) {
+                const matchText = (
+                    (r.data1 || '') + ' ' + 
+                    (r.petugas_username || '') + ' ' + 
+                    (r.petugas_fullname || '') + ' ' +
+                    (r.sls_name || '') + ' ' +
+                    (r.sls_code || '') + ' ' +
+                    (r.status || '')
+                ).toLowerCase();
+                if (!matchText.includes(searchVal)) return false;
+            }
+            return true;
+        });
+        
+        filtered.sort((a, b) => {
+            let valA = '', valB = '';
+            switch (window.granularSortField) {
+                case 'kab': valA = a.kab_name || ''; valB = b.kab_name || ''; break;
+                case 'kec': valA = a.kec_name || ''; valB = b.kec_name || ''; break;
+                case 'desa': valA = a.desa_name || ''; valB = b.desa_name || ''; break;
+                case 'sls': valA = a.sls_name || ''; valB = b.sls_name || ''; break;
+                case 'petugas': valA = a.petugas_fullname || ''; valB = b.petugas_fullname || ''; break;
+                case 'target': valA = a.data1 || ''; valB = b.data1 || ''; break;
+                case 'status': valA = a.status || ''; valB = b.status || ''; break;
+            }
+            
+            let compare = valA.localeCompare(valB, 'id', { sensitivity: 'base' });
+            return window.granularSortAsc ? compare : -compare;
+        });
+        
+        const totalItems = filtered.length;
+        const totalPages = Math.ceil(totalItems / window.granularPageLimit);
+        
+        const startIndex = (window.granularCurrentPage - 1) * window.granularPageLimit;
+        const endIndex = Math.min(startIndex + window.granularPageLimit, totalItems);
+        const paginated = filtered.slice(startIndex, endIndex);
+        
+        if (paginated.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 3rem; color: var(--text-secondary);">Tidak ada data assignment yang cocok dengan kriteria filter.</td></tr>`;
+            const pagInfo = document.getElementById('assign-sls-pagination-info');
+            if (pagInfo) pagInfo.innerText = 'Menampilkan 0 - 0 dari 0 Target';
+            const pagBtns = document.getElementById('assign-sls-pagination-buttons');
+            if (pagBtns) pagBtns.innerHTML = '';
+            return;
+        }
+        
+        let html = '';
+        paginated.forEach((r, idx) => {
+            const no = startIndex + idx + 1;
+            const statusUpper = (r.status || '').toUpperCase();
+            let statusBadgeClass = 'table-badge-open';
+            if (statusUpper.includes('APPROVED')) {
+                statusBadgeClass = 'table-badge-approved';
+            } else if (statusUpper.includes('REJECTED')) {
+                statusBadgeClass = 'table-badge-rejected';
+            } else if (statusUpper.includes('SUBMITTED')) {
+                statusBadgeClass = 'table-badge-submitted';
+            } else if (statusUpper.includes('REVOKED')) {
+                statusBadgeClass = 'table-badge-revoked';
+            } else if (statusUpper === 'DRAFT') {
+                statusBadgeClass = 'table-badge-submitted';
+            }
+                
+            const petugasLabel = r.petugas_fullname && r.petugas_fullname !== '-' ? 
+                `${r.petugas_fullname} <span style="font-size:0.75rem; color:var(--text-secondary); display:block; font-family:monospace;">@${r.petugas_username}</span>` : 
+                '<span style="color:var(--text-muted); font-style:italic;">Belum Ditugaskan</span>';
+                
+            html += `
+                <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;">
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-weight: 600; color: var(--text-secondary);">${no}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 600; color: var(--text-primary); font-size: 0.8rem;">${r.kab_name}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary);">${r.kec_name}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary);">${r.desa_name}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary);">${r.sls_name} <span style="font-size:0.7rem; color:var(--text-secondary); display:block; font-family:monospace;">${r.sls_code}</span></td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.85rem; color: var(--text-primary);">${petugasLabel}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 700; color: var(--text-primary); font-size: 0.85rem;">${r.data1} <span style="font-size:0.7rem; color:var(--text-secondary); display:block; font-family:monospace; font-weight:500;">ID: ${r.codeIdentity || '-'}</span></td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle;">
+                        <span class="table-badge ${statusBadgeClass}">${r.status}</span>
+                    </td>
+                </tr>
+            `;
+        });
+        tbody.innerHTML = html;
+        
+        const pagInfo = document.getElementById('assign-sls-pagination-info');
+        if (pagInfo) {
+            pagInfo.innerText = `Menampilkan ${startIndex + 1} - ${endIndex} dari ${totalItems} Target`;
+        }
+        
+        const pagBtns = document.getElementById('assign-sls-pagination-buttons');
+        if (pagBtns) {
+            let btnsHtml = '';
+            btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === 1 ? 'disabled' : ''} onclick="window.setGranularPage(${window.granularCurrentPage - 1})">Sebelumnya</button>`;
+            
+            let startPage = Math.max(1, window.granularCurrentPage - 2);
+            let endPage = Math.min(totalPages, startPage + 4);
+            if (endPage - startPage < 4) {
+                startPage = Math.max(1, endPage - 4);
+            }
+            
+            for (let p = startPage; p <= endPage; p++) {
+                btnsHtml += `<button class="page-btn ${p === window.granularCurrentPage ? 'active' : ''}" onclick="window.setGranularPage(${p})">${p}</button>`;
+            }
+            
+            btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === totalPages ? 'disabled' : ''} onclick="window.setGranularPage(${window.granularCurrentPage + 1})">Berikutnya</button>`;
+            pagBtns.innerHTML = btnsHtml;
+        }
+    };
+    
+    window.setGranularPage = function(page) {
+        window.granularCurrentPage = page;
+        window.renderGranularAssignmentsTable(false);
+    };
+
+    window.downloadGranularAssignCSV = function() {
+        if (!window.GRANULAR_ASSIGNMENTS_DATA) return;
+        
+        const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
+        const desaVal = document.getElementById('assign-sls-desa-filter')?.value || 'all';
+        const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
+        const statusVal = document.getElementById('assign-sls-status-filter')?.value || 'all';
+        const searchVal = document.getElementById('assign-sls-search-input')?.value.toLowerCase().trim() || '';
+        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+        const surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
+
+        let filtered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
+            if (r.survey_type !== surveyTypeFilter) return false;
+            if (kabVal !== 'all' && r.kab_name !== kabVal) return false;
+            if (kecVal !== 'all' && r.kec_name !== kecVal) return false;
+            if (desaVal !== 'all' && r.desa_name !== desaVal) return false;
+            if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
+            if (statusVal !== 'all' && r.status !== statusVal) return false;
+            if (searchVal) {
+                const matchText = (
+                    (r.data1 || '') + ' ' + 
+                    (r.petugas_username || '') + ' ' + 
+                    (r.petugas_fullname || '') + ' ' +
+                    (r.sls_name || '') + ' ' +
+                    (r.sls_code || '')
+                ).toLowerCase();
+                if (!matchText.includes(searchVal)) return false;
+            }
+            return true;
+        });
+
+        if (filtered.length === 0) {
+            alert('Tidak ada data untuk diunduh.');
+            return;
+        }
+
+        let csvContent = '\uFEFFNo;Kabupaten;Kecamatan;Desa;Kode SLS;Nama SLS;Username Petugas;Nama Petugas;ID Target;Nama Assignment;Status;Jenis Sensus\r\n';
+        filtered.forEach((r, idx) => {
+            const no = idx + 1;
+            const kab = (r.kab_name || '-').replace(/"/g, '""');
+            const kec = (r.kec_name || '-').replace(/"/g, '""');
+            const desa = (r.desa_name || '-').replace(/"/g, '""');
+            const slsCode = r.sls_code || '-';
+            const slsName = (r.sls_name || '-').replace(/"/g, '""');
+            const petUser = r.petugas_username || '-';
+            const petName = (r.petugas_fullname || '-').replace(/"/g, '""');
+            const targetId = r.codeIdentity || '-';
+            const targetName = (r.data1 || '-').replace(/"/g, '""');
+            const status = r.status || 'OPEN';
+            const type = r.survey_type === 'se_umum' ? 'SE Umum' : 'SE UB';
+            
+            csvContent += `"${no}";"${kab}";"${kec}";"${desa}";"${slsCode}";"${slsName}";"${petUser}";"${petName}";"${targetId}";"${targetName}";"${status}";"${type}"\r\n`;
+        });
+
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.setAttribute('href', url);
+        const fileName = `granular_assignments_${surveyTypeFilter}_${kabVal.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}.csv`;
+        link.setAttribute('download', fileName);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     window.toggleStatsDetail = function(section) {
