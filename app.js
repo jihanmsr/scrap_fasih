@@ -1769,7 +1769,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!window.currentChartType) window.currentChartType = { se_umum: 'bar', se_ub: 'bar' };
 
         window.toggleChartType = function (type) {
-            window.currentChartType[type] = window.currentChartType[type] === 'line' ? 'bar' : 'line';
+            const current = window.currentChartType[type] || 'bar';
+            let next = 'line';
+            if (current === 'bar') {
+                next = 'line';
+            } else if (current === 'line') {
+                next = 'line_daily';
+            } else if (current === 'line_daily') {
+                next = 'bar';
+            }
+            window.currentChartType[type] = next;
             window.renderSeDashboard(type);
         };
 
@@ -1784,24 +1793,85 @@ document.addEventListener('DOMContentLoaded', () => {
             let chartData = {};
             let chartOptions = {};
 
-            if (cType === 'line') {
-                const cumToday = submitted;
-                const cumYesterday = submitted - today;
-                const cum2DaysAgo = submitted - today - yesterday;
+            if (cType === 'line' || cType === 'line_daily') {
+                let labels = ['H-2', 'Kemarin', 'Hari Ini'];
+                let dataPoints = (cType === 'line')
+                    ? [submitted - today - yesterday, submitted - today, submitted]
+                    : [twoDaysAgo, yesterday, today];
+                
+                const stats = window.DAILY_SUBMISSION_STATS;
+                if (stats && Array.isArray(stats) && stats.length > 0) {
+                    const filtered = stats.filter(r => r.survey_type === surveyType);
+                    const dateMap = {};
+                    filtered.forEach(r => {
+                        const d = r.date;
+                        if (d) {
+                            dateMap[d] = (dateMap[d] || 0) + (r.count || 0);
+                        }
+                    });
+                    
+                    const sortedDates = Object.keys(dateMap).sort();
+                    if (sortedDates.length > 0) {
+                        const cumData = new Array(sortedDates.length);
+                        let runningTotal = submitted;
+                        cumData[sortedDates.length - 1] = runningTotal;
+                        
+                        for (let i = sortedDates.length - 1; i > 0; i--) {
+                            const date = sortedDates[i];
+                            const change = dateMap[date] || 0;
+                            runningTotal = Math.max(0, runningTotal - change);
+                            cumData[i - 1] = runningTotal;
+                        }
+                        
+                        // Filter starting from June 15 ('2026-06-15')
+                        const startIndex = sortedDates.findIndex(d => d >= '2026-06-15');
+                        let finalDates = sortedDates;
+                        let finalDataPoints = (cType === 'line') ? cumData : sortedDates.map(d => dateMap[d] || 0);
+                        if (startIndex !== -1) {
+                            finalDates = sortedDates.slice(startIndex);
+                            finalDataPoints = finalDataPoints.slice(startIndex);
+                        }
+                        
+                        labels = finalDates.map(d => {
+                            try {
+                                const parts = d.split('-');
+                                if (parts.length === 3) return `${parts[2]}/${parts[1]}`;
+                            } catch(e) {}
+                            return d;
+                        });
+                        dataPoints = finalDataPoints;
+                    }
+                }
+
+                // Adjust wrapper width dynamically for line charts
+                const wrapper = ctx.parentElement;
+                if (wrapper) {
+                    const parentWidth = wrapper.parentElement.clientWidth || 400;
+                    const dayWidth = parentWidth / 3;
+                    const computedWidth = Math.max(parentWidth, labels.length * dayWidth);
+                    wrapper.style.width = computedWidth + 'px';
+                    
+                    // Scroll to the far right to show most recent days
+                    setTimeout(() => {
+                        if (wrapper.parentElement) {
+                            wrapper.parentElement.scrollLeft = wrapper.parentElement.scrollWidth;
+                        }
+                    }, 50);
+                }
 
                 chartData = {
-                    labels: ['H-2', 'Kemarin', 'Hari Ini'],
+                    labels: labels,
                     datasets: [{
-                        label: 'Total Capaian Selesai (Kumulatif)',
-                        data: [cum2DaysAgo, cumYesterday, cumToday],
-                        borderColor: '#3b82f6',
-                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                        label: cType === 'line' ? 'Total Capaian Selesai (Kumulatif)' : 'Progres Submit Per Hari',
+                        data: dataPoints,
+                        borderColor: cType === 'line' ? '#3b82f6' : '#10b981',
+                        backgroundColor: cType === 'line' ? 'rgba(59, 130, 246, 0.2)' : 'rgba(16, 185, 129, 0.2)',
                         borderWidth: 3,
                         pointBackgroundColor: '#0b1120',
-                        pointBorderColor: '#3b82f6',
+                        pointBorderColor: cType === 'line' ? '#3b82f6' : '#10b981',
                         pointBorderWidth: 2,
-                        pointRadius: 6,
-                        pointHoverRadius: 8,
+                        pointRadius: labels.length > 10 ? 3 : 6,
+                        pointHoverRadius: labels.length > 10 ? 5 : 8,
                         fill: true,
                         tension: 0.4
                     }]
@@ -1820,7 +1890,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 };
             } else {
-                // Bar Chart Per Kabupaten (Stacked)
+                // Bar Chart Per Kabupaten (Stacked/Overlapping where Green is on top)
+                const wrapper = ctx.parentElement;
+                if (wrapper) {
+                    wrapper.style.width = '100%';
+                }
+
                 const sortedForBar = [...surveyData].sort((a, b) => b.total_prelist - a.total_prelist);
                 chartData = {
                     labels: sortedForBar.map(i => i.kabupaten.replace(/\[\d+\] /g, '')),
@@ -1830,7 +1905,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             data: sortedForBar.map(i => i.total_prelist || 0),
                             backgroundColor: 'rgba(239, 68, 68, 0.85)', // Red
                             borderRadius: 4,
-                            grouped: false
+                            grouped: false,
+                            order: 2
                         },
                         {
                             label: 'Submitted (Selesai)',
@@ -1838,7 +1914,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             backgroundColor: 'rgba(16, 185, 129, 0.85)', // Green
                             borderRadius: 4,
                             minBarLength: 6,
-                            grouped: false
+                            grouped: false,
+                            order: 1
                         }
                     ]
                 };
@@ -1873,7 +1950,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             window.seCharts[surveyType] = new Chart(ctx.getContext('2d'), {
-                type: cType,
+                type: (cType === 'line' || cType === 'line_daily') ? 'line' : 'bar',
                 data: chartData,
                 options: chartOptions
             });
@@ -4463,9 +4540,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Switch Tab function
     window.switchTab = function (tabId) {
-        if (tabId === 'timeline') {
-            tabId = 'se_umum';
-        }
         // Hide all tab contents
         document.querySelectorAll('.tab-content').forEach(el => {
             el.style.display = 'none';

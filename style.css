@@ -1933,3 +1933,18 @@ th.sortable:hover {
     background-color: var(--card-hover-bg);
     color: var(--text-primary);
 }
+
+/* Custom scrollbar for charts */
+.chart-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+.chart-scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+.chart-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.25);
+    border-radius: 3px;
+}
+.chart-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.45);
+}
