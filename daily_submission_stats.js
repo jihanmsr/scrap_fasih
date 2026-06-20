@@ -1,15 +1,27 @@
 window.DAILY_SUBMISSION_STATS = [
   {
+    "date": "2026-06-17",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 324
+  },
+  {
+    "date": "2026-06-15",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 102
+  },
+  {
     "date": "2026-06-20",
     "kab_name": "BANGGAI KEPULAUAN",
     "survey_type": "se_umum",
-    "count": 800
+    "count": 799
   },
   {
     "date": "2026-06-19",
     "kab_name": "BANGGAI KEPULAUAN",
     "survey_type": "se_umum",
-    "count": 669
+    "count": 677
   },
   {
     "date": "2026-06-18",
@@ -18,22 +30,10 @@ window.DAILY_SUBMISSION_STATS = [
     "count": 525
   },
   {
-    "date": "2026-06-17",
-    "kab_name": "BANGGAI KEPULAUAN",
-    "survey_type": "se_umum",
-    "count": 325
-  },
-  {
     "date": "2026-06-16",
     "kab_name": "BANGGAI KEPULAUAN",
     "survey_type": "se_umum",
     "count": 243
-  },
-  {
-    "date": "2026-06-15",
-    "kab_name": "BANGGAI KEPULAUAN",
-    "survey_type": "se_umum",
-    "count": 102
   },
   {
     "date": "2026-06-13",
@@ -153,49 +153,49 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-21",
     "kab_name": "BANGGAI KEPULAUAN",
     "survey_type": "se_umum",
-    "count": 52
+    "count": 59
   },
   {
     "date": "2026-06-21",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 116
+    "count": 119
   },
   {
     "date": "2026-06-20",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 2362
+    "count": 2361
   },
   {
     "date": "2026-06-19",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 1572
+    "count": 1562
   },
   {
     "date": "2026-06-18",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 1799
+    "count": 1762
   },
   {
     "date": "2026-06-17",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 1389
+    "count": 1382
   },
   {
     "date": "2026-06-16",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 967
+    "count": 964
   },
   {
     "date": "2026-06-15",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 215
+    "count": 214
   },
   {
     "date": "2026-06-13",
@@ -207,25 +207,25 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-20",
     "kab_name": "MOROWALI",
     "survey_type": "se_umum",
-    "count": 701
+    "count": 724
   },
   {
     "date": "2026-06-18",
     "kab_name": "MOROWALI",
     "survey_type": "se_umum",
-    "count": 453
+    "count": 467
   },
   {
     "date": "2026-06-19",
     "kab_name": "MOROWALI",
     "survey_type": "se_umum",
-    "count": 451
+    "count": 446
   },
   {
     "date": "2026-06-17",
     "kab_name": "MOROWALI",
     "survey_type": "se_umum",
-    "count": 340
+    "count": 349
   },
   {
     "date": "2026-06-11",
@@ -237,13 +237,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-21",
     "kab_name": "MOROWALI",
     "survey_type": "se_umum",
-    "count": 24
+    "count": 32
   },
   {
     "date": "2026-06-16",
     "kab_name": "MOROWALI",
     "survey_type": "se_umum",
-    "count": 137
+    "count": 138
   },
   {
     "date": "2026-06-15",
@@ -366,16 +366,16 @@ window.DAILY_SUBMISSION_STATS = [
     "count": 23
   },
   {
-    "date": "2026-06-20",
-    "kab_name": "POSO",
-    "survey_type": "se_umum",
-    "count": 1820
-  },
-  {
     "date": "2026-06-19",
     "kab_name": "POSO",
     "survey_type": "se_umum",
     "count": 1158
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1812
   },
   {
     "date": "2026-06-15",
@@ -387,43 +387,43 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-21",
     "kab_name": "POSO",
     "survey_type": "se_umum",
-    "count": 53
+    "count": 61
   },
   {
     "date": "2026-06-20",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 1529
+    "count": 1505
   },
   {
     "date": "2026-06-18",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 702
+    "count": 688
   },
   {
     "date": "2026-06-19",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 877
+    "count": 865
   },
   {
     "date": "2026-06-17",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 538
+    "count": 537
   },
   {
     "date": "2026-06-16",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 296
+    "count": 289
   },
   {
     "date": "2026-06-15",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 65
+    "count": 63
   },
   {
     "date": "2026-06-21",
@@ -465,7 +465,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-19",
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
-    "count": 693
+    "count": 691
   },
   {
     "date": "2026-06-18",
@@ -486,16 +486,16 @@ window.DAILY_SUBMISSION_STATS = [
     "count": 159
   },
   {
+    "date": "2026-06-21",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 67
+  },
+  {
     "date": "2026-06-15",
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
     "count": 40
-  },
-  {
-    "date": "2026-06-21",
-    "kab_name": "TOLI-TOLI",
-    "survey_type": "se_umum",
-    "count": 59
   },
   {
     "date": "2026-06-14",
@@ -579,7 +579,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-20",
     "kab_name": "BUOL",
     "survey_type": "se_umum",
-    "count": 1061
+    "count": 1057
   },
   {
     "date": "2026-06-19",
@@ -612,10 +612,22 @@ window.DAILY_SUBMISSION_STATS = [
     "count": 105
   },
   {
+    "date": "2026-06-12",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-05",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
     "date": "2026-06-21",
     "kab_name": "BUOL",
     "survey_type": "se_umum",
-    "count": 51
+    "count": 56
   },
   {
     "date": "2026-06-04",
@@ -636,20 +648,14 @@ window.DAILY_SUBMISSION_STATS = [
     "count": 2
   },
   {
-    "date": "2026-06-12",
+    "date": "2026-05-23",
     "kab_name": "BUOL",
     "survey_type": "se_umum",
     "count": 1
   },
   {
     "date": "2026-06-05",
-    "kab_name": "BUOL",
-    "survey_type": "se_umum",
-    "count": 1
-  },
-  {
-    "date": "2026-05-23",
-    "kab_name": "BUOL",
+    "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
     "count": 1
   },
@@ -657,43 +663,37 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-20",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 1914
+    "count": 2337
   },
   {
     "date": "2026-06-19",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 1195
+    "count": 1485
   },
   {
     "date": "2026-06-18",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 874
+    "count": 1153
   },
   {
     "date": "2026-06-17",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 760
+    "count": 947
   },
   {
     "date": "2026-06-16",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 559
+    "count": 616
   },
   {
     "date": "2026-06-15",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 178
-  },
-  {
-    "date": "2026-06-05",
-    "kab_name": "PARIGI MOUTONG",
-    "survey_type": "se_umum",
-    "count": 1
+    "count": 190
   },
   {
     "date": "2026-06-11",
@@ -705,7 +705,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-21",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 126
+    "count": 155
   },
   {
     "date": "2026-06-12",

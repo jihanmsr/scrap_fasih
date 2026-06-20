@@ -290,9 +290,26 @@ async def generate_report():
         
         datatable_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
 
-        async def fetch_api_safely(url, payload, token, timeout_seconds=120, max_retries=3):
+        async def fetch_api_safely(url, payload, token, timeout_seconds=120, max_retries=3, method="POST"):
             for attempt in range(1, max_retries + 1):
                 try:
+                    res = await page.evaluate("""
+                        async ({url, payload, token, timeoutMs, method}) => {
+                            const controller = new AbortController();
+                            const id = setTimeout(() => controller.abort(), timeoutMs);
+                            try {
+                                const fetchOpts = {
+                                    method: method,
+                                    headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+                                    signal: controller.signal
+                                };
+                                if (method !== "GET" && payload !== null) {
+                                    fetchOpts.body = JSON.stringify(payload);
+                                }
+                                const r = await fetch(url, fetchOpts);
+                                clearTimeout(id);
+                                if (!r.ok) return { error: `HTTP ${r.status}: ${await r.text()}`, status: r.status };
+                                const text = await r.text();
                                 try {
                                     return JSON.parse(text);
                                 } catch(e) {
@@ -303,7 +320,7 @@ async def generate_report():
                                 return { error: e.toString() };
                             }
                         }
-                    """, {"url": url, "payload": payload, "token": token, "timeoutMs": timeout_seconds * 1000})
+                    """, {"url": url, "payload": payload, "token": token, "timeoutMs": timeout_seconds * 1000, "method": method})
                     # Retry on 5xx server errors
                     if isinstance(res, dict) and res.get("error"):
                         status = res.get("status", 0)
@@ -900,7 +917,7 @@ async def generate_report():
                             status_records_count += len(recs)
                             
                         if status_records_count > 0:
-                        print(f"  Selesai fetch {kab_name} -> {kec_name} status {status}: {status_records_count} records (Accumulated: {len(all_records)})")
+                            print(f"  Selesai fetch {kab_name} -> {kec_name} status {status}: {status_records_count} records (Accumulated: {len(all_records)})")
             
             # Fetch historical snapshots from Supabase to pre-populate yesterday and two days ago completed
             yesterday_str = yesterday.strftime("%Y-%m-%d")

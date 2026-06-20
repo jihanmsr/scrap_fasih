@@ -2997,14 +2997,17 @@ bed3c6e7-5916-4d83-a40d-372e744e8ac3,JOYFUL KIDS,OPEN,joyfulkids2004@gmail.com,B
 bed3c6e7-5916-4d83-a40d-372e744e8ac3,JOYFUL KIDS,OPEN,joyfulkids2004@gmail.com,Bounced,Bounced,"02 Jun 2026, 06:59:00",6,[71] PALU
 bed3c6e7-5916-4d83-a40d-372e744e8ac3,JOYFUL KIDS,OPEN,joyfulkids2004@gmail.com,Bounced,Queued,"02 Jun 2026, 06:58:39",7,[71] PALU
 c376b2fd-de12-4da7-b07f-f27625d8f67d,BRIUNIT TATURA,OPEN,-,-,-,-,0,[71] PALU
-40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Queued,"09 Jun 2026, 11:16:21",1,[71] PALU
-40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:16:15",2,[71] PALU
-40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Delivered,"04 Jun 2026, 11:13:08",3,[71] PALU
-40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Queued,"04 Jun 2026, 11:13:02",4,[71] PALU
-40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Delivered,"04 Jun 2026, 11:12:33",5,[71] PALU
-40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Queued,"04 Jun 2026, 11:12:29",6,[71] PALU
-40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Delivered,"02 Jun 2026, 01:00:16",7,[71] PALU
-40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Delivered,Queued,"02 Jun 2026, 01:00:12",8,[71] PALU
+40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Clicked,Clicked,"20 Jun 2026, 11:33:18",1,[71] PALU
+40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Clicked,Opened,"20 Jun 2026, 11:31:15",2,[71] PALU
+40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Clicked,Opened,"20 Jun 2026, 11:30:04",3,[71] PALU
+40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Clicked,Queued,"09 Jun 2026, 11:16:21",4,[71] PALU
+40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Clicked,Delivered,"09 Jun 2026, 11:16:15",5,[71] PALU
+40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Clicked,Delivered,"04 Jun 2026, 11:13:08",6,[71] PALU
+40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Clicked,Queued,"04 Jun 2026, 11:13:02",7,[71] PALU
+40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Clicked,Delivered,"04 Jun 2026, 11:12:33",8,[71] PALU
+40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Clicked,Queued,"04 Jun 2026, 11:12:29",9,[71] PALU
+40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Clicked,Delivered,"02 Jun 2026, 01:00:16",10,[71] PALU
+40e22368-2c9c-4da6-b095-eb1281d94c94,"TOHA BATU PALU, PT",OPEN,tohabatupalu@gmail.com,Clicked,Queued,"02 Jun 2026, 01:00:12",11,[71] PALU
 cb9cf0d8-5427-43d3-bea9-984be52f3a88,SIRTU KARYA UTAMA PT,OPEN,ptsirtukaryautama@gmail.com,Opened,Opened,"05 Jun 2026, 09:02:57",1,[71] PALU
 cb9cf0d8-5427-43d3-bea9-984be52f3a88,SIRTU KARYA UTAMA PT,OPEN,ptsirtukaryautama@gmail.com,Opened,Delivered,"02 Jun 2026, 07:41:46",2,[71] PALU
 cb9cf0d8-5427-43d3-bea9-984be52f3a88,SIRTU KARYA UTAMA PT,OPEN,ptsirtukaryautama@gmail.com,Opened,Queued,"02 Jun 2026, 07:41:42",3,[71] PALU
@@ -3257,3 +3260,63 @@ a1efac58-5ae4-40aa-ac6f-b05be07a6a70,ANUTA KARYA PRIMA,OPEN,anutakaryaprima@gmai
 9ad798fd-3673-4d1e-ab8c-6b8df6a12162,SINAR LESTARI JAYAPRIMA,OPEN,ptsinarlestarijayaprima@yahoo.com,Bounced,Queued,"02 Jun 2026, 04:54:25",2,[71] PALU
 b767faad-d83e-4f27-a944-b49f0d4c13f9,"DUAPUTRA PERKASA MANDIRI,CV",OPEN,duaputraperkasamandiri@gmail.com,Delivered,Delivered,"02 Jun 2026, 06:32:51",1,[71] PALU
 b767faad-d83e-4f27-a944-b49f0d4c13f9,"DUAPUTRA PERKASA MANDIRI,CV",OPEN,duaputraperkasamandiri@gmail.com,Delivered,Queued,"02 Jun 2026, 06:32:50",2,[71] PALU
+8dd95298-bef6-472e-9f59-9a50ee99cef1,WANHONG NONFERROUS RECYCLING UTILIZATION PT,SUBMITTED RESPONDENT,wanhong.nru@gmail.com,Delivered,Delivered,"04 Jun 2026, 11:41:24",1,[71] PALU
+8dd95298-bef6-472e-9f59-9a50ee99cef1,WANHONG NONFERROUS RECYCLING UTILIZATION PT,SUBMITTED RESPONDENT,wanhong.nru@gmail.com,Delivered,Queued,"04 Jun 2026, 11:41:21",2,[71] PALU
+8dd95298-bef6-472e-9f59-9a50ee99cef1,WANHONG NONFERROUS RECYCLING UTILIZATION PT,SUBMITTED RESPONDENT,wanhong.nru@gmail.com,Delivered,Delivered,"02 Jun 2026, 04:12:55",3,[71] PALU
+8dd95298-bef6-472e-9f59-9a50ee99cef1,WANHONG NONFERROUS RECYCLING UTILIZATION PT,SUBMITTED RESPONDENT,wanhong.nru@gmail.com,Delivered,Queued,"02 Jun 2026, 04:12:55",4,[71] PALU
+b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Opened,"04 Jun 2026, 11:33:26",1,[71] PALU
+b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Opened,"04 Jun 2026, 11:33:13",2,[71] PALU
+b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Opened,"04 Jun 2026, 11:32:24",3,[71] PALU
+b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Delivered,"04 Jun 2026, 11:30:04",4,[71] PALU
+b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Queued,"04 Jun 2026, 11:30:00",5,[71] PALU
+b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Delivered,"02 Jun 2026, 06:30:27",6,[71] PALU
+b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Queued,"02 Jun 2026, 06:30:24",7,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Opened,"10 Jun 2026, 23:41:42",1,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Opened,"10 Jun 2026, 23:41:41",2,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Delivered,"10 Jun 2026, 23:17:21",3,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Queued,"10 Jun 2026, 23:17:21",4,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Delivered,"10 Jun 2026, 10:32:10",5,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Queued,"10 Jun 2026, 10:32:09",6,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Clicked,"10 Jun 2026, 10:30:48",7,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Opened,"10 Jun 2026, 10:30:36",8,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Opened,"10 Jun 2026, 10:30:35",9,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Clicked,"02 Jun 2026, 06:48:48",10,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Clicked,"02 Jun 2026, 06:48:47",11,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Opened,"02 Jun 2026, 06:48:32",12,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Delivered,"02 Jun 2026, 03:23:06",13,[71] PALU
+7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Queued,"02 Jun 2026, 03:22:53",14,[71] PALU
+01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Delivered,"03 Jun 2026, 16:46:45",1,[71] PALU
+01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Queued,"03 Jun 2026, 16:46:41",2,[71] PALU
+01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Opened,"03 Jun 2026, 07:48:29",3,[71] PALU
+01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Clicked,"03 Jun 2026, 07:48:29",4,[71] PALU
+01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Opened,"02 Jun 2026, 08:47:43",5,[71] PALU
+01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Delivered,"01 Jun 2026, 22:46:17",6,[71] PALU
+01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Queued,"01 Jun 2026, 22:46:13",7,[71] PALU
+1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Opened,"11 Jun 2026, 14:30:52",1,[71] PALU
+1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Opened,"11 Jun 2026, 14:30:44",2,[71] PALU
+1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Opened,"11 Jun 2026, 14:30:43",3,[71] PALU
+1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Opened,"11 Jun 2026, 14:30:39",4,[71] PALU
+1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Opened,"11 Jun 2026, 14:30:33",5,[71] PALU
+1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Delivered,"04 Jun 2026, 11:19:25",6,[71] PALU
+1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Queued,"04 Jun 2026, 11:19:20",7,[71] PALU
+1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Delivered,"02 Jun 2026, 05:33:35",8,[71] PALU
+1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Queued,"02 Jun 2026, 05:33:32",9,[71] PALU
+1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Delivered,"01 Jun 2026, 23:40:18",10,[71] PALU
+1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Queued,"01 Jun 2026, 23:40:15",11,[71] PALU
+abcf8218-4b74-42f9-996a-ab3d2118937f,"ALFA INDUSTRI MANDIRI, PT",SUBMITTED RESPONDENT,ptalfaindustrimandiri@gmail.com,Delivered,Delivered,"04 Jun 2026, 11:31:37",1,[71] PALU
+d0165086-104a-4500-b00b-2fc5d6b40f95,"MANADO MOTOR, CV",SUBMITTED RESPONDENT,soputraroland@yahoo.com,Permanent_fail,Permanent_fail,"10 Jun 2026, 04:53:33",1,[71] PALU
+d0165086-104a-4500-b00b-2fc5d6b40f95,"MANADO MOTOR, CV",SUBMITTED RESPONDENT,soputraroland@yahoo.com,Permanent_fail,Bounced,"02 Jun 2026, 07:57:37",2,[71] PALU
+d0165086-104a-4500-b00b-2fc5d6b40f95,"MANADO MOTOR, CV",SUBMITTED RESPONDENT,soputraroland@yahoo.com,Permanent_fail,Queued,"02 Jun 2026, 07:57:15",3,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Opened,"04 Jun 2026, 12:24:18",3,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Delivered,"04 Jun 2026, 12:23:16",4,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Queued,"04 Jun 2026, 12:23:11",5,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Clicked,"04 Jun 2026, 11:29:34",6,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Opened,"04 Jun 2026, 11:29:27",7,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Opened,"04 Jun 2026, 11:28:26",8,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Clicked,"04 Jun 2026, 11:18:58",9,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Clicked,"04 Jun 2026, 11:16:15",10,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Opened,"04 Jun 2026, 11:16:12",11,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Opened,"04 Jun 2026, 11:12:45",12,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Clicked,"04 Jun 2026, 11:12:45",13,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Delivered,"04 Jun 2026, 11:12:29",14,[71] PALU
+46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Queued,"04 Jun 2026, 11:12:29",15,[71] PALU

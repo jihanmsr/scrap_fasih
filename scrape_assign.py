@@ -385,13 +385,6 @@ async def fetch_sls_by_kecamatan(page, token, survey_period_id, region1_id, kab_
 
             sls_dict[sls_code]["total"] += 1
             
-            # Check if synced (SUBMITTED or APPROVED status)
-            status = comp.get("assignmentStatusAlias", "")
-            if status:
-                status_upper = status.upper()
-                if "SUBMITTED" in status_upper or "APPROVED" in status_upper:
-                    sls_dict[sls_code]["sync_count"] += 1
-
             officer = comp.get("currentUserUsername")
             if officer:
                 sls_dict[sls_code]["assigned"] += 1
@@ -640,12 +633,6 @@ async def fetch_sls_ub_via_datatable(page, token, survey_period_id, region1_id, 
             }
 
         sls_dict[sls_code]["total"] += 1
-        
-        status = comp.get("assignmentStatusAlias", "")
-        if status:
-            status_upper = status.upper()
-            if "SUBMITTED" in status_upper or "APPROVED" in status_upper:
-                sls_dict[sls_code]["sync_count"] += 1
 
         officer = comp.get("currentUserUsername")
         if officer:
