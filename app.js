@@ -1847,7 +1847,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const wrapper = ctx.parentElement;
                 if (wrapper) {
                     const parentWidth = wrapper.parentElement.clientWidth || 400;
-                    const dayWidth = parentWidth / 3;
+                    // Use smaller dayWidth so bars are denser/dempet - each day takes ~1/7 of visible width
+                    const dayWidth = Math.max(40, parentWidth / 7);
                     const computedWidth = Math.max(parentWidth, labels.length * dayWidth);
                     wrapper.style.width = computedWidth + 'px';
                     
@@ -5039,6 +5040,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resetSelect('sls-desa-filter');
         resetSelect('sls-petugas-filter');
         resetSelect('sls-assignment-filter');
+        resetSelect('assign-sls-status-filter');
 
         resetSelect('sync-kab-filter');
         resetSelect('sync-kec-filter');
@@ -5678,6 +5680,16 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadGranularAssignmentsData() {
         const tbody = document.getElementById('assign-sls-table-body');
         if (window.GRANULAR_ASSIGNMENTS_DATA) {
+            // Re-populate status filter in case it's empty (e.g. after tab switch)
+            const statusSelect = document.getElementById('assign-sls-status-filter');
+            if (statusSelect && statusSelect.options.length <= 1) {
+                const uniqueStatuses = new Set();
+                window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
+                    if (r.status) uniqueStatuses.add(r.status);
+                });
+                statusSelect.innerHTML = '<option value="all">Semua Status</option>' +
+                    Array.from(uniqueStatuses).sort().map(s => `<option value="${s}">${s}</option>`).join('');
+            }
             window.renderGranularAssignmentsTable();
             return;
         }

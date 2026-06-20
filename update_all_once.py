@@ -1,6 +1,7 @@
 import asyncio
 import os
 import sys
+import subprocess
 
 # Pastikan directory root masuk dalam sys.path
 root_dir = os.path.dirname(os.path.abspath(__file__))
@@ -8,7 +9,6 @@ sys.path.append(root_dir)
 
 from scrape_sync import scrape_sync_data
 from generate_ipas_report import generate_report
-from scrape_via_api import scrape_via_api
 from scrape_granular_assignments import scrape_all_granular
 
 async def run_all():
@@ -35,8 +35,8 @@ async def run_all():
     # 3. Scrape Email UB (Bounced History)
     print("[3/4] Menarik status pengiriman email Usaha Besar (UB)...")
     try:
-        # scrape_via_api adalah fungsi sinkron (synchronous)
-        scrape_via_api()
+        # Jalankan sebagai subprocess agar tidak konflik dengan loop asyncio
+        subprocess.run([sys.executable, "scrape_via_api.py"], check=True)
         print("-> Sukses memperbarui riwayat email bounce UB.\n")
     except Exception as e:
         print(f"-> [ERROR] Gagal menarik email UB: {e}\n")
