@@ -273,51 +273,83 @@ async def fetch_sls_by_kecamatan(page, token, survey_period_id, region1_id, kab_
         kab_name = k["kab_name"]
         print(f"      [DEBUG] Starting fetch_one_kec for {k['kec_name']} ({kec_id})")
         
-        async def do_fetch():
-            start = 0
-            length = 1000
-            kec_records = []
-            while True:
-                payload_dt = {
-                    "start": start, "length": length, "columns": [{"data": "id"}], "order": [],
-                    "search": {"value": "", "regex": False},
-                    "assignmentExtraParam": {
-                        "region1Id": region1_id, 
-                        "region2Id": kab_id,
-                        "region3Id": kec_id,
-                        "surveyPeriodId": survey_period_id, 
-                        "assignmentErrorStatusType": -1, 
-                        "filterTargetType": ""
+            async def fetch_dynamic_node(r3, r4, r5):
+                start = 0
+                length = 1000
+                node_records = []
+                while True:
+                    payload_dt = {
+                        "start": start, "length": length, "columns": [{"data": "id"}], "order": [],
+                        "search": {"value": "", "regex": False},
+                        "assignmentExtraParam": {
+                            "region1Id": region1_id, 
+                            "region2Id": kab_id,
+                            "region3Id": r3 if r3 else "",
+                            "region4Id": r4 if r4 else "",
+                            "region5Id": r5 if r5 else "",
+                            "surveyPeriodId": survey_period_id, 
+                            "assignmentErrorStatusType": -1, 
+                            "filterTargetType": ""
+                        }
                     }
-                }
-                for attempt in range(4):
-                    try:
-                        print(f"      [DEBUG] Waiting for semaphore for {k['kec_name']} ({kec_id}), attempt {attempt+1}")
-                        async with sem:
-                            print(f"      [DEBUG] Acquired semaphore for {k['kec_name']} ({kec_id})")
-                            res_dt = await evaluate_fetch_with_retry(page, token, DATATABLE_URL, payload_dt)
-                            await asyncio.sleep(1.0)
-                        if res_dt and "searchData" in res_dt:
-                            records = res_dt["searchData"]
-                            if not records:
-                                return kec_records
-                            kec_records.extend(records)
-                            
-                            if len(records) < length:
-                                return kec_records
-                            start += length
-                            if start >= res_dt.get("totalHit", 0):
-                                return kec_records
-                            break
-                        elif res_dt and isinstance(res_dt, dict) and "error" in res_dt:
-                            print(f"      [DEBUG] API error for {k['kec_name']} ({kec_id}): {res_dt}")
+                    for attempt in range(4):
+                        try:
+                            async with sem:
+                                res_dt = await evaluate_fetch_with_retry(page, token, DATATABLE_URL, payload_dt)
+                                await asyncio.sleep(1.0)
+                            if res_dt and "searchData" in res_dt:
+                                records = res_dt["searchData"]
+                                if not records:
+                                    return node_records, False
+                                node_records.extend(records)
+                                
+                                if len(records) < length:
+                                    return node_records, False
+                                start += length
+                                if start >= res_dt.get("totalHit", 0):
+                                    if res_dt.get("totalHit", 0) >= 1000:
+                                        return node_records, True # Butuh fallback
+                                    return node_records, False
+                                break
+                            elif res_dt and isinstance(res_dt, dict) and "error" in res_dt:
+                                await asyncio.sleep(0.5 * (attempt + 1))
+                        except Exception as ex:
                             await asyncio.sleep(0.5 * (attempt + 1))
-                    except Exception as ex:
-                        print(f"      [DEBUG] Exception inside do_fetch for {k['kec_name']} ({kec_id}): {ex}")
-                        await asyncio.sleep(0.5 * (attempt + 1))
-                else:
-                    break
-            return kec_records
+                    else:
+                        break
+                return node_records, False
+
+            # Eksekusi dengan fallback rekursif
+            recs, needs_fallback = await fetch_dynamic_node(kec_id, "", "")
+            if needs_fallback:
+                print(f"      [FALLBACK] Kecamatan {k['kec_name']} tembus 1000 limit! Turun ke Desa...")
+                reg_url = f"https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/region?parentId={kec_id}&regionLevel=4"
+                desa_res = await evaluate_fetch_with_retry(page, token, reg_url, None, timeout=30.0)
+                desas = desa_res.get("data", []) if desa_res else []
+                if not desas:
+                    return recs
+                
+                all_kec_recs = []
+                for desa in desas:
+                    d_id = desa.get("id")
+                    d_recs, d_fallback = await fetch_dynamic_node(kec_id, d_id, "")
+                    if d_fallback:
+                        print(f"      [FALLBACK] Desa {desa.get('name')} tembus 1000 limit! Turun ke SLS...")
+                        sls_url = f"https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/region?parentId={d_id}&regionLevel=5"
+                        sls_res = await evaluate_fetch_with_retry(page, token, sls_url, None, timeout=30.0)
+                        slss = sls_res.get("data", []) if sls_res else []
+                        if not slss:
+                            all_kec_recs.extend(d_recs)
+                        else:
+                            for sls in slss:
+                                s_id = sls.get("id")
+                                s_recs, _ = await fetch_dynamic_node(kec_id, d_id, s_id)
+                                all_kec_recs.extend(s_recs)
+                    else:
+                        all_kec_recs.extend(d_recs)
+                return all_kec_recs
+            else:
+                return recs
 
         res = await do_fetch()
         completed += 1
@@ -520,71 +552,109 @@ async def fetch_sls_ub_via_datatable(page, token, survey_period_id, region1_id, 
     print(f"\n[{label}] Menarik rincian per SLS dari DATATABLE API (Provinsi)...")
     sls_dict = {}
 
-    start = 0
-    length = 1000
-    
-    while True:
-        payload_dt = {
-            "start": start, "length": length, "columns": [{"data": "id"}], "order": [],
-            "search": {"value": "", "regex": False},
-            "assignmentExtraParam": {
-                "region1Id": region1_id, 
-                "surveyPeriodId": survey_period_id, 
-                "assignmentErrorStatusType": -1, 
-                "filterTargetType": ""
-            }
-        }
-        
-        res_dt = await evaluate_fetch_with_retry(page, token, DATATABLE_URL, payload_dt, timeout=45.0)
-
-        if not res_dt or "searchData" not in res_dt: break
-        records = res_dt["searchData"]
-        if not records: break
-
-        for comp in records:
-            region = comp.get("region", {})
-            lvl1 = region.get("level1", {}) or {}
-            lvl2 = lvl1.get("level2", {}) or {}
-            lvl3 = lvl2.get("level3", {}) or {}
-            lvl4 = lvl3.get("level4", {}) or {}
-            lvl5 = lvl4.get("level5", {}) or {}
-
-            # Ambil nama kabupaten
-            kab_code = lvl2.get("fullCode")
-            kab_name = kab_region_map.get(kab_code, {}).get("name", lvl2.get("name", "LAINNYA"))
-
-            sls_code = lvl5.get("fullCode", "LAINNYA")
-            if sls_code not in sls_dict:
-                sls_dict[sls_code] = {
-                    "sls_code": sls_code, 
-                    "sls_name": lvl5.get("name", "LAINNYA"),
-                    "desa_name": lvl4.get("name", "LAINNYA"), 
-                    "kec_name": lvl3.get("name", "LAINNYA"),
-                    "kab_name": kab_name, 
-                    "total": 0, "assigned": 0, "unassigned": 0, "sync_count": 0,
-                    "officers": set(), "officer_usernames": set()
+    async def fetch_dynamic_node(r2, r3, r4, r5):
+        start = 0
+        length = 1000
+        node_records = []
+        while True:
+            payload_dt = {
+                "start": start, "length": length, "columns": [{"data": "id"}], "order": [],
+                "search": {"value": "", "regex": False},
+                "assignmentExtraParam": {
+                    "region1Id": region1_id,
+                    "region2Id": r2 if r2 else "",
+                    "region3Id": r3 if r3 else "",
+                    "region4Id": r4 if r4 else "",
+                    "region5Id": r5 if r5 else "",
+                    "surveyPeriodId": survey_period_id, 
+                    "assignmentErrorStatusType": -1, 
+                    "filterTargetType": ""
                 }
+            }
+            res_dt = await evaluate_fetch_with_retry(page, token, DATATABLE_URL, payload_dt, timeout=45.0)
+            if not res_dt or "searchData" not in res_dt: break
+            records = res_dt["searchData"]
+            if not records: break
+            node_records.extend(records)
+            start += length
+            if start >= res_dt.get("totalHit", 0):
+                if res_dt.get("totalHit", 0) >= 1000:
+                    return node_records, True
+                return node_records, False
+        return node_records, False
 
-            sls_dict[sls_code]["total"] += 1
-            
-            # Check if synced (SUBMITTED or APPROVED status)
-            status = comp.get("assignmentStatusAlias", "")
-            if status:
-                status_upper = status.upper()
-                if "SUBMITTED" in status_upper or "APPROVED" in status_upper:
-                    sls_dict[sls_code]["sync_count"] += 1
-
-            officer = comp.get("currentUserUsername")
-            if officer:
-                sls_dict[sls_code]["assigned"] += 1
-                ofc_name = comp.get("currentUserFullname", "-")
-                sls_dict[sls_code]["officers"].add(f"{ofc_name} ({officer})" if ofc_name != "-" else officer)
-                sls_dict[sls_code]["officer_usernames"].add(officer)
+    # Tarik level Provinsi, turun ke Kabupaten dst jika limit
+    all_ub_records = []
+    prov_recs, prov_fallback = await fetch_dynamic_node("", "", "", "")
+    
+    if prov_fallback:
+        print(f"  [FALLBACK] Provinsi SE UB tembus 1000 limit! Turun ke Kabupaten...")
+        for kab_code, kab_cfg in kab_region_map.items():
+            kab_id = kab_cfg["id"]
+            k_recs, k_fallback = await fetch_dynamic_node(kab_id, "", "", "")
+            if k_fallback:
+                print(f"  [FALLBACK] Kabupaten {kab_cfg['name']} tembus 1000 limit! Turun ke Kecamatan...")
+                reg_url = f"https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/region?parentId={kab_id}&regionLevel=3"
+                kec_res = await evaluate_fetch_with_retry(page, token, reg_url, None, timeout=30.0)
+                kecs = kec_res.get("data", []) if kec_res else []
+                for kec in kecs:
+                    kec_id = kec.get("id")
+                    kec_recs, kec_fallback = await fetch_dynamic_node(kab_id, kec_id, "", "")
+                    if kec_fallback:
+                        # Fallback ke Desa
+                        reg_url_desa = f"https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/region?parentId={kec_id}&regionLevel=4"
+                        desa_res = await evaluate_fetch_with_retry(page, token, reg_url_desa, None, timeout=30.0)
+                        desas = desa_res.get("data", []) if desa_res else []
+                        for desa in desas:
+                            desa_id = desa.get("id")
+                            desa_recs, _ = await fetch_dynamic_node(kab_id, kec_id, desa_id, "")
+                            all_ub_records.extend(desa_recs)
+                    else:
+                        all_ub_records.extend(kec_recs)
             else:
-                sls_dict[sls_code]["unassigned"] += 1
+                all_ub_records.extend(k_recs)
+    else:
+        all_ub_records.extend(prov_recs)
 
-        start += length
-        if start >= res_dt.get("totalHit", 0): break
+    for comp in all_ub_records:
+        region = comp.get("region", {})
+        lvl1 = region.get("level1", {}) or {}
+        lvl2 = lvl1.get("level2", {}) or {}
+        lvl3 = lvl2.get("level3", {}) or {}
+        lvl4 = lvl3.get("level4", {}) or {}
+        lvl5 = lvl4.get("level5", {}) or {}
+
+        kab_code = lvl2.get("fullCode")
+        kab_name = kab_region_map.get(kab_code, {}).get("name", lvl2.get("name", "LAINNYA"))
+
+        sls_code = lvl5.get("fullCode", "LAINNYA")
+        if sls_code not in sls_dict:
+            sls_dict[sls_code] = {
+                "sls_code": sls_code, 
+                "sls_name": lvl5.get("name", "LAINNYA"),
+                "desa_name": lvl4.get("name", "LAINNYA"), 
+                "kec_name": lvl3.get("name", "LAINNYA"),
+                "kab_name": kab_name, 
+                "total": 0, "assigned": 0, "unassigned": 0, "sync_count": 0,
+                "officers": set(), "officer_usernames": set()
+            }
+
+        sls_dict[sls_code]["total"] += 1
+        
+        status = comp.get("assignmentStatusAlias", "")
+        if status:
+            status_upper = status.upper()
+            if "SUBMITTED" in status_upper or "APPROVED" in status_upper:
+                sls_dict[sls_code]["sync_count"] += 1
+
+        officer = comp.get("currentUserUsername")
+        if officer:
+            sls_dict[sls_code]["assigned"] += 1
+            ofc_name = comp.get("currentUserFullname", "-")
+            sls_dict[sls_code]["officers"].add(f"{ofc_name} ({officer})" if ofc_name != "-" else officer)
+            sls_dict[sls_code]["officer_usernames"].add(officer)
+        else:
+            sls_dict[sls_code]["unassigned"] += 1
 
     processed_sls = list(sls_dict.values())
     print(f"     ✅ Berhasil menarik total {len(processed_sls)} SLS untuk {label}.")

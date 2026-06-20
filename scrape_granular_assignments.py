@@ -518,6 +518,8 @@ def save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data):
 async def scrape_all_granular():
     print("[START] Mulai proses penarikan seluruh data secara granular...")
     
+    remarks_dict = {}
+    
     # 1. Connect to Playwright
     async with async_playwright() as p:
         browser, context, page = await get_authenticated_context(p)
@@ -666,9 +668,55 @@ async def scrape_all_granular():
             for r in results_ub:
                 raw_se_ub_data.extend(r)
                 
+            print(f"\n[DONE] Scraping datatable selesai. Total Raw Umum: {len(raw_se_umum_data)} | Total Raw UB: {len(raw_se_ub_data)}")
+            
+            # --- FETCH REMARKS UNTUK STATUS REJECTED/REVOKED ---
+            print("\n--- Memulai Fetching Remarks untuk Target Ditolak/Dibatalkan ---")
+            rejected_targets = []
+            for r in raw_se_umum_data + raw_se_ub_data:
+                status = str(r.get("assignmentStatusAlias", "")).upper()
+                if "REJECTED" in status or "REVOKED" in status:
+                    rejected_targets.append(r.get("id"))
+            
+            # Buang duplikat id
+            rejected_targets = list(set([tid for tid in rejected_targets if tid]))
+            
+            if rejected_targets:
+                print(f"[INFO] Ditemukan {len(rejected_targets)} target dengan status REJECTED/REVOKED. Mengambil catatan (remarks)...")
+                sem_remarks = asyncio.Semaphore(10)
+                
+                async def _fetch_remark(tid):
+                    url = f"https://fasih-sm.bps.go.id/app/api/survey-response/api/v1/remarks?assignmentId={tid}"
+                    for attempt in range(3):
+                        async with sem_remarks:
+                            try:
+                                r = await client.get(url)
+                                if r.status_code == 200:
+                                    data = r.json()
+                                    if isinstance(data, list) and len(data) > 0:
+                                        # Ambil remark terbaru / gabungkan
+                                        remarks_texts = []
+                                        for rm in data:
+                                            txt = rm.get("remark", "")
+                                            by = rm.get("currentUserFullname", "Pengawas")
+                                            if txt: remarks_texts.append(f"{by}: {txt}")
+                                        if remarks_texts:
+                                            remarks_dict[tid] = " | ".join(remarks_texts)
+                                    break
+                            except Exception:
+                                pass
+                        await asyncio.sleep(0.5)
+                
+                tasks_remarks = [_fetch_remark(tid) for tid in rejected_targets]
+                await asyncio.gather(*tasks_remarks)
+                print(f"[INFO] Berhasil mengambil catatan untuk {len(remarks_dict)} target.")
+            else:
+                print("[INFO] Tidak ada target REJECTED/REVOKED.")
+            
             # Stop the periodic saver
             scraping_done = True
             saver_task.cancel()
+
             
             print(f"\n[DONE] Scraping selesai. Total Raw Umum: {len(raw_se_umum_data)} | Total Raw UB: {len(raw_se_ub_data)}")
         
@@ -807,7 +855,8 @@ async def scrape_all_granular():
             "regions": regions_list,
             "petugas": petugas_list,
             "statuses": statuses_list,
-            "targets": compressed_targets
+            "targets": compressed_targets,
+            "remarks": remarks_dict
         }
         
         # Calculate size before compression
@@ -876,6 +925,16 @@ async def scrape_all_granular():
                 
         if browser:
             await browser.close()
+
+        # 5. Cleanup Browser (OOM Mitigation)
+        print("\n[CLEANUP] Membersihkan resource Playwright/Chrome untuk mencegah Memory Leak...")
+        try:
+            if page: await page.close()
+            if context: await context.close()
+            if browser: await browser.close()
+            print(" -> Success: Browser resources cleaned up.")
+        except Exception as e:
+            print(f" -> Warning: Gagal membersihkan browser resources: {e}")
 
 if __name__ == "__main__":
     asyncio.run(scrape_all_granular())

@@ -663,6 +663,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const assignSlsSearchInput = document.getElementById('assign-sls-search-input');
     if (assignSlsSearchInput) {
         assignSlsSearchInput.addEventListener('input', () => {
+            if (typeof window.updateGranularStatusFilterOptions === 'function') {
+                window.updateGranularStatusFilterOptions();
+            }
             window.renderGranularAssignmentsTable(true);
         });
     }
@@ -5635,6 +5638,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const petugas = payload.petugas || [];
             const statuses = payload.statuses || [];
             const targets = payload.targets || [];
+            const remarksDict = payload.remarks || {};
+            
             
             console.log(`Rebuilding ${targets.length} targets...`);
             const rebuilt = targets.map((t) => {
@@ -5645,6 +5650,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const reg = regIdx >= 0 && regIdx < regions.length ? regions[regIdx] : ["-", "-", "-", "-", "-", "-", "-", "-"];
                 const pet = petIdx >= 0 && petIdx < petugas.length ? petugas[petIdx] : ["-", "-"];
                 const stat = statIdx >= 0 && statIdx < statuses.length ? statuses[statIdx] : "OPEN";
+                const tid = t[0];
+                const rmk = remarksDict[tid] || "";
                 
                 return {
                     id: t[0],
@@ -5662,7 +5669,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     sls_code: reg[6],
                     sls_name: reg[7],
                     dateModifiedEpoch: t[6],
-                    survey_type: t[7] === 0 ? 'se_umum' : 'se_ub'
+                    survey_type: t[7] === 0 ? 'se_umum' : 'se_ub',
+                    remark: rmk
                 };
             });
             
@@ -5677,19 +5685,75 @@ document.addEventListener('DOMContentLoaded', () => {
     let isGranularLoading = false;
     window.GRANULAR_ASSIGNMENTS_DATA = null;
 
+    window.updateGranularStatusFilterOptions = function() {
+        const statusSelect = document.getElementById('assign-sls-status-filter');
+        if (!statusSelect || !window.GRANULAR_ASSIGNMENTS_DATA) return;
+
+        const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
+
+        const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
+        const desaVal = document.getElementById('assign-sls-desa-filter')?.value || 'all';
+        const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
+        const searchVal = document.getElementById('assign-sls-search-input')?.value.toLowerCase().trim() || '';
+        
+        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+        const surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
+
+        const filteredForStatus = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
+            if (r.survey_type !== surveyTypeFilter) return false;
+            if (kabVal !== 'all' && r.kab_name !== kabVal) return false;
+            if (kecVal !== 'all' && r.kec_name !== kecVal) return false;
+            if (desaVal !== 'all' && r.desa_name !== desaVal) return false;
+            if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
+            
+            if (searchVal) {
+                const matchText = (
+                    (r.data1 || '') + ' ' + 
+                    (r.petugas_username || '') + ' ' + 
+                    (r.petugas_fullname || '') + ' ' +
+                    (r.sls_name || '') + ' ' +
+                    (r.sls_code || '') + ' ' +
+                    (r.status || '')
+                ).toLowerCase();
+                if (!matchText.includes(searchVal)) return false;
+            }
+            return true;
+        });
+
+        const statusCounts = {};
+        let totalCount = 0;
+        
+        filteredForStatus.forEach(r => {
+            if (r.status) {
+                statusCounts[r.status] = (statusCounts[r.status] || 0) + 1;
+                totalCount++;
+            }
+        });
+
+        const currentSelectedStatus = statusSelect.value || 'all';
+
+        let optionsHTML = `<option value="all">Semua Status (${formatNum(totalCount)})</option>`;
+        
+        const sortedStatuses = Object.keys(statusCounts).sort();
+        sortedStatuses.forEach(s => {
+            const count = statusCounts[s];
+            optionsHTML += `<option value="${s}">${s} (${formatNum(count)})</option>`;
+        });
+
+        statusSelect.innerHTML = optionsHTML;
+
+        if (currentSelectedStatus === 'all' || statusCounts[currentSelectedStatus]) {
+            statusSelect.value = currentSelectedStatus;
+        } else {
+            statusSelect.value = 'all';
+        }
+    };
+
     async function loadGranularAssignmentsData() {
         const tbody = document.getElementById('assign-sls-table-body');
         if (window.GRANULAR_ASSIGNMENTS_DATA) {
-            // Re-populate status filter in case it's empty (e.g. after tab switch)
-            const statusSelect = document.getElementById('assign-sls-status-filter');
-            if (statusSelect && statusSelect.options.length <= 1) {
-                const uniqueStatuses = new Set();
-                window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
-                    if (r.status) uniqueStatuses.add(r.status);
-                });
-                statusSelect.innerHTML = '<option value="all">Semua Status</option>' +
-                    Array.from(uniqueStatuses).sort().map(s => `<option value="${s}">${s}</option>`).join('');
-            }
+            window.updateGranularStatusFilterOptions();
             window.renderGranularAssignmentsTable();
             return;
         }
@@ -5879,18 +5943,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
-        
-        if (changedLevel === 'kab') {
-            const uniqueStatuses = new Set();
-            window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
-                if (r.status) uniqueStatuses.add(r.status);
-            });
-            if (statusSelect) {
-                statusSelect.innerHTML = '<option value="all">Semua Status</option>' + 
-                    Array.from(uniqueStatuses).sort().map(s => `<option value="${s}">${s}</option>`).join('');
-            }
-        }
-        
+        window.updateGranularStatusFilterOptions();
         window.renderGranularAssignmentsTable(true);
     };
 
@@ -6004,6 +6057,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 700; color: var(--text-primary); font-size: 0.85rem;">${r.data1} <span style="font-size:0.7rem; color:var(--text-secondary); display:block; font-family:monospace; font-weight:500;">ID: ${r.codeIdentity || '-'}</span></td>
                     <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle;">
                         <span class="table-badge ${statusBadgeClass}">${r.status}</span>
+                    </td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.75rem; color: var(--text-primary); max-width: 250px; word-wrap: break-word; line-height: 1.3;">
+                        ${r.remark || '-'}
                     </td>
                 </tr>
             `;

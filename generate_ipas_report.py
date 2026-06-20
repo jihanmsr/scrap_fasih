@@ -293,20 +293,6 @@ async def generate_report():
         async def fetch_api_safely(url, payload, token, timeout_seconds=120, max_retries=3):
             for attempt in range(1, max_retries + 1):
                 try:
-                    res = await page.evaluate("""
-                        async ({url, payload, token, timeoutMs}) => {
-                            const controller = new AbortController();
-                            const id = setTimeout(() => controller.abort(), timeoutMs);
-                            try {
-                                const r = await fetch(url, {
-                                    method: "POST",
-                                    headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
-                                    body: JSON.stringify(payload),
-                                    signal: controller.signal
-                                });
-                                clearTimeout(id);
-                                if (!r.ok) return { error: `HTTP ${r.status}: ${await r.text()}`, status: r.status };
-                                const text = await r.text();
                                 try {
                                     return JSON.parse(text);
                                 } catch(e) {
@@ -764,73 +750,157 @@ async def generate_report():
             yesterday = today - datetime.timedelta(days=1)
             two_days_ago = today - datetime.timedelta(days=2)
 
+            import json
+            import os
+            
+            # Load mapping kecamatan dari region_map_sulteng.json
+            region_map_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "region_map_sulteng.json")
+            kab_to_kec_map = {}
+            if os.path.exists(region_map_path):
+                try:
+                    with open(region_map_path, "r", encoding="utf-8") as f:
+                        rmap = json.load(f)
+                        for rdata in rmap.values():
+                            kab_to_kec_map[rdata.get("kab_name")] = rdata.get("kecamatan", [])
+                except Exception as e:
+                    print(f"Error loading region map: {e}")
+
             all_records = []
             
-            print("Mengambil rincian data progres harian tingkat provinsi...")
-            for status in active_statuses:
-                start = 0
-                status_records_count = 0
-                while True:
-                    payload = {
-                        "start": start,
-                        "length": 100,
-                        "columns": [
-                            {"data": "id"},
-                            {"data": "codeIdentity"},
-                            {"data": "data1"},
-                            {"data": "data6"},
-                            {"data": "dateCreated"},
-                            {"data": "dateModified"},
-                            {"data": "assignmentStatusAlias"},
-                            {"data": "region"}
-                        ],
-                        "order": [{"column": 5, "dir": "desc"}],
-                        "search": {"value": "", "regex": False},
-                        "assignmentExtraParam": {
-                            "region1Id": survey_cfg["prov_id"],
-                            "surveyPeriodId": period_id,
-                            "assignmentStatusAlias": status,
-                            "assignmentErrorStatusType": -1,
-                            "filterTargetType": ""
-                        }
-                    }
-                    res = await fetch_api_safely(datatable_url, payload, xsrf_token)
-                    if not res or "error" in res:
-                        print(f"  [ERROR] Gagal mengambil rincian harian status {status} (start: {start}): {res.get('error') if res else 'Unknown error'}")
-                        break
-                    
-                    records_part = res.get("searchData", [])
-                    if not records_part:
-                        break
+            print("Mengambil rincian data progres harian tingkat provinsi (per KECAMATAN untuk bypass limit 1000 API)...")
+            for kab in survey_cfg["kabs"]:
+                kab_id = kab["id"]
+                kab_name = kab["name"]
+                
+                # Dapatkan daftar kecamatan untuk kab ini
+                kecs = kab_to_kec_map.get(kab_name, [])
+                if not kecs:
+                    # Fallback ke pencarian level kabupaten jika tidak ada mapping kecamatan
+                    kecs = [{"id": "", "name": kab_name}]
+                
+                for kec in kecs:
+                    kec_id = kec["id"]
+                    kec_name = kec["name"]
+                    if kec_name == "-":
+                        continue
                         
-                    all_records.extend(records_part)
-                    status_records_count += len(records_part)
-                    
-                    # Early break optimization: check if oldest record in this batch is older than two_days_ago.
-                    # Since we sort by dateModified desc, once we see a record older than two_days_ago,
-                    # all subsequent records in next batches will also be older.
-                    should_stop = False
-                    for r in records_part:
-                        dm_str = r.get("dateModified")
-                        if dm_str:
-                            try:
-                                dt = parse_bps_datetime(dm_str, local_tz)
-                                if dt and dt.date() < two_days_ago:
-                                    should_stop = True
+                    for status in active_statuses:
+                        
+                        async def fetch_dynamic_node(r3, r3_name, r4, r4_name, r5, r5_name):
+                            start = 0
+                            node_records_count = 0
+                            node_records_list = []
+                            
+                            while True:
+                                payload = {
+                                    "start": start,
+                                    "length": 100,
+                                    "columns": [
+                                        {"data": "id"},
+                                        {"data": "codeIdentity"},
+                                        {"data": "data1"},
+                                        {"data": "data6"},
+                                        {"data": "dateCreated"},
+                                        {"data": "dateModified"},
+                                        {"data": "assignmentStatusAlias"},
+                                        {"data": "region"}
+                                    ],
+                                    "order": [{"column": 5, "dir": "desc"}],
+                                    "search": {"value": "", "regex": False},
+                                    "assignmentExtraParam": {
+                                        "region1Id": survey_cfg["prov_id"],
+                                        "region2Id": kab_id,
+                                        "region3Id": r3 if r3 else "",
+                                        "region4Id": r4 if r4 else "",
+                                        "region5Id": r5 if r5 else "",
+                                        "surveyPeriodId": period_id,
+                                        "assignmentStatusAlias": status,
+                                        "assignmentErrorStatusType": -1,
+                                        "filterTargetType": ""
+                                    }
+                                }
+                                
+                                res = await fetch_api_safely(datatable_url, payload, xsrf_token)
+                                if not res or "error" in res:
+                                    print(f"  [ERROR] Gagal mengambil rincian status {status} di {r3_name}: {res.get('error') if res else 'Unknown error'}")
+                                    return node_records_list, False
+                                
+                                records_part = res.get("searchData", [])
+                                if not records_part:
                                     break
-                            except Exception:
-                                pass
-                    
-                    if should_stop:
-                        print(f"  [EARLY BREAK] Stop fetch status {status} at start={start} because records became older than {two_days_ago}")
-                        break
+                                    
+                                node_records_list.extend(records_part)
+                                node_records_count += len(records_part)
+                                
+                                # Check early break
+                                should_stop = False
+                                for r in records_part:
+                                    dm_str = r.get("dateModified")
+                                    if dm_str:
+                                        try:
+                                            dt = parse_bps_datetime(dm_str, local_tz)
+                                            if dt and dt.date() < two_days_ago:
+                                                should_stop = True
+                                                break
+                                        except Exception:
+                                            pass
+                                
+                                if should_stop:
+                                    break
+                                    
+                                start += 100
+                                if start >= res.get("totalHit", 0):
+                                    if res.get("totalHit", 0) >= 1000 and not should_stop:
+                                        # LIMIT HIT BEFORE EARLY BREAK! 
+                                        return node_records_list, True # Needs fallback
+                                    break
+                                await asyncio.sleep(0.05)
+                                
+                            return node_records_list, False
+                            
+                        # Mula-mula coba tarik dari Kecamatan
+                        recs, needs_fallback = await fetch_dynamic_node(kec_id, kec_name, "", "", "", "")
                         
-                    start += 100
-                    if start >= res.get("totalHit", 0):
-                        break
-                    await asyncio.sleep(0.1)
-                    
-                print(f"  Selesai fetch status {status}: {status_records_count} records (Accumulated total: {len(all_records)} so far)")
+                        if needs_fallback:
+                            print(f"  [FALLBACK] {kec_name} status {status} mentok di 1000! Fallback ke level Desa...")
+                            # Fetch desas
+                            reg_url = f"https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/region?parentId={kec_id}&regionLevel=4"
+                            desa_res = await fetch_api_safely(reg_url, None, xsrf_token, method="GET")
+                            desas = desa_res.get("data", []) if desa_res else []
+                            
+                            if not desas:
+                                all_records.extend(recs)
+                                status_records_count += len(recs)
+                            else:
+                                for desa in desas:
+                                    d_id = desa.get("id")
+                                    d_name = desa.get("name")
+                                    
+                                    d_recs, d_fallback = await fetch_dynamic_node(kec_id, kec_name, d_id, d_name, "", "")
+                                    if d_fallback:
+                                        print(f"  [FALLBACK] Desa {d_name} mentok di 1000! Fallback ke SLS...")
+                                        sls_url = f"https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/region?parentId={d_id}&regionLevel=5"
+                                        sls_res = await fetch_api_safely(sls_url, None, xsrf_token, method="GET")
+                                        slss = sls_res.get("data", []) if sls_res else []
+                                        if not slss:
+                                            all_records.extend(d_recs)
+                                            status_records_count += len(d_recs)
+                                        else:
+                                            for sls in slss:
+                                                s_id = sls.get("id")
+                                                s_name = sls.get("name")
+                                                s_recs, _ = await fetch_dynamic_node(kec_id, kec_name, d_id, d_name, s_id, s_name)
+                                                all_records.extend(s_recs)
+                                                status_records_count += len(s_recs)
+                                    else:
+                                        all_records.extend(d_recs)
+                                        status_records_count += len(d_recs)
+                        else:
+                            all_records.extend(recs)
+                            status_records_count += len(recs)
+                            
+                        if status_records_count > 0:
+                        print(f"  Selesai fetch {kab_name} -> {kec_name} status {status}: {status_records_count} records (Accumulated: {len(all_records)})")
             
             # Fetch historical snapshots from Supabase to pre-populate yesterday and two days ago completed
             yesterday_str = yesterday.strftime("%Y-%m-%d")

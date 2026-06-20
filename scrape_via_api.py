@@ -1017,20 +1017,28 @@ def scrape_via_api():
                 logging.warning(f"Gagal menghapus cycle tracking file: {e}")
 
         # Simpan HASIL AKHIR (lengkap) ke Supabase dan data.js
+        # Simpan HASIL AKHIR (lengkap) ke Supabase dan data.js
         save_realtime_data(all_records)
-        logging.info(f"Scraping via API selesai putaran ini. Total records: {len(all_records)}. Menunggu 2 menit sebelum scrape berikutnya...")
+        logging.info(f"Scraping via API selesai putaran ini. Total records: {len(all_records)}.")
+        
+        # --- PERUBAHAN OOM MITIGASI: Bersihkan resource Playwright ---
+        try:
+            if page:
+                page.close()
+            if context:
+                context.close()
+            if browser:
+                browser.close()
+            logging.info("Resource Playwright/Chrome berhasil dibebaskan.")
+        except Exception as e:
+            logging.warning(f"Gagal menutup browser: {e}")
 
 def main_loop():
-    while True:
-        try:
-            logging.info("=== MEMULAI SIKLUS SCRAPING REAL-TIME ===")
-            scrape_via_api()
-        except Exception as e:
-            logging.error(f"Terjadi kesalahan fatal pada siklus: {e}")
-        
-        # Jeda 2 menit (120 detik)
-        logging.info("Menunggu 2 menit...")
-        time.sleep(120)
+    try:
+        logging.info("=== MEMULAI SIKLUS SCRAPING REAL-TIME ===")
+        scrape_via_api()
+    except Exception as e:
+        logging.error(f"Terjadi kesalahan fatal pada siklus: {e}")
 
 if __name__ == "__main__":
     main_loop()

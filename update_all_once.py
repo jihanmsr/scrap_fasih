@@ -11,10 +11,22 @@ from scrape_sync import scrape_sync_data
 from generate_ipas_report import generate_report
 from scrape_granular_assignments import scrape_all_granular
 
+def cleanup_browsers():
+    print("[INFO] Membersihkan sisa proses browser Chrome (9222/9223) untuk mencegah memory leak...")
+    try:
+        subprocess.run("pkill -f 'remote-debugging-port=9223'", shell=True, stderr=subprocess.DEVNULL)
+        subprocess.run("pkill -f 'remote-debugging-port=9222'", shell=True, stderr=subprocess.DEVNULL)
+    except:
+        pass
+
 async def run_all():
     print("=========================================")
     print("   MEMULAI PROSES UPDATE DATA SEKALIKUS  ")
     print("=========================================\n")
+
+    # Bersihkan browser sisa sebelum mulai
+    cleanup_browsers()
+    print("")
 
     # 1. Tarik Data Sync Superset
     print("[1/4] Menarik data sinkronisasi Superset...")
@@ -52,6 +64,9 @@ async def run_all():
     print("=========================================")
     print("     PROSES UPDATE SELESAI DENGAN SUKSES ")
     print("=========================================")
+    
+    # Bersihkan browser setelah selesai
+    cleanup_browsers()
 
 if __name__ == "__main__":
     asyncio.run(run_all())

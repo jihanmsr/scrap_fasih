@@ -371,8 +371,9 @@ abdc2fb8-1b33-4230-aa4a-456704f055ba,PEGAWAI PT.BANK NEGARA INDONESIA (PERSERO) 
 1d18cf6c-1bbe-41e7-8fcd-34539ffaa56c,BANK NEGARA INDONESIA,OPEN,ismayaranita2@gmail.com,Delivered,Queued,"09 Jun 2026, 11:03:40",2,[02] BANGGAI
 1d18cf6c-1bbe-41e7-8fcd-34539ffaa56c,BANK NEGARA INDONESIA,OPEN,ismayaranita2@gmail.com,Delivered,Delivered,"01 Jun 2026, 23:41:07",3,[02] BANGGAI
 1d18cf6c-1bbe-41e7-8fcd-34539ffaa56c,BANK NEGARA INDONESIA,OPEN,ismayaranita2@gmail.com,Delivered,Queued,"01 Jun 2026, 23:41:03",4,[02] BANGGAI
-75a0f26b-2075-47a5-8809-43bb39a105a8,"BANK RAKYAT INDONESIA, PT (PERSERO) TBK KC LUWUK",OPEN,brikantorcabangluwuk@gmail.com,Delivered,Delivered,"02 Jun 2026, 03:02:16",1,[02] BANGGAI
-75a0f26b-2075-47a5-8809-43bb39a105a8,"BANK RAKYAT INDONESIA, PT (PERSERO) TBK KC LUWUK",OPEN,brikantorcabangluwuk@gmail.com,Delivered,Queued,"02 Jun 2026, 03:02:15",2,[02] BANGGAI
+75a0f26b-2075-47a5-8809-43bb39a105a8,"BANK RAKYAT INDONESIA, PT (PERSERO) TBK KC LUWUK",OPEN,brikantorcabangluwuk@gmail.com,Opened,Opened,"19 Jun 2026, 16:27:35",1,[02] BANGGAI
+75a0f26b-2075-47a5-8809-43bb39a105a8,"BANK RAKYAT INDONESIA, PT (PERSERO) TBK KC LUWUK",OPEN,brikantorcabangluwuk@gmail.com,Opened,Delivered,"02 Jun 2026, 03:02:16",2,[02] BANGGAI
+75a0f26b-2075-47a5-8809-43bb39a105a8,"BANK RAKYAT INDONESIA, PT (PERSERO) TBK KC LUWUK",OPEN,brikantorcabangluwuk@gmail.com,Opened,Queued,"02 Jun 2026, 03:02:15",3,[02] BANGGAI
 f0097235-734f-478c-9444-2c51db4b2533,BANK SINAR MAS TBK PT,OPEN,-,-,-,-,0,[02] BANGGAI
 268b48c9-eefd-4ae2-8992-7aaf81afb207,KOPERASI KARYAWAN KOKABRI,OPEN,-,-,-,-,0,[02] BANGGAI
 a912bab8-16cc-407e-8879-0f4d949843c3,Mega Auto Finance. PT,OPEN,-,-,-,-,0,[02] BANGGAI
@@ -401,15 +402,23 @@ f7959ff9-a3d7-40b5-8dda-be3d74e34980,Pertambangan Bijih Nikel [LUWUK MINERAL PER
 bd38f44f-5677-417c-b02e-d5cc6b43f5af,BANK MANDIRI (PERSERO) TBK KCP BANGGAI BUNTA,OPEN,cma@bankmandiri.co.id,Delivered,Delivered,"02 Jun 2026, 06:35:57",1,[02] BANGGAI
 bd38f44f-5677-417c-b02e-d5cc6b43f5af,BANK MANDIRI (PERSERO) TBK KCP BANGGAI BUNTA,OPEN,cma@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 06:35:57",2,[02] BANGGAI
 3900cc83-cbf3-4887-88f3-9bd4e4c1f21d,"BANK RAKYAT INDONESIA, PT (PERSERO) TBK UNIT BUNTA",OPEN,-,-,-,-,0,[02] BANGGAI
-7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"19 Jun 2026, 08:46:47",1,[03] MOROWALI
-7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"17 Jun 2026, 08:07:07",2,[03] MOROWALI
-7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"15 Jun 2026, 08:34:01",3,[03] MOROWALI
-7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"13 Jun 2026, 10:31:52",4,[03] MOROWALI
-7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Delivered,"11 Jun 2026, 17:35:28",5,[03] MOROWALI
-7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Queued,"11 Jun 2026, 17:35:24",6,[03] MOROWALI
-7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"09 Jun 2026, 11:15:42",7,[03] MOROWALI
-7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Delivered,"02 Jun 2026, 03:18:30",8,[03] MOROWALI
-7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Queued,"02 Jun 2026, 03:18:25",9,[03] MOROWALI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"10 Jun 2026, 08:15:35",1,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Delivered,"10 Jun 2026, 04:29:50",2,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Queued,"10 Jun 2026, 04:29:47",3,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"09 Jun 2026, 11:46:27",4,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Opened,"02 Jun 2026, 09:18:48",5,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Delivered,"02 Jun 2026, 09:08:55",6,[02] BANGGAI
+e4269010-f6bd-4eef-84e4-7a5acd0ad51d,ALAM SUKSES BERJAYA,SUBMITTED RESPONDENT,berkattbperkasa@gmail.com,Opened,Queued,"02 Jun 2026, 09:08:51",7,[02] BANGGAI
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"20 Jun 2026, 08:08:53",1,[03] MOROWALI
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"19 Jun 2026, 08:46:47",2,[03] MOROWALI
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"17 Jun 2026, 08:07:07",3,[03] MOROWALI
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"15 Jun 2026, 08:34:01",4,[03] MOROWALI
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"13 Jun 2026, 10:31:52",5,[03] MOROWALI
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Delivered,"11 Jun 2026, 17:35:28",6,[03] MOROWALI
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Queued,"11 Jun 2026, 17:35:24",7,[03] MOROWALI
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Clicked,"09 Jun 2026, 11:15:42",8,[03] MOROWALI
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Delivered,"02 Jun 2026, 03:18:30",9,[03] MOROWALI
+7a913cb7-c5d4-4cb6-99bc-64f0d749efc3,SUMBER MENTARI MOROWALI,DRAFT,pt.sumbermentarimorowali@gmail.com,Clicked,Queued,"02 Jun 2026, 03:18:25",10,[03] MOROWALI
 5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Clicked,"18 Jun 2026, 20:29:44",1,[03] MOROWALI
 5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Opened,"18 Jun 2026, 20:29:38",2,[03] MOROWALI
 5c7786b1-7b40-47d3-b356-dc74e874af79,CHINA EQUIPMENT RENTAL,DRAFT,ptchinaequipmentrental@gmail.com,Clicked,Clicked,"03 Jun 2026, 19:18:17",3,[03] MOROWALI
@@ -1014,10 +1023,10 @@ c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cip
 c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Opened,"22 May 2026, 16:39:10",9,[04] POSO
 c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Delivered,"22 May 2026, 16:37:55",10,[04] POSO
 c830640d-a252-41a0-99bd-cb594fbb3478,CIPTA TORAU RESORT,SUBMITTED RESPONDENT,cipta.torauresort@gmail.com,Clicked,Queued,"22 May 2026, 16:37:52",11,[04] POSO
-c76855d2-4b36-44ea-af7f-ab1b9837914a,KUD PESAT LIMBORO,OPEN,-,-,-,-,0,[05] DONGGALA
-9955ae30-3ead-4d6a-8a67-b3766d18475d,KUD SINAR TANI,OPEN,-,-,-,-,0,[05] DONGGALA
-530c113f-8957-46cd-8337-c5754890cd34,KOPTAN SINAR TANI MANDIRI TANAMPULU,OPEN,-,-,-,-,0,[05] DONGGALA
-905bc9cb-8e4d-4496-bbf6-84fb96137b70,KOPTAN MASUGI,OPEN,-,-,-,-,0,[05] DONGGALA
+c76855d2-4b36-44ea-af7f-ab1b9837914a,KUD PESAT LIMBORO,SUBMITTED BY Pencacah,-,-,-,-,0,[05] DONGGALA
+9955ae30-3ead-4d6a-8a67-b3766d18475d,KUD SINAR TANI,SUBMITTED BY Pencacah,-,-,-,-,0,[05] DONGGALA
+530c113f-8957-46cd-8337-c5754890cd34,KOPTAN SINAR TANI MANDIRI TANAMPULU,SUBMITTED BY Pencacah,-,-,-,-,0,[05] DONGGALA
+905bc9cb-8e4d-4496-bbf6-84fb96137b70,KOPTAN MASUGI,SUBMITTED BY Pencacah,-,-,-,-,0,[05] DONGGALA
 fd196827-2fec-4156-a5b2-e2384b448719,LOLI PRATAMA MAJU,OPEN,lolipratamam@gmail.com,Delivered,Delivered,"02 Jun 2026, 10:36:40",1,[05] DONGGALA
 fd196827-2fec-4156-a5b2-e2384b448719,LOLI PRATAMA MAJU,OPEN,lolipratamam@gmail.com,Delivered,Queued,"02 Jun 2026, 10:36:28",2,[05] DONGGALA
 c5943835-8b35-457a-bee5-0e2f2ecb2541,MALOMO 77,OPEN,-,-,-,-,0,[05] DONGGALA
@@ -1092,13 +1101,13 @@ bb78d0af-4d52-420b-8b3e-990c7b52195b,AMINUDDIN H. ARSYAD,OPEN,arsyadaminudin17@g
 6a219834-e8b6-4705-9af6-a41909be7596,INDONESIA HENGXING TRADE DEVELOPMENT,OPEN,ptindonesiahengxing@gmail.com,Delivered,Queued,"02 Jun 2026, 02:35:40",2,[05] DONGGALA
 610277ff-8d97-41fb-9663-65a019b17673,"ADAS SEJAHTERA, PT",OPEN,-,-,-,-,0,[05] DONGGALA
 c3ade782-c19b-4380-a239-04e5179380c2,ADI RAMAT CV,OPEN,-,-,-,-,0,[05] DONGGALA
-c76855d2-4b36-44ea-af7f-ab1b9837914a,KUD PESAT LIMBORO,OPEN,-,-,-,-,0,[05] DONGGALA
-9955ae30-3ead-4d6a-8a67-b3766d18475d,KUD SINAR TANI,OPEN,-,-,-,-,0,[05] DONGGALA
-530c113f-8957-46cd-8337-c5754890cd34,KOPTAN SINAR TANI MANDIRI TANAMPULU,OPEN,-,-,-,-,0,[05] DONGGALA
-905bc9cb-8e4d-4496-bbf6-84fb96137b70,KOPTAN MASUGI,OPEN,-,-,-,-,0,[05] DONGGALA
-5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Delivered,"02 Jun 2026, 11:38:52",1,[06] TOLI-TOLI
-5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Opened,"02 Jun 2026, 11:38:32",2,[06] TOLI-TOLI
-5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Queued,"02 Jun 2026, 11:38:23",3,[06] TOLI-TOLI
+c76855d2-4b36-44ea-af7f-ab1b9837914a,KUD PESAT LIMBORO,SUBMITTED BY Pencacah,-,-,-,-,0,[05] DONGGALA
+9955ae30-3ead-4d6a-8a67-b3766d18475d,KUD SINAR TANI,SUBMITTED BY Pencacah,-,-,-,-,0,[05] DONGGALA
+530c113f-8957-46cd-8337-c5754890cd34,KOPTAN SINAR TANI MANDIRI TANAMPULU,SUBMITTED BY Pencacah,-,-,-,-,0,[05] DONGGALA
+905bc9cb-8e4d-4496-bbf6-84fb96137b70,KOPTAN MASUGI,SUBMITTED BY Pencacah,-,-,-,-,0,[05] DONGGALA
+5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",SUBMITTED BY Pencacah,sst.asterodewa@gmail.com,Opened,Delivered,"02 Jun 2026, 11:38:52",1,[06] TOLI-TOLI
+5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",SUBMITTED BY Pencacah,sst.asterodewa@gmail.com,Opened,Opened,"02 Jun 2026, 11:38:32",2,[06] TOLI-TOLI
+5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",SUBMITTED BY Pencacah,sst.asterodewa@gmail.com,Opened,Queued,"02 Jun 2026, 11:38:23",3,[06] TOLI-TOLI
 9722d961-fc6c-4375-bc1e-928a54ce8268,"CAKRAWALA MITRA BAHARI, PT",OPEN,cakrawala.mitrabahari@gmail.com,Delivered,Delivered,"02 Jun 2026, 11:47:36",1,[06] TOLI-TOLI
 9722d961-fc6c-4375-bc1e-928a54ce8268,"CAKRAWALA MITRA BAHARI, PT",OPEN,cakrawala.mitrabahari@gmail.com,Delivered,Queued,"02 Jun 2026, 11:47:31",2,[06] TOLI-TOLI
 3c454286-f2b3-4315-8d1e-a76c7d6e585b,RUMAH SAKIT UMUM DAERAH MOKOPIDO,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
@@ -1225,9 +1234,9 @@ b333a9fd-f8af-45da-855f-be3e1133f42d,"mitra sepadan finance, pt cabang Tolitoli 
 15dc8f43-088b-4013-b635-fba38279ab5d,BANK MANDIRI UNIT SONI,OPEN,tolitolisoni@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 11:25:22",4,[06] TOLI-TOLI
 74480f18-7928-403a-b016-ea2556e1f0ad,"PT. POS INDONESIA, KANTOR POS GALANG",OPEN,-,-,-,-,0,[06] TOLI-TOLI
 d8e40686-a2a8-4e55-b967-671e032fe3cc,BANK BRI UNIT BANGKIR,OPEN,-,-,-,-,0,[06] TOLI-TOLI
-5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Delivered,"02 Jun 2026, 11:38:52",1,[06] TOLI-TOLI
-5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Opened,"02 Jun 2026, 11:38:32",2,[06] TOLI-TOLI
-5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",OPEN,sst.asterodewa@gmail.com,Opened,Queued,"02 Jun 2026, 11:38:23",3,[06] TOLI-TOLI
+5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",SUBMITTED BY Pencacah,sst.asterodewa@gmail.com,Opened,Delivered,"02 Jun 2026, 11:38:52",1,[06] TOLI-TOLI
+5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",SUBMITTED BY Pencacah,sst.asterodewa@gmail.com,Opened,Opened,"02 Jun 2026, 11:38:32",2,[06] TOLI-TOLI
+5de9ffbd-1a89-42b8-9d42-c6fe0a46bdce,"ALAM MEGA JAYA, CV",SUBMITTED BY Pencacah,sst.asterodewa@gmail.com,Opened,Queued,"02 Jun 2026, 11:38:23",3,[06] TOLI-TOLI
 3c454286-f2b3-4315-8d1e-a76c7d6e585b,RUMAH SAKIT UMUM DAERAH MOKOPIDO,SUBMITTED RESPONDENT,igedeariasa2@gmail.com,-,-,-,0,[06] TOLI-TOLI
 00df1671-c389-48b7-81ce-303adae27900,PERTAMINA PATRA NIAGA,SUBMITTED RESPONDENT,patra.luwuk@outlook.com,Delivered,Delivered,"02 Jun 2026, 05:19:34",1,[06] TOLI-TOLI
 00df1671-c389-48b7-81ce-303adae27900,PERTAMINA PATRA NIAGA,SUBMITTED RESPONDENT,patra.luwuk@outlook.com,Delivered,Queued,"02 Jun 2026, 05:19:21",2,[06] TOLI-TOLI
@@ -1412,15 +1421,27 @@ aefc6985-5ca2-4729-807b-4e37c83d7b27,"BANK SULAWESI TENGAH, PT",SUBMITTED RESPON
 18fc3e72-4081-4840-8dd6-769b4752fd37,UPT RSUD MOKOYURLI BUOL,SUBMITTED RESPONDENT,ianalfian95@gmail.com,Clicked,Opened,"19 May 2026, 11:16:08",13,[07] BUOL
 18fc3e72-4081-4840-8dd6-769b4752fd37,UPT RSUD MOKOYURLI BUOL,SUBMITTED RESPONDENT,ianalfian95@gmail.com,Clicked,Delivered,"19 May 2026, 11:14:37",14,[07] BUOL
 18fc3e72-4081-4840-8dd6-769b4752fd37,UPT RSUD MOKOYURLI BUOL,SUBMITTED RESPONDENT,ianalfian95@gmail.com,Clicked,Queued,"19 May 2026, 11:14:34",15,[07] BUOL
-4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Queued,"09 Jun 2026, 11:19:29",1,[08] PARIGI MOUTONG
-4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:19:29",2,[08] PARIGI MOUTONG
-4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Delivered,"02 Jun 2026, 01:33:44",3,[08] PARIGI MOUTONG
-4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Queued,"02 Jun 2026, 01:33:40",4,[08] PARIGI MOUTONG
-d673ae1b-22c8-439c-bdcc-2a46c7e9927d,BANK MEGA TBK,OPEN,bagus.hartono@bankmega.com,Delivered,Delivered,"02 Jun 2026, 08:23:35",1,[08] PARIGI MOUTONG
-d673ae1b-22c8-439c-bdcc-2a46c7e9927d,BANK MEGA TBK,OPEN,bagus.hartono@bankmega.com,Delivered,Queued,"02 Jun 2026, 08:23:34",2,[08] PARIGI MOUTONG
-c5b92842-2479-4459-9185-538b7b443f92,BANK BNI PARIGI UNIT KUR,OPEN,nigustiayutasni23@gmail.com,Delivered,Delivered,"02 Jun 2026, 07:24:06",1,[08] PARIGI MOUTONG
-c5b92842-2479-4459-9185-538b7b443f92,BANK BNI PARIGI UNIT KUR,OPEN,nigustiayutasni23@gmail.com,Delivered,Queued,"02 Jun 2026, 07:24:03",2,[08] PARIGI MOUTONG
-6b4f842e-cbcf-4a55-a70e-cfac8126d236,PT Pegadaian Persero UPC KOTARAYA,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
+4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Delivered,"20 Jun 2026, 13:22:20",1,[08] PARIGI MOUTONG
+4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Queued,"20 Jun 2026, 13:22:15",2,[08] PARIGI MOUTONG
+4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Delivered,"20 Jun 2026, 13:21:53",3,[08] PARIGI MOUTONG
+4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Queued,"20 Jun 2026, 13:21:53",4,[08] PARIGI MOUTONG
+4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Queued,"09 Jun 2026, 11:19:29",5,[08] PARIGI MOUTONG
+4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:19:29",6,[08] PARIGI MOUTONG
+4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Delivered,"02 Jun 2026, 01:33:44",7,[08] PARIGI MOUTONG
+4d1cc1cb-1121-4109-be20-1a19793afa6d,AROMA JAYA PALU,OPEN,ptaromajayapalu@gmail.com,Delivered,Queued,"02 Jun 2026, 01:33:40",8,[08] PARIGI MOUTONG
+d673ae1b-22c8-439c-bdcc-2a46c7e9927d,BANK MEGA TBK,OPEN,bagus.hartono@bankmega.com,Delivered,Delivered,"20 Jun 2026, 13:22:20",1,[08] PARIGI MOUTONG
+d673ae1b-22c8-439c-bdcc-2a46c7e9927d,BANK MEGA TBK,OPEN,bagus.hartono@bankmega.com,Delivered,Queued,"20 Jun 2026, 13:22:19",2,[08] PARIGI MOUTONG
+d673ae1b-22c8-439c-bdcc-2a46c7e9927d,BANK MEGA TBK,OPEN,bagus.hartono@bankmega.com,Delivered,Delivered,"20 Jun 2026, 13:21:44",3,[08] PARIGI MOUTONG
+d673ae1b-22c8-439c-bdcc-2a46c7e9927d,BANK MEGA TBK,OPEN,bagus.hartono@bankmega.com,Delivered,Queued,"20 Jun 2026, 13:21:43",4,[08] PARIGI MOUTONG
+d673ae1b-22c8-439c-bdcc-2a46c7e9927d,BANK MEGA TBK,OPEN,bagus.hartono@bankmega.com,Delivered,Delivered,"02 Jun 2026, 08:23:35",5,[08] PARIGI MOUTONG
+d673ae1b-22c8-439c-bdcc-2a46c7e9927d,BANK MEGA TBK,OPEN,bagus.hartono@bankmega.com,Delivered,Queued,"02 Jun 2026, 08:23:34",6,[08] PARIGI MOUTONG
+c5b92842-2479-4459-9185-538b7b443f92,BANK BNI PARIGI UNIT KUR,OPEN,nigustiayutasni23@gmail.com,Delivered,Delivered,"20 Jun 2026, 13:22:24",1,[08] PARIGI MOUTONG
+c5b92842-2479-4459-9185-538b7b443f92,BANK BNI PARIGI UNIT KUR,OPEN,nigustiayutasni23@gmail.com,Delivered,Queued,"20 Jun 2026, 13:22:20",2,[08] PARIGI MOUTONG
+c5b92842-2479-4459-9185-538b7b443f92,BANK BNI PARIGI UNIT KUR,OPEN,nigustiayutasni23@gmail.com,Delivered,Queued,"20 Jun 2026, 13:21:31",3,[08] PARIGI MOUTONG
+c5b92842-2479-4459-9185-538b7b443f92,BANK BNI PARIGI UNIT KUR,OPEN,nigustiayutasni23@gmail.com,Delivered,Delivered,"20 Jun 2026, 13:21:31",4,[08] PARIGI MOUTONG
+c5b92842-2479-4459-9185-538b7b443f92,BANK BNI PARIGI UNIT KUR,OPEN,nigustiayutasni23@gmail.com,Delivered,Delivered,"02 Jun 2026, 07:24:06",5,[08] PARIGI MOUTONG
+c5b92842-2479-4459-9185-538b7b443f92,BANK BNI PARIGI UNIT KUR,OPEN,nigustiayutasni23@gmail.com,Delivered,Queued,"02 Jun 2026, 07:24:03",6,[08] PARIGI MOUTONG
+6b4f842e-cbcf-4a55-a70e-cfac8126d236,PT Pegadaian Persero UPC KOTARAYA,DRAFT,-,-,-,-,0,[08] PARIGI MOUTONG
 456c29d8-19b8-4fb6-a0c7-59e5e23edd92,"PT. POS INDONESIA, Kantor Pos Cabang Luar Kota Moutong",OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 8a32e430-23b2-46ff-8b68-7dd7afb33862,BANK SULTENG,OPEN,banksultengposo@mailnesia.com,Permanent_fail,Permanent_fail,"02 Jun 2026, 06:02:51",1,[08] PARIGI MOUTONG
 8a32e430-23b2-46ff-8b68-7dd7afb33862,BANK SULTENG,OPEN,kaslambunu@yahoo.co.id,Bounced,Bounced,"02 Jun 2026, 04:02:15",1,[08] PARIGI MOUTONG
@@ -1436,8 +1457,12 @@ a57a6e06-e82d-4125-b2b1-be1af66786ae,"PK. SENANG HATI, PT",OPEN,-,-,-,-,0,[08] P
 1bbcc4b3-06aa-4cd2-b554-ff9fd1755a65,PARIGI AQUAKULTURA PRIMA,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 9d47ca40-13b3-40d8-8a83-d3b38a08fe23,"WALUYO, UD",OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 2892e2bb-3f66-4a47-a6f3-c02c0622e41a,BANK PERKREDITAN RAKYAT,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
-c3a13720-d28b-4b33-ac5a-5f2618b561b7,OGOLIGO SEJAHTERA,OPEN,sejahteraptogoligo@gmail.com,Delivered,Delivered,"02 Jun 2026, 07:17:15",1,[08] PARIGI MOUTONG
-c3a13720-d28b-4b33-ac5a-5f2618b561b7,OGOLIGO SEJAHTERA,OPEN,sejahteraptogoligo@gmail.com,Delivered,Queued,"02 Jun 2026, 07:16:48",2,[08] PARIGI MOUTONG
+c3a13720-d28b-4b33-ac5a-5f2618b561b7,OGOLIGO SEJAHTERA,OPEN,sejahteraptogoligo@gmail.com,Opened,Opened,"20 Jun 2026, 13:49:51",1,[08] PARIGI MOUTONG
+c3a13720-d28b-4b33-ac5a-5f2618b561b7,OGOLIGO SEJAHTERA,OPEN,sejahteraptogoligo@gmail.com,Opened,Opened,"20 Jun 2026, 13:22:30",2,[08] PARIGI MOUTONG
+c3a13720-d28b-4b33-ac5a-5f2618b561b7,OGOLIGO SEJAHTERA,OPEN,sejahteraptogoligo@gmail.com,Opened,Delivered,"20 Jun 2026, 13:22:24",3,[08] PARIGI MOUTONG
+c3a13720-d28b-4b33-ac5a-5f2618b561b7,OGOLIGO SEJAHTERA,OPEN,sejahteraptogoligo@gmail.com,Opened,Queued,"20 Jun 2026, 13:22:20",4,[08] PARIGI MOUTONG
+c3a13720-d28b-4b33-ac5a-5f2618b561b7,OGOLIGO SEJAHTERA,OPEN,sejahteraptogoligo@gmail.com,Opened,Delivered,"02 Jun 2026, 07:17:15",5,[08] PARIGI MOUTONG
+c3a13720-d28b-4b33-ac5a-5f2618b561b7,OGOLIGO SEJAHTERA,OPEN,sejahteraptogoligo@gmail.com,Opened,Queued,"02 Jun 2026, 07:16:48",6,[08] PARIGI MOUTONG
 cf344f14-7782-4891-b66c-7926dc9acce6,SPBU <FARID>,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 64f2f615-a461-4813-bef8-f305e17d42a6,BANK BRI KCP KOTARAYA,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 d664daf4-02b3-400f-949b-f3d1b3cf0bd0,BANK SULTENG  <MOH ANDRIYANSYAH >,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
@@ -1447,8 +1472,10 @@ ecabaeb5-3d4c-4f8f-9bad-6d93c19de43d,"PT Adira Dinamika Multi Finance Tbk, Kanto
 c0c136e4-4fb4-4813-9394-0c05234a2dfe,BANK MANDIRI KOTARAYA <NIZAR>,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 57da4c20-331b-4763-981b-6e288f1eba20,BRI UNIT TINOMBALA,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 e61578ba-1d28-40ca-ae49-a1468d44f863,BRI UNIT MANINILI,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
-3e075b21-e7b8-4b09-bbb0-a7155ccb1543,"KANTOR CABANG PEMBANTU,KCP",OPEN,halopos@posindonesia.co.id,Delivered,Delivered,"02 Jun 2026, 00:45:11",1,[08] PARIGI MOUTONG
-3e075b21-e7b8-4b09-bbb0-a7155ccb1543,"KANTOR CABANG PEMBANTU,KCP",OPEN,halopos@posindonesia.co.id,Delivered,Queued,"02 Jun 2026, 00:45:02",2,[08] PARIGI MOUTONG
+3e075b21-e7b8-4b09-bbb0-a7155ccb1543,"KANTOR CABANG PEMBANTU,KCP",OPEN,halopos@posindonesia.co.id,Delivered,Delivered,"20 Jun 2026, 13:22:20",1,[08] PARIGI MOUTONG
+3e075b21-e7b8-4b09-bbb0-a7155ccb1543,"KANTOR CABANG PEMBANTU,KCP",OPEN,halopos@posindonesia.co.id,Delivered,Queued,"20 Jun 2026, 13:22:16",2,[08] PARIGI MOUTONG
+3e075b21-e7b8-4b09-bbb0-a7155ccb1543,"KANTOR CABANG PEMBANTU,KCP",OPEN,halopos@posindonesia.co.id,Delivered,Delivered,"02 Jun 2026, 00:45:11",3,[08] PARIGI MOUTONG
+3e075b21-e7b8-4b09-bbb0-a7155ccb1543,"KANTOR CABANG PEMBANTU,KCP",OPEN,halopos@posindonesia.co.id,Delivered,Queued,"02 Jun 2026, 00:45:02",4,[08] PARIGI MOUTONG
 7334afb1-bd34-490f-90c9-1fe49f5c8b29,"PT PEGADAIAN (PERSERO), UPC BRI UNIT TINOMBO",OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 29fee7f1-2d5e-4f91-92d6-4ecdf6565dda,"ESA PUTLII PRAKARSA UTAMA, PT",OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 5a3ff3c1-3bb3-4cab-a368-0c7a39739993,BPR BINARTA LUHUR,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
@@ -1469,38 +1496,54 @@ e1a49f73-b1f2-43df-9a9b-dd2dba23ee2e,BANK PERKREDITAN RAKYAT BINARTA LUHUR,OPEN,
 e1a49f73-b1f2-43df-9a9b-dd2dba23ee2e,BANK PERKREDITAN RAKYAT BINARTA LUHUR,OPEN,binartasumber@yahoo.co.id,Bounced,Queued,"02 Jun 2026, 08:59:36",2,[08] PARIGI MOUTONG
 3b643efd-b49a-4b3e-84ba-b44a38b7c2ee,PT BPR BINARTA LUHUR,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 df79e9ef-4859-4f49-b08d-da3d88d4143b,BRI UNIT SUMBERSARI,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
-1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,igedecitrayasa92@gmail.com,Opened,Opened,"09 Jun 2026, 11:08:28",1,[08] PARIGI MOUTONG
-1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,igedecitrayasa92@gmail.com,Opened,Queued,"09 Jun 2026, 11:03:41",2,[08] PARIGI MOUTONG
-1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,igedecitrayasa92@gmail.com,Opened,Delivered,"09 Jun 2026, 11:03:41",3,[08] PARIGI MOUTONG
-2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Delivered,"09 Jun 2026, 11:08:17",1,[08] PARIGI MOUTONG
-2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Queued,"09 Jun 2026, 11:07:57",2,[08] PARIGI MOUTONG
-2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Clicked,"02 Jun 2026, 07:58:11",3,[08] PARIGI MOUTONG
-2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Opened,"02 Jun 2026, 07:57:50",4,[08] PARIGI MOUTONG
-2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Queued,"01 Jun 2026, 23:54:31",5,[08] PARIGI MOUTONG
-2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Delivered,"01 Jun 2026, 23:54:30",6,[08] PARIGI MOUTONG
-3320adff-ecdc-41be-a69f-a321c7adbcd6,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:12:59",1,[08] PARIGI MOUTONG
-3320adff-ecdc-41be-a69f-a321c7adbcd6,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,Delivered,Queued,"09 Jun 2026, 11:12:59",2,[08] PARIGI MOUTONG
-3320adff-ecdc-41be-a69f-a321c7adbcd6,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,Delivered,Delivered,"02 Jun 2026, 00:33:27",3,[08] PARIGI MOUTONG
-3320adff-ecdc-41be-a69f-a321c7adbcd6,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,Delivered,Queued,"02 Jun 2026, 00:33:24",4,[08] PARIGI MOUTONG
+1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,igedecitrayasa92@gmail.com,Opened,Opened,"20 Jun 2026, 14:50:55",1,[08] PARIGI MOUTONG
+1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,igedecitrayasa92@gmail.com,Opened,Opened,"20 Jun 2026, 14:50:52",2,[08] PARIGI MOUTONG
+1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,igedecitrayasa92@gmail.com,Opened,Opened,"20 Jun 2026, 14:50:31",3,[08] PARIGI MOUTONG
+1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,igedecitrayasa92@gmail.com,Opened,Delivered,"20 Jun 2026, 13:22:15",4,[08] PARIGI MOUTONG
+1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,igedecitrayasa92@gmail.com,Opened,Queued,"20 Jun 2026, 13:22:12",5,[08] PARIGI MOUTONG
+1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,igedecitrayasa92@gmail.com,Opened,Opened,"09 Jun 2026, 11:08:28",6,[08] PARIGI MOUTONG
+1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,igedecitrayasa92@gmail.com,Opened,Queued,"09 Jun 2026, 11:03:41",7,[08] PARIGI MOUTONG
+1ceaf655-fe5d-4a3d-a00b-21d7f2762f1c,"PT Pegadaian (Persero), UPC SUMBERSARI",OPEN,igedecitrayasa92@gmail.com,Opened,Delivered,"09 Jun 2026, 11:03:41",8,[08] PARIGI MOUTONG
+2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Delivered,"20 Jun 2026, 13:22:15",1,[08] PARIGI MOUTONG
+2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Queued,"20 Jun 2026, 13:22:12",2,[08] PARIGI MOUTONG
+2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Opened,"19 Jun 2026, 16:25:38",3,[08] PARIGI MOUTONG
+2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Delivered,"09 Jun 2026, 11:08:17",4,[08] PARIGI MOUTONG
+2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Queued,"09 Jun 2026, 11:07:57",5,[08] PARIGI MOUTONG
+2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Clicked,"02 Jun 2026, 07:58:11",6,[08] PARIGI MOUTONG
+2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Opened,"02 Jun 2026, 07:57:50",7,[08] PARIGI MOUTONG
+2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Queued,"01 Jun 2026, 23:54:31",8,[08] PARIGI MOUTONG
+2484b5ea-88e3-4e0e-9112-2c99b157d483,BANK SULTENG KANCAB PEMB.PARIGI,OPEN,banksulteng.parigi@yahoo.co.id,Clicked,Delivered,"01 Jun 2026, 23:54:30",9,[08] PARIGI MOUTONG
+3320adff-ecdc-41be-a69f-a321c7adbcd6,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,Delivered,Delivered,"20 Jun 2026, 13:22:16",1,[08] PARIGI MOUTONG
+3320adff-ecdc-41be-a69f-a321c7adbcd6,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,Delivered,Queued,"20 Jun 2026, 13:22:15",2,[08] PARIGI MOUTONG
+3320adff-ecdc-41be-a69f-a321c7adbcd6,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,Delivered,Delivered,"09 Jun 2026, 11:12:59",3,[08] PARIGI MOUTONG
+3320adff-ecdc-41be-a69f-a321c7adbcd6,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,Delivered,Queued,"09 Jun 2026, 11:12:59",4,[08] PARIGI MOUTONG
+3320adff-ecdc-41be-a69f-a321c7adbcd6,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,Delivered,Delivered,"02 Jun 2026, 00:33:27",5,[08] PARIGI MOUTONG
+3320adff-ecdc-41be-a69f-a321c7adbcd6,GLORY ANUGRAH PERKASA,OPEN,cv.gloryanugerahperkasa@gmail.com,Delivered,Queued,"02 Jun 2026, 00:33:24",6,[08] PARIGI MOUTONG
 51fc63d9-46bb-4773-b335-76d8589dddf4,BPR PALU ANUGERA CABANG PARIGI,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 487d79ac-cb64-4668-9531-ebc3f866653e,BANK PERKREDITAN RAKYAT PALU ANUGERAH,OPEN,paluanugerahprg@yahoo.com,Permanent_fail,Permanent_fail,"09 Jun 2026, 11:18:28",1,[08] PARIGI MOUTONG
 487d79ac-cb64-4668-9531-ebc3f866653e,BANK PERKREDITAN RAKYAT PALU ANUGERAH,OPEN,paluanugerahprg@yahoo.com,Permanent_fail,Bounced,"02 Jun 2026, 01:23:29",2,[08] PARIGI MOUTONG
 487d79ac-cb64-4668-9531-ebc3f866653e,BANK PERKREDITAN RAKYAT PALU ANUGERAH,OPEN,paluanugerahprg@yahoo.com,Permanent_fail,Queued,"02 Jun 2026, 01:23:24",3,[08] PARIGI MOUTONG
 53371dda-e2fd-418b-b255-b54ac8ec4e8d,KANTOR BRI,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 b143ac48-18b1-461e-8107-1e44db563e43,"PT Pegadaian (Persero), CPS Kampal Parigi",OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
-8b7d6afd-d5e8-4946-aaea-ef7396a3e447,PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI,OPEN,sekretariat244@bankmega.com,Delivered,Delivered,"02 Jun 2026, 04:04:48",1,[08] PARIGI MOUTONG
-8b7d6afd-d5e8-4946-aaea-ef7396a3e447,PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI,OPEN,sekretariat244@bankmega.com,Delivered,Queued,"02 Jun 2026, 04:04:47",2,[08] PARIGI MOUTONG
+8b7d6afd-d5e8-4946-aaea-ef7396a3e447,PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI,OPEN,sekretariat244@bankmega.com,Delivered,Queued,"20 Jun 2026, 13:22:20",1,[08] PARIGI MOUTONG
+8b7d6afd-d5e8-4946-aaea-ef7396a3e447,PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI,OPEN,sekretariat244@bankmega.com,Delivered,Delivered,"20 Jun 2026, 13:22:20",2,[08] PARIGI MOUTONG
+8b7d6afd-d5e8-4946-aaea-ef7396a3e447,PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI,OPEN,sekretariat244@bankmega.com,Delivered,Delivered,"02 Jun 2026, 04:04:48",3,[08] PARIGI MOUTONG
+8b7d6afd-d5e8-4946-aaea-ef7396a3e447,PT. Bank Mega Tbk Kantor Cabang Pembantu PARIGI,OPEN,sekretariat244@bankmega.com,Delivered,Queued,"02 Jun 2026, 04:04:47",4,[08] PARIGI MOUTONG
 d900ba14-03aa-4cf1-8872-746118648c4f,BPR ALIMO DANA PRIMA PT,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 751712a7-8d7e-4ea7-93be-51fae4a3cc01,"BPR PALU LOKADANA UTAMA, PT",OPEN,bprpalulokadana@yahoo.co.id,Bounced,Bounced,"02 Jun 2026, 10:34:01",1,[08] PARIGI MOUTONG
 751712a7-8d7e-4ea7-93be-51fae4a3cc01,"BPR PALU LOKADANA UTAMA, PT",OPEN,bprpalulokadana@yahoo.co.id,Bounced,Queued,"02 Jun 2026, 10:33:19",2,[08] PARIGI MOUTONG
-15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6,BANK NEGARA INDONESIA PERSERO TBK,OPEN,prick@bni.co.id,Delivered,Queued,"09 Jun 2026, 11:02:09",1,[08] PARIGI MOUTONG
-15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6,BANK NEGARA INDONESIA PERSERO TBK,OPEN,prick@bni.co.id,Delivered,Delivered,"09 Jun 2026, 11:02:09",2,[08] PARIGI MOUTONG
-15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6,BANK NEGARA INDONESIA PERSERO TBK,OPEN,prick@bni.co.id,Delivered,Delivered,"01 Jun 2026, 23:29:30",3,[08] PARIGI MOUTONG
-15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6,BANK NEGARA INDONESIA PERSERO TBK,OPEN,prick@bni.co.id,Delivered,Queued,"01 Jun 2026, 23:29:26",4,[08] PARIGI MOUTONG
+15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6,BANK NEGARA INDONESIA PERSERO TBK,OPEN,prick@bni.co.id,Delivered,Delivered,"20 Jun 2026, 13:22:12",1,[08] PARIGI MOUTONG
+15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6,BANK NEGARA INDONESIA PERSERO TBK,OPEN,prick@bni.co.id,Delivered,Queued,"20 Jun 2026, 13:22:12",2,[08] PARIGI MOUTONG
+15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6,BANK NEGARA INDONESIA PERSERO TBK,OPEN,prick@bni.co.id,Delivered,Queued,"09 Jun 2026, 11:02:09",3,[08] PARIGI MOUTONG
+15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6,BANK NEGARA INDONESIA PERSERO TBK,OPEN,prick@bni.co.id,Delivered,Delivered,"09 Jun 2026, 11:02:09",4,[08] PARIGI MOUTONG
+15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6,BANK NEGARA INDONESIA PERSERO TBK,OPEN,prick@bni.co.id,Delivered,Delivered,"01 Jun 2026, 23:29:30",5,[08] PARIGI MOUTONG
+15e3fbbd-9a5c-4537-9190-55cc7e2ea1b6,BANK NEGARA INDONESIA PERSERO TBK,OPEN,prick@bni.co.id,Delivered,Queued,"01 Jun 2026, 23:29:26",6,[08] PARIGI MOUTONG
 8e053414-c59a-43ac-b820-de312580eda8,BANK BRI < KANTOR CABANG PARIGI >,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 ed483ac5-1c8d-42e9-8159-71392b70a5c3,BANK MANDIRI < KCP PARIGI >,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
-e0e167fe-12a0-4e2f-b3dd-6f28dcc2c546,"BANK MANDIRI TBK, PT",OPEN,mmu.parigi_mtgtsrtl@bankmandiri.co.id,Delivered,Delivered,"02 Jun 2026, 08:57:43",1,[08] PARIGI MOUTONG
-e0e167fe-12a0-4e2f-b3dd-6f28dcc2c546,"BANK MANDIRI TBK, PT",OPEN,mmu.parigi_mtgtsrtl@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 08:57:42",2,[08] PARIGI MOUTONG
+e0e167fe-12a0-4e2f-b3dd-6f28dcc2c546,"BANK MANDIRI TBK, PT",OPEN,mmu.parigi_mtgtsrtl@bankmandiri.co.id,Delivered,Delivered,"20 Jun 2026, 13:22:23",1,[08] PARIGI MOUTONG
+e0e167fe-12a0-4e2f-b3dd-6f28dcc2c546,"BANK MANDIRI TBK, PT",OPEN,mmu.parigi_mtgtsrtl@bankmandiri.co.id,Delivered,Queued,"20 Jun 2026, 13:22:20",2,[08] PARIGI MOUTONG
+e0e167fe-12a0-4e2f-b3dd-6f28dcc2c546,"BANK MANDIRI TBK, PT",OPEN,mmu.parigi_mtgtsrtl@bankmandiri.co.id,Delivered,Delivered,"02 Jun 2026, 08:57:43",3,[08] PARIGI MOUTONG
+e0e167fe-12a0-4e2f-b3dd-6f28dcc2c546,"BANK MANDIRI TBK, PT",OPEN,mmu.parigi_mtgtsrtl@bankmandiri.co.id,Delivered,Queued,"02 Jun 2026, 08:57:42",4,[08] PARIGI MOUTONG
 ebe04c4e-3f3d-45c7-ac17-78dec7f90345,BANK DANAMON,OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 bd574b33-2488-4633-b3ac-375008e68655,"PT. POS INDONESIA, KANTOR POS CABANG LUAR KOTA PARIGI",OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
 0b807a76-8ae0-42d2-b741-49bbc23d9689,"PT Pegadaian (Persero), UPC TOLAI",OPEN,-,-,-,-,0,[08] PARIGI MOUTONG
@@ -1626,18 +1669,19 @@ c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , P
 c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"22 May 2026, 09:26:04",26,[11] BANGGAI LAUT
 c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Delivered,"22 May 2026, 09:02:13",27,[11] BANGGAI LAUT
 c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Queued,"22 May 2026, 09:02:09",28,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"16 Jun 2026, 20:51:29",29,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"10 Jun 2026, 13:41:30",30,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"06 Jun 2026, 02:14:16",31,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 10:33:12",32,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 10:31:54",33,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 10:28:38",34,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 09:30:30",35,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 09:28:48",36,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 09:28:00",37,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 09:14:44",38,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Delivered,"02 Jun 2026, 07:30:01",39,[11] BANGGAI LAUT
-c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Queued,"02 Jun 2026, 07:29:58",40,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"20 Jun 2026, 09:22:47",29,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"16 Jun 2026, 20:51:29",30,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"10 Jun 2026, 13:41:30",31,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"06 Jun 2026, 02:14:16",32,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 10:33:12",33,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 10:31:54",34,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 10:28:38",35,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 09:30:30",36,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 09:28:48",37,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 09:28:00",38,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Clicked,"02 Jun 2026, 09:14:44",39,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Delivered,"02 Jun 2026, 07:30:01",40,[11] BANGGAI LAUT
+c7babf50-a57b-4fc1-8fe7-e08f2b09f402,"BANK RAKYAT INDONESIA KCP BANGGAI LAUT , PT PERSERO TBK",DRAFT,citra.83@gmail.com,Clicked,Queued,"02 Jun 2026, 07:29:58",41,[11] BANGGAI LAUT
 c7b87907-2b61-416e-99d5-70e9f6588744,"BRI UNIT BANGGAI, PT",SUBMITTED RESPONDENT,lvrttlv@gmail.com,Clicked,Opened,"31 May 2026, 22:12:49",1,[11] BANGGAI LAUT
 c7b87907-2b61-416e-99d5-70e9f6588744,"BRI UNIT BANGGAI, PT",SUBMITTED RESPONDENT,lvrttlv@gmail.com,Clicked,Opened,"31 May 2026, 22:12:37",2,[11] BANGGAI LAUT
 c7b87907-2b61-416e-99d5-70e9f6588744,"BRI UNIT BANGGAI, PT",SUBMITTED RESPONDENT,lvrttlv@gmail.com,Clicked,Queued,"31 May 2026, 22:12:22",3,[11] BANGGAI LAUT
@@ -2375,33 +2419,34 @@ abcf8218-4b74-42f9-996a-ab3d2118937f,"ALFA INDUSTRI MANDIRI, PT",SUBMITTED RESPO
 85c44a30-bdc8-4a83-b5f5-53b426b2bd70,UNIVERSITAS ISLAM NEGERI DATOKRAMA PALU,DRAFT,Humas@uindatokarama.ac.id,Bounced,Queued,"12 Jun 2026, 16:07:27",5,[71] PALU
 85c44a30-bdc8-4a83-b5f5-53b426b2bd70,UNIVERSITAS ISLAM NEGERI DATOKRAMA PALU,DRAFT,Humas@uindatokarama.ac.id,Bounced,Bounced,"02 Jun 2026, 03:44:55",6,[71] PALU
 85c44a30-bdc8-4a83-b5f5-53b426b2bd70,UNIVERSITAS ISLAM NEGERI DATOKRAMA PALU,DRAFT,Humas@uindatokarama.ac.id,Bounced,Queued,"02 Jun 2026, 03:44:52",7,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"17 Jun 2026, 13:31:46",1,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Opened,"15 Jun 2026, 11:46:06",2,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Delivered,"15 Jun 2026, 11:44:54",3,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Queued,"15 Jun 2026, 11:44:50",4,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Opened,"15 Jun 2026, 11:42:03",5,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"15 Jun 2026, 11:37:12",6,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Delivered,"15 Jun 2026, 11:37:09",7,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Queued,"15 Jun 2026, 11:37:09",8,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Delivered,"15 Jun 2026, 11:31:23",9,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Delivered,"15 Jun 2026, 11:31:19",10,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Queued,"15 Jun 2026, 11:31:19",11,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"15 Jun 2026, 11:20:22",12,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"13 Jun 2026, 12:17:26",13,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 21:27:11",14,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 14:54:18",15,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:41:49",16,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:39:39",17,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:39:02",18,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:38:56",19,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:38:44",20,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:22:44",21,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:20:43",22,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:20:36",23,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:20:05",24,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Opened,"03 Jun 2026, 01:11:10",25,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Delivered,"02 Jun 2026, 09:36:13",26,[71] PALU
-ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Queued,"02 Jun 2026, 09:35:35",27,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Opened,"19 Jun 2026, 18:23:10",1,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"17 Jun 2026, 13:31:46",2,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Opened,"15 Jun 2026, 11:46:06",3,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Delivered,"15 Jun 2026, 11:44:54",4,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Queued,"15 Jun 2026, 11:44:50",5,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Opened,"15 Jun 2026, 11:42:03",6,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"15 Jun 2026, 11:37:12",7,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Delivered,"15 Jun 2026, 11:37:09",8,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Queued,"15 Jun 2026, 11:37:09",9,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Delivered,"15 Jun 2026, 11:31:23",10,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Delivered,"15 Jun 2026, 11:31:19",11,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Queued,"15 Jun 2026, 11:31:19",12,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"15 Jun 2026, 11:20:22",13,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"13 Jun 2026, 12:17:26",14,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 21:27:11",15,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 14:54:18",16,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:41:49",17,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:39:39",18,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:39:02",19,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:38:56",20,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:38:44",21,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:22:44",22,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:20:43",23,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:20:36",24,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Clicked,"11 Jun 2026, 13:20:05",25,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Opened,"03 Jun 2026, 01:11:10",26,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Delivered,"02 Jun 2026, 09:36:13",27,[71] PALU
+ebef66e9-774d-478b-a0cf-df61337b9761,FANDY GUNAWAN,DRAFT,enclubofficial@gmail.com,Clicked,Queued,"02 Jun 2026, 09:35:35",28,[71] PALU
 d0165086-104a-4500-b00b-2fc5d6b40f95,"MANADO MOTOR, CV",SUBMITTED RESPONDENT,soputraroland@yahoo.com,Permanent_fail,Permanent_fail,"10 Jun 2026, 04:53:33",1,[71] PALU
 d0165086-104a-4500-b00b-2fc5d6b40f95,"MANADO MOTOR, CV",SUBMITTED RESPONDENT,soputraroland@yahoo.com,Permanent_fail,Bounced,"02 Jun 2026, 07:57:37",2,[71] PALU
 d0165086-104a-4500-b00b-2fc5d6b40f95,"MANADO MOTOR, CV",SUBMITTED RESPONDENT,soputraroland@yahoo.com,Permanent_fail,Queued,"02 Jun 2026, 07:57:15",3,[71] PALU
@@ -3212,63 +3257,3 @@ a1efac58-5ae4-40aa-ac6f-b05be07a6a70,ANUTA KARYA PRIMA,OPEN,anutakaryaprima@gmai
 9ad798fd-3673-4d1e-ab8c-6b8df6a12162,SINAR LESTARI JAYAPRIMA,OPEN,ptsinarlestarijayaprima@yahoo.com,Bounced,Queued,"02 Jun 2026, 04:54:25",2,[71] PALU
 b767faad-d83e-4f27-a944-b49f0d4c13f9,"DUAPUTRA PERKASA MANDIRI,CV",OPEN,duaputraperkasamandiri@gmail.com,Delivered,Delivered,"02 Jun 2026, 06:32:51",1,[71] PALU
 b767faad-d83e-4f27-a944-b49f0d4c13f9,"DUAPUTRA PERKASA MANDIRI,CV",OPEN,duaputraperkasamandiri@gmail.com,Delivered,Queued,"02 Jun 2026, 06:32:50",2,[71] PALU
-8dd95298-bef6-472e-9f59-9a50ee99cef1,WANHONG NONFERROUS RECYCLING UTILIZATION PT,SUBMITTED RESPONDENT,wanhong.nru@gmail.com,Delivered,Delivered,"04 Jun 2026, 11:41:24",1,[71] PALU
-8dd95298-bef6-472e-9f59-9a50ee99cef1,WANHONG NONFERROUS RECYCLING UTILIZATION PT,SUBMITTED RESPONDENT,wanhong.nru@gmail.com,Delivered,Queued,"04 Jun 2026, 11:41:21",2,[71] PALU
-8dd95298-bef6-472e-9f59-9a50ee99cef1,WANHONG NONFERROUS RECYCLING UTILIZATION PT,SUBMITTED RESPONDENT,wanhong.nru@gmail.com,Delivered,Delivered,"02 Jun 2026, 04:12:55",3,[71] PALU
-8dd95298-bef6-472e-9f59-9a50ee99cef1,WANHONG NONFERROUS RECYCLING UTILIZATION PT,SUBMITTED RESPONDENT,wanhong.nru@gmail.com,Delivered,Queued,"02 Jun 2026, 04:12:55",4,[71] PALU
-b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Opened,"04 Jun 2026, 11:33:26",1,[71] PALU
-b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Opened,"04 Jun 2026, 11:33:13",2,[71] PALU
-b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Opened,"04 Jun 2026, 11:32:24",3,[71] PALU
-b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Delivered,"04 Jun 2026, 11:30:04",4,[71] PALU
-b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Queued,"04 Jun 2026, 11:30:00",5,[71] PALU
-b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Delivered,"02 Jun 2026, 06:30:27",6,[71] PALU
-b603267c-de6c-4b44-a6f2-dc7509d5bd10,"GANDA PARADE ARTANA, PT",SUBMITTED RESPONDENT,gpartana2020@gmail.com,Opened,Queued,"02 Jun 2026, 06:30:24",7,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Opened,"10 Jun 2026, 23:41:42",1,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Opened,"10 Jun 2026, 23:41:41",2,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Delivered,"10 Jun 2026, 23:17:21",3,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Queued,"10 Jun 2026, 23:17:21",4,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Delivered,"10 Jun 2026, 10:32:10",5,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Queued,"10 Jun 2026, 10:32:09",6,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Clicked,"10 Jun 2026, 10:30:48",7,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Opened,"10 Jun 2026, 10:30:36",8,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Opened,"10 Jun 2026, 10:30:35",9,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Clicked,"02 Jun 2026, 06:48:48",10,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Clicked,"02 Jun 2026, 06:48:47",11,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Opened,"02 Jun 2026, 06:48:32",12,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Delivered,"02 Jun 2026, 03:23:06",13,[71] PALU
-7c76ecfe-4010-4674-844e-12f4e655ea40,BETON INDUSTRI INDONESIA,SUBMITTED RESPONDENT,pt.betonindustriind@gmail.com,Clicked,Queued,"02 Jun 2026, 03:22:53",14,[71] PALU
-01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Delivered,"03 Jun 2026, 16:46:45",1,[71] PALU
-01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Queued,"03 Jun 2026, 16:46:41",2,[71] PALU
-01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Opened,"03 Jun 2026, 07:48:29",3,[71] PALU
-01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Clicked,"03 Jun 2026, 07:48:29",4,[71] PALU
-01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Opened,"02 Jun 2026, 08:47:43",5,[71] PALU
-01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Delivered,"01 Jun 2026, 22:46:17",6,[71] PALU
-01023561-d8f0-4e84-b475-f41547a905f1,KESEJAHTERAAN BANK PEMBANGUNAN DAERAH SULAWESI TENGAH,SUBMITTED RESPONDENT,yyksbpd@gmail.com,Clicked,Queued,"01 Jun 2026, 22:46:13",7,[71] PALU
-1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Opened,"11 Jun 2026, 14:30:52",1,[71] PALU
-1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Opened,"11 Jun 2026, 14:30:44",2,[71] PALU
-1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Opened,"11 Jun 2026, 14:30:43",3,[71] PALU
-1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Opened,"11 Jun 2026, 14:30:39",4,[71] PALU
-1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Opened,"11 Jun 2026, 14:30:33",5,[71] PALU
-1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Delivered,"04 Jun 2026, 11:19:25",6,[71] PALU
-1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Queued,"04 Jun 2026, 11:19:20",7,[71] PALU
-1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Delivered,"02 Jun 2026, 05:33:35",8,[71] PALU
-1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Queued,"02 Jun 2026, 05:33:32",9,[71] PALU
-1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Delivered,"01 Jun 2026, 23:40:18",10,[71] PALU
-1c7ec86c-08de-428d-a272-031f985c2ff9,"HONG THAI INTERNATIONAL, PT",SUBMITTED RESPONDENT,internationalhongthai@gmail.com,Opened,Queued,"01 Jun 2026, 23:40:15",11,[71] PALU
-abcf8218-4b74-42f9-996a-ab3d2118937f,"ALFA INDUSTRI MANDIRI, PT",SUBMITTED RESPONDENT,ptalfaindustrimandiri@gmail.com,Delivered,Delivered,"04 Jun 2026, 11:31:37",1,[71] PALU
-d0165086-104a-4500-b00b-2fc5d6b40f95,"MANADO MOTOR, CV",SUBMITTED RESPONDENT,soputraroland@yahoo.com,Permanent_fail,Permanent_fail,"10 Jun 2026, 04:53:33",1,[71] PALU
-d0165086-104a-4500-b00b-2fc5d6b40f95,"MANADO MOTOR, CV",SUBMITTED RESPONDENT,soputraroland@yahoo.com,Permanent_fail,Bounced,"02 Jun 2026, 07:57:37",2,[71] PALU
-d0165086-104a-4500-b00b-2fc5d6b40f95,"MANADO MOTOR, CV",SUBMITTED RESPONDENT,soputraroland@yahoo.com,Permanent_fail,Queued,"02 Jun 2026, 07:57:15",3,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Opened,"04 Jun 2026, 12:24:18",3,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Delivered,"04 Jun 2026, 12:23:16",4,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Queued,"04 Jun 2026, 12:23:11",5,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Clicked,"04 Jun 2026, 11:29:34",6,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Opened,"04 Jun 2026, 11:29:27",7,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Opened,"04 Jun 2026, 11:28:26",8,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Clicked,"04 Jun 2026, 11:18:58",9,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Clicked,"04 Jun 2026, 11:16:15",10,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Opened,"04 Jun 2026, 11:16:12",11,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Opened,"04 Jun 2026, 11:12:45",12,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Clicked,"04 Jun 2026, 11:12:45",13,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Delivered,"04 Jun 2026, 11:12:29",14,[71] PALU
-46810e54-b17a-473d-8c2c-f5c2a7b7e559,"GANESHA GLOBAL IMPEX,PT ",SUBMITTED RESPONDENT,jesysintyarulansari@gmail.com,Clicked,Queued,"04 Jun 2026, 11:12:29",15,[71] PALU
