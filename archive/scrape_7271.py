@@ -1,0 +1,5 @@
+import sys
+import subprocess
+
+print("=== Menjalankan Scraping SE Umum untuk Kabupaten PALU (7271) ===")
+subprocess.run([sys.executable, "scrape_granular_core.py", "se_umum", "7271"])

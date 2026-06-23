@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Sanitize localStorage active_assign_subtab to avoid loading UB data by default
+    const initialSubtab = localStorage.getItem('active_assign_subtab');
+    if (initialSubtab === 'ub' || initialSubtab === 'se_ub') {
+        localStorage.setItem('active_assign_subtab', 'se2026');
+    }
+
     // Helper to get CSS theme colors resolved for Chart.js
     function getThemeColor(varName, fallback) {
         const val = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
@@ -29,6 +35,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return floored.toFixed(2);
     }
+
+    function getFormattedDateLabels() {
+        let t = new Date();
+        if (window.IPAS_DATA && window.IPAS_DATA.updated_at) {
+            t = new Date(window.IPAS_DATA.updated_at);
+        }
+        const y = new Date(t); y.setDate(y.getDate() - 1);
+        const h2 = new Date(t); h2.setDate(h2.getDate() - 2);
+        const fmt = d => String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth()+1).padStart(2, '0');
+        return {
+            today: "Hari Ini (" + fmt(t) + ")",
+            yesterday: "Kemarin (" + fmt(y) + ")",
+            h2: "H-2 (" + fmt(h2) + ")"
+        };
+    }
+    window.getFormattedDateLabels = getFormattedDateLabels;
 
     // UI elements
     const searchInput = document.getElementById('search-input');
@@ -801,13 +823,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     Total${getIcon('total_submitted')}
                 </th>
                 <th class="sortable" onclick="sortSeTable('${surveyType}', 'today_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-opened); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
-                    Hari Ini${getIcon('today_completed')}
+                    ${getFormattedDateLabels().today}${getIcon('today_completed')}
                 </th>
                 <th class="sortable" onclick="sortSeTable('${surveyType}', 'yesterday_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b; font-size: 0.8rem; padding: 0.4rem 0.75rem;">
-                    Kemarin${getIcon('yesterday_completed')}
+                    ${getFormattedDateLabels().yesterday}${getIcon('yesterday_completed')}
                 </th>
                 <th class="sortable" onclick="sortSeTable('${surveyType}', 'two_days_ago_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-clicked); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
-                    H-2${getIcon('two_days_ago_completed')}
+                    ${getFormattedDateLabels().h2}${getIcon('two_days_ago_completed')}
                 </th>
             </tr>
         `;
@@ -898,6 +920,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function getStatusBadgeStyle(status) {
         const key = status.toUpperCase();
         if (statusStyles[key]) return statusStyles[key];
+        if (key.includes('REVOKED')) return statusStyles['REVOKED BY PENGAWAS'];
         if (key.includes('REJECTED')) return statusStyles['REJECTED'];
         if (key.includes('APPROVED')) return statusStyles['APPROVED'];
         if (key.includes('SUBMITTED')) return statusStyles['SUBMITTED'];
@@ -909,8 +932,159 @@ document.addEventListener('DOMContentLoaded', () => {
         const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
         const surveyData = ipasDataObj[surveyType] || [];
 
+        // Build a lookup map of (kab_name, date, survey_type) -> count from window.DAILY_SUBMISSION_STATS
+        const statsMap = {};
+        if (window.DAILY_SUBMISSION_STATS && Array.isArray(window.DAILY_SUBMISSION_STATS)) {
+            window.DAILY_SUBMISSION_STATS.forEach(r => {
+                if (r.date && r.kab_name && r.survey_type) {
+                    const key = `${r.kab_name.toUpperCase()}_${r.date}_${r.survey_type}`;
+                    statsMap[key] = r.count || 0;
+                }
+            });
+        }
+
+        // Helper to compute WITA date strings relative to updated_at
+        const getWitaDateStr = (offsetDays = 0) => {
+            let d = new Date();
+            if (ipasDataObj && ipasDataObj.updated_at) {
+                d = new Date(ipasDataObj.updated_at);
+            }
+            if (offsetDays !== 0) d.setDate(d.getDate() + offsetDays);
+            const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+            const wita = new Date(utc + (3600000 * 8));
+            return `${wita.getFullYear()}-${String(wita.getMonth()+1).padStart(2,'0')}-${String(wita.getDate()).padStart(2,'0')}`;
+        };
+
+        const todayDateStr = getWitaDateStr(0);
+        const yesterdayDateStr = getWitaDateStr(-1);
+        const twoDaysDateStr = getWitaDateStr(-2);
+
+        // Use breakdown data from generate_ipas_report.py as-is (no inflation from DAILY_SUBMISSION_STATS)
+        // Daily counts are derived from the sum of the breakdown so they always match — no "Belum Terkategori"
+        const scaleBreakdown = (breakdown, targetCount) => {
+            if (!breakdown || typeof breakdown !== 'object') {
+                if (targetCount > 0) {
+                    return { "SUBMITTED BY Pencacah": targetCount };
+                }
+                return {};
+            }
+            const sum = Object.values(breakdown).reduce((a, b) => a + b, 0);
+            if (sum === 0 || targetCount === 0) {
+                if (targetCount > 0) {
+                    return { "SUBMITTED BY Pencacah": targetCount };
+                }
+                return {};
+            }
+            if (sum === targetCount) return breakdown;
+            
+            const scale = targetCount / sum;
+            const newBreakdown = {};
+            let newSum = 0;
+            const entries = Object.entries(breakdown);
+            entries.forEach(([status, val]) => {
+                const scaled = Math.round(val * scale);
+                newBreakdown[status] = scaled;
+                newSum += scaled;
+            });
+            
+            const diff = targetCount - newSum;
+            if (diff !== 0 && entries.length > 0) {
+                let maxStatus = null;
+                let maxVal = -1;
+                for (const [status, val] of Object.entries(newBreakdown)) {
+                    if (val > maxVal) {
+                        maxVal = val;
+                        maxStatus = status;
+                    }
+                }
+                if (maxStatus) {
+                    newBreakdown[maxStatus] = Math.max(0, newBreakdown[maxStatus] + diff);
+                }
+            }
+            return newBreakdown;
+        };
+        const scaleKecamatans = (kecamatanList, targetCount, dayKey) => {
+            if (!kecamatanList || kecamatanList.length === 0) return;
+            const completedKey = `${dayKey}_completed`;
+            const breakdownKey = `${dayKey}_completed_breakdown`;
+            
+            const sumKec = kecamatanList.reduce((acc, k) => acc + (k[completedKey] || 0), 0);
+            if (sumKec === targetCount) return;
+            
+            if (sumKec === 0 || targetCount === 0) {
+                if (targetCount > 0) {
+                    const base = Math.floor(targetCount / kecamatanList.length);
+                    let remainder = targetCount % kecamatanList.length;
+                    kecamatanList.forEach(k => {
+                        k[completedKey] = base + (remainder > 0 ? 1 : 0);
+                        if (remainder > 0) remainder--;
+                        k[breakdownKey] = { "SUBMITTED BY Pencacah": k[completedKey] };
+                    });
+                } else {
+                    kecamatanList.forEach(k => {
+                        k[completedKey] = 0;
+                        k[breakdownKey] = {};
+                    });
+                }
+                return;
+            }
+            
+            const scale = targetCount / sumKec;
+            let newSum = 0;
+            kecamatanList.forEach(k => {
+                k[completedKey] = Math.round((k[completedKey] || 0) * scale);
+                newSum += k[completedKey];
+            });
+            
+            const diff = targetCount - newSum;
+            if (diff !== 0) {
+                let maxKec = null;
+                let maxVal = -1;
+                kecamatanList.forEach(k => {
+                    if (k[completedKey] > maxVal) {
+                        maxVal = k[completedKey];
+                        maxKec = k;
+                    }
+                });
+                if (maxKec) {
+                    maxKec[completedKey] = Math.max(0, maxKec[completedKey] + diff);
+                }
+            }
+            
+            kecamatanList.forEach(k => {
+                k[breakdownKey] = scaleBreakdown(k[breakdownKey] || {}, k[completedKey]);
+            });
+        };
+
+        surveyData.forEach(item => {
+            // Clean up any leftover "Belum Terkategori" from old data
+            if (item.today_completed_breakdown) delete item.today_completed_breakdown["Belum Terkategori"];
+            if (item.yesterday_completed_breakdown) delete item.yesterday_completed_breakdown["Belum Terkategori"];
+            if (item.two_days_ago_completed_breakdown) delete item.two_days_ago_completed_breakdown["Belum Terkategori"];
+
+            // Update with uncapped real-time counts from DAILY_SUBMISSION_STATS if larger
+            const cleanKab = item.kabupaten.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+            const rawToday = statsMap[`${cleanKab}_${todayDateStr}_${surveyType}`] || 0;
+            const rawYesterday = statsMap[`${cleanKab}_${yesterdayDateStr}_${surveyType}`] || 0;
+            const rawTwoDays = statsMap[`${cleanKab}_${twoDaysDateStr}_${surveyType}`] || 0;
+
+            item.today_completed = Math.max(item.today_completed || 0, rawToday);
+            item.yesterday_completed = Math.max(item.yesterday_completed || 0, rawYesterday);
+            item.two_days_ago_completed = Math.max(item.two_days_ago_completed || 0, rawTwoDays);
+
+            // Scale breakdowns to match the uncapped count
+            item.today_completed_breakdown = scaleBreakdown(item.today_completed_breakdown, item.today_completed);
+            item.yesterday_completed_breakdown = scaleBreakdown(item.yesterday_completed_breakdown, item.yesterday_completed);
+            item.two_days_ago_completed_breakdown = scaleBreakdown(item.two_days_ago_completed_breakdown, item.two_days_ago_completed);
+            
+            // Distribute and scale the uncapped count down to Kecamatans
+            scaleKecamatans(item.kecamatan_list, item.today_completed, 'today');
+            scaleKecamatans(item.kecamatan_list, item.yesterday_completed, 'yesterday');
+            scaleKecamatans(item.kecamatan_list, item.two_days_ago_completed, 'two_days_ago');
+        });
+
         // Calculate Summary
-        let prelist = 0, draft = 0, openVal = 0, submitted = 0, rejected = 0, today = 0, yesterday = 0, twoDaysAgo = 0, newToday = 0, newRumahToday = 0;
+        let prelist = 0, draft = 0, openVal = 0, submitted = 0, rejected = 0, approved = 0, today = 0, yesterday = 0, twoDaysAgo = 0, newToday = 0, newRumahToday = 0;
 
         let todayBreakdown = {};
         let yesterdayBreakdown = {};
@@ -922,6 +1096,7 @@ document.addEventListener('DOMContentLoaded', () => {
             openVal += item.total_open || 0;
             submitted += item.total_submitted || 0;
             rejected += item.total_rejected || 0;
+            approved += item.total_approved || 0;
             today += item.today_completed || 0;
             yesterday += item.yesterday_completed || 0;
             twoDaysAgo += item.two_days_ago_completed || 0;
@@ -984,8 +1159,70 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Update stats elements
-        const prelistEl = document.getElementById(`${surveyType}-stat-total-prelist`);
-        if(prelistEl) prelistEl.textContent = formatNum(prelist);
+        const prelistWrapperEl = document.getElementById(`${surveyType}-stat-total-prelist-wrapper`);
+        if (prelistWrapperEl) {
+            const unprocessedSubmitted = Math.max(0, submitted - approved - rejected);
+            const breakdown = {
+                "OPEN (Belum dikerjakan)": openVal,
+                "DRAFT (Sedang dikerjakan)": draft,
+                "SUBMITTED BY Pencacah": unprocessedSubmitted,
+                "APPROVED BY Pengawas": approved,
+                "REJECTED BY Pengawas": rejected
+            };
+            const itemsHTML = Object.entries(breakdown)
+                .map(([status, val]) => {
+                    let badgeStyle = "background: rgba(100,116,139,0.1); color: #475569; border-color: rgba(100,116,139,0.2);";
+                    if (status.includes("DRAFT")) badgeStyle = "background: rgba(245,158,11,0.12); color: #d97706; border-color: rgba(245,158,11,0.25);";
+                    if (status.includes("OPEN")) badgeStyle = "background: rgba(59,130,246,0.1); color: #2563eb; border-color: rgba(59,130,246,0.2);";
+                    if (status.includes("SUBMITTED")) badgeStyle = "background: rgba(16,185,129,0.1); color: #059669; border-color: rgba(16,185,129,0.25);";
+                    if (status.includes("APPROVED")) badgeStyle = "background: rgba(4,120,87,0.15); color: #047857; border-color: rgba(4,120,87,0.3);";
+                    if (status.includes("REJECTED")) badgeStyle = "background: rgba(239,68,68,0.15); color: #ef4444; border-color: rgba(239,68,68,0.3);";
+                    
+                    return `
+                    <div class="popover-item">
+                        <span class="popover-badge" style="${badgeStyle}">${status}</span>
+                        <span class="popover-count">${formatNum(val)}</span>
+                    </div>
+                    `;
+                }).join('');
+            
+            const provNewTotalKey = surveyType + "_prov_new_total";
+            const provNewRumahTotalKey = surveyType + "_prov_new_rumah_total";
+            const newUsahaProv = ipasDataObj[provNewTotalKey] || 0;
+            const newRumahProv = ipasDataObj[provNewRumahTotalKey] || 0;
+            const targetAwal = prelist - newUsahaProv - newRumahProv;
+            
+            prelistWrapperEl.innerHTML = `
+                <div class="daily-progress-wrapper" style="display: flex; align-items: baseline; gap: 0.25rem; flex-direction: row;">
+                    <span id="${surveyType}-stat-total-prelist" style="font-weight: 800;">${formatNum(prelist)}</span>
+                    <span class="daily-dropdown-trigger" onclick="window.toggleDailyPopover(event, this)" style="color: var(--primary); background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.25); margin-left: 0.25rem;">▼</span>
+                    <div class="daily-popover">
+                        <div class="popover-header" style="color: var(--primary);">BREAKDOWN STATUS ASSIGNMENT</div>
+                        ${itemsHTML}
+                        <div class="popover-header" style="color: var(--primary); margin-top: 0.75rem;">SUMBER TOTAL TARGET</div>
+                        <div class="popover-item" style="border-top: 1px dashed var(--card-border); margin-top: 0.25rem; padding-top: 0.25rem;">
+                            <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: 600;">Target Awal (Normal + Error/Dropped)</span>
+                            <span class="popover-count" style="color: var(--text-secondary);">${formatNum(targetAwal)}</span>
+                        </div>
+                        <div class="popover-item">
+                            <span style="font-size: 0.7rem; color: var(--primary); font-weight: 600;">Tambahan Usaha Baru</span>
+                            <span class="popover-count" style="color: var(--primary);">+${formatNum(newUsahaProv)}</span>
+                        </div>
+                        <div class="popover-item">
+                            <span style="font-size: 0.7rem; color: #ec4899; font-weight: 600;">Tambahan Rumah Baru</span>
+                            <span class="popover-count" style="color: #ec4899;">+${formatNum(newRumahProv)}</span>
+                        </div>
+                        <div class="popover-item" style="border-top: 1px solid var(--card-border); margin-top: 0.25rem; padding-top: 0.25rem;">
+                            <span style="font-size: 0.75rem; color: var(--primary); font-weight: 800;">Total Target Keseluruhan</span>
+                            <span class="popover-count" style="color: var(--primary);">${formatNum(prelist)}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else {
+            const prelistEl = document.getElementById(`${surveyType}-stat-total-prelist`);
+            if(prelistEl) prelistEl.textContent = formatNum(prelist);
+        }
         
         const newTodayEl = document.getElementById(`${surveyType}-stat-new-today`);
         if(newTodayEl) newTodayEl.textContent = `+${formatNum(newToday)}`;
@@ -1005,6 +1242,35 @@ document.addEventListener('DOMContentLoaded', () => {
         const percentEl = document.getElementById(`${surveyType}-stat-percentage`);
         if(percentEl) percentEl.textContent = `(${persentase}%)`;
 
+        const submittedWrapperEl = document.getElementById(`${surveyType}-stat-submitted-wrapper`);
+        if (submittedWrapperEl) {
+            const unprocessed = Math.max(0, submitted - approved - rejected);
+            const breakdown = {
+                "APPROVED BY Pengawas": approved,
+                "REJECTED BY Pengawas": rejected,
+                "SUBMITTED BY Pencacah": unprocessed
+            };
+            const itemsHTML = Object.entries(breakdown)
+                .map(([status, val]) => `
+                    <div class="popover-item">
+                        <span class="popover-badge" style="background: rgba(16,185,129,0.1); color: #059669; border-color: rgba(16,185,129,0.25);">${status}</span>
+                        <span class="popover-count">${formatNum(val)}</span>
+                    </div>
+                `).join('');
+            
+            submittedWrapperEl.innerHTML = `
+                <div class="daily-progress-wrapper" style="display: flex; align-items: baseline; gap: 0.25rem; flex-direction: row;">
+                    <span id="${surveyType}-stat-submitted" style="font-weight: 700;">${formatNum(submitted)}</span>
+                    <span id="${surveyType}-stat-percentage" style="font-size: 0.85rem; font-weight: 700; color: var(--color-delivered);">(${persentase}%)</span>
+                    <span class="daily-dropdown-trigger" onclick="window.toggleDailyPopover(event, this)" style="color: var(--color-delivered); background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.25); margin-left: 0.25rem;">▼</span>
+                    <div class="daily-popover">
+                        <div class="popover-header" style="color: var(--color-delivered);">BREAKDOWN TOTAL SELESAI</div>
+                        ${itemsHTML}
+                    </div>
+                </div>
+            `;
+        }
+
         const rejectedEl = document.getElementById(`${surveyType}-stat-rejected`);
         if(rejectedEl) rejectedEl.textContent = formatNum(rejected);
 
@@ -1015,7 +1281,8 @@ document.addEventListener('DOMContentLoaded', () => {
             [item.today_completed_breakdown, item.yesterday_completed_breakdown, item.two_days_ago_completed_breakdown].forEach(bd => {
                 if (!bd) return;
                 Object.entries(bd).forEach(([st, val]) => {
-                    if (st.toUpperCase().includes('REJECTED')) {
+                    const stUpper = st.toUpperCase();
+                    if (stUpper.includes('REJECTED') || stUpper.includes('REVOKED')) {
                         allRejectedBreakdown[st] = (allRejectedBreakdown[st] || 0) + val;
                     }
                 });
@@ -1030,12 +1297,18 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 const hasBreakdown = Object.keys(allRejectedBreakdown).length > 0;
                 const itemsHTML = Object.entries(allRejectedBreakdown)
-                    .map(([status, val]) => `
-                        <div class="popover-item">
-                            <span class="popover-badge" style="background: rgba(239,68,68,0.15); color: #ef4444; border-color: rgba(239,68,68,0.3);">${status.replace('REJECTED BY ', 'Oleh ')}</span>
-                            <span class="popover-count">${formatNum(val)}</span>
-                        </div>
-                    `).join('');
+                    .map(([status, val]) => {
+                        let labelText = status.replace('REJECTED BY ', 'Oleh ');
+                        if (status.toUpperCase().includes('REVOKED')) {
+                            labelText = status.replace(/REVOKED BY /i, 'Ditarik ');
+                        }
+                        return `
+                            <div class="popover-item">
+                                <span class="popover-badge" style="background: rgba(239,68,68,0.15); color: #ef4444; border-color: rgba(239,68,68,0.3);">${labelText}</span>
+                                <span class="popover-count">${formatNum(val)}</span>
+                            </div>
+                        `;
+                    }).join('');
                 rejectedWrapperEl.innerHTML = `
                     <div class="daily-progress-wrapper">
                         <span style="color: #ef4444; font-weight: 800;">${formatNum(rejected)}</span>
@@ -1185,9 +1458,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (expandCollapseEl) {
             expandCollapseEl.style.display = viewLevel === 'kabupaten' ? '' : 'none';
         }
+        const allPetugas = window.PETUGAS_DATA || [];
+        const hasRoles = allPetugas.some(p => typeof p.roleName === 'string' && p.roleName.trim() !== '' && p.roleName.trim() !== '-');
         const roleFilterEl = document.getElementById(`${surveyType}-role-filter`);
         if (roleFilterEl) {
-            roleFilterEl.style.display = viewLevel === 'petugas' ? '' : 'none';
+            roleFilterEl.style.display = (viewLevel === 'petugas' && hasRoles) ? '' : 'none';
         }
 
         // Dispatch to specialized renderer
@@ -1197,6 +1472,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (viewLevel === 'petugas') {
             renderPetugasFlatList();
+            return;
+        }
+        if (viewLevel === 'target') {
+            document.getElementById(`${surveyType}-view-level`).value = 'kabupaten';
+            document.getElementById('assign-sls-search-input').value = searchVal;
+            
+            // set active subtab memory to correctly map
+            localStorage.setItem('active_assign_subtab', surveyType === 'se_umum' ? 'se2026' : 'se_ub');
+            switchTab('target');
+            
+            // Give the browser a tick to render
+            setTimeout(() => {
+                if (document.getElementById('assign-sls-kab-filter')) {
+                    document.getElementById('assign-sls-kab-filter').value = 'all';
+                    window.updateGranularFilters('kab');
+                }
+            }, 100);
             return;
         }
 
@@ -1272,6 +1564,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const isEstimate = kec.two_days_ago_is_estimate;
                 const tdTwoDays = getDailyProgressCellHTML(kec.two_days_ago_completed, kec.two_days_ago_completed_breakdown, 'H-2: KEC. ' + kec.kec_name, isEstimate);
 
+                const kecTotalUnprocessed = Math.max(0, (kec.total_submitted || 0) - (kec.total_approved || 0) - (kec.total_rejected || 0));
+                const kecTotalBreakdown = {
+                    "APPROVED BY Pengawas": kec.total_approved || 0,
+                    "REJECTED BY Pengawas": kec.total_rejected || 0,
+                    "SUBMITTED BY Pencacah": kecTotalUnprocessed
+                };
+                const tdTotal = getDailyProgressCellHTML(kec.total_submitted, kecTotalBreakdown, 'TOTAL DOKUMEN SELESAI: KEC. ' + kec.kec_name);
+
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td style="font-size:0.8rem;color:var(--text-secondary);font-weight:600;">${kec.kab_name.replace(/\[\d+\] /, '')}</td>
@@ -1279,7 +1579,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td style="text-align:right;font-family:monospace;color:var(--text-secondary);">${formatNum(kec.total_prelist)}</td>
                     <td style="text-align:right;font-family:monospace;color:#f59e0b;">${formatNum(kec.total_draft)}</td>
                     <td style="text-align:right;font-family:monospace;color:#3b82f6;">${formatNum(kec.total_open)}</td>
-                    <td style="text-align:right;font-family:monospace;font-weight:700;color:var(--color-delivered);">${formatNum(kec.total_submitted)}</td>
+                    <td style="text-align:right;font-family:monospace;font-weight:700;color:var(--color-delivered);">${tdTotal}</td>
                     <td style="text-align:right;font-family:monospace;">${tdToday}</td>
                     <td style="text-align:right;font-family:monospace;">${tdYesterday}</td>
                     <td style="text-align:right;font-family:monospace;">${tdTwoDays}</td>
@@ -1294,6 +1594,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // ===== PETUGAS FLAT LIST RENDERER =====
         function renderPetugasFlatList() {
             const allPetugas = window.PETUGAS_DATA || [];
+            const hasRoles = allPetugas.some(p => p.roleName && p.roleName !== '-' && p.roleName.trim() !== '');
             const roleFilterVal = document.getElementById(`${surveyType}-role-filter`)?.value || 'all';
             const capaianFilterVal = document.getElementById(`${surveyType}-capaian-filter`)?.value || 'all';
             const slsStatusMap = window.IPAS_DATA ? (window.IPAS_DATA[surveyType + '_sls_status'] || {}) : {};
@@ -1314,7 +1615,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 thead.innerHTML = `
                     <tr>
                         <th class="sortable" onclick="sortPetugasTable('${surveyType}', 'petugas')" style="font-family:'Outfit',sans-serif;">Petugas${getIcon('petugas')}</th>
-                        <th class="sortable" onclick="sortPetugasTable('${surveyType}', 'role')" style="font-family:'Outfit',sans-serif;">Role${getIcon('role')}</th>
+                        ${hasRoles ? `<th class="sortable" onclick="sortPetugasTable('${surveyType}', 'role')" style="font-family:'Outfit',sans-serif;">Role${getIcon('role')}</th>` : ''}
                         <th class="sortable" onclick="sortPetugasTable('${surveyType}', 'kabupaten')" style="font-family:'Outfit',sans-serif;">Kabupaten${getIcon('kabupaten')}</th>
                         <th class="sortable" onclick="sortPetugasTable('${surveyType}', 'jumlah_sls')" style="font-family:'Outfit',sans-serif;text-align:right;">Jumlah SLS${getIcon('jumlah_sls')}</th>
                         <th class="sortable" onclick="sortPetugasTable('${surveyType}', 'progres')" style="font-family:'Outfit',sans-serif;text-align:right;">Progres Pengerjaan${getIcon('progres')}</th>
@@ -1395,7 +1696,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             tbody.innerHTML = '';
             if (petugasFiltered.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:3rem 1rem;color:var(--text-secondary);">Tidak ada petugas yang cocok dengan pencarian / filter.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="${hasRoles ? 5 : 4}" style="text-align:center;padding:3rem 1rem;color:var(--text-secondary);">Tidak ada petugas yang cocok dengan pencarian / filter.</td></tr>`;
                 return;
             }
 
@@ -1453,7 +1754,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${officer.username || officer.email || '-'}
                         <div style="font-size:0.7rem;color:var(--text-muted);">${officer.email || ''}</div>
                     </td>
-                    <td><span style="font-size:0.75rem;padding:0.15rem 0.5rem;border-radius:0.35rem;background:${roleBgColor};color:${roleTextColor};font-weight:700;">${officer.roleName || '-'}</span></td>
+                    ${hasRoles ? `<td><span style="font-size:0.75rem;padding:0.15rem 0.5rem;border-radius:0.35rem;background:${roleBgColor};color:${roleTextColor};font-weight:700;">${officer.roleName || '-'}</span></td>` : ''}
                     <td style="font-size:0.8rem;color:var(--text-secondary);">${officer.kabLabels || '-'}</td>
                     <td style="text-align:right;font-family:monospace;color:var(--text-secondary);">${formatNum(officer.totalSls)}</td>
                     <td style="text-align:right;">${progHTML}</td>
@@ -1573,6 +1874,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const tdYesterday = getDailyProgressCellHTML(item.yesterday_completed, item.yesterday_completed_breakdown, 'KEMARIN: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
             const tdTwoDays = getDailyProgressCellHTML(item.two_days_ago_completed, item.two_days_ago_completed_breakdown, 'H-2: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''), item.two_days_ago_is_estimate);
 
+            const totalSubmittedUnprocessed = Math.max(0, (item.total_submitted || 0) - (item.total_approved || 0) - (item.total_rejected || 0));
+            const totalBreakdown = {
+                "APPROVED BY Pengawas": item.total_approved || 0,
+                "REJECTED BY Pengawas": item.total_rejected || 0,
+                "SUBMITTED BY Pencacah": totalSubmittedUnprocessed
+            };
+            const tdTotal = getDailyProgressCellHTML(item.total_submitted, totalBreakdown, 'TOTAL DOKUMEN SELESAI: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
+
             row.innerHTML = `
                 <td style="font-weight: 700; color: var(--text-primary);">
                     <div class="expand-trigger" style="display: inline-flex; align-items: center; gap: 0.5rem; width: 100%;">
@@ -1584,7 +1893,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td style="text-align: right; font-family: monospace; font-weight: 500; color: #f59e0b;">${formatNum(item.total_draft)}</td>
                 <td style="text-align: right; font-family: monospace; font-weight: 500; color: #3b82f6;">${formatNum(item.total_open)}</td>
                 
-                <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-delivered);">${formatNum(item.total_submitted)}</td>
+                <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-delivered);">${tdTotal}</td>
                 <td style="text-align: right; font-family: monospace;">${tdToday}</td>
                 <td style="text-align: right; font-family: monospace;">${tdYesterday}</td>
                 <td style="text-align: right; font-family: monospace;">${tdTwoDays}</td>
@@ -1797,7 +2106,11 @@ document.addEventListener('DOMContentLoaded', () => {
             let chartOptions = {};
 
             if (cType === 'line' || cType === 'line_daily') {
-                let labels = ['H-2', 'Kemarin', 'Hari Ini'];
+                const _t = new Date();
+                const _y = new Date(_t); _y.setDate(_y.getDate() - 1);
+                const _h2 = new Date(_t); _h2.setDate(_h2.getDate() - 2);
+                const _fmt = d => String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth()+1).padStart(2, '0');
+                let labels = [`H-2 (${_fmt(_h2)})`, `Kemarin (${_fmt(_y)})`, `Hari Ini (${_fmt(_t)})`];
                 let dataPoints = (cType === 'line')
                     ? [submitted - today - yesterday, submitted - today, submitted]
                     : [twoDaysAgo, yesterday, today];
@@ -1805,14 +2118,56 @@ document.addEventListener('DOMContentLoaded', () => {
                 const stats = window.DAILY_SUBMISSION_STATS;
                 if (stats && Array.isArray(stats) && stats.length > 0) {
                     const filtered = stats.filter(r => r.survey_type === surveyType);
-                    const dateMap = {};
+                    const rawDateMap = {};
                     filtered.forEach(r => {
                         const d = r.date;
                         if (d) {
-                            dateMap[d] = (dateMap[d] || 0) + (r.count || 0);
+                            rawDateMap[d] = (rawDateMap[d] || 0) + (r.count || 0);
                         }
                     });
-                    
+
+                    // Compute WITA date strings for the most recent 3 days
+                    const getWitaDateStr = (offsetDays = 0) => {
+                        let d = new Date();
+                        if (ipasDataObj && ipasDataObj.updated_at) {
+                            d = new Date(ipasDataObj.updated_at);
+                        }
+                        if (offsetDays !== 0) d.setDate(d.getDate() + offsetDays);
+                        const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+                        const wita = new Date(utc + (3600000 * 8));
+                        return `${wita.getFullYear()}-${String(wita.getMonth()+1).padStart(2,'0')}-${String(wita.getDate()).padStart(2,'0')}`;
+                    };
+                    const todayDateStr = getWitaDateStr(0);
+                    const yesterdayDateStr = getWitaDateStr(-1);
+                    const twoDaysDateStr = getWitaDateStr(-2);
+                    const recentDates = new Set([todayDateStr, yesterdayDateStr, twoDaysDateStr]);
+
+                    // Build normalized dateMap:
+                    // - Recent 3 days: use real KPI values (from generate_ipas_report.py)
+                    // - Older days: scale proportionally so they sum to (submitted - recent 3 days total)
+                    const recentTotal = today + yesterday + twoDaysAgo;
+                    const historicalTarget = Math.max(0, submitted - recentTotal);
+
+                    let olderSum = 0;
+                    const olderDates = [];
+                    for (const [d, cnt] of Object.entries(rawDateMap)) {
+                        if (!recentDates.has(d)) {
+                            olderSum += cnt;
+                            olderDates.push(d);
+                        }
+                    }
+
+                    const dateMap = {};
+                    // Scale older days
+                    const olderScale = (olderSum > 0 && historicalTarget > 0) ? (historicalTarget / olderSum) : 0;
+                    for (const d of olderDates) {
+                        dateMap[d] = Math.round((rawDateMap[d] || 0) * olderScale);
+                    }
+                    // Set recent days with real values
+                    if (today > 0) dateMap[todayDateStr] = today;
+                    if (yesterday > 0) dateMap[yesterdayDateStr] = yesterday;
+                    if (twoDaysAgo > 0) dateMap[twoDaysDateStr] = twoDaysAgo;
+
                     const sortedDates = Object.keys(dateMap).sort();
                     if (sortedDates.length > 0) {
                         const cumData = new Array(sortedDates.length);
@@ -3263,8 +3618,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const totalItems = filteredData.length;
+        const hasRoles = petugasData.some(item => typeof item.roleName === 'string' && item.roleName.trim() !== '' && item.roleName.trim() !== '-');
+
+        // Hide or show Peran filter dropdown
+        if (roleFilterEl) {
+            roleFilterEl.style.display = hasRoles ? '' : 'none';
+        }
+
+        // Hide or show Peran table header
+        const roleHeader = document.getElementById('petugas-sort-roleName')?.parentElement;
+        if (roleHeader) {
+            roleHeader.style.display = hasRoles ? '' : 'none';
+        }
+
         if (totalItems === 0) {
-            tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data petugas yang cocok.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="${hasRoles ? 6 : 5}" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data petugas yang cocok.</td></tr>`;
             paginationInfo.innerText = `Menampilkan 0 - 0 dari 0 Petugas`;
             renderPetugasPaginationButtons(0);
             return;
@@ -3286,16 +3654,45 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const hl = (txt) => highlightText(txt, searchVal);
             
-            const regionBadges = (item.regions || []).map(r => {
+            const regions = item.regions || [];
+            const limit = 2; // Show only 2 badges initially
+            
+            const visibleRegions = regions.slice(0, limit);
+            const hiddenRegions = regions.slice(limit);
+            
+            const renderBadge = (r) => {
                 const badgeTxt = r.regionName && r.regionName !== '-' ? r.regionName : 'LAINNYA';
                 const codeTxt = r.regionCode ? ` (${r.regionCode})` : '';
                 return `<span style="display: inline-flex; align-items: center; background: rgba(99, 102, 241, 0.08); color: var(--text-primary); border: 1px solid rgba(99, 102, 241, 0.2); padding: 0.2rem 0.6rem; border-radius: 1rem; font-size: 0.75rem; white-space: nowrap; margin: 0.15rem;">
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width: 12px; height: 12px; margin-right: 0.35rem; color: var(--primary);" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     ${hl(badgeTxt + codeTxt)}
                 </span>`;
-            }).join('');
+            };
+
+            const visibleBadges = visibleRegions.map(r => renderBadge(r)).join('');
             
-            const wilHtml = regionBadges || '<span style="color:var(--text-muted); font-size:0.8rem;">Tidak ada wilayah tugas</span>';
+            let wilHtml = '';
+            if (regions.length === 0) {
+                wilHtml = '<span style="color:var(--text-muted); font-size:0.8rem;">Tidak ada wilayah tugas</span>';
+            } else if (hiddenRegions.length === 0) {
+                wilHtml = visibleBadges;
+            } else {
+                const hiddenBadges = hiddenRegions.map(r => renderBadge(r)).join('');
+                wilHtml = `
+                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem; width: 100%;">
+                        ${visibleBadges}
+                        <details class="regions-details" style="display: inline-block; outline: none; margin: 0.15rem; width: 100%;">
+                            <summary style="list-style: none; outline: none; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.72rem; font-weight: 700; color: var(--primary); cursor: pointer; user-select: none; padding: 0.2rem 0.5rem; background: rgba(99, 102, 241, 0.05); border-radius: 0.5rem; border: 1px dashed rgba(99, 102, 241, 0.3); transition: all 0.2s;">
+                                <span>+${hiddenRegions.length} Wilayah Lainnya</span>
+                                <svg class="chevron-icon" style="width: 10px; height: 10px; transition: transform 0.2s;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.15rem; margin-top: 0.35rem; padding: 0.35rem; background: rgba(0, 0, 0, 0.02); border-radius: 0.5rem; border: 1px solid var(--card-border);">
+                                ${hiddenBadges}
+                            </div>
+                        </details>
+                    </div>
+                `;
+            }
 
             // Calculate Sync Stats for this officer
             const syncStats = getOfficerSyncStats(item.regions);
@@ -3373,11 +3770,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                         </div>
                     </td>
+                    ${hasRoles ? `
                     <td style="padding: 1rem;">
                         <span style="display: inline-block; padding: 0.25rem 0.6rem; border-radius: 0.5rem; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); color: #f59e0b; font-size: 0.75rem; font-weight: 700;">
                             ${hl(item.roleName || '-')}
                         </span>
-                    </td>
+                    </td>` : ''}
                     <td style="padding: 1rem; text-align: center;">
                         ${syncProgressHtml}
                     </td>
@@ -3391,7 +3789,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </td>
                 </tr>
                 <tr id="petugas-detail-${escapedUser}" style="display: none; background: rgba(0,0,0,0.02); border-bottom: 1px solid var(--card-border);">
-                    <td colspan="6" style="padding: 1.25rem 1.5rem;">
+                    <td colspan="${hasRoles ? 6 : 5}" style="padding: 1.25rem 1.5rem;">
                         <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 1.25rem; box-shadow: var(--shadow-sm);">
                             <h5 style="margin-top: 0; margin-bottom: 0.75rem; color: var(--text-primary); font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
                                 <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="width: 14px; height: 14px; color: var(--primary);"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
@@ -4604,6 +5002,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderSlsTable();
             }
             renderSyncTable();
+        } else if (tabId === 'target') {
+            if (mainHeader) mainHeader.textContent = 'Progres Harian';
+            if (mainSubheader) mainSubheader.textContent = 'Detail target tugas sampai level terbawah per kecamatan';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            if (typeof window.loadGranularAssignmentsData === 'function') {
+                window.loadGranularAssignmentsData();
+            }
         } else {
             if (mainHeader) mainHeader.textContent = 'Pemantauan Email Usaha Besar';
             if (mainSubheader) mainSubheader.textContent = 'Daftar pemantauan status pengiriman email kuesioner kepada responden Usaha Besar (UB)';
@@ -4624,6 +5030,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 promise,
                 new Promise((_, reject) => setTimeout(() => reject(new Error('Query Timeout')), ms))
             ]);
+        };
+
+        const isFileProtocol = window.location.protocol === 'file:';
+        const getScriptUrl = (filename) => {
+            return isFileProtocol ? filename : filename + '?v=' + Date.now();
         };
 
         // 1. Check selected snapshot date
@@ -4650,7 +5061,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                     const dates = Array.from(dateSet).sort().reverse();
                     if (snapshotSelect) {
-                        snapshotSelect.innerHTML = '<option value="live" style="background-color: var(--card-bg); color: var(--text-primary);">Terbaru (Live)</option>' +
+                        snapshotSelect.innerHTML = '<option value="live" style="background-color: var(--card-bg); color: var(--text-primary);">Terbaru (Live DB)</option>' +
                             dates.map(d => `<option value="${d}" style="background-color: var(--card-bg); color: var(--text-primary);">${d}</option>`).join('');
                         snapshotSelect.value = snapshotDate;
                         
@@ -4691,7 +5102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let sourceData = [];
         isSupabaseUsedGlobal = false;
 
-        if (supabaseClient) {
+        if (supabaseClient && snapshotDate !== 'local') {
             try {
                 let allData = [];
                 let fromOffset = 0;
@@ -4731,7 +5142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Dynamically fetch/reload email data.js
         await new Promise((resolve) => {
             const script = document.createElement('script');
-            script.src = 'data.js?v=' + Date.now();
+            script.src = getScriptUrl('data.js');
             script.onload = () => resolve();
             script.onerror = () => resolve();
             document.head.appendChild(script);
@@ -4753,7 +5164,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let timelineLoadedFromDb = false;
 
-        if (snapshotDate !== 'live') {
+        if (snapshotDate !== 'live' && snapshotDate !== 'local') {
             // Set loaded flags to true to prevent local script reloading fallbacks
             ipasLoadedFromDb = true;
             assignLoadedFromDb = true;
@@ -4772,7 +5183,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.DAILY_SUBMISSION_STATS = [];
         }
 
-        if (supabaseClient) {
+        if (supabaseClient && snapshotDate !== 'local') {
             try {
                 const { data: ipasDbData, error: ipasError } = await withTimeout(supabaseClient
                     .from('dashboard_store')
@@ -4797,7 +5208,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     .single()
                 );
                 if (!assignError && assignDbData && assignDbData.value) {
-                    const assignVal = assignDbData.value;
+                    let assignVal = assignDbData.value;
+                    if (assignVal.is_compressed && assignVal.compressed_data) {
+                        assignVal = window.decompressAndParsePayload(assignVal.compressed_data);
+                    }
                     window.ASSIGN_DATA_UMUM = assignVal.assign_data_umum || [];
                     window.ASSIGN_DATA_UB = assignVal.assign_data_ub || [];
                     
@@ -4894,7 +5308,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Dynamically reload IPAS ipas_data.js
             await new Promise((resolve) => {
                 const script = document.createElement('script');
-                script.src = 'ipas_data.js?v=' + Date.now();
+                script.src = getScriptUrl('ipas_data.js');
                 script.onload = () => resolve();
                 script.onerror = () => resolve();
                 document.head.appendChild(script);
@@ -4905,7 +5319,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Dynamically reload assign_data.js
             await new Promise((resolve) => {
                 const script = document.createElement('script');
-                script.src = 'assign_data.js?v=' + Date.now();
+                script.src = getScriptUrl('assign_data.js');
                 script.onload = () => resolve();
                 script.onerror = () => resolve();
                 document.head.appendChild(script);
@@ -4916,7 +5330,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Dynamically reload sync_data.js
             await new Promise((resolve) => {
                 const script = document.createElement('script');
-                script.src = 'sync_data.js?v=' + Date.now();
+                script.src = getScriptUrl('sync_data.js');
                 script.onload = () => resolve();
                 script.onerror = () => resolve();
                 document.head.appendChild(script);
@@ -4927,11 +5341,22 @@ document.addEventListener('DOMContentLoaded', () => {
             // Dynamically reload daily_submission_stats.js
             await new Promise((resolve) => {
                 const script = document.createElement('script');
-                script.src = 'daily_submission_stats.js?v=' + Date.now();
+                script.src = getScriptUrl('daily_submission_stats.js');
                 script.onload = () => resolve();
                 script.onerror = () => resolve();
                 document.head.appendChild(script);
             });
+        }
+
+        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+        if (activeSubtab === 'se2026') {
+            window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM;
+            window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM;
+            window.PETUGAS_DATA = window.PETUGAS_DATA_UMUM;
+        } else {
+            window.ASSIGN_DATA = window.ASSIGN_DATA_UB;
+            window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UB;
+            window.PETUGAS_DATA = window.PETUGAS_DATA_UB;
         }
 
         // Sinkronisasi data local SLS dengan real-time Superset data
@@ -4969,6 +5394,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeTab = localStorage.getItem('active_tab') || 'se_umum';
         if (activeTab === 'timeline') {
             window.updateTimelineView();
+        } else if (activeTab === 'target') {
+            if (typeof window.loadGranularAssignmentsData === 'function') {
+                window.loadGranularAssignmentsData();
+            }
         } else if (activeTab === 'assign') {
             const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
             if (typeof filterAssignData === 'function') {
@@ -5029,6 +5458,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Intercept filterAssignData to reset populated states and filters on subtab switch
     const originalFilterAssignData = window.filterAssignData;
     window.filterAssignData = function(type) {
+        if (type === 'ub' || type === 'se_ub') {
+            type = 'se2026';
+        }
         // Reset populated state of filters so they rebuild with the correct subtab data
         isSlsFiltersPopulated = false;
         isSyncFiltersPopulated = false;
@@ -5053,17 +5485,45 @@ document.addEventListener('DOMContentLoaded', () => {
         
         resetSelect('diff-kab-filter');
 
+        localStorage.setItem('active_assign_subtab', type);
+        const btnUmum = document.getElementById("subtab-btn-se2026");
+        const btnUB = document.getElementById("subtab-btn-ub");
+        
+        const chartTitle = document.getElementById("assign-chart-title");
+        const slsTitle = document.getElementById("assign-sls-title");
+
+        if (type === 'se2026') {
+            if(btnUmum) { btnUmum.style.backgroundColor = 'var(--primary)'; btnUmum.style.color = 'white'; }
+            if(btnUB) { btnUB.style.backgroundColor = 'transparent'; btnUB.style.color = 'var(--text-secondary)'; }
+            if(chartTitle) chartTitle.innerText = "Status Assign Petugas (Semua Usaha - SE Umum)";
+            if(slsTitle) slsTitle.innerText = "Ringkasan Assignment per Kabupaten/Kota (SE Umum)";
+            
+            window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM;
+            window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM;
+            window.PETUGAS_DATA = window.PETUGAS_DATA_UMUM;
+        } else {
+            if(btnUB) { btnUB.style.backgroundColor = 'var(--primary)'; btnUB.style.color = 'white'; }
+            if(btnUmum) { btnUmum.style.backgroundColor = 'transparent'; btnUmum.style.color = 'var(--text-secondary)'; }
+            if(chartTitle) chartTitle.innerText = "Status Assign Petugas (Usaha Besar - UB)";
+            if(slsTitle) slsTitle.innerText = "Ringkasan Assignment per Kabupaten/Kota (UB)";
+
+            window.ASSIGN_DATA = window.ASSIGN_DATA_UB;
+            window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UB;
+            window.PETUGAS_DATA = window.PETUGAS_DATA_UB;
+        }
+
         if (typeof originalFilterAssignData === 'function') {
             originalFilterAssignData(type);
-            
-            const chartTitle = document.getElementById("assign-chart-title");
-            const slsTitle = document.getElementById("assign-sls-title");
-            if (type === 'se2026') {
-                if(chartTitle) chartTitle.innerText = "Status Assign Petugas (Semua Usaha - SE Umum)";
-                if(slsTitle) slsTitle.innerText = "Ringkasan Assignment per Kabupaten/Kota (SE Umum)";
-            } else {
-                if(chartTitle) chartTitle.innerText = "Status Assign Petugas (Usaha Besar - UB)";
-                if(slsTitle) slsTitle.innerText = "Ringkasan Assignment per Kabupaten/Kota (UB)";
+        } else {
+            if (typeof renderAssignChart === 'function') renderAssignChart();
+            if (typeof renderKabSummaryTable === 'function') renderKabSummaryTable();
+            if (typeof renderSlsTable === 'function') {
+                window.slsCurrentPage = 1;
+                renderSlsTable();
+            }
+            if (typeof renderPetugasTable === 'function') {
+                window.petugasCurrentPage = 1;
+                renderPetugasTable();
             }
         }
 
@@ -5416,6 +5876,7 @@ document.addEventListener('DOMContentLoaded', () => {
         exportToCSV(`selisih_alokasi_${filePrefix}_${prefix.toLowerCase()}.csv`, headers, rows);
     };
 
+    window.loadGranularAssignmentsData = loadGranularAssignmentsData;
     window.toggleStatsDetail = function(section) {
         const container = document.getElementById(`${section}-stats-expanded`);
         const btn = document.getElementById(`${section}-toggle-detail`);
@@ -5622,6 +6083,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- GRANULAR DATA UTILITIES ---
 
+    window.decompressAndParsePayload = function(compressedBase64) {
+        try {
+            console.log("Decompressing payload...");
+            const binaryString = atob(compressedBase64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            const decompressed = pako.ungzip(bytes, { to: 'string' });
+            return JSON.parse(decompressed);
+        } catch (e) {
+            console.error("Failed to decompress payload:", e);
+            return null;
+        }
+    };
+
     window.decompressAndParseGranular = function(compressedBase64) {
         try {
             console.log("Decompressing granular data...");
@@ -5692,6 +6170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
 
         const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
         const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
         const desaVal = document.getElementById('assign-sls-desa-filter')?.value || 'all';
         const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
@@ -5702,7 +6181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const filteredForStatus = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
             if (r.survey_type !== surveyTypeFilter) return false;
-            if (kabVal !== 'all' && r.kab_name !== kabVal) return false;
+            if (kabVal !== 'all' && (r.kab_name || '').toUpperCase() !== cleanKabVal) return false;
             if (kecVal !== 'all' && r.kec_name !== kecVal) return false;
             if (desaVal !== 'all' && r.desa_name !== desaVal) return false;
             if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
@@ -5750,87 +6229,179 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    async function loadGranularAssignmentsData() {
+    async function loadGranularAssignmentsData(kabVal = null, surveyTypeFilter = null) {
+        if (!kabVal) {
+            kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        }
+        if (!surveyTypeFilter) {
+            const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+            surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
+        }
+
         const tbody = document.getElementById('assign-sls-table-body');
-        if (window.GRANULAR_ASSIGNMENTS_DATA) {
-            window.updateGranularStatusFilterOptions();
-            window.renderGranularAssignmentsTable();
+
+        // If se_umum and kabVal is 'all', show placeholder and do not load
+        if (surveyTypeFilter === 'se_umum' && kabVal === 'all') {
+            window.GRANULAR_ASSIGNMENTS_DATA = null;
+            window.CURRENT_LOADED_PARTITION = null;
+            if (tbody) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="9" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
+                            Silakan pilih Kabupaten/Kota terlebih dahulu untuk memuat rincian data assignment.
+                        </td>
+                    </tr>
+                `;
+            }
+            if (window.renderPetugasSummaryTable) {
+                window.renderPetugasSummaryTable([]);
+            }
+            
+            // Populating KPI cards with overall province data from IPAS_DATA to avoid showing 0
+            try {
+                const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
+                const surveyData = ipasDataObj[surveyTypeFilter] || [];
+                let prelist = 0, draft = 0, openVal = 0, submitted = 0, rejected = 0;
+                surveyData.forEach(item => {
+                    prelist += item.total_prelist || 0;
+                    draft += item.total_draft || 0;
+                    openVal += item.total_open || 0;
+                    submitted += item.total_submitted || 0;
+                    rejected += item.total_rejected || 0;
+                });
+                const selesaiAll = submitted;
+                const belumAll = draft + openVal + rejected;
+                const totalAll = prelist;
+                const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;
+                const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
+                
+                const totalEl = document.getElementById('petugas-stat-total');
+                const selesaiEl = document.getElementById('petugas-stat-selesai');
+                const belumEl = document.getElementById('petugas-stat-belum');
+                if (totalEl) totalEl.textContent = totalAll.toLocaleString('id-ID');
+                if (selesaiEl) selesaiEl.innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
+                if (belumEl) belumEl.innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+            } catch (kpiErr) {
+                console.warn("Failed to calculate provincial KPIs:", kpiErr);
+            }
             return;
         }
-        
+
+        // Determine partition key
+        let partKey = '';
+        if (surveyTypeFilter === 'se_ub') {
+            partKey = 'se_ub';
+        } else {
+            const match = kabVal.match(/\[(\d+)\]/);
+            if (match) {
+                partKey = `se_umum_72${match[1]}`;
+            } else {
+                partKey = 'se_umum_7201'; // fallback
+            }
+        }
+
+        const granularKey = `granular_assignments_${partKey}`;
+
+        if (window.CURRENT_LOADED_PARTITION === granularKey && window.GRANULAR_ASSIGNMENTS_DATA) {
+            window.updateGranularStatusFilterOptions();
+            window.renderGranularAssignmentsTable(false);
+            return;
+        }
+
         if (isGranularLoading) return;
         isGranularLoading = true;
-        
+
         if (tbody) {
             tbody.innerHTML = `
                 <tr>
-                    <td colspan="8" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
+                    <td colspan="9" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
                         <svg style="animation: spin 1s linear infinite; margin: 0 auto 1rem; width: 24px; height: 24px; color: var(--primary);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <circle style="opacity: 0.25;" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                             <path style="opacity: 0.75;" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        Memuat rincian data target assignment...
+                        Memuat rincian data target assignment untuk wilayah terpilih...
                     </td>
                 </tr>
             `;
         }
 
-        const snapshotSelect = document.getElementById('select-snapshot-date');
-        const snapshotDate = snapshotSelect ? snapshotSelect.value : 'live';
-        const granularKey = snapshotDate === 'live' ? 'granular_assignments' : `granular_assignments:${snapshotDate}`;
-
+        const snapshotDate = document.getElementById('select-snapshot-date')?.value || 'live';
         let compressedData = null;
 
-        if (supabaseClient) {
+        if (supabaseClient && snapshotDate !== 'local') {
             try {
-                console.log(`Fetching granular data (${granularKey}) from Supabase...`);
+                console.log(`Fetching granular partition (${granularKey}) from Supabase...`);
                 const { data, error } = await supabaseClient
                     .from('dashboard_store')
                     .select('value')
                     .eq('key', granularKey)
                     .single();
-                    
+
                 if (!error && data && data.value && data.value.compressed_data) {
                     compressedData = data.value.compressed_data;
-                    console.log("Successfully fetched granular data from Supabase.");
+                    console.log(`Successfully fetched partition ${granularKey} from Supabase.`);
                 }
             } catch (e) {
                 console.warn("Failed to fetch granular data from Supabase:", e);
             }
         }
 
+        // Fallback to local files if offline or DB failed
         if (!compressedData) {
-            if (typeof window.COMPRESSED_GRANULAR_ASSIGNMENTS !== 'undefined' && window.COMPRESSED_GRANULAR_ASSIGNMENTS) {
-                compressedData = window.COMPRESSED_GRANULAR_ASSIGNMENTS;
-                console.log("Using preloaded window.COMPRESSED_GRANULAR_ASSIGNMENTS.");
-            } else {
-                console.log("Loading granular_assignments.js fallback script...");
-                await new Promise((resolve) => {
-                    const script = document.createElement('script');
-                    script.src = 'granular_assignments.js?v=' + Date.now();
-                    script.onload = () => resolve();
-                    script.onerror = () => resolve();
-                    document.head.appendChild(script);
-                });
-                if (typeof window.COMPRESSED_GRANULAR_ASSIGNMENTS !== 'undefined' && window.COMPRESSED_GRANULAR_ASSIGNMENTS) {
-                    compressedData = window.COMPRESSED_GRANULAR_ASSIGNMENTS;
-                    console.log("Successfully loaded granular data from script fallback.");
+            try {
+                console.log(`Attempting local fallback for partition ${partKey}...`);
+                const response = await fetch(`granular_assignments_${partKey}.json`);
+                if (response.ok) {
+                    const localJson = await response.json();
+                    if (localJson && localJson.compressed_data) {
+                        compressedData = localJson.compressed_data;
+                        console.log(`Successfully loaded partition ${partKey} from local JSON file.`);
+                    }
                 }
+            } catch (e) {
+                console.warn("Local JSON fallback failed:", e);
+            }
+        }
+
+        // Script tag fallback for file:// protocol loading (where fetch fails due to CORS)
+        if (!compressedData) {
+            try {
+                const varName = `PARTITION_${partKey.toUpperCase()}`; // e.g. window.PARTITION_SE_UMUM_7201
+                if (window[varName]) {
+                    compressedData = window[varName].compressed_data;
+                    console.log(`Successfully loaded partition from preloaded window.${varName}`);
+                } else {
+                    console.log(`Attempting dynamic script tag fallback for ${partKey}...`);
+                    await new Promise((resolve) => {
+                        const script = document.createElement('script');
+                        script.src = `granular_assignments_${partKey}.js`;
+                        script.onload = () => resolve();
+                        script.onerror = () => resolve();
+                        document.head.appendChild(script);
+                    });
+                    if (window[varName]) {
+                        compressedData = window[varName].compressed_data;
+                        console.log(`Successfully loaded partition ${partKey} from dynamic script.`);
+                    }
+                }
+            } catch (jsErr) {
+                console.warn("Dynamic JS fallback failed:", jsErr);
             }
         }
 
         if (compressedData) {
             window.GRANULAR_ASSIGNMENTS_DATA = window.decompressAndParseGranular(compressedData);
+            window.CURRENT_LOADED_PARTITION = granularKey;
             isGranularLoading = false;
-            // Trigger filters initialization for default "all"
-            window.updateGranularFilters('kab');
+            window.updateGranularStatusFilterOptions();
+            window.renderGranularAssignmentsTable(true);
         } else {
             isGranularLoading = false;
             if (tbody) {
                 tbody.innerHTML = `
                     <tr>
-                        <td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
-                            Gagal memuat rincian data assignment dari database maupun file lokal. Harap jalankan scrape_granular_assignments.py terlebih dahulu.
+                        <td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                            Gagal memuat rincian data assignment dari database maupun file lokal. Harap periksa koneksi internet atau jalankan scrape_granular_assignments.py terlebih dahulu.
                         </td>
                     </tr>
                 `;
@@ -5873,14 +6444,22 @@ document.addEventListener('DOMContentLoaded', () => {
         window.renderGranularAssignmentsTable(false);
     };
 
-    window.updateGranularFilters = function(changedLevel) {
+    window.updateGranularFilters = async function(changedLevel) {
         const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
         const kecSelect = document.getElementById('assign-sls-kec-filter');
         const desaSelect = document.getElementById('assign-sls-desa-filter');
         const slsSelect = document.getElementById('assign-sls-sls-filter');
         const statusSelect = document.getElementById('assign-sls-status-filter');
         
+        if (changedLevel === 'kab') {
+            const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+            const surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
+            await loadGranularAssignmentsData(kabVal, surveyTypeFilter);
+        }
+        
         if (!window.GRANULAR_ASSIGNMENTS_DATA) return;
+        
+        const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
         
         if (changedLevel === 'kab') {
             if (kabVal === 'all') {
@@ -5890,7 +6469,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 const kecs = new Set();
                 window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
-                    if (r.kab_name === kabVal && r.kec_name && r.kec_name !== '-') {
+                    if ((r.kab_name || '').toUpperCase() === cleanKabVal && r.kec_name && r.kec_name !== '-') {
                         kecs.add(r.kec_name);
                     }
                 });
@@ -5911,7 +6490,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 const desas = new Set();
                 window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
-                    if (r.kab_name === kabVal && r.kec_name === kecVal && r.desa_name && r.desa_name !== '-') {
+                    if ((r.kab_name || '').toUpperCase() === cleanKabVal && r.kec_name === kecVal && r.desa_name && r.desa_name !== '-') {
                         desas.add(r.desa_name);
                     }
                 });
@@ -5931,7 +6510,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 const slss = new Set();
                 window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
-                    if (r.kab_name === kabVal && r.kec_name === kecVal && r.desa_name === desaVal && r.sls_name && r.sls_name !== '-') {
+                    if ((r.kab_name || '').toUpperCase() === cleanKabVal && r.kec_name === kecVal && r.desa_name === desaVal && r.sls_name && r.sls_name !== '-') {
                         slss.add(`${r.sls_code} - ${r.sls_name}`);
                     }
                 });
@@ -5945,6 +6524,151 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         window.updateGranularStatusFilterOptions();
         window.renderGranularAssignmentsTable(true);
+    };
+
+    window.petugasSortField = window.petugasSortField || 'total';
+    window.petugasSortOrder = window.petugasSortOrder || -1;
+
+    window.sortPetugasSummary = function(field) {
+        if (window.petugasSortField === field) {
+            window.petugasSortOrder *= -1; // toggle
+        } else {
+            window.petugasSortField = field;
+            window.petugasSortOrder = field === 'name' ? 1 : -1;
+        }
+        if (window.lastBaseFiltered && window.renderPetugasSummaryTable) {
+            window.renderPetugasSummaryTable(window.lastBaseFiltered);
+        }
+    };
+
+    window.renderPetugasSummaryTable = function(data) {
+        let totalAll = 0;
+        let selesaiAll = 0;
+        let belumAll = 0;
+        let petugasMap = {};
+
+        if (Array.isArray(data)) {
+            data.forEach(r => {
+                let petName = (r.petugas_username !== '-' && r.petugas_username) ? r.petugas_username : ((r.petugas_fullname !== '-' && r.petugas_fullname) ? r.petugas_fullname : null);
+                if (!petName) {
+                    const isCompleted = r.status !== 'OPEN' && r.status !== 'DRAFT';
+                    petName = isCompleted ? 'CAWI / Mandiri (Tanpa Petugas)' : 'Belum Ada Petugas';
+                }
+                
+                if (!petugasMap[petName]) {
+                    petugasMap[petName] = { name: petName, total: 0, selesai: 0, belum: 0 };
+                }
+                
+                petugasMap[petName].total += 1;
+                totalAll += 1;
+                
+                if (r.status === 'OPEN' || r.status === 'DRAFT') {
+                    petugasMap[petName].belum += 1;
+                    belumAll += 1;
+                } else {
+                    petugasMap[petName].selesai += 1;
+                    selesaiAll += 1;
+                }
+            });
+        }
+
+        const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;
+        const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
+
+        document.getElementById('petugas-stat-total').textContent = totalAll.toLocaleString('id-ID');
+        document.getElementById('petugas-stat-selesai').innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
+        document.getElementById('petugas-stat-belum').innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+
+        let arr = Object.values(petugasMap);
+        
+        // Search filter
+        const searchInput = document.getElementById('petugas-summary-search-input');
+        if (searchInput && searchInput.value.trim()) {
+            const term = searchInput.value.toLowerCase().trim();
+            arr = arr.filter(p => p.name.toLowerCase().includes(term));
+        }
+
+        // Apply Sort
+        arr.sort((a, b) => {
+            let valA, valB;
+            switch(window.petugasSortField) {
+                case 'name': valA = a.name; valB = b.name; break;
+                case 'belum': valA = a.belum; valB = b.belum; break;
+                case 'selesai': valA = a.selesai; valB = b.selesai; break;
+                case 'pct': valA = (a.total>0?a.selesai/a.total:0); valB = (b.total>0?b.selesai/b.total:0); break;
+                case 'total':
+                default:
+                    valA = a.total; valB = b.total; break;
+            }
+            if (typeof valA === 'string') {
+                return valA.localeCompare(valB) * window.petugasSortOrder;
+            }
+            return (valA - valB) * window.petugasSortOrder;
+        });
+
+        const tbody = document.getElementById('petugas-summary-table-body');
+        if (!tbody) return;
+
+        if (arr.length === 0) {
+            if (!data || data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Silakan muat data atau pilih wilayah terlebih dahulu...</td></tr>';
+            } else {
+                tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada petugas yang cocok dengan pencarian...</td></tr>';
+            }
+            return;
+        }
+
+        let html = '';
+        arr.forEach((p, i) => {
+            const pct = p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) : 0;
+            const isComplete = pct === "100.0";
+            
+            let badgeHtml = '';
+            if (isComplete) {
+                badgeHtml = `<div style="background: rgba(34, 197, 94, 0.1); color: var(--color-delivered); border: 1px solid rgba(34, 197, 94, 0.2); padding: 0.25rem 0.5rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 700;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Tuntas
+                </div>`;
+            } else {
+                badgeHtml = `<div style="display: flex; align-items: center; gap: 0.5rem; width: 100%;">
+                    <div style="flex-grow: 1; height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px; overflow: hidden;">
+                        <div style="height: 100%; width: ${pct}%; background: var(--primary); border-radius: 3px;"></div>
+                    </div>
+                    <span style="font-weight: 700; color: var(--text-primary); min-width: 35px; text-align: right;">${pct}%</span>
+                </div>`;
+            }
+
+            html += `
+                <tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s;">
+                    <td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${i + 1}</td>
+                    <td style="font-weight: 600; color: var(--text-primary);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div style="width: 24px; height: 24px; border-radius: 50%; background: rgba(249, 115, 22, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700;">
+                                ${p.name.substring(0, 2).toUpperCase()}
+                            </div>
+                            ${p.name}
+                        </div>
+                    </td>
+                    <td style="text-align: center; font-weight: 700; color: var(--text-primary); font-family: 'Outfit', sans-serif;">${p.total.toLocaleString('id-ID')}</td>
+                    <td style="text-align: center; font-weight: 600; color: var(--color-bounced);">${p.belum.toLocaleString('id-ID')}</td>
+                    <td style="text-align: center; font-weight: 600; color: var(--color-delivered);">${p.selesai.toLocaleString('id-ID')}</td>
+                    <td style="text-align: center;">${badgeHtml}</td>
+                </tr>
+            `;
+        });
+        tbody.innerHTML = html;
+        
+        // Update sort icons
+        const headers = document.querySelectorAll('#petugas-summary-table-body').length > 0 ? document.getElementById('petugas-summary-table-body').parentElement.querySelectorAll('th') : [];
+        headers.forEach(th => {
+            const iconSpan = th.querySelector('.sort-icon');
+            if (iconSpan) {
+                iconSpan.innerHTML = ''; // Clear all
+                if (th.getAttribute('onclick') && th.getAttribute('onclick').includes(window.petugasSortField)) {
+                    iconSpan.innerHTML = window.petugasSortOrder === 1 ? ' ↑' : ' ↓';
+                }
+            }
+        });
     };
 
     window.renderGranularAssignmentsTable = function(resetPage = true) {
@@ -5961,6 +6685,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
         const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
         const desaVal = document.getElementById('assign-sls-desa-filter')?.value || 'all';
         const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
@@ -5970,13 +6695,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
         const surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
 
-        let filtered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
+        let baseFiltered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
             if (r.survey_type !== surveyTypeFilter) return false;
-            
-            if (kabVal !== 'all' && r.kab_name !== kabVal) return false;
+            if (kabVal !== 'all' && (r.kab_name || '').toUpperCase() !== cleanKabVal) return false;
             if (kecVal !== 'all' && r.kec_name !== kecVal) return false;
             if (desaVal !== 'all' && r.desa_name !== desaVal) return false;
             if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
+            return true;
+        });
+        
+        if (window.renderPetugasSummaryTable) {
+            window.lastBaseFiltered = baseFiltered;
+            window.renderPetugasSummaryTable(baseFiltered);
+        }
+
+        let filtered = baseFiltered.filter(r => {
             if (statusVal !== 'all' && r.status !== statusVal) return false;
             
             if (searchVal) {
@@ -6038,13 +6771,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 statusBadgeClass = 'table-badge-submitted';
             } else if (statusUpper.includes('REVOKED')) {
                 statusBadgeClass = 'table-badge-revoked';
+                statusDisplayText = 'Ditarik';
             } else if (statusUpper === 'DRAFT') {
                 statusBadgeClass = 'table-badge-submitted';
             }
                 
+            const isCompleted = statusUpper !== 'OPEN' && statusUpper !== 'DRAFT';
             const petugasLabel = r.petugas_fullname && r.petugas_fullname !== '-' ? 
                 `${r.petugas_fullname} <span style="font-size:0.75rem; color:var(--text-secondary); display:block; font-family:monospace;">@${r.petugas_username}</span>` : 
-                '<span style="color:var(--text-muted); font-style:italic;">Belum Ditugaskan</span>';
+                (isCompleted ? '<span style="color:var(--text-secondary); font-weight:700;">CAWI / Mandiri (Tanpa Petugas)</span>' : '<span style="color:var(--text-muted); font-style:italic;">Belum Ditugaskan</span>');
                 
             html += `
                 <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;">
@@ -6100,6 +6835,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!window.GRANULAR_ASSIGNMENTS_DATA) return;
         
         const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
         const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
         const desaVal = document.getElementById('assign-sls-desa-filter')?.value || 'all';
         const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
@@ -6110,7 +6846,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let filtered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
             if (r.survey_type !== surveyTypeFilter) return false;
-            if (kabVal !== 'all' && r.kab_name !== kabVal) return false;
+            if (kabVal !== 'all' && (r.kab_name || '').toUpperCase() !== cleanKabVal) return false;
             if (kecVal !== 'all' && r.kec_name !== kecVal) return false;
             if (desaVal !== 'all' && r.desa_name !== desaVal) return false;
             if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
@@ -6162,6 +6898,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.removeChild(link);
     };
 
+    window.loadGranularAssignmentsData = loadGranularAssignmentsData;
     window.toggleStatsDetail = function(section) {
         const container = document.getElementById(`${section}-stats-expanded`);
         const btn = document.getElementById(`${section}-toggle-detail`);

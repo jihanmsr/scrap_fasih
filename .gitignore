@@ -5,3 +5,8 @@ __pycache__/
 .DS_Store
 .vercel/
 .env
+
+# Generated heavy report files
+Detail_Usaha_SE_Umum_*.csv
+Detail_Usaha_SE_UB_*.csv
+Laporan_Progres_Petugas_*.xlsx

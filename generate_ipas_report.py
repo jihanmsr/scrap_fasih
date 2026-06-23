@@ -129,7 +129,8 @@ async def get_authenticated_context(p):
             user_data_dir=abs_user_data_dir,
             headless=False,
             executable_path=chrome_path,
-            args=["--no-first-run", "--no-default-browser-check", "--disable-background-networking", "--disable-background-timer-throttling"]
+            ignore_default_args=["--enable-automation"],
+            args=["--no-first-run", "--no-default-browser-check", "--disable-blink-features=AutomationControlled", "--disable-background-networking", "--disable-background-timer-throttling"]
         )
 
     if page is None:
@@ -161,7 +162,10 @@ async def get_authenticated_context(p):
 def is_tambahan(code_identity):
     if not code_identity:
         return False
-    parts = [p.strip() for p in code_identity.split(" - ")]
+    cleaned = code_identity.strip()
+    if not cleaned.startswith("72"):
+        return True
+    parts = [p.strip() for p in cleaned.split(" - ")]
     if len(parts) < 2:
         return False
     source = parts[1].upper()
@@ -425,24 +429,27 @@ async def generate_report():
         
         # Load region_map_sulteng.json
         region_map = {}
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        region_map_path = os.path.join(script_dir, "region_map_sulteng.json")
         try:
-            with open("region_map_sulteng.json", "r", encoding="utf-8") as f:
+            with open(region_map_path, "r", encoding="utf-8") as f:
                 region_map = json.load(f)
-            print("[INFO] region_map_sulteng.json berhasil dimuat.")
+            print(f"[INFO] {region_map_path} berhasil dimuat.")
         except Exception as e:
             print(f"[WARNING] Gagal memuat region_map_sulteng.json: {e}")
 
         # Build mapping from kec_id to kec_code using region_map_sulteng_full.json
         kec_id_to_code = {}
+        region_map_full_path = os.path.join(script_dir, "region_map_sulteng_full.json")
         try:
-            with open("region_map_sulteng_full.json", "r", encoding="utf-8") as f:
+            with open(region_map_full_path, "r", encoding="utf-8") as f:
                 full_map = json.load(f)
             for kab_code, kab_data in full_map.get("kabupaten", {}).items():
                 for kec_code, kec_data in kab_data.get("kecamatan", {}).items():
                     kec_id = kec_data.get("kec_id")
                     if kec_id:
                         kec_id_to_code[kec_id] = kec_code
-            print(f"[INFO] region_map_sulteng_full.json loaded. Mapped {len(kec_id_to_code)} kecamatan UUIDs to codes.")
+            print(f"[INFO] {region_map_full_path} loaded. Mapped {len(kec_id_to_code)} kecamatan UUIDs to codes.")
         except Exception as e:
             print(f"[WARNING] Gagal memuat region_map_sulteng_full.json: {e}")
 
@@ -459,48 +466,6 @@ async def generate_report():
             sls_status_map = {}
             processed_record_ids = set()
             
-            # Fetch target totals at Kecamatan level via Report API
-            kec_prelist_map = {}
-            report_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-user-assignment"
-            print("Mengambil rincian target Kecamatan dari Report API...")
-            for kab in survey_cfg["kabs"]:
-                import re
-                match = re.search(r"\[(\d+)\]", kab["name"])
-                kab_code = "72" + match.group(1) if match else ""
-                if kab_code:
-                    payload_report = {
-                        "surveyPeriodId": period_id,
-                        "region1Id": survey_cfg["prov_id"],
-                        "region2Id": kab["id"]
-                    }
-                    res_report = None
-                    for retry_kab in range(3):
-                        res_report = await fetch_api_safely(report_url, payload_report, xsrf_token, timeout_seconds=180)
-                        if isinstance(res_report, dict) and res_report.get("error"):
-                            wait_sec = 15 * (retry_kab + 1)
-                            print(f"  [ERROR] Gagal memproses {kab['name']}: {res_report['error'][:80]}")
-                            if retry_kab < 2:
-                                print(f"  [RETRY {retry_kab+1}/3] Mencoba ulang dalam {wait_sec}s...")
-                                await asyncio.sleep(wait_sec)
-                            else:
-                                print(f"  [SKIP] {kab['name']} dilewati setelah 3x gagal.")
-                        else:
-                            break
-                    if res_report and isinstance(res_report, list):
-                        for item in res_report:
-                            kec_key = item.get("key")
-                            kec_lbl = item.get("label")
-                            values = item.get("values", [])
-                            total = 0
-                            for v in values:
-                                if v.get("label", "").lower() == "total":
-                                    total = v.get("value", 0)
-                                    break
-                            if kec_key:
-                                kec_prelist_map[kec_key] = total
-                            if kec_lbl:
-                                kec_prelist_map[kec_lbl] = total
-
             # Initialize final report dict
             report_data = {}
             for k in survey_cfg["kabs"]:
@@ -514,17 +479,10 @@ async def generate_report():
                     if kec["name"] == "-":
                         continue
                     
-                    kec_code = kec_id_to_code.get(kec["id"])
-                    total_prelist = 0
-                    if kec_code and kec_code in kec_prelist_map:
-                        total_prelist = kec_prelist_map[kec_code]
-                    else:
-                        total_prelist = kec_prelist_map.get(kec["id"], 0)
-
                     kec_list_initial.append({
                         "kec_name": kec["name"],
                         "kec_id": kec["id"],
-                        "total_prelist": total_prelist,
+                        "total_prelist": 0,
                         "total_draft": 0,
                         "total_open": 0,
                         "total_submitted": 0,
@@ -600,10 +558,82 @@ async def generate_report():
                     }
                 }
                 
-                res, res_nontarget = await asyncio.gather(
+                # Fetch kecamatan status aggregations concurrently with kabupaten payloads
+                import re
+                match = re.search(r"\[(\d+)\]", kab["name"])
+                kab_code = "72" + match.group(1) if match else ""
+                kec_items = region_map.get(kab_code, {}).get("kecamatan", [])
+                kecs_to_fetch = [kec for kec in kec_items if kec["name"] != "-"]
+
+                async def fetch_kec_status_agg(kec):
+                    kec_id = kec["id"]
+                    payload_kec = {
+                        "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
+                        "assignmentExtraParam": {
+                            "region1Id": survey_cfg["prov_id"],
+                            "region2Id": kab["id"],
+                            "region3Id": kec_id,
+                            "surveyPeriodId": period_id,
+                            "assignmentErrorStatusType": -1,
+                            "filterTargetType": "target"
+                        }
+                    }
+                    res_kec = await fetch_api_safely(datatable_url, payload_kec, xsrf_token)
+                    
+                    kec_submitted = 0
+                    kec_approved = 0
+                    kec_rejected = 0
+                    kec_draft = 0
+                    
+                    if res_kec and "searchAggregation" in res_kec:
+                        agg = res_kec["searchAggregation"]
+                        for item in agg:
+                            key = item.get("keyAggregation", "")
+                            count = item.get("docCount", 0)
+                            if key == "DRAFT":
+                                kec_draft += count
+                            elif "SUBMITTED" in key:
+                                kec_submitted += count
+                            elif "REJECTED" in key or "REVOKED" in key:
+                                kec_rejected += count
+                                kec_submitted += count
+                            elif "APPROVED" in key:
+                                kec_approved += count
+                                kec_submitted += count
+                                
+                    return {
+                        "kec_id": kec_id,
+                        "total_target": res_kec.get("totalHit", 0) if res_kec else 0,
+                        "total_draft": kec_draft,
+                        "total_submitted": kec_submitted,
+                        "total_rejected": kec_rejected,
+                        "total_approved": kec_approved
+                    }
+
+                tasks = [
                     fetch_api_safely(datatable_url, payload, xsrf_token),
                     fetch_api_safely(datatable_url, payload_nontarget, xsrf_token)
-                )
+                ]
+                for kec in kecs_to_fetch:
+                    tasks.append(fetch_kec_status_agg(kec))
+
+                task_results = await asyncio.gather(*tasks)
+                res = task_results[0]
+                res_nontarget = task_results[1]
+                kec_results = task_results[2:]
+
+                kec_status_map_local = {r["kec_id"]: r for r in kec_results}
+
+                # Overwrite kecamatan stats with the fetched datatable values
+                for kec_stats in report_data[kab["name"]]["kecamatan_list"]:
+                    k_id = kec_stats["kec_id"]
+                    if k_id in kec_status_map_local:
+                        ks = kec_status_map_local[k_id]
+                        kec_stats["total_prelist"] = ks["total_target"]
+                        kec_stats["total_draft"] = ks["total_draft"]
+                        kec_stats["total_submitted"] = ks["total_submitted"]
+                        kec_stats["total_rejected"] = ks["total_rejected"]
+                        kec_stats["total_approved"] = ks["total_approved"]
                 
                 if not res or "error" in res:
                     print(f"  [ERROR] Gagal memproses {kab['name']}: {res.get('error') if res else 'Unknown error'}")
@@ -628,7 +658,7 @@ async def generate_report():
                         open_target += count
                     elif "SUBMITTED" in key:
                         submitted_target += count
-                    elif "REJECTED" in key:
+                    elif "REJECTED" in key or "REVOKED" in key:
                         rejected_target += count
                     elif "APPROVED" in key:
                         approved_target += count
@@ -711,7 +741,7 @@ async def generate_report():
                         submitted_nontarget += 1
                         if kec_stats:
                             kec_stats["total_submitted"] += 1
-                    elif "REJECTED" in status_upper:
+                    elif "REJECTED" in status_upper or "REVOKED" in status_upper:
                         rejected_nontarget += 1
                         if kec_stats:
                             kec_stats["total_submitted"] += 1
@@ -767,9 +797,6 @@ async def generate_report():
             yesterday = today - datetime.timedelta(days=1)
             two_days_ago = today - datetime.timedelta(days=2)
 
-            import json
-            import os
-            
             # Load mapping kecamatan dari region_map_sulteng.json
             region_map_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "region_map_sulteng.json")
             kab_to_kec_map = {}
@@ -784,140 +811,67 @@ async def generate_report():
 
             all_records = []
             
-            print("Mengambil rincian data progres harian tingkat provinsi (per KECAMATAN untuk bypass limit 1000 API)...")
-            for kab in survey_cfg["kabs"]:
-                kab_id = kab["id"]
-                kab_name = kab["name"]
+            print("Mengambil rincian data progres harian tingkat provinsi (Provincial level query)...")
+            start = 0
+            length = 500
+            
+            while True:
+                payload = {
+                    "start": start,
+                    "length": length,
+                    "columns": [
+                        {"data": "id"},
+                        {"data": "codeIdentity"},
+                        {"data": "data1"},
+                        {"data": "data6"},
+                        {"data": "dateCreated"},
+                        {"data": "dateModified"},
+                        {"data": "assignmentStatusAlias"},
+                        {"data": "region"}
+                    ],
+                    "order": [{"column": 5, "dir": "desc"}],
+                    "search": {"value": "", "regex": False},
+                    "assignmentExtraParam": {
+                        "region1Id": survey_cfg["prov_id"],
+                        "surveyPeriodId": period_id,
+                        "assignmentErrorStatusType": -1,
+                        "filterTargetType": ""
+                    }
+                }
                 
-                # Dapatkan daftar kecamatan untuk kab ini
-                kecs = kab_to_kec_map.get(kab_name, [])
-                if not kecs:
-                    # Fallback ke pencarian level kabupaten jika tidak ada mapping kecamatan
-                    kecs = [{"id": "", "name": kab_name}]
+                res = await fetch_api_safely(datatable_url, payload, xsrf_token)
+                if not res or "error" in res:
+                    print(f"  [ERROR] Gagal mengambil rincian progres provinsi: {res.get('error') if res else 'Unknown error'}")
+                    break
                 
-                for kec in kecs:
-                    kec_id = kec["id"]
-                    kec_name = kec["name"]
-                    if kec_name == "-":
-                        continue
-                        
-                    for status in active_statuses:
-                        
-                        async def fetch_dynamic_node(r3, r3_name, r4, r4_name, r5, r5_name):
-                            start = 0
-                            node_records_count = 0
-                            node_records_list = []
-                            
-                            while True:
-                                payload = {
-                                    "start": start,
-                                    "length": 100,
-                                    "columns": [
-                                        {"data": "id"},
-                                        {"data": "codeIdentity"},
-                                        {"data": "data1"},
-                                        {"data": "data6"},
-                                        {"data": "dateCreated"},
-                                        {"data": "dateModified"},
-                                        {"data": "assignmentStatusAlias"},
-                                        {"data": "region"}
-                                    ],
-                                    "order": [{"column": 5, "dir": "desc"}],
-                                    "search": {"value": "", "regex": False},
-                                    "assignmentExtraParam": {
-                                        "region1Id": survey_cfg["prov_id"],
-                                        "region2Id": kab_id,
-                                        "region3Id": r3 if r3 else "",
-                                        "region4Id": r4 if r4 else "",
-                                        "region5Id": r5 if r5 else "",
-                                        "surveyPeriodId": period_id,
-                                        "assignmentStatusAlias": status,
-                                        "assignmentErrorStatusType": -1,
-                                        "filterTargetType": ""
-                                    }
-                                }
-                                
-                                res = await fetch_api_safely(datatable_url, payload, xsrf_token)
-                                if not res or "error" in res:
-                                    print(f"  [ERROR] Gagal mengambil rincian status {status} di {r3_name}: {res.get('error') if res else 'Unknown error'}")
-                                    return node_records_list, False
-                                
-                                records_part = res.get("searchData", [])
-                                if not records_part:
-                                    break
-                                    
-                                node_records_list.extend(records_part)
-                                node_records_count += len(records_part)
-                                
-                                # Check early break
-                                should_stop = False
-                                for r in records_part:
-                                    dm_str = r.get("dateModified")
-                                    if dm_str:
-                                        try:
-                                            dt = parse_bps_datetime(dm_str, local_tz)
-                                            if dt and dt.date() < two_days_ago:
-                                                should_stop = True
-                                                break
-                                        except Exception:
-                                            pass
-                                
-                                if should_stop:
-                                    break
-                                    
-                                start += 100
-                                if start >= res.get("totalHit", 0):
-                                    if res.get("totalHit", 0) >= 1000 and not should_stop:
-                                        # LIMIT HIT BEFORE EARLY BREAK! 
-                                        return node_records_list, True # Needs fallback
-                                    break
-                                await asyncio.sleep(0.05)
-                                
-                            return node_records_list, False
-                            
-                        # Mula-mula coba tarik dari Kecamatan
-                        recs, needs_fallback = await fetch_dynamic_node(kec_id, kec_name, "", "", "", "")
-                        
-                        if needs_fallback:
-                            print(f"  [FALLBACK] {kec_name} status {status} mentok di 1000! Fallback ke level Desa...")
-                            # Fetch desas
-                            reg_url = f"https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/region?parentId={kec_id}&regionLevel=4"
-                            desa_res = await fetch_api_safely(reg_url, None, xsrf_token, method="GET")
-                            desas = desa_res.get("data", []) if desa_res else []
-                            
-                            if not desas:
-                                all_records.extend(recs)
-                                status_records_count += len(recs)
-                            else:
-                                for desa in desas:
-                                    d_id = desa.get("id")
-                                    d_name = desa.get("name")
-                                    
-                                    d_recs, d_fallback = await fetch_dynamic_node(kec_id, kec_name, d_id, d_name, "", "")
-                                    if d_fallback:
-                                        print(f"  [FALLBACK] Desa {d_name} mentok di 1000! Fallback ke SLS...")
-                                        sls_url = f"https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/region?parentId={d_id}&regionLevel=5"
-                                        sls_res = await fetch_api_safely(sls_url, None, xsrf_token, method="GET")
-                                        slss = sls_res.get("data", []) if sls_res else []
-                                        if not slss:
-                                            all_records.extend(d_recs)
-                                            status_records_count += len(d_recs)
-                                        else:
-                                            for sls in slss:
-                                                s_id = sls.get("id")
-                                                s_name = sls.get("name")
-                                                s_recs, _ = await fetch_dynamic_node(kec_id, kec_name, d_id, d_name, s_id, s_name)
-                                                all_records.extend(s_recs)
-                                                status_records_count += len(s_recs)
-                                    else:
-                                        all_records.extend(d_recs)
-                                        status_records_count += len(d_recs)
-                        else:
-                            all_records.extend(recs)
-                            status_records_count += len(recs)
-                            
-                        if status_records_count > 0:
-                            print(f"  Selesai fetch {kab_name} -> {kec_name} status {status}: {status_records_count} records (Accumulated: {len(all_records)})")
+                records_part = res.get("searchData", [])
+                if not records_part:
+                    break
+                    
+                all_records.extend(records_part)
+                print(f"  Fetched {len(records_part)} records (Total Akumulasi: {len(all_records)})")
+                
+                # Check early break: only stop if the entire page has no records from today, yesterday, or two days ago
+                has_recent_record = False
+                for r in records_part:
+                    dm_str = r.get("dateModified")
+                    if dm_str:
+                        try:
+                            dt = parse_bps_datetime(dm_str, local_tz)
+                            if dt and dt.date() >= two_days_ago:
+                                has_recent_record = True
+                                break
+                        except Exception:
+                            pass
+                
+                if not has_recent_record and len(records_part) > 0:
+                    print(f"  [INFO] Berhenti lebih awal karena halaman ini tidak memiliki record dari H-2 s/d Hari ini.")
+                    break
+                    
+                start += length
+                if start >= res.get("totalHit", 0):
+                    break
+                await asyncio.sleep(0.05)
             
             # Fetch historical snapshots from Supabase to pre-populate yesterday and two days ago completed
             yesterday_str = yesterday.strftime("%Y-%m-%d")
@@ -1086,19 +1040,9 @@ async def generate_report():
                                 break
 
                 # Count active target states at Kecamatan level if not OPEN
-                if is_target and kec_stats:
-                    if status_alias == "DRAFT":
-                        kec_stats["total_draft"] += 1
-                    elif status_alias in [
-                        "SUBMITTED RESPONDENT", "SUBMITTED BY Pencacah",
-                        "APPROVED BY Pengawas", "REJECTED BY Pengawas",
-                        "REJECTED BY Admin Kabupaten", "REVOKED BY Pengawas"
-                    ]:
-                        kec_stats["total_submitted"] += 1
-                    if "REJECTED" in (status_alias or ""):
-                        kec_stats["total_rejected"] += 1
-                    elif "APPROVED" in (status_alias or ""):
-                        kec_stats["total_approved"] += 1
+                # Target states at Kecamatan level are now initialized from Report API above.
+                # Non-targets are accumulated in the non-target records loop instead.
+                pass
 
                 # Check completions
                 status_upper = (status_alias or "").upper()
@@ -1256,7 +1200,8 @@ async def generate_report():
             "se_umum_prov_new_rumah_total": output_data.get("se_umum_prov_new_rumah_total", 0),
             "se_ub_prov_new_rumah_total": output_data.get("se_ub_prov_new_rumah_total", 0)
         }
-        with open("ipas_data.js", "w", encoding="utf-8") as f:
+        ipas_data_path = os.path.join(script_dir, "ipas_data.js")
+        with open(ipas_data_path, "w", encoding="utf-8") as f:
             f.write(f"window.IPAS_DATA = {json.dumps(final_js_obj, ensure_ascii=False, indent=2)};\n")
             
         print("\nLaporan rekap Sensus Ekonomi berhasil di-generate ke ipas_data.js!")
