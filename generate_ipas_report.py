@@ -731,34 +731,22 @@ async def generate_report():
 
                     if status_upper == "DRAFT":
                         draft_nontarget += 1
-                        if kec_stats:
-                            kec_stats["total_draft"] += 1
                     elif status_upper == "OPEN":
                         open_nontarget += 1
-                        if kec_stats:
-                            kec_stats["total_open"] += 1
                     elif "SUBMITTED" in status_upper:
                         submitted_nontarget += 1
-                        if kec_stats:
-                            kec_stats["total_submitted"] += 1
                     elif "REJECTED" in status_upper or "REVOKED" in status_upper:
                         rejected_nontarget += 1
-                        if kec_stats:
-                            kec_stats["total_submitted"] += 1
-                            kec_stats["total_rejected"] += 1
                     elif "APPROVED" in status_upper:
                         approved_nontarget += 1
-                        if kec_stats:
-                            kec_stats["total_submitted"] += 1
-                            kec_stats["total_approved"] += 1
                 
                 # Hitung metrik final gabungan Kabupaten
-                total_prelist = prelist_target + tambahan_usaha + tambahan_rumah_baru
-                total_draft = draft_target + draft_nontarget
-                total_open = open_target + open_nontarget
-                total_submitted = submitted_target + approved_target + rejected_target + (submitted_nontarget + rejected_nontarget + approved_nontarget)
-                total_rejected = rejected_target + rejected_nontarget
-                total_approved = approved_target + approved_nontarget
+                total_prelist = prelist_target
+                total_draft = draft_target
+                total_open = open_target
+                total_submitted = submitted_target + approved_target + rejected_target
+                total_rejected = rejected_target
+                total_approved = approved_target
                 
                 report_data[kab["name"]]["total_prelist"] = total_prelist
                 report_data[kab["name"]]["total_draft"] = total_draft
@@ -1146,7 +1134,7 @@ async def generate_report():
                 formatted_kecs = []
                 for kec_s in stats["kecamatan_list"]:
                     # Calculate open targets
-                    k_prelist = kec_s["total_prelist"] + kec_s["new_usaha_overall"] + kec_s["new_rumah_overall"]
+                    k_prelist = kec_s["total_prelist"]
                     k_draft = kec_s["total_draft"]
                     k_sub = kec_s["total_submitted"]
                     k_open = max(0, k_prelist - k_sub - k_draft)
