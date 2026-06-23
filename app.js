@@ -1085,6 +1085,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Calculate Summary
         let prelist = 0, draft = 0, openVal = 0, submitted = 0, rejected = 0, approved = 0, today = 0, yesterday = 0, twoDaysAgo = 0, newToday = 0, newRumahToday = 0;
+        let submittedPencacah = 0, submittedRespondent = 0;
 
         let todayBreakdown = {};
         let yesterdayBreakdown = {};
@@ -1097,6 +1098,8 @@ document.addEventListener('DOMContentLoaded', () => {
             submitted += item.total_submitted || 0;
             rejected += item.total_rejected || 0;
             approved += item.total_approved || 0;
+            submittedPencacah += item.total_submitted_pencacah || 0;
+            submittedRespondent += item.total_submitted_respondent || 0;
             today += item.today_completed || 0;
             yesterday += item.yesterday_completed || 0;
             twoDaysAgo += item.two_days_ago_completed || 0;
@@ -1161,11 +1164,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update stats elements
         const prelistWrapperEl = document.getElementById(`${surveyType}-stat-total-prelist-wrapper`);
         if (prelistWrapperEl) {
-            const unprocessedSubmitted = Math.max(0, submitted - approved - rejected);
             const breakdown = {
                 "OPEN (Belum dikerjakan)": openVal,
                 "DRAFT (Sedang dikerjakan)": draft,
-                "SUBMITTED BY Pencacah": unprocessedSubmitted,
+                "SUBMITTED BY Pencacah": submittedPencacah,
+                "SUBMITTED RESPONDENT": submittedRespondent,
                 "APPROVED BY Pengawas": approved,
                 "REJECTED BY Pengawas": rejected
             };
@@ -1244,11 +1247,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const submittedWrapperEl = document.getElementById(`${surveyType}-stat-submitted-wrapper`);
         if (submittedWrapperEl) {
-            const unprocessed = Math.max(0, submitted - approved - rejected);
             const breakdown = {
                 "APPROVED BY Pengawas": approved,
                 "REJECTED BY Pengawas": rejected,
-                "SUBMITTED BY Pencacah": unprocessed
+                "SUBMITTED BY Pencacah": submittedPencacah,
+                "SUBMITTED RESPONDENT": submittedRespondent
             };
             const itemsHTML = Object.entries(breakdown)
                 .map(([status, val]) => `
@@ -1564,11 +1567,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const isEstimate = kec.two_days_ago_is_estimate;
                 const tdTwoDays = getDailyProgressCellHTML(kec.two_days_ago_completed, kec.two_days_ago_completed_breakdown, 'H-2: KEC. ' + kec.kec_name, isEstimate);
 
-                const kecTotalUnprocessed = Math.max(0, (kec.total_submitted || 0) - (kec.total_approved || 0) - (kec.total_rejected || 0));
                 const kecTotalBreakdown = {
                     "APPROVED BY Pengawas": kec.total_approved || 0,
                     "REJECTED BY Pengawas": kec.total_rejected || 0,
-                    "SUBMITTED BY Pencacah": kecTotalUnprocessed
+                    "SUBMITTED BY Pencacah": kec.total_submitted_pencacah || 0,
+                    "SUBMITTED RESPONDENT": kec.total_submitted_respondent || 0
                 };
                 const tdTotal = getDailyProgressCellHTML(kec.total_submitted, kecTotalBreakdown, 'TOTAL DOKUMEN SELESAI: KEC. ' + kec.kec_name);
 
@@ -1874,11 +1877,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const tdYesterday = getDailyProgressCellHTML(item.yesterday_completed, item.yesterday_completed_breakdown, 'KEMARIN: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
             const tdTwoDays = getDailyProgressCellHTML(item.two_days_ago_completed, item.two_days_ago_completed_breakdown, 'H-2: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''), item.two_days_ago_is_estimate);
 
-            const totalSubmittedUnprocessed = Math.max(0, (item.total_submitted || 0) - (item.total_approved || 0) - (item.total_rejected || 0));
             const totalBreakdown = {
                 "APPROVED BY Pengawas": item.total_approved || 0,
                 "REJECTED BY Pengawas": item.total_rejected || 0,
-                "SUBMITTED BY Pencacah": totalSubmittedUnprocessed
+                "SUBMITTED BY Pencacah": item.total_submitted_pencacah || 0,
+                "SUBMITTED RESPONDENT": item.total_submitted_respondent || 0
             };
             const tdTotal = getDailyProgressCellHTML(item.total_submitted, totalBreakdown, 'TOTAL DOKUMEN SELESAI: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
 

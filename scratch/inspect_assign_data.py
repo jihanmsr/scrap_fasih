@@ -16,8 +16,16 @@ supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 try:
     res = supabase.table("dashboard_store").select("value").eq("key", "assign_data").execute()
     if res.data:
-        val = res.data[0]["value"]
-        print("assign_data structure keys:", list(val.keys()))
+        db_val = res.data[0]["value"]
+        print("Raw database keys:", list(db_val.keys()))
+        
+        import base64
+        import gzip
+        
+        compressed = db_val.get("compressed_data")
+        raw_bytes = gzip.decompress(base64.b64decode(compressed))
+        val = json.loads(raw_bytes.decode('utf-8'))
+        print("Decompressed assign_data structure keys:", list(val.keys()))
         
         # Check lengths
         for k in ["assign_data_umum", "assign_data_ub", "assign_sls_data_umum", "assign_sls_data_ub", "petugas_data_umum", "petugas_data_ub"]:

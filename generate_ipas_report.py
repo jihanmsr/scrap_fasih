@@ -8,6 +8,7 @@ import datetime
 import socket
 import subprocess
 import shutil
+from urllib.parse import unquote
 from playwright.async_api import async_playwright
 
 load_dotenv()
@@ -252,50 +253,66 @@ async def generate_report():
             print("Gagal mendapatkan browser context:", e)
             return
 
-        # Cari tab aktif yang sudah membuka fasih-sm
-        active_page = None
-        for p_page in context.pages:
+        async def get_valid_token():
+            nonlocal page, context, browser
+            active_page = None
+            for p_page in context.pages:
+                try:
+                    if not p_page.is_closed() and "fasih-sm.bps.go.id" in p_page.url:
+                        active_page = p_page
+                        print(f"Menemukan tab aktif FASIH: {p_page.url}", flush=True)
+                        break
+                except Exception:
+                    pass
+            
+            if active_page:
+                page = active_page
+            else:
+                try:
+                    if page.is_closed():
+                        page = await context.new_page()
+                except Exception:
+                    page = await context.new_page()
+                    
+            current_url = ""
             try:
-                if not p_page.is_closed() and "fasih-sm.bps.go.id" in p_page.url:
-                    active_page = p_page
-                    print(f"Menemukan tab aktif FASIH: {p_page.url}")
-                    break
+                current_url = page.url
             except Exception:
                 pass
-        
-        if active_page:
-            page = active_page
-        else:
-            try:
-                if page.is_closed():
-                    page = await context.new_page()
-            except Exception:
-                page = await context.new_page()
                 
-        # Periksa ulang url page saat ini secara aman
-        current_url = ""
-        try:
-            current_url = page.url
-        except Exception:
-            pass
-            
-        if "fasih-sm.bps.go.id" not in current_url:
-            print(f"Tab FASIH tidak aktif (URL saat ini: {current_url}). Navigasi...")
-            try:
-                await page.goto("https://fasih-sm.bps.go.id/app/dashboard", timeout=60000, wait_until="domcontentloaded")
-            except Exception as e:
-                print("Gagal navigasi ke dashboard url:", e)
+            if "fasih-sm.bps.go.id" not in current_url:
+                print(f"Tab FASIH tidak aktif (URL saat ini: {current_url}). Navigasi...", flush=True)
+                try:
+                    await page.goto("https://fasih-sm.bps.go.id/app/dashboard", timeout=60000, wait_until="domcontentloaded")
+                except Exception as e:
+                    print("Gagal navigasi ke dashboard url:", e, flush=True)
 
-        cookies = await page.context.cookies()
-        xsrf_token_raw = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), "")
-        
-        from urllib.parse import unquote
-        xsrf_token = unquote(xsrf_token_raw)
-        
+            cookies = await page.context.cookies()
+            xsrf_token_raw = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), "")
+            from urllib.parse import unquote
+            return unquote(xsrf_token_raw)
+
+        xsrf_token = await get_valid_token()
         datatable_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
 
         async def fetch_api_safely(url, payload, token, timeout_seconds=120, max_retries=3, method="POST"):
+            nonlocal page, context, browser, xsrf_token
             for attempt in range(1, max_retries + 1):
+                is_closed = True
+                try:
+                    is_closed = page.is_closed() or not browser.is_connected()
+                except Exception:
+                    is_closed = True
+                
+                if is_closed:
+                    print(f"    [INFO] Koneksi browser terputus atau page closed. Mencoba menyambung kembali (attempt {attempt})...", flush=True)
+                    try:
+                        browser, context, page = await get_authenticated_context(p)
+                        xsrf_token = await get_valid_token()
+                        token = xsrf_token
+                    except Exception as re_err:
+                        print(f"    [WARNING] Gagal reconnect ke Chrome: {re_err}", flush=True)
+
                 try:
                     res = await page.evaluate("""
                         async ({url, payload, token, timeoutMs, method}) => {
@@ -330,17 +347,17 @@ async def generate_report():
                         status = res.get("status", 0)
                         if status in (502, 503, 504) and attempt < max_retries:
                             wait_sec = 10 * attempt
-                            print(f"    [RETRY {attempt}/{max_retries}] Server error {status}, menunggu {wait_sec}s...")
+                            print(f"    [RETRY {attempt}/{max_retries}] Server error {status}, menunggu {wait_sec}s...", flush=True)
                             await asyncio.sleep(wait_sec)
                             continue
                     return res
                 except Exception as e:
                     if attempt < max_retries:
                         wait_sec = 10 * attempt
-                        print(f"    [RETRY {attempt}/{max_retries}] Exception: {e}, menunggu {wait_sec}s...")
+                        print(f"    [RETRY {attempt}/{max_retries}] Exception: {e}, menunggu {wait_sec}s...", flush=True)
                         await asyncio.sleep(wait_sec)
-                    else:
-                        return {"error": str(e)}
+                        continue
+                    raise e
 
         async def check_session_valid(token):
             if not token:
@@ -488,6 +505,8 @@ async def generate_report():
                         "total_submitted": 0,
                         "total_rejected": 0,
                         "total_approved": 0,
+                        "total_submitted_pencacah": 0,
+                        "total_submitted_respondent": 0,
                         "today_completed": 0,
                         "yesterday_completed": 0,
                         "two_days_ago_completed": 0,
@@ -511,6 +530,8 @@ async def generate_report():
                     "total_submitted": 0,
                     "total_rejected": 0,
                     "total_approved": 0,
+                    "total_submitted_pencacah": 0,
+                    "total_submitted_respondent": 0,
                     "today_completed": 0,
                     "yesterday_completed": 0,
                     "two_days_ago_completed": 0,
@@ -584,6 +605,8 @@ async def generate_report():
                     kec_approved = 0
                     kec_rejected = 0
                     kec_draft = 0
+                    kec_submitted_pencacah = 0
+                    kec_submitted_respondent = 0
                     
                     if res_kec and "searchAggregation" in res_kec:
                         agg = res_kec["searchAggregation"]
@@ -592,7 +615,17 @@ async def generate_report():
                             count = item.get("docCount", 0)
                             if key == "DRAFT":
                                 kec_draft += count
+                            elif key == "SUBMITTED BY Pencacah":
+                                kec_submitted_pencacah += count
+                                kec_submitted += count
+                            elif key == "SUBMITTED RESPONDENT":
+                                kec_submitted_respondent += count
+                                kec_submitted += count
                             elif "SUBMITTED" in key:
+                                if "RESPONDENT" in key.upper():
+                                    kec_submitted_respondent += count
+                                else:
+                                    kec_submitted_pencacah += count
                                 kec_submitted += count
                             elif "REJECTED" in key or "REVOKED" in key:
                                 kec_rejected += count
@@ -607,7 +640,9 @@ async def generate_report():
                         "total_draft": kec_draft,
                         "total_submitted": kec_submitted,
                         "total_rejected": kec_rejected,
-                        "total_approved": kec_approved
+                        "total_approved": kec_approved,
+                        "total_submitted_pencacah": kec_submitted_pencacah,
+                        "total_submitted_respondent": kec_submitted_respondent
                     }
 
                 tasks = [
@@ -634,6 +669,8 @@ async def generate_report():
                         kec_stats["total_submitted"] = ks["total_submitted"]
                         kec_stats["total_rejected"] = ks["total_rejected"]
                         kec_stats["total_approved"] = ks["total_approved"]
+                        kec_stats["total_submitted_pencacah"] = ks["total_submitted_pencacah"]
+                        kec_stats["total_submitted_respondent"] = ks["total_submitted_respondent"]
                 
                 if not res or "error" in res:
                     print(f"  [ERROR] Gagal memproses {kab['name']}: {res.get('error') if res else 'Unknown error'}")
@@ -646,6 +683,8 @@ async def generate_report():
                 submitted_target = 0
                 rejected_target = 0
                 approved_target = 0
+                submitted_pencacah_target = 0
+                submitted_respondent_target = 0
                 
                 agg_target = res.get("searchAggregation", [])
                 for item in agg_target:
@@ -658,6 +697,10 @@ async def generate_report():
                         open_target += count
                     elif "SUBMITTED" in key:
                         submitted_target += count
+                        if "RESPONDENT" in key.upper():
+                            submitted_respondent_target += count
+                        else:
+                            submitted_pencacah_target += count
                     elif "REJECTED" in key or "REVOKED" in key:
                         rejected_target += count
                     elif "APPROVED" in key:
@@ -747,6 +790,8 @@ async def generate_report():
                 total_submitted = submitted_target + approved_target + rejected_target
                 total_rejected = rejected_target
                 total_approved = approved_target
+                total_submitted_pencacah = submitted_pencacah_target
+                total_submitted_respondent = submitted_respondent_target
                 
                 report_data[kab["name"]]["total_prelist"] = total_prelist
                 report_data[kab["name"]]["total_draft"] = total_draft
@@ -754,6 +799,8 @@ async def generate_report():
                 report_data[kab["name"]]["total_submitted"] = total_submitted
                 report_data[kab["name"]]["total_rejected"] = total_rejected
                 report_data[kab["name"]]["total_approved"] = total_approved
+                report_data[kab["name"]]["total_submitted_pencacah"] = total_submitted_pencacah
+                report_data[kab["name"]]["total_submitted_respondent"] = total_submitted_respondent
                 report_data[kab["name"]]["new_usaha_overall"] = tambahan_usaha
                 report_data[kab["name"]]["new_rumah_overall"] = tambahan_rumah_baru
                 print(f"  {kab['name']}: Prelist={total_prelist}, UsahaBaruOverall={tambahan_usaha}, RumahBaruOverall={tambahan_rumah_baru}, Draft={total_draft}, Open={total_open}, Submitted={total_submitted}")
@@ -1141,6 +1188,8 @@ async def generate_report():
                     kec_s["total_prelist"] = k_prelist
                     kec_s["total_open"] = k_open
                     kec_s["persentase"] = round((k_sub / k_prelist * 100) if k_prelist > 0 else 0.0, 2)
+                    kec_s["total_submitted_pencacah"] = kec_s.get("total_submitted_pencacah", 0)
+                    kec_s["total_submitted_respondent"] = kec_s.get("total_submitted_respondent", 0)
                     formatted_kecs.append(kec_s)
                 
                 final_list.append({
@@ -1151,6 +1200,8 @@ async def generate_report():
                     "total_submitted": completed,
                     "total_rejected": stats["total_rejected"],
                     "total_approved": stats["total_approved"],
+                    "total_submitted_pencacah": stats.get("total_submitted_pencacah", 0),
+                    "total_submitted_respondent": stats.get("total_submitted_respondent", 0),
                     "persentase": pct,
                     "today_completed": stats["today_completed"],
                     "yesterday_completed": stats["yesterday_completed"],
