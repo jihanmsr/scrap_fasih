@@ -38181,4 +38181,4 @@ window.EMAIL_DATA = [
     "kab_name": "[71] PALU"
   }
 ];
-window.LAST_UPDATED = '24 Jun 2026, 08:13:03';
+window.LAST_UPDATED = '24 Jun 2026, 08:13:48';
