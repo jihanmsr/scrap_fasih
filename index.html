@@ -333,6 +333,11 @@
                         </div>
                         <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center;">
                             <div style="display: flex; gap: 0.5rem; flex: 1 1 auto; flex-wrap: wrap;">
+                                <select class="region-select" id="assign-sls-survey-filter" onchange="window.handleGranularSurveyFilterChange()"
+                                    style="min-width: 150px; border-color: var(--primary); font-weight: 700; background: rgba(249, 115, 22, 0.05);">
+                                    <option value="se_umum">SE Umum</option>
+                                    <option value="se_ub">SE UB</option>
+                                </select>
                                 <select class="region-select" id="assign-sls-kab-filter" onchange="window.updateGranularFilters('kab')"
                                     style="min-width: 200px;">
                                     <option value="all">Semua Kabupaten</option>
@@ -483,14 +488,17 @@
                                         <th class="sortable" onclick="window.sortGranularTable('desa')" style="cursor: pointer; text-align: left;">Desa <span id="granular-sort-desa">↕</span></th>
                                         <th class="sortable" onclick="window.sortGranularTable('sls')" style="cursor: pointer; text-align: left;">SLS <span id="granular-sort-sls">↕</span></th>
                                         <th class="sortable" onclick="window.sortGranularTable('petugas')" style="cursor: pointer; text-align: left;">Petugas <span id="granular-sort-petugas">↕</span></th>
-                                        <th class="sortable" onclick="window.sortGranularTable('target')" style="cursor: pointer; text-align: left;">Assignment <span id="granular-sort-target">↕</span></th>
-                                        <th class="sortable" onclick="window.sortGranularTable('status')" style="width: 150px; cursor: pointer; text-align: center;">Status <span id="granular-sort-status">↕</span></th>
+                                        <th class="sortable" onclick="window.sortGranularTable('pengawas')" style="cursor: pointer; text-align: left;">Pengawas <span id="granular-sort-pengawas">↕</span></th>
+                                        <th class="sortable" onclick="window.sortGranularTable('target_code')" style="cursor: pointer; text-align: left;">Kode Target <span id="granular-sort-target_code">↕</span></th>
+                                        <th class="sortable" onclick="window.sortGranularTable('target_name')" style="cursor: pointer; text-align: left;">Nama Perusahaan / Usaha <span id="granular-sort-target_name">↕</span></th>
+                                        <th class="sortable" onclick="window.sortGranularTable('status')" style="width: 130px; cursor: pointer; text-align: center;">Status <span id="granular-sort-status">↕</span></th>
+                                        <th class="sortable" onclick="window.sortGranularTable('date_modified')" style="width: 140px; cursor: pointer; text-align: center;">Terakhir Diupdate <span id="granular-sort-date_modified">↕</span></th>
                                         <th style="width: 250px; cursor: default; text-align: left;">Catatan / Remarks</th>
                                     </tr>
                                 </thead>
                                 <tbody id="assign-sls-table-body">
                                     <tr>
-                                        <td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                                        <td colspan="12" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
                                             Silakan pilih Kabupaten/Kota terlebih dahulu untuk memuat rincian data assignment...
                                         </td>
                                     </tr>

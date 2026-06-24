@@ -107,8 +107,9 @@ def merge_granulars():
                 
             # Now map targets
             for t in p_targets:
-                # t = [tid, code_id, name, stat_idx, pet_idx, reg_idx, epoch_mod, survey_flag]
+                # t = [tid, code_id, name, stat_idx, pet_idx, reg_idx, epoch_mod, survey_flag, pengawas_idx]
                 tid = t[0]
+                pengawas_idx = pet_idx_map.get(t[8], -1) if len(t) > 8 else -1
                 new_t = [
                     t[0],
                     t[1],
@@ -117,7 +118,8 @@ def merge_granulars():
                     pet_idx_map.get(t[4], -1),
                     reg_idx_map.get(t[5], -1),
                     t[6],
-                    t[7]
+                    t[7],
+                    pengawas_idx
                 ]
                 
                 # Update or insert

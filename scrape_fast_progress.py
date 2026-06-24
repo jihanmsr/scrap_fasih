@@ -119,107 +119,164 @@ async def fetch_users_mapping(page, token, period_id):
     print(f" ✅ Berhasil menarik {len(users)} alokasi petugas.")
     return users
 
+def merge_user_records(records):
+    merged = {}
+    for r in records:
+        username = r.get("username")
+        if not username:
+            continue
+        if username not in merged:
+            merged[username] = dict(r)
+            merged[username]["regionSummary"] = list(r.get("regionSummary", []))
+        else:
+            existing_codes = {reg.get("regionCode") for reg in merged[username]["regionSummary"]}
+            for reg in r.get("regionSummary", []):
+                code = reg.get("regionCode")
+                if code not in existing_codes:
+                    merged[username]["regionSummary"].append(reg)
+                    existing_codes.add(code)
+    return list(merged.values())
+
 async def fetch_responsibility_report(page, token, survey_period_id, role_id, target_type):
-    # report-progress-by-responsibility hanya memperbolehkan size maksimal 10.
+    kab_map_umum = {
+        "7201": "bc32354f-1245-426f-b2cf-a5733e1295ad",
+        "7202": "530e9ca5-86ba-434e-9b04-405102e6d900",
+        "7203": "9783f0c1-f047-477f-8840-11eae7cf70e2",
+        "7204": "fb9cd9f0-c4c0-4a37-9041-57190693f625",
+        "7205": "289f1ff3-a6ad-4c9b-a49f-7b454d03a33f",
+        "7206": "d833fdce-ebfb-429b-a1bb-8966239fd8e4",
+        "7207": "c523694a-2e72-4570-9489-da2d7b119fe7",
+        "7208": "25c59fd9-afd5-4c1a-9dfb-42bb697a7434",
+        "7209": "736c4c22-51d1-44be-8b2c-aa197d9459a4",
+        "7210": "0061da62-2a47-4dee-b8d0-239b33e2c59d",
+        "7211": "eed1a3e7-b81d-4fc7-b0d6-61257c1449b2",
+        "7212": "d05ef8fd-b5e4-414f-9a83-8cdea03e0767",
+        "7271": "4ab6ca2f-7952-4e8e-a94d-b6dd933e5d44"
+    }
+
+    kab_map_ub = {
+        "7201": "9c9b2d79-9fb1-4ce7-b0f1-6b7bb5511beb",
+        "7202": "34165dd5-372e-42fa-99c6-0cc19a9b4d0b",
+        "7203": "48c4e5d0-5525-41a8-a4ba-2cc38cd9c424",
+        "7204": "e18368ae-d1cd-4d43-a74d-5b9ddac5dd22",
+        "7205": "c075c4b4-7eb0-4d72-9c16-5103088fb5eb",
+        "7206": "d3a28bfa-b611-488b-8255-369da5cedbf7",
+        "7207": "dfe4c643-3282-40db-a5fd-cb288a4f592d",
+        "7208": "f18109d2-fc8b-4b9c-886a-dc242d21206e",
+        "7209": "4d01eba1-5ae9-4603-82a6-2c831aea9905",
+        "7210": "2a240d3a-67ee-45b2-ae78-4b4b3a909a90",
+        "7211": "288c5680-f6d5-4783-a946-d5a06f547c02",
+        "7212": "a5324f17-7a00-436f-b468-2fc59fcf605d",
+        "7271": "1acfedb4-276e-44d6-9e45-6d43588536d6"
+    }
+
+    if survey_period_id == SE_UMUM_PERIOD:
+        region1_id = "5214ecb2-bef1-4a86-9446-451cf430928e"
+        kab_ids = list(kab_map_umum.values())
+    else:
+        region1_id = "a00c8aef-afc4-4d4f-b80d-789a15450ef9"
+        kab_ids = list(kab_map_ub.values())
+
     size = 10
     url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-progress-by-responsibility"
-    
-    payload = {
-        "surveyPeriodId": survey_period_id,
-        "surveyRoleId": role_id,
-        "size": size,
-        "page": 0,
-        "search": "",
-        "target": target_type,
-        "region": {
-            "region1Id": "5214ecb2-bef1-4a86-9446-451cf430928e",
-            "region2Id": None,
-            "region3Id": None,
-            "region4Id": None,
-            "region5Id": None,
-            "region6Id": None,
-            "region7Id": None,
-            "region8Id": None,
-            "region9Id": None,
-            "region10Id": None
-        },
-        "regionSummaryLevel": 6
-    }
-    
-    print(f"[INFO] Mengambil halaman pertama laporan progres (role {role_id}, target {target_type})...")
-    try:
-        first_resp = await page.evaluate("""
-            async ({url, payload, token}) => {
-                try {
-                    const r = await fetch(url, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
-                        body: JSON.stringify(payload)
-                    });
-                    if (!r.ok) return { _error: `HTTP ${r.status}` };
-                    return await r.json();
-                } catch (e) {
-                    return { _error: e.toString() };
-                }
-            }
-        """, {"url": url, "payload": payload, "token": token})
-    except Exception as e:
-        print(f"[ERROR] Gagal mengevaluasi halaman pertama (role {role_id}): {e}")
-        return None
-        
-    if not first_resp or not first_resp.get("success"):
-        err = first_resp.get("_error") if first_resp else "Empty response"
-        print(f"[ERROR] Gagal menarik halaman pertama (role {role_id}): {err}")
-        return None
-        
-    data = first_resp.get("data", {})
-    all_content = list(data.get("content", []))
-    total_elements = data.get("totalElements", 0)
-    total_pages = (total_elements + size - 1) // size if size > 0 else 1
-    
-    print(f" ✅ Laporan progres (role {role_id}): total {total_elements} records, {total_pages} halaman.")
-    
-    if total_pages > 1:
-        # Tarik sisa halaman dalam chunk sequential untuk mencegah overloading Playwright evaluate
-        chunk_size = 15
-        for i in range(1, total_pages, chunk_size):
-            chunk_end = min(total_pages, i + chunk_size)
-            print(f"  [INFO] Menarik halaman {i} sampai {chunk_end-1} (role {role_id})...")
-            
-            chunk_tasks = []
-            for p_idx in range(i, chunk_end):
-                p_payload = dict(payload)
-                p_payload["page"] = p_idx
-                chunk_tasks.append(page.evaluate("""
-                    async ({url, payload, token}) => {
-                        try {
-                            const r = await fetch(url, {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
-                                body: JSON.stringify(payload)
-                            });
-                            if (!r.ok) return { _error: `HTTP ${r.status}` };
-                            return await r.json();
-                        } catch (e) {
-                            return { _error: e.toString() };
-                        }
+    all_content = []
+
+    for idx, kab_id in enumerate(kab_ids):
+        print(f"  [INFO] Menarik data progres (role {role_id}, target {target_type}) Kab {idx+1}/{len(kab_ids)}: {kab_id}...")
+        payload = {
+            "surveyPeriodId": survey_period_id,
+            "surveyRoleId": role_id,
+            "size": size,
+            "page": 0,
+            "search": "",
+            "target": target_type,
+            "region": {
+                "region1Id": region1_id,
+                "region2Id": kab_id,
+                "region3Id": None,
+                "region4Id": None,
+                "region5Id": None,
+                "region6Id": None,
+                "region7Id": None,
+                "region8Id": None,
+                "region9Id": None,
+                "region10Id": None
+            },
+            "regionSummaryLevel": 6
+        }
+
+        try:
+            first_resp = await page.evaluate("""
+                async ({url, payload, token}) => {
+                    try {
+                        const r = await fetch(url, {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+                            body: JSON.stringify(payload)
+                        });
+                        if (!r.ok) return { _error: `HTTP ${r.status}` };
+                        return await r.json();
+                    } catch (e) {
+                        return { _error: e.toString() };
                     }
-                """, {"url": url, "payload": p_payload, "token": token}))
+                }
+            """, {"url": url, "payload": payload, "token": token})
+        except Exception as e:
+            print(f"    [ERROR] Gagal mengevaluasi halaman pertama untuk Kab {kab_id}: {e}")
+            continue
+
+        if not first_resp or not first_resp.get("success"):
+            err = first_resp.get("_error") if first_resp else "Empty response"
+            print(f"    [ERROR] Gagal menarik halaman pertama Kab {kab_id}: {err}")
+            continue
+
+        data = first_resp.get("data", {})
+        kab_content = list(data.get("content", []))
+        total_elements = data.get("totalElements", 0)
+        total_pages = (total_elements + size - 1) // size if size > 0 else 1
+
+        if total_pages > 1:
+            chunk_size = 15
+            for i in range(1, total_pages, chunk_size):
+                chunk_end = min(total_pages, i + chunk_size)
                 
-            chunk_results = await asyncio.gather(*chunk_tasks)
-            for idx, r in enumerate(chunk_results):
-                if r and r.get("success"):
-                    all_content.extend(r.get("data", {}).get("content", []))
-                else:
-                    err = r.get("_error") if r else "Empty response"
-                    actual_page = i + idx
-                    print(f"  [ERROR] Gagal menarik halaman {actual_page} (role {role_id}): {err}")
-                    return None
-            
-            # Jeda singkat agar browser bernapas
-            await asyncio.sleep(0.15)
-                
-    return all_content
+                chunk_tasks = []
+                for p_idx in range(i, chunk_end):
+                    p_payload = dict(payload)
+                    p_payload["page"] = p_idx
+                    chunk_tasks.append(page.evaluate("""
+                        async ({url, payload, token}) => {
+                            try {
+                                const r = await fetch(url, {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+                                    body: JSON.stringify(payload)
+                                });
+                                if (!r.ok) return { _error: `HTTP ${r.status}` };
+                                return await r.json();
+                            } catch (e) {
+                                return { _error: e.toString() };
+                            }
+                        }
+                    """, {"url": url, "payload": p_payload, "token": token}))
+                    
+                chunk_results = await asyncio.gather(*chunk_tasks)
+                for c_idx, r in enumerate(chunk_results):
+                    if r and r.get("success"):
+                        kab_content.extend(r.get("data", {}).get("content", []))
+                    else:
+                        err = r.get("_error") if r else "Empty response"
+                        actual_page = i + c_idx
+                        print(f"      [ERROR] Gagal menarik halaman {actual_page} untuk Kab {kab_id}: {err}")
+
+                await asyncio.sleep(0.15)
+
+        all_content.extend(kab_content)
+
+    merged_content = merge_user_records(all_content)
+    print(f" ✅ Laporan progres (role {role_id}) selesai. Total {len(merged_content)} records ter-merge.")
+    return merged_content
+
 
 def fetch_current_ipas_data(supabase_client):
     if supabase_client:

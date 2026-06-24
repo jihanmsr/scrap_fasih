@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const y = new Date(t); y.setDate(y.getDate() - 1);
         const h2 = new Date(t); h2.setDate(h2.getDate() - 2);
-        const fmt = d => String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth()+1).padStart(2, '0');
+        const fmt = d => String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0');
         return {
             today: "Hari Ini (" + fmt(t) + ")",
             yesterday: "Kemarin (" + fmt(y) + ")",
@@ -840,17 +840,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const popover = element.nextElementSibling;
         if (!popover) return;
         const isActive = popover.classList.contains('active');
-        
+
         // Close all other active popovers
         document.querySelectorAll('.daily-popover.active').forEach(p => {
             if (p !== popover) p.classList.remove('active');
         });
-        
+
         if (isActive) {
             popover.classList.remove('active');
         } else {
             popover.classList.add('active');
-            
+
             // Adjust position if offscreen
             const rect = popover.getBoundingClientRect();
             if (rect.left < 0) {
@@ -874,24 +874,24 @@ document.addEventListener('DOMContentLoaded', () => {
     function getSlsStatusCounts(slsCode, slsTotal, surveyType) {
         const slsStatusMap = window.IPAS_DATA ? (window.IPAS_DATA[surveyType + '_sls_status'] || {}) : {};
         const slsData = slsStatusMap[slsCode] || { target: {}, nontarget: {} };
-        
+
         const targetCounts = slsData.target || {};
         const nontargetCounts = slsData.nontarget || {};
-        
+
         let activeTargetSum = 0;
         const statuses = new Set([...Object.keys(targetCounts), ...Object.keys(nontargetCounts)]);
-        
+
         for (const count of Object.values(targetCounts)) {
             activeTargetSum += count;
         }
-        
+
         const openTargets = Math.max(0, slsTotal - activeTargetSum);
-        
+
         const combined = {};
         if (openTargets > 0) {
             combined["OPEN"] = openTargets;
         }
-        
+
         statuses.forEach(status => {
             const tCount = targetCounts[status] || 0;
             const ntCount = nontargetCounts[status] || 0;
@@ -900,7 +900,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 combined[status] = total;
             }
         });
-        
+
         return combined;
     }
 
@@ -952,7 +952,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (offsetDays !== 0) d.setDate(d.getDate() + offsetDays);
             const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
             const wita = new Date(utc + (3600000 * 8));
-            return `${wita.getFullYear()}-${String(wita.getMonth()+1).padStart(2,'0')}-${String(wita.getDate()).padStart(2,'0')}`;
+            return `${wita.getFullYear()}-${String(wita.getMonth() + 1).padStart(2, '0')}-${String(wita.getDate()).padStart(2, '0')}`;
         };
 
         const todayDateStr = getWitaDateStr(0);
@@ -976,7 +976,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return {};
             }
             if (sum === targetCount) return breakdown;
-            
+
             const scale = targetCount / sum;
             const newBreakdown = {};
             let newSum = 0;
@@ -986,7 +986,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 newBreakdown[status] = scaled;
                 newSum += scaled;
             });
-            
+
             const diff = targetCount - newSum;
             if (diff !== 0 && entries.length > 0) {
                 let maxStatus = null;
@@ -1007,10 +1007,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!kecamatanList || kecamatanList.length === 0) return;
             const completedKey = `${dayKey}_completed`;
             const breakdownKey = `${dayKey}_completed_breakdown`;
-            
+
             const sumKec = kecamatanList.reduce((acc, k) => acc + (k[completedKey] || 0), 0);
             if (sumKec === targetCount) return;
-            
+
             if (sumKec === 0 || targetCount === 0) {
                 if (targetCount > 0) {
                     const base = Math.floor(targetCount / kecamatanList.length);
@@ -1028,14 +1028,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 return;
             }
-            
+
             const scale = targetCount / sumKec;
             let newSum = 0;
             kecamatanList.forEach(k => {
                 k[completedKey] = Math.round((k[completedKey] || 0) * scale);
                 newSum += k[completedKey];
             });
-            
+
             const diff = targetCount - newSum;
             if (diff !== 0) {
                 let maxKec = null;
@@ -1050,7 +1050,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     maxKec[completedKey] = Math.max(0, maxKec[completedKey] + diff);
                 }
             }
-            
+
             kecamatanList.forEach(k => {
                 k[breakdownKey] = scaleBreakdown(k[breakdownKey] || {}, k[completedKey]);
             });
@@ -1076,7 +1076,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.today_completed_breakdown = scaleBreakdown(item.today_completed_breakdown, item.today_completed);
             item.yesterday_completed_breakdown = scaleBreakdown(item.yesterday_completed_breakdown, item.yesterday_completed);
             item.two_days_ago_completed_breakdown = scaleBreakdown(item.two_days_ago_completed_breakdown, item.two_days_ago_completed);
-            
+
             // Distribute and scale the uncapped count down to Kecamatans
             scaleKecamatans(item.kecamatan_list, item.today_completed, 'today');
             scaleKecamatans(item.kecamatan_list, item.yesterday_completed, 'yesterday');
@@ -1139,7 +1139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const getDailyProgressCellHTML = (count, breakdown, headerTitle, isEstimate) => {
             if (!count || count <= 0) return `<span>0</span>`;
-            
+
             const estimatePrefix = isEstimate ? `<span title="Data estimasi — snapshot H-2 tidak tersedia" style="color:#f59e0b;font-weight:800;cursor:help;margin-right:2px;">~</span>` : '';
             const itemsHTML = Object.entries(breakdown || {})
                 .map(([status, val]) => `
@@ -1148,7 +1148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="popover-count">${formatNum(val)}</span>
                     </div>
                 `).join('');
-                
+
             return `
                 <div class="daily-progress-wrapper">
                     <span>${estimatePrefix}${formatNum(count)}</span>
@@ -1180,7 +1180,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (status.includes("SUBMITTED")) badgeStyle = "background: rgba(16,185,129,0.1); color: #059669; border-color: rgba(16,185,129,0.25);";
                     if (status.includes("APPROVED")) badgeStyle = "background: rgba(4,120,87,0.15); color: #047857; border-color: rgba(4,120,87,0.3);";
                     if (status.includes("REJECTED")) badgeStyle = "background: rgba(239,68,68,0.15); color: #ef4444; border-color: rgba(239,68,68,0.3);";
-                    
+
                     return `
                     <div class="popover-item">
                         <span class="popover-badge" style="${badgeStyle}">${status}</span>
@@ -1188,13 +1188,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     `;
                 }).join('');
-            
+
             const provNewTotalKey = surveyType + "_prov_new_total";
             const provNewRumahTotalKey = surveyType + "_prov_new_rumah_total";
             const newUsahaProv = ipasDataObj[provNewTotalKey] || 0;
             const newRumahProv = ipasDataObj[provNewRumahTotalKey] || 0;
             const targetAwal = prelist - newUsahaProv - newRumahProv;
-            
+
             prelistWrapperEl.innerHTML = `
                 <div class="daily-progress-wrapper" style="display: flex; align-items: baseline; gap: 0.25rem; flex-direction: row;">
                     <span id="${surveyType}-stat-total-prelist" style="font-weight: 800;">${formatNum(prelist)}</span>
@@ -1204,7 +1204,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${itemsHTML}
                         <div class="popover-header" style="color: var(--primary); margin-top: 0.75rem;">SUMBER TOTAL TARGET</div>
                         <div class="popover-item" style="border-top: 1px dashed var(--card-border); margin-top: 0.25rem; padding-top: 0.25rem;">
-                            <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: 600;">Target Awal (Normal + Error/Dropped)</span>
+                            <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: 600;">Target Awal</span>
                             <span class="popover-count" style="color: var(--text-secondary);">${formatNum(targetAwal)}</span>
                         </div>
                         <div class="popover-item">
@@ -1224,26 +1224,26 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         } else {
             const prelistEl = document.getElementById(`${surveyType}-stat-total-prelist`);
-            if(prelistEl) prelistEl.textContent = formatNum(prelist);
+            if (prelistEl) prelistEl.textContent = formatNum(prelist);
         }
-        
+
         const newTodayEl = document.getElementById(`${surveyType}-stat-new-today`);
-        if(newTodayEl) newTodayEl.textContent = `+${formatNum(newToday)}`;
-        
+        if (newTodayEl) newTodayEl.textContent = `+${formatNum(newToday)}`;
+
         const newRumahTodayEl = document.getElementById(`${surveyType}-stat-new-rumah-today`);
-        if(newRumahTodayEl) newRumahTodayEl.textContent = `+${formatNum(newRumahToday)}`;
-        
+        if (newRumahTodayEl) newRumahTodayEl.textContent = `+${formatNum(newRumahToday)}`;
+
         const draftEl = document.getElementById(`${surveyType}-stat-draft`);
-        if(draftEl) draftEl.textContent = formatNum(draft);
-        
+        if (draftEl) draftEl.textContent = formatNum(draft);
+
         const openEl = document.getElementById(`${surveyType}-stat-open`);
-        if(openEl) openEl.textContent = formatNum(openVal);
-        
+        if (openEl) openEl.textContent = formatNum(openVal);
+
         const submittedEl = document.getElementById(`${surveyType}-stat-submitted`);
-        if(submittedEl) submittedEl.textContent = formatNum(submitted);
-        
+        if (submittedEl) submittedEl.textContent = formatNum(submitted);
+
         const percentEl = document.getElementById(`${surveyType}-stat-percentage`);
-        if(percentEl) percentEl.textContent = `(${persentase}%)`;
+        if (percentEl) percentEl.textContent = `(${persentase}%)`;
 
         const submittedWrapperEl = document.getElementById(`${surveyType}-stat-submitted-wrapper`);
         if (submittedWrapperEl) {
@@ -1260,7 +1260,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="popover-count">${formatNum(val)}</span>
                     </div>
                 `).join('');
-            
+
             submittedWrapperEl.innerHTML = `
                 <div class="daily-progress-wrapper" style="display: flex; align-items: baseline; gap: 0.25rem; flex-direction: row;">
                     <span id="${surveyType}-stat-submitted" style="font-weight: 700;">${formatNum(submitted)}</span>
@@ -1275,7 +1275,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const rejectedEl = document.getElementById(`${surveyType}-stat-rejected`);
-        if(rejectedEl) rejectedEl.textContent = formatNum(rejected);
+        if (rejectedEl) rejectedEl.textContent = formatNum(rejected);
 
         // Build rejected breakdown by aggregating status breakdowns across all days/all data
         const allRejectedBreakdown = {};
@@ -1330,13 +1330,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const todayEl = document.getElementById(`${surveyType}-stat-today`);
-        if(todayEl) todayEl.innerHTML = getDailyProgressCellHTML(today, todayBreakdown, 'SUBMIT HARI INI');
+        if (todayEl) todayEl.innerHTML = getDailyProgressCellHTML(today, todayBreakdown, 'SUBMIT HARI INI');
 
         const yesterdayEl = document.getElementById(`${surveyType}-stat-yesterday`);
-        if(yesterdayEl) yesterdayEl.innerHTML = getDailyProgressCellHTML(yesterday, yesterdayBreakdown, 'SUBMIT KEMARIN');
+        if (yesterdayEl) yesterdayEl.innerHTML = getDailyProgressCellHTML(yesterday, yesterdayBreakdown, 'SUBMIT KEMARIN');
 
         const twoDaysEl = document.getElementById(`${surveyType}-stat-2days`);
-        if(twoDaysEl) twoDaysEl.innerHTML = getDailyProgressCellHTML(twoDaysAgo, twoDaysAgoBreakdown, 'SUBMIT 2 HARI LALU');
+        if (twoDaysEl) twoDaysEl.innerHTML = getDailyProgressCellHTML(twoDaysAgo, twoDaysAgoBreakdown, 'SUBMIT 2 HARI LALU');
 
         // Calculate and set card percentages with dynamic precision for small numbers
         const formatPctVal = (v, tot) => {
@@ -1350,13 +1350,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const pctTwoDays = formatPctVal(twoDaysAgo, prelist);
 
         const todayPctEl = document.getElementById(`${surveyType}-stat-today-pct`);
-        if(todayPctEl) todayPctEl.textContent = `(${pctToday}%)`;
+        if (todayPctEl) todayPctEl.textContent = `(${pctToday}%)`;
 
         const yesterdayPctEl = document.getElementById(`${surveyType}-stat-yesterday-pct`);
-        if(yesterdayPctEl) yesterdayPctEl.textContent = `(${pctYesterday}%)`;
+        if (yesterdayPctEl) yesterdayPctEl.textContent = `(${pctYesterday}%)`;
 
         const twoDaysPctEl = document.getElementById(`${surveyType}-stat-2days-pct`);
-        if(twoDaysPctEl) twoDaysPctEl.textContent = `(${pctTwoDays}%)`;
+        if (twoDaysPctEl) twoDaysPctEl.textContent = `(${pctTwoDays}%)`;
 
         // Total Tambahan Usaha card (kumulatif)
         let newOverall = 0;
@@ -1397,7 +1397,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const sisaUsahaEl = document.getElementById(`${surveyType}-stat-sisa-usaha`);
         if (sisaUsahaEl) sisaUsahaEl.textContent = formatNum(sisa);
-        
+
         const todayCompletedEl = document.getElementById(`${surveyType}-stat-today-completed`);
         if (todayCompletedEl) todayCompletedEl.textContent = formatNum(today);
 
@@ -1424,10 +1424,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let filtered = surveyData.map(item => {
             const kabMatch = item.kabupaten.toLowerCase().includes(searchVal);
-            const matchingKecs = (item.kecamatan_list || []).filter(kec => 
+            const matchingKecs = (item.kecamatan_list || []).filter(kec =>
                 kec.kec_name.toLowerCase().includes(searchVal)
             );
-            
+
             if (kabMatch || matchingKecs.length > 0) {
                 if (!kabMatch && matchingKecs.length > 0 && searchVal !== "") {
                     window.expandedSeKabs[surveyType][item.kabupaten] = true;
@@ -1480,11 +1480,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (viewLevel === 'target') {
             document.getElementById(`${surveyType}-view-level`).value = 'kabupaten';
             document.getElementById('assign-sls-search-input').value = searchVal;
-            
+
             // set active subtab memory to correctly map
             localStorage.setItem('active_assign_subtab', surveyType === 'se_umum' ? 'se2026' : 'se_ub');
             switchTab('target');
-            
+
             // Give the browser a tick to render
             setTimeout(() => {
                 if (document.getElementById('assign-sls-kab-filter')) {
@@ -1559,8 +1559,8 @@ document.addEventListener('DOMContentLoaded', () => {
             allKecs.forEach(kec => {
                 const pct = parseFloat(kec.persentase) || 0;
                 const pctClass = pct >= 80 ? 'background-color:rgba(16,185,129,0.1);color:#10b981;border:1px solid rgba(16,185,129,0.2);' :
-                                 pct >= 50 ? 'background-color:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2);' :
-                                             'background-color:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2);';
+                    pct >= 50 ? 'background-color:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2);' :
+                        'background-color:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2);';
 
                 const tdToday = getDailyProgressCellHTML(kec.today_completed, kec.today_completed_breakdown, 'HARI INI: KEC. ' + kec.kec_name);
                 const tdYesterday = getDailyProgressCellHTML(kec.yesterday_completed, kec.yesterday_completed_breakdown, 'KEMARIN: KEC. ' + kec.kec_name);
@@ -1680,9 +1680,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (searchVal) {
                     const searchLower = searchVal.toLowerCase();
                     const matchSearch = (p.username || '').toLowerCase().includes(searchLower) ||
-                                       (p.email || '').toLowerCase().includes(searchLower) ||
-                                       (p.roleName || '').toLowerCase().includes(searchLower) ||
-                                       (p.kabLabels || '').toLowerCase().includes(searchLower);
+                        (p.email || '').toLowerCase().includes(searchLower) ||
+                        (p.roleName || '').toLowerCase().includes(searchLower) ||
+                        (p.kabLabels || '').toLowerCase().includes(searchLower);
                     if (!matchSearch) return false;
                 }
 
@@ -2112,12 +2112,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const _t = new Date();
                 const _y = new Date(_t); _y.setDate(_y.getDate() - 1);
                 const _h2 = new Date(_t); _h2.setDate(_h2.getDate() - 2);
-                const _fmt = d => String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth()+1).padStart(2, '0');
+                const _fmt = d => String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0');
                 let labels = [`H-2 (${_fmt(_h2)})`, `Kemarin (${_fmt(_y)})`, `Hari Ini (${_fmt(_t)})`];
                 let dataPoints = (cType === 'line')
                     ? [submitted - today - yesterday, submitted - today, submitted]
                     : [twoDaysAgo, yesterday, today];
-                
+
                 const stats = window.DAILY_SUBMISSION_STATS;
                 if (stats && Array.isArray(stats) && stats.length > 0) {
                     const filtered = stats.filter(r => r.survey_type === surveyType);
@@ -2138,7 +2138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (offsetDays !== 0) d.setDate(d.getDate() + offsetDays);
                         const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
                         const wita = new Date(utc + (3600000 * 8));
-                        return `${wita.getFullYear()}-${String(wita.getMonth()+1).padStart(2,'0')}-${String(wita.getDate()).padStart(2,'0')}`;
+                        return `${wita.getFullYear()}-${String(wita.getMonth() + 1).padStart(2, '0')}-${String(wita.getDate()).padStart(2, '0')}`;
                     };
                     const todayDateStr = getWitaDateStr(0);
                     const yesterdayDateStr = getWitaDateStr(-1);
@@ -2176,14 +2176,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         const cumData = new Array(sortedDates.length);
                         let runningTotal = submitted;
                         cumData[sortedDates.length - 1] = runningTotal;
-                        
+
                         for (let i = sortedDates.length - 1; i > 0; i--) {
                             const date = sortedDates[i];
                             const change = dateMap[date] || 0;
                             runningTotal = Math.max(0, runningTotal - change);
                             cumData[i - 1] = runningTotal;
                         }
-                        
+
                         // Filter starting from June 15 ('2026-06-15')
                         const startIndex = sortedDates.findIndex(d => d >= '2026-06-15');
                         let finalDates = sortedDates;
@@ -2192,12 +2192,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             finalDates = sortedDates.slice(startIndex);
                             finalDataPoints = finalDataPoints.slice(startIndex);
                         }
-                        
+
                         labels = finalDates.map(d => {
                             try {
                                 const parts = d.split('-');
                                 if (parts.length === 3) return `${parts[2]}/${parts[1]}`;
-                            } catch(e) {}
+                            } catch (e) { }
                             return d;
                         });
                         dataPoints = finalDataPoints;
@@ -2212,7 +2212,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const dayWidth = Math.max(40, parentWidth / 7);
                     const computedWidth = Math.max(parentWidth, labels.length * dayWidth);
                     wrapper.style.width = computedWidth + 'px';
-                    
+
                     // Scroll to the far right to show most recent days
                     setTimeout(() => {
                         if (wrapper.parentElement) {
@@ -2490,7 +2490,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let progressGaugeInstance = null;
     let syncGaugeInstance = null;
 
-    window.switchAssignSubtab = function(tabName) {
+    window.switchAssignSubtab = function (tabName) {
         const sections = ['kab', 'sls', 'petugas'];
         sections.forEach(s => {
             const el = document.getElementById(`assign-${s}-section`);
@@ -2537,7 +2537,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Aggregate SLS-level assignment and sync by Kabupaten
         const slsStatsByKab = {};
-        
+
         // Initialize for all kabupaten from window.ASSIGN_DATA
         window.ASSIGN_DATA.forEach(d => {
             slsStatsByKab[d.kode_kab] = { total: 0, assigned: 0, synced: 0 };
@@ -2663,7 +2663,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let totalSls = 0;
             let assignedSls = 0;
-            
+
             Object.values(slsStatsByKab).forEach(stats => {
                 totalSls += stats.total;
                 assignedSls += stats.assigned;
@@ -2720,7 +2720,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.slsSort = { column: 'kab_name', order: 'asc' };
     window.slsCurrentPage = 1;
     let SLS_ITEMS_PER_PAGE = 25;
-    window.changeSlsLimit = function(val) {
+    window.changeSlsLimit = function (val) {
         SLS_ITEMS_PER_PAGE = parseInt(val) || 25;
         window.slsCurrentPage = 1;
         renderSlsTable();
@@ -2865,7 +2865,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const sortedOfficers = Array.from(officerSet).sort();
         const currentSelected = petugasSelect.value;
-        
+
         petugasSelect.innerHTML = '<option value="all">Semua Petugas</option>' +
             sortedOfficers.map(o => `<option value="${o}">${o}</option>`).join('');
 
@@ -3199,7 +3199,7 @@ document.addEventListener('DOMContentLoaded', () => {
             current.order = 'asc';
         }
         window.petugasCurrentPage = 1;
-        
+
         // Update header indicators
         ['username', 'roleName', 'totalRegions', 'workload'].forEach(col => {
             const el = document.getElementById(`petugas-sort-${col}`);
@@ -3211,7 +3211,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-        
+
         window.renderPetugasTable();
     };
 
@@ -3225,10 +3225,10 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('[id^="petugas-detail-"]').forEach(el => {
                 el.style.display = 'none';
             });
-            
+
             // Show this detailed row
             detailRow.style.display = 'table-row';
-            
+
             // Render the SLS list for this officer
             const tbody = document.getElementById(`petugas-sls-tbody-${escapedUser}`);
             if (tbody) {
@@ -3262,9 +3262,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         };
 
                         const totalTarget = slsInfo.total || 0;
-                        
+
                         const statusCounts = getSlsStatusCounts(sls14, totalTarget, surveyType);
-                        
+
                         let completedCount = 0;
                         Object.entries(statusCounts).forEach(([status, count]) => {
                             const key = status.toUpperCase();
@@ -3277,7 +3277,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (totalTarget > 0) {
                             progressPct = (completedCount / totalTarget) * 100;
                         }
-                        
+
                         const badgesHtml = Object.entries(statusCounts)
                             .filter(([status, count]) => count > 0)
                             .map(([status, count]) => {
@@ -3349,7 +3349,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function getOfficerSyncStats(regions) {
         let totalSls = regions ? regions.length : 0;
         let syncedSls = 0;
-        
+
         // Build a lookup map of sync_count from active ASSIGN_SLS_DATA
         const localSyncMap = {};
         if (window.ASSIGN_SLS_DATA) {
@@ -3360,7 +3360,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-        
+
         (regions || []).forEach(r => {
             if (r.regionCode) {
                 const sls14 = r.regionCode.substring(0, 14);
@@ -3370,7 +3370,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-        
+
         return {
             total: totalSls,
             synced: syncedSls,
@@ -3380,7 +3380,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function syncLocalSlsWithSupersetData() {
         if (!window.SUPERSET_SYNC_SLS_DATA || window.SUPERSET_SYNC_SLS_DATA.length === 0) return;
-        
+
         const syncMap = {};
         window.SUPERSET_SYNC_SLS_DATA.forEach(item => {
             if (item.sls_code) {
@@ -3402,7 +3402,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateList(window.ASSIGN_SLS_DATA_UMUM);
         updateList(window.ASSIGN_SLS_DATA_UB);
-        
+
         const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
         if (activeSubtab === 'se2026') {
             window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM;
@@ -3415,13 +3415,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const syncContainerInner = document.getElementById('global-sync-progress-container-inner');
         const syncTextInner = document.getElementById('global-sync-text-inner');
         const syncPercentCenter = document.getElementById('sync-gauge-percent-center');
-        
+
         if (!window.ASSIGN_DATA) return;
 
         let totalSls = 0;
         let syncedSls = 0;
         let hasLocalSyncData = false;
-        
+
         if (window.ASSIGN_SLS_DATA && window.ASSIGN_SLS_DATA.length > 0) {
             window.ASSIGN_SLS_DATA.forEach(sls => {
                 if (sls.desa_name === '-' || sls.sls_name === '-') return;
@@ -3448,7 +3448,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-                         
+
         const pct = totalSls > 0 ? ((syncedSls / totalSls) * 100).toFixed(2) : '0.00';
         const textContent = `${new Intl.NumberFormat('id-ID').format(syncedSls)} dari ${new Intl.NumberFormat('id-ID').format(totalSls)} SLS tersinkronisasi (Real-time)`;
 
@@ -3654,15 +3654,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         tbody.innerHTML = pageData.map((item, index) => {
             const rowNumber = startIdx + index + 1;
-            
+
             const hl = (txt) => highlightText(txt, searchVal);
-            
+
             const regions = item.regions || [];
             const limit = 2; // Show only 2 badges initially
-            
+
             const visibleRegions = regions.slice(0, limit);
             const hiddenRegions = regions.slice(limit);
-            
+
             const renderBadge = (r) => {
                 const badgeTxt = r.regionName && r.regionName !== '-' ? r.regionName : 'LAINNYA';
                 const codeTxt = r.regionCode ? ` (${r.regionCode})` : '';
@@ -3673,7 +3673,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             const visibleBadges = visibleRegions.map(r => renderBadge(r)).join('');
-            
+
             let wilHtml = '';
             if (regions.length === 0) {
                 wilHtml = '<span style="color:var(--text-muted); font-size:0.8rem;">Tidak ada wilayah tugas</span>';
@@ -3831,8 +3831,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.syncCurrentPage = 1;
     let SYNC_ITEMS_PER_PAGE = 25;
     window.syncSort = { column: 'kab_name', order: 'asc' };
-    
-    window.changeSyncLimit = function(val) {
+
+    window.changeSyncLimit = function (val) {
         SYNC_ITEMS_PER_PAGE = parseInt(val) || 25;
         window.syncCurrentPage = 1;
         renderSyncTable();
@@ -3984,7 +3984,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const sortedOfficers = Array.from(officerSet).sort();
         const currentSelected = petugasSelect.value;
-        
+
         petugasSelect.innerHTML = '<option value="all">Semua Petugas</option>' +
             sortedOfficers.map(o => `<option value="${o}">${o}</option>`).join('');
 
@@ -4015,12 +4015,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <th onclick="window.sortSyncTable('unsynced')" style="font-family: 'Outfit', sans-serif; text-align: center; color: #f59e0b; cursor: pointer; user-select: none; width: 130px;">Belum Sync${getIcon('unsynced')}</th>
             <th onclick="window.sortSyncTable('sync_status')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none; width: 120px;">Status${getIcon('sync_status')}</th>
         `;
-        
+
         // Populate global sync
         updateGlobalSyncProgress();
     }
 
-    window.renderSyncTable = function() {
+    window.renderSyncTable = function () {
         const tbody = document.getElementById('sync-table-body');
         const paginationInfo = document.getElementById('sync-pagination-info');
         if (!tbody || !paginationInfo) return;
@@ -4062,10 +4062,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (kabFilter !== 'all' && item.kab_name !== kabFilter) return false;
             if (kecFilter !== 'all' && item.kec_name !== kecFilter) return false;
             if (desaFilter !== 'all' && item.desa_name !== desaFilter) return false;
-            
+
             // Exclude dummy SLS
             if (item.desa_name === '-' || item.sls_name === '-') return false;
-            
+
             // Petugas filter
             if (petugasFilter !== 'all') {
                 if (!item.officers || !item.officers.includes(petugasFilter)) return false;
@@ -4147,7 +4147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderSyncPaginationButtons(maxPage);
     };
 
-    window.downloadSyncCSV = function() {
+    window.downloadSyncCSV = function () {
         if (!window.ASSIGN_SLS_DATA || window.ASSIGN_SLS_DATA.length === 0) {
             alert("Tidak ada data SLS untuk diunduh.");
             return;
@@ -4180,10 +4180,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (kabFilter !== 'all' && item.kab_name !== kabFilter) return false;
             if (kecFilter !== 'all' && item.kec_name !== kecFilter) return false;
             if (desaFilter !== 'all' && item.desa_name !== desaFilter) return false;
-            
+
             // Exclude dummy SLS
             if (item.desa_name === '-' || item.sls_name === '-') return false;
-            
+
             // Petugas filter
             if (petugasFilter !== 'all') {
                 if (!item.officers || !item.officers.includes(petugasFilter)) return false;
@@ -4230,7 +4230,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const encodedUri = encodeURI(csvContent);
         const link = document.createElement("a");
         link.setAttribute("href", encodedUri);
-        
+
         const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
         link.setAttribute("download", `rincian_sync_capi_realtime_${activeSubtab}.csv`);
         document.body.appendChild(link);
@@ -4243,10 +4243,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!btnContainer) return;
         btnContainer.innerHTML = '';
         if (maxPage <= 1) return;
-        
+
         const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
         const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
-        
+
         // Prev button
         if (window.syncCurrentPage > 1) {
             const prevBtn = document.createElement('button');
@@ -4258,11 +4258,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             btnContainer.appendChild(prevBtn);
         }
-        
+
         // Logic to display limited page range
         let startPage = Math.max(1, window.syncCurrentPage - 2);
         let endPage = Math.min(maxPage, window.syncCurrentPage + 2);
-        
+
         if (startPage > 1) {
             const page1 = document.createElement('button');
             page1.textContent = '1';
@@ -4272,7 +4272,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderSyncTable();
             });
             btnContainer.appendChild(page1);
-            
+
             if (startPage > 2) {
                 const dots = document.createElement('span');
                 dots.textContent = '...';
@@ -4280,7 +4280,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 btnContainer.appendChild(dots);
             }
         }
-        
+
         for (let i = startPage; i <= endPage; i++) {
             const btn = document.createElement('button');
             btn.textContent = i;
@@ -4295,7 +4295,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             btnContainer.appendChild(btn);
         }
-        
+
         if (endPage < maxPage) {
             if (endPage < maxPage - 1) {
                 const dots = document.createElement('span');
@@ -4303,7 +4303,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
                 btnContainer.appendChild(dots);
             }
-            
+
             const pageLast = document.createElement('button');
             pageLast.textContent = maxPage;
             pageLast.style.cssText = btnStyle;
@@ -4313,7 +4313,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             btnContainer.appendChild(pageLast);
         }
-        
+
         if (window.syncCurrentPage < maxPage) {
             const nextBtn = document.createElement('button');
             nextBtn.innerHTML = '&gt;';
@@ -4406,14 +4406,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function exportToCSV(filename, headers, rows) {
         let csvContent = "\ufeff"; // BOM for Excel UTF-8 support
         csvContent += headers.map(h => `"${h.replace(/"/g, '""')}"`).join(",") + "\n";
-        
+
         rows.forEach(row => {
             csvContent += row.map(cell => {
                 const str = String(cell === null || cell === undefined ? "" : cell);
                 return `"${str.replace(/"/g, '""')}"`;
             }).join(",") + "\n";
         });
-        
+
         const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
@@ -4512,10 +4512,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (kabVal !== 'all' && item.kab_name && !item.kab_name.includes(kabVal)) return false;
             if (kecVal !== 'all' && item.kec_name !== kecVal) return false;
             if (desaVal !== 'all' && item.desa_name !== desaVal) return false;
-            
+
             // Exclude dummy SLS
             if (item.desa_name === '-' || item.sls_name === '-') return false;
-            
+
             if (assignVal !== 'all') {
                 if (assignVal === 'fully_assigned' && item.unassigned !== 0) return false;
                 if (assignVal === 'unassigned' && item.assigned !== 0) return false;
@@ -5043,7 +5043,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1. Check selected snapshot date
         const snapshotSelect = document.getElementById('select-snapshot-date');
         const snapshotDate = snapshotSelect ? snapshotSelect.value : 'live';
-        
+
         // 2. Populate snapshot dates once if using Supabase
         if (supabaseClient && !window.isSnapshotDateDropdownPopulated) {
             try {
@@ -5067,7 +5067,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         snapshotSelect.innerHTML = '<option value="live" style="background-color: var(--card-bg); color: var(--text-primary);">Terbaru (Live DB)</option>' +
                             dates.map(d => `<option value="${d}" style="background-color: var(--card-bg); color: var(--text-primary);">${d}</option>`).join('');
                         snapshotSelect.value = snapshotDate;
-                        
+
                         // Register change listener once
                         if (!window.isSnapshotDateListenerRegistered) {
                             snapshotSelect.addEventListener('change', () => {
@@ -5173,7 +5173,7 @@ document.addEventListener('DOMContentLoaded', () => {
             assignLoadedFromDb = true;
             syncLoadedFromDb = true;
             timelineLoadedFromDb = true;
-            
+
             // Clear current data first in case snapshot date has missing tables
             window.IPAS_DATA = null;
             window.ASSIGN_DATA_UMUM = [];
@@ -5217,7 +5217,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     window.ASSIGN_DATA_UMUM = assignVal.assign_data_umum || [];
                     window.ASSIGN_DATA_UB = assignVal.assign_data_ub || [];
-                    
+
                     const decompressSls = (list) => {
                         if (!list || !Array.isArray(list)) return [];
                         if (list.length > 0 && !Array.isArray(list[0])) return list; // Already decompressed / old format
@@ -5256,7 +5256,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.ASSIGN_SLS_DATA_UB = decompressSls(assignVal.assign_sls_data_ub);
                     window.PETUGAS_DATA_UMUM = assignVal.petugas_data_umum || [];
                     window.PETUGAS_DATA_UB = assignVal.petugas_data_ub || [];
-                    
+
                     const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
                     if (activeSubtab === 'se2026') {
                         window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM;
@@ -5460,14 +5460,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Intercept filterAssignData to reset populated states and filters on subtab switch
     const originalFilterAssignData = window.filterAssignData;
-    window.filterAssignData = function(type) {
+    window.filterAssignData = function (type) {
         if (type === 'ub' || type === 'se_ub') {
             type = 'se2026';
         }
         // Reset populated state of filters so they rebuild with the correct subtab data
         isSlsFiltersPopulated = false;
         isSyncFiltersPopulated = false;
-        
+
         // Reset filter select elements to "all"
         const resetSelect = (id) => {
             const el = document.getElementById(id);
@@ -5485,30 +5485,30 @@ document.addEventListener('DOMContentLoaded', () => {
         resetSelect('sync-desa-filter');
         resetSelect('sync-petugas-filter');
         resetSelect('sync-status-filter');
-        
+
         resetSelect('diff-kab-filter');
 
         localStorage.setItem('active_assign_subtab', type);
         const btnUmum = document.getElementById("subtab-btn-se2026");
         const btnUB = document.getElementById("subtab-btn-ub");
-        
+
         const chartTitle = document.getElementById("assign-chart-title");
         const slsTitle = document.getElementById("assign-sls-title");
 
         if (type === 'se2026') {
-            if(btnUmum) { btnUmum.style.backgroundColor = 'var(--primary)'; btnUmum.style.color = 'white'; }
-            if(btnUB) { btnUB.style.backgroundColor = 'transparent'; btnUB.style.color = 'var(--text-secondary)'; }
-            if(chartTitle) chartTitle.innerText = "Status Assign Petugas (Semua Usaha - SE Umum)";
-            if(slsTitle) slsTitle.innerText = "Ringkasan Assignment per Kabupaten/Kota (SE Umum)";
-            
+            if (btnUmum) { btnUmum.style.backgroundColor = 'var(--primary)'; btnUmum.style.color = 'white'; }
+            if (btnUB) { btnUB.style.backgroundColor = 'transparent'; btnUB.style.color = 'var(--text-secondary)'; }
+            if (chartTitle) chartTitle.innerText = "Status Assign Petugas (Semua Usaha - SE Umum)";
+            if (slsTitle) slsTitle.innerText = "Ringkasan Assignment per Kabupaten/Kota (SE Umum)";
+
             window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM;
             window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM;
             window.PETUGAS_DATA = window.PETUGAS_DATA_UMUM;
         } else {
-            if(btnUB) { btnUB.style.backgroundColor = 'var(--primary)'; btnUB.style.color = 'white'; }
-            if(btnUmum) { btnUmum.style.backgroundColor = 'transparent'; btnUmum.style.color = 'var(--text-secondary)'; }
-            if(chartTitle) chartTitle.innerText = "Status Assign Petugas (Usaha Besar - UB)";
-            if(slsTitle) slsTitle.innerText = "Ringkasan Assignment per Kabupaten/Kota (UB)";
+            if (btnUB) { btnUB.style.backgroundColor = 'var(--primary)'; btnUB.style.color = 'white'; }
+            if (btnUmum) { btnUmum.style.backgroundColor = 'transparent'; btnUmum.style.color = 'var(--text-secondary)'; }
+            if (chartTitle) chartTitle.innerText = "Status Assign Petugas (Usaha Besar - UB)";
+            if (slsTitle) slsTitle.innerText = "Ringkasan Assignment per Kabupaten/Kota (UB)";
 
             window.ASSIGN_DATA = window.ASSIGN_DATA_UB;
             window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UB;
@@ -5532,9 +5532,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Initialize/reset active subtab to 'kab' on survey type switch
         window.switchAssignSubtab('kab');
-        
+
         renderSyncTable();
-        
+
         window.diffCurrentPage = 1;
         renderDiffTable();
     };
@@ -5547,11 +5547,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.switchDiffTab = function (tab) {
         window.activeDiffTab = tab;
         window.diffCurrentPage = 1;
-        
+
         // Update tab buttons
         const btnP = document.getElementById('btn-diff-p-only');
         const btnW = document.getElementById('btn-diff-w-only');
-        
+
         if (tab === 'p_only') {
             if (btnP) {
                 btnP.style.backgroundColor = 'var(--primary)';
@@ -5579,7 +5579,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const header = document.getElementById('diff-table-header-officer');
             if (header) header.innerText = 'Pengawas';
         }
-        
+
         window.renderDiffTable();
     };
 
@@ -5880,11 +5880,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.loadGranularAssignmentsData = loadGranularAssignmentsData;
-    window.toggleStatsDetail = function(section) {
+    window.toggleStatsDetail = function (section) {
         const container = document.getElementById(`${section}-stats-expanded`);
         const btn = document.getElementById(`${section}-toggle-detail`);
         if (!container || !btn) return;
-        
+
         if (container.style.display === 'none') {
             container.style.display = 'flex';
             btn.classList.add('expanded');
@@ -5905,15 +5905,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderDailySubmissionChart(dates, counts) {
         const ctx = document.getElementById('dailySubmissionChart');
         if (!ctx) return;
-        
+
         if (dailySubmissionChartInstance) {
             dailySubmissionChartInstance.destroy();
         }
-        
+
         const isDark = document.body.classList.contains('dark-theme');
         const textColor = isDark ? '#e2e8f0' : '#475569';
         const borderColor = isDark ? '#f97316' : '#ea580c';
-        
+
         dailySubmissionChartInstance = new Chart(ctx, {
             type: 'line',
             data: {
@@ -5968,12 +5968,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderTimelineTable(dates, dateMap, kabFilter, typeFilter) {
         const tbody = document.getElementById('timeline-table-body');
         if (!tbody) return;
-        
+
         if (!window.DAILY_SUBMISSION_STATS || window.DAILY_SUBMISSION_STATS.length === 0) {
             tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data progres harian.</td></tr>`;
             return;
         }
-        
+
         const filtered = window.DAILY_SUBMISSION_STATS.filter(r => {
             if (kabFilter !== 'all') {
                 const cleanFilter = kabFilter.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
@@ -5982,21 +5982,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeFilter !== 'all' && r.survey_type !== typeFilter) return false;
             return true;
         });
-        
+
         filtered.sort((a, b) => b.date.localeCompare(a.date) || a.kab_name.localeCompare(b.kab_name));
-        
+
         if (filtered.length === 0) {
             tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data untuk filter terpilih.</td></tr>`;
             return;
         }
-        
+
         const fmt = (n) => new Intl.NumberFormat('id-ID').format(n || 0);
         let rowsHtml = '';
-        
+
         filtered.forEach((r, index) => {
             const surveyLabel = r.survey_type === 'se_umum' ? 'SE Umum' : 'SE UB';
             const badgeClass = r.survey_type === 'se_umum' ? 'table-badge-umum' : 'table-badge-ub';
-            
+
             rowsHtml += `
                 <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;">
                     <td style="padding: 0.75rem 1.25rem; text-align: center; vertical-align: middle; font-weight: 600; color: var(--text-secondary);">${index + 1}</td>
@@ -6009,14 +6009,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 </tr>
             `;
         });
-        
+
         tbody.innerHTML = rowsHtml;
     }
 
-    window.updateTimelineView = function() {
+    window.updateTimelineView = function () {
         const kabFilter = document.getElementById('timeline-kab-filter')?.value || 'all';
         const typeFilter = document.getElementById('timeline-type-filter')?.value || 'all';
-        
+
         if (!window.DAILY_SUBMISSION_STATS || !Array.isArray(window.DAILY_SUBMISSION_STATS) || window.DAILY_SUBMISSION_STATS.length === 0) {
             // Show empty state in KPI and table
             const statTotal = document.getElementById('timeline-stat-total');
@@ -6032,7 +6032,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (tbody) tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:2rem;color:var(--text-secondary);">Data progres harian belum tersedia. Jalankan scrape_granular_assignments.py terlebih dahulu.</td></tr>`;
             return;
         }
-        
+
         const filtered = window.DAILY_SUBMISSION_STATS.filter(r => {
             if (kabFilter !== 'all') {
                 // Dropdown values are like "[01] BANGGAI KEPULAUAN", data has "BANGGAI KEPULAUAN"
@@ -6042,21 +6042,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeFilter !== 'all' && r.survey_type !== typeFilter) return false;
             return true;
         });
-        
+
         const dateMap = {};
         filtered.forEach(r => {
             const d = r.date;
             if (!dateMap[d]) dateMap[d] = 0;
             dateMap[d] += (r.count || 0);
         });
-        
+
         const sortedDates = Object.keys(dateMap).sort();
         const sortedCounts = sortedDates.map(d => dateMap[d]);
-        
+
         let total = 0;
         let peakDay = '-';
         let peakVal = 0;
-        
+
         sortedDates.forEach((d, idx) => {
             const val = sortedCounts[idx];
             total += val;
@@ -6065,28 +6065,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 peakDay = d;
             }
         });
-        
+
         const avg = sortedDates.length > 0 ? (total / sortedDates.length).toFixed(1) : 0;
-        
+
         const statTotal = document.getElementById('timeline-stat-total');
         const statAvg = document.getElementById('timeline-stat-avg');
         const statPeakDay = document.getElementById('timeline-stat-peak-day');
         const substatPeakVal = document.getElementById('timeline-substat-peak-val');
-        
+
         const fmt = (n) => new Intl.NumberFormat('id-ID').format(n || 0);
-        
+
         if (statTotal) statTotal.innerText = fmt(total);
         if (statAvg) statAvg.innerText = fmt(avg);
         if (statPeakDay) statPeakDay.innerText = peakDay;
         if (substatPeakVal) substatPeakVal.innerText = `${fmt(peakVal)} submit`;
-        
+
         renderDailySubmissionChart(sortedDates, sortedCounts);
         renderTimelineTable(sortedDates, dateMap, kabFilter, typeFilter);
     };
 
     // --- GRANULAR DATA UTILITIES ---
 
-    window.decompressAndParsePayload = function(compressedBase64) {
+    window.decompressAndParsePayload = function (compressedBase64) {
         try {
             console.log("Decompressing payload...");
             const binaryString = atob(compressedBase64);
@@ -6103,7 +6103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    window.decompressAndParseGranular = function(compressedBase64) {
+    window.decompressAndParseGranular = function (compressedBase64) {
         try {
             console.log("Decompressing granular data...");
             const binaryString = atob(compressedBase64);
@@ -6114,26 +6114,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const decompressed = pako.ungzip(bytes, { to: 'string' });
             const payload = JSON.parse(decompressed);
-            
+
             const regions = payload.regions || [];
             const petugas = payload.petugas || [];
             const statuses = payload.statuses || [];
             const targets = payload.targets || [];
             const remarksDict = payload.remarks || {};
-            
-            
+
+
             console.log(`Rebuilding ${targets.length} targets...`);
             const rebuilt = targets.map((t) => {
                 const regIdx = t[5];
                 const petIdx = t[4];
                 const statIdx = t[3];
-                
+                const pengawasIdx = t.length > 8 ? t[8] : -1;
+
                 const reg = regIdx >= 0 && regIdx < regions.length ? regions[regIdx] : ["-", "-", "-", "-", "-", "-", "-", "-"];
                 const pet = petIdx >= 0 && petIdx < petugas.length ? petugas[petIdx] : ["-", "-"];
+                const pengawas = pengawasIdx >= 0 && pengawasIdx < petugas.length ? petugas[pengawasIdx] : ["-", "-"];
                 const stat = statIdx >= 0 && statIdx < statuses.length ? statuses[statIdx] : "OPEN";
                 const tid = t[0];
                 const rmk = remarksDict[tid] || "";
-                
+
                 return {
                     id: t[0],
                     codeIdentity: t[1],
@@ -6141,6 +6143,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     status: stat,
                     petugas_username: pet[0],
                     petugas_fullname: pet[1],
+                    pengawas_username: pengawas[0],
+                    pengawas_fullname: pengawas[1],
                     kab_code: reg[0],
                     kab_name: reg[1],
                     kec_code: reg[2],
@@ -6154,7 +6158,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     remark: rmk
                 };
             });
-            
+
             console.log("Decompression success. Rebuilt targets:", rebuilt.length);
             return rebuilt;
         } catch (e) {
@@ -6166,7 +6170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isGranularLoading = false;
     window.GRANULAR_ASSIGNMENTS_DATA = null;
 
-    window.updateGranularStatusFilterOptions = function() {
+    window.updateGranularStatusFilterOptions = function () {
         const statusSelect = document.getElementById('assign-sls-status-filter');
         if (!statusSelect || !window.GRANULAR_ASSIGNMENTS_DATA) return;
 
@@ -6178,7 +6182,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const desaVal = document.getElementById('assign-sls-desa-filter')?.value || 'all';
         const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
         const searchVal = document.getElementById('assign-sls-search-input')?.value.toLowerCase().trim() || '';
-        
+
         const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
         const surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
 
@@ -6188,11 +6192,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (kecVal !== 'all' && r.kec_name !== kecVal) return false;
             if (desaVal !== 'all' && r.desa_name !== desaVal) return false;
             if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
-            
+
             if (searchVal) {
                 const matchText = (
-                    (r.data1 || '') + ' ' + 
-                    (r.petugas_username || '') + ' ' + 
+                    (r.data1 || '') + ' ' +
+                    (r.petugas_username || '') + ' ' +
                     (r.petugas_fullname || '') + ' ' +
                     (r.sls_name || '') + ' ' +
                     (r.sls_code || '') + ' ' +
@@ -6205,7 +6209,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const statusCounts = {};
         let totalCount = 0;
-        
+
         filteredForStatus.forEach(r => {
             if (r.status) {
                 statusCounts[r.status] = (statusCounts[r.status] || 0) + 1;
@@ -6216,7 +6220,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentSelectedStatus = statusSelect.value || 'all';
 
         let optionsHTML = `<option value="all">Semua Status (${formatNum(totalCount)})</option>`;
-        
+
         const sortedStatuses = Object.keys(statusCounts).sort();
         sortedStatuses.forEach(s => {
             const count = statusCounts[s];
@@ -6237,8 +6241,13 @@ document.addEventListener('DOMContentLoaded', () => {
             kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
         }
         if (!surveyTypeFilter) {
-            const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
-            surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
+            const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
+            if (surveyFilterEl) {
+                surveyTypeFilter = surveyFilterEl.value;
+            } else {
+                const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+                surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
+            }
         }
 
         const tbody = document.getElementById('assign-sls-table-body');
@@ -6250,7 +6259,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (tbody) {
                 tbody.innerHTML = `
                     <tr>
-                        <td colspan="9" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
+                        <td colspan="12" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
                             Silakan pilih Kabupaten/Kota terlebih dahulu untuk memuat rincian data assignment.
                         </td>
                     </tr>
@@ -6259,7 +6268,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (window.renderPetugasSummaryTable) {
                 window.renderPetugasSummaryTable([]);
             }
-            
+
             // Populating KPI cards with overall province data from IPAS_DATA to avoid showing 0
             try {
                 const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
@@ -6277,7 +6286,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const totalAll = prelist;
                 const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;
                 const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
-                
+
                 const totalEl = document.getElementById('petugas-stat-total');
                 const selesaiEl = document.getElementById('petugas-stat-selesai');
                 const belumEl = document.getElementById('petugas-stat-belum');
@@ -6317,7 +6326,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tbody) {
             tbody.innerHTML = `
                 <tr>
-                    <td colspan="9" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
+                    <td colspan="12" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
                         <svg style="animation: spin 1s linear infinite; margin: 0 auto 1rem; width: 24px; height: 24px; color: var(--primary);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <circle style="opacity: 0.25;" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                             <path style="opacity: 0.75;" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -6403,7 +6412,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (tbody) {
                 tbody.innerHTML = `
                     <tr>
-                        <td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                        <td colspan="12" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
                             Gagal memuat rincian data assignment dari database maupun file lokal. Harap periksa koneksi internet atau jalankan scrape_granular_assignments.py terlebih dahulu.
                         </td>
                     </tr>
@@ -6418,21 +6427,21 @@ document.addEventListener('DOMContentLoaded', () => {
     window.granularPageLimit = 50;
     window.granularSortField = 'kab';
     window.granularSortAsc = true;
-    
-    window.changeGranularLimit = function(limit) {
+
+    window.changeGranularLimit = function (limit) {
         window.granularPageLimit = parseInt(limit);
         window.renderGranularAssignmentsTable(true);
     };
 
-    window.sortGranularTable = function(field) {
+    window.sortGranularTable = function (field) {
         if (window.granularSortField === field) {
             window.granularSortAsc = !window.granularSortAsc;
         } else {
             window.granularSortField = field;
             window.granularSortAsc = true;
         }
-        
-        const fields = ['kab', 'kec', 'desa', 'sls', 'petugas', 'target', 'status'];
+
+        const fields = ['kab', 'kec', 'desa', 'sls', 'petugas', 'pengawas', 'target_code', 'target_name', 'status', 'date_modified'];
         fields.forEach(f => {
             const el = document.getElementById(`granular-sort-${f}`);
             if (el) {
@@ -6443,27 +6452,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-        
+
         window.renderGranularAssignmentsTable(false);
     };
 
-    window.updateGranularFilters = async function(changedLevel) {
+    window.handleGranularSurveyFilterChange = async function () {
+        const kabSelect = document.getElementById('assign-sls-kab-filter');
+        const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
+        if (!surveyFilterEl) return;
+        const surveyTypeFilter = surveyFilterEl.value;
+        const kabVal = kabSelect ? kabSelect.value : 'all';
+        
+        // Reset sub filters to all & disabled
+        const kecSelect = document.getElementById('assign-sls-kec-filter');
+        const desaSelect = document.getElementById('assign-sls-desa-filter');
+        const slsSelect = document.getElementById('assign-sls-sls-filter');
+        if (kecSelect) { kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>'; kecSelect.disabled = true; }
+        if (desaSelect) { desaSelect.innerHTML = '<option value="all">Semua Desa</option>'; desaSelect.disabled = true; }
+        if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
+
+        await loadGranularAssignmentsData(kabVal, surveyTypeFilter);
+        
+        // Re-update granular filters from 'kab' level to populate kecamatan if kab is selected
+        if (kabVal !== 'all') {
+            await window.updateGranularFilters('kab');
+        }
+    };
+
+    window.updateGranularFilters = async function (changedLevel) {
         const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
         const kecSelect = document.getElementById('assign-sls-kec-filter');
         const desaSelect = document.getElementById('assign-sls-desa-filter');
         const slsSelect = document.getElementById('assign-sls-sls-filter');
         const statusSelect = document.getElementById('assign-sls-status-filter');
-        
+
         if (changedLevel === 'kab') {
-            const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
-            const surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
+            const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
+            const surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value : (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
             await loadGranularAssignmentsData(kabVal, surveyTypeFilter);
         }
-        
+
         if (!window.GRANULAR_ASSIGNMENTS_DATA) return;
-        
+
         const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
-        
+
         if (changedLevel === 'kab') {
             if (kabVal === 'all') {
                 if (kecSelect) { kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>'; kecSelect.disabled = true; }
@@ -6478,7 +6510,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 const sortedKecs = Array.from(kecs).sort();
                 if (kecSelect) {
-                    kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>' + 
+                    kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>' +
                         sortedKecs.map(k => `<option value="${k}">${k}</option>`).join('');
                     kecSelect.disabled = false;
                 }
@@ -6499,7 +6531,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 const sortedDesas = Array.from(desas).sort();
                 if (desaSelect) {
-                    desaSelect.innerHTML = '<option value="all">Semua Desa</option>' + 
+                    desaSelect.innerHTML = '<option value="all">Semua Desa</option>' +
                         sortedDesas.map(d => `<option value="${d}">${d}</option>`).join('');
                     desaSelect.disabled = false;
                 }
@@ -6519,7 +6551,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 const sortedSlss = Array.from(slss).sort();
                 if (slsSelect) {
-                    slsSelect.innerHTML = '<option value="all">Semua SLS</option>' + 
+                    slsSelect.innerHTML = '<option value="all">Semua SLS</option>' +
                         sortedSlss.map(s => `<option value="${s.split(' - ')[0]}">${s}</option>`).join('');
                     slsSelect.disabled = false;
                 }
@@ -6532,7 +6564,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.petugasSortField = window.petugasSortField || 'total';
     window.petugasSortOrder = window.petugasSortOrder || -1;
 
-    window.sortPetugasSummary = function(field) {
+    window.sortPetugasSummary = function (field) {
         if (window.petugasSortField === field) {
             window.petugasSortOrder *= -1; // toggle
         } else {
@@ -6544,7 +6576,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    window.renderPetugasSummaryTable = function(data) {
+    window.renderPetugasSummaryTable = function (data) {
         let totalAll = 0;
         let selesaiAll = 0;
         let belumAll = 0;
@@ -6557,14 +6589,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     const isCompleted = r.status !== 'OPEN' && r.status !== 'DRAFT';
                     petName = isCompleted ? 'CAWI / Mandiri (Tanpa Petugas)' : 'Belum Ada Petugas';
                 }
-                
+
                 if (!petugasMap[petName]) {
                     petugasMap[petName] = { name: petName, total: 0, selesai: 0, belum: 0 };
                 }
-                
+
                 petugasMap[petName].total += 1;
                 totalAll += 1;
-                
+
                 if (r.status === 'OPEN' || r.status === 'DRAFT') {
                     petugasMap[petName].belum += 1;
                     belumAll += 1;
@@ -6583,7 +6615,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('petugas-stat-belum').innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
 
         let arr = Object.values(petugasMap);
-        
+
         // Search filter
         const searchInput = document.getElementById('petugas-summary-search-input');
         if (searchInput && searchInput.value.trim()) {
@@ -6594,11 +6626,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Apply Sort
         arr.sort((a, b) => {
             let valA, valB;
-            switch(window.petugasSortField) {
+            switch (window.petugasSortField) {
                 case 'name': valA = a.name; valB = b.name; break;
                 case 'belum': valA = a.belum; valB = b.belum; break;
                 case 'selesai': valA = a.selesai; valB = b.selesai; break;
-                case 'pct': valA = (a.total>0?a.selesai/a.total:0); valB = (b.total>0?b.selesai/b.total:0); break;
+                case 'pct': valA = (a.total > 0 ? a.selesai / a.total : 0); valB = (b.total > 0 ? b.selesai / b.total : 0); break;
                 case 'total':
                 default:
                     valA = a.total; valB = b.total; break;
@@ -6625,7 +6657,7 @@ document.addEventListener('DOMContentLoaded', () => {
         arr.forEach((p, i) => {
             const pct = p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) : 0;
             const isComplete = pct === "100.0";
-            
+
             let badgeHtml = '';
             if (isComplete) {
                 badgeHtml = `<div style="background: rgba(34, 197, 94, 0.1); color: var(--color-delivered); border: 1px solid rgba(34, 197, 94, 0.2); padding: 0.25rem 0.5rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 700;">
@@ -6660,7 +6692,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         });
         tbody.innerHTML = html;
-        
+
         // Update sort icons
         const headers = document.querySelectorAll('#petugas-summary-table-body').length > 0 ? document.getElementById('petugas-summary-table-body').parentElement.querySelectorAll('th') : [];
         headers.forEach(th => {
@@ -6674,19 +6706,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    window.renderGranularAssignmentsTable = function(resetPage = true) {
+    window.renderGranularAssignmentsTable = function (resetPage = true) {
         const tbody = document.getElementById('assign-sls-table-body');
         if (!tbody) return;
-        
+
         if (!window.GRANULAR_ASSIGNMENTS_DATA) {
-            tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Rincian data target assignment belum dimuat. Silakan ubah filter Kabupaten/Kota.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Rincian data target assignment belum dimuat. Silakan ubah filter Kabupaten/Kota.</td></tr>`;
             return;
         }
-        
+
         if (resetPage) {
             window.granularCurrentPage = 1;
         }
-        
+
         const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
         const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
         const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
@@ -6694,9 +6726,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
         const statusVal = document.getElementById('assign-sls-status-filter')?.value || 'all';
         const searchVal = document.getElementById('assign-sls-search-input')?.value.toLowerCase().trim() || '';
-        
-        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
-        const surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
+
+        const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
+        const surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value : (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
 
         let baseFiltered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
             if (r.survey_type !== surveyTypeFilter) return false;
@@ -6706,7 +6738,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
             return true;
         });
-        
+
         if (window.renderPetugasSummaryTable) {
             window.lastBaseFiltered = baseFiltered;
             window.renderPetugasSummaryTable(baseFiltered);
@@ -6714,12 +6746,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let filtered = baseFiltered.filter(r => {
             if (statusVal !== 'all' && r.status !== statusVal) return false;
-            
+
             if (searchVal) {
                 const matchText = (
-                    (r.data1 || '') + ' ' + 
-                    (r.petugas_username || '') + ' ' + 
+                    (r.data1 || '') + ' ' +
+                    (r.petugas_username || '') + ' ' +
                     (r.petugas_fullname || '') + ' ' +
+                    (r.pengawas_username || '') + ' ' +
+                    (r.pengawas_fullname || '') + ' ' +
                     (r.sls_name || '') + ' ' +
                     (r.sls_code || '') + ' ' +
                     (r.status || '')
@@ -6728,39 +6762,48 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             return true;
         });
-        
-        filtered.sort((a, b) => {
-            let valA = '', valB = '';
-            switch (window.granularSortField) {
-                case 'kab': valA = a.kab_name || ''; valB = b.kab_name || ''; break;
-                case 'kec': valA = a.kec_name || ''; valB = b.kec_name || ''; break;
-                case 'desa': valA = a.desa_name || ''; valB = b.desa_name || ''; break;
-                case 'sls': valA = a.sls_name || ''; valB = b.sls_name || ''; break;
-                case 'petugas': valA = a.petugas_fullname || ''; valB = b.petugas_fullname || ''; break;
-                case 'target': valA = a.data1 || ''; valB = b.data1 || ''; break;
-                case 'status': valA = a.status || ''; valB = b.status || ''; break;
-            }
-            
-            let compare = valA.localeCompare(valB, 'id', { sensitivity: 'base' });
-            return window.granularSortAsc ? compare : -compare;
-        });
-        
+
+        if (window.granularSortField === 'date_modified') {
+            filtered.sort((a, b) => {
+                const diff = (a.dateModifiedEpoch || 0) - (b.dateModifiedEpoch || 0);
+                return window.granularSortAsc ? diff : -diff;
+            });
+        } else {
+            filtered.sort((a, b) => {
+                let valA = '', valB = '';
+                switch (window.granularSortField) {
+                    case 'kab': valA = a.kab_name || ''; valB = b.kab_name || ''; break;
+                    case 'kec': valA = a.kec_name || ''; valB = b.kec_name || ''; break;
+                    case 'desa': valA = a.desa_name || ''; valB = b.desa_name || ''; break;
+                    case 'sls': valA = a.sls_name || ''; valB = b.sls_name || ''; break;
+                    case 'petugas': valA = a.petugas_fullname || ''; valB = b.petugas_fullname || ''; break;
+                    case 'pengawas': valA = a.pengawas_fullname || ''; valB = b.pengawas_fullname || ''; break;
+                    case 'target_code': valA = a.codeIdentity || ''; valB = b.codeIdentity || ''; break;
+                    case 'target_name': valA = a.data1 || ''; valB = b.data1 || ''; break;
+                    case 'status': valA = a.status || ''; valB = b.status || ''; break;
+                }
+
+                let compare = valA.localeCompare(valB, 'id', { sensitivity: 'base' });
+                return window.granularSortAsc ? compare : -compare;
+            });
+        }
+
         const totalItems = filtered.length;
         const totalPages = Math.ceil(totalItems / window.granularPageLimit);
-        
+
         const startIndex = (window.granularCurrentPage - 1) * window.granularPageLimit;
         const endIndex = Math.min(startIndex + window.granularPageLimit, totalItems);
         const paginated = filtered.slice(startIndex, endIndex);
-        
+
         if (paginated.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 3rem; color: var(--text-secondary);">Tidak ada data assignment yang cocok dengan kriteria filter.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; padding: 3rem; color: var(--text-secondary);">Tidak ada data assignment yang cocok dengan kriteria filter.</td></tr>`;
             const pagInfo = document.getElementById('assign-sls-pagination-info');
             if (pagInfo) pagInfo.innerText = 'Menampilkan 0 - 0 dari 0 Target';
             const pagBtns = document.getElementById('assign-sls-pagination-buttons');
             if (pagBtns) pagBtns.innerHTML = '';
             return;
         }
-        
+
         let html = '';
         paginated.forEach((r, idx) => {
             const no = startIndex + idx + 1;
@@ -6778,12 +6821,25 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (statusUpper === 'DRAFT') {
                 statusBadgeClass = 'table-badge-submitted';
             }
-                
+
             const isCompleted = statusUpper !== 'OPEN' && statusUpper !== 'DRAFT';
-            const petugasLabel = r.petugas_fullname && r.petugas_fullname !== '-' ? 
-                `${r.petugas_fullname} <span style="font-size:0.75rem; color:var(--text-secondary); display:block; font-family:monospace;">@${r.petugas_username}</span>` : 
+            const petugasLabel = r.petugas_fullname && r.petugas_fullname !== '-' ?
+                `${r.petugas_fullname} <span style="font-size:0.75rem; color:var(--text-secondary); display:block; font-family:monospace;">@${r.petugas_username}</span>` :
                 (isCompleted ? '<span style="color:var(--text-secondary); font-weight:700;">CAWI / Mandiri (Tanpa Petugas)</span>' : '<span style="color:var(--text-muted); font-style:italic;">Belum Ditugaskan</span>');
-                
+
+            const pengawasLabel = r.pengawas_fullname && r.pengawas_fullname !== '-' ?
+                `${r.pengawas_fullname} <span style="font-size:0.75rem; color:var(--text-secondary); display:block; font-family:monospace;">@${r.pengawas_username}</span>` :
+                '<span style="color:var(--text-muted); font-style:italic;">-</span>';
+
+            let formattedDate = '-';
+            if (r.dateModifiedEpoch && r.dateModifiedEpoch > 0) {
+                try {
+                    const dt = new Date(r.dateModifiedEpoch * 1000);
+                    const pad = (n) => String(n).padStart(2, '0');
+                    formattedDate = `${dt.getFullYear()}-${pad(dt.getMonth()+1)}-${pad(dt.getDate())} ${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
+                } catch(e) {}
+            }
+
             html += `
                 <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;">
                     <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-weight: 600; color: var(--text-secondary);">${no}</td>
@@ -6792,10 +6848,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary);">${r.desa_name}</td>
                     <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary);">${r.sls_name} <span style="font-size:0.7rem; color:var(--text-secondary); display:block; font-family:monospace;">${r.sls_code}</span></td>
                     <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.85rem; color: var(--text-primary);">${petugasLabel}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 700; color: var(--text-primary); font-size: 0.85rem;">${r.data1} <span style="font-size:0.7rem; color:var(--text-secondary); display:block; font-family:monospace; font-weight:500;">ID: ${r.codeIdentity || '-'}</span></td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.85rem; color: var(--text-primary);">${pengawasLabel}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 600; font-family: monospace; font-size: 0.8rem; color: var(--text-primary);">${r.codeIdentity || '-'}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 700; color: var(--text-primary); font-size: 0.85rem;">${r.data1}</td>
                     <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle;">
                         <span class="table-badge ${statusBadgeClass}">${r.status}</span>
                     </td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary); white-space: nowrap;">${formattedDate}</td>
                     <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.75rem; color: var(--text-primary); max-width: 250px; word-wrap: break-word; line-height: 1.3;">
                         ${r.remark || '-'}
                     </td>
@@ -6803,40 +6862,40 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         });
         tbody.innerHTML = html;
-        
+
         const pagInfo = document.getElementById('assign-sls-pagination-info');
         if (pagInfo) {
             pagInfo.innerText = `Menampilkan ${startIndex + 1} - ${endIndex} dari ${totalItems} Target`;
         }
-        
+
         const pagBtns = document.getElementById('assign-sls-pagination-buttons');
         if (pagBtns) {
             let btnsHtml = '';
             btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === 1 ? 'disabled' : ''} onclick="window.setGranularPage(${window.granularCurrentPage - 1})">Sebelumnya</button>`;
-            
+
             let startPage = Math.max(1, window.granularCurrentPage - 2);
             let endPage = Math.min(totalPages, startPage + 4);
             if (endPage - startPage < 4) {
                 startPage = Math.max(1, endPage - 4);
             }
-            
+
             for (let p = startPage; p <= endPage; p++) {
                 btnsHtml += `<button class="page-btn ${p === window.granularCurrentPage ? 'active' : ''}" onclick="window.setGranularPage(${p})">${p}</button>`;
             }
-            
+
             btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === totalPages ? 'disabled' : ''} onclick="window.setGranularPage(${window.granularCurrentPage + 1})">Berikutnya</button>`;
             pagBtns.innerHTML = btnsHtml;
         }
     };
-    
-    window.setGranularPage = function(page) {
+
+    window.setGranularPage = function (page) {
         window.granularCurrentPage = page;
         window.renderGranularAssignmentsTable(false);
     };
 
-    window.downloadGranularAssignCSV = function() {
+    window.downloadGranularAssignCSV = function () {
         if (!window.GRANULAR_ASSIGNMENTS_DATA) return;
-        
+
         const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
         const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
         const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
@@ -6844,8 +6903,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
         const statusVal = document.getElementById('assign-sls-status-filter')?.value || 'all';
         const searchVal = document.getElementById('assign-sls-search-input')?.value.toLowerCase().trim() || '';
-        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
-        const surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
+        const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
+        const surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value : (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
 
         let filtered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
             if (r.survey_type !== surveyTypeFilter) return false;
@@ -6856,9 +6915,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (statusVal !== 'all' && r.status !== statusVal) return false;
             if (searchVal) {
                 const matchText = (
-                    (r.data1 || '') + ' ' + 
-                    (r.petugas_username || '') + ' ' + 
+                    (r.data1 || '') + ' ' +
+                    (r.petugas_username || '') + ' ' +
                     (r.petugas_fullname || '') + ' ' +
+                    (r.pengawas_username || '') + ' ' +
+                    (r.pengawas_fullname || '') + ' ' +
                     (r.sls_name || '') + ' ' +
                     (r.sls_code || '')
                 ).toLowerCase();
@@ -6872,7 +6933,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        let csvContent = '\uFEFFNo;Kabupaten;Kecamatan;Desa;Kode SLS;Nama SLS;Username Petugas;Nama Petugas;ID Target;Nama Assignment;Status;Jenis Sensus\r\n';
+        let csvContent = '\uFEFFNo;Kabupaten;Kecamatan;Desa;Kode SLS;Nama SLS;Username Petugas;Nama Petugas;Username Pengawas;Nama Pengawas;ID Target;Nama Assignment;Status;Tanggal Update;Jenis Sensus\r\n';
         filtered.forEach((r, idx) => {
             const no = idx + 1;
             const kab = (r.kab_name || '-').replace(/"/g, '""');
@@ -6882,12 +6943,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const slsName = (r.sls_name || '-').replace(/"/g, '""');
             const petUser = r.petugas_username || '-';
             const petName = (r.petugas_fullname || '-').replace(/"/g, '""');
+            const pengawasUser = r.pengawas_username || '-';
+            const pengawasName = (r.pengawas_fullname || '-').replace(/"/g, '""');
             const targetId = r.codeIdentity || '-';
             const targetName = (r.data1 || '-').replace(/"/g, '""');
             const status = r.status || 'OPEN';
+
+            let formattedDate = '-';
+            if (r.dateModifiedEpoch && r.dateModifiedEpoch > 0) {
+                try {
+                    const dt = new Date(r.dateModifiedEpoch * 1000);
+                    const pad = (n) => String(n).padStart(2, '0');
+                    formattedDate = `${dt.getFullYear()}-${pad(dt.getMonth()+1)}-${pad(dt.getDate())} ${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
+                } catch(e) {}
+            }
+
             const type = r.survey_type === 'se_umum' ? 'SE Umum' : 'SE UB';
-            
-            csvContent += `"${no}";"${kab}";"${kec}";"${desa}";"${slsCode}";"${slsName}";"${petUser}";"${petName}";"${targetId}";"${targetName}";"${status}";"${type}"\r\n`;
+
+            csvContent += `"${no}";"${kab}";"${kec}";"${desa}";"${slsCode}";"${slsName}";"${petUser}";"${petName}";"${pengawasUser}";"${pengawasName}";"${targetId}";"${targetName}";"${status}";"${formattedDate}";"${type}"\r\n`;
         });
 
         const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
@@ -6899,14 +6972,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        URL.revokeObjectURL(url);
     };
 
     window.loadGranularAssignmentsData = loadGranularAssignmentsData;
-    window.toggleStatsDetail = function(section) {
+    window.toggleStatsDetail = function (section) {
         const container = document.getElementById(`${section}-stats-expanded`);
         const btn = document.getElementById(`${section}-toggle-detail`);
         if (!container || !btn) return;
-        
+
         if (container.style.display === 'none') {
             container.style.display = 'flex';
             btn.classList.add('expanded');
