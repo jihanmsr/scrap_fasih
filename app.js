@@ -4945,6 +4945,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Switch Tab function
     window.switchTab = function (tabId) {
+        if (tabId === 'target') {
+            alert('Data progres petugas sedang disesuaikan, fitur ini dinonaktifkan sementara.');
+            return;
+        }
         // Hide all tab contents
         document.querySelectorAll('.tab-content').forEach(el => {
             el.style.display = 'none';
@@ -6995,7 +6999,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial Execution
     fetchDataAndRender().then(() => {
         // Restore active tab from localStorage, default to 'se_umum'
-        const activeTab = localStorage.getItem('active_tab') || 'se_umum';
+        let activeTab = localStorage.getItem('active_tab') || 'se_umum';
+        if (activeTab === 'target') {
+            activeTab = 'se_umum';
+        }
         window.switchTab(activeTab);
     });
 });

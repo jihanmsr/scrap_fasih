@@ -294,52 +294,64 @@ window.DAILY_SUBMISSION_STATS = [
     "count": 17
   },
   {
+    "date": "2026-06-23",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 2643
+  },
+  {
     "date": "2026-06-22",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 2135
+    "count": 1682
   },
   {
     "date": "2026-06-21",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 1686
+    "count": 1390
   },
   {
     "date": "2026-06-20",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 1365
+    "count": 1093
   },
   {
     "date": "2026-06-19",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 930
+    "count": 767
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 411
   },
   {
     "date": "2026-06-18",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 686
+    "count": 626
   },
   {
     "date": "2026-06-17",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 528
+    "count": 484
   },
   {
     "date": "2026-06-16",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 354
+    "count": 319
   },
   {
     "date": "2026-06-15",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 166
+    "count": 157
   },
   {
     "date": "2026-06-14",

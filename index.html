@@ -53,7 +53,7 @@
                     </svg>
                     Sensus Ekonomi 2026
                 </button>
-<button class="btn-tab" id="tab-btn-se_ub" onclick="switchTab('se_ub')">
+                <button class="btn-tab" id="tab-btn-se_ub" onclick="switchTab('se_ub')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
                         <line x1="18" x2="18" y1="20" y2="10"></line>
@@ -62,7 +62,7 @@
                     </svg>
                     Sensus Ekonomi UB
                 </button>
-<button class="btn-tab" id="tab-btn-email" onclick="switchTab('email')">
+                <button class="btn-tab" id="tab-btn-email" onclick="switchTab('email')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -70,7 +70,7 @@
                     </svg>
                     Pemantauan Email UB
                 </button>
-<button class="btn-tab" id="tab-btn-assign" onclick="switchTab('assign')">
+                <button class="btn-tab" id="tab-btn-assign" onclick="switchTab('assign')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -80,7 +80,8 @@
                     </svg>
                     Alokasi Petugas
                 </button>
-<button class="btn-tab" id="tab-btn-target" onclick="switchTab('target')">
+                <button class="btn-tab" id="tab-btn-target" onclick="switchTab('target')"
+                    style="opacity: 0.5; cursor: not-allowed;" title="Data progres petugas masih belum sesuai">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
                         <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -90,7 +91,7 @@
                     </svg>
                     Progres Petugas
                 </button>
-</nav>
+            </nav>
 
             <div class="sidebar-footer"
                 style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--card-border); text-align: left; display: flex; flex-direction: column; gap: 0.75rem; align-items: center; padding-left: 0.25rem; padding-right: 0.25rem;">
@@ -137,10 +138,15 @@
                 </div>
                 <div class="header-actions" style="display: flex; align-items: center; gap: 0.75rem;">
                     <!-- Date Snapshot Selector -->
-                    <div style="display: flex; align-items: center; gap: 0.5rem; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 0.25rem 0.75rem; height: 40px; box-shadow: var(--shadow-sm);">
-                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); white-space: nowrap; font-family: 'Outfit', sans-serif;">TANGGAL DATA:</span>
-                        <select id="select-snapshot-date" style="background: transparent; border: none; color: var(--text-primary); font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; outline: none; cursor: pointer; padding-right: 1.5rem; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right center; background-size: 0.65em auto;">
-                            <option value="live" style="background-color: var(--card-bg); color: var(--text-primary);">Terbaru (Live DB)</option>
+                    <div
+                        style="display: flex; align-items: center; gap: 0.5rem; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 0.25rem 0.75rem; height: 40px; box-shadow: var(--shadow-sm);">
+                        <span
+                            style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); white-space: nowrap; font-family: 'Outfit', sans-serif;">TANGGAL
+                            DATA:</span>
+                        <select id="select-snapshot-date"
+                            style="background: transparent; border: none; color: var(--text-primary); font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; outline: none; cursor: pointer; padding-right: 1.5rem; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right center; background-size: 0.65em auto;">
+                            <option value="live" style="background-color: var(--card-bg); color: var(--text-primary);">
+                                Terbaru (Live DB)</option>
                         </select>
                     </div>
                     <button class="btn-action" id="btn-refresh" title="Muat Ulang Halaman">
@@ -204,7 +210,7 @@
                             <div class="stat-value" id="stat-clicked">0</div>
                         </div>
                     </div>
-                    
+
                     <button class="btn-toggle-detail" id="email-toggle-detail" onclick="toggleStatsDetail('email')">
                         Lihat Kegagalan Email ▼
                     </button>
@@ -319,232 +325,308 @@
                     </div>
             </div>
             <div class="tab-content" id="tab-content-target" style="display: none; padding: 1.5rem;">
-                    <!-- Granular Target / Assignment Section -->
+                <!-- Granular Target / Assignment Section -->
 
 
-                    <!-- Global Region Selection Panel -->
-                    <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 2rem;">
-                        <div style="font-weight: 700; font-size: 0.95rem; color: var(--text); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; font-family: 'Outfit', sans-serif;">
-                            <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="color: var(--primary);" viewbox="0 0 24 24" width="18">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-                            </svg>
-                            Pilih Wilayah Kerja
+                <!-- Global Region Selection Panel -->
+                <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 2rem;">
+                    <div
+                        style="font-weight: 700; font-size: 0.95rem; color: var(--text); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; font-family: 'Outfit', sans-serif;">
+                        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5" style="color: var(--primary);"
+                            viewbox="0 0 24 24" width="18">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                        </svg>
+                        Pilih Wilayah Kerja
+                    </div>
+                    <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+                        <div style="display: flex; gap: 0.5rem; flex: 1 1 auto; flex-wrap: wrap;">
+                            <select class="region-select" id="assign-sls-survey-filter"
+                                onchange="window.handleGranularSurveyFilterChange()"
+                                style="min-width: 150px; border-color: var(--primary); font-weight: 700; background: rgba(249, 115, 22, 0.05);">
+                                <option value="se_umum">SE Umum</option>
+                                <option value="se_ub">SE UB</option>
+                            </select>
+                            <select class="region-select" id="assign-sls-kab-filter"
+                                onchange="window.updateGranularFilters('kab')" style="min-width: 200px;">
+                                <option value="all">Semua Kabupaten</option>
+                                <option value="[01] BANGGAI KEPULAUAN">[01] BANGGAI KEPULAUAN</option>
+                                <option value="[02] BANGGAI">[02] BANGGAI</option>
+                                <option value="[03] MOROWALI">[03] MOROWALI</option>
+                                <option value="[04] POSO">[04] POSO</option>
+                                <option value="[05] DONGGALA">[05] DONGGALA</option>
+                                <option value="[06] TOLI-TOLI">[06] TOLI-TOLI</option>
+                                <option value="[07] BUOL">[07] BUOL</option>
+                                <option value="[08] PARIGI MOUTONG">[08] PARIGI MOUTONG</option>
+                                <option value="[09] TOJO UNA-UNA">[09] TOJO UNA-UNA</option>
+                                <option value="[10] SIGI">[10] SIGI</option>
+                                <option value="[11] BANGGAI LAUT">[11] BANGGAI LAUT</option>
+                                <option value="[12] MOROWALI UTARA">[12] MOROWALI UTARA</option>
+                                <option value="[71] PALU">[71] PALU</option>
+                            </select>
+                            <select class="region-select" id="assign-sls-kec-filter"
+                                onchange="window.updateGranularFilters('kec')" disabled style="min-width: 170px;">
+                                <option value="all">Semua Kecamatan</option>
+                            </select>
+                            <select class="region-select" id="assign-sls-desa-filter"
+                                onchange="window.updateGranularFilters('desa')" disabled style="min-width: 170px;">
+                                <option value="all">Semua Desa</option>
+                            </select>
+                            <select class="region-select" id="assign-sls-sls-filter"
+                                onchange="window.renderGranularAssignmentsTable(true)" disabled
+                                style="min-width: 170px;">
+                                <option value="all">Semua SLS</option>
+                            </select>
                         </div>
-                        <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+                    </div>
+                </div>
+
+                <!-- Summary Cards (Petugas) -->
+                <div class="compact-stats" id="petugas-summary-cards" style="margin-top: 1rem; margin-bottom: 2rem;">
+                    <div class="stat-card-compact" style="--stat-color: var(--primary);">
+                        <div class="stat-label">Total Target (Beban Petugas)</div>
+                        <div class="stat-value" id="petugas-stat-total">0</div>
+                    </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--color-delivered);">
+                        <div class="stat-label">Selesai (Bukan DRAFT/OPEN)</div>
+                        <div class="stat-value" id="petugas-stat-selesai">0 <span
+                                style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(0%)</span></div>
+                    </div>
+                    <div class="stat-card-compact" style="--stat-color: var(--color-bounced);">
+                        <div class="stat-label">Belum Selesai (DRAFT/OPEN)</div>
+                        <div class="stat-value" id="petugas-stat-belum">0 <span
+                                style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(0%)</span></div>
+                    </div>
+                </div>
+
+                <!-- Petugas Summary Table -->
+                <div id="petugas-summary-section" style="margin-bottom: 3rem;">
+                    <h3
+                        style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 0.5rem;">
+                        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5"
+                            style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        Rekapitulasi Capaian per Petugas
+                    </h3>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0; font-weight: 500;">
+                            Data agregat progres masing-masing petugas (berdasarkan wilayah terpilih di filter atas).
+                        </p>
+                        <div class="search-wrapper"
+                            style="max-width: 250px; width: 100%; margin: 0; position: relative;">
+                            <svg class="search-icon" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"
+                                style="width: 16px; height: 16px;">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                            </svg>
+                            <input class="search-input" id="petugas-summary-search-input"
+                                onkeyup="if(window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered)"
+                                placeholder="Cari nama petugas..." type="text"
+                                style="height: 38px; padding-left: 2.5rem; font-size: 0.85rem;" />
+                        </div>
+                    </div>
+                    <div class="ipas-table-wrapper" style="max-height: 400px; overflow-y: auto;">
+                        <table class="ipas-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 60px; text-align: center;">No</th>
+                                    <th style="text-align: left; cursor: pointer;"
+                                        onclick="window.sortPetugasSummary('name')">Nama Petugas <span
+                                            class="sort-icon"></span></th>
+                                    <th style="text-align: center; cursor: pointer;"
+                                        onclick="window.sortPetugasSummary('total')">Total Target <span
+                                            class="sort-icon"></span></th>
+                                    <th style="text-align: center; cursor: pointer;"
+                                        onclick="window.sortPetugasSummary('belum')">Belum Selesai <span
+                                            class="sort-icon"></span></th>
+                                    <th style="text-align: center; cursor: pointer;"
+                                        onclick="window.sortPetugasSummary('selesai')">Selesai <span
+                                            class="sort-icon"></span></th>
+                                    <th style="text-align: center; width: 120px; cursor: pointer;"
+                                        onclick="window.sortPetugasSummary('pct')">% Capaian <span
+                                            class="sort-icon"></span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="petugas-summary-table-body">
+                                <tr>
+                                    <td colspan="6"
+                                        style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                                        Silakan muat data atau pilih wilayah terlebih dahulu...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem; border-top: 1px dashed var(--card-border); padding-top: 1.5rem;"
+                    id="granular-assignment-section-wrapper">
+                    <h3
+                        style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 0.5rem;">
+                        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5"
+                            style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        Daftar Rincian Target & Status Assignment
+                    </h3>
+                    <p
+                        style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem; font-weight: 500;">
+                        Gunakan filter di atas untuk menelusuri target sensus sampai tingkat SLS, petugas pencacah, dan
+                        status pengerjaan.
+                    </p>
+
+                    <!-- Local Table Filters Panel -->
+                    <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+                        <div class="search-row"
+                            style="flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between;">
                             <div style="display: flex; gap: 0.5rem; flex: 1 1 auto; flex-wrap: wrap;">
-                                <select class="region-select" id="assign-sls-survey-filter" onchange="window.handleGranularSurveyFilterChange()"
-                                    style="min-width: 150px; border-color: var(--primary); font-weight: 700; background: rgba(249, 115, 22, 0.05);">
-                                    <option value="se_umum">SE Umum</option>
-                                    <option value="se_ub">SE UB</option>
+                                <select class="region-select" id="assign-sls-status-filter"
+                                    onchange="window.renderGranularAssignmentsTable(true)" style="min-width: 150px;">
+                                    <option value="all">Semua Status</option>
                                 </select>
-                                <select class="region-select" id="assign-sls-kab-filter" onchange="window.updateGranularFilters('kab')"
-                                    style="min-width: 200px;">
-                                    <option value="all">Semua Kabupaten</option>
-                                    <option value="[01] BANGGAI KEPULAUAN">[01] BANGGAI KEPULAUAN</option>
-                                    <option value="[02] BANGGAI">[02] BANGGAI</option>
-                                    <option value="[03] MOROWALI">[03] MOROWALI</option>
-                                    <option value="[04] POSO">[04] POSO</option>
-                                    <option value="[05] DONGGALA">[05] DONGGALA</option>
-                                    <option value="[06] TOLI-TOLI">[06] TOLI-TOLI</option>
-                                    <option value="[07] BUOL">[07] BUOL</option>
-                                    <option value="[08] PARIGI MOUTONG">[08] PARIGI MOUTONG</option>
-                                    <option value="[09] TOJO UNA-UNA">[09] TOJO UNA-UNA</option>
-                                    <option value="[10] SIGI">[10] SIGI</option>
-                                    <option value="[11] BANGGAI LAUT">[11] BANGGAI LAUT</option>
-                                    <option value="[12] MOROWALI UTARA">[12] MOROWALI UTARA</option>
-                                    <option value="[71] PALU">[71] PALU</option>
+                                <select class="region-select" id="assign-sls-limit-select"
+                                    onchange="window.changeGranularLimit(this.value)">
+                                    <option value="10">10 baris</option>
+                                    <option value="25">25 baris</option>
+                                    <option value="50" selected>50 baris</option>
+                                    <option value="100">100 baris</option>
                                 </select>
-                                <select class="region-select" id="assign-sls-kec-filter" onchange="window.updateGranularFilters('kec')" disabled
-                                    style="min-width: 170px;">
-                                    <option value="all">Semua Kecamatan</option>
-                                </select>
-                                <select class="region-select" id="assign-sls-desa-filter" onchange="window.updateGranularFilters('desa')" disabled
-                                    style="min-width: 170px;">
-                                    <option value="all">Semua Desa</option>
-                                </select>
-                                <select class="region-select" id="assign-sls-sls-filter" onchange="window.renderGranularAssignmentsTable(true)" disabled
-                                    style="min-width: 170px;">
-                                    <option value="all">Semua SLS</option>
-                                </select>
+                                <button class="btn-action" id="btn-download-granular-assign"
+                                    onclick="window.downloadGranularAssignCSV()"
+                                    style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
+                                    Unduh CSV
+                                </button>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Summary Cards (Petugas) -->
-                    <div class="compact-stats" id="petugas-summary-cards" style="margin-top: 1rem; margin-bottom: 2rem;">
-                        <div class="stat-card-compact" style="--stat-color: var(--primary);">
-                            <div class="stat-label">Total Target (Beban Petugas)</div>
-                            <div class="stat-value" id="petugas-stat-total">0</div>
-                        </div>
-                        <div class="stat-card-compact" style="--stat-color: var(--color-delivered);">
-                            <div class="stat-label">Selesai (Bukan DRAFT/OPEN)</div>
-                            <div class="stat-value" id="petugas-stat-selesai">0 <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(0%)</span></div>
-                        </div>
-                        <div class="stat-card-compact" style="--stat-color: var(--color-bounced);">
-                            <div class="stat-label">Belum Selesai (DRAFT/OPEN)</div>
-                            <div class="stat-value" id="petugas-stat-belum">0 <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(0%)</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Petugas Summary Table -->
-                    <div id="petugas-summary-section" style="margin-bottom: 3rem;">
-                        <h3 style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 0.5rem;">
-                            <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            Rekapitulasi Capaian per Petugas
-                        </h3>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
-                            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0; font-weight: 500;">
-                                Data agregat progres masing-masing petugas (berdasarkan wilayah terpilih di filter atas).
-                            </p>
-                            <div class="search-wrapper" style="max-width: 250px; width: 100%; margin: 0; position: relative;">
-                                <svg class="search-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" style="width: 16px; height: 16px;">
+                            <div class="search-wrapper"
+                                style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
+                                    viewbox="0 0 24 24">
                                     <circle cx="11" cy="11" r="8"></circle>
                                     <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
                                 </svg>
-                                <input class="search-input" id="petugas-summary-search-input" onkeyup="if(window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered)" placeholder="Cari nama petugas..." type="text" style="height: 38px; padding-left: 2.5rem; font-size: 0.85rem;"/>
+                                <input type="text" id="assign-sls-search-input"
+                                    placeholder="Cari nama target / petugas..."
+                                    style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
                             </div>
-                        </div>
-                        <div class="ipas-table-wrapper" style="max-height: 400px; overflow-y: auto;">
-                            <table class="ipas-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 60px; text-align: center;">No</th>
-                                        <th style="text-align: left; cursor: pointer;" onclick="window.sortPetugasSummary('name')">Nama Petugas <span class="sort-icon"></span></th>
-                                        <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('total')">Total Target <span class="sort-icon"></span></th>
-                                        <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('belum')">Belum Selesai <span class="sort-icon"></span></th>
-                                        <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('selesai')">Selesai <span class="sort-icon"></span></th>
-                                        <th style="text-align: center; width: 120px; cursor: pointer;" onclick="window.sortPetugasSummary('pct')">% Capaian <span class="sort-icon"></span></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="petugas-summary-table-body">
-                                    <tr>
-                                        <td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
-                                            Silakan muat data atau pilih wilayah terlebih dahulu...
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
 
-                    <div style="margin-top: 2rem; border-top: 1px dashed var(--card-border); padding-top: 1.5rem;" id="granular-assignment-section-wrapper">
-                        <h3 style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 0.5rem;">
-                            <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline>
-                            </svg>
-                            Daftar Rincian Target & Status Assignment
-                        </h3>
-                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem; font-weight: 500;">
-                            Gunakan filter di atas untuk menelusuri target sensus sampai tingkat SLS, petugas pencacah, dan status pengerjaan.
-                        </p>
-
-                        <!-- Local Table Filters Panel -->
-                        <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
-                            <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between;">
-                                <div style="display: flex; gap: 0.5rem; flex: 1 1 auto; flex-wrap: wrap;">
-                                    <select class="region-select" id="assign-sls-status-filter" onchange="window.renderGranularAssignmentsTable(true)"
-                                        style="min-width: 150px;">
-                                        <option value="all">Semua Status</option>
-                                    </select>
-                                    <select class="region-select" id="assign-sls-limit-select" onchange="window.changeGranularLimit(this.value)">
-                                        <option value="10">10 baris</option>
-                                        <option value="25">25 baris</option>
-                                        <option value="50" selected>50 baris</option>
-                                        <option value="100">100 baris</option>
-                                    </select>
-                                    <button class="btn-action" id="btn-download-granular-assign" onclick="window.downloadGranularAssignCSV()"
-                                        style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
-                                        Unduh CSV
-                                    </button>
-                                </div>
-                                <div class="search-wrapper" style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2.5"
-                                        style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
-                                        viewbox="0 0 24 24">
-                                        <circle cx="11" cy="11" r="8"></circle>
-                                        <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
-                                    </svg>
-                                    <input type="text" id="assign-sls-search-input" placeholder="Cari nama target / petugas..."
-                                        style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Table -->
-                        <div class="ipas-table-wrapper" style="max-height: 500px; overflow-y: auto;">
-                            <table class="ipas-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 60px; text-align: center; cursor: default;">No</th>
-                                        <th class="sortable" onclick="window.sortGranularTable('kab')" style="cursor: pointer; text-align: left;">Kabupaten <span id="granular-sort-kab">↕</span></th>
-                                        <th class="sortable" onclick="window.sortGranularTable('kec')" style="cursor: pointer; text-align: left;">Kecamatan <span id="granular-sort-kec">↕</span></th>
-                                        <th class="sortable" onclick="window.sortGranularTable('desa')" style="cursor: pointer; text-align: left;">Desa <span id="granular-sort-desa">↕</span></th>
-                                        <th class="sortable" onclick="window.sortGranularTable('sls')" style="cursor: pointer; text-align: left;">SLS <span id="granular-sort-sls">↕</span></th>
-                                        <th class="sortable" onclick="window.sortGranularTable('petugas')" style="cursor: pointer; text-align: left;">Petugas <span id="granular-sort-petugas">↕</span></th>
-                                        <th class="sortable" onclick="window.sortGranularTable('pengawas')" style="cursor: pointer; text-align: left;">Pengawas <span id="granular-sort-pengawas">↕</span></th>
-                                        <th class="sortable" onclick="window.sortGranularTable('target_code')" style="cursor: pointer; text-align: left;">Kode Target <span id="granular-sort-target_code">↕</span></th>
-                                        <th class="sortable" onclick="window.sortGranularTable('target_name')" style="cursor: pointer; text-align: left;">Nama Perusahaan / Usaha <span id="granular-sort-target_name">↕</span></th>
-                                        <th class="sortable" onclick="window.sortGranularTable('status')" style="width: 130px; cursor: pointer; text-align: center;">Status <span id="granular-sort-status">↕</span></th>
-                                        <th class="sortable" onclick="window.sortGranularTable('date_modified')" style="width: 140px; cursor: pointer; text-align: center;">Terakhir Diupdate <span id="granular-sort-date_modified">↕</span></th>
-                                        <th style="width: 250px; cursor: default; text-align: left;">Catatan / Remarks</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="assign-sls-table-body">
-                                    <tr>
-                                        <td colspan="12" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
-                                            Silakan pilih Kabupaten/Kota terlebih dahulu untuk memuat rincian data assignment...
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Pagination -->
-                        <div id="assign-sls-pagination"
-                            style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
-                            <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;"
-                                id="assign-sls-pagination-info">Menampilkan 0 - 0 dari 0 Target</div>
-                            <div style="display: flex; gap: 0.35rem; align-items: center;"
-                                id="assign-sls-pagination-buttons"></div>
-                        </div>
+                    <!-- Table -->
+                    <div class="ipas-table-wrapper" style="max-height: 500px; overflow-y: auto;">
+                        <table class="ipas-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 60px; text-align: center; cursor: default;">No</th>
+                                    <th class="sortable" onclick="window.sortGranularTable('kab')"
+                                        style="cursor: pointer; text-align: left;">Kabupaten <span
+                                            id="granular-sort-kab">↕</span></th>
+                                    <th class="sortable" onclick="window.sortGranularTable('kec')"
+                                        style="cursor: pointer; text-align: left;">Kecamatan <span
+                                            id="granular-sort-kec">↕</span></th>
+                                    <th class="sortable" onclick="window.sortGranularTable('desa')"
+                                        style="cursor: pointer; text-align: left;">Desa <span
+                                            id="granular-sort-desa">↕</span></th>
+                                    <th class="sortable" onclick="window.sortGranularTable('sls')"
+                                        style="cursor: pointer; text-align: left;">SLS <span
+                                            id="granular-sort-sls">↕</span></th>
+                                    <th class="sortable" onclick="window.sortGranularTable('petugas')"
+                                        style="cursor: pointer; text-align: left;">Petugas <span
+                                            id="granular-sort-petugas">↕</span></th>
+                                    <th class="sortable" onclick="window.sortGranularTable('pengawas')"
+                                        style="cursor: pointer; text-align: left;">Pengawas <span
+                                            id="granular-sort-pengawas">↕</span></th>
+                                    <th class="sortable" onclick="window.sortGranularTable('target_code')"
+                                        style="cursor: pointer; text-align: left;">Kode Target <span
+                                            id="granular-sort-target_code">↕</span></th>
+                                    <th class="sortable" onclick="window.sortGranularTable('target_name')"
+                                        style="cursor: pointer; text-align: left;">Nama Perusahaan / Usaha <span
+                                            id="granular-sort-target_name">↕</span></th>
+                                    <th class="sortable" onclick="window.sortGranularTable('status')"
+                                        style="width: 130px; cursor: pointer; text-align: center;">Status <span
+                                            id="granular-sort-status">↕</span></th>
+                                    <th class="sortable" onclick="window.sortGranularTable('date_modified')"
+                                        style="width: 140px; cursor: pointer; text-align: center;">Terakhir Diupdate
+                                        <span id="granular-sort-date_modified">↕</span></th>
+                                    <th style="width: 250px; cursor: default; text-align: left;">Catatan / Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody id="assign-sls-table-body">
+                                <tr>
+                                    <td colspan="12"
+                                        style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                                        Silakan pilih Kabupaten/Kota terlebih dahulu untuk memuat rincian data
+                                        assignment...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+
+                    <!-- Pagination -->
+                    <div id="assign-sls-pagination"
+                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
+                        <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;"
+                            id="assign-sls-pagination-info">Menampilkan 0 - 0 dari 0 Target</div>
+                        <div style="display: flex; gap: 0.35rem; align-items: center;"
+                            id="assign-sls-pagination-buttons"></div>
+                    </div>
+                </div>
             </div>
             <div class="tab-content" id="tab-content-se_umum">
 
                 <div class="compact-stats" id="se_umum-stats-container">
                     <div class="stat-card-compact" style="--stat-color: var(--primary);">
                         <div class="stat-label">Total Target</div>
-                        <div class="stat-value" id="se_umum-stat-total-prelist-wrapper" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                        <div class="stat-value" id="se_umum-stat-total-prelist-wrapper"
+                            style="display: flex; align-items: baseline; gap: 0.25rem;">
                             <span id="se_umum-stat-total-prelist">0</span>
                         </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--color-delivered);">
                         <div class="stat-label">Total Selesai</div>
-                        <div class="stat-value" id="se_umum-stat-submitted-wrapper" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                        <div class="stat-value" id="se_umum-stat-submitted-wrapper"
+                            style="display: flex; align-items: baseline; gap: 0.25rem;">
                             <span id="se_umum-stat-submitted">0</span>
-                            <span id="se_umum-stat-percentage" style="font-size: 0.85rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
+                            <span id="se_umum-stat-percentage"
+                                style="font-size: 0.85rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
                         </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--color-opened);">
                         <div class="stat-label">Submit Hari Ini</div>
                         <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
                             <span id="se_umum-stat-today">0</span>
-                            <span id="se_umum-stat-today-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
+                            <span id="se_umum-stat-today-pct"
+                                style="font-size: 0.8rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
                         </div>
                         <div class="stat-subtext" style="display: flex; gap: 0.35rem; align-items: center;">
-                            <span onclick="openProvincialNewBusinessesModal('se_umum', 'usaha')" style="cursor: pointer;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
-                                <span id="se_umum-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span> usaha
+                            <span onclick="openProvincialNewBusinessesModal('se_umum', 'usaha')"
+                                style="cursor: pointer;" onmouseover="this.style.opacity='0.8';"
+                                onmouseout="this.style.opacity='1';">
+                                <span id="se_umum-stat-new-today"
+                                    style="color: var(--primary); font-weight: 700;">+0</span> usaha
                             </span>
                             <span style="color: var(--card-border);">|</span>
-                            <span onclick="openProvincialNewBusinessesModal('se_umum', 'rumah')" style="cursor: pointer;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
-                                <span id="se_umum-stat-new-rumah-today" style="color: #ec4899; font-weight: 700;">+0</span> rumah
+                            <span onclick="openProvincialNewBusinessesModal('se_umum', 'rumah')"
+                                style="cursor: pointer;" onmouseover="this.style.opacity='0.8';"
+                                onmouseout="this.style.opacity='1';">
+                                <span id="se_umum-stat-new-rumah-today"
+                                    style="color: #ec4899; font-weight: 700;">+0</span> rumah
                             </span>
                         </div>
                     </div>
@@ -552,14 +634,16 @@
                         <div class="stat-label">Submit Kemarin</div>
                         <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
                             <span id="se_umum-stat-yesterday">0</span>
-                            <span id="se_umum-stat-yesterday-pct" style="font-size: 0.8rem; font-weight: 700; color: #fbbf24;">(0.00%)</span>
+                            <span id="se_umum-stat-yesterday-pct"
+                                style="font-size: 0.8rem; font-weight: 700; color: #fbbf24;">(0.00%)</span>
                         </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--color-clicked);">
                         <div class="stat-label">Submit 2 Hari Lalu</div>
                         <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
                             <span id="se_umum-stat-2days">0</span>
-                            <span id="se_umum-stat-2days-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-clicked);">(0.00%)</span>
+                            <span id="se_umum-stat-2days-pct"
+                                style="font-size: 0.8rem; font-weight: 700; color: var(--color-clicked);">(0.00%)</span>
                         </div>
                     </div>
                 </div>
@@ -577,12 +661,15 @@
                         <div class="stat-label">Rejected</div>
                         <div class="stat-value" id="se_umum-stat-rejected-wrapper">0</div>
                     </div>
-                    <div class="stat-card-compact" style="--stat-color: var(--primary); cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_umum', 'all')">
+                    <div class="stat-card-compact" style="--stat-color: var(--primary); cursor: pointer;"
+                        onclick="openProvincialNewBusinessesModal('se_umum', 'all')">
                         <div class="stat-label">Tambahan (Non-Target)</div>
                         <div class="stat-value" id="se_umum-stat-new-overall-merged">0</div>
-                        <div class="stat-subtext" style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.2;">
+                        <div class="stat-subtext"
+                            style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.2;">
                             <span id="se_umum-stat-new-breakdown-subtext">0 usaha | 0 rumah</span>
-                            <br/><span id="se_umum-stat-new-today-subtext" style="color: var(--color-delivered);">+0 hari ini</span>
+                            <br /><span id="se_umum-stat-new-today-subtext" style="color: var(--color-delivered);">+0
+                                hari ini</span>
                         </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
@@ -609,7 +696,8 @@
                                 Ganti Tipe Grafik
                             </button>
                         </h3>
-                        <div class="chart-scroll-container" style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 0.5rem; background: transparent;">
+                        <div class="chart-scroll-container"
+                            style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 0.5rem; background: transparent;">
                             <div class="chart-canvas-wrapper" style="position: relative; height: 320px; width: 100%;">
                                 <canvas id="se_umum-chart"></canvas>
                             </div>
@@ -622,16 +710,19 @@
                         <h3 id="se_umum-table-title"
                             style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">
                             Rincian per Kabupaten/Kota</h3>
-                        
+
                         <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
                             <!-- View Level Selector -->
-                            <select class="sort-select" id="se_umum-view-level" onchange="renderSeDashboard('se_umum')" style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--primary); background: rgba(99,102,241,0.08) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236366f1%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 165px;">
+                            <select class="sort-select" id="se_umum-view-level" onchange="renderSeDashboard('se_umum')"
+                                style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--primary); background: rgba(99,102,241,0.08) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236366f1%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 165px;">
                                 <option value="kabupaten">Per Kabupaten/Kota</option>
                                 <option value="kecamatan">Per Kecamatan</option>
                             </select>
 
                             <!-- Dropdown Filter Capaian -->
-                            <select class="sort-select" id="se_umum-capaian-filter" onchange="renderSeDashboard('se_umum')" style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--text-primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 150px;">
+                            <select class="sort-select" id="se_umum-capaian-filter"
+                                onchange="renderSeDashboard('se_umum')"
+                                style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--text-primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 150px;">
                                 <option value="all">Semua Capaian</option>
                                 <option value="high">Capaian Tinggi (≥ 80%)</option>
                                 <option value="med">Capaian Sedang (50% - 80%)</option>
@@ -639,7 +730,8 @@
                             </select>
 
                             <!-- Dropdown Filter Role -->
-                            <select class="sort-select" id="se_umum-role-filter" onchange="renderSeDashboard('se_umum')" style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--text-primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 130px; display: none;">
+                            <select class="sort-select" id="se_umum-role-filter" onchange="renderSeDashboard('se_umum')"
+                                style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--text-primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 130px; display: none;">
                                 <option value="all">Semua Role</option>
                                 <option value="Pencacah">Pencacah</option>
                                 <option value="Pengawas">Pengawas</option>
@@ -653,8 +745,8 @@
                                     <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round"
                                         stroke-linejoin="round" stroke-width="2.5"></path>
                                 </svg>
-                                <input class="search-input" id="se_umum-search-input" placeholder="Cari kab/kec/petugas..."
-                                    type="text" style="height: 38px;" />
+                                <input class="search-input" id="se_umum-search-input"
+                                    placeholder="Cari kab/kec/petugas..." type="text" style="height: 38px;" />
                             </div>
                         </div>
                     </div>
@@ -692,30 +784,38 @@
                 <div class="compact-stats" id="se_ub-stats-container">
                     <div class="stat-card-compact" style="--stat-color: var(--primary);">
                         <div class="stat-label">Total Target</div>
-                        <div class="stat-value" id="se_ub-stat-total-prelist-wrapper" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                        <div class="stat-value" id="se_ub-stat-total-prelist-wrapper"
+                            style="display: flex; align-items: baseline; gap: 0.25rem;">
                             <span id="se_ub-stat-total-prelist">0</span>
                         </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--color-delivered);">
                         <div class="stat-label">Total Selesai</div>
-                        <div class="stat-value" id="se_ub-stat-submitted-wrapper" style="display: flex; align-items: baseline; gap: 0.25rem;">
+                        <div class="stat-value" id="se_ub-stat-submitted-wrapper"
+                            style="display: flex; align-items: baseline; gap: 0.25rem;">
                             <span id="se_ub-stat-submitted">0</span>
-                            <span id="se_ub-stat-percentage" style="font-size: 0.85rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
+                            <span id="se_ub-stat-percentage"
+                                style="font-size: 0.85rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
                         </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--color-opened);">
                         <div class="stat-label">Submit Hari Ini</div>
                         <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
                             <span id="se_ub-stat-today">0</span>
-                            <span id="se_ub-stat-today-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
+                            <span id="se_ub-stat-today-pct"
+                                style="font-size: 0.8rem; font-weight: 700; color: var(--color-delivered);">(0.00%)</span>
                         </div>
                         <div class="stat-subtext" style="display: flex; gap: 0.35rem; align-items: center;">
-                            <span onclick="openProvincialNewBusinessesModal('se_ub', 'usaha')" style="cursor: pointer;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
-                                <span id="se_ub-stat-new-today" style="color: var(--primary); font-weight: 700;">+0</span> usaha
+                            <span onclick="openProvincialNewBusinessesModal('se_ub', 'usaha')" style="cursor: pointer;"
+                                onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
+                                <span id="se_ub-stat-new-today"
+                                    style="color: var(--primary); font-weight: 700;">+0</span> usaha
                             </span>
                             <span style="color: var(--card-border);">|</span>
-                            <span onclick="openProvincialNewBusinessesModal('se_ub', 'rumah')" style="cursor: pointer;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
-                                <span id="se_ub-stat-new-rumah-today" style="color: #ec4899; font-weight: 700;">+0</span> rumah
+                            <span onclick="openProvincialNewBusinessesModal('se_ub', 'rumah')" style="cursor: pointer;"
+                                onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
+                                <span id="se_ub-stat-new-rumah-today"
+                                    style="color: #ec4899; font-weight: 700;">+0</span> rumah
                             </span>
                         </div>
                     </div>
@@ -723,14 +823,16 @@
                         <div class="stat-label">Submit Kemarin</div>
                         <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
                             <span id="se_ub-stat-yesterday">0</span>
-                            <span id="se_ub-stat-yesterday-pct" style="font-size: 0.8rem; font-weight: 700; color: #fbbf24;">(0.00%)</span>
+                            <span id="se_ub-stat-yesterday-pct"
+                                style="font-size: 0.8rem; font-weight: 700; color: #fbbf24;">(0.00%)</span>
                         </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--color-clicked);">
                         <div class="stat-label">Submit 2 Hari Lalu</div>
                         <div class="stat-value" style="display: flex; align-items: baseline; gap: 0.25rem;">
                             <span id="se_ub-stat-2days">0</span>
-                            <span id="se_ub-stat-2days-pct" style="font-size: 0.8rem; font-weight: 700; color: var(--color-clicked);">(0.00%)</span>
+                            <span id="se_ub-stat-2days-pct"
+                                style="font-size: 0.8rem; font-weight: 700; color: var(--color-clicked);">(0.00%)</span>
                         </div>
                     </div>
                 </div>
@@ -748,12 +850,15 @@
                         <div class="stat-label">Rejected</div>
                         <div class="stat-value" id="se_ub-stat-rejected-wrapper">0</div>
                     </div>
-                    <div class="stat-card-compact" style="--stat-color: var(--primary); cursor: pointer;" onclick="openProvincialNewBusinessesModal('se_ub', 'all')">
+                    <div class="stat-card-compact" style="--stat-color: var(--primary); cursor: pointer;"
+                        onclick="openProvincialNewBusinessesModal('se_ub', 'all')">
                         <div class="stat-label">Tambahan (Non-Target)</div>
                         <div class="stat-value" id="se_ub-stat-new-overall-merged">0</div>
-                        <div class="stat-subtext" style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.2;">
+                        <div class="stat-subtext"
+                            style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.2;">
                             <span id="se_ub-stat-new-breakdown-subtext">0 usaha | 0 rumah</span>
-                            <br/><span id="se_ub-stat-new-today-subtext" style="color: var(--color-delivered);">+0 hari ini</span>
+                            <br /><span id="se_ub-stat-new-today-subtext" style="color: var(--color-delivered);">+0 hari
+                                ini</span>
                         </div>
                     </div>
                     <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
@@ -780,7 +885,8 @@
                                 Ganti Tipe Grafik
                             </button>
                         </h3>
-                        <div class="chart-scroll-container" style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 0.5rem; background: transparent;">
+                        <div class="chart-scroll-container"
+                            style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 0.5rem; background: transparent;">
                             <div class="chart-canvas-wrapper" style="position: relative; height: 320px; width: 100%;">
                                 <canvas id="se_ub-chart"></canvas>
                             </div>
@@ -793,16 +899,18 @@
                         <h3 id="se_ub-table-title"
                             style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">
                             Rincian per Kabupaten/Kota</h3>
-                        
+
                         <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
                             <!-- View Level Selector -->
-                            <select class="sort-select" id="se_ub-view-level" onchange="renderSeDashboard('se_ub')" style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--primary); background: rgba(99,102,241,0.08) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236366f1%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 165px;">
+                            <select class="sort-select" id="se_ub-view-level" onchange="renderSeDashboard('se_ub')"
+                                style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 700; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--primary); background: rgba(99,102,241,0.08) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236366f1%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 165px;">
                                 <option value="kabupaten">Per Kabupaten/Kota</option>
                                 <option value="kecamatan">Per Kecamatan</option>
                             </select>
 
                             <!-- Dropdown Filter Capaian -->
-                            <select class="sort-select" id="se_ub-capaian-filter" onchange="renderSeDashboard('se_ub')" style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--text-primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 150px;">
+                            <select class="sort-select" id="se_ub-capaian-filter" onchange="renderSeDashboard('se_ub')"
+                                style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--text-primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 150px;">
                                 <option value="all">Semua Capaian</option>
                                 <option value="high">Capaian Tinggi (≥ 80%)</option>
                                 <option value="med">Capaian Sedang (50% - 80%)</option>
@@ -810,7 +918,8 @@
                             </select>
 
                             <!-- Dropdown Filter Role -->
-                            <select class="sort-select" id="se_ub-role-filter" onchange="renderSeDashboard('se_ub')" style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--text-primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 130px; display: none;">
+                            <select class="sort-select" id="se_ub-role-filter" onchange="renderSeDashboard('se_ub')"
+                                style="height: 38px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 0 2rem 0 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0aec0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 0.75rem center; background-size: 0.65em auto; color: var(--text-primary); cursor: pointer; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; min-width: 130px; display: none;">
                                 <option value="all">Semua Role</option>
                                 <option value="Pencacah">Pencacah</option>
                                 <option value="Pengawas">Pengawas</option>
@@ -824,8 +933,8 @@
                                     <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round"
                                         stroke-linejoin="round" stroke-width="2.5"></path>
                                 </svg>
-                                <input class="search-input" id="se_ub-search-input" placeholder="Cari kab/kec/petugas..."
-                                    type="text" style="height: 38px;" />
+                                <input class="search-input" id="se_ub-search-input"
+                                    placeholder="Cari kab/kec/petugas..." type="text" style="height: 38px;" />
                             </div>
                         </div>
                     </div>
@@ -860,20 +969,27 @@
 
             </div>
             <div class="tab-content" id="tab-content-assign" style="display: none;">
-                <div style="display: none; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
-                    <div class="tabs-navigation" style="justify-content: flex-start; margin: 0; border-bottom: none; padding-bottom: 0;">
+                <div
+                    style="display: none; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                    <div class="tabs-navigation"
+                        style="justify-content: flex-start; margin: 0; border-bottom: none; padding-bottom: 0;">
                         <button class="btn-tab active" id="subtab-btn-se2026" onclick="filterAssignData('se2026')"
-                            style="background-color: var(--primary); color: white; margin-bottom: 0;">Usaha SE2026</button>
+                            style="background-color: var(--primary); color: white; margin-bottom: 0;">Usaha
+                            SE2026</button>
                         <button class="btn-tab" id="subtab-btn-ub" onclick="filterAssignData('ub')"
                             style="margin-bottom: 0;">Usaha Besar (UB)</button>
                     </div>
                 </div>
 
                 <!-- Subtab Table Navigation for Kabupaten, SLS, Petugas -->
-                <div class="tabs-navigation" id="assign-tables-nav" style="justify-content: flex-start; margin-top: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; gap: 0.5rem;">
-                    <button class="btn-tab active" id="assign-subtab-btn-kab" onclick="window.switchAssignSubtab('kab')" style="margin-bottom: 0;">SLS / Sub-SLS</button>
-                    <button class="btn-tab" id="assign-subtab-btn-sls" onclick="window.switchAssignSubtab('sls')" style="margin-bottom: 0;">Assignment</button>
-                    <button class="btn-tab" id="assign-subtab-btn-petugas" onclick="window.switchAssignSubtab('petugas')" style="margin-bottom: 0;">Petugas</button>
+                <div class="tabs-navigation" id="assign-tables-nav"
+                    style="justify-content: flex-start; margin-top: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; gap: 0.5rem;">
+                    <button class="btn-tab active" id="assign-subtab-btn-kab" onclick="window.switchAssignSubtab('kab')"
+                        style="margin-bottom: 0;">SLS / Sub-SLS</button>
+                    <button class="btn-tab" id="assign-subtab-btn-sls" onclick="window.switchAssignSubtab('sls')"
+                        style="margin-bottom: 0;">Assignment</button>
+                    <button class="btn-tab" id="assign-subtab-btn-petugas"
+                        onclick="window.switchAssignSubtab('petugas')" style="margin-bottom: 0;">Petugas</button>
                 </div>
 
                 <!-- SLS / Sub-SLS Section (was Kabupaten/Kota) -->
@@ -898,19 +1014,25 @@
                     <div class="assign-charts-container">
                         <div
                             style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.5rem; box-shadow: var(--shadow-sm); text-align: center; position: relative;">
-                            
-                            <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px dashed var(--card-border);">
-                                <span style="font-weight: 800; font-family: 'Outfit', sans-serif; font-size: 1.1rem; color: var(--text-primary);">Progres</span>
-                                <span style="font-weight: 600; font-family: 'Outfit', sans-serif; font-size: 0.8rem; color: var(--primary); background: var(--pill-inactive-bg); padding: 0.25rem 0.75rem; border-radius: 1rem;">Sulawesi Tengah</span>
+
+                            <div
+                                style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px dashed var(--card-border);">
+                                <span
+                                    style="font-weight: 800; font-family: 'Outfit', sans-serif; font-size: 1.1rem; color: var(--text-primary);">Progres</span>
+                                <span
+                                    style="font-weight: 600; font-family: 'Outfit', sans-serif; font-size: 0.8rem; color: var(--primary); background: var(--pill-inactive-bg); padding: 0.25rem 0.75rem; border-radius: 1rem;">Sulawesi
+                                    Tengah</span>
                             </div>
 
-                            <div style="width: 100%; display: flex; flex-direction: column; align-items: center; flex: 1; justify-content: center;">
+                            <div
+                                style="width: 100%; display: flex; flex-direction: column; align-items: center; flex: 1; justify-content: center;">
                                 <h4
                                     style="margin: 0 0 1rem 0; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
                                     Alokasi</h4>
                                 <div
                                     style="position: relative; width: 220px; height: 110px; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 0.5rem;">
-                                    <canvas id="progressGaugeChart" style="max-height: 110px; max-width: 220px;"></canvas>
+                                    <canvas id="progressGaugeChart"
+                                        style="max-height: 110px; max-width: 220px;"></canvas>
                                     <div id="gauge-percent-center"
                                         style="position: absolute; bottom: 0; font-family: 'Outfit', sans-serif; font-size: 1.95rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">
                                         0.00%</div>
@@ -923,18 +1045,23 @@
                                 </div>
                             </div>
 
-                            <div id="global-sync-progress-container-inner" style="display: none; width: 100%; flex-direction: column; align-items: center; padding-top: 1.25rem; margin-top: 0.75rem; flex: 1; justify-content: center;">
-                                <h4 style="margin: 0 0 1rem 0; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
+                            <div id="global-sync-progress-container-inner"
+                                style="display: none; width: 100%; flex-direction: column; align-items: center; padding-top: 1.25rem; margin-top: 0.75rem; flex: 1; justify-content: center;">
+                                <h4
+                                    style="margin: 0 0 1rem 0; font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
                                     Sync
                                 </h4>
-                                <div style="position: relative; width: 220px; height: 110px; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 0.5rem;">
+                                <div
+                                    style="position: relative; width: 220px; height: 110px; display: flex; justify-content: center; align-items: flex-end; margin-bottom: 0.5rem;">
                                     <canvas id="syncGaugeChart" style="max-height: 110px; max-width: 220px;"></canvas>
-                                    <div id="sync-gauge-percent-center" style="position: absolute; bottom: 0; font-family: 'Outfit', sans-serif; font-size: 1.95rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">
+                                    <div id="sync-gauge-percent-center"
+                                        style="position: absolute; bottom: 0; font-family: 'Outfit', sans-serif; font-size: 1.95rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em;">
                                         0.00%
                                     </div>
                                 </div>
                                 <div style="margin-top: 0.5rem;">
-                                    <div id="global-sync-text-inner" style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); line-height: 1.4;">
+                                    <div id="global-sync-text-inner"
+                                        style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); line-height: 1.4;">
                                         Menghitung data sinkronisasi...
                                     </div>
                                 </div>
@@ -950,31 +1077,41 @@
 
                     <!-- SLS Table sub-section inside Tab 1 -->
                     <div style="margin-top: 1.5rem;">
-                        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="stats-grid"
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
                             <div class="stat-card" style="--stat-color: var(--text-secondary); padding: 1.25rem;">
                                 <div class="stat-label" style="font-size: 0.8rem;">Total SLS</div>
-                                <div class="stat-value" id="sls-stat-total" style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">0</div>
-                                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-substat-total">Target Usaha: 0</div>
+                                <div class="stat-value" id="sls-stat-total"
+                                    style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">0</div>
+                                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
+                                    id="sls-substat-total">Target Usaha: 0</div>
                             </div>
                             <div class="stat-card" style="--stat-color: var(--text-secondary); padding: 1.25rem;">
                                 <div class="stat-label" style="font-size: 0.8rem;">SLS Sudah Ditugaskan</div>
-                                <div class="stat-value" id="sls-stat-fully" style="color: var(--color-delivered); font-size: 1.8rem; font-weight: 800;">0</div>
-                                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-fully">0.00% dari total SLS</div>
+                                <div class="stat-value" id="sls-stat-fully"
+                                    style="color: var(--color-delivered); font-size: 1.8rem; font-weight: 800;">0</div>
+                                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
+                                    id="sls-pct-fully">0.00% dari total SLS</div>
                             </div>
                             <div class="stat-card" style="--stat-color: var(--text-secondary); padding: 1.25rem;">
                                 <div class="stat-label" style="font-size: 0.8rem;">SLS Sebagian Ditugaskan</div>
-                                <div class="stat-value" id="sls-stat-partially" style="color: #f59e0b; font-size: 1.8rem; font-weight: 800;">0</div>
-                                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-partially">0.00% dari total SLS</div>
+                                <div class="stat-value" id="sls-stat-partially"
+                                    style="color: #f59e0b; font-size: 1.8rem; font-weight: 800;">0</div>
+                                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
+                                    id="sls-pct-partially">0.00% dari total SLS</div>
                             </div>
                             <div class="stat-card" style="--stat-color: var(--text-secondary); padding: 1.25rem;">
                                 <div class="stat-label" style="font-size: 0.8rem;">SLS Belum Ditugaskan</div>
-                                <div class="stat-value" id="sls-stat-unassigned" style="color: #ef4444; font-size: 1.8rem; font-weight: 800;">0</div>
-                                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="sls-pct-unassigned">0.00% dari total SLS</div>
+                                <div class="stat-value" id="sls-stat-unassigned"
+                                    style="color: #ef4444; font-size: 1.8rem; font-weight: 800;">0</div>
+                                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
+                                    id="sls-pct-unassigned">0.00% dari total SLS</div>
                             </div>
                         </div>
 
                         <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
-                            <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between;">
+                            <div class="search-row"
+                                style="flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between;">
                                 <div style="display: flex; gap: 0.5rem; flex: 1 1 auto; flex-wrap: wrap;">
                                     <select class="region-select" id="sls-kab-filter" style="min-width: 160px;">
                                         <option value="all">Semua Kabupaten</option>
@@ -994,36 +1131,54 @@
                                         <option value="partially_assigned">Sebagian Ditugaskan</option>
                                         <option value="unassigned">Belum Ditugaskan</option>
                                     </select>
-                                    <select class="region-select" id="sls-limit-select" onchange="window.changeSlsLimit(this.value)">
+                                    <select class="region-select" id="sls-limit-select"
+                                        onchange="window.changeSlsLimit(this.value)">
                                         <option value="10">10 baris</option>
                                         <option value="25" selected>25 baris</option>
                                         <option value="50">50 baris</option>
                                         <option value="100">100 baris</option>
                                     </select>
-                                    <button class="btn-action" id="btn-download-sls" onclick="window.downloadSlsCSV()" style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
+                                    <button class="btn-action" id="btn-download-sls" onclick="window.downloadSlsCSV()"
+                                        style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
                                         Unduh CSV
                                     </button>
                                 </div>
-                                <div class="search-wrapper" style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);" viewbox="0 0 24 24">
-                                        <circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                                <div class="search-wrapper"
+                                    style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5"
+                                        style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
+                                        viewbox="0 0 24 24">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
                                     </svg>
-                                    <input type="text" id="sls-search-input" placeholder="Cari SLS, Desa, Kec, Kab, Petugas..." style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
+                                    <input type="text" id="sls-search-input"
+                                        placeholder="Cari SLS, Desa, Kec, Kab, Petugas..."
+                                        style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
                                 </div>
                             </div>
                         </div>
 
                         <div class="ipas-table-wrapper" style="max-height: 500px; overflow-y: auto;">
                             <table class="ipas-table">
-                                <thead><tr id="sls-table-headers"></tr></thead>
+                                <thead>
+                                    <tr id="sls-table-headers"></tr>
+                                </thead>
                                 <tbody id="sls-table-body">
-                                    <tr><td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat rincian SLS...</td></tr>
+                                    <tr>
+                                        <td colspan="9"
+                                            style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                                            Memuat rincian SLS...</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div id="sls-pagination" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
-                            <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;" id="sls-pagination-info">Menampilkan 0 - 0 dari 0 SLS</div>
-                            <div style="display: flex; gap: 0.35rem; align-items: center;" id="sls-pagination-buttons"></div>
+                        <div id="sls-pagination"
+                            style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
+                            <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;"
+                                id="sls-pagination-info">Menampilkan 0 - 0 dari 0 SLS</div>
+                            <div style="display: flex; gap: 0.35rem; align-items: center;" id="sls-pagination-buttons">
+                            </div>
                         </div>
                     </div>
 
@@ -1032,38 +1187,72 @@
 
                 <!-- Assignment Section (was SLS/Sub-SLS) -->
                 <div id="assign-sls-section" class="stats-section" style="margin-top: 0; display: none;">
-                    <h3 style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 0.5rem;">
-                        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    <h3
+                        style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 0.5rem;">
+                        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5"
+                            style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
                         <span id="assign-sls-title">Ringkasan Assignment per Kabupaten/Kota</span>
                     </h3>
-                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem; font-weight: 500;">
+                    <p
+                        style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem; font-weight: 500;">
                         Data total target usaha per kabupaten — termasuk SLS tanpa nama (hasil ngisi bareng).
                     </p>
 
                     <div style="display: flex; justify-content: flex-end; margin-bottom: 0.75rem;">
-                        <button class="btn-action" id="btn-download-kab-summary" onclick="window.downloadKabSummaryCSV()" style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 0.5rem; height: auto;">
+                        <button class="btn-action" id="btn-download-kab-summary"
+                            onclick="window.downloadKabSummaryCSV()"
+                            style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 0.5rem; height: auto;">
                             Unduh CSV
                         </button>
                     </div>
-                    <div style="overflow-x: auto; border-radius: 0.75rem; border: 1px solid var(--card-border); margin-bottom: 0;">
-                        <table style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.875rem;">
+                    <div
+                        style="overflow-x: auto; border-radius: 0.75rem; border: 1px solid var(--card-border); margin-bottom: 0;">
+                        <table
+                            style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.875rem;">
                             <thead>
-                                <tr style="background-color: var(--card-bg); border-bottom: 2px solid var(--card-border);">
-                                    <th style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 60px;">No</th>
-                                    <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 120px;">Kode Kab</th>
-                                    <th style="padding: 0.75rem 1rem; text-align: left; font-weight: 700; color: var(--text); white-space: nowrap;">Nama Kabupaten</th>
-                                    <th style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: var(--text-secondary); white-space: nowrap; width: 130px;">Total Usaha</th>
-                                    <th style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #10b981; white-space: nowrap; width: 110px;">Sudah</th>
-                                    <th style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #ef4444; white-space: nowrap; width: 110px;">Belum</th>
-                                    <th style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #f59e0b; white-space: nowrap; width: 110px;">Belum Sync</th>
-                                    <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 110px;">% Assign</th>
-                                    <th style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #6366f1; white-space: nowrap; width: 110px;">% Sync</th>
+                                <tr
+                                    style="background-color: var(--card-bg); border-bottom: 2px solid var(--card-border);">
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 60px;">
+                                        No</th>
+                                    <th
+                                        style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 120px;">
+                                        Kode Kab</th>
+                                    <th
+                                        style="padding: 0.75rem 1rem; text-align: left; font-weight: 700; color: var(--text); white-space: nowrap;">
+                                        Nama Kabupaten</th>
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: var(--text-secondary); white-space: nowrap; width: 130px;">
+                                        Total Usaha</th>
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #10b981; white-space: nowrap; width: 110px;">
+                                        Sudah</th>
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #ef4444; white-space: nowrap; width: 110px;">
+                                        Belum</th>
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: #f59e0b; white-space: nowrap; width: 110px;">
+                                        Belum Sync</th>
+                                    <th
+                                        style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: var(--text); white-space: nowrap; width: 110px;">
+                                        % Assign</th>
+                                    <th
+                                        style="padding: 0.75rem 1rem; text-align: center; font-weight: 700; color: #6366f1; white-space: nowrap; width: 110px;">
+                                        % Sync</th>
                                 </tr>
                             </thead>
                             <tbody id="kab-summary-tbody">
-                                <tr><td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat data ringkasan kabupaten...</td></tr>
+                                <tr>
+                                    <td colspan="9"
+                                        style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat
+                                        data ringkasan kabupaten...</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -1086,10 +1275,11 @@
                     </h3>
 
                     <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
-                        <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between;">
+                        <div class="search-row"
+                            style="flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between;">
                             <div style="display: flex; gap: 0.5rem; flex: 1 1 auto; flex-wrap: wrap;">
-                                <select class="region-select" id="petugas-role-filter" onchange="window.renderPetugasTable()"
-                                    style="min-width: 150px;">
+                                <select class="region-select" id="petugas-role-filter"
+                                    onchange="window.renderPetugasTable()" style="min-width: 150px;">
                                     <option value="all">Semua Peran</option>
                                     <option value="Pencacah">Pencacah</option>
                                     <option value="Pengawas">Pengawas</option>
@@ -1098,8 +1288,8 @@
                                     <option value="Viewer Kabupaten">Viewer Kabupaten</option>
                                     <option value="Viewer Provinsi">Viewer Provinsi</option>
                                 </select>
-                                <select class="region-select" id="petugas-kab-filter" onchange="window.renderPetugasTable()"
-                                    style="min-width: 165px;">
+                                <select class="region-select" id="petugas-kab-filter"
+                                    onchange="window.renderPetugasTable()" style="min-width: 165px;">
                                     <option value="all">Semua Kabupaten</option>
                                     <option value="7201">Banggai</option>
                                     <option value="7207">Banggai Kepulauan</option>
@@ -1115,25 +1305,28 @@
                                     <option value="7209">Tojo Una-Una</option>
                                     <option value="7204">Toli-Toli</option>
                                 </select>
-                                <select class="region-select" id="petugas-workload-filter" onchange="window.renderPetugasTable()"
-                                    style="min-width: 170px;">
+                                <select class="region-select" id="petugas-workload-filter"
+                                    onchange="window.renderPetugasTable()" style="min-width: 170px;">
                                     <option value="all">Semua Beban Kerja</option>
                                     <option value="overloaded">Beban Lebih (> 800 Target)</option>
                                     <option value="medium">Beban Sedang (501-800 Target)</option>
                                     <option value="light">Beban Ringan (≤ 500 Target)</option>
                                 </select>
-                                <select class="region-select" id="petugas-limit-select" onchange="window.changePetugasLimit(this.value)">
+                                <select class="region-select" id="petugas-limit-select"
+                                    onchange="window.changePetugasLimit(this.value)">
                                     <option value="10">10 baris</option>
                                     <option value="25">25 baris</option>
                                     <option value="50" selected>50 baris</option>
                                     <option value="100">100 baris</option>
                                 </select>
-                                <button class="btn-action" id="btn-download-petugas" onclick="window.downloadPetugasCSV()"
+                                <button class="btn-action" id="btn-download-petugas"
+                                    onclick="window.downloadPetugasCSV()"
                                     style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
                                     Unduh CSV
                                 </button>
                             </div>
-                            <div class="search-wrapper" style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
+                            <div class="search-wrapper"
+                                style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2.5"
                                     style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
@@ -1160,7 +1353,8 @@
                                     <th class="sortable" onclick="window.sortPetugasTable('roleName')"
                                         style="width: 140px; cursor: pointer; text-align: left;">Peran <span
                                             id="petugas-sort-roleName">↕</span></th>
-                                    <th style="width: 160px; text-align: center; cursor: default;">Progres Sync CAPI</th>
+                                    <th style="width: 160px; text-align: center; cursor: default;">Progres Sync CAPI
+                                    </th>
                                     <th class="sortable" onclick="window.sortPetugasTable('workload')"
                                         style="width: 150px; cursor: pointer; text-align: center;">Beban Kerja <span
                                             id="petugas-sort-workload">↕</span></th>
@@ -1183,21 +1377,29 @@
                         style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
                         <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;"
                             id="petugas-pagination-info">Menampilkan 0 - 0 dari 0 Petugas</div>
-                        <div style="display: flex; gap: 0.35rem; align-items: center;"
-                            id="petugas-pagination-buttons"></div>
-                </div>
+                        <div style="display: flex; gap: 0.35rem; align-items: center;" id="petugas-pagination-buttons">
+                        </div>
+                    </div>
 
                     <!-- Rincian Sync CAPI (dipindah ke tab Petugas) -->
                     <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px dashed var(--card-border);">
-                        <h4 style="color: var(--text); font-size: 1rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 0.5rem;">
-                            <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.6rem; color: var(--primary);" viewbox="0 0 24 24" width="16">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        <h4
+                            style="color: var(--text); font-size: 1rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 0.5rem;">
+                            <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2.5"
+                                style="margin-right: 0.6rem; color: var(--primary);" viewbox="0 0 24 24" width="16">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
                             Rincian Sync CAPI (Real-time SM)
                         </h4>
-                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem; font-weight: 500;">Data sinkronisasi SLS berdasarkan tarikan real-time dari Fasih SM. Tidak termasuk SLS tanpa nama.</p>
+                        <p
+                            style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem; font-weight: 500;">
+                            Data sinkronisasi SLS berdasarkan tarikan real-time dari Fasih SM. Tidak termasuk SLS tanpa
+                            nama.</p>
                         <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
-                            <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between;">
+                            <div class="search-row"
+                                style="flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between;">
                                 <div style="display: flex; gap: 0.5rem; flex: 1 1 auto; flex-wrap: wrap;">
                                     <select class="region-select" id="sync-kab-filter" style="min-width: 160px;">
                                         <option value="all">Semua Kabupaten</option>
@@ -1216,36 +1418,55 @@
                                         <option value="synced">Synced (Ada Sync)</option>
                                         <option value="not_synced">Not Synced (0 Sync)</option>
                                     </select>
-                                    <select class="region-select" id="sync-limit-select" onchange="window.changeSyncLimit(this.value)">
+                                    <select class="region-select" id="sync-limit-select"
+                                        onchange="window.changeSyncLimit(this.value)">
                                         <option value="10">10 baris</option>
                                         <option value="25" selected>25 baris</option>
                                         <option value="50">50 baris</option>
                                         <option value="100">100 baris</option>
                                     </select>
-                                    <button class="btn-action" id="btn-download-sync" onclick="window.downloadSyncCSV()" style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">Unduh CSV</button>
+                                    <button class="btn-action" id="btn-download-sync" onclick="window.downloadSyncCSV()"
+                                        style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">Unduh
+                                        CSV</button>
                                 </div>
-                                <div class="search-wrapper" style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);" viewbox="0 0 24 24">
-                                        <circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                                <div class="search-wrapper"
+                                    style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2.5"
+                                        style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-secondary);"
+                                        viewbox="0 0 24 24">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
                                     </svg>
-                                    <input type="text" id="sync-search-input" placeholder="Cari SLS, Desa, Kec, Kab, Kode..." style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
+                                    <input type="text" id="sync-search-input"
+                                        placeholder="Cari SLS, Desa, Kec, Kab, Kode..."
+                                        style="width: 100%; padding: 0.75rem 1rem 0.75rem 2.75rem; border-radius: 0.75rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.2s; height: 46px;">
                                 </div>
                             </div>
                         </div>
                         <div class="ipas-table-wrapper" style="max-height: 500px; overflow-y: auto;">
                             <table class="ipas-table">
-                                <thead><tr id="sync-table-headers"></tr></thead>
+                                <thead>
+                                    <tr id="sync-table-headers"></tr>
+                                </thead>
                                 <tbody id="sync-table-body">
-                                    <tr><td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat rincian sinkronisasi SLS...</td></tr>
+                                    <tr>
+                                        <td colspan="9"
+                                            style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                                            Memuat rincian sinkronisasi SLS...</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div id="sync-pagination" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
-                            <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;" id="sync-pagination-info">Menampilkan 0 - 0 dari 0 SLS</div>
-                            <div style="display: flex; gap: 0.35rem; align-items: center;" id="sync-pagination-buttons"></div>
+                        <div id="sync-pagination"
+                            style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
+                            <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;"
+                                id="sync-pagination-info">Menampilkan 0 - 0 dari 0 SLS</div>
+                            <div style="display: flex; gap: 0.35rem; align-items: center;" id="sync-pagination-buttons">
+                            </div>
                         </div>
                     </div>
-            </div>
+                </div>
 
             </div>
             <!-- Tab Content: Timeline / Progres Harian -->
@@ -1255,8 +1476,10 @@
                 <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
                     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
                         <div style="display: flex; flex-direction: column; gap: 0.35rem; min-width: 200px;">
-                            <label for="timeline-kab-filter" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Kabupaten/Kota</label>
-                            <select class="region-select" id="timeline-kab-filter" onchange="window.updateTimelineView()">
+                            <label for="timeline-kab-filter"
+                                style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Kabupaten/Kota</label>
+                            <select class="region-select" id="timeline-kab-filter"
+                                onchange="window.updateTimelineView()">
                                 <option value="all">Semua Kabupaten</option>
                                 <option value="[01] BANGGAI KEPULAUAN">[01] BANGGAI KEPULAUAN</option>
                                 <option value="[02] BANGGAI">[02] BANGGAI</option>
@@ -1274,8 +1497,11 @@
                             </select>
                         </div>
                         <div style="display: flex; flex-direction: column; gap: 0.35rem; min-width: 180px;">
-                            <label for="timeline-type-filter" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Jenis Usaha</label>
-                            <select class="region-select" id="timeline-type-filter" onchange="window.updateTimelineView()">
+                            <label for="timeline-type-filter"
+                                style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Jenis
+                                Usaha</label>
+                            <select class="region-select" id="timeline-type-filter"
+                                onchange="window.updateTimelineView()">
                                 <option value="all">Semua Jenis (Umum & UB)</option>
                                 <option value="se_umum">Sensus Ekonomi Umum</option>
                                 <option value="se_ub">Sensus Ekonomi UB</option>
@@ -1285,61 +1511,97 @@
                 </div>
 
                 <!-- KPI Summary Cards -->
-                <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                <div class="stats-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
                     <div class="stat-card" style="padding: 1.25rem;">
                         <div class="stat-label" style="font-size: 0.8rem;">Total Terkumpul (Submit/Approve)</div>
-                        <div class="stat-value" id="timeline-stat-total" style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">0</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="timeline-substat-total">Survei Terpilih</div>
+                        <div class="stat-value" id="timeline-stat-total"
+                            style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">0</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
+                            id="timeline-substat-total">Survei Terpilih</div>
                     </div>
                     <div class="stat-card" style="padding: 1.25rem;">
                         <div class="stat-label" style="font-size: 0.8rem;">Rata-rata Harian</div>
-                        <div class="stat-value" id="timeline-stat-avg" style="color: var(--color-delivered); font-size: 1.8rem; font-weight: 800;">0</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="timeline-substat-avg">Submit per hari</div>
+                        <div class="stat-value" id="timeline-stat-avg"
+                            style="color: var(--color-delivered); font-size: 1.8rem; font-weight: 800;">0</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
+                            id="timeline-substat-avg">Submit per hari</div>
                     </div>
                     <div class="stat-card" style="padding: 1.25rem;">
                         <div class="stat-label" style="font-size: 0.8rem;">Puncak Aktivitas</div>
-                        <div class="stat-value" id="timeline-stat-peak-day" style="color: #f59e0b; font-size: 1.5rem; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-top: 0.2rem; padding-bottom: 0.2rem;">-</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;" id="timeline-substat-peak-val">0 submit</div>
+                        <div class="stat-value" id="timeline-stat-peak-day"
+                            style="color: #f59e0b; font-size: 1.5rem; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-top: 0.2rem; padding-bottom: 0.2rem;">
+                            -</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
+                            id="timeline-substat-peak-val">0 submit</div>
                     </div>
                 </div>
 
                 <!-- Line Chart Container -->
                 <div class="stats-section" style="margin-top: 0; margin-bottom: 1.5rem;">
-                    <h3 style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 1rem;">
-                        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
-                            <path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                    <h3
+                        style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 1rem;">
+                        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5"
+                            style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
+                            <path d="M3 3v18h18"></path>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
                         </svg>
                         Grafik Progres Harian (Tren Penyerahan Sensus)
                     </h3>
-                    <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); height: 350px; position: relative;">
+                    <div
+                        style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); height: 350px; position: relative;">
                         <canvas id="dailySubmissionChart"></canvas>
                     </div>
                 </div>
 
                 <!-- Daily Report Table -->
                 <div class="stats-section" style="margin-top: 0;">
-                    <h3 style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 0.5rem;">
-                        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+                    <h3
+                        style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 0.5rem;">
+                        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5"
+                            style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
                         </svg>
                         Detail Progres Submit per Tanggal
                     </h3>
-                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem; font-weight: 500;">
+                    <p
+                        style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem; font-weight: 500;">
                         Rincian jumlah berkas sensus yang ter-submit pada masing-masing hari.
                     </p>
                     <div style="overflow-x: auto; border-radius: 0.75rem; border: 1px solid var(--card-border);">
-                        <table style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.875rem;">
+                        <table
+                            style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.875rem;">
                             <thead>
-                                <tr style="background-color: var(--card-bg); border-bottom: 2px solid var(--card-border);">
-                                    <th style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); width: 80px;">No</th>
-                                    <th style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); width: 150px;">Tanggal</th>
-                                    <th style="padding: 0.75rem 1.25rem; text-align: left; font-weight: 700; color: var(--text);">Kabupaten/Kota</th>
-                                    <th style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); width: 180px;">Jenis Sensus</th>
-                                    <th style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: var(--text); width: 150px;">Jumlah Submit</th>
+                                <tr
+                                    style="background-color: var(--card-bg); border-bottom: 2px solid var(--card-border);">
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); width: 80px;">
+                                        No</th>
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); width: 150px;">
+                                        Tanggal</th>
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: left; font-weight: 700; color: var(--text);">
+                                        Kabupaten/Kota</th>
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); width: 180px;">
+                                        Jenis Sensus</th>
+                                    <th
+                                        style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: var(--text); width: 150px;">
+                                        Jumlah Submit</th>
                                 </tr>
                             </thead>
                             <tbody id="timeline-table-body">
-                                <tr><td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat data progres harian...</td></tr>
+                                <tr>
+                                    <td colspan="5"
+                                        style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat
+                                        data progres harian...</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -1383,49 +1645,50 @@
     <script src="assign_data.js"></script>
     <script src="ipas_data.js"></script>
     <script src="sync_data.js"></script>
-    <script src="daily_submission_stats.js" onerror="console.log('daily_submission_stats.js fallback skipped')"></script>
+    <script src="daily_submission_stats.js"
+        onerror="console.log('daily_submission_stats.js fallback skipped')"></script>
     <script src="granular_assignments.js" onerror="console.log('granular_assignments.js fallback skipped')"></script>
 
     <script src="app.js"></script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let t = new Date();
-        if (window.IPAS_DATA && window.IPAS_DATA.updated_at) {
-            t = new Date(window.IPAS_DATA.updated_at);
-        }
-        const getWitaDate = (baseDate, offsetDays) => {
-            const d = new Date(baseDate);
-            if (offsetDays !== 0) d.setDate(d.getDate() + offsetDays);
-            const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-            return new Date(utc + (3600000 * 8));
-        };
-        const tWita = getWitaDate(t, 0);
-        const yWita = getWitaDate(t, -1);
-        const h2Wita = getWitaDate(t, -2);
-        
-        const fmt = d => String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth()+1).padStart(2, '0');
-        
-        const strToday = "Hari Ini (" + fmt(tWita) + ")";
-        const strYesterday = "Kemarin (" + fmt(yWita) + ")";
-        const strH2 = "2 Hari Lalu (" + fmt(h2Wita) + ")";
-        const strH2B = "H-2 (" + fmt(h2Wita) + ")";
-
-        // Replace in stat-label divs
-        document.querySelectorAll('.stat-label').forEach(el => {
-            if (el.textContent.includes('Submit Hari Ini')) el.innerHTML = 'Submit ' + strToday;
-            if (el.textContent.includes('Submit Kemarin')) el.innerHTML = 'Submit ' + strYesterday;
-            if (el.textContent.includes('Submit 2 Hari Lalu')) el.innerHTML = 'Submit ' + strH2;
-        });
-
-        // Replace in th elements
-        document.querySelectorAll('th').forEach(el => {
-            if (el.textContent.includes('Progres (Hari Ini | Kemarin)')) {
-                el.innerHTML = 'Progres (' + strToday + ' | ' + strYesterday + ')';
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let t = new Date();
+            if (window.IPAS_DATA && window.IPAS_DATA.updated_at) {
+                t = new Date(window.IPAS_DATA.updated_at);
             }
+            const getWitaDate = (baseDate, offsetDays) => {
+                const d = new Date(baseDate);
+                if (offsetDays !== 0) d.setDate(d.getDate() + offsetDays);
+                const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+                return new Date(utc + (3600000 * 8));
+            };
+            const tWita = getWitaDate(t, 0);
+            const yWita = getWitaDate(t, -1);
+            const h2Wita = getWitaDate(t, -2);
+
+            const fmt = d => String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0');
+
+            const strToday = "Hari Ini (" + fmt(tWita) + ")";
+            const strYesterday = "Kemarin (" + fmt(yWita) + ")";
+            const strH2 = "2 Hari Lalu (" + fmt(h2Wita) + ")";
+            const strH2B = "H-2 (" + fmt(h2Wita) + ")";
+
+            // Replace in stat-label divs
+            document.querySelectorAll('.stat-label').forEach(el => {
+                if (el.textContent.includes('Submit Hari Ini')) el.innerHTML = 'Submit ' + strToday;
+                if (el.textContent.includes('Submit Kemarin')) el.innerHTML = 'Submit ' + strYesterday;
+                if (el.textContent.includes('Submit 2 Hari Lalu')) el.innerHTML = 'Submit ' + strH2;
+            });
+
+            // Replace in th elements
+            document.querySelectorAll('th').forEach(el => {
+                if (el.textContent.includes('Progres (Hari Ini | Kemarin)')) {
+                    el.innerHTML = 'Progres (' + strToday + ' | ' + strYesterday + ')';
+                }
+            });
         });
-    });
-</script>
+    </script>
 </body>
 
 
