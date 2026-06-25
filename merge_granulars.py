@@ -33,12 +33,64 @@ def get_wita_date_string(epoch_secs):
     except Exception:
         return None
 
-def save_key_to_supabase(supabase, key, value):
-    try:
-        supabase.table("dashboard_store").delete().eq("key", key).execute()
-    except Exception as e:
-        print(f"  [WARNING] Gagal menghapus key {key} sebelum insert: {e}")
-    supabase.table("dashboard_store").insert({"key": key, "value": value}).execute()
+def save_key_to_supabase(supabase, key, value, max_retries=3):
+    """Upload key-value ke Supabase dengan upsert dan chunked upload untuk payload besar."""
+    compressed = value.get("compressed_data", "") if isinstance(value, dict) else ""
+    CHUNK_LIMIT = 3 * 1024 * 1024  # 3MB per chunk
+
+    if compressed and len(compressed) > CHUNK_LIMIT:
+        chunks = [compressed[i:i+CHUNK_LIMIT] for i in range(0, len(compressed), CHUNK_LIMIT)]
+        total_chunks = len(chunks)
+
+        for ci, chunk in enumerate(chunks):
+            chunk_key = f"{key}__chunk_{ci}"
+            chunk_val = {
+                "compressed_data": chunk,
+                "chunk_index": ci,
+                "total_chunks": total_chunks,
+                "updated_at": value.get("updated_at", "") if isinstance(value, dict) else ""
+            }
+            for attempt in range(max_retries):
+                try:
+                    supabase.table("dashboard_store").upsert(
+                        {"key": chunk_key, "value": chunk_val},
+                        on_conflict="key"
+                    ).execute()
+                    break
+                except Exception as e:
+                    if attempt < max_retries - 1:
+                        wait = 2 ** attempt
+                        print(f"  [RETRY {attempt+1}] Chunk {ci}/{total_chunks} gagal, coba lagi dalam {wait}s: {e}")
+                        time.sleep(wait)
+                    else:
+                        raise
+
+        # Upload metadata record
+        meta_val = {k: v for k, v in value.items() if k != "compressed_data"}
+        meta_val["is_chunked"] = True
+        meta_val["total_chunks"] = total_chunks
+        meta_val["compressed_data"] = ""
+        supabase.table("dashboard_store").upsert(
+            {"key": key, "value": meta_val},
+            on_conflict="key"
+        ).execute()
+        return
+
+    # Upload normal dengan upsert (tidak perlu delete dulu)
+    for attempt in range(max_retries):
+        try:
+            supabase.table("dashboard_store").upsert(
+                {"key": key, "value": value},
+                on_conflict="key"
+            ).execute()
+            return
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait = 2 ** attempt
+                print(f"  [RETRY {attempt+1}] Upload {key} gagal, coba lagi dalam {wait}s: {e}")
+                time.sleep(wait)
+            else:
+                raise
 
 def merge_granulars():
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -476,7 +528,10 @@ if (activeSubtab === 'se2026') {
                 print(f" [ERROR] Gagal mengunggah partisi se_ub ke Supabase: {ex}")
                 
         # Upload each se_umum partition
-        for fpath in glob.glob(os.path.join(script_dir, "granular_assignments_se_umum_*.json")):
+        all_partition_success = True
+        failed_partitions = []
+        for fpath in sorted(glob.glob(os.path.join(script_dir, "granular_assignments_se_umum_*.json"))):
+            key = "unknown"
             try:
                 basename = os.path.basename(fpath)
                 kab_code = basename.split("_")[-1].split(".")[0] # e.g. 7201
@@ -485,6 +540,8 @@ if (activeSubtab === 'se2026') {
                     d = json.load(f)
                 comp = d.get("compressed_data")
                 if comp:
+                    mb_size = len(comp) / (1024*1024)
+                    print(f" -> Upload {key} ({mb_size:.1f} MB)...")
                     payload = {
                         "compressed_data": comp,
                         "updated_at": d.get("updated_at", datetime.now().isoformat())
@@ -493,8 +550,14 @@ if (activeSubtab === 'se2026') {
                     print(f" ✅ Berhasil mengunggah partisi {key} ke Supabase.")
             except Exception as ex:
                 print(f" [ERROR] Gagal mengunggah partisi {key} ke Supabase: {ex}")
+                all_partition_success = False
+                failed_partitions.append(key)
                 
-        print("✅ SINKRONISASI PARTISI SUPABASE BERHASIL!")
+        if all_partition_success:
+            print("✅ SINKRONISASI PARTISI SUPABASE BERHASIL!")
+        else:
+            print(f"⚠️  SINKRONISASI PARTISI SELESAI DENGAN {len(failed_partitions)} GAGAL: {', '.join(failed_partitions)}")
+            print("    Partisi yang gagal perlu di-upload ulang secara manual.")
     except Exception as e:
         print(f"[ERROR] Gagal mengunggah partisi ke Supabase: {e}")
  

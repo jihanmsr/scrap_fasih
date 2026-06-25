@@ -4945,10 +4945,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Switch Tab function
     window.switchTab = function (tabId) {
-        if (tabId === 'target') {
-            alert('Data progres petugas sedang disesuaikan, fitur ini dinonaktifkan sementara.');
-            return;
-        }
         // Hide all tab contents
         document.querySelectorAll('.tab-content').forEach(el => {
             el.style.display = 'none';
@@ -5016,6 +5012,22 @@ document.addEventListener('DOMContentLoaded', () => {
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
             if (typeof window.loadGranularAssignmentsData === 'function') {
                 window.loadGranularAssignmentsData();
+            }
+        } else if (tabId === 'anomali') {
+            if (mainHeader) mainHeader.textContent = 'Pemantauan Anomali';
+            if (mainSubheader) mainSubheader.textContent = 'Daftar anomali dan tindak lanjut petugas di lapangan';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            // Show anomali tab content (uses id="tab-anomali", not "tab-content-anomali")
+            const anomaliContent = document.getElementById('tab-anomali');
+            if (anomaliContent) anomaliContent.style.display = 'block';
+            // Activate button
+            const anomaliBtn = document.getElementById('tab-btn-anomali');
+            if (anomaliBtn) anomaliBtn.classList.add('active');
+            // Check if user is already logged in
+            const loggedUser = sessionStorage.getItem('anomali_user');
+            if (loggedUser) {
+                window.showAnomaliDataSection();
             }
         } else {
             if (mainHeader) mainHeader.textContent = 'Pemantauan Email Usaha Besar';
@@ -6353,9 +6365,36 @@ document.addEventListener('DOMContentLoaded', () => {
                     .eq('key', granularKey)
                     .single();
 
-                if (!error && data && data.value && data.value.compressed_data) {
-                    compressedData = data.value.compressed_data;
-                    console.log(`Successfully fetched partition ${granularKey} from Supabase.`);
+                if (!error && data && data.value) {
+                    const val = data.value;
+                    if (val.is_chunked && val.total_chunks) {
+                        // Partisi besar di-upload dalam chunks — rakit ulang
+                        console.log(`Partition ${granularKey} is chunked (${val.total_chunks} chunks), fetching...`);
+                        const chunkParts = [];
+                        let chunksFetched = true;
+                        for (let ci = 0; ci < val.total_chunks; ci++) {
+                            const chunkKey = `${granularKey}__chunk_${ci}`;
+                            const { data: chunkData, error: chunkErr } = await supabaseClient
+                                .from('dashboard_store')
+                                .select('value')
+                                .eq('key', chunkKey)
+                                .single();
+                            if (!chunkErr && chunkData && chunkData.value && chunkData.value.compressed_data) {
+                                chunkParts.push(chunkData.value.compressed_data);
+                            } else {
+                                console.warn(`Failed to fetch chunk ${ci} for ${granularKey}:`, chunkErr);
+                                chunksFetched = false;
+                                break;
+                            }
+                        }
+                        if (chunksFetched && chunkParts.length === val.total_chunks) {
+                            compressedData = chunkParts.join('');
+                            console.log(`Successfully assembled ${val.total_chunks} chunks for ${granularKey}.`);
+                        }
+                    } else if (val.compressed_data) {
+                        compressedData = val.compressed_data;
+                        console.log(`Successfully fetched partition ${granularKey} from Supabase.`);
+                    }
                 }
             } catch (e) {
                 console.warn("Failed to fetch granular data from Supabase:", e);
@@ -6995,6 +7034,395 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerHTML = section === 'email' ? 'Lihat Kegagalan Email ▼' : 'Lihat Detail Lainnya ▼';
         }
     };
+
+    // ========== ANOMALI FEATURE ==========
+
+    // State untuk data anomali (cache)
+    let anomaliDataCache = [];
+
+    // Tampilkan section data (setelah login)
+    window.showAnomaliDataSection = function() {
+        const userJson = sessionStorage.getItem('anomali_user');
+        if (!userJson) return;
+        const user = JSON.parse(userJson);
+
+        const loginSec = document.getElementById('anomali-login-section');
+        const dataSec = document.getElementById('anomali-data-section');
+        const headerActions = document.getElementById('anomali-header-actions');
+        if (loginSec) loginSec.style.display = 'none';
+        if (dataSec) dataSec.style.display = 'block';
+        if (headerActions) headerActions.style.display = 'flex';
+
+        const nameEl = document.getElementById('anomali-user-name');
+        const kabEl = document.getElementById('anomali-user-kab');
+        if (nameEl) nameEl.textContent = user.nama || user.username;
+        if (kabEl) kabEl.textContent = user.kab_code ? `Kode Wilayah: ${user.kab_code}` : '';
+
+        loadAnomaliData();
+    };
+
+    // Load data anomali dari Supabase
+    async function loadAnomaliData() {
+        if (!supabaseClient) {
+            renderAnomaliTable([]);
+            return;
+        }
+        const loadingEl = document.getElementById('anomali-loading');
+        const tableCard = document.querySelector('#anomali-table')?.closest('.card');
+        if (loadingEl) loadingEl.style.display = 'block';
+        if (tableCard) tableCard.style.display = 'none';
+
+        try {
+            const { data, error } = await supabaseClient
+                .from('anomali_data')
+                .select('*')
+                .order('id', { ascending: true });
+
+            if (error) throw error;
+
+            anomaliDataCache = data || [];
+            populateAnomaliKabDropdown(anomaliDataCache);
+            updateAnomalInfoBar();
+            renderAnomaliTable(anomaliDataCache);
+        } catch (e) {
+            console.error('Gagal load anomali:', e);
+            anomaliDataCache = [];
+            renderAnomaliTable([]);
+        } finally {
+            if (loadingEl) loadingEl.style.display = 'none';
+            if (tableCard) tableCard.style.display = 'block';
+        }
+    }
+
+    // Sort state
+    let anomaliSortField = 'pct_biaya';
+    let anomaliSortDir = 'desc'; // 'asc' | 'desc'
+
+    // Format rupiah singkat
+    function fmtRp(val) {
+        if (!val) return '-';
+        if (val >= 1e9) return `Rp ${(val/1e9).toFixed(1)}M`;
+        if (val >= 1e6) return `Rp ${(val/1e6).toFixed(1)}jt`;
+        return `Rp ${val.toLocaleString('id-ID')}`;
+    }
+
+    // Populate kab dropdown
+    function populateAnomaliKabDropdown(data) {
+        const sel = document.getElementById('anomali-filter-kab');
+        if (!sel) return;
+        const kabs = [...new Set(data.map(r => r.kab_code).filter(Boolean))].sort();
+        sel.innerHTML = '<option value="">Semua Kab/Kota</option>' +
+            kabs.map(k => `<option value="${k}">${k}</option>`).join('');
+    }
+
+    // Info bar
+    function updateAnomalInfoBar() {
+        const el = document.getElementById('anomali-info-bar');
+        if (!el || !anomaliDataCache.length) return;
+        const total = anomaliDataCache.length;
+        const kabs = new Set(anomaliDataCache.map(r => r.kab_code)).size;
+        const totalBiaya = anomaliDataCache.reduce((s, r) => s + (r.biaya_produksi || 0), 0);
+        el.textContent = `${total} anomali · ${kabs} kab/kota · Total biaya produksi: ${fmtRp(totalBiaya)}`;
+    }
+
+    // Render tabel anomali (full rewrite)
+    function renderAnomaliTable(data) {
+        const tbody = document.getElementById('anomali-tbody');
+        const emptyEl = document.getElementById('anomali-empty');
+        const countTotal = document.getElementById('anomali-count-total');
+        const countPending = document.getElementById('anomali-count-pending');
+        const countProcess = document.getElementById('anomali-count-process');
+        const countDone = document.getElementById('anomali-count-done');
+        const showingEl = document.getElementById('anomali-showing');
+
+        if (!tbody) return;
+
+        // Summary always from full cache
+        const allData = anomaliDataCache;
+        if (countTotal) countTotal.textContent = allData.length;
+        if (countPending) countPending.textContent = allData.filter(r => r.status_anomali == 1).length;
+        if (countProcess) countProcess.textContent = allData.filter(r => r.status_anomali == 2).length;
+        if (countDone) countDone.textContent = allData.filter(r => r.status_anomali == 3).length;
+
+        // Sort
+        const sorted = [...data].sort((a, b) => {
+            let av = a[anomaliSortField] ?? '';
+            let bv = b[anomaliSortField] ?? '';
+            if (anomaliSortField === 'no') { av = a._rowIdx || 0; bv = b._rowIdx || 0; }
+            const cmp = typeof av === 'number' ? av - bv : String(av).localeCompare(String(bv), 'id');
+            return anomaliSortDir === 'asc' ? cmp : -cmp;
+        });
+
+        // Update sort icons
+        ['no','kab_code','jenis_anomali','nama_krt','pct_biaya','biaya_produksi','total_pengeluaran','status_anomali'].forEach(f => {
+            const el = document.getElementById('sort-icon-' + f);
+            if (el) el.textContent = f === anomaliSortField ? (anomaliSortDir === 'asc' ? ' ↑' : ' ↓') : '';
+        });
+
+        if (showingEl) showingEl.textContent = data.length < allData.length ? `Tampil ${data.length} dari ${allData.length}` : `${allData.length} data`;
+
+        if (sorted.length === 0) {
+            tbody.innerHTML = '';
+            if (emptyEl) emptyEl.style.display = 'block';
+            return;
+        }
+        if (emptyEl) emptyEl.style.display = 'none';
+
+        const statusBadge = {
+            1: `<span style="display:inline-block;padding:0.2rem 0.6rem;background:rgba(239,68,68,0.1);color:#ef4444;border-radius:99px;font-size:0.75rem;font-weight:700;">Belum</span>`,
+            2: `<span style="display:inline-block;padding:0.2rem 0.6rem;background:rgba(245,158,11,0.1);color:#f59e0b;border-radius:99px;font-size:0.75rem;font-weight:700;">Diproses</span>`,
+            3: `<span style="display:inline-block;padding:0.2rem 0.6rem;background:rgba(34,197,94,0.1);color:#22c55e;border-radius:99px;font-size:0.75rem;font-weight:700;">Selesai</span>`,
+        };
+
+        tbody.innerHTML = sorted.map((row, idx) => {
+            const pct = row.pct_biaya || 0;
+            const pctColor = pct >= 100 ? '#ef4444' : pct >= 80 ? '#f97316' : '#f59e0b';
+            const pctBg = pct >= 100 ? 'rgba(239,68,68,0.1)' : pct >= 80 ? 'rgba(249,115,22,0.1)' : 'rgba(245,158,11,0.1)';
+            const jenisIcon = (row.jenis_anomali || '').includes('Melebihi') ? '⚠️' :
+                              (row.jenis_anomali || '').includes('Sangat') ? '🔴' : '🟡';
+            const namaUsaha = row.nama_krt || '<span style="color:var(--text-secondary);font-style:italic;">-</span>';
+
+            return `<tr id="anomali-row-${row.id}" style="border-bottom: 1px solid var(--card-border); transition: background 0.15s;" onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">
+                <td style="padding:0.6rem 0.8rem;text-align:center;color:var(--text-secondary);font-size:0.78rem;">${idx + 1}</td>
+                <td style="padding:0.6rem 0.8rem;font-weight:600;font-size:0.82rem;white-space:nowrap;">${row.kab_code || '-'}</td>
+                <td style="padding:0.6rem 0.8rem;">
+                    <span style="font-size:0.78rem;">${jenisIcon} ${(row.jenis_anomali || '-').replace('Biaya Produksi ', '')}</span>
+                </td>
+                <td style="padding:0.6rem 0.8rem;max-width:200px;">
+                    <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
+                    ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
+                </td>
+                <td style="padding:0.6rem 0.8rem;text-align:center;">
+                    <span style="display:inline-block;padding:0.25rem 0.65rem;background:${pctBg};color:${pctColor};border-radius:99px;font-weight:800;font-size:0.82rem;white-space:nowrap;">${pct}%</span>
+                </td>
+                <td style="padding:0.6rem 0.8rem;text-align:right;font-weight:600;font-size:0.82rem;white-space:nowrap;">${fmtRp(row.biaya_produksi)}</td>
+                <td style="padding:0.6rem 0.8rem;text-align:right;font-size:0.82rem;white-space:nowrap;color:var(--text-secondary);">${fmtRp(row.total_pengeluaran)}</td>
+                <td style="padding:0.6rem 0.8rem;">
+                    <textarea rows="2"
+                        style="width:100%;min-width:160px;padding:0.3rem 0.5rem;border:1px solid var(--card-border);border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.8rem;resize:vertical;line-height:1.4;"
+                        onchange="window.setAnomaliBuf(${row.id},'tindak_lanjut',this.value)"
+                        placeholder="Isi tindak lanjut...">${row.tindak_lanjut || ''}</textarea>
+                </td>
+                <td style="padding:0.6rem 0.8rem;text-align:center;">
+                    <select onchange="window.setAnomaliBuf(${row.id},'status_anomali',parseInt(this.value))"
+                        style="padding:0.3rem 0.4rem;border:1px solid var(--card-border);border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.78rem;font-weight:600;cursor:pointer;">
+                        <option value="1" ${row.status_anomali == 1 ? 'selected' : ''}>Belum</option>
+                        <option value="2" ${row.status_anomali == 2 ? 'selected' : ''}>Diproses</option>
+                        <option value="3" ${row.status_anomali == 3 ? 'selected' : ''}>Selesai</option>
+                    </select>
+                </td>
+                <td style="padding:0.6rem 0.8rem;text-align:center;">
+                    <button onclick="window.saveAnomaliRow(${row.id})"
+                        style="width:32px;height:32px;background:var(--primary);color:white;border:none;border-radius:0.4rem;cursor:pointer;font-size:0.85rem;display:flex;align-items:center;justify-content:center;margin:auto;">
+                        💾
+                    </button>
+                </td>
+            </tr>`;
+        }).join('');
+    }
+
+    // Sort handler
+    window.sortAnomali = function(field) {
+        if (anomaliSortField === field) {
+            anomaliSortDir = anomaliSortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+            anomaliSortField = field;
+            anomaliSortDir = field === 'pct_biaya' || field === 'biaya_produksi' || field === 'total_pengeluaran' ? 'desc' : 'asc';
+        }
+        window.filterAnomaliTable();
+    };
+
+    // Filter by status via card click
+    window.filterByStatus = function(statusVal) {
+        const sel = document.getElementById('anomali-filter-status');
+        if (sel) sel.value = statusVal;
+        window.filterAnomaliTable();
+    };
+
+    // Filter tabel anomali
+    function applyAnomaliFilter(data, searchVal, statusVal, kabVal, jenisVal) {
+        const q = (searchVal || '').toLowerCase();
+        const s = statusVal || '';
+        const k = kabVal || '';
+        const j = jenisVal || '';
+        return data.filter(row => {
+            const matchSearch = !q ||
+                (row.nama_krt || '').toLowerCase().includes(q) ||
+                (row.kab_code || '').toLowerCase().includes(q) ||
+                (row.jenis_anomali || '').toLowerCase().includes(q) ||
+                (row.sls_code || '').includes(q);
+            const matchStatus = !s || String(row.status_anomali) === s;
+            const matchKab = !k || (row.kab_code || '') === k;
+            const matchJenis = !j || (row.jenis_anomali || '').includes(j);
+            return matchSearch && matchStatus && matchKab && matchJenis;
+        });
+    }
+
+    window.filterAnomaliTable = function() {
+        const searchVal = (document.getElementById('anomali-search') || {}).value || '';
+        const statusVal = (document.getElementById('anomali-filter-status') || {}).value || '';
+        const kabVal = (document.getElementById('anomali-filter-kab') || {}).value || '';
+        const jenisVal = (document.getElementById('anomali-filter-jenis') || {}).value || '';
+        const filtered = applyAnomaliFilter(anomaliDataCache, searchVal, statusVal, kabVal, jenisVal);
+        renderAnomaliTable(filtered);
+    };
+
+    // Login anomali via Supabase RPC
+    window.loginAnomali = async function() {
+        const usernameEl = document.getElementById('anomali-username');
+        const passwordEl = document.getElementById('anomali-password');
+        const errorEl = document.getElementById('anomali-login-error');
+        const loginBtn = document.querySelector('#anomali-login-section button');
+
+        const username = (usernameEl?.value || '').trim();
+        const password = (passwordEl?.value || '').trim();
+
+        if (!username || !password) {
+            if (errorEl) { errorEl.textContent = 'Username dan password wajib diisi!'; errorEl.style.display = 'block'; }
+            return;
+        }
+
+        if (loginBtn) { loginBtn.textContent = 'Memeriksa...'; loginBtn.disabled = true; }
+        if (errorEl) errorEl.style.display = 'none';
+
+        try {
+            if (!supabaseClient) throw new Error('Koneksi database tidak tersedia.');
+
+            const { data, error } = await supabaseClient
+                .rpc('check_login', { p_username: username, p_password: password });
+
+            if (error) throw error;
+
+            if (data) {
+                sessionStorage.setItem('anomali_user', JSON.stringify(data));
+                window.showAnomaliDataSection();
+            } else {
+                if (errorEl) { errorEl.textContent = 'Username atau password salah!'; errorEl.style.display = 'block'; }
+            }
+        } catch (e) {
+            console.error('Login error:', e);
+            if (errorEl) { errorEl.textContent = 'Terjadi kesalahan: ' + e.message; errorEl.style.display = 'block'; }
+        } finally {
+            if (loginBtn) { loginBtn.textContent = 'Masuk'; loginBtn.disabled = false; }
+        }
+    };
+
+    // Enter key support for login
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            const anomaliSection = document.getElementById('anomali-login-section');
+            if (anomaliSection && anomaliSection.style.display !== 'none' &&
+                document.getElementById('tab-anomali') && document.getElementById('tab-anomali').style.display !== 'none') {
+                window.loginAnomali();
+            }
+        }
+    });
+
+    // Logout anomali
+    window.logoutAnomali = function() {
+        sessionStorage.removeItem('anomali_user');
+        const loginSec = document.getElementById('anomali-login-section');
+        const dataSec = document.getElementById('anomali-data-section');
+        const headerActions = document.getElementById('anomali-header-actions');
+        if (loginSec) { loginSec.style.display = 'block'; }
+        if (dataSec) dataSec.style.display = 'none';
+        if (headerActions) headerActions.style.display = 'none';
+        const usernameEl = document.getElementById('anomali-username');
+        const passwordEl = document.getElementById('anomali-password');
+        if (usernameEl) usernameEl.value = '';
+        if (passwordEl) passwordEl.value = '';
+        anomaliDataCache = [];
+    };
+
+    // Download template tindak lanjut (CSV)
+    window.downloadAnomalTemplate = function() {
+        const data = anomaliDataCache;
+        if (!data || data.length === 0) {
+            alert('Data anomali belum dimuat. Silakan login terlebih dahulu.');
+            return;
+        }
+        let csv = 'ID;Kab/Kota;Jenis Anomali;Nama KRT;Catatan;Tindak Lanjut;Status (1=Belum/2=Proses/3=Selesai)\r\n';
+        data.forEach(row => {
+            const esc = v => `"${String(v || '').replace(/"/g, '""')}"`;
+            csv += `${row.id};${esc(row.kab_code)};${esc(row.jenis_anomali)};${esc(row.nama_krt)};${esc(row.catatan)};${esc(row.tindak_lanjut)};${row.status_anomali || 1}\r\n`;
+        });
+        const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `template_anomali_${new Date().toISOString().split('T')[0]}.csv`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    };
+
+    // Upload hasil tindak lanjut dari CSV
+    window.uploadAnomaliTindakLanjut = async function(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        if (!supabaseClient) { alert('Supabase tidak terhubung!'); return; }
+
+        const reader = new FileReader();
+        reader.onload = async function(e) {
+            try {
+                const text = e.target.result;
+                const lines = text.replace(/\r/g, '').split('\n').filter(l => l.trim());
+                if (lines.length < 2) { alert('File kosong atau tidak valid.'); return; }
+
+                const allParsed = [];
+                const skipped = [];
+
+                for (let i = 1; i < lines.length; i++) {
+                    const parts = lines[i].split(';');
+                    if (parts.length < 7) continue;
+                    const id = parseInt(parts[0]);
+                    if (isNaN(id)) continue;
+
+                    const tindak_lanjut = parts[5].replace(/^"|"$/g, '').replace(/""/g, '"').trim();
+                    const status_anomali = parseInt(parts[6]) || 1;
+
+                    // ✅ SMART MERGE: skip baris yang kosong tindak lanjutnya DAN statusnya masih default (1)
+                    // Artinya: hanya update baris yang memang diisi user
+                    if (!tindak_lanjut && status_anomali === 1) {
+                        skipped.push(id);
+                        continue;
+                    }
+
+                    allParsed.push({ id, tindak_lanjut, status_anomali });
+                }
+
+                if (allParsed.length === 0) {
+                    alert(`Tidak ada baris yang diisi.\n\nPastikan kolom "Tindak Lanjut" sudah diisi atau status sudah diubah dari 1.\n\n(${skipped.length} baris kosong dilewati otomatis)`);
+                    return;
+                }
+
+                // Konfirmasi sebelum upload
+                const confirmed = confirm(
+                    `📤 Akan mengupload ${allParsed.length} baris yang sudah diisi.\n` +
+                    `⏭️ ${skipped.length} baris kosong akan DILEWATI (tidak mengubah data orang lain).\n\n` +
+                    `Lanjutkan?`
+                );
+                if (!confirmed) return;
+
+                let successCount = 0;
+                for (const upd of allParsed) {
+                    const { id, ...fields } = upd;
+                    const { error } = await supabaseClient.from('anomali_data').update(fields).eq('id', id);
+                    if (!error) successCount++;
+                }
+
+                alert(`✅ Berhasil: ${successCount} baris diupdate.\n⏭️ ${skipped.length} baris kosong dilewati (aman, tidak menimpa data lain).`);
+                await loadAnomaliData();
+            } catch (err) {
+                alert('Gagal memproses file: ' + err.message);
+            }
+        };
+        reader.readAsText(file, 'UTF-8');
+        event.target.value = '';
+    };
+
+    // ========== END ANOMALI FEATURE ==========
 
     // Initial Execution
     fetchDataAndRender().then(() => {

@@ -1,0 +1,53 @@
+[INFO] Koneksi Supabase berhasil diinisialisasi untuk scrape_granular_assignments.
+[INFO] Global region_map_full loaded successfully.
+[START] Mulai proses penarikan seluruh data secara granular...
+[INFO] Terhubung ke browser. URL Tab Aktif: about:blank
+[INFO] Membuka halaman dashboard FASIH...
+
+==============================================================
+[WARNING] Sesi FASIH tidak valid atau telah kedaluwarsa.
+Harap LOGIN atau REFRESH halaman FASIH di browser Chrome Anda.
+Script mendeteksi secara otomatis setiap 15 detik...
+==============================================================
+
+[INFO] Mencoba memuat ulang halaman untuk memicu pembaruan cookie...
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 664, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/jihanmaisaroh/scrap_fasih/scrape_granular_core.py", line 775, in scrape_all_granular
+    await page.reload(timeout=120000, wait_until="networkidle")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/async_api/_generated.py", line 9086, in reload
+    await self._impl_obj.reload(timeout=timeout, waitUntil=wait_until)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_page.py", line 560, in reload
+    await self._channel.send(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 123, in _inner_send
+    done, _ = await asyncio.wait(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/tasks.py", line 454, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/tasks.py", line 540, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jihanmaisaroh/scrap_fasih/scrape_granular_core.py", line 1304, in <module>
+    asyncio.run(scrape_all_granular(survey_filter, kab_filter))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt

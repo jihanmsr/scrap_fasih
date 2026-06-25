@@ -1,0 +1,256 @@
+{
+   "checksum": "a7965041e4aad3ea7c1beb5493621c9a",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13426670147713764",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks Bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13361365626586199",
+            "date_last_used": "0",
+            "guid": "194fc6d2-6e0f-4081-90a3-9778a9d4fc65",
+            "id": "8",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Hima-1/IMK-3SI1-KEL1-DPM-2024",
+            "type": "url",
+            "url": "https://github.com/Hima-1/IMK-3SI1-KEL1-DPM-2024"
+         }, {
+            "date_added": "13385153602481897",
+            "date_last_used": "0",
+            "guid": "319d4596-6a6e-4a29-9ae3-e785896dc806",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Desain Community – Figma",
+            "type": "url",
+            "url": "https://www.figma.com/design/c5GKOOnrxdGRYdomJ7kHCC/Desain-Community?node-id=51-1024&t=K3XuLC2bcZffRTkd-0"
+         }, {
+            "date_added": "13389164719003305",
+            "date_last_used": "0",
+            "guid": "169f003e-c905-4ede-8694-96d5462ab39c",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Untitled design - Presentation - Canva",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGkrOftNtM/irIzQSLA1GtLCtj0vGeQcA/edit"
+         }, {
+            "date_added": "13389484957391952",
+            "date_last_used": "0",
+            "guid": "90e41f44-6d9c-4ff4-be91-15afdd9f3264",
+            "id": "11",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "ChatGPT - Code FE Next",
+            "type": "url",
+            "url": "https://chatgpt.com/c/6802561b-2f00-8013-ad86-bb453435ad7f"
+         }, {
+            "date_added": "13389632242829581",
+            "date_last_used": "0",
+            "guid": "d2cd608d-bd94-402e-ac9b-34e2e509eade",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Template Doa Harian",
+            "type": "url",
+            "url": "https://chatgpt.com/c/6804fb12-2f20-8013-b862-59527d650add"
+         }, {
+            "date_added": "13389950592745061",
+            "date_last_used": "0",
+            "guid": "4ebd33e8-1564-408c-83aa-6042617c71bd",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "DESRIST24-DSRKnowledgeTypologyFinalManuscript.pdf",
+            "type": "url",
+            "url": "file:///Users/jihanmaisaroh/Downloads/DESRIST24-DSRKnowledgeTypologyFinalManuscript.pdf"
+         }, {
+            "date_added": "13390285264789861",
+            "date_last_used": "0",
+            "guid": "a852fed0-c441-494b-ad5d-ddf732ef78ce",
+            "id": "14",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Seminar Hasil - Jihan - Presentation",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGltz9v9LM/kTv8iwb6P8rEYvWQLrFrCQ/edit"
+         }, {
+            "date_added": "13390355568329084",
+            "date_last_used": "0",
+            "guid": "f4b64050-b7c9-4428-9ecc-11bb581bd939",
+            "id": "15",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Microsoft Word - 35. Finsa Nurpandi, Anita Ilmaniati",
+            "type": "url",
+            "url": "file:///Users/jihanmaisaroh/Downloads/3322-ArticleText-18620-1-10-20231214.pdf"
+         }, {
+            "date_added": "13390634417502534",
+            "date_last_used": "0",
+            "guid": "af64a49d-6881-4030-b80e-85b6d2f4ab01",
+            "id": "16",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Seminar Hasil - Jihan - Presentation",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGltz9v9LM/kTv8iwb6P8rEYvWQLrFrCQ/edit#"
+         }, {
+            "date_added": "13390936077494450",
+            "date_last_used": "0",
+            "guid": "356e37e9-afeb-45a5-b84d-1cc1dc251914",
+            "id": "17",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Frontend Architecture For Design Systems",
+            "type": "url",
+            "url": "https://cdn.bookey.app/files/pdf/book/en/frontend-architecture-for-design-systems.pdf"
+         }, {
+            "date_added": "13391063665083993",
+            "date_last_used": "0",
+            "guid": "9cd99492-794c-4e7b-9f1c-82034b6c7cea",
+            "id": "18",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Presentasi dan Lampiran - Presentation",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGmusjQOPQ/OGtwWW9ECu-AvFazNm_6Cg/edit"
+         }, {
+            "date_added": "13396459489161985",
+            "date_last_used": "0",
+            "guid": "e40234ff-4d4d-445e-a154-b4a58431ebf7",
+            "id": "19",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Prisma Studio",
+            "type": "url",
+            "url": "http://localhost:5555/"
+         }, {
+            "date_added": "13397072802849461",
+            "date_last_used": "0",
+            "guid": "b7256d25-22a3-45d6-adcd-357424dc52d1",
+            "id": "20",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "MySQL | Railway",
+            "type": "url",
+            "url": "https://railway.com/project/5a1f3766-637f-42ed-b93b-5bd6cbaf017b/service/ff71c7ae-4245-4324-8761-4f0712c7a69b/data?environmentId=c2ee4918-ceca-4b4d-b84a-1ce04cd233d6&state=table&table=comments"
+         }, {
+            "date_added": "13397569007612702",
+            "date_last_used": "0",
+            "guid": "4b82c380-8370-4604-a53c-381d45b7d1e0",
+            "id": "21",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Ujian Kompetensi Jihan - Presentation (4:3)",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGtyrhoG5Y/HdZom7_zsBEYXt3Rkd-aUQ/edit"
+         }, {
+            "date_added": "13416893861331331",
+            "date_last_used": "0",
+            "guid": "17be64d0-d324-4b59-be94-3ffe235884dc",
+            "id": "22",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "SIMPONI BPS KOTA CIREBON",
+            "type": "url",
+            "url": "https://sites.google.com/d/1e5rMGNX-SPeABoQaX6voFtJ1FNhnl98a/p/1Nhh_RgJ-TP9MGrRF_H2rLhrua-7qExQz/edit"
+         }, {
+            "date_added": "13420165876330906",
+            "date_last_used": "0",
+            "guid": "0e22051f-b3f0-4c43-83f3-e6170aefaf4d",
+            "id": "23",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "CATUR-PAPARAN - Presentation",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAHGDPX1YC8/9g_bc6vr9WeVoynt313F5A/edit"
+         }, {
+            "date_added": "13421827363902474",
+            "date_last_used": "0",
+            "guid": "aa1166a4-bada-41f0-9e7e-18934d33d1ce",
+            "id": "24",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Bukti dukung WFH - Google Drive",
+            "type": "url",
+            "url": "https://drive.google.com/drive/folders/1kWNcdo-g9XEKGtjBW4xb00WzyCADuMuL?hl=ID"
+         } ],
+         "date_added": "13426670147713764",
+         "date_last_used": "0",
+         "date_modified": "13421827363902474",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other Bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [ {
+            "date_added": "13274113546981335",
+            "date_last_used": "0",
+            "guid": "a0112c31-da7b-457c-9993-90cbafdbeccb",
+            "id": "5",
+            "meta_info": {
+               "last_visited_desktop": "13277199428208927"
+            },
+            "name": "Web Portal SIPADU STIS : Beranda",
+            "type": "url",
+            "url": "https://stis.ac.id/sipadu/mahasiswa/index.php/main/index"
+         }, {
+            "date_added": "13313872439563074",
+            "date_last_used": "0",
+            "guid": "f0aad160-91a2-4fc9-b51d-04a2bb9220b9",
+            "id": "6",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Nonton Series Friends: Season 1 (1994) | REBAHIN",
+            "type": "url",
+            "url": "http://104.237.198.197/series/friends-season-1-1994/watch/?ep=2&sv=1"
+         }, {
+            "date_added": "13313875532925688",
+            "date_last_used": "0",
+            "guid": "9d990191-7ba0-4994-9ae5-f561d77398f7",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Nonton Series The Big Bang Theory: Season 1 (2007) Sub Indo",
+            "type": "url",
+            "url": "http://104.237.198.197/series/nonton-the-big-bang-theory-season-1-sub-indo/watch/?ep=2&sv=1"
+         } ],
+         "date_added": "13426670147713764",
+         "date_last_used": "0",
+         "date_modified": "13313875532925688",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile Bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

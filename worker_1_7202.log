@@ -1,0 +1,38 @@
+[INFO] Koneksi Supabase berhasil diinisialisasi untuk scrape_granular_assignments.
+[INFO] Global region_map_full loaded successfully.
+[START] Mulai proses penarikan seluruh data secara granular...
+[INFO] Terhubung ke browser. URL Tab Aktif: about:blank
+[INFO] Membuka halaman dashboard FASIH...
+
+==============================================================
+[WARNING] Sesi FASIH tidak valid atau telah kedaluwarsa.
+Harap LOGIN atau REFRESH halaman FASIH di browser Chrome Anda.
+Script mendeteksi secara otomatis setiap 15 detik...
+==============================================================
+
+[INFO] Mencoba memuat ulang halaman untuk memicu pembaruan cookie...
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 664, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/jihanmaisaroh/scrap_fasih/scrape_granular_core.py", line 779, in scrape_all_granular
+    await asyncio.sleep(15)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/tasks.py", line 655, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jihanmaisaroh/scrap_fasih/scrape_granular_core.py", line 1304, in <module>
+    asyncio.run(scrape_all_granular(survey_filter, kab_filter))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt

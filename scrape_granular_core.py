@@ -25,7 +25,8 @@ if SUPABASE_URL and SUPABASE_KEY and "MASUKKAN" not in SUPABASE_URL:
     except Exception as e:
         print(f"[ERROR] Gagal menginisialisasi Supabase: {e}")
 
-USER_DATA_DIR = "playwright_chrome_profile"
+USER_DATA_DIR = os.environ.get("CHROME_PROFILE_DIR", "playwright_chrome_profile")
+CDP_PORT_OVERRIDE = os.environ.get("CDP_PORT", "")
 
 region_map_full = {}
 try:
@@ -47,7 +48,10 @@ def check_port_open(port=9222):
         return False
 
 async def get_authenticated_context(p):
-    for port in [9223, 9222]:
+    ports_to_try = [9223, 9222]
+    if CDP_PORT_OVERRIDE:
+        ports_to_try = [int(CDP_PORT_OVERRIDE)] + ports_to_try
+    for port in ports_to_try:
         if check_port_open(port):
             try:
                 browser = await p.chromium.connect_over_cdp(f"http://127.0.0.1:{port}")
@@ -77,10 +81,14 @@ async def get_authenticated_context(p):
 
     abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
     chrome_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    extra_args = ["--no-first-run", "--no-default-browser-check", "--disable-blink-features=AutomationControlled"]
+    if CDP_PORT_OVERRIDE:
+        extra_args.append(f"--remote-debugging-port={CDP_PORT_OVERRIDE}")
+    is_parallel = bool(CDP_PORT_OVERRIDE)
     context = await p.chromium.launch_persistent_context(
-        user_data_dir=abs_user_data_dir, headless=False, executable_path=chrome_path,
+        user_data_dir=abs_user_data_dir, headless=is_parallel, executable_path=chrome_path,
         ignore_default_args=["--enable-automation"],
-        args=["--no-first-run", "--no-default-browser-check", "--disable-blink-features=AutomationControlled"]
+        args=extra_args
     )
     return None, context, context.pages[0] if context.pages else await context.new_page()
 
@@ -122,8 +130,10 @@ async def check_session_valid(page, token):
     return False
 
 session_refresh_lock = asyncio.Lock()
+_session_valid_count = 0
 
 async def refresh_session_if_needed(client, page, context):
+    global _session_valid_count
     async with session_refresh_lock:
         cookies = await context.cookies()
         cookie_dict = {c["name"]: c["value"] for c in cookies}
@@ -138,7 +148,9 @@ async def refresh_session_if_needed(client, page, context):
             is_valid = await check_session_valid(page, token)
             
         if is_valid:
-            print("[INFO] Browser session is valid, updating HTTPX client with new token/cookies.", flush=True)
+            _session_valid_count += 1
+            if _session_valid_count <= 2 or _session_valid_count % 50 == 0:
+                print(f"[INFO] Session valid (refresh #{_session_valid_count}), updating HTTPX client.", flush=True)
             client.headers.update({"X-XSRF-TOKEN": token})
             client.cookies.clear()
             for c in cookies:
@@ -200,7 +212,8 @@ async def safe_post(client, page, context, sem, url, payload, max_retries=4):
                             return res
                     except Exception:
                         pass
-                print(f"[WARNING] POST response invalid (status {r.status_code}). Possible session expiration.", flush=True)
+                if attempt > 0:
+                    print(f"[WARNING] POST invalid (status {r.status_code}, attempt {attempt+1}/{max_retries}). Session issue?", flush=True)
                 is_session_issue = (
                     r.status_code in [401, 403] or
                     "login" in str(r.url).lower() or
@@ -242,10 +255,10 @@ async def safe_get(client, page, context, sem, url, max_retries=3):
                                 method: "GET",
                                 headers: { "X-XSRF-TOKEN": token }
                             });
-                            if (!r.ok) return { _error: `HTTP ${r.status}` };
+                            if (!r.ok) return { _error: `HTTP ${r.status}`, _status: r.status };
                             return await r.json();
                         } catch (e) {
-                            return { _error: e.toString() };
+                            return { _error: e.toString(), _status: 0 };
                         }
                     }
                 """, {"url": url, "token": token})
@@ -254,9 +267,13 @@ async def safe_get(client, page, context, sem, url, max_retries=3):
                     if "_error" not in res:
                         return res
                     else:
+                        status_code = res.get("_status", 0)
                         status_err = res["_error"]
+                        # 404 = resource not found, bukan session issue — langsung return None
+                        if status_code == 404:
+                            return None
                         print(f"[WARNING] GET response invalid ({status_err}). Possible session expiration.", flush=True)
-                        if "401" in status_err or "403" in status_err:
+                        if status_code in (401, 403):
                             is_session_issue = True
                 elif isinstance(res, list):
                     return res
@@ -1202,9 +1219,12 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
             
         # JIKA INI ADALAH SCRAPING PARSIAL, KITA PANGGIL MERGE_GRANULARS.PY!
         if suffix:
-            import subprocess
-            print("Memanggil merge_granulars.py untuk menggabungkan partisi...")
-            subprocess.Popen([sys.executable, os.path.join(script_dir, "merge_granulars.py")], cwd=script_dir)
+            if os.environ.get("SKIP_SUPABASE_UPLOAD"):
+                print("[INFO] Parallel mode — skip auto-merge (parent runner will handle it).")
+            else:
+                import subprocess
+                print("Memanggil merge_granulars.py untuk menggabungkan partisi...")
+                subprocess.Popen([sys.executable, os.path.join(script_dir, "merge_granulars.py")], cwd=script_dir)
             return # skip uploading partial to supabase here, merge_granulars will do it!
 
         stats_json_path = os.path.join(script_dir, "daily_submission_stats.json")

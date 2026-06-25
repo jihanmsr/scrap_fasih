@@ -140,161 +140,215 @@ def merge_user_records(records):
             merged[uid]["regions"] = old_regs
     return list(merged.values())
 
-async def fetch_responsibility_report(page, token, survey_period_id, role_id, target_type):
-    # Dapatkan mapping kab_code -> nama
-    kab_code_map = {}
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    region_map_path = os.path.join(script_dir, "region_map_sulteng.json")
-    try:
-        with open(region_map_path, "r", encoding="utf-8") as f:
-            rmap = json.load(f)
-            for kcode, kdata in rmap.items():
-                kab_code_map[kdata.get("kab_name")] = kcode
-    except Exception as e:
-        print(f"[WARNING] Gagal memuat region_map_sulteng.json untuk nama kabupaten: {e}")
+# Kab IDs per survey (dari surveys config di run_ipas_report_generation)
+SURVEY_KAB_IDS = {
+    "fd68e454-ba45-4b85-8205-f3bf777ded24": {  # SE Umum
+        "province_id": "5214ecb2-bef1-4a86-9446-451cf430928e",
+        "kabs": [
+            ("7201", "[01] BANGGAI KEPULAUAN", "bc32354f-1245-426f-b2cf-a5733e1295ad"),
+            ("7202", "[02] BANGGAI",            "530e9ca5-86ba-434e-9b04-405102e6d900"),
+            ("7203", "[03] MOROWALI",           "9783f0c1-f047-477f-8840-11eae7cf70e2"),
+            ("7204", "[04] POSO",               "fb9cd9f0-c4c0-4a37-9041-57190693f625"),
+            ("7205", "[05] DONGGALA",           "289f1ff3-a6ad-4c9b-a49f-7b454d03a33f"),
+            ("7206", "[06] TOLI-TOLI",          "d833fdce-ebfb-429b-a1bb-8966239fd8e4"),
+            ("7207", "[07] BUOL",               "c523694a-2e72-4570-9489-da2d7b119fe7"),
+            ("7208", "[08] PARIGI MOUTONG",     "25c59fd9-afd5-4c1a-9dfb-42bb697a7434"),
+            ("7209", "[09] TOJO UNA-UNA",       "736c4c22-51d1-44be-8b2c-aa197d9459a4"),
+            ("7210", "[10] SIGI",               "0061da62-2a47-4dee-b8d0-239b33e2c59d"),
+            ("7211", "[11] BANGGAI LAUT",       "eed1a3e7-b81d-4fc7-b0d6-61257c1449b2"),
+            ("7212", "[12] MOROWALI UTARA",     "d05ef8fd-b5e4-414f-9a83-8cdea03e0767"),
+            ("7271", "[71] PALU",               "4ab6ca2f-7952-4e8e-a94d-b6dd933e5d44"),
+        ]
+    },
+    "37526b20-81c8-42f5-a895-6190137d7394": {  # SE UB
+        "province_id": "a00c8aef-afc4-4d4f-b80d-789a15450ef9",
+        "kabs": [
+            ("7201", "[01] BANGGAI KEPULAUAN", "9c9b2d79-9fb1-4ce7-b0f1-6b7bb5511beb"),
+            ("7202", "[02] BANGGAI",            "34165dd5-372e-42fa-99c6-0cc19a9b4d0b"),
+            ("7203", "[03] MOROWALI",           "48c4e5d0-5525-41a8-a4ba-2cc38cd9c424"),
+            ("7204", "[04] POSO",               "e18368ae-d1cd-4d43-a74d-5b9ddac5dd22"),
+            ("7205", "[05] DONGGALA",           "c075c4b4-7eb0-4d72-9c16-5103088fb5eb"),
+            ("7206", "[06] TOLI-TOLI",          "d3a28bfa-b611-488b-8255-369da5cedbf7"),
+            ("7207", "[07] BUOL",               "dfe4c643-3282-40db-a5fd-cb288a4f592d"),
+            ("7208", "[08] PARIGI MOUTONG",     "f18109d2-fc8b-4b9c-886a-dc242d21206e"),
+            ("7209", "[09] TOJO UNA-UNA",       "4d01eba1-5ae9-4603-82a6-2c831aea9905"),
+            ("7210", "[10] SIGI",               "2a240d3a-67ee-45b2-ae78-4b4b3a909a90"),
+            ("7211", "[11] BANGGAI LAUT",       "288c5680-f6d5-4783-a946-d5a06f547c02"),
+            ("7212", "[12] MOROWALI UTARA",     "a5324f17-7a00-436f-b468-2fc59fcf605d"),
+            ("7271", "[71] PALU",               "1acfedb4-276e-44d6-9e45-6d43588536d6"),
+        ]
+    },
+}
 
-    # load region_map_sulteng_full.json untuk pemetaan kecamatan (region3Id) dan desa (region4Id)
-    region_map_full_path = os.path.join(script_dir, "region_map_sulteng_full.json")
-    kab_to_kecs = {}
-    kec_id_to_desas = {}
-    try:
-        with open(region_map_full_path, "r", encoding="utf-8") as f:
-            full_map = json.load(f)
-            for kab_code, kab_data in full_map.get("kabupaten", {}).items():
-                kab_to_kecs[kab_code] = []
-                for kec_code, kec_data in kab_data.get("kecamatan", {}).items():
-                    kec_id = kec_data.get("kec_id")
-                    if kec_id:
-                        kab_to_kecs[kab_code].append({
-                            "kec_id": kec_id,
-                            "kec_name": kec_data.get("kec_name", kec_code)
-                        })
-                        desas = []
-                        for desa_code, desa_data in kec_data.get("desa", {}).items():
-                            d_id = desa_data.get("desa_id")
-                            if d_id:
-                                desas.append({
-                                    "id": d_id,
-                                    "name": desa_data.get("desa_name", desa_code)
-                                })
-                        kec_id_to_desas[kec_id] = desas
-    except Exception as e:
-        print(f"[WARNING] Gagal memuat region_map_sulteng_full.json untuk pemetaan region3Id & region4Id: {e}")
+async def fetch_responsibility_report(page, token, survey_period_id, role_id, target_type):
+    """
+    Menarik data progres per-petugas dari report-progress-by-responsibility.
+    Menggunakan payload format yang benar: {page, size, surveyPeriodId, surveyRoleId, target, region{}, regionSummaryLevel}
+    """
+    # Ambil province_id dan kab list yang sesuai untuk survey ini
+    survey_cfg = SURVEY_KAB_IDS.get(survey_period_id, {})
+    PROVINCE_ID = survey_cfg.get("province_id", "5214ecb2-bef1-4a86-9446-451cf430928e")
+    kab_id_list = survey_cfg.get("kabs", [])
 
     report_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-progress-by-responsibility"
-    print(f"[INFO] Menarik data progress responsibility untuk periode={survey_period_id}, role={role_id}...")
-    
-    all_results = []
-    
-    # Untuk menghindari limit 10.000 Elasticsearch (track_total_hits), 
-    # kita partisi request API per Kecamatan (region3Id).
-    for kab_name, kab_code in kab_code_map.items():
-        kecs = kab_to_kecs.get(kab_code, [])
-        if not kecs:
-            print(f"      [WARNING] Kecamatan kosong untuk Kab {kab_name} ({kab_code}). Skip.")
-            continue
-            
-        print(f"   [>] Memproses Kabupaten {kab_name} ({len(kecs)} Kecamatan)...")
-        
-        # Buat task parallel untuk setiap kecamatan di kabupaten ini
-        async def fetch_kec(kec):
-            kec_id = kec["kec_id"]
-            kec_name = kec["kec_name"]
-            kec_results = []
-            
-            # Cek total data terlebih dahulu dengan query awal (length=1)
-            payload = {
-                "start": 0,
-                "length": 1,
-                "columns": [],
-                "order": [],
-                "search": {"value": "", "regex": False},
-                "assignmentExtraParam": {
+    print(f"[INFO] Menarik data responsibility (payload benar) untuk periode={survey_period_id}, role={role_id}...")
+
+    all_flat_rows = []
+
+    def make_region(kab_id=None, kec_id=None):
+        return {
+            "region1Id": PROVINCE_ID,
+            "region2Id": kab_id,
+            "region3Id": kec_id,
+            "region4Id": None, "region5Id": None, "region6Id": None,
+            "region7Id": None, "region8Id": None, "region9Id": None, "region10Id": None
+        }
+
+    _debug_printed = [False]  # print sekali saja
+
+    def flatten_content(content):
+        """
+        Ubah list content (per-user) dari API menjadi flat rows.
+        Field names dicoba dengan fallback: targetCount/target, syncCount, dll.
+        """
+        rows = []
+        for user in content:
+            username = user.get("username") or ""
+            fullname = user.get("fullName") or user.get("fullname") or username
+            regions = user.get("regionSummary") or []
+
+            # Debug print satu kali untuk lihat struktur asli API
+            if not _debug_printed[0] and regions:
+                import json as _json
+                print(f"   [DEBUG] regionSummary[0] keys: {list(regions[0].keys())}")
+                print(f"   [DEBUG] regionSummary[0] sample: {_json.dumps(regions[0], ensure_ascii=False)[:300]}")
+                _debug_printed[0] = True
+            elif not _debug_printed[0] and not regions:
+                # user tanpa regionSummary - print user keys
+                print(f"   [DEBUG] user keys (no regionSummary): {list(user.keys())}")
+                for k, v in user.items():
+                    if not isinstance(v, (list, dict)):
+                        print(f"     {k}: {v}")
+                _debug_printed[0] = True
+
+            for reg in regions:
+                region_code = (reg.get("regionCode") or reg.get("region5Id")
+                               or reg.get("id") or reg.get("code") or reg.get("slsCode"))
+                if not region_code:
+                    continue
+
+                # Coba semua kemungkinan field names untuk tiap count
+                target   = (reg.get("targetCount") or reg.get("target") or
+                            reg.get("totalTarget") or reg.get("total") or 0)
+                submitted = (reg.get("submittedCount") or reg.get("submitted") or
+                             reg.get("totalSubmitted") or reg.get("syncCount") or 0)
+                approved  = (reg.get("approvedCount") or reg.get("approved") or
+                             reg.get("totalApproved") or 0)
+                rejected  = (reg.get("rejectedCount") or reg.get("rejected") or
+                             reg.get("totalRejected") or reg.get("revokedCount") or 0)
+                draft     = (reg.get("draftCount") or reg.get("draft") or
+                             reg.get("totalDraft") or 0)
+                open_cnt  = (reg.get("openCount") or reg.get("open") or
+                             reg.get("totalOpen") or 0)
+
+                # Kalau target masih 0 tapi ada submitted/approved, hitung dari sana
+                if target == 0 and (submitted + approved + rejected + draft + open_cnt) > 0:
+                    target = submitted + approved + rejected + draft + open_cnt
+
+                sync_count = submitted + approved + rejected
+
+                # Status dominan
+                if approved > 0:
+                    status_alias = "APPROVED"
+                elif rejected > 0:
+                    status_alias = "REJECTED"
+                elif submitted > 0:
+                    status_alias = "SUBMITTED_PENCACAH"
+                elif draft > 0:
+                    status_alias = "DRAFT"
+                else:
+                    status_alias = "OPEN"
+
+                rows.append({
+                    "region5Id": region_code,
+                    "targetCount": target,
+                    "syncCount": sync_count,
+                    "assignmentStatusAlias": status_alias,
+                    "username": username,
+                    "fullname": fullname,
+                })
+        return rows
+
+    if kab_id_list:
+        # Iterasi per kabupaten agar tidak melebihi limit API
+        for kab_code, kab_name, kab_id in kab_id_list:
+            print(f"   [>] Responsibility: Kab {kab_name}...")
+            page_idx = 0
+            size = 10  # API membatasi max 10 per page
+            kab_rows = []
+            while True:
+                payload = {
                     "surveyPeriodId": survey_period_id,
                     "surveyRoleId": role_id,
-                    "assignmentErrorStatusType": -1,
-                    "filterTargetType": target_type,
-                    "region3Id": kec_id
+                    "size": size,
+                    "page": page_idx,
+                    "search": "",
+                    "target": "TARGET_ONLY",
+                    "region": make_region(kab_id=kab_id),
+                    "regionSummaryLevel": 6
                 }
-            }
-            
-            resp = await fetch_api_safely(page, report_url, payload, token)
-            total_hit = 0
-            if resp and resp.get("success"):
-                total_hit = resp.get("data", {}).get("totalHit", 0)
-                
-            desas = kec_id_to_desas.get(kec_id, [])
-            if total_hit >= 10000 and desas:
-                print(f"      [INFO] Kec {kec_name} memiliki totalHit {total_hit} (>= 10000) di responsibility report. Membagi query per Desa...")
-                
-                async def fetch_desa(desa):
-                    d_id = desa["id"]
-                    d_results = []
-                    d_start = 0
-                    d_length = 500
-                    while True:
-                        d_payload = {
-                            "start": d_start,
-                            "length": d_length,
-                            "columns": [],
-                            "order": [],
-                            "search": {"value": "", "regex": False},
-                            "assignmentExtraParam": {
-                                "surveyPeriodId": survey_period_id,
-                                "surveyRoleId": role_id,
-                                "assignmentErrorStatusType": -1,
-                                "filterTargetType": target_type,
-                                "region3Id": kec_id,
-                                "region4Id": d_id
-                            }
-                        }
-                        d_resp = await fetch_api_safely(page, report_url, d_payload, token)
-                        if not d_resp or not d_resp.get("success"):
-                            break
-                        d_content = d_resp.get("data", {}).get("content", [])
-                        if not d_content:
-                            break
-                        d_results.extend(d_content)
-                        if len(d_content) < d_length:
-                            break
-                        d_start += d_length
-                    return d_results
-                
-                desa_tasks = [fetch_desa(d) for d in desas]
-                desa_results = await asyncio.gather(*desa_tasks)
-                for dr in desa_results:
-                    kec_results.extend(dr)
-            else:
-                # Ambil normal
-                start = 0
-                length = 500
-                while True:
-                    payload["start"] = start
-                    payload["length"] = length
-                    resp = await fetch_api_safely(page, report_url, payload, token)
-                    if not resp or not resp.get("success"):
-                        break
-                        
-                    data = resp.get("data", {})
-                    content = data.get("content", [])
-                    if not content:
-                        break
-                        
-                    kec_results.extend(content)
-                    if len(content) < length:
-                        break
-                    start += length
-                    
-            return kec_results
+                resp = await fetch_api_safely(page, report_url, payload, token)
+                if not resp or not resp.get("success"):
+                    # DEBUG: cetak raw response agar bisa dianalisis
+                    import json as _json
+                    print(f"      [DEBUG] Raw resp (Kab {kab_name} page {page_idx}): {_json.dumps(resp, ensure_ascii=False)[:400] if resp else 'None'}")
+                    print(f"      [WARNING] Gagal/kosong untuk Kab {kab_name} page {page_idx}")
+                    break
 
-        # Jalankan parallel untuk kecamatan di kabupaten ini
-        tasks = [fetch_kec(kec) for kec in kecs]
-        kab_results = await asyncio.gather(*tasks)
-        for r_list in kab_results:
-            all_results.extend(r_list)
-            
-    print(f" ✅ Total {len(all_results)} baris data responsibility berhasil ditarik.")
-    return all_results
+                data = resp.get("data", {})
+                content = data.get("content", [])
+                if not content:
+                    break
+                kab_rows.extend(flatten_content(content))
+                total_pages = data.get("totalPages", 1)
+                if page_idx >= total_pages - 1:
+                    break
+                page_idx += 1
+            all_flat_rows.extend(kab_rows)
+            print(f"      -> {len(kab_rows)} SLS assignments untuk Kab {kab_name}")
+    else:
+        # Fallback: query seluruh provinsi sekaligus
+        print("[INFO] Fallback: query responsibility per provinsi (tanpa filter kab)...")
+        page_idx = 0
+        size = 10  # API membatasi max 10 per page
+        while True:
+            payload = {
+                "surveyPeriodId": survey_period_id,
+                "surveyRoleId": role_id,
+                "size": size,
+                "page": page_idx,
+                "search": "",
+                "target": "TARGET_ONLY",
+                "region": make_region(),
+                "regionSummaryLevel": 6
+            }
+            resp = await fetch_api_safely(page, report_url, payload, token)
+            if not resp or not resp.get("success"):
+                break
+            data = resp.get("data", {})
+            content = data.get("content", [])
+            if not content:
+                break
+            all_flat_rows.extend(flatten_content(content))
+            total_pages = data.get("totalPages", 1)
+            if page_idx >= total_pages - 1:
+                break
+            page_idx += 1
+
+    print(f" ✅ Total {len(all_flat_rows)} baris data responsibility berhasil ditarik.")
+    return all_flat_rows
+
+
 
 def fetch_current_ipas_data(supabase_client):
     if supabase_client:
@@ -1610,8 +1664,8 @@ async def main():
             json.dump(users_map, f, indent=2)
         print(" ✅ Mapping user ID diperbarui.")
 
-        raw_responsibility_umum = await fetch_responsibility_report(page, token, SE_UMUM_PERIOD, ROLE_PENCACAH_UMUM, "target")
-        raw_responsibility_ub = await fetch_responsibility_report(page, token, SE_UB_PERIOD, ROLE_PENCACAH_UB, "target")
+        raw_responsibility_umum = await fetch_responsibility_report(page, token, SE_UMUM_PERIOD, ROLE_PENCACAH_UMUM, "TARGET_ONLY")
+        raw_responsibility_ub = await fetch_responsibility_report(page, token, SE_UB_PERIOD, ROLE_PENCACAH_UB, "TARGET_ONLY")
 
         # Pengelompokan Data SE Umum
         sls_targets_umum = {}

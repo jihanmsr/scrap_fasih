@@ -1,0 +1,257 @@
+{
+   "checksum": "a7965041e4aad3ea7c1beb5493621c9a",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13426670147713764",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks Bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13361365626586199",
+            "date_last_used": "0",
+            "guid": "194fc6d2-6e0f-4081-90a3-9778a9d4fc65",
+            "id": "8",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Hima-1/IMK-3SI1-KEL1-DPM-2024",
+            "type": "url",
+            "url": "https://github.com/Hima-1/IMK-3SI1-KEL1-DPM-2024"
+         }, {
+            "date_added": "13385153602481897",
+            "date_last_used": "0",
+            "guid": "319d4596-6a6e-4a29-9ae3-e785896dc806",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Desain Community – Figma",
+            "type": "url",
+            "url": "https://www.figma.com/design/c5GKOOnrxdGRYdomJ7kHCC/Desain-Community?node-id=51-1024&t=K3XuLC2bcZffRTkd-0"
+         }, {
+            "date_added": "13389164719003305",
+            "date_last_used": "0",
+            "guid": "169f003e-c905-4ede-8694-96d5462ab39c",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Untitled design - Presentation - Canva",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGkrOftNtM/irIzQSLA1GtLCtj0vGeQcA/edit"
+         }, {
+            "date_added": "13389484957391952",
+            "date_last_used": "0",
+            "guid": "90e41f44-6d9c-4ff4-be91-15afdd9f3264",
+            "id": "11",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "ChatGPT - Code FE Next",
+            "type": "url",
+            "url": "https://chatgpt.com/c/6802561b-2f00-8013-ad86-bb453435ad7f"
+         }, {
+            "date_added": "13389632242829581",
+            "date_last_used": "0",
+            "guid": "d2cd608d-bd94-402e-ac9b-34e2e509eade",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Template Doa Harian",
+            "type": "url",
+            "url": "https://chatgpt.com/c/6804fb12-2f20-8013-b862-59527d650add"
+         }, {
+            "date_added": "13389950592745061",
+            "date_last_used": "0",
+            "guid": "4ebd33e8-1564-408c-83aa-6042617c71bd",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "DESRIST24-DSRKnowledgeTypologyFinalManuscript.pdf",
+            "type": "url",
+            "url": "file:///Users/jihanmaisaroh/Downloads/DESRIST24-DSRKnowledgeTypologyFinalManuscript.pdf"
+         }, {
+            "date_added": "13390285264789861",
+            "date_last_used": "0",
+            "guid": "a852fed0-c441-494b-ad5d-ddf732ef78ce",
+            "id": "14",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Seminar Hasil - Jihan - Presentation",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGltz9v9LM/kTv8iwb6P8rEYvWQLrFrCQ/edit"
+         }, {
+            "date_added": "13390355568329084",
+            "date_last_used": "0",
+            "guid": "f4b64050-b7c9-4428-9ecc-11bb581bd939",
+            "id": "15",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Microsoft Word - 35. Finsa Nurpandi, Anita Ilmaniati",
+            "type": "url",
+            "url": "file:///Users/jihanmaisaroh/Downloads/3322-ArticleText-18620-1-10-20231214.pdf"
+         }, {
+            "date_added": "13390634417502534",
+            "date_last_used": "0",
+            "guid": "af64a49d-6881-4030-b80e-85b6d2f4ab01",
+            "id": "16",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Seminar Hasil - Jihan - Presentation",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGltz9v9LM/kTv8iwb6P8rEYvWQLrFrCQ/edit#"
+         }, {
+            "date_added": "13390936077494450",
+            "date_last_used": "0",
+            "guid": "356e37e9-afeb-45a5-b84d-1cc1dc251914",
+            "id": "17",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Frontend Architecture For Design Systems",
+            "type": "url",
+            "url": "https://cdn.bookey.app/files/pdf/book/en/frontend-architecture-for-design-systems.pdf"
+         }, {
+            "date_added": "13391063665083993",
+            "date_last_used": "0",
+            "guid": "9cd99492-794c-4e7b-9f1c-82034b6c7cea",
+            "id": "18",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Presentasi dan Lampiran - Presentation",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGmusjQOPQ/OGtwWW9ECu-AvFazNm_6Cg/edit"
+         }, {
+            "date_added": "13396459489161985",
+            "date_last_used": "0",
+            "guid": "e40234ff-4d4d-445e-a154-b4a58431ebf7",
+            "id": "19",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Prisma Studio",
+            "type": "url",
+            "url": "http://localhost:5555/"
+         }, {
+            "date_added": "13397072802849461",
+            "date_last_used": "0",
+            "guid": "b7256d25-22a3-45d6-adcd-357424dc52d1",
+            "id": "20",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "MySQL | Railway",
+            "type": "url",
+            "url": "https://railway.com/project/5a1f3766-637f-42ed-b93b-5bd6cbaf017b/service/ff71c7ae-4245-4324-8761-4f0712c7a69b/data?environmentId=c2ee4918-ceca-4b4d-b84a-1ce04cd233d6&state=table&table=comments"
+         }, {
+            "date_added": "13397569007612702",
+            "date_last_used": "0",
+            "guid": "4b82c380-8370-4604-a53c-381d45b7d1e0",
+            "id": "21",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Ujian Kompetensi Jihan - Presentation (4:3)",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAGtyrhoG5Y/HdZom7_zsBEYXt3Rkd-aUQ/edit"
+         }, {
+            "date_added": "13416893861331331",
+            "date_last_used": "0",
+            "guid": "17be64d0-d324-4b59-be94-3ffe235884dc",
+            "id": "22",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "SIMPONI BPS KOTA CIREBON",
+            "type": "url",
+            "url": "https://sites.google.com/d/1e5rMGNX-SPeABoQaX6voFtJ1FNhnl98a/p/1Nhh_RgJ-TP9MGrRF_H2rLhrua-7qExQz/edit"
+         }, {
+            "date_added": "13420165876330906",
+            "date_last_used": "0",
+            "guid": "0e22051f-b3f0-4c43-83f3-e6170aefaf4d",
+            "id": "23",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "CATUR-PAPARAN - Presentation",
+            "type": "url",
+            "url": "https://www.canva.com/design/DAHGDPX1YC8/9g_bc6vr9WeVoynt313F5A/edit"
+         }, {
+            "date_added": "13421827363902474",
+            "date_last_used": "0",
+            "guid": "aa1166a4-bada-41f0-9e7e-18934d33d1ce",
+            "id": "24",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Bukti dukung WFH - Google Drive",
+            "type": "url",
+            "url": "https://drive.google.com/drive/folders/1kWNcdo-g9XEKGtjBW4xb00WzyCADuMuL?hl=ID"
+         } ],
+         "date_added": "13426670147713764",
+         "date_last_used": "0",
+         "date_modified": "13421827363902474",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other Bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [ {
+            "date_added": "13274113546981335",
+            "date_last_used": "0",
+            "guid": "a0112c31-da7b-457c-9993-90cbafdbeccb",
+            "id": "5",
+            "meta_info": {
+               "last_visited_desktop": "13277199428208927"
+            },
+            "name": "Web Portal SIPADU STIS : Beranda",
+            "type": "url",
+            "url": "https://stis.ac.id/sipadu/mahasiswa/index.php/main/index"
+         }, {
+            "date_added": "13313872439563074",
+            "date_last_used": "0",
+            "guid": "f0aad160-91a2-4fc9-b51d-04a2bb9220b9",
+            "id": "6",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Nonton Series Friends: Season 1 (1994) | REBAHIN",
+            "type": "url",
+            "url": "http://104.237.198.197/series/friends-season-1-1994/watch/?ep=2&sv=1"
+         }, {
+            "date_added": "13313875532925688",
+            "date_last_used": "0",
+            "guid": "9d990191-7ba0-4994-9ae5-f561d77398f7",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Nonton Series The Big Bang Theory: Season 1 (2007) Sub Indo",
+            "type": "url",
+            "url": "http://104.237.198.197/series/nonton-the-big-bang-theory-season-1-sub-indo/watch/?ep=2&sv=1"
+         } ],
+         "date_added": "13426670147713764",
+         "date_last_used": "0",
+         "date_modified": "13313875532925688",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile Bookmarks",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "Cm8KTwiIgQISSSAAkgE2CjQKDmNocm9tZV9zeW5jX2JtEgU1MSFibRoSCU5sho70VAYAEU5sho70VAYAKYsah470VAYA6gELCIC87NEGEPDu4EgSACoYRjdKWXdzN3RxNW1MelJoZkZWcjlvUT09SAMS6wEIBhLmAQocRUVxbmFTOS9nZG5MZngwUXV2SUpPNmdTRm00PRJmWjpBRHF0QVp6c3ZrMjR1Zm5PSTJ3TnFEalRURzZ4akJqbm5UbTlMSkg2SUJaL3FJZm0xeVJUbjkzTXM0UHc5aU50ZzZ2Zm5CVFgrSWpXRk43SHhuSDZBM1EzZGduR2hPZzRJUT09GAAgACgAMIGe9PC1m5ADOIuCs//KMECLgrP/yjBKHDFWSStKSFBoY3BnZW83R3ZWUmpkSkg3U3BQTT1aHiIcenhmVVFGYUVUeHlmWko5ZzZzUThoMWtHdC9NPWUAAAAAEuwBCAoS5wEKHDVILy95UWNXdVFLV2NmTldtdGRRL2xxZ2FCYz0SZlo6QURxdEFaenN2azI0dWZuT0kyd05xRGpUVEc2eFNZNzFrTU5pdEl6WDk4Tnp6dkc0ZXZISGprMngvNERDVStHT3UwcVlHNW03ZFVxSFpIOStQc1lHUllta2wxdll2UWZuYlE9PRgAIAAoADCBnvTwtZuQAzieh8e94zJAnofHveMyShxkbTZCclNaMGFxTzhza1JHaUVkOW9vKzIrZlU9Wh8iHbhlaDBOUTc4Wm5CMUx0YzBvV1NMcC9aZmpsdUU9ZQAAAAAS7AEIBxLnAQocbDhQT0dlMUFGL0pYTi9LWm9KMVpQdys1MWtVPRJmWjpBRHF0QVp6c3ZrMjR1Zm5PSTJ3TnFEalRURzZ4SGhydlJyZURNYVpxaDRtaGhsYzRsd0U2c0dqZ281dkxqVjdXSmdmUEFZSGd0RENyVDhEbURhUU1teGM4S1VrYS85L2pydz09GAAgACgAMIGe9PC1m5ADOP3o74DLMED96O+AyzBKHFlGV2kzbndnOVQyOU1TdzRMTE16RGVBS1M2ND1aHyIdvVZoaE9aM2kvODFOSHl4SUc3OW9GWnNvNHhaWT1lAAAAABLDAQgDEr4BChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EmZaOkFEcXRBWnpiVkwrM21TU1pVb1Jrc3FBTzBLdm84akdJZDNseW9seGp6QTNsbXBrRmYyUThNWW52WGZXc3FuVncvNkREQ0g5ZlQxS2VLS0xzR1JQUUVaVjdvaFlIeEJKdHhnPT0YACAAKAAwrcXs9uiclQM4AEAAShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAABLtAQgYEugBChxkSmdCUS9DZVlYSU5rMTZqMU5vTXFKWGVNOTA9EmZaOkFEcXRBWnpzdmsyNHVmbk9JMndOcURqVFRHNng3ZlIyczhzZGdSQnYxUlhXa21pbThoVCs5a21rc0V2MW9sUVZCdWJjYTNrZ0M5YkZDNkNaYVBMTm82b0V1T1dIOTNqbWZRPT0YACABKAEw7aH7psqelQM4w9iolN0zQKDAy7fvM0ocV1lzVkdOTnNMNUpiZFpWaHJ0UFVMU0J5NUs4PVogIh7//TEyQUhTczhkYWRaOG1xd081dWZ0TnJqT1RHbz1lAAAAABLDAQgCEr4BChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EmZaOkFEcXRBWnlzcW9BRDV1Qlc2MjgwUk13T29SZ2JSQm9LWU1ETEYzZ0Q1MjlPYk45blhib3JSeXppaXcxMWtlNHVscVY4WDl0OWdlNDAwTFpQUTR6Qm9GWDBOSnkxZzlueEN3PT0YACAAKAAwrcXs9uiclQM4AEAAShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAABLtAQgTEugBChwvb1gyTi9jVDNLdVFOMDFMN2ZMZnZteFh1MEk9EmZaOkFEcXRBWnpzdmsyNHVmbk9JMndOcURqVFRHNnhWNyswS0Q1QmRaMDVqR2N5SS9XL0JWVEJ4U2NaMGlCT1NVUnFhRVJ4eXV5a3dJVFdVb2hDMldERDRlam45Q1prZlhYWmt3PT0YACABKAEw7aH7psqelQM4j7/80/4yQKDAy7fvM0ocWi9pYnFPK2xXRXBpLytRMUg1YjlLVXM5RVNFPVogIh7/pklQZUNsMjd5S3hmN3JIMis5MEtFNEdNVy9XRT1lAAAAABKrAQgBEqYBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9Ek5aOkFEcXRBWncySTQvc1pENnQ1em1GdzJUeDBIaGp4VzlEWTZ0Z0RIV0pOajd5b2xIRXAvYWlDekRPMjZhbDgzMCt4Z0wyd3hxNTQ2SmgYACAAKAAwrcXs9uiclQM4AEAAShxhUkNXTGdoRjliNUlucUtJRHZ1Si9qdlFrRmM9WgBlAAAAABLrAQgFEuYBChx1YVd0OFp3eUk2WGd4SVdYbGRMWEFiL3djcVE9EmZaOkFEcXRBWnpzdmsyNHVmbk9JMndOcURqVFRHNng2ZU4xS2trNXhOKzBjSDduMFZiNmRKZWwraE1GWUR2RVNqU01CK1psb0FtRi8zYUxTY3hpaE9LZDRic3BPRENkYmVlQ1JRPT0YACABKAEw7aH7psqelQM45eXw8LYvQKDAy7fvM0ocWXhxSGFyRHdXMnRENzMvNnpCSk42ZWVBenlrPVoeIhxDWnZjZk5tclVMSVBneUFHcVdnSE1NOEs4elk9ZQAAAAAS6wEICBLmAQocS082bWNyamhkdlJMeEsvZm5KMk9hV3BNUStvPRJmWjpBRHF0QVp6c3ZrMjR1Zm5PSTJ3TnFEalRURzZ4Qk1NajhpRDJZWkVjVzd0d0dzOHZBeHpaSis5alEvbnF2STdZMExNUWdJYVJXQ3U3RFBCeGQrcXg2WHc5Q1JMU2dOTXJlUT09GAAgACgAMIGe9PC1m5ADONqN9fX7MUDajfX1+zFKHFhwb3ByYlMwVTVjTTIrMnNjRGVTN1ZNM01GND1aHiIcTHdneWROckVRcUx4M0cwYWZKdzJLVUxndlRBPWUAAAAAEusBCAkS5gEKHFpiVi8wYnorK0Q4aVJXTnMzZVlQM25CeUtzOD0SZlo6QURxdEFaenN2azI0dWZuT0kyd05xRGpUVEc2eDg0N2xUNUo1ekM3M2lXTW1KUFg5K21sNkF0UUpjdHdaeDVSQ0NMRjFYMUhRYUxoNWwxeU1uVEFQaVUvb2FOelp6R0dzcmc9PRgAIAAoADDOj6Kvxp6UAzi29/PE1DJAtvfzxNQyShxWRGVmdnFYV0NaUUg5Vlh5WlUzR3BmbUhHRWM9Wh4iHHFiSGo0bWtVRnI1WW03eFdYT1ZxVGRySW1lST1lAAAAABLsAQgLEucBChx3L0xtVERDNXZHYndkaGxha0FyR0dDU3l5NUE9EmZaOkFEcXRBWnpzdmsyNHVmbk9JMndOcURqVFRHNnhpYXJpenFyMzJFdHlKekN6N3J1MEZpeWgxWU8wMFlQNTJRSkcrWi9kNVF2VGZmZkdhdEVvWnBhUDJQR3NTbG1pOHlERUNnPT0YACAAKAAwgZ708LWbkAM41u2g1uQyQNbtoNbkMkocUEdTakd2Q2tNS1pHQzgydTdwNnUrdzRQcjBnPVofIh3cekNLdHJReE5pdloxUlhNZ0xienM0djdLK3BRPWUAAAAAEuwBCAwS5wEKHDFZYkg3TEdCeTgrN0d1bGVCMWFqTzN2NW9TUT0SZlo6QURxdEFaenN2azI0dWZuT0kyd05xRGpUVEc2eGkyblpjbnpjbk9MV1NMYVhDL1ZHbUV6TXhuNi9VUkVoREtUTWxxRE5tL2lvOWxiUUV5cUo2Zmd2QnJVNUZjL1IvaTBsckE9PRgAIAAoADCBnvTwtZuQAziSub6c5TJAkrm+nOUyShxxb0Y5SFRXYS94SU13dytodldwa1gwa3Nmblk9Wh8iHe5jT3JjT2N1VXdYRVo5UXlWT3BRSjZqMm1oaHM9ZQAAAAAS7AEIERLnAQocS0pDWWx1QTNjMnZVN1M0WVZiUFNYVlBPanVrPRJmWjpBRHF0QVp6c3ZrMjR1Zm5PSTJ3TnFEalRURzZ4UFpqSHVic2MzVFZyeG84cy9pY2J3Z2F3NHNkSnVVWk1RZVdieEcwUEtXZjM0Qjd0NzJOVjFacEVVQ05FYVIxY2RSWDhndz09GAAgACgAMIGe9PC1m5ADOLmZmorqMkC5mZqK6jJKHFR5TlF0L0QwSUpkU240Nll2MlB1YjBVU2I0UT1aHyId/zJlbFFET3BSUlkyWGl1cGxTQkd0cW1KZjBlTT1lAAAAABLtAQgWEugBChwxNUlRSFZXYTZ4UmFQbWFrSHNQaXVSYklMZXM9EmZaOkFEcXRBWnpzdmsyNHVmbk9JMndOcURqVFRHNnhUZjg3amd6WTdPZmtRUWZERmNNOFZrOENodlhCTmlSZVVXS0RRN1dCN2lLSzZPeC9yMUZCR0V1R3pXS3dLMkwvcGlXdEh3PT0YACAAKAAwzo+ir8aelAM42Mvr48ozQNjL6+PKM0ocMFNIUGpKejExc2tZY2RyNU52Ums3bWFPSXlvPVogIh7/9FAyM002SVlBWFRKUW9WbTg0N01MM2lCNGkyQT1lAAAAABLtAQgUEugBChw5WGJHdThrd1dwWlZlVHFpenQ4VE1pemxYbHc9EmZaOkFEcXRBWnpzdmsyNHVmbk9JMndOcURqVFRHNngxNDVSU2k5R3NWbEpHMkRkQ3o2NW94WFZjR1NHWmdGMG1BQ1lobk9uWlpydm85TDZEMUFmeVZZemdhei9HQ004U2s1ZW13PT0YACAAKAAwgZ708LWbkAM4pJi2+IAzQKSYtviAM0ocZ2lVU1QxNnluZjFtVXNmODJjK0JMZ0lHWU5FPVogIh7/0zh4TTZydDc4VTRxTU11aXh6UXVpNlB1dmhUcz1lAAAAABLsAQgPEucBChxIVXkrVE53QklsTXpaK2F2TWNYOUZ0Wkp2L1E9EmZaOkFEcXRBWnpzdmsyNHVmbk9JMndOcURqVFRHNngzVnNPTjdMT1ovelZFOWZ0V3p1TTU2U1EybFNEZUE0ME9ZdTJBaUxTcVhnZjJHYi93aWhIR3prd0pnOFZjMkl0cUZ6Z2hBPT0YACAAKAAw0butle37jAM4y92y9ecyQMvdsvXnMkocNzBuQnF0Y1JIR0tFbmdXSC9aVm1oSDQzQ21rPVofIh39MWpLbmRRLzY0K2R3QTh1RmdzMzNzVnl6c01rPWUAAAAAEuwBCA0S5wEKHG85WXkwMXkrcCtVejJoVFZtTFFpdGpTK3lZQT0SZlo6QURxdEFaenN2azI0dWZuT0kyd05xRGpUVEc2eDdldWdDNGt1eXhGS1pYbGlYTVdQN2puUHNxUFdudElIUk1jU0srUWN6TGpPdFhsWmdEVVZUQlZkSkpydGg5T0xJNkNqaFE9PRgAIAAoADDJl4TCiPCMAzjs/aS05jJA7P2ktOYyShx6cG96VnpPVUFMdnppbmlhOGtSL0E3b0NOaW89Wh8iHfdmU25tTjVQbUZIUUE2U2tkS2FrSVE1YlVyekE9ZQAAAAAS7AEIEBLnAQocTTZVejNJQ29WWFhDTVpqT0ZoRk9aemRDV1V3PRJmWjpBRHF0QVp6c3ZrMjR1Zm5PSTJ3TnFEalRURzZ4amFGWTZhaWYrSFc1dWtFTTMyeTVpSVFybGlnekM4OXloL3pEbEo0S2VDd0YvMjhybVN5ZVh4L2I0UU4vbSthSVJEazcyZz09GAAgACgAMIGe9PC1m5ADOOKqrvroMkDiqq766DJKHDhmdGVjMzFOME10ZkdmZXEzakVDSUtkcDBPdz1aHyId/itXZFdTMis1NmtMdXhjakh1Q2FQamlMa3NBYz1lAAAAABLsAQgSEucBChw3SXhReStQQ0RqNWFaRW05bEwrMmtQendQZkU9EmZaOkFEcXRBWnpzdmsyNHVmbk9JMndOcURqVFRHNngwYnlIaU0rdHJjOGRRWGNyM3ZrcHV6SEQ4L3hLSDVqT1FVSjlBcW9QanRqVFlRZGd4enNFUTYzQ3o0eDNsU3hkR04zbHVRPT0YACAAKAAwgZ708LWbkAM4wMOFx+oyQMDDhcfqMkoceG4xaWk2OXY4SElIdG9jQmFqZEQ5NGlQNm9jPVofIh3/TWFOLzFuMlNwZDNaL3ZFdmQ3TytGTCtCZ0FNPWUAAAAAEu0BCBUS6AEKHGRidWNMeWczcGwxQ0VWNFE4TVBaTENFdlJ6QT0SZlo6QURxdEFaenN2azI0dWZuT0kyd05xRGpUVEc2eC8xeUtEYVN3amxkdmF4byszaDNma1AzSG41b3NXWGZ1ZDc1R0VLUlVyM0JZcTcyN0RLckhhUHBJNmRQa0lwWFBpeEgzanc9PRgAIAAoADCBnvTwtZuQAziCkITlgjNAgpCE5YIzShxKMzk2a1crV3lzMWR3SzZRQ0tNMkhZVjdYT3c9WiAiHv/pR1ErbTJYY29hcnRxQys3UGtFN3N2bFRjeGw4PWUAAAAAEuwBCA4S5wEKHHJUWGsybU10bW9wb2d1L2llTVRqb1hYSHhRYz0SZlo6QURxdEFaenN2azI0dWZuT0kyd05xRGpUVEc2eEl4OHBtRFc5UXIwVjR5anA5OExuRWZIeCtFQVBIY2NzSVhjajhoWG9HMmVyWHYrdDluM3BXbzlQbktnaTRmVVlMajI0ZVE9PRgAIAAoADCBnvTwtZuQAzib3+/T5zJAm9/v0+cyShxLa01xVk9hajNzeG9lR1NjNWlBbk80ZDliSWM9Wh8iHftMMjNvZnQ2ZlFJcXN6eGNSM3l0czhPQW5waFU9ZQAAAAAS7QEIFxLoAQocWEpYWXN0U29BWFFGdkdaQ090ZTRLOVFWV1FzPRJmWjpBRHF0QVp6c3ZrMjR1Zm5PSTJ3TnFEalRURzZ4YWU1MXYzaUs1WU1ESzIxTGRVbGdFNElXd3VINWRtTjJtejVxYmdLQUZMQXlhck05ZHplNlFYU09KdFNoWDlUdTQxMStXUT09GAAgACgAMM6Poq/GnpQDOO7Eh/zWM0DuxIf81jNKHHRpT05vcDI2M2RCY2RSWlBzS05TREM0dGhlbz1aICIe//pBQi9iOEhOL3NMcnVnK1poOWpEMTlGUDNyYVE9ZQAAAAAwATgA",
+   "version": 1
+}

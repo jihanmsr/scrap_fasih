@@ -10,3 +10,13 @@ __pycache__/
 Detail_Usaha_SE_Umum_*.csv
 Detail_Usaha_SE_UB_*.csv
 Laporan_Progres_Petugas_*.xlsx
+
+# File besar (>50MB) - jangan di-push ke GitHub
+hasil_export.csv
+granular_assignments.js
+granular_assignments.json
+granular_assignments_*.js
+granular_assignments_*.json
+*.json.bak
+all_email_history.csv
+backup_all_email_history.csv
