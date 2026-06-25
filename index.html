@@ -91,7 +91,17 @@
                     </svg>
                     Progres Petugas
                 </button>
-            </nav>
+            
+                <button class="btn-tab" id="tab-btn-anomali" style="opacity: 0.45; cursor: not-allowed; pointer-events: none; position: relative;" disabled title="Segera Hadir">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    Pemantauan Anomali
+                    <span style="margin-left: 0.5rem; font-size: 0.65rem; font-weight: 700; background: #94a3b8; color: white; border-radius: 999px; padding: 1px 7px; letter-spacing: 0.04em; vertical-align: middle;">SOON</span>
+                </button>
+</nav>
 
             <div class="sidebar-footer"
                 style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--card-border); text-align: left; display: flex; flex-direction: column; gap: 0.75rem; align-items: center; padding-left: 0.25rem; padding-right: 0.25rem;">
@@ -1608,7 +1618,94 @@
                 </div>
             </div>
 
-        </main>
+        
+            <div class="tab-content" id="tab-anomali" style="display: none;">
+                <!-- COMING SOON PLACEHOLDER — hapus section ini setelah fitur siap -->
+                <div class="header">
+                    <div>
+                        <h1 class="page-title">Pemantauan Anomali</h1>
+                        <p class="page-subtitle">Daftar anomali dan tindak lanjut petugas di lapangan.</p>
+                    </div>
+                </div>
+
+                <div id="anomali-login-section" style="background: white; padding: 2rem; border-radius: 1rem; text-align: center; max-width: 400px; margin: 2rem auto; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                    <h2 style="margin-bottom: 1rem; font-family: 'Outfit', sans-serif;">Login Pegawai BPS</h2>
+                    <p style="margin-bottom: 1.5rem; color: #64748b; font-size: 0.9rem;">Silakan login untuk melihat rincian anomali dan mengisi tindak lanjut.</p>
+                    <input type="text" id="anomali-username" placeholder="Username / NIP" style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #e2e8f0; border-radius: 0.5rem; outline: none; font-family: 'Plus Jakarta Sans', sans-serif;">
+                    <input type="password" id="anomali-password" placeholder="Password" style="width: 100%; padding: 0.75rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; border-radius: 0.5rem; outline: none; font-family: 'Plus Jakarta Sans', sans-serif;">
+                    <button onclick="loginAnomali()" style="width: 100%; padding: 0.75rem; background: var(--primary); color: white; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">Masuk</button>
+                    <div id="anomali-login-error" style="color: #ef4444; margin-top: 1rem; font-size: 0.85rem; display: none;">Username atau password salah!</div>
+                </div>
+
+                <div id="anomali-data-section" style="display: none;">
+                    <!-- Top Bar: greeting + filter + logout -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; gap: 1rem; flex-wrap: wrap;">
+                        <div>
+                            <div style="font-weight: 700; color: var(--text-primary); font-size: 1rem;">Halo, <span id="anomali-user-name" style="color: var(--primary);"></span></div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);" id="anomali-user-kab"></div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                            <input type="text" id="anomali-search" placeholder="🔍 Cari nama / jenis anomali..." oninput="filterAnomaliTable()" style="padding: 0.5rem 0.85rem; border: 1px solid var(--card-border); border-radius: 0.5rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none; min-width: 220px;">
+                            <select id="anomali-filter-status" onchange="filterAnomaliTable()" style="padding: 0.5rem 0.85rem; border: 1px solid var(--card-border); border-radius: 0.5rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer;">
+                                <option value="">Semua Status</option>
+                                <option value="1">Belum Ditindaklanjuti</option>
+                                <option value="2">Sedang Diproses</option>
+                                <option value="3">Selesai</option>
+                            </select>
+                            <button onclick="logoutAnomali()" style="padding: 0.5rem 1rem; background: #f1f5f9; color: #475569; border: none; border-radius: 0.5rem; cursor: pointer; font-weight: 500; font-family: 'Plus Jakarta Sans', sans-serif; transition: all 0.2s; font-size: 0.85rem;">Logout</button>
+                        </div>
+                    </div>
+
+                    <!-- Summary cards -->
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap;" id="anomali-summary-row">
+                        <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 0.85rem 1.25rem; min-width: 160px; flex: 1;">
+                            <div style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Total Anomali</div>
+                            <div style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary); font-family: 'Outfit', sans-serif;" id="anomali-count-total">-</div>
+                        </div>
+                        <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 0.85rem 1.25rem; min-width: 160px; flex: 1;">
+                            <div style="font-size: 0.75rem; color: #ef4444; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Belum Ditindaklanjuti</div>
+                            <div style="font-size: 1.6rem; font-weight: 800; color: #ef4444; font-family: 'Outfit', sans-serif;" id="anomali-count-pending">-</div>
+                        </div>
+                        <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 0.85rem 1.25rem; min-width: 160px; flex: 1;">
+                            <div style="font-size: 0.75rem; color: #f59e0b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Sedang Diproses</div>
+                            <div style="font-size: 1.6rem; font-weight: 800; color: #f59e0b; font-family: 'Outfit', sans-serif;" id="anomali-count-process">-</div>
+                        </div>
+                        <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 0.85rem 1.25rem; min-width: 160px; flex: 1;">
+                            <div style="font-size: 0.75rem; color: #22c55e; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Selesai</div>
+                            <div style="font-size: 1.6rem; font-weight: 800; color: #22c55e; font-family: 'Outfit', sans-serif;" id="anomali-count-done">-</div>
+                        </div>
+                    </div>
+
+                    <!-- Loading & Table -->
+                    <div id="anomali-loading" style="text-align: center; padding: 3rem; color: var(--text-secondary); display: none;">
+                        <div style="font-size: 1rem;">⏳ Memuat data anomali...</div>
+                    </div>
+                    <div class="card" style="overflow-x: auto;">
+                        <table class="table w-full" id="anomali-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40px;">No</th>
+                                    <th>Kab/Kota</th>
+                                    <th>Jenis Anomali</th>
+                                    <th>Nama KRT / Target</th>
+                                    <th style="max-width: 220px;">Catatan</th>
+                                    <th style="min-width: 220px;">Tindak Lanjut</th>
+                                    <th style="min-width: 140px;">Status</th>
+                                    <th style="width: 80px;">Simpan</th>
+                                </tr>
+                            </thead>
+                            <tbody id="anomali-tbody">
+                                <!-- Data injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="anomali-empty" style="text-align: center; padding: 3rem; color: var(--text-secondary); display: none;">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">✅</div>
+                        <div style="font-weight: 600;">Tidak ada data anomali ditemukan.</div>
+                    </div>
+                </div>
+            </div>
+</main>
     </div>
     <div class="modal-overlay" id="businesses-modal">
         <div class="modal-container">

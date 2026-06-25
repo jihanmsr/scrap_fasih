@@ -27,6 +27,18 @@ if SUPABASE_URL and SUPABASE_KEY and "MASUKKAN" not in SUPABASE_URL:
 
 USER_DATA_DIR = "playwright_chrome_profile"
 
+region_map_full = {}
+try:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    region_map_full_path = os.path.join(script_dir, "region_map_sulteng_full.json")
+    if os.path.exists(region_map_full_path):
+        with open(region_map_full_path, "r", encoding="utf-8") as f:
+            region_map_full = json.load(f)
+        print("[INFO] Global region_map_full loaded successfully.")
+except Exception as e:
+    print(f"[WARNING] Gagal memuat region_map_sulteng_full.json di tingkat global: {e}")
+
+
 def check_port_open(port=9222):
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -126,19 +138,18 @@ async def refresh_session_if_needed(client, page, context):
             is_valid = await check_session_valid(page, token)
             
         if is_valid:
-            if client_token != token:
-                print("[INFO] Browser session is valid, updating HTTPX client with new token/cookies.", flush=True)
-                client.headers.update({"X-XSRF-TOKEN": token})
-                client.cookies.clear()
-                for c in cookies:
-                    client.cookies.set(
-                        c['name'],
-                        c['value'],
-                        domain=c.get('domain', 'fasih-sm.bps.go.id'),
-                        path=c.get('path', '/')
-                    )
-                return True
-            return False
+            print("[INFO] Browser session is valid, updating HTTPX client with new token/cookies.", flush=True)
+            client.headers.update({"X-XSRF-TOKEN": token})
+            client.cookies.clear()
+            for c in cookies:
+                client.cookies.set(
+                    c['name'],
+                    c['value'],
+                    domain=c.get('domain', 'fasih-sm.bps.go.id'),
+                    path=c.get('path', '/')
+                )
+            return True
+
             
         print("[WARNING] Sesi FASIH tidak valid atau telah kedaluwarsa. Mencoba memicu pembaruan cookie via page reload...", flush=True)
         
@@ -216,23 +227,42 @@ async def safe_get(client, page, context, sem, url, max_retries=3):
         is_session_issue = False
         async with sem:
             try:
-                r = await client.get(url)
-                if r.status_code == 200:
-                    try:
-                        return r.json()
-                    except Exception:
-                        pass
-                elif r.status_code == 404:
-                    return None
+                cookies = await context.cookies()
+                token = ""
+                for c in cookies:
+                    if c["name"] == "XSRF-TOKEN":
+                        from urllib.parse import unquote
+                        token = unquote(c["value"])
+                        break
+
+                res = await page.evaluate("""
+                    async ({url, token}) => {
+                        try {
+                            const r = await fetch(url, {
+                                method: "GET",
+                                headers: { "X-XSRF-TOKEN": token }
+                            });
+                            if (!r.ok) return { _error: `HTTP ${r.status}` };
+                            return await r.json();
+                        } catch (e) {
+                            return { _error: e.toString() };
+                        }
+                    }
+                """, {"url": url, "token": token})
+
+                if res and isinstance(res, dict):
+                    if "_error" not in res:
+                        return res
+                    else:
+                        status_err = res["_error"]
+                        print(f"[WARNING] GET response invalid ({status_err}). Possible session expiration.", flush=True)
+                        if "401" in status_err or "403" in status_err:
+                            is_session_issue = True
+                elif isinstance(res, list):
+                    return res
                     
-                print(f"[WARNING] GET response invalid (status {r.status_code}). Possible session expiration.", flush=True)
-                is_session_issue = (
-                    r.status_code in [401, 403] or
-                    "login" in str(r.url).lower() or
-                    (r.status_code == 200 and not r.text.strip().startswith("["))
-                )
             except Exception as e:
-                print(f"[WARNING] GET request exception: {e}", flush=True)
+                print(f"[WARNING] GET request exception via page.evaluate: {e}", flush=True)
                 is_session_issue = True
                 
         if attempt < max_retries - 1:
@@ -293,191 +323,106 @@ SURVEY_CONFIGS = [
 
 DATATABLE_URL = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
 
-async def fetch_kab_granular(client, page, context, survey_period_id, region1_id, kab_id, kab_name, label, sem):
-    print(f"  -> [{label}] Mulai download data wilayah: {kab_name}...")
+async def get_regions(client, page, context, sem, level, parent_code_key, parent_code_val, group_id):
+    url = f"https://fasih-sm.bps.go.id/app/api/region/api/v1/region/level{level}?groupId={group_id}&{parent_code_key}={parent_code_val}"
+    res = await safe_get(client, page, context, sem, url)
+    raw_data = res.get("data", res) if isinstance(res, dict) else res
+    if isinstance(raw_data, list):
+        return raw_data
+    elif isinstance(raw_data, dict) and "id" in raw_data:
+        return [raw_data]
+    return []
+
+async def fetch_targets_with_drilldown(client, page, context, sem, survey_period_id, region1_id, level, current_region_id, current_region_code, current_region_name, label, status_filter=None):
     start = 0
     length = 1000
     all_records = []
     
-    # We query datatable-all-user-survey-periode with all necessary columns
     columns_payload = [
-        {"data": "id"},
-        {"data": "codeIdentity"},
-        {"data": "data1"}, # Target/Company Name
-        {"data": "assignmentStatusAlias"},
+        {"data": "id"}, {"data": "codeIdentity"}, {"data": "data1"},
+        {"data": "assignmentStatusAlias", "name": "", "searchable": True, "orderable": True, "search": {"value": status_filter or "", "regex": False}},
+        {"data": "assignmentErrorStatusAlias"},
         {"data": "currentUserUsername"},
-        {"data": "currentUserFullname"},
-        {"data": "dateCreated"},
-        {"data": "dateModified"},
-        {"data": "region"}
+        {"data": "currentUserFullname"}, {"data": "dateCreated"},
+        {"data": "dateModified"}, {"data": "region"}, {"data": "assignmentResponsibility"}
     ]
     
+    level_to_param = { 1: "region1Id", 2: "region2Id", 3: "region3Id", 4: "region4Id", 5: "region5Id" }
+    param_key = level_to_param[level]
+    indent = "   " * (level - 2) if level >= 2 else ""
+    if status_filter: indent += "   "
+    
     while True:
+        if start == 0:
+            if level == 3 and not status_filter:
+                print(f"  [>>] Menarik Kecamatan: {current_region_name} [{current_region_code}]...", flush=True)
+            elif level == 4 and not status_filter:
+                print(f"    [>>>] Menarik Desa: {current_region_name} [{current_region_code}]...", flush=True)
+            elif status_filter:
+                print(f"{indent} -> Menarik status {status_filter}...", flush=True)
+                
         payload = {
-            "start": start,
-            "length": length,
-            "columns": columns_payload,
-            "order": [],
-            "search": {"value": "", "regex": False},
+            "start": start, "length": length, "columns": columns_payload, "order": [], "search": {"value": status_filter or "", "regex": False},
             "assignmentExtraParam": {
-                "region1Id": region1_id,
-                "region2Id": kab_id,
-                "surveyPeriodId": survey_period_id,
-                "assignmentErrorStatusType": -1,
-                "filterTargetType": ""
+                "region1Id": region1_id, "surveyPeriodId": survey_period_id,
+                "assignmentErrorStatusType": -1, "filterTargetType": "", param_key: current_region_id
             }
         }
         
         res = await safe_post(client, page, context, sem, DATATABLE_URL, payload)
-        
         if not res or "_error" in res or "searchData" not in res:
-            print(f"      [ERROR] Fatal gagal ambil page data {start} untuk {kab_name}. Error: {res.get('_error') if res else 'None'}")
+            print(f"{indent}[ERROR] Gagal ambil data offset {start} di {current_region_name}")
             break
             
         records = res["searchData"]
-        if not records:
-            break
+        total = res.get("totalHit", 0)
+        if total >= 1000 and level == 4:
+            if start == 0:
+                print(f"{indent}  [!] Desa {current_region_name} memiliki {total} target (>= 1000). Memecah pencarian berdasarkan SLS...", flush=True)
+                kab_code = current_region_code[:4]
+                kec_code = current_region_code[:7]
+                desa_code = current_region_code
+                kab_data = region_map_full.get("kabupaten", {}).get(kab_code, {})
+                kec_data = kab_data.get("kecamatan", {}).get(kec_code, {})
+                desa_data = kec_data.get("desa", {}).get(desa_code, {})
+                sls_items = desa_data.get("sls", [])
+                
+                if sls_items:
+                    async def fetch_sls_targets(sls):
+                        sls_id = sls.get("sls_id")
+                        sls_name = sls.get("sls_name") or "-"
+                        sls_full_code = sls.get("sls_full_code") or ""
+                        if sls_id:
+                            return await fetch_targets_with_drilldown(
+                                client, page, context, sem,
+                                survey_period_id, region1_id,
+                                5, sls_id, sls_full_code, sls_name, label, status_filter=None
+                            )
+                        return []
+
+                    tasks = [fetch_sls_targets(sls) for sls in sls_items]
+                    sls_results = await asyncio.gather(*tasks)
+                    for r_list in sls_results:
+                        all_records.extend(r_list)
+                    
+                    print(f"{indent}      => Total dari Desa {current_region_name} (via {len(sls_items)} SLS): {len(all_records)} / {total} target", flush=True)
+                    return all_records
+                else:
+                    print(f"{indent}  [WARNING] SLS tidak ditemukan untuk Desa {current_region_name} di metadata. Menggunakan fallback paginasi biasa...", flush=True)
+
             
+        if not records: break
         all_records.extend(records)
-        print(f"      [{kab_name}] Downloaded {len(all_records)} / {res.get('totalHit', 0)} targets...")
-        
-        if len(records) < length or len(all_records) >= res.get("totalHit", 0):
-            break
-            
+        if len(records) < length or len(all_records) >= total: break
         start += length
         
-    print(f"  -> [{label}] Selesai {kab_name}. Total: {len(all_records)} target.")
-    return all_records
-
-# Shared progress counter for SE Umum by Desa
-progress_lock = asyncio.Lock()
-completed_desas = 0
-total_desas = 0
-
-async def fetch_desa_granular(client, page, context, survey_period_id, region1_id, kab_id, kec_id, desa_id, kab_name, kec_name, desa_name, label, sem, sls_list=None):
-    global completed_desas, total_desas
-    
-    start = 0
-    length = 1000
-    all_records = []
-    
-    columns_payload = [
-        {"data": "id"},
-        {"data": "codeIdentity"},
-        {"data": "data1"},
-        {"data": "assignmentStatusAlias"},
-        {"data": "currentUserUsername"},
-        {"data": "currentUserFullname"},
-        {"data": "dateCreated"},
-        {"data": "dateModified"},
-        {"data": "region"}
-    ]
-    
-    payload = {
-        "start": start,
-        "length": length,
-        "columns": columns_payload,
-        "order": [],
-        "search": {"value": "", "regex": False},
-        "assignmentExtraParam": {
-            "region1Id": region1_id,
-            "region2Id": kab_id,
-            "region3Id": kec_id,
-            "region4Id": desa_id,
-            "surveyPeriodId": survey_period_id,
-            "assignmentErrorStatusType": -1,
-            "filterTargetType": ""
-        }
-    }
-    
-    res = await safe_post(client, page, context, sem, DATATABLE_URL, payload)
-            
-    if not res or "_error" in res or "searchData" not in res:
-        print(f"      [ERROR] Gagal ambil page data {start} untuk Desa {desa_name}.")
-    else:
-        records = res["searchData"]
-        all_records.extend(records)
-        total_hit = res.get("totalHit", 0)
+    if level == 4 and not status_filter:
+        print(f"    [OK] Desa {current_region_name} selesai ({len(all_records)} data)", flush=True)
+    elif level == 3 and not status_filter:
+        print(f"  [OK] Kecamatan {current_region_name} selesai ({len(all_records)} data)", flush=True)
         
-        # Check if totalHit > 1000 and we have a valid sls_list to split the query
-        if total_hit > 1000 and sls_list:
-            print(f"      [INFO] Desa {desa_name} memiliki {total_hit} target (>1000). Menggunakan query split per SLS untuk menghindari limitasi paging BPS.", flush=True)
-            
-            # Map target ID -> record to avoid duplicates
-            records_dict = {r["id"]: r for r in all_records}
-            
-            # Fetch for each SLS
-            for sls in sls_list:
-                sls_id = sls.get("sls_id")
-                sls_name = sls.get("sls_name", "-")
-                if not sls_id:
-                    continue
-                    
-                start_sls = 0
-                while True:
-                    payload_sls = {
-                        "start": start_sls,
-                        "length": length,
-                        "columns": columns_payload,
-                        "order": [],
-                        "search": {"value": "", "regex": False},
-                        "assignmentExtraParam": {
-                            "region1Id": region1_id,
-                            "region2Id": kab_id,
-                            "region3Id": kec_id,
-                            "region4Id": desa_id,
-                            "region5Id": sls_id,
-                            "surveyPeriodId": survey_period_id,
-                            "assignmentErrorStatusType": -1,
-                            "filterTargetType": ""
-                        }
-                    }
-                    
-                    res_sls = await safe_post(client, page, context, sem, DATATABLE_URL, payload_sls)
-                            
-                    if not res_sls or "_error" in res_sls or "searchData" not in res_sls:
-                        print(f"      [ERROR] Gagal ambil page data {start_sls} untuk SLS {sls_name} di Desa {desa_name}.")
-                        break
-                        
-                    records_sls = res_sls["searchData"]
-                    if not records_sls:
-                        break
-                        
-                    for r in records_sls:
-                        records_dict[r["id"]] = r
-                        
-                    if len(records_sls) < length or len(records_dict) >= total_hit:
-                        break
-                        
-                    start_sls += length
-            
-            all_records = list(records_dict.values())
-            print(f"      [SUCCESS] Desa {desa_name}: Berhasil menarik {len(all_records)} / {total_hit} target.", flush=True)
-            
-        elif total_hit > 1000:
-            print(f"      [WARNING] Desa {desa_name} memiliki {total_hit} target (>1000), tetapi tidak ada sls_list untuk split query!", flush=True)
-            # Try paging as fallback
-            start = length
-            while True:
-                payload["start"] = start
-                res = await safe_post(client, page, context, sem, DATATABLE_URL, payload)
-                        
-                if not res or "_error" in res or "searchData" not in res:
-                    break
-                records = res["searchData"]
-                if not records:
-                    break
-                all_records.extend(records)
-                if len(records) < length or len(all_records) >= total_hit:
-                    break
-                start += length
- 
-    async with progress_lock:
-        completed_desas += 1
-        if completed_desas % 50 == 0 or completed_desas == total_desas:
-            print(f"      [PROGRESS] SE Umum: Downloaded {completed_desas} / {total_desas} desas...", flush=True)
-            
     return all_records
+
 
 def parse_date_to_epoch(date_str):
     if not date_str:
@@ -498,6 +443,52 @@ def get_wita_date_string(epoch_secs):
     wita_offset = timezone(timedelta(hours=8))
     dt_wita = dt_utc.astimezone(wita_offset)
     return dt_wita.strftime("%Y-%m-%d")
+
+def resolve_pcl_pml(r, users_mapping):
+    pcl_username = "-"
+    pcl_fullname = "-"
+    pml_username = "-"
+    pml_fullname = "-"
+
+    responsibilities = r.get("assignmentResponsibility")
+    if responsibilities and isinstance(responsibilities, list):
+        for resp in responsibilities:
+            role = resp.get("currentSurveyRoleName")
+            uid = resp.get("currentUserId")
+            if not role or not uid:
+                continue
+            
+            u_name = "-"
+            u_full = "-"
+            if uid == r.get("currentUserId"):
+                u_name = r.get("currentUserUsername") or "-"
+                u_full = r.get("currentUserFullname") or "-"
+            elif uid in users_mapping:
+                u_name = users_mapping[uid].get("username") or "-"
+                u_full = users_mapping[uid].get("fullname") or "-"
+                
+            if role == "Pencacah":
+                pcl_username = u_name
+                pcl_fullname = u_full
+            elif role == "Pengawas":
+                pml_username = u_name
+                pml_fullname = u_full
+
+    # Fallbacks
+    if pcl_username == "-":
+        if r.get("currentUserSurveyRoleName") == "Pencacah":
+            pcl_username = r.get("currentUserUsername") or "-"
+            pcl_fullname = r.get("currentUserFullname") or "-"
+        elif r.get("currentUserUsername") and r.get("currentUserSurveyRoleName") != "Pengawas":
+            pcl_username = r.get("currentUserUsername")
+            pcl_fullname = r.get("currentUserFullname") or "-"
+
+    if pml_username == "-":
+        if r.get("currentUserSurveyRoleName") == "Pengawas":
+            pml_username = r.get("currentUserUsername") or "-"
+            pml_fullname = r.get("currentUserFullname") or "-"
+
+    return pcl_username, pcl_fullname, pml_username, pml_fullname
 
 def save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data):
     if not raw_se_umum_data and not raw_se_ub_data:
@@ -587,28 +578,26 @@ def save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data):
         code_id = r.get("codeIdentity")
         name = r.get("data1") or "-"
         status = r.get("assignmentStatusAlias") or "OPEN"
-        username = r.get("currentUserUsername")
-        fullname = r.get("currentUserFullname")
+        
+        responsibilities = r.get("assignmentResponsibility")
+        if responsibilities and isinstance(responsibilities, list):
+            for resp in responsibilities:
+                if resp.get("currentSurveyRoleName") == "Pencacah":
+                    pcl_status = resp.get("assignmentResponsibilityStatusId")
+                    if pcl_status and pcl_status.upper() == "SUBMITTED":
+                        if "Pengawas" in status or status.upper() == "APPROVED":
+                            status = "SUBMITTED BY Pencacah"
+                    break
+
         date_mod_str = r.get("dateModified")
         epoch_mod = parse_date_to_epoch(date_mod_str)
         
         reg_idx = get_region_idx(r, "SULAWESI TENGAH")
-        pet_idx = get_petugas_idx(username, fullname)
         stat_idx = get_status_idx(status)
         
-        pengawas_id = None
-        for resp in r.get("assignmentResponsibility", []):
-            if resp.get("currentSurveyRoleName") == "Pengawas":
-                pengawas_id = resp.get("currentUserId")
-                break
-        
-        pengawas_username = "-"
-        pengawas_fullname = "-"
-        if pengawas_id and pengawas_id in users_mapping:
-            pengawas_username = users_mapping[pengawas_id]["username"]
-            pengawas_fullname = users_mapping[pengawas_id]["fullname"]
-            
-        pengawas_idx = get_petugas_idx(pengawas_username, pengawas_fullname)
+        pcl_username, pcl_fullname, pml_username, pml_fullname = resolve_pcl_pml(r, users_mapping)
+        pet_idx = get_petugas_idx(pcl_username, pcl_fullname)
+        pengawas_idx = get_petugas_idx(pml_username, pml_fullname)
         
         compressed_targets.append([
             tid, code_id, name, stat_idx, pet_idx, reg_idx, epoch_mod, 0, pengawas_idx
@@ -650,28 +639,26 @@ def save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data):
         code_id = r.get("codeIdentity")
         name = r.get("data1") or "-"
         status = r.get("assignmentStatusAlias") or "OPEN"
-        username = r.get("currentUserUsername")
-        fullname = r.get("currentUserFullname")
+        
+        responsibilities = r.get("assignmentResponsibility")
+        if responsibilities and isinstance(responsibilities, list):
+            for resp in responsibilities:
+                if resp.get("currentSurveyRoleName") == "Pencacah":
+                    pcl_status = resp.get("assignmentResponsibilityStatusId")
+                    if pcl_status and pcl_status.upper() == "SUBMITTED":
+                        if "Pengawas" in status or status.upper() == "APPROVED":
+                            status = "SUBMITTED BY Pencacah"
+                    break
+
         date_mod_str = r.get("dateModified")
         epoch_mod = parse_date_to_epoch(date_mod_str)
         
         reg_idx = get_region_idx(r, "SULAWESI TENGAH")
-        pet_idx = get_petugas_idx(username, fullname)
         stat_idx = get_status_idx(status)
         
-        pengawas_id = None
-        for resp in r.get("assignmentResponsibility", []):
-            if resp.get("currentSurveyRoleName") == "Pengawas":
-                pengawas_id = resp.get("currentUserId")
-                break
-        
-        pengawas_username = "-"
-        pengawas_fullname = "-"
-        if pengawas_id and pengawas_id in users_mapping:
-            pengawas_username = users_mapping[pengawas_id]["username"]
-            pengawas_fullname = users_mapping[pengawas_id]["fullname"]
-            
-        pengawas_idx = get_petugas_idx(pengawas_username, pengawas_fullname)
+        pcl_username, pcl_fullname, pml_username, pml_fullname = resolve_pcl_pml(r, users_mapping)
+        pet_idx = get_petugas_idx(pcl_username, pcl_fullname)
+        pengawas_idx = get_petugas_idx(pml_username, pml_fullname)
         
         compressed_targets.append([
             tid, code_id, name, stat_idx, pet_idx, reg_idx, epoch_mod, 1, pengawas_idx
@@ -724,7 +711,7 @@ def save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data):
 
 async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
     print("[START] Mulai proses penarikan seluruh data secara granular...")
-    global users_mapping
+    global users_mapping, region_map_full
     users_mapping = {}
     try:
         import json
@@ -831,7 +818,7 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
                 print(f"[ERROR] Gagal memuat region_map_sulteng_full.json: {e}")
                 region_map_full = {}
                 
-            sem_umum = asyncio.Semaphore(15)
+            sem_umum = asyncio.Semaphore(5)
             tasks_umum = []
             
             kab_dict_to_process = {}
@@ -839,36 +826,12 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
                 if kab_code_filter and k != kab_code_filter:
                     continue
                 kab_dict_to_process[k] = v
-                
+            total_desas = 0
             for kab_code, kab_cfg in kab_dict_to_process.items():
                 kab_data = region_map_full.get("kabupaten", {}).get(kab_code, {})
-                if not kab_data:
-                    print(f"[WARNING] Kabupaten {kab_code} tidak ditemukan di region_map_sulteng_full.json")
-                    continue
-                for kec_code, kec_data in kab_data.get("kecamatan", {}).items():
-                    kec_name = kec_data.get("kec_name", "-")
-                    for desa_code, desa_data in kec_data.get("desa", {}).items():
-                        desa_name = desa_data.get("desa_name", "-")
-                        tasks_umum.append(
-                            fetch_desa_granular(
-                                client, 
-                                page,
-                                context,
-                                cfg_umum["survey_period_id"], 
-                                cfg_umum["region1_id"], 
-                                kab_cfg["id"], 
-                                kec_data["kec_id"], 
-                                desa_data["desa_id"], 
-                                kab_cfg["name"], 
-                                kec_name, 
-                                desa_name, 
-                                "SE Umum", 
-                                sem_umum,
-                                sls_list=desa_data.get("sls", [])
-                            )
-                        )
-                        
-            total_desas = len(tasks_umum)
+                for kec_data in kab_data.get("kecamatan", {}).values():
+                    total_desas += len(kec_data.get("desa", {}))
+                    
             completed_desas = 0
             print(f"[INFO] Total Desa yang akan di-query untuk SE Umum: {total_desas}")
             
@@ -886,30 +849,87 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
             saver_task = asyncio.create_task(periodic_saver())
             
             try:
-                results_umum = await asyncio.gather(*tasks_umum)
-                for r in results_umum:
-                    raw_se_umum_data.extend(r)
+                for kab_code, kab_cfg in kab_dict_to_process.items():
+                    kab_data = region_map_full.get("kabupaten", {}).get(kab_code, {})
+                    if not kab_data:
+                        print(f"[WARNING] Kabupaten {kab_code} tidak ditemukan di region_map_sulteng_full.json")
+                        continue
+                        
+                    kab_name = kab_cfg["name"]
+                    print(f"\\n[>] Memulai Kabupaten: {kab_name} [{kab_code}]")
+                    
+                    for kec_code, kec_data in kab_data.get("kecamatan", {}).items():
+                        kec_name = kec_data.get("kec_name", "-")
+                        print(f"  [>>] Memasuki Kecamatan: {kec_name} [{kec_code}]")
+                        
+                        tasks_umum_kec = []
+                        for desa_code, desa_data in kec_data.get("desa", {}).items():
+                            desa_name = desa_data.get("desa_name", "-")
+                            tasks_umum_kec.append(
+                                fetch_targets_with_drilldown(
+                                    client, page, context, sem_umum,
+                                    cfg_umum["survey_period_id"], cfg_umum["region1_id"],
+                                    4, desa_data["desa_id"], desa_code, desa_name, "SE Umum"
+                                )
+                            )
+                            
+                        if tasks_umum_kec:
+                            for coro in asyncio.as_completed(tasks_umum_kec):
+                                result = await coro
+                                raw_se_umum_data.extend(result)
+                                completed_desas += 1
+                                if completed_desas % 50 == 0 or completed_desas == total_desas:
+                                    print(f"      [PROGRESS] SE Umum: Downloaded {completed_desas} / {total_desas} desas...", flush=True)
             finally:
-                # Run intermediate save before SE UB starts
+                scraping_done = True
                 save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data)
                 
-            # Run SE UB (by Kabupaten since total UB targets are very small)
+            # Run SE UB (by Kecamatan in parallel)
             cfg_ub = SURVEY_CONFIGS[1]
-            print(f"\n--- Memulai Scraping {cfg_ub['label'].upper()} ---")
- 
-            kab_dict_ub = {}
-            for k, v in cfg_ub["kab_region_map"].items():
-                if kab_code_filter and k != kab_code_filter:
-                    continue
-                kab_dict_ub[k] = v
-            tasks_ub = [
-                fetch_kab_granular(client, page, context, cfg_ub["survey_period_id"], cfg_ub["region1_id"], kab_cfg["id"], kab_cfg["name"], "SE UB", sem)
-                for kab_id, kab_cfg in kab_dict_ub.items()
-            ]
-            results_ub = await asyncio.gather(*tasks_ub)
-            for r in results_ub:
-                raw_se_ub_data.extend(r)
+            if not survey_type_filter or survey_type_filter == "se_ub":
+                print(f"\\n--- Memulai Scraping {cfg_ub['label'].upper()} ---")
                 
+                kab_dict_ub = {}
+                for k, v in cfg_ub["kab_region_map"].items():
+                    if kab_code_filter and k != kab_code_filter:
+                        continue
+                    kab_dict_ub[k] = v
+                    
+                total_kecs_ub = 0
+                for kab_code in kab_dict_ub:
+                    kab_data = region_map_full.get("kabupaten", {}).get(kab_code, {})
+                    total_kecs_ub += len(kab_data.get("kecamatan", {}))
+                    
+                completed_kecs_ub = 0
+                print(f"[INFO] Total Kecamatan yang akan di-query untuk SE UB: {total_kecs_ub}")
+                
+                for kab_code, kab_cfg in kab_dict_ub.items():
+                    kab_data = region_map_full.get("kabupaten", {}).get(kab_code, {})
+                    if not kab_data:
+                        continue
+                        
+                    kab_name = kab_cfg["name"]
+                    print(f"\\n[>] Memulai Kabupaten (SE UB): {kab_name} [{kab_code}]")
+                    
+                    tasks_ub_kab = []
+                    for kec_code, kec_data in kab_data.get("kecamatan", {}).items():
+                        kec_name = kec_data.get("kec_name", "-")
+                        tasks_ub_kab.append(
+                            fetch_targets_with_drilldown(
+                                client, page, context, sem,
+                                cfg_ub["survey_period_id"], cfg_ub["region1_id"],
+                                3, kec_data["kec_id"], kec_code, kec_name, "SE UB"
+                            )
+                        )
+                        
+                    if tasks_ub_kab:
+                        for coro in asyncio.as_completed(tasks_ub_kab):
+                            result = await coro
+                            raw_se_ub_data.extend(result)
+                            completed_kecs_ub += 1
+                            if completed_kecs_ub % 10 == 0 or completed_kecs_ub == total_kecs_ub:
+                                print(f"      [PROGRESS] SE UB: Downloaded {completed_kecs_ub} / {total_kecs_ub} kecamatan...", flush=True)
+                            
             print(f"\n[DONE] Scraping datatable selesai. Total Raw Umum: {len(raw_se_umum_data)} | Total Raw UB: {len(raw_se_ub_data)}")
             
             # --- FETCH REMARKS UNTUK STATUS REJECTED/REVOKED ---
@@ -1042,19 +1062,20 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
             code_id = r.get("codeIdentity")
             name = r.get("data1") or "-"
             status = r.get("assignmentStatusAlias") or "OPEN"
-            username = r.get("currentUserUsername")
-            fullname = r.get("currentUserFullname")
             date_mod_str = r.get("dateModified")
             epoch_mod = parse_date_to_epoch(date_mod_str)
             
             # Map indices
             reg_idx = get_region_idx(r, "SULAWESI TENGAH")
-            pet_idx = get_petugas_idx(username, fullname)
             stat_idx = get_status_idx(status)
+            
+            pcl_username, pcl_fullname, pml_username, pml_fullname = resolve_pcl_pml(r, users_mapping)
+            pet_idx = get_petugas_idx(pcl_username, pcl_fullname)
+            pengawas_idx = get_petugas_idx(pml_username, pml_fullname)
             
             # Survey Type: 0 for se_umum, 1 for se_ub
             compressed_targets.append([
-                tid, code_id, name, stat_idx, pet_idx, reg_idx, epoch_mod, 0
+                tid, code_id, name, stat_idx, pet_idx, reg_idx, epoch_mod, 0, pengawas_idx
             ])
             
             # Daily aggregation for non-OPEN statuses (Submissions/Approvals)
@@ -1095,17 +1116,18 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
             code_id = r.get("codeIdentity")
             name = r.get("data1") or "-"
             status = r.get("assignmentStatusAlias") or "OPEN"
-            username = r.get("currentUserUsername")
-            fullname = r.get("currentUserFullname")
             date_mod_str = r.get("dateModified")
             epoch_mod = parse_date_to_epoch(date_mod_str)
             
             reg_idx = get_region_idx(r, "SULAWESI TENGAH")
-            pet_idx = get_petugas_idx(username, fullname)
             stat_idx = get_status_idx(status)
             
+            pcl_username, pcl_fullname, pml_username, pml_fullname = resolve_pcl_pml(r, users_mapping)
+            pet_idx = get_petugas_idx(pcl_username, pcl_fullname)
+            pengawas_idx = get_petugas_idx(pml_username, pml_fullname)
+            
             compressed_targets.append([
-                tid, code_id, name, stat_idx, pet_idx, reg_idx, epoch_mod, 1
+                tid, code_id, name, stat_idx, pet_idx, reg_idx, epoch_mod, 1, pengawas_idx
             ])
             
             status_upper = status.upper()

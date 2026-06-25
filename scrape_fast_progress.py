@@ -5,13 +5,16 @@ import sys
 import time
 import base64
 import gzip
-from datetime import datetime
+import datetime
+import socket
+import subprocess
+import shutil
 from dotenv import load_dotenv
 from playwright.async_api import async_playwright
 from urllib.parse import unquote
 
-# Import get_authenticated_context from core
-from scrape_granular_core import get_authenticated_context
+# Import get_authenticated_context and check_session_valid from core
+from scrape_granular_core import get_authenticated_context, check_session_valid
 
 load_dotenv()
 SUPABASE_URL = os.getenv("SUPABASE_URL")
@@ -98,14 +101,13 @@ async def fetch_users_mapping(page, token, period_id):
     size = 1000
     while True:
         url = f"https://fasih-sm.bps.go.id/app/api/survey-user/api/v1/allocations-view/by-user?surveyPeriodId={period_id}&page={page_idx}&size={size}"
-        try:
-            resp = await page.evaluate(f'''() => fetch("{url}", {{ headers: {{ "X-XSRF-TOKEN": "{token}" }} }}).then(r => r.json())''')
-        except Exception as e:
-            print(f"[ERROR] Gagal menarik allocations page {page_idx}: {e}")
-            return None
-            
+        resp = await fetch_api_safely(page, url, None, token, method="GET")
+        
+        # Get the fresh token in case it was refreshed during fetch_api_safely
+        token = await get_xsrf_token(page) or token
+        
         if not resp or not resp.get("success"):
-            print(f"[ERROR] API allocations page {page_idx} gagal atau success=false.")
+            print(f"[ERROR] API allocations page {page_idx} gagal atau success=false: {resp.get('error') if resp else 'No response'}")
             return None
             
         content = resp.get("data", {}).get("content", [])
@@ -122,203 +124,1380 @@ async def fetch_users_mapping(page, token, period_id):
 def merge_user_records(records):
     merged = {}
     for r in records:
-        username = r.get("username")
-        if not username:
+        uid = r.get("id") or r.get("userId")
+        if not uid:
             continue
-        if username not in merged:
-            merged[username] = dict(r)
-            merged[username]["regionSummary"] = list(r.get("regionSummary", []))
+        if uid not in merged:
+            merged[uid] = r
         else:
-            existing_codes = {reg.get("regionCode") for reg in merged[username]["regionSummary"]}
-            for reg in r.get("regionSummary", []):
-                code = reg.get("regionCode")
-                if code not in existing_codes:
-                    merged[username]["regionSummary"].append(reg)
-                    existing_codes.add(code)
+            # Gabungkan region
+            old_regs = merged[uid].get("regions") or []
+            new_regs = r.get("regions") or []
+            seen_regs = {x.get("id") for x in old_regs if x.get("id")}
+            for nr in new_regs:
+                if nr.get("id") not in seen_regs:
+                    old_regs.append(nr)
+            merged[uid]["regions"] = old_regs
     return list(merged.values())
 
 async def fetch_responsibility_report(page, token, survey_period_id, role_id, target_type):
-    kab_map_umum = {
-        "7201": "bc32354f-1245-426f-b2cf-a5733e1295ad",
-        "7202": "530e9ca5-86ba-434e-9b04-405102e6d900",
-        "7203": "9783f0c1-f047-477f-8840-11eae7cf70e2",
-        "7204": "fb9cd9f0-c4c0-4a37-9041-57190693f625",
-        "7205": "289f1ff3-a6ad-4c9b-a49f-7b454d03a33f",
-        "7206": "d833fdce-ebfb-429b-a1bb-8966239fd8e4",
-        "7207": "c523694a-2e72-4570-9489-da2d7b119fe7",
-        "7208": "25c59fd9-afd5-4c1a-9dfb-42bb697a7434",
-        "7209": "736c4c22-51d1-44be-8b2c-aa197d9459a4",
-        "7210": "0061da62-2a47-4dee-b8d0-239b33e2c59d",
-        "7211": "eed1a3e7-b81d-4fc7-b0d6-61257c1449b2",
-        "7212": "d05ef8fd-b5e4-414f-9a83-8cdea03e0767",
-        "7271": "4ab6ca2f-7952-4e8e-a94d-b6dd933e5d44"
-    }
+    # Dapatkan mapping kab_code -> nama
+    kab_code_map = {}
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    region_map_path = os.path.join(script_dir, "region_map_sulteng.json")
+    try:
+        with open(region_map_path, "r", encoding="utf-8") as f:
+            rmap = json.load(f)
+            for kcode, kdata in rmap.items():
+                kab_code_map[kdata.get("kab_name")] = kcode
+    except Exception as e:
+        print(f"[WARNING] Gagal memuat region_map_sulteng.json untuk nama kabupaten: {e}")
 
-    kab_map_ub = {
-        "7201": "9c9b2d79-9fb1-4ce7-b0f1-6b7bb5511beb",
-        "7202": "34165dd5-372e-42fa-99c6-0cc19a9b4d0b",
-        "7203": "48c4e5d0-5525-41a8-a4ba-2cc38cd9c424",
-        "7204": "e18368ae-d1cd-4d43-a74d-5b9ddac5dd22",
-        "7205": "c075c4b4-7eb0-4d72-9c16-5103088fb5eb",
-        "7206": "d3a28bfa-b611-488b-8255-369da5cedbf7",
-        "7207": "dfe4c643-3282-40db-a5fd-cb288a4f592d",
-        "7208": "f18109d2-fc8b-4b9c-886a-dc242d21206e",
-        "7209": "4d01eba1-5ae9-4603-82a6-2c831aea9905",
-        "7210": "2a240d3a-67ee-45b2-ae78-4b4b3a909a90",
-        "7211": "288c5680-f6d5-4783-a946-d5a06f547c02",
-        "7212": "a5324f17-7a00-436f-b468-2fc59fcf605d",
-        "7271": "1acfedb4-276e-44d6-9e45-6d43588536d6"
-    }
+    # load region_map_sulteng_full.json untuk pemetaan kecamatan (region3Id) dan desa (region4Id)
+    region_map_full_path = os.path.join(script_dir, "region_map_sulteng_full.json")
+    kab_to_kecs = {}
+    kec_id_to_desas = {}
+    try:
+        with open(region_map_full_path, "r", encoding="utf-8") as f:
+            full_map = json.load(f)
+            for kab_code, kab_data in full_map.get("kabupaten", {}).items():
+                kab_to_kecs[kab_code] = []
+                for kec_code, kec_data in kab_data.get("kecamatan", {}).items():
+                    kec_id = kec_data.get("kec_id")
+                    if kec_id:
+                        kab_to_kecs[kab_code].append({
+                            "kec_id": kec_id,
+                            "kec_name": kec_data.get("kec_name", kec_code)
+                        })
+                        desas = []
+                        for desa_code, desa_data in kec_data.get("desa", {}).items():
+                            d_id = desa_data.get("desa_id")
+                            if d_id:
+                                desas.append({
+                                    "id": d_id,
+                                    "name": desa_data.get("desa_name", desa_code)
+                                })
+                        kec_id_to_desas[kec_id] = desas
+    except Exception as e:
+        print(f"[WARNING] Gagal memuat region_map_sulteng_full.json untuk pemetaan region3Id & region4Id: {e}")
 
-    if survey_period_id == SE_UMUM_PERIOD:
-        region1_id = "5214ecb2-bef1-4a86-9446-451cf430928e"
-        kab_ids = list(kab_map_umum.values())
-    else:
-        region1_id = "a00c8aef-afc4-4d4f-b80d-789a15450ef9"
-        kab_ids = list(kab_map_ub.values())
-
-    size = 10
-    url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-progress-by-responsibility"
-    all_content = []
-
-    for idx, kab_id in enumerate(kab_ids):
-        print(f"  [INFO] Menarik data progres (role {role_id}, target {target_type}) Kab {idx+1}/{len(kab_ids)}: {kab_id}...")
-        payload = {
-            "surveyPeriodId": survey_period_id,
-            "surveyRoleId": role_id,
-            "size": size,
-            "page": 0,
-            "search": "",
-            "target": target_type,
-            "region": {
-                "region1Id": region1_id,
-                "region2Id": kab_id,
-                "region3Id": None,
-                "region4Id": None,
-                "region5Id": None,
-                "region6Id": None,
-                "region7Id": None,
-                "region8Id": None,
-                "region9Id": None,
-                "region10Id": None
-            },
-            "regionSummaryLevel": 6
-        }
-
-        try:
-            first_resp = await page.evaluate("""
-                async ({url, payload, token}) => {
-                    try {
-                        const r = await fetch(url, {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
-                            body: JSON.stringify(payload)
-                        });
-                        if (!r.ok) return { _error: `HTTP ${r.status}` };
-                        return await r.json();
-                    } catch (e) {
-                        return { _error: e.toString() };
-                    }
+    report_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-progress-by-responsibility"
+    print(f"[INFO] Menarik data progress responsibility untuk periode={survey_period_id}, role={role_id}...")
+    
+    all_results = []
+    
+    # Untuk menghindari limit 10.000 Elasticsearch (track_total_hits), 
+    # kita partisi request API per Kecamatan (region3Id).
+    for kab_name, kab_code in kab_code_map.items():
+        kecs = kab_to_kecs.get(kab_code, [])
+        if not kecs:
+            print(f"      [WARNING] Kecamatan kosong untuk Kab {kab_name} ({kab_code}). Skip.")
+            continue
+            
+        print(f"   [>] Memproses Kabupaten {kab_name} ({len(kecs)} Kecamatan)...")
+        
+        # Buat task parallel untuk setiap kecamatan di kabupaten ini
+        async def fetch_kec(kec):
+            kec_id = kec["kec_id"]
+            kec_name = kec["kec_name"]
+            kec_results = []
+            
+            # Cek total data terlebih dahulu dengan query awal (length=1)
+            payload = {
+                "start": 0,
+                "length": 1,
+                "columns": [],
+                "order": [],
+                "search": {"value": "", "regex": False},
+                "assignmentExtraParam": {
+                    "surveyPeriodId": survey_period_id,
+                    "surveyRoleId": role_id,
+                    "assignmentErrorStatusType": -1,
+                    "filterTargetType": target_type,
+                    "region3Id": kec_id
                 }
-            """, {"url": url, "payload": payload, "token": token})
-        except Exception as e:
-            print(f"    [ERROR] Gagal mengevaluasi halaman pertama untuk Kab {kab_id}: {e}")
-            continue
-
-        if not first_resp or not first_resp.get("success"):
-            err = first_resp.get("_error") if first_resp else "Empty response"
-            print(f"    [ERROR] Gagal menarik halaman pertama Kab {kab_id}: {err}")
-            continue
-
-        data = first_resp.get("data", {})
-        kab_content = list(data.get("content", []))
-        total_elements = data.get("totalElements", 0)
-        total_pages = (total_elements + size - 1) // size if size > 0 else 1
-
-        if total_pages > 1:
-            chunk_size = 15
-            for i in range(1, total_pages, chunk_size):
-                chunk_end = min(total_pages, i + chunk_size)
+            }
+            
+            resp = await fetch_api_safely(page, report_url, payload, token)
+            total_hit = 0
+            if resp and resp.get("success"):
+                total_hit = resp.get("data", {}).get("totalHit", 0)
                 
-                chunk_tasks = []
-                for p_idx in range(i, chunk_end):
-                    p_payload = dict(payload)
-                    p_payload["page"] = p_idx
-                    chunk_tasks.append(page.evaluate("""
-                        async ({url, payload, token}) => {
-                            try {
-                                const r = await fetch(url, {
-                                    method: "POST",
-                                    headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
-                                    body: JSON.stringify(payload)
-                                });
-                                if (!r.ok) return { _error: `HTTP ${r.status}` };
-                                return await r.json();
-                            } catch (e) {
-                                return { _error: e.toString() };
+            desas = kec_id_to_desas.get(kec_id, [])
+            if total_hit >= 10000 and desas:
+                print(f"      [INFO] Kec {kec_name} memiliki totalHit {total_hit} (>= 10000) di responsibility report. Membagi query per Desa...")
+                
+                async def fetch_desa(desa):
+                    d_id = desa["id"]
+                    d_results = []
+                    d_start = 0
+                    d_length = 500
+                    while True:
+                        d_payload = {
+                            "start": d_start,
+                            "length": d_length,
+                            "columns": [],
+                            "order": [],
+                            "search": {"value": "", "regex": False},
+                            "assignmentExtraParam": {
+                                "surveyPeriodId": survey_period_id,
+                                "surveyRoleId": role_id,
+                                "assignmentErrorStatusType": -1,
+                                "filterTargetType": target_type,
+                                "region3Id": kec_id,
+                                "region4Id": d_id
                             }
                         }
-                    """, {"url": url, "payload": p_payload, "token": token}))
+                        d_resp = await fetch_api_safely(page, report_url, d_payload, token)
+                        if not d_resp or not d_resp.get("success"):
+                            break
+                        d_content = d_resp.get("data", {}).get("content", [])
+                        if not d_content:
+                            break
+                        d_results.extend(d_content)
+                        if len(d_content) < d_length:
+                            break
+                        d_start += d_length
+                    return d_results
+                
+                desa_tasks = [fetch_desa(d) for d in desas]
+                desa_results = await asyncio.gather(*desa_tasks)
+                for dr in desa_results:
+                    kec_results.extend(dr)
+            else:
+                # Ambil normal
+                start = 0
+                length = 500
+                while True:
+                    payload["start"] = start
+                    payload["length"] = length
+                    resp = await fetch_api_safely(page, report_url, payload, token)
+                    if not resp or not resp.get("success"):
+                        break
+                        
+                    data = resp.get("data", {})
+                    content = data.get("content", [])
+                    if not content:
+                        break
+                        
+                    kec_results.extend(content)
+                    if len(content) < length:
+                        break
+                    start += length
                     
-                chunk_results = await asyncio.gather(*chunk_tasks)
-                for c_idx, r in enumerate(chunk_results):
-                    if r and r.get("success"):
-                        kab_content.extend(r.get("data", {}).get("content", []))
-                    else:
-                        err = r.get("_error") if r else "Empty response"
-                        actual_page = i + c_idx
-                        print(f"      [ERROR] Gagal menarik halaman {actual_page} untuk Kab {kab_id}: {err}")
+            return kec_results
 
-                await asyncio.sleep(0.15)
-
-        all_content.extend(kab_content)
-
-    merged_content = merge_user_records(all_content)
-    print(f" ✅ Laporan progres (role {role_id}) selesai. Total {len(merged_content)} records ter-merge.")
-    return merged_content
-
+        # Jalankan parallel untuk kecamatan di kabupaten ini
+        tasks = [fetch_kec(kec) for kec in kecs]
+        kab_results = await asyncio.gather(*tasks)
+        for r_list in kab_results:
+            all_results.extend(r_list)
+            
+    print(f" ✅ Total {len(all_results)} baris data responsibility berhasil ditarik.")
+    return all_results
 
 def fetch_current_ipas_data(supabase_client):
     if supabase_client:
         try:
             res = supabase_client.table("dashboard_store").select("value").eq("key", "ipas_data").execute()
             if res.data:
-                return res.data[0]["value"]
+                return res.data[0].get("value")
         except Exception as e:
-            print(f"[WARNING] Gagal mengambil ipas_data dari Supabase: {e}")
-            
-    # Fallback ke file lokal
-    try:
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        ipas_path = os.path.join(script_dir, "ipas_data.js")
-        if os.path.exists(ipas_path):
-            with open(ipas_path, "r", encoding="utf-8") as f:
-                content = f.read()
-            import re
-            json_match = re.search(r"window\.IPAS_DATA\s*=\s*(\{.*?\});", content, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group(1))
-    except Exception as e:
-        print(f"[WARNING] Gagal mengambil ipas_data lokal: {e}")
-        
+            print(f"[WARNING] Gagal mengambil ipas_data lama dari Supabase: {e}")
     return None
 
 def compress_sls(sls_list):
     return [
         [
-            item.get("sls_code"),
-            item.get("sls_name"),
-            item.get("desa_name"),
-            item.get("kec_name"),
-            item.get("kab_name"),
-            item.get("total"),
-            item.get("assigned"),
-            item.get("unassigned"),
+            item.get("sls_code", ""),
+            item.get("target_count", 0),
             item.get("sync_count", 0),
             item.get("officers", [])
         ]
         for item in sls_list
     ]
+
+# =====================================================================
+# HELPER FUNCTIONS UNTUK IPAS REPORT (DARI generate_ipas_report.py)
+# =====================================================================
+
+def is_tambahan(code_identity):
+    if not code_identity:
+        return False
+    cleaned = code_identity.strip()
+    if not cleaned.startswith("72"):
+        return True
+    parts = [p.strip() for p in cleaned.split(" - ")]
+    if len(parts) < 2:
+        return False
+    source = parts[1].upper()
+    known_sources = {"DTSEN", "UMK", "UM", "UMB", "UMKM", "SE2026", "SE26", "PDRB", "PAPI", "CAWI", "CAPI", "UB"}
+    if source in known_sources:
+        return False
+    if source.startswith("SE26") or source.startswith("SE2026"):
+        return False
+    return True
+
+def extract_sls_code(code_identity):
+    if not code_identity:
+        return ""
+    parts = [p.strip() for p in code_identity.split(" - ")]
+    prefix = parts[0]
+    digits = "".join([c for c in prefix if c.isdigit()])
+    if digits.startswith("72"):
+        if len(digits) >= 14:
+            return digits[:14]
+    return ""
+
+def parse_bps_datetime(dt_str, local_tz):
+    if not dt_str:
+        return None
+    cleaned = dt_str.strip()
+    if cleaned.endswith("Z"):
+        cleaned = cleaned[:-1] + "+00:00"
+    elif not ("+" in cleaned[10:] or (cleaned[10:].count("-") > 0)):
+        cleaned = cleaned + "+00:00"
+    dt = datetime.datetime.fromisoformat(cleaned)
+    return dt.astimezone(local_tz)
+
+def classify_tambahan(code_identity, data1, data6):
+    code_id_upper = (code_identity or "").upper()
+    data1_upper = (data1 or "").upper()
+    data6_upper = (data6 or "").upper()
+    
+    if "BANGUNAN KOSONG" in data1_upper or "RUMAH KOSONG" in data1_upper or "KOSONG" in data1_upper or "BANGUNAN KOSONG" in code_id_upper or "RUMAH KOSONG" in code_id_upper:
+        return "Bangunan/Rumah Kosong", False
+    if "1. YA" in code_id_upper or "1.YA" in code_id_upper:
+        return "Keluarga Usaha", True
+    if "2. TIDAK" in code_id_upper or "2.TIDAK" in code_id_upper:
+        return "Keluarga (Bukan Usaha)", False
+    if "KELUARGA" in data6_upper:
+        if "UMKM" in data6_upper or "UMB" in data6_upper:
+            return "Keluarga Usaha", True
+        return "Keluarga", False
+    if "/" in data1_upper:
+        if "UMKM" in data6_upper or "UMB" in data6_upper:
+            return "Keluarga Usaha", True
+        return "Keluarga", False
+    if "BANGUNAN_LAIN" in data6_upper or "BANGUNAN LAIN" in data6_upper:
+        return "Bangunan Lain / Usaha", True
+    if "UMKM" in data6_upper:
+        return "Usaha (UMKM)", True
+    if "UMB" in data6_upper:
+        return "Usaha (UMB)", True
+    return "Usaha Baru", True
+
+
+session_refresh_lock = asyncio.Lock()
+
+async def get_xsrf_token(page):
+    try:
+        cookies = await page.context.cookies()
+        for c in cookies:
+            if c["name"] == "XSRF-TOKEN":
+                from urllib.parse import unquote
+                return unquote(c["value"])
+    except Exception:
+        pass
+    return ""
+
+async def fetch_api_safely(page, url, payload, token, timeout_seconds=120, max_retries=3, method="POST"):
+    global session_refresh_lock
+    for attempt in range(1, max_retries + 1):
+        try:
+            if "fasih-sm.bps.go.id" not in page.url:
+                raise Exception("Not on FASIH domain")
+                
+            current_token = await get_xsrf_token(page) or token
+            res = await page.evaluate("""
+                async ({url, payload, token, timeoutMs, method}) => {
+                    const controller = new AbortController();
+                    const id = setTimeout(() => controller.abort(), timeoutMs);
+                    try {
+                        const fetchOpts = {
+                            method: method,
+                            headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+                            signal: controller.signal
+                        };
+                        if (method !== "GET" && payload !== null) {
+                            fetchOpts.body = JSON.stringify(payload);
+                        }
+                        const r = await fetch(url, fetchOpts);
+                        clearTimeout(id);
+                        if (!r.ok) return { error: `HTTP ${r.status}: ${await r.text()}`, status: r.status };
+                        const text = await r.text();
+                        try {
+                            return JSON.parse(text);
+                        } catch(e) {
+                            return { error: "Invalid JSON", text: text.substring(0, 200) };
+                        }
+                    } catch(e) {
+                        clearTimeout(id);
+                        return { error: e.toString() };
+                    }
+                }
+            """, {"url": url, "payload": payload, "token": current_token, "timeoutMs": timeout_seconds * 1000, "method": method})
+            
+            is_session_error = False
+            if isinstance(res, dict):
+                err = res.get("error", "")
+                status = res.get("status", 0)
+                text = res.get("text", "")
+                if err == "Invalid JSON" and "<!DOCTYPE html>" in text:
+                    is_session_error = True
+                elif status in (401, 403):
+                    is_session_error = True
+                elif "Failed to fetch" in str(err) or "fetch" in str(err).lower():
+                    is_session_error = True
+                    
+            if is_session_error:
+                async with session_refresh_lock:
+                    new_token = await get_xsrf_token(page)
+                    is_valid = await check_session_valid(page, new_token)
+                    if not is_valid:
+                        print(f"  [WARNING] Sesi FASIH kedaluwarsa saat mengakses {url}. Mencoba menyegarkan halaman browser...")
+                        try:
+                            if "fasih-sm.bps.go.id" not in page.url:
+                                print(f"  [INFO] Menavigasi kembali ke FASIH dashboard karena URL saat ini: {page.url}")
+                                await page.goto("https://fasih-sm.bps.go.id/app/dashboard", timeout=60000)
+                            else:
+                                await page.reload(timeout=60000, wait_until="domcontentloaded")
+                            await asyncio.sleep(2)
+                            new_token = await get_xsrf_token(page)
+                            is_valid = await check_session_valid(page, new_token)
+                            while not is_valid:
+                                print("\n==============================================================")
+                                print("[WARNING] Harap LOGIN atau REFRESH halaman FASIH di browser Chrome Anda.")
+                                print("Mencoba mendeteksi secara otomatis setiap 15 detik...")
+                                print("==============================================================\n", flush=True)
+                                await asyncio.sleep(15)
+                                if "fasih-sm.bps.go.id" not in page.url and "sso.bps.go.id" not in page.url:
+                                    try:
+                                        await page.goto("https://fasih-sm.bps.go.id/app/dashboard", timeout=30000)
+                                    except Exception:
+                                        pass
+                                new_token = await get_xsrf_token(page)
+                                is_valid = await check_session_valid(page, new_token)
+                            print("  [SUCCESS] Sesi berhasil diperbarui dan diverifikasi!")
+                        except Exception as refresh_err:
+                            print(f"  [ERROR] Gagal menyegarkan halaman browser: {refresh_err}")
+                if attempt < max_retries:
+                    continue
+
+            if isinstance(res, dict) and res.get("error"):
+                status = res.get("status", 0)
+                if status in (502, 503, 504) and attempt < max_retries:
+                    wait_sec = 5 * attempt
+                    print(f"    [RETRY {attempt}/{max_retries}] Server error {status}, menunggu {wait_sec}s...")
+                    await asyncio.sleep(wait_sec)
+                    continue
+            return res
+        except Exception as e:
+            err_str = str(e)
+            is_session_error = False
+            if any(x in err_str.lower() for x in ["failed to fetch", "context was destroyed", "navigation", "destroyed", "execution context", "not on fasih domain"]):
+                is_session_error = True
+                
+            if is_session_error:
+                async with session_refresh_lock:
+                    new_token = await get_xsrf_token(page)
+                    is_valid = await check_session_valid(page, new_token)
+                    if not is_valid:
+                        print(f"  [WARNING] Sesi FASIH kedaluwarsa/bermasalah ({err_str}). Mencoba menyegarkan halaman browser...")
+                        try:
+                            if "fasih-sm.bps.go.id" not in page.url:
+                                print(f"  [INFO] Menavigasi kembali ke FASIH dashboard karena URL saat ini: {page.url}")
+                                await page.goto("https://fasih-sm.bps.go.id/app/dashboard", timeout=60000)
+                            else:
+                                await page.reload(timeout=60000, wait_until="domcontentloaded")
+                            await asyncio.sleep(2)
+                            new_token = await get_xsrf_token(page)
+                            is_valid = await check_session_valid(page, new_token)
+                            while not is_valid:
+                                print("\n==============================================================")
+                                print("[WARNING] Harap LOGIN atau REFRESH halaman FASIH di browser Chrome Anda.")
+                                print("Mencoba mendeteksi secara otomatis setiap 15 detik...")
+                                print("==============================================================\n", flush=True)
+                                await asyncio.sleep(15)
+                                if "fasih-sm.bps.go.id" not in page.url and "sso.bps.go.id" not in page.url:
+                                    try:
+                                        await page.goto("https://fasih-sm.bps.go.id/app/dashboard", timeout=30000)
+                                    except Exception:
+                                        pass
+                                new_token = await get_xsrf_token(page)
+                                is_valid = await check_session_valid(page, new_token)
+                            print("  [SUCCESS] Sesi berhasil diperbarui dan diverifikasi!")
+                        except Exception as refresh_err:
+                            print(f"  [ERROR] Gagal menyegarkan halaman browser: {refresh_err}")
+                if attempt < max_retries:
+                    continue
+            
+            if attempt == max_retries:
+                print(f"    [ERROR] Gagal fetch: {e}")
+                return {"error": err_str}
+            await asyncio.sleep(2)
+
+# =====================================================================
+# PIPELINE UTAMA LAPORAN IPAS (DARI generate_ipas_report.py)
+# =====================================================================
+
+async def run_ipas_report_generation(page, xsrf_token):
+    print("\n==============================================================")
+    print("  MEMULAI PIPELINE LAPORAN IPAS (generate_ipas_report)")
+    print("==============================================================")
+    
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Define surveys
+    surveys = {
+        "se_umum": {
+            "period_id": "fd68e454-ba45-4b85-8205-f3bf777ded24",
+            "prov_id": "5214ecb2-bef1-4a86-9446-451cf430928e",
+            "label": "Sensus Ekonomi 2026 (Umum)",
+            "kabs": [
+                {"code": "01", "name": "[01] BANGGAI KEPULAUAN", "id": "bc32354f-1245-426f-b2cf-a5733e1295ad"},
+                {"code": "02", "name": "[02] BANGGAI", "id": "530e9ca5-86ba-434e-9b04-405102e6d900"},
+                {"code": "03", "name": "[03] MOROWALI", "id": "9783f0c1-f047-477f-8840-11eae7cf70e2"},
+                {"code": "04", "name": "[04] POSO", "id": "fb9cd9f0-c4c0-4a37-9041-57190693f625"},
+                {"code": "05", "name": "[05] DONGGALA", "id": "289f1ff3-a6ad-4c9b-a49f-7b454d03a33f"},
+                {"code": "06", "name": "[06] TOLI-TOLI", "id": "d833fdce-ebfb-429b-a1bb-8966239fd8e4"},
+                {"code": "07", "name": "[07] BUOL", "id": "c523694a-2e72-4570-9489-da2d7b119fe7"},
+                {"code": "08", "name": "[08] PARIGI MOUTONG", "id": "25c59fd9-afd5-4c1a-9dfb-42bb697a7434"},
+                {"code": "09", "name": "[09] TOJO UNA-UNA", "id": "736c4c22-51d1-44be-8b2c-aa197d9459a4"},
+                {"code": "10", "name": "[10] SIGI", "id": "0061da62-2a47-4dee-b8d0-239b33e2c59d"},
+                {"code": "11", "name": "[11] BANGGAI LAUT", "id": "eed1a3e7-b81d-4fc7-b0d6-61257c1449b2"},
+                {"code": "12", "name": "[12] MOROWALI UTARA", "id": "d05ef8fd-b5e4-414f-9a83-8cdea03e0767"},
+                {"code": "71", "name": "[71] PALU", "id": "4ab6ca2f-7952-4e8e-a94d-b6dd933e5d44"}
+            ]
+        },
+        "se_ub": {
+            "period_id": "37526b20-81c8-42f5-a895-6190137d7394",
+            "prov_id": "a00c8aef-afc4-4d4f-b80d-789a15450ef9",
+            "label": "Sensus Ekonomi 2026 - UB (Usaha Besar)",
+            "kabs": [
+                {"code": "01", "name": "[01] BANGGAI KEPULAUAN", "id": "9c9b2d79-9fb1-4ce7-b0f1-6b7bb5511beb"},
+                {"code": "02", "name": "[02] BANGGAI", "id": "34165dd5-372e-42fa-99c6-0cc19a9b4d0b"},
+                {"code": "03", "name": "[03] MOROWALI", "id": "48c4e5d0-5525-41a8-a4ba-2cc38cd9c424"},
+                {"code": "04", "name": "[04] POSO", "id": "e18368ae-d1cd-4d43-a74d-5b9ddac5dd22"},
+                {"code": "05", "name": "[05] DONGGALA", "id": "c075c4b4-7eb0-4d72-9c16-5103088fb5eb"},
+                {"code": "06", "name": "[06] TOLI-TOLI", "id": "d3a28bfa-b611-488b-8255-369da5cedbf7"},
+                {"code": "07", "name": "[07] BUOL", "id": "dfe4c643-3282-40db-a5fd-cb288a4f592d"},
+                {"code": "08", "name": "[08] PARIGI MOUTONG", "id": "f18109d2-fc8b-4b9c-886a-dc242d21206e"},
+                {"code": "09", "name": "[09] TOJO UNA-UNA", "id": "4d01eba1-5ae9-4603-82a6-2c831aea9905"},
+                {"code": "10", "name": "[10] SIGI", "id": "2a240d3a-67ee-45b2-ae78-4b4b3a909a90"},
+                {"code": "11", "name": "[11] BANGGAI LAUT", "id": "288c5680-f6d5-4783-a946-d5a06f547c02"},
+                {"code": "12", "name": "[12] MOROWALI UTARA", "id": "a5324f17-7a00-436f-b468-2fc59fcf605d"},
+                {"code": "71", "name": "[71] PALU", "id": "1acfedb4-276e-44d6-9e45-6d43588536d6"}
+            ]
+        }
+    }
+
+    # Load region maps
+    region_map = {}
+    region_map_path = os.path.join(script_dir, "region_map_sulteng.json")
+    try:
+        with open(region_map_path, "r", encoding="utf-8") as f:
+            region_map = json.load(f)
+        print(f"[INFO] {region_map_path} berhasil dimuat.")
+    except Exception as e:
+        print(f"[WARNING] Gagal memuat region_map_sulteng.json: {e}")
+
+    kec_id_to_code = {}
+    kec_id_to_desas = {}
+    region_map_full_path = os.path.join(script_dir, "region_map_sulteng_full.json")
+    try:
+        with open(region_map_full_path, "r", encoding="utf-8") as f:
+            full_map = json.load(f)
+        for kab_code, kab_data in full_map.get("kabupaten", {}).items():
+            for kec_code, kec_data in kab_data.get("kecamatan", {}).items():
+                kec_id = kec_data.get("kec_id")
+                if kec_id:
+                    kec_id_to_code[kec_id] = kec_code
+                    desas = []
+                    for desa_code, desa_data in kec_data.get("desa", {}).items():
+                        d_id = desa_data.get("desa_id")
+                        if d_id:
+                            desas.append({
+                                "id": d_id,
+                                "name": desa_data.get("desa_name", desa_code)
+                            })
+                    kec_id_to_desas[kec_id] = desas
+        print(f"[INFO] {region_map_full_path} loaded. Mapped {len(kec_id_to_code)} kecamatan UUIDs to codes and desas.")
+    except Exception as e:
+        print(f"[WARNING] Gagal memuat region_map_sulteng_full.json: {e}")
+
+    output_data = {}
+    datatable_url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
+
+    for survey_key, survey_cfg in surveys.items():
+        print(f"\n=========================================")
+        print(f"Memproses Survey: {survey_cfg['label']}")
+        print(f"=========================================")
+        
+        period_id = survey_cfg["period_id"]
+        sls_status_map = {}
+        processed_record_ids = set()
+        
+        # Initialize final report dict
+        report_data = {}
+        for k in survey_cfg["kabs"]:
+            import re
+            match = re.search(r"\[(\d+)\]", k["name"])
+            kab_code = "72" + match.group(1) if match else ""
+            
+            kec_list_initial = []
+            kec_items = region_map.get(kab_code, {}).get("kecamatan", [])
+            for kec in kec_items:
+                if kec["name"] == "-":
+                    continue
+                
+                kec_list_initial.append({
+                    "kec_name": kec["name"],
+                    "kec_id": kec["id"],
+                    "total_prelist": 0,
+                    "total_draft": 0,
+                    "total_open": 0,
+                    "total_submitted": 0,
+                    "total_rejected": 0,
+                    "total_approved": 0,
+                    "total_submitted_pencacah": 0,
+                    "total_submitted_respondent": 0,
+                    "today_completed": 0,
+                    "yesterday_completed": 0,
+                    "two_days_ago_completed": 0,
+                    "today_completed_breakdown": {},
+                    "yesterday_completed_breakdown": {},
+                    "two_days_ago_completed_breakdown": {},
+                    "new_usaha_today": 0,
+                    "new_usaha_yesterday": 0,
+                    "new_usaha_overall": 0,
+                    "new_rumah_today": 0,
+                    "new_rumah_yesterday": 0,
+                    "new_rumah_overall": 0,
+                    "new_businesses": []
+                })
+
+            report_data[k["name"]] = {
+                "kabupaten": k["name"],
+                "total_prelist": 0,
+                "total_draft": 0,
+                "total_open": 0,
+                "total_submitted": 0,
+                "total_rejected": 0,
+                "total_approved": 0,
+                "total_submitted_pencacah": 0,
+                "total_submitted_respondent": 0,
+                "today_completed": 0,
+                "yesterday_completed": 0,
+                "two_days_ago_completed": 0,
+                "today_completed_breakdown": {},
+                "yesterday_completed_breakdown": {},
+                "two_days_ago_completed_breakdown": {},
+                "new_usaha_today": 0,
+                "new_usaha_yesterday": 0,
+                "new_rumah_today": 0,
+                "new_rumah_yesterday": 0,
+                "new_usaha_overall": 0,
+                "new_rumah_overall": 0,
+                "new_businesses": [],
+                "kecamatan_list": kec_list_initial
+            }
+
+        for kab in survey_cfg["kabs"]:
+            payload = {
+                "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
+                "assignmentExtraParam": {
+                    "region1Id": survey_cfg["prov_id"],
+                    "region2Id": kab["id"],
+                    "surveyPeriodId": period_id,
+                    "assignmentErrorStatusType": -1,
+                    "filterTargetType": "target"
+                }
+            }
+            payload_nontarget = {
+                "start": 0, "length": 1000, "columns": [
+                    {"data": "id"},
+                    {"data": "codeIdentity"},
+                    {"data": "data1"},
+                    {"data": "data6"},
+                    {"data": "assignmentStatusAlias"},
+                    {"data": "region"}
+                ], "order": [], "search": {"value": "", "regex": False},
+                "assignmentExtraParam": {
+                    "region1Id": survey_cfg["prov_id"],
+                    "region2Id": kab["id"],
+                    "surveyPeriodId": period_id,
+                    "assignmentErrorStatusType": -1,
+                    "filterTargetType": "non-target"
+                }
+            }
+            
+            import re
+            match = re.search(r"\[(\d+)\]", kab["name"])
+            kab_code = "72" + match.group(1) if match else ""
+            kec_items = region_map.get(kab_code, {}).get("kecamatan", [])
+            kecs_to_fetch = [kec for kec in kec_items if kec["name"] != "-"]
+
+            async def fetch_kec_status_agg(kec):
+                kec_id = kec["id"]
+                kec_name = kec["name"]
+                payload_kec = {
+                    "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
+                    "assignmentExtraParam": {
+                        "region1Id": survey_cfg["prov_id"],
+                        "region2Id": kab["id"],
+                        "region3Id": kec_id,
+                        "surveyPeriodId": period_id,
+                        "assignmentErrorStatusType": -1,
+                        "filterTargetType": "target"
+                    }
+                }
+                res_kec = await fetch_api_safely(page, datatable_url, payload_kec, xsrf_token)
+                
+                kec_prelist = res_kec.get("totalHit", 0) if res_kec else 0
+                
+                kec_submitted = 0
+                kec_approved = 0
+                kec_rejected = 0
+                kec_draft = 0
+                kec_submitted_pencacah = 0
+                kec_submitted_respondent = 0
+                
+                desas = kec_id_to_desas.get(kec_id, [])
+                if kec_prelist >= 10000 and desas:
+                    print(f"      [INFO] Kec {kec_name} memiliki totalHit {kec_prelist} (>= 10000) di progress report. Membagi query per Desa...")
+                    
+                    async def fetch_desa_status_agg(desa):
+                        d_id = desa["id"]
+                        payload_desa = {
+                            "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
+                            "assignmentExtraParam": {
+                                "region1Id": survey_cfg["prov_id"],
+                                "region2Id": kab["id"],
+                                "region3Id": kec_id,
+                                "region4Id": d_id,
+                                "surveyPeriodId": period_id,
+                                "assignmentErrorStatusType": -1,
+                                "filterTargetType": "target"
+                            }
+                        }
+                        res_desa = await fetch_api_safely(page, datatable_url, payload_desa, xsrf_token)
+                        
+                        d_prelist = res_desa.get("totalHit", 0) if res_desa else 0
+                        d_submitted = 0
+                        d_approved = 0
+                        d_rejected = 0
+                        d_draft = 0
+                        d_submitted_pencacah = 0
+                        d_submitted_respondent = 0
+                        
+                        if res_desa and "searchAggregation" in res_desa:
+                            agg = res_desa["searchAggregation"]
+                            for item in agg:
+                                key = item.get("keyAggregation", "")
+                                count = item.get("docCount", 0)
+                                if key == "DRAFT":
+                                    d_draft += count
+                                elif key == "SUBMITTED BY Pencacah":
+                                    d_submitted_pencacah += count
+                                    d_submitted += count
+                                elif key == "SUBMITTED RESPONDENT":
+                                    d_submitted_respondent += count
+                                    d_submitted += count
+                                elif "SUBMITTED" in key:
+                                    if "RESPONDENT" in key.upper():
+                                        d_submitted_respondent += count
+                                    else:
+                                        d_submitted_pencacah += count
+                                    d_submitted += count
+                                elif "REJECTED" in key or "REVOKED" in key:
+                                    d_rejected += count
+                                    d_submitted += count
+                                elif "APPROVED" in key:
+                                    d_approved += count
+                                    d_submitted += count
+                                    
+                        return {
+                            "total_target": d_prelist,
+                            "total_draft": d_draft,
+                            "total_submitted": d_submitted,
+                            "total_rejected": d_rejected,
+                            "total_approved": d_approved,
+                            "total_submitted_pencacah": d_submitted_pencacah,
+                            "total_submitted_respondent": d_submitted_respondent
+                        }
+                    
+                    desa_tasks = [fetch_desa_status_agg(d) for d in desas]
+                    desa_results = await asyncio.gather(*desa_tasks)
+                    
+                    kec_prelist = 0
+                    for dr in desa_results:
+                        kec_prelist += dr["total_target"]
+                        kec_draft += dr["total_draft"]
+                        kec_submitted += dr["total_submitted"]
+                        kec_rejected += dr["total_rejected"]
+                        kec_approved += dr["total_approved"]
+                        kec_submitted_pencacah += dr["total_submitted_pencacah"]
+                        kec_submitted_respondent += dr["total_submitted_respondent"]
+                        
+                    print(f"      [SUCCESS] Kec {kec_name} selesai di-agregasi per Desa. Real Prelist={kec_prelist}")
+                else:
+                    if res_kec and "searchAggregation" in res_kec:
+                        agg = res_kec["searchAggregation"]
+                        for item in agg:
+                            key = item.get("keyAggregation", "")
+                            count = item.get("docCount", 0)
+                            if key == "DRAFT":
+                                kec_draft += count
+                            elif key == "SUBMITTED BY Pencacah":
+                                kec_submitted_pencacah += count
+                                kec_submitted += count
+                            elif key == "SUBMITTED RESPONDENT":
+                                kec_submitted_respondent += count
+                                kec_submitted += count
+                            elif "SUBMITTED" in key:
+                                if "RESPONDENT" in key.upper():
+                                    kec_submitted_respondent += count
+                                else:
+                                    kec_submitted_pencacah += count
+                                kec_submitted += count
+                            elif "REJECTED" in key or "REVOKED" in key:
+                                kec_rejected += count
+                                kec_submitted += count
+                            elif "APPROVED" in key:
+                                kec_approved += count
+                                kec_submitted += count
+                                
+                return {
+                    "kec_id": kec_id,
+                    "total_target": kec_prelist,
+                    "total_draft": kec_draft,
+                    "total_submitted": kec_submitted,
+                    "total_rejected": kec_rejected,
+                    "total_approved": kec_approved,
+                    "total_submitted_pencacah": kec_submitted_pencacah,
+                    "total_submitted_respondent": kec_submitted_respondent
+                }
+
+            tasks = [
+                fetch_api_safely(page, datatable_url, payload, xsrf_token),
+                fetch_api_safely(page, datatable_url, payload_nontarget, xsrf_token)
+            ]
+            for kec in kecs_to_fetch:
+                tasks.append(fetch_kec_status_agg(kec))
+
+            task_results = await asyncio.gather(*tasks)
+            res = task_results[0]
+            res_nontarget = task_results[1]
+            kec_results = task_results[2:]
+
+            kec_status_map_local = {r["kec_id"]: r for r in kec_results}
+
+            for kec_stats in report_data[kab["name"]]["kecamatan_list"]:
+                k_id = kec_stats["kec_id"]
+                if k_id in kec_status_map_local:
+                    ks = kec_status_map_local[k_id]
+                    kec_stats["total_prelist"] = ks["total_target"]
+                    kec_stats["total_draft"] = ks["total_draft"]
+                    kec_stats["total_submitted"] = ks["total_submitted"]
+                    kec_stats["total_rejected"] = ks["total_rejected"]
+                    kec_stats["total_approved"] = ks["total_approved"]
+                    kec_stats["total_submitted_pencacah"] = ks["total_submitted_pencacah"]
+                    kec_stats["total_submitted_respondent"] = ks["total_submitted_respondent"]
+            
+            if not res or "error" in res:
+                print(f"  [ERROR] Gagal memproses {kab['name']}: {res.get('error') if res else 'Unknown error'}")
+                if res and res.get("text"):
+                    print(f"    [RESPONSE TEXT] {res.get('text')}")
+                continue
+            
+            prelist_target = 0
+            draft_target = 0
+            open_target = 0
+            submitted_target = 0
+            rejected_target = 0
+            approved_target = 0
+            submitted_pencacah_target = 0
+            submitted_respondent_target = 0
+            
+            agg_target = res.get("searchAggregation", [])
+            for item in agg_target:
+                key = item.get("keyAggregation", "")
+                count = item.get("docCount", 0)
+                prelist_target += count
+                if key == "DRAFT":
+                    draft_target += count
+                elif key == "OPEN":
+                    open_target += count
+                elif "SUBMITTED" in key:
+                    submitted_target += count
+                    if "RESPONDENT" in key.upper():
+                        submitted_respondent_target += count
+                    else:
+                        submitted_pencacah_target += count
+                elif "REJECTED" in key or "REVOKED" in key:
+                    rejected_target += count
+                elif "APPROVED" in key:
+                    approved_target += count
+            
+            if prelist_target == 0:
+                prelist_target = res.get("totalHit", 0)
+
+            draft_nontarget = 0
+            open_nontarget = 0
+            submitted_nontarget = 0
+            rejected_nontarget = 0
+            approved_nontarget = 0
+            
+            tambahan_usaha = 0
+            tambahan_rumah_baru = 0
+            nontarget_records = res_nontarget.get("searchData", []) if res_nontarget else []
+            
+            for item in nontarget_records:
+                code_id = item.get("codeIdentity") or ""
+                rec_id = item.get("id")
+                if rec_id and rec_id not in processed_record_ids:
+                    processed_record_ids.add(rec_id)
+                    sls_code = extract_sls_code(code_id)
+                    if sls_code:
+                        status_alias = item.get("assignmentStatusAlias") or ""
+                        if status_alias:
+                            is_t = not is_tambahan(code_id)
+                            key_type = "target" if is_t else "nontarget"
+                            if sls_code not in sls_status_map:
+                                sls_status_map[sls_code] = {"target": {}, "nontarget": {}}
+                            sls_status_map[sls_code][key_type][status_alias] = sls_status_map[sls_code][key_type].get(status_alias, 0) + 1
+
+                if not is_tambahan(code_id):
+                    continue
+                status = item.get("assignmentStatusAlias", "")
+                data1_val = item.get("data1") or ""
+                data6_val = str(item.get("data6") or "").upper()
+                jenis_lbl, is_usaha_derived = classify_tambahan(code_id, data1_val, data6_val)
+                is_rumah = not is_usaha_derived
+                
+                status_upper = status.upper()
+                
+                kec_id = None
+                n_region = item.get("region", {})
+                if n_region:
+                    kec_id = n_region.get("level1", {}).get("level2", {}).get("level3", {}).get("id")
+                
+                kec_stats = None
+                if kec_id:
+                    for k_item in report_data[kab["name"]]["kecamatan_list"]:
+                        if k_item["kec_id"] == kec_id:
+                            kec_stats = k_item
+                            break
+                
+                if is_rumah:
+                    tambahan_rumah_baru += 1
+                    if kec_stats:
+                        kec_stats["new_rumah_overall"] += 1
+                else:
+                    tambahan_usaha += 1
+                    if kec_stats:
+                        kec_stats["new_usaha_overall"] += 1
+
+                if status_upper == "DRAFT":
+                    draft_nontarget += 1
+                elif status_upper == "OPEN":
+                    open_nontarget += 1
+                elif "SUBMITTED" in status_upper:
+                    submitted_nontarget += 1
+                elif "REJECTED" in status_upper or "REVOKED" in status_upper:
+                    rejected_nontarget += 1
+                elif "APPROVED" in status_upper:
+                    approved_nontarget += 1
+            
+            total_prelist = prelist_target
+            total_draft = draft_target
+            total_open = open_target
+            total_submitted = submitted_target + approved_target + rejected_target
+            total_rejected = rejected_target
+            total_approved = approved_target
+            total_submitted_pencacah = submitted_pencacah_target
+            total_submitted_respondent = submitted_respondent_target
+            
+            report_data[kab["name"]]["total_prelist"] = total_prelist
+            report_data[kab["name"]]["total_draft"] = total_draft
+            report_data[kab["name"]]["total_open"] = total_open
+            report_data[kab["name"]]["total_submitted"] = total_submitted
+            report_data[kab["name"]]["total_rejected"] = total_rejected
+            report_data[kab["name"]]["total_approved"] = total_approved
+            report_data[kab["name"]]["total_submitted_pencacah"] = total_submitted_pencacah
+            report_data[kab["name"]]["total_submitted_respondent"] = total_submitted_respondent
+            report_data[kab["name"]]["new_usaha_overall"] = tambahan_usaha
+            report_data[kab["name"]]["new_rumah_overall"] = tambahan_rumah_baru
+            print(f"  {kab['name']}: Prelist={total_prelist}, UsahaBaruOverall={tambahan_usaha}, RumahBaruOverall={tambahan_rumah_baru}, Draft={total_draft}, Open={total_open}, Submitted={total_submitted}")
+            for kec_stats in report_data[kab["name"]]["kecamatan_list"]:
+                kec_prelist = kec_stats.get("total_prelist", 0)
+                kec_draft = kec_stats.get("total_draft", 0)
+                kec_submitted = kec_stats.get("total_submitted", 0)
+                kec_open = max(0, kec_prelist - kec_draft - kec_submitted)
+                kec_new_usaha = kec_stats.get("new_usaha_overall", 0)
+                kec_new_rumah = kec_stats.get("new_rumah_overall", 0)
+                kec_name = kec_stats.get("kec_name", "-")
+                print(f"    -> Kec {kec_name}: Prelist={kec_prelist}, UsahaBaruOverall={kec_new_usaha}, RumahBaruOverall={kec_new_rumah}, Draft={kec_draft}, Open={kec_open}, Submitted={kec_submitted}")
+
+        prov_original_total = sum(report_data[k["name"]]["total_prelist"] for k in survey_cfg["kabs"])
+        prov_new_total = sum(report_data[k["name"]]["new_usaha_overall"] for k in survey_cfg["kabs"])
+        prov_new_rumah_total = sum(report_data[k["name"]]["new_rumah_overall"] for k in survey_cfg["kabs"])
+        prov_draft_total = sum(report_data[k["name"]]["total_draft"] for k in survey_cfg["kabs"])
+        prov_open_total = sum(report_data[k["name"]]["total_open"] for k in survey_cfg["kabs"])
+        prov_submitted_total = sum(report_data[k["name"]]["total_submitted"] for k in survey_cfg["kabs"])
+
+        output_data[f"{survey_key}_prov_total"] = prov_original_total
+        output_data[f"{survey_key}_prov_new_total"] = prov_new_total
+        output_data[f"{survey_key}_prov_new_rumah_total"] = prov_new_rumah_total
+
+        print(f"\n  =========================================")
+        print(f"  TOTAL PROVINSI ({survey_cfg['label']}):")
+        print(f"  Prelist={prov_original_total}, UsahaBaruOverall={prov_new_total}, RumahBaruOverall={prov_new_rumah_total}, Draft={prov_draft_total}, Open={prov_open_total}, Submitted={prov_submitted_total}")
+        print(f"  =========================================\n")
+
+        local_tz = datetime.timezone(datetime.timedelta(hours=8))
+        today = datetime.datetime.now(local_tz).date()
+        yesterday = today - datetime.timedelta(days=1)
+        two_days_ago = today - datetime.timedelta(days=2)
+
+        # Load mapping kecamatan dari region_map_sulteng.json
+        kab_to_kec_map = {}
+        if os.path.exists(region_map_path):
+            try:
+                with open(region_map_path, "r", encoding="utf-8") as f:
+                    rmap = json.load(f)
+                    for rdata in rmap.values():
+                        kab_to_kec_map[rdata.get("kab_name")] = rdata.get("kecamatan", [])
+            except Exception as e:
+                print(f"Error loading region map: {e}")
+
+        all_records = []
+        print("Mengambil rincian data progres harian tingkat provinsi...")
+        start = 0
+        length = 500
+        
+        while True:
+            payload = {
+                "start": start,
+                "length": length,
+                "columns": [
+                    {"data": "id"},
+                    {"data": "codeIdentity"},
+                    {"data": "data1"},
+                    {"data": "data6"},
+                    {"data": "dateCreated"},
+                    {"data": "dateModified"},
+                    {"data": "assignmentStatusAlias"},
+                    {"data": "region"}
+                ],
+                "order": [{"column": 5, "dir": "desc"}],
+                "search": {"value": "", "regex": False},
+                "assignmentExtraParam": {
+                    "region1Id": survey_cfg["prov_id"],
+                    "surveyPeriodId": period_id,
+                    "assignmentErrorStatusType": -1,
+                    "filterTargetType": ""
+                }
+            }
+            
+            res = await fetch_api_safely(page, datatable_url, payload, xsrf_token)
+            if not res or "error" in res:
+                print(f"  [ERROR] Gagal mengambil rincian progres provinsi: {res.get('error') if res else 'Unknown error'}")
+                if res and res.get("text"):
+                    print(f"    [RESPONSE TEXT] {res.get('text')}")
+                break
+            
+            records_part = res.get("searchData", [])
+            if not records_part:
+                break
+                
+            all_records.extend(records_part)
+            print(f"  Fetched {len(records_part)} records (Total Akumulasi: {len(all_records)})")
+            
+            has_recent_record = False
+            for r in records_part:
+                dm_str = r.get("dateModified")
+                if dm_str:
+                    try:
+                        dt = parse_bps_datetime(dm_str, local_tz)
+                        if dt and dt.date() >= two_days_ago:
+                            has_recent_record = True
+                            break
+                    except Exception:
+                        pass
+            
+            if not has_recent_record and len(records_part) > 0:
+                print(f"  [INFO] Berhenti lebih awal karena halaman ini tidak memiliki record dari H-2 s/d Hari ini.")
+                break
+                
+            start += length
+            if start >= res.get("totalHit", 0):
+                break
+            await asyncio.sleep(0.05)
+        
+        # Snapshots
+        yesterday_str = yesterday.strftime("%Y-%m-%d")
+        two_days_ago_str = two_days_ago.strftime("%Y-%m-%d")
+        yesterday_snapshot = None
+        two_days_ago_snapshot = None
+        
+        if supabase:
+            try:
+                res_yest = supabase.table("dashboard_store").select("value").eq("key", f"ipas_data:{yesterday_str}").execute()
+                if res_yest.data:
+                    yesterday_snapshot = res_yest.data[0].get("value")
+                    print(f"  [SUPABASE] Menemukan snapshot kemarin ({yesterday_str}) untuk {survey_key}")
+            except Exception as e:
+                print(f"  [SUPABASE] Gagal mengambil snapshot kemarin: {e}")
+                
+            try:
+                res_two = supabase.table("dashboard_store").select("value").eq("key", f"ipas_data:{two_days_ago_str}").execute()
+                if res_two.data:
+                    two_days_ago_snapshot = res_two.data[0].get("value")
+                    print(f"  [SUPABASE] Menemukan snapshot 2 hari lalu ({two_days_ago_str}) untuk {survey_key}")
+                else:
+                    for fallback_offset in [3, 4, 5]:
+                        fallback_date = today - datetime.timedelta(days=fallback_offset)
+                        fallback_str = fallback_date.strftime("%Y-%m-%d")
+                        try:
+                            res_fb = supabase.table("dashboard_store").select("value").eq("key", f"ipas_data:{fallback_str}").execute()
+                            if res_fb.data:
+                                two_days_ago_snapshot = res_fb.data[0].get("value")
+                                print(f"  [SUPABASE] H-2 tidak ada. Menggunakan snapshot H-{fallback_offset} ({fallback_str}) sebagai fallback H-2")
+                                break
+                        except Exception:
+                            pass
+            except Exception as e:
+                print(f"  [SUPABASE] Gagal mengambil snapshot 2 hari lalu: {e}")
+
+        has_yesterday_snapshot = False
+        has_two_days_ago_snapshot = False
+        
+        for k in survey_cfg["kabs"]:
+            kab_name = k["name"]
+            y_kab = None
+            t_kab = None
+            
+            if yesterday_snapshot and survey_key in yesterday_snapshot:
+                y_kab = next((x for x in yesterday_snapshot[survey_key] if x.get("kabupaten") == kab_name), None)
+            if two_days_ago_snapshot and survey_key in two_days_ago_snapshot:
+                t_kab = next((x for x in two_days_ago_snapshot[survey_key] if x.get("kabupaten") == kab_name), None)
+                
+            if y_kab:
+                has_yesterday_snapshot = True
+                report_data[kab_name]["yesterday_completed"] = y_kab.get("today_completed", 0)
+                report_data[kab_name]["yesterday_completed_breakdown"] = y_kab.get("today_completed_breakdown", {})
+                
+                for kec_s in report_data[kab_name]["kecamatan_list"]:
+                    y_kec = next((x for x in y_kab.get("kecamatan_list", []) if x.get("kec_id") == kec_s["kec_id"] or x.get("kec_name") == kec_s["kec_name"]), None)
+                    if y_kec:
+                        kec_s["yesterday_completed"] = y_kec.get("today_completed", 0)
+                        kec_s["yesterday_completed_breakdown"] = y_kec.get("today_completed_breakdown", {})
+                
+                if not t_kab:
+                    report_data[kab_name]["two_days_ago_is_estimate"] = True
+                    for kec_s in report_data[kab_name]["kecamatan_list"]:
+                        kec_s["two_days_ago_is_estimate"] = True
+                            
+            if t_kab:
+                has_two_days_ago_snapshot = True
+                report_data[kab_name]["two_days_ago_completed"] = t_kab.get("today_completed", 0)
+                report_data[kab_name]["two_days_ago_completed_breakdown"] = t_kab.get("today_completed_breakdown", {})
+                report_data[kab_name]["two_days_ago_is_estimate"] = False
+                
+                for kec_s in report_data[kab_name]["kecamatan_list"]:
+                    t_kec = next((x for x in t_kab.get("kecamatan_list", []) if x.get("kec_id") == kec_s["kec_id"] or x.get("kec_name") == kec_s["kec_name"]), None)
+                    if t_kec:
+                        kec_s["two_days_ago_completed"] = t_kec.get("today_completed", 0)
+                        kec_s["two_days_ago_completed_breakdown"] = t_kec.get("today_completed_breakdown", {})
+                        kec_s["two_days_ago_is_estimate"] = False  
+
+        print("Mengolah riwayat tanggal dan mengelompokkan ke Kabupaten & Kecamatan...")
+        kab_id_to_name = {k["id"]: k["name"] for k in survey_cfg["kabs"]}
+        kab_code_to_name = {f"72{k['code']}": k["name"] for k in survey_cfg["kabs"]}
+        
+        for r in all_records:
+            code_id = r.get("codeIdentity") or ""
+            rec_id = r.get("id")
+            if rec_id and rec_id not in processed_record_ids:
+                processed_record_ids.add(rec_id)
+                sls_code = extract_sls_code(code_id)
+                if sls_code:
+                    status_alias = r.get("assignmentStatusAlias") or ""
+                    if status_alias:
+                        is_t = not is_tambahan(code_id)
+                        key_type = "target" if is_t else "nontarget"
+                        if sls_code not in sls_status_map:
+                            sls_status_map[sls_code] = {"target": {}, "nontarget": {}}
+                        sls_status_map[sls_code][key_type][status_alias] = sls_status_map[sls_code][key_type].get(status_alias, 0) + 1
+
+            kab_name = None
+            kec_id = None
+            
+            region = r.get("region", {})
+            if region:
+                lvl2 = region.get("level1", {}).get("level2", {}) or {}
+                kab_id = lvl2.get("id")
+                if kab_id and kab_id in kab_id_to_name:
+                    kab_name = kab_id_to_name[kab_id]
+                else:
+                    kab_code = lvl2.get("fullCode")
+                    if kab_code and kab_code in kab_code_to_name:
+                        kab_name = kab_code_to_name[kab_code]
+                
+                lvl3 = lvl2.get("level3", {}) or {}
+                kec_id = lvl3.get("id")
+            
+            if not kab_name:
+                code_identity = r.get("codeIdentity")
+                if code_identity:
+                    import re
+                    match = re.search(r"\b(72\d{2})\b", code_identity)
+                    if match:
+                        kab_name = kab_code_to_name.get(match.group(1))
+                    else:
+                        if len(code_identity) >= 4:
+                            kab_name = kab_code_to_name.get(code_identity[:4])
+            
+            if not kab_name:
+                continue
+                
+            status_alias = r.get("assignmentStatusAlias")
+            is_target = not is_tambahan(r.get("codeIdentity") or "")
+            
+            kec_stats = None
+            if kec_id and kab_name in report_data:
+                for k_item in report_data[kab_name]["kecamatan_list"]:
+                    if k_item["kec_id"] == kec_id:
+                        kec_stats = k_item
+                        break
+
+            if not kec_stats and kab_name in report_data:
+                level_regions = r.get("levelRegions") or []
+                kec_name_from_region = None
+                for lr in level_regions:
+                    if lr.get("level") == 3:
+                        kec_name_from_region = (lr.get("name") or "").upper().strip()
+                        break
+                if kec_name_from_region:
+                    for k_item in report_data[kab_name]["kecamatan_list"]:
+                        if k_item["kec_name"].upper().strip() == kec_name_from_region:
+                            kec_stats = k_item
+                            break
+
+            status_upper = (status_alias or "").upper()
+            if "SUBMITTED" in status_upper or "APPROVED" in status_upper or "REJECTED" in status_upper or "REVOKED" in status_upper:
+                mod_date_str = r.get("dateModified")
+                if mod_date_str:
+                    try:
+                        dt = parse_bps_datetime(mod_date_str, local_tz)
+                        mod_date = dt.date() if dt else None
+                        
+                        if mod_date == today:
+                            report_data[kab_name]["today_completed"] += 1
+                            bd = report_data[kab_name].setdefault("today_completed_breakdown", {})
+                            bd[status_alias] = bd.get(status_alias, 0) + 1
+                            
+                            if kec_stats:
+                                kec_stats["today_completed"] += 1
+                                kbd = kec_stats.setdefault("today_completed_breakdown", {})
+                                kbd[status_alias] = kbd.get(status_alias, 0) + 1
+                        elif mod_date == yesterday and not has_yesterday_snapshot:
+                            report_data[kab_name]["yesterday_completed"] += 1
+                            bd = report_data[kab_name].setdefault("yesterday_completed_breakdown", {})
+                            bd[status_alias] = bd.get(status_alias, 0) + 1
+                            
+                            if kec_stats:
+                                kec_stats["yesterday_completed"] += 1
+                                kbd = kec_stats.setdefault("yesterday_completed_breakdown", {})
+                                kbd[status_alias] = kbd.get(status_alias, 0) + 1
+                        elif mod_date == two_days_ago and not has_two_days_ago_snapshot:
+                            report_data[kab_name]["two_days_ago_completed"] += 1
+                            bd = report_data[kab_name].setdefault("two_days_ago_completed_breakdown", {})
+                            bd[status_alias] = bd.get(status_alias, 0) + 1
+                            
+                            if kec_stats:
+                                kec_stats["two_days_ago_completed"] += 1
+                                kbd = kec_stats.setdefault("two_days_ago_completed_breakdown", {})
+                                kbd[status_alias] = kbd.get(status_alias, 0) + 1
+                    except Exception:
+                        pass
+                        
+            create_date_str = r.get("dateCreated")
+            if create_date_str:
+                try:
+                    dt = parse_bps_datetime(create_date_str, local_tz)
+                    create_date = dt.date() if dt else None
+                    comp_name = r.get("data1") or "-"
+                    code_id = r.get("codeIdentity") or "-"
+                    if is_tambahan(code_id):
+                        data6_val = str(r.get("data6") or "").upper()
+                        jenis_lbl, is_usaha_derived = classify_tambahan(code_id, comp_name, data6_val)
+                        is_rumah = not is_usaha_derived
+                        
+                        if create_date == today:
+                            if is_rumah:
+                                report_data[kab_name]["new_rumah_today"] += 1
+                                if kec_stats:
+                                    kec_stats["new_rumah_today"] += 1
+                            else:
+                                report_data[kab_name]["new_usaha_today"] += 1
+                                if kec_stats:
+                                    kec_stats["new_usaha_today"] += 1
+                        elif create_date == yesterday:
+                            if is_rumah:
+                                report_data[kab_name]["new_rumah_yesterday"] += 1
+                                if kec_stats:
+                                    kec_stats["new_rumah_yesterday"] += 1
+                            else:
+                                report_data[kab_name]["new_usaha_yesterday"] += 1
+                                if kec_stats:
+                                    kec_stats["new_usaha_yesterday"] += 1
+                        
+                        date_lbl = "today" if create_date == today else ("yesterday" if create_date == yesterday else "older")
+                        biz_item = {
+                            "name": comp_name,
+                            "code": code_id,
+                            "date": date_lbl,
+                            "status": status_alias,
+                            "type": "rumah" if is_rumah else "usaha",
+                            "kecName": kec_stats["kec_name"] if kec_stats else "-",
+                            "jenis": jenis_lbl
+                        }
+                        report_data[kab_name]["new_businesses"].append(biz_item)
+                        if kec_stats:
+                            kec_stats.setdefault("new_businesses", []).append(biz_item)
+                except Exception:
+                    pass
+
+        final_list = []
+        for kab_name, stats in report_data.items():
+            prelist = stats["total_prelist"]
+            completed = stats["total_submitted"]
+            pct = round((completed / prelist * 100) if prelist > 0 else 0.0, 2)
+            
+            formatted_kecs = []
+            for kec_s in stats["kecamatan_list"]:
+                k_prelist = kec_s["total_prelist"]
+                k_draft = kec_s["total_draft"]
+                k_sub = kec_s["total_submitted"]
+                k_open = max(0, k_prelist - k_sub - k_draft)
+                kec_s["total_prelist"] = k_prelist
+                kec_s["total_open"] = k_open
+                kec_s["persentase"] = round((k_sub / k_prelist * 100) if k_prelist > 0 else 0.0, 2)
+                kec_s["total_submitted_pencacah"] = kec_s.get("total_submitted_pencacah", 0)
+                kec_s["total_submitted_respondent"] = kec_s.get("total_submitted_respondent", 0)
+                formatted_kecs.append(kec_s)
+            
+            final_list.append({
+                "kabupaten": kab_name,
+                "total_prelist": prelist,
+                "total_draft": stats["total_draft"],
+                "total_open": stats["total_open"],
+                "total_submitted": completed,
+                "total_rejected": stats["total_rejected"],
+                "total_approved": stats["total_approved"],
+                "total_submitted_pencacah": stats.get("total_submitted_pencacah", 0),
+                "total_submitted_respondent": stats.get("total_submitted_respondent", 0),
+                "persentase": pct,
+                "today_completed": stats["today_completed"],
+                "yesterday_completed": stats["yesterday_completed"],
+                "two_days_ago_completed": stats["two_days_ago_completed"],
+                "two_days_ago_is_estimate": stats.get("two_days_ago_is_estimate", False),
+                "today_completed_breakdown": stats.get("today_completed_breakdown", {}),
+                "yesterday_completed_breakdown": stats.get("yesterday_completed_breakdown", {}),
+                "two_days_ago_completed_breakdown": stats.get("two_days_ago_completed_breakdown", {}),
+                "new_usaha_today": stats["new_usaha_today"],
+                "new_usaha_yesterday": stats["new_usaha_yesterday"],
+                "new_rumah_today": stats["new_rumah_today"],
+                "new_rumah_yesterday": stats["new_rumah_yesterday"],
+                "new_usaha_overall": stats.get("new_usaha_overall", 0),
+                "new_rumah_overall": stats.get("new_rumah_overall", 0),
+                "new_businesses": stats["new_businesses"],
+                "kecamatan_list": formatted_kecs
+            })
+        
+        output_data[survey_key] = final_list
+        output_data[f"{survey_key}_sls_status"] = sls_status_map
+
+    now_str = datetime.datetime.now(local_tz).isoformat()
+    final_js_obj = {
+        "updated_at": now_str,
+        "se_umum": output_data["se_umum"],
+        "se_ub": output_data["se_ub"],
+        "se_umum_sls_status": output_data.get("se_umum_sls_status", {}),
+        "se_ub_sls_status": output_data.get("se_ub_sls_status", {}),
+        "se_umum_prov_total": output_data.get("se_umum_prov_total", 0),
+        "se_ub_prov_total": output_data.get("se_ub_prov_total", 0),
+        "se_umum_prov_new_total": output_data.get("se_umum_prov_new_total", 0),
+        "se_ub_prov_new_total": output_data.get("se_ub_prov_new_total", 0),
+        "se_umum_prov_new_rumah_total": output_data.get("se_umum_prov_new_rumah_total", 0),
+        "se_ub_prov_new_rumah_total": output_data.get("se_ub_prov_new_rumah_total", 0)
+    }
+    
+    # Save locally
+    ipas_data_path = os.path.join(script_dir, "ipas_data.js")
+    with open(ipas_data_path, "w", encoding="utf-8") as f:
+        f.write(f"window.IPAS_DATA = {json.dumps(final_js_obj, ensure_ascii=False, indent=2)};\n")
+    print(" ✅ File ipas_data.js berhasil disimpan.")
+
+    # Upload to Supabase
+    if supabase:
+        try:
+            print("Mengunggah data IPAS ke Supabase...")
+            supabase.table("dashboard_store").delete().eq("key", "ipas_data").execute()
+            supabase.table("dashboard_store").insert({"key": "ipas_data", "value": final_js_obj}).execute()
+            print(" ✅ Berhasil mengunggah data IPAS ke Supabase.")
+            
+            today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+            daily_key = f"ipas_data:{today_str}"
+            supabase.table("dashboard_store").delete().eq("key", daily_key).execute()
+            supabase.table("dashboard_store").insert({"key": daily_key, "value": final_js_obj}).execute()
+            print(f" ✅ Berhasil mengunggah data IPAS harian ({daily_key}) ke Supabase.")
+        except Exception as e:
+            print(f"[ERROR] Gagal mengunggah data IPAS ke Supabase: {e}")
+
+async def check_session_valid(page, token):
+    if not token:
+        return False
+    url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode"
+    payload = {
+        "start": 0, "length": 1, "columns": [{"data": "id"}], "order": [], "search": {"value": "", "regex": False},
+        "assignmentExtraParam": {
+            "region1Id": "a00c8aef-afc4-4d4f-b80d-789a15450ef9",
+            "surveyPeriodId": "37526b20-81c8-42f5-a895-6190137d7394",
+            "assignmentErrorStatusType": -1
+        }
+    }
+    try:
+        res = await page.evaluate("""
+            async ({url, payload, token}) => {
+                try {
+                    const r = await fetch(url, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+                        body: JSON.stringify(payload)
+                    });
+                    if (!r.ok) return { _error: `HTTP ${r.status}` };
+                    return await r.json();
+                } catch (e) {
+                    return { _error: e.toString() };
+                }
+            }
+        """, {"url": url, "payload": payload, "token": token})
+        
+        if res and isinstance(res, dict):
+            if "_error" in res:
+                return False
+            return "searchData" in res or "searchAggregation" in res
+    except Exception:
+        pass
+    return False
+
+# =====================================================================
+# MAIN PIPELINE SCRAPE
+# =====================================================================
 
 async def main():
     start_time = time.time()
@@ -329,7 +1508,6 @@ async def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     region_map_path = os.path.join(script_dir, "region_map_sulteng_full.json")
     
-    # 1. Bangun mapping SLS dari region_map_sulteng_full.json
     sls_lookup = {}
     if os.path.exists(region_map_path):
         print(f"[INFO] Memuat SLS metadata dari {region_map_path}...")
@@ -359,7 +1537,6 @@ async def main():
         print(f"[ERROR] File {region_map_path} tidak ditemukan!")
         sys.exit(1)
 
-    # 2. Hubungkan ke browser dan dapatkan auth token
     async with async_playwright() as p:
         try:
             browser, context, page = await get_authenticated_context(p)
@@ -368,27 +1545,50 @@ async def main():
             print(f"[ERROR] Gagal menghubungkan ke browser: {e}")
             sys.exit(1)
 
-        # Pastikan navigasi ke FASIH untuk otentikasi
-        if "fasih-sm.bps.go.id" not in page.url:
-            print("[INFO] Navigasi ke FASIH untuk menyegarkan sesi...")
-            await page.goto("https://fasih-sm.bps.go.id/app/dashboard")
-            await asyncio.sleep(2)
+        attempt_count = 0
+        while True:
+            attempt_count += 1
+            if "fasih-sm.bps.go.id" not in page.url:
+                print("[INFO] Navigasi ke FASIH untuk menyegarkan sesi...")
+                try:
+                    await page.goto("https://fasih-sm.bps.go.id/app/dashboard", timeout=60000)
+                    await asyncio.sleep(2)
+                except Exception as e:
+                    print(f"[WARNING] Gagal memuat halaman FASIH: {e}")
+            else:
+                if attempt_count > 1:
+                    print(f"[INFO] Reloading page (attempt {attempt_count})...")
+                    try:
+                        await page.reload(timeout=60000, wait_until="domcontentloaded")
+                        await asyncio.sleep(2)
+                    except Exception as e:
+                        print(f"[WARNING] Gagal memuat ulang halaman: {e}")
 
-        cookies = await context.cookies()
-        token_raw = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), None)
-        if not token_raw:
-            print("[ERROR] Sesi tidak ditemukan di browser. Harap login terlebih dahulu di tab Chrome.")
-            if browser:
-                await browser.close()
-            sys.exit(1)
-        token = unquote(token_raw)
+            cookies = await context.cookies()
+            token_raw = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), None)
+            token = unquote(token_raw) if token_raw else ""
+            
+            if token and await check_session_valid(page, token):
+                print("[SUCCESS] Sesi berhasil diverifikasi dan siap digunakan!")
+                break
+                
+            print("\n==============================================================")
+            print("[WARNING] Sesi FASIH tidak valid atau telah kedaluwarsa.")
+            print("Harap LOGIN atau REFRESH halaman FASIH di browser Chrome Anda.")
+            print("Mencoba mendeteksi secara otomatis setiap 15 detik...")
+            print("==============================================================\n")
+            await asyncio.sleep(15)
 
-        # 3. Tarik data user allocations
+
+        # -------------------------------------------------------------
+        # STEP 1: SCRAPE PROGRESS BY RESPONSIBILITY (STATUS ASSIGN PETUGAS)
+        # -------------------------------------------------------------
+        print("\n--- [STEP 1/2] Menarik Progres Alokasi Petugas ---")
         users_umum = await fetch_users_mapping(page, token, SE_UMUM_PERIOD)
         users_ub = await fetch_users_mapping(page, token, SE_UB_PERIOD)
 
         if (users_umum is None) or (users_ub is None):
-            print("[ERROR] Gagal menarik alokasi petugas. Batalkan proses agar tidak menimpa data yang ada.")
+            print("[ERROR] Gagal menarik alokasi petugas. Batalkan proses.")
             if browser:
                 try:
                     await page.close()
@@ -397,7 +1597,6 @@ async def main():
                     pass
             sys.exit(1)
 
-        # Simpan users_mapping.json secara lokal
         users_map = {}
         for u in users_umum + users_ub:
             uid = u.get("id") or u.get("userId")
@@ -406,198 +1605,312 @@ async def main():
                     "username": u.get("username", "-"),
                     "fullname": u.get("fullname", "-")
                 }
+
         with open(os.path.join(script_dir, "users_mapping.json"), "w", encoding="utf-8") as f:
             json.dump(users_map, f, indent=2)
+        print(" ✅ Mapping user ID diperbarui.")
 
-        # 4. Tarik laporan responsibility (via chunked page.evaluate)
-        print("[INFO] Memulai query report-progress-by-responsibility...")
-        umum_pencacah = await fetch_responsibility_report(page, token, SE_UMUM_PERIOD, ROLE_PENCACAH_UMUM, "ALL")
-        umum_pengawas = await fetch_responsibility_report(page, token, SE_UMUM_PERIOD, ROLE_PENGAWAS_UMUM, "TARGET_ONLY")
-        ub_pencacah = await fetch_responsibility_report(page, token, SE_UB_PERIOD, ROLE_PENCACAH_UB, "ALL")
-        ub_pengawas = await fetch_responsibility_report(page, token, SE_UB_PERIOD, ROLE_PENGAWAS_UB, "TARGET_ONLY")
+        raw_responsibility_umum = await fetch_responsibility_report(page, token, SE_UMUM_PERIOD, ROLE_PENCACAH_UMUM, "target")
+        raw_responsibility_ub = await fetch_responsibility_report(page, token, SE_UB_PERIOD, ROLE_PENCACAH_UB, "target")
 
-        # Tutup tab / disconnect browser
-        try:
-            if browser:
-                await page.close()
-                await browser.disconnect()
-            else:
-                await context.close()
-        except Exception:
-            pass
+        # Pengelompokan Data SE Umum
+        sls_targets_umum = {}
+        sls_breakdowns_umum = {}
+        petugas_data_umum = {}
+        assign_data_umum_map = {}
 
-        # Guard checks to prevent overwriting dashboard files with empty/failed data.
-        # SE Umum MUST not be None or empty.
-        if (umum_pencacah is None) or (umum_pengawas is None):
-            print("[ERROR] Pengunduhan laporan progres SE Umum gagal (HTTP error atau response null). Batalkan proses agar tidak menimpa data yang ada.")
-            sys.exit(1)
+        for row in raw_responsibility_umum:
+            sls_code = row.get("region5Id")
+            if not sls_code:
+                continue
             
-        if len(umum_pencacah) == 0 or len(umum_pengawas) == 0:
-            print("[ERROR] Laporan progress SE Umum kosong! Batalkan proses agar tidak menimpa data yang ada.")
-            sys.exit(1)
+            target_count = row.get("targetCount", 0)
+            sync_count = row.get("syncCount", 0)
+            status_alias = row.get("assignmentStatusAlias", "OPEN")
+            username = row.get("username")
+            fullname = row.get("fullname") or username or "-"
+
+            sls_targets_umum[sls_code] = sls_targets_umum.get(sls_code, 0) + target_count
+
+            # Breakdown status
+            sls_breakdowns_umum.setdefault(sls_code, [])
+            found = False
+            for item in sls_breakdowns_umum[sls_code]:
+                if item["status"] == status_alias:
+                    item["count"] += target_count
+                    found = True
+                    break
+            if not found:
+                sls_breakdowns_umum[sls_code].append({"status": status_alias, "count": target_count})
+
+            # Petugas data
+            if username:
+                pet_info = petugas_data_umum.setdefault(username, {
+                    "username": username,
+                    "fullname": fullname,
+                    "target_count": 0,
+                    "sync_count": 0,
+                    "draft_count": 0,
+                    "open_count": 0,
+                    "submitted_count": 0,
+                    "approved_count": 0,
+                    "rejected_count": 0,
+                })
+                pet_info["target_count"] += target_count
+                pet_info["sync_count"] += sync_count
+                
+                cats = categorize_status(status_alias, target_count)
+                pet_info["draft_count"] += cats["draft"]
+                pet_info["open_count"] += cats["open"]
+                pet_info["submitted_count"] += cats["submitted"]
+                pet_info["approved_count"] += cats["approved"]
+                pet_info["rejected_count"] += cats["rejected"]
+
+            # SLS info
+            sls_info = sls_lookup.get(sls_code)
+            if sls_info:
+                kab_name = sls_info["kab_name"]
+                kec_name = sls_info["kec_name"]
+                
+                key = (kab_name, kec_name)
+                assign_data_umum_map.setdefault(key, {
+                    "kabupaten": kab_name,
+                    "kecamatan": kec_name,
+                    "total_prelist": 0,
+                    "total_draft": 0,
+                    "total_open": 0,
+                    "total_submitted": 0,
+                    "total_rejected": 0,
+                    "total_approved": 0,
+                    "total_submitted_pencacah": 0,
+                    "total_submitted_respondent": 0,
+                    "persentase": 0.0
+                })
+                
+                sum_info = assign_data_umum_map[key]
+                sum_info["total_prelist"] += target_count
+                cats = categorize_status(status_alias, target_count)
+                sum_info["total_draft"] += cats["draft"]
+                sum_info["total_open"] += cats["open"]
+                sum_info["total_submitted_pencacah"] += cats["submitted_pencacah"]
+                sum_info["total_submitted_respondent"] += cats["submitted_respondent"]
+                sum_info["total_submitted"] += cats["submitted"]
+                sum_info["total_rejected"] += cats["rejected"]
+                sum_info["total_approved"] += cats["approved"]
+
+        # Pengelompokan Data SE UB
+        sls_targets_ub = {}
+        sls_breakdowns_ub = {}
+        petugas_data_ub = {}
+        assign_data_ub_map = {}
+
+        for row in raw_responsibility_ub:
+            sls_code = row.get("region5Id")
+            if not sls_code:
+                continue
             
-        if (ub_pencacah is None) or (ub_pengawas is None):
-            print("[ERROR] Pengunduhan laporan progres SE UB gagal. Batalkan proses agar tidak menimpa data yang ada.")
-            sys.exit(1)
+            target_count = row.get("targetCount", 0)
+            sync_count = row.get("syncCount", 0)
+            status_alias = row.get("assignmentStatusAlias", "OPEN")
+            username = row.get("username")
+            fullname = row.get("fullname") or username or "-"
 
-    print(f"[INFO] Pengunduhan API selesai dalam {time.time() - start_time:.2f} detik. Memproses data...")
+            sls_targets_ub[sls_code] = sls_targets_ub.get(sls_code, 0) + target_count
 
-    # 5. Agregasikan Target dan Status breakdowns untuk SE Umum
-    print("[INFO] Memproses data SE Umum...")
-    sls_targets_umum = {}
-    sls_breakdowns_umum = {}
-    for item in umum_pengawas:
-        for reg in item.get("regionSummary", []):
-            code = reg.get("regionCode")
-            if code:
-                sls_targets_umum[code] = reg.get("total", 0)
-                sls_breakdowns_umum[code] = reg.get("statusBreakdown", [])
+            # Breakdown status
+            sls_breakdowns_ub.setdefault(sls_code, [])
+            found = False
+            for item in sls_breakdowns_ub[sls_code]:
+                if item["status"] == status_alias:
+                    item["count"] += target_count
+                    found = True
+                    break
+            if not found:
+                sls_breakdowns_ub[sls_code].append({"status": status_alias, "count": target_count})
 
-    sls_assigned_umum = {}
-    sls_officers_umum = {}
-    for item in umum_pencacah:
-        username = item.get("username")
-        fullname = item.get("fullname")
-        ofc_str = f"{fullname} ({username})" if fullname and fullname != "-" else username
-        for reg in item.get("regionSummary", []):
-            code = reg.get("regionCode")
-            if code:
-                sls_assigned_umum[code] = sls_assigned_umum.get(code, 0) + reg.get("total", 0)
-                sls_officers_umum.setdefault(code, set()).add(ofc_str)
+            # Petugas data
+            if username:
+                pet_info = petugas_data_ub.setdefault(username, {
+                    "username": username,
+                    "fullname": fullname,
+                    "target_count": 0,
+                    "sync_count": 0,
+                    "draft_count": 0,
+                    "open_count": 0,
+                    "submitted_count": 0,
+                    "approved_count": 0,
+                    "rejected_count": 0,
+                })
+                pet_info["target_count"] += target_count
+                pet_info["sync_count"] += sync_count
+                
+                cats = categorize_status(status_alias, target_count)
+                pet_info["draft_count"] += cats["draft"]
+                pet_info["open_count"] += cats["open"]
+                pet_info["submitted_count"] += cats["submitted"]
+                pet_info["approved_count"] += cats["approved"]
+                pet_info["rejected_count"] += cats["rejected"]
 
-    all_sls_umum = set(sls_targets_umum.keys()).union(set(sls_assigned_umum.keys()))
-    processed_sls_umum = []
-    for code in all_sls_umum:
-        sls_info = sls_lookup.get(code)
-        total = sls_targets_umum.get(code, 0)
-        assigned = sls_assigned_umum.get(code, 0)
-        unassigned = max(0, total - assigned)
-        breakdown = sls_breakdowns_umum.get(code, [])
-        sync_count = sum(c.get("count", 0) for c in breakdown if c.get("status", "").upper() not in ["OPEN", "DRAFT"])
-        
-        processed_sls_umum.append({
-            "sls_code": code,
-            "sls_name": sls_info["sls_name"] if sls_info else "-",
-            "desa_name": sls_info["desa_name"] if sls_info else "-",
-            "kec_name": sls_info["kec_name"] if sls_info else "-",
-            "kab_name": sls_info["kab_name"] if sls_info else "-",
-            "total": total,
-            "assigned": assigned,
-            "unassigned": unassigned,
-            "sync_count": sync_count,
-            "officers": list(sls_officers_umum.get(code, []))
-        })
+            # SLS info
+            sls_info = sls_lookup.get(sls_code)
+            if sls_info:
+                kab_name = sls_info["kab_name"]
+                kec_name = sls_info["kec_name"]
+                
+                key = (kab_name, kec_name)
+                assign_data_ub_map.setdefault(key, {
+                    "kabupaten": kab_name,
+                    "kecamatan": kec_name,
+                    "total_prelist": 0,
+                    "total_draft": 0,
+                    "total_open": 0,
+                    "total_submitted": 0,
+                    "total_rejected": 0,
+                    "total_approved": 0,
+                    "total_submitted_pencacah": 0,
+                    "total_submitted_respondent": 0,
+                    "persentase": 0.0
+                })
+                
+                sum_info = assign_data_ub_map[key]
+                sum_info["total_prelist"] += target_count
+                cats = categorize_status(status_alias, target_count)
+                sum_info["total_draft"] += cats["draft"]
+                sum_info["total_open"] += cats["open"]
+                sum_info["total_submitted_pencacah"] += cats["submitted_pencacah"]
+                sum_info["total_submitted_respondent"] += cats["submitted_respondent"]
+                sum_info["total_submitted"] += cats["submitted"]
+                sum_info["total_rejected"] += cats["rejected"]
+                sum_info["total_approved"] += cats["approved"]
 
-    # 6. Agregasikan Target dan Status breakdowns untuk SE UB
-    print("[INFO] Memproses data SE UB...")
-    sls_targets_ub = {}
-    sls_breakdowns_ub = {}
-    for item in ub_pengawas:
-        for reg in item.get("regionSummary", []):
-            code = reg.get("regionCode")
-            if code:
-                sls_targets_ub[code] = reg.get("total", 0)
-                sls_breakdowns_ub[code] = reg.get("statusBreakdown", [])
+        # Finalisasi output list untuk assign_data
+        assign_data_umum = list(assign_data_umum_map.values())
+        for x in assign_data_umum:
+            x["persentase"] = round((x["total_submitted"] / x["total_prelist"] * 100) if x["total_prelist"] > 0 else 0.0, 2)
+            
+        assign_data_ub = list(assign_data_ub_map.values())
+        for x in assign_data_ub:
+            x["persentase"] = round((x["total_submitted"] / x["total_prelist"] * 100) if x["total_prelist"] > 0 else 0.0, 2)
 
-    sls_assigned_ub = {}
-    sls_officers_ub = {}
-    for item in ub_pencacah:
-        username = item.get("username")
-        fullname = item.get("fullname")
-        ofc_str = f"{fullname} ({username})" if fullname and fullname != "-" else username
-        for reg in item.get("regionSummary", []):
-            code = reg.get("regionCode")
-            if code:
-                sls_assigned_ub[code] = sls_assigned_ub.get(code, 0) + reg.get("total", 0)
-                sls_officers_ub.setdefault(code, set()).add(ofc_str)
+        # Proses SLS allocations
+        processed_sls_umum = []
+        for code, target_count in sls_targets_umum.items():
+            breakdown = sls_breakdowns_umum.get(code, [])
+            sync_count = 0
+            for item in breakdown:
+                if item["status"] != "OPEN":
+                    sync_count += item["count"]
+            
+            # Cari petugas
+            officers = []
+            for row in raw_responsibility_umum:
+                if row.get("region5Id") == code and row.get("username"):
+                    if row.get("username") not in officers:
+                        officers.append(row.get("username"))
+                        
+            processed_sls_umum.append({
+                "sls_code": code,
+                "target_count": target_count,
+                "sync_count": sync_count,
+                "officers": officers
+            })
 
-    all_sls_ub = set(sls_targets_ub.keys()).union(set(sls_assigned_ub.keys()))
-    processed_sls_ub = []
-    for code in all_sls_ub:
-        sls_info = sls_lookup.get(code)
-        total = sls_targets_ub.get(code, 0)
-        assigned = sls_assigned_ub.get(code, 0)
-        unassigned = max(0, total - assigned)
-        breakdown = sls_breakdowns_ub.get(code, [])
-        sync_count = sum(c.get("count", 0) for c in breakdown if c.get("status", "").upper() not in ["OPEN", "DRAFT"])
+        processed_sls_ub = []
+        for code, target_count in sls_targets_ub.items():
+            breakdown = sls_breakdowns_ub.get(code, [])
+            sync_count = 0
+            for item in breakdown:
+                if item["status"] != "OPEN":
+                    sync_count += item["count"]
+                    
+            officers = []
+            for row in raw_responsibility_ub:
+                if row.get("region5Id") == code and row.get("username"):
+                    if row.get("username") not in officers:
+                        officers.append(row.get("username"))
+                        
+            processed_sls_ub.append({
+                "sls_code": code,
+                "target_count": target_count,
+                "sync_count": sync_count,
+                "officers": officers
+            })
 
-        processed_sls_ub.append({
-            "sls_code": code,
-            "sls_name": sls_info["sls_name"] if sls_info else "-",
-            "desa_name": sls_info["desa_name"] if sls_info else "-",
-            "kec_name": kec_name if 'kec_name' in locals() else "-",
-            "kab_name": kab_name if 'kab_name' in locals() else "-",
-            "total": total,
-            "assigned": assigned,
-            "unassigned": unassigned,
-            "sync_count": sync_count,
-            "officers": list(sls_officers_ub.get(code, []))
-        })
+        # Gabungkan mapping alokasi ke petugas
+        formatted_petugas_umum = []
+        for u in users_umum:
+            username = u.get("username")
+            if not username:
+                continue
+            
+            pet_stats = petugas_data_umum.get(username, {})
+            formatted_regions = []
+            u_regions = u.get("regions") or []
+            for r in u_regions:
+                r_id = r.get("id")
+                r_name = r.get("name")
+                r_level = r.get("level")
+                if r_id and r_level == 5: # SLS Level
+                    formatted_regions.append({"id": r_id, "name": r_name})
+                    
+            formatted_petugas_umum.append({
+                "id": u.get("id") or u.get("userId"),
+                "username": username,
+                "fullname": u.get("fullname") or u.get("name") or username,
+                "target_count": pet_stats.get("target_count", 0),
+                "sync_count": pet_stats.get("sync_count", 0),
+                "draft_count": pet_stats.get("draft_count", 0),
+                "open_count": pet_stats.get("open_count", 0),
+                "submitted_count": pet_stats.get("submitted_count", 0),
+                "approved_count": pet_stats.get("approved_count", 0),
+                "rejected_count": pet_stats.get("rejected_count", 0),
+                "regions": formatted_regions,
+                "totalRegions": len(formatted_regions)
+            })
 
-    # 7. Buat assign_data variables
-    assign_umum_dict = {}
-    for k, v in KAB_NAMES.items():
-        assign_umum_dict[k] = {
-            "kode_kab": k,
-            "nama_kab": v,
-            "total": 0,
-            "assigned": 0,
-            "have_not_assigned": 0,
-            "timestamp": datetime.now().isoformat()
-        }
-    for sls in processed_sls_umum:
-        kab_code = sls["sls_code"][:4]
-        if kab_code in assign_umum_dict:
-            assign_umum_dict[kab_code]["total"] += sls["total"]
-            assign_umum_dict[kab_code]["assigned"] += sls["assigned"]
-            assign_umum_dict[kab_code]["have_not_assigned"] += sls["unassigned"]
+        formatted_petugas_ub = []
+        for u in users_ub:
+            username = u.get("username")
+            if not username:
+                continue
+            
+            pet_stats = petugas_data_ub.get(username, {})
+            formatted_regions = []
+            u_regions = u.get("regions") or []
+            for r in u_regions:
+                r_id = r.get("id")
+                r_name = r.get("name")
+                r_level = r.get("level")
+                if r_id and r_level == 5:
+                    formatted_regions.append({"id": r_id, "name": r_name})
+                    
+            formatted_petugas_ub.append({
+                "id": u.get("id") or u.get("userId"),
+                "username": username,
+                "fullname": u.get("fullname") or u.get("name") or username,
+                "target_count": pet_stats.get("target_count", 0),
+                "sync_count": pet_stats.get("sync_count", 0),
+                "draft_count": pet_stats.get("draft_count", 0),
+                "open_count": pet_stats.get("open_count", 0),
+                "submitted_count": pet_stats.get("submitted_count", 0),
+                "approved_count": pet_stats.get("approved_count", 0),
+                "rejected_count": pet_stats.get("rejected_count", 0),
+                "regions": formatted_regions,
+                "totalRegions": len(formatted_regions)
+            })
 
-    assign_data_umum = list(assign_umum_dict.values())
+        # Gabungkan mapping petugas (kombinasi data)
+        petugas_data_umum = merge_user_records(formatted_petugas_umum)
+        petugas_data_ub = merge_user_records(formatted_petugas_ub)
 
-    assign_ub_total = sum(s["total"] for s in processed_sls_ub)
-    assign_ub_assigned = sum(s["assigned"] for s in processed_sls_ub)
-    assign_ub_unassigned = sum(s["unassigned"] for s in processed_sls_ub)
-    assign_data_ub = [
-        {
-            "kode_kab": "7200",
-            "nama_kab": "SULAWESI TENGAH",
-            "total": assign_ub_total,
-            "assigned": assign_ub_assigned,
-            "have_not_assigned": assign_ub_unassigned,
-            "timestamp": datetime.now().isoformat()
-        }
-    ]
-
-    petugas_data_umum = []
-    for u in users_umum:
-        regions = u.get("regions", [])
-        formatted_regions = [{"regionCode": r.get("regionCode"), "regionName": r.get("regionName")} for r in regions]
-        petugas_data_umum.append({
-            "username": u.get("username", "-"),
-            "fullname": u.get("fullname", "-"),
-            "regions": formatted_regions,
-            "totalRegions": len(formatted_regions)
-        })
-
-    petugas_data_ub = []
-    for u in users_ub:
-        regions = u.get("regions", [])
-        formatted_regions = [{"regionCode": r.get("regionCode"), "regionName": r.get("regionName")} for r in regions]
-        petugas_data_ub.append({
-            "username": u.get("username", "-"),
-            "fullname": u.get("fullname", "-"),
-            "regions": formatted_regions,
-            "totalRegions": len(formatted_regions)
-        })
-
-    # Simpan assign_data.js secara lokal
-    js_content = f"window.ASSIGN_DATA_UMUM = {json.dumps(assign_data_umum, indent=4, ensure_ascii=False)};\n"
-    js_content += f"window.ASSIGN_DATA_UB   = {json.dumps(assign_data_ub,   indent=4, ensure_ascii=False)};\n"
-    js_content += f"window.ASSIGN_SLS_DATA_UMUM = {json.dumps(compress_sls(processed_sls_umum), indent=4, ensure_ascii=False)};\n"
-    js_content += f"window.ASSIGN_SLS_DATA_UB   = {json.dumps(compress_sls(processed_sls_ub),   indent=4, ensure_ascii=False)};\n"
-    js_content += f"window.PETUGAS_DATA_UMUM = {json.dumps(petugas_data_umum, indent=4, ensure_ascii=False)};\n"
-    js_content += f"window.PETUGAS_DATA_UB   = {json.dumps(petugas_data_ub,   indent=4, ensure_ascii=False)};\n"
-    js_content += """
+        # Simpan assign_data.js secara lokal
+        js_content = f"window.ASSIGN_DATA_UMUM = {json.dumps(assign_data_umum, indent=4, ensure_ascii=False)};\n"
+        js_content += f"window.ASSIGN_DATA_UB   = {json.dumps(assign_data_ub,   indent=4, ensure_ascii=False)};\n"
+        js_content += f"window.ASSIGN_SLS_DATA_UMUM = {json.dumps(compress_sls(processed_sls_umum), indent=4, ensure_ascii=False)};\n"
+        js_content += f"window.ASSIGN_SLS_DATA_UB   = {json.dumps(compress_sls(processed_sls_ub),   indent=4, ensure_ascii=False)};\n"
+        js_content += f"window.PETUGAS_DATA_UMUM = {json.dumps(petugas_data_umum, indent=4, ensure_ascii=False)};\n"
+        js_content += f"window.PETUGAS_DATA_UB   = {json.dumps(petugas_data_ub,   indent=4, ensure_ascii=False)};\n"
+        js_content += """
 const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
 if (activeSubtab === 'se2026') {
     window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM || [];
@@ -609,217 +1922,72 @@ if (activeSubtab === 'se2026') {
     window.PETUGAS_DATA = window.PETUGAS_DATA_UB || [];
 }
 """
-    assign_data_path = os.path.join(script_dir, "assign_data.js")
-    with open(assign_data_path, "w", encoding="utf-8") as f:
-        f.write(js_content)
-    print(" ✅ File assign_data.js berhasil disimpan.")
+        assign_data_path = os.path.join(script_dir, "assign_data.js")
+        with open(assign_data_path, "w", encoding="utf-8") as f:
+            f.write(js_content)
+        print(" ✅ File assign_data.js berhasil disimpan.")
 
-    # 8. Update ipas_data sambil mempertahankan data history timeline
-    print("[INFO] Menggabungkan laporan progres dengan ipas_data historis...")
-    current_ipas = fetch_current_ipas_data(supabase)
-    if not current_ipas:
-        print("[WARNING] ipas_data lama tidak ditemukan. Membuat template default...")
-        current_ipas = {
-            "se_umum": [{"kabupaten": name, "total_prelist": 0, "total_draft": 0, "total_open": 0, "total_submitted": 0, "total_rejected": 0, "total_approved": 0, "total_submitted_pencacah": 0, "total_submitted_respondent": 0, "persentase": 0.0, "today_completed": 0, "yesterday_completed": 0, "two_days_ago_completed": 0, "today_completed_breakdown": {}, "yesterday_completed_breakdown": {}, "two_days_ago_completed_breakdown": {}, "new_usaha_today": 0, "new_usaha_yesterday": 0, "new_rumah_today": 0, "new_rumah_yesterday": 0, "new_usaha_overall": 0, "new_rumah_overall": 0, "new_businesses": [], "kecamatan_list": []} for name in KAB_NAMES.values()],
-            "se_ub": [{"kabupaten": name, "total_prelist": 0, "total_draft": 0, "total_open": 0, "total_submitted": 0, "total_rejected": 0, "total_approved": 0, "total_submitted_pencacah": 0, "total_submitted_respondent": 0, "persentase": 0.0, "today_completed": 0, "yesterday_completed": 0, "two_days_ago_completed": 0, "today_completed_breakdown": {}, "yesterday_completed_breakdown": {}, "two_days_ago_completed_breakdown": {}, "new_usaha_today": 0, "new_usaha_yesterday": 0, "new_rumah_today": 0, "new_rumah_yesterday": 0, "new_usaha_overall": 0, "new_rumah_overall": 0, "new_businesses": [], "kecamatan_list": []} for name in KAB_NAMES.values()]
-        }
-
-    # Bikin SLS status maps untuk se_umum dan se_ub
-    se_umum_sls_status = {}
-    for code, breakdown in sls_breakdowns_umum.items():
-        target_stats = {}
-        for c in breakdown:
-            status_name = c.get("status")
-            count = c.get("count", 0)
-            if status_name:
-                target_stats[status_name] = target_stats.get(status_name, 0) + count
-        se_umum_sls_status[code] = {
-            "target": target_stats,
-            "nontarget": {}
-        }
-
-    se_ub_sls_status = {}
-    for code, breakdown in sls_breakdowns_ub.items():
-        target_stats = {}
-        for c in breakdown:
-            status_name = c.get("status")
-            count = c.get("count", 0)
-            if status_name:
-                target_stats[status_name] = target_stats.get(status_name, 0) + count
-        se_ub_sls_status[code] = {
-            "target": target_stats,
-            "nontarget": {}
-        }
-
-    # Helper untuk memperbarui list kabupaten & kecamatan
-    def update_survey_statistics(survey_list, sls_targets, sls_breakdowns):
-        for kab in survey_list:
-            kab_name = kab.get("kabupaten")
-            
-            kab_prelist = 0
-            kab_draft = 0
-            kab_open = 0
-            kab_submitted = 0
-            kab_rejected = 0
-            kab_approved = 0
-            kab_sub_pencacah = 0
-            kab_sub_respondent = 0
-
-            # Hitung total dan breakdown di tingkat Kabupaten
-            for sls_code, breakdown in sls_breakdowns.items():
-                sls_info = sls_lookup.get(sls_code)
-                if sls_info and sls_info["kab_name"] == kab_name:
-                    for c in breakdown:
-                        status = c.get("status", "")
-                        count = c.get("count", 0)
-                        cats = categorize_status(status, count)
-                        kab_draft += cats["draft"]
-                        kab_open += cats["open"]
-                        kab_sub_pencacah += cats["submitted_pencacah"]
-                        kab_sub_respondent += cats["submitted_respondent"]
-                        kab_submitted += cats["submitted"]
-                        kab_rejected += cats["rejected"]
-                        kab_approved += cats["approved"]
-                    kab_prelist += sls_targets.get(sls_code, 0)
-
-            # Perbarui kab metrics
-            kab["total_prelist"] = kab_prelist
-            kab["total_draft"] = kab_draft
-            kab["total_open"] = kab_open
-            kab["total_submitted"] = kab_submitted
-            kab["total_rejected"] = kab_rejected
-            kab["total_approved"] = kab_approved
-            kab["total_submitted_pencacah"] = kab_sub_pencacah
-            kab["total_submitted_respondent"] = kab_sub_respondent
-            kab["persentase"] = round((kab_submitted / kab_prelist * 100) if kab_prelist > 0 else 0.0, 2)
-
-            # Hitung total di tingkat Kecamatan
-            for kec in kab.get("kecamatan_list", []):
-                kec_name = kec.get("kec_name")
+        # Upload assign_data ke Supabase
+        if supabase:
+            try:
+                now_iso = datetime.datetime.now().isoformat()
+                assign_payload = {
+                    "updated_at": now_iso,
+                    "assign_data_umum": assign_data_umum,
+                    "assign_data_ub": assign_data_ub,
+                    "assign_sls_data_umum": compress_sls(processed_sls_umum),
+                    "assign_sls_data_ub": compress_sls(processed_sls_ub),
+                    "petugas_data_umum": petugas_data_umum,
+                    "petugas_data_ub": petugas_data_ub
+                }
+                raw_str = json.dumps(assign_payload, ensure_ascii=False)
+                compressed_str = base64.b64encode(gzip.compress(raw_str.encode('utf-8'))).decode('utf-8')
+                db_assign_payload = {
+                    "is_compressed": True,
+                    "compressed_data": compressed_str
+                }
                 
-                kec_prelist = 0
-                kec_draft = 0
-                kec_open = 0
-                kec_submitted = 0
-                kec_rejected = 0
-                kec_approved = 0
-                kec_sub_pencacah = 0
-                kec_sub_respondent = 0
+                # Upsert assign_data utama
+                supabase.table("dashboard_store").delete().eq("key", "assign_data").execute()
+                supabase.table("dashboard_store").insert({"key": "assign_data", "value": db_assign_payload}).execute()
+                print(" ✅ database_store key 'assign_data' updated.")
+                
+                # Upsert assign_data snapshot harian
+                today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+                daily_key = f"assign_data:{today_str}"
+                supabase.table("dashboard_store").delete().eq("key", daily_key).execute()
+                supabase.table("dashboard_store").insert({"key": daily_key, "value": db_assign_payload}).execute()
+                print(f" ✅ database_store key '{daily_key}' updated.")
+            except Exception as e:
+                print(f"[ERROR] Gagal mengunggah assign_data ke Supabase: {e}")
 
-                for sls_code, breakdown in sls_breakdowns.items():
-                    sls_info = sls_lookup.get(sls_code)
-                    if sls_info and sls_info["kab_name"] == kab_name and sls_info["kec_name"] == kec_name:
-                        for c in breakdown:
-                            status = c.get("status", "")
-                            count = c.get("count", 0)
-                            cats = categorize_status(status, count)
-                            kec_draft += cats["draft"]
-                            kec_open += cats["open"]
-                            kec_sub_pencacah += cats["submitted_pencacah"]
-                            kec_sub_respondent += cats["submitted_respondent"]
-                            kec_submitted += cats["submitted"]
-                            kec_rejected += cats["rejected"]
-                            kec_approved += cats["approved"]
-                        kec_prelist += sls_targets.get(sls_code, 0)
-
-                kec["total_prelist"] = kec_prelist
-                kec["total_draft"] = kec_draft
-                kec["total_open"] = kec_open
-                kec["total_submitted"] = kec_submitted
-                kec["total_rejected"] = kec_rejected
-                kec["total_approved"] = kec_approved
-                kec["total_submitted_pencacah"] = kec_sub_pencacah
-                kec["total_submitted_respondent"] = kec_sub_respondent
-                kec["persentase"] = round((kec_submitted / kec_prelist * 100) if kec_prelist > 0 else 0.0, 2)
-
-    # Lakukan update data statistik
-    update_survey_statistics(current_ipas.get("se_umum", []), sls_targets_umum, sls_breakdowns_umum)
-    update_survey_statistics(current_ipas.get("se_ub", []), sls_targets_ub, sls_breakdowns_ub)
-
-    # Hitung total tingkat Provinsi
-    se_umum_prov_total = sum(kab["total_submitted"] for kab in current_ipas.get("se_umum", []))
-    se_ub_prov_total = sum(kab["total_submitted"] for kab in current_ipas.get("se_ub", []))
-
-    now_iso = datetime.now().isoformat()
-    final_ipas_obj = {
-        "updated_at": now_iso,
-        "se_umum": current_ipas.get("se_umum", []),
-        "se_ub": current_ipas.get("se_ub", []),
-        "se_umum_sls_status": se_umum_sls_status,
-        "se_ub_sls_status": se_ub_sls_status,
-        "se_umum_prov_total": se_umum_prov_total,
-        "se_ub_prov_total": se_ub_prov_total,
-        "se_umum_prov_new_total": current_ipas.get("se_umum_prov_new_total", 0),
-        "se_ub_prov_new_total": current_ipas.get("se_ub_prov_new_total", 0),
-        "se_umum_prov_new_rumah_total": current_ipas.get("se_umum_prov_new_rumah_total", 0),
-        "se_ub_prov_new_rumah_total": current_ipas.get("se_ub_prov_new_rumah_total", 0)
-    }
-
-    # Simpan ipas_data.js secara lokal
-    ipas_data_path = os.path.join(script_dir, "ipas_data.js")
-    with open(ipas_data_path, "w", encoding="utf-8") as f:
-        f.write(f"window.IPAS_DATA = {json.dumps(final_ipas_obj, ensure_ascii=False, indent=2)};\n")
-    print(" ✅ File ipas_data.js berhasil disimpan.")
-
-    # 9. Upload data ke Supabase
-    if supabase:
-        print("[INFO] Sinkronisasi ke Supabase...")
-        
-        # A. Upload assign_data (terkompresi)
+        # -------------------------------------------------------------
+        # STEP 2: RUN IPAS REPORT PIPELINE (TREN CAPAIAN & USAHA BARU)
+        # -------------------------------------------------------------
+        print("\n--- [STEP 2/2] Menjalankan Pipeline Laporan IPAS ---")
         try:
-            assign_payload = {
-                "updated_at": now_iso,
-                "assign_data_umum": assign_data_umum,
-                "assign_data_ub": assign_data_ub,
-                "assign_sls_data_umum": compress_sls(processed_sls_umum),
-                "assign_sls_data_ub": compress_sls(processed_sls_ub),
-                "petugas_data_umum": petugas_data_umum,
-                "petugas_data_ub": petugas_data_ub
-            }
-            raw_str = json.dumps(assign_payload, ensure_ascii=False)
-            compressed_str = base64.b64encode(gzip.compress(raw_str.encode('utf-8'))).decode('utf-8')
-            db_assign_payload = {
-                "is_compressed": True,
-                "compressed_data": compressed_str
-            }
-            
-            # Upsert assign_data utama
-            supabase.table("dashboard_store").delete().eq("key", "assign_data").execute()
-            supabase.table("dashboard_store").insert({"key": "assign_data", "value": db_assign_payload}).execute()
-            print(" ✅ database_store key 'assign_data' updated.")
-            
-            # Upsert assign_data snapshot harian
-            today_str = datetime.now().strftime("%Y-%m-%d")
-            daily_key = f"assign_data:{today_str}"
-            supabase.table("dashboard_store").delete().eq("key", daily_key).execute()
-            supabase.table("dashboard_store").insert({"key": daily_key, "value": db_assign_payload}).execute()
-            print(f" ✅ database_store key '{daily_key}' updated.")
+            await run_ipas_report_generation(page, token)
         except Exception as e:
-            print(f"[ERROR] Gagal mengunggah assign_data ke Supabase: {e}")
+            print(f"[ERROR] Pipeline Laporan IPAS gagal: {e}")
 
-        # B. Upload ipas_data
+        # Cleanup Playwright browser cleanly
         try:
-            # Upsert ipas_data utama
-            supabase.table("dashboard_store").delete().eq("key", "ipas_data").execute()
-            supabase.table("dashboard_store").insert({"key": "ipas_data", "value": final_ipas_obj}).execute()
-            print(" ✅ database_store key 'ipas_data' updated.")
-            
-            # Upsert ipas_data snapshot harian
-            daily_key_ipas = f"ipas_data:{today_str}"
-            supabase.table("dashboard_store").delete().eq("key", daily_key_ipas).execute()
-            supabase.table("dashboard_store").insert({"key": daily_key_ipas, "value": final_ipas_obj}).execute()
-            print(f" ✅ database_store key '{daily_key_ipas}' updated.")
-        except Exception as e:
-            print(f"[ERROR] Gagal mengunggah ipas_data ke Supabase: {e}")
-            
-        print(" ✅ Sinkronisasi Supabase selesai.")
-    else:
-        print("[WARNING] Koneksi Supabase tidak aktif. Skip upload database.")
+            if browser:
+                await page.close()
+                await browser.disconnect()
+            else:
+                await context.close()
+        except Exception:
+            pass
 
     duration = time.time() - start_time
-    print("==============================================================")
-    print(f"  PROSES SCRAPE PROGRES CEPAT SELESAI DALAM {duration:.2f} DETIK!")
+    print("\n==============================================================")
+    print(f"🎉 UNIFIED UPDATE SELESAI DALAM {duration:.2f} DETIK!")
     print("==============================================================")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        print("\n[INFO] Proses dihentikan oleh pengguna.")
+        sys.exit(0)
