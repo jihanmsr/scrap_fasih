@@ -7097,6 +7097,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sort state
     let anomaliSortField = 'pct_biaya';
     let anomaliSortDir = 'desc'; // 'asc' | 'desc'
+    let anomaliCurrentPage = 1;
+    const ANOMALI_PAGE_SIZE = 50;
+    let anomaliFilteredCache = []; // current filtered+sorted dataset for pagination
+
+    // Buffer: perubahan belum disimpan, keyed by row.id
+    let anomaliBuf = {};
+
+    window.setAnomaliBuf = function(id, field, value) {
+        if (!anomaliBuf[id]) anomaliBuf[id] = {};
+        anomaliBuf[id][field] = value;
+        // Mark row as dirty
+        const row = document.getElementById('anomali-row-' + id);
+        if (row) row.style.outline = '2px solid rgba(249,115,22,0.5)';
+    };
 
     // Format rupiah singkat
     function fmtRp(val) {
@@ -7153,20 +7167,33 @@ document.addEventListener('DOMContentLoaded', () => {
             return anomaliSortDir === 'asc' ? cmp : -cmp;
         });
 
+        // Store for pagination
+        anomaliFilteredCache = sorted;
+
         // Update sort icons
         ['no','kab_code','jenis_anomali','nama_krt','pct_biaya','biaya_produksi','total_pengeluaran','status_anomali'].forEach(f => {
             const el = document.getElementById('sort-icon-' + f);
             if (el) el.textContent = f === anomaliSortField ? (anomaliSortDir === 'asc' ? ' ↑' : ' ↓') : '';
         });
 
-        if (showingEl) showingEl.textContent = data.length < allData.length ? `Tampil ${data.length} dari ${allData.length}` : `${allData.length} data`;
+        const total = sorted.length;
+        const totalAll = allData.length;
+        if (showingEl) showingEl.textContent = total < totalAll ? `Tampil ${total} dari ${totalAll}` : `${totalAll} data`;
 
         if (sorted.length === 0) {
             tbody.innerHTML = '';
             if (emptyEl) emptyEl.style.display = 'block';
+            renderAnomaliPagination(0);
             return;
         }
         if (emptyEl) emptyEl.style.display = 'none';
+
+        // Pagination slice
+        const totalPages = Math.ceil(sorted.length / ANOMALI_PAGE_SIZE);
+        if (anomaliCurrentPage > totalPages) anomaliCurrentPage = totalPages;
+        if (anomaliCurrentPage < 1) anomaliCurrentPage = 1;
+        const start = (anomaliCurrentPage - 1) * ANOMALI_PAGE_SIZE;
+        const pageData = sorted.slice(start, start + ANOMALI_PAGE_SIZE);
 
         const statusBadge = {
             1: `<span style="display:inline-block;padding:0.2rem 0.6rem;background:rgba(239,68,68,0.1);color:#ef4444;border-radius:99px;font-size:0.75rem;font-weight:700;">Belum</span>`,
@@ -7174,16 +7201,18 @@ document.addEventListener('DOMContentLoaded', () => {
             3: `<span style="display:inline-block;padding:0.2rem 0.6rem;background:rgba(34,197,94,0.1);color:#22c55e;border-radius:99px;font-size:0.75rem;font-weight:700;">Selesai</span>`,
         };
 
-        tbody.innerHTML = sorted.map((row, idx) => {
+        tbody.innerHTML = pageData.map((row, idx) => {
             const pct = row.pct_biaya || 0;
             const pctColor = pct >= 100 ? '#ef4444' : pct >= 80 ? '#f97316' : '#f59e0b';
             const pctBg = pct >= 100 ? 'rgba(239,68,68,0.1)' : pct >= 80 ? 'rgba(249,115,22,0.1)' : 'rgba(245,158,11,0.1)';
             const jenisIcon = (row.jenis_anomali || '').includes('Melebihi') ? '⚠️' :
                               (row.jenis_anomali || '').includes('Sangat') ? '🔴' : '🟡';
             const namaUsaha = row.nama_krt || '<span style="color:var(--text-secondary);font-style:italic;">-</span>';
+            const globalIdx = start + idx + 1;
+            const savedInfo = row.updated_by ? `<div style="font-size:0.68rem;color:var(--text-secondary);margin-top:0.15rem;">✓ ${row.updated_by}</div>` : '';
 
             return `<tr id="anomali-row-${row.id}" style="border-bottom: 1px solid var(--card-border); transition: background 0.15s;" onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">
-                <td style="padding:0.6rem 0.8rem;text-align:center;color:var(--text-secondary);font-size:0.78rem;">${idx + 1}</td>
+                <td style="padding:0.6rem 0.8rem;text-align:center;color:var(--text-secondary);font-size:0.78rem;">${globalIdx}</td>
                 <td style="padding:0.6rem 0.8rem;font-weight:600;font-size:0.82rem;white-space:nowrap;">${row.kab_code || '-'}</td>
                 <td style="padding:0.6rem 0.8rem;">
                     <span style="font-size:0.78rem;">${jenisIcon} ${(row.jenis_anomali || '-').replace('Biaya Produksi ', '')}</span>
@@ -7191,6 +7220,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td style="padding:0.6rem 0.8rem;max-width:200px;">
                     <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
                     ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
+                    ${savedInfo}
                 </td>
                 <td style="padding:0.6rem 0.8rem;text-align:center;">
                     <span style="display:inline-block;padding:0.25rem 0.65rem;background:${pctBg};color:${pctColor};border-radius:99px;font-weight:800;font-size:0.82rem;white-space:nowrap;">${pct}%</span>
@@ -7213,13 +7243,68 @@ document.addEventListener('DOMContentLoaded', () => {
                 </td>
                 <td style="padding:0.6rem 0.8rem;text-align:center;">
                     <button onclick="window.saveAnomaliRow(${row.id})"
-                        style="width:32px;height:32px;background:var(--primary);color:white;border:none;border-radius:0.4rem;cursor:pointer;font-size:0.85rem;display:flex;align-items:center;justify-content:center;margin:auto;">
-                        💾
+                        id="save-btn-${row.id}"
+                        title="Simpan perubahan baris ini"
+                        style="display:inline-flex;align-items:center;gap:0.3rem;padding:0.35rem 0.65rem;background:var(--primary);color:white;border:none;border-radius:0.4rem;cursor:pointer;font-size:0.75rem;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;">
+                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        Simpan
                     </button>
                 </td>
             </tr>`;
         }).join('');
+
+        renderAnomaliPagination(sorted.length);
     }
+
+    function renderAnomaliPagination(totalItems) {
+        const infoEl = document.getElementById('anomali-pagination-info');
+        const btnsEl = document.getElementById('anomali-pagination-buttons');
+        const paginationEl = document.getElementById('anomali-pagination');
+        if (!infoEl || !btnsEl) return;
+
+        const totalPages = Math.ceil(totalItems / ANOMALI_PAGE_SIZE);
+        const start = totalItems === 0 ? 0 : (anomaliCurrentPage - 1) * ANOMALI_PAGE_SIZE + 1;
+        const end = Math.min(anomaliCurrentPage * ANOMALI_PAGE_SIZE, totalItems);
+        infoEl.textContent = `Menampilkan ${start}–${end} dari ${totalItems} data`;
+
+        if (paginationEl) paginationEl.style.display = totalItems === 0 ? 'none' : 'flex';
+
+        if (totalPages <= 1) { btnsEl.innerHTML = ''; return; }
+
+        const btnStyle = (active) => `padding:0.3rem 0.6rem;border-radius:0.35rem;border:1px solid var(--card-border);background:${active ? 'var(--primary)' : 'var(--card-bg)'};color:${active ? 'white' : 'var(--text-primary)'};font-size:0.78rem;font-weight:600;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;`;
+
+        let html = `<button style="${btnStyle(false)}" onclick="window.goAnomaliPage(${anomaliCurrentPage - 1})" ${anomaliCurrentPage === 1 ? 'disabled' : ''}>‹</button>`;
+
+        // Show limited page buttons
+        const pages = [];
+        for (let p = 1; p <= totalPages; p++) {
+            if (p === 1 || p === totalPages || (p >= anomaliCurrentPage - 2 && p <= anomaliCurrentPage + 2)) {
+                pages.push(p);
+            } else if (pages[pages.length-1] !== '...') {
+                pages.push('...');
+            }
+        }
+        pages.forEach(p => {
+            if (p === '...') {
+                html += `<span style="padding:0.3rem 0.4rem;color:var(--text-secondary);">…</span>`;
+            } else {
+                html += `<button style="${btnStyle(p === anomaliCurrentPage)}" onclick="window.goAnomaliPage(${p})">${p}</button>`;
+            }
+        });
+
+        html += `<button style="${btnStyle(false)}" onclick="window.goAnomaliPage(${anomaliCurrentPage + 1})" ${anomaliCurrentPage === totalPages ? 'disabled' : ''}>›</button>`;
+        btnsEl.innerHTML = html;
+    }
+
+    window.goAnomaliPage = function(page) {
+        const totalPages = Math.ceil(anomaliFilteredCache.length / ANOMALI_PAGE_SIZE);
+        if (page < 1 || page > totalPages) return;
+        anomaliCurrentPage = page;
+        renderAnomaliTable(anomaliFilteredCache);
+        // Scroll to top of table
+        const tbl = document.getElementById('anomali-table');
+        if (tbl) tbl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
 
     // Sort handler
     window.sortAnomali = function(field) {
@@ -7229,6 +7314,7 @@ document.addEventListener('DOMContentLoaded', () => {
             anomaliSortField = field;
             anomaliSortDir = field === 'pct_biaya' || field === 'biaya_produksi' || field === 'total_pengeluaran' ? 'desc' : 'asc';
         }
+        anomaliCurrentPage = 1; // reset ke halaman 1 saat sort berubah
         window.filterAnomaliTable();
     };
 
@@ -7264,7 +7350,86 @@ document.addEventListener('DOMContentLoaded', () => {
         const kabVal = (document.getElementById('anomali-filter-kab') || {}).value || '';
         const jenisVal = (document.getElementById('anomali-filter-jenis') || {}).value || '';
         const filtered = applyAnomaliFilter(anomaliDataCache, searchVal, statusVal, kabVal, jenisVal);
+        anomaliCurrentPage = 1; // reset ke halaman 1 saat filter berubah
         renderAnomaliTable(filtered);
+    };
+
+    // Save single row
+    window.saveAnomaliRow = async function(id) {
+        if (!supabaseClient) { alert('Supabase tidak tersedia.'); return; }
+        const changes = anomaliBuf[id];
+        if (!changes || Object.keys(changes).length === 0) {
+            alert('Tidak ada perubahan untuk disimpan.');
+            return;
+        }
+        const btn = document.getElementById('save-btn-' + id);
+        const row = document.getElementById('anomali-row-' + id);
+        const logEl = document.getElementById('anomali-upload-log');
+
+        // Get current user info
+        let userInfo = {};
+        try { userInfo = JSON.parse(sessionStorage.getItem('anomali_user') || '{}'); } catch(e) {}
+        const updatedBy = userInfo.nama || userInfo.username || 'Unknown';
+        const updatedAt = new Date().toISOString();
+
+        if (btn) { btn.textContent = '...'; btn.disabled = true; }
+
+        try {
+            const payload = { ...changes, updated_by: updatedBy, updated_at: updatedAt };
+            const { error } = await supabaseClient
+                .from('anomali_data')
+                .update(payload)
+                .eq('id', id);
+
+            if (error) throw error;
+
+            // Clear buffer for this row
+            delete anomaliBuf[id];
+
+            // Update local cache
+            const cacheIdx = anomaliDataCache.findIndex(r => r.id === id);
+            if (cacheIdx !== -1) {
+                Object.assign(anomaliDataCache[cacheIdx], payload);
+            }
+
+            // Visual feedback
+            if (row) {
+                row.style.outline = 'none';
+                row.style.background = 'rgba(34,197,94,0.06)';
+                setTimeout(() => { if (row) row.style.background = ''; }, 2000);
+            }
+            if (btn) {
+                btn.innerHTML = '<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Tersimpan';
+                btn.style.background = '#22c55e';
+                setTimeout(() => {
+                    if (btn) {
+                        btn.innerHTML = '<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Simpan';
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }
+                }, 2000);
+            }
+
+            // Audit log
+            if (logEl) {
+                const timeStr = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+                logEl.textContent = `✅ Disimpan oleh ${updatedBy}${userInfo.kab_code ? ' · Kab ' + userInfo.kab_code : ''} · ${timeStr}`;
+                logEl.style.display = 'block';
+                logEl.style.color = '#16a34a';
+                logEl.style.background = 'rgba(34,197,94,0.08)';
+                logEl.style.borderColor = 'rgba(34,197,94,0.25)';
+            }
+        } catch(e) {
+            console.error('Save anomali row error:', e);
+            if (btn) { btn.textContent = 'Gagal!'; btn.style.background = '#ef4444'; setTimeout(() => { if (btn) { btn.innerHTML = '<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Simpan'; btn.style.background = ''; btn.disabled = false; } }, 2000); }
+            if (logEl) {
+                logEl.textContent = `❌ Gagal menyimpan: ${e.message}`;
+                logEl.style.display = 'block';
+                logEl.style.color = '#ef4444';
+                logEl.style.background = 'rgba(239,68,68,0.08)';
+                logEl.style.borderColor = 'rgba(239,68,68,0.25)';
+            }
+        }
     };
 
     // Login anomali via Supabase RPC
@@ -7334,23 +7499,34 @@ document.addEventListener('DOMContentLoaded', () => {
         anomaliDataCache = [];
     };
 
-    // Download template tindak lanjut (CSV)
+    // Download template tindak lanjut (CSV proper format)
     window.downloadAnomalTemplate = function() {
         const data = anomaliDataCache;
         if (!data || data.length === 0) {
             alert('Data anomali belum dimuat. Silakan login terlebih dahulu.');
             return;
         }
-        let csv = 'ID;Kab/Kota;Jenis Anomali;Nama KRT;Catatan;Tindak Lanjut;Status (1=Belum/2=Proses/3=Selesai)\r\n';
+        const esc = v => `"${String(v || '').replace(/"/g, '""')}"`;
+        // Header baris pertama dengan kolom terpisah
+        let csv = 'ID,Kab/Kota,Jenis Anomali,Nama Usaha,% Biaya,Biaya Produksi (Rp),Total Pengeluaran (Rp),Tindak Lanjut,Status (1=Belum/2=Proses/3=Selesai)\r\n';
         data.forEach(row => {
-            const esc = v => `"${String(v || '').replace(/"/g, '""')}"`;
-            csv += `${row.id};${esc(row.kab_code)};${esc(row.jenis_anomali)};${esc(row.nama_krt)};${esc(row.catatan)};${esc(row.tindak_lanjut)};${row.status_anomali || 1}\r\n`;
+            csv += [
+                row.id,
+                esc(row.kab_code),
+                esc(row.jenis_anomali),
+                esc(row.nama_krt),
+                row.pct_biaya || 0,
+                row.biaya_produksi || 0,
+                row.total_pengeluaran || 0,
+                esc(row.tindak_lanjut),
+                row.status_anomali || 1
+            ].join(',') + '\r\n';
         });
         const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = `template_anomali_${new Date().toISOString().split('T')[0]}.csv`;
+        link.download = `anomali_tindaklanjut_${new Date().toISOString().split('T')[0]}.csv`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -7363,27 +7539,55 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!file) return;
         if (!supabaseClient) { alert('Supabase tidak terhubung!'); return; }
 
+        // Get current user info for audit
+        let userInfo = {};
+        try { userInfo = JSON.parse(sessionStorage.getItem('anomali_user') || '{}'); } catch(e) {}
+        const updatedBy = userInfo.nama || userInfo.username || 'Unknown';
+        const updatedAt = new Date().toISOString();
+        const logEl = document.getElementById('anomali-upload-log');
+
         const reader = new FileReader();
         reader.onload = async function(e) {
             try {
                 const text = e.target.result;
-                const lines = text.replace(/\r/g, '').split('\n').filter(l => l.trim());
-                if (lines.length < 2) { alert('File kosong atau tidak valid.'); return; }
+                // Parse CSV: support both comma and semicolon delimiters
+                const rawLines = text.replace(/\r/g, '').split('\n').filter(l => l.trim());
+                if (rawLines.length < 2) { alert('File kosong atau tidak valid.'); return; }
+
+                // Detect delimiter from header row
+                const delimiter = rawLines[0].includes(';') ? ';' : ',';
+
+                // Simple CSV row parser (handles quoted fields)
+                function parseCSVRow(line, delim) {
+                    const parts = [];
+                    let cur = '', inQuote = false;
+                    for (let ci = 0; ci < line.length; ci++) {
+                        const ch = line[ci];
+                        if (ch === '"') {
+                            if (inQuote && line[ci+1] === '"') { cur += '"'; ci++; }
+                            else inQuote = !inQuote;
+                        } else if (ch === delim && !inQuote) {
+                            parts.push(cur); cur = '';
+                        } else { cur += ch; }
+                    }
+                    parts.push(cur);
+                    return parts;
+                }
 
                 const allParsed = [];
                 const skipped = [];
 
-                for (let i = 1; i < lines.length; i++) {
-                    const parts = lines[i].split(';');
-                    if (parts.length < 7) continue;
+                for (let i = 1; i < rawLines.length; i++) {
+                    const parts = parseCSVRow(rawLines[i], delimiter);
+                    // New format: ID(0),Kab(1),Jenis(2),Nama(3),%Biaya(4),BiayaProd(5),TotalPeng(6),TindakLanjut(7),Status(8)
+                    const isNewFormat = parts.length >= 9;
                     const id = parseInt(parts[0]);
                     if (isNaN(id)) continue;
 
-                    const tindak_lanjut = parts[5].replace(/^"|"$/g, '').replace(/""/g, '"').trim();
-                    const status_anomali = parseInt(parts[6]) || 1;
+                    const tindak_lanjut = (isNewFormat ? parts[7] : parts[5] || parts[6] || '').replace(/^"|"$/g, '').replace(/""/g, '"').trim();
+                    const status_anomali = parseInt(isNewFormat ? parts[8] : parts[6]) || 1;
 
-                    // ✅ SMART MERGE: skip baris yang kosong tindak lanjutnya DAN statusnya masih default (1)
-                    // Artinya: hanya update baris yang memang diisi user
+                    // SMART MERGE: skip baris yang tidak diubah
                     if (!tindak_lanjut && status_anomali === 1) {
                         skipped.push(id);
                         continue;
@@ -7401,6 +7605,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const confirmed = confirm(
                     `📤 Akan mengupload ${allParsed.length} baris yang sudah diisi.\n` +
                     `⏭️ ${skipped.length} baris kosong akan DILEWATI (tidak mengubah data orang lain).\n\n` +
+                    `Upload sebagai: ${updatedBy}${userInfo.kab_code ? ' (Kab ' + userInfo.kab_code + ')' : ''}\n\n` +
                     `Lanjutkan?`
                 );
                 if (!confirmed) return;
@@ -7408,19 +7613,179 @@ document.addEventListener('DOMContentLoaded', () => {
                 let successCount = 0;
                 for (const upd of allParsed) {
                     const { id, ...fields } = upd;
-                    const { error } = await supabaseClient.from('anomali_data').update(fields).eq('id', id);
+                    // Tambahkan audit trail ke setiap baris yang diupdate
+                    const { error } = await supabaseClient.from('anomali_data').update({
+                        ...fields,
+                        updated_by: updatedBy,
+                        updated_at: updatedAt
+                    }).eq('id', id);
                     if (!error) successCount++;
+                }
+
+                // Show audit log
+                if (logEl) {
+                    const timeStr = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+                    logEl.textContent = `✅ Upload berhasil: ${successCount}/${allParsed.length} baris diupdate oleh ${updatedBy}${userInfo.kab_code ? ' · Kab ' + userInfo.kab_code : ''} · ${timeStr}`;
+                    logEl.style.display = 'block';
+                    logEl.style.color = '#16a34a';
+                    logEl.style.background = 'rgba(34,197,94,0.08)';
+                    logEl.style.borderColor = 'rgba(34,197,94,0.25)';
                 }
 
                 alert(`✅ Berhasil: ${successCount} baris diupdate.\n⏭️ ${skipped.length} baris kosong dilewati (aman, tidak menimpa data lain).`);
                 await loadAnomaliData();
             } catch (err) {
+                if (logEl) {
+                    logEl.textContent = `❌ Upload gagal: ${err.message}`;
+                    logEl.style.display = 'block';
+                    logEl.style.color = '#ef4444';
+                    logEl.style.background = 'rgba(239,68,68,0.08)';
+                    logEl.style.borderColor = 'rgba(239,68,68,0.25)';
+                }
                 alert('Gagal memproses file: ' + err.message);
             }
         };
         reader.readAsText(file, 'UTF-8');
         event.target.value = '';
     };
+
+    // ========== TABULASI ==========
+    let tabulasiOpen = false;
+
+    window.toggleTabulasi = function() {
+        tabulasiOpen = !tabulasiOpen;
+        const sec = document.getElementById('tabulasi-section');
+        const icon = document.getElementById('tabulasi-toggle-icon');
+        if (sec) sec.style.display = tabulasiOpen ? 'block' : 'none';
+        if (icon) icon.textContent = tabulasiOpen ? '▼' : '▶';
+        if (tabulasiOpen && anomaliDataCache.length > 0) renderTabulasi();
+    };
+
+    function renderTabulasi() {
+        const container = document.getElementById('tabulasi-container');
+        if (!container || anomaliDataCache.length === 0) return;
+
+        const data = anomaliDataCache;
+
+        // Build pivot: kab → { melebihi, sangat, dominan, total, biaya, belum, diproses, selesai }
+        const pivot = {};
+        data.forEach(row => {
+            const kab = row.kab_code || 'Lainnya';
+            if (!pivot[kab]) pivot[kab] = { melebihi: 0, sangat: 0, dominan: 0, total: 0, biaya: 0, belum: 0, diproses: 0, selesai: 0 };
+            const p = pivot[kab];
+            p.total++;
+            p.biaya += row.biaya_produksi || 0;
+            if ((row.jenis_anomali || '').includes('Melebihi')) p.melebihi++;
+            else if ((row.jenis_anomali || '').includes('Sangat')) p.sangat++;
+            else p.dominan++;
+            if (row.status_anomali == 3) p.selesai++;
+            else if (row.status_anomali == 2) p.diproses++;
+            else p.belum++;
+        });
+
+        const kabs = Object.keys(pivot).sort();
+        const totals = { melebihi: 0, sangat: 0, dominan: 0, total: 0, biaya: 0, belum: 0, diproses: 0, selesai: 0 };
+        kabs.forEach(k => {
+            Object.keys(totals).forEach(f => totals[f] += pivot[k][f]);
+        });
+
+        const thStyle = 'padding: 0.55rem 0.75rem; font-size: 0.75rem; font-weight: 700; text-align: center; white-space: nowrap; letter-spacing: 0.04em; text-transform: uppercase; background: var(--card-bg); color: var(--text-secondary); border-bottom: 2px solid var(--card-border);';
+        const thLeftStyle = thStyle.replace('text-align: center', 'text-align: left');
+        const tdStyle = (align='center') => `padding: 0.5rem 0.75rem; font-size: 0.82rem; text-align: ${align}; border-bottom: 1px solid var(--card-border); vertical-align: middle;`;
+
+        const badge = (n, color, bg) => n > 0 ? `<span style="display:inline-block;padding:0.15rem 0.55rem;background:${bg};color:${color};border-radius:99px;font-weight:700;font-size:0.78rem;">${n}</span>` : `<span style="color:var(--text-secondary);font-size:0.78rem;">-</span>`;
+
+        const rows = kabs.map(kab => {
+            const p = pivot[kab];
+            const pct = p.total > 0 ? Math.round((p.selesai / p.total) * 100) : 0;
+            const pctColor = pct >= 80 ? '#22c55e' : pct >= 40 ? '#f59e0b' : '#ef4444';
+            const barW = pct;
+            return `<tr onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">
+                <td style="${tdStyle('left')} font-weight: 600;">${kab}</td>
+                <td style="${tdStyle()}">${badge(p.melebihi, '#ef4444', 'rgba(239,68,68,0.1)')}</td>
+                <td style="${tdStyle()}">${badge(p.sangat, '#f97316', 'rgba(249,115,22,0.1)')}</td>
+                <td style="${tdStyle()}">${badge(p.dominan, '#f59e0b', 'rgba(245,158,11,0.1)')}</td>
+                <td style="${tdStyle()} font-weight: 700;">${p.total}</td>
+                <td style="${tdStyle('right')} font-size: 0.78rem; color: var(--text-secondary);">${fmtRp(p.biaya)}</td>
+                <td style="${tdStyle()}">
+                    ${badge(p.belum, '#ef4444', 'rgba(239,68,68,0.1)')}
+                    ${p.diproses > 0 ? badge(p.diproses, '#f59e0b', 'rgba(245,158,11,0.1)') : ''}
+                    ${p.selesai > 0 ? badge(p.selesai, '#22c55e', 'rgba(34,197,94,0.1)') : ''}
+                </td>
+                <td style="${tdStyle()} min-width: 100px;">
+                    <div style="display:flex;align-items:center;gap:0.4rem;">
+                        <div style="flex:1;height:6px;background:var(--card-border);border-radius:99px;overflow:hidden;">
+                            <div style="height:100%;width:${barW}%;background:${pctColor};border-radius:99px;transition:width 0.5s;"></div>
+                        </div>
+                        <span style="font-size:0.75rem;font-weight:700;color:${pctColor};min-width:32px;">${pct}%</span>
+                    </div>
+                </td>
+            </tr>`;
+        }).join('');
+
+        // Totals row
+        const totalPct = totals.total > 0 ? Math.round((totals.selesai / totals.total) * 100) : 0;
+        const totalPctColor = totalPct >= 80 ? '#22c55e' : totalPct >= 40 ? '#f59e0b' : '#ef4444';
+        const totalsRow = `<tr style="background: rgba(249,115,22,0.04); border-top: 2px solid var(--card-border);">
+            <td style="${tdStyle('left')} font-weight: 800; color: var(--primary);">TOTAL SULAWESI TENGAH</td>
+            <td style="${tdStyle()} font-weight: 700;">${totals.melebihi}</td>
+            <td style="${tdStyle()} font-weight: 700;">${totals.sangat}</td>
+            <td style="${tdStyle()} font-weight: 700;">${totals.dominan}</td>
+            <td style="${tdStyle()} font-weight: 800; font-size: 0.9rem;">${totals.total}</td>
+            <td style="${tdStyle('right')} font-weight: 700; font-size: 0.78rem;">${fmtRp(totals.biaya)}</td>
+            <td style="${tdStyle()}">
+                ${badge(totals.belum, '#ef4444', 'rgba(239,68,68,0.1)')}
+                ${totals.diproses > 0 ? badge(totals.diproses, '#f59e0b', 'rgba(245,158,11,0.1)') : ''}
+                ${totals.selesai > 0 ? badge(totals.selesai, '#22c55e', 'rgba(34,197,94,0.1)') : ''}
+            </td>
+            <td style="${tdStyle()}">
+                <div style="display:flex;align-items:center;gap:0.4rem;">
+                    <div style="flex:1;height:6px;background:var(--card-border);border-radius:99px;overflow:hidden;">
+                        <div style="height:100%;width:${totalPct}%;background:${totalPctColor};border-radius:99px;"></div>
+                    </div>
+                    <span style="font-size:0.75rem;font-weight:800;color:${totalPctColor};min-width:32px;">${totalPct}%</span>
+                </div>
+            </td>
+        </tr>`;
+
+        container.innerHTML = `
+            <table style="width:100%;border-collapse:collapse;font-family:'Plus Jakarta Sans',sans-serif;min-width:700px;">
+                <thead>
+                    <tr>
+                        <th style="${thLeftStyle} min-width:140px;">Kab/Kota</th>
+                        <th style="${thStyle} color:#ef4444;">⚠️ Melebihi</th>
+                        <th style="${thStyle} color:#f97316;">🔴 Sangat Dom.</th>
+                        <th style="${thStyle} color:#f59e0b;">🟡 Dominan</th>
+                        <th style="${thStyle}">Total</th>
+                        <th style="${thStyle} text-align:right; min-width:120px;">Total Biaya Prod.</th>
+                        <th style="${thStyle} min-width:150px;">Status TL</th>
+                        <th style="${thStyle} min-width:110px;">% Selesai</th>
+                    </tr>
+                </thead>
+                <tbody>${rows}</tbody>
+                <tfoot>${totalsRow}</tfoot>
+            </table>
+            <div style="margin-top:0.6rem;font-size:0.73rem;color:var(--text-secondary);">
+                * Klik header tabel di bawah untuk sort. TL = Tindak Lanjut. Klik baris kab/kota untuk filter tabel.
+            </div>`;
+
+        // Make rows clickable to filter
+        const trs = container.querySelectorAll('tbody tr');
+        trs.forEach((tr, i) => {
+            tr.style.cursor = 'pointer';
+            tr.title = 'Klik untuk filter ke ' + kabs[i];
+            tr.addEventListener('click', () => {
+                const sel = document.getElementById('anomali-filter-kab');
+                if (sel) {
+                    sel.value = kabs[i];
+                    window.filterAnomaliTable();
+                    // Scroll to table
+                    const tbl = document.getElementById('anomali-table');
+                    if (tbl) tbl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    }
 
     // ========== END ANOMALI FEATURE ==========
 

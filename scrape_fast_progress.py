@@ -2000,15 +2000,24 @@ if (activeSubtab === 'se2026') {
                     "is_compressed": True,
                     "compressed_data": compressed_str
                 }
-                
-                # Upsert assign_data utama
-                supabase.table("dashboard_store").delete().eq("key", "assign_data").execute()
-                supabase.table("dashboard_store").insert({"key": "assign_data", "value": db_assign_payload}).execute()
-                print(" ✅ database_store key 'assign_data' updated.")
-                
-                # Upsert assign_data snapshot harian
+
+                # ✅ Simpan ke key 'assign_data_fast' (tidak timpa granular!)
+                # Key 'assign_data' hanya diisi oleh merge_granulars.py (data lengkap 1.18jt target)
+                supabase.table("dashboard_store").delete().eq("key", "assign_data_fast").execute()
+                supabase.table("dashboard_store").insert({"key": "assign_data_fast", "value": db_assign_payload}).execute()
+                print(" ✅ database_store key 'assign_data_fast' updated (SLS & petugas stats).")
+
+                # Cek apakah data granular sudah ada — kalau belum, isi assign_data sebagai fallback
+                existing_granular = supabase.table("dashboard_store").select("key").eq("key", "assign_data").execute()
+                if not existing_granular.data:
+                    supabase.table("dashboard_store").insert({"key": "assign_data", "value": db_assign_payload}).execute()
+                    print(" ℹ️  assign_data belum ada — di-isi dengan fast data sebagai fallback.")
+                else:
+                    print(" ℹ️  assign_data granular sudah ada → TIDAK ditimpa oleh fast scraper.")
+
+                # Snapshot harian tetap pakai key sendiri
                 today_str = datetime.datetime.now().strftime("%Y-%m-%d")
-                daily_key = f"assign_data:{today_str}"
+                daily_key = f"assign_data_fast:{today_str}"
                 supabase.table("dashboard_store").delete().eq("key", daily_key).execute()
                 supabase.table("dashboard_store").insert({"key": daily_key, "value": db_assign_payload}).execute()
                 print(f" ✅ database_store key '{daily_key}' updated.")
