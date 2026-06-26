@@ -9,73 +9,73 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-25",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 2582
+    "count": 4305
   },
   {
     "date": "2026-06-24",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 1891
+    "count": 2898
   },
   {
     "date": "2026-06-23",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 1661
+    "count": 2316
   },
   {
     "date": "2026-06-22",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 1073
+    "count": 1426
   },
   {
     "date": "2026-06-21",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 994
+    "count": 1482
   },
   {
     "date": "2026-06-20",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 754
+    "count": 982
   },
   {
     "date": "2026-06-19",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 557
+    "count": 779
   },
   {
     "date": "2026-06-18",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 428
+    "count": 685
   },
   {
     "date": "2026-06-17",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 452
+    "count": 597
   },
   {
     "date": "2026-06-26",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 974
+    "count": 1627
   },
   {
     "date": "2026-06-16",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 293
+    "count": 364
   },
   {
     "date": "2026-06-15",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 90
+    "count": 109
   },
   {
     "date": "2026-06-11",

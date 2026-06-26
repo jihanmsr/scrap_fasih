@@ -6465,20 +6465,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- REKAP BELUM DITUGASKAN PER KECAMATAN ---
-    let rekapBelumOpen = false;
-
-    window.toggleRekapBelum = function () {
-        rekapBelumOpen = !rekapBelumOpen;
-        const sec = document.getElementById('rekap-belum-section');
-        const icon = document.getElementById('rekap-belum-toggle-icon');
-        if (sec) sec.style.display = rekapBelumOpen ? 'block' : 'none';
-        if (icon) icon.textContent = rekapBelumOpen ? '▼' : '▶';
-        if (rekapBelumOpen) renderRekapBelum();
+    window.openRekapBelumModal = function () {
+        const modal = document.getElementById('rekap-belum-modal');
+        if (modal) {
+            modal.style.display = 'flex';
+            renderRekapBelum();
+        }
     };
 
     function renderRekapBelum() {
-        const tbody = document.getElementById('rekap-belum-tbody');
-        const summaryEl = document.getElementById('rekap-belum-summary');
+        const tbody = document.getElementById('rekap-belum-modal-tbody');
+        const summaryEl = document.getElementById('rekap-belum-modal-summary');
         if (!tbody) return;
 
         if (!window.GRANULAR_ASSIGNMENTS_DATA) {
