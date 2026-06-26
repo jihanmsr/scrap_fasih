@@ -7423,7 +7423,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const pct = row.pct_biaya || 0;
             const pctColor = pct >= 100 ? '#ef4444' : pct >= 80 ? '#f97316' : '#f59e0b';
             const pctBg = pct >= 100 ? 'rgba(239,68,68,0.1)' : pct >= 80 ? 'rgba(249,115,22,0.1)' : 'rgba(245,158,11,0.1)';
-            const jenisIcon = (row.jenis_anomali || '').includes('Sama') ? '⚠️' :
+            const jenisIcon = (row.jenis_anomali || '').includes('Melebihi') ? '⛔' :
+                (row.jenis_anomali || '').includes('Sama') ? '⚠️' :
                 (row.jenis_anomali || '').includes('Sangat') ? '🔴' : '🟡';
             const namaUsaha = row.nama_krt || '<span style="color:var(--text-secondary);font-style:italic;">-</span>';
             const globalIdx = start + idx + 1;

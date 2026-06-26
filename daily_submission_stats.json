@@ -1,79 +1,91 @@
 [
   {
-    "date": "2026-06-23",
-    "kab_name": "MOROWALI UTARA",
-    "survey_type": "se_umum",
-    "count": 194
-  },
-  {
-    "date": "2026-06-20",
-    "kab_name": "MOROWALI UTARA",
-    "survey_type": "se_umum",
-    "count": 88
-  },
-  {
-    "date": "2026-06-18",
-    "kab_name": "MOROWALI UTARA",
-    "survey_type": "se_umum",
-    "count": 193
-  },
-  {
-    "date": "2026-06-26",
-    "kab_name": "MOROWALI UTARA",
-    "survey_type": "se_umum",
-    "count": 233
-  },
-  {
-    "date": "2026-06-24",
-    "kab_name": "MOROWALI UTARA",
-    "survey_type": "se_umum",
-    "count": 227
-  },
-  {
-    "date": "2026-06-25",
-    "kab_name": "MOROWALI UTARA",
-    "survey_type": "se_umum",
-    "count": 409
-  },
-  {
-    "date": "2026-06-22",
-    "kab_name": "MOROWALI UTARA",
-    "survey_type": "se_umum",
-    "count": 101
-  },
-  {
-    "date": "2026-06-19",
-    "kab_name": "MOROWALI UTARA",
-    "survey_type": "se_umum",
-    "count": 155
-  },
-  {
-    "date": "2026-06-17",
-    "kab_name": "MOROWALI UTARA",
-    "survey_type": "se_umum",
-    "count": 117
-  },
-  {
-    "date": "2026-06-21",
-    "kab_name": "MOROWALI UTARA",
-    "survey_type": "se_umum",
-    "count": 79
-  },
-  {
-    "date": "2026-06-16",
-    "kab_name": "MOROWALI UTARA",
-    "survey_type": "se_umum",
-    "count": 14
-  },
-  {
-    "date": "2026-06-15",
-    "kab_name": "MOROWALI UTARA",
+    "date": "2026-05-29",
+    "kab_name": "PALU",
     "survey_type": "se_umum",
     "count": 2
   },
   {
-    "date": "2026-06-12",
-    "kab_name": "MOROWALI UTARA",
+    "date": "2026-05-26",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 6
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 372
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 571
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 335
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 349
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 269
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 242
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 268
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 154
+  },
+  {
+    "date": "2026-06-16",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 134
+  },
+  {
+    "date": "2026-06-17",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 214
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 240
+  },
+  {
+    "date": "2026-06-15",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 39
+  },
+  {
+    "date": "2026-06-11",
+    "kab_name": "PALU",
     "survey_type": "se_umum",
     "count": 1
   }
