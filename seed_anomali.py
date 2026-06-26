@@ -27,7 +27,7 @@ KAB_NAMES = {
     '7208': 'Parigi Moutong',
     '7209': 'Tojo Una-Una',
     '7210': 'Sigi',
-    '7211': 'Banggai (Kepulauan)',
+    '7211': 'Banggai Laut',
     '7212': 'Morowali Utara',
     '7271': 'Kota Palu',
 }
