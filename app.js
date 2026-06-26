@@ -6539,7 +6539,8 @@ document.addEventListener('DOMContentLoaded', () => {
         base.forEach(r => {
             const hasOfficer = !!(r.petugas_username && r.petugas_username !== '-' && r.petugas_username !== '');
             if (!hasOfficer) {
-                const key = `${r.kab_name || '?'}|||${r.kec_name || '?'}`;
+                const cleanKab = (r.kab_name || '?').replace(/^\[\d+\]\s*/, '').trim();
+                const key = `${cleanKab}|||${r.kec_name || '?'}`;
                 if (!unassignedByKec[key]) unassignedByKec[key] = [];
                 unassignedByKec[key].push(r);
             }
@@ -7442,6 +7443,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
                     ${savedInfo}
                 </td>
+                <td style="padding:0.6rem 0.8rem;min-width:130px;">
+                    ${row.nama_petugas ? `<div style="font-size:0.8rem;font-weight:600;color:var(--text-primary);">${row.nama_petugas}</div>` : `<span style="color:var(--text-secondary);font-size:0.78rem;font-style:italic;">-</span>`}
+                </td>
                 <td style="padding:0.6rem 0.8rem;text-align:center;">
                     <span style="display:inline-block;padding:0.25rem 0.65rem;background:${pctBg};color:${pctColor};border-radius:99px;font-weight:800;font-size:0.82rem;white-space:nowrap;">${pct}%</span>
                 </td>
@@ -7727,14 +7731,16 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         const esc = v => `"${String(v || '').replace(/"/g, '""')}"`;
-        // Header baris pertama dengan kolom terpisah
-        let csv = 'ID,Kab/Kota,Jenis Anomali,Nama Usaha,% Biaya,Biaya Produksi (Rp),Total Pengeluaran (Rp),Tindak Lanjut,Status (1=Belum/2=Proses/3=Selesai)\r\n';
+        // Header: ID(A), Kab(B), Jenis(C), Nama Usaha(D), Nama Petugas(E), Kode SLS(F), % Biaya(G), Biaya Produksi(H), Total Pengeluaran(I), Tindak Lanjut(J), Status(K)
+        let csv = 'ID,Kab/Kota,Jenis Anomali,Nama Usaha,Nama Petugas,Kode SLS,% Biaya,Biaya Produksi (Rp),Total Pengeluaran (Rp),Tindak Lanjut,Status (1=Belum/2=Proses/3=Selesai)\r\n';
         data.forEach(row => {
             csv += [
                 row.id,
                 esc(row.kab_code),
                 esc(row.jenis_anomali),
                 esc(row.nama_krt),
+                esc(row.nama_petugas),
+                esc(row.sls_code),
                 row.pct_biaya || 0,
                 row.biaya_produksi || 0,
                 row.total_pengeluaran || 0,
@@ -7752,6 +7758,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
     };
+
 
     // Upload hasil tindak lanjut dari CSV
     window.uploadAnomaliTindakLanjut = async function(event) {
@@ -7799,13 +7806,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 for (let i = 1; i < rawLines.length; i++) {
                     const parts = parseCSVRow(rawLines[i], delimiter);
-                    // New format: ID(0),Kab(1),Jenis(2),Nama(3),%Biaya(4),BiayaProd(5),TotalPeng(6),TindakLanjut(7),Status(8)
-                    const isNewFormat = parts.length >= 9;
+                    // New format: ID(0),Kab(1),Jenis(2),Nama(3),Petugas(4),SLS(5),%Biaya(6),BiayaProd(7),TotalPeng(8),TindakLanjut(9),Status(10)
+                    const isNewFormat = parts.length >= 11;
                     const id = parseInt(parts[0]);
                     if (isNaN(id)) continue;
 
-                    const tindak_lanjut = (isNewFormat ? parts[7] : parts[5] || parts[6] || '').replace(/^"|"$/g, '').replace(/""/g, '"').trim();
-                    const status_anomali = parseInt(isNewFormat ? parts[8] : parts[6]) || 1;
+                    // Fallback to old format if less than 11 columns
+                    const tindak_lanjut = (isNewFormat ? parts[9] : parts.length >= 9 ? parts[7] : parts[5] || parts[6] || '').replace(/^"|"$/g, '').replace(/""/g, '"').trim();
+                    const status_anomali = parseInt(isNewFormat ? parts[10] : parts.length >= 9 ? parts[8] : parts[6]) || 1;
 
                     // SMART MERGE: skip baris yang tidak diubah
                     if (!tindak_lanjut && status_anomali === 1) {
