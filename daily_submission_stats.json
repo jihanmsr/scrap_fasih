@@ -453,55 +453,55 @@
     "date": "2026-06-26",
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
-    "count": 44
+    "count": 1075
   },
   {
     "date": "2026-06-25",
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
-    "count": 2595
+    "count": 2338
   },
   {
     "date": "2026-06-24",
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
-    "count": 1415
+    "count": 1327
   },
   {
     "date": "2026-06-23",
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
-    "count": 1413
-  },
-  {
-    "date": "2026-06-21",
-    "kab_name": "TOLI-TOLI",
-    "survey_type": "se_umum",
-    "count": 1004
-  },
-  {
-    "date": "2026-06-19",
-    "kab_name": "TOLI-TOLI",
-    "survey_type": "se_umum",
-    "count": 550
+    "count": 1341
   },
   {
     "date": "2026-06-22",
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
-    "count": 1023
+    "count": 969
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 960
   },
   {
     "date": "2026-06-20",
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
-    "count": 844
+    "count": 802
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 533
   },
   {
     "date": "2026-06-18",
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
-    "count": 389
+    "count": 374
   },
   {
     "date": "2026-06-17",
@@ -831,67 +831,73 @@
     "date": "2026-06-25",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 3475
+    "count": 2979
   },
   {
     "date": "2026-06-24",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 1717
+    "count": 1636
   },
   {
     "date": "2026-06-23",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 1524
+    "count": 1494
   },
   {
     "date": "2026-06-22",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 1258
-  },
-  {
-    "date": "2026-06-20",
-    "kab_name": "DONGGALA",
-    "survey_type": "se_umum",
-    "count": 736
-  },
-  {
-    "date": "2026-06-18",
-    "kab_name": "DONGGALA",
-    "survey_type": "se_umum",
-    "count": 565
-  },
-  {
-    "date": "2026-06-21",
-    "kab_name": "DONGGALA",
-    "survey_type": "se_umum",
-    "count": 930
-  },
-  {
-    "date": "2026-06-19",
-    "kab_name": "DONGGALA",
-    "survey_type": "se_umum",
-    "count": 583
-  },
-  {
-    "date": "2026-06-17",
-    "kab_name": "DONGGALA",
-    "survey_type": "se_umum",
-    "count": 464
-  },
-  {
-    "date": "2026-06-16",
-    "kab_name": "DONGGALA",
-    "survey_type": "se_umum",
-    "count": 205
+    "count": 1243
   },
   {
     "date": "2026-06-26",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 55
+    "count": 1092
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 887
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 556
+  },
+  {
+    "date": "2026-06-17",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 458
+  },
+  {
+    "date": "2026-06-16",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 198
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 721
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 572
+  },
+  {
+    "date": "2026-06-14",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 1
   },
   {
     "date": "2026-06-12",
@@ -903,16 +909,10 @@
     "date": "2026-06-15",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 21
+    "count": 20
   },
   {
     "date": "2026-06-13",
-    "kab_name": "DONGGALA",
-    "survey_type": "se_umum",
-    "count": 1
-  },
-  {
-    "date": "2026-06-14",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
     "count": 1

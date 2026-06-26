@@ -6464,6 +6464,221 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- REKAP BELUM DITUGASKAN PER KECAMATAN ---
+    let rekapBelumOpen = false;
+
+    window.toggleRekapBelum = function () {
+        rekapBelumOpen = !rekapBelumOpen;
+        const sec = document.getElementById('rekap-belum-section');
+        const icon = document.getElementById('rekap-belum-toggle-icon');
+        if (sec) sec.style.display = rekapBelumOpen ? 'block' : 'none';
+        if (icon) icon.textContent = rekapBelumOpen ? '▼' : '▶';
+        if (rekapBelumOpen) renderRekapBelum();
+    };
+
+    function renderRekapBelum() {
+        const tbody = document.getElementById('rekap-belum-tbody');
+        const summaryEl = document.getElementById('rekap-belum-summary');
+        if (!tbody) return;
+
+        if (!window.GRANULAR_ASSIGNMENTS_DATA) {
+            tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:2rem;color:var(--text-secondary);">Data granular belum dimuat. Pilih Kabupaten/Kota terlebih dahulu.</td></tr>`;
+            return;
+        }
+
+        // Apply same kab + survey type filter as main table
+        const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+        const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
+        const surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value :
+            (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
+
+        const base = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
+            if (r.survey_type !== surveyTypeFilter) return false;
+            if (kabVal !== 'all') {
+                const cleanRKab = (r.kab_name || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                if (cleanRKab !== cleanKabVal) return false;
+            }
+            return true;
+        });
+
+        if (base.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:2rem;color:var(--text-secondary);">Tidak ada data untuk filter aktif saat ini.</td></tr>`;
+            if (summaryEl) summaryEl.textContent = '';
+            return;
+        }
+
+        // Aggregate per kab+kec
+        const pivot = {};
+        base.forEach(r => {
+            const cleanKab = (r.kab_name || '?').replace(/^\[\d+\]\s*/, '').trim();
+            const key = `${cleanKab}|||${r.kec_name || '?'}`;
+            if (!pivot[key]) pivot[key] = { kab: cleanKab, kec: r.kec_name || '?', total: 0, assigned: 0, unassigned: 0 };
+            pivot[key].total++;
+            const hasOfficer = !!(r.petugas_username && r.petugas_username !== '-' && r.petugas_username !== '');
+            if (hasOfficer) pivot[key].assigned++;
+            else pivot[key].unassigned++;
+        });
+
+        // Sort by unassigned desc
+        const rows = Object.values(pivot).sort((a, b) => b.unassigned - a.unassigned);
+
+        const totalUnassigned = rows.reduce((s, r) => s + r.unassigned, 0);
+        const totalAll = rows.reduce((s, r) => s + r.total, 0);
+        if (summaryEl) summaryEl.textContent = totalUnassigned > 0
+            ? `${totalUnassigned.toLocaleString('id-ID')} usaha belum ditugaskan di ${rows.filter(r => r.unassigned > 0).length} kecamatan`
+            : '✅ Semua sudah ditugaskan';
+
+        if (rows.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:2rem;color:#22c55e;font-weight:700;">✅ Semua usaha sudah ditugaskan!</td></tr>`;
+            return;
+        }
+
+        // Build lookup: key → list of unassigned usaha records
+        const unassignedByKec = {};
+        base.forEach(r => {
+            const hasOfficer = !!(r.petugas_username && r.petugas_username !== '-' && r.petugas_username !== '');
+            if (!hasOfficer) {
+                const key = `${r.kab_name || '?'}|||${r.kec_name || '?'}`;
+                if (!unassignedByKec[key]) unassignedByKec[key] = [];
+                unassignedByKec[key].push(r);
+            }
+        });
+
+        const tdBase = 'padding: 0.55rem 1rem; border-bottom: 1px solid var(--card-border); vertical-align: middle;';
+
+        const rowsHtml = rows.map((r, i) => {
+            const pct = r.total > 0 ? (r.assigned / r.total * 100) : 0;
+            const pctColor = pct >= 90 ? '#22c55e' : pct >= 50 ? '#f59e0b' : '#ef4444';
+            const barW = Math.round(pct);
+            const rowBg = r.unassigned > 0 ? '' : 'background: rgba(34,197,94,0.04);';
+            const key = `${r.kab}|||${r.kec}`;
+            const safeKey = encodeURIComponent(key);
+            const canExpand = r.unassigned > 0;
+
+            return `<tr id="rekap-row-${i}" data-rekap-key="${safeKey}" style="${rowBg} cursor: ${canExpand ? 'pointer' : 'default'};"
+                    ${canExpand ? `onclick="window.toggleRekapDetail('${safeKey}', ${i})"` : ''}
+                    onmouseenter="this.style.background='${canExpand ? 'var(--hover-bg)' : 'rgba(34,197,94,0.06)'}'"
+                    onmouseleave="this.style.background='${r.unassigned > 0 ? '' : 'rgba(34,197,94,0.04)'}'"
+                    title="${canExpand ? 'Klik untuk lihat daftar usaha belum ditugaskan' : ''}">
+                <td style="${tdBase} text-align: center; font-size: 0.75rem; color: var(--text-secondary);">
+                    ${canExpand ? `<span id="rekap-icon-${i}" style="font-size:0.8rem; color:#ef4444;">▶</span>` : `<span style="color:#22c55e;">✓</span>`}
+                </td>
+                <td style="${tdBase} font-size: 0.8rem; color: var(--text-secondary);">${r.kab}</td>
+                <td style="${tdBase} font-weight: 600;">${r.kec}</td>
+                <td style="${tdBase} text-align: right; font-weight: 600;">${r.total.toLocaleString('id-ID')}</td>
+                <td style="${tdBase} text-align: right; font-weight: 700; color: ${r.unassigned > 0 ? '#ef4444' : '#22c55e'};">
+                    ${r.unassigned > 0 ? `<span style="display:inline-flex;align-items:center;gap:0.3rem;">${r.unassigned.toLocaleString('id-ID')} <span style="font-size:0.68rem;color:#ef4444;opacity:0.7;">klik ▼</span></span>` : '✅ 0'}
+                </td>
+                <td style="${tdBase} text-align: right; color: #22c55e; font-weight: 600;">${r.assigned.toLocaleString('id-ID')}</td>
+                <td style="${tdBase} text-align: center;">
+                    <div style="display:flex;align-items:center;gap:0.4rem;justify-content:flex-end;">
+                        <div style="width:80px;height:6px;background:var(--card-border);border-radius:99px;overflow:hidden;flex-shrink:0;">
+                            <div style="height:100%;width:${barW}%;background:${pctColor};border-radius:99px;transition:width 0.4s;"></div>
+                        </div>
+                        <span style="font-size:0.76rem;font-weight:700;color:${pctColor};min-width:38px;text-align:right;">${pct.toFixed(1)}%</span>
+                    </div>
+                </td>
+            </tr>
+            <tr id="rekap-detail-${i}" style="display: none;">
+                <td colspan="7" style="padding: 0; background: rgba(239,68,68,0.025);">
+                    <div id="rekap-detail-content-${i}" style="padding: 0.5rem 1.5rem 0.75rem;"></div>
+                </td>
+            </tr>`;
+        }).join('');
+
+        tbody.innerHTML = rowsHtml;
+
+        window._rekapRows = rows;
+        window._rekapUnassignedByKec = unassignedByKec;
+
+        window.toggleRekapDetail = function(safeKey, idx) {
+            const detailRow = document.getElementById(`rekap-detail-${idx}`);
+            const icon = document.getElementById(`rekap-icon-${idx}`);
+            if (!detailRow) return;
+
+            const isOpen = detailRow.style.display !== 'none';
+            detailRow.style.display = isOpen ? 'none' : 'table-row';
+            if (icon) icon.textContent = isOpen ? '▶' : '▼';
+            if (icon) icon.style.color = isOpen ? '#ef4444' : '#f59e0b';
+
+            if (!isOpen) {
+                const key = decodeURIComponent(safeKey);
+                const usahaList = (window._rekapUnassignedByKec || {})[key] || [];
+                const contentDiv = document.getElementById(`rekap-detail-content-${idx}`);
+                if (!contentDiv) return;
+
+                if (usahaList.length === 0) {
+                    contentDiv.innerHTML = `<div style="text-align:center;padding:1rem;color:var(--text-secondary);font-size:0.83rem;">Tidak ada usaha belum ditugaskan.</div>`;
+                    return;
+                }
+
+                const sorted = [...usahaList].sort((a, b) => {
+                    const da = (a.desa_name || '').localeCompare(b.desa_name || '');
+                    if (da !== 0) return da;
+                    return (a.sls_name || '').localeCompare(b.sls_name || '');
+                });
+
+                const thS = 'padding: 0.4rem 0.75rem; font-size: 0.71rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-secondary); background: var(--card-bg); border-bottom: 1.5px solid var(--card-border); white-space: nowrap;';
+                const tdS = 'padding: 0.42rem 0.75rem; font-size: 0.8rem; border-bottom: 1px solid var(--card-border);';
+
+                const tableRows = sorted.map((u, j) => `
+                    <tr onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">
+                        <td style="${tdS} text-align:center; color:var(--text-secondary); font-size:0.72rem;">${j + 1}</td>
+                        <td style="${tdS}">${u.desa_name || '-'}</td>
+                        <td style="${tdS} color:var(--text-secondary);">${u.sls_name || '-'}</td>
+                        <td style="${tdS} font-weight: 600;">${u.data1 || u.target_name || '-'}</td>
+                        <td style="${tdS} font-family: monospace; font-size: 0.75rem; color: var(--text-secondary);">${u.codeIdentity || u.target_code || '-'}</td>
+                        <td style="${tdS} text-align:center;">
+                            <span style="background:rgba(239,68,68,0.1);color:#ef4444;padding:0.15rem 0.5rem;border-radius:99px;font-size:0.72rem;font-weight:700;">Belum</span>
+                        </td>
+                    </tr>`).join('');
+
+                contentDiv.innerHTML = `
+                    <div style="font-size:0.78rem;font-weight:700;color:#ef4444;margin-bottom:0.5rem;padding-top:0.25rem;">
+                        ${usahaList.length} usaha belum ditugaskan di ${key.split('|||')[1]}
+                    </div>
+                    <div style="overflow-x:auto;border-radius:0.5rem;border:1px solid var(--card-border);">
+                        <table style="width:100%;border-collapse:collapse;font-family:'Plus Jakarta Sans',sans-serif;">
+                            <thead><tr>
+                                <th style="${thS} text-align:center; width:38px;">No</th>
+                                <th style="${thS}">Desa</th>
+                                <th style="${thS}">SLS</th>
+                                <th style="${thS}">Nama Usaha</th>
+                                <th style="${thS}">Kode</th>
+                                <th style="${thS} text-align:center;">Status</th>
+                            </tr></thead>
+                            <tbody>${tableRows}</tbody>
+                        </table>
+                    </div>`;
+            }
+        };
+
+        // Totals footer
+        const totalAssigned = rows.reduce((s, r) => s + r.assigned, 0);
+        const totalPct = totalAll > 0 ? (totalAssigned / totalAll * 100) : 0;
+        const totalPctColor = totalPct >= 90 ? '#22c55e' : totalPct >= 50 ? '#f59e0b' : '#ef4444';
+        const footerRow = `<tr style="background: rgba(249,115,22,0.04); border-top: 2px solid var(--card-border);">
+            <td style="${tdBase} text-align: center; color: var(--text-secondary); font-size: 0.75rem;" colspan="2"></td>
+            <td style="${tdBase} font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif;">TOTAL</td>
+            <td style="${tdBase} text-align: right; font-weight: 800; font-size: 0.9rem;">${totalAll.toLocaleString('id-ID')}</td>
+            <td style="${tdBase} text-align: right; font-weight: 800; color: #ef4444;">${totalUnassigned.toLocaleString('id-ID')}</td>
+            <td style="${tdBase} text-align: right; font-weight: 800; color: #22c55e;">${totalAssigned.toLocaleString('id-ID')}</td>
+            <td style="${tdBase} text-align: center;">
+                <div style="display:flex;align-items:center;gap:0.4rem;justify-content:flex-end;">
+                    <div style="width:80px;height:6px;background:var(--card-border);border-radius:99px;overflow:hidden;flex-shrink:0;">
+                        <div style="height:100%;width:${Math.round(totalPct)}%;background:${totalPctColor};border-radius:99px;"></div>
+                    </div>
+                    <span style="font-size:0.76rem;font-weight:800;color:${totalPctColor};min-width:38px;text-align:right;">${totalPct.toFixed(1)}%</span>
+                </div>
+            </td>
+        </tr>`;
+        tbody.innerHTML += footerRow;
+    }
+
+    // Expose so renderGranularAssignmentsTable can refresh it when open
+    window.renderRekapBelum = renderRekapBelum;
+
     // --- GRANULAR TABLE FILTERS, SORT & RENDER ---
 
     window.granularCurrentPage = 1;
@@ -6928,6 +7143,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === totalPages ? 'disabled' : ''} onclick="window.setGranularPage(${window.granularCurrentPage + 1})">Berikutnya</button>`;
             pagBtns.innerHTML = btnsHtml;
+        }
+
+        // Auto-refresh rekap panel if open
+        if (rekapBelumOpen && window.renderRekapBelum) {
+            window.renderRekapBelum();
         }
     };
 

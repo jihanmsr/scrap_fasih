@@ -593,7 +593,46 @@
                             id="assign-sls-pagination-buttons"></div>
                     </div>
                 </div>
+
+                <!-- Rekap Belum Ditugaskan per Kecamatan -->
+                <div class="card" style="margin-top: 1.5rem; padding: 0; overflow: hidden;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--card-border); cursor: pointer;"
+                        onclick="window.toggleRekapBelum()">
+                        <div style="display: flex; align-items: center; gap: 0.6rem;">
+                            <svg width="16" height="16" fill="none" stroke="#ef4444" stroke-width="2.5" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                            <span style="font-weight: 700; font-size: 0.9rem; color: var(--text-primary); font-family: 'Outfit', sans-serif;">
+                                Rekap Belum Ditugaskan per Kecamatan
+                            </span>
+                            <span style="font-size: 0.73rem; color: var(--text-secondary);">Berdasarkan filter aktif di atas</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span id="rekap-belum-summary" style="font-size: 0.78rem; font-weight: 700; color: #ef4444;"></span>
+                            <span id="rekap-belum-toggle-icon" style="font-size: 0.85rem; color: var(--text-secondary);">▶</span>
+                        </div>
+                    </div>
+                    <div id="rekap-belum-section" style="display: none; overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.82rem;">
+                            <thead>
+                                <tr style="background: var(--card-bg); border-bottom: 2px solid var(--card-border);">
+                                    <th style="padding: 0.6rem 1rem; text-align: center; width: 44px; color: var(--text-secondary); font-size: 0.73rem; font-weight: 700; text-transform: uppercase;">No</th>
+                                    <th style="padding: 0.6rem 1rem; text-align: left; color: var(--text-secondary); font-size: 0.73rem; font-weight: 700; text-transform: uppercase; min-width: 130px;">Kabupaten</th>
+                                    <th style="padding: 0.6rem 1rem; text-align: left; color: var(--text-secondary); font-size: 0.73rem; font-weight: 700; text-transform: uppercase; min-width: 140px;">Kecamatan</th>
+                                    <th style="padding: 0.6rem 1rem; text-align: right; color: var(--text-secondary); font-size: 0.73rem; font-weight: 700; text-transform: uppercase;">Total Usaha</th>
+                                    <th style="padding: 0.6rem 1rem; text-align: right; color: #ef4444; font-size: 0.73rem; font-weight: 700; text-transform: uppercase;">Belum Ditugaskan</th>
+                                    <th style="padding: 0.6rem 1rem; text-align: right; color: #22c55e; font-size: 0.73rem; font-weight: 700; text-transform: uppercase;">Sudah Ditugaskan</th>
+                                    <th style="padding: 0.6rem 1rem; text-align: center; color: var(--text-secondary); font-size: 0.73rem; font-weight: 700; text-transform: uppercase; min-width: 110px;">% Teralokasi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rekap-belum-tbody">
+                                <tr><td colspan="7" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Buka panel ini untuk memuat rekap...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
+
             <div class="tab-content" id="tab-content-se_umum">
 
                 <div class="compact-stats" id="se_umum-stats-container">
