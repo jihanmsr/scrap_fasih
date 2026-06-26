@@ -3,72 +3,72 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-15",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 36
+    "count": 71
   },
   {
     "date": "2026-06-25",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 1333
+    "count": 1623
   },
   {
     "date": "2026-06-24",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 461
+    "count": 613
   },
   {
     "date": "2026-06-23",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 540
+    "count": 681
   },
   {
     "date": "2026-06-22",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 540
+    "count": 656
   },
   {
     "date": "2026-06-21",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 357
+    "count": 468
   },
   {
     "date": "2026-06-20",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 310
+    "count": 409
   },
   {
     "date": "2026-06-19",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 248
+    "count": 370
   },
   {
     "date": "2026-06-18",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 349
+    "count": 481
   },
   {
     "date": "2026-06-17",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 213
+    "count": 326
   },
   {
     "date": "2026-06-16",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 153
+    "count": 236
   },
   {
     "date": "2026-06-26",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 228
+    "count": 322
   }
 ];
