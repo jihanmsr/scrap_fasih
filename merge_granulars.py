@@ -303,6 +303,7 @@ def merge_granulars():
                     "assigned": 0,
                     "unassigned": 0,
                     "sync_count": 0,
+                    "completed": 0,
                     "officers": set()
                 }
             sls_item = sls_dict[sls_code]
@@ -313,6 +314,10 @@ def merge_granulars():
                 sls_item["officers"].add(ofc_str)
             else:
                 sls_item["unassigned"] += 1
+            
+            # Count completed (NOT OPEN and NOT DRAFT)
+            if status_upper != "OPEN" and status_upper != "DRAFT":
+                sls_item["completed"] += 1
                 
         # 3. Update Petugas aggregate
         if is_assigned:

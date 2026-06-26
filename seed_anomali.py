@@ -84,8 +84,10 @@ def main():
             pct = round(biaya_produksi / total_pengeluaran * 100, 1)
 
         # Tentukan jenis anomali
-        if pct >= 100:
+        if pct > 100:
             jenis = 'Biaya Produksi Melebihi Total Pengeluaran'
+        elif pct == 100:
+            jenis = 'Biaya Produksi Sama dengan Total Pengeluaran'
         elif pct >= 80:
             jenis = 'Biaya Produksi Sangat Dominan (≥80%)'
         else:

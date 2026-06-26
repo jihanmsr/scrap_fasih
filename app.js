@@ -2893,6 +2893,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <th onclick="sortSlsTable('total')" style="font-family: 'Outfit', sans-serif; text-align: center; cursor: pointer; user-select: none;">Total Target${getIcon('total')}</th>
             <th onclick="sortSlsTable('assigned')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-delivered); cursor: pointer; user-select: none;">Ditugaskan${getIcon('assigned')}</th>
             <th onclick="sortSlsTable('unassigned')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-bounced); cursor: pointer; user-select: none;">Belum Ditugaskan${getIcon('unassigned')}</th>
+            <th onclick="sortSlsTable('completed')" style="font-family: 'Outfit', sans-serif; text-align: center; color: #10b981; cursor: pointer; user-select: none;">Selesai${getIcon('completed')}</th>
             <th onclick="sortSlsTable('unsynced')" style="font-family: 'Outfit', sans-serif; text-align: center; color: #f59e0b; cursor: pointer; user-select: none;">Belum Sync${getIcon('unsynced')}</th>
             <th style="font-family: 'Outfit', sans-serif; user-select: none;">Status & Petugas</th>
         `;
@@ -2903,7 +2904,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!tbody) return;
 
         if (!window.ASSIGN_SLS_DATA || window.ASSIGN_SLS_DATA.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data SLS belum tersedia. Pastikan sinkronisasi data sedang berjalan.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data SLS belum tersedia. Pastikan sinkronisasi data sedang berjalan.</td></tr>`;
             return;
         }
 
@@ -3032,7 +3033,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderSlsTableHeaders();
 
         if (filtered.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary);">Tidak ada data SLS yang cocok dengan filter pencarian.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary);">Tidak ada data SLS yang cocok dengan filter pencarian.</td></tr>`;
             document.getElementById('sls-pagination-info').textContent = 'Menampilkan 0 - 0 dari 0 SLS';
             document.getElementById('sls-pagination-buttons').innerHTML = '';
             return;
@@ -3068,20 +3069,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const hl = (txt) => highlightText(txt, searchVal);
 
             return `
-                <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.2s;">
-                    <td style="padding: 1rem; color: var(--text-secondary); font-weight: 500;">${hl(item.kab_name)}</td>
-                    <td style="padding: 1rem; color: var(--text-secondary);">${hl(item.kec_name)}</td>
-                    <td style="padding: 1rem; color: var(--text-secondary);">${hl(item.desa_name)}</td>
-                    <td style="padding: 1rem; font-weight: 600; color: var(--text);">${hl(item.sls_name)} <span style="font-size: 0.75rem; font-weight: 400; color: var(--text-secondary); display:block;">${hl(item.sls_code)}</span></td>
-                    <td style="padding: 1rem; text-align: center; font-weight: 600;">${item.total}</td>
-                    <td style="padding: 1rem; text-align: center; color: #10b981; font-weight: 600;">${item.assigned}</td>
-                    <td style="padding: 1rem; text-align: center; color: #ef4444; font-weight: 600;">${item.unassigned}</td>
-                    <td style="padding: 1rem; text-align: center; color: #f59e0b; font-weight: 600;">${unsynced}</td>
-                    <td style="padding: 1rem;">
-                        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
-                            <div>${badge}</div>
-                            <span style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem; display: block;">${hl(officers)}</span>
-                        </div>
+                <tr class="table-row">
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">${hl(item.kab_name || '-')}</td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">${hl(item.kec_name || '-')}</td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">${hl(item.desa_name || '-')}</td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top; font-family: monospace;">${hl(item.sls_code || '-')} <br><span style="font-family: 'Outfit', sans-serif; font-size: 0.85rem; color: var(--text-secondary);">${hl(item.sls_name || '-')}</span></td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top; text-align: center; font-weight: 700; font-size: 1.1rem;">${formatNum(item.total)}</td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top; text-align: center; color: var(--color-delivered); font-weight: 700; font-size: 1.1rem;">${formatNum(item.assigned)}</td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top; text-align: center; color: var(--color-bounced); font-weight: 700; font-size: 1.1rem;">${formatNum(item.unassigned)}</td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top; text-align: center; color: #10b981; font-weight: 700; font-size: 1.1rem;">${formatNum(item.completed || 0)}</td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top; text-align: center; color: #f59e0b; font-weight: 700; font-size: 1.1rem;">${formatNum(unsynced)}</td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <div style="margin-bottom: 0.5rem;">${badge}</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4;">${hl(officers)}</div>
                     </td>
                 </tr>
             `;
@@ -4026,7 +4026,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!tbody || !paginationInfo) return;
 
         if (!window.ASSIGN_SLS_DATA || window.ASSIGN_SLS_DATA.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data SLS belum tersedia. Pastikan sinkronisasi data sedang berjalan.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Data SLS belum tersedia. Pastikan sinkronisasi data sedang berjalan.</td></tr>`;
             paginationInfo.innerText = `Menampilkan 0 - 0 dari 0 SLS`;
             return;
         }
@@ -4083,7 +4083,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const totalItems = filtered.length;
         if (totalItems === 0) {
-            tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data SLS Sync yang cocok dengan filter.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data SLS Sync yang cocok dengan filter.</td></tr>`;
             paginationInfo.innerText = `Menampilkan 0 - 0 dari 0 SLS`;
             renderSyncPaginationButtons(0);
             return;
@@ -6590,7 +6590,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window._rekapRows = rows;
         window._rekapUnassignedByKec = unassignedByKec;
 
-        window.toggleRekapDetail = function(safeKey, idx) {
+        window.toggleRekapDetail = function (safeKey, idx) {
             const detailRow = document.getElementById(`rekap-detail-${idx}`);
             const icon = document.getElementById(`rekap-icon-${idx}`);
             if (!detailRow) return;
@@ -6718,7 +6718,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!surveyFilterEl) return;
         const surveyTypeFilter = surveyFilterEl.value;
         const kabVal = kabSelect ? kabSelect.value : 'all';
-        
+
         // Reset sub filters to all & disabled
         const kecSelect = document.getElementById('assign-sls-kec-filter');
         const desaSelect = document.getElementById('assign-sls-desa-filter');
@@ -6728,7 +6728,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
 
         await loadGranularAssignmentsData(kabVal, surveyTypeFilter);
-        
+
         // Re-update granular filters from 'kab' level to populate kecamatan if kab is selected
         if (kabVal !== 'all') {
             await window.updateGranularFilters('kab');
@@ -7092,8 +7092,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 try {
                     const dt = new Date(r.dateModifiedEpoch * 1000);
                     const pad = (n) => String(n).padStart(2, '0');
-                    formattedDate = `${dt.getFullYear()}-${pad(dt.getMonth()+1)}-${pad(dt.getDate())} ${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
-                } catch(e) {}
+                    formattedDate = `${dt.getFullYear()}-${pad(dt.getMonth() + 1)}-${pad(dt.getDate())} ${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
+                } catch (e) { }
             }
 
             html += `
@@ -7215,8 +7215,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 try {
                     const dt = new Date(r.dateModifiedEpoch * 1000);
                     const pad = (n) => String(n).padStart(2, '0');
-                    formattedDate = `${dt.getFullYear()}-${pad(dt.getMonth()+1)}-${pad(dt.getDate())} ${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
-                } catch(e) {}
+                    formattedDate = `${dt.getFullYear()}-${pad(dt.getMonth() + 1)}-${pad(dt.getDate())} ${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
+                } catch (e) { }
             }
 
             const type = r.survey_type === 'se_umum' ? 'SE Umum' : 'SE UB';
@@ -7259,7 +7259,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let anomaliDataCache = [];
 
     // Tampilkan section data (setelah login)
-    window.showAnomaliDataSection = function() {
+    window.showAnomaliDataSection = function () {
         const userJson = sessionStorage.getItem('anomali_user');
         if (!userJson) return;
         const user = JSON.parse(userJson);
@@ -7322,7 +7322,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Buffer: perubahan belum disimpan, keyed by row.id
     let anomaliBuf = {};
 
-    window.setAnomaliBuf = function(id, field, value) {
+    window.setAnomaliBuf = function (id, field, value) {
         if (!anomaliBuf[id]) anomaliBuf[id] = {};
         anomaliBuf[id][field] = value;
         // Mark row as dirty
@@ -7333,8 +7333,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Format rupiah singkat
     function fmtRp(val) {
         if (!val) return '-';
-        if (val >= 1e9) return `Rp ${(val/1e9).toFixed(1)}M`;
-        if (val >= 1e6) return `Rp ${(val/1e6).toFixed(1)}jt`;
+        if (val >= 1e9) return `Rp ${(val / 1e9).toFixed(1)}M`;
+        if (val >= 1e6) return `Rp ${(val / 1e6).toFixed(1)}jt`;
         return `Rp ${val.toLocaleString('id-ID')}`;
     }
 
@@ -7389,7 +7389,7 @@ document.addEventListener('DOMContentLoaded', () => {
         anomaliFilteredCache = sorted;
 
         // Update sort icons
-        ['no','kab_code','jenis_anomali','nama_krt','pct_biaya','biaya_produksi','total_pengeluaran','status_anomali'].forEach(f => {
+        ['no', 'kab_code', 'jenis_anomali', 'nama_krt', 'pct_biaya', 'biaya_produksi', 'total_pengeluaran', 'status_anomali'].forEach(f => {
             const el = document.getElementById('sort-icon-' + f);
             if (el) el.textContent = f === anomaliSortField ? (anomaliSortDir === 'asc' ? ' ↑' : ' ↓') : '';
         });
@@ -7423,8 +7423,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const pct = row.pct_biaya || 0;
             const pctColor = pct >= 100 ? '#ef4444' : pct >= 80 ? '#f97316' : '#f59e0b';
             const pctBg = pct >= 100 ? 'rgba(239,68,68,0.1)' : pct >= 80 ? 'rgba(249,115,22,0.1)' : 'rgba(245,158,11,0.1)';
-            const jenisIcon = (row.jenis_anomali || '').includes('Melebihi') ? '⚠️' :
-                              (row.jenis_anomali || '').includes('Sangat') ? '🔴' : '🟡';
+            const jenisIcon = (row.jenis_anomali || '').includes('Sama') ? '⚠️' :
+                (row.jenis_anomali || '').includes('Sangat') ? '🔴' : '🟡';
             const namaUsaha = row.nama_krt || '<span style="color:var(--text-secondary);font-style:italic;">-</span>';
             const globalIdx = start + idx + 1;
             const savedInfo = row.updated_by ? `<div style="font-size:0.68rem;color:var(--text-secondary);margin-top:0.15rem;">✓ ${row.updated_by}</div>` : '';
@@ -7501,7 +7501,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let p = 1; p <= totalPages; p++) {
             if (p === 1 || p === totalPages || (p >= anomaliCurrentPage - 2 && p <= anomaliCurrentPage + 2)) {
                 pages.push(p);
-            } else if (pages[pages.length-1] !== '...') {
+            } else if (pages[pages.length - 1] !== '...') {
                 pages.push('...');
             }
         }
@@ -7517,7 +7517,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnsEl.innerHTML = html;
     }
 
-    window.goAnomaliPage = function(page) {
+    window.goAnomaliPage = function (page) {
         const totalPages = Math.ceil(anomaliFilteredCache.length / ANOMALI_PAGE_SIZE);
         if (page < 1 || page > totalPages) return;
         anomaliCurrentPage = page;
@@ -7528,7 +7528,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Sort handler
-    window.sortAnomali = function(field) {
+    window.sortAnomali = function (field) {
         if (anomaliSortField === field) {
             anomaliSortDir = anomaliSortDir === 'asc' ? 'desc' : 'asc';
         } else {
@@ -7540,7 +7540,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Filter by status via card click
-    window.filterByStatus = function(statusVal) {
+    window.filterByStatus = function (statusVal) {
         const sel = document.getElementById('anomali-filter-status');
         if (sel) sel.value = statusVal;
         window.filterAnomaliTable();
@@ -7560,12 +7560,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 (row.sls_code || '').includes(q);
             const matchStatus = !s || String(row.status_anomali) === s;
             const matchKab = !k || (row.kab_code || '') === k;
-            const matchJenis = !j || (row.jenis_anomali || '').includes(j);
+            let matchJenis = true;
+            if (j) {
+                const jenisStr = row.jenis_anomali || '';
+                if (j === 'Dominan') {
+                    // Match "Dominan" but EXCLUDE "Sangat Dominan"
+                    matchJenis = jenisStr.includes('Dominan') && !jenisStr.includes('Sangat');
+                } else {
+                    matchJenis = jenisStr.includes(j);
+                }
+            }
             return matchSearch && matchStatus && matchKab && matchJenis;
         });
     }
 
-    window.filterAnomaliTable = function() {
+    window.filterAnomaliTable = function () {
         const searchVal = (document.getElementById('anomali-search') || {}).value || '';
         const statusVal = (document.getElementById('anomali-filter-status') || {}).value || '';
         const kabVal = (document.getElementById('anomali-filter-kab') || {}).value || '';
@@ -7576,7 +7585,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Save single row
-    window.saveAnomaliRow = async function(id) {
+    window.saveAnomaliRow = async function (id) {
         if (!supabaseClient) { alert('Supabase tidak tersedia.'); return; }
         const changes = anomaliBuf[id];
         if (!changes || Object.keys(changes).length === 0) {
@@ -7589,7 +7598,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Get current user info
         let userInfo = {};
-        try { userInfo = JSON.parse(sessionStorage.getItem('anomali_user') || '{}'); } catch(e) {}
+        try { userInfo = JSON.parse(sessionStorage.getItem('anomali_user') || '{}'); } catch (e) { }
         const updatedBy = userInfo.nama || userInfo.username || 'Unknown';
         const updatedAt = new Date().toISOString();
 
@@ -7640,7 +7649,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 logEl.style.background = 'rgba(34,197,94,0.08)';
                 logEl.style.borderColor = 'rgba(34,197,94,0.25)';
             }
-        } catch(e) {
+        } catch (e) {
             console.error('Save anomali row error:', e);
             if (btn) { btn.textContent = 'Gagal!'; btn.style.background = '#ef4444'; setTimeout(() => { if (btn) { btn.innerHTML = '<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Simpan'; btn.style.background = ''; btn.disabled = false; } }, 2000); }
             if (logEl) {
@@ -7654,7 +7663,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Login anomali via Supabase RPC
-    window.loginAnomali = async function() {
+    window.loginAnomali = async function () {
         const usernameEl = document.getElementById('anomali-username');
         const passwordEl = document.getElementById('anomali-password');
         const errorEl = document.getElementById('anomali-login-error');
@@ -7694,7 +7703,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Enter key support for login
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             const anomaliSection = document.getElementById('anomali-login-section');
             if (anomaliSection && anomaliSection.style.display !== 'none' &&
@@ -7705,7 +7714,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Logout anomali
-    window.logoutAnomali = function() {
+    window.logoutAnomali = function () {
         sessionStorage.removeItem('anomali_user');
         const loginSec = document.getElementById('anomali-login-section');
         const dataSec = document.getElementById('anomali-data-section');
@@ -7721,7 +7730,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Download template tindak lanjut (CSV proper format)
-    window.downloadAnomalTemplate = function() {
+    window.downloadAnomalTemplate = function () {
         const data = anomaliDataCache;
         if (!data || data.length === 0) {
             alert('Data anomali belum dimuat. Silakan login terlebih dahulu.');
@@ -7758,20 +7767,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Upload hasil tindak lanjut dari CSV
-    window.uploadAnomaliTindakLanjut = async function(event) {
+    window.uploadAnomaliTindakLanjut = async function (event) {
         const file = event.target.files[0];
         if (!file) return;
         if (!supabaseClient) { alert('Supabase tidak terhubung!'); return; }
 
         // Get current user info for audit
         let userInfo = {};
-        try { userInfo = JSON.parse(sessionStorage.getItem('anomali_user') || '{}'); } catch(e) {}
+        try { userInfo = JSON.parse(sessionStorage.getItem('anomali_user') || '{}'); } catch (e) { }
         const updatedBy = userInfo.nama || userInfo.username || 'Unknown';
         const updatedAt = new Date().toISOString();
         const logEl = document.getElementById('anomali-upload-log');
 
         const reader = new FileReader();
-        reader.onload = async function(e) {
+        reader.onload = async function (e) {
             try {
                 const text = e.target.result;
                 // Parse CSV: support both comma and semicolon delimiters
@@ -7788,7 +7797,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     for (let ci = 0; ci < line.length; ci++) {
                         const ch = line[ci];
                         if (ch === '"') {
-                            if (inQuote && line[ci+1] === '"') { cur += '"'; ci++; }
+                            if (inQuote && line[ci + 1] === '"') { cur += '"'; ci++; }
                             else inQuote = !inQuote;
                         } else if (ch === delim && !inQuote) {
                             parts.push(cur); cur = '';
@@ -7877,7 +7886,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========== TABULASI ==========
     let tabulasiOpen = false;
 
-    window.toggleTabulasi = function() {
+    window.toggleTabulasi = function () {
         tabulasiOpen = !tabulasiOpen;
         const sec = document.getElementById('tabulasi-section');
         const icon = document.getElementById('tabulasi-toggle-icon');
@@ -7892,15 +7901,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const data = anomaliDataCache;
 
-        // Build pivot: kab → { melebihi, sangat, dominan, total, biaya, belum, diproses, selesai }
+        // Build pivot: kab → { sama, sangat, dominan, total, biaya, belum, diproses, selesai }
         const pivot = {};
         data.forEach(row => {
             const kab = row.kab_code || 'Lainnya';
-            if (!pivot[kab]) pivot[kab] = { melebihi: 0, sangat: 0, dominan: 0, total: 0, biaya: 0, belum: 0, diproses: 0, selesai: 0 };
+            if (!pivot[kab]) pivot[kab] = { melebihi: 0, sama: 0, sangat: 0, dominan: 0, total: 0, biaya: 0, belum: 0, diproses: 0, selesai: 0 };
             const p = pivot[kab];
             p.total++;
             p.biaya += row.biaya_produksi || 0;
             if ((row.jenis_anomali || '').includes('Melebihi')) p.melebihi++;
+            else if ((row.jenis_anomali || '').includes('Sama')) p.sama++;
             else if ((row.jenis_anomali || '').includes('Sangat')) p.sangat++;
             else p.dominan++;
             if (row.status_anomali == 3) p.selesai++;
@@ -7909,14 +7919,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const kabs = Object.keys(pivot).sort();
-        const totals = { melebihi: 0, sangat: 0, dominan: 0, total: 0, biaya: 0, belum: 0, diproses: 0, selesai: 0 };
+        const totals = { melebihi: 0, sama: 0, sangat: 0, dominan: 0, total: 0, biaya: 0, belum: 0, diproses: 0, selesai: 0 };
         kabs.forEach(k => {
             Object.keys(totals).forEach(f => totals[f] += pivot[k][f]);
         });
 
         const thStyle = 'padding: 0.55rem 0.75rem; font-size: 0.75rem; font-weight: 700; text-align: center; white-space: nowrap; letter-spacing: 0.04em; text-transform: uppercase; background: var(--card-bg); color: var(--text-secondary); border-bottom: 2px solid var(--card-border);';
         const thLeftStyle = thStyle.replace('text-align: center', 'text-align: left');
-        const tdStyle = (align='center') => `padding: 0.5rem 0.75rem; font-size: 0.82rem; text-align: ${align}; border-bottom: 1px solid var(--card-border); vertical-align: middle;`;
+        const tdStyle = (align = 'center') => `padding: 0.5rem 0.75rem; font-size: 0.82rem; text-align: ${align}; border-bottom: 1px solid var(--card-border); vertical-align: middle;`;
 
         const badge = (n, color, bg) => n > 0 ? `<span style="display:inline-block;padding:0.15rem 0.55rem;background:${bg};color:${color};border-radius:99px;font-weight:700;font-size:0.78rem;">${n}</span>` : `<span style="color:var(--text-secondary);font-size:0.78rem;">-</span>`;
 
@@ -7928,6 +7938,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return `<tr onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">
                 <td style="${tdStyle('left')} font-weight: 600;">${kab}</td>
                 <td style="${tdStyle()}">${badge(p.melebihi, '#ef4444', 'rgba(239,68,68,0.1)')}</td>
+                <td style="${tdStyle()}">${badge(p.sama, '#ef4444', 'rgba(239,68,68,0.1)')}</td>
                 <td style="${tdStyle()}">${badge(p.sangat, '#f97316', 'rgba(249,115,22,0.1)')}</td>
                 <td style="${tdStyle()}">${badge(p.dominan, '#f59e0b', 'rgba(245,158,11,0.1)')}</td>
                 <td style="${tdStyle()} font-weight: 700;">${p.total}</td>
@@ -7954,6 +7965,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalsRow = `<tr style="background: rgba(249,115,22,0.04); border-top: 2px solid var(--card-border);">
             <td style="${tdStyle('left')} font-weight: 800; color: var(--primary);">TOTAL SULAWESI TENGAH</td>
             <td style="${tdStyle()} font-weight: 700;">${totals.melebihi}</td>
+            <td style="${tdStyle()} font-weight: 700;">${totals.sama}</td>
             <td style="${tdStyle()} font-weight: 700;">${totals.sangat}</td>
             <td style="${tdStyle()} font-weight: 700;">${totals.dominan}</td>
             <td style="${tdStyle()} font-weight: 800; font-size: 0.9rem;">${totals.total}</td>
@@ -7978,7 +7990,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <thead>
                     <tr>
                         <th style="${thLeftStyle} min-width:140px;">Kab/Kota</th>
-                        <th style="${thStyle} color:#ef4444;">⚠️ Melebihi</th>
+                        <th style="${thStyle} color:#ef4444;">⛔ Melebihi</th>
+                        <th style="${thStyle} color:#ef4444;">⚠️ Sama</th>
                         <th style="${thStyle} color:#f97316;">🔴 Sangat Dom.</th>
                         <th style="${thStyle} color:#f59e0b;">🟡 Dominan</th>
                         <th style="${thStyle}">Total</th>
