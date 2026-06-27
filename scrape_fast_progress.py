@@ -1072,6 +1072,33 @@ async def run_ipas_report_generation(page, xsrf_token):
             total_approved = approved_target
             total_submitted_pencacah = submitted_pencacah_target
             total_submitted_respondent = submitted_respondent_target
+
+            if survey_key == "se_umum":
+                SE_UMUM_BENCHMARK_TARGETS = {
+                    "[01] BANGGAI KEPULAUAN": 45576,
+                    "[02] BANGGAI": 144337,
+                    "[03] MOROWALI": 50780,
+                    "[04] POSO": 108963,
+                    "[05] DONGGALA": 109532,
+                    "[06] TOLI-TOLI": 79955,
+                    "[07] BUOL": 59393,
+                    "[08] PARIGI MOUTONG": 174474,
+                    "[09] TOJO UNA-UNA": 60607,
+                    "[10] SIGI": 108247,
+                    "[11] BANGGAI LAUT": 28572,
+                    "[12] MOROWALI UTARA": 43731,
+                    "[71] PALU": 172294
+                }
+                kab_name_key = kab["name"]
+                if kab_name_key in SE_UMUM_BENCHMARK_TARGETS:
+                    original_prelist = total_prelist
+                    total_prelist = SE_UMUM_BENCHMARK_TARGETS[kab_name_key]
+                    total_open = max(0, total_prelist - total_draft - total_submitted)
+                    
+                    if original_prelist > 0:
+                        scale_ratio = total_prelist / original_prelist
+                        for kec_stats in report_data[kab["name"]]["kecamatan_list"]:
+                            kec_stats["total_prelist"] = int(round(kec_stats.get("total_prelist", 0) * scale_ratio))
             
             report_data[kab["name"]]["total_prelist"] = total_prelist
             report_data[kab["name"]]["total_draft"] = total_draft
