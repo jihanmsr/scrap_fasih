@@ -8,22 +8,18 @@ import subprocess
 import socket
 import pandas as pd
 from dotenv import load_dotenv
-from supabase import create_client, Client
 from playwright.sync_api import sync_playwright
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 load_dotenv()
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+LOCAL_API_URL = os.getenv("LOCAL_API_URL", "https://dds-api.bpssulteng.id/api.php")
+import requests
 
-supabase: Client = None
-if SUPABASE_URL and SUPABASE_KEY and "MASUKKAN" not in SUPABASE_URL:
-    try:
-        supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
-        logging.info("Koneksi Supabase berhasil diinisialisasi.")
-    except Exception as e:
-        logging.error(f"Gagal menginisialisasi Supabase: {e}")
+def post_to_api(action, json_data):
+    url = "https://103.5.51.154/api.php"
+    headers = {"Host": "bpssulteng.id"}
+    return requests.post(f"{url}?action={action}", json=json_data, headers=headers, verify=False)
 
 # --- PERUBAHAN 1: NAMA FOLDER PROFIL DIBEDAKAN ---
 USER_DATA_DIR = "playwright_chrome_profile_email" 
@@ -302,18 +298,9 @@ def save_realtime_data(all_records):
             js_data = df.to_dict(orient="records")
 
             # Kirim data ke Supabase jika terkonfigurasi
-            if supabase:
+            if True:
                 logging.info("Menyinkronkan data ke Supabase...")
-                available_cols = set()
-                try:
-                    sample_res = supabase.table("email_logs").select("*").limit(1).execute()
-                    if sample_res.data:
-                        available_cols = set(sample_res.data[0].keys())
-                    else:
-                        available_cols = {"code", "company_name", "email", "global_status", "status", "timestamp", "order"}
-                except Exception as e:
-                    logging.warning(f"Gagal mendeteksi kolom Supabase: {e}")
-                    available_cols = {"code", "company_name", "email", "global_status", "status", "timestamp", "order"}
+                available_cols = {"code", "name", "kab_name", "kabupaten", "kecamatan", "desa", "email", "role", "survey_status", "status", "timestamp", "order", "global_status"}
 
                 db_records = []
                 for r in js_data:
@@ -334,13 +321,12 @@ def save_realtime_data(all_records):
                         rec["kabupaten"] = str(r.get("kab_name", "-"))
                     db_records.append(rec)
                 
-                # Truncate and insert in batches
-                supabase.table("email_logs").delete().neq("code", "FORCE_DELETE_ALL_XYZ").execute()
-                batch_size = 400
-                for i in range(0, len(db_records), batch_size):
-                    batch = db_records[i:i+batch_size]
-                    supabase.table("email_logs").insert(batch).execute()
-                logging.info(f"Sinkronisasi Supabase berhasil! Mengunggah {len(db_records)} records.")
+                # Truncate and insert new data in one go via custom endpoint
+                try:
+                    post_to_api("replace_email_logs", db_records)
+                except Exception as e:
+                    logging.error(f"Error replacing email logs: {e}")
+                logging.info(f"Sinkronisasi API Lokal berhasil! Mengunggah {len(db_records)} records.")
     except Exception as e:
         logging.error(f"Gagal menulis data/sinkronisasi real-time: {e}")
 

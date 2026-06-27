@@ -1897,6 +1897,10 @@
                             style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.82rem; outline: none; cursor: pointer;">
                             <option value="">Semua Kab/Kota</option>
                         </select>
+                        <select id="anomali-filter-date" onchange="filterAnomaliTable()"
+                            style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.82rem; outline: none; cursor: pointer;">
+                            <option value="">Semua Tanggal</option>
+                        </select>
                         <select id="anomali-filter-status" onchange="filterAnomaliTable()"
                             style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.82rem; outline: none; cursor: pointer;">
                             <option value="">Semua Status</option>
@@ -1938,6 +1942,9 @@
                                     <th onclick="sortAnomali('jenis_anomali')"
                                         style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 140px;">
                                         Jenis Anomali <span id="sort-icon-jenis_anomali"></span></th>
+                                    <th onclick="sortAnomali('waktu_anomali')"
+                                        style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 120px;">
+                                        Tanggal <span id="sort-icon-waktu_anomali"></span></th>
                                     <th onclick="sortAnomali('nama_krt')"
                                         style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">
                                         Nama Usaha <span id="sort-icon-nama_krt"></span></th>

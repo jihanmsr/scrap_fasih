@@ -152,16 +152,57 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 50);
     });
 
-    // Initialize Supabase Client if credentials are provided
-    let supabaseClient = null;
-    if (typeof supabase !== 'undefined' && window.SUPABASE_URL && window.SUPABASE_KEY && window.SUPABASE_URL !== 'URL_PLACEHOLDER') {
-        try {
-            supabaseClient = supabase.createClient(window.SUPABASE_URL, window.SUPABASE_KEY);
-            console.log("Supabase Client initialized successfully.");
-        } catch (e) {
-            console.error("Failed to initialize Supabase client:", e);
+    let supabaseClient = {
+        from: function(tableName) {
+            return {
+                select: function(cols) {
+                    let req = { tableName, eqCol: null, eqVal: null, isSingle: false, orderCol: null };
+                    let executor = {
+                        eq: function(col, val) { req.eqCol = col; req.eqVal = val; return executor; },
+                        single: function() { req.isSingle = true; return executor; },
+                        order: function(col, opts) { req.orderCol = col; return executor; },
+                        then: function(resolve, reject) {
+                            let action = 'get_' + tableName.replace('_data','');
+                            if (tableName === 'dashboard_store') action = 'get_store';
+                            fetch(`https://dds-api.bpssulteng.id/api.php?action=${action}`)
+                                .then(res => res.json())
+                                .then(data => {
+                                    if (req.eqCol && req.eqVal) {
+                                        data = data.filter(d => d[req.eqCol] === req.eqVal);
+                                    }
+                                    if (req.isSingle) {
+                                        if (data.length > 0) {
+                                            if (tableName === 'dashboard_store' && typeof data[0].value === 'string') {
+                                                try { data[0].value = JSON.parse(data[0].value); } catch(e){}
+                                            }
+                                            resolve({ data: data[0], error: null });
+                                        } else resolve({ data: null, error: { message: "No rows found" } });
+                                    } else {
+                                        resolve({ data: data, error: null });
+                                    }
+                                }).catch(err => resolve({ data: null, error: err }));
+                        }
+                    };
+                    return executor;
+                },
+                update: function(payload) {
+                    return {
+                        eq: async function(col, val) {
+                            try {
+                                const response = await fetch(`https://dds-api.bpssulteng.id/api.php?action=update_${tableName.replace('_data','')}`, {
+                                    method: 'POST',
+                                    headers: {'Content-Type': 'application/json'},
+                                    body: JSON.stringify({...payload, id: val})
+                                });
+                                const data = await response.json();
+                                return { data: data, error: null };
+                            } catch(e) { return { data: null, error: e }; }
+                        }
+                    };
+                }
+            };
         }
-    }
+    };
 
     let companies = [];
     let sourceData = [];
@@ -2520,6 +2561,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof renderKabSummaryTable === 'function') renderKabSummaryTable();
             if (typeof loadGranularAssignmentsData === 'function') loadGranularAssignmentsData();
         }
+        // When Tab 3 (Petugas) is activated, render Petugas Table
+        if (tabName === 'petugas') {
+            if (typeof renderPetugasTable === 'function') renderPetugasTable();
+        }
     };
 
     function renderAssignChart() {
@@ -3350,16 +3395,20 @@ document.addEventListener('DOMContentLoaded', () => {
         let totalSls = regions ? regions.length : 0;
         let syncedSls = 0;
 
-        // Build a lookup map of sync_count from active ASSIGN_SLS_DATA
-        const localSyncMap = {};
-        if (window.ASSIGN_SLS_DATA) {
-            window.ASSIGN_SLS_DATA.forEach(sls => {
-                const code = sls.sls_code || sls.sls_id;
-                if (code) {
-                    localSyncMap[code] = sls.sync_count || 0;
-                }
-            });
+        // Build and cache a lookup map of sync_count from active ASSIGN_SLS_DATA
+        if (!window.syncMapCache) {
+            window.syncMapCache = {};
+            if (window.ASSIGN_SLS_DATA) {
+                window.ASSIGN_SLS_DATA.forEach(sls => {
+                    const code = sls.sls_code || sls.sls_id;
+                    if (code) {
+                        window.syncMapCache[code] = sls.sync_count || 0;
+                    }
+                });
+            }
         }
+        
+        const localSyncMap = window.syncMapCache;
 
         (regions || []).forEach(r => {
             if (r.regionCode) {
@@ -7300,6 +7349,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             anomaliDataCache = data || [];
             populateAnomaliKabDropdown(anomaliDataCache);
+            populateAnomaliDateDropdown(anomaliDataCache);
+            populateAnomaliJenisDropdown(anomaliDataCache);
             updateAnomalInfoBar();
             renderAnomaliTable(anomaliDataCache);
         } catch (e) {
@@ -7347,6 +7398,38 @@ document.addEventListener('DOMContentLoaded', () => {
             kabs.map(k => `<option value="${k}">${k}</option>`).join('');
     }
 
+    // Populate date dropdown dynamically from created_at
+    function populateAnomaliDateDropdown(data) {
+        const sel = document.getElementById('anomali-filter-date');
+        if (!sel) return;
+        const dates = [...new Set(data.map(r => {
+            if (!r.created_at) return null;
+            return r.created_at.substring(0, 10);
+        }).filter(Boolean))].sort().reverse();
+        
+        const fmtDate = (dStr) => {
+            try {
+                const parts = dStr.split('-');
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+                return `${parts[2]} ${months[parseInt(parts[1])-1]} ${parts[0]}`;
+            } catch(e) {
+                return dStr;
+            }
+        };
+        
+        sel.innerHTML = '<option value="">Semua Tanggal</option>' +
+            dates.map(d => `<option value="${d}">${fmtDate(d)}</option>`).join('');
+    }
+
+    // Populate jenis dropdown dynamically from jenis_anomali
+    function populateAnomaliJenisDropdown(data) {
+        const sel = document.getElementById('anomali-filter-jenis');
+        if (!sel) return;
+        const jenisList = [...new Set(data.map(r => r.jenis_anomali).filter(Boolean))].sort();
+        sel.innerHTML = '<option value="">Semua Jenis</option>' +
+            jenisList.map(j => `<option value="${j}">${j.replace('Biaya Produksi ', '')}</option>`).join('');
+    }
+
     // Info bar
     function updateAnomalInfoBar() {
         const el = document.getElementById('anomali-info-bar');
@@ -7380,6 +7463,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const sorted = [...data].sort((a, b) => {
             let av = a[anomaliSortField] ?? '';
             let bv = b[anomaliSortField] ?? '';
+            if (anomaliSortField === 'waktu_anomali') {
+                av = a.created_at || '';
+                bv = b.created_at || '';
+            }
             if (anomaliSortField === 'no') { av = a._rowIdx || 0; bv = b._rowIdx || 0; }
             const cmp = typeof av === 'number' ? av - bv : String(av).localeCompare(String(bv), 'id');
             return anomaliSortDir === 'asc' ? cmp : -cmp;
@@ -7389,7 +7476,7 @@ document.addEventListener('DOMContentLoaded', () => {
         anomaliFilteredCache = sorted;
 
         // Update sort icons
-        ['no', 'kab_code', 'jenis_anomali', 'nama_krt', 'pct_biaya', 'biaya_produksi', 'total_pengeluaran', 'status_anomali'].forEach(f => {
+        ['no', 'kab_code', 'jenis_anomali', 'waktu_anomali', 'nama_krt', 'pct_biaya', 'biaya_produksi', 'total_pengeluaran', 'status_anomali'].forEach(f => {
             const el = document.getElementById('sort-icon-' + f);
             if (el) el.textContent = f === anomaliSortField ? (anomaliSortDir === 'asc' ? ' ↑' : ' ↓') : '';
         });
@@ -7419,6 +7506,17 @@ document.addEventListener('DOMContentLoaded', () => {
             3: `<span style="display:inline-block;padding:0.2rem 0.6rem;background:rgba(34,197,94,0.1);color:#22c55e;border-radius:99px;font-size:0.75rem;font-weight:700;">Selesai</span>`,
         };
 
+        const fmtDate = (dStr) => {
+            if (!dStr) return '-';
+            try {
+                const parts = dStr.substring(0, 10).split('-');
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+                return `${parts[2]} ${months[parseInt(parts[1])-1]} ${parts[0]}`;
+            } catch(e) {
+                return dStr;
+            }
+        };
+
         tbody.innerHTML = pageData.map((row, idx) => {
             const pct = row.pct_biaya || 0;
             const pctColor = pct >= 100 ? '#ef4444' : pct >= 80 ? '#f97316' : '#f59e0b';
@@ -7436,9 +7534,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td style="padding:0.6rem 0.8rem;">
                     <span style="font-size:0.78rem;">${jenisIcon} ${(row.jenis_anomali || '-').replace('Biaya Produksi ', '')}</span>
                 </td>
-                <td style="padding:0.6rem 0.8rem;max-width:200px;">
+                <td style="padding:0.6rem 0.8rem;white-space:nowrap;">${fmtDate(row.created_at)}</td>
+                <td style="padding:0.6rem 0.8rem;max-width:230px;">
                     <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
                     ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
+                    ${row.catatan ? `<div style="font-size:0.74rem;color:#d97706;margin-top:0.25rem;line-height:1.3;font-weight:500;">💡 ${row.catatan}</div>` : ''}
                     ${savedInfo}
                 </td>
                 <td style="padding:0.6rem 0.8rem;min-width:130px;">
@@ -7548,11 +7648,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Filter tabel anomali
-    function applyAnomaliFilter(data, searchVal, statusVal, kabVal, jenisVal) {
+    function applyAnomaliFilter(data, searchVal, statusVal, kabVal, jenisVal, dateVal) {
         const q = (searchVal || '').toLowerCase();
         const s = statusVal || '';
         const k = kabVal || '';
         const j = jenisVal || '';
+        const d = dateVal || '';
         return data.filter(row => {
             const matchSearch = !q ||
                 (row.nama_krt || '').toLowerCase().includes(q) ||
@@ -7561,17 +7662,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 (row.sls_code || '').includes(q);
             const matchStatus = !s || String(row.status_anomali) === s;
             const matchKab = !k || (row.kab_code || '') === k;
-            let matchJenis = true;
-            if (j) {
-                const jenisStr = row.jenis_anomali || '';
-                if (j === 'Dominan') {
-                    // Match "Dominan" but EXCLUDE "Sangat Dominan"
-                    matchJenis = jenisStr.includes('Dominan') && !jenisStr.includes('Sangat');
-                } else {
-                    matchJenis = jenisStr.includes(j);
-                }
-            }
-            return matchSearch && matchStatus && matchKab && matchJenis;
+            const matchDate = !d || (row.created_at && row.created_at.substring(0, 10) === d);
+            const matchJenis = !j || (row.jenis_anomali || '') === j;
+            return matchSearch && matchStatus && matchKab && matchJenis && matchDate;
         });
     }
 
@@ -7580,7 +7673,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const statusVal = (document.getElementById('anomali-filter-status') || {}).value || '';
         const kabVal = (document.getElementById('anomali-filter-kab') || {}).value || '';
         const jenisVal = (document.getElementById('anomali-filter-jenis') || {}).value || '';
-        const filtered = applyAnomaliFilter(anomaliDataCache, searchVal, statusVal, kabVal, jenisVal);
+        const dateVal = (document.getElementById('anomali-filter-date') || {}).value || '';
+        const filtered = applyAnomaliFilter(anomaliDataCache, searchVal, statusVal, kabVal, jenisVal, dateVal);
         anomaliCurrentPage = 1; // reset ke halaman 1 saat filter berubah
         renderAnomaliTable(filtered);
     };
