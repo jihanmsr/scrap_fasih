@@ -35,7 +35,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7201040014000500",
-        45,
+        48,
         0,
         [
             "crazycerno@gmail.com"
@@ -43,7 +43,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7201040014000800",
-        159,
+        180,
         0,
         [
             "madaputri1405@gmail.com"
@@ -91,7 +91,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7201040014000700",
-        109,
+        119,
         0,
         [
             "fadilahsabrina07@gmail.com"
@@ -107,7 +107,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7201040014001300",
-        221,
+        226,
         0,
         [
             "apriyaninani1234@gmail.com"
@@ -131,7 +131,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7201040015000200",
-        111,
+        116,
         0,
         [
             "lindalorenza2001@gmail.com"
@@ -171,7 +171,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7201040015001100",
-        123,
+        124,
         0,
         [
             "amrullahwidiamrullah@gmail.com"
@@ -187,7 +187,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7201040016000100",
-        410,
+        411,
         0,
         [
             "yulitamangemba08@gmail.com"
@@ -283,7 +283,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7201040020000200",
-        193,
+        194,
         0,
         [
             "musrifasutamin@gmail.com"
@@ -371,7 +371,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7202013008000100",
-        152,
+        154,
         0,
         [
             "nursilva00@gmail.com"
@@ -515,7 +515,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7202030043000200",
-        76,
+        86,
         0,
         [
             "verasuleman5@gmail.com"
@@ -603,7 +603,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7202031006000200",
-        136,
+        139,
         0,
         [
             "alisupramono075@gmail.com"
@@ -731,7 +731,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7202031013000400",
-        124,
+        125,
         0,
         [
             "ririnindri029@gmail.com"
@@ -739,7 +739,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7202031013000500",
-        91,
+        93,
         0,
         [
             "ririnindri029@gmail.com"
@@ -779,7 +779,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7202051010000100",
-        159,
+        164,
         0,
         [
             "rosdyanaku@gmail.com"
@@ -1395,7 +1395,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7203020003000100",
-        38,
+        39,
         0,
         [
             "liskafita37@gmail.com"
@@ -2019,7 +2019,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7204041004000400",
-        50,
+        53,
         0,
         [
             "cendanasanutu@gmail.com"
@@ -2107,7 +2107,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7204042004000100",
-        72,
+        74,
         0,
         [
             "priskilayudit@gmail.com"
@@ -2403,7 +2403,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7204051004000700",
-        167,
+        168,
         0,
         [
             "kristamialin0303walili@gmail.com"
@@ -2507,7 +2507,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7204051006000500",
-        57,
+        58,
         0,
         [
             "ypebaja@gmail.com"
@@ -2579,7 +2579,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7205101001000302",
-        75,
+        79,
         0,
         [
             "fardiantivv@gmail.com"
@@ -2611,7 +2611,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7205101003000302",
-        88,
+        89,
         0,
         [
             "mohriskialfauzan@gmail.com"
@@ -2627,7 +2627,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7205101006000100",
-        131,
+        132,
         0,
         [
             "adzanlamakana@gmail.com"
@@ -2667,7 +2667,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7205102001000100",
-        160,
+        164,
         0,
         [
             "mohmaqbul69@gmail.com"
@@ -2675,7 +2675,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7205102002000400",
-        188,
+        189,
         0,
         [
             "galangstat24050@gmail.com"
@@ -2755,7 +2755,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7205051001001200",
-        43,
+        45,
         0,
         [
             "fberkah446@gmail.com"
@@ -3163,7 +3163,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7206031008000600",
-        55,
+        61,
         0,
         [
             "rhiahijria994@gmail.com"
@@ -3283,7 +3283,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7206031004000600",
-        53,
+        55,
         0,
         [
             "artalitagafur@gmail.com"
@@ -3459,7 +3459,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7206031009000300",
-        121,
+        128,
         0,
         [
             "rahmatialukman27@gmail.com"
@@ -3595,7 +3595,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7206032001000900",
-        30,
+        31,
         0,
         [
             "tinasuhar65@gmail.com"
@@ -3715,7 +3715,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7206032002000900",
-        95,
+        96,
         0,
         [
             "samrins365@gmail.com"
@@ -3995,7 +3995,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7207030024000100",
-        62,
+        63,
         0,
         [
             "riskilabanu49@gmail.com"
@@ -4571,7 +4571,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7207031003000700",
-        64,
+        65,
         0,
         [
             "shokhekulhuda02@gmail.com"
@@ -4643,7 +4643,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7208010001000100",
-        155,
+        157,
         0,
         [
             "muhfajarislami@gmail.com"
@@ -4683,7 +4683,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7208010001000502",
-        109,
+        111,
         0,
         [
             "anastasiameyga925@gmail.com"
@@ -4699,7 +4699,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7208010002000201",
-        157,
+        159,
         0,
         [
             "iihsann446@gmail.com"
@@ -4723,7 +4723,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7208010002000302",
-        173,
+        175,
         0,
         [
             "jumariajumar2@gmail.com"
@@ -4739,7 +4739,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7208010002000402",
-        140,
+        142,
         0,
         [
             "robilaisti@gmail.com"
@@ -4795,7 +4795,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7208010003000202",
-        109,
+        113,
         0,
         [
             "irulmaulana58@gmail.com"
@@ -4827,7 +4827,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7208010004000200",
-        82,
+        83,
         0,
         [
             "fdwiasviani@gmail.com"
@@ -4843,7 +4843,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7208010004000500",
-        131,
+        134,
         0,
         [
             "nurfadilaawalina08@gmail.com"
@@ -4867,7 +4867,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7209010002000200",
-        189,
+        190,
         0,
         [
             "acalalamentik@gmail.com"
@@ -4899,7 +4899,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7209010005000400",
-        88,
+        89,
         0,
         [
             "winandasyachputri@gmail.com"
@@ -4907,7 +4907,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7209010004000400",
-        77,
+        78,
         0,
         [
             "winandasyachputri@gmail.com"
@@ -5003,7 +5003,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7209061002000200",
-        42,
+        45,
         0,
         [
             "nurcichii@gmail.com"
@@ -5019,7 +5019,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7209061002000300",
-        23,
+        24,
         0,
         [
             "nurcichii@gmail.com"
@@ -5115,7 +5115,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7209061004000100",
-        54,
+        57,
         0,
         [
             "ff7516800@gmail.com"
@@ -5123,7 +5123,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7209061004000300",
-        46,
+        47,
         0,
         [
             "ff7516800@gmail.com"
@@ -5251,7 +5251,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7209061011000200",
-        36,
+        37,
         0,
         [
             "samsulsam1999@gmail.com"
@@ -5291,7 +5291,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7209061013000100",
-        51,
+        52,
         0,
         [
             "agusagus52644@gmail.com"
@@ -5411,7 +5411,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7210060003001000",
-        130,
+        135,
         0,
         [
             "ibeibrahim980@gmail.com"
@@ -5483,7 +5483,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7210130003000300",
-        114,
+        115,
         0,
         [
             "sitinurulmardiaskoloi@gmail.com"
@@ -5715,7 +5715,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7210130008000300",
-        174,
+        177,
         0,
         [
             "maulanarasyid0301@gmail.com"
@@ -5787,7 +5787,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7211030001000500",
-        157,
+        159,
         0,
         [
             "riskianasky@gmail.com"
@@ -5915,7 +5915,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7211040002000401",
-        225,
+        228,
         0,
         [
             "stsalsah284@gmail.com"
@@ -5931,7 +5931,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7211040002000302",
-        109,
+        112,
         0,
         [
             "stsalsah284@gmail.com"
@@ -5955,7 +5955,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7211040003000300",
-        190,
+        192,
         0,
         [
             "fahrudindjibran7@gmail.com"
@@ -5971,7 +5971,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7211040003000500",
-        152,
+        153,
         0,
         [
             "fahrudindjibran7@gmail.com"
@@ -5995,7 +5995,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7211040004000200",
-        112,
+        120,
         0,
         [
             "asrianihl@gmail.com"
@@ -6043,7 +6043,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7211040003001100",
-        211,
+        215,
         0,
         [
             "wahyunimansa34@gmail.com"
@@ -6059,7 +6059,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7211040005000900",
-        225,
+        231,
         0,
         [
             "hestikasim54@gmail.com"
@@ -6083,7 +6083,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7212100006001000",
-        70,
+        74,
         0,
         [
             "rismadyka@gmail.com"
@@ -6187,7 +6187,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7212100006000100",
-        39,
+        40,
         0,
         [
             "darasistapingki@gmail.com"
@@ -6475,7 +6475,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7212100014000200",
-        75,
+        76,
         0,
         [
             "danielndola93@gmail.com"
@@ -6578,16 +6578,16 @@ window.ASSIGN_SLS_DATA_UMUM = [
         ]
     ],
     [
-        "7212080001000300",
-        67,
+        "7212080001000200",
+        72,
         0,
         [
             "echesuba973@gmail.com"
         ]
     ],
     [
-        "7212080001000200",
-        66,
+        "7212080001000300",
+        67,
         0,
         [
             "echesuba973@gmail.com"
@@ -6779,7 +6779,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7271020009001400",
-        222,
+        223,
         0,
         [
             "khaerunnisa2986@gmail.com"
@@ -6907,7 +6907,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7271012001000100",
-        174,
+        180,
         0,
         [
             "arhrahmanhasan@gmail.com"
@@ -6987,7 +6987,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7271012001000901",
-        209,
+        215,
         0,
         [
             "nadyapasande12@gmail.com"
@@ -7059,7 +7059,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7271012001001500",
-        57,
+        59,
         0,
         [
             "lutfiaarfan@gmail.com"
@@ -7075,7 +7075,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7271012001002000",
-        201,
+        204,
         0,
         [
             "saadaarifin131@gmail.com"
@@ -7083,7 +7083,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7271012001001900",
-        182,
+        185,
         0,
         [
             "saadaarifin131@gmail.com"
@@ -7099,7 +7099,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7271012001002100",
-        241,
+        245,
         0,
         [
             "sarryiien95@gmail.com"
@@ -7115,7 +7115,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7271012001002200",
-        114,
+        116,
         0,
         [
             "sarryiien95@gmail.com"
@@ -7147,7 +7147,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7271012002000400",
-        237,
+        238,
         0,
         [
             "salehmanda0@gmail.com"
@@ -12040,10 +12040,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "6e0bb638-f331-4107-826c-d34e3ff416f7",
         "username": "acalalamentik@gmail.com",
         "fullname": "acalalamentik@gmail.com",
-        "target_count": 326,
+        "target_count": 327,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 326,
+        "open_count": 327,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -12558,10 +12558,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "bafefe8f-3029-4de0-9a2b-351f87ebd1da",
         "username": "adzanlamakana@gmail.com",
         "fullname": "adzanlamakana@gmail.com",
-        "target_count": 402,
+        "target_count": 403,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 402,
+        "open_count": 403,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -12824,10 +12824,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "ef9364fe-fe03-4ad9-886a-869c7bd7158e",
         "username": "agusagus52644@gmail.com",
         "fullname": "agusagus52644@gmail.com",
-        "target_count": 232,
+        "target_count": 233,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 232,
+        "open_count": 233,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -14042,10 +14042,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "1432b094-60d4-48e4-acad-451c99f6630d",
         "username": "alisupramono075@gmail.com",
         "fullname": "alisupramono075@gmail.com",
-        "target_count": 516,
+        "target_count": 519,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 516,
+        "open_count": 519,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -14532,10 +14532,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "db4473c6-8567-4614-b226-73c6fc63cf35",
         "username": "amrullahwidiamrullah@gmail.com",
         "fullname": "amrullahwidiamrullah@gmail.com",
-        "target_count": 341,
+        "target_count": 342,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 341,
+        "open_count": 342,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -14714,10 +14714,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "31025507-75ef-4d55-96bf-0ac5104d7438",
         "username": "anastasiameyga925@gmail.com",
         "fullname": "anastasiameyga925@gmail.com",
-        "target_count": 285,
+        "target_count": 287,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 285,
+        "open_count": 287,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -16030,10 +16030,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "8beed75d-2a99-4695-ac7d-b04b66a534e0",
         "username": "apriyaninani1234@gmail.com",
         "fullname": "apriyaninani1234@gmail.com",
-        "target_count": 336,
+        "target_count": 341,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 336,
+        "open_count": 341,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -16254,10 +16254,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "4abe2cf7-2905-4ddb-b00e-08196bc01385",
         "username": "arhrahmanhasan@gmail.com",
         "fullname": "arhrahmanhasan@gmail.com",
-        "target_count": 716,
+        "target_count": 722,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 716,
+        "open_count": 722,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -16870,10 +16870,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "7e0a6781-6619-4cf0-a45d-bdf65d93d8fd",
         "username": "artalitagafur@gmail.com",
         "fullname": "artalitagafur@gmail.com",
-        "target_count": 389,
+        "target_count": 391,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 389,
+        "open_count": 391,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -17332,10 +17332,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "8754fce0-b452-47b1-92a4-0455d141e9c7",
         "username": "asrianihl@gmail.com",
         "fullname": "asrianihl@gmail.com",
-        "target_count": 686,
+        "target_count": 694,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 686,
+        "open_count": 694,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -19362,10 +19362,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "1c187a24-e77b-455a-b81a-b69f88387bff",
         "username": "cendanasanutu@gmail.com",
         "fullname": "cendanasanutu@gmail.com",
-        "target_count": 416,
+        "target_count": 419,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 416,
+        "open_count": 419,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -19810,10 +19810,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "d25b72c0-f9a3-47a6-808c-4be4670ad324",
         "username": "crazycerno@gmail.com",
         "fullname": "crazycerno@gmail.com",
-        "target_count": 331,
+        "target_count": 334,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 331,
+        "open_count": 334,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -19950,10 +19950,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "423b5eef-5169-4539-a64d-15053651a59c",
         "username": "danielndola93@gmail.com",
         "fullname": "danielndola93@gmail.com",
-        "target_count": 290,
+        "target_count": 291,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 290,
+        "open_count": 291,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -20062,10 +20062,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "39aeb6f8-6488-4ea2-a053-ac60010aad53",
         "username": "darasistapingki@gmail.com",
         "fullname": "darasistapingki@gmail.com",
-        "target_count": 385,
+        "target_count": 386,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 385,
+        "open_count": 386,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -21994,10 +21994,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "a61f9679-6252-44ca-8439-7f55a743e338",
         "username": "echesuba973@gmail.com",
         "fullname": "echesuba973@gmail.com",
-        "target_count": 434,
+        "target_count": 440,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 434,
+        "open_count": 440,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -23380,10 +23380,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "c882dd07-5fbf-44d5-9052-5fba236e1929",
         "username": "fadilahsabrina07@gmail.com",
         "fullname": "fadilahsabrina07@gmail.com",
-        "target_count": 348,
+        "target_count": 358,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 348,
+        "open_count": 358,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -23646,10 +23646,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "59086c5c-1eec-4293-8f85-132912f116e3",
         "username": "fahrudindjibran7@gmail.com",
         "fullname": "fahrudindjibran7@gmail.com",
-        "target_count": 926,
+        "target_count": 929,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 926,
+        "open_count": 929,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -24024,10 +24024,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "08241f07-5253-4845-8a47-a4bd71e006bf",
         "username": "fardiantivv@gmail.com",
         "fullname": "fardiantivv@gmail.com",
-        "target_count": 340,
+        "target_count": 344,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 340,
+        "open_count": 344,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -24444,10 +24444,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "f8cfbd81-68fd-4e19-858f-483203449101",
         "username": "fberkah446@gmail.com",
         "fullname": "fberkah446@gmail.com",
-        "target_count": 254,
+        "target_count": 256,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 254,
+        "open_count": 256,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -24458,10 +24458,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "88baee48-829a-47f7-95ca-38fba3704266",
         "username": "fdwiasviani@gmail.com",
         "fullname": "fdwiasviani@gmail.com",
-        "target_count": 424,
+        "target_count": 425,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 424,
+        "open_count": 425,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -24850,10 +24850,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "1010d2d4-a129-4bf1-bf97-39372cd3b08a",
         "username": "ff7516800@gmail.com",
         "fullname": "ff7516800@gmail.com",
-        "target_count": 226,
+        "target_count": 230,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 226,
+        "open_count": 230,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -26250,10 +26250,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "31844c4f-c6d4-4e79-8870-79c08989c50c",
         "username": "galangstat24050@gmail.com",
         "fullname": "galangstat24050@gmail.com",
-        "target_count": 295,
+        "target_count": 296,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 295,
+        "open_count": 296,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -27846,10 +27846,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "095bb393-8ad1-4aa1-a279-4c34f7d71b9a",
         "username": "hestikasim54@gmail.com",
         "fullname": "hestikasim54@gmail.com",
-        "target_count": 579,
+        "target_count": 585,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 579,
+        "open_count": 585,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -27888,6 +27888,20 @@ window.PETUGAS_DATA_UMUM = [
         "id": "6f726ce0-07c6-4d57-9f2c-731c6108df82",
         "username": "hi.whyuni31@gmail.com",
         "fullname": "hi.whyuni31@gmail.com",
+        "target_count": 0,
+        "sync_count": 0,
+        "draft_count": 0,
+        "open_count": 0,
+        "submitted_count": 0,
+        "approved_count": 0,
+        "rejected_count": 0,
+        "regions": [],
+        "totalRegions": 0
+    },
+    {
+        "id": "581ac3ae-88f4-4c1f-baad-a76239c3efde",
+        "username": "hidarno.hamiun",
+        "fullname": "hidarno.hamiun",
         "target_count": 0,
         "sync_count": 0,
         "draft_count": 0,
@@ -28308,10 +28322,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "1244df87-240e-4394-96af-ffa87dfb213e",
         "username": "ibeibrahim980@gmail.com",
         "fullname": "ibeibrahim980@gmail.com",
-        "target_count": 464,
+        "target_count": 469,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 464,
+        "open_count": 469,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -28854,10 +28868,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "6a2d2ba1-a92f-4f32-b790-25b2dbd43384",
         "username": "iihsann446@gmail.com",
         "fullname": "iihsann446@gmail.com",
-        "target_count": 377,
+        "target_count": 379,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 377,
+        "open_count": 379,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -30632,10 +30646,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "51a4a6b2-8a6a-42fa-851b-b280f85f35a2",
         "username": "irulmaulana58@gmail.com",
         "fullname": "irulmaulana58@gmail.com",
-        "target_count": 388,
+        "target_count": 392,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 388,
+        "open_count": 392,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -31035,6 +31049,20 @@ window.PETUGAS_DATA_UMUM = [
         "totalRegions": 0
     },
     {
+        "id": "6b8cd70e-9680-4902-8dac-5d97c627ddd9",
+        "username": "iswanlupa-pppk",
+        "fullname": "iswanlupa-pppk",
+        "target_count": 0,
+        "sync_count": 0,
+        "draft_count": 0,
+        "open_count": 0,
+        "submitted_count": 0,
+        "approved_count": 0,
+        "rejected_count": 0,
+        "regions": [],
+        "totalRegions": 0
+    },
+    {
         "id": "514658cd-e021-46e9-9cfe-b754341f29db",
         "username": "iswari.puri",
         "fullname": "iswari.puri",
@@ -31416,6 +31444,20 @@ window.PETUGAS_DATA_UMUM = [
         "id": "455047ad-b6a9-4aa7-8dec-96393f02b44e",
         "username": "jefflasiampe@gmail.com",
         "fullname": "jefflasiampe@gmail.com",
+        "target_count": 0,
+        "sync_count": 0,
+        "draft_count": 0,
+        "open_count": 0,
+        "submitted_count": 0,
+        "approved_count": 0,
+        "rejected_count": 0,
+        "regions": [],
+        "totalRegions": 0
+    },
+    {
+        "id": "3e04326c-655f-4a24-b1f9-d27a11d3e691",
+        "username": "jeffri",
+        "fullname": "jeffri",
         "target_count": 0,
         "sync_count": 0,
         "draft_count": 0,
@@ -31850,10 +31892,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "33954d08-ce68-4838-b3fa-5651a9a667e8",
         "username": "jumariajumar2@gmail.com",
         "fullname": "jumariajumar2@gmail.com",
-        "target_count": 291,
+        "target_count": 293,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 291,
+        "open_count": 293,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -32620,10 +32662,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "7c4ecbb3-651d-4e81-817e-9cf9a1ff60ac",
         "username": "khaerunnisa2986@gmail.com",
         "fullname": "khaerunnisa2986@gmail.com",
-        "target_count": 736,
+        "target_count": 737,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 736,
+        "open_count": 737,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -33026,10 +33068,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "092bf301-f2d3-416d-871a-df69d69455b3",
         "username": "kristamialin0303walili@gmail.com",
         "fullname": "kristamialin0303walili@gmail.com",
-        "target_count": 394,
+        "target_count": 395,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 394,
+        "open_count": 395,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -33908,10 +33950,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "93ac48e7-cd01-4555-9d21-fb8eadaea9fb",
         "username": "lindalorenza2001@gmail.com",
         "fullname": "lindalorenza2001@gmail.com",
-        "target_count": 463,
+        "target_count": 468,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 463,
+        "open_count": 468,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -34034,10 +34076,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "3985771b-373c-4073-9f9f-4c9194d74504",
         "username": "liskafita37@gmail.com",
         "fullname": "liskafita37@gmail.com",
-        "target_count": 421,
+        "target_count": 422,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 421,
+        "open_count": 422,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -34384,10 +34426,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "23599642-f5bb-4b4e-ac17-207e5fdeacf2",
         "username": "lutfiaarfan@gmail.com",
         "fullname": "lutfiaarfan@gmail.com",
-        "target_count": 520,
+        "target_count": 522,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 520,
+        "open_count": 522,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -34622,10 +34664,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "4433d7f2-d9de-49cb-8682-396dc8841141",
         "username": "madaputri1405@gmail.com",
         "fullname": "madaputri1405@gmail.com",
-        "target_count": 377,
+        "target_count": 398,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 377,
+        "open_count": 398,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -35742,10 +35784,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "d547af33-2afa-4196-91df-e09029cb733c",
         "username": "maulanarasyid0301@gmail.com",
         "fullname": "maulanarasyid0301@gmail.com",
-        "target_count": 494,
+        "target_count": 497,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 494,
+        "open_count": 497,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -37590,10 +37632,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "77cbcb0d-196f-4bef-9ea5-eec16dd3b071",
         "username": "mohmaqbul69@gmail.com",
         "fullname": "mohmaqbul69@gmail.com",
-        "target_count": 367,
+        "target_count": 371,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 367,
+        "open_count": 371,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -37702,10 +37744,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "befe7db7-0ec5-445c-95b6-3f147a256c71",
         "username": "mohriskialfauzan@gmail.com",
         "fullname": "mohriskialfauzan@gmail.com",
-        "target_count": 350,
+        "target_count": 351,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 350,
+        "open_count": 351,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -38388,10 +38430,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "bf29b7f3-9b09-4195-a1df-3a9624960c26",
         "username": "muhfajarislami@gmail.com",
         "fullname": "muhfajarislami@gmail.com",
-        "target_count": 266,
+        "target_count": 268,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 266,
+        "open_count": 268,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -38654,10 +38696,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "547404e4-f520-4a83-9933-43f88e1f59c8",
         "username": "musrifasutamin@gmail.com",
         "fullname": "musrifasutamin@gmail.com",
-        "target_count": 328,
+        "target_count": 329,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 328,
+        "open_count": 329,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -39130,10 +39172,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "2a82b28d-b307-4a1a-9dca-71fe038dcb8e",
         "username": "nadyapasande12@gmail.com",
         "fullname": "nadyapasande12@gmail.com",
-        "target_count": 659,
+        "target_count": 665,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 659,
+        "open_count": 665,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -41300,10 +41342,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "cd418906-e78c-47f1-8c6e-ab33ed6b1c9c",
         "username": "nurcichii@gmail.com",
         "fullname": "nurcichii@gmail.com",
-        "target_count": 334,
+        "target_count": 338,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 334,
+        "open_count": 338,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -41356,10 +41398,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "2755c400-1943-47d4-8d0f-c56e0f72399c",
         "username": "nurfadilaawalina08@gmail.com",
         "fullname": "nurfadilaawalina08@gmail.com",
-        "target_count": 344,
+        "target_count": 347,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 344,
+        "open_count": 347,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -42112,10 +42154,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "8c12fb39-4004-4633-a3f7-57e4cf9a9591",
         "username": "nursilva00@gmail.com",
         "fullname": "nursilva00@gmail.com",
-        "target_count": 390,
+        "target_count": 392,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 390,
+        "open_count": 392,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -43512,10 +43554,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "3044ea98-4674-4ef3-b261-8a61498549b3",
         "username": "priskilayudit@gmail.com",
         "fullname": "priskilayudit@gmail.com",
-        "target_count": 446,
+        "target_count": 448,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 446,
+        "open_count": 448,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -44324,10 +44366,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "55cfd0ba-7cd8-45e5-bf04-5f07f9e199a4",
         "username": "rahmatialukman27@gmail.com",
         "fullname": "rahmatialukman27@gmail.com",
-        "target_count": 330,
+        "target_count": 337,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 330,
+        "open_count": 337,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -45542,10 +45584,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "95d90e1b-64a1-4f8f-8e9d-731beedc11fc",
         "username": "rhiahijria994@gmail.com",
         "fullname": "rhiahijria994@gmail.com",
-        "target_count": 373,
+        "target_count": 379,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 373,
+        "open_count": 379,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -46186,10 +46228,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "87c06e75-10f7-4de0-a8b4-a8b72f248e24",
         "username": "ririnindri029@gmail.com",
         "fullname": "ririnindri029@gmail.com",
-        "target_count": 466,
+        "target_count": 469,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 466,
+        "open_count": 469,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -46480,10 +46522,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "fbc3b7aa-be62-4f2a-b807-09194b2b65c7",
         "username": "riskianasky@gmail.com",
         "fullname": "riskianasky@gmail.com",
-        "target_count": 563,
+        "target_count": 565,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 563,
+        "open_count": 565,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -46508,10 +46550,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "aec7e8c8-f36f-4a29-a33e-e2519066ab36",
         "username": "riskilabanu49@gmail.com",
         "fullname": "riskilabanu49@gmail.com",
-        "target_count": 426,
+        "target_count": 427,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 426,
+        "open_count": 427,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -46564,10 +46606,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "dd2ac39e-fda4-4d6b-a95d-13d557475da9",
         "username": "rismadyka@gmail.com",
         "fullname": "rismadyka@gmail.com",
-        "target_count": 328,
+        "target_count": 332,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 328,
+        "open_count": 332,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -47012,10 +47054,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "c55e793c-026c-4716-b39b-2ab6307f3032",
         "username": "robilaisti@gmail.com",
         "fullname": "robilaisti@gmail.com",
-        "target_count": 279,
+        "target_count": 281,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 279,
+        "open_count": 281,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -47026,6 +47068,20 @@ window.PETUGAS_DATA_UMUM = [
         "id": "9ba0992d-ddf6-486e-be49-4a6690911279",
         "username": "rodhitaangriani@gmail.com",
         "fullname": "rodhitaangriani@gmail.com",
+        "target_count": 0,
+        "sync_count": 0,
+        "draft_count": 0,
+        "open_count": 0,
+        "submitted_count": 0,
+        "approved_count": 0,
+        "rejected_count": 0,
+        "regions": [],
+        "totalRegions": 0
+    },
+    {
+        "id": "b2eda2ed-e2be-45c7-b0e6-6ef89b6545c2",
+        "username": "roen",
+        "fullname": "roen",
         "target_count": 0,
         "sync_count": 0,
         "draft_count": 0,
@@ -47068,6 +47124,20 @@ window.PETUGAS_DATA_UMUM = [
         "id": "2ac378d6-bc69-4bfd-bc83-3298ad4d4263",
         "username": "romi",
         "fullname": "romi",
+        "target_count": 0,
+        "sync_count": 0,
+        "draft_count": 0,
+        "open_count": 0,
+        "submitted_count": 0,
+        "approved_count": 0,
+        "rejected_count": 0,
+        "regions": [],
+        "totalRegions": 0
+    },
+    {
+        "id": "61b69cf9-8a1d-4a2d-ba11-240ed767c07e",
+        "username": "romistungka-pppk",
+        "fullname": "romistungka-pppk",
         "target_count": 0,
         "sync_count": 0,
         "draft_count": 0,
@@ -47124,10 +47194,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "672d3698-6e82-4653-aa9a-4f0fd9cecd9b",
         "username": "rosdyanaku@gmail.com",
         "fullname": "rosdyanaku@gmail.com",
-        "target_count": 437,
+        "target_count": 442,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 437,
+        "open_count": 442,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -47572,10 +47642,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "a715edc3-e8a7-4cf1-bf95-7be5f0565466",
         "username": "saadaarifin131@gmail.com",
         "fullname": "saadaarifin131@gmail.com",
-        "target_count": 703,
+        "target_count": 709,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 703,
+        "open_count": 709,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -48006,10 +48076,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "695313a4-940e-42de-bd83-0e0a338a0ef9",
         "username": "salehmanda0@gmail.com",
         "fullname": "salehmanda0@gmail.com",
-        "target_count": 890,
+        "target_count": 891,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 890,
+        "open_count": 891,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -48048,6 +48118,20 @@ window.PETUGAS_DATA_UMUM = [
         "id": "5aaf2c4e-3f77-48dd-82d8-6e8c52b2280f",
         "username": "salsasally15@gmail.com",
         "fullname": "salsasally15@gmail.com",
+        "target_count": 0,
+        "sync_count": 0,
+        "draft_count": 0,
+        "open_count": 0,
+        "submitted_count": 0,
+        "approved_count": 0,
+        "rejected_count": 0,
+        "regions": [],
+        "totalRegions": 0
+    },
+    {
+        "id": "70df4cb5-4af3-4c28-9e49-ccde95f48e8e",
+        "username": "salwa.anisa",
+        "fullname": "salwa.anisa",
         "target_count": 0,
         "sync_count": 0,
         "draft_count": 0,
@@ -48132,10 +48216,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "ad6f0f45-ec85-4f89-b523-0b4c4a1c29e1",
         "username": "samrins365@gmail.com",
         "fullname": "samrins365@gmail.com",
-        "target_count": 375,
+        "target_count": 376,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 375,
+        "open_count": 376,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -48160,10 +48244,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "c6defd5d-2805-4491-bc4d-1fc453bbcd74",
         "username": "samsulsam1999@gmail.com",
         "fullname": "samsulsam1999@gmail.com",
-        "target_count": 241,
+        "target_count": 242,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 241,
+        "open_count": 242,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -48566,10 +48650,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "215ee4ba-d3d3-44c0-9b7b-156dd3d4f014",
         "username": "sarryiien95@gmail.com",
         "fullname": "sarryiien95@gmail.com",
-        "target_count": 769,
+        "target_count": 775,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 769,
+        "open_count": 775,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -48972,6 +49056,20 @@ window.PETUGAS_DATA_UMUM = [
         "id": "69bb3ce7-e2e0-4c64-b653-526d2c7fd1aa",
         "username": "selvinmanu89@gmail.com",
         "fullname": "selvinmanu89@gmail.com",
+        "target_count": 0,
+        "sync_count": 0,
+        "draft_count": 0,
+        "open_count": 0,
+        "submitted_count": 0,
+        "approved_count": 0,
+        "rejected_count": 0,
+        "regions": [],
+        "totalRegions": 0
+    },
+    {
+        "id": "ec1a3ee3-5cfe-4289-b34a-39a911952cae",
+        "username": "selvita_nova",
+        "fullname": "selvita_nova",
         "target_count": 0,
         "sync_count": 0,
         "draft_count": 0,
@@ -49420,10 +49518,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "ffa99ce7-0a3b-4696-bd91-8460d00e7937",
         "username": "shokhekulhuda02@gmail.com",
         "fullname": "shokhekulhuda02@gmail.com",
-        "target_count": 341,
+        "target_count": 342,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 341,
+        "open_count": 342,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -50148,10 +50246,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "6254a56f-bb29-47f7-b3a4-58fe52299276",
         "username": "sitinurulmardiaskoloi@gmail.com",
         "fullname": "sitinurulmardiaskoloi@gmail.com",
-        "target_count": 393,
+        "target_count": 394,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 393,
+        "open_count": 394,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -51324,10 +51422,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "44e466ec-2dbf-4b5c-be5f-88fa1d860c79",
         "username": "stsalsah284@gmail.com",
         "fullname": "stsalsah284@gmail.com",
-        "target_count": 463,
+        "target_count": 469,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 463,
+        "open_count": 469,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -53183,6 +53281,20 @@ window.PETUGAS_DATA_UMUM = [
         "totalRegions": 0
     },
     {
+        "id": "10983f59-a4c8-4147-8942-c9c3464d80d9",
+        "username": "tiara.setyati",
+        "fullname": "tiara.setyati",
+        "target_count": 0,
+        "sync_count": 0,
+        "draft_count": 0,
+        "open_count": 0,
+        "submitted_count": 0,
+        "approved_count": 0,
+        "rejected_count": 0,
+        "regions": [],
+        "totalRegions": 0
+    },
+    {
         "id": "e01ad78e-04f0-413b-8f3d-0a6141530e55",
         "username": "tiaraindah.uml2020@gmail.com",
         "fullname": "tiaraindah.uml2020@gmail.com",
@@ -53340,10 +53452,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "e75f06f3-4784-4132-834c-311a4e809a7a",
         "username": "tinasuhar65@gmail.com",
         "fullname": "tinasuhar65@gmail.com",
-        "target_count": 364,
+        "target_count": 365,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 364,
+        "open_count": 365,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -54488,10 +54600,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "dc9fd454-e1ae-45bd-81d4-7cc1796ca04a",
         "username": "verasuleman5@gmail.com",
         "fullname": "verasuleman5@gmail.com",
-        "target_count": 366,
+        "target_count": 376,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 366,
+        "open_count": 376,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -54642,6 +54754,20 @@ window.PETUGAS_DATA_UMUM = [
         "id": "dbcd011e-e47f-438c-9938-2cec5b3aa9ae",
         "username": "vichilapanda@gmail.com",
         "fullname": "vichilapanda@gmail.com",
+        "target_count": 0,
+        "sync_count": 0,
+        "draft_count": 0,
+        "open_count": 0,
+        "submitted_count": 0,
+        "approved_count": 0,
+        "rejected_count": 0,
+        "regions": [],
+        "totalRegions": 0
+    },
+    {
+        "id": "81657a4d-cfab-45e2-b5c5-f3c1e0e1e8c4",
+        "username": "victor.robert",
+        "fullname": "victor.robert",
         "target_count": 0,
         "sync_count": 0,
         "draft_count": 0,
@@ -54992,10 +55118,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "5f9fac2f-7bc7-4e1c-8da3-e7f72b9879dd",
         "username": "wahyunimansa34@gmail.com",
         "fullname": "wahyunimansa34@gmail.com",
-        "target_count": 376,
+        "target_count": 380,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 376,
+        "open_count": 380,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -55580,10 +55706,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "2721ec50-3b9c-4558-a474-e0e9748e3f2e",
         "username": "winandasyachputri@gmail.com",
         "fullname": "winandasyachputri@gmail.com",
-        "target_count": 286,
+        "target_count": 288,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 286,
+        "open_count": 288,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -56630,10 +56756,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "f5d94967-9a7f-40d9-8234-4840616e1899",
         "username": "ypebaja@gmail.com",
         "fullname": "ypebaja@gmail.com",
-        "target_count": 342,
+        "target_count": 343,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 342,
+        "open_count": 343,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -56910,10 +57036,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "b7643ac4-4165-4c96-87e5-ad36f5e11ba7",
         "username": "yulitamangemba08@gmail.com",
         "fullname": "yulitamangemba08@gmail.com",
-        "target_count": 410,
+        "target_count": 411,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 410,
+        "open_count": 411,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -58086,6 +58212,20 @@ window.PETUGAS_DATA_UMUM = [
         "id": "c1de3b5a-874e-4833-a69f-759d80ba7073",
         "username": "zulkifliusman1997@gmail.com",
         "fullname": "zulkifliusman1997@gmail.com",
+        "target_count": 0,
+        "sync_count": 0,
+        "draft_count": 0,
+        "open_count": 0,
+        "submitted_count": 0,
+        "approved_count": 0,
+        "rejected_count": 0,
+        "regions": [],
+        "totalRegions": 0
+    },
+    {
+        "id": "6fc93eed-f1dc-4ba0-81e9-ea8f626faf53",
+        "username": "zulman",
+        "fullname": "zulman",
         "target_count": 0,
         "sync_count": 0,
         "draft_count": 0,
