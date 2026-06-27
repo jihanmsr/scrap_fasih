@@ -1204,6 +1204,7 @@ body {
 .main-content {
     flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 2rem 3rem;
     display: flex;
     flex-direction: column;
@@ -1338,6 +1339,50 @@ body {
         padding: 1.5rem 1rem;
         overflow-y: visible;
         height: auto;
+    }
+
+    /* Make filter rows wrap on smaller screens */
+    .search-row {
+        flex-wrap: wrap !important;
+    }
+
+    .filter-panel .search-row > div {
+        flex-wrap: wrap !important;
+    }
+
+    /* Ensure region selects don't overflow on mobile */
+    .region-select {
+        min-width: 120px !important;
+        max-width: 100%;
+    }
+
+    /* Compact stats cards stack nicely */
+    .compact-stats {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .main-content {
+        padding: 1rem 0.75rem;
+    }
+
+    .filter-panel {
+        padding: 1rem !important;
+    }
+
+    .region-select {
+        width: 100% !important;
+        min-width: unset !important;
+    }
+
+    .btn-action {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 0.75rem !important;
+    }
+
+    .compact-stats {
+        grid-template-columns: 1fr 1fr !important;
     }
 }
 

@@ -1,25 +1,26 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-06-27T07:42:25.276023+08:00",
+  "updated_at": "2026-06-27T08:21:16.521412+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
-      "total_prelist": 45764,
-      "total_draft": 1456,
-      "total_open": 37890,
-      "total_submitted": 6418,
-      "total_rejected": 617,
-      "total_approved": 2576,
-      "total_submitted_pencacah": 3131,
+      "total_prelist": 45775,
+      "total_draft": 1451,
+      "total_open": 37878,
+      "total_submitted": 6446,
+      "total_rejected": 620,
+      "total_approved": 2587,
+      "total_submitted_pencacah": 3145,
       "total_submitted_respondent": 94,
-      "persentase": 14.02,
-      "today_completed": 61,
+      "persentase": 14.08,
+      "today_completed": 53,
       "yesterday_completed": 51,
       "two_days_ago_completed": 20,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "SUBMITTED BY Pencacah": 17,
-        "APPROVED BY Pengawas": 29,
-        "REJECTED BY Pengawas": 15
+        "SUBMITTED BY Pencacah": 32,
+        "REJECTED BY Pengawas": 9,
+        "APPROVED BY Pengawas": 11,
+        "REVOKED BY Pengawas": 1
       },
       "yesterday_completed_breakdown": {
         "APPROVED BY Pengawas": 7,
@@ -32,14 +33,59 @@ window.IPAS_DATA = {
       },
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_rumah_today": 1,
-      "new_rumah_yesterday": 6,
-      "new_usaha_overall": 70,
-      "new_rumah_overall": 222,
+      "new_rumah_today": 13,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 67,
+      "new_rumah_overall": 225,
       "new_businesses": [
         {
+          "name": "SURIYANTO TUMIA / RENI",
+          "code": "7201040014000700 - SURIYANTO TUMIA / RENI - 11 /  - 0",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TINANGKUNG",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "MOH. PURWANTO / SRI LULAN ADAM",
+          "code": "7201030010000400 - MOH. PURWANTO / SRI LULAN ADAM - 14 /  - 0",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TOTIKUM",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN BELUM JADI",
+          "code": "7201040014001300 - BANGUNAN BELUM JADI - 40 /  - 2. Tidak",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TINANGKUNG",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
           "name": "BANGUNAN KOSONG",
-          "code": "7201040014001300 - BANGUNAN KOSONG - 47 /  - 2. Tidak",
+          "code": "7201062004000200 - BANGUNAN KOSONG - 7 /  - 2. Tidak",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BULAGI UTARA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "DULA / HARPIA",
+          "code": "7201040009000200 - DULA / HARPIA - 11 /  - 1 - 94785 - 1. Ya",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "usaha",
+          "kecName": "TINANGKUNG",
+          "jenis": "Keluarga Usaha"
+        },
+        {
+          "name": "RUMAH KOSONG",
+          "code": "7201040010000800 - RUMAH KOSONG - 20 / ",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
@@ -47,107 +93,98 @@ window.IPAS_DATA = {
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "RAHMADI / ICAK I. UMASUGI",
-          "code": "7201030010000400 - RAHMADI / ICAK I. UMASUGI - 75 /  - 0",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOTIKUM",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "SAUD LIBUKA / HAIRIA",
-          "code": "7201051002000300 - SAUD LIBUKA / HAIRIA - 26 /  - 1",
-          "date": "older",
+          "name": "WARUNG MAKAN (AJUN) (FITRY)",
+          "code": "7201061001000200 - WARUNG MAKAN (AJUN) (FITRY) - 33 /  - 1 - 2. Tidak",
+          "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "PELING TENGAH",
-          "jenis": "Keluarga"
+          "kecName": "BULAGI SELATAN",
+          "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "MUNISFA B. TAMBUAK / ALFARIZI ",
-          "code": "7201050019000100 - MUNISFA B. TAMBUAK / ALFARIZI  - 37 /  - 0",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "LIANG",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "ALJUFRI / MEGA",
-          "code": "7201071009000200 - ALJUFRI / MEGA - 47 /  - 1",
-          "date": "older",
+          "name": "BANGUNAN KOSONG",
+          "code": "7201062004000200 - BANGUNAN KOSONG - 4 /  - 2. Tidak",
+          "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "BUKO SELATAN",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "BANGUNAN KOSONG",
-          "code": "7201030010000400 - BANGUNAN KOSONG - 83 / ",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOTIKUM",
+          "kecName": "BULAGI UTARA",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "BANGUNAN KOSONG",
-          "code": "7201030010000400 - BANGUNAN KOSONG - 68 / ",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOTIKUM",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "BANGUNAN KOSONG",
-          "code": "7201030010000400 - BANGUNAN KOSONG - 82 / ",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOTIKUM",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "BANGUNAN KOSONG",
-          "code": "7201040014001300 - BANGUNAN KOSONG - - /  - 2. Tidak",
-          "date": "yesterday",
+          "name": "RUMAH KOSONG ",
+          "code": "7201040014001300 - RUMAH KOSONG  - 44 /  - 2. Tidak",
+          "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "TINANGKUNG",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "LISMAWATI / ",
-          "code": "7201071009000200 - LISMAWATI /  - 47 /  - 1",
-          "date": "older",
+          "name": "BANGUNAN KOSONG",
+          "code": "7201060003000300 - BANGUNAN KOSONG - 20 /  - 2. Tidak",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BULAGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "SURIYA / ",
+          "code": "7201030013000300 - SURIYA /  - - /  - 0",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "TOTIKUM",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7201062004000200 - BANGUNAN KOSONG - 2 /  - 2. Tidak",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BULAGI UTARA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "SAMSIAR / SAMSIAR",
+          "code": "7201042003001100 - SAMSIAR / SAMSIAR - 35 /  - 0",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TINANGKUNG UTARA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7201071005000200 - BANGUNAN KOSONG - 33 /  - 2. Tidak",
+          "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "BUKO SELATAN",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "BANGUNAN KOSONG ",
-          "code": "7201050019000100 - BANGUNAN KOSONG  - 52 / ",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "LIANG",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "BANGUNAN KOSONG ",
-          "code": "7201050019000100 - BANGUNAN KOSONG  - 51 / ",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
+          "name": "RUMAH KOSONG",
+          "code": "7201051010000400 - RUMAH KOSONG - 3 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "LIANG",
+          "kecName": "PELING TENGAH",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "USMAN NEKE / MULIANI MUHADO",
-          "code": "7201030012000800 - USMAN NEKE / MULIANI MUHADO - 37 /  - 0",
+          "name": "RUMAH KOSONG",
+          "code": "7201051010000400 - RUMAH KOSONG - 7 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "PELING TENGAH",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "AZHAR HUSEIN / ASTUTI",
+          "code": "7201030012000800 - AZHAR HUSEIN / ASTUTI - 25 /  - 1",
           "date": "older",
           "status": "REJECTED BY Pengawas",
           "type": "rumah",
@@ -155,60 +192,33 @@ window.IPAS_DATA = {
           "jenis": "Keluarga"
         },
         {
-          "name": "POLINDES ",
-          "code": "7201051003000300 - POLINDES  - 42 /  - 2. Tidak",
-          "date": "yesterday",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PELING TENGAH",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "NUR HALIMA / ",
-          "code": "7201051003000300 - NUR HALIMA /  - 9 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PELING TENGAH",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "GUDANG",
-          "code": "7201051003000300 - NONBKU - 3",
+          "name": "KEDAI MINUMAN (ARUM)",
+          "code": "7201030012000800 - KEDAI MINUMAN (ARUM) - 30 /  - 0",
           "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "usaha",
-          "kecName": "PELING TENGAH",
-          "jenis": "Bangunan Lain / Usaha"
-        },
-        {
-          "name": "TRI SUCIPTO / NUR INTAN SAFITRI P. TATU",
-          "code": "7201030012000800 - TRI SUCIPTO / NUR INTAN SAFITRI P. TATU - 33 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
           "kecName": "TOTIKUM",
-          "jenis": "Keluarga"
+          "jenis": "Usaha Baru"
         }
       ],
       "kecamatan_list": [
         {
           "kec_name": "TOTIKUM",
           "kec_id": "815d35b4-fc43-43b5-b2ff-afc30f187298",
-          "total_prelist": 4260,
-          "total_draft": 110,
+          "total_prelist": 4261,
+          "total_draft": 111,
           "total_open": 3611,
           "total_submitted": 539,
-          "total_rejected": 35,
-          "total_approved": 286,
-          "total_submitted_pencacah": 213,
+          "total_rejected": 37,
+          "total_approved": 287,
+          "total_submitted_pencacah": 210,
           "total_submitted_respondent": 5,
-          "today_completed": 13,
+          "today_completed": 4,
           "yesterday_completed": 1,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
             "REJECTED BY Pengawas": 3,
-            "APPROVED BY Pengawas": 10
+            "APPROVED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
@@ -217,49 +227,13 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 5,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 2,
-          "new_rumah_overall": 27,
+          "new_rumah_today": 1,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 28,
           "new_businesses": [
             {
-              "name": "RAHMADI / ICAK I. UMASUGI",
-              "code": "7201030010000400 - RAHMADI / ICAK I. UMASUGI - 75 /  - 0",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOTIKUM",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7201030010000400 - BANGUNAN KOSONG - 83 / ",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOTIKUM",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7201030010000400 - BANGUNAN KOSONG - 68 / ",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOTIKUM",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7201030010000400 - BANGUNAN KOSONG - 82 / ",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOTIKUM",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "USMAN NEKE / MULIANI MUHADO",
-              "code": "7201030012000800 - USMAN NEKE / MULIANI MUHADO - 37 /  - 0",
+              "name": "MOH. PURWANTO / SRI LULAN ADAM",
+              "code": "7201030010000400 - MOH. PURWANTO / SRI LULAN ADAM - 14 /  - 0",
               "date": "older",
               "status": "REJECTED BY Pengawas",
               "type": "rumah",
@@ -267,13 +241,31 @@ window.IPAS_DATA = {
               "jenis": "Keluarga"
             },
             {
-              "name": "TRI SUCIPTO / NUR INTAN SAFITRI P. TATU",
-              "code": "7201030012000800 - TRI SUCIPTO / NUR INTAN SAFITRI P. TATU - 33 /  - 0",
+              "name": "SURIYA / ",
+              "code": "7201030013000300 - SURIYA /  - - /  - 0",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "TOTIKUM",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "AZHAR HUSEIN / ASTUTI",
+              "code": "7201030012000800 - AZHAR HUSEIN / ASTUTI - 25 /  - 1",
               "date": "older",
               "status": "REJECTED BY Pengawas",
               "type": "rumah",
               "kecName": "TOTIKUM",
               "jenis": "Keluarga"
+            },
+            {
+              "name": "KEDAI MINUMAN (ARUM)",
+              "code": "7201030012000800 - KEDAI MINUMAN (ARUM) - 30 /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "usaha",
+              "kecName": "TOTIKUM",
+              "jenis": "Usaha Baru"
             }
           ],
           "two_days_ago_is_estimate": false,
@@ -290,12 +282,10 @@ window.IPAS_DATA = {
           "total_approved": 206,
           "total_submitted_pencacah": 118,
           "total_submitted_respondent": 1,
-          "today_completed": 1,
+          "today_completed": 0,
           "yesterday_completed": 3,
           "two_days_ago_completed": 1,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
           },
@@ -315,19 +305,21 @@ window.IPAS_DATA = {
         {
           "kec_name": "TINANGKUNG",
           "kec_id": "6db0d206-23a2-4a19-8e59-8910954bf137",
-          "total_prelist": 7004,
-          "total_draft": 219,
-          "total_open": 5890,
-          "total_submitted": 895,
+          "total_prelist": 7006,
+          "total_draft": 220,
+          "total_open": 5889,
+          "total_submitted": 897,
           "total_rejected": 48,
-          "total_approved": 384,
+          "total_approved": 386,
           "total_submitted_pencacah": 438,
           "total_submitted_respondent": 25,
-          "today_completed": 2,
+          "today_completed": 7,
           "yesterday_completed": 6,
           "two_days_ago_completed": 6,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 4,
+            "REJECTED BY Pengawas": 1,
+            "APPROVED BY Pengawas": 2
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 5,
@@ -339,14 +331,41 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 25,
-          "new_rumah_today": 1,
-          "new_rumah_yesterday": 1,
+          "new_usaha_overall": 23,
+          "new_rumah_today": 3,
+          "new_rumah_yesterday": 0,
           "new_rumah_overall": 52,
           "new_businesses": [
             {
-              "name": "BANGUNAN KOSONG",
-              "code": "7201040014001300 - BANGUNAN KOSONG - 47 /  - 2. Tidak",
+              "name": "SURIYANTO TUMIA / RENI",
+              "code": "7201040014000700 - SURIYANTO TUMIA / RENI - 11 /  - 0",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TINANGKUNG",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "BANGUNAN BELUM JADI",
+              "code": "7201040014001300 - BANGUNAN BELUM JADI - 40 /  - 2. Tidak",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TINANGKUNG",
+              "jenis": "Keluarga (Bukan Usaha)"
+            },
+            {
+              "name": "DULA / HARPIA",
+              "code": "7201040009000200 - DULA / HARPIA - 11 /  - 1 - 94785 - 1. Ya",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "usaha",
+              "kecName": "TINANGKUNG",
+              "jenis": "Keluarga Usaha"
+            },
+            {
+              "name": "RUMAH KOSONG",
+              "code": "7201040010000800 - RUMAH KOSONG - 20 / ",
               "date": "today",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
@@ -354,9 +373,9 @@ window.IPAS_DATA = {
               "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "BANGUNAN KOSONG",
-              "code": "7201040014001300 - BANGUNAN KOSONG - - /  - 2. Tidak",
-              "date": "yesterday",
+              "name": "RUMAH KOSONG ",
+              "code": "7201040014001300 - RUMAH KOSONG  - 44 /  - 2. Tidak",
+              "date": "today",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "TINANGKUNG",
@@ -364,24 +383,24 @@ window.IPAS_DATA = {
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.78
+          "persentase": 12.8
         },
         {
           "kec_name": "TINANGKUNG SELATAN",
           "kec_id": "af7151a7-5b03-4f11-9420-67a0e5755163",
           "total_prelist": 2767,
-          "total_draft": 76,
-          "total_open": 2212,
-          "total_submitted": 479,
+          "total_draft": 74,
+          "total_open": 2211,
+          "total_submitted": 482,
           "total_rejected": 20,
           "total_approved": 54,
-          "total_submitted_pencacah": 404,
+          "total_submitted_pencacah": 407,
           "total_submitted_respondent": 1,
-          "today_completed": 2,
+          "today_completed": 3,
           "yesterday_completed": 2,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -391,30 +410,30 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 5,
+          "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 10,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 17.31
+          "persentase": 17.42
         },
         {
           "kec_name": "TINANGKUNG UTARA",
           "kec_id": "08d262e1-dd9c-40a5-8891-0ea7c60556f1",
-          "total_prelist": 3191,
+          "total_prelist": 3192,
           "total_draft": 96,
-          "total_open": 2656,
-          "total_submitted": 439,
+          "total_open": 2655,
+          "total_submitted": 441,
           "total_rejected": 28,
           "total_approved": 244,
-          "total_submitted_pencacah": 166,
+          "total_submitted_pencacah": 168,
           "total_submitted_respondent": 1,
-          "today_completed": 3,
+          "today_completed": 2,
           "yesterday_completed": 10,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 3
+            "SUBMITTED BY Pencacah": 2
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 10
@@ -425,31 +444,39 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 3,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 12,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "SAMSIAR / SAMSIAR",
+              "code": "7201042003001100 - SAMSIAR / SAMSIAR - 35 /  - 0",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TINANGKUNG UTARA",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 13.76
+          "persentase": 13.82
         },
         {
           "kec_name": "LIANG",
           "kec_id": "6d5f82d4-8d29-4d72-bf4e-ff30bea5556b",
           "total_prelist": 3712,
           "total_draft": 31,
-          "total_open": 3093,
-          "total_submitted": 588,
+          "total_open": 3092,
+          "total_submitted": 589,
           "total_rejected": 49,
-          "total_approved": 95,
+          "total_approved": 96,
           "total_submitted_pencacah": 442,
           "total_submitted_respondent": 2,
-          "today_completed": 15,
+          "today_completed": 1,
           "yesterday_completed": 2,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 9,
-            "REJECTED BY Pengawas": 3,
-            "SUBMITTED BY Pencacah": 3
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -461,58 +488,30 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 2,
+          "new_rumah_yesterday": 0,
           "new_rumah_overall": 15,
-          "new_businesses": [
-            {
-              "name": "MUNISFA B. TAMBUAK / ALFARIZI ",
-              "code": "7201050019000100 - MUNISFA B. TAMBUAK / ALFARIZI  - 37 /  - 0",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LIANG",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "BANGUNAN KOSONG ",
-              "code": "7201050019000100 - BANGUNAN KOSONG  - 52 / ",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LIANG",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN KOSONG ",
-              "code": "7201050019000100 - BANGUNAN KOSONG  - 51 / ",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LIANG",
-              "jenis": "Bangunan/Rumah Kosong"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 15.84
+          "persentase": 15.87
         },
         {
           "kec_name": "PELING TENGAH",
           "kec_id": "10596e9c-277d-4bf7-87df-c3610b508787",
-          "total_prelist": 3612,
+          "total_prelist": 3614,
           "total_draft": 82,
-          "total_open": 2832,
-          "total_submitted": 698,
-          "total_rejected": 90,
-          "total_approved": 306,
-          "total_submitted_pencacah": 300,
+          "total_open": 2828,
+          "total_submitted": 704,
+          "total_rejected": 89,
+          "total_approved": 309,
+          "total_submitted_pencacah": 304,
           "total_submitted_respondent": 2,
-          "today_completed": 16,
+          "today_completed": 13,
           "yesterday_completed": 3,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2,
-            "REJECTED BY Pengawas": 8,
-            "APPROVED BY Pengawas": 6
+            "APPROVED BY Pengawas": 4,
+            "REJECTED BY Pengawas": 3,
+            "SUBMITTED BY Pencacah": 6
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -523,65 +522,49 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 9,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
+          "new_rumah_today": 2,
+          "new_rumah_yesterday": 0,
           "new_rumah_overall": 42,
           "new_businesses": [
             {
-              "name": "SAUD LIBUKA / HAIRIA",
-              "code": "7201051002000300 - SAUD LIBUKA / HAIRIA - 26 /  - 1",
-              "date": "older",
+              "name": "RUMAH KOSONG",
+              "code": "7201051010000400 - RUMAH KOSONG - 3 / ",
+              "date": "today",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "PELING TENGAH",
-              "jenis": "Keluarga"
+              "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "POLINDES ",
-              "code": "7201051003000300 - POLINDES  - 42 /  - 2. Tidak",
-              "date": "yesterday",
-              "status": "REJECTED BY Pengawas",
+              "name": "RUMAH KOSONG",
+              "code": "7201051010000400 - RUMAH KOSONG - 7 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "PELING TENGAH",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "NUR HALIMA / ",
-              "code": "7201051003000300 - NUR HALIMA /  - 9 /  - 0 - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "PELING TENGAH",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "GUDANG",
-              "code": "7201051003000300 - NONBKU - 3",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "usaha",
-              "kecName": "PELING TENGAH",
-              "jenis": "Bangunan Lain / Usaha"
+              "jenis": "Bangunan/Rumah Kosong"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 19.32
+          "persentase": 19.48
         },
         {
           "kec_name": "BULAGI",
           "kec_id": "19a74969-792a-4808-b058-a64a911265c5",
-          "total_prelist": 3760,
+          "total_prelist": 3761,
           "total_draft": 150,
-          "total_open": 3069,
-          "total_submitted": 541,
+          "total_open": 3068,
+          "total_submitted": 543,
           "total_rejected": 34,
           "total_approved": 200,
-          "total_submitted_pencacah": 306,
+          "total_submitted_pencacah": 308,
           "total_submitted_respondent": 1,
-          "today_completed": 0,
+          "today_completed": 3,
           "yesterday_completed": 3,
           "two_days_ago_completed": 2,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 3
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
           },
@@ -592,29 +575,39 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 4,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 14,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7201060003000300 - BANGUNAN KOSONG - 20 /  - 2. Tidak",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BULAGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.39
+          "persentase": 14.44
         },
         {
           "kec_name": "BULAGI SELATAN",
           "kec_id": "c6ba1730-dcc6-4481-8193-8b278f7af2c5",
-          "total_prelist": 3883,
-          "total_draft": 71,
+          "total_prelist": 3884,
+          "total_draft": 68,
           "total_open": 3367,
-          "total_submitted": 445,
+          "total_submitted": 449,
           "total_rejected": 119,
           "total_approved": 154,
-          "total_submitted_pencacah": 171,
+          "total_submitted_pencacah": 175,
           "total_submitted_respondent": 1,
-          "today_completed": 2,
+          "today_completed": 4,
           "yesterday_completed": 4,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 4
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
@@ -625,30 +618,42 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 9,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 11,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "WARUNG MAKAN (AJUN) (FITRY)",
+              "code": "7201061001000200 - WARUNG MAKAN (AJUN) (FITRY) - 33 /  - 1 - 2. Tidak",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BULAGI SELATAN",
+              "jenis": "Keluarga (Bukan Usaha)"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 11.46
+          "persentase": 11.56
         },
         {
           "kec_name": "BULAGI UTARA",
           "kec_id": "c8975e22-e6a1-42e8-bec8-56f1ccc380d8",
-          "total_prelist": 3343,
+          "total_prelist": 3345,
           "total_draft": 109,
           "total_open": 2673,
-          "total_submitted": 561,
-          "total_rejected": 49,
-          "total_approved": 356,
-          "total_submitted_pencacah": 154,
+          "total_submitted": 563,
+          "total_rejected": 51,
+          "total_approved": 360,
+          "total_submitted_pencacah": 150,
           "total_submitted_respondent": 2,
-          "today_completed": 2,
+          "today_completed": 10,
           "yesterday_completed": 0,
           "two_days_ago_completed": 3,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 1,
-            "REJECTED BY Pengawas": 1
+            "SUBMITTED BY Pencacah": 3,
+            "REJECTED BY Pengawas": 2,
+            "APPROVED BY Pengawas": 4,
+            "REVOKED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
@@ -657,29 +662,57 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
-          "new_rumah_today": 0,
+          "new_rumah_today": 3,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 1,
-          "new_businesses": [],
+          "new_rumah_overall": 3,
+          "new_businesses": [
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7201062004000200 - BANGUNAN KOSONG - 7 /  - 2. Tidak",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BULAGI UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7201062004000200 - BANGUNAN KOSONG - 4 /  - 2. Tidak",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BULAGI UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7201062004000200 - BANGUNAN KOSONG - 2 /  - 2. Tidak",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BULAGI UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 16.78
+          "persentase": 16.83
         },
         {
           "kec_name": "BUKO",
           "kec_id": "e82a8220-ba0f-4ffd-87c4-c0f134716259",
           "total_prelist": 3719,
-          "total_draft": 112,
-          "total_open": 3099,
-          "total_submitted": 508,
+          "total_draft": 111,
+          "total_open": 3097,
+          "total_submitted": 511,
           "total_rejected": 34,
           "total_approved": 176,
-          "total_submitted_pencacah": 298,
+          "total_submitted_pencacah": 301,
           "total_submitted_respondent": 0,
-          "today_completed": 2,
+          "today_completed": 3,
           "yesterday_completed": 10,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 10
@@ -695,18 +728,18 @@ window.IPAS_DATA = {
           "new_rumah_overall": 13,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 13.66
+          "persentase": 13.74
         },
         {
           "kec_name": "BUKO SELATAN",
           "kec_id": "3df1a02f-6314-4442-bd6b-17eaa2895e1a",
-          "total_prelist": 3043,
-          "total_draft": 64,
-          "total_open": 2661,
-          "total_submitted": 318,
+          "total_prelist": 3044,
+          "total_draft": 63,
+          "total_open": 2660,
+          "total_submitted": 321,
           "total_rejected": 82,
           "total_approved": 115,
-          "total_submitted_pencacah": 121,
+          "total_submitted_pencacah": 124,
           "total_submitted_respondent": 0,
           "today_completed": 3,
           "yesterday_completed": 7,
@@ -724,54 +757,44 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 2,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 12,
           "new_businesses": [
             {
-              "name": "ALJUFRI / MEGA",
-              "code": "7201071009000200 - ALJUFRI / MEGA - 47 /  - 1",
-              "date": "older",
+              "name": "BANGUNAN KOSONG",
+              "code": "7201071005000200 - BANGUNAN KOSONG - 33 /  - 2. Tidak",
+              "date": "today",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "BUKO SELATAN",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "LISMAWATI / ",
-              "code": "7201071009000200 - LISMAWATI /  - 47 /  - 1",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "BUKO SELATAN",
-              "jenis": "Keluarga"
+              "jenis": "Bangunan/Rumah Kosong"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 10.45
+          "persentase": 10.55
         }
       ]
     },
     {
       "kabupaten": "[02] BANGGAI",
-      "total_prelist": 145001,
-      "total_draft": 3096,
-      "total_open": 121219,
-      "total_submitted": 20684,
-      "total_rejected": 975,
-      "total_approved": 4117,
-      "total_submitted_pencacah": 15588,
+      "total_prelist": 145016,
+      "total_draft": 3087,
+      "total_open": 121190,
+      "total_submitted": 20737,
+      "total_rejected": 985,
+      "total_approved": 4144,
+      "total_submitted_pencacah": 15604,
       "total_submitted_respondent": 4,
-      "persentase": 14.26,
-      "today_completed": 129,
+      "persentase": 14.3,
+      "today_completed": 90,
       "yesterday_completed": 95,
       "two_days_ago_completed": 69,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "SUBMITTED BY Pencacah": 69,
-        "APPROVED BY Pengawas": 45,
-        "REVOKED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 14
+        "SUBMITTED BY Pencacah": 56,
+        "REJECTED BY Pengawas": 11,
+        "APPROVED BY Pengawas": 23
       },
       "yesterday_completed_breakdown": {
         "APPROVED BY Pengawas": 9,
@@ -781,56 +804,101 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 6,
         "SUBMITTED BY Pencacah": 63
       },
-      "new_usaha_today": 0,
+      "new_usaha_today": 3,
       "new_usaha_yesterday": 0,
-      "new_rumah_today": 2,
-      "new_rumah_yesterday": 11,
-      "new_usaha_overall": 17,
-      "new_rumah_overall": 212,
+      "new_rumah_today": 12,
+      "new_rumah_yesterday": 4,
+      "new_usaha_overall": 18,
+      "new_rumah_overall": 220,
       "new_businesses": [
         {
-          "name": "BANGUNAN KOSONG 39",
-          "code": "7202053002000400 - 39 / ",
+          "name": "MURSALAT MAHDI / ALFA JUNE PONTOH",
+          "code": "7202053008000400 - MURSALAT MAHDI /  - 43 /  - 0 - 2. Tidak",
           "date": "yesterday",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "LUWUK SELATAN",
-          "jenis": "Bangunan/Rumah Kosong"
+          "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "RUMAH KOSONG WARNA ABU ABU ",
-          "code": "7202011009000300 - - / ",
-          "date": "older",
-          "status": "REVOKED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "ASURA MALAN / ARIDA MANANGKARI",
-          "code": "7202071002000100 - ASURA MALAN / ARIDA MANANGKARI - - /  - 0",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "MASAMA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "RUDI ABDULAH / RUHAIDA KUPANDE",
-          "code": "7202040006000100 - RUDI ABDULAH / RUHAIDA KUPANDE - 47 /  - 1",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "KINTOM",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "SAMSUL BASRI / ",
-          "code": "7202051004000500 - SAMSUL BASRI /  - 36 /  - 0",
-          "date": "older",
+          "name": "AUDIA / NURFIAKA LALU",
+          "code": "7202051008000300 - AUDIA / NURFIAKA LALU - 30 /  - 1",
+          "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "LUWUK TIMUR",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7202020013000200 - BANGUNAN KOSONG - 7 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BATUI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7202020013000200 - BANGUNAN KOSONG - 5 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BATUI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "JUMINO / LASINI",
+          "code": "7202011005000600 - JUMINO / LASINI - 18 /  - 0 - 2. Tidak",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TOILI BARAT",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "FADAIBAN TERIANUS HAJU / PATRIYANTI LANUSI",
+          "code": "7202080031000200 - FADAIBAN TERIANUS HAJU / PATRIYANTI LANUSI - 23 /  - 1 - 2. Tidak",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BALANTAK",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "SRI MULYANI HAMIN / INTAN SASMITA SABAKA",
+          "code": "7202020013000200 - SRI MULYANI HAMIN / INTAN SASMITA SABAKA - 4 /  - Wrng@gmail.com - 1 - 17425975",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BATUI",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "MAHYUDIN / ARIANI N.TAPA",
+          "code": "7202020013000200 - MAHYUDIN / ARIANI N.TAPA - 3 /  - Ojk@gmail.com - 1 - 17425975",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BATUI",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "MUSLIH B ADING / MOH RIFYAL ZUHDY M ADING",
+          "code": "7202020013000200 - MUSLIH B ADING / MOH RIFYAL ZUHDY M ADING - 1 /  - 0 - 94762 - 1. Ya",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "BATUI",
+          "jenis": "Keluarga Usaha"
+        },
+        {
+          "name": "KOMANG WASTINI / I GEDE ARDIASA",
+          "code": "7202013006000100 - KOMANG WASTINI / I GEDE ARDIASA - 34 /  - 1",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TOILI JAYA",
           "jenis": "Keluarga"
         },
         {
@@ -843,256 +911,139 @@ window.IPAS_DATA = {
           "jenis": "Keluarga"
         },
         {
-          "name": "NYOMAN BUDIANTARA / NI LUH DUNI NINGSIH",
-          "code": "7202011014000601 - NYOMAN BUDIANTARA / NI LUH DUNI NINGSIH - - /  - 0",
-          "date": "yesterday",
+          "name": "BENGKEL GEDE DARMIKA",
+          "code": "7202011012000700 - BENGKEL GEDE DARMIKA - 52 /  - 1",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "TOILI BARAT",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "DENIS LABOLA / KEVIN KURNIAWAN LABOLA",
+          "code": "7202052006000500 - DENIS LABOLA / KEVIN KURNIAWAN LABOLA - 15 /  - 2",
+          "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "TOILI BARAT",
+          "kecName": "LUWUK UTARA",
           "jenis": "Keluarga"
         },
         {
-          "name": "WALET I NYOMAN MADIANIS",
-          "code": "7202011006000300 - WALET I NYOMAN MADIANIS - 22 /  - 1 - 2. Tidak",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "name": "MESJID AL AMIN",
+          "code": "7202051008000300 - MESJID AL AMIN - 20 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "LUWUK TIMUR",
+          "jenis": "Usaha Baru"
         },
         {
-          "name": "KADEK KARIASE / NI LUH MILIYANTI",
-          "code": "7202031013000500 - KADEK KARIASE / NI LUH MILIYANTI - 34 /  - 0 - 2. Tidak",
-          "date": "yesterday",
+          "name": "RISWANDI M. JAO / NURHAYATI TALIBU",
+          "code": "7202020010000200 - RISWANDI M. JAO / NURHAYATI TALIBU - 74 /  - 2705250066034 - 1 - 17425500",
+          "date": "today",
           "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BATUI",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "ABDUL FATAH / ",
+          "code": "7202031010000100 - ABDUL FATAH /  - 37 /  - 0",
+          "date": "today",
+          "status": "DRAFT",
           "type": "rumah",
           "kecName": "NUHON",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "jenis": "Keluarga"
         },
         {
-          "name": "WARUNG PUTU SUDANI",
-          "code": "7202011006000300 - WARUNG PUTU SUDANI - 26 /  - 1 - 2. Tidak",
+          "name": "NYOMAN JANTUK / KETUT CITRA",
+          "code": "7202011014000601 - NYOMAN JANTUK / KETUT CITRA - - /  - 0",
           "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
+          "status": "DRAFT",
           "type": "rumah",
           "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "jenis": "Keluarga"
         },
         {
-          "name": "WALET I WAYAN GINSIR",
-          "code": "7202011006000300 - WALET I WAYAN GINSIR - 21 /  - 1 - 2. Tidak",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
+          "name": "MAKMUR AM / MURNI AZIS",
+          "code": "7202011009000400 - MAKMUR AM / MURNI AZIS - 30 /  - 0",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
           "type": "rumah",
           "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "jenis": "Keluarga"
         },
         {
-          "name": "MUSHOLA",
-          "code": "7202011005000600 - MUSHOLA - 23 /  - 2. Tidak",
+          "name": "ARSIN A BANTIANG / SULISTYANA",
+          "code": "7202011009000400 -  / ARSIN A BANTIANG - - /  - 0",
           "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "jenis": "Keluarga"
         },
         {
-          "name": "RUSLI / RABIAH",
-          "code": "7202011005000600 - RUSLI /  - 14 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
+          "name": " / AAN SASKIA MAJO",
+          "code": "7202071002000100 -  / AAN SASKIA MAJO - - /  - 0",
+          "date": "today",
+          "status": "DRAFT",
           "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "kecName": "MASAMA",
+          "jenis": "Keluarga"
         },
         {
-          "name": "EKO SUPRIONO / YULIANI",
-          "code": "7202011005000600 - EKO SUPRIONO /  - 19 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "SULAMI / AGUS SETIAWAN",
-          "code": "7202011005000600 - SULAMI / AGUS SETIAWAN - 11 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "MUHAIL / SUNARTI",
-          "code": "7202011005000600 - MUHAIL / SUNARTI - 11 /  - 1 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "MUSTARI / ",
-          "code": "7202053004000900 - MUSTARI /  - 28 /  - 1",
+          "name": "YADAPIT NATALAN / YETI MANGALUA",
+          "code": "7202051009000300 - YADAPIT NATALAN / YETI MANGALUA - 15 /  - 1 - 2. Tidak",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "LUWUK SELATAN",
+          "kecName": "LUWUK TIMUR",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "SUGIANTO / RAMINAH",
+          "code": "7202011009000400 - SUGIANTO / RAMINAH - 36 /  - 0",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TOILI BARAT",
           "jenis": "Keluarga"
         },
         {
-          "name": "RUMAH KOSONG",
-          "code": "7202011005000600 - RUMAH KOSONG - 28 /  - 2. Tidak",
+          "name": "RUSLAN KANDAUO / NURMIATI",
+          "code": "7202011009000400 - RUSLAN KANDAUO / NURMIATI - - /  - 0",
           "date": "older",
-          "status": "APPROVED BY Pengawas",
+          "status": "REJECTED BY Pengawas",
           "type": "rumah",
           "kecName": "TOILI BARAT",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "SAHID / SUMIATI",
-          "code": "7202011005000600 - SAHID /  - 10 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "SUNARTO / TOILIYANI",
-          "code": "7202011005000600 - SUNARTO /  - 16 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "ASRIANI MBATONO / ",
-          "code": "7202050025000800 - ASRIANI MBATONO /  - 66 /  - 0",
-          "date": "yesterday",
-          "status": "DRAFT",
-          "type": "rumah",
-          "kecName": "LUWUK",
           "jenis": "Keluarga"
         },
         {
-          "name": "I WAYAN PURWATA / ",
-          "code": "7202013006000100 - I WAYAN PURWATA /  - 38 /  - 1",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI JAYA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "ZULKIFLI / ",
-          "code": "7202010045000800 - ZULKIFLI /  - 25 /  - 1 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT",
-          "type": "rumah",
-          "kecName": "TOILI",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "SAIMAH / ",
-          "code": "7202011005000600 - SAIMAH /  - 17 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "ASRI ADIDI LALINGGARA / SUSI IRAWATI",
-          "code": "7202011005000600 - ASRI ADIDI LALINGGARA / SUSI IRAWATI - 3 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "SUNARSO / SUTINI",
-          "code": "7202011005000600 - SUNARSO / SUTINI - 7 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "RUMAH KOSONG",
-          "code": "7202011005000600 - RUMAH KOSONG - 9 /  - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "WAYAN ARTA / I KETUT SANGKOL",
-          "code": "7202013006000100 - WAYAN ARTA / I KETUT SANGKOL - 42 /  - 2",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI JAYA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "SUKARYADI / SUKATMINAH",
-          "code": "7202011005000600 - SUKARYADI / SUKATMINAH - 12 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "RUMAH KOSONG",
-          "code": "7202011005000600 - RUMAH KOSONG - 8 /  - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI BARAT",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "MUHAMMAD NUR YUNUS / ASNA BAHMID RAHMAN",
-          "code": "7202030043000300 - MUHAMAD NUR YUNUS /  - 4 /  - - - 1",
+          "name": "DELVI DALENYO / APRILIA KIRAYON",
+          "code": "7202031007000100 - DELVI DALENYO / APRILIA KIRAYON - 28 /  - 0",
           "date": "older",
           "status": "DRAFT",
           "type": "rumah",
-          "kecName": "BUNTA",
+          "kecName": "NUHON",
           "jenis": "Keluarga"
         },
         {
-          "name": "IRAWATI LAKORO / ",
-          "code": "7202030043000300 - IRAWATI LAKORO /  - 9 /  - 1",
+          "name": "SARTONO / SUHENA",
+          "code": "7202011009000400 - SARTONO / SUHENA - - /  - 0",
           "date": "older",
-          "status": "DRAFT",
+          "status": "REJECTED BY Pengawas",
           "type": "rumah",
-          "kecName": "BUNTA",
+          "kecName": "TOILI BARAT",
           "jenis": "Keluarga"
         },
         {
-          "name": "I KADEK ERDIANTO / IDA AYU PUTU ARIANI",
-          "code": "7202013006000100 - I KADEK ERDIANTO / IDA AYU PUTU ARIANI - 21 /  - 0",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TOILI JAYA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "BARIYAH / ",
-          "code": "7202011005000600 - BARIYAH /  - 1 /  - 0 - 2. Tidak",
+          "name": "HARIS / SITI FATIMAH",
+          "code": "7202011009000400 - HARIS / SITI FATIMAH - - / ",
           "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "TOILI BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "jenis": "Keluarga"
         }
       ],
       "kecamatan_list": [
@@ -1100,18 +1051,18 @@ window.IPAS_DATA = {
           "kec_name": "TOILI",
           "kec_id": "45bfeee6-ffa4-4015-b66c-277ac2385dd6",
           "total_prelist": 8474,
-          "total_draft": 162,
-          "total_open": 7121,
-          "total_submitted": 1191,
-          "total_rejected": 38,
+          "total_draft": 160,
+          "total_open": 7119,
+          "total_submitted": 1195,
+          "total_rejected": 37,
           "total_approved": 473,
-          "total_submitted_pencacah": 679,
+          "total_submitted_pencacah": 684,
           "total_submitted_respondent": 1,
-          "today_completed": 5,
+          "today_completed": 4,
           "yesterday_completed": 7,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 5
+            "SUBMITTED BY Pencacah": 4
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 7
@@ -1121,42 +1072,32 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 2,
-          "new_rumah_today": 1,
+          "new_usaha_overall": 1,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 11,
-          "new_businesses": [
-            {
-              "name": "ZULKIFLI / ",
-              "code": "7202010045000800 - ZULKIFLI /  - 25 /  - 1 - 2. Tidak",
-              "date": "today",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "TOILI",
-              "jenis": "Keluarga (Bukan Usaha)"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.05
+          "persentase": 14.1
         },
         {
           "kec_name": "TOILI BARAT",
           "kec_id": "e7d2c034-96e9-42b8-8581-9c94e821ccc6",
-          "total_prelist": 8960,
-          "total_draft": 252,
-          "total_open": 7237,
-          "total_submitted": 1471,
-          "total_rejected": 49,
-          "total_approved": 699,
-          "total_submitted_pencacah": 723,
+          "total_prelist": 8962,
+          "total_draft": 249,
+          "total_open": 7233,
+          "total_submitted": 1480,
+          "total_rejected": 54,
+          "total_approved": 705,
+          "total_submitted_pencacah": 721,
           "total_submitted_respondent": 0,
-          "today_completed": 31,
+          "today_completed": 18,
           "yesterday_completed": 15,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 27,
-            "REVOKED BY Pengawas": 1,
-            "SUBMITTED BY Pencacah": 3
+            "SUBMITTED BY Pencacah": 9,
+            "REJECTED BY Pengawas": 5,
+            "APPROVED BY Pengawas": 4
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 7,
@@ -1165,196 +1106,97 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
           },
-          "new_usaha_today": 0,
+          "new_usaha_today": 1,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 4,
-          "new_rumah_overall": 21,
+          "new_usaha_overall": 1,
+          "new_rumah_today": 1,
+          "new_rumah_yesterday": 1,
+          "new_rumah_overall": 29,
           "new_businesses": [
             {
-              "name": "RUMAH KOSONG WARNA ABU ABU ",
-              "code": "7202011009000300 - - / ",
-              "date": "older",
-              "status": "REVOKED BY Pengawas",
+              "name": "JUMINO / LASINI",
+              "code": "7202011005000600 - JUMINO / LASINI - 18 /  - 0 - 2. Tidak",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "TOILI BARAT",
-              "jenis": "Bangunan/Rumah Kosong"
+              "jenis": "Keluarga (Bukan Usaha)"
             },
             {
-              "name": "NYOMAN BUDIANTARA / NI LUH DUNI NINGSIH",
-              "code": "7202011014000601 - NYOMAN BUDIANTARA / NI LUH DUNI NINGSIH - - /  - 0",
-              "date": "yesterday",
+              "name": "BENGKEL GEDE DARMIKA",
+              "code": "7202011012000700 - BENGKEL GEDE DARMIKA - 52 /  - 1",
+              "date": "today",
               "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "TOILI BARAT",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "NYOMAN JANTUK / KETUT CITRA",
+              "code": "7202011014000601 - NYOMAN JANTUK / KETUT CITRA - - /  - 0",
+              "date": "yesterday",
+              "status": "DRAFT",
               "type": "rumah",
               "kecName": "TOILI BARAT",
               "jenis": "Keluarga"
             },
             {
-              "name": "WALET I NYOMAN MADIANIS",
-              "code": "7202011006000300 - WALET I NYOMAN MADIANIS - 22 /  - 1 - 2. Tidak",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
+              "name": "MAKMUR AM / MURNI AZIS",
+              "code": "7202011009000400 - MAKMUR AM / MURNI AZIS - 30 /  - 0",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
               "type": "rumah",
               "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Keluarga"
             },
             {
-              "name": "WARUNG PUTU SUDANI",
-              "code": "7202011006000300 - WARUNG PUTU SUDANI - 26 /  - 1 - 2. Tidak",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "WALET I WAYAN GINSIR",
-              "code": "7202011006000300 - WALET I WAYAN GINSIR - 21 /  - 1 - 2. Tidak",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "MUSHOLA",
-              "code": "7202011005000600 - MUSHOLA - 23 /  - 2. Tidak",
+              "name": "ARSIN A BANTIANG / SULISTYANA",
+              "code": "7202011009000400 -  / ARSIN A BANTIANG - - /  - 0",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Keluarga"
             },
             {
-              "name": "RUSLI / RABIAH",
-              "code": "7202011005000600 - RUSLI /  - 14 /  - 0 - 2. Tidak",
+              "name": "SUGIANTO / RAMINAH",
+              "code": "7202011009000400 - SUGIANTO / RAMINAH - 36 /  - 0",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Keluarga"
             },
             {
-              "name": "EKO SUPRIONO / YULIANI",
-              "code": "7202011005000600 - EKO SUPRIONO /  - 19 /  - 0 - 2. Tidak",
+              "name": "RUSLAN KANDAUO / NURMIATI",
+              "code": "7202011009000400 - RUSLAN KANDAUO / NURMIATI - - /  - 0",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TOILI BARAT",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "SARTONO / SUHENA",
+              "code": "7202011009000400 - SARTONO / SUHENA - - /  - 0",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TOILI BARAT",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "HARIS / SITI FATIMAH",
+              "code": "7202011009000400 - HARIS / SITI FATIMAH - - / ",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "SULAMI / AGUS SETIAWAN",
-              "code": "7202011005000600 - SULAMI / AGUS SETIAWAN - 11 /  - 0 - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "MUHAIL / SUNARTI",
-              "code": "7202011005000600 - MUHAIL / SUNARTI - 11 /  - 1 - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "RUMAH KOSONG",
-              "code": "7202011005000600 - RUMAH KOSONG - 28 /  - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "SAHID / SUMIATI",
-              "code": "7202011005000600 - SAHID /  - 10 /  - 0 - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "SUNARTO / TOILIYANI",
-              "code": "7202011005000600 - SUNARTO /  - 16 /  - 0 - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "SAIMAH / ",
-              "code": "7202011005000600 - SAIMAH /  - 17 /  - 0 - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "ASRI ADIDI LALINGGARA / SUSI IRAWATI",
-              "code": "7202011005000600 - ASRI ADIDI LALINGGARA / SUSI IRAWATI - 3 /  - 0 - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "SUNARSO / SUTINI",
-              "code": "7202011005000600 - SUNARSO / SUTINI - 7 /  - 0 - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "RUMAH KOSONG",
-              "code": "7202011005000600 - RUMAH KOSONG - 9 /  - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "SUKARYADI / SUKATMINAH",
-              "code": "7202011005000600 - SUKARYADI / SUKATMINAH - 12 /  - 0 - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "RUMAH KOSONG",
-              "code": "7202011005000600 - RUMAH KOSONG - 8 /  - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BARIYAH / ",
-              "code": "7202011005000600 - BARIYAH /  - 1 /  - 0 - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 16.42
+          "persentase": 16.51
         },
         {
           "kec_name": "MOILONG",
@@ -1394,15 +1236,16 @@ window.IPAS_DATA = {
           "total_draft": 107,
           "total_open": 4633,
           "total_submitted": 899,
-          "total_rejected": 36,
-          "total_approved": 447,
-          "total_submitted_pencacah": 416,
+          "total_rejected": 37,
+          "total_approved": 450,
+          "total_submitted_pencacah": 412,
           "total_submitted_respondent": 0,
-          "today_completed": 3,
+          "today_completed": 4,
           "yesterday_completed": 4,
           "two_days_ago_completed": 5,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 3
+            "APPROVED BY Pengawas": 3,
+            "REJECTED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 2,
@@ -1416,30 +1259,12 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 3,
-          "new_rumah_overall": 16,
+          "new_rumah_yesterday": 1,
+          "new_rumah_overall": 14,
           "new_businesses": [
             {
-              "name": "I WAYAN PURWATA / ",
-              "code": "7202013006000100 - I WAYAN PURWATA /  - 38 /  - 1",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI JAYA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "WAYAN ARTA / I KETUT SANGKOL",
-              "code": "7202013006000100 - WAYAN ARTA / I KETUT SANGKOL - 42 /  - 2",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TOILI JAYA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "I KADEK ERDIANTO / IDA AYU PUTU ARIANI",
-              "code": "7202013006000100 - I KADEK ERDIANTO / IDA AYU PUTU ARIANI - 21 /  - 0",
+              "name": "KOMANG WASTINI / I GEDE ARDIASA",
+              "code": "7202013006000100 - KOMANG WASTINI / I GEDE ARDIASA - 34 /  - 1",
               "date": "yesterday",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
@@ -1453,20 +1278,20 @@ window.IPAS_DATA = {
         {
           "kec_name": "BATUI",
           "kec_id": "369d51ff-11a4-4e80-b823-79cb11a55392",
-          "total_prelist": 6326,
+          "total_prelist": 6332,
           "total_draft": 61,
-          "total_open": 5598,
-          "total_submitted": 667,
-          "total_rejected": 7,
-          "total_approved": 20,
-          "total_submitted_pencacah": 640,
+          "total_open": 5592,
+          "total_submitted": 679,
+          "total_rejected": 8,
+          "total_approved": 22,
+          "total_submitted_pencacah": 649,
           "total_submitted_respondent": 0,
-          "today_completed": 7,
+          "today_completed": 13,
           "yesterday_completed": 2,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 4,
-            "SUBMITTED BY Pencacah": 3
+            "SUBMITTED BY Pencacah": 12,
+            "REJECTED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -1474,15 +1299,70 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
           },
-          "new_usaha_today": 0,
+          "new_usaha_today": 1,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
+          "new_usaha_overall": 1,
+          "new_rumah_today": 5,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
-          "new_businesses": [],
+          "new_rumah_overall": 5,
+          "new_businesses": [
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7202020013000200 - BANGUNAN KOSONG - 7 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BATUI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7202020013000200 - BANGUNAN KOSONG - 5 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BATUI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "SRI MULYANI HAMIN / INTAN SASMITA SABAKA",
+              "code": "7202020013000200 - SRI MULYANI HAMIN / INTAN SASMITA SABAKA - 4 /  - Wrng@gmail.com - 1 - 17425975",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BATUI",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "MAHYUDIN / ARIANI N.TAPA",
+              "code": "7202020013000200 - MAHYUDIN / ARIANI N.TAPA - 3 /  - Ojk@gmail.com - 1 - 17425975",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BATUI",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "MUSLIH B ADING / MOH RIFYAL ZUHDY M ADING",
+              "code": "7202020013000200 - MUSLIH B ADING / MOH RIFYAL ZUHDY M ADING - 1 /  - 0 - 94762 - 1. Ya",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "BATUI",
+              "jenis": "Keluarga Usaha"
+            },
+            {
+              "name": "RISWANDI M. JAO / NURHAYATI TALIBU",
+              "code": "7202020010000200 - RISWANDI M. JAO / NURHAYATI TALIBU - 74 /  - 2705250066034 - 1 - 17425500",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BATUI",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 10.54
+          "persentase": 10.72
         },
         {
           "kec_name": "BATUI SELATAN",
@@ -1542,46 +1422,27 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 7,
-          "new_businesses": [
-            {
-              "name": "MUHAMMAD NUR YUNUS / ASNA BAHMID RAHMAN",
-              "code": "7202030043000300 - MUHAMAD NUR YUNUS /  - 4 /  - - - 1",
-              "date": "older",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "BUNTA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "IRAWATI LAKORO / ",
-              "code": "7202030043000300 - IRAWATI LAKORO /  - 9 /  - 1",
-              "date": "older",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "BUNTA",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_rumah_overall": 5,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 10.57
         },
         {
           "kec_name": "NUHON",
           "kec_id": "47925987-8247-41b2-ac48-d5bcd780a49d",
-          "total_prelist": 6817,
+          "total_prelist": 6818,
           "total_draft": 108,
-          "total_open": 5707,
-          "total_submitted": 1002,
+          "total_open": 5706,
+          "total_submitted": 1004,
           "total_rejected": 7,
           "total_approved": 63,
-          "total_submitted_pencacah": 932,
+          "total_submitted_pencacah": 934,
           "total_submitted_respondent": 0,
-          "today_completed": 8,
+          "today_completed": 2,
           "yesterday_completed": 0,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 8
+            "SUBMITTED BY Pencacah": 2
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
@@ -1590,39 +1451,48 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 11,
+          "new_rumah_today": 1,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 13,
           "new_businesses": [
             {
-              "name": "KADEK KARIASE / NI LUH MILIYANTI",
-              "code": "7202031013000500 - KADEK KARIASE / NI LUH MILIYANTI - 34 /  - 0 - 2. Tidak",
-              "date": "yesterday",
-              "status": "SUBMITTED BY Pencacah",
+              "name": "ABDUL FATAH / ",
+              "code": "7202031010000100 - ABDUL FATAH /  - 37 /  - 0",
+              "date": "today",
+              "status": "DRAFT",
               "type": "rumah",
               "kecName": "NUHON",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "DELVI DALENYO / APRILIA KIRAYON",
+              "code": "7202031007000100 - DELVI DALENYO / APRILIA KIRAYON - 28 /  - 0",
+              "date": "older",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "NUHON",
+              "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.7
+          "persentase": 14.73
         },
         {
           "kec_name": "SIMPANG RAYA",
           "kec_id": "97f3d4a0-a610-4046-888b-48faf72dcc17",
           "total_prelist": 5652,
-          "total_draft": 76,
-          "total_open": 4473,
-          "total_submitted": 1103,
+          "total_draft": 75,
+          "total_open": 4472,
+          "total_submitted": 1105,
           "total_rejected": 21,
           "total_approved": 17,
-          "total_submitted_pencacah": 1065,
+          "total_submitted_pencacah": 1067,
           "total_submitted_respondent": 0,
-          "today_completed": 15,
+          "today_completed": 3,
           "yesterday_completed": 3,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 15
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -1638,24 +1508,24 @@ window.IPAS_DATA = {
           "new_rumah_overall": 1,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 19.52
+          "persentase": 19.55
         },
         {
           "kec_name": "KINTOM",
           "kec_id": "53621f5b-b1ad-439d-a884-efe0b6bb3b00",
           "total_prelist": 4085,
-          "total_draft": 183,
-          "total_open": 3172,
-          "total_submitted": 730,
+          "total_draft": 182,
+          "total_open": 3171,
+          "total_submitted": 732,
           "total_rejected": 80,
           "total_approved": 177,
-          "total_submitted_pencacah": 473,
+          "total_submitted_pencacah": 475,
           "total_submitted_respondent": 0,
-          "today_completed": 6,
+          "today_completed": 2,
           "yesterday_completed": 0,
           "two_days_ago_completed": 8,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 6
+            "SUBMITTED BY Pencacah": 2
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
@@ -1667,37 +1537,27 @@ window.IPAS_DATA = {
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 4,
-          "new_businesses": [
-            {
-              "name": "RUDI ABDULAH / RUHAIDA KUPANDE",
-              "code": "7202040006000100 - RUDI ABDULAH / RUHAIDA KUPANDE - 47 /  - 1",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "KINTOM",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 17.87
+          "persentase": 17.92
         },
         {
           "kec_name": "LUWUK",
           "kec_id": "197a3800-64a8-410b-be92-0721ce1edd47",
           "total_prelist": 16834,
           "total_draft": 413,
-          "total_open": 14138,
-          "total_submitted": 2283,
-          "total_rejected": 38,
-          "total_approved": 109,
-          "total_submitted_pencacah": 2134,
+          "total_open": 14137,
+          "total_submitted": 2284,
+          "total_rejected": 41,
+          "total_approved": 121,
+          "total_submitted_pencacah": 2120,
           "total_submitted_respondent": 2,
-          "today_completed": 25,
+          "today_completed": 16,
           "yesterday_completed": 5,
           "two_days_ago_completed": 6,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 10,
-            "REJECTED BY Pengawas": 14,
+            "REJECTED BY Pengawas": 3,
+            "APPROVED BY Pengawas": 12,
             "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
@@ -1708,80 +1568,90 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
+          "new_usaha_overall": 2,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 19,
-          "new_businesses": [
-            {
-              "name": "ASRIANI MBATONO / ",
-              "code": "7202050025000800 - ASRIANI MBATONO /  - 66 /  - 0",
-              "date": "yesterday",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "LUWUK",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 18,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 13.56
+          "persentase": 13.57
         },
         {
           "kec_name": "LUWUK TIMUR",
           "kec_id": "0f54399d-bc23-4624-bedf-fe72921745d4",
-          "total_prelist": 4632,
+          "total_prelist": 4635,
           "total_draft": 17,
-          "total_open": 4085,
-          "total_submitted": 530,
+          "total_open": 4080,
+          "total_submitted": 538,
           "total_rejected": 0,
           "total_approved": 18,
-          "total_submitted_pencacah": 512,
+          "total_submitted_pencacah": 520,
           "total_submitted_respondent": 0,
-          "today_completed": 4,
+          "today_completed": 8,
           "yesterday_completed": 8,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4
+            "SUBMITTED BY Pencacah": 8
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 8
           },
           "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
+          "new_usaha_today": 1,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
+          "new_usaha_overall": 1,
+          "new_rumah_today": 2,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 16,
+          "new_rumah_overall": 18,
           "new_businesses": [
             {
-              "name": "SAMSUL BASRI / ",
-              "code": "7202051004000500 - SAMSUL BASRI /  - 36 /  - 0",
-              "date": "older",
+              "name": "AUDIA / NURFIAKA LALU",
+              "code": "7202051008000300 - AUDIA / NURFIAKA LALU - 30 /  - 1",
+              "date": "today",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "LUWUK TIMUR",
               "jenis": "Keluarga"
+            },
+            {
+              "name": "MESJID AL AMIN",
+              "code": "7202051008000300 - MESJID AL AMIN - 20 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "LUWUK TIMUR",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "YADAPIT NATALAN / YETI MANGALUA",
+              "code": "7202051009000300 - YADAPIT NATALAN / YETI MANGALUA - 15 /  - 1 - 2. Tidak",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "LUWUK TIMUR",
+              "jenis": "Keluarga (Bukan Usaha)"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 11.44
+          "persentase": 11.61
         },
         {
           "kec_name": "LUWUK UTARA",
           "kec_id": "08e402a6-e6f9-4efa-b578-4a496126e8d3",
-          "total_prelist": 8643,
+          "total_prelist": 8644,
           "total_draft": 178,
           "total_open": 7317,
-          "total_submitted": 1148,
+          "total_submitted": 1149,
           "total_rejected": 172,
           "total_approved": 358,
-          "total_submitted_pencacah": 618,
+          "total_submitted_pencacah": 619,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 1,
           "yesterday_completed": 11,
           "two_days_ago_completed": 8,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 1
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 11
           },
@@ -1791,29 +1661,39 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 28,
-          "new_businesses": [],
+          "new_rumah_overall": 29,
+          "new_businesses": [
+            {
+              "name": "DENIS LABOLA / KEVIN KURNIAWAN LABOLA",
+              "code": "7202052006000500 - DENIS LABOLA / KEVIN KURNIAWAN LABOLA - 15 /  - 2",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "LUWUK UTARA",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 13.28
+          "persentase": 13.29
         },
         {
           "kec_name": "LUWUK SELATAN",
           "kec_id": "0b69db88-e899-475e-81bd-94f54622baa4",
           "total_prelist": 12186,
-          "total_draft": 299,
-          "total_open": 10625,
-          "total_submitted": 1262,
+          "total_draft": 298,
+          "total_open": 10623,
+          "total_submitted": 1265,
           "total_rejected": 54,
           "total_approved": 356,
-          "total_submitted_pencacah": 851,
+          "total_submitted_pencacah": 854,
           "total_submitted_respondent": 1,
-          "today_completed": 4,
+          "today_completed": 3,
           "yesterday_completed": 4,
           "two_days_ago_completed": 9,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
@@ -1824,18 +1704,18 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 2,
-          "new_rumah_today": 1,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 2,
-          "new_rumah_overall": 13,
+          "new_rumah_overall": 14,
           "new_businesses": [
             {
-              "name": "BANGUNAN KOSONG 39",
-              "code": "7202053002000400 - 39 / ",
+              "name": "MURSALAT MAHDI / ALFA JUNE PONTOH",
+              "code": "7202053008000400 - MURSALAT MAHDI /  - 43 /  - 0 - 2. Tidak",
               "date": "yesterday",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "LUWUK SELATAN",
-              "jenis": "Bangunan/Rumah Kosong"
+              "jenis": "Keluarga (Bukan Usaha)"
             },
             {
               "name": "JEANE ISKANDAR / RAYNER JONATHAN KURNIAWAN",
@@ -1845,36 +1725,29 @@ window.IPAS_DATA = {
               "type": "rumah",
               "kecName": "LUWUK SELATAN",
               "jenis": "Keluarga"
-            },
-            {
-              "name": "MUSTARI / ",
-              "code": "7202053004000900 - MUSTARI /  - 28 /  - 1",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "LUWUK SELATAN",
-              "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 10.36
+          "persentase": 10.38
         },
         {
           "kec_name": "NAMBO",
           "kec_id": "978f2d5d-ca81-4b14-8e41-41b629e2c873",
           "total_prelist": 4064,
           "total_draft": 2,
-          "total_open": 3293,
-          "total_submitted": 769,
-          "total_rejected": 4,
-          "total_approved": 44,
-          "total_submitted_pencacah": 721,
+          "total_open": 3292,
+          "total_submitted": 770,
+          "total_rejected": 5,
+          "total_approved": 48,
+          "total_submitted_pencacah": 717,
           "total_submitted_respondent": 0,
-          "today_completed": 16,
+          "today_completed": 6,
           "yesterday_completed": 0,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 16
+            "REJECTED BY Pengawas": 1,
+            "APPROVED BY Pengawas": 4,
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {},
@@ -1886,24 +1759,24 @@ window.IPAS_DATA = {
           "new_rumah_overall": 3,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 18.92
+          "persentase": 18.95
         },
         {
           "kec_name": "PAGIMANA",
           "kec_id": "1158aabf-3710-4ec4-8ab3-0021c2a7b48d",
           "total_prelist": 8633,
-          "total_draft": 213,
-          "total_open": 7494,
-          "total_submitted": 926,
+          "total_draft": 212,
+          "total_open": 7491,
+          "total_submitted": 930,
           "total_rejected": 22,
           "total_approved": 36,
-          "total_submitted_pencacah": 868,
+          "total_submitted_pencacah": 872,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 6,
           "yesterday_completed": 2,
           "two_days_ago_completed": 5,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
+            "SUBMITTED BY Pencacah": 6
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -1919,18 +1792,18 @@ window.IPAS_DATA = {
           "new_rumah_overall": 3,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 10.73
+          "persentase": 10.77
         },
         {
           "kec_name": "BUALEMO",
           "kec_id": "1679ee85-fe8d-448c-a282-ced46abd8926",
           "total_prelist": 6485,
-          "total_draft": 243,
+          "total_draft": 242,
           "total_open": 5138,
-          "total_submitted": 1104,
+          "total_submitted": 1105,
           "total_rejected": 185,
           "total_approved": 178,
-          "total_submitted_pencacah": 741,
+          "total_submitted_pencacah": 742,
           "total_submitted_respondent": 0,
           "today_completed": 1,
           "yesterday_completed": 3,
@@ -1949,10 +1822,10 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 15,
+          "new_rumah_overall": 14,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 17.02
+          "persentase": 17.04
         },
         {
           "kec_name": "LOBU",
@@ -1988,11 +1861,11 @@ window.IPAS_DATA = {
           "kec_id": "3d02a578-d341-416f-a926-7eac46e007e1",
           "total_prelist": 2351,
           "total_draft": 6,
-          "total_open": 1864,
-          "total_submitted": 481,
+          "total_open": 1863,
+          "total_submitted": 482,
           "total_rejected": 4,
           "total_approved": 52,
-          "total_submitted_pencacah": 425,
+          "total_submitted_pencacah": 426,
           "total_submitted_respondent": 0,
           "today_completed": 1,
           "yesterday_completed": 1,
@@ -2011,28 +1884,26 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 2,
+          "new_rumah_overall": 1,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 20.46
+          "persentase": 20.5
         },
         {
           "kec_name": "MASAMA",
           "kec_id": "7995aa5d-7d7e-4c8c-9abc-51c995bb2d5b",
-          "total_prelist": 4764,
-          "total_draft": 106,
+          "total_prelist": 4765,
+          "total_draft": 107,
           "total_open": 4073,
           "total_submitted": 585,
           "total_rejected": 7,
           "total_approved": 154,
           "total_submitted_pencacah": 424,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 0,
           "yesterday_completed": 0,
           "two_days_ago_completed": 1,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
@@ -2040,15 +1911,15 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 8,
           "new_businesses": [
             {
-              "name": "ASURA MALAN / ARIDA MANANGKARI",
-              "code": "7202071002000100 - ASURA MALAN / ARIDA MANANGKARI - - /  - 0",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
+              "name": " / AAN SASKIA MAJO",
+              "code": "7202071002000100 -  / AAN SASKIA MAJO - - /  - 0",
+              "date": "today",
+              "status": "DRAFT",
               "type": "rumah",
               "kecName": "MASAMA",
               "jenis": "Keluarga"
@@ -2081,7 +1952,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 6,
+          "new_rumah_overall": 5,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 21.5
@@ -2089,18 +1960,20 @@ window.IPAS_DATA = {
         {
           "kec_name": "BALANTAK",
           "kec_id": "450c4990-c8a1-4d8b-8b87-a655c6f5c2b8",
-          "total_prelist": 2529,
+          "total_prelist": 2530,
           "total_draft": 0,
           "total_open": 1701,
-          "total_submitted": 828,
+          "total_submitted": 829,
           "total_rejected": 60,
           "total_approved": 250,
-          "total_submitted_pencacah": 518,
+          "total_submitted_pencacah": 519,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 1,
           "yesterday_completed": 5,
           "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 1
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 5
           },
@@ -2108,12 +1981,22 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 4,
-          "new_businesses": [],
+          "new_rumah_overall": 3,
+          "new_businesses": [
+            {
+              "name": "FADAIBAN TERIANUS HAJU / PATRIYANTI LANUSI",
+              "code": "7202080031000200 - FADAIBAN TERIANUS HAJU / PATRIYANTI LANUSI - 23 /  - 1 - 2. Tidak",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BALANTAK",
+              "jenis": "Keluarga (Bukan Usaha)"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 32.74
+          "persentase": 32.77
         },
         {
           "kec_name": "BALANTAK SELATAN",
@@ -2151,17 +2034,17 @@ window.IPAS_DATA = {
           "kec_id": "f120d797-3b84-49b4-a302-f6d163dc2a7b",
           "total_prelist": 1716,
           "total_draft": 0,
-          "total_open": 1322,
-          "total_submitted": 394,
+          "total_open": 1321,
+          "total_submitted": 395,
           "total_rejected": 8,
           "total_approved": 93,
-          "total_submitted_pencacah": 293,
+          "total_submitted_pencacah": 294,
           "total_submitted_respondent": 0,
           "today_completed": 1,
           "yesterday_completed": 1,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 1
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
@@ -2174,32 +2057,31 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 17,
+          "new_rumah_overall": 15,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 22.96
+          "persentase": 23.02
         }
       ]
     },
     {
       "kabupaten": "[03] MOROWALI",
-      "total_prelist": 50987,
-      "total_draft": 1494,
-      "total_open": 44470,
-      "total_submitted": 5022,
-      "total_rejected": 413,
-      "total_approved": 1375,
-      "total_submitted_pencacah": 3234,
+      "total_prelist": 50993,
+      "total_draft": 1493,
+      "total_open": 44460,
+      "total_submitted": 5039,
+      "total_rejected": 408,
+      "total_approved": 1382,
+      "total_submitted_pencacah": 3249,
       "total_submitted_respondent": 0,
-      "persentase": 9.85,
-      "today_completed": 58,
+      "persentase": 9.88,
+      "today_completed": 40,
       "yesterday_completed": 14,
       "two_days_ago_completed": 52,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "REJECTED BY Pengawas": 45,
-        "SUBMITTED BY Pencacah": 5,
-        "APPROVED BY Pengawas": 8
+        "SUBMITTED BY Pencacah": 33,
+        "APPROVED BY Pengawas": 7
       },
       "yesterday_completed_breakdown": {
         "APPROVED BY Pengawas": 3,
@@ -2212,232 +2094,124 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 3,
         "SUBMITTED BY Pencacah": 9
       },
-      "new_usaha_today": 0,
+      "new_usaha_today": 1,
       "new_usaha_yesterday": 0,
-      "new_rumah_today": 0,
-      "new_rumah_yesterday": 6,
-      "new_usaha_overall": 64,
+      "new_rumah_today": 5,
+      "new_rumah_yesterday": 1,
+      "new_usaha_overall": 63,
       "new_rumah_overall": 438,
       "new_businesses": [
         {
-          "name": "MAPPIGAU / ASWAR",
-          "code": "7203021006001515 - MAPPIGAU / ASWAR - 9 /  - 0 - 2. Tidak",
+          "name": "SATTUO / CAYA",
+          "code": "7203040006000100 - SATTUO / CAYA - 10 /  - 0",
           "date": "older",
-          "status": "REJECTED BY Pengawas",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "kecName": "BUNGKU BARAT",
+          "jenis": "Keluarga"
         },
         {
-          "name": "WAHYUDI  / HAJRAH ",
-          "code": "7203021006001515 - WAHYUDI  / HAJRAH  - 18 /  - 0 - 2. Tidak",
+          "name": "ALFUT SAWINA / MUSNIATI",
+          "code": "7203031005000100 - ALFUT SAWINA /  - 53 /  - 0",
           "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "HARISTAN HASAN / ",
-          "code": "7203030025000201 - HARISTAN HASAN /  - - /  - 0 - 2. Tidak",
-          "date": "yesterday",
           "status": "DRAFT",
           "type": "rumah",
-          "kecName": "BUNGKU TENGAH",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "ARYSKA AMINAH ARYS / ",
-          "code": "7203021006001514 - ARYSKA AMINAH ARYS /  - 42 /  - 1",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
+          "kecName": "BUNGKU TIMUR",
           "jenis": "Keluarga"
         },
         {
-          "name": "ABDUL ARYS / HASNAH ",
-          "code": "7203021006001514 - ABDUL ARYS / HASNAH  - 42 /  - 0",
+          "name": "MASJID ",
+          "code": "7203031004000500 - MASJID  - 35 /  - 94973",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "BUNGKU TIMUR",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "RUMAH KOSONG 3",
+          "code": "7203020006000100 - RUMAH KOSONG 3 - 55 /  - 2. Tidak",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BUNGKU SELATAN",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7203021006001514 - BANGUNAN KOSONG - 92 / ",
           "date": "older",
-          "status": "REJECTED BY Pengawas",
+          "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "BAHODOPI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7203021006001514 - BANGUNAN KOSONG - 96 / ",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "BAHODOPI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "NALFIN LAMALONGI / ",
+          "code": "7203040002000300 - NALFIN LAMALONGI /  - 54 /  - 0",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BUNGKU BARAT",
           "jenis": "Keluarga"
         },
         {
-          "name": "NOVIAL / ",
-          "code": "7203021006001514 - NOVIAL /  - 40 /  - 0",
+          "name": "ARIF / RUHAEMA ",
+          "code": "7203040006000100 - ARIF / RUHAEMA  - 19 /  - 0",
           "date": "older",
-          "status": "REJECTED BY Pengawas",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "BAHODOPI",
+          "kecName": "BUNGKU BARAT",
           "jenis": "Keluarga"
         },
         {
-          "name": "MONALISA / ",
-          "code": "7203021006001514 - MONALISA /  - 39 /  - 0",
+          "name": "OKTOVAN TIPAK / ",
+          "code": "7203021008000611 - DUSUN  /  - - /  - 0",
           "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "SUDIRMAN / ",
-          "code": "7203021006001514 - SUDIRMAN /  - 36 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "LIMPAH   / NURLIANTI",
-          "code": "7203021006001514 - LIMPAH   / NURLIANTI - 32 /  - 1",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "ASDIN PASENO / ",
-          "code": "7203021006001514 - ASDIN PASENO /  - 34 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "SAHARUDDIN / ",
-          "code": "7203021006001514 - SAHARUDDIN /  - 31 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "INTAN / ",
-          "code": "7203021006001514 - INTAN /  - 10 / ",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "HERI TANGKE LIMBONG MADAO / ",
-          "code": "7203021006001514 - HERI TANGKE LIMBONG MADAO /  - 30 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "YOSEP BORO / DIONISIUS",
-          "code": "7203021006001514 - YOSEP BORO / DIONISIUS - 29 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "JAMALI SANGA / RASNI",
-          "code": "7203021006001514 - JAMALI SANGA / RASNI - 28 /  - 2",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "SRI BATA / JEFRI PARUBAK",
-          "code": "7203021006001514 - SRI BATA / JEFRI PARUBAK - 27 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "JUNAEDI SAMPE MATASIK  / ",
-          "code": "7203021006001514 - JUNAEDI SAMPE MATASIK  /  - 26 /  - 2",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "CHRISEN HADITA / ",
-          "code": "7203021006001514 - CHRISEN HADITA /  - 23 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "TIDAK MEMBERIKAN INFORMASI / ",
-          "code": "7203021006001514 - TIDAK MEMBERIKAN INFORMASI /  - 22 / ",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "MUHAMMAD ARIS FEBRIAN / ",
-          "code": "7203021006001514 - MUHAMMAD ARIS FEBRIAN /  - 17 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "ANDY PUTRA JAYUSMAN / ANGGUN KONA'AH",
-          "code": "7203021006001514 - ANDY PUTRA JAYUSMAN / ANGGUN KONA'AH - 12 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "MINCE SEMEN / DEI LESTARI",
-          "code": "7203021006001514 - MINCE SEMEN / DEI LESTARI - 11 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "JUFRI / ",
-          "code": "7203021006001514 - JUFRI /  - 9 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "MOHAMAD ERWIN / LIYENSI PANDE",
-          "code": "7203021006001514 - MOHAMAD ERWIN / LIYENSI PANDE - 8 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
+          "status": "DRAFT",
           "type": "rumah",
           "kecName": "BAHODOPI",
           "jenis": "Keluarga"
         },
         {
           "name": "BANGUNAN KOSONG",
-          "code": "7203021006001514 - BANGUNAN KOSONG - 4 / ",
+          "code": "7203031004000500 - BANGUNAN KOSONG - 36 /  - 94973",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BUNGKU TIMUR",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7203040006000600 - BANGUNAN KOSONG - - / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "BUNGKU BARAT",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "ACANG / PUTRI",
+          "code": "7203021008000611 - ACANG / PUTRI - 24 /  - 0",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BAHODOPI",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7203021006001514 - BANGUNAN KOSONG - 63 / ",
           "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
@@ -2445,53 +2219,17 @@ window.IPAS_DATA = {
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "BAHARUDDIN / RABIYATUL ADAWIYAH",
-          "code": "7203021006001514 - BAHARUDDIN / RABIYATUL ADAWIYAH - 7 /  - 1",
+          "name": "BANGUNAN KOSONG",
+          "code": "7203021006001514 - BANGUNAN KOSONG - 56 / ",
           "date": "older",
-          "status": "REJECTED BY Pengawas",
+          "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "SAMBRI   / MERDA KALA PADANG",
-          "code": "7203021006001514 - SAMBRI   / MERDA KALA PADANG - 6 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "BANGUN KOSONG",
-          "code": "7203040006000600 - BANGUN KOSONG - - / ",
-          "date": "yesterday",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BUNGKU BARAT",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "STANIS LAUS ALEX / JULIANTI YORAN",
-          "code": "7203021006001514 - STANIS LAUS ALEX / JULIANTI YORAN - 5 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "ISWANDI SAPUTRA  / WILINAR",
-          "code": "7203021006001514 - ISWANDI SAPUTRA  / WILINAR - 3 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "KIOS H IRMAN",
-          "code": "7203021006001514 - KIOS H IRMAN - 14 /  - 1",
+          "name": "TIDAK DITEMUKAN",
+          "code": "7203021006001514 - TIDAK DITEMUKAN - 69 / ",
           "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "usaha",
@@ -2499,220 +2237,22 @@ window.IPAS_DATA = {
           "jenis": "Usaha Baru"
         },
         {
-          "name": "TRIMO SUMADI / ",
-          "code": "7203040006000100 - TRIMO SUMADI /  - - /  - 0",
+          "name": "BANGUNAN KOSONG",
+          "code": "7203021006001514 - BANGUNAN KOSONG - 53 / ",
           "date": "older",
-          "status": "DRAFT",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "BAHODOPI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "FIKRAN M. LAWAU / ",
+          "code": "7203040002000300 - FIKRAN M. LAWAU /  - 54 /  - 0",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "BUNGKU BARAT",
           "jenis": "Keluarga"
-        },
-        {
-          "name": "RISWAN / PUTRI SAKINA IMANSARI",
-          "code": "7203021006001514 - RISWAN / PUTRI SAKINA IMANSARI - 2 /  - putrisakina19999@gmail.com - 1",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "RAIMON SALUA / ",
-          "code": "7203021006001514 - RAIMON SALUA /  - 1 /  - 0 - 94974 - 2. Tidak",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "RAHMAT / ",
-          "code": "7203021006001505 - RAHMAT /  - 2 /  - 0 - 2. Tidak",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "BAYU SAPUTRA LABASO / ",
-          "code": "7203021006001505 - BAYU SAPUTRA LABASO /  - 1 /  - 0 - 2. Tidak",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "SYAHRUL / ",
-          "code": "7203021006001504 - SYAHRUL /  - 26 /  - 0",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "MUH. REFKY ARMIN / ",
-          "code": "7203021006001504 - MUH. REFKY ARMIN /  - 27 /  - 0",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "HERMAN / ",
-          "code": "7203021006001504 - HERMAN /  - 25 /  - 1",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "KAMAR KOST 10",
-          "code": "7203021006001504 - KAMAR KOST 10 - 20 / ",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "usaha",
-          "kecName": "BAHODOPI",
-          "jenis": "Usaha Baru"
-        },
-        {
-          "name": "AFDAL / ",
-          "code": "7203021006001504 - AFDAL /  - 18 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "IRHAM / ",
-          "code": "7203021006001504 - IRHAM /  - 14 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "BUSRAN JUNAIN / ",
-          "code": "7203021006001504 - BUSRAN JUNAIN /  - 1 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "ABDUL JALIL LAMARINGGI / ",
-          "code": "7203021006001504 - ABDUL JALIL LAMARINGGI /  - 13 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "RISALDI / ",
-          "code": "7203021006001504 - RISALDI /  - 12 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "RUSDI / ",
-          "code": "7203021006001504 - RUSDI /  - 12 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "WANDI / ",
-          "code": "7203021006001504 - WANDI /  - 10 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "JECKY SANTOPORA / ",
-          "code": "7203021006001504 - JECKY SANTOPORA /  - 11 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "ABDI SANJAYA AS, S / ",
-          "code": "7203021006001504 - ABDI SANJAYA AS, S /  - 2 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "RISMAN / HAMDANA",
-          "code": "7203021006001504 - RISMAN / HAMDANA - 7 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "LA ODE MUHAMMAD ANDI RIFAL / NINA MITA SARI",
-          "code": "7203021006001504 - LA ODE MUHAMMAD ANDI RIFAL / NINA MITA SARI - 6 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "APRIAWAN HALLE / ",
-          "code": "7203021006001504 - APRIAWAN HALLE /  - 5 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "MUHAMMAD RASYID HAMSARI / ",
-          "code": "7203021006001504 - MUHAMMAD RASYID HAMSARI /  - 4 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "IDUL AKBAR / ",
-          "code": "7203021006001504 - IDUL AKBAR /  - 3 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "KIOS VHIFA",
-          "code": "7203021006001504 - KIOS VHIFA - 1 /  - 94974 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAHODOPI",
-          "jenis": "Keluarga (Bukan Usaha)"
         }
       ],
       "kecamatan_list": [
@@ -2773,19 +2313,19 @@ window.IPAS_DATA = {
         {
           "kec_name": "BUNGKU SELATAN",
           "kec_id": "bd8c5caf-274f-48a4-8237-3e59f41d2b09",
-          "total_prelist": 3355,
+          "total_prelist": 3356,
           "total_draft": 52,
-          "total_open": 2840,
-          "total_submitted": 463,
+          "total_open": 2835,
+          "total_submitted": 469,
           "total_rejected": 62,
           "total_approved": 190,
-          "total_submitted_pencacah": 211,
+          "total_submitted_pencacah": 217,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 14,
           "yesterday_completed": 1,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
+            "SUBMITTED BY Pencacah": 14
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 1
@@ -2794,30 +2334,40 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 4,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 73,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "RUMAH KOSONG 3",
+              "code": "7203020006000100 - RUMAH KOSONG 3 - 55 /  - 2. Tidak",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BUNGKU SELATAN",
+              "jenis": "Bangunan/Rumah Kosong"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 13.8
+          "persentase": 13.97
         },
         {
           "kec_name": "BAHODOPI",
           "kec_id": "ef6b143e-383e-4275-8d76-cfd7f124d160",
-          "total_prelist": 11526,
+          "total_prelist": 11527,
           "total_draft": 329,
           "total_open": 10144,
-          "total_submitted": 1053,
-          "total_rejected": 142,
-          "total_approved": 43,
-          "total_submitted_pencacah": 868,
+          "total_submitted": 1054,
+          "total_rejected": 144,
+          "total_approved": 49,
+          "total_submitted_pencacah": 861,
           "total_submitted_respondent": 0,
-          "today_completed": 52,
+          "today_completed": 7,
           "yesterday_completed": 0,
           "two_days_ago_completed": 3,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 44,
-            "APPROVED BY Pengawas": 8
+            "APPROVED BY Pengawas": 6,
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
@@ -2827,220 +2377,13 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 21,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 4,
-          "new_rumah_overall": 156,
+          "new_rumah_today": 1,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 163,
           "new_businesses": [
             {
-              "name": "MAPPIGAU / ASWAR",
-              "code": "7203021006001515 - MAPPIGAU / ASWAR - 9 /  - 0 - 2. Tidak",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "WAHYUDI  / HAJRAH ",
-              "code": "7203021006001515 - WAHYUDI  / HAJRAH  - 18 /  - 0 - 2. Tidak",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "ARYSKA AMINAH ARYS / ",
-              "code": "7203021006001514 - ARYSKA AMINAH ARYS /  - 42 /  - 1",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "ABDUL ARYS / HASNAH ",
-              "code": "7203021006001514 - ABDUL ARYS / HASNAH  - 42 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "NOVIAL / ",
-              "code": "7203021006001514 - NOVIAL /  - 40 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "MONALISA / ",
-              "code": "7203021006001514 - MONALISA /  - 39 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "SUDIRMAN / ",
-              "code": "7203021006001514 - SUDIRMAN /  - 36 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "LIMPAH   / NURLIANTI",
-              "code": "7203021006001514 - LIMPAH   / NURLIANTI - 32 /  - 1",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "ASDIN PASENO / ",
-              "code": "7203021006001514 - ASDIN PASENO /  - 34 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "SAHARUDDIN / ",
-              "code": "7203021006001514 - SAHARUDDIN /  - 31 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "INTAN / ",
-              "code": "7203021006001514 - INTAN /  - 10 / ",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "HERI TANGKE LIMBONG MADAO / ",
-              "code": "7203021006001514 - HERI TANGKE LIMBONG MADAO /  - 30 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "YOSEP BORO / DIONISIUS",
-              "code": "7203021006001514 - YOSEP BORO / DIONISIUS - 29 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "JAMALI SANGA / RASNI",
-              "code": "7203021006001514 - JAMALI SANGA / RASNI - 28 /  - 2",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "SRI BATA / JEFRI PARUBAK",
-              "code": "7203021006001514 - SRI BATA / JEFRI PARUBAK - 27 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "JUNAEDI SAMPE MATASIK  / ",
-              "code": "7203021006001514 - JUNAEDI SAMPE MATASIK  /  - 26 /  - 2",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "CHRISEN HADITA / ",
-              "code": "7203021006001514 - CHRISEN HADITA /  - 23 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "TIDAK MEMBERIKAN INFORMASI / ",
-              "code": "7203021006001514 - TIDAK MEMBERIKAN INFORMASI /  - 22 / ",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "MUHAMMAD ARIS FEBRIAN / ",
-              "code": "7203021006001514 - MUHAMMAD ARIS FEBRIAN /  - 17 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "ANDY PUTRA JAYUSMAN / ANGGUN KONA'AH",
-              "code": "7203021006001514 - ANDY PUTRA JAYUSMAN / ANGGUN KONA'AH - 12 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "MINCE SEMEN / DEI LESTARI",
-              "code": "7203021006001514 - MINCE SEMEN / DEI LESTARI - 11 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "JUFRI / ",
-              "code": "7203021006001514 - JUFRI /  - 9 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "MOHAMAD ERWIN / LIYENSI PANDE",
-              "code": "7203021006001514 - MOHAMAD ERWIN / LIYENSI PANDE - 8 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
               "name": "BANGUNAN KOSONG",
-              "code": "7203021006001514 - BANGUNAN KOSONG - 4 / ",
+              "code": "7203021006001514 - BANGUNAN KOSONG - 92 / ",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
@@ -3048,44 +2391,53 @@ window.IPAS_DATA = {
               "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "BAHARUDDIN / RABIYATUL ADAWIYAH",
-              "code": "7203021006001514 - BAHARUDDIN / RABIYATUL ADAWIYAH - 7 /  - 1",
+              "name": "BANGUNAN KOSONG",
+              "code": "7203021006001514 - BANGUNAN KOSONG - 96 / ",
               "date": "older",
-              "status": "REJECTED BY Pengawas",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "BAHODOPI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "OKTOVAN TIPAK / ",
+              "code": "7203021008000611 - DUSUN  /  - - /  - 0",
+              "date": "older",
+              "status": "DRAFT",
               "type": "rumah",
               "kecName": "BAHODOPI",
               "jenis": "Keluarga"
             },
             {
-              "name": "SAMBRI   / MERDA KALA PADANG",
-              "code": "7203021006001514 - SAMBRI   / MERDA KALA PADANG - 6 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
+              "name": "ACANG / PUTRI",
+              "code": "7203021008000611 - ACANG / PUTRI - 24 /  - 0",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "BAHODOPI",
               "jenis": "Keluarga"
             },
             {
-              "name": "STANIS LAUS ALEX / JULIANTI YORAN",
-              "code": "7203021006001514 - STANIS LAUS ALEX / JULIANTI YORAN - 5 /  - 0",
+              "name": "BANGUNAN KOSONG",
+              "code": "7203021006001514 - BANGUNAN KOSONG - 63 / ",
               "date": "older",
-              "status": "REJECTED BY Pengawas",
+              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
+              "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "ISWANDI SAPUTRA  / WILINAR",
-              "code": "7203021006001514 - ISWANDI SAPUTRA  / WILINAR - 3 /  - 0",
+              "name": "BANGUNAN KOSONG",
+              "code": "7203021006001514 - BANGUNAN KOSONG - 56 / ",
               "date": "older",
-              "status": "REJECTED BY Pengawas",
+              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
+              "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "KIOS H IRMAN",
-              "code": "7203021006001514 - KIOS H IRMAN - 14 /  - 1",
+              "name": "TIDAK DITEMUKAN",
+              "code": "7203021006001514 - TIDAK DITEMUKAN - 69 / ",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "usaha",
@@ -3093,211 +2445,13 @@ window.IPAS_DATA = {
               "jenis": "Usaha Baru"
             },
             {
-              "name": "RISWAN / PUTRI SAKINA IMANSARI",
-              "code": "7203021006001514 - RISWAN / PUTRI SAKINA IMANSARI - 2 /  - putrisakina19999@gmail.com - 1",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "RAIMON SALUA / ",
-              "code": "7203021006001514 - RAIMON SALUA /  - 1 /  - 0 - 94974 - 2. Tidak",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "RAHMAT / ",
-              "code": "7203021006001505 - RAHMAT /  - 2 /  - 0 - 2. Tidak",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "BAYU SAPUTRA LABASO / ",
-              "code": "7203021006001505 - BAYU SAPUTRA LABASO /  - 1 /  - 0 - 2. Tidak",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "SYAHRUL / ",
-              "code": "7203021006001504 - SYAHRUL /  - 26 /  - 0",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "MUH. REFKY ARMIN / ",
-              "code": "7203021006001504 - MUH. REFKY ARMIN /  - 27 /  - 0",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "HERMAN / ",
-              "code": "7203021006001504 - HERMAN /  - 25 /  - 1",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "KAMAR KOST 10",
-              "code": "7203021006001504 - KAMAR KOST 10 - 20 / ",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "usaha",
-              "kecName": "BAHODOPI",
-              "jenis": "Usaha Baru"
-            },
-            {
-              "name": "AFDAL / ",
-              "code": "7203021006001504 - AFDAL /  - 18 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "IRHAM / ",
-              "code": "7203021006001504 - IRHAM /  - 14 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "BUSRAN JUNAIN / ",
-              "code": "7203021006001504 - BUSRAN JUNAIN /  - 1 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "ABDUL JALIL LAMARINGGI / ",
-              "code": "7203021006001504 - ABDUL JALIL LAMARINGGI /  - 13 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "RISALDI / ",
-              "code": "7203021006001504 - RISALDI /  - 12 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "RUSDI / ",
-              "code": "7203021006001504 - RUSDI /  - 12 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "WANDI / ",
-              "code": "7203021006001504 - WANDI /  - 10 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "JECKY SANTOPORA / ",
-              "code": "7203021006001504 - JECKY SANTOPORA /  - 11 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "ABDI SANJAYA AS, S / ",
-              "code": "7203021006001504 - ABDI SANJAYA AS, S /  - 2 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "RISMAN / HAMDANA",
-              "code": "7203021006001504 - RISMAN / HAMDANA - 7 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "LA ODE MUHAMMAD ANDI RIFAL / NINA MITA SARI",
-              "code": "7203021006001504 - LA ODE MUHAMMAD ANDI RIFAL / NINA MITA SARI - 6 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "APRIAWAN HALLE / ",
-              "code": "7203021006001504 - APRIAWAN HALLE /  - 5 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "MUHAMMAD RASYID HAMSARI / ",
-              "code": "7203021006001504 - MUHAMMAD RASYID HAMSARI /  - 4 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "IDUL AKBAR / ",
-              "code": "7203021006001504 - IDUL AKBAR /  - 3 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAHODOPI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "KIOS VHIFA",
-              "code": "7203021006001504 - KIOS VHIFA - 1 /  - 94974 - 2. Tidak",
+              "name": "BANGUNAN KOSONG",
+              "code": "7203021006001514 - BANGUNAN KOSONG - 53 / ",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "BAHODOPI",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Bangunan/Rumah Kosong"
             }
           ],
           "two_days_ago_is_estimate": false,
@@ -3343,12 +2497,10 @@ window.IPAS_DATA = {
           "total_approved": 112,
           "total_submitted_pencacah": 737,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 0,
           "yesterday_completed": 4,
           "two_days_ago_completed": 12,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {
             "REJECTED BY Pengawas": 3,
             "SUBMITTED BY Pencacah": 1
@@ -3359,70 +2511,90 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 24,
+          "new_usaha_overall": 22,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
+          "new_rumah_yesterday": 0,
           "new_rumah_overall": 60,
-          "new_businesses": [
-            {
-              "name": "HARISTAN HASAN / ",
-              "code": "7203030025000201 - HARISTAN HASAN /  - - /  - 0 - 2. Tidak",
-              "date": "yesterday",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "BUNGKU TENGAH",
-              "jenis": "Keluarga (Bukan Usaha)"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 9.05
         },
         {
           "kec_name": "BUNGKU TIMUR",
           "kec_id": "8c1ff4fe-2afb-437d-9470-b92c19242ca9",
-          "total_prelist": 4543,
+          "total_prelist": 4545,
           "total_draft": 217,
-          "total_open": 3772,
-          "total_submitted": 554,
+          "total_open": 3770,
+          "total_submitted": 558,
           "total_rejected": 48,
           "total_approved": 196,
-          "total_submitted_pencacah": 310,
+          "total_submitted_pencacah": 314,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 4,
           "yesterday_completed": 2,
           "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 4
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
           },
           "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
+          "new_usaha_today": 1,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 4,
-          "new_rumah_today": 0,
+          "new_usaha_overall": 5,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 24,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "ALFUT SAWINA / MUSNIATI",
+              "code": "7203031005000100 - ALFUT SAWINA /  - 53 /  - 0",
+              "date": "older",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "BUNGKU TIMUR",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "MASJID ",
+              "code": "7203031004000500 - MASJID  - 35 /  - 94973",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "BUNGKU TIMUR",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7203031004000500 - BANGUNAN KOSONG - 36 /  - 94973",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BUNGKU TIMUR",
+              "jenis": "Bangunan/Rumah Kosong"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.19
+          "persentase": 12.28
         },
         {
           "kec_name": "BUNGKU BARAT",
           "kec_id": "b210ab89-5b54-44c8-a3af-8ea0313524b1",
-          "total_prelist": 4789,
+          "total_prelist": 4791,
           "total_draft": 193,
           "total_open": 4208,
-          "total_submitted": 388,
-          "total_rejected": 32,
-          "total_approved": 153,
-          "total_submitted_pencacah": 203,
+          "total_submitted": 390,
+          "total_rejected": 25,
+          "total_approved": 154,
+          "total_submitted_pencacah": 211,
           "total_submitted_respondent": 0,
-          "today_completed": 4,
+          "today_completed": 11,
           "yesterday_completed": 5,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3,
-            "REJECTED BY Pengawas": 1
+            "SUBMITTED BY Pencacah": 10,
+            "APPROVED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 2,
@@ -3435,47 +2607,76 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 4,
-          "new_rumah_today": 0,
+          "new_rumah_today": 2,
           "new_rumah_yesterday": 1,
-          "new_rumah_overall": 69,
+          "new_rumah_overall": 63,
           "new_businesses": [
             {
-              "name": "BANGUN KOSONG",
-              "code": "7203040006000600 - BANGUN KOSONG - - / ",
+              "name": "SATTUO / CAYA",
+              "code": "7203040006000100 - SATTUO / CAYA - 10 /  - 0",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BUNGKU BARAT",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "NALFIN LAMALONGI / ",
+              "code": "7203040002000300 - NALFIN LAMALONGI /  - 54 /  - 0",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BUNGKU BARAT",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "ARIF / RUHAEMA ",
+              "code": "7203040006000100 - ARIF / RUHAEMA  - 19 /  - 0",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BUNGKU BARAT",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7203040006000600 - BANGUNAN KOSONG - - / ",
               "date": "yesterday",
-              "status": "REJECTED BY Pengawas",
+              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "BUNGKU BARAT",
               "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "TRIMO SUMADI / ",
-              "code": "7203040006000100 - TRIMO SUMADI /  - - /  - 0",
-              "date": "older",
-              "status": "DRAFT",
+              "name": "FIKRAN M. LAWAU / ",
+              "code": "7203040002000300 - FIKRAN M. LAWAU /  - 54 /  - 0",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "BUNGKU BARAT",
               "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 8.1
+          "persentase": 8.14
         },
         {
           "kec_name": "BUMI RAYA",
           "kec_id": "0bf36300-6961-4bb9-946e-e906e38f8ca3",
           "total_prelist": 4553,
-          "total_draft": 161,
+          "total_draft": 160,
           "total_open": 3949,
-          "total_submitted": 443,
+          "total_submitted": 444,
           "total_rejected": 20,
           "total_approved": 222,
-          "total_submitted_pencacah": 201,
+          "total_submitted_pencacah": 202,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 1,
           "yesterday_completed": 2,
           "two_days_ago_completed": 1,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 1
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
           },
@@ -3487,26 +2688,28 @@ window.IPAS_DATA = {
           "new_usaha_overall": 6,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 34,
+          "new_rumah_overall": 33,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 9.73
+          "persentase": 9.75
         },
         {
           "kec_name": "WITA PONDA",
           "kec_id": "1f5b8573-dd8a-49a5-b07d-da7c7064dd72",
           "total_prelist": 6339,
           "total_draft": 178,
-          "total_open": 5523,
-          "total_submitted": 638,
+          "total_open": 5520,
+          "total_submitted": 641,
           "total_rejected": 17,
           "total_approved": 459,
-          "total_submitted_pencacah": 162,
+          "total_submitted_pencacah": 165,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 3,
           "yesterday_completed": 0,
           "two_days_ago_completed": 33,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 3
+          },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "APPROVED BY Pengawas": 28,
@@ -3521,30 +2724,29 @@ window.IPAS_DATA = {
           "new_rumah_overall": 21,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 10.06
+          "persentase": 10.11
         }
       ]
     },
     {
       "kabupaten": "[04] POSO",
-      "total_prelist": 109279,
-      "total_draft": 2141,
-      "total_open": 88657,
-      "total_submitted": 18478,
-      "total_rejected": 1232,
-      "total_approved": 5859,
-      "total_submitted_pencacah": 11342,
+      "total_prelist": 109284,
+      "total_draft": 2138,
+      "total_open": 88644,
+      "total_submitted": 18499,
+      "total_rejected": 1233,
+      "total_approved": 5885,
+      "total_submitted_pencacah": 11336,
       "total_submitted_respondent": 45,
-      "persentase": 16.91,
-      "today_completed": 58,
+      "persentase": 16.93,
+      "today_completed": 57,
       "yesterday_completed": 77,
       "two_days_ago_completed": 58,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "APPROVED BY Pengawas": 17,
-        "SUBMITTED BY Pencacah": 35,
-        "REJECTED BY Pengawas": 5,
-        "REVOKED BY Pengawas": 1
+        "APPROVED BY Pengawas": 28,
+        "SUBMITTED BY Pencacah": 25,
+        "REJECTED BY Pengawas": 4
       },
       "yesterday_completed_breakdown": {
         "APPROVED BY Pengawas": 3,
@@ -3556,25 +2758,79 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 6,
         "SUBMITTED BY Pencacah": 39
       },
-      "new_usaha_today": 0,
+      "new_usaha_today": 1,
       "new_usaha_yesterday": 0,
-      "new_rumah_today": 5,
-      "new_rumah_yesterday": 2,
-      "new_usaha_overall": 22,
-      "new_rumah_overall": 151,
+      "new_rumah_today": 3,
+      "new_rumah_yesterday": 4,
+      "new_usaha_overall": 23,
+      "new_rumah_overall": 161,
       "new_businesses": [
         {
-          "name": "ABDUL MAJID / NURLINDA",
-          "code": "7204010013000300 - ABDUL MAJID /  - - /  - 0",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
+          "name": "FERDIANUS LEKOINTA / ",
+          "code": "7204012009000100 - FERDIANUS LEKOINTA /  - 42 /  - 0",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
           "type": "rumah",
-          "kecName": "PAMONA SELATAN",
+          "kecName": "PAMONA TENGGARA",
           "jenis": "Keluarga"
         },
         {
-          "name": "BUDI / YULI PUJI ASTUTI",
-          "code": "7204040020001000 - BUDI / YULI PUJI ASTUTI - 17 /  - 1 - 2. Tidak",
+          "name": "BRIGITA DESY SALU  / BRIGITA DESY SALU",
+          "code": "7204030005001801 - BRIGITA DESY SALU  / BRIGITA DESY SALU - 22 /  - 2202230076034 - 1",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "PAMONA PUSALEMBA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG (KIOS)",
+          "code": "7204032001000200 - BANGUNAN KOSONG (KIOS) - 27 / ",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PAMONA UTARA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG ",
+          "code": "7204032001000200 - BANGUNAN KOSONG  - 26 / ",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PAMONA UTARA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "HASANUDIN / NURIA RAREA",
+          "code": "7204052005001400 - HASANUDIN / NURIA RAREA - 54 /  - 1",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "POSO PESISIR UTARA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "RUMAH KOSONG",
+          "code": "7204060009000800 - RUMAH KOSONG - 6 /  - 2. Tidak",
+          "date": "yesterday",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "LAGE",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "LESMAN WILYAM TADJODJA / SIOMIN NERHAYATI PORA",
+          "code": "7204031007000600 - LESMAN WILYAM TADJODJA / SIOMIN NERHAYATI PORA - 5 /  - 1",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "PAMONA TIMUR",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "JULFIAN YOSUA GAANG  / SELTIANA ",
+          "code": "7204040017000800 - JULFIAN YOSUA GAANG  / SELTIANA  - 14 /  - 3 - 2. Tidak",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
@@ -3582,107 +2838,62 @@ window.IPAS_DATA = {
           "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "MARANATA TINGGIBO / RISNA UNGARAJA",
-          "code": "7204043002000300 - MARANATA TINGGIBO / RISNA UNGARAJA - 18 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "LORE PEORE",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "KIOS MURAH KASIH ",
-          "code": "7204043002000300 - KIOS MURAH KASIH  - 11 /  - 1 - 2. Tidak",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "LORE PEORE",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "BANGUNAN KOSONG TONGGIBO",
-          "code": "7204043002000300 - BANGUNAN KOSONG TONGGIBO - 17 /  - 2. Tidak",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "LORE PEORE",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "AGUSTINUS RANTELORE / DORTJE SALINDEHO",
-          "code": "7204032004000100 - AGUSTINUS RANTELORE / DORTJE SALINDEHO - 73 /  - 1",
+          "name": "BUDIMAN / SITTI RAMADHAN LAKADJO",
+          "code": "7204070007000600 - BUDIMAN / SITTI RAMADHAN LAKADJO - 78 /  - 0",
           "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "PAMONA UTARA",
+          "kecName": "POSO KOTA",
           "jenis": "Keluarga"
         },
         {
-          "name": "BANGUNAN KOSONG ",
-          "code": "7204052004000500 - BANGUNAN KOSONG  - 31 /  - 2. Tidak",
+          "name": "BANGUNAN KOSONG",
+          "code": "7204010021000300 - BANGUNAN KOSONG - 61 / ",
           "date": "older",
-          "status": "APPROVED BY Pengawas",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "POSO PESISIR UTARA",
+          "kecName": "PAMONA SELATAN",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "BANGUNAN KOSONG ",
-          "code": "7204052004000500 - BANGUNAN KOSONG  - 16 /  - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "POSO PESISIR UTARA",
-          "jenis": "Bangunan/Rumah Kosong"
+          "name": "KOS KOSAN",
+          "code": "7204010021000300 - KOS KOSAN - 17 /  - 1",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "usaha",
+          "kecName": "PAMONA SELATAN",
+          "jenis": "Usaha Baru"
         },
         {
-          "name": "BANGUNAN KOSONG ",
-          "code": "7204052004000500 - BANGUNAN KOSONG  - 28 /  - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
+          "name": "AFRIANTO ESTEVANUS CECENG ENDODAGO P. / FITRIANI HALIDO",
+          "code": "7204052011000800 - AFRIANTO ESTEVANUS CECENG ENDODAGO P. / FITRIANI HALIDO - 44 /  - 2 - 18046209",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "POSO PESISIR UTARA",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "BANGUNAN KOSONG ",
-          "code": "7204052004000500 - BANGUNAN KOSONG  - 27 /  - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "POSO PESISIR UTARA",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "YULIANA BADILO / ",
-          "code": "7204032004000100 - YULIANA BADILO /  - 67 /  - 0",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PAMONA UTARA",
           "jenis": "Keluarga"
         },
         {
-          "name": "HARIYANTO TOLEWO / MARGARETA KRISTIANI",
-          "code": "7204030005001200 - HARIYANTO TOLEWO / MARGARETA KRISTIANI - 17 /  - 0",
-          "date": "older",
-          "status": "REVOKED BY Pengawas",
+          "name": "ELEN PANDORA  / -",
+          "code": "7204030004000900 - ELEN PANDORA  / - - - / ",
+          "date": "yesterday",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "PAMONA PUSALEMBA",
           "jenis": "Keluarga"
         },
         {
-          "name": "ADITYA BATURANGKA  / ",
-          "code": "7204012009000100 - ADITYA BATURANGKA  /  - 58 /  - 1",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "PAMONA TENGGARA",
-          "jenis": "Keluarga"
+          "name": "RAFEN  BENGKEL MOTOR",
+          "code": "7204032001000100 - RAFEN  BENGKEL MOTOR - 9 /  - 1",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "usaha",
+          "kecName": "PAMONA UTARA",
+          "jenis": "Usaha Baru"
         },
         {
-          "name": "BANGUNAN KOSONG",
-          "code": "7204032004000100 - BANGUNAN KOSONG - 68 / ",
+          "name": "BANGUN KOSONG ",
+          "code": "7204032001000100 - BANGUN KOSONG  - 42 / ",
           "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
@@ -3690,33 +2901,68 @@ window.IPAS_DATA = {
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "ARLEN GRAHAN ANTJURA / ESTER MARIONES PERABU",
-          "code": "7204032004000100 - ARLEN GRAHAN ANTJURA / ESTER MARIONES PERABU - 61 /  - 1",
+          "name": "BANGUN KOSONG ",
+          "code": "7204032001000100 - BANGUN KOSONG  - 39 / ",
           "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "PAMONA UTARA",
-          "jenis": "Keluarga"
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUN KOSONG ",
+          "code": "7204032001000100 - BANGUN KOSONG  - 35 / ",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PAMONA UTARA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUN KOSONG ",
+          "code": "7204032001000100 - BANGUN KOSONG  - 37 / ",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PAMONA UTARA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUN KOSONG ",
+          "code": "7204032001000100 - BANGUN KOSONG  - 38 / ",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PAMONA UTARA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUN KOSONG ",
+          "code": "7204032001000100 - BANGUN KOSONG  - 36 / ",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PAMONA UTARA",
+          "jenis": "Bangunan/Rumah Kosong"
         }
       ],
       "kecamatan_list": [
         {
           "kec_name": "PAMONA SELATAN",
           "kec_id": "2d49f072-a4b9-44a3-bc96-7b58fccd7cb1",
-          "total_prelist": 9348,
-          "total_draft": 425,
-          "total_open": 7731,
-          "total_submitted": 1192,
+          "total_prelist": 9349,
+          "total_draft": 423,
+          "total_open": 7729,
+          "total_submitted": 1197,
           "total_rejected": 332,
           "total_approved": 322,
-          "total_submitted_pencacah": 537,
+          "total_submitted_pencacah": 542,
           "total_submitted_respondent": 1,
-          "today_completed": 6,
+          "today_completed": 5,
           "yesterday_completed": 25,
           "two_days_ago_completed": 4,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4,
-            "REJECTED BY Pengawas": 2
+            "SUBMITTED BY Pencacah": 5
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 25
@@ -3725,25 +2971,34 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 2,
             "SUBMITTED BY Pencacah": 2
           },
-          "new_usaha_today": 0,
+          "new_usaha_today": 1,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
+          "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 7,
           "new_businesses": [
             {
-              "name": "ABDUL MAJID / NURLINDA",
-              "code": "7204010013000300 - ABDUL MAJID /  - - /  - 0",
+              "name": "BANGUNAN KOSONG",
+              "code": "7204010021000300 - BANGUNAN KOSONG - 61 / ",
               "date": "older",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "PAMONA SELATAN",
-              "jenis": "Keluarga"
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "KOS KOSAN",
+              "code": "7204010021000300 - KOS KOSAN - 17 /  - 1",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "usaha",
+              "kecName": "PAMONA SELATAN",
+              "jenis": "Usaha Baru"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.75
+          "persentase": 12.8
         },
         {
           "kec_name": "PAMONA BARAT",
@@ -3756,12 +3011,10 @@ window.IPAS_DATA = {
           "total_approved": 83,
           "total_submitted_pencacah": 386,
           "total_submitted_respondent": 1,
-          "today_completed": 2,
+          "today_completed": 0,
           "yesterday_completed": 6,
           "two_days_ago_completed": 2,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 1,
             "SUBMITTED BY Pencacah": 5
@@ -3774,7 +3027,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 11,
+          "new_rumah_overall": 10,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 12.19
@@ -3783,18 +3036,20 @@ window.IPAS_DATA = {
           "kec_name": "PAMONA TENGGARA",
           "kec_id": "f72225ba-53ec-49fb-ac83-5ac62c9ae840",
           "total_prelist": 3278,
-          "total_draft": 121,
-          "total_open": 2633,
-          "total_submitted": 524,
+          "total_draft": 122,
+          "total_open": 2631,
+          "total_submitted": 525,
           "total_rejected": 121,
           "total_approved": 98,
-          "total_submitted_pencacah": 304,
+          "total_submitted_pencacah": 305,
           "total_submitted_respondent": 1,
-          "today_completed": 2,
+          "today_completed": 3,
           "yesterday_completed": 2,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "APPROVED BY Pengawas": 1,
+            "REJECTED BY Pengawas": 1,
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -3806,33 +3061,33 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
-          "new_rumah_today": 1,
-          "new_rumah_yesterday": 0,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 1,
           "new_rumah_overall": 17,
           "new_businesses": [
             {
-              "name": "ADITYA BATURANGKA  / ",
-              "code": "7204012009000100 - ADITYA BATURANGKA  /  - 58 /  - 1",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
+              "name": "FERDIANUS LEKOINTA / ",
+              "code": "7204012009000100 - FERDIANUS LEKOINTA /  - 42 /  - 0",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "PAMONA TENGGARA",
               "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 15.99
+          "persentase": 16.02
         },
         {
           "kec_name": "LORE SELATAN",
           "kec_id": "0bf0fa56-87b8-41f8-8f33-23cec2dec82a",
           "total_prelist": 2608,
           "total_draft": 0,
-          "total_open": 2076,
-          "total_submitted": 532,
+          "total_open": 2075,
+          "total_submitted": 533,
           "total_rejected": 49,
           "total_approved": 141,
-          "total_submitted_pencacah": 341,
+          "total_submitted_pencacah": 342,
           "total_submitted_respondent": 1,
           "today_completed": 1,
           "yesterday_completed": 2,
@@ -3856,7 +3111,7 @@ window.IPAS_DATA = {
           "new_rumah_overall": 0,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 20.4
+          "persentase": 20.44
         },
         {
           "kec_name": "LORE BARAT",
@@ -3891,21 +3146,18 @@ window.IPAS_DATA = {
           "kec_name": "PAMONA PUSALEMBA",
           "kec_id": "f0977b34-a484-463a-a661-91be193bfbda",
           "total_prelist": 10017,
-          "total_draft": 315,
-          "total_open": 7808,
-          "total_submitted": 1894,
-          "total_rejected": 73,
+          "total_draft": 313,
+          "total_open": 7804,
+          "total_submitted": 1900,
+          "total_rejected": 72,
           "total_approved": 568,
-          "total_submitted_pencacah": 1253,
+          "total_submitted_pencacah": 1260,
           "total_submitted_respondent": 0,
-          "today_completed": 6,
+          "today_completed": 8,
           "yesterday_completed": 3,
           "two_days_ago_completed": 3,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1,
-            "APPROVED BY Pengawas": 3,
-            "REJECTED BY Pengawas": 1,
-            "REVOKED BY Pengawas": 1
+            "SUBMITTED BY Pencacah": 8
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -3918,21 +3170,30 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
+          "new_rumah_yesterday": 1,
           "new_rumah_overall": 24,
           "new_businesses": [
             {
-              "name": "HARIYANTO TOLEWO / MARGARETA KRISTIANI",
-              "code": "7204030005001200 - HARIYANTO TOLEWO / MARGARETA KRISTIANI - 17 /  - 0",
+              "name": "BRIGITA DESY SALU  / BRIGITA DESY SALU",
+              "code": "7204030005001801 - BRIGITA DESY SALU  / BRIGITA DESY SALU - 22 /  - 2202230076034 - 1",
               "date": "older",
-              "status": "REVOKED BY Pengawas",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "PAMONA PUSALEMBA",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "ELEN PANDORA  / -",
+              "code": "7204030004000900 - ELEN PANDORA  / - - - / ",
+              "date": "yesterday",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "PAMONA PUSALEMBA",
               "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 18.91
+          "persentase": 18.97
         },
         {
           "kec_name": "PAMONA TIMUR",
@@ -3941,15 +3202,15 @@ window.IPAS_DATA = {
           "total_draft": 81,
           "total_open": 3840,
           "total_submitted": 1293,
-          "total_rejected": 44,
+          "total_rejected": 43,
           "total_approved": 147,
-          "total_submitted_pencacah": 1102,
+          "total_submitted_pencacah": 1103,
           "total_submitted_respondent": 0,
-          "today_completed": 3,
+          "today_completed": 1,
           "yesterday_completed": 3,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -3963,7 +3224,17 @@ window.IPAS_DATA = {
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 5,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "LESMAN WILYAM TADJODJA / SIOMIN NERHAYATI PORA",
+              "code": "7204031007000600 - LESMAN WILYAM TADJODJA / SIOMIN NERHAYATI PORA - 5 /  - 1",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "PAMONA TIMUR",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
           "persentase": 24.8
         },
@@ -3971,19 +3242,18 @@ window.IPAS_DATA = {
           "kec_name": "PAMONA UTARA",
           "kec_id": "9da7b709-4f49-4912-9394-e4acab997078",
           "total_prelist": 6375,
-          "total_draft": 7,
-          "total_open": 4659,
+          "total_draft": 8,
+          "total_open": 4658,
           "total_submitted": 1709,
           "total_rejected": 31,
-          "total_approved": 1471,
-          "total_submitted_pencacah": 206,
+          "total_approved": 1490,
+          "total_submitted_pencacah": 187,
           "total_submitted_respondent": 1,
-          "today_completed": 8,
+          "today_completed": 20,
           "yesterday_completed": 4,
           "two_days_ago_completed": 4,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 7,
-            "REJECTED BY Pengawas": 1
+            "APPROVED BY Pengawas": 20
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 2,
@@ -3994,32 +3264,14 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
+          "new_usaha_overall": 2,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 2,
-          "new_rumah_overall": 12,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 20,
           "new_businesses": [
             {
-              "name": "AGUSTINUS RANTELORE / DORTJE SALINDEHO",
-              "code": "7204032004000100 - AGUSTINUS RANTELORE / DORTJE SALINDEHO - 73 /  - 1",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "PAMONA UTARA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "YULIANA BADILO / ",
-              "code": "7204032004000100 - YULIANA BADILO /  - 67 /  - 0",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "PAMONA UTARA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7204032004000100 - BANGUNAN KOSONG - 68 / ",
+              "name": "BANGUNAN KOSONG (KIOS)",
+              "code": "7204032001000200 - BANGUNAN KOSONG (KIOS) - 27 / ",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
@@ -4027,13 +3279,76 @@ window.IPAS_DATA = {
               "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "ARLEN GRAHAN ANTJURA / ESTER MARIONES PERABU",
-              "code": "7204032004000100 - ARLEN GRAHAN ANTJURA / ESTER MARIONES PERABU - 61 /  - 1",
+              "name": "BANGUNAN KOSONG ",
+              "code": "7204032001000200 - BANGUNAN KOSONG  - 26 / ",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "PAMONA UTARA",
-              "jenis": "Keluarga"
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "RAFEN  BENGKEL MOTOR",
+              "code": "7204032001000100 - RAFEN  BENGKEL MOTOR - 9 /  - 1",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "usaha",
+              "kecName": "PAMONA UTARA",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "BANGUN KOSONG ",
+              "code": "7204032001000100 - BANGUN KOSONG  - 42 / ",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PAMONA UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUN KOSONG ",
+              "code": "7204032001000100 - BANGUN KOSONG  - 39 / ",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PAMONA UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUN KOSONG ",
+              "code": "7204032001000100 - BANGUN KOSONG  - 35 / ",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PAMONA UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUN KOSONG ",
+              "code": "7204032001000100 - BANGUN KOSONG  - 37 / ",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PAMONA UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUN KOSONG ",
+              "code": "7204032001000100 - BANGUN KOSONG  - 38 / ",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PAMONA UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUN KOSONG ",
+              "code": "7204032001000100 - BANGUN KOSONG  - 36 / ",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PAMONA UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
             }
           ],
           "two_days_ago_is_estimate": false,
@@ -4042,20 +3357,20 @@ window.IPAS_DATA = {
         {
           "kec_name": "LORE UTARA",
           "kec_id": "78d3ff5c-a22d-4898-8495-fdfd56229b6a",
-          "total_prelist": 5827,
+          "total_prelist": 5829,
           "total_draft": 44,
           "total_open": 4570,
-          "total_submitted": 1213,
+          "total_submitted": 1215,
           "total_rejected": 25,
-          "total_approved": 307,
-          "total_submitted_pencacah": 881,
+          "total_approved": 314,
+          "total_submitted_pencacah": 876,
           "total_submitted_respondent": 0,
-          "today_completed": 4,
+          "today_completed": 7,
           "yesterday_completed": 1,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 1,
-            "SUBMITTED BY Pencacah": 3
+            "SUBMITTED BY Pencacah": 1,
+            "APPROVED BY Pengawas": 6
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
@@ -4066,11 +3381,11 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 4,
+          "new_rumah_overall": 6,
           "new_businesses": [
             {
-              "name": "BUDI / YULI PUJI ASTUTI",
-              "code": "7204040020001000 - BUDI / YULI PUJI ASTUTI - 17 /  - 1 - 2. Tidak",
+              "name": "JULFIAN YOSUA GAANG  / SELTIANA ",
+              "code": "7204040017000800 - JULFIAN YOSUA GAANG  / SELTIANA  - 14 /  - 3 - 2. Tidak",
               "date": "today",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
@@ -4079,7 +3394,7 @@ window.IPAS_DATA = {
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 20.82
+          "persentase": 20.84
         },
         {
           "kec_name": "LORE TENGAH",
@@ -4115,11 +3430,11 @@ window.IPAS_DATA = {
           "kec_id": "92c3c179-4230-4727-a1a5-4b2aaf0d86e8",
           "total_prelist": 2506,
           "total_draft": 23,
-          "total_open": 2133,
-          "total_submitted": 350,
+          "total_open": 2132,
+          "total_submitted": 351,
           "total_rejected": 23,
           "total_approved": 31,
-          "total_submitted_pencacah": 296,
+          "total_submitted_pencacah": 297,
           "total_submitted_respondent": 0,
           "today_completed": 1,
           "yesterday_completed": 0,
@@ -4139,7 +3454,7 @@ window.IPAS_DATA = {
           "new_rumah_overall": 0,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 13.97
+          "persentase": 14.01
         },
         {
           "kec_name": "LORE PEORE",
@@ -4152,12 +3467,10 @@ window.IPAS_DATA = {
           "total_approved": 85,
           "total_submitted_pencacah": 243,
           "total_submitted_respondent": 0,
-          "today_completed": 3,
+          "today_completed": 0,
           "yesterday_completed": 0,
           "two_days_ago_completed": 4,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
@@ -4165,38 +3478,10 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
-          "new_rumah_today": 3,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 6,
-          "new_businesses": [
-            {
-              "name": "MARANATA TINGGIBO / RISNA UNGARAJA",
-              "code": "7204043002000300 - MARANATA TINGGIBO / RISNA UNGARAJA - 18 /  - 0 - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "LORE PEORE",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "KIOS MURAH KASIH ",
-              "code": "7204043002000300 - KIOS MURAH KASIH  - 11 /  - 1 - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "LORE PEORE",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "BANGUNAN KOSONG TONGGIBO",
-              "code": "7204043002000300 - BANGUNAN KOSONG TONGGIBO - 17 /  - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "LORE PEORE",
-              "jenis": "Bangunan/Rumah Kosong"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 20.45
         },
@@ -4211,12 +3496,10 @@ window.IPAS_DATA = {
           "total_approved": 135,
           "total_submitted_pencacah": 1356,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 0,
           "yesterday_completed": 0,
           "two_days_ago_completed": 0,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
@@ -4224,7 +3507,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 8,
+          "new_rumah_overall": 7,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 14.98
@@ -4240,10 +3523,13 @@ window.IPAS_DATA = {
           "total_approved": 555,
           "total_submitted_pencacah": 52,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 3,
           "yesterday_completed": 0,
           "two_days_ago_completed": 12,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "APPROVED BY Pengawas": 1,
+            "SUBMITTED BY Pencacah": 2
+          },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "APPROVED BY Pengawas": 12
@@ -4261,20 +3547,19 @@ window.IPAS_DATA = {
         {
           "kec_name": "POSO PESISIR UTARA",
           "kec_id": "dfc213a9-a637-42cf-beea-6b0226cd67ae",
-          "total_prelist": 6643,
+          "total_prelist": 6645,
           "total_draft": 188,
-          "total_open": 5487,
-          "total_submitted": 968,
+          "total_open": 5486,
+          "total_submitted": 971,
           "total_rejected": 92,
           "total_approved": 472,
-          "total_submitted_pencacah": 404,
+          "total_submitted_pencacah": 407,
           "total_submitted_respondent": 0,
-          "today_completed": 7,
+          "today_completed": 3,
           "yesterday_completed": 4,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3,
-            "APPROVED BY Pengawas": 4
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
@@ -4285,49 +3570,31 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 2,
-          "new_rumah_today": 0,
+          "new_rumah_today": 2,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 6,
+          "new_rumah_overall": 8,
           "new_businesses": [
             {
-              "name": "BANGUNAN KOSONG ",
-              "code": "7204052004000500 - BANGUNAN KOSONG  - 31 /  - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
+              "name": "HASANUDIN / NURIA RAREA",
+              "code": "7204052005001400 - HASANUDIN / NURIA RAREA - 54 /  - 1",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "POSO PESISIR UTARA",
-              "jenis": "Bangunan/Rumah Kosong"
+              "jenis": "Keluarga"
             },
             {
-              "name": "BANGUNAN KOSONG ",
-              "code": "7204052004000500 - BANGUNAN KOSONG  - 16 /  - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
+              "name": "AFRIANTO ESTEVANUS CECENG ENDODAGO P. / FITRIANI HALIDO",
+              "code": "7204052011000800 - AFRIANTO ESTEVANUS CECENG ENDODAGO P. / FITRIANI HALIDO - 44 /  - 2 - 18046209",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "POSO PESISIR UTARA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN KOSONG ",
-              "code": "7204052004000500 - BANGUNAN KOSONG  - 28 /  - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "POSO PESISIR UTARA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN KOSONG ",
-              "code": "7204052004000500 - BANGUNAN KOSONG  - 27 /  - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "POSO PESISIR UTARA",
-              "jenis": "Bangunan/Rumah Kosong"
+              "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.57
+          "persentase": 14.61
         },
         {
           "kec_name": "LAGE",
@@ -4336,17 +3603,15 @@ window.IPAS_DATA = {
           "total_draft": 208,
           "total_open": 7183,
           "total_submitted": 1406,
-          "total_rejected": 76,
+          "total_rejected": 79,
           "total_approved": 445,
-          "total_submitted_pencacah": 884,
+          "total_submitted_pencacah": 881,
           "total_submitted_respondent": 1,
-          "today_completed": 4,
+          "today_completed": 3,
           "yesterday_completed": 9,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 2,
-            "REJECTED BY Pengawas": 1,
-            "SUBMITTED BY Pencacah": 1
+            "REJECTED BY Pengawas": 3
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 9
@@ -4358,9 +3623,19 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 17,
-          "new_businesses": [],
+          "new_rumah_yesterday": 1,
+          "new_rumah_overall": 18,
+          "new_businesses": [
+            {
+              "name": "RUMAH KOSONG",
+              "code": "7204060009000800 - RUMAH KOSONG - 6 /  - 2. Tidak",
+              "date": "yesterday",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "LAGE",
+              "jenis": "Bangunan/Rumah Kosong"
+            }
+          ],
           "two_days_ago_is_estimate": false,
           "persentase": 15.98
         },
@@ -4368,18 +3643,18 @@ window.IPAS_DATA = {
           "kec_name": "POSO KOTA",
           "kec_id": "d99a5e42-aa17-4f26-aab4-b0eff5e45e03",
           "total_prelist": 11622,
-          "total_draft": 186,
+          "total_draft": 185,
           "total_open": 9545,
-          "total_submitted": 1891,
+          "total_submitted": 1892,
           "total_rejected": 124,
           "total_approved": 497,
-          "total_submitted_pencacah": 1270,
+          "total_submitted_pencacah": 1271,
           "total_submitted_respondent": 0,
-          "today_completed": 8,
+          "today_completed": 1,
           "yesterday_completed": 4,
           "two_days_ago_completed": 9,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 8
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "REJECTED BY Pengawas": 1,
@@ -4392,11 +3667,21 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 12,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
+          "new_rumah_yesterday": 1,
           "new_rumah_overall": 4,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "BUDIMAN / SITTI RAMADHAN LAKADJO",
+              "code": "7204070007000600 - BUDIMAN / SITTI RAMADHAN LAKADJO - 78 /  - 0",
+              "date": "yesterday",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "POSO KOTA",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 16.27
+          "persentase": 16.28
         },
         {
           "kec_name": "POSO KOTA UTARA",
@@ -4434,17 +3719,17 @@ window.IPAS_DATA = {
           "kec_id": "43ded262-d778-4704-aa2e-2932db6c98b9",
           "total_prelist": 5887,
           "total_draft": 121,
-          "total_open": 4919,
-          "total_submitted": 847,
+          "total_open": 4918,
+          "total_submitted": 848,
           "total_rejected": 33,
           "total_approved": 53,
-          "total_submitted_pencacah": 761,
+          "total_submitted_pencacah": 762,
           "total_submitted_respondent": 0,
-          "today_completed": 2,
+          "today_completed": 1,
           "yesterday_completed": 0,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
@@ -4452,35 +3737,36 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
+          "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 26,
+          "new_rumah_overall": 25,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.39
+          "persentase": 14.4
         }
       ]
     },
     {
       "kabupaten": "[05] DONGGALA",
-      "total_prelist": 109960,
-      "total_draft": 2557,
-      "total_open": 94205,
-      "total_submitted": 13192,
-      "total_rejected": 874,
-      "total_approved": 8247,
-      "total_submitted_pencacah": 4066,
+      "total_prelist": 109965,
+      "total_draft": 2559,
+      "total_open": 94187,
+      "total_submitted": 13213,
+      "total_rejected": 881,
+      "total_approved": 8263,
+      "total_submitted_pencacah": 4064,
       "total_submitted_respondent": 5,
-      "persentase": 12.0,
-      "today_completed": 46,
+      "persentase": 12.02,
+      "today_completed": 51,
       "yesterday_completed": 63,
       "two_days_ago_completed": 92,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "APPROVED BY Pengawas": 21,
-        "REJECTED BY Pengawas": 5,
-        "SUBMITTED BY Pencacah": 20
+        "SUBMITTED BY Pencacah": 25,
+        "REJECTED BY Pengawas": 6,
+        "APPROVED BY Pengawas": 17,
+        "REVOKED BY Pengawas": 3
       },
       "yesterday_completed_breakdown": {
         "REVOKED BY Pengawas": 2,
@@ -4493,160 +3779,160 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 11,
         "SUBMITTED BY Pencacah": 50
       },
-      "new_usaha_today": 0,
-      "new_usaha_yesterday": 0,
-      "new_rumah_today": 3,
-      "new_rumah_yesterday": 0,
-      "new_usaha_overall": 55,
-      "new_rumah_overall": 268,
+      "new_usaha_today": 1,
+      "new_usaha_yesterday": 1,
+      "new_rumah_today": 8,
+      "new_rumah_yesterday": 3,
+      "new_usaha_overall": 53,
+      "new_rumah_overall": 271,
       "new_businesses": [
         {
-          "name": "I MADE SUWEJA / NI MADE SUDIASIH",
-          "code": "7205041005000500 - MADE SUWEJA /  - - /  - 0",
+          "name": "ANIS / MARHAENI",
+          "code": "7205161004000300 - ANIS / MARHAENI - 18 /  - 1 - 2. Tidak",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "SOJOL UTARA",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "M.JUFRI AMIR / SUHARTIKA MUHTAR",
+          "code": "7205080026000500 - M.JUFRI AMIR / SUHARTIKA MUHTAR - 45 /  - 0",
+          "date": "yesterday",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "BANAWA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "SUHARTI / MOH.DWI HASTOYO",
+          "code": "7205080026000500 - SUHARTI / MOH.DWI HASTOYO - 16 /  - 0",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "BANAWA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "SITI NURJANAH / ",
+          "code": "7205160001001300 - SITI NURJANAH /  - - /  - 0",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "SOJOL",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BUMDES KARYA SOJOL",
+          "code": "7205160013000300 - BUMDES KARYA SOJOL - 21 /  - 1",
+          "date": "yesterday",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "SOJOL",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "ASRI / ",
+          "code": "7205081003000202 - ASRI /  - - /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "BANAWA SELATAN",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN WALET KOSONG",
+          "code": "7205041005000500 - BANGUNAN WALET KOSONG - 95 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "RIO PAKAVA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "HARMOKO / AINUN",
+          "code": "7205041001000701 - HARMOKO / AINUN - 3 /  - 0 - 94346 - 2. Tidak",
           "date": "older",
           "status": "REJECTED BY Pengawas",
           "type": "rumah",
           "kecName": "RIO PAKAVA",
-          "jenis": "Keluarga"
+          "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "RAMLIANA / A'AN SYAIFUL BAYAAN",
-          "code": "7205090007000201 - RAMLIANA / A'AN SYAIFUL BAYAAN - - /  - 1",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
+          "name": "BANGUNAN KOSONG",
+          "code": "7205041011000600 - BANGUNAN KOSONG - - /  - 0",
+          "date": "today",
+          "status": "DRAFT",
           "type": "rumah",
-          "kecName": "LABUAN",
-          "jenis": "Keluarga"
+          "kecName": "RIO PAKAVA",
+          "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "AMIR GUFRON / RIKA FITRIANI",
-          "code": "7205080013000900 - AMIR GUFRON / RIKA FITRIANI - 49 /  - 1 - 31345875",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BANAWA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "KANTOR DESA LOLI OGE",
-          "code": "7205080013000900 - KANTOR DESA LOLI OGE - 23 / ",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
+          "name": "BANGUNAN WALET",
+          "code": "7205041011000600 - BANGUNAN WALET - - /  - 0",
+          "date": "today",
+          "status": "DRAFT",
           "type": "usaha",
-          "kecName": "BANAWA",
+          "kecName": "RIO PAKAVA",
           "jenis": "Usaha Baru"
         },
         {
-          "name": "BANGUNAN KOSONG",
-          "code": "7205080013000900 - BANGUNAN KOSONG - 37 / ",
-          "date": "older",
+          "name": "RUMAH KOSONG",
+          "code": "7205041001000802 - RUMAH KOSONG - 98 /  - 2. Tidak",
+          "date": "today",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
-          "kecName": "BANAWA",
+          "kecName": "RIO PAKAVA",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "SIMON / ARWIN",
-          "code": "7205080013000900 - SIMON / ARWIN - 12 /  - 0",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BANAWA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "WALET SUMARDI ",
-          "code": "7205160003000900 - WALET SUMARDI  - 92 /  - 1 - 2. Tidak",
+          "name": "RUMAH KOSONG ",
+          "code": "7205041001000802 - RUMAH KOSONG  - 99 /  - 2. Tidak",
           "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "SOJOL",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "ST. MARIA / SYARIF",
-          "code": "7205081003000500 - ST. MARIA / SYARIF - 3 /  - 1",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "BANAWA SELATAN",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "FHATKHUL MUBIN / WAGINI",
-          "code": "7205041005000500 - FHATKHUL MUBIN /  - - /  - 0",
-          "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "RIO PAKAVA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "AHMADI / FITRIANI",
-          "code": "7205081003000500 - AHMADI / FITRIANI - 1 /  - 2 - 94351 - 2. Tidak - 60700005",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "BANAWA SELATAN",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "BANGUNAN KOSONG",
-          "code": "7205080013000900 - BANGUNAN KOSONG - 34 / ",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BANAWA",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "SABUDDIN / JUMUDIA",
-          "code": "7205160013000500 - SABUDDIN / JUMUDIA - 6 /  - 2",
+          "name": "RUMAH KOSONG ",
+          "code": "7205041001000802 - RUMAH KOSONG  - 100 /  - 2. Tidak",
           "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "SOJOL",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "AL MUDASIR / NI KETUT RISKI RAHAYU",
-          "code": "7205041005000500 - AL MUDASIR /  - - /  - 0",
-          "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "RIO PAKAVA",
-          "jenis": "Keluarga"
+          "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "RISKAL KHAIDAR / MARSELA JELIYANTI IDJI",
-          "code": "7205080013000900 - RISKAL KHAIDAR / MARSELA JELIYANTI IDJI - 50 /  - 0",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BANAWA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "UMAR / KATRINA",
-          "code": "7205041005000500 -  /  - - /  - 0",
-          "date": "older",
+          "name": "RUMAH KOSONG",
+          "code": "7205041001000802 - RUMAH KOSONG - 101 /  - 2. Tidak",
+          "date": "today",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "RIO PAKAVA",
-          "jenis": "Keluarga"
+          "jenis": "Bangunan/Rumah Kosong"
         },
         {
           "name": "DANIEL BODA / MEGAWATI ",
           "code": "7205041001000802 - DANIEL BODA / MEGAWATI  - 106 /  - 1 - 2. Tidak",
           "date": "today",
-          "status": "SUBMITTED BY Pencacah",
+          "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "RIO PAKAVA",
           "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "MOHAMMAD FAOZAN / REGITA",
-          "code": "7205080013000900 - MOHAMMAD FAOZAN / REGITA - 48 /  - 0",
+          "name": "SAGI HARIANTO / ",
+          "code": "7205041005000500 - SAGI HARIANTO /  - - /  - 0",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "RIO PAKAVA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "ZAKINA / REZKY RAMADANI",
+          "code": "7205080014000400 - ZAKINA / REZKY RAMADANI - 3 /  - 0",
           "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
@@ -4654,10 +3940,19 @@ window.IPAS_DATA = {
           "jenis": "Keluarga"
         },
         {
-          "name": "RIDWAN / ASNAWIAH",
-          "code": "7205080024000600 - RIDWAN / ASNAWIAH - 49 /  - 0",
+          "name": "ARWANDI / YULIKA",
+          "code": "7205160013000300 - ARWANDI / YULIKA - 11 /  - 0",
           "date": "older",
-          "status": "DRAFT",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "SOJOL",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "ARMIN / ULFA",
+          "code": "7205080014000400 - ARMIN / ULFA - 8 /  - 0",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "BANAWA",
           "jenis": "Keluarga"
@@ -4667,81 +3962,126 @@ window.IPAS_DATA = {
         {
           "kec_name": "RIO PAKAVA",
           "kec_id": "4f40cdd6-5d07-4521-8801-bd7f680ff72c",
-          "total_prelist": 7470,
-          "total_draft": 210,
-          "total_open": 6415,
-          "total_submitted": 845,
-          "total_rejected": 86,
-          "total_approved": 552,
-          "total_submitted_pencacah": 207,
+          "total_prelist": 7474,
+          "total_draft": 217,
+          "total_open": 6410,
+          "total_submitted": 847,
+          "total_rejected": 88,
+          "total_approved": 558,
+          "total_submitted_pencacah": 201,
           "total_submitted_respondent": 0,
-          "today_completed": 7,
+          "today_completed": 10,
           "yesterday_completed": 0,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 2,
             "REJECTED BY Pengawas": 2,
-            "APPROVED BY Pengawas": 4,
-            "SUBMITTED BY Pencacah": 1
+            "APPROVED BY Pengawas": 6
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "APPROVED BY Pengawas": 2
           },
-          "new_usaha_today": 0,
+          "new_usaha_today": 1,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 2,
-          "new_rumah_today": 1,
+          "new_usaha_overall": 3,
+          "new_rumah_today": 8,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 46,
+          "new_rumah_overall": 50,
           "new_businesses": [
             {
-              "name": "I MADE SUWEJA / NI MADE SUDIASIH",
-              "code": "7205041005000500 - MADE SUWEJA /  - - /  - 0",
+              "name": "BANGUNAN WALET KOSONG",
+              "code": "7205041005000500 - BANGUNAN WALET KOSONG - 95 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "RIO PAKAVA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "HARMOKO / AINUN",
+              "code": "7205041001000701 - HARMOKO / AINUN - 3 /  - 0 - 94346 - 2. Tidak",
               "date": "older",
               "status": "REJECTED BY Pengawas",
               "type": "rumah",
               "kecName": "RIO PAKAVA",
-              "jenis": "Keluarga"
+              "jenis": "Keluarga (Bukan Usaha)"
             },
             {
-              "name": "FHATKHUL MUBIN / WAGINI",
-              "code": "7205041005000500 - FHATKHUL MUBIN /  - - /  - 0",
-              "date": "older",
+              "name": "BANGUNAN KOSONG",
+              "code": "7205041011000600 - BANGUNAN KOSONG - - /  - 0",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "RIO PAKAVA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN WALET",
+              "code": "7205041011000600 - BANGUNAN WALET - - /  - 0",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "usaha",
+              "kecName": "RIO PAKAVA",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "RUMAH KOSONG",
+              "code": "7205041001000802 - RUMAH KOSONG - 98 /  - 2. Tidak",
+              "date": "today",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "RIO PAKAVA",
-              "jenis": "Keluarga"
+              "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "AL MUDASIR / NI KETUT RISKI RAHAYU",
-              "code": "7205041005000500 - AL MUDASIR /  - - /  - 0",
-              "date": "older",
+              "name": "RUMAH KOSONG ",
+              "code": "7205041001000802 - RUMAH KOSONG  - 99 /  - 2. Tidak",
+              "date": "today",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "RIO PAKAVA",
-              "jenis": "Keluarga"
+              "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "UMAR / KATRINA",
-              "code": "7205041005000500 -  /  - - /  - 0",
-              "date": "older",
+              "name": "RUMAH KOSONG ",
+              "code": "7205041001000802 - RUMAH KOSONG  - 100 /  - 2. Tidak",
+              "date": "today",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "RIO PAKAVA",
-              "jenis": "Keluarga"
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "RUMAH KOSONG",
+              "code": "7205041001000802 - RUMAH KOSONG - 101 /  - 2. Tidak",
+              "date": "today",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "RIO PAKAVA",
+              "jenis": "Bangunan/Rumah Kosong"
             },
             {
               "name": "DANIEL BODA / MEGAWATI ",
               "code": "7205041001000802 - DANIEL BODA / MEGAWATI  - 106 /  - 1 - 2. Tidak",
               "date": "today",
-              "status": "SUBMITTED BY Pencacah",
+              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "RIO PAKAVA",
               "jenis": "Keluarga (Bukan Usaha)"
+            },
+            {
+              "name": "SAGI HARIANTO / ",
+              "code": "7205041005000500 - SAGI HARIANTO /  - - /  - 0",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "RIO PAKAVA",
+              "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 11.31
+          "persentase": 11.33
         },
         {
           "kec_name": "PINEMBANI",
@@ -4754,12 +4094,10 @@ window.IPAS_DATA = {
           "total_approved": 195,
           "total_submitted_pencacah": 25,
           "total_submitted_respondent": 0,
-          "today_completed": 3,
+          "today_completed": 0,
           "yesterday_completed": 0,
           "two_days_ago_completed": 1,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
@@ -4779,18 +4117,19 @@ window.IPAS_DATA = {
           "kec_id": "093f557f-6ee7-462b-921a-7f48359be640",
           "total_prelist": 15641,
           "total_draft": 498,
-          "total_open": 13692,
-          "total_submitted": 1451,
-          "total_rejected": 126,
-          "total_approved": 823,
-          "total_submitted_pencacah": 497,
+          "total_open": 13691,
+          "total_submitted": 1452,
+          "total_rejected": 125,
+          "total_approved": 831,
+          "total_submitted_pencacah": 491,
           "total_submitted_respondent": 5,
-          "today_completed": 19,
+          "today_completed": 9,
           "yesterday_completed": 3,
           "two_days_ago_completed": 18,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 17,
-            "REJECTED BY Pengawas": 2
+            "REJECTED BY Pengawas": 1,
+            "APPROVED BY Pengawas": 6,
+            "SUBMITTED BY Pencacah": 2
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -4804,12 +4143,30 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 31,
+          "new_rumah_yesterday": 2,
+          "new_rumah_overall": 32,
           "new_businesses": [
             {
-              "name": "AMIR GUFRON / RIKA FITRIANI",
-              "code": "7205080013000900 - AMIR GUFRON / RIKA FITRIANI - 49 /  - 1 - 31345875",
+              "name": "M.JUFRI AMIR / SUHARTIKA MUHTAR",
+              "code": "7205080026000500 - M.JUFRI AMIR / SUHARTIKA MUHTAR - 45 /  - 0",
+              "date": "yesterday",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "BANAWA",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "SUHARTI / MOH.DWI HASTOYO",
+              "code": "7205080026000500 - SUHARTI / MOH.DWI HASTOYO - 16 /  - 0",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "BANAWA",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "ZAKINA / REZKY RAMADANI",
+              "code": "7205080014000400 - ZAKINA / REZKY RAMADANI - 3 /  - 0",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
@@ -4817,64 +4174,10 @@ window.IPAS_DATA = {
               "jenis": "Keluarga"
             },
             {
-              "name": "KANTOR DESA LOLI OGE",
-              "code": "7205080013000900 - KANTOR DESA LOLI OGE - 23 / ",
+              "name": "ARMIN / ULFA",
+              "code": "7205080014000400 - ARMIN / ULFA - 8 /  - 0",
               "date": "older",
               "status": "APPROVED BY Pengawas",
-              "type": "usaha",
-              "kecName": "BANAWA",
-              "jenis": "Usaha Baru"
-            },
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7205080013000900 - BANGUNAN KOSONG - 37 / ",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BANAWA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "SIMON / ARWIN",
-              "code": "7205080013000900 - SIMON / ARWIN - 12 /  - 0",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BANAWA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7205080013000900 - BANGUNAN KOSONG - 34 / ",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BANAWA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "RISKAL KHAIDAR / MARSELA JELIYANTI IDJI",
-              "code": "7205080013000900 - RISKAL KHAIDAR / MARSELA JELIYANTI IDJI - 50 /  - 0",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BANAWA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "MOHAMMAD FAOZAN / REGITA",
-              "code": "7205080013000900 - MOHAMMAD FAOZAN / REGITA - 48 /  - 0",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BANAWA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "RIDWAN / ASNAWIAH",
-              "code": "7205080024000600 - RIDWAN / ASNAWIAH - 49 /  - 0",
-              "date": "older",
-              "status": "DRAFT",
               "type": "rumah",
               "kecName": "BANAWA",
               "jenis": "Keluarga"
@@ -4887,12 +4190,12 @@ window.IPAS_DATA = {
           "kec_name": "BANAWA SELATAN",
           "kec_id": "168c5d87-5d05-4af4-8635-f4c7c2db83b4",
           "total_prelist": 9637,
-          "total_draft": 292,
-          "total_open": 7949,
-          "total_submitted": 1396,
+          "total_draft": 289,
+          "total_open": 7946,
+          "total_submitted": 1402,
           "total_rejected": 85,
           "total_approved": 1091,
-          "total_submitted_pencacah": 220,
+          "total_submitted_pencacah": 226,
           "total_submitted_respondent": 0,
           "today_completed": 7,
           "yesterday_completed": 8,
@@ -4912,30 +4215,21 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 6,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 32,
+          "new_rumah_yesterday": 1,
+          "new_rumah_overall": 33,
           "new_businesses": [
             {
-              "name": "ST. MARIA / SYARIF",
-              "code": "7205081003000500 - ST. MARIA / SYARIF - 3 /  - 1",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
+              "name": "ASRI / ",
+              "code": "7205081003000202 - ASRI /  - - /  - 1",
+              "date": "yesterday",
+              "status": "DRAFT",
               "type": "rumah",
               "kecName": "BANAWA SELATAN",
               "jenis": "Keluarga"
-            },
-            {
-              "name": "AHMADI / FITRIANI",
-              "code": "7205081003000500 - AHMADI / FITRIANI - 1 /  - 2 - 94351 - 2. Tidak - 60700005",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "BANAWA SELATAN",
-              "jenis": "Keluarga (Bukan Usaha)"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.49
+          "persentase": 14.55
         },
         {
           "kec_name": "BANAWA TENGAH",
@@ -4945,13 +4239,15 @@ window.IPAS_DATA = {
           "total_open": 3642,
           "total_submitted": 509,
           "total_rejected": 7,
-          "total_approved": 406,
-          "total_submitted_pencacah": 96,
+          "total_approved": 409,
+          "total_submitted_pencacah": 93,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 3,
           "yesterday_completed": 1,
           "two_days_ago_completed": 5,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "APPROVED BY Pengawas": 3
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
           },
@@ -4979,12 +4275,10 @@ window.IPAS_DATA = {
           "total_approved": 268,
           "total_submitted_pencacah": 282,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 0,
           "yesterday_completed": 2,
           "two_days_ago_completed": 1,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
           },
@@ -4997,17 +4291,7 @@ window.IPAS_DATA = {
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 16,
-          "new_businesses": [
-            {
-              "name": "RAMLIANA / A'AN SYAIFUL BAYAAN",
-              "code": "7205090007000201 - RAMLIANA / A'AN SYAIFUL BAYAAN - - /  - 1",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "LABUAN",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 10.94
         },
@@ -5015,17 +4299,19 @@ window.IPAS_DATA = {
           "kec_name": "TANANTOVEA",
           "kec_id": "5c8cbbde-3c0a-4099-a73d-6330f4994844",
           "total_prelist": 5876,
-          "total_draft": 60,
-          "total_open": 5098,
-          "total_submitted": 718,
+          "total_draft": 59,
+          "total_open": 5096,
+          "total_submitted": 721,
           "total_rejected": 131,
           "total_approved": 433,
-          "total_submitted_pencacah": 154,
+          "total_submitted_pencacah": 157,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 3,
           "yesterday_completed": 1,
           "two_days_ago_completed": 7,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 3
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
           },
@@ -5042,7 +4328,7 @@ window.IPAS_DATA = {
           "new_rumah_overall": 12,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.22
+          "persentase": 12.27
         },
         {
           "kec_name": "SINDUE",
@@ -5078,16 +4364,18 @@ window.IPAS_DATA = {
           "kec_id": "d91b97ef-4d10-495f-a94d-decdac2f17f7",
           "total_prelist": 4549,
           "total_draft": 50,
-          "total_open": 3938,
-          "total_submitted": 561,
+          "total_open": 3937,
+          "total_submitted": 562,
           "total_rejected": 37,
           "total_approved": 392,
-          "total_submitted_pencacah": 132,
+          "total_submitted_pencacah": 133,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 1,
           "yesterday_completed": 5,
           "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 1
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 5
           },
@@ -5100,52 +4388,56 @@ window.IPAS_DATA = {
           "new_rumah_overall": 31,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.33
+          "persentase": 12.35
         },
         {
           "kec_name": "SINDUE TOBATA",
           "kec_id": "d8e59f02-6dfb-40fd-af65-81c20d6cb73f",
           "total_prelist": 3598,
           "total_draft": 21,
-          "total_open": 2948,
-          "total_submitted": 629,
+          "total_open": 2947,
+          "total_submitted": 630,
           "total_rejected": 11,
           "total_approved": 594,
-          "total_submitted_pencacah": 24,
+          "total_submitted_pencacah": 25,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 1,
           "yesterday_completed": 0,
           "two_days_ago_completed": 2,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 1
+          },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
+          "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 6,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 17.48
+          "persentase": 17.51
         },
         {
           "kec_name": "SIRENJA",
           "kec_id": "a0703dae-6684-4769-88c6-bb648052f398",
           "total_prelist": 7228,
           "total_draft": 158,
-          "total_open": 5896,
-          "total_submitted": 1174,
+          "total_open": 5895,
+          "total_submitted": 1175,
           "total_rejected": 54,
           "total_approved": 647,
-          "total_submitted_pencacah": 473,
+          "total_submitted_pencacah": 474,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 1,
           "yesterday_completed": 11,
           "two_days_ago_completed": 11,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 1
+          },
           "yesterday_completed_breakdown": {
             "REVOKED BY Pengawas": 1,
             "APPROVED BY Pengawas": 6,
@@ -5164,7 +4456,7 @@ window.IPAS_DATA = {
           "new_rumah_overall": 12,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 16.24
+          "persentase": 16.26
         },
         {
           "kec_name": "BALAESANG",
@@ -5173,14 +4465,15 @@ window.IPAS_DATA = {
           "total_draft": 338,
           "total_open": 7325,
           "total_submitted": 860,
-          "total_rejected": 55,
-          "total_approved": 378,
-          "total_submitted_pencacah": 427,
+          "total_rejected": 57,
+          "total_approved": 380,
+          "total_submitted_pencacah": 423,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 3,
           "yesterday_completed": 18,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
+            "APPROVED BY Pengawas": 2,
             "REJECTED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
@@ -5193,10 +4486,10 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 12,
+          "new_usaha_overall": 9,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 23,
+          "new_rumah_overall": 20,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 10.09
@@ -5206,17 +4499,17 @@ window.IPAS_DATA = {
           "kec_id": "ae2467bd-10d2-436b-87a9-ec49c78e49cf",
           "total_prelist": 3927,
           "total_draft": 170,
-          "total_open": 3254,
-          "total_submitted": 503,
+          "total_open": 3252,
+          "total_submitted": 505,
           "total_rejected": 25,
           "total_approved": 419,
-          "total_submitted_pencacah": 59,
+          "total_submitted_pencacah": 61,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 2,
           "yesterday_completed": 0,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
+            "SUBMITTED BY Pencacah": 2
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
@@ -5230,24 +4523,24 @@ window.IPAS_DATA = {
           "new_rumah_overall": 16,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.81
+          "persentase": 12.86
         },
         {
           "kec_name": "DAMPELAS",
           "kec_id": "539972d4-028f-442b-95c1-4b4cb7fa9224",
           "total_prelist": 11156,
           "total_draft": 253,
-          "total_open": 9592,
-          "total_submitted": 1311,
+          "total_open": 9591,
+          "total_submitted": 1312,
           "total_rejected": 71,
           "total_approved": 674,
-          "total_submitted_pencacah": 566,
+          "total_submitted_pencacah": 567,
           "total_submitted_respondent": 0,
-          "today_completed": 2,
+          "today_completed": 1,
           "yesterday_completed": 5,
           "two_days_ago_completed": 25,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 5
@@ -5262,27 +4555,28 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 14,
+          "new_rumah_overall": 13,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 11.75
+          "persentase": 11.76
         },
         {
           "kec_name": "SOJOL",
           "kec_id": "8421b303-1415-48dc-b8ef-1b808cac1372",
-          "total_prelist": 8899,
-          "total_draft": 158,
+          "total_prelist": 8900,
+          "total_draft": 156,
           "total_open": 7768,
-          "total_submitted": 973,
-          "total_rejected": 58,
+          "total_submitted": 976,
+          "total_rejected": 59,
           "total_approved": 601,
-          "total_submitted_pencacah": 314,
+          "total_submitted_pencacah": 316,
           "total_submitted_respondent": 0,
           "today_completed": 4,
           "yesterday_completed": 5,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4
+            "SUBMITTED BY Pencacah": 3,
+            "REJECTED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 1,
@@ -5292,25 +4586,34 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 2
           },
           "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 5,
-          "new_rumah_today": 2,
+          "new_usaha_yesterday": 1,
+          "new_usaha_overall": 6,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 14,
+          "new_rumah_overall": 15,
           "new_businesses": [
             {
-              "name": "WALET SUMARDI ",
-              "code": "7205160003000900 - WALET SUMARDI  - 92 /  - 1 - 2. Tidak",
-              "date": "today",
+              "name": "SITI NURJANAH / ",
+              "code": "7205160001001300 - SITI NURJANAH /  - - /  - 0",
+              "date": "older",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "SOJOL",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Keluarga"
             },
             {
-              "name": "SABUDDIN / JUMUDIA",
-              "code": "7205160013000500 - SABUDDIN / JUMUDIA - 6 /  - 2",
-              "date": "today",
+              "name": "BUMDES KARYA SOJOL",
+              "code": "7205160013000300 - BUMDES KARYA SOJOL - 21 /  - 1",
+              "date": "yesterday",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "SOJOL",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "ARWANDI / YULIKA",
+              "code": "7205160013000300 - ARWANDI / YULIKA - 11 /  - 0",
+              "date": "older",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "SOJOL",
@@ -5318,24 +4621,26 @@ window.IPAS_DATA = {
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 10.93
+          "persentase": 10.97
         },
         {
           "kec_name": "SOJOL UTARA",
           "kec_id": "cf6a1f78-8c15-4cef-b9ec-d6ff4019b5d9",
           "total_prelist": 3513,
-          "total_draft": 18,
-          "total_open": 3039,
+          "total_draft": 19,
+          "total_open": 3038,
           "total_submitted": 456,
-          "total_rejected": 20,
-          "total_approved": 320,
+          "total_rejected": 23,
+          "total_approved": 317,
           "total_submitted_pencacah": 116,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 6,
           "yesterday_completed": 4,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
+            "SUBMITTED BY Pencacah": 2,
+            "REVOKED BY Pengawas": 3,
+            "REJECTED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 4
@@ -5349,7 +4654,17 @@ window.IPAS_DATA = {
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 0,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "ANIS / MARHAENI",
+              "code": "7205161004000300 - ANIS / MARHAENI - 18 /  - 1 - 2. Tidak",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "SOJOL UTARA",
+              "jenis": "Keluarga (Bukan Usaha)"
+            }
+          ],
           "two_days_ago_is_estimate": false,
           "persentase": 12.98
         }
@@ -5357,24 +4672,23 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[06] TOLI-TOLI",
-      "total_prelist": 80267,
-      "total_draft": 1902,
-      "total_open": 67384,
-      "total_submitted": 10969,
-      "total_rejected": 567,
-      "total_approved": 4672,
-      "total_submitted_pencacah": 5730,
+      "total_prelist": 80275,
+      "total_draft": 1898,
+      "total_open": 67372,
+      "total_submitted": 10993,
+      "total_rejected": 568,
+      "total_approved": 4681,
+      "total_submitted_pencacah": 5744,
       "total_submitted_respondent": 0,
-      "persentase": 13.67,
-      "today_completed": 80,
+      "persentase": 13.69,
+      "today_completed": 37,
       "yesterday_completed": 56,
       "two_days_ago_completed": 39,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "APPROVED BY Pengawas": 22,
-        "SUBMITTED BY Pencacah": 40,
-        "REJECTED BY Pengawas": 7,
-        "REVOKED BY Pengawas": 11
+        "SUBMITTED BY Pencacah": 25,
+        "APPROVED BY Pengawas": 7,
+        "REJECTED BY Pengawas": 5
       },
       "yesterday_completed_breakdown": {
         "REVOKED BY Pengawas": 1,
@@ -5387,227 +4701,110 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 2,
         "SUBMITTED BY Pencacah": 27
       },
-      "new_usaha_today": 2,
+      "new_usaha_today": 1,
       "new_usaha_yesterday": 0,
-      "new_rumah_today": 9,
-      "new_rumah_yesterday": 4,
-      "new_usaha_overall": 48,
-      "new_rumah_overall": 283,
+      "new_rumah_today": 7,
+      "new_rumah_yesterday": 1,
+      "new_usaha_overall": 47,
+      "new_rumah_overall": 286,
       "new_businesses": [
+        {
+          "name": "RUMAH KOSONG ",
+          "code": "7206020007000200 - RUMAH KOSONG  - 4 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "DAMPAL UTARA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "MOH SALEH / DINASTI",
+          "code": "7206060006001800 - MOH SALEH / DINASTI - 28 /  - 1",
+          "date": "today",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TOLITOLI UTARA",
+          "jenis": "Keluarga"
+        },
         {
           "name": "SAMSU / NURMA",
           "code": "7206060006001800 - SAMSU / NURMA - 27 /  - 1",
           "date": "today",
-          "status": "SUBMITTED BY Pencacah",
+          "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "TOLITOLI UTARA",
           "jenis": "Keluarga"
         },
         {
-          "name": "RAHUL / SRI YOLANDA",
-          "code": "7206060009000900 - RAHUL / SRI YOLANDA - 58 /  - 1",
-          "date": "yesterday",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "TOLITOLI UTARA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "BANGUNAN KOSONG RUMAH YUSUP PRAWITO",
-          "code": "7206050003000600 - BANGUNAN KOSONG RUMAH YUSUP PRAWITO - - / ",
-          "date": "yesterday",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "GALANG",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "BANGUNAN KOSONG RUMAHNYA IBU IRMA",
-          "code": "7206030005000100 - BANGUNAN KOSONG RUMAHNYA IBU IRMA - 25 / ",
+          "name": "RUMAH KOSONG ",
+          "code": "7206020007000200 - RUMAH KOSONG  - 3 / ",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "DONDO",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "MOH RIFAI / HASRIANI",
-          "code": "7206020003000300 - MOH RIFAI / HASRIANI - - /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT",
           "type": "rumah",
           "kecName": "DAMPAL UTARA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "IRFAN / HASNAWI",
-          "code": "7206060010000300 - - / ",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "TOLITOLI UTARA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "SUMARNI  / ",
-          "code": "7206061001000600 - SUMARNI  /  - 60 /  - 0",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "DAKO PEMEAN",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "BANGUNAN KOSONG SARANG BURUNG WALET",
-          "code": "7206031008000900 - BANGUNAN KOSONG SARANG BURUNG WALET - 7 /  - 1",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "OGODEIDE",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "SAMSUL / SAINAB",
-          "code": "7206031008000900 - SAMSUL / SAINAB - 6 /  - 2 - 2. Tidak",
+          "name": "RUMAH KOSONG",
+          "code": "7206020007000200 - RUMAH KOSONG - 2 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "DAMPAL UTARA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "KANTOR PKK",
+          "code": "7206060013001300 - KANTOR PKK - 44 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "TOLITOLI UTARA",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7206060013001300 - BANGUNAN KOSONG - 3 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TOLITOLI UTARA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "I KOMANG BUDI ARTANA / NI PUTU SUCI SETYAWATI ",
+          "code": "7206041003001300 - I KOMANG BUDI ARTANA / NI PUTU SUCI SETYAWATI  - 20 /  - 2",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "LAMPASIO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "I NENGAH NARTA / ",
+          "code": "7206032003000600 - NI NYOMAN DIRI /  - - / ",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "BASIDONDO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "ROBBI MANIAR / SEPTIANI MAS'UD",
+          "code": "7206060009000900 - ROBBI MANIAR / SEPTIANI MAS'UD - 72 /  - 1",
           "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "OGODEIDE",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "MUSDIN / ",
-          "code": "7206060010000300 - MUSDIN /  - - /  - 0",
-          "date": "today",
-          "status": "DRAFT",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "TOLITOLI UTARA",
           "jenis": "Keluarga"
         },
         {
-          "name": "SAYURAN (NINGSIH)",
-          "code": "7206040016000501 - SAYURAN (NINGSIH) - 20 /  - 1 - 2. Tidak - 14044238",
+          "name": "NI NYOMAN DIRI / ",
+          "code": "7206032003000600 -  /  - - /  - 0",
           "date": "older",
-          "status": "REVOKED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAOLAN",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "IKAN (SURIYANA)",
-          "code": "7206040016000501 - IKAN (SURIYANA) - 53 /  - 1 - 2. Tidak - 16641273",
-          "date": "older",
-          "status": "REVOKED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAOLAN",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "IWAN / INDAN RAHAYU",
-          "code": "7206040016005600 - IWAN / INDAN RAHAYU - 39 /  - 0",
-          "date": "today",
-          "status": "DRAFT",
-          "type": "rumah",
-          "kecName": "BAOLAN",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "DUMA HENGKENANG  / ",
-          "code": "7206060012000100 - DUMA HENGKENANG  /  - 27 /  - 1",
-          "date": "today",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
-          "kecName": "TOLITOLI UTARA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "RUSNI / NURDIANA",
-          "code": "7206040016005600 - RUSNI / NURDIANA - 35 /  - 0",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "BAOLAN",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "BENSIN ECERAN RISKA JAYA",
-          "code": "7206031006000300 - BENSIN ECERAN RISKA JAYA - 57 /  - 1",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "usaha",
-          "kecName": "OGODEIDE",
-          "jenis": "Usaha Baru"
-        },
-        {
-          "name": "REMPAH (YENI DAU)",
-          "code": "7206040016000501 - REMPAH (YENI DAU) - 61 /  - 1 - 2. Tidak - 16523994",
-          "date": "older",
-          "status": "REVOKED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAOLAN",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "SAYUR (DEYBI TIELUNG)",
-          "code": "7206040016000501 - SAYUR (DEYBI TIELUNG) - 52 /  - 1 - 2. Tidak - 12712559",
-          "date": "older",
-          "status": "REVOKED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAOLAN",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "SAYUR (JUHANA)",
-          "code": "7206040016000501 - SAYUR (JUHANA) - 60 /  - 1 - 2. Tidak - 14044238",
-          "date": "older",
-          "status": "REVOKED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAOLAN",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "BRILINK ADHYATMA",
-          "code": "7206040016005600 - BRILINK ADHYATMA - 9 /  - 1",
-          "date": "today",
-          "status": "DRAFT",
-          "type": "usaha",
-          "kecName": "BAOLAN",
-          "jenis": "Usaha Baru"
-        },
-        {
-          "name": "BUAH (NURIYATI)",
-          "code": "7206040016000501 - BUAH (NURIYATI) - 40 /  - 1 - 2. Tidak - 14727881",
-          "date": "older",
-          "status": "REVOKED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BAOLAN",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "CHAIRUDDIN / RIZA HAIDA WARDHANI",
-          "code": "7206040016005600 - CHAIRUDDIN / RIZA HAIDA WARDHANI - 19 /  - 1",
-          "date": "today",
-          "status": "DRAFT",
-          "type": "rumah",
-          "kecName": "BAOLAN",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "MOH RAHMAT / LINDA",
-          "code": "7206050004000300 - MOH RAHMAT /  - 25 /  - 1",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "GALANG",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "HASAN DATU / NURSIA",
-          "code": "7206040016005600 - HASAN DATU / NURSIA - 52 /  - 1",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "BAOLAN",
+          "kecName": "BASIDONDO",
           "jenis": "Keluarga"
         }
       ],
@@ -5617,11 +4814,11 @@ window.IPAS_DATA = {
           "kec_id": "a7bf080a-3def-427c-a6c2-675b9161843b",
           "total_prelist": 8032,
           "total_draft": 78,
-          "total_open": 6887,
-          "total_submitted": 1067,
+          "total_open": 6886,
+          "total_submitted": 1068,
           "total_rejected": 25,
           "total_approved": 344,
-          "total_submitted_pencacah": 698,
+          "total_submitted_pencacah": 699,
           "total_submitted_respondent": 0,
           "today_completed": 1,
           "yesterday_completed": 1,
@@ -5643,23 +4840,25 @@ window.IPAS_DATA = {
           "new_rumah_overall": 15,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 13.28
+          "persentase": 13.3
         },
         {
           "kec_name": "DAMPAL UTARA",
           "kec_id": "511c910b-ed62-4816-b1ed-492abc67fe54",
-          "total_prelist": 5065,
+          "total_prelist": 5067,
           "total_draft": 198,
           "total_open": 4073,
-          "total_submitted": 794,
+          "total_submitted": 796,
           "total_rejected": 47,
           "total_approved": 283,
-          "total_submitted_pencacah": 464,
+          "total_submitted_pencacah": 466,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 3,
           "yesterday_completed": 4,
           "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 3
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
           },
@@ -5667,39 +4866,57 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 2,
-          "new_rumah_today": 1,
+          "new_rumah_today": 3,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 29,
+          "new_rumah_overall": 28,
           "new_businesses": [
             {
-              "name": "MOH RIFAI / HASRIANI",
-              "code": "7206020003000300 - MOH RIFAI / HASRIANI - - /  - 0 - 2. Tidak",
+              "name": "RUMAH KOSONG ",
+              "code": "7206020007000200 - RUMAH KOSONG  - 4 / ",
               "date": "today",
-              "status": "DRAFT",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "DAMPAL UTARA",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "RUMAH KOSONG ",
+              "code": "7206020007000200 - RUMAH KOSONG  - 3 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "DAMPAL UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "RUMAH KOSONG",
+              "code": "7206020007000200 - RUMAH KOSONG - 2 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "DAMPAL UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 15.68
+          "persentase": 15.71
         },
         {
           "kec_name": "DONDO",
           "kec_id": "a2937b90-81a6-4c92-b53b-44911931dbe6",
           "total_prelist": 8120,
           "total_draft": 63,
-          "total_open": 7007,
-          "total_submitted": 1050,
+          "total_open": 7005,
+          "total_submitted": 1052,
           "total_rejected": 97,
           "total_approved": 610,
-          "total_submitted_pencacah": 343,
+          "total_submitted_pencacah": 345,
           "total_submitted_respondent": 0,
-          "today_completed": 3,
+          "today_completed": 2,
           "yesterday_completed": 12,
           "two_days_ago_completed": 12,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3
+            "SUBMITTED BY Pencacah": 2
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 12
@@ -5712,97 +4929,60 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 6,
-          "new_rumah_today": 1,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 22,
-          "new_businesses": [
-            {
-              "name": "BANGUNAN KOSONG RUMAHNYA IBU IRMA",
-              "code": "7206030005000100 - BANGUNAN KOSONG RUMAHNYA IBU IRMA - 25 / ",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "DONDO",
-              "jenis": "Bangunan/Rumah Kosong"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.93
+          "persentase": 12.96
         },
         {
           "kec_name": "OGODEIDE",
           "kec_id": "c6e474d6-064d-4afa-bde0-ff7fb454cdc3",
           "total_prelist": 4545,
           "total_draft": 37,
-          "total_open": 3634,
-          "total_submitted": 874,
-          "total_rejected": 11,
-          "total_approved": 678,
-          "total_submitted_pencacah": 185,
+          "total_open": 3632,
+          "total_submitted": 876,
+          "total_rejected": 8,
+          "total_approved": 679,
+          "total_submitted_pencacah": 189,
           "total_submitted_respondent": 0,
-          "today_completed": 15,
+          "today_completed": 5,
           "yesterday_completed": 0,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 5,
-            "APPROVED BY Pengawas": 10
+            "SUBMITTED BY Pencacah": 5
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 1,
+          "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 5,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 2,
+          "new_rumah_yesterday": 0,
           "new_rumah_overall": 32,
-          "new_businesses": [
-            {
-              "name": "BANGUNAN KOSONG SARANG BURUNG WALET",
-              "code": "7206031008000900 - BANGUNAN KOSONG SARANG BURUNG WALET - 7 /  - 1",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "OGODEIDE",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "SAMSUL / SAINAB",
-              "code": "7206031008000900 - SAMSUL / SAINAB - 6 /  - 2 - 2. Tidak",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "OGODEIDE",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "BENSIN ECERAN RISKA JAYA",
-              "code": "7206031006000300 - BENSIN ECERAN RISKA JAYA - 57 /  - 1",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "usaha",
-              "kecName": "OGODEIDE",
-              "jenis": "Usaha Baru"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 19.23
+          "persentase": 19.27
         },
         {
           "kec_name": "BASIDONDO",
           "kec_id": "66505253-c231-4272-9b94-dc6d3a71fd2a",
           "total_prelist": 3691,
           "total_draft": 42,
-          "total_open": 3128,
-          "total_submitted": 521,
-          "total_rejected": 4,
-          "total_approved": 477,
-          "total_submitted_pencacah": 40,
+          "total_open": 3126,
+          "total_submitted": 523,
+          "total_rejected": 5,
+          "total_approved": 479,
+          "total_submitted_pencacah": 39,
           "total_submitted_respondent": 0,
-          "today_completed": 3,
+          "today_completed": 4,
           "yesterday_completed": 1,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3
+            "SUBMITTED BY Pencacah": 1,
+            "REJECTED BY Pengawas": 1,
+            "APPROVED BY Pengawas": 2
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
@@ -5813,29 +4993,47 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 7,
-          "new_businesses": [],
+          "new_rumah_overall": 9,
+          "new_businesses": [
+            {
+              "name": "I NENGAH NARTA / ",
+              "code": "7206032003000600 - NI NYOMAN DIRI /  - - / ",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "BASIDONDO",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "NI NYOMAN DIRI / ",
+              "code": "7206032003000600 -  /  - - /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "BASIDONDO",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.12
+          "persentase": 14.17
         },
         {
           "kec_name": "BAOLAN",
           "kec_id": "1f4e43f8-9369-4617-80a1-26e4c366a490",
-          "total_prelist": 22962,
+          "total_prelist": 22963,
           "total_draft": 579,
-          "total_open": 19465,
-          "total_submitted": 2918,
-          "total_rejected": 144,
+          "total_open": 19463,
+          "total_submitted": 2921,
+          "total_rejected": 147,
           "total_approved": 980,
           "total_submitted_pencacah": 1794,
           "total_submitted_respondent": 0,
-          "today_completed": 17,
+          "today_completed": 5,
           "yesterday_completed": 16,
           "two_days_ago_completed": 4,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 3,
-            "SUBMITTED BY Pencacah": 3,
-            "REVOKED BY Pengawas": 11
+            "SUBMITTED BY Pencacah": 2,
+            "REJECTED BY Pengawas": 3
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 16
@@ -5843,133 +5041,32 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
           },
-          "new_usaha_today": 1,
+          "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 10,
-          "new_rumah_today": 4,
+          "new_usaha_overall": 9,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 101,
-          "new_businesses": [
-            {
-              "name": "SAYURAN (NINGSIH)",
-              "code": "7206040016000501 - SAYURAN (NINGSIH) - 20 /  - 1 - 2. Tidak - 14044238",
-              "date": "older",
-              "status": "REVOKED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAOLAN",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "IKAN (SURIYANA)",
-              "code": "7206040016000501 - IKAN (SURIYANA) - 53 /  - 1 - 2. Tidak - 16641273",
-              "date": "older",
-              "status": "REVOKED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAOLAN",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "IWAN / INDAN RAHAYU",
-              "code": "7206040016005600 - IWAN / INDAN RAHAYU - 39 /  - 0",
-              "date": "today",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "BAOLAN",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "RUSNI / NURDIANA",
-              "code": "7206040016005600 - RUSNI / NURDIANA - 35 /  - 0",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "BAOLAN",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "REMPAH (YENI DAU)",
-              "code": "7206040016000501 - REMPAH (YENI DAU) - 61 /  - 1 - 2. Tidak - 16523994",
-              "date": "older",
-              "status": "REVOKED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAOLAN",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "SAYUR (DEYBI TIELUNG)",
-              "code": "7206040016000501 - SAYUR (DEYBI TIELUNG) - 52 /  - 1 - 2. Tidak - 12712559",
-              "date": "older",
-              "status": "REVOKED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAOLAN",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "SAYUR (JUHANA)",
-              "code": "7206040016000501 - SAYUR (JUHANA) - 60 /  - 1 - 2. Tidak - 14044238",
-              "date": "older",
-              "status": "REVOKED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAOLAN",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "BRILINK ADHYATMA",
-              "code": "7206040016005600 - BRILINK ADHYATMA - 9 /  - 1",
-              "date": "today",
-              "status": "DRAFT",
-              "type": "usaha",
-              "kecName": "BAOLAN",
-              "jenis": "Usaha Baru"
-            },
-            {
-              "name": "BUAH (NURIYATI)",
-              "code": "7206040016000501 - BUAH (NURIYATI) - 40 /  - 1 - 2. Tidak - 14727881",
-              "date": "older",
-              "status": "REVOKED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BAOLAN",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "CHAIRUDDIN / RIZA HAIDA WARDHANI",
-              "code": "7206040016005600 - CHAIRUDDIN / RIZA HAIDA WARDHANI - 19 /  - 1",
-              "date": "today",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "BAOLAN",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "HASAN DATU / NURSIA",
-              "code": "7206040016005600 - HASAN DATU / NURSIA - 52 /  - 1",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "BAOLAN",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.71
+          "persentase": 12.72
         },
         {
           "kec_name": "LAMPASIO",
           "kec_id": "d607fcc3-89d5-44dc-bd31-7bd8321e0177",
-          "total_prelist": 4388,
+          "total_prelist": 4389,
           "total_draft": 79,
-          "total_open": 3618,
-          "total_submitted": 691,
+          "total_open": 3617,
+          "total_submitted": 693,
           "total_rejected": 76,
           "total_approved": 264,
-          "total_submitted_pencacah": 351,
+          "total_submitted_pencacah": 353,
           "total_submitted_respondent": 0,
           "today_completed": 3,
           "yesterday_completed": 4,
           "two_days_ago_completed": 3,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 1,
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
@@ -5980,31 +5077,40 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 4,
-          "new_rumah_today": 0,
+          "new_usaha_overall": 3,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 12,
-          "new_businesses": [],
+          "new_rumah_overall": 13,
+          "new_businesses": [
+            {
+              "name": "I KOMANG BUDI ARTANA / NI PUTU SUCI SETYAWATI ",
+              "code": "7206041003001300 - I KOMANG BUDI ARTANA / NI PUTU SUCI SETYAWATI  - 20 /  - 2",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "LAMPASIO",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 15.75
+          "persentase": 15.79
         },
         {
           "kec_name": "GALANG",
           "kec_id": "224cc036-712f-468a-a169-ca7e662d7bfa",
           "total_prelist": 13341,
-          "total_draft": 543,
+          "total_draft": 542,
           "total_open": 10996,
-          "total_submitted": 1802,
+          "total_submitted": 1803,
           "total_rejected": 68,
           "total_approved": 300,
-          "total_submitted_pencacah": 1434,
+          "total_submitted_pencacah": 1435,
           "total_submitted_respondent": 0,
-          "today_completed": 15,
+          "today_completed": 1,
           "yesterday_completed": 17,
           "two_days_ago_completed": 7,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 13,
-            "REJECTED BY Pengawas": 2
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 1,
@@ -6018,48 +5124,29 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 9,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 34,
-          "new_businesses": [
-            {
-              "name": "BANGUNAN KOSONG RUMAH YUSUP PRAWITO",
-              "code": "7206050003000600 - BANGUNAN KOSONG RUMAH YUSUP PRAWITO - - / ",
-              "date": "yesterday",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "GALANG",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "MOH RAHMAT / LINDA",
-              "code": "7206050004000300 - MOH RAHMAT /  - 25 /  - 1",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "GALANG",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 33,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 13.51
         },
         {
           "kec_name": "TOLITOLI UTARA",
           "kec_id": "66294627-db5d-409e-bdc7-302d3bd7b4d7",
-          "total_prelist": 6695,
-          "total_draft": 106,
-          "total_open": 5773,
-          "total_submitted": 816,
+          "total_prelist": 6699,
+          "total_draft": 104,
+          "total_open": 5771,
+          "total_submitted": 824,
           "total_rejected": 70,
-          "total_approved": 399,
-          "total_submitted_pencacah": 347,
+          "total_approved": 405,
+          "total_submitted_pencacah": 349,
           "total_submitted_respondent": 0,
-          "today_completed": 19,
+          "today_completed": 13,
           "yesterday_completed": 1,
           "two_days_ago_completed": 7,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 12,
-            "SUBMITTED BY Pencacah": 6,
+            "APPROVED BY Pengawas": 5,
+            "SUBMITTED BY Pencacah": 7,
             "REJECTED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
@@ -6068,79 +5155,77 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 7
           },
-          "new_usaha_today": 0,
+          "new_usaha_today": 1,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 7,
+          "new_usaha_overall": 8,
           "new_rumah_today": 3,
           "new_rumah_yesterday": 1,
-          "new_rumah_overall": 21,
+          "new_rumah_overall": 24,
           "new_businesses": [
+            {
+              "name": "MOH SALEH / DINASTI",
+              "code": "7206060006001800 - MOH SALEH / DINASTI - 28 /  - 1",
+              "date": "today",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TOLITOLI UTARA",
+              "jenis": "Keluarga"
+            },
             {
               "name": "SAMSU / NURMA",
               "code": "7206060006001800 - SAMSU / NURMA - 27 /  - 1",
               "date": "today",
-              "status": "SUBMITTED BY Pencacah",
+              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "TOLITOLI UTARA",
               "jenis": "Keluarga"
             },
             {
-              "name": "RAHUL / SRI YOLANDA",
-              "code": "7206060009000900 - RAHUL / SRI YOLANDA - 58 /  - 1",
+              "name": "KANTOR PKK",
+              "code": "7206060013001300 - KANTOR PKK - 44 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "TOLITOLI UTARA",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7206060013001300 - BANGUNAN KOSONG - 3 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TOLITOLI UTARA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "ROBBI MANIAR / SEPTIANI MAS'UD",
+              "code": "7206060009000900 - ROBBI MANIAR / SEPTIANI MAS'UD - 72 /  - 1",
               "date": "yesterday",
               "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "TOLITOLI UTARA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "IRFAN / HASNAWI",
-              "code": "7206060010000300 - - / ",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "TOLITOLI UTARA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "MUSDIN / ",
-              "code": "7206060010000300 - MUSDIN /  - - /  - 0",
-              "date": "today",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "TOLITOLI UTARA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "DUMA HENGKENANG  / ",
-              "code": "7206060012000100 - DUMA HENGKENANG  /  - 27 /  - 1",
-              "date": "today",
-              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "TOLITOLI UTARA",
               "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.19
+          "persentase": 12.3
         },
         {
           "kec_name": "DAKO PEMEAN",
           "kec_id": "b55f6be9-6f94-41f6-95b9-03467952b4b0",
           "total_prelist": 3428,
-          "total_draft": 177,
+          "total_draft": 176,
           "total_open": 2815,
-          "total_submitted": 436,
+          "total_submitted": 437,
           "total_rejected": 25,
           "total_approved": 337,
-          "total_submitted_pencacah": 74,
+          "total_submitted_pencacah": 75,
           "total_submitted_respondent": 0,
-          "today_completed": 4,
+          "today_completed": 0,
           "yesterday_completed": 0,
           "two_days_ago_completed": 5,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "APPROVED BY Pengawas": 1,
@@ -6151,43 +5236,32 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 10,
-          "new_businesses": [
-            {
-              "name": "SUMARNI  / ",
-              "code": "7206061001000600 - SUMARNI  /  - 60 /  - 0",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "DAKO PEMEAN",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_rumah_overall": 9,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.72
+          "persentase": 12.75
         }
       ]
     },
     {
       "kabupaten": "[07] BUOL",
-      "total_prelist": 59527,
-      "total_draft": 1415,
-      "total_open": 49738,
-      "total_submitted": 8373,
-      "total_rejected": 823,
-      "total_approved": 1872,
-      "total_submitted_pencacah": 5632,
+      "total_prelist": 59529,
+      "total_draft": 1418,
+      "total_open": 49727,
+      "total_submitted": 8383,
+      "total_rejected": 827,
+      "total_approved": 1887,
+      "total_submitted_pencacah": 5623,
       "total_submitted_respondent": 46,
-      "persentase": 14.07,
-      "today_completed": 44,
+      "persentase": 14.08,
+      "today_completed": 45,
       "yesterday_completed": 22,
       "two_days_ago_completed": 58,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "SUBMITTED BY Pencacah": 25,
-        "REJECTED BY Pengawas": 5,
-        "REVOKED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 13
+        "APPROVED BY Pengawas": 17,
+        "SUBMITTED BY Pencacah": 16,
+        "REJECTED BY Pengawas": 12
       },
       "yesterday_completed_breakdown": {
         "REJECTED BY Pengawas": 4,
@@ -6200,172 +5274,91 @@ window.IPAS_DATA = {
       },
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_rumah_today": 6,
-      "new_rumah_yesterday": 2,
-      "new_usaha_overall": 58,
-      "new_rumah_overall": 223,
+      "new_rumah_today": 1,
+      "new_rumah_yesterday": 4,
+      "new_usaha_overall": 57,
+      "new_rumah_overall": 216,
       "new_businesses": [
         {
-          "name": "SARDI S. MA'RUF / MASITA ALPIA",
-          "code": "7207041001001200 - SARDI S. MA'RUF / MASITA ALPIA - 43 /  - 1",
+          "name": "BANGUNAN KOSONG",
+          "code": "7207040001000900 - BANGUNAN KOSONG - - /  - 2. Tidak",
           "date": "today",
-          "status": "SUBMITTED BY Pencacah",
+          "status": "DRAFT",
           "type": "rumah",
-          "kecName": "GADUNG",
-          "jenis": "Keluarga"
+          "kecName": "BUNOBOGU",
+          "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "PO'U ABDULLAH  / MINARILA",
-          "code": "7207011003003400 - PO'U ABDULLAH  / MINARILA - - /  - 0",
-          "date": "yesterday",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "BIAU",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "SAHRIL R. BOI / SARNING J. UMAR",
-          "code": "7207030021000100 - SAHRIL R. BOI / SARNING J. UMAR - 24 /  - 1",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
+          "name": "OPAN NOHO / YULIANI A BEGALI",
+          "code": "7207030008000500 - OPAN NOHO /  - - / ",
+          "date": "older",
+          "status": "DRAFT",
           "type": "rumah",
           "kecName": "BOKAT",
           "jenis": "Keluarga"
         },
         {
-          "name": "MCK",
-          "code": "7207040006001200 - NONBKU - 4",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "usaha",
-          "kecName": "BUNOBOGU",
-          "jenis": "Bangunan Lain / Usaha"
-        },
-        {
-          "name": "RUSTAM Y NIHI / HATIJAH A NGOU",
-          "code": "7207011003003400 - RUSTAM Y NIHI / HATIJAH A NGOU - - /  - 0",
-          "date": "today",
-          "status": "DRAFT",
-          "type": "rumah",
-          "kecName": "BIAU",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "BALAI DESA",
-          "code": "7207040006001200 - NONBKU - 3",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "usaha",
-          "kecName": "BUNOBOGU",
-          "jenis": "Bangunan Lain / Usaha"
-        },
-        {
-          "name": "TRIBUN",
-          "code": "7207010009000200 - NONBKU - 1",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "usaha",
-          "kecName": "LAKEA",
-          "jenis": "Bangunan Lain / Usaha"
-        },
-        {
-          "name": "MARWIN / ROSMAWATI ",
-          "code": "7207031003000600 - MARWIN / ROSMAWATI  - - /  - 0",
-          "date": "today",
-          "status": "DRAFT",
-          "type": "rumah",
-          "kecName": "BUKAL",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "KANTOR DESA",
-          "code": "7207040006001200 - NONBKU - 1",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "usaha",
-          "kecName": "BUNOBOGU",
-          "jenis": "Bangunan Lain / Usaha"
-        },
-        {
-          "name": "RUMAH KOSONG",
-          "code": "7207010009000200 - RUMAH KOSONG - 12 /  - 1. Ya",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "LAKEA",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "RUMAH KOSONG",
-          "code": "7207010009000200 - RUMAH KOSONG - 8 /  - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "LAKEA",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "SAHRIL ANTON  / LISTINA RAHMAWATI ",
-          "code": "7207011005000401 -  /  - 6 /  - 0",
-          "date": "older",
-          "status": "DRAFT",
-          "type": "rumah",
-          "kecName": "BIAU",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "TEMPAT USAHA KOPRA NAJAMUDIN LASMIN",
-          "code": "7207010009000100 - TEMPAT USAHA KOPRA  - 22 /  - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "LAKEA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "NUR NOVELIA J. NAUKOKO / ",
-          "code": "7207020017000100 - NUR NOVELIA J. NAUKOKO /  - - /  - 0 - 2. Tidak",
+          "name": "RUMAH DI KEBUN",
+          "code": "7207020008000100 - RUMAH DI KEBUN - 83 /  - 2. Tidak",
           "date": "yesterday",
-          "status": "SUBMITTED BY Pencacah",
+          "status": "REJECTED BY Pengawas",
           "type": "rumah",
           "kecName": "MOMUNU",
           "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "RUMAH KOSONG",
-          "code": "7207010018000900 - RUMAH KOSONG - 5 / ",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
+          "name": "BANGUNAN KOSONG ",
+          "code": "7207020008000100 - BANGUNAN KOSONG  - 81 /  - 2. Tidak",
+          "date": "yesterday",
+          "status": "REJECTED BY Pengawas",
           "type": "rumah",
-          "kecName": "LAKEA",
+          "kecName": "MOMUNU",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "DANDI SAWAR / ",
-          "code": "7207011003000400 - DANDI SAWAR /  - 10 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
+          "name": "BANGUNAN KOSONG ",
+          "code": "7207020008000100 - BANGUNAN KOSONG  - 78 /  - 2. Tidak",
+          "date": "yesterday",
+          "status": "REJECTED BY Pengawas",
           "type": "rumah",
-          "kecName": "BIAU",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "kecName": "MOMUNU",
+          "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "POS KAMLING",
-          "code": "7207010018000900 - NONBKU - 1",
+          "name": "RAMLI / 2",
+          "code": "7207030019000100 - RAMLI / 2 - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "BOKAT",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "MASJID",
+          "code": "7207040006001200 - NONBKU - 2",
           "date": "older",
-          "status": "APPROVED BY Pengawas",
+          "status": "SUBMITTED BY Pencacah",
           "type": "usaha",
-          "kecName": "LAKEA",
+          "kecName": "BUNOBOGU",
           "jenis": "Bangunan Lain / Usaha"
         },
         {
-          "name": "RISNO NANGGU / OKTAVIANI R. MAHMUD",
-          "code": "7207031009000300 - RISNO NANGGU / OKTAVIANI R. MAHMUD - 28 /  - 1 - 2. Tidak",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
+          "name": "BANGUNAN BRI LAMA",
+          "code": "7207050006000600 - NONBKU - 1",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "usaha",
+          "kecName": "PALELEH",
+          "jenis": "Bangunan Lain / Usaha"
+        },
+        {
+          "name": "BANGUNAN KOSONG WARNA HIJAU DEPAN TAMAN",
+          "code": "7207040001000600 - BANGUNAN KOSONG WARNA HIJAU DEPAN TAMAN - 12 /  - 1. Ya",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
           "type": "rumah",
-          "kecName": "BUKAL",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "kecName": "BUNOBOGU",
+          "jenis": "Bangunan/Rumah Kosong"
         }
       ],
       "kecamatan_list": [
@@ -6374,18 +5367,17 @@ window.IPAS_DATA = {
           "kec_id": "9500a712-af0e-402d-aa10-de7305b3f0f9",
           "total_prelist": 4229,
           "total_draft": 70,
-          "total_open": 3459,
-          "total_submitted": 700,
-          "total_rejected": 102,
+          "total_open": 3458,
+          "total_submitted": 701,
+          "total_rejected": 105,
           "total_approved": 127,
-          "total_submitted_pencacah": 470,
+          "total_submitted_pencacah": 468,
           "total_submitted_respondent": 1,
-          "today_completed": 15,
+          "today_completed": 4,
           "yesterday_completed": 0,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 13,
-            "REJECTED BY Pengawas": 1,
+            "REJECTED BY Pengawas": 3,
             "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {},
@@ -6395,84 +5387,29 @@ window.IPAS_DATA = {
           "new_usaha_overall": 5,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 10,
-          "new_businesses": [
-            {
-              "name": "TRIBUN",
-              "code": "7207010009000200 - NONBKU - 1",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "usaha",
-              "kecName": "LAKEA",
-              "jenis": "Bangunan Lain / Usaha"
-            },
-            {
-              "name": "RUMAH KOSONG",
-              "code": "7207010009000200 - RUMAH KOSONG - 12 /  - 1. Ya",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LAKEA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "RUMAH KOSONG",
-              "code": "7207010009000200 - RUMAH KOSONG - 8 /  - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LAKEA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "TEMPAT USAHA KOPRA NAJAMUDIN LASMIN",
-              "code": "7207010009000100 - TEMPAT USAHA KOPRA  - 22 /  - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LAKEA",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "RUMAH KOSONG",
-              "code": "7207010018000900 - RUMAH KOSONG - 5 / ",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LAKEA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "POS KAMLING",
-              "code": "7207010018000900 - NONBKU - 1",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "usaha",
-              "kecName": "LAKEA",
-              "jenis": "Bangunan Lain / Usaha"
-            }
-          ],
+          "new_rumah_overall": 8,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 16.55
+          "persentase": 16.58
         },
         {
           "kec_name": "BIAU",
           "kec_id": "65adffaa-4bb1-411e-894b-497d04d34415",
           "total_prelist": 13843,
-          "total_draft": 430,
+          "total_draft": 429,
           "total_open": 11523,
-          "total_submitted": 1890,
+          "total_submitted": 1891,
           "total_rejected": 225,
-          "total_approved": 258,
-          "total_submitted_pencacah": 1401,
+          "total_approved": 260,
+          "total_submitted_pencacah": 1400,
           "total_submitted_respondent": 6,
-          "today_completed": 8,
+          "today_completed": 10,
           "yesterday_completed": 9,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4,
-            "REVOKED BY Pengawas": 1,
-            "REJECTED BY Pengawas": 3
+            "APPROVED BY Pengawas": 4,
+            "REJECTED BY Pengawas": 3,
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {
             "REJECTED BY Pengawas": 2,
@@ -6483,50 +5420,13 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 18,
-          "new_rumah_today": 2,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 72,
-          "new_businesses": [
-            {
-              "name": "PO'U ABDULLAH  / MINARILA",
-              "code": "7207011003003400 - PO'U ABDULLAH  / MINARILA - - /  - 0",
-              "date": "yesterday",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "BIAU",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "RUSTAM Y NIHI / HATIJAH A NGOU",
-              "code": "7207011003003400 - RUSTAM Y NIHI / HATIJAH A NGOU - - /  - 0",
-              "date": "today",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "BIAU",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "SAHRIL ANTON  / LISTINA RAHMAWATI ",
-              "code": "7207011005000401 -  /  - 6 /  - 0",
-              "date": "older",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "BIAU",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "DANDI SAWAR / ",
-              "code": "7207011003000400 - DANDI SAWAR /  - 10 /  - 0 - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "BIAU",
-              "jenis": "Keluarga (Bukan Usaha)"
-            }
-          ],
+          "new_usaha_overall": 16,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 67,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 13.65
+          "persentase": 13.66
         },
         {
           "kec_name": "KARAMAT",
@@ -6535,14 +5435,16 @@ window.IPAS_DATA = {
           "total_draft": 17,
           "total_open": 3165,
           "total_submitted": 441,
-          "total_rejected": 29,
+          "total_rejected": 30,
           "total_approved": 87,
-          "total_submitted_pencacah": 323,
+          "total_submitted_pencacah": 322,
           "total_submitted_respondent": 2,
-          "today_completed": 0,
+          "today_completed": 1,
           "yesterday_completed": 0,
           "two_days_ago_completed": 2,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "REJECTED BY Pengawas": 1
+          },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -6562,16 +5464,17 @@ window.IPAS_DATA = {
           "kec_id": "1327182c-39b6-445a-99cb-f9f2064b707a",
           "total_prelist": 6344,
           "total_draft": 199,
-          "total_open": 5239,
-          "total_submitted": 906,
-          "total_rejected": 63,
+          "total_open": 5238,
+          "total_submitted": 907,
+          "total_rejected": 67,
           "total_approved": 288,
-          "total_submitted_pencacah": 554,
+          "total_submitted_pencacah": 551,
           "total_submitted_respondent": 1,
-          "today_completed": 2,
+          "today_completed": 7,
           "yesterday_completed": 2,
           "two_days_ago_completed": 33,
           "today_completed_breakdown": {
+            "REJECTED BY Pengawas": 5,
             "SUBMITTED BY Pencacah": 2
           },
           "yesterday_completed_breakdown": {
@@ -6586,32 +5489,50 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 5,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 27,
+          "new_rumah_yesterday": 3,
+          "new_rumah_overall": 28,
           "new_businesses": [
             {
-              "name": "NUR NOVELIA J. NAUKOKO / ",
-              "code": "7207020017000100 - NUR NOVELIA J. NAUKOKO /  - - /  - 0 - 2. Tidak",
+              "name": "RUMAH DI KEBUN",
+              "code": "7207020008000100 - RUMAH DI KEBUN - 83 /  - 2. Tidak",
               "date": "yesterday",
-              "status": "SUBMITTED BY Pencacah",
+              "status": "REJECTED BY Pengawas",
               "type": "rumah",
               "kecName": "MOMUNU",
               "jenis": "Keluarga (Bukan Usaha)"
+            },
+            {
+              "name": "BANGUNAN KOSONG ",
+              "code": "7207020008000100 - BANGUNAN KOSONG  - 81 /  - 2. Tidak",
+              "date": "yesterday",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "MOMUNU",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG ",
+              "code": "7207020008000100 - BANGUNAN KOSONG  - 78 /  - 2. Tidak",
+              "date": "yesterday",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "MOMUNU",
+              "jenis": "Bangunan/Rumah Kosong"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.28
+          "persentase": 14.3
         },
         {
           "kec_name": "TILOAN",
           "kec_id": "8685eb3e-968f-4bf2-a4d3-51d7cac83480",
           "total_prelist": 3629,
           "total_draft": 38,
-          "total_open": 3016,
-          "total_submitted": 575,
+          "total_open": 3014,
+          "total_submitted": 577,
           "total_rejected": 52,
           "total_approved": 177,
-          "total_submitted_pencacah": 345,
+          "total_submitted_pencacah": 347,
           "total_submitted_respondent": 1,
           "today_completed": 1,
           "yesterday_completed": 0,
@@ -6628,27 +5549,27 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 9,
+          "new_rumah_overall": 8,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 15.84
+          "persentase": 15.9
         },
         {
           "kec_name": "BOKAT",
           "kec_id": "a7ad0568-6cb5-4a81-aa91-c4e2eca8ca6b",
           "total_prelist": 6517,
-          "total_draft": 98,
-          "total_open": 5564,
+          "total_draft": 99,
+          "total_open": 5563,
           "total_submitted": 855,
-          "total_rejected": 183,
+          "total_rejected": 179,
           "total_approved": 393,
-          "total_submitted_pencacah": 275,
+          "total_submitted_pencacah": 279,
           "total_submitted_respondent": 4,
-          "today_completed": 8,
+          "today_completed": 5,
           "yesterday_completed": 9,
           "two_days_ago_completed": 5,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 8
+            "SUBMITTED BY Pencacah": 5
           },
           "yesterday_completed_breakdown": {
             "REJECTED BY Pengawas": 1,
@@ -6660,15 +5581,24 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 6,
-          "new_rumah_today": 1,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 37,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 1,
+          "new_rumah_overall": 36,
           "new_businesses": [
             {
-              "name": "SAHRIL R. BOI / SARNING J. UMAR",
-              "code": "7207030021000100 - SAHRIL R. BOI / SARNING J. UMAR - 24 /  - 1",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
+              "name": "OPAN NOHO / YULIANI A BEGALI",
+              "code": "7207030008000500 - OPAN NOHO /  - - / ",
+              "date": "older",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "BOKAT",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "RAMLI / 2",
+              "code": "7207030019000100 - RAMLI / 2 - - /  - 0",
+              "date": "yesterday",
+              "status": "DRAFT",
               "type": "rumah",
               "kecName": "BOKAT",
               "jenis": "Keluarga"
@@ -6682,11 +5612,11 @@ window.IPAS_DATA = {
           "kec_id": "05826f63-ec31-48d7-a062-ecef50f28cd1",
           "total_prelist": 5508,
           "total_draft": 96,
-          "total_open": 4789,
-          "total_submitted": 623,
+          "total_open": 4788,
+          "total_submitted": 624,
           "total_rejected": 87,
           "total_approved": 91,
-          "total_submitted_pencacah": 444,
+          "total_submitted_pencacah": 445,
           "total_submitted_respondent": 1,
           "today_completed": 1,
           "yesterday_completed": 0,
@@ -6702,49 +5632,30 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 3,
-          "new_rumah_today": 2,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 7,
-          "new_businesses": [
-            {
-              "name": "MARWIN / ROSMAWATI ",
-              "code": "7207031003000600 - MARWIN / ROSMAWATI  - - /  - 0",
-              "date": "today",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "BUKAL",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "RISNO NANGGU / OKTAVIANI R. MAHMUD",
-              "code": "7207031009000300 - RISNO NANGGU / OKTAVIANI R. MAHMUD - 28 /  - 1 - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "BUKAL",
-              "jenis": "Keluarga (Bukan Usaha)"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 11.31
+          "persentase": 11.33
         },
         {
           "kec_name": "BUNOBOGU",
           "kec_id": "b1862982-cfa7-4442-a701-5a2a3b250ffa",
-          "total_prelist": 3770,
-          "total_draft": 124,
-          "total_open": 2960,
-          "total_submitted": 686,
+          "total_prelist": 3771,
+          "total_draft": 128,
+          "total_open": 2956,
+          "total_submitted": 687,
           "total_rejected": 17,
-          "total_approved": 263,
-          "total_submitted_pencacah": 406,
+          "total_approved": 265,
+          "total_submitted_pencacah": 405,
           "total_submitted_respondent": 0,
-          "today_completed": 6,
+          "today_completed": 3,
           "yesterday_completed": 0,
           "two_days_ago_completed": 10,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 1,
-            "SUBMITTED BY Pencacah": 5
+            "SUBMITTED BY Pencacah": 1,
+            "APPROVED BY Pengawas": 2
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
@@ -6754,13 +5665,22 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 9,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 19,
+          "new_rumah_overall": 21,
           "new_businesses": [
             {
-              "name": "MCK",
-              "code": "7207040006001200 - NONBKU - 4",
+              "name": "BANGUNAN KOSONG",
+              "code": "7207040001000900 - BANGUNAN KOSONG - - /  - 2. Tidak",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "BUNOBOGU",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "MASJID",
+              "code": "7207040006001200 - NONBKU - 2",
               "date": "older",
               "status": "SUBMITTED BY Pencacah",
               "type": "usaha",
@@ -6768,37 +5688,28 @@ window.IPAS_DATA = {
               "jenis": "Bangunan Lain / Usaha"
             },
             {
-              "name": "BALAI DESA",
-              "code": "7207040006001200 - NONBKU - 3",
+              "name": "BANGUNAN KOSONG WARNA HIJAU DEPAN TAMAN",
+              "code": "7207040001000600 - BANGUNAN KOSONG WARNA HIJAU DEPAN TAMAN - 12 /  - 1. Ya",
               "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "usaha",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
               "kecName": "BUNOBOGU",
-              "jenis": "Bangunan Lain / Usaha"
-            },
-            {
-              "name": "KANTOR DESA",
-              "code": "7207040006001200 - NONBKU - 1",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "usaha",
-              "kecName": "BUNOBOGU",
-              "jenis": "Bangunan Lain / Usaha"
+              "jenis": "Bangunan/Rumah Kosong"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 18.2
+          "persentase": 18.22
         },
         {
           "kec_name": "GADUNG",
           "kec_id": "6fabf945-8b2f-4368-b0e2-81ab1392dd7e",
-          "total_prelist": 4558,
-          "total_draft": 45,
-          "total_open": 3776,
-          "total_submitted": 737,
+          "total_prelist": 4559,
+          "total_draft": 44,
+          "total_open": 3775,
+          "total_submitted": 740,
           "total_rejected": 2,
           "total_approved": 73,
-          "total_submitted_pencacah": 661,
+          "total_submitted_pencacah": 664,
           "total_submitted_respondent": 1,
           "today_completed": 2,
           "yesterday_completed": 0,
@@ -6813,22 +5724,12 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 3,
-          "new_rumah_today": 1,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 19,
-          "new_businesses": [
-            {
-              "name": "SARDI S. MA'RUF / MASITA ALPIA",
-              "code": "7207041001001200 - SARDI S. MA'RUF / MASITA ALPIA - 43 /  - 1",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "GADUNG",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_rumah_overall": 18,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 16.17
+          "persentase": 16.23
         },
         {
           "kec_name": "PALELEH",
@@ -6838,14 +5739,14 @@ window.IPAS_DATA = {
           "total_open": 4227,
           "total_submitted": 558,
           "total_rejected": 37,
-          "total_approved": 112,
-          "total_submitted_pencacah": 408,
+          "total_approved": 123,
+          "total_submitted_pencacah": 397,
           "total_submitted_respondent": 1,
-          "today_completed": 1,
+          "today_completed": 11,
           "yesterday_completed": 1,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
+            "APPROVED BY Pengawas": 11
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
@@ -6853,11 +5754,21 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 4,
+          "new_usaha_overall": 5,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 12,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "BANGUNAN BRI LAMA",
+              "code": "7207050006000600 - NONBKU - 1",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "usaha",
+              "kecName": "PALELEH",
+              "jenis": "Bangunan Lain / Usaha"
+            }
+          ],
           "two_days_ago_is_estimate": false,
           "persentase": 11.22
         },
@@ -6896,23 +5807,23 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[08] PARIGI MOUTONG",
-      "total_prelist": 174998,
-      "total_draft": 2666,
-      "total_open": 149829,
-      "total_submitted": 22498,
-      "total_rejected": 1459,
-      "total_approved": 7169,
-      "total_submitted_pencacah": 13865,
+      "total_prelist": 175004,
+      "total_draft": 2653,
+      "total_open": 149752,
+      "total_submitted": 22594,
+      "total_rejected": 1507,
+      "total_approved": 7202,
+      "total_submitted_pencacah": 13880,
       "total_submitted_respondent": 5,
-      "persentase": 12.86,
-      "today_completed": 134,
+      "persentase": 12.91,
+      "today_completed": 205,
       "yesterday_completed": 91,
       "two_days_ago_completed": 94,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "SUBMITTED BY Pencacah": 82,
-        "APPROVED BY Pengawas": 21,
-        "REJECTED BY Pengawas": 30,
+        "SUBMITTED BY Pencacah": 116,
+        "APPROVED BY Pengawas": 33,
+        "REJECTED BY Pengawas": 55,
         "REVOKED BY Pengawas": 1
       },
       "yesterday_completed_breakdown": {
@@ -6927,50 +5838,95 @@ window.IPAS_DATA = {
       },
       "new_usaha_today": 0,
       "new_usaha_yesterday": 1,
-      "new_rumah_today": 6,
-      "new_rumah_yesterday": 7,
-      "new_usaha_overall": 36,
-      "new_rumah_overall": 165,
+      "new_rumah_today": 5,
+      "new_rumah_yesterday": 8,
+      "new_usaha_overall": 43,
+      "new_rumah_overall": 174,
       "new_businesses": [
         {
-          "name": "IHLASUL AMAL / MAYA PRATIWI",
-          "code": "7208041005000200 - IHLASUL AMAL / MAYA PRATIWI - 55 /  - 1",
-          "date": "older",
+          "name": "YAHYA / ",
+          "code": "7208021005000500 - YAHYA /  - 11 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI SELATAN",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "BRILINK PANJI TOWERA",
+          "code": "7208033005000200 - BRILINK PANJI TOWERA - - /  - 1",
+          "date": "yesterday",
           "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "SINIU",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "ASRA / ANDIKA",
+          "code": "7208041005000200 - ASRA / ANDIKA - - /  - 0",
+          "date": "older",
+          "status": "DRAFT",
           "type": "rumah",
           "kecName": "TINOMBO SELATAN",
           "jenis": "Keluarga"
         },
         {
-          "name": "DARYONO / SUPATMI",
-          "code": "7208051004000700 - DARYONO / SUPATMI - 34 /  - 0 - 2. Tidak",
-          "date": "today",
+          "name": "I GEDE AGUS INDRAWAN / WAYAN WIDNYANI",
+          "code": "7208011001000100 - I GEDE AGUS INDRAWAN /  - - /  - 0",
+          "date": "yesterday",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "MEPANGA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "BANGUNAN KOSONG",
-          "code": "7208020017000202 - KOSAN KOSONG - 36 / ",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PARIGI",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "HAIKAL DJAFAR MANGORE / NUR ANISA H HI MAKMUR",
-          "code": "7208020017000202 - HAIKAL DJAFAR MANGORE / NUR ANISA H HI MAKMUR - 35 /  - 1",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PARIGI",
+          "kecName": "TORUE",
           "jenis": "Keluarga"
         },
         {
-          "name": "FADLI / SARNA",
-          "code": "7208030007000100 - FADLI / SARNA,IZAN,NURHAFIZAH - - /  - 1",
+          "name": "GEREJA ",
+          "code": "7208060027000400 - NONBKU - 2",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "MOUTONG",
+          "jenis": "Bangunan Lain / Usaha"
+        },
+        {
+          "name": "IMAM SOPINGI / NUR FARMA HIDAYANTI",
+          "code": "7208063011000300 - IMAM SOPINGI / NUR FARMA HIDAYANTI - 54 /  - 1",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "BOLANO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "ES TELER (SUSANTI)",
+          "code": "7208050008000300 - USAHA JUAL ES - - /  - 1",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "TOMINI",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "GEREJA EMANUEL TONTONG",
+          "code": "7208060027000400 - NONBKU - 1",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "MOUTONG",
+          "jenis": "Bangunan Lain / Usaha"
+        },
+        {
+          "name": "TEMPAT PEMBUATAN GULA MERAH SAIDIN ",
+          "code": "7208041017000300 - TEMPAT PEMBUATAN GULA MERAH SAIDIN  - 1 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "TINOMBO SELATAN",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "ASPAR / MARDIYANTI SOLEMAN ",
+          "code": "7208030020000100 - ASPAR /  - 30 /  - 0",
           "date": "older",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
@@ -6978,247 +5934,418 @@ window.IPAS_DATA = {
           "jenis": "Keluarga"
         },
         {
-          "name": "SEKTETARIAT PKK",
-          "code": "7208050019000100 - NONBKU - 2",
+          "name": "IWAN HASAN / RONITA",
+          "code": "7208063011000300 - IWAN HASAN / RONITA - 52 /  - 0",
           "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "usaha",
-          "kecName": "TOMINI",
-          "jenis": "Bangunan Lain / Usaha"
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "BOLANO",
+          "jenis": "Keluarga"
         },
         {
-          "name": "KIOS AURA",
-          "code": "7208020017000202 - KIOS AURA - 17 /  - 1",
+          "name": "ALDI / ",
+          "code": "7208032008000200 - ALDI /  - 60 /  - 2 - 2. Tidak - 13087696,13087696",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TORIBULU",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "ATTARIQ / ALFIDAH. A. SUNUH",
+          "code": "7208042009000100 - ATTARIQ / ALFIDAH. A. SUNUH - 9 /  - 0",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "SIDOAN",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "WAHYUDIN H. M. LEMBA / DEVIYANTI PUJI ASTUTI. AMD. KEP",
+          "code": "7208024005000400 - WAHYUDIN H. M. LEMBA / DEVI YANTI PUJI ASTUTI. AMD. KEP - - /  - 0",
           "date": "yesterday",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "PARIGI TENGAH",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BENGKEL NUR RAHMAT",
+          "code": "7208020017000202 - BENGKEL NUR RAHMAT - 8 /  - 1",
+          "date": "older",
           "status": "REJECTED BY Pengawas",
           "type": "usaha",
           "kecName": "PARIGI",
           "jenis": "Usaha Baru"
         },
         {
-          "name": "ASPAR / MARDIYANTI SOLEMAN ",
-          "code": "7208030020000100 - ASPAR /  - 30 /  - 0",
-          "date": "older",
-          "status": "DRAFT",
-          "type": "rumah",
-          "kecName": "AMPIBABO",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "IHMAR PAY / LUSIANA, S.SOS",
-          "code": "7208020017000202 - IHMAR PAY / LUSIANA, S.SOS - 30 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PARIGI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "JOHAN SYAIBIMAH / ",
-          "code": "7208020017000202 - JOHAN SYAIBIMAH /  - 29 /  - 0",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PARIGI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "WARDATULJANNAH / ALISA NABILLAH",
-          "code": "7208020017000202 - WARDATULJANNAH / ALISA NABILLAH - 27 /  - 1",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PARIGI",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "BANGUNAN KOSONG RUMAH JALIM",
-          "code": "7208052001000300 - RUMAH TETE AKI - - /  - 2. Tidak",
+          "name": "KANTOR DESA TOMOLI UTARA",
+          "code": "7208032008000200 - KANTOR DESA TOMOLI UTARA - 63 /  - 2. Tidak",
           "date": "older",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "PALASA",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "BANGUNAN KOSONG PAPAN KEBUN JAGUNG LAPANGAN",
-          "code": "7208052001000300 - 27 /  - 2. Tidak",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "PALASA",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "RISAL / HASNAWATI",
-          "code": "7208030010000100 - RISAL / HASNAWATI - 16 /  - 2",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "AMPIBABO",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "DR. CREDO PRATAMA PUTRA ARIEF / DR. NELA JULIANTI",
-          "code": "7208063009000200 - DR. CREDO PRATAMA PUTRA ARIEF / DR. NELA JULIANTI - 53 /  - 0",
-          "date": "yesterday",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "BOLANO",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "KARDIMAN / SULASIH",
-          "code": "7208051007001000 - KARDIMAN / SULASIH - 14 /  - 2",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "MEPANGA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "FADLAN / MARIAM",
-          "code": "7208024005000200 - FADLAN / MARIAM - 69 /  - 0",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "PARIGI TENGAH",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "RAMADHAN / ",
-          "code": "7208030010000500 - RAMADHAN /  - - /  - 0 - 2. Tidak",
-          "date": "yesterday",
-          "status": "DRAFT",
-          "type": "rumah",
-          "kecName": "AMPIBABO",
+          "kecName": "TORIBULU",
           "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "PURA BRAHMA YOGA LEMBAGA SARI",
-          "code": "7208012007000600 - NONBKU - 5",
+          "name": "BANGUNAN WALET MILIK BUMDES TOMOLI UTARA",
+          "code": "7208032008000200 - BANGUNAN WALET MILIK BUMDES - 64 /  - 2. Tidak",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TORIBULU",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "BANGUNAN USAHA WALET",
+          "code": "7208042009000100 - BANGUNAN USAHA WALET - 2 /  - 1",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "usaha",
+          "kecName": "SIDOAN",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "KANTOR DESA",
+          "code": "7208032008000200 - NONBKU - 4",
           "date": "older",
           "status": "SUBMITTED BY Pencacah",
           "type": "usaha",
-          "kecName": "BALINGGI",
+          "kecName": "TORIBULU",
           "jenis": "Bangunan Lain / Usaha"
         },
         {
-          "name": "BANGUNAN KOSONG RUMAH BARU BELAKANG WALET LAPANGAN",
-          "code": "7208052001000300 - BANGUNAN KOSONG RUMAH BARU BELAKANG WALET LAPANGAN - 26 /  - 2. Tidak",
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - BANGUNAN KOSONG - 81 / ",
+          "date": "yesterday",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - BANGUNAN KOSONG - 80 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "RUMAH KOSONG",
+          "code": "7208040029000400 - RUMAH KOSONG - 21 / ",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "PALASA",
+          "kecName": "TINOMBO",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "I NYOMAN SUNARTA / ",
-          "code": "7208010002000402 - I NYOMAN SUNARTA /  - 16 /  - 0",
+          "name": "RUMAH KOSONG",
+          "code": "7208030019000300 - RUMAH KOSONG - 11 / ",
           "date": "older",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "SAUSU",
+          "kecName": "AMPIBABO",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG ",
+          "code": "7208020017000202 - BANGUNAN KOSONG  - 77 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "RUMAH KOSONG",
+          "code": "7208020017000202 - RUMAH KOSONG - 75 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "ANCA  / RATNA",
+          "code": "7208042009000100 - ANCA  / RATNA - 13 /  - 0",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "SIDOAN",
           "jenis": "Keluarga"
         },
         {
-          "name": "BANGUNAN KOSONG WALET LAPANGAN",
-          "code": "7208052001000300 - BANGUNAN KOSONG WALET LAPANGAN - 25 /  - 2. Tidak",
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - RUKO KOSONG - 72 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "MASJID AL-ITTIHAD",
+          "code": "7208020017000202 - MASJID AL-ITTIHAD - 70 / ",
+          "date": "older",
+          "status": "REVOKED BY Pengawas",
+          "type": "usaha",
+          "kecName": "PARIGI",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - KOS BERKAH 17 - 68 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "RUMAH KOSONG",
+          "code": "7208040029000400 - RUMAH KOSONG - 18 / ",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "PALASA",
+          "kecName": "TINOMBO",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "RUMAH KOSONG (PONIJO)",
-          "code": "7208061031000500 - RUMAH KOSONG (PONIJO) - 63 / ",
-          "date": "yesterday",
-          "status": "SUBMITTED BY Pencacah",
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - KOS BERKAH 16 - 67 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
           "type": "rumah",
-          "kecName": "BOLANO LAMBUNU",
+          "kecName": "PARIGI",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "GUNG HERI SETYAWAN  / EMYATI SULASTRI NINGSIH ",
-          "code": "7208010002000402 - GUNG HERI SETYAWAN  / EMYATI SULASTRI NINGSIH  - 11 /  - 2",
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - BANGUNAN KOSONG - 83 / ",
           "date": "yesterday",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - KOS BERKAH KAMAR 66 - 66 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "I GEDE APRIANTO / NI KADEK RIKA YANTI",
+          "code": "7208063008000200 - I GEDE APRIANTO / NI KADEK RIKA YANTI - 60 /  - 1",
+          "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "SAUSU",
+          "kecName": "BOLANO",
           "jenis": "Keluarga"
         },
         {
-          "name": "STERVIN JEVELINO MALORE / ERVINA POKERE",
-          "code": "7208041009000100 - STERVIN JEVELINO MALORE / ERVINA POKERE - 17 /  - 3",
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - KOS BERKAH 65 - 65 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - KOS BERKAH 64 - 64 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - KOS BERKAH 11 - 63 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "RUMAH KOSONG KE 3",
+          "code": "7208030019000300 - RUMAH KOSONG - 12 / ",
           "date": "older",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "TINOMBO SELATAN",
+          "kecName": "AMPIBABO",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - KOS BERKAH 10 - 62 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "DARWIS / FAUZIAH",
+          "code": "7208032003000700 - DARWIS / FAUZIAH - 62 /  - 1",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TORIBULU",
           "jenis": "Keluarga"
         },
         {
-          "name": "UJANG HERMAWAN  / MUHAMAD RISKY HERMAWAN ",
-          "code": "7208061031000500 - UJANG HERMAWAN  /  - 40 /  - 0",
+          "name": "MOHAMAD YAUMIL / FATNUN",
+          "code": "7208020017000202 - MOHAMAD YAUMIL / FATNUN - 61 /  - 0",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "NURHAYATI / FARID",
+          "code": "7208024003000400 - BANGUNAN TEMPAT TINGGAL - 3 /  - 1",
           "date": "older",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "BOLANO LAMBUNU",
+          "kecName": "PARIGI TENGAH",
           "jenis": "Keluarga"
         },
         {
-          "name": "MURSIDAN / ",
-          "code": "7208024006000100 -  /  - - / ",
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - BANGUNAN KOSONG - 82 / ",
           "date": "yesterday",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "MUSRIN / IRNA",
+          "code": "7208062003000200 - MUSRIN / IRNA - 3 /  - 3",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TAOPA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "RUMAH KOSONG",
+          "code": "7208063011000300 - DUSUN III DESA SIDOMUKTI - 44 / ",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "BOLANO",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7208020017000202 - BANGUNAN KOSONG - 84 / ",
+          "date": "yesterday",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "INDRA SURAPATI  / SELFI",
+          "code": "7208024006000100 - INDRA SURAPATI  / SELFI - 103 /  - 0",
+          "date": "older",
           "status": "DRAFT",
           "type": "rumah",
           "kecName": "PARIGI TENGAH",
           "jenis": "Keluarga"
         },
         {
-          "name": "ANWAR DAVID / ANIK S",
-          "code": "7208024005000200 - ANWAR DAVID / ANIK S - 46 /  - 0",
+          "name": "IPAN RIFALDI / NISA",
+          "code": "7208040030000400 - IPAN RIFALDI / NISA - 43 /  - 0",
           "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "PARIGI TENGAH",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "ABD HALIM AHMAD / LILIK KUSMAWATI",
-          "code": "7208063001000100 - ABD HALIM AHMAD /  - - /  - 1",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BOLANO",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "WIDODO / SLAMET ALIF AL- AZHAR",
-          "code": "7208063003000200 - WIDODO / SLAMET ALIF AL- AZHAR - 36 /  - 1",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "BOLANO",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "MOH AKBAR / LETIA",
-          "code": "7208040028000500 - MOH AKBAR / LETIA - 52 /  - 1 - 2. Tidak",
-          "date": "yesterday",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "TINOMBO",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "jenis": "Keluarga"
         },
         {
-          "name": "MUHAMMAD ARIFIN / SURIYATI",
-          "code": "7208064003000400 - MUHAMMAD ARIFIN / SURIYATI - 40 /  - 0 - 2. Tidak",
-          "date": "yesterday",
+          "name": "JONES HAMBUAKO / NETI A MAKULUBI",
+          "code": "7208020017000202 - JONES HAMBUAKO / NETI A MAKULUBI - 47 /  - 0",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PARIGI",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "ACINANG / AIDIL",
+          "code": "7208030023000200 - ACINANG / AIDIL - 47 /  - 0",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "AMPIBABO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "AMUTIA / NUR KINAR",
+          "code": "7208040030000400 - AMUTIA / NUR KINAR - 44 /  - 0",
+          "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
-          "kecName": "ONGKA MALINO",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "kecName": "TINOMBO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "KIOS IBU NURFAIDAH",
+          "code": "7208020017000202 - KIOS IBU NURFAIDAH - 40 /  - 1",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "usaha",
+          "kecName": "PARIGI",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "BOSI / KIMATIA",
+          "code": "7208040030000400 - BOSI / KIMATIA - 61 /  - 1",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TINOMBO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "ASRAP / FALIA",
+          "code": "7208040030000400 - ASRAP / FALIA - 63 /  - 0",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TINOMBO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "ESTA DANA VENTURA",
+          "code": "7208020017000202 - ESTA DANA VENTURA - 25 /  - 9999 - 1",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "usaha",
+          "kecName": "PARIGI",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "NAIYA / NAIYA",
+          "code": "7208040030000400 -  / NAIYA - 41 /  - 1",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TINOMBO",
+          "jenis": "Keluarga"
         }
       ],
       "kecamatan_list": [
@@ -7227,17 +6354,17 @@ window.IPAS_DATA = {
           "kec_id": "7edaff7e-8716-46ed-9c95-4572b6118ea8",
           "total_prelist": 7944,
           "total_draft": 86,
-          "total_open": 6899,
-          "total_submitted": 959,
-          "total_rejected": 66,
+          "total_open": 6897,
+          "total_submitted": 961,
+          "total_rejected": 65,
           "total_approved": 165,
-          "total_submitted_pencacah": 728,
+          "total_submitted_pencacah": 731,
           "total_submitted_respondent": 0,
-          "today_completed": 3,
+          "today_completed": 4,
           "yesterday_completed": 2,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3
+            "SUBMITTED BY Pencacah": 4
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 1,
@@ -7250,49 +6377,29 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 8,
-          "new_businesses": [
-            {
-              "name": "I NYOMAN SUNARTA / ",
-              "code": "7208010002000402 - I NYOMAN SUNARTA /  - 16 /  - 0",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "SAUSU",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "GUNG HERI SETYAWAN  / EMYATI SULASTRI NINGSIH ",
-              "code": "7208010002000402 - GUNG HERI SETYAWAN  / EMYATI SULASTRI NINGSIH  - 11 /  - 2",
-              "date": "yesterday",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "SAUSU",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 7,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.07
+          "persentase": 12.1
         },
         {
           "kec_name": "TORUE",
           "kec_id": "f8a0bc27-18ff-4713-9b8f-8a3a1adf8df7",
           "total_prelist": 8384,
-          "total_draft": 20,
-          "total_open": 7206,
-          "total_submitted": 1158,
+          "total_draft": 19,
+          "total_open": 7204,
+          "total_submitted": 1161,
           "total_rejected": 41,
-          "total_approved": 154,
-          "total_submitted_pencacah": 963,
+          "total_approved": 159,
+          "total_submitted_pencacah": 961,
           "total_submitted_respondent": 0,
-          "today_completed": 8,
+          "today_completed": 10,
           "yesterday_completed": 6,
           "two_days_ago_completed": 4,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3,
-            "APPROVED BY Pengawas": 4,
-            "REJECTED BY Pengawas": 1
+            "SUBMITTED BY Pencacah": 4,
+            "APPROVED BY Pengawas": 6
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 1,
@@ -7306,28 +6413,38 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
-          "new_businesses": [],
+          "new_rumah_yesterday": 1,
+          "new_rumah_overall": 1,
+          "new_businesses": [
+            {
+              "name": "I GEDE AGUS INDRAWAN / WAYAN WIDNYANI",
+              "code": "7208011001000100 - I GEDE AGUS INDRAWAN /  - - /  - 0",
+              "date": "yesterday",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TORUE",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 13.81
+          "persentase": 13.85
         },
         {
           "kec_name": "BALINGGI",
           "kec_id": "12585f97-0cbd-465d-8397-14f4d0cd14a2",
           "total_prelist": 6999,
           "total_draft": 2,
-          "total_open": 5927,
-          "total_submitted": 1070,
+          "total_open": 5926,
+          "total_submitted": 1071,
           "total_rejected": 36,
           "total_approved": 320,
-          "total_submitted_pencacah": 714,
+          "total_submitted_pencacah": 715,
           "total_submitted_respondent": 0,
-          "today_completed": 5,
+          "today_completed": 1,
           "yesterday_completed": 3,
           "two_days_ago_completed": 6,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 5
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -7341,37 +6458,28 @@ window.IPAS_DATA = {
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 0,
-          "new_businesses": [
-            {
-              "name": "PURA BRAHMA YOGA LEMBAGA SARI",
-              "code": "7208012007000600 - NONBKU - 5",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "usaha",
-              "kecName": "BALINGGI",
-              "jenis": "Bangunan Lain / Usaha"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 15.29
+          "persentase": 15.3
         },
         {
           "kec_name": "PARIGI",
           "kec_id": "1118cb16-dd43-4601-9bc7-9635fb91b815",
           "total_prelist": 13581,
           "total_draft": 134,
-          "total_open": 12437,
-          "total_submitted": 1010,
-          "total_rejected": 107,
-          "total_approved": 205,
-          "total_submitted_pencacah": 694,
+          "total_open": 12436,
+          "total_submitted": 1011,
+          "total_rejected": 162,
+          "total_approved": 204,
+          "total_submitted_pencacah": 641,
           "total_submitted_respondent": 4,
-          "today_completed": 24,
+          "today_completed": 51,
           "yesterday_completed": 2,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 22,
-            "SUBMITTED BY Pencacah": 2
+            "REJECTED BY Pengawas": 49,
+            "REVOKED BY Pengawas": 1,
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -7380,15 +6488,33 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 2
           },
           "new_usaha_today": 0,
-          "new_usaha_yesterday": 1,
-          "new_usaha_overall": 1,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 6,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 7,
+          "new_rumah_yesterday": 4,
+          "new_rumah_overall": 25,
           "new_businesses": [
             {
+              "name": "BENGKEL NUR RAHMAT",
+              "code": "7208020017000202 - BENGKEL NUR RAHMAT - 8 /  - 1",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "usaha",
+              "kecName": "PARIGI",
+              "jenis": "Usaha Baru"
+            },
+            {
               "name": "BANGUNAN KOSONG",
-              "code": "7208020017000202 - KOSAN KOSONG - 36 / ",
+              "code": "7208020017000202 - BANGUNAN KOSONG - 81 / ",
+              "date": "yesterday",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - BANGUNAN KOSONG - 80 / ",
               "date": "older",
               "status": "REJECTED BY Pengawas",
               "type": "rumah",
@@ -7396,8 +6522,116 @@ window.IPAS_DATA = {
               "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "HAIKAL DJAFAR MANGORE / NUR ANISA H HI MAKMUR",
-              "code": "7208020017000202 - HAIKAL DJAFAR MANGORE / NUR ANISA H HI MAKMUR - 35 /  - 1",
+              "name": "BANGUNAN KOSONG ",
+              "code": "7208020017000202 - BANGUNAN KOSONG  - 77 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "RUMAH KOSONG",
+              "code": "7208020017000202 - RUMAH KOSONG - 75 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - RUKO KOSONG - 72 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "MASJID AL-ITTIHAD",
+              "code": "7208020017000202 - MASJID AL-ITTIHAD - 70 / ",
+              "date": "older",
+              "status": "REVOKED BY Pengawas",
+              "type": "usaha",
+              "kecName": "PARIGI",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - KOS BERKAH 17 - 68 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - KOS BERKAH 16 - 67 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - BANGUNAN KOSONG - 83 / ",
+              "date": "yesterday",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - KOS BERKAH KAMAR 66 - 66 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - KOS BERKAH 65 - 65 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - KOS BERKAH 64 - 64 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - KOS BERKAH 11 - 63 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - KOS BERKAH 10 - 62 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "MOHAMAD YAUMIL / FATNUN",
+              "code": "7208020017000202 - MOHAMAD YAUMIL / FATNUN - 61 /  - 0",
               "date": "older",
               "status": "REJECTED BY Pengawas",
               "type": "rumah",
@@ -7405,40 +6639,49 @@ window.IPAS_DATA = {
               "jenis": "Keluarga"
             },
             {
-              "name": "KIOS AURA",
-              "code": "7208020017000202 - KIOS AURA - 17 /  - 1",
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - BANGUNAN KOSONG - 82 / ",
               "date": "yesterday",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7208020017000202 - BANGUNAN KOSONG - 84 / ",
+              "date": "yesterday",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "JONES HAMBUAKO / NETI A MAKULUBI",
+              "code": "7208020017000202 - JONES HAMBUAKO / NETI A MAKULUBI - 47 /  - 0",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "KIOS IBU NURFAIDAH",
+              "code": "7208020017000202 - KIOS IBU NURFAIDAH - 40 /  - 1",
+              "date": "older",
               "status": "REJECTED BY Pengawas",
               "type": "usaha",
               "kecName": "PARIGI",
               "jenis": "Usaha Baru"
             },
             {
-              "name": "IHMAR PAY / LUSIANA, S.SOS",
-              "code": "7208020017000202 - IHMAR PAY / LUSIANA, S.SOS - 30 /  - 0",
+              "name": "ESTA DANA VENTURA",
+              "code": "7208020017000202 - ESTA DANA VENTURA - 25 /  - 9999 - 1",
               "date": "older",
               "status": "REJECTED BY Pengawas",
-              "type": "rumah",
+              "type": "usaha",
               "kecName": "PARIGI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "JOHAN SYAIBIMAH / ",
-              "code": "7208020017000202 - JOHAN SYAIBIMAH /  - 29 /  - 0",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "PARIGI",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "WARDATULJANNAH / ALISA NABILLAH",
-              "code": "7208020017000202 - WARDATULJANNAH / ALISA NABILLAH - 27 /  - 1",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "PARIGI",
-              "jenis": "Keluarga"
+              "jenis": "Usaha Baru"
             }
           ],
           "two_days_ago_is_estimate": false,
@@ -7451,14 +6694,17 @@ window.IPAS_DATA = {
           "total_draft": 60,
           "total_open": 7968,
           "total_submitted": 807,
-          "total_rejected": 22,
-          "total_approved": 191,
-          "total_submitted_pencacah": 594,
+          "total_rejected": 25,
+          "total_approved": 192,
+          "total_submitted_pencacah": 590,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 5,
           "yesterday_completed": 4,
           "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "APPROVED BY Pengawas": 2,
+            "REJECTED BY Pengawas": 3
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
           },
@@ -7467,9 +6713,19 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
+          "new_rumah_yesterday": 1,
           "new_rumah_overall": 2,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "YAHYA / ",
+              "code": "7208021005000500 - YAHYA /  - 11 /  - 0 - 2. Tidak",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PARIGI SELATAN",
+              "jenis": "Keluarga (Bukan Usaha)"
+            }
+          ],
           "two_days_ago_is_estimate": false,
           "persentase": 9.13
         },
@@ -7495,7 +6751,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 3,
+          "new_rumah_overall": 1,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 8.98
@@ -7505,11 +6761,11 @@ window.IPAS_DATA = {
           "kec_id": "e8a994c9-45e1-4c50-a81e-8c2a43909c92",
           "total_prelist": 2404,
           "total_draft": 10,
-          "total_open": 2155,
-          "total_submitted": 239,
+          "total_open": 2154,
+          "total_submitted": 240,
           "total_rejected": 22,
           "total_approved": 155,
-          "total_submitted_pencacah": 62,
+          "total_submitted_pencacah": 63,
           "total_submitted_respondent": 0,
           "today_completed": 1,
           "yesterday_completed": 4,
@@ -7529,24 +6785,24 @@ window.IPAS_DATA = {
           "new_rumah_overall": 1,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 9.94
+          "persentase": 9.98
         },
         {
           "kec_name": "PARIGI TENGAH",
           "kec_id": "fd134760-3a4b-4e3f-970e-0629934cf6c7",
           "total_prelist": 3405,
-          "total_draft": 240,
+          "total_draft": 239,
           "total_open": 2634,
-          "total_submitted": 531,
-          "total_rejected": 19,
+          "total_submitted": 532,
+          "total_rejected": 18,
           "total_approved": 439,
-          "total_submitted_pencacah": 73,
+          "total_submitted_pencacah": 75,
           "total_submitted_respondent": 0,
-          "today_completed": 2,
+          "today_completed": 3,
           "yesterday_completed": 1,
           "two_days_ago_completed": 6,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
@@ -7561,20 +6817,11 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 1,
-          "new_rumah_overall": 10,
+          "new_rumah_overall": 8,
           "new_businesses": [
             {
-              "name": "FADLAN / MARIAM",
-              "code": "7208024005000200 - FADLAN / MARIAM - 69 /  - 0",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PARIGI TENGAH",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "MURSIDAN / ",
-              "code": "7208024006000100 -  /  - - / ",
+              "name": "WAHYUDIN H. M. LEMBA / DEVIYANTI PUJI ASTUTI. AMD. KEP",
+              "code": "7208024005000400 - WAHYUDIN H. M. LEMBA / DEVI YANTI PUJI ASTUTI. AMD. KEP - - /  - 0",
               "date": "yesterday",
               "status": "DRAFT",
               "type": "rumah",
@@ -7582,34 +6829,43 @@ window.IPAS_DATA = {
               "jenis": "Keluarga"
             },
             {
-              "name": "ANWAR DAVID / ANIK S",
-              "code": "7208024005000200 - ANWAR DAVID / ANIK S - 46 /  - 0",
+              "name": "NURHAYATI / FARID",
+              "code": "7208024003000400 - BANGUNAN TEMPAT TINGGAL - 3 /  - 1",
               "date": "older",
               "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "PARIGI TENGAH",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "INDRA SURAPATI  / SELFI",
+              "code": "7208024006000100 - INDRA SURAPATI  / SELFI - 103 /  - 0",
+              "date": "older",
+              "status": "DRAFT",
               "type": "rumah",
               "kecName": "PARIGI TENGAH",
               "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 15.59
+          "persentase": 15.62
         },
         {
           "kec_name": "AMPIBABO",
           "kec_id": "12e93053-5586-46d4-adc5-205e654b9d88",
-          "total_prelist": 9130,
-          "total_draft": 145,
-          "total_open": 7516,
-          "total_submitted": 1469,
-          "total_rejected": 108,
+          "total_prelist": 9131,
+          "total_draft": 142,
+          "total_open": 7514,
+          "total_submitted": 1475,
+          "total_rejected": 103,
           "total_approved": 720,
-          "total_submitted_pencacah": 641,
+          "total_submitted_pencacah": 652,
           "total_submitted_respondent": 0,
-          "today_completed": 9,
+          "today_completed": 12,
           "yesterday_completed": 5,
           "two_days_ago_completed": 4,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 9
+            "SUBMITTED BY Pencacah": 12
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 5
@@ -7621,12 +6877,12 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 6,
           "new_rumah_today": 1,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 22,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 23,
           "new_businesses": [
             {
-              "name": "FADLI / SARNA",
-              "code": "7208030007000100 - FADLI / SARNA,IZAN,NURHAFIZAH - - /  - 1",
+              "name": "ASPAR / MARDIYANTI SOLEMAN ",
+              "code": "7208030020000100 - ASPAR /  - 30 /  - 0",
               "date": "older",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
@@ -7634,35 +6890,35 @@ window.IPAS_DATA = {
               "jenis": "Keluarga"
             },
             {
-              "name": "ASPAR / MARDIYANTI SOLEMAN ",
-              "code": "7208030020000100 - ASPAR /  - 30 /  - 0",
+              "name": "RUMAH KOSONG",
+              "code": "7208030019000300 - RUMAH KOSONG - 11 / ",
               "date": "older",
-              "status": "DRAFT",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "AMPIBABO",
-              "jenis": "Keluarga"
+              "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "RISAL / HASNAWATI",
-              "code": "7208030010000100 - RISAL / HASNAWATI - 16 /  - 2",
+              "name": "RUMAH KOSONG KE 3",
+              "code": "7208030019000300 - RUMAH KOSONG - 12 / ",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "AMPIBABO",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "ACINANG / AIDIL",
+              "code": "7208030023000200 - ACINANG / AIDIL - 47 /  - 0",
               "date": "today",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "AMPIBABO",
               "jenis": "Keluarga"
-            },
-            {
-              "name": "RAMADHAN / ",
-              "code": "7208030010000500 - RAMADHAN /  - - /  - 0 - 2. Tidak",
-              "date": "yesterday",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "AMPIBABO",
-              "jenis": "Keluarga (Bukan Usaha)"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 16.09
+          "persentase": 16.15
         },
         {
           "kec_name": "KASIMBAR",
@@ -7693,7 +6949,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 12,
+          "new_rumah_overall": 9,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 13.78
@@ -7701,19 +6957,19 @@ window.IPAS_DATA = {
         {
           "kec_name": "TORIBULU",
           "kec_id": "b13929ff-7daa-46a7-8f3c-7c967b512580",
-          "total_prelist": 6363,
+          "total_prelist": 6364,
           "total_draft": 0,
-          "total_open": 4985,
-          "total_submitted": 1378,
-          "total_rejected": 101,
+          "total_open": 4979,
+          "total_submitted": 1385,
+          "total_rejected": 97,
           "total_approved": 259,
-          "total_submitted_pencacah": 1018,
+          "total_submitted_pencacah": 1029,
           "total_submitted_respondent": 0,
-          "today_completed": 4,
+          "today_completed": 11,
           "yesterday_completed": 3,
           "two_days_ago_completed": 14,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4
+            "SUBMITTED BY Pencacah": 11
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -7725,24 +6981,70 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
-          "new_rumah_today": 0,
+          "new_usaha_overall": 2,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 9,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "ALDI / ",
+              "code": "7208032008000200 - ALDI /  - 60 /  - 2 - 2. Tidak - 13087696,13087696",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TORIBULU",
+              "jenis": "Keluarga (Bukan Usaha)"
+            },
+            {
+              "name": "KANTOR DESA TOMOLI UTARA",
+              "code": "7208032008000200 - KANTOR DESA TOMOLI UTARA - 63 /  - 2. Tidak",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TORIBULU",
+              "jenis": "Keluarga (Bukan Usaha)"
+            },
+            {
+              "name": "BANGUNAN WALET MILIK BUMDES TOMOLI UTARA",
+              "code": "7208032008000200 - BANGUNAN WALET MILIK BUMDES - 64 /  - 2. Tidak",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TORIBULU",
+              "jenis": "Keluarga (Bukan Usaha)"
+            },
+            {
+              "name": "KANTOR DESA",
+              "code": "7208032008000200 - NONBKU - 4",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "TORIBULU",
+              "jenis": "Bangunan Lain / Usaha"
+            },
+            {
+              "name": "DARWIS / FAUZIAH",
+              "code": "7208032003000700 - DARWIS / FAUZIAH - 62 /  - 1",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TORIBULU",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 21.66
+          "persentase": 21.76
         },
         {
           "kec_name": "SINIU",
           "kec_id": "a5719653-4a62-478c-bc63-86a4c4e0e46d",
           "total_prelist": 3998,
           "total_draft": 202,
-          "total_open": 3092,
-          "total_submitted": 704,
+          "total_open": 3091,
+          "total_submitted": 705,
           "total_rejected": 43,
           "total_approved": 48,
-          "total_submitted_pencacah": 613,
+          "total_submitted_pencacah": 614,
           "total_submitted_respondent": 0,
           "today_completed": 2,
           "yesterday_completed": 0,
@@ -7753,31 +7055,43 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
+          "new_usaha_yesterday": 1,
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 3,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "BRILINK PANJI TOWERA",
+              "code": "7208033005000200 - BRILINK PANJI TOWERA - - /  - 1",
+              "date": "yesterday",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "SINIU",
+              "jenis": "Usaha Baru"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 17.61
+          "persentase": 17.63
         },
         {
           "kec_name": "TINOMBO",
           "kec_id": "0d34a059-18b6-45da-9168-d4dea9488fd6",
-          "total_prelist": 8123,
+          "total_prelist": 8125,
           "total_draft": 82,
-          "total_open": 6888,
-          "total_submitted": 1153,
-          "total_rejected": 83,
-          "total_approved": 719,
-          "total_submitted_pencacah": 351,
+          "total_open": 6887,
+          "total_submitted": 1156,
+          "total_rejected": 84,
+          "total_approved": 727,
+          "total_submitted_pencacah": 345,
           "total_submitted_respondent": 0,
-          "today_completed": 6,
+          "today_completed": 9,
           "yesterday_completed": 9,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 6
+            "SUBMITTED BY Pencacah": 3,
+            "APPROVED BY Pengawas": 5,
+            "REJECTED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 6,
@@ -7789,39 +7103,93 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 5,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 8,
+          "new_rumah_today": 2,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 15,
           "new_businesses": [
             {
-              "name": "MOH AKBAR / LETIA",
-              "code": "7208040028000500 - MOH AKBAR / LETIA - 52 /  - 1 - 2. Tidak",
-              "date": "yesterday",
+              "name": "RUMAH KOSONG",
+              "code": "7208040029000400 - RUMAH KOSONG - 21 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TINOMBO",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "RUMAH KOSONG",
+              "code": "7208040029000400 - RUMAH KOSONG - 18 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TINOMBO",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "IPAN RIFALDI / NISA",
+              "code": "7208040030000400 - IPAN RIFALDI / NISA - 43 /  - 0",
+              "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "TINOMBO",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "AMUTIA / NUR KINAR",
+              "code": "7208040030000400 - AMUTIA / NUR KINAR - 44 /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TINOMBO",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "BOSI / KIMATIA",
+              "code": "7208040030000400 - BOSI / KIMATIA - 61 /  - 1",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TINOMBO",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "ASRAP / FALIA",
+              "code": "7208040030000400 - ASRAP / FALIA - 63 /  - 0",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TINOMBO",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "NAIYA / NAIYA",
+              "code": "7208040030000400 -  / NAIYA - 41 /  - 1",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TINOMBO",
+              "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.19
+          "persentase": 14.23
         },
         {
           "kec_name": "TINOMBO SELATAN",
           "kec_id": "a111edd6-85c3-4f88-8f2c-7c53cd83b0ac",
           "total_prelist": 11151,
-          "total_draft": 517,
-          "total_open": 9032,
-          "total_submitted": 1602,
+          "total_draft": 512,
+          "total_open": 9020,
+          "total_submitted": 1619,
           "total_rejected": 166,
           "total_approved": 439,
-          "total_submitted_pencacah": 997,
+          "total_submitted_pencacah": 1014,
           "total_submitted_respondent": 0,
-          "today_completed": 4,
+          "today_completed": 17,
           "yesterday_completed": 3,
           "two_days_ago_completed": 5,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4
+            "SUBMITTED BY Pencacah": 17
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -7833,30 +7201,30 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 3,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 15,
+          "new_rumah_yesterday": 1,
+          "new_rumah_overall": 12,
           "new_businesses": [
             {
-              "name": "IHLASUL AMAL / MAYA PRATIWI",
-              "code": "7208041005000200 - IHLASUL AMAL / MAYA PRATIWI - 55 /  - 1",
+              "name": "ASRA / ANDIKA",
+              "code": "7208041005000200 - ASRA / ANDIKA - - /  - 0",
               "date": "older",
-              "status": "SUBMITTED BY Pencacah",
+              "status": "DRAFT",
               "type": "rumah",
               "kecName": "TINOMBO SELATAN",
               "jenis": "Keluarga"
             },
             {
-              "name": "STERVIN JEVELINO MALORE / ERVINA POKERE",
-              "code": "7208041009000100 - STERVIN JEVELINO MALORE / ERVINA POKERE - 17 /  - 3",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
+              "name": "TEMPAT PEMBUATAN GULA MERAH SAIDIN ",
+              "code": "7208041017000300 - TEMPAT PEMBUATAN GULA MERAH SAIDIN  - 1 /  - 1 - 2. Tidak",
+              "date": "yesterday",
+              "status": "DRAFT",
               "type": "rumah",
               "kecName": "TINOMBO SELATAN",
-              "jenis": "Keluarga"
+              "jenis": "Keluarga (Bukan Usaha)"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.37
+          "persentase": 14.52
         },
         {
           "kec_name": "SIDOAN",
@@ -7865,16 +7233,16 @@ window.IPAS_DATA = {
           "total_draft": 79,
           "total_open": 4942,
           "total_submitted": 452,
-          "total_rejected": 32,
-          "total_approved": 136,
-          "total_submitted_pencacah": 284,
+          "total_rejected": 33,
+          "total_approved": 149,
+          "total_submitted_pencacah": 270,
           "total_submitted_respondent": 0,
-          "today_completed": 5,
+          "today_completed": 14,
           "yesterday_completed": 2,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 3,
-            "SUBMITTED BY Pencacah": 2
+            "APPROVED BY Pengawas": 13,
+            "REJECTED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 1,
@@ -7885,11 +7253,39 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
+          "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 17,
-          "new_businesses": [],
+          "new_rumah_overall": 18,
+          "new_businesses": [
+            {
+              "name": "ATTARIQ / ALFIDAH. A. SUNUH",
+              "code": "7208042009000100 - ATTARIQ / ALFIDAH. A. SUNUH - 9 /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "SIDOAN",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "BANGUNAN USAHA WALET",
+              "code": "7208042009000100 - BANGUNAN USAHA WALET - 2 /  - 1",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "usaha",
+              "kecName": "SIDOAN",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "ANCA  / RATNA",
+              "code": "7208042009000100 - ANCA  / RATNA - 13 /  - 0",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "SIDOAN",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
           "persentase": 8.26
         },
@@ -7897,18 +7293,18 @@ window.IPAS_DATA = {
           "kec_name": "TOMINI",
           "kec_id": "ef80a49e-9d83-467e-8995-206c1103af77",
           "total_prelist": 7064,
-          "total_draft": 197,
-          "total_open": 5868,
-          "total_submitted": 999,
+          "total_draft": 196,
+          "total_open": 5862,
+          "total_submitted": 1006,
           "total_rejected": 105,
           "total_approved": 330,
-          "total_submitted_pencacah": 564,
+          "total_submitted_pencacah": 571,
           "total_submitted_respondent": 0,
-          "today_completed": 4,
+          "today_completed": 7,
           "yesterday_completed": 7,
           "two_days_ago_completed": 6,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4
+            "SUBMITTED BY Pencacah": 7
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 7
@@ -7920,40 +7316,40 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
+          "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 2,
           "new_businesses": [
             {
-              "name": "SEKTETARIAT PKK",
-              "code": "7208050019000100 - NONBKU - 2",
+              "name": "ES TELER (SUSANTI)",
+              "code": "7208050008000300 - USAHA JUAL ES - - /  - 1",
               "date": "older",
               "status": "SUBMITTED BY Pencacah",
               "type": "usaha",
               "kecName": "TOMINI",
-              "jenis": "Bangunan Lain / Usaha"
+              "jenis": "Usaha Baru"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.14
+          "persentase": 14.24
         },
         {
           "kec_name": "MEPANGA",
           "kec_id": "72a3039e-e0fa-40c3-bb2a-aab294784d68",
-          "total_prelist": 11709,
+          "total_prelist": 11710,
           "total_draft": 85,
-          "total_open": 10717,
-          "total_submitted": 907,
+          "total_open": 10707,
+          "total_submitted": 918,
           "total_rejected": 81,
           "total_approved": 262,
-          "total_submitted_pencacah": 564,
+          "total_submitted_pencacah": 575,
           "total_submitted_respondent": 0,
-          "today_completed": 4,
+          "today_completed": 12,
           "yesterday_completed": 5,
           "two_days_ago_completed": 5,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4
+            "SUBMITTED BY Pencacah": 12
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 5
@@ -7963,49 +7359,30 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 5,
-          "new_rumah_today": 2,
+          "new_usaha_overall": 3,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 11,
-          "new_businesses": [
-            {
-              "name": "DARYONO / SUPATMI",
-              "code": "7208051004000700 - DARYONO / SUPATMI - 34 /  - 0 - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "MEPANGA",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "KARDIMAN / SULASIH",
-              "code": "7208051007001000 - KARDIMAN / SULASIH - 14 /  - 2",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "MEPANGA",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_rumah_overall": 4,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 7.75
+          "persentase": 7.84
         },
         {
           "kec_name": "PALASA",
           "kec_id": "20faf16f-54f4-4829-91a2-a458cf0e45fd",
           "total_prelist": 9887,
           "total_draft": 62,
-          "total_open": 8566,
-          "total_submitted": 1259,
+          "total_open": 8563,
+          "total_submitted": 1262,
           "total_rejected": 104,
           "total_approved": 96,
-          "total_submitted_pencacah": 1059,
+          "total_submitted_pencacah": 1062,
           "total_submitted_respondent": 0,
-          "today_completed": 11,
+          "today_completed": 3,
           "yesterday_completed": 0,
           "two_days_ago_completed": 4,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 11
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
@@ -8014,66 +7391,29 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
-          "new_rumah_today": 2,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 5,
-          "new_businesses": [
-            {
-              "name": "BANGUNAN KOSONG RUMAH JALIM",
-              "code": "7208052001000300 - RUMAH TETE AKI - - /  - 2. Tidak",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PALASA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN KOSONG PAPAN KEBUN JAGUNG LAPANGAN",
-              "code": "7208052001000300 - 27 /  - 2. Tidak",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PALASA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN KOSONG RUMAH BARU BELAKANG WALET LAPANGAN",
-              "code": "7208052001000300 - BANGUNAN KOSONG RUMAH BARU BELAKANG WALET LAPANGAN - 26 /  - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PALASA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN KOSONG WALET LAPANGAN",
-              "code": "7208052001000300 - BANGUNAN KOSONG WALET LAPANGAN - 25 /  - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PALASA",
-              "jenis": "Bangunan/Rumah Kosong"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.73
+          "persentase": 12.76
         },
         {
           "kec_name": "MOUTONG",
           "kec_id": "83d8e49d-1cd7-453f-8542-629d6f602ae2",
           "total_prelist": 9148,
           "total_draft": 24,
-          "total_open": 7977,
-          "total_submitted": 1147,
+          "total_open": 7962,
+          "total_submitted": 1162,
           "total_rejected": 39,
           "total_approved": 356,
-          "total_submitted_pencacah": 752,
+          "total_submitted_pencacah": 767,
           "total_submitted_respondent": 0,
-          "today_completed": 10,
+          "today_completed": 15,
           "yesterday_completed": 9,
           "two_days_ago_completed": 9,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 10
+            "SUBMITTED BY Pencacah": 15
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 9
@@ -8085,31 +7425,49 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
+          "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 3,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "GEREJA ",
+              "code": "7208060027000400 - NONBKU - 2",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "MOUTONG",
+              "jenis": "Bangunan Lain / Usaha"
+            },
+            {
+              "name": "GEREJA EMANUEL TONTONG",
+              "code": "7208060027000400 - NONBKU - 1",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "MOUTONG",
+              "jenis": "Bangunan Lain / Usaha"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.54
+          "persentase": 12.7
         },
         {
           "kec_name": "BOLANO LAMBUNU",
           "kec_id": "1dc08110-bfa6-4157-afcf-163a7a31ee13",
           "total_prelist": 8709,
           "total_draft": 288,
-          "total_open": 7092,
-          "total_submitted": 1329,
-          "total_rejected": 52,
+          "total_open": 7089,
+          "total_submitted": 1332,
+          "total_rejected": 51,
           "total_approved": 831,
-          "total_submitted_pencacah": 446,
+          "total_submitted_pencacah": 450,
           "total_submitted_respondent": 0,
-          "today_completed": 6,
+          "today_completed": 4,
           "yesterday_completed": 8,
           "two_days_ago_completed": 5,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 1,
-            "SUBMITTED BY Pencacah": 5
+            "SUBMITTED BY Pencacah": 4
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 8
@@ -8121,46 +7479,29 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 9,
-          "new_businesses": [
-            {
-              "name": "RUMAH KOSONG (PONIJO)",
-              "code": "7208061031000500 - RUMAH KOSONG (PONIJO) - 63 / ",
-              "date": "yesterday",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "BOLANO LAMBUNU",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "UJANG HERMAWAN  / MUHAMAD RISKY HERMAWAN ",
-              "code": "7208061031000500 - UJANG HERMAWAN  /  - 40 /  - 0",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "BOLANO LAMBUNU",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 6,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 15.26
+          "persentase": 15.29
         },
         {
           "kec_name": "TAOPA",
           "kec_id": "eef80b48-ab88-4243-b0ab-9bd61208f9ac",
           "total_prelist": 5934,
-          "total_draft": 52,
+          "total_draft": 51,
           "total_open": 5372,
-          "total_submitted": 510,
+          "total_submitted": 511,
           "total_rejected": 30,
           "total_approved": 56,
-          "total_submitted_pencacah": 424,
+          "total_submitted_pencacah": 425,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 1,
           "yesterday_completed": 0,
           "two_days_ago_completed": 5,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 1
+          },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "APPROVED BY Pengawas": 3,
@@ -8172,29 +7513,39 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 2,
-          "new_businesses": [],
+          "new_rumah_overall": 3,
+          "new_businesses": [
+            {
+              "name": "MUSRIN / IRNA",
+              "code": "7208062003000200 - MUSRIN / IRNA - 3 /  - 3",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TAOPA",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 8.59
+          "persentase": 8.61
         },
         {
           "kec_name": "BOLANO",
           "kec_id": "fa5a857c-f56b-4c61-a119-42d8a2632797",
-          "total_prelist": 6732,
-          "total_draft": 81,
-          "total_open": 5651,
-          "total_submitted": 1000,
+          "total_prelist": 6733,
+          "total_draft": 80,
+          "total_open": 5643,
+          "total_submitted": 1010,
           "total_rejected": 21,
-          "total_approved": 128,
-          "total_submitted_pencacah": 851,
+          "total_approved": 135,
+          "total_submitted_pencacah": 854,
           "total_submitted_respondent": 0,
-          "today_completed": 13,
+          "today_completed": 20,
           "yesterday_completed": 2,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 7,
-            "REJECTED BY Pengawas": 2,
-            "APPROVED BY Pengawas": 4
+            "REJECTED BY Pengawas": 1,
+            "SUBMITTED BY Pencacah": 12,
+            "APPROVED BY Pengawas": 7
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -8204,61 +7555,67 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
+          "new_usaha_overall": 0,
           "new_rumah_today": 1,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 8,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 11,
           "new_businesses": [
             {
-              "name": "DR. CREDO PRATAMA PUTRA ARIEF / DR. NELA JULIANTI",
-              "code": "7208063009000200 - DR. CREDO PRATAMA PUTRA ARIEF / DR. NELA JULIANTI - 53 /  - 0",
-              "date": "yesterday",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "BOLANO",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "ABD HALIM AHMAD / LILIK KUSMAWATI",
-              "code": "7208063001000100 - ABD HALIM AHMAD /  - - /  - 1",
+              "name": "IMAM SOPINGI / NUR FARMA HIDAYANTI",
+              "code": "7208063011000300 - IMAM SOPINGI / NUR FARMA HIDAYANTI - 54 /  - 1",
               "date": "older",
-              "status": "REJECTED BY Pengawas",
+              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "BOLANO",
               "jenis": "Keluarga"
             },
             {
-              "name": "WIDODO / SLAMET ALIF AL- AZHAR",
-              "code": "7208063003000200 - WIDODO / SLAMET ALIF AL- AZHAR - 36 /  - 1",
+              "name": "IWAN HASAN / RONITA",
+              "code": "7208063011000300 - IWAN HASAN / RONITA - 52 /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "BOLANO",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "I GEDE APRIANTO / NI KADEK RIKA YANTI",
+              "code": "7208063008000200 - I GEDE APRIANTO / NI KADEK RIKA YANTI - 60 /  - 1",
               "date": "today",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "BOLANO",
               "jenis": "Keluarga"
+            },
+            {
+              "name": "RUMAH KOSONG",
+              "code": "7208063011000300 - DUSUN III DESA SIDOMUKTI - 44 / ",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "BOLANO",
+              "jenis": "Bangunan/Rumah Kosong"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.85
+          "persentase": 15.0
         },
         {
           "kec_name": "ONGKA MALINO",
           "kec_id": "ad36f493-23a3-46bb-b036-508508581915",
           "total_prelist": 7695,
           "total_draft": 26,
-          "total_open": 6406,
-          "total_submitted": 1263,
+          "total_open": 6403,
+          "total_submitted": 1266,
           "total_rejected": 47,
           "total_approved": 658,
-          "total_submitted_pencacah": 558,
+          "total_submitted_pencacah": 561,
           "total_submitted_respondent": 0,
-          "today_completed": 13,
+          "today_completed": 3,
           "yesterday_completed": 12,
           "two_days_ago_completed": 5,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4,
-            "APPROVED BY Pengawas": 7,
-            "REJECTED BY Pengawas": 1,
-            "REVOKED BY Pengawas": 1
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 12
@@ -8270,43 +7627,32 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 8,
-          "new_businesses": [
-            {
-              "name": "MUHAMMAD ARIFIN / SURIYATI",
-              "code": "7208064003000400 - MUHAMMAD ARIFIN / SURIYATI - 40 /  - 0 - 2. Tidak",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "ONGKA MALINO",
-              "jenis": "Keluarga (Bukan Usaha)"
-            }
-          ],
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 6,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 16.41
+          "persentase": 16.45
         }
       ]
     },
     {
       "kabupaten": "[09] TOJO UNA-UNA",
-      "total_prelist": 60751,
-      "total_draft": 949,
-      "total_open": 49589,
-      "total_submitted": 10209,
-      "total_rejected": 971,
+      "total_prelist": 60757,
+      "total_draft": 947,
+      "total_open": 49564,
+      "total_submitted": 10242,
+      "total_rejected": 959,
       "total_approved": 4154,
-      "total_submitted_pencacah": 5080,
+      "total_submitted_pencacah": 5125,
       "total_submitted_respondent": 4,
-      "persentase": 16.8,
-      "today_completed": 48,
+      "persentase": 16.86,
+      "today_completed": 60,
       "yesterday_completed": 44,
       "two_days_ago_completed": 48,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "REJECTED BY Pengawas": 10,
-        "APPROVED BY Pengawas": 28,
-        "SUBMITTED BY Pencacah": 10
+        "SUBMITTED BY Pencacah": 58,
+        "REJECTED BY Pengawas": 2
       },
       "yesterday_completed_breakdown": {
         "APPROVED BY Pengawas": 3,
@@ -8319,52 +7665,25 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 8,
         "SUBMITTED BY Pencacah": 33
       },
-      "new_usaha_today": 0,
+      "new_usaha_today": 1,
       "new_usaha_yesterday": 0,
-      "new_rumah_today": 1,
-      "new_rumah_yesterday": 0,
-      "new_usaha_overall": 45,
-      "new_rumah_overall": 152,
+      "new_rumah_today": 8,
+      "new_rumah_yesterday": 1,
+      "new_usaha_overall": 49,
+      "new_rumah_overall": 155,
       "new_businesses": [
         {
-          "name": "INDRA JUDU / SELVIA GIWE",
-          "code": "7209030009000600 - INDRA JUDU / SELVIA GIWE - 6 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "ULUBONGKA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "I GUSTI NGURAH KOMANG ABADI / DEWA AYU KOMALA DEWI",
-          "code": "7209070003000300 - I GUSTI NGURAH KOMANG ABADI / DEWA AYU KOMALA DEWI - 3 /  - 0",
-          "date": "older",
+          "name": "MUSOLAH KANTOR CAMAT",
+          "code": "7209020018000400 - MUSOLAH KANTOR CAMAT - 40 / ",
+          "date": "today",
           "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "TOGEAN",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "RUMAH DINAS KEPALA DESA BORNEANG ",
-          "code": "7209030008000100 - RUMAH DINAS KEPALA DESA BORNEANG  - 43 /  - 94682",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
           "type": "usaha",
-          "kecName": "ULUBONGKA",
+          "kecName": "TOJO",
           "jenis": "Usaha Baru"
         },
         {
-          "name": "NURHAIDA / ISMAIL",
-          "code": "7209060009000100 - NURHAIDA /  - 47 / ",
-          "date": "older",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "UNA - UNA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "ABIDIN DG. MAROLA / ",
-          "code": "7209050015000400 - ABIDIN DG. MAROLA /  - 57 /  - 0 - 94683",
+          "name": "MOHAMMAD ISHAK / DEWI FADILA ZULFATRI ABD. RAHIM",
+          "code": "7209050003000300 - MOHAMMAD ISHAK / DEWI FADILA ZULFATRI ABD. RAHIM - 76 /  - 0",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
@@ -8372,33 +7691,222 @@ window.IPAS_DATA = {
           "jenis": "Keluarga"
         },
         {
-          "name": "KANTOR DESA TUMBULAWA ",
-          "code": "7209061004000100 - NONBKU - 1",
+          "name": "BALAI DUSUN",
+          "code": "7209040015000300 - NONBKU - 1",
           "date": "older",
           "status": "SUBMITTED BY Pencacah",
           "type": "usaha",
-          "kecName": "BATUDAKA",
+          "kecName": "AMPANA TETE",
           "jenis": "Bangunan Lain / Usaha"
+        },
+        {
+          "name": "MUHAMMAD RAFKA LABATJO / ",
+          "code": "7209060008000100 - MUHAMMAD RAFKA LABATJO /  - 24 /  - 0",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "UNA - UNA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "KANTOR CAMAT TOJO",
+          "code": "7209020018000400 - NONBKU - 7",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "TOJO",
+          "jenis": "Bangunan Lain / Usaha"
+        },
+        {
+          "name": "SURIYATI BOLOTA  / MOHAMAD FADEL ALAMRI",
+          "code": "7209040001000500 - SURIYATI BOLOTA  / MOHAMAD FADEL ALAMRI - 7 /  - 3",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "AMPANA TETE",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "SAFRIL S LAFINYOI / SERLI",
+          "code": "7209061003000300 - SAFRIL S LAFINYOI / SERLI - 6 /  - 1",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BATUDAKA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG ",
+          "code": "7209040015000300 - BANGUNAN KOSONG  - 8 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "AMPANA TETE",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "KANTOR POLISI SEKTOR TOJO",
+          "code": "7209020018000400 - NONBKU - 1",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "TOJO",
+          "jenis": "Bangunan Lain / Usaha"
+        },
+        {
+          "name": "MUHAMMAD FAJRIN / WIWIN I. HARIDJI",
+          "code": "7209051005000400 - MUHAMMAD FAJRIN / WI - - /  - 1",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "RATOLINDO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG ",
+          "code": "7209040015000300 - BANGUNAN KOSONG  - 9 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "AMPANA TETE",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7209040015000300 - BANGUNAN KOSONG - 13 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "AMPANA TETE",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7209040015000300 - BANGUNAN KOSONG - 2 / ",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "AMPANA TETE",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "KIOS (JUNAEBA RASIDU)",
+          "code": "7209030014001100 - KIOS (JUNAEBA RASIDU) - - /  - 0",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "ULUBONGKA",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "RIDAN / WIDYAWATI T HASAN",
+          "code": "7209070003000300 - RIDAN / WIDYAWATI T HASAN - 18 /  - 3",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TOGEAN",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "ILHAM SONI / LUSIANTI A. MAMIKA",
+          "code": "7209030014001100 - ILHAM SONI / LUSIANTI A. MAMIKA - - /  - 0 - 2. Tidak",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "ULUBONGKA",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "MUSHOLA KANTOR POLISI",
+          "code": "7209020018000400 - NONBKU - 5",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "TOJO",
+          "jenis": "Bangunan Lain / Usaha"
+        },
+        {
+          "name": "KIOS (MINARSI)",
+          "code": "7209051008001000 - KIOS (MINARSI) - 31 /  - 1 - 2. Tidak",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "RATOLINDO",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "DAHLIA / LILA SYAKILA AULIA PUTRI",
+          "code": "7209020018000200 - IBU DAHLIA / LILA SYAKILA AULIA PUTRI - 2 /  - 0",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TOJO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "HERMANSYAH K AMAY / HARTINI PONGIAN",
+          "code": "7209080009000100 - HERMANSYAH K AMAY / HARTINI PONGIAN - 34 /  - 0",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "WALEA KEPULAUAN",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "RATNA / RASNAWATI",
+          "code": "7209060008000100 - RATNA /  - - /  - 1",
+          "date": "older",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "UNA - UNA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "SUAIB / TANWIN",
+          "code": "7209040001000500 - SUAIB / TANWIN - 51 /  - 2",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "AMPANA TETE",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "KANTOR KEPALA DESA BAULU",
+          "code": "7209070013000100 - NONBKU - 1",
+          "date": "older",
+          "status": "DRAFT",
+          "type": "usaha",
+          "kecName": "TOGEAN",
+          "jenis": "Bangunan Lain / Usaha"
+        },
+        {
+          "name": "MUHAMAD SALIM / NUSHASNI",
+          "code": "7209010010000100 - MUHAMAD SALIM / NUSHASNI - 39 /  - 1",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "TOJO BARAT",
+          "jenis": "Keluarga"
         }
       ],
       "kecamatan_list": [
         {
           "kec_name": "TOJO BARAT",
           "kec_id": "82804cbe-8c3d-4a4e-b06d-ea475721eb43",
-          "total_prelist": 4980,
-          "total_draft": 122,
-          "total_open": 3973,
-          "total_submitted": 885,
-          "total_rejected": 68,
+          "total_prelist": 4981,
+          "total_draft": 124,
+          "total_open": 3970,
+          "total_submitted": 887,
+          "total_rejected": 71,
           "total_approved": 206,
-          "total_submitted_pencacah": 611,
+          "total_submitted_pencacah": 610,
           "total_submitted_respondent": 0,
-          "today_completed": 5,
+          "today_completed": 4,
           "yesterday_completed": 3,
           "two_days_ago_completed": 9,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 4,
-            "SUBMITTED BY Pencacah": 1
+            "SUBMITTED BY Pencacah": 2,
+            "REJECTED BY Pengawas": 2
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -8412,28 +7920,40 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 7,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 12,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "MUHAMAD SALIM / NUSHASNI",
+              "code": "7209010010000100 - MUHAMAD SALIM / NUSHASNI - 39 /  - 1",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "TOJO BARAT",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 17.77
+          "persentase": 17.81
         },
         {
           "kec_name": "TOJO",
           "kec_id": "a7e361b1-bdf4-4d57-882e-c410de209db2",
           "total_prelist": 5314,
           "total_draft": 133,
-          "total_open": 4496,
-          "total_submitted": 685,
-          "total_rejected": 99,
+          "total_open": 4492,
+          "total_submitted": 689,
+          "total_rejected": 96,
           "total_approved": 326,
-          "total_submitted_pencacah": 260,
+          "total_submitted_pencacah": 267,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 9,
           "yesterday_completed": 3,
           "two_days_ago_completed": 10,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 9
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
           },
@@ -8442,33 +7962,78 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 2,
             "SUBMITTED BY Pencacah": 4
           },
-          "new_usaha_today": 0,
+          "new_usaha_today": 1,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 7,
+          "new_usaha_overall": 10,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 17,
-          "new_businesses": [],
+          "new_rumah_overall": 18,
+          "new_businesses": [
+            {
+              "name": "MUSOLAH KANTOR CAMAT",
+              "code": "7209020018000400 - MUSOLAH KANTOR CAMAT - 40 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "TOJO",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "KANTOR CAMAT TOJO",
+              "code": "7209020018000400 - NONBKU - 7",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "TOJO",
+              "jenis": "Bangunan Lain / Usaha"
+            },
+            {
+              "name": "KANTOR POLISI SEKTOR TOJO",
+              "code": "7209020018000400 - NONBKU - 1",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "TOJO",
+              "jenis": "Bangunan Lain / Usaha"
+            },
+            {
+              "name": "MUSHOLA KANTOR POLISI",
+              "code": "7209020018000400 - NONBKU - 5",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "TOJO",
+              "jenis": "Bangunan Lain / Usaha"
+            },
+            {
+              "name": "DAHLIA / LILA SYAKILA AULIA PUTRI",
+              "code": "7209020018000200 - IBU DAHLIA / LILA SYAKILA AULIA PUTRI - 2 /  - 0",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TOJO",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.89
+          "persentase": 12.97
         },
         {
           "kec_name": "ULUBONGKA",
           "kec_id": "38034715-8fc4-4aa8-b887-752b8bd83417",
           "total_prelist": 7037,
-          "total_draft": 62,
-          "total_open": 5433,
-          "total_submitted": 1542,
-          "total_rejected": 119,
+          "total_draft": 60,
+          "total_open": 5432,
+          "total_submitted": 1545,
+          "total_rejected": 116,
           "total_approved": 623,
-          "total_submitted_pencacah": 799,
+          "total_submitted_pencacah": 805,
           "total_submitted_respondent": 1,
-          "today_completed": 17,
+          "today_completed": 6,
           "yesterday_completed": 2,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 15,
-            "REJECTED BY Pengawas": 2
+            "SUBMITTED BY Pencacah": 6
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -8478,50 +8043,49 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 8,
+          "new_usaha_overall": 9,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 19,
+          "new_rumah_overall": 20,
           "new_businesses": [
             {
-              "name": "INDRA JUDU / SELVIA GIWE",
-              "code": "7209030009000600 - INDRA JUDU / SELVIA GIWE - 6 /  - 0 - 2. Tidak",
+              "name": "KIOS (JUNAEBA RASIDU)",
+              "code": "7209030014001100 - KIOS (JUNAEBA RASIDU) - - /  - 0",
               "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "ULUBONGKA",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "RUMAH DINAS KEPALA DESA BORNEANG ",
-              "code": "7209030008000100 - RUMAH DINAS KEPALA DESA BORNEANG  - 43 /  - 94682",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
+              "status": "SUBMITTED BY Pencacah",
               "type": "usaha",
               "kecName": "ULUBONGKA",
               "jenis": "Usaha Baru"
+            },
+            {
+              "name": "ILHAM SONI / LUSIANTI A. MAMIKA",
+              "code": "7209030014001100 - ILHAM SONI / LUSIANTI A. MAMIKA - - /  - 0 - 2. Tidak",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "ULUBONGKA",
+              "jenis": "Keluarga (Bukan Usaha)"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 21.91
+          "persentase": 21.96
         },
         {
           "kec_name": "AMPANA TETE",
           "kec_id": "c5d104a9-0aa2-4ba8-a8c8-1c211de4f455",
-          "total_prelist": 10558,
-          "total_draft": 116,
-          "total_open": 8543,
-          "total_submitted": 1899,
-          "total_rejected": 202,
+          "total_prelist": 10562,
+          "total_draft": 117,
+          "total_open": 8531,
+          "total_submitted": 1914,
+          "total_rejected": 196,
           "total_approved": 1180,
-          "total_submitted_pencacah": 517,
+          "total_submitted_pencacah": 538,
           "total_submitted_respondent": 0,
-          "today_completed": 11,
+          "today_completed": 27,
           "yesterday_completed": 9,
           "two_days_ago_completed": 9,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3,
-            "APPROVED BY Pengawas": 8
+            "SUBMITTED BY Pencacah": 27
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 9
@@ -8532,30 +8096,94 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 7,
-          "new_rumah_today": 0,
+          "new_usaha_overall": 6,
+          "new_rumah_today": 4,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 11,
-          "new_businesses": [],
+          "new_rumah_overall": 15,
+          "new_businesses": [
+            {
+              "name": "BALAI DUSUN",
+              "code": "7209040015000300 - NONBKU - 1",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "AMPANA TETE",
+              "jenis": "Bangunan Lain / Usaha"
+            },
+            {
+              "name": "SURIYATI BOLOTA  / MOHAMAD FADEL ALAMRI",
+              "code": "7209040001000500 - SURIYATI BOLOTA  / MOHAMAD FADEL ALAMRI - 7 /  - 3",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "AMPANA TETE",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "BANGUNAN KOSONG ",
+              "code": "7209040015000300 - BANGUNAN KOSONG  - 8 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "AMPANA TETE",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG ",
+              "code": "7209040015000300 - BANGUNAN KOSONG  - 9 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "AMPANA TETE",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7209040015000300 - BANGUNAN KOSONG - 13 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "AMPANA TETE",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7209040015000300 - BANGUNAN KOSONG - 2 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "AMPANA TETE",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "SUAIB / TANWIN",
+              "code": "7209040001000500 - SUAIB / TANWIN - 51 /  - 2",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "AMPANA TETE",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 17.99
+          "persentase": 18.12
         },
         {
           "kec_name": "AMPANA KOTA",
           "kec_id": "ee81aba3-2a27-4035-a8ec-f46af32b90fb",
           "total_prelist": 8203,
-          "total_draft": 205,
-          "total_open": 6771,
-          "total_submitted": 1227,
+          "total_draft": 203,
+          "total_open": 6769,
+          "total_submitted": 1231,
           "total_rejected": 120,
           "total_approved": 653,
-          "total_submitted_pencacah": 453,
+          "total_submitted_pencacah": 457,
           "total_submitted_respondent": 1,
-          "today_completed": 1,
+          "today_completed": 5,
           "yesterday_completed": 0,
           "two_days_ago_completed": 6,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
+            "SUBMITTED BY Pencacah": 5
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
@@ -8566,11 +8194,11 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 24,
+          "new_rumah_overall": 23,
           "new_businesses": [
             {
-              "name": "ABIDIN DG. MAROLA / ",
-              "code": "7209050015000400 - ABIDIN DG. MAROLA /  - 57 /  - 0 - 94683",
+              "name": "MOHAMMAD ISHAK / DEWI FADILA ZULFATRI ABD. RAHIM",
+              "code": "7209050003000300 - MOHAMMAD ISHAK / DEWI FADILA ZULFATRI ABD. RAHIM - 76 /  - 0",
               "date": "today",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
@@ -8579,25 +8207,24 @@ window.IPAS_DATA = {
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.96
+          "persentase": 15.01
         },
         {
           "kec_name": "RATOLINDO",
           "kec_id": "7d333cb8-ca0e-4ded-8b02-ba02fa79bd9f",
           "total_prelist": 11974,
-          "total_draft": 94,
-          "total_open": 10114,
-          "total_submitted": 1766,
+          "total_draft": 90,
+          "total_open": 10113,
+          "total_submitted": 1771,
           "total_rejected": 149,
           "total_approved": 434,
-          "total_submitted_pencacah": 1182,
+          "total_submitted_pencacah": 1187,
           "total_submitted_respondent": 1,
-          "today_completed": 2,
+          "today_completed": 5,
           "yesterday_completed": 11,
           "two_days_ago_completed": 6,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1,
-            "APPROVED BY Pengawas": 1
+            "SUBMITTED BY Pencacah": 5
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 11
@@ -8610,30 +8237,46 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 5,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 28,
-          "new_businesses": [],
+          "new_rumah_yesterday": 1,
+          "new_rumah_overall": 26,
+          "new_businesses": [
+            {
+              "name": "MUHAMMAD FAJRIN / WIWIN I. HARIDJI",
+              "code": "7209051005000400 - MUHAMMAD FAJRIN / WI - - /  - 1",
+              "date": "yesterday",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "RATOLINDO",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "KIOS (MINARSI)",
+              "code": "7209051008001000 - KIOS (MINARSI) - 31 /  - 1 - 2. Tidak",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "RATOLINDO",
+              "jenis": "Keluarga (Bukan Usaha)"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.75
+          "persentase": 14.79
         },
         {
           "kec_name": "UNA - UNA",
           "kec_id": "5a3ae331-c17a-4d95-9e2c-55e978d69bf1",
-          "total_prelist": 2580,
-          "total_draft": 66,
+          "total_prelist": 2581,
+          "total_draft": 67,
           "total_open": 2059,
           "total_submitted": 455,
           "total_rejected": 58,
           "total_approved": 217,
           "total_submitted_pencacah": 180,
           "total_submitted_respondent": 0,
-          "today_completed": 8,
+          "today_completed": 0,
           "yesterday_completed": 3,
           "two_days_ago_completed": 2,
-          "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 4,
-            "REJECTED BY Pengawas": 4
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
           },
@@ -8643,22 +8286,31 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 3,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 10,
+          "new_rumah_overall": 9,
           "new_businesses": [
             {
-              "name": "NURHAIDA / ISMAIL",
-              "code": "7209060009000100 - NURHAIDA /  - 47 / ",
+              "name": "MUHAMMAD RAFKA LABATJO / ",
+              "code": "7209060008000100 - MUHAMMAD RAFKA LABATJO /  - 24 /  - 0",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "UNA - UNA",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "RATNA / RASNAWATI",
+              "code": "7209060008000100 - RATNA /  - - /  - 1",
               "date": "older",
-              "status": "REJECTED BY Pengawas",
+              "status": "DRAFT",
               "type": "rumah",
               "kecName": "UNA - UNA",
               "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 17.64
+          "persentase": 17.63
         },
         {
           "kec_name": "BATUDAKA",
@@ -8667,9 +8319,9 @@ window.IPAS_DATA = {
           "total_draft": 15,
           "total_open": 1492,
           "total_submitted": 404,
-          "total_rejected": 72,
+          "total_rejected": 71,
           "total_approved": 114,
-          "total_submitted_pencacah": 218,
+          "total_submitted_pencacah": 219,
           "total_submitted_respondent": 0,
           "today_completed": 1,
           "yesterday_completed": 1,
@@ -8691,13 +8343,13 @@ window.IPAS_DATA = {
           "new_rumah_overall": 5,
           "new_businesses": [
             {
-              "name": "KANTOR DESA TUMBULAWA ",
-              "code": "7209061004000100 - NONBKU - 1",
+              "name": "SAFRIL S LAFINYOI / SERLI",
+              "code": "7209061003000300 - SAFRIL S LAFINYOI / SERLI - 6 /  - 1",
               "date": "older",
               "status": "SUBMITTED BY Pencacah",
-              "type": "usaha",
+              "type": "rumah",
               "kecName": "BATUDAKA",
-              "jenis": "Bangunan Lain / Usaha"
+              "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
@@ -8707,18 +8359,18 @@ window.IPAS_DATA = {
           "kec_name": "TOGEAN",
           "kec_id": "807deb70-de48-4df9-9475-768b0e8612a0",
           "total_prelist": 3311,
-          "total_draft": 38,
-          "total_open": 2806,
+          "total_draft": 39,
+          "total_open": 2805,
           "total_submitted": 467,
-          "total_rejected": 36,
+          "total_rejected": 34,
           "total_approved": 165,
-          "total_submitted_pencacah": 266,
+          "total_submitted_pencacah": 268,
           "total_submitted_respondent": 0,
-          "today_completed": 2,
+          "today_completed": 3,
           "yesterday_completed": 10,
           "two_days_ago_completed": 2,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 2,
@@ -8730,19 +8382,28 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 5,
+          "new_usaha_overall": 6,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 16,
+          "new_rumah_overall": 17,
           "new_businesses": [
             {
-              "name": "I GUSTI NGURAH KOMANG ABADI / DEWA AYU KOMALA DEWI",
-              "code": "7209070003000300 - I GUSTI NGURAH KOMANG ABADI / DEWA AYU KOMALA DEWI - 3 /  - 0",
+              "name": "RIDAN / WIDYAWATI T HASAN",
+              "code": "7209070003000300 - RIDAN / WIDYAWATI T HASAN - 18 /  - 3",
               "date": "older",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "TOGEAN",
               "jenis": "Keluarga"
+            },
+            {
+              "name": "KANTOR KEPALA DESA BAULU",
+              "code": "7209070013000100 - NONBKU - 1",
+              "date": "older",
+              "status": "DRAFT",
+              "type": "usaha",
+              "kecName": "TOGEAN",
+              "jenis": "Bangunan Lain / Usaha"
             }
           ],
           "two_days_ago_is_estimate": false,
@@ -8752,19 +8413,17 @@ window.IPAS_DATA = {
           "kec_name": "WALEA KEPULAUAN",
           "kec_id": "dab5d5a2-5e96-488f-8746-2bae6ad0b6d2",
           "total_prelist": 1571,
-          "total_draft": 58,
-          "total_open": 1250,
+          "total_draft": 59,
+          "total_open": 1249,
           "total_submitted": 263,
           "total_rejected": 3,
           "total_approved": 131,
           "total_submitted_pencacah": 129,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 0,
           "yesterday_completed": 0,
           "two_days_ago_completed": 1,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
@@ -8772,10 +8431,20 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 8,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "HERMANSYAH K AMAY / HARTINI PONGIAN",
+              "code": "7209080009000100 - HERMANSYAH K AMAY / HARTINI PONGIAN - 34 /  - 0",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "WALEA KEPULAUAN",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
           "persentase": 16.74
         },
@@ -8840,23 +8509,24 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[10] SIGI",
-      "total_prelist": 108938,
-      "total_draft": 1593,
-      "total_open": 92115,
-      "total_submitted": 15230,
-      "total_rejected": 685,
-      "total_approved": 5813,
-      "total_submitted_pencacah": 8715,
+      "total_prelist": 108942,
+      "total_draft": 1591,
+      "total_open": 92099,
+      "total_submitted": 15252,
+      "total_rejected": 717,
+      "total_approved": 5821,
+      "total_submitted_pencacah": 8697,
       "total_submitted_respondent": 17,
-      "persentase": 13.98,
-      "today_completed": 77,
+      "persentase": 14.0,
+      "today_completed": 87,
       "yesterday_completed": 70,
       "two_days_ago_completed": 99,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "SUBMITTED BY Pencacah": 54,
-        "REJECTED BY Pengawas": 3,
-        "APPROVED BY Pengawas": 20
+        "REJECTED BY Pengawas": 45,
+        "SUBMITTED BY Pencacah": 30,
+        "APPROVED BY Pengawas": 11,
+        "REVOKED BY Pengawas": 1
       },
       "yesterday_completed_breakdown": {
         "APPROVED BY Pengawas": 3,
@@ -8869,165 +8539,183 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 25,
         "SUBMITTED BY Pencacah": 58
       },
-      "new_usaha_today": 1,
+      "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
-      "new_rumah_today": 9,
-      "new_rumah_yesterday": 1,
-      "new_usaha_overall": 37,
-      "new_rumah_overall": 233,
+      "new_rumah_today": 4,
+      "new_rumah_yesterday": 2,
+      "new_usaha_overall": 38,
+      "new_rumah_overall": 228,
       "new_businesses": [
         {
-          "name": "PONDOK NASI KUNING (SRI IVON)",
-          "code": "7210090012000200 - PONDOK NASI KUNING (SRI IVON) - 28 /  - 1",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "usaha",
-          "kecName": "DOLO BARAT",
-          "jenis": "Usaha Baru"
-        },
-        {
-          "name": "IBADA / ",
-          "code": "7210040005000300 - IBADA /  - 43 /  - 0",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "LINDU",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "ABDILLA / NURMIN",
-          "code": "7210100003000200 - ABDILLA / NURMIN - - /  - 1 - 94364",
+          "name": "DELA SUSILO / SITI RAHMAWATI",
+          "code": "7210110009000200 - DELA SUSILO / SITI RAHMAWATI - 11 /  - 0",
           "date": "older",
-          "status": "DRAFT",
+          "status": "REJECTED BY Pengawas",
           "type": "rumah",
-          "kecName": "TANAMBULAVA",
+          "kecName": "DOLO",
           "jenis": "Keluarga"
         },
         {
-          "name": "ASRAN / MARIATI",
-          "code": "7210060013001400 - ASRAN / MARIATI - 13 /  - 0",
+          "name": "HAMNA / RAHMAWATI ABAS",
+          "code": "7210080001000901 - HAMNA / RAHMAWATI ABAS - 36 /  - 0",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "DOLO SELATAN",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7210110009000200 - BANGUNAN KOSONG - 4 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "DOLO",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "MUSHOLAH KOSONG",
+          "code": "7210110009000200 - MUSHOLAH KOSONG - 2 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "DOLO",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "NUSE / OLFIN",
+          "code": "7210060003001000 - NUSE / OLFIN - 1 /  - 1 - 2. Tidak",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "PALOLO",
-          "jenis": "Keluarga"
+          "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "IBNU THUFAIL  / ",
-          "code": "7210120012001201 - IBNU THUFAIL  /  - 36 /  - 0",
-          "date": "today",
+          "name": "BURHANUDDIN MARAGAU / ",
+          "code": "7210120012000900 -  / BURHANUDI  - 10 / ",
+          "date": "older",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "SIGI BIROMARU",
           "jenis": "Keluarga"
         },
         {
-          "name": "FEBRIANTO / FIRDA YANTI",
-          "code": "7210110010000500 - - / ",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "DOLO",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "MASJID BAITURRAHMAN",
-          "code": "7210130011001101 - MASJID BAITURRAHMAN - 11 /  - 2. Tidak",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "MARAWOLA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "SALEH / AMINAH",
-          "code": "7210130006000300 - SALEH / AMINAH - 62 /  - 0",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "MARAWOLA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "MASJID BTN GRAHA MUTIARA",
-          "code": "7210130011001101 - MASJID BTN GRAHA MUTIARA - 10 /  - 2. Tidak",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "MARAWOLA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "BANGUNAN KOSONG",
-          "code": "7210030011000400 - BANGUNAN KOSONG - 42 /  - 2. Tidak",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "KULAWI",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "ARMAN / HASNAH",
-          "code": "7210110011000600 - ARMAN / HASNAH - - /  - 0",
+          "name": "RUMAH KOSONG",
+          "code": "7210130008003300 - RUMAH KOSONG - 67 / ",
           "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "MARAWOLA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "RUMAH KOSONG",
+          "code": "7210130008003300 - RUMAH KOSONG - 68 / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "MARAWOLA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "IBAHIRA / MUH. UMAR FARDIYAMAN ",
+          "code": "7210120002000300 - BAHIRA /  - - /  - 0",
+          "date": "older",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "SIGI BIROMARU",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "RUMAH ADAT DESA BANGGA (BARUGA)",
+          "code": "7210080001000901 - NONBKU - 5",
+          "date": "older",
           "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "DOLO SELATAN",
+          "jenis": "Bangunan Lain / Usaha"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7210110009000200 - BANGUNAN KOSONG - 22 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "DOLO",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7210110009000200 - BANGUNAN KOSONG - 17 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "DOLO",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "MUHAMAD ARIEL / PAULINA",
+          "code": "7210110009000200 - MUHAMAD ARIEL / PAULINA - 9 /  - 1",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
           "type": "rumah",
           "kecName": "DOLO",
           "jenis": "Keluarga"
         },
         {
-          "name": "MY BROWEHL / GHILBERT",
-          "code": "7210150001000300 - MY BROWEHL / GHILBERT - 6 /  - 1 - 4531110",
+          "name": "RUGAIYAH / AKBAR",
+          "code": "7210080001000901 - RUGAIYAH / AKBAR - 15 /  - 1",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "KINOVARO",
+          "kecName": "DOLO SELATAN",
           "jenis": "Keluarga"
         },
         {
-          "name": "ANSAR / RINI SEPTIANI",
-          "code": "7210130003001500 - ANSAR / RINI SEPTIANI - - /  - 0",
+          "name": "MARLON CHARLES TRISFEINAL / NELY NOVIANI",
+          "code": "7210010007000200 - MARLON CHARLES TRISFEINAL / NELY NOVIANI - 12 /  - 1",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PIPIKORO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "KANDANG AYAM POTONG SUPIANTO ",
+          "code": "7210130003001500 -  /  - - /  - 0",
           "date": "older",
           "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
+          "type": "usaha",
           "kecName": "MARAWOLA",
-          "jenis": "Keluarga"
+          "jenis": "Usaha Baru"
         },
         {
-          "name": "BANGUNAN KOSONG",
-          "code": "7210060010000200 - BANGUNAN KOSONG - 29 /  - 2. Tidak",
+          "name": "MASJID KECIL (BUKIT 1) ",
+          "code": "7210130004000200 - NONBKU - 3",
           "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PALOLO",
-          "jenis": "Bangunan/Rumah Kosong"
+          "status": "REVOKED BY Pengawas",
+          "type": "usaha",
+          "kecName": "MARAWOLA",
+          "jenis": "Bangunan Lain / Usaha"
         },
         {
           "name": "BANGUNAN KOSONG",
-          "code": "7210030011000400 - BANGUNAN KOSONG - 3 /  - 2. Tidak",
+          "code": "7210121002000200 - BANGUNAN KOSONG - 46 / ",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "KULAWI",
+          "kecName": "SIGI KOTA",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "BANGUNAN KOSONG",
-          "code": "7210060010000200 - BANGUNAN KOSONG - 28 /  - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
+          "name": "ISMUNANDAR / HELVIANI",
+          "code": "7210120013001700 - ISMUNANDAR / HELVIANI - 67 /  - 1",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "PALOLO",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "BANGUNAN BARU",
-          "code": "7210060010000200 - BANGUNAN BARU - 27 /  - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PALOLO",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "kecName": "SIGI BIROMARU",
+          "jenis": "Keluarga"
         }
       ],
       "kecamatan_list": [
@@ -9038,15 +8726,16 @@ window.IPAS_DATA = {
           "total_draft": 2,
           "total_open": 2580,
           "total_submitted": 794,
-          "total_rejected": 19,
-          "total_approved": 221,
-          "total_submitted_pencacah": 554,
+          "total_rejected": 22,
+          "total_approved": 223,
+          "total_submitted_pencacah": 549,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 5,
           "yesterday_completed": 4,
           "two_days_ago_completed": 3,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
+            "REJECTED BY Pengawas": 3,
+            "APPROVED BY Pengawas": 2
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
@@ -9059,8 +8748,18 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
-          "new_businesses": [],
+          "new_rumah_overall": 1,
+          "new_businesses": [
+            {
+              "name": "MARLON CHARLES TRISFEINAL / NELY NOVIANI",
+              "code": "7210010007000200 - MARLON CHARLES TRISFEINAL / NELY NOVIANI - 12 /  - 1",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PIPIKORO",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
           "persentase": 23.52
         },
@@ -9101,16 +8800,15 @@ window.IPAS_DATA = {
           "total_draft": 14,
           "total_open": 5802,
           "total_submitted": 435,
-          "total_rejected": 26,
-          "total_approved": 306,
-          "total_submitted_pencacah": 103,
+          "total_rejected": 27,
+          "total_approved": 307,
+          "total_submitted_pencacah": 101,
           "total_submitted_respondent": 0,
-          "today_completed": 4,
+          "today_completed": 2,
           "yesterday_completed": 2,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 1,
-            "SUBMITTED BY Pencacah": 3
+            "APPROVED BY Pengawas": 2
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -9121,29 +8819,10 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 1,
-          "new_rumah_today": 2,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 5,
-          "new_businesses": [
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7210030011000400 - BANGUNAN KOSONG - 42 /  - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "KULAWI",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7210030011000400 - BANGUNAN KOSONG - 3 /  - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "KULAWI",
-              "jenis": "Bangunan/Rumah Kosong"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 6.96
         },
@@ -9158,12 +8837,10 @@ window.IPAS_DATA = {
           "total_approved": 0,
           "total_submitted_pencacah": 262,
           "total_submitted_respondent": 0,
-          "today_completed": 3,
+          "today_completed": 0,
           "yesterday_completed": 1,
           "two_days_ago_completed": 0,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
           },
@@ -9171,20 +8848,10 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 1,
-          "new_rumah_today": 1,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 7,
-          "new_businesses": [
-            {
-              "name": "IBADA / ",
-              "code": "7210040005000300 - IBADA /  - 43 /  - 0",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "LINDU",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 12.81
         },
@@ -9199,12 +8866,10 @@ window.IPAS_DATA = {
           "total_approved": 48,
           "total_submitted_pencacah": 193,
           "total_submitted_respondent": 0,
-          "today_completed": 1,
+          "today_completed": 0,
           "yesterday_completed": 0,
           "two_days_ago_completed": 0,
-          "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 1
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
@@ -9221,20 +8886,20 @@ window.IPAS_DATA = {
           "kec_name": "PALOLO",
           "kec_id": "be388afe-d903-4264-a8b8-37b4fda22a88",
           "total_prelist": 11795,
-          "total_draft": 198,
-          "total_open": 10423,
+          "total_draft": 199,
+          "total_open": 10422,
           "total_submitted": 1174,
-          "total_rejected": 146,
+          "total_rejected": 149,
           "total_approved": 809,
-          "total_submitted_pencacah": 219,
+          "total_submitted_pencacah": 216,
           "total_submitted_respondent": 0,
-          "today_completed": 9,
+          "today_completed": 5,
           "yesterday_completed": 2,
           "two_days_ago_completed": 6,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2,
-            "REJECTED BY Pengawas": 2,
-            "APPROVED BY Pengawas": 5
+            "SUBMITTED BY Pencacah": 1,
+            "APPROVED BY Pengawas": 1,
+            "REJECTED BY Pengawas": 3
           },
           "yesterday_completed_breakdown": {
             "REJECTED BY Pengawas": 1,
@@ -9246,40 +8911,13 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 4,
-          "new_rumah_today": 1,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 33,
+          "new_rumah_overall": 30,
           "new_businesses": [
             {
-              "name": "ASRAN / MARIATI",
-              "code": "7210060013001400 - ASRAN / MARIATI - 13 /  - 0",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PALOLO",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7210060010000200 - BANGUNAN KOSONG - 29 /  - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "PALOLO",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7210060010000200 - BANGUNAN KOSONG - 28 /  - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "PALOLO",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN BARU",
-              "code": "7210060010000200 - BANGUNAN BARU - 27 /  - 2. Tidak",
+              "name": "NUSE / OLFIN",
+              "code": "7210060003001000 - NUSE / OLFIN - 1 /  - 1 - 2. Tidak",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
@@ -9295,11 +8933,11 @@ window.IPAS_DATA = {
           "kec_id": "73a8378b-cd0b-4761-bde9-f8746044e41d",
           "total_prelist": 5680,
           "total_draft": 58,
-          "total_open": 4756,
-          "total_submitted": 866,
+          "total_open": 4755,
+          "total_submitted": 867,
           "total_rejected": 29,
           "total_approved": 141,
-          "total_submitted_pencacah": 696,
+          "total_submitted_pencacah": 697,
           "total_submitted_respondent": 0,
           "today_completed": 1,
           "yesterday_completed": 1,
@@ -9321,25 +8959,24 @@ window.IPAS_DATA = {
           "new_rumah_overall": 8,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 15.25
+          "persentase": 15.26
         },
         {
           "kec_name": "DOLO SELATAN",
           "kec_id": "fb9dcba4-ab2a-4dd7-898e-b987fd04ad46",
-          "total_prelist": 6964,
+          "total_prelist": 6965,
           "total_draft": 64,
-          "total_open": 5887,
-          "total_submitted": 1013,
+          "total_open": 5885,
+          "total_submitted": 1016,
           "total_rejected": 42,
           "total_approved": 371,
-          "total_submitted_pencacah": 600,
+          "total_submitted_pencacah": 603,
           "total_submitted_respondent": 0,
-          "today_completed": 16,
+          "today_completed": 6,
           "yesterday_completed": 8,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 15,
-            "SUBMITTED BY Pencacah": 1
+            "SUBMITTED BY Pencacah": 6
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 8
@@ -9347,30 +8984,60 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
-          "new_rumah_today": 0,
+          "new_usaha_overall": 4,
+          "new_rumah_today": 2,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 42,
-          "new_businesses": [],
+          "new_rumah_overall": 41,
+          "new_businesses": [
+            {
+              "name": "HAMNA / RAHMAWATI ABAS",
+              "code": "7210080001000901 - HAMNA / RAHMAWATI ABAS - 36 /  - 0",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "DOLO SELATAN",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "RUMAH ADAT DESA BANGGA (BARUGA)",
+              "code": "7210080001000901 - NONBKU - 5",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "DOLO SELATAN",
+              "jenis": "Bangunan Lain / Usaha"
+            },
+            {
+              "name": "RUGAIYAH / AKBAR",
+              "code": "7210080001000901 - RUGAIYAH / AKBAR - 15 /  - 1",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "DOLO SELATAN",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.55
+          "persentase": 14.59
         },
         {
           "kec_name": "DOLO BARAT",
           "kec_id": "8abf6762-528b-4387-ab8e-5bbfd1bd4ff1",
-          "total_prelist": 6757,
-          "total_draft": 226,
-          "total_open": 5135,
-          "total_submitted": 1396,
-          "total_rejected": 43,
-          "total_approved": 581,
-          "total_submitted_pencacah": 772,
+          "total_prelist": 6758,
+          "total_draft": 225,
+          "total_open": 5134,
+          "total_submitted": 1399,
+          "total_rejected": 46,
+          "total_approved": 583,
+          "total_submitted_pencacah": 770,
           "total_submitted_respondent": 0,
-          "today_completed": 3,
+          "today_completed": 6,
           "yesterday_completed": 2,
           "two_days_ago_completed": 24,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3
+            "REJECTED BY Pengawas": 3,
+            "APPROVED BY Pengawas": 2,
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -9379,42 +9046,33 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 16,
             "SUBMITTED BY Pencacah": 8
           },
-          "new_usaha_today": 1,
+          "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 6,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 25,
-          "new_businesses": [
-            {
-              "name": "PONDOK NASI KUNING (SRI IVON)",
-              "code": "7210090012000200 - PONDOK NASI KUNING (SRI IVON) - 28 /  - 1",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "usaha",
-              "kecName": "DOLO BARAT",
-              "jenis": "Usaha Baru"
-            }
-          ],
+          "new_rumah_overall": 24,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 20.66
+          "persentase": 20.7
         },
         {
           "kec_name": "TANAMBULAVA",
           "kec_id": "f46c850a-a828-405e-b077-fe937ebc9c87",
           "total_prelist": 4212,
           "total_draft": 88,
-          "total_open": 3474,
-          "total_submitted": 650,
+          "total_open": 3473,
+          "total_submitted": 651,
           "total_rejected": 12,
           "total_approved": 312,
-          "total_submitted_pencacah": 326,
+          "total_submitted_pencacah": 327,
           "total_submitted_respondent": 0,
-          "today_completed": 2,
+          "today_completed": 4,
           "yesterday_completed": 3,
           "two_days_ago_completed": 15,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 3,
+            "REJECTED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -9431,36 +9089,27 @@ window.IPAS_DATA = {
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 5,
-          "new_businesses": [
-            {
-              "name": "ABDILLA / NURMIN",
-              "code": "7210100003000200 - ABDILLA / NURMIN - - /  - 1 - 94364",
-              "date": "older",
-              "status": "DRAFT",
-              "type": "rumah",
-              "kecName": "TANAMBULAVA",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 15.43
+          "persentase": 15.46
         },
         {
           "kec_name": "DOLO",
           "kec_id": "a74c23ad-508c-476a-ad16-542172650e06",
           "total_prelist": 10128,
           "total_draft": 119,
-          "total_open": 8536,
-          "total_submitted": 1473,
-          "total_rejected": 68,
+          "total_open": 8534,
+          "total_submitted": 1475,
+          "total_rejected": 89,
           "total_approved": 185,
-          "total_submitted_pencacah": 1220,
+          "total_submitted_pencacah": 1201,
           "total_submitted_respondent": 0,
-          "today_completed": 7,
+          "today_completed": 36,
           "yesterday_completed": 8,
           "two_days_ago_completed": 6,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 7
+            "REJECTED BY Pengawas": 34,
+            "SUBMITTED BY Pencacah": 2
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 8
@@ -9472,47 +9121,83 @@ window.IPAS_DATA = {
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 14,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 13,
           "new_businesses": [
             {
-              "name": "FEBRIANTO / FIRDA YANTI",
-              "code": "7210110010000500 - - / ",
+              "name": "DELA SUSILO / SITI RAHMAWATI",
+              "code": "7210110009000200 - DELA SUSILO / SITI RAHMAWATI - 11 /  - 0",
               "date": "older",
-              "status": "SUBMITTED BY Pencacah",
+              "status": "REJECTED BY Pengawas",
               "type": "rumah",
               "kecName": "DOLO",
               "jenis": "Keluarga"
             },
             {
-              "name": "ARMAN / HASNAH",
-              "code": "7210110011000600 - ARMAN / HASNAH - - /  - 0",
-              "date": "yesterday",
-              "status": "SUBMITTED BY Pencacah",
+              "name": "BANGUNAN KOSONG",
+              "code": "7210110009000200 - BANGUNAN KOSONG - 4 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "DOLO",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "MUSHOLAH KOSONG",
+              "code": "7210110009000200 - MUSHOLAH KOSONG - 2 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "DOLO",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7210110009000200 - BANGUNAN KOSONG - 22 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "DOLO",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7210110009000200 - BANGUNAN KOSONG - 17 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "DOLO",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "MUHAMAD ARIEL / PAULINA",
+              "code": "7210110009000200 - MUHAMAD ARIEL / PAULINA - 9 /  - 1",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
               "type": "rumah",
               "kecName": "DOLO",
               "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.54
+          "persentase": 14.56
         },
         {
           "kec_name": "SIGI BIROMARU",
           "kec_id": "4f84b7b6-595b-4892-adbd-db4c77d9c96d",
-          "total_prelist": 19609,
-          "total_draft": 202,
-          "total_open": 16836,
-          "total_submitted": 2571,
-          "total_rejected": 98,
+          "total_prelist": 19610,
+          "total_draft": 201,
+          "total_open": 16834,
+          "total_submitted": 2575,
+          "total_rejected": 97,
           "total_approved": 893,
-          "total_submitted_pencacah": 1580,
+          "total_submitted_pencacah": 1585,
           "total_submitted_respondent": 0,
-          "today_completed": 3,
+          "today_completed": 6,
           "yesterday_completed": 16,
           "two_days_ago_completed": 12,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 3
+            "SUBMITTED BY Pencacah": 6
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 16
@@ -9523,14 +9208,32 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 5,
+          "new_usaha_overall": 3,
           "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 33,
+          "new_rumah_overall": 34,
           "new_businesses": [
             {
-              "name": "IBNU THUFAIL  / ",
-              "code": "7210120012001201 - IBNU THUFAIL  /  - 36 /  - 0",
+              "name": "BURHANUDDIN MARAGAU / ",
+              "code": "7210120012000900 -  / BURHANUDI  - 10 / ",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "SIGI BIROMARU",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "IBAHIRA / MUH. UMAR FARDIYAMAN ",
+              "code": "7210120002000300 - BAHIRA /  - - /  - 0",
+              "date": "older",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "SIGI BIROMARU",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "ISMUNANDAR / HELVIANI",
+              "code": "7210120013001700 - ISMUNANDAR / HELVIANI - 67 /  - 1",
               "date": "today",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
@@ -9539,18 +9242,18 @@ window.IPAS_DATA = {
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 13.11
+          "persentase": 13.13
         },
         {
           "kec_name": "SIGI KOTA",
           "kec_id": "f58e07d8-4dad-4ecc-9297-e66165fcb191",
-          "total_prelist": 6989,
+          "total_prelist": 6990,
           "total_draft": 313,
           "total_open": 5750,
-          "total_submitted": 926,
+          "total_submitted": 927,
           "total_rejected": 33,
           "total_approved": 817,
-          "total_submitted_pencacah": 76,
+          "total_submitted_pencacah": 77,
           "total_submitted_respondent": 0,
           "today_completed": 2,
           "yesterday_completed": 7,
@@ -9570,29 +9273,42 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 6,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 23,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7210121002000200 - BANGUNAN KOSONG - 46 / ",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "SIGI KOTA",
+              "jenis": "Bangunan/Rumah Kosong"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 13.25
+          "persentase": 13.26
         },
         {
           "kec_name": "MARAWOLA",
           "kec_id": "c8020894-4d15-433a-8de4-31ea83480352",
           "total_prelist": 12555,
-          "total_draft": 249,
-          "total_open": 10718,
-          "total_submitted": 1588,
-          "total_rejected": 78,
-          "total_approved": 411,
-          "total_submitted_pencacah": 1097,
+          "total_draft": 248,
+          "total_open": 10717,
+          "total_submitted": 1590,
+          "total_rejected": 80,
+          "total_approved": 414,
+          "total_submitted_pencacah": 1094,
           "total_submitted_respondent": 2,
-          "today_completed": 23,
+          "today_completed": 8,
           "yesterday_completed": 13,
           "two_days_ago_completed": 4,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 23
+            "APPROVED BY Pengawas": 4,
+            "REJECTED BY Pengawas": 1,
+            "SUBMITTED BY Pencacah": 2,
+            "REVOKED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 13
@@ -9603,66 +9319,68 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
-          "new_rumah_today": 3,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 28,
+          "new_usaha_overall": 5,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 2,
+          "new_rumah_overall": 27,
           "new_businesses": [
             {
-              "name": "MASJID BAITURRAHMAN",
-              "code": "7210130011001101 - MASJID BAITURRAHMAN - 11 /  - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
+              "name": "RUMAH KOSONG",
+              "code": "7210130008003300 - RUMAH KOSONG - 67 / ",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "MARAWOLA",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "SALEH / AMINAH",
-              "code": "7210130006000300 - SALEH / AMINAH - 62 /  - 0",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
+              "name": "RUMAH KOSONG",
+              "code": "7210130008003300 - RUMAH KOSONG - 68 / ",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "MARAWOLA",
-              "jenis": "Keluarga"
+              "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "MASJID BTN GRAHA MUTIARA",
-              "code": "7210130011001101 - MASJID BTN GRAHA MUTIARA - 10 /  - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "MARAWOLA",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "ANSAR / RINI SEPTIANI",
-              "code": "7210130003001500 - ANSAR / RINI SEPTIANI - - /  - 0",
+              "name": "KANDANG AYAM POTONG SUPIANTO ",
+              "code": "7210130003001500 -  /  - - /  - 0",
               "date": "older",
               "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
+              "type": "usaha",
               "kecName": "MARAWOLA",
-              "jenis": "Keluarga"
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "MASJID KECIL (BUKIT 1) ",
+              "code": "7210130004000200 - NONBKU - 3",
+              "date": "older",
+              "status": "REVOKED BY Pengawas",
+              "type": "usaha",
+              "kecName": "MARAWOLA",
+              "jenis": "Bangunan Lain / Usaha"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.65
+          "persentase": 12.66
         },
         {
           "kec_name": "MARAWOLA BARAT",
           "kec_id": "dd954d13-92e1-418d-ad83-a7bd2cdea907",
           "total_prelist": 2265,
           "total_draft": 5,
-          "total_open": 1888,
-          "total_submitted": 372,
+          "total_open": 1887,
+          "total_submitted": 373,
           "total_rejected": 4,
           "total_approved": 361,
-          "total_submitted_pencacah": 7,
+          "total_submitted_pencacah": 8,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 1,
           "yesterday_completed": 0,
           "two_days_ago_completed": 4,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 1
+          },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
@@ -9675,24 +9393,24 @@ window.IPAS_DATA = {
           "new_rumah_overall": 3,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 16.42
+          "persentase": 16.47
         },
         {
           "kec_name": "KINOVARO",
           "kec_id": "78a16357-c302-4f7c-9fa6-4c20c38ab82a",
           "total_prelist": 4415,
           "total_draft": 35,
-          "total_open": 3560,
-          "total_submitted": 820,
+          "total_open": 3556,
+          "total_submitted": 824,
           "total_rejected": 67,
           "total_approved": 190,
-          "total_submitted_pencacah": 563,
+          "total_submitted_pencacah": 567,
           "total_submitted_respondent": 0,
-          "today_completed": 2,
+          "today_completed": 5,
           "yesterday_completed": 3,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 5
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -9701,44 +9419,34 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
-          "new_rumah_today": 1,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 4,
-          "new_businesses": [
-            {
-              "name": "MY BROWEHL / GHILBERT",
-              "code": "7210150001000300 - MY BROWEHL / GHILBERT - 6 /  - 1 - 4531110",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "KINOVARO",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 18.57
+          "persentase": 18.66
         }
       ]
     },
     {
       "kabupaten": "[11] BANGGAI LAUT",
       "total_prelist": 28631,
-      "total_draft": 344,
-      "total_open": 23219,
-      "total_submitted": 5067,
-      "total_rejected": 167,
-      "total_approved": 2949,
-      "total_submitted_pencacah": 1926,
+      "total_draft": 348,
+      "total_open": 23205,
+      "total_submitted": 5077,
+      "total_rejected": 175,
+      "total_approved": 2962,
+      "total_submitted_pencacah": 1915,
       "total_submitted_respondent": 25,
-      "persentase": 17.7,
-      "today_completed": 31,
+      "persentase": 17.73,
+      "today_completed": 39,
       "yesterday_completed": 59,
       "two_days_ago_completed": 25,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "SUBMITTED BY Pencacah": 12,
-        "APPROVED BY Pengawas": 7,
-        "REJECTED BY Pengawas": 12
+        "SUBMITTED BY Pencacah": 15,
+        "REJECTED BY Pengawas": 11,
+        "APPROVED BY Pengawas": 13
       },
       "yesterday_completed_breakdown": {
         "REVOKED BY Pengawas": 1,
@@ -9753,31 +9461,22 @@ window.IPAS_DATA = {
       "new_usaha_today": 0,
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
-      "new_rumah_yesterday": 0,
-      "new_usaha_overall": 28,
-      "new_rumah_overall": 130,
+      "new_rumah_yesterday": 1,
+      "new_usaha_overall": 27,
+      "new_rumah_overall": 127,
       "new_businesses": [
-        {
-          "name": "RENDI LAORENSIUS / ",
-          "code": "7211050004000200 - RENDI LAORENSIUS /  - 4 /  - 2 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "BANGGAI TENGAH",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
         {
           "name": "DARMAWATI(DM) SHOP",
           "code": "7211040003000200 - DARMAWATI(DM) SHOP - 18 /  - 1",
           "date": "older",
-          "status": "REJECTED BY Pengawas",
+          "status": "SUBMITTED BY Pencacah",
           "type": "usaha",
           "kecName": "BANGGAI",
           "jenis": "Usaha Baru"
         },
         {
-          "name": "KIOS AULIA (ANDRI M PANDANGI)",
-          "code": "7211040003000200 - KIOS AULIA (ANDRI M PANDANGI) - 15 /  - 1",
+          "name": "TOKO YANI LAMENA 2",
+          "code": "7211040003000200 - TOKO YANI LAMENA 2 - 54 /  - 9999 - 1",
           "date": "older",
           "status": "REJECTED BY Pengawas",
           "type": "usaha",
@@ -9785,12 +9484,48 @@ window.IPAS_DATA = {
           "jenis": "Usaha Baru"
         },
         {
-          "name": "KISMAN L / PELMA",
-          "code": "7211060003000300 - KISMAN L / PELMA - 4 /  - 1 - 2. Tidak",
+          "name": "TOKO YANI LAMENA (DIANA)",
+          "code": "7211040003000200 - TOKO YANI LAMENA (DIANA) - 38 /  - 9999 - 1",
           "date": "older",
-          "status": "REJECTED BY Pengawas",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "usaha",
+          "kecName": "BANGGAI",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "SUKMA SAHUDIN  / RAIHAN WAHYUDI",
+          "code": "7211050001000500 - SUKMA SAHUDIN  /  - 46 /  - 0",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
           "type": "rumah",
-          "kecName": "BANGGAI SELATAN",
+          "kecName": "BANGGAI TENGAH",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "HASNA AMIR / ",
+          "code": "7211010006000100 - HASNA /  - - /  - 0",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "BANGKURUNG",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "KIOS SEMBAKO (PAHDA)",
+          "code": "7211050001000500 - KIOS SEMBAKO (PAHDA) - - /  - 1",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "usaha",
+          "kecName": "BANGGAI TENGAH",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "WARUNG SEMBAKO (ROMIN) ",
+          "code": "7211050004000200 - WARUNG SEMBAKO (ROMIN)  - 21 /  - 1 - 2. Tidak",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "BANGGAI TENGAH",
           "jenis": "Keluarga (Bukan Usaha)"
         }
       ],
@@ -9799,17 +9534,19 @@ window.IPAS_DATA = {
           "kec_name": "BANGKURUNG",
           "kec_id": "3d771ffa-25dc-4292-a9d3-538f78762950",
           "total_prelist": 3460,
-          "total_draft": 33,
-          "total_open": 2824,
-          "total_submitted": 603,
-          "total_rejected": 17,
+          "total_draft": 32,
+          "total_open": 2822,
+          "total_submitted": 606,
+          "total_rejected": 16,
           "total_approved": 370,
-          "total_submitted_pencacah": 216,
+          "total_submitted_pencacah": 220,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 5,
           "yesterday_completed": 2,
           "two_days_ago_completed": 6,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 5
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
           },
@@ -9822,10 +9559,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 13,
-          "new_businesses": [],
+          "new_rumah_overall": 14,
+          "new_businesses": [
+            {
+              "name": "HASNA AMIR / ",
+              "code": "7211010006000100 - HASNA /  - - /  - 0",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "BANGKURUNG",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 17.43
+          "persentase": 17.51
         },
         {
           "kec_name": "LABOBO",
@@ -9863,17 +9610,17 @@ window.IPAS_DATA = {
           "kec_id": "f7028561-08bc-4482-a1ad-da94b0aa612f",
           "total_prelist": 2822,
           "total_draft": 75,
-          "total_open": 2393,
-          "total_submitted": 354,
+          "total_open": 2391,
+          "total_submitted": 356,
           "total_rejected": 9,
           "total_approved": 84,
-          "total_submitted_pencacah": 261,
+          "total_submitted_pencacah": 263,
           "total_submitted_respondent": 0,
-          "today_completed": 2,
+          "today_completed": 1,
           "yesterday_completed": 4,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
@@ -9881,32 +9628,31 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 4,
+          "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 13,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.54
+          "persentase": 12.62
         },
         {
           "kec_name": "BANGGAI",
           "kec_id": "2592bed7-1f8c-407a-8544-c19e8948d0e7",
           "total_prelist": 10458,
           "total_draft": 74,
-          "total_open": 8315,
-          "total_submitted": 2069,
+          "total_open": 8314,
+          "total_submitted": 2070,
           "total_rejected": 34,
-          "total_approved": 1011,
-          "total_submitted_pencacah": 1002,
+          "total_approved": 1010,
+          "total_submitted_pencacah": 1004,
           "total_submitted_respondent": 22,
-          "today_completed": 10,
+          "today_completed": 5,
           "yesterday_completed": 38,
           "two_days_ago_completed": 6,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 2,
-            "SUBMITTED BY Pencacah": 3,
-            "REJECTED BY Pengawas": 5
+            "SUBMITTED BY Pencacah": 4,
+            "REJECTED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 38
@@ -9916,14 +9662,23 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 12,
+          "new_usaha_overall": 13,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 39,
+          "new_rumah_overall": 38,
           "new_businesses": [
             {
               "name": "DARMAWATI(DM) SHOP",
               "code": "7211040003000200 - DARMAWATI(DM) SHOP - 18 /  - 1",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "usaha",
+              "kecName": "BANGGAI",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "TOKO YANI LAMENA 2",
+              "code": "7211040003000200 - TOKO YANI LAMENA 2 - 54 /  - 9999 - 1",
               "date": "older",
               "status": "REJECTED BY Pengawas",
               "type": "usaha",
@@ -9931,36 +9686,35 @@ window.IPAS_DATA = {
               "jenis": "Usaha Baru"
             },
             {
-              "name": "KIOS AULIA (ANDRI M PANDANGI)",
-              "code": "7211040003000200 - KIOS AULIA (ANDRI M PANDANGI) - 15 /  - 1",
+              "name": "TOKO YANI LAMENA (DIANA)",
+              "code": "7211040003000200 - TOKO YANI LAMENA (DIANA) - 38 /  - 9999 - 1",
               "date": "older",
-              "status": "REJECTED BY Pengawas",
+              "status": "SUBMITTED BY Pencacah",
               "type": "usaha",
               "kecName": "BANGGAI",
               "jenis": "Usaha Baru"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 19.78
+          "persentase": 19.79
         },
         {
           "kec_name": "BANGGAI TENGAH",
           "kec_id": "de4d86dc-a229-4091-afc8-911fcad33aed",
           "total_prelist": 3294,
-          "total_draft": 98,
-          "total_open": 2577,
+          "total_draft": 103,
+          "total_open": 2572,
           "total_submitted": 619,
-          "total_rejected": 19,
-          "total_approved": 523,
-          "total_submitted_pencacah": 77,
+          "total_rejected": 21,
+          "total_approved": 533,
+          "total_submitted_pencacah": 65,
           "total_submitted_respondent": 0,
-          "today_completed": 5,
+          "today_completed": 11,
           "yesterday_completed": 10,
           "two_days_ago_completed": 13,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 2,
             "REJECTED BY Pengawas": 2,
-            "SUBMITTED BY Pencacah": 1
+            "APPROVED BY Pengawas": 9
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 10
@@ -9970,15 +9724,33 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 5,
+          "new_usaha_overall": 4,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 22,
+          "new_rumah_yesterday": 1,
+          "new_rumah_overall": 20,
           "new_businesses": [
             {
-              "name": "RENDI LAORENSIUS / ",
-              "code": "7211050004000200 - RENDI LAORENSIUS /  - 4 /  - 2 - 2. Tidak",
+              "name": "SUKMA SAHUDIN  / RAIHAN WAHYUDI",
+              "code": "7211050001000500 - SUKMA SAHUDIN  /  - 46 /  - 0",
               "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "BANGGAI TENGAH",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "KIOS SEMBAKO (PAHDA)",
+              "code": "7211050001000500 - KIOS SEMBAKO (PAHDA) - - /  - 1",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "usaha",
+              "kecName": "BANGGAI TENGAH",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "WARUNG SEMBAKO (ROMIN) ",
+              "code": "7211050004000200 - WARUNG SEMBAKO (ROMIN)  - 21 /  - 1 - 2. Tidak",
+              "date": "yesterday",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "BANGGAI TENGAH",
@@ -9993,19 +9765,17 @@ window.IPAS_DATA = {
           "kec_id": "844993c2-c95c-4061-8d23-1e5c34a5e52c",
           "total_prelist": 2172,
           "total_draft": 1,
-          "total_open": 1781,
-          "total_submitted": 390,
+          "total_open": 1777,
+          "total_submitted": 394,
           "total_rejected": 18,
           "total_approved": 208,
-          "total_submitted_pencacah": 164,
+          "total_submitted_pencacah": 168,
           "total_submitted_respondent": 0,
-          "today_completed": 9,
+          "today_completed": 3,
           "yesterday_completed": 0,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 5,
-            "REJECTED BY Pengawas": 2,
-            "APPROVED BY Pengawas": 2
+            "SUBMITTED BY Pencacah": 3
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {},
@@ -10015,19 +9785,9 @@ window.IPAS_DATA = {
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 4,
-          "new_businesses": [
-            {
-              "name": "KISMAN L / PELMA",
-              "code": "7211060003000300 - KISMAN L / PELMA - 4 /  - 1 - 2. Tidak",
-              "date": "older",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "BANGGAI SELATAN",
-              "jenis": "Keluarga (Bukan Usaha)"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 17.96
+          "persentase": 18.14
         },
         {
           "kec_name": "BOKAN KEPULAUAN",
@@ -10036,17 +9796,17 @@ window.IPAS_DATA = {
           "total_draft": 32,
           "total_open": 3568,
           "total_submitted": 630,
-          "total_rejected": 61,
-          "total_approved": 377,
-          "total_submitted_pencacah": 192,
+          "total_rejected": 68,
+          "total_approved": 381,
+          "total_submitted_pencacah": 181,
           "total_submitted_respondent": 0,
-          "today_completed": 5,
+          "today_completed": 14,
           "yesterday_completed": 2,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 3,
-            "APPROVED BY Pengawas": 1,
-            "SUBMITTED BY Pencacah": 1
+            "REJECTED BY Pengawas": 8,
+            "SUBMITTED BY Pencacah": 2,
+            "APPROVED BY Pengawas": 4
           },
           "yesterday_completed_breakdown": {
             "REJECTED BY Pengawas": 2
@@ -10057,7 +9817,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 32,
+          "new_rumah_overall": 31,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 14.89
@@ -10066,23 +9826,24 @@ window.IPAS_DATA = {
     },
     {
       "kabupaten": "[12] MOROWALI UTARA",
-      "total_prelist": 43814,
+      "total_prelist": 43818,
       "total_draft": 640,
-      "total_open": 37834,
-      "total_submitted": 5338,
-      "total_rejected": 310,
-      "total_approved": 2203,
-      "total_submitted_pencacah": 2824,
+      "total_open": 37828,
+      "total_submitted": 5348,
+      "total_rejected": 328,
+      "total_approved": 2232,
+      "total_submitted_pencacah": 2787,
       "total_submitted_respondent": 1,
-      "persentase": 12.18,
-      "today_completed": 51,
+      "persentase": 12.21,
+      "today_completed": 57,
       "yesterday_completed": 26,
       "two_days_ago_completed": 35,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "SUBMITTED BY Pencacah": 23,
-        "APPROVED BY Pengawas": 26,
-        "REJECTED BY Pengawas": 2
+        "APPROVED BY Pengawas": 30,
+        "SUBMITTED BY Pencacah": 9,
+        "REJECTED BY Pengawas": 17,
+        "REVOKED BY Pengawas": 1
       },
       "yesterday_completed_breakdown": {
         "APPROVED BY Pengawas": 6,
@@ -10093,21 +9854,30 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 4,
         "SUBMITTED BY Pencacah": 26
       },
-      "new_usaha_today": 1,
+      "new_usaha_today": 0,
       "new_usaha_yesterday": 1,
-      "new_rumah_today": 3,
-      "new_rumah_yesterday": 5,
-      "new_usaha_overall": 75,
-      "new_rumah_overall": 175,
+      "new_rumah_today": 5,
+      "new_rumah_yesterday": 1,
+      "new_usaha_overall": 77,
+      "new_rumah_overall": 181,
       "new_businesses": [
         {
-          "name": "WAHID / RISDAYANTI",
-          "code": "7212080007000100 - WAHID / RISDAYANTI - 30 /  - 1",
+          "name": "PEDAGANG CAMPURAN (ALMON DEE) ",
+          "code": "7212020008000400 - PEDAGANG CAMPURAN (ALMON DEE)  - 34 /  - 1",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "usaha",
+          "kecName": "LEMBO",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "H. AMIRUDDIN  / HJ. ENDANG ",
+          "code": "7212100006000100 - H. AMIRUDDIN  / HJ. ENDANG  - 41 /  - 2 - 2. Tidak",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "SOYO JAYA",
-          "jenis": "Keluarga"
+          "kecName": "MAMOSALATO",
+          "jenis": "Keluarga (Bukan Usaha)"
         },
         {
           "name": "INDRAYANI TAMPATONDA / SUMARNI BONGINGI",
@@ -10119,53 +9889,170 @@ window.IPAS_DATA = {
           "jenis": "Keluarga"
         },
         {
-          "name": "BANGUNAN KOSONG",
-          "code": "7212030009000400 - BANGUNAN KOSONG - 1 /  - 94966 - 2. Tidak",
-          "date": "yesterday",
+          "name": "YERLIN WONDOU / RONI FERNANDES SOPACUA",
+          "code": "7212020006000200 - YERLIN WONDOU /  - - / ",
+          "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
-          "kecName": "LEMBO RAYA",
+          "kecName": "LEMBO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7212020006000200 - BANGUNAN KOSONG - - /  - 0",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "LEMBO",
           "jenis": "Bangunan/Rumah Kosong"
         },
         {
-          "name": "KANISIUS ATA / YERTIN ALAPU",
-          "code": "7212030009000400 - KANISIUS ATA / YERTIN ALAPU - 2 /  - 1",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "LEMBO RAYA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "DUMMY",
-          "code": "7212020006100100 - DUMMY - 1",
+          "name": "BANGUNAN GEREJA PANTEKOSTA",
+          "code": "7212020006000200 - BANGUNAN GEREJA PANTEKOSTA - - / ",
           "date": "older",
-          "status": "SUBMITTED BY Pencacah",
+          "status": "APPROVED BY Pengawas",
           "type": "usaha",
           "kecName": "LEMBO",
           "jenis": "Usaha Baru"
         },
         {
-          "name": "STENLIUS WETO WORA / YULVIANA NDUNGGE",
-          "code": "7212030009000400 - STENLIUS WETO WORA / YULVIANA NDUNGGE - 2 /  - 0",
-          "date": "yesterday",
+          "name": "WELISITE WONDOU / BAYU PUTRAWAN KALAHA",
+          "code": "7212020006000200 -  /  - - /  - 0",
+          "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
-          "kecName": "LEMBO RAYA",
+          "kecName": "LEMBO",
           "jenis": "Keluarga"
         },
         {
-          "name": "HERIYANTO DG. RATE / MERI POROTUO ",
-          "code": "7212040011000201 - HERIYANTO DG. RATE / MERI POROTUO  - 90 /  - 0 - 1. Ya",
+          "name": "ALBERT LANTIUNGA / ALPING SANTRYA LANTIUNGA",
+          "code": "7212070003000600 - ALBERT LANTIUNGA / ALPING SANTRYA LANTIUNGA - 4 /  - 0",
           "date": "today",
           "status": "DRAFT",
-          "type": "usaha",
-          "kecName": "PETASIA TIMUR",
-          "jenis": "Keluarga Usaha"
+          "type": "rumah",
+          "kecName": "MORI UTARA",
+          "jenis": "Keluarga"
         },
         {
-          "name": "MARTENIUS TIMPO / ",
-          "code": "7212020013000500 - MARTENIUS TIMPO /  - 39 /  - 0",
+          "name": "BANGUNAN KANTOR DESA MORA",
+          "code": "7212020006000200 - BANGUNAN KANTOR DESA MORA - - / ",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "usaha",
+          "kecName": "LEMBO",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "BANGUNAN KHUSUS USAHA(KARANG TARUNA) ",
+          "code": "7212020006000200 - BANGUNAN KHUSUS USAH(KARANG TARUNA)  - - /  - 0",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "usaha",
+          "kecName": "LEMBO",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "BANGUNAN BALAI DESA MORA",
+          "code": "7212020006000200 - BANGUNAN BALAI DESA MORA - - / ",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "usaha",
+          "kecName": "LEMBO",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "SUARDI / ",
+          "code": "7212050002000400 - SUARDI /  - - /  - 0",
+          "date": "yesterday",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "PETASIA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "ASRUL / ",
+          "code": "7212050009000100 - ASRUL /  - 58 /  - 0",
+          "date": "today",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "PETASIA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "USAHA KIOS MICHAEL RIFKY PATRAS",
+          "code": "7212020006000200 - USAHA KIOS - - /  - 1",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "usaha",
+          "kecName": "LEMBO",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "MASJID AL MUHAJRIN",
+          "code": "7212040010000202 - MASJID AL MUHAJRIN - - / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "usaha",
+          "kecName": "PETASIA TIMUR",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "KIOS SIDRAP  (ABDUL MALIK) ",
+          "code": "7212040010000202 - KIOS SIDRAP - - /  - 0",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "usaha",
+          "kecName": "PETASIA TIMUR",
+          "jenis": "Usaha Baru"
+        },
+        {
+          "name": "RUDIN PENEKU / NERIYATI TAMALEDU",
+          "code": "7212020006000200 -  /  - - /  - 0",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "LEMBO",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7212040010000202 - BANGUNAN KOSONG - 20 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PETASIA TIMUR",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG RUKO BLOK 2",
+          "code": "7212040010000202 - BANGUNAN KOSONG RUKO BLOK 2 - 21 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PETASIA TIMUR",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "FARHAN.S / TRICIA MARGARETHA MAKEGAU, JENNAIRA ELJASMINE SUNARDY",
+          "code": "7212050007000400 - FARHAN.S / TRICIA MARGARETHA MAKEGAU, JENNAIRA ELJASMINE SUNARDY - 2 /  - 0",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PETASIA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG 29",
+          "code": "7212040010000202 - BANGUNAN KOSONG 29 - 29 / ",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PETASIA TIMUR",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "RONDENTABE SUDAMARA / UBAHALI MONTILEI",
+          "code": "7212020010200100 - RONDENTABE SUDAMARA / UBAHALI MONTILEI - 2 /  - 1",
           "date": "today",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
@@ -10173,40 +10060,31 @@ window.IPAS_DATA = {
           "jenis": "Keluarga"
         },
         {
-          "name": "ANTON HARIADI / YETIK FITAMALASARI",
-          "code": "7212030009000400 - ANTON HARIADI / YETIK FITAMALASARI - 8 /  - 2",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "LEMBO RAYA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "IRWAN TEGUH CAHYONO / WAHYUNING ASIH",
-          "code": "7212030009000400 - IRWAN TEGUH CAHYONO / WAHYUNING ASIH - 3 /  - 2",
-          "date": "yesterday",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "LEMBO RAYA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "CLARITA ISE / LEVINO JULIO BASIR",
-          "code": "7212060005000500 - CLARITA ISE / LEVINO JULIO BASIR - 1 /  - 0 - 94711 - 2. Tidak",
+          "name": "DARMIN SAPADA / ",
+          "code": "7212060002000200 - DARMIN SAPADA /  - 20 /  - 0",
           "date": "older",
-          "status": "SUBMITTED BY Pencacah",
+          "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "PETASIA BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
+          "jenis": "Keluarga"
         },
         {
-          "name": "BANGUNAN TEMPAT IBADAH ",
-          "code": "7212030009000100 - BANGUNAN TEMPAT IBADAH  - 55 / ",
-          "date": "yesterday",
+          "name": "KARTONO LAMALAOA / DEICE LAUH",
+          "code": "7212060002000200 - KARTONO LAMALAOA / DEICE LAUH - 29 /  - 0",
+          "date": "older",
           "status": "APPROVED BY Pengawas",
-          "type": "usaha",
-          "kecName": "LEMBO RAYA",
-          "jenis": "Usaha Baru"
+          "type": "rumah",
+          "kecName": "PETASIA BARAT",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "JON NAMAS / YERNI SAPADA",
+          "code": "7212060002000200 - JON NAMAS / YERNI SAPADA - 21 /  - 0",
+          "date": "older",
+          "status": "REJECTED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PETASIA BARAT",
+          "jenis": "Keluarga"
         }
       ],
       "kecamatan_list": [
@@ -10242,19 +10120,20 @@ window.IPAS_DATA = {
         {
           "kec_name": "LEMBO",
           "kec_id": "eb697b73-5488-4054-8c44-6cf99c5073d1",
-          "total_prelist": 5674,
-          "total_draft": 67,
-          "total_open": 4951,
-          "total_submitted": 656,
+          "total_prelist": 5675,
+          "total_draft": 66,
+          "total_open": 4950,
+          "total_submitted": 659,
           "total_rejected": 11,
-          "total_approved": 537,
-          "total_submitted_pencacah": 108,
+          "total_approved": 556,
+          "total_submitted_pencacah": 92,
           "total_submitted_respondent": 0,
-          "today_completed": 6,
+          "today_completed": 21,
           "yesterday_completed": 3,
           "two_days_ago_completed": 9,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 6
+            "APPROVED BY Pengawas": 19,
+            "SUBMITTED BY Pencacah": 2
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
@@ -10265,12 +10144,21 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 4
           },
           "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 17,
+          "new_usaha_yesterday": 1,
+          "new_usaha_overall": 21,
           "new_rumah_today": 2,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 38,
+          "new_rumah_overall": 37,
           "new_businesses": [
+            {
+              "name": "PEDAGANG CAMPURAN (ALMON DEE) ",
+              "code": "7212020008000400 - PEDAGANG CAMPURAN (ALMON DEE)  - 34 /  - 1",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
+              "type": "usaha",
+              "kecName": "LEMBO",
+              "jenis": "Usaha Baru"
+            },
             {
               "name": "INDRAYANI TAMPATONDA / SUMARNI BONGINGI",
               "code": "7212020010000400 - INDRAYANI TAMPATONDA / SUMARNI BONGINGI - 33 /  - 0",
@@ -10281,17 +10169,89 @@ window.IPAS_DATA = {
               "jenis": "Keluarga"
             },
             {
-              "name": "DUMMY",
-              "code": "7212020006100100 - DUMMY - 1",
+              "name": "YERLIN WONDOU / RONI FERNANDES SOPACUA",
+              "code": "7212020006000200 - YERLIN WONDOU /  - - / ",
               "date": "older",
-              "status": "SUBMITTED BY Pencacah",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "LEMBO",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7212020006000200 - BANGUNAN KOSONG - - /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "LEMBO",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN GEREJA PANTEKOSTA",
+              "code": "7212020006000200 - BANGUNAN GEREJA PANTEKOSTA - - / ",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
               "type": "usaha",
               "kecName": "LEMBO",
               "jenis": "Usaha Baru"
             },
             {
-              "name": "MARTENIUS TIMPO / ",
-              "code": "7212020013000500 - MARTENIUS TIMPO /  - 39 /  - 0",
+              "name": "WELISITE WONDOU / BAYU PUTRAWAN KALAHA",
+              "code": "7212020006000200 -  /  - - /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "LEMBO",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "BANGUNAN KANTOR DESA MORA",
+              "code": "7212020006000200 - BANGUNAN KANTOR DESA MORA - - / ",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "usaha",
+              "kecName": "LEMBO",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "BANGUNAN KHUSUS USAHA(KARANG TARUNA) ",
+              "code": "7212020006000200 - BANGUNAN KHUSUS USAH(KARANG TARUNA)  - - /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "usaha",
+              "kecName": "LEMBO",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "BANGUNAN BALAI DESA MORA",
+              "code": "7212020006000200 - BANGUNAN BALAI DESA MORA - - / ",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "usaha",
+              "kecName": "LEMBO",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "USAHA KIOS MICHAEL RIFKY PATRAS",
+              "code": "7212020006000200 - USAHA KIOS - - /  - 1",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "usaha",
+              "kecName": "LEMBO",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "RUDIN PENEKU / NERIYATI TAMALEDU",
+              "code": "7212020006000200 -  /  - - /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "LEMBO",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "RONDENTABE SUDAMARA / UBAHALI MONTILEI",
+              "code": "7212020010200100 - RONDENTABE SUDAMARA / UBAHALI MONTILEI - 2 /  - 1",
               "date": "today",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
@@ -10300,7 +10260,7 @@ window.IPAS_DATA = {
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 11.56
+          "persentase": 11.61
         },
         {
           "kec_name": "LEMBO RAYA",
@@ -10310,16 +10270,14 @@ window.IPAS_DATA = {
           "total_open": 2266,
           "total_submitted": 525,
           "total_rejected": 24,
-          "total_approved": 367,
-          "total_submitted_pencacah": 134,
+          "total_approved": 369,
+          "total_submitted_pencacah": 132,
           "total_submitted_respondent": 0,
-          "today_completed": 27,
+          "today_completed": 2,
           "yesterday_completed": 4,
           "two_days_ago_completed": 4,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 25,
-            "SUBMITTED BY Pencacah": 1,
-            "REJECTED BY Pengawas": 1
+            "APPROVED BY Pengawas": 2
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 1,
@@ -10331,67 +10289,12 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 1
           },
           "new_usaha_today": 0,
-          "new_usaha_yesterday": 1,
-          "new_usaha_overall": 12,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 11,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 5,
+          "new_rumah_yesterday": 0,
           "new_rumah_overall": 21,
-          "new_businesses": [
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7212030009000400 - BANGUNAN KOSONG - 1 /  - 94966 - 2. Tidak",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LEMBO RAYA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "KANISIUS ATA / YERTIN ALAPU",
-              "code": "7212030009000400 - KANISIUS ATA / YERTIN ALAPU - 2 /  - 1",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LEMBO RAYA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "STENLIUS WETO WORA / YULVIANA NDUNGGE",
-              "code": "7212030009000400 - STENLIUS WETO WORA / YULVIANA NDUNGGE - 2 /  - 0",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LEMBO RAYA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "ANTON HARIADI / YETIK FITAMALASARI",
-              "code": "7212030009000400 - ANTON HARIADI / YETIK FITAMALASARI - 8 /  - 2",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LEMBO RAYA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "IRWAN TEGUH CAHYONO / WAHYUNING ASIH",
-              "code": "7212030009000400 - IRWAN TEGUH CAHYONO / WAHYUNING ASIH - 3 /  - 2",
-              "date": "yesterday",
-              "status": "REJECTED BY Pengawas",
-              "type": "rumah",
-              "kecName": "LEMBO RAYA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "BANGUNAN TEMPAT IBADAH ",
-              "code": "7212030009000100 - BANGUNAN TEMPAT IBADAH  - 55 / ",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "usaha",
-              "kecName": "LEMBO RAYA",
-              "jenis": "Usaha Baru"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 18.32
         },
@@ -10402,15 +10305,15 @@ window.IPAS_DATA = {
           "total_draft": 68,
           "total_open": 6045,
           "total_submitted": 775,
-          "total_rejected": 6,
+          "total_rejected": 16,
           "total_approved": 315,
-          "total_submitted_pencacah": 453,
+          "total_submitted_pencacah": 443,
           "total_submitted_respondent": 1,
-          "today_completed": 2,
+          "today_completed": 10,
           "yesterday_completed": 5,
           "two_days_ago_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "REJECTED BY Pengawas": 10
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 2,
@@ -10419,21 +10322,57 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {
             "SUBMITTED BY Pencacah": 1
           },
-          "new_usaha_today": 1,
+          "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 23,
+          "new_usaha_overall": 25,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 30,
+          "new_rumah_overall": 33,
           "new_businesses": [
             {
-              "name": "HERIYANTO DG. RATE / MERI POROTUO ",
-              "code": "7212040011000201 - HERIYANTO DG. RATE / MERI POROTUO  - 90 /  - 0 - 1. Ya",
-              "date": "today",
-              "status": "DRAFT",
+              "name": "MASJID AL MUHAJRIN",
+              "code": "7212040010000202 - MASJID AL MUHAJRIN - - / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
               "type": "usaha",
               "kecName": "PETASIA TIMUR",
-              "jenis": "Keluarga Usaha"
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "KIOS SIDRAP  (ABDUL MALIK) ",
+              "code": "7212040010000202 - KIOS SIDRAP - - /  - 0",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "usaha",
+              "kecName": "PETASIA TIMUR",
+              "jenis": "Usaha Baru"
+            },
+            {
+              "name": "BANGUNAN KOSONG",
+              "code": "7212040010000202 - BANGUNAN KOSONG - 20 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PETASIA TIMUR",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG RUKO BLOK 2",
+              "code": "7212040010000202 - BANGUNAN KOSONG RUKO BLOK 2 - 21 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PETASIA TIMUR",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG 29",
+              "code": "7212040010000202 - BANGUNAN KOSONG 29 - 29 / ",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PETASIA TIMUR",
+              "jenis": "Bangunan/Rumah Kosong"
             }
           ],
           "two_days_ago_is_estimate": false,
@@ -10442,18 +10381,20 @@ window.IPAS_DATA = {
         {
           "kec_name": "PETASIA",
           "kec_id": "d073602c-65dc-42a5-8adb-9cb36538fc5c",
-          "total_prelist": 7166,
-          "total_draft": 148,
-          "total_open": 6334,
+          "total_prelist": 7167,
+          "total_draft": 150,
+          "total_open": 6333,
           "total_submitted": 684,
-          "total_rejected": 39,
+          "total_rejected": 40,
           "total_approved": 197,
-          "total_submitted_pencacah": 448,
+          "total_submitted_pencacah": 447,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 1,
           "yesterday_completed": 3,
           "two_days_ago_completed": 6,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "REJECTED BY Pengawas": 1
+          },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 3
           },
@@ -10463,12 +10404,40 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 1,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 26,
-          "new_businesses": [],
+          "new_rumah_today": 1,
+          "new_rumah_yesterday": 1,
+          "new_rumah_overall": 28,
+          "new_businesses": [
+            {
+              "name": "SUARDI / ",
+              "code": "7212050002000400 - SUARDI /  - - /  - 0",
+              "date": "yesterday",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "PETASIA",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "ASRUL / ",
+              "code": "7212050009000100 - ASRUL /  - 58 /  - 0",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "PETASIA",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "FARHAN.S / TRICIA MARGARETHA MAKEGAU, JENNAIRA ELJASMINE SUNARDY",
+              "code": "7212050007000400 - FARHAN.S / TRICIA MARGARETHA MAKEGAU, JENNAIRA ELJASMINE SUNARDY - 2 /  - 0",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PETASIA",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 9.55
+          "persentase": 9.54
         },
         {
           "kec_name": "PETASIA BARAT",
@@ -10477,16 +10446,16 @@ window.IPAS_DATA = {
           "total_draft": 0,
           "total_open": 2273,
           "total_submitted": 344,
-          "total_rejected": 25,
-          "total_approved": 154,
-          "total_submitted_pencacah": 165,
+          "total_rejected": 28,
+          "total_approved": 162,
+          "total_submitted_pencacah": 154,
           "total_submitted_respondent": 0,
-          "today_completed": 9,
+          "today_completed": 11,
           "yesterday_completed": 4,
           "two_days_ago_completed": 3,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 8,
-            "APPROVED BY Pengawas": 1
+            "REJECTED BY Pengawas": 3,
+            "APPROVED BY Pengawas": 8
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 1,
@@ -10500,16 +10469,34 @@ window.IPAS_DATA = {
           "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 10,
+          "new_rumah_overall": 13,
           "new_businesses": [
             {
-              "name": "CLARITA ISE / LEVINO JULIO BASIR",
-              "code": "7212060005000500 - CLARITA ISE / LEVINO JULIO BASIR - 1 /  - 0 - 94711 - 2. Tidak",
+              "name": "DARMIN SAPADA / ",
+              "code": "7212060002000200 - DARMIN SAPADA /  - 20 /  - 0",
               "date": "older",
-              "status": "SUBMITTED BY Pencacah",
+              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "PETASIA BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "KARTONO LAMALAOA / DEICE LAUH",
+              "code": "7212060002000200 - KARTONO LAMALAOA / DEICE LAUH - 29 /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PETASIA BARAT",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "JON NAMAS / YERNI SAPADA",
+              "code": "7212060002000200 - JON NAMAS / YERNI SAPADA - 21 /  - 0",
+              "date": "older",
+              "status": "REJECTED BY Pengawas",
+              "type": "rumah",
+              "kecName": "PETASIA BARAT",
+              "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
@@ -10518,47 +10505,60 @@ window.IPAS_DATA = {
         {
           "kec_name": "MORI UTARA",
           "kec_id": "52d02a96-c109-435d-afd8-4627b862e4ab",
-          "total_prelist": 2919,
-          "total_draft": 202,
-          "total_open": 2346,
-          "total_submitted": 371,
+          "total_prelist": 2920,
+          "total_draft": 201,
+          "total_open": 2345,
+          "total_submitted": 374,
           "total_rejected": 4,
           "total_approved": 19,
-          "total_submitted_pencacah": 348,
+          "total_submitted_pencacah": 351,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 3,
           "yesterday_completed": 0,
           "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 3
+          },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 0,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 3,
-          "new_businesses": [],
+          "new_rumah_overall": 4,
+          "new_businesses": [
+            {
+              "name": "ALBERT LANTIUNGA / ALPING SANTRYA LANTIUNGA",
+              "code": "7212070003000600 - ALBERT LANTIUNGA / ALPING SANTRYA LANTIUNGA - 4 /  - 0",
+              "date": "today",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "MORI UTARA",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 12.71
+          "persentase": 12.81
         },
         {
           "kec_name": "SOYO JAYA",
           "kec_id": "87884162-bc06-4844-8390-e6abdec7a955",
           "total_prelist": 3051,
           "total_draft": 32,
-          "total_open": 2696,
-          "total_submitted": 323,
-          "total_rejected": 25,
-          "total_approved": 140,
+          "total_open": 2694,
+          "total_submitted": 325,
+          "total_rejected": 28,
+          "total_approved": 139,
           "total_submitted_pencacah": 158,
           "total_submitted_respondent": 0,
-          "today_completed": 3,
+          "today_completed": 5,
           "yesterday_completed": 0,
           "two_days_ago_completed": 7,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2,
-            "REJECTED BY Pengawas": 1
+            "REJECTED BY Pengawas": 2,
+            "REVOKED BY Pengawas": 1,
+            "SUBMITTED BY Pencacah": 2
           },
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed_breakdown": {
@@ -10567,22 +10567,12 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 2,
-          "new_rumah_today": 1,
+          "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 13,
-          "new_businesses": [
-            {
-              "name": "WAHID / RISDAYANTI",
-              "code": "7212080007000100 - WAHID / RISDAYANTI - 30 /  - 1",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "SOYO JAYA",
-              "jenis": "Keluarga"
-            }
-          ],
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 10.59
+          "persentase": 10.65
         },
         {
           "kec_name": "BUNGKU UTARA",
@@ -10592,14 +10582,14 @@ window.IPAS_DATA = {
           "total_open": 4342,
           "total_submitted": 675,
           "total_rejected": 47,
-          "total_approved": 234,
-          "total_submitted_pencacah": 394,
+          "total_approved": 235,
+          "total_submitted_pencacah": 393,
           "total_submitted_respondent": 0,
-          "today_completed": 4,
+          "today_completed": 1,
           "yesterday_completed": 4,
           "two_days_ago_completed": 3,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 4
+            "APPROVED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 4
@@ -10613,7 +10603,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 7,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 27,
+          "new_rumah_overall": 24,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 13.44
@@ -10621,18 +10611,21 @@ window.IPAS_DATA = {
         {
           "kec_name": "MAMOSALATO",
           "kec_id": "c0008bb8-abee-428f-8a6e-344476ad546f",
-          "total_prelist": 3478,
+          "total_prelist": 3479,
           "total_draft": 0,
-          "total_open": 2977,
-          "total_submitted": 501,
-          "total_rejected": 11,
+          "total_open": 2976,
+          "total_submitted": 503,
+          "total_rejected": 12,
           "total_approved": 35,
-          "total_submitted_pencacah": 455,
+          "total_submitted_pencacah": 456,
           "total_submitted_respondent": 0,
-          "today_completed": 0,
+          "today_completed": 3,
           "yesterday_completed": 2,
           "two_days_ago_completed": 2,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 2,
+            "REJECTED BY Pengawas": 1
+          },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 2
           },
@@ -10641,35 +10634,45 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 10,
-          "new_rumah_today": 0,
+          "new_usaha_overall": 7,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 3,
-          "new_businesses": [],
+          "new_rumah_overall": 4,
+          "new_businesses": [
+            {
+              "name": "H. AMIRUDDIN  / HJ. ENDANG ",
+              "code": "7212100006000100 - H. AMIRUDDIN  / HJ. ENDANG  - 41 /  - 2 - 2. Tidak",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "MAMOSALATO",
+              "jenis": "Keluarga (Bukan Usaha)"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 14.4
+          "persentase": 14.46
         }
       ]
     },
     {
       "kabupaten": "[71] PALU",
-      "total_prelist": 172788,
-      "total_draft": 2667,
-      "total_open": 154321,
-      "total_submitted": 15790,
-      "total_rejected": 843,
-      "total_approved": 6242,
-      "total_submitted_pencacah": 8684,
+      "total_prelist": 172793,
+      "total_draft": 2651,
+      "total_open": 154304,
+      "total_submitted": 15828,
+      "total_rejected": 833,
+      "total_approved": 6269,
+      "total_submitted_pencacah": 8705,
       "total_submitted_respondent": 21,
-      "persentase": 9.14,
-      "today_completed": 98,
+      "persentase": 9.16,
+      "today_completed": 76,
       "yesterday_completed": 68,
       "two_days_ago_completed": 119,
       "two_days_ago_is_estimate": false,
       "today_completed_breakdown": {
-        "APPROVED BY Pengawas": 44,
-        "SUBMITTED BY Pencacah": 50,
-        "REJECTED BY Pengawas": 4
+        "SUBMITTED BY Pencacah": 49,
+        "APPROVED BY Pengawas": 26,
+        "REJECTED BY Pengawas": 1
       },
       "yesterday_completed_breakdown": {
         "APPROVED BY Pengawas": 16,
@@ -10683,150 +10686,132 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 86
       },
       "new_usaha_today": 0,
-      "new_usaha_yesterday": 1,
-      "new_rumah_today": 6,
-      "new_rumah_yesterday": 12,
-      "new_usaha_overall": 27,
-      "new_rumah_overall": 399,
+      "new_usaha_yesterday": 0,
+      "new_rumah_today": 5,
+      "new_rumah_yesterday": 17,
+      "new_usaha_overall": 26,
+      "new_rumah_overall": 414,
       "new_businesses": [
         {
-          "name": "JIHAN / ",
-          "code": "7271011005001202 - JIHAN /  - 12 /  - 0 - 2. Tidak",
+          "name": "NARSUM ML / RATNA",
+          "code": "7271020005002401 - NARSUM M. L /  - - /  - 1 - 2. Tidak",
           "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
-          "kecName": "TATANGA",
+          "kecName": "PALU SELATAN",
           "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "RUMAH KOSONG 1",
-          "code": "7271011005001202 - RUMAH KOSONG 1 - 11 /  - 2. Tidak",
+          "name": "SURURI / SAMINA",
+          "code": "7271011001002501 - SURURI / SAMINA - 65 /  - 1",
           "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "BANGUNAN KOSONG",
-          "code": "7271031002000402 - BANGUNAN KOSONG - - / ",
-          "date": "older",
           "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "MANTIKULORE",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "LANGGALI ATRIE / WARDA. NM",
-          "code": "7271010006000900 -  /  - - /  - 1 - 2. Tidak",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "PALU BARAT",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "AHMAD AGUS MUJIONO / FITRI NOVIANTI",
-          "code": "7271011005000602 - AHMAD AGUS MUJIONO / FITRI NOVIANTI - 12 /  - 1",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "TATANGA",
           "jenis": "Keluarga"
         },
         {
-          "name": "SADE / BADERAH",
-          "code": "7271020005002401 - SADE / BADERAH - - /  - 0 - 2. Tidak",
+          "name": "NURJANATUL MA'WA / ",
+          "code": "7271031002000402 - NURJANATUL MA'WA /  - - /  - 0",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "MANTIKULORE",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "SATE AYAM NOSARARA",
+          "code": "7271020008003001 - SATE AYAM NOSARARA - 42 /  - 1 - 2. Tidak",
           "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "PALU SELATAN",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "SASKYA / ",
+          "code": "7271031006000403 - SASKIYA /  - - /  - 0",
+          "date": "older",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "MANTIKULORE",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "LUSYANTO / TRIAMSIH",
+          "code": "7271020005000200 - LUSYANTO / TRIAMSIH - 61 /  - 0",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "PALU SELATAN",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG",
+          "code": "7271010008000300 - RUMAH KOSONG - 1 /  - 94226 - 2. Tidak",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "PALU BARAT",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "MOEHAMMAD FADLY / DIAN RAHMA SARI",
+          "code": "7271011003002200 - MOEHAMMAD FADLY / DIAN RAHMA SARI - 15 /  - 1 - 2. Tidak",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "ROSTIN / ",
+          "code": "7271020007001900 - ROSTIN /  - 56 /  - 0",
+          "date": "yesterday",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "PALU SELATAN",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "NOFRIDA SELMA / MEGA YATRI AMINI",
+          "code": "7271020008003002 - NOFRIDA SELMA / MEGA YATRI AMINI - 67 /  - 0",
+          "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "PALU SELATAN",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "FITRI / ",
+          "code": "7271031002000402 - KILAMON /  - - /  - 0",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "MANTIKULORE",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "CHRISDAYANTI / ",
+          "code": "7271011003002200 - CHRISDAYANTI /  - 3 /  - 0 - 2. Tidak",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "OLVAN PANGINCANI / MELDA",
+          "code": "7271020005002401 - OLVAN PANGINCANI / MELDA - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
           "status": "DRAFT",
           "type": "rumah",
           "kecName": "PALU SELATAN",
           "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "BANGUNAN KOSONG",
-          "code": "7271031002000402 - BANGUNAN KOSONG - - / ",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "MANTIKULORE",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "YESI SUHENDRO / FINA ARIANI",
-          "code": "7271011005000601 - YESI SUHENDRO / FINA ARIANI - 18 /  - 1",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "AGUS RIADI / FIRDA",
-          "code": "7271011004001402 - AGUS RIADI / FIRDA - 7 /  - www.firdayani12345@gmail.com - 1 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "NAYA CELL",
-          "code": "7271011004001402 - NAYA CELL - - /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "RAHMAWATI / ",
-          "code": "7271011004001402 - RAHMAWATI /  - - /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "ABDUL FATAN  / MASRIANININGSIH",
-          "code": "7271020005002401 - ABDUL FATAN  / MASRIANRI NINGSIH - - /  - 1 - 2. Tidak",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "PALU SELATAN",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "SLAMET WIDODO  / DARMAYANTI",
-          "code": "7271011004001401 -  /  - - /  - 2. Tidak",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "ASLIA / FAHRUL",
-          "code": "7271011004001401 - ASLIA / FAHRUL - 8 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "REZA / RESSA ANATASYA",
-          "code": "7271011004001200 -  /  - - /  - 0",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "IRMA DEVIANTI  / JUNAEDI",
-          "code": "7271031002000402 - HAERUDDIN /  - - / ",
+          "name": "AISYAH RAMADHANI  / ",
+          "code": "7271031006000403 - AISYAH RAMADHANI  /  - 7 /  - 0",
           "date": "older",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
@@ -10834,202 +10819,247 @@ window.IPAS_DATA = {
           "jenis": "Keluarga"
         },
         {
-          "name": "SEKRETARIAT MAHASISWA ",
-          "code": "7271011004001100 - SEKRETARIAT MAHASISWA  - - /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "ROSNANI MANGABE / ZURAIDA",
-          "code": "7271011004001100 - ROSNANI /  - 14 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "POP ICE (YETI) ",
-          "code": "7271010006001600 - POP ICE (YETI)  - 77 /  - 1",
-          "date": "older",
+          "name": "HIDAYAT / NURLIANA",
+          "code": "7271030001001000 - HIDAYAT / NURLIANA - 87 /  - 0",
+          "date": "today",
           "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "PALU TIMUR",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "USAHA KERUPUK",
+          "code": "7271011005000601 - USAHA KERUPUK - 26 /  - 1",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
           "type": "usaha",
-          "kecName": "PALU BARAT",
+          "kecName": "TATANGA",
           "jenis": "Usaha Baru"
         },
         {
-          "name": "RUMAH KOS KOSONG ABU-ABU ",
-          "code": "7271011004001002 - RUMAH KOS KOSONG ABU-ABU  - 3 /  - 2. Tidak",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "RUMAH KOSONG KOSONG ABU-ABU ",
-          "code": "7271011004001002 - RUMAH KOSONG KOSONG ABU-ABU  - 1 /  - 2. Tidak",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "RUMAH KOS KOSONG ABU-ABU ",
-          "code": "7271011004001002 - RUMAH KOS KOSONG ABU-ABU  - 2 /  - 2. Tidak",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "ARIANTO  / MARIYAM ",
-          "code": "7271011004001002 -  /  - 1 /  - 0 - 2. Tidak",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
+          "name": "MAHDAN / ELVIRA",
+          "code": "7271011003002200 - MAHDAN / ELVIRA - 19 /  - 1 - 2. Tidak",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "TATANGA",
           "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "SOULTAN MOCH BAKIR / MOH IQBAL",
-          "code": "7271020005003501 - SOULTAN MOCH BAKIR / MOH IQBAL - 50 /  - 0",
-          "date": "yesterday",
-          "status": "REJECTED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PALU SELATAN",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "HENDRA HERMAWAN / YETI",
-          "code": "7271010006001600 - HENDRA HERMAWAN / YETI - 76 /  - 9999 - 2",
+          "name": "INTAN FAHDIANA A. DIASAMO / ",
+          "code": "7271031006000403 - INTAN FAHDIANA A. DIASAMO /  - 6 /  - 0",
           "date": "older",
           "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "PALU BARAT",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "ARY SYAHRIAL / TETY ROSMIANY",
-          "code": "7271020009002400 - ARY SYAHRIAL / TETY ROSMIANY - 20 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "PALU SELATAN",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "SUARDIN / MINARNI",
-          "code": "7271011003000500 - SUARDIN / MINARNI - - /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "DRAFT",
-          "type": "rumah",
-          "kecName": "TATANGA",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "ANWIR DJ. LAMADJIDO / HATIFA",
-          "code": "7271010006001600 - ANWIR DJ. LAMADJIDO / HATIFA - 33 /  - 0",
-          "date": "yesterday",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "PALU BARAT",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "BANGUNAN KOSONG (KOS)",
-          "code": "7271012003002300 - 104 - 104 /  - 2. Tidak",
-          "date": "older",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "ULUJADI",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "STEFANUS UBAS / ELEN TANTJARO",
-          "code": "7271031001001000 - STEFANUS UBAS / ELEN TANTJARO - 8 /  - 0 - 2. Tidak",
-          "date": "older",
-          "status": "APPROVED BY Pengawas",
           "type": "rumah",
           "kecName": "MANTIKULORE",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "M BUSRA / IKA YUSRIANA",
+          "code": "7271011003002200 - M BUSRA / IKA YUSRIANA - 18 /  - 0 - 2. Tidak",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "TATANGA",
           "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "SAHABUDDIN / HASTIN ISTIARSIH",
-          "code": "7271020009002400 - SAHABUDDIN / HASTIN ISTIARSIH - 19 /  - 0 - 2. Tidak",
+          "name": "I GEDE MOH RAHMAT TAUFIK / TUMINI",
+          "code": "7271011005000601 - I GEDE MOH RAHMAT TAUFIK / TUMINI - 11 /  - 1",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "ARRAHMAN / HENNY SARTJE SANGKOY",
+          "code": "7271020005003700 - ARRAHMAN / HENNY SARTJE SANGKOY - 16 /  - 0",
           "date": "today",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
+          "kecName": "PALU SELATAN",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "HADI PURNAWIRATA / ",
+          "code": "7271020005002401 - HADI PURNAWIRATA /  - 34 /  - 0 - 2. Tidak",
+          "date": "older",
+          "status": "DRAFT",
+          "type": "rumah",
+          "kecName": "PALU SELATAN",
+          "jenis": "Keluarga (Bukan Usaha)"
+        },
+        {
+          "name": "ESTHER BUNGA / ELSAM MAURURA LAMBE",
+          "code": "7271020005002401 - ESTHER BUNGA / ELSAM MAURURA LAMBE - - /  - 0 - 2. Tidak",
+          "date": "yesterday",
           "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "PALU SELATAN",
           "jenis": "Keluarga (Bukan Usaha)"
         },
         {
-          "name": "ABD MALIK / SITTI MASHYTA",
-          "code": "7271020005003501 - ABD MALIK / SITTI MASHYTA - 49 /  - 0",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "PALU SELATAN",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "SUHARTO / ASNELLY",
-          "code": "7271041003001101 -  /  - - /  - 0",
+          "name": "MOH. YUSUF / DARLINA",
+          "code": "7271041003000600 - MOH. YUSUF / DARLINA - 17 / ",
           "date": "older",
-          "status": "REJECTED BY Pengawas",
+          "status": "SUBMITTED BY Pencacah",
           "type": "rumah",
           "kecName": "TAWAELI",
           "jenis": "Keluarga"
         },
         {
-          "name": "MOHAMMAD ACE / HERDIANTI",
-          "code": "7271020005003700 - MOHAMMAD ACE / HERDIANTI - 12 /  - 0",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "PALU SELATAN",
-          "jenis": "Keluarga"
-        },
-        {
-          "name": "WARUNG BANTARAN (RAHMATIA) ",
-          "code": "7271010004001200 - KEDAI PISANG GORENG - - /  - 0",
-          "date": "yesterday",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "usaha",
-          "kecName": "PALU BARAT",
-          "jenis": "Usaha Baru"
-        },
-        {
-          "name": "BANGUNAN-RUMAH KOSONG",
-          "code": "7271031001001000 - BANGUNAN-RUMAH KOSONG - 24 /  - 2. Tidak",
-          "date": "yesterday",
-          "status": "APPROVED BY Pengawas",
-          "type": "rumah",
-          "kecName": "MANTIKULORE",
-          "jenis": "Bangunan/Rumah Kosong"
-        },
-        {
-          "name": "MOH. SADRI / FATMAUN AULIA WULANSARI",
-          "code": "7271020009002400 - MOH. SADRI / FATMAUN AULIA WULANSARI - 14 /  - 0 - 2. Tidak",
-          "date": "today",
-          "status": "SUBMITTED BY Pencacah",
-          "type": "rumah",
-          "kecName": "PALU SELATAN",
-          "jenis": "Keluarga (Bukan Usaha)"
-        },
-        {
-          "name": "ISDAR / LIKA SARKIA",
-          "code": "7271031006002900 - ISDAR / LIKA SARKIA - 39 /  - 0",
+          "name": "KUSNANDAR / JUMAIA",
+          "code": "7271011005000601 - KUSNANDAR / JUMAIA - 20 /  - 0",
           "date": "older",
           "status": "APPROVED BY Pengawas",
           "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "LUKMAN SAPUTRA / FITRIYANTI",
+          "code": "7271011005000601 - LUKMAN SAPUTRA / FITRIYANTI - 14 /  - 0",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "NOPIANTO / ZULFIANA",
+          "code": "7271011005000601 - NOPIANTO / ZULFIANA - 17 /  - 0",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "AULIA / ",
+          "code": "7271031006000403 - AULIA /  - 5 / ",
+          "date": "older",
+          "status": "SUBMITTED BY Pencacah",
+          "type": "rumah",
           "kecName": "MANTIKULORE",
           "jenis": "Keluarga"
+        },
+        {
+          "name": "KALMAN / MUSDALIFA",
+          "code": "7271011005001900 - KALMAN / MUSDALIFA - - /  - 0",
+          "date": "older",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG 4",
+          "code": "7271011005001900 - BANGUNAN KOSONG 4 - 78 / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG 9",
+          "code": "7271011005001900 - BANGUNAN KOSONG 9 - 88 / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG 8",
+          "code": "7271011005001900 - BANGUNAN KOSONG 8 - 87 / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG 13",
+          "code": "7271011005001900 - BANGUNAN KOSONG 13 - 70 / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG 2",
+          "code": "7271011005001900 - BANGUNAN KOSONG 2 - 80 / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG 15",
+          "code": "7271011005001900 - BANGUNAN KOSONG 15 - 72 / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG 11",
+          "code": "7271011005001900 - BANGUNAN KOSONG 11 - 85 / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG 7",
+          "code": "7271011005001900 - BANGUNAN KOSONG 7 - 89 / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "BANGUNAN KOSONG 14",
+          "code": "7271011005001900 - BANGUNAN KOSONG 14 - 70 / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "SANDI FURNAWAN / FEDLI SANTOSO",
+          "code": "7271020007001201 - SANDI FURNAWAN / FEDLI SANTOSO - 63 /  - 1",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "PALU SELATAN",
+          "jenis": "Keluarga"
+        },
+        {
+          "name": "BANGUNAN KOSONG 12",
+          "code": "7271011005001900 - BANGUNAN KOSONG 12 - 91 / ",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Bangunan/Rumah Kosong"
+        },
+        {
+          "name": "WANDI / -",
+          "code": "7271011005001202 - WANDI / - - 9 /  - 0 - 2. Tidak",
+          "date": "yesterday",
+          "status": "APPROVED BY Pengawas",
+          "type": "rumah",
+          "kecName": "TATANGA",
+          "jenis": "Keluarga (Bukan Usaha)"
         }
       ],
       "kecamatan_list": [
@@ -11040,15 +11070,15 @@ window.IPAS_DATA = {
           "total_draft": 295,
           "total_open": 18424,
           "total_submitted": 2109,
-          "total_rejected": 142,
+          "total_rejected": 140,
           "total_approved": 284,
-          "total_submitted_pencacah": 1680,
+          "total_submitted_pencacah": 1682,
           "total_submitted_respondent": 3,
-          "today_completed": 7,
+          "today_completed": 2,
           "yesterday_completed": 11,
           "two_days_ago_completed": 0,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 7
+            "SUBMITTED BY Pencacah": 2
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 1,
@@ -11057,56 +11087,20 @@ window.IPAS_DATA = {
           },
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
-          "new_usaha_yesterday": 1,
+          "new_usaha_yesterday": 0,
           "new_usaha_overall": 6,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 82,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 83,
           "new_businesses": [
             {
-              "name": "LANGGALI ATRIE / WARDA. NM",
-              "code": "7271010006000900 -  /  - - /  - 1 - 2. Tidak",
+              "name": "BANGUNAN KOSONG",
+              "code": "7271010008000300 - RUMAH KOSONG - 1 /  - 94226 - 2. Tidak",
               "date": "older",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "PALU BARAT",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "POP ICE (YETI) ",
-              "code": "7271010006001600 - POP ICE (YETI)  - 77 /  - 1",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "usaha",
-              "kecName": "PALU BARAT",
-              "jenis": "Usaha Baru"
-            },
-            {
-              "name": "HENDRA HERMAWAN / YETI",
-              "code": "7271010006001600 - HENDRA HERMAWAN / YETI - 76 /  - 9999 - 2",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PALU BARAT",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "ANWIR DJ. LAMADJIDO / HATIFA",
-              "code": "7271010006001600 - ANWIR DJ. LAMADJIDO / HATIFA - 33 /  - 0",
-              "date": "yesterday",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PALU BARAT",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "WARUNG BANTARAN (RAHMATIA) ",
-              "code": "7271010004001200 - KEDAI PISANG GORENG - - /  - 0",
-              "date": "yesterday",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "usaha",
-              "kecName": "PALU BARAT",
-              "jenis": "Usaha Baru"
+              "jenis": "Bangunan/Rumah Kosong"
             }
           ],
           "two_days_ago_is_estimate": false,
@@ -11116,19 +11110,20 @@ window.IPAS_DATA = {
           "kec_name": "TATANGA",
           "kec_id": "c3a96057-476b-4a0e-b08b-c5143d46ecfd",
           "total_prelist": 24098,
-          "total_draft": 228,
-          "total_open": 21773,
-          "total_submitted": 2097,
-          "total_rejected": 107,
-          "total_approved": 694,
-          "total_submitted_pencacah": 1295,
+          "total_draft": 227,
+          "total_open": 21768,
+          "total_submitted": 2103,
+          "total_rejected": 100,
+          "total_approved": 719,
+          "total_submitted_pencacah": 1283,
           "total_submitted_respondent": 1,
-          "today_completed": 61,
+          "today_completed": 39,
           "yesterday_completed": 11,
           "two_days_ago_completed": 23,
           "today_completed_breakdown": {
-            "APPROVED BY Pengawas": 35,
-            "SUBMITTED BY Pencacah": 26
+            "SUBMITTED BY Pencacah": 14,
+            "APPROVED BY Pengawas": 24,
+            "REJECTED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 11
@@ -11140,95 +11135,68 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
-          "new_rumah_today": 1,
-          "new_rumah_yesterday": 8,
-          "new_rumah_overall": 31,
+          "new_usaha_overall": 2,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 12,
+          "new_rumah_overall": 52,
           "new_businesses": [
             {
-              "name": "JIHAN / ",
-              "code": "7271011005001202 - JIHAN /  - 12 /  - 0 - 2. Tidak",
+              "name": "SURURI / SAMINA",
+              "code": "7271011001002501 - SURURI / SAMINA - 65 /  - 1",
               "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TATANGA",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "RUMAH KOSONG 1",
-              "code": "7271011005001202 - RUMAH KOSONG 1 - 11 /  - 2. Tidak",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TATANGA",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "AHMAD AGUS MUJIONO / FITRI NOVIANTI",
-              "code": "7271011005000602 - AHMAD AGUS MUJIONO / FITRI NOVIANTI - 12 /  - 1",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "TATANGA",
               "jenis": "Keluarga"
             },
             {
-              "name": "YESI SUHENDRO / FINA ARIANI",
-              "code": "7271011005000601 - YESI SUHENDRO / FINA ARIANI - 18 /  - 1",
+              "name": "MOEHAMMAD FADLY / DIAN RAHMA SARI",
+              "code": "7271011003002200 - MOEHAMMAD FADLY / DIAN RAHMA SARI - 15 /  - 1 - 2. Tidak",
               "date": "older",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TATANGA",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "AGUS RIADI / FIRDA",
-              "code": "7271011004001402 - AGUS RIADI / FIRDA - 7 /  - www.firdayani12345@gmail.com - 1 - 2. Tidak",
-              "date": "older",
-              "status": "APPROVED BY Pengawas",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "TATANGA",
               "jenis": "Keluarga (Bukan Usaha)"
             },
             {
-              "name": "NAYA CELL",
-              "code": "7271011004001402 - NAYA CELL - - /  - 0 - 2. Tidak",
+              "name": "CHRISDAYANTI / ",
+              "code": "7271011003002200 - CHRISDAYANTI /  - 3 /  - 0 - 2. Tidak",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "TATANGA",
+              "jenis": "Keluarga (Bukan Usaha)"
+            },
+            {
+              "name": "USAHA KERUPUK",
+              "code": "7271011005000601 - USAHA KERUPUK - 26 /  - 1",
               "date": "older",
               "status": "APPROVED BY Pengawas",
-              "type": "rumah",
+              "type": "usaha",
               "kecName": "TATANGA",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Usaha Baru"
             },
             {
-              "name": "RAHMAWATI / ",
-              "code": "7271011004001402 - RAHMAWATI /  - - /  - 0 - 2. Tidak",
+              "name": "MAHDAN / ELVIRA",
+              "code": "7271011003002200 - MAHDAN / ELVIRA - 19 /  - 1 - 2. Tidak",
               "date": "older",
-              "status": "APPROVED BY Pengawas",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "TATANGA",
               "jenis": "Keluarga (Bukan Usaha)"
             },
             {
-              "name": "SLAMET WIDODO  / DARMAYANTI",
-              "code": "7271011004001401 -  /  - - /  - 2. Tidak",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
-              "type": "rumah",
-              "kecName": "TATANGA",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "ASLIA / FAHRUL",
-              "code": "7271011004001401 - ASLIA / FAHRUL - 8 /  - 0 - 2. Tidak",
+              "name": "M BUSRA / IKA YUSRIANA",
+              "code": "7271011003002200 - M BUSRA / IKA YUSRIANA - 18 /  - 0 - 2. Tidak",
               "date": "older",
-              "status": "APPROVED BY Pengawas",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "TATANGA",
               "jenis": "Keluarga (Bukan Usaha)"
             },
             {
-              "name": "REZA / RESSA ANATASYA",
-              "code": "7271011004001200 -  /  - - /  - 0",
+              "name": "I GEDE MOH RAHMAT TAUFIK / TUMINI",
+              "code": "7271011005000601 - I GEDE MOH RAHMAT TAUFIK / TUMINI - 11 /  - 1",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
@@ -11236,26 +11204,44 @@ window.IPAS_DATA = {
               "jenis": "Keluarga"
             },
             {
-              "name": "SEKRETARIAT MAHASISWA ",
-              "code": "7271011004001100 - SEKRETARIAT MAHASISWA  - - /  - 0 - 2. Tidak",
+              "name": "KUSNANDAR / JUMAIA",
+              "code": "7271011005000601 - KUSNANDAR / JUMAIA - 20 /  - 0",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "TATANGA",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Keluarga"
             },
             {
-              "name": "ROSNANI MANGABE / ZURAIDA",
-              "code": "7271011004001100 - ROSNANI /  - 14 /  - 0 - 2. Tidak",
+              "name": "LUKMAN SAPUTRA / FITRIYANTI",
+              "code": "7271011005000601 - LUKMAN SAPUTRA / FITRIYANTI - 14 /  - 0",
               "date": "older",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "TATANGA",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Keluarga"
             },
             {
-              "name": "RUMAH KOS KOSONG ABU-ABU ",
-              "code": "7271011004001002 - RUMAH KOS KOSONG ABU-ABU  - 3 /  - 2. Tidak",
+              "name": "NOPIANTO / ZULFIANA",
+              "code": "7271011005000601 - NOPIANTO / ZULFIANA - 17 /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TATANGA",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "KALMAN / MUSDALIFA",
+              "code": "7271011005001900 - KALMAN / MUSDALIFA - - /  - 0",
+              "date": "older",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TATANGA",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "BANGUNAN KOSONG 4",
+              "code": "7271011005001900 - BANGUNAN KOSONG 4 - 78 / ",
               "date": "yesterday",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
@@ -11263,8 +11249,8 @@ window.IPAS_DATA = {
               "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "RUMAH KOSONG KOSONG ABU-ABU ",
-              "code": "7271011004001002 - RUMAH KOSONG KOSONG ABU-ABU  - 1 /  - 2. Tidak",
+              "name": "BANGUNAN KOSONG 9",
+              "code": "7271011005001900 - BANGUNAN KOSONG 9 - 88 / ",
               "date": "yesterday",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
@@ -11272,8 +11258,8 @@ window.IPAS_DATA = {
               "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "RUMAH KOS KOSONG ABU-ABU ",
-              "code": "7271011004001002 - RUMAH KOS KOSONG ABU-ABU  - 2 /  - 2. Tidak",
+              "name": "BANGUNAN KOSONG 8",
+              "code": "7271011005001900 - BANGUNAN KOSONG 8 - 87 / ",
               "date": "yesterday",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
@@ -11281,44 +11267,97 @@ window.IPAS_DATA = {
               "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "ARIANTO  / MARIYAM ",
-              "code": "7271011004001002 -  /  - 1 /  - 0 - 2. Tidak",
+              "name": "BANGUNAN KOSONG 13",
+              "code": "7271011005001900 - BANGUNAN KOSONG 13 - 70 / ",
               "date": "yesterday",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "TATANGA",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Bangunan/Rumah Kosong"
             },
             {
-              "name": "SUARDIN / MINARNI",
-              "code": "7271011003000500 - SUARDIN / MINARNI - - /  - 0 - 2. Tidak",
-              "date": "today",
-              "status": "DRAFT",
+              "name": "BANGUNAN KOSONG 2",
+              "code": "7271011005001900 - BANGUNAN KOSONG 2 - 80 / ",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TATANGA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG 15",
+              "code": "7271011005001900 - BANGUNAN KOSONG 15 - 72 / ",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TATANGA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG 11",
+              "code": "7271011005001900 - BANGUNAN KOSONG 11 - 85 / ",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TATANGA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG 7",
+              "code": "7271011005001900 - BANGUNAN KOSONG 7 - 89 / ",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TATANGA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG 14",
+              "code": "7271011005001900 - BANGUNAN KOSONG 14 - 70 / ",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TATANGA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "BANGUNAN KOSONG 12",
+              "code": "7271011005001900 - BANGUNAN KOSONG 12 - 91 / ",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
+              "type": "rumah",
+              "kecName": "TATANGA",
+              "jenis": "Bangunan/Rumah Kosong"
+            },
+            {
+              "name": "WANDI / -",
+              "code": "7271011005001202 - WANDI / - - 9 /  - 0 - 2. Tidak",
+              "date": "yesterday",
+              "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "TATANGA",
               "jenis": "Keluarga (Bukan Usaha)"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 8.7
+          "persentase": 8.73
         },
         {
           "kec_name": "ULUJADI",
           "kec_id": "8ec30a25-67aa-421a-a887-f1b683ff2371",
           "total_prelist": 15432,
           "total_draft": 346,
-          "total_open": 13278,
-          "total_submitted": 1808,
+          "total_open": 13277,
+          "total_submitted": 1809,
           "total_rejected": 86,
           "total_approved": 920,
-          "total_submitted_pencacah": 801,
+          "total_submitted_pencacah": 802,
           "total_submitted_respondent": 1,
-          "today_completed": 5,
+          "today_completed": 1,
           "yesterday_completed": 7,
           "two_days_ago_completed": 14,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 2,
-            "SUBMITTED BY Pencacah": 3
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 3,
@@ -11330,41 +11369,30 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 8,
+          "new_usaha_overall": 7,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 54,
-          "new_businesses": [
-            {
-              "name": "BANGUNAN KOSONG (KOS)",
-              "code": "7271012003002300 - 104 - 104 /  - 2. Tidak",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "ULUJADI",
-              "jenis": "Bangunan/Rumah Kosong"
-            }
-          ],
+          "new_rumah_overall": 48,
+          "new_businesses": [],
           "two_days_ago_is_estimate": false,
           "persentase": 11.72
         },
         {
           "kec_name": "PALU SELATAN",
           "kec_id": "2b67d591-f1f8-4bc5-b655-968adf0d20f9",
-          "total_prelist": 32159,
-          "total_draft": 380,
+          "total_prelist": 32163,
+          "total_draft": 374,
           "total_open": 29047,
-          "total_submitted": 2732,
-          "total_rejected": 115,
-          "total_approved": 1451,
-          "total_submitted_pencacah": 1161,
+          "total_submitted": 2742,
+          "total_rejected": 114,
+          "total_approved": 1452,
+          "total_submitted_pencacah": 1171,
           "total_submitted_respondent": 5,
-          "today_completed": 8,
+          "today_completed": 12,
           "yesterday_completed": 16,
           "two_days_ago_completed": 22,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 6,
-            "REJECTED BY Pengawas": 1,
+            "SUBMITTED BY Pencacah": 11,
             "APPROVED BY Pengawas": 1
           },
           "yesterday_completed_breakdown": {
@@ -11377,101 +11405,121 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 1,
-          "new_rumah_today": 5,
-          "new_rumah_yesterday": 2,
-          "new_rumah_overall": 83,
+          "new_rumah_today": 4,
+          "new_rumah_yesterday": 5,
+          "new_rumah_overall": 85,
           "new_businesses": [
             {
-              "name": "SADE / BADERAH",
-              "code": "7271020005002401 - SADE / BADERAH - - /  - 0 - 2. Tidak",
+              "name": "NARSUM ML / RATNA",
+              "code": "7271020005002401 - NARSUM M. L /  - - /  - 1 - 2. Tidak",
+              "date": "yesterday",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "PALU SELATAN",
+              "jenis": "Keluarga (Bukan Usaha)"
+            },
+            {
+              "name": "SATE AYAM NOSARARA",
+              "code": "7271020008003001 - SATE AYAM NOSARARA - 42 /  - 1 - 2. Tidak",
               "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "PALU SELATAN",
+              "jenis": "Keluarga (Bukan Usaha)"
+            },
+            {
+              "name": "LUSYANTO / TRIAMSIH",
+              "code": "7271020005000200 - LUSYANTO / TRIAMSIH - 61 /  - 0",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "PALU SELATAN",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "ROSTIN / ",
+              "code": "7271020007001900 - ROSTIN /  - 56 /  - 0",
+              "date": "yesterday",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "PALU SELATAN",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "NOFRIDA SELMA / MEGA YATRI AMINI",
+              "code": "7271020008003002 - NOFRIDA SELMA / MEGA YATRI AMINI - 67 /  - 0",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "PALU SELATAN",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "OLVAN PANGINCANI / MELDA",
+              "code": "7271020005002401 - OLVAN PANGINCANI / MELDA - - /  - 0 - 2. Tidak",
+              "date": "yesterday",
               "status": "DRAFT",
               "type": "rumah",
               "kecName": "PALU SELATAN",
               "jenis": "Keluarga (Bukan Usaha)"
             },
             {
-              "name": "ABDUL FATAN  / MASRIANININGSIH",
-              "code": "7271020005002401 - ABDUL FATAN  / MASRIANRI NINGSIH - - /  - 1 - 2. Tidak",
-              "date": "older",
+              "name": "ARRAHMAN / HENNY SARTJE SANGKOY",
+              "code": "7271020005003700 - ARRAHMAN / HENNY SARTJE SANGKOY - 16 /  - 0",
+              "date": "today",
               "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PALU SELATAN",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "SOULTAN MOCH BAKIR / MOH IQBAL",
-              "code": "7271020005003501 - SOULTAN MOCH BAKIR / MOH IQBAL - 50 /  - 0",
-              "date": "yesterday",
-              "status": "REJECTED BY Pengawas",
               "type": "rumah",
               "kecName": "PALU SELATAN",
               "jenis": "Keluarga"
             },
             {
-              "name": "ARY SYAHRIAL / TETY ROSMIANY",
-              "code": "7271020009002400 - ARY SYAHRIAL / TETY ROSMIANY - 20 /  - 0 - 2. Tidak",
-              "date": "today",
+              "name": "HADI PURNAWIRATA / ",
+              "code": "7271020005002401 - HADI PURNAWIRATA /  - 34 /  - 0 - 2. Tidak",
+              "date": "older",
+              "status": "DRAFT",
+              "type": "rumah",
+              "kecName": "PALU SELATAN",
+              "jenis": "Keluarga (Bukan Usaha)"
+            },
+            {
+              "name": "ESTHER BUNGA / ELSAM MAURURA LAMBE",
+              "code": "7271020005002401 - ESTHER BUNGA / ELSAM MAURURA LAMBE - - /  - 0 - 2. Tidak",
+              "date": "yesterday",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "PALU SELATAN",
               "jenis": "Keluarga (Bukan Usaha)"
             },
             {
-              "name": "SAHABUDDIN / HASTIN ISTIARSIH",
-              "code": "7271020009002400 - SAHABUDDIN / HASTIN ISTIARSIH - 19 /  - 0 - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PALU SELATAN",
-              "jenis": "Keluarga (Bukan Usaha)"
-            },
-            {
-              "name": "ABD MALIK / SITTI MASHYTA",
-              "code": "7271020005003501 - ABD MALIK / SITTI MASHYTA - 49 /  - 0",
+              "name": "SANDI FURNAWAN / FEDLI SANTOSO",
+              "code": "7271020007001201 - SANDI FURNAWAN / FEDLI SANTOSO - 63 /  - 1",
               "date": "yesterday",
               "status": "APPROVED BY Pengawas",
               "type": "rumah",
               "kecName": "PALU SELATAN",
               "jenis": "Keluarga"
-            },
-            {
-              "name": "MOHAMMAD ACE / HERDIANTI",
-              "code": "7271020005003700 - MOHAMMAD ACE / HERDIANTI - 12 /  - 0",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PALU SELATAN",
-              "jenis": "Keluarga"
-            },
-            {
-              "name": "MOH. SADRI / FATMAUN AULIA WULANSARI",
-              "code": "7271020009002400 - MOH. SADRI / FATMAUN AULIA WULANSARI - 14 /  - 0 - 2. Tidak",
-              "date": "today",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "PALU SELATAN",
-              "jenis": "Keluarga (Bukan Usaha)"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 8.5
+          "persentase": 8.53
         },
         {
           "kec_name": "PALU TIMUR",
           "kec_id": "1eba08ca-b70b-45fc-b51c-3d4f697093ef",
-          "total_prelist": 22015,
+          "total_prelist": 22016,
           "total_draft": 286,
-          "total_open": 19726,
-          "total_submitted": 2003,
+          "total_open": 19719,
+          "total_submitted": 2011,
           "total_rejected": 71,
           "total_approved": 670,
-          "total_submitted_pencacah": 1260,
+          "total_submitted_pencacah": 1268,
           "total_submitted_respondent": 2,
-          "today_completed": 0,
+          "today_completed": 8,
           "yesterday_completed": 10,
           "two_days_ago_completed": 10,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "SUBMITTED BY Pencacah": 8
+          },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 6,
             "SUBMITTED BY Pencacah": 4
@@ -11483,30 +11531,39 @@ window.IPAS_DATA = {
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
           "new_usaha_overall": 4,
-          "new_rumah_today": 0,
+          "new_rumah_today": 1,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 50,
-          "new_businesses": [],
+          "new_businesses": [
+            {
+              "name": "HIDAYAT / NURLIANA",
+              "code": "7271030001001000 - HIDAYAT / NURLIANA - 87 /  - 0",
+              "date": "today",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "PALU TIMUR",
+              "jenis": "Keluarga"
+            }
+          ],
           "two_days_ago_is_estimate": false,
-          "persentase": 9.1
+          "persentase": 9.13
         },
         {
           "kec_name": "MANTIKULORE",
           "kec_id": "9138f47c-c2c1-4e86-9faa-bec0250ff6b0",
           "total_prelist": 38947,
-          "total_draft": 488,
+          "total_draft": 483,
           "total_open": 35061,
-          "total_submitted": 3398,
+          "total_submitted": 3403,
           "total_rejected": 208,
           "total_approved": 1271,
-          "total_submitted_pencacah": 1918,
+          "total_submitted_pencacah": 1923,
           "total_submitted_respondent": 1,
-          "today_completed": 14,
+          "today_completed": 5,
           "yesterday_completed": 5,
           "two_days_ago_completed": 29,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 6,
-            "APPROVED BY Pengawas": 8
+            "SUBMITTED BY Pencacah": 5
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 5
@@ -11519,32 +11576,14 @@ window.IPAS_DATA = {
           },
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 7,
+          "new_usaha_overall": 6,
           "new_rumah_today": 0,
-          "new_rumah_yesterday": 1,
-          "new_rumah_overall": 84,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 82,
           "new_businesses": [
             {
-              "name": "BANGUNAN KOSONG",
-              "code": "7271031002000402 - BANGUNAN KOSONG - - / ",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "MANTIKULORE",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "BANGUNAN KOSONG",
-              "code": "7271031002000402 - BANGUNAN KOSONG - - / ",
-              "date": "older",
-              "status": "SUBMITTED BY Pencacah",
-              "type": "rumah",
-              "kecName": "MANTIKULORE",
-              "jenis": "Bangunan/Rumah Kosong"
-            },
-            {
-              "name": "IRMA DEVIANTI  / JUNAEDI",
-              "code": "7271031002000402 - HAERUDDIN /  - - / ",
+              "name": "NURJANATUL MA'WA / ",
+              "code": "7271031002000402 - NURJANATUL MA'WA /  - - /  - 0",
               "date": "older",
               "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
@@ -11552,52 +11591,71 @@ window.IPAS_DATA = {
               "jenis": "Keluarga"
             },
             {
-              "name": "STEFANUS UBAS / ELEN TANTJARO",
-              "code": "7271031001001000 - STEFANUS UBAS / ELEN TANTJARO - 8 /  - 0 - 2. Tidak",
+              "name": "SASKYA / ",
+              "code": "7271031006000403 - SASKIYA /  - - /  - 0",
               "date": "older",
-              "status": "APPROVED BY Pengawas",
+              "status": "DRAFT",
               "type": "rumah",
               "kecName": "MANTIKULORE",
-              "jenis": "Keluarga (Bukan Usaha)"
+              "jenis": "Keluarga"
             },
             {
-              "name": "BANGUNAN-RUMAH KOSONG",
-              "code": "7271031001001000 - BANGUNAN-RUMAH KOSONG - 24 /  - 2. Tidak",
-              "date": "yesterday",
-              "status": "APPROVED BY Pengawas",
+              "name": "FITRI / ",
+              "code": "7271031002000402 - KILAMON /  - - /  - 0",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "MANTIKULORE",
-              "jenis": "Bangunan/Rumah Kosong"
+              "jenis": "Keluarga"
             },
             {
-              "name": "ISDAR / LIKA SARKIA",
-              "code": "7271031006002900 - ISDAR / LIKA SARKIA - 39 /  - 0",
+              "name": "AISYAH RAMADHANI  / ",
+              "code": "7271031006000403 - AISYAH RAMADHANI  /  - 7 /  - 0",
               "date": "older",
-              "status": "APPROVED BY Pengawas",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "MANTIKULORE",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "INTAN FAHDIANA A. DIASAMO / ",
+              "code": "7271031006000403 - INTAN FAHDIANA A. DIASAMO /  - 6 /  - 0",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
+              "type": "rumah",
+              "kecName": "MANTIKULORE",
+              "jenis": "Keluarga"
+            },
+            {
+              "name": "AULIA / ",
+              "code": "7271031006000403 - AULIA /  - 5 / ",
+              "date": "older",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "MANTIKULORE",
               "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 8.72
+          "persentase": 8.74
         },
         {
           "kec_name": "PALU UTARA",
           "kec_id": "aba62c3a-4e6b-4b9a-b494-e94666473193",
           "total_prelist": 10030,
-          "total_draft": 395,
+          "total_draft": 394,
           "total_open": 8807,
-          "total_submitted": 828,
+          "total_submitted": 829,
           "total_rejected": 59,
-          "total_approved": 550,
+          "total_approved": 551,
           "total_submitted_pencacah": 218,
           "total_submitted_respondent": 1,
           "today_completed": 2,
           "yesterday_completed": 2,
           "two_days_ago_completed": 4,
           "today_completed_breakdown": {
-            "SUBMITTED BY Pencacah": 2
+            "APPROVED BY Pengawas": 1,
+            "SUBMITTED BY Pencacah": 1
           },
           "yesterday_completed_breakdown": {
             "SUBMITTED BY Pencacah": 2
@@ -11613,24 +11671,24 @@ window.IPAS_DATA = {
           "new_rumah_overall": 5,
           "new_businesses": [],
           "two_days_ago_is_estimate": false,
-          "persentase": 8.26
+          "persentase": 8.27
         },
         {
           "kec_name": "TAWAELI",
           "kec_id": "fbe9ae12-e179-4253-9350-99782221afa6",
           "total_prelist": 9254,
-          "total_draft": 234,
-          "total_open": 8211,
-          "total_submitted": 809,
+          "total_draft": 231,
+          "total_open": 8207,
+          "total_submitted": 816,
           "total_rejected": 55,
           "total_approved": 402,
-          "total_submitted_pencacah": 351,
+          "total_submitted_pencacah": 358,
           "total_submitted_respondent": 1,
-          "today_completed": 1,
+          "today_completed": 7,
           "yesterday_completed": 6,
           "two_days_ago_completed": 17,
           "today_completed_breakdown": {
-            "REJECTED BY Pengawas": 1
+            "SUBMITTED BY Pencacah": 7
           },
           "yesterday_completed_breakdown": {
             "APPROVED BY Pengawas": 6
@@ -11645,20 +11703,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 10,
+          "new_rumah_overall": 9,
           "new_businesses": [
             {
-              "name": "SUHARTO / ASNELLY",
-              "code": "7271041003001101 -  /  - - /  - 0",
+              "name": "MOH. YUSUF / DARLINA",
+              "code": "7271041003000600 - MOH. YUSUF / DARLINA - 17 / ",
               "date": "older",
-              "status": "REJECTED BY Pengawas",
+              "status": "SUBMITTED BY Pencacah",
               "type": "rumah",
               "kecName": "TAWAELI",
               "jenis": "Keluarga"
             }
           ],
           "two_days_ago_is_estimate": false,
-          "persentase": 8.74
+          "persentase": 8.82
         }
       ]
     }
@@ -16912,19 +16970,252 @@ window.IPAS_DATA = {
     }
   ],
   "se_umum_sls_status": {
-    "72010620020001": {
+    "72010410070002": {
+      "target": {
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72010400100008": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72010610010002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 7
+      }
+    },
+    "72010400090002": {
       "target": {
         "APPROVED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 1,
-        "DRAFT": 1,
         "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72010500060004": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72010620040002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72010510010003": {
+      "target": {
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 9,
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 5
+      }
+    },
+    "72010400140013": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 6
+      }
+    },
+    "72010700150003": {
+      "target": {
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 3,
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1,
+        "DRAFT": 1
+      }
+    },
+    "72010620020002": {
+      "target": {
+        "APPROVED BY Pengawas": 2,
+        "REVOKED BY Pengawas": 1,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72010600030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72010300130003": {
+      "target": {
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72010410050002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6,
+        "DRAFT": 9
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 4
+      }
+    },
+    "72010600030004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72010700090001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {}
+    },
+    "72010420030011": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 5
+      }
+    },
+    "72010600120006": {
+      "target": {
+        "DRAFT": 4
+      },
+      "nontarget": {}
+    },
+    "72010300120008": {
+      "target": {
+        "REJECTED BY Pengawas": 3,
+        "DRAFT": 2,
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 3,
+        "APPROVED BY Pengawas": 2,
+        "DRAFT": 1
+      }
+    },
+    "72010700080003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 7,
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72010310050022": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72010710050002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "REJECTED BY Pengawas": 4,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72010500030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72010620020001": {
+      "target": {
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 3,
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72010510100004": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72010710090002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 9,
+        "DRAFT": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 2
+      }
+    },
+    "72010310020002": {
+      "target": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72010510060007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72010400090003": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72010510090001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
     "72010500120003": {
       "target": {
-        "REJECTED BY Pengawas": 1,
         "APPROVED BY Pengawas": 3,
+        "REJECTED BY Pengawas": 1,
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
@@ -16935,14 +17226,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72010400140013": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 4
-      }
-    },
     "72010300130002": {
       "target": {
         "REJECTED BY Pengawas": 1,
@@ -16950,16 +17233,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 3
-      }
-    },
-    "72010710090002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 8,
-        "DRAFT": 4
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3,
-        "DRAFT": 3
       }
     },
     "72010500190001": {
@@ -16988,10 +17261,11 @@ window.IPAS_DATA = {
     "72010300100004": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 4
+        "APPROVED BY Pengawas": 4,
+        "REJECTED BY Pengawas": 1
       }
     },
     "72010510020003": {
@@ -17003,16 +17277,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 2
       }
     },
-    "72010510010003": {
-      "target": {
-        "REJECTED BY Pengawas": 3,
-        "APPROVED BY Pengawas": 5,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 6
-      }
-    },
     "72010600040002": {
       "target": {
         "DRAFT": 1,
@@ -17022,49 +17286,15 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72010500030003": {
-      "target": {
-        "DRAFT": 1,
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72010310020002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 4
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
     "72010300130007": {
       "target": {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
     },
-    "72010700080003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 8,
-        "DRAFT": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72010300130004": {
       "target": {
         "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {}
-    },
-    "72010300130003": {
-      "target": {
-        "APPROVED BY Pengawas": 3
       },
       "nontarget": {}
     },
@@ -17074,28 +17304,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72010500060004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72010300120008": {
-      "target": {
-        "DRAFT": 2,
-        "APPROVED BY Pengawas": 3,
-        "REJECTED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 2,
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 1
       }
     },
     "72010510030003": {
@@ -17108,46 +17316,10 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 11
       }
     },
-    "72010700150003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 2,
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "DRAFT": 1
-      }
-    },
-    "72010410070002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5,
-        "DRAFT": 4
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
     "72010310070001": {
       "target": {
         "DRAFT": 2,
         "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72010400090002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72010600030004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5,
-        "REJECTED BY Pengawas": 1
       },
       "nontarget": {}
     },
@@ -17226,12 +17398,10 @@ window.IPAS_DATA = {
     },
     "72010400100013": {
       "target": {
-        "SUBMITTED BY Pencacah": 3,
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "REVOKED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72010300120006": {
@@ -17341,7 +17511,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 2
+        "REJECTED BY Pengawas": 1
       }
     },
     "72010700100005": {
@@ -17349,16 +17519,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
-    },
-    "72010710050002": {
-      "target": {
-        "REJECTED BY Pengawas": 4,
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2
-      }
     },
     "72010300120001": {
       "target": {
@@ -17370,7 +17530,7 @@ window.IPAS_DATA = {
       "target": {
         "REJECTED BY Pengawas": 3,
         "APPROVED BY Pengawas": 9,
-        "DRAFT": 3,
+        "DRAFT": 2,
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
@@ -17489,7 +17649,7 @@ window.IPAS_DATA = {
     },
     "72010400220002": {
       "target": {
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -17510,16 +17670,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72010410050002": {
-      "target": {
-        "DRAFT": 9,
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3,
-        "DRAFT": 5
-      }
-    },
     "72010300170005": {
       "target": {
         "SUBMITTED BY Pencacah": 3
@@ -17528,16 +17678,10 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72010310050022": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
     "72010500090002": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -17587,12 +17731,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 3
       }
-    },
-    "72010620040002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
     },
     "72010500090001": {
       "target": {
@@ -17652,7 +17790,7 @@ window.IPAS_DATA = {
     "72010420050001": {
       "target": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3,
+        "SUBMITTED BY Pencacah": 2,
         "REJECTED BY Pengawas": 2
       },
       "nontarget": {
@@ -17684,7 +17822,7 @@ window.IPAS_DATA = {
     "72010700180001": {
       "target": {
         "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -17722,7 +17860,8 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "APPROVED BY Pengawas": 2,
-        "DRAFT": 2
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72010310050015": {
@@ -17801,9 +17940,7 @@ window.IPAS_DATA = {
     },
     "72010600010003": {
       "target": {
-        "SUBMITTED BY Pencacah": 7,
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 7
       },
       "nontarget": {}
     },
@@ -17853,12 +17990,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72010700090001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
-    },
     "72010400200012": {
       "target": {
         "APPROVED BY Pengawas": 3,
@@ -17884,7 +18015,7 @@ window.IPAS_DATA = {
     },
     "72010500140002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 5
@@ -17942,7 +18073,7 @@ window.IPAS_DATA = {
     },
     "72010310080003": {
       "target": {
-        "DRAFT": 4
+        "DRAFT": 3
       },
       "nontarget": {}
     },
@@ -17951,14 +18082,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
-    },
-    "72010420030011": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 4
-      }
     },
     "72010410040004": {
       "target": {
@@ -17971,18 +18094,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
-    },
-    "72010510090001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
-    },
-    "72010610010002": {
-      "target": {},
-      "nontarget": {
-        "APPROVED BY Pengawas": 7
-      }
     },
     "72010500092001": {
       "target": {},
@@ -18027,21 +18138,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72010600120006": {
-      "target": {
-        "DRAFT": 3
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72010620020002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
     "72010500070002": {
       "target": {
         "SUBMITTED BY Pencacah": 2
@@ -18068,7 +18164,7 @@ window.IPAS_DATA = {
     },
     "72010500070001": {
       "target": {
-        "SUBMITTED BY Pencacah": 6,
+        "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
@@ -18082,7 +18178,7 @@ window.IPAS_DATA = {
     },
     "72010310050005": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -18107,8 +18203,7 @@ window.IPAS_DATA = {
         "DRAFT": 1
       },
       "nontarget": {
-        "DRAFT": 7,
-        "APPROVED BY Pengawas": 1
+        "DRAFT": 7
       }
     },
     "72010600120007": {
@@ -18120,13 +18215,11 @@ window.IPAS_DATA = {
     "72010400150002": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1,
-        "APPROVED BY Pengawas": 1
+        "DRAFT": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 3,
-        "DRAFT": 4,
-        "APPROVED BY Pengawas": 1
+        "DRAFT": 4
       }
     },
     "72010310050020": {
@@ -18156,21 +18249,368 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72010510040004": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72010610020001": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72010510100004": {
+    "72020530080004": {
       "target": {
         "DRAFT": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020510080003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72020320090001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 2
+      },
+      "nontarget": {}
+    },
+    "72020600190008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72020200130002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 5
+      }
+    },
+    "72020600330002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72020820060001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72020530020004": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020200080004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72020110050006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 10,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 15
+      }
+    },
+    "72020500130006": {
+      "target": {
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 7
+      },
+      "nontarget": {}
+    },
+    "72020800310002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020600430001": {
+      "target": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72020600180002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72020130060001": {
+      "target": {
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 10,
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72020530090003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020110120007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020700100002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020310100001": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72020300220001": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020320010002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72020310170001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {}
+    },
+    "72020130020003": {
+      "target": {
+        "APPROVED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72020540040004": {
+      "target": {
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 4
+      },
+      "nontarget": {}
+    },
+    "72020100230002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72020500230003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020200140003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72020520060005": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020110080009": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72020200150006": {
+      "target": {
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 4
+      },
+      "nontarget": {}
+    },
+    "72020200100002": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020400030001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 7
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72020500130004": {
+      "target": {
+        "APPROVED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72020110140006": {
+      "target": {},
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020510080007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {}
+    },
+    "72020110090004": {
+      "target": {
+        "APPROVED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 2
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 3,
+        "APPROVED BY Pengawas": 3
+      }
+    },
+    "72020100230006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72020110150003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72020310130005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 9
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 6
+      }
+    },
+    "72020530020011": {
+      "target": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 7
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020500130003": {
+      "target": {
+        "APPROVED BY Pengawas": 8,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72020710020001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020100480001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72020540100002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72020510090003": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020130010012": {
+      "target": {
+        "APPROVED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72020310070001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72020200230001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72020610070014": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72020100450007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 2
       },
       "nontarget": {}
     },
@@ -18180,20 +18620,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "REVOKED BY Pengawas": 1
-      }
-    },
-    "72020110120007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72020710020001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
       }
     },
     "72020530040009": {
@@ -18222,56 +18648,11 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72020610070014": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
-    },
-    "72020100450007": {
-      "target": {
-        "DRAFT": 3
-      },
-      "nontarget": {}
-    },
-    "72020700100002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
     "72020510040005": {
       "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
-    },
-    "72020600180002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020200150006": {
-      "target": {
-        "APPROVED BY Pengawas": 4
-      },
-      "nontarget": {}
-    },
-    "72020600430001": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72020100230002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
     },
     "72020320070006": {
       "target": {
@@ -18279,27 +18660,8 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72020200130002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72020510030001": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {}
-    },
-    "72020310170001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
-    },
-    "72020200230001": {
-      "target": {
-        "DRAFT": 1,
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
@@ -18313,15 +18675,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 3
       }
     },
-    "72020530090003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72020300430003": {
       "target": {
         "DRAFT": 3
@@ -18330,15 +18683,9 @@ window.IPAS_DATA = {
         "DRAFT": 2
       }
     },
-    "72020110140006": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72020320010005": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
+        "SUBMITTED BY Pencacah": 1,
         "DRAFT": 1
       },
       "nontarget": {}
@@ -18351,24 +18698,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72020310130005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 9
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 6
-      }
-    },
     "72020540040005": {
       "target": {
         "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {}
-    },
-    "72020500130003": {
-      "target": {
-        "APPROVED BY Pengawas": 4,
-        "REJECTED BY Pengawas": 1
       },
       "nontarget": {}
     },
@@ -18393,14 +18725,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72020100480001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3
-      }
-    },
     "72020100220009": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -18413,36 +18737,12 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72020110050006": {
-      "target": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 9
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 15
-      }
-    },
-    "72020310070001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
-    },
     "72020510020002": {
       "target": {
         "SUBMITTED BY Pencacah": 9
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72020130060001": {
-      "target": {
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 9,
-        "REJECTED BY Pengawas": 1
       }
     },
     "72020100450008": {
@@ -18463,16 +18763,7 @@ window.IPAS_DATA = {
       "target": {
         "APPROVED BY Pengawas": 4,
         "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72020320090001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
       },
       "nontarget": {}
     },
@@ -18485,7 +18776,7 @@ window.IPAS_DATA = {
     "72020820010001": {
       "target": {
         "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "APPROVED BY Pengawas": 5,
@@ -18527,9 +18818,7 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 8,
         "REVOKED BY Pengawas": 2
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72020110060008": {
       "target": {
@@ -18570,7 +18859,7 @@ window.IPAS_DATA = {
     },
     "72020720080003": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -18598,14 +18887,6 @@ window.IPAS_DATA = {
       "target": {
         "DRAFT": 1,
         "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72020400030001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {
         "DRAFT": 1
@@ -18660,10 +18941,10 @@ window.IPAS_DATA = {
     },
     "72020820030001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 11
+        "SUBMITTED BY Pencacah": 9
       }
     },
     "72020610090011": {
@@ -18677,12 +18958,6 @@ window.IPAS_DATA = {
     "72020100230005": {
       "target": {
         "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020530080004": {
-      "target": {
-        "DRAFT": 1
       },
       "nontarget": {}
     },
@@ -18702,12 +18977,6 @@ window.IPAS_DATA = {
     "72020530030002": {
       "target": {
         "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020130010012": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -18752,8 +19021,7 @@ window.IPAS_DATA = {
     },
     "72020610040001": {
       "target": {
-        "SUBMITTED BY Pencacah": 3,
-        "REJECTED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -18764,14 +19032,6 @@ window.IPAS_DATA = {
         "DRAFT": 1
       },
       "nontarget": {}
-    },
-    "72020300220001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72020510120003": {
       "target": {},
@@ -18831,7 +19091,7 @@ window.IPAS_DATA = {
     },
     "72020610090002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -18851,7 +19111,7 @@ window.IPAS_DATA = {
     "72020610120001": {
       "target": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -18876,21 +19136,12 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72020530020011": {
+    "72020710100004": {
       "target": {
-        "SUBMITTED BY Pencacah": 7,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72020710100004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
       }
     },
     "72020610200001": {
@@ -18913,13 +19164,12 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 2
       }
     },
     "72020610030004": {
       "target": {
-        "SUBMITTED BY Pencacah": 9
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -18947,7 +19197,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       }
     },
     "72020520040007": {
@@ -18976,7 +19226,7 @@ window.IPAS_DATA = {
     },
     "72020620070002": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 7
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -18990,7 +19240,7 @@ window.IPAS_DATA = {
     },
     "72020800190001": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -19006,7 +19256,7 @@ window.IPAS_DATA = {
     "72020100380002": {
       "target": {
         "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 2
+        "DRAFT": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -19017,12 +19267,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 3
       }
-    },
-    "72020800310002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
     },
     "72020100230003": {
       "target": {
@@ -19083,8 +19327,7 @@ window.IPAS_DATA = {
     },
     "72020200090003": {
       "target": {
-        "SUBMITTED BY Pencacah": 7,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {}
     },
@@ -19107,7 +19350,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72020720010002": {
@@ -19153,7 +19396,7 @@ window.IPAS_DATA = {
     },
     "72020810040002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3,
+        "SUBMITTED BY Pencacah": 2,
         "DRAFT": 3
       },
       "nontarget": {}
@@ -19164,18 +19407,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72020500230003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72020810030002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -19195,7 +19429,7 @@ window.IPAS_DATA = {
     },
     "72020520060004": {
       "target": {
-        "SUBMITTED BY Pencacah": 10
+        "SUBMITTED BY Pencacah": 7
       },
       "nontarget": {}
     },
@@ -19222,14 +19456,14 @@ window.IPAS_DATA = {
     },
     "72020600290002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3,
+        "SUBMITTED BY Pencacah": 2,
         "DRAFT": 1
       },
       "nontarget": {}
     },
     "72020610050002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -19250,13 +19484,6 @@ window.IPAS_DATA = {
     "72020800130001": {
       "target": {
         "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020200140003": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -19301,18 +19528,12 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72020600330002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
-    },
     "72020130050003": {
       "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 3,
-        "REVOKED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 3
+        "REVOKED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 1
       }
     },
     "72020110130002": {
@@ -19323,16 +19544,16 @@ window.IPAS_DATA = {
     },
     "72020800200007": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72020100220002": {
       "target": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -19351,9 +19572,7 @@ window.IPAS_DATA = {
       }
     },
     "72020710010001": {
-      "target": {
-        "DRAFT": 1
-      },
+      "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
@@ -19378,14 +19597,14 @@ window.IPAS_DATA = {
     },
     "72020800130002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72020610100001": {
       "target": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -19399,17 +19618,14 @@ window.IPAS_DATA = {
     },
     "72020120110003": {
       "target": {
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 3
+        "REJECTED BY Pengawas": 2
       },
       "nontarget": {
         "APPROVED BY Pengawas": 2
       }
     },
     "72020600180001": {
-      "target": {
-        "DRAFT": 1
-      },
+      "target": {},
       "nontarget": {
         "REJECTED BY Pengawas": 1
       }
@@ -19428,7 +19644,7 @@ window.IPAS_DATA = {
     },
     "72020600190004": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -19440,7 +19656,7 @@ window.IPAS_DATA = {
     },
     "72020530100009": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -19464,7 +19680,7 @@ window.IPAS_DATA = {
     },
     "72020610200007": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -19476,147 +19692,79 @@ window.IPAS_DATA = {
     },
     "72020130020001": {
       "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72030200080005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 10,
+        "OPEN": 1
+      },
+      "nontarget": {}
+    },
+    "72030400060001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 12,
+        "DRAFT": 1,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 6,
+        "DRAFT": 3
+      }
+    },
+    "72030410120002": {
+      "target": {
         "SUBMITTED BY Pencacah": 3
       },
-      "nontarget": {}
+      "nontarget": {
+        "DRAFT": 1
+      }
     },
-    "72020520060005": {
+    "72030310040005": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 2
       },
-      "nontarget": {}
-    },
-    "72020100230001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
-    },
-    "72020300460001": {
-      "target": {
+      "nontarget": {
         "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
       }
     },
-    "72020200080004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020300330001": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72020510070007": {
+    "72030420060008": {
       "target": {
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
-    "72020300180006": {
+    "72030200060001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5,
+        "DRAFT": 2,
+        "REJECTED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72030420060006": {
       "target": {
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
-    "72020100240004": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72020320110005": {
+    "72030410080006": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72020530050001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020310050001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020720070002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 1,
+        "REJECTED BY Pengawas": 1,
+        "REVOKED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 4,
+        "DRAFT": 1
       }
-    },
-    "72020710070002": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72020820050001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020300340001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020120010001": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72020300180008": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020320060002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020300180007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020600140001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72020540060002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020600190006": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
     },
     "72030210060015": {
       "target": {
@@ -19624,42 +19772,39 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {
+        "APPROVED BY Pengawas": 16,
         "REJECTED BY Pengawas": 67,
-        "APPROVED BY Pengawas": 10,
         "SUBMITTED BY Pencacah": 10,
         "DRAFT": 3
       }
     },
-    "72030400060001": {
+    "72030400020003": {
       "target": {
-        "SUBMITTED BY Pencacah": 6,
+        "SUBMITTED BY Pencacah": 9,
+        "APPROVED BY Pengawas": 7
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 5
+      }
+    },
+    "72030210080006": {
+      "target": {
+        "OPEN": 1
+      },
+      "nontarget": {
+        "DRAFT": 5,
+        "SUBMITTED BY Pencacah": 6
+      }
+    },
+    "72030420010001": {
+      "target": {
         "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 2,
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 4
+        "APPROVED BY Pengawas": 3
       }
-    },
-    "72030310040005": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {}
-    },
-    "72030300250001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72030200060001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 2,
-        "DRAFT": 2
-      },
-      "nontarget": {}
     },
     "72030400060006": {
       "target": {
@@ -19667,20 +19812,25 @@ window.IPAS_DATA = {
         "DRAFT": 1
       },
       "nontarget": {
+        "APPROVED BY Pengawas": 2,
         "REJECTED BY Pengawas": 1,
         "DRAFT": 12,
-        "SUBMITTED BY Pencacah": 9,
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 8
       }
     },
-    "72030400020003": {
+    "72030300250002": {
       "target": {
-        "SUBMITTED BY Pencacah": 10,
-        "APPROVED BY Pengawas": 7
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3
+        "DRAFT": 1
       }
+    },
+    "72030300250001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
     },
     "72030410070002": {
       "target": {
@@ -19721,19 +19871,6 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72030410080006": {
-      "target": {
-        "REJECTED BY Pengawas": 1,
-        "DRAFT": 1,
-        "REVOKED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 4,
-        "DRAFT": 1
-      }
-    },
     "72030310020001": {
       "target": {
         "DRAFT": 2,
@@ -19771,8 +19908,8 @@ window.IPAS_DATA = {
     "72030310050001": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 10,
-        "DRAFT": 2
+        "SUBMITTED BY Pencacah": 9,
+        "DRAFT": 3
       }
     },
     "72030420090004": {
@@ -19841,16 +19978,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 25
       }
     },
-    "72030420010001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 3,
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 3
-      }
-    },
     "72030420030007": {
       "target": {
         "SUBMITTED BY Pencacah": 2,
@@ -19866,9 +19993,9 @@ window.IPAS_DATA = {
         "DRAFT": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 12,
+        "SUBMITTED BY Pencacah": 11,
         "DRAFT": 2,
-        "REJECTED BY Pengawas": 2
+        "REJECTED BY Pengawas": 1
       }
     },
     "72030200030001": {
@@ -19911,15 +20038,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
-    },
-    "72030410120002": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "DRAFT": 2
-      }
     },
     "72030200300007": {
       "target": {
@@ -19988,7 +20106,7 @@ window.IPAS_DATA = {
     },
     "72030420060001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -20039,10 +20157,10 @@ window.IPAS_DATA = {
     "72030200300006": {
       "target": {
         "APPROVED BY Pengawas": 3,
-        "REJECTED BY Pengawas": 9
+        "REJECTED BY Pengawas": 7
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 13,
+        "APPROVED BY Pengawas": 12,
         "REJECTED BY Pengawas": 2
       }
     },
@@ -20109,11 +20227,11 @@ window.IPAS_DATA = {
     },
     "72030400080001": {
       "target": {
-        "DRAFT": 3
+        "DRAFT": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 5,
-        "DRAFT": 10,
+        "DRAFT": 3,
         "APPROVED BY Pengawas": 1,
         "REJECTED BY Pengawas": 1
       }
@@ -20154,9 +20272,7 @@ window.IPAS_DATA = {
       }
     },
     "72030300140001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
+      "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
@@ -20167,13 +20283,6 @@ window.IPAS_DATA = {
         "DRAFT": 19,
         "SUBMITTED BY Pencacah": 7
       }
-    },
-    "72030420060006": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {}
     },
     "72030410050001": {
       "target": {},
@@ -20213,7 +20322,7 @@ window.IPAS_DATA = {
     "72030420020001": {
       "target": {
         "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -20271,15 +20380,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
-    },
-    "72030210080006": {
-      "target": {
-        "OPEN": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 6,
-        "DRAFT": 5
-      }
     },
     "72030210060006": {
       "target": {
@@ -20445,12 +20545,6 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72030420060008": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {}
-    },
     "72030200140001": {
       "target": {
         "APPROVED BY Pengawas": 1
@@ -20521,22 +20615,14 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72030300250002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
     "72030400090001": {
       "target": {
-        "DRAFT": 2,
+        "DRAFT": 1,
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72030420020008": {
@@ -20579,21 +20665,209 @@ window.IPAS_DATA = {
     },
     "72030420080001": {
       "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72040320010002": {
+      "target": {
+        "APPROVED BY Pengawas": 6
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72040520050014": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72040300050018": {
+      "target": {
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 9
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72040300050008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 3
+      },
+      "nontarget": {}
+    },
+    "72040300040009": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72040720050002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 9
+      },
+      "nontarget": {}
+    },
+    "72040120010008": {
+      "target": {
+        "DRAFT": 4
+      },
+      "nontarget": {}
+    },
+    "72040600090008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72040200060004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72040310070006": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72040400170008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72040120090001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 14
+      }
+    },
+    "72040100130007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72040700070006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72040320010005": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72040100010005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72040100210003": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
+      }
+    },
+    "72040420040006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72040520110008": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72040300300008": {
+      "target": {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
-    "72030210060014": {
-      "target": {},
+    "72040320010001": {
+      "target": {
+        "APPROVED BY Pengawas": 5
+      },
       "nontarget": {
+        "APPROVED BY Pengawas": 7
+      }
+    },
+    "72040600150002": {
+      "target": {
+        "REJECTED BY Pengawas": 2,
+        "SUBMITTED BY Pencacah": 16,
         "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 5
       }
     },
     "72040600030014": {
       "target": {
+        "REJECTED BY Pengawas": 1,
         "APPROVED BY Pengawas": 2
       },
       "nontarget": {}
+    },
+    "72040400190010": {
+      "target": {
+        "APPROVED BY Pengawas": 7
+      },
+      "nontarget": {}
+    },
+    "72040420050005": {
+      "target": {
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72040100130003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72040400200010": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 4
+      }
     },
     "72040720010008": {
       "target": {
@@ -20622,16 +20896,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72040120090001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3,
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 13
-      }
-    },
     "72040430020003": {
       "target": {},
       "nontarget": {
@@ -20648,13 +20912,7 @@ window.IPAS_DATA = {
     "72040300020002": {
       "target": {
         "APPROVED BY Pengawas": 3,
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
-    },
-    "72040300050008": {
-      "target": {
-        "DRAFT": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -20664,45 +20922,15 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72040100130007": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72040520100006": {
       "target": {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
-    "72040600150002": {
-      "target": {
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 17,
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 5
-      }
-    },
     "72040700110007": {
       "target": {
         "SUBMITTED BY Pencacah": 8
-      },
-      "nontarget": {}
-    },
-    "72040400170008": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72040120010008": {
-      "target": {
-        "DRAFT": 3
       },
       "nontarget": {}
     },
@@ -20714,13 +20942,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "APPROVED BY Pengawas": 8
       }
-    },
-    "72040420050005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 3
-      },
-      "nontarget": {}
     },
     "72040100160006": {
       "target": {
@@ -20799,23 +21020,15 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72040520050014": {
-      "target": {
-        "APPROVED BY Pengawas": 4
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
-    },
     "72040420010017": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72040110050003": {
       "target": {
-        "DRAFT": 2,
+        "DRAFT": 1,
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
@@ -20825,8 +21038,8 @@ window.IPAS_DATA = {
     },
     "72040320030010": {
       "target": {
-        "SUBMITTED BY Pencacah": 6,
-        "APPROVED BY Pengawas": 15
+        "SUBMITTED BY Pencacah": 5,
+        "APPROVED BY Pengawas": 12
       },
       "nontarget": {}
     },
@@ -20835,15 +21048,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 22
       },
       "nontarget": {}
-    },
-    "72040100130003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 1
-      }
     },
     "72040520090004": {
       "target": {
@@ -20856,11 +21060,10 @@ window.IPAS_DATA = {
     },
     "72040720050006": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 17,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 17
       }
     },
     "72040110050004": {
@@ -20893,12 +21096,6 @@ window.IPAS_DATA = {
     "72040710050005": {
       "target": {
         "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72040700070006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -20938,11 +21135,10 @@ window.IPAS_DATA = {
     },
     "72040110030013": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 1
       }
     },
     "72040100130009": {
@@ -20970,12 +21166,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "APPROVED BY Pengawas": 3
       }
-    },
-    "72040600090008": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
     },
     "72040400200006": {
       "target": {
@@ -21007,20 +21197,6 @@ window.IPAS_DATA = {
     "72040200090005": {
       "target": {
         "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {}
-    },
-    "72040100010005": {
-      "target": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72040300050018": {
-      "target": {
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 9
       },
       "nontarget": {}
     },
@@ -21140,8 +21316,7 @@ window.IPAS_DATA = {
     },
     "72040100180010": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -21205,12 +21380,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72040400200010": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 4
-      }
-    },
     "72040500050006": {
       "target": {
         "APPROVED BY Pengawas": 1,
@@ -21249,10 +21418,10 @@ window.IPAS_DATA = {
     },
     "72040300300006": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72040500050011": {
@@ -21300,12 +21469,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72040720050002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 8
-      },
-      "nontarget": {}
-    },
     "72040100200003": {
       "target": {
         "OPEN": 1
@@ -21320,7 +21483,7 @@ window.IPAS_DATA = {
     },
     "72040300020003": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -21355,17 +21518,11 @@ window.IPAS_DATA = {
     },
     "72040110050002": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
-    },
-    "72040100210003": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {}
     },
     "72040700090002": {
       "target": {
@@ -21400,18 +21557,18 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72040510010007": {
       "target": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {}
     },
     "72040310060004": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -21419,7 +21576,7 @@ window.IPAS_DATA = {
     },
     "72040430030007": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -21482,7 +21639,7 @@ window.IPAS_DATA = {
     },
     "72040700110003": {
       "target": {
-        "SUBMITTED BY Pencacah": 20
+        "SUBMITTED BY Pencacah": 19
       },
       "nontarget": {}
     },
@@ -21617,8 +21774,8 @@ window.IPAS_DATA = {
     },
     "72040700090008": {
       "target": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 3
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -21630,82 +21787,77 @@ window.IPAS_DATA = {
     },
     "72040500020006": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
+      },
+      "nontarget": {}
     },
     "72040100190003": {
       "target": {
-        "REJECTED BY Pengawas": 5,
-        "APPROVED BY Pengawas": 3
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {}
     },
-    "72040320020009": {
-      "target": {
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {}
-    },
-    "72040100150010": {
-      "target": {
-        "REJECTED BY Pengawas": 4
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
-      }
-    },
-    "72040700110001": {
+    "72051610040003": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {}
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
     },
-    "72040500010006": {
+    "72051400110007": {
       "target": {
-        "REJECTED BY Pengawas": 1
+        "DRAFT": 4,
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72040310080008": {
+    "72051610030005": {
       "target": {
-        "APPROVED BY Pengawas": 1
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72050800260005": {
+      "target": {
+        "APPROVED BY Pengawas": 17,
+        "REJECTED BY Pengawas": 6
       },
       "nontarget": {
+        "APPROVED BY Pengawas": 1,
         "REJECTED BY Pengawas": 1
       }
     },
-    "72040200050004": {
+    "72051310040003": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 4,
+        "REJECTED BY Pengawas": 2
       },
       "nontarget": {}
     },
-    "72040320060007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {}
-    },
-    "72040720012002": {
+    "72051600010013": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 4
       }
     },
-    "72040100190005": {
+    "72051600130003": {
       "target": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 3
       },
-      "nontarget": {}
-    },
-    "72040700060008": {
-      "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72050810030002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72050410050005": {
@@ -21714,8 +21866,62 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1,
         "REJECTED BY Pengawas": 1,
         "APPROVED BY Pengawas": 3
+      }
+    },
+    "72051010030002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72050810070002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {}
+    },
+    "72050410110006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 9,
+        "DRAFT": 4
+      },
+      "nontarget": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 5
+      }
+    },
+    "72050800140006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72050810030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 7
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050410010007": {
+      "target": {},
+      "nontarget": {
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72050820050001": {
+      "target": {
+        "APPROVED BY Pengawas": 6
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 1
       }
     },
     "72050900070002": {
@@ -21730,37 +21936,66 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 9
       }
     },
-    "72051600130003": {
+    "72051310050002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6,
+        "APPROVED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72050800270002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72050910040001": {
       "target": {
         "SUBMITTED BY Pencacah": 3
       },
+      "nontarget": {}
+    },
+    "72050410010008": {
+      "target": {
+        "APPROVED BY Pengawas": 4,
+        "REJECTED BY Pengawas": 3
+      },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "APPROVED BY Pengawas": 26,
+        "REJECTED BY Pengawas": 5
       }
     },
-    "72051610040001": {
+    "72051020020002": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 2
       },
-      "nontarget": {}
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
     },
-    "72051400110007": {
+    "72051300110004": {
       "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 2
+        "APPROVED BY Pengawas": 2,
+        "REJECTED BY Pengawas": 7
       },
-      "nontarget": {}
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
     },
-    "72050810110003": {
+    "72051200020001": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72050810030002": {
+    "72050810140004": {
       "target": {
-        "SUBMITTED BY Pencacah": 3,
-        "REJECTED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 4,
+        "REVOKED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -21768,8 +22003,47 @@ window.IPAS_DATA = {
     },
     "72050800140004": {
       "target": {
-        "APPROVED BY Pengawas": 3,
+        "APPROVED BY Pengawas": 4,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72051610040001": {
+      "target": {
+        "REVOKED BY Pengawas": 3,
+        "REJECTED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72051400100006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72051600050001": {
+      "target": {
+        "REJECTED BY Pengawas": 2,
+        "REVOKED BY Pengawas": 1
+      },
+      "nontarget": {
         "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72050810110001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050810110003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -21778,14 +22052,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
-    },
-    "72050810030003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72050800130009": {
       "target": {
@@ -21799,13 +22065,6 @@ window.IPAS_DATA = {
     "72051400060006": {
       "target": {
         "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72051310040003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4,
-        "REJECTED BY Pengawas": 2
       },
       "nontarget": {}
     },
@@ -21838,18 +22097,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       }
     },
-    "72050410010008": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 3,
-        "REJECTED BY Pengawas": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 5,
-        "APPROVED BY Pengawas": 21,
-        "REJECTED BY Pengawas": 5
-      }
-    },
     "72050800240006": {
       "target": {},
       "nontarget": {
@@ -21859,32 +22106,16 @@ window.IPAS_DATA = {
     },
     "72050800210007": {
       "target": {
-        "SUBMITTED BY Pencacah": 7,
-        "REVOKED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72050410010007": {
-      "target": {},
-      "nontarget": {
-        "APPROVED BY Pengawas": 2
       }
     },
     "72051000010003": {
       "target": {},
       "nontarget": {
         "DRAFT": 1
-      }
-    },
-    "72051300110004": {
-      "target": {
-        "REJECTED BY Pengawas": 6,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
       }
     },
     "72051010010001": {
@@ -21901,12 +22132,6 @@ window.IPAS_DATA = {
         "DRAFT": 1,
         "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72050810070002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -21933,14 +22158,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72050410110006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 8
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 5
-      }
-    },
     "72050410080001": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -21951,14 +22168,6 @@ window.IPAS_DATA = {
       "target": {},
       "nontarget": {
         "APPROVED BY Pengawas": 2
-      }
-    },
-    "72051020020002": {
-      "target": {
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
       }
     },
     "72051400040001": {
@@ -21991,13 +22200,12 @@ window.IPAS_DATA = {
     },
     "72051300120001": {
       "target": {
-        "REJECTED BY Pengawas": 5,
+        "REJECTED BY Pengawas": 4,
         "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72051400110016": {
@@ -22025,15 +22233,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
-    },
-    "72050820050001": {
-      "target": {
-        "APPROVED BY Pengawas": 5
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
-      }
     },
     "72050820070002": {
       "target": {
@@ -22064,7 +22263,7 @@ window.IPAS_DATA = {
     },
     "72050810180001": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "APPROVED BY Pengawas": 3,
@@ -22104,7 +22303,7 @@ window.IPAS_DATA = {
     },
     "72051010020003": {
       "target": {
-        "SUBMITTED BY Pencacah": 10
+        "SUBMITTED BY Pencacah": 9
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 8
@@ -22194,14 +22393,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "APPROVED BY Pengawas": 10
       }
-    },
-    "72051310050002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5,
-        "APPROVED BY Pengawas": 2,
-        "REJECTED BY Pengawas": 2
-      },
-      "nontarget": {}
     },
     "72050900070004": {
       "target": {
@@ -22428,7 +22619,7 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 3,
         "APPROVED BY Pengawas": 7,
-        "DRAFT": 3
+        "DRAFT": 2
       }
     },
     "72051300160003": {
@@ -22441,7 +22632,7 @@ window.IPAS_DATA = {
     },
     "72051000030005": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -22460,13 +22651,11 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 3
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72050810030004": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 7
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
@@ -22488,7 +22677,7 @@ window.IPAS_DATA = {
     "72050800230003": {
       "target": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -22512,7 +22701,7 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 4
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 4
+        "APPROVED BY Pengawas": 3
       }
     },
     "72050910100002": {
@@ -22537,13 +22726,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72050800260005": {
-      "target": {
-        "REJECTED BY Pengawas": 6,
-        "APPROVED BY Pengawas": 15
-      },
-      "nontarget": {}
-    },
     "72051600050004": {
       "target": {
         "SUBMITTED BY Pencacah": 3
@@ -22563,8 +22745,7 @@ window.IPAS_DATA = {
         "DRAFT": 2
       },
       "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
+        "DRAFT": 1
       }
     },
     "72050810010004": {
@@ -22586,9 +22767,7 @@ window.IPAS_DATA = {
       }
     },
     "72050810130002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
+      "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 3
       }
@@ -22611,17 +22790,7 @@ window.IPAS_DATA = {
     },
     "72050910060002": {
       "target": {
-        "SUBMITTED BY Pencacah": 7
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72050810140004": {
-      "target": {
-        "REVOKED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 3,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -22656,8 +22825,8 @@ window.IPAS_DATA = {
     },
     "72051010040001": {
       "target": {
-        "REJECTED BY Pengawas": 7,
-        "APPROVED BY Pengawas": 10
+        "REJECTED BY Pengawas": 6,
+        "APPROVED BY Pengawas": 8
       },
       "nontarget": {
         "REJECTED BY Pengawas": 2
@@ -22695,24 +22864,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72050810110001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72051600050001": {
-      "target": {
-        "REJECTED BY Pengawas": 1,
-        "REVOKED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
     "72050910070001": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -22743,7 +22894,7 @@ window.IPAS_DATA = {
     "72051310060004": {
       "target": {
         "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -22770,7 +22921,7 @@ window.IPAS_DATA = {
     "72051020030001": {
       "target": {
         "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
     },
@@ -22786,12 +22937,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72051600010013": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3
       }
     },
     "72051600050002": {
@@ -22826,21 +22971,13 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 1
       }
     },
     "72051300010002": {
       "target": {
         "APPROVED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 6
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
-      }
-    },
-    "72050800270002": {
-      "target": {
-        "APPROVED BY Pengawas": 1
+        "REJECTED BY Pengawas": 3
       },
       "nontarget": {}
     },
@@ -22850,55 +22987,164 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72051020060003": {
+    "72060600060018": {
       "target": {
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 7
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 3,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72060200070002": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72060300050001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72050800280007": {
+    "72060600110005": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 3,
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 5
       },
       "nontarget": {}
     },
-    "72051600080002": {
+    "72060500030006": {
       "target": {
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 5
+      }
+    },
+    "72060310080009": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2,
         "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72060400160001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72060610040001": {
+      "target": {
+        "DRAFT": 1,
+        "APPROVED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 3
       },
       "nontarget": {}
     },
-    "72051010030002": {
+    "72060310060003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5,
+        "APPROVED BY Pengawas": 9
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72060410090010": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72051200090002": {
+    "72060600130013": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3,
+        "APPROVED BY Pengawas": 5
+      }
+    },
+    "72060410030012": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 2,
+        "REVOKED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72060600100005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {}
+    },
+    "72060410030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72060400140007": {
+      "target": {
+        "REJECTED BY Pengawas": 6
+      },
+      "nontarget": {}
+    },
+    "72060320070005": {
+      "target": {
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72060400140017": {
       "target": {
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
-    "72050810150004": {
+    "72060600110001": {
       "target": {
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
-    "72050810120002": {
+    "72060410030013": {
+      "target": {},
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72060100130003": {
       "target": {
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72051300080003": {
+    "72060320030006": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {}
+      "nontarget": {
+        "APPROVED BY Pengawas": 2,
+        "SUBMITTED BY Pencacah": 1
+      }
     },
     "72060600090009": {
       "target": {
@@ -22907,13 +23153,33 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 4
+        "SUBMITTED BY Pencacah": 2,
+        "REJECTED BY Pengawas": 3
       }
     },
-    "72060400140007": {
+    "72060500030012": {
       "target": {
-        "REJECTED BY Pengawas": 3
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72060310100001": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72060610020007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72060320010007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
     },
@@ -22923,34 +23189,11 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72060500030006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6,
-        "DRAFT": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 5
-      }
-    },
-    "72060500030012": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
-    },
-    "72060300050001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72060200030003": {
       "target": {},
       "nontarget": {
         "DRAFT": 11,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72060600100003": {
@@ -22958,25 +23201,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
         "DRAFT": 1
-      }
-    },
-    "72060310060003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 9
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 2
-      }
-    },
-    "72060310080009": {
-      "target": {
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1
       }
     },
     "72060610010006": {
@@ -23006,12 +23230,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72060400140017": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {}
-    },
     "72060600090008": {
       "target": {
         "APPROVED BY Pengawas": 8,
@@ -23040,16 +23258,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72060600060018": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 7
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72060400160005": {
       "target": {
         "REVOKED BY Pengawas": 7,
@@ -23073,12 +23281,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 6
       }
     },
-    "72060100130003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72060600120001": {
       "target": {
         "APPROVED BY Pengawas": 4
@@ -23092,16 +23294,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 2
       },
       "nontarget": {}
-    },
-    "72060600130013": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5,
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 5
-      }
     },
     "72060300150005": {
       "target": {
@@ -23125,7 +23317,7 @@ window.IPAS_DATA = {
     "72060320040008": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 4,
+        "SUBMITTED BY Pencacah": 2,
         "APPROVED BY Pengawas": 3
       },
       "nontarget": {}
@@ -23156,7 +23348,7 @@ window.IPAS_DATA = {
     },
     "72060300170002": {
       "target": {
-        "SUBMITTED BY Pencacah": 4,
+        "SUBMITTED BY Pencacah": 2,
         "DRAFT": 1,
         "REVOKED BY Pengawas": 5
       },
@@ -23165,12 +23357,6 @@ window.IPAS_DATA = {
         "DRAFT": 1,
         "REVOKED BY Pengawas": 4
       }
-    },
-    "72060410090010": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
     },
     "72060200030007": {
       "target": {
@@ -23205,7 +23391,7 @@ window.IPAS_DATA = {
     },
     "72060400160029": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -23313,7 +23499,7 @@ window.IPAS_DATA = {
     "72060610020010": {
       "target": {
         "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 4
@@ -23328,7 +23514,7 @@ window.IPAS_DATA = {
     "72060600080002": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 11
+        "REJECTED BY Pengawas": 10
       },
       "nontarget": {
         "REJECTED BY Pengawas": 1
@@ -23339,7 +23525,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2,
+        "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 1
       }
     },
@@ -23409,7 +23595,7 @@ window.IPAS_DATA = {
     },
     "72060400160042": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -23446,7 +23632,7 @@ window.IPAS_DATA = {
     },
     "72060310110004": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -23528,12 +23714,11 @@ window.IPAS_DATA = {
     },
     "72060500030003": {
       "target": {
-        "DRAFT": 3,
+        "DRAFT": 2,
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "REVOKED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72060200020010": {
@@ -23544,12 +23729,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 4,
         "APPROVED BY Pengawas": 1
       }
-    },
-    "72060600100005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
     },
     "72060500010009": {
       "target": {
@@ -23568,12 +23747,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 2,
         "DRAFT": 3
-      }
-    },
-    "72060410030013": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
       }
     },
     "72060410050004": {
@@ -23674,8 +23847,8 @@ window.IPAS_DATA = {
     },
     "72060400160048": {
       "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 3
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "DRAFT": 2,
@@ -23751,14 +23924,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
         "DRAFT": 1
-      }
-    },
-    "72060400160001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
       }
     },
     "72060300100004": {
@@ -23889,13 +24054,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72060320010007": {
-      "target": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
     "72060410070006": {
       "target": {},
       "nontarget": {
@@ -23983,16 +24141,15 @@ window.IPAS_DATA = {
     },
     "72060410050005": {
       "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72060500060011": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
+        "SUBMITTED BY Pencacah": 1,
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {
@@ -24013,18 +24170,11 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       }
     },
-    "72060610040001": {
-      "target": {
-        "APPROVED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 3
-      },
-      "nontarget": {}
-    },
     "72060500110006": {
       "target": {
         "DRAFT": 2,
         "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "REJECTED BY Pengawas": 1,
@@ -24040,25 +24190,11 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       }
     },
-    "72060600110001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
-    },
     "72060500050005": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
-    },
-    "72060320030006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72060400170024": {
       "target": {
@@ -24095,20 +24231,13 @@ window.IPAS_DATA = {
     },
     "72060610040003": {
       "target": {
-        "REJECTED BY Pengawas": 6,
+        "REJECTED BY Pengawas": 4,
         "APPROVED BY Pengawas": 2
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 2,
+        "REJECTED BY Pengawas": 1,
         "APPROVED BY Pengawas": 1
       }
-    },
-    "72060600110005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {}
     },
     "72060300120003": {
       "target": {
@@ -24118,36 +24247,26 @@ window.IPAS_DATA = {
     },
     "72060300070001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 6,
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 6
       },
       "nontarget": {}
     },
     "72060400160049": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 6,
-        "REJECTED BY Pengawas": 1,
-        "EDITED BY Pengawas": 1
+        "APPROVED BY Pengawas": 3,
+        "REJECTED BY Pengawas": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 3,
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
+        "REJECTED BY Pengawas": 1
       }
-    },
-    "72060610020007": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
     },
     "72060200020009": {
       "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -24162,13 +24281,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
       }
-    },
-    "72060410030012": {
-      "target": {
-        "REJECTED BY Pengawas": 3,
-        "REVOKED BY Pengawas": 1
-      },
-      "nontarget": {}
     },
     "72060410070021": {
       "target": {
@@ -24188,39 +24300,51 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72060500060001": {
+    "72070500060006": {
       "target": {
-        "DRAFT": 2
+        "APPROVED BY Pengawas": 10
       },
-      "nontarget": {}
-    },
-    "72060100100004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72060600070009": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72060400120001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72060200030012": {
-      "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 1
       }
     },
-    "72060410040005": {
+    "72070400010009": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 3
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72070300080005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 4,
+        "REJECTED BY Pengawas": 4,
+        "APPROVED BY Pengawas": 2,
+        "REVOKED BY Pengawas": 1
+      }
+    },
+    "72070200080001": {
+      "target": {
+        "REJECTED BY Pengawas": 4,
+        "DRAFT": 4,
+        "SUBMITTED BY Pencacah": 12,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 4,
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72070110040010": {
+      "target": {
+        "APPROVED BY Pengawas": 2,
+        "REJECTED BY Pengawas": 2
       },
       "nontarget": {}
     },
@@ -24230,8 +24354,144 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 2,
+        "DRAFT": 2,
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72070200170008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72070200070006": {
+      "target": {
+        "REJECTED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
+      }
+    },
+    "72070400060012": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 4
+      }
+    },
+    "72070300070001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 15,
         "DRAFT": 2
+      },
+      "nontarget": {}
+    },
+    "72070110070002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6,
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 4
+      }
+    },
+    "72070410050002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {}
+    },
+    "72070120050001": {
+      "target": {
+        "REJECTED BY Pengawas": 3,
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72070210060005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72070300080001": {
+      "target": {
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 9
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72070100120007": {
+      "target": {
+        "REJECTED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72070100100006": {
+      "target": {
+        "REJECTED BY Pengawas": 2,
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {}
+    },
+    "72070310080001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {}
+    },
+    "72070110010001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72070100090014": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6,
+        "APPROVED BY Pengawas": 5,
+        "OPEN": 2
+      },
+      "nontarget": {}
+    },
+    "72070110050010": {
+      "target": {
+        "REJECTED BY Pengawas": 4,
+        "REVOKED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 6,
+        "DRAFT": 3
+      },
+      "nontarget": {}
+    },
+    "72070400010006": {
+      "target": {
+        "APPROVED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 3
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 3,
+        "SUBMITTED BY Pencacah": 1,
+        "EDITED BY Pengawas": 1
+      }
+    },
+    "72070410010012": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 6
       }
     },
     "72070300210001": {
@@ -24242,70 +24502,24 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72070400010006": {
-      "target": {
-        "REJECTED BY Pengawas": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 2,
-        "EDITED BY Pengawas": 1
-      }
-    },
-    "72070300070001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 11,
-        "DRAFT": 2
-      },
-      "nontarget": {}
-    },
     "72070110030034": {
       "target": {
         "DRAFT": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 10,
+        "SUBMITTED BY Pencacah": 8,
         "DRAFT": 3
-      }
-    },
-    "72070110050010": {
-      "target": {
-        "REVOKED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 3,
-        "SUBMITTED BY Pencacah": 6,
-        "DRAFT": 3
-      },
-      "nontarget": {}
-    },
-    "72070400060012": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3
       }
     },
     "72070500130003": {
       "target": {
-        "SUBMITTED BY Pencacah": 4,
+        "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 1,
         "REJECTED BY Pengawas": 2
       },
       "nontarget": {
         "REJECTED BY Pengawas": 2,
         "APPROVED BY Pengawas": 3
-      }
-    },
-    "72070200080001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 12,
-        "DRAFT": 3,
-        "REJECTED BY Pengawas": 3,
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 4
       }
     },
     "72070100090002": {
@@ -24326,17 +24540,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 1
       }
     },
-    "72070110070002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5,
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 4
-      }
-    },
     "72070110050004": {
       "target": {
         "SUBMITTED BY Pencacah": 8,
@@ -24344,7 +24547,7 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72070100090001": {
@@ -24362,14 +24565,8 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 1
       }
-    },
-    "72070100100006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {}
     },
     "72070200170001": {
       "target": {
@@ -24385,14 +24582,8 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
-    },
-    "72070410050002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
     },
     "72070310090003": {
       "target": {
@@ -24401,14 +24592,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
-    },
-    "72070100090014": {
-      "target": {
-        "APPROVED BY Pengawas": 5,
-        "SUBMITTED BY Pencacah": 6,
-        "OPEN": 2
-      },
-      "nontarget": {}
     },
     "72070210010001": {
       "target": {},
@@ -24430,12 +24613,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
       }
-    },
-    "72070110010001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
     },
     "72070110040008": {
       "target": {
@@ -24475,14 +24652,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72070210060005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 4
-      }
-    },
     "72070410060003": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -24513,7 +24682,7 @@ window.IPAS_DATA = {
     },
     "72070200170002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3,
+        "SUBMITTED BY Pencacah": 2,
         "DRAFT": 6
       },
       "nontarget": {
@@ -24526,16 +24695,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 8,
-        "DRAFT": 1
-      }
-    },
-    "72070300080001": {
-      "target": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 9
-      },
-      "nontarget": {
+        "SUBMITTED BY Pencacah": 7,
         "DRAFT": 1
       }
     },
@@ -24643,7 +24803,7 @@ window.IPAS_DATA = {
     "72070300210002": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -24674,20 +24834,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72070300080005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 1,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 4,
-        "REJECTED BY Pengawas": 5,
-        "APPROVED BY Pengawas": 3,
-        "REVOKED BY Pengawas": 1
-      }
-    },
     "72070110030013": {
       "target": {
         "SUBMITTED BY Pencacah": 4
@@ -24699,7 +24845,7 @@ window.IPAS_DATA = {
     },
     "72070200180001": {
       "target": {
-        "SUBMITTED BY Pencacah": 10,
+        "SUBMITTED BY Pencacah": 8,
         "DRAFT": 1
       },
       "nontarget": {
@@ -24709,10 +24855,10 @@ window.IPAS_DATA = {
     },
     "72070110030018": {
       "target": {
-        "SUBMITTED BY Pencacah": 12
+        "SUBMITTED BY Pencacah": 10
       },
       "nontarget": {
-        "DRAFT": 2,
+        "DRAFT": 1,
         "SUBMITTED BY Pencacah": 4
       }
     },
@@ -24769,7 +24915,7 @@ window.IPAS_DATA = {
     "72070110020009": {
       "target": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 9
@@ -24805,15 +24951,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
-    },
-    "72070200070006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
-      }
     },
     "72070400010013": {
       "target": {},
@@ -24863,12 +25000,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72070410010012": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 6
-      }
-    },
     "72070100100003": {
       "target": {
         "SUBMITTED BY Pencacah": 2,
@@ -24880,14 +25011,6 @@ window.IPAS_DATA = {
         "DRAFT": 2
       }
     },
-    "72070120050001": {
-      "target": {
-        "REJECTED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
     "72070410080005": {
       "target": {
         "SUBMITTED BY Pencacah": 3
@@ -24898,8 +25021,7 @@ window.IPAS_DATA = {
     },
     "72070110050011": {
       "target": {
-        "DRAFT": 4,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 4
       },
       "nontarget": {
         "DRAFT": 7
@@ -24997,17 +25119,9 @@ window.IPAS_DATA = {
     },
     "72070510060002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
-    },
-    "72070100120007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72070310050005": {
       "target": {},
@@ -25033,11 +25147,9 @@ window.IPAS_DATA = {
       }
     },
     "72070410040007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
+      "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72070120030001": {
@@ -25109,11 +25221,11 @@ window.IPAS_DATA = {
     },
     "72070110030001": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72070100120012": {
@@ -25133,7 +25245,7 @@ window.IPAS_DATA = {
     },
     "72070500070004": {
       "target": {
-        "SUBMITTED BY Pencacah": 6,
+        "SUBMITTED BY Pencacah": 4,
         "DRAFT": 3
       },
       "nontarget": {
@@ -25164,12 +25276,6 @@ window.IPAS_DATA = {
     "72070110050006": {
       "target": {
         "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72070310080001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -25331,13 +25437,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72070200170008": {
-      "target": {
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
-    },
     "72070120060006": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -25397,18 +25496,16 @@ window.IPAS_DATA = {
     },
     "72070310090002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72070400070016": {
       "target": {
         "DRAFT": 10,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72070410020008": {
       "target": {
@@ -25447,7 +25544,7 @@ window.IPAS_DATA = {
     "72070410020009": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72070410030007": {
@@ -25456,41 +25553,533 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72070100110003": {
+    "72080210050005": {
+      "target": {
+        "REJECTED BY Pengawas": 3,
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72080630130001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080110010001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080600270004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72080410050002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 8,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
+      }
+    },
+    "72080110030001": {
+      "target": {
+        "APPROVED BY Pengawas": 10,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72080630110003": {
+      "target": {
+        "APPROVED BY Pengawas": 3,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 3
+      }
+    },
+    "72080500080003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080630030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72080100130001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72080410090001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080610170005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72080320040004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "REJECTED BY Pengawas": 3
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 4,
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72080630090002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080610160001": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080630030002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 7
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080410170003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72080300200001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 10
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72080510040001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080210050001": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72080320080002": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 4
+      }
+    },
+    "72080410140001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 11
+      },
+      "nontarget": {}
+    },
+    "72080420090001": {
+      "target": {
+        "APPROVED BY Pengawas": 11
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2,
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72080200170002": {
+      "target": {
+        "REJECTED BY Pengawas": 45
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 27,
+        "REVOKED BY Pengawas": 1
+      }
+    },
+    "72080240050004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5,
+        "APPROVED BY Pengawas": 3,
+        "REJECTED BY Pengawas": 2
+      },
+      "nontarget": {
+        "DRAFT": 1,
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72080320010002": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72070400070015": {
+    "72080500150003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {}
+    },
+    "72080510140003": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "DRAFT": 2
+      }
+    },
+    "72080300190003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72080640030004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72080400290004": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72080520080003": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72070500060006": {
+    "72080300120002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080110060002": {
+      "target": {
+        "OPEN": 1,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080200130001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72080630030001": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {}
+    },
+    "72080400090003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080520090004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72080610330002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080630080002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080320030007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080640050005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080240030004": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080600060004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72080230100001": {
       "target": {
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
-    "72070100120011": {
+    "72080610010006": {
+      "target": {
+        "DRAFT": 5
+      },
+      "nontarget": {}
+    },
+    "72080510070003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 21
+      },
+      "nontarget": {}
+    },
+    "72080620030002": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080600250001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 13
+      },
+      "nontarget": {}
+    },
+    "72080600061001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72080320060003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72080400300004": {
+      "target": {
+        "APPROVED BY Pengawas": 4
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 4,
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72080610310005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72080240060001": {
+      "target": {
+        "DRAFT": 1,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "DRAFT": 2
+      }
+    },
+    "72080300230002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080600360001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4,
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72080500070004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72080300240003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72080640170002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72080520110001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080500080002": {
       "target": {
         "DRAFT": 1
       },
       "nontarget": {}
     },
-    "72080200170002": {
+    "72080240010003": {
       "target": {
-        "REJECTED BY Pengawas": 16
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 6
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080100180004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "REJECTED BY Pengawas": 2
+      },
+      "nontarget": {}
+    },
+    "72080600310001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 8
+      },
+      "nontarget": {}
+    },
+    "72080300060003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4,
+        "APPROVED BY Pengawas": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 2
       }
     },
     "72080110070001": {
       "target": {
         "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72080630010004": {
+      "target": {
+        "APPROVED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72080500070003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72080120010002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080330040001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080110010004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72080510040007": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080600020005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -25543,13 +26132,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080300240003": {
-      "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
     "72080600320002": {
       "target": {
         "SUBMITTED BY Pencacah": 4
@@ -25568,15 +26150,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080230100001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
-    },
     "72080120020003": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -25588,29 +26164,11 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080110030001": {
-      "target": {
-        "APPROVED BY Pengawas": 4,
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
     "72080110040010": {
       "target": {
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
-    },
-    "72080300200001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 10
-      },
-      "nontarget": {
-        "DRAFT": 1,
-        "APPROVED BY Pengawas": 2
-      }
     },
     "72080520010003": {
       "target": {
@@ -25620,23 +26178,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 5
       }
     },
-    "72080500080003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72080600360001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
-      }
-    },
     "72080640040001": {
       "target": {
         "REVOKED BY Pengawas": 1,
@@ -25644,41 +26185,27 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080500070003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72080330050005": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
     "72080300100001": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72080600260002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72080630090002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72080120070006": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -25704,9 +26231,7 @@ window.IPAS_DATA = {
     "72080240050002": {
       "target": {
         "APPROVED BY Pengawas": 8,
-        "REJECTED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
+        "REJECTED BY Pengawas": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -25714,9 +26239,7 @@ window.IPAS_DATA = {
     },
     "72080300100005": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 7
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "DRAFT": 1,
@@ -25724,28 +26247,9 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       }
     },
-    "72080410050002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4,
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080500070004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
     "72080300110006": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "REJECTED BY Pengawas": 2
@@ -25759,12 +26263,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72080320030007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {}
-    },
     "72080100020004": {
       "target": {
         "REJECTED BY Pengawas": 1
@@ -25774,46 +26272,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 2,
         "REJECTED BY Pengawas": 1
       }
-    },
-    "72080600250001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 10
-      },
-      "nontarget": {}
-    },
-    "72080610010006": {
-      "target": {
-        "DRAFT": 5
-      },
-      "nontarget": {}
-    },
-    "72080610310005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3,
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72080640170002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72080200130001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72080610160001": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
     },
     "72080520010001": {
       "target": {
@@ -25830,51 +26288,11 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72080410090001": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080240060001": {
-      "target": {
-        "DRAFT": 1,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72080630010004": {
-      "target": {
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
     "72080630100002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
-    },
-    "72080300060003": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 4
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 2
-      }
-    },
-    "72080630030002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72080630010001": {
       "target": {
@@ -25885,27 +26303,9 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 3
       }
     },
-    "72080630130001": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 1
-      }
-    },
-    "72080640030004": {
-      "target": {
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
-    },
     "72080400280005": {
       "target": {
-        "APPROVED BY Pengawas": 15,
+        "APPROVED BY Pengawas": 13,
         "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {
@@ -25920,16 +26320,7 @@ window.IPAS_DATA = {
     },
     "72080240010004": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 4
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2
-      }
-    },
-    "72080600310001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 7
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -25979,12 +26370,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080210050005": {
-      "target": {
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {}
-    },
     "72080640030007": {
       "target": {
         "APPROVED BY Pengawas": 15
@@ -26001,12 +26386,6 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72080100130001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72080600320004": {
       "target": {
         "APPROVED BY Pengawas": 13,
@@ -26018,12 +26397,6 @@ window.IPAS_DATA = {
       "target": {
         "REJECTED BY Pengawas": 9,
         "APPROVED BY Pengawas": 4
-      },
-      "nontarget": {}
-    },
-    "72080500150003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -26042,7 +26415,7 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 3,
-        "APPROVED BY Pengawas": 4
+        "APPROVED BY Pengawas": 1
       }
     },
     "72080500140002": {
@@ -26053,8 +26426,7 @@ window.IPAS_DATA = {
     },
     "72080600040002": {
       "target": {
-        "APPROVED BY Pengawas": 3,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {}
     },
@@ -26100,24 +26472,9 @@ window.IPAS_DATA = {
     },
     "72080510070001": {
       "target": {
-        "SUBMITTED BY Pencacah": 10
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
-    },
-    "72080510040001": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080320040004": {
-      "target": {
-        "REJECTED BY Pengawas": 4
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 4,
-        "APPROVED BY Pengawas": 2
-      }
     },
     "72080620020001": {
       "target": {
@@ -26134,7 +26491,7 @@ window.IPAS_DATA = {
     },
     "72080630030004": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -26148,14 +26505,11 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 3
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72080600280001": {
       "target": {
-        "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {}
     },
@@ -26210,9 +26564,7 @@ window.IPAS_DATA = {
       "target": {
         "APPROVED BY Pengawas": 5
       },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
+      "nontarget": {}
     },
     "72080110020001": {
       "target": {
@@ -26237,33 +26589,16 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 1
       }
     },
     "72080100180003": {
       "target": {
-        "REJECTED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1
+        "REJECTED BY Pengawas": 2
       },
       "nontarget": {
         "APPROVED BY Pengawas": 1
       }
-    },
-    "72080100180004": {
-      "target": {
-        "REJECTED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080110010004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
     },
     "72080220060001": {
       "target": {
@@ -26310,12 +26645,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080300190003": {
-      "target": {
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {}
-    },
     "72080300180001": {
       "target": {},
       "nontarget": {
@@ -26324,7 +26653,7 @@ window.IPAS_DATA = {
     },
     "72080200160011": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -26350,7 +26679,7 @@ window.IPAS_DATA = {
     },
     "72080330040002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -26370,17 +26699,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080240010003": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 4
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 1
-      }
-    },
     "72080300220003": {
       "target": {
         "SUBMITTED BY Pencacah": 2
@@ -26398,17 +26716,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72080240050004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6,
-        "APPROVED BY Pengawas": 3,
-        "REJECTED BY Pengawas": 2
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2,
         "SUBMITTED BY Pencacah": 2
       }
     },
@@ -26443,12 +26750,11 @@ window.IPAS_DATA = {
     },
     "72080510020001": {
       "target": {
-        "REJECTED BY Pengawas": 6,
-        "SUBMITTED BY Pencacah": 3
+        "REJECTED BY Pengawas": 5,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
+        "REJECTED BY Pengawas": 1
       }
     },
     "72080300090002": {
@@ -26461,7 +26767,7 @@ window.IPAS_DATA = {
     },
     "72080600340003": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -26477,13 +26783,13 @@ window.IPAS_DATA = {
     },
     "72080310170001": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
     "72080310100004": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -26491,7 +26797,7 @@ window.IPAS_DATA = {
     },
     "72080310110006": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -26561,10 +26867,10 @@ window.IPAS_DATA = {
     },
     "72080220030004": {
       "target": {
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72080600020001": {
@@ -26590,12 +26896,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080320060003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72080210050003": {
       "target": {
         "SUBMITTED BY Pencacah": 2
@@ -26605,9 +26905,9 @@ window.IPAS_DATA = {
     "72080610010004": {
       "target": {
         "APPROVED BY Pengawas": 2,
-        "REJECTED BY Pengawas": 4,
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
+        "REJECTED BY Pengawas": 3,
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -26619,19 +26919,13 @@ window.IPAS_DATA = {
     },
     "72080520020004": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72080520090004": {
-      "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72080640120001": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -26639,7 +26933,7 @@ window.IPAS_DATA = {
     },
     "72080100010005": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -26649,18 +26943,11 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080630030003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
-    },
     "72080500160004": {
       "target": {
         "APPROVED BY Pengawas": 1,
         "REJECTED BY Pengawas": 1,
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 2
+        "DRAFT": 1
       },
       "nontarget": {
         "DRAFT": 1
@@ -26668,7 +26955,7 @@ window.IPAS_DATA = {
     },
     "72080600230004": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -26678,15 +26965,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080510070003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 13
-      },
-      "nontarget": {}
-    },
     "72080400080002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -26704,27 +26985,16 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080510140003": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 7
-      }
-    },
     "72080420070004": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72080610020009": {
       "target": {
         "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 12
+        "DRAFT": 5
       },
       "nontarget": {}
     },
@@ -26736,7 +27006,7 @@ window.IPAS_DATA = {
     },
     "72080320020003": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -26748,191 +27018,207 @@ window.IPAS_DATA = {
     },
     "72080640090003": {
       "target": {
-        "APPROVED BY Pengawas": 11,
-        "REJECTED BY Pengawas": 2
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
-    },
-    "72080500190002": {
-      "target": {
         "APPROVED BY Pengawas": 4
       },
       "nontarget": {}
     },
-    "72080240050001": {
+    "72080500190002": {
       "target": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {}
     },
-    "72080240020001": {
-      "target": {
-        "APPROVED BY Pengawas": 2,
-        "DRAFT": 2
-      },
-      "nontarget": {}
-    },
-    "72080510010001": {
+    "72090700030003": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
-    "72080310010007": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 3
-      }
-    },
-    "72080300080003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080410130001": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72080500140001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080310060005": {
+    "72090300030001": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72080110010001": {
+    "72090400080004": {
       "target": {
-        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72090300140011": {
+      "target": {
+        "SUBMITTED BY Pencacah": 14
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 4
+      }
+    },
+    "72090400010001": {
+      "target": {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72080310060002": {
+    "72090600080001": {
       "target": {
+        "REJECTED BY Pengawas": 4,
         "APPROVED BY Pengawas": 3
       },
+      "nontarget": {
+        "DRAFT": 2,
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72090200180004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 7
+      }
+    },
+    "72090400010005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72090610030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72090500030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6,
+        "DRAFT": 3
+      },
+      "nontarget": {
+        "DRAFT": 2,
+        "APPROVED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72090510050004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72090800110001": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      },
       "nontarget": {}
     },
-    "72080610160003": {
+    "72090400150003": {
       "target": {
+        "SUBMITTED BY Pencacah": 6,
+        "APPROVED BY Pengawas": 1,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 5
+      }
+    },
+    "72090500150002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72090100100001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72090400010002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72090100040004": {
+      "target": {
+        "REJECTED BY Pengawas": 8,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72090200150002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72090200180002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72090510080010": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72090400080008": {
+      "target": {
+        "DRAFT": 4,
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72090500010003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
         "DRAFT": 2
       },
       "nontarget": {}
     },
-    "72080310020004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080510120003": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72080320050002": {
-      "target": {
-        "APPROVED BY Pengawas": 2,
-        "REJECTED BY Pengawas": 9
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 3
-      }
-    },
-    "72080510120009": {
-      "target": {
-        "APPROVED BY Pengawas": 12
-      },
-      "nontarget": {}
-    },
-    "72080610020003": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72080300100004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080410120003": {
+    "72090800090001": {
       "target": {},
       "nontarget": {
-        "APPROVED BY Pengawas": 2
+        "DRAFT": 2
       }
     },
-    "72080600290003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080600300001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080310160001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72080630050001": {
+    "72090700130001": {
       "target": {},
       "nontarget": {
         "DRAFT": 1
       }
     },
-    "72080110070004": {
+    "72090100090001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 6
       },
-      "nontarget": {}
-    },
-    "72080630010006": {
-      "target": {
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72080610180007": {
-      "target": {},
       "nontarget": {
+        "DRAFT": 2,
         "SUBMITTED BY Pencacah": 1
       }
-    },
-    "72080200210003": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080510180002": {
-      "target": {
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {}
     },
     "72090300090006": {
       "target": {
@@ -26940,19 +27226,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "APPROVED BY Pengawas": 1
-      }
-    },
-    "72090100040004": {
-      "target": {
-        "REJECTED BY Pengawas": 7,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72090700030003": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
       }
     },
     "72090300150002": {
@@ -26999,7 +27272,7 @@ window.IPAS_DATA = {
     },
     "72090300150001": {
       "target": {
-        "APPROVED BY Pengawas": 14,
+        "APPROVED BY Pengawas": 13,
         "REJECTED BY Pengawas": 3
       },
       "nontarget": {
@@ -27014,20 +27287,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "REJECTED BY Pengawas": 1
       }
-    },
-    "72090100100001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4,
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72090400080008": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 3
-      },
-      "nontarget": {}
     },
     "72090400110004": {
       "target": {
@@ -27111,24 +27370,11 @@ window.IPAS_DATA = {
     "72090400160003": {
       "target": {
         "REVOKED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {
         "REJECTED BY Pengawas": 1
       }
-    },
-    "72090800090001": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 2
-      }
-    },
-    "72090500010003": {
-      "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
     },
     "72090810060001": {
       "target": {
@@ -27143,29 +27389,6 @@ window.IPAS_DATA = {
         "REVOKED BY Pengawas": 1,
         "REJECTED BY Pengawas": 1,
         "APPROVED BY Pengawas": 7
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72090400150003": {
-      "target": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72090200180004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3
-      }
-    },
-    "72090300140011": {
-      "target": {
-        "SUBMITTED BY Pencacah": 12
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -27226,14 +27449,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72090500150002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72090700090002": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -27287,18 +27502,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 10
       },
       "nontarget": {}
-    },
-    "72090500030003": {
-      "target": {
-        "DRAFT": 4,
-        "SUBMITTED BY Pencacah": 5,
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {
-        "DRAFT": 2,
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72090500010004": {
       "target": {
@@ -27467,7 +27670,7 @@ window.IPAS_DATA = {
     },
     "72090200240005": {
       "target": {
-        "SUBMITTED BY Pencacah": 7
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -27507,7 +27710,7 @@ window.IPAS_DATA = {
     "72090200190004": {
       "target": {
         "APPROVED BY Pengawas": 12,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "APPROVED BY Pengawas": 4
@@ -27533,16 +27736,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72090100090001": {
-      "target": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 8
-      },
-      "nontarget": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
     "72090100050004": {
       "target": {
         "SUBMITTED BY Pencacah": 4
@@ -27565,12 +27758,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
-    },
-    "72090610030003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
     },
     "72090400090002": {
       "target": {
@@ -27644,15 +27831,14 @@ window.IPAS_DATA = {
     "72090500010002": {
       "target": {
         "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
     "72090510050010": {
       "target": {
         "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 3,
-        "REJECTED BY Pengawas": 1
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -27705,11 +27891,9 @@ window.IPAS_DATA = {
     },
     "72090510080007": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
+      },
+      "nontarget": {}
     },
     "72090200220001": {
       "target": {
@@ -27723,7 +27907,7 @@ window.IPAS_DATA = {
     },
     "72090100020006": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -27783,17 +27967,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72090510080010": {
-      "target": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
     "72090300140005": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 5
@@ -27805,7 +27981,7 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72090510060012": {
@@ -27864,13 +28040,9 @@ window.IPAS_DATA = {
       }
     },
     "72090600050004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 9
-      },
+      "target": {},
       "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 1
       }
     },
     "72090400090006": {
@@ -27918,7 +28090,7 @@ window.IPAS_DATA = {
     },
     "72090700020001": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -27928,12 +28100,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       }
     },
-    "72090800110001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72090700012001": {
       "target": {},
       "nontarget": {
@@ -27942,17 +28108,17 @@ window.IPAS_DATA = {
     },
     "72090510080009": {
       "target": {
-        "REJECTED BY Pengawas": 27,
+        "REJECTED BY Pengawas": 25,
         "APPROVED BY Pengawas": 2
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 16
+        "REJECTED BY Pengawas": 15
       }
     },
     "72090500140007": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       }
     },
     "72090400090005": {
@@ -27963,11 +28129,9 @@ window.IPAS_DATA = {
     },
     "72090610020002": {
       "target": {
-        "SUBMITTED BY Pencacah": 10
+        "SUBMITTED BY Pencacah": 9
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72090500150001": {
       "target": {
@@ -27996,18 +28160,9 @@ window.IPAS_DATA = {
     },
     "72090810030001": {
       "target": {
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
-    },
-    "72090600080001": {
-      "target": {
-        "REJECTED BY Pengawas": 4,
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
-      }
     },
     "72090400180005": {
       "target": {
@@ -28062,13 +28217,13 @@ window.IPAS_DATA = {
     "72090510050006": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72090500140001": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -28080,7 +28235,7 @@ window.IPAS_DATA = {
     },
     "72090810040005": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -28090,17 +28245,9 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72090510050004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72090100020001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -28151,7 +28298,7 @@ window.IPAS_DATA = {
     "72090400180001": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72090300130005": {
@@ -28160,50 +28307,236 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72090400060004": {
+    "72101200120009": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {}
-    },
-    "72090600170001": {
-      "target": {
+      "nontarget": {
         "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72101100090002": {
+      "target": {
+        "REJECTED BY Pengawas": 45
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 6
+      }
+    },
+    "72100900050008": {
+      "target": {
+        "REJECTED BY Pengawas": 3
       },
       "nontarget": {}
     },
-    "72090700050006": {
+    "72101300080033": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2,
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72101200140001": {
       "target": {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
-    "72090400170004": {
+    "72100100070002": {
+      "target": {
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 5
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72101500030004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72100700010003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72101200020003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72100800010009": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72100600210003": {
+      "target": {
+        "REJECTED BY Pengawas": 3
+      },
+      "nontarget": {}
+    },
+    "72100200100005": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72101300050004": {
+      "target": {
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72100600150005": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72101000040003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 11
+      },
+      "nontarget": {}
+    },
+    "72101500010003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72101500040008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72100900020006": {
+      "target": {
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {}
+    },
+    "72101000030002": {
       "target": {
         "REJECTED BY Pengawas": 1,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72101210010003": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72101300030015": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72101300040002": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "REVOKED BY Pengawas": 1,
+        "DRAFT": 4
+      }
+    },
+    "72101300050001": {
+      "target": {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
     },
-    "72090600050001": {
+    "72100900120002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72101100090007": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72090400010011": {
-      "target": {},
+    "72101300070009": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72101210020002": {
+      "target": {
+        "APPROVED BY Pengawas": 5
+      },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72090600080002": {
-      "target": {},
+    "72101400040002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72101200130017": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
       "nontarget": {
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 7
       }
     },
-    "72100400050003": {
+    "72101100100005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72100300110002": {
+      "target": {
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72100900080003": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
@@ -28211,7 +28544,16 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72101100100005": {
+    "72100300090003": {
+      "target": {
+        "REJECTED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 9
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72100400050003": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
@@ -28228,14 +28570,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       }
     },
-    "72101500010003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72101100040008": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -28250,19 +28584,9 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72101000030002": {
-      "target": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
     "72100600130014": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
+        "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
@@ -28273,20 +28597,6 @@ window.IPAS_DATA = {
       "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72101000040003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 8
-      },
-      "nontarget": {}
-    },
-    "72101300070009": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 4
       }
     },
     "72101300060003": {
@@ -28311,14 +28621,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 4
-      }
-    },
-    "72100900120002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
       }
     },
     "72101210030001": {
@@ -28366,14 +28668,6 @@ window.IPAS_DATA = {
     "72101100110006": {
       "target": {
         "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72101300030015": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -28432,14 +28726,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 1
       }
     },
-    "72100900080003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72100500010002": {
       "target": {
         "SUBMITTED BY Pencacah": 11
@@ -28473,23 +28759,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 5
       }
     },
-    "72101200130017": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 6
-      }
-    },
-    "72100300090003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 10,
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72100900090004": {
       "target": {
         "APPROVED BY Pengawas": 4
@@ -28507,8 +28776,7 @@ window.IPAS_DATA = {
     "72100800010003": {
       "target": {
         "APPROVED BY Pengawas": 47,
-        "OPEN": 2,
-        "SUBMITTED BY Pencacah": 1
+        "OPEN": 1
       },
       "nontarget": {
         "APPROVED BY Pengawas": 3,
@@ -28533,12 +28801,10 @@ window.IPAS_DATA = {
     "72100900050001": {
       "target": {
         "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 5,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 5
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 1
       }
     },
     "72100800010002": {
@@ -28602,12 +28868,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72100200100005": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
     "72101100110005": {
       "target": {
         "SUBMITTED BY Pencacah": 5
@@ -28620,7 +28880,7 @@ window.IPAS_DATA = {
     "72101100070010": {
       "target": {
         "REJECTED BY Pengawas": 3,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "REJECTED BY Pengawas": 2,
@@ -28652,7 +28912,8 @@ window.IPAS_DATA = {
     "72100600140002": {
       "target": {
         "REJECTED BY Pengawas": 6,
-        "APPROVED BY Pengawas": 9
+        "APPROVED BY Pengawas": 9,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "APPROVED BY Pengawas": 1
@@ -28681,7 +28942,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "DRAFT": 3
+        "DRAFT": 2
       }
     },
     "72101200130007": {
@@ -28693,15 +28954,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 1
       }
     },
-    "72101210010003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2
-      }
-    },
     "72100900050006": {
       "target": {
         "SUBMITTED BY Pencacah": 3
@@ -28710,14 +28962,14 @@ window.IPAS_DATA = {
     },
     "72100900080002": {
       "target": {
-        "DRAFT": 4,
+        "DRAFT": 3,
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72101200120006": {
       "target": {
-        "SUBMITTED BY Pencacah": 26
+        "SUBMITTED BY Pencacah": 24
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 6
@@ -28732,21 +28984,14 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       }
     },
-    "72100100070002": {
-      "target": {
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {}
-    },
     "72101210030007": {
       "target": {
-        "DRAFT": 8,
-        "SUBMITTED BY Pencacah": 4
+        "DRAFT": 4,
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 1,
-        "DRAFT": 1
+        "APPROVED BY Pengawas": 1
       }
     },
     "72101400100007": {
@@ -28871,7 +29116,7 @@ window.IPAS_DATA = {
     "72101300030003": {
       "target": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 7
       },
       "nontarget": {}
     },
@@ -28943,15 +29188,14 @@ window.IPAS_DATA = {
     },
     "72101100100001": {
       "target": {
-        "DRAFT": 3,
+        "DRAFT": 2,
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72101210100006": {
       "target": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {
         "APPROVED BY Pengawas": 1
@@ -28993,12 +29237,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72101210020002": {
-      "target": {
-        "APPROVED BY Pengawas": 5
-      },
-      "nontarget": {}
-    },
     "72100700070002": {
       "target": {
         "SUBMITTED BY Pencacah": 2
@@ -29013,7 +29251,7 @@ window.IPAS_DATA = {
     },
     "72101300010001": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -29034,12 +29272,12 @@ window.IPAS_DATA = {
     },
     "72100600170008": {
       "target": {
-        "REJECTED BY Pengawas": 14,
+        "REJECTED BY Pengawas": 11,
         "DRAFT": 1
       },
       "nontarget": {
         "DRAFT": 2,
-        "REJECTED BY Pengawas": 10
+        "REJECTED BY Pengawas": 7
       }
     },
     "72101300110013": {
@@ -29059,11 +29297,11 @@ window.IPAS_DATA = {
     "72100800011004": {
       "target": {
         "REJECTED BY Pengawas": 9,
-        "APPROVED BY Pengawas": 20
+        "APPROVED BY Pengawas": 19
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 13,
-        "REJECTED BY Pengawas": 2
+        "APPROVED BY Pengawas": 12,
+        "REJECTED BY Pengawas": 1
       }
     },
     "72100700040004": {
@@ -29081,17 +29319,10 @@ window.IPAS_DATA = {
     },
     "72101210090004": {
       "target": {
-        "APPROVED BY Pengawas": 1
+        "APPROVED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
-    },
-    "72101200020003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
     },
     "72101200160001": {
       "target": {
@@ -29128,12 +29359,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72100300110002": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72101210060009": {
       "target": {
         "APPROVED BY Pengawas": 5
@@ -29148,15 +29373,9 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 2
       }
     },
-    "72101100090002": {
-      "target": {
-        "REJECTED BY Pengawas": 23
-      },
-      "nontarget": {}
-    },
     "72101300060007": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -29164,8 +29383,7 @@ window.IPAS_DATA = {
     },
     "72101200160005": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -29191,9 +29409,7 @@ window.IPAS_DATA = {
       "nontarget": {}
     },
     "72100800020006": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
+      "target": {},
       "nontarget": {
         "DRAFT": 1
       }
@@ -29210,14 +29426,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72101300040002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "DRAFT": 4
-      }
-    },
     "72100600030006": {
       "target": {
         "APPROVED BY Pengawas": 1
@@ -29228,22 +29436,18 @@ window.IPAS_DATA = {
     },
     "72100900090003": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72100600160001": {
       "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 2
       },
       "nontarget": {}
     },
     "72101200120014": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
-      },
+      "target": {},
       "nontarget": {
         "DRAFT": 1
       }
@@ -29275,31 +29479,11 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72101400040002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72101200140001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {}
-    },
     "72101300080018": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
-    },
-    "72101300080033": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 4
-      }
     },
     "72100600030011": {
       "target": {
@@ -29313,9 +29497,7 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72101200010002": {
       "target": {
@@ -29372,96 +29554,133 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72101300080002": {
+    "72110400020004": {
       "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72101100090007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 6,
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4,
+        "DRAFT": 2
       }
     },
-    "72101300030014": {
+    "72110500010005": {
       "target": {
-        "DRAFT": 1
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 6,
+        "DRAFT": 6,
+        "SUBMITTED BY Pencacah": 11
       },
-      "nontarget": {}
-    },
-    "72101100050008": {
-      "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 2,
+        "REJECTED BY Pengawas": 2,
+        "DRAFT": 1
       }
     },
-    "72101200090011": {
-      "target": {},
+    "72110400030002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 15
+      },
       "nontarget": {
+        "REJECTED BY Pengawas": 4,
+        "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 3
       }
     },
-    "72101500050005": {
+    "72110600020001": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
-    "72100900020006": {
+    "72110100060001": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72100900030006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72110500040002": {
-      "target": {
-        "REJECTED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 4,
+        "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 1
+        "APPROVED BY Pengawas": 2
       }
     },
-    "72110700120004": {
+    "72110300050003": {
       "target": {
-        "REJECTED BY Pengawas": 9,
-        "APPROVED BY Pengawas": 7,
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 7,
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72110500010001": {
+      "target": {
+        "DRAFT": 5,
+        "APPROVED BY Pengawas": 5,
+        "REJECTED BY Pengawas": 3,
+        "SUBMITTED BY Pencacah": 11
       },
       "nontarget": {}
     },
-    "72110500010005": {
+    "72110100040003": {
       "target": {
-        "DRAFT": 3,
-        "APPROVED BY Pengawas": 2,
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 12
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 5
+      },
+      "nontarget": {}
+    },
+    "72110700120004": {
+      "target": {
+        "REJECTED BY Pengawas": 17,
+        "APPROVED BY Pengawas": 11
+      },
+      "nontarget": {}
+    },
+    "72110700030001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 8,
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 1,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72110100060002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 8
+      },
+      "nontarget": {}
+    },
+    "72110500050001": {
+      "target": {
+        "APPROVED BY Pengawas": 9,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 5
       }
     },
     "72110600030005": {
       "target": {
-        "SUBMITTED BY Pencacah": 13,
+        "SUBMITTED BY Pencacah": 14,
         "REJECTED BY Pengawas": 1,
         "APPROVED BY Pengawas": 5,
         "REVOKED BY Pengawas": 1
       },
       "nontarget": {}
+    },
+    "72110500040002": {
+      "target": {
+        "APPROVED BY Pengawas": 3,
+        "REJECTED BY Pengawas": 2,
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2
+      }
     },
     "72110400050010": {
       "target": {
@@ -29473,17 +29692,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       }
     },
-    "72110400030002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 15
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 4,
-        "APPROVED BY Pengawas": 3
-      }
-    },
     "72110300010002": {
       "target": {
         "SUBMITTED BY Pencacah": 6
@@ -29492,7 +29700,7 @@ window.IPAS_DATA = {
     },
     "72110400020005": {
       "target": {
-        "SUBMITTED BY Pencacah": 7
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -29507,35 +29715,9 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 1
       }
     },
-    "72110700030001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6,
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 1
-      }
-    },
-    "72110500010001": {
-      "target": {
-        "APPROVED BY Pengawas": 5,
-        "DRAFT": 2,
-        "REJECTED BY Pengawas": 3,
-        "SUBMITTED BY Pencacah": 11
-      },
-      "nontarget": {}
-    },
-    "72110100040003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 5
-      },
-      "nontarget": {}
-    },
     "72110700020003": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -29573,7 +29755,7 @@ window.IPAS_DATA = {
         "DRAFT": 4,
         "REJECTED BY Pengawas": 2,
         "APPROVED BY Pengawas": 4,
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -29601,7 +29783,7 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 3,
-        "DRAFT": 4
+        "DRAFT": 3
       }
     },
     "72110400050008": {
@@ -29690,12 +29872,9 @@ window.IPAS_DATA = {
     },
     "72110500030003": {
       "target": {
-        "SUBMITTED BY Pencacah": 4,
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 4
       },
-      "nontarget": {
-        "APPROVED BY Pengawas": 4
-      }
+      "nontarget": {}
     },
     "72110100010001": {
       "target": {
@@ -29754,22 +29933,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 13
       }
     },
-    "72110400020004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 4,
-        "DRAFT": 2
-      }
-    },
-    "72110600020001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
     "72110600030002": {
       "target": {
         "REJECTED BY Pengawas": 5,
@@ -29777,15 +29940,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "REJECTED BY Pengawas": 1
-      }
-    },
-    "72110500050001": {
-      "target": {
-        "APPROVED BY Pengawas": 8,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 5
       }
     },
     "72110100100001": {
@@ -29815,7 +29969,7 @@ window.IPAS_DATA = {
     },
     "72110300040001": {
       "target": {
-        "SUBMITTED BY Pencacah": 6,
+        "SUBMITTED BY Pencacah": 5,
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
@@ -29826,17 +29980,11 @@ window.IPAS_DATA = {
     },
     "72110600060003": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "REJECTED BY Pengawas": 2
       }
-    },
-    "72110100060002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 9
-      },
-      "nontarget": {}
     },
     "72110700060001": {
       "target": {
@@ -29885,14 +30033,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72110100060001": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2
-      }
-    },
     "72110300020001": {
       "target": {
         "DRAFT": 1,
@@ -29908,16 +30048,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 12
       },
       "nontarget": {}
-    },
-    "72110300050003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6,
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72110300060002": {
       "target": {
@@ -29952,7 +30082,7 @@ window.IPAS_DATA = {
     "72110400010001": {
       "target": {
         "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -29978,12 +30108,12 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72110400090001": {
       "target": {
-        "SUBMITTED BY Pencacah": 16
+        "SUBMITTED BY Pencacah": 10
       },
       "nontarget": {}
     },
@@ -30028,7 +30158,7 @@ window.IPAS_DATA = {
     },
     "72110400010002": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -30042,7 +30172,7 @@ window.IPAS_DATA = {
     },
     "72110400030011": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -30064,7 +30194,7 @@ window.IPAS_DATA = {
     },
     "72110400020002": {
       "target": {
-        "SUBMITTED BY Pencacah": 12
+        "SUBMITTED BY Pencacah": 10
       },
       "nontarget": {}
     },
@@ -30074,19 +30204,192 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72110500030001": {
+    "72120200080004": {
       "target": {
-        "APPROVED BY Pengawas": 1
+        "APPROVED BY Pengawas": 7,
+        "SUBMITTED BY Pencacah": 8
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 7,
+        "SUBMITTED BY Pencacah": 2
       }
     },
-    "72110700110002": {
-      "target": {},
+    "72121000060001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
+    },
+    "72120500090001": {
+      "target": {
+        "DRAFT": 7
+      },
+      "nontarget": {
+        "DRAFT": 4,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72120200060003": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72120200060002": {
+      "target": {
+        "APPROVED BY Pengawas": 17,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 12,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72120900200001": {
+      "target": {
+        "APPROVED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72120600020002": {
+      "target": {
+        "REJECTED BY Pengawas": 6,
+        "APPROVED BY Pengawas": 6,
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 3,
+        "REJECTED BY Pengawas": 3
+      }
+    },
+    "72120800040001": {
+      "target": {
+        "REJECTED BY Pengawas": 1,
+        "REVOKED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72120200100004": {
+      "target": {
+        "APPROVED BY Pengawas": 2,
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "DRAFT": 1,
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72120700040001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72120700030006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72121000010001": {
+      "target": {
+        "REJECTED BY Pengawas": 5
+      },
+      "nontarget": {}
+    },
+    "72120200080005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 10,
+        "APPROVED BY Pengawas": 17,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72120500020004": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 3
+      }
+    },
+    "72120700070010": {
+      "target": {
+        "SUBMITTED BY Pencacah": 9,
+        "DRAFT": 55
+      },
+      "nontarget": {}
+    },
+    "72120800050001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72120400100002": {
+      "target": {
+        "REJECTED BY Pengawas": 5
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 5
+      }
+    },
+    "72120800100003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72120500070004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72120200102001": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72121000050003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 8
+      },
+      "nontarget": {}
+    },
+    "72120800010001": {
+      "target": {
+        "REJECTED BY Pengawas": 4,
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 3,
+        "APPROVED BY Pengawas": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72120300091001": {
+      "target": {
+        "APPROVED BY Pengawas": 22
+      },
+      "nontarget": {}
     },
     "72120900230003": {
       "target": {
@@ -30110,22 +30413,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 4
-      }
-    },
-    "72120300091001": {
-      "target": {
-        "APPROVED BY Pengawas": 20
-      },
-      "nontarget": {}
-    },
-    "72120200100004": {
-      "target": {
-        "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "DRAFT": 1,
-        "APPROVED BY Pengawas": 1
       }
     },
     "72120300090004": {
@@ -30158,17 +30445,6 @@ window.IPAS_DATA = {
         "OPEN": 1
       },
       "nontarget": {}
-    },
-    "72120800010001": {
-      "target": {
-        "REJECTED BY Pengawas": 3,
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 4,
-        "APPROVED BY Pengawas": 5
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72120200060001": {
       "target": {
@@ -30256,17 +30532,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 2
       }
     },
-    "72120200080005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 9,
-        "APPROVED BY Pengawas": 17,
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 2
-      }
-    },
     "72120200132001": {
       "target": {
         "APPROVED BY Pengawas": 2
@@ -30307,27 +30572,11 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72121000050003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 8
-      },
-      "nontarget": {}
-    },
     "72120600050004": {
       "target": {
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
-    },
-    "72120200060002": {
-      "target": {
-        "APPROVED BY Pengawas": 11,
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 3,
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72120800080006": {
       "target": {
@@ -30337,12 +30586,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
       }
-    },
-    "72120800050001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
     },
     "72120300020003": {
       "target": {},
@@ -30379,16 +30622,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 2
       }
     },
-    "72120200080004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 10,
-        "APPROVED BY Pengawas": 5
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3,
-        "APPROVED BY Pengawas": 6
-      }
-    },
     "72120500010001": {
       "target": {
         "APPROVED BY Pengawas": 10
@@ -30396,12 +30629,6 @@ window.IPAS_DATA = {
       "nontarget": {}
     },
     "72120800070002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72120900200001": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
@@ -30504,14 +30731,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 2
       }
     },
-    "72120500020004": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "DRAFT": 3
-      }
-    },
     "72120900030002": {
       "target": {
         "SUBMITTED BY Pencacah": 2
@@ -30566,12 +30785,9 @@ window.IPAS_DATA = {
     },
     "72120200010006": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 11
+        "SUBMITTED BY Pencacah": 2
       },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2
-      }
+      "nontarget": {}
     },
     "72120600080006": {
       "target": {
@@ -30639,16 +30855,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 4
       }
     },
-    "72120600020002": {
-      "target": {
-        "REJECTED BY Pengawas": 4,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 1
-      }
-    },
     "72120700010001": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -30672,12 +30878,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72121000010001": {
-      "target": {
-        "REJECTED BY Pengawas": 4
-      },
-      "nontarget": {}
-    },
     "72120500090003": {
       "target": {
         "SUBMITTED BY Pencacah": 4
@@ -30685,20 +30885,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 3,
         "DRAFT": 1
-      }
-    },
-    "72120500070004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {}
-    },
-    "72120800040001": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
       }
     },
     "72120900090011": {
@@ -30733,12 +30919,6 @@ window.IPAS_DATA = {
       }
     },
     "72120400082001": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72120200102001": {
       "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -30801,22 +30981,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72120700070010": {
-      "target": {
-        "SUBMITTED BY Pencacah": 8,
-        "DRAFT": 56
-      },
-      "nontarget": {}
-    },
     "72120900080008": {
       "target": {
         "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {}
-    },
-    "72121000060001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -30852,13 +31019,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72120700030006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
     "72120900160007": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -30878,13 +31038,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
-    },
-    "72120700040001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4,
-        "DRAFT": 1
-      },
-      "nontarget": {}
     },
     "72120100090004": {
       "target": {
@@ -30922,14 +31075,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "APPROVED BY Pengawas": 1,
         "REJECTED BY Pengawas": 1
-      }
-    },
-    "72120800100003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
       }
     },
     "72120300021002": {
@@ -30988,12 +31133,11 @@ window.IPAS_DATA = {
     },
     "72120300020001": {
       "target": {
-        "APPROVED BY Pengawas": 6,
+        "APPROVED BY Pengawas": 2,
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
+        "REJECTED BY Pengawas": 1
       }
     },
     "72120300060004": {
@@ -31034,15 +31178,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 4
-      }
-    },
-    "72120500090001": {
-      "target": {
-        "DRAFT": 6
-      },
-      "nontarget": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 1
       }
     },
     "72120500080004": {
@@ -31094,7 +31229,7 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 2
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 3
+        "APPROVED BY Pengawas": 2
       }
     },
     "72121000020001": {
@@ -31174,13 +31309,13 @@ window.IPAS_DATA = {
     },
     "72121000070004": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
     "72120700010002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -31200,7 +31335,7 @@ window.IPAS_DATA = {
     },
     "72120800030002": {
       "target": {
-        "DRAFT": 2
+        "DRAFT": 1
       },
       "nontarget": {}
     },
@@ -31243,9 +31378,7 @@ window.IPAS_DATA = {
       "nontarget": {}
     },
     "72120200010005": {
-      "target": {
-        "APPROVED BY Pengawas": 4
-      },
+      "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
@@ -31288,91 +31421,12 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72120900030001": {
+    "72710200080030": {
       "target": {
-        "APPROVED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 3
-      }
-    },
-    "72120200030001": {
-      "target": {
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 4
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 3,
-        "REJECTED BY Pengawas": 1
-      }
-    },
-    "72120800090002": {
-      "target": {
-        "REJECTED BY Pengawas": 2
-      },
-      "nontarget": {}
-    },
-    "72120900120010": {
-      "target": {
         "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72121000140002": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3
-      }
-    },
-    "72121000070005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72120700020002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72710110050012": {
-      "target": {},
-      "nontarget": {
-        "APPROVED BY Pengawas": 2
-      }
-    },
-    "72710110030022": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {}
-    },
-    "72710310060003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72710310020004": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 5
-      }
-    },
-    "72710100060009": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72710110050006": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 3
       }
     },
     "72710200050024": {
@@ -31381,9 +31435,108 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 7,
+        "DRAFT": 3
       }
+    },
+    "72710110010025": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72710310020004": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 7
+      }
+    },
+    "72710120010015": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72710300020006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6,
+        "APPROVED BY Pengawas": 5
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 3
+      }
+    },
+    "72710310060004": {
+      "target": {},
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72710110030022": {
+      "target": {
+        "SUBMITTED BY Pencacah": 15
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 4
+      }
+    },
+    "72710300010015": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72710410050001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72710200050002": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72710410040019": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72710400010020": {
+      "target": {
+        "APPROVED BY Pengawas": 6,
+        "REJECTED BY Pengawas": 3,
+        "REVOKED BY Pengawas": 1,
+        "DRAFT": 4,
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "DRAFT": 2
+      }
+    },
+    "72710100080003": {
+      "target": {
+        "APPROVED BY Pengawas": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 7,
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72710400040013": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 1
+      },
+      "nontarget": {}
     },
     "72710200070019": {
       "target": {
@@ -31391,8 +31544,95 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 5
+      }
+    },
+    "72710310060021": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72710300010010": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 5
+      }
+    },
+    "72710110050006": {
+      "target": {
+        "APPROVED BY Pengawas": 6
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 7,
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72710100040012": {
+      "target": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72710200050037": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72710410030006": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72710100040002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72710110050019": {
+      "target": {
+        "APPROVED BY Pengawas": 2,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 11
+      }
+    },
+    "72710200070012": {
+      "target": {},
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72710110050012": {
+      "target": {},
+      "nontarget": {
+        "APPROVED BY Pengawas": 4
+      }
+    },
+    "72710310060003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72710100060009": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72710110040014": {
@@ -31415,15 +31655,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 13
       },
       "nontarget": {}
-    },
-    "72710100040012": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4,
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72710110040012": {
       "target": {
@@ -31498,13 +31729,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       }
     },
-    "72710310060021": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
     "72710310060029": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
@@ -31515,13 +31739,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 7
       }
     },
-    "72710400040013": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
     "72710110010032": {
       "target": {
         "APPROVED BY Pengawas": 10
@@ -31531,10 +31748,10 @@ window.IPAS_DATA = {
     "72710120030023": {
       "target": {
         "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 5,
+        "SUBMITTED BY Pencacah": 3,
         "REJECTED BY Pengawas": 4,
         "APPROVED BY Pengawas": 11,
         "DRAFT": 2
@@ -31556,12 +31773,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 2
       }
     },
-    "72710200050037": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72710310010008": {
       "target": {
         "APPROVED BY Pengawas": 3
@@ -31573,8 +31784,7 @@ window.IPAS_DATA = {
     "72710310020026": {
       "target": {
         "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {
         "APPROVED BY Pengawas": 2
@@ -31607,8 +31817,7 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "APPROVED BY Pengawas": 3,
-        "REJECTED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1
+        "REJECTED BY Pengawas": 2
       }
     },
     "72710120050006": {
@@ -31658,8 +31867,7 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 4
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 10,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 10
       }
     },
     "72710110010021": {
@@ -31697,12 +31905,11 @@ window.IPAS_DATA = {
     "72710310030001": {
       "target": {
         "REJECTED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72710100050003": {
@@ -31767,18 +31974,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 1
       }
     },
-    "72710400010020": {
-      "target": {
-        "REJECTED BY Pengawas": 3,
-        "APPROVED BY Pengawas": 5,
-        "REVOKED BY Pengawas": 1,
-        "DRAFT": 4,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "DRAFT": 2
-      }
-    },
     "72710200040015": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -31811,7 +32006,7 @@ window.IPAS_DATA = {
       "target": {
         "REJECTED BY Pengawas": 10,
         "APPROVED BY Pengawas": 6,
-        "SUBMITTED BY Pencacah": 7
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {
         "APPROVED BY Pengawas": 4,
@@ -31821,13 +32016,11 @@ window.IPAS_DATA = {
     "72710120030017": {
       "target": {
         "SUBMITTED BY Pencacah": 5,
-        "REVOKED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
+        "REVOKED BY Pengawas": 1
       },
       "nontarget": {
         "REJECTED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 2,
-        "REVOKED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72710100070001": {
@@ -31869,8 +32062,7 @@ window.IPAS_DATA = {
     },
     "72710120020007": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 3
@@ -31981,7 +32173,7 @@ window.IPAS_DATA = {
     },
     "72710200090004": {
       "target": {
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
         "APPROVED BY Pengawas": 4,
@@ -32021,8 +32213,7 @@ window.IPAS_DATA = {
     },
     "72710110020004": {
       "target": {
-        "SUBMITTED BY Pencacah": 8,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 8
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -32037,8 +32228,8 @@ window.IPAS_DATA = {
     "72710200050003": {
       "target": {},
       "nontarget": {
-        "APPROVED BY Pengawas": 8,
-        "DRAFT": 3
+        "APPROVED BY Pengawas": 7,
+        "DRAFT": 2
       }
     },
     "72710100040009": {
@@ -32066,19 +32257,9 @@ window.IPAS_DATA = {
     },
     "72710310060005": {
       "target": {
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 2
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72710100040002": {
-      "target": {
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
+      "nontarget": {}
     },
     "72710310060015": {
       "target": {},
@@ -32103,36 +32284,11 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 2
       }
     },
-    "72710100080003": {
-      "target": {
-        "APPROVED BY Pengawas": 4
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 7,
-        "REJECTED BY Pengawas": 1
-      }
-    },
     "72710200080009": {
       "target": {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
-    },
-    "72710300010010": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 5
-      }
-    },
-    "72710300020006": {
-      "target": {
-        "APPROVED BY Pengawas": 5
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 3
-      }
     },
     "72710200040005": {
       "target": {
@@ -32150,21 +32306,13 @@ window.IPAS_DATA = {
     },
     "72710300010013": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
     "72710200040004": {
       "target": {
         "APPROVED BY Pengawas": 6
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
-    },
-    "72710300010015": {
-      "target": {
-        "APPROVED BY Pengawas": 1
       },
       "nontarget": {
         "APPROVED BY Pengawas": 1
@@ -32190,7 +32338,7 @@ window.IPAS_DATA = {
     },
     "72710100040019": {
       "target": {
-        "SUBMITTED BY Pencacah": 14
+        "SUBMITTED BY Pencacah": 13
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 4
@@ -32218,7 +32366,7 @@ window.IPAS_DATA = {
     },
     "72710300010004": {
       "target": {
-        "REJECTED BY Pengawas": 5,
+        "REJECTED BY Pengawas": 3,
         "APPROVED BY Pengawas": 2
       },
       "nontarget": {
@@ -32303,11 +32451,9 @@ window.IPAS_DATA = {
     },
     "72710120010002": {
       "target": {
-        "DRAFT": 6
+        "DRAFT": 3
       },
-      "nontarget": {
-        "DRAFT": 1
-      }
+      "nontarget": {}
     },
     "72710410020004": {
       "target": {
@@ -32335,11 +32481,9 @@ window.IPAS_DATA = {
     },
     "72710110060014": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
+      },
+      "nontarget": {}
     },
     "72710120020019": {
       "target": {
@@ -32352,7 +32496,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72710310030006": {
@@ -32409,29 +32553,22 @@ window.IPAS_DATA = {
       "nontarget": {}
     },
     "72710200080020": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
+      "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72710310030035": {
-      "target": {
-        "REJECTED BY Pengawas": 1
-      },
+      "target": {},
       "nontarget": {
-        "REJECTED BY Pengawas": 5
+        "REJECTED BY Pengawas": 4
       }
     },
     "72710310070012": {
       "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
         "DRAFT": 1
-      }
+      },
+      "nontarget": {}
     },
     "72710410040011": {
       "target": {
@@ -32449,11 +32586,10 @@ window.IPAS_DATA = {
     },
     "72710120020020": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
+        "DRAFT": 1
       }
     },
     "72710310050008": {
@@ -32463,157 +32599,56 @@ window.IPAS_DATA = {
       }
     },
     "72710410050003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 4
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 2
-      }
-    },
-    "72710200070012": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "REJECTED BY Pengawas": 1
       }
     },
-    "72710400090012": {
+    "72070110030014": {
       "target": {
         "APPROVED BY Pengawas": 2
       },
       "nontarget": {}
     },
-    "72710300010001": {
+    "72060300170001": {
       "target": {
-        "APPROVED BY Pengawas": 5
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72710310010016": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72710310030017": {
+    "72100800060002": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72710120010022": {
+    "72020320010001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080330050002": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72100600030010": {
       "target": {},
       "nontarget": {
         "APPROVED BY Pengawas": 1
       }
     },
-    "72710100110020": {
+    "72040120090004": {
       "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "REJECTED BY Pengawas": 1
       },
       "nontarget": {}
     },
-    "72710300050040": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72710400020014": {
+    "72040510030005": {
       "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72710310060028": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
         "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72710400020011": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72710300040015": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72710310070016": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72710120010021": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72040400190010": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72080330040001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080400300004": {
-      "target": {
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {}
-    },
-    "72020510080007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080510040007": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080120010002": {
-      "target": {
-        "OPEN": 1
-      },
-      "nontarget": {}
-    },
-    "72020530020004": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080600020005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080410140001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     }
@@ -37228,10 +37263,10 @@ window.IPAS_DATA = {
       "nontarget": {}
     }
   },
-  "se_umum_prov_total": 1190705,
+  "se_umum_prov_total": 1190782,
   "se_ub_prov_total": 1271,
-  "se_umum_prov_new_total": 582,
+  "se_umum_prov_new_total": 588,
   "se_ub_prov_new_total": 6,
-  "se_umum_prov_new_rumah_total": 3051,
+  "se_umum_prov_new_rumah_total": 3096,
   "se_ub_prov_new_rumah_total": 0
 };

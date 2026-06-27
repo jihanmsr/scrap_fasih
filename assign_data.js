@@ -107,7 +107,7 @@ window.ASSIGN_SLS_DATA_UMUM = [
     ],
     [
         "7201040014001300",
-        220,
+        221,
         0,
         [
             "apriyaninani1234@gmail.com"
@@ -16030,10 +16030,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "8beed75d-2a99-4695-ac7d-b04b66a534e0",
         "username": "apriyaninani1234@gmail.com",
         "fullname": "apriyaninani1234@gmail.com",
-        "target_count": 335,
+        "target_count": 336,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 335,
+        "open_count": 336,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
