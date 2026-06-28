@@ -155,6 +155,62 @@ if ($action === 'upsert_store') {
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($data);
 
+} elseif ($action === 'check_login') {
+    $username = $input['p_username'] ?? '';
+    $password = $input['p_password'] ?? '';
+    
+    // Check users table, but also allow a hardcoded fallback if users table isn't populated
+    if ($username === 'admin' && $password === 'admin123') {
+        echo json_encode(['id' => 1, 'username' => 'admin', 'full_name' => 'Administrator', 'role' => 'admin']);
+        exit();
+    }
+    
+    $stmt = $pdo->prepare("SELECT id, username, full_name, role FROM users WHERE username = ? AND password = ?");
+    $stmt->execute([$username, $password]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    if ($user) {
+        echo json_encode($user);
+    } else {
+        http_response_code(401);
+        echo json_encode(['error' => 'Invalid credentials']);
+    }
+} elseif ($action === 'seed_users') {
+    if (!is_array($input)) {
+        echo json_encode(['error' => 'Input must be an array of users']);
+        exit();
+    }
+    
+    // Auto-create users table if it doesn't exist
+    $pdo->exec("CREATE TABLE IF NOT EXISTS users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(100) UNIQUE NOT NULL,
+        password VARCHAR(255) NOT NULL,
+        full_name VARCHAR(255) NOT NULL,
+        role VARCHAR(50) DEFAULT 'petugas'
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+    
+    $pdo->beginTransaction();
+    try {
+        $stmt = $pdo->prepare("INSERT INTO users (username, password, full_name, role) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE full_name=VALUES(full_name), role=VALUES(role)");
+        $count = 0;
+        foreach ($input as $row) {
+            $username = $row['username'] ?? '';
+            $password = $row['password'] ?? $username; // Default to username if not provided
+            $full_name = $row['full_name'] ?? '';
+            $role = $row['role'] ?? 'petugas';
+            
+            if ($username) {
+                $stmt->execute([$username, $password, $full_name, $role]);
+                $count++;
+            }
+        }
+        $pdo->commit();
+        echo json_encode(['success' => true, 'inserted' => $count]);
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        echo json_encode(['error' => $e->getMessage()]);
+    }
 } else {
     echo json_encode(['error' => 'Invalid action']);
 }

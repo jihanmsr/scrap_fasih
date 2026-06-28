@@ -204,6 +204,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Add rpc method for mock client
+    supabaseClient.rpc = async function(fnName, params) {
+        if (fnName === 'check_login') {
+            try {
+                const response = await fetch(`https://dds-api.bpssulteng.id/api.php?action=check_login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(params)
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    return { data: data, error: null };
+                } else {
+                    return { data: null, error: { message: "Invalid credentials" } };
+                }
+            } catch(e) {
+                return { data: null, error: e };
+            }
+        }
+        return { data: null, error: { message: "Not implemented" } };
+    };
+
     let companies = [];
     let sourceData = [];
     let se_umumData = window.IPAS_DATA ? window.IPAS_DATA.se_umum : [];
