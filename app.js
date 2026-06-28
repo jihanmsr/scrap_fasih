@@ -5,6 +5,23 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('active_assign_subtab', 'se2026');
     }
 
+    // Initialize user map for mapping emails to full names
+    window.userMap = {};
+    fetch('https://dds-api.bpssulteng.id/api.php?action=get_users')
+        .then(res => res.json())
+        .then(data => {
+            if (Array.isArray(data)) {
+                data.forEach(user => {
+                    window.userMap[user.username] = user.full_name;
+                });
+                // Re-render email table if it's already rendered
+                if (typeof window.renderEmailUBTable === 'function') {
+                    window.renderEmailUBTable();
+                }
+            }
+        })
+        .catch(err => console.error('Failed to load user map:', err));
+
     // Helper to get CSS theme colors resolved for Chart.js
     function getThemeColor(varName, fallback) {
         const val = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
@@ -547,12 +564,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     const kabkotName = rawKab || ((comp.code && typeof comp.code === 'string') ? (kabkotMapping[comp.code.substring(0, 4)] || 'Lainnya') : 'Lainnya');
                     const lastLog = comp.history.length ? comp.history[comp.history.length - 1] : { status: '-', timestamp: '-' };
+                    let employeeName = '';
+                    if (window.userMap && window.userMap[(comp.email || '').split('@')[0]]) {
+                        employeeName = `<br><span style="font-size:0.75rem;color:var(--text-secondary);">${window.userMap[(comp.email || '').split('@')[0]]}</span>`;
+                    }
 
                     return `
                         <tr>
                             <td>${highlightText(comp.code, searchQuery)}</td>
                             <td style="font-weight: 700;">${highlightText(comp.company_name, searchQuery)}</td>
-                            <td>${highlightText(comp.email, searchQuery)}</td>
+                            <td>${highlightText(comp.email, searchQuery)}${employeeName}</td>
                             <td><span class="company-status-badge" style="--badge-bg: ${statusStyle.bg}; --badge-color: ${statusStyle.color}; --badge-border: ${statusStyle.border};">${comp.global_status}</span></td>
                             <td><span class="survey-status-badge" style="background-color: ${surveyStyle.bg}; color: ${surveyStyle.color}; border: 1px solid ${surveyStyle.border};">${comp.survey_status}</span></td>
                             <td>${kabkotName === 'Lainnya' ? '-' : kabkotName}</td>
@@ -1817,8 +1838,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td style="font-weight:600;color:var(--text-primary);">
-                        ${officer.username || officer.email || '-'}
-                        <div style="font-size:0.7rem;color:var(--text-muted);">${officer.email || ''}</div>
+                        ${(window.userMap && window.userMap[officer.username || (officer.email || '').split('@')[0]]) || officer.username || officer.email || '-'}
+                        <div style="font-size:0.7rem;color:var(--text-muted);">${officer.email || officer.username || ''}</div>
                     </td>
                     ${hasRoles ? `<td><span style="font-size:0.75rem;padding:0.15rem 0.5rem;border-radius:0.35rem;background:${roleBgColor};color:${roleTextColor};font-weight:700;">${officer.roleName || '-'}</span></td>` : ''}
                     <td style="font-size:0.8rem;color:var(--text-secondary);">${officer.kabLabels || '-'}</td>
@@ -7465,14 +7486,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render tabel anomali (full rewrite)
     function renderAnomaliTable(data) {
         const tbody = document.getElementById('anomali-tbody');
+        const thead = document.getElementById('anomali-thead');
         const emptyEl = document.getElementById('anomali-empty');
         const countTotal = document.getElementById('anomali-count-total');
         const countPending = document.getElementById('anomali-count-pending');
         const countProcess = document.getElementById('anomali-count-process');
         const countDone = document.getElementById('anomali-count-done');
         const showingEl = document.getElementById('anomali-showing');
+        const jenisFilter = document.getElementById('anomali-filter-jenis');
+        const selectedJenis = jenisFilter ? jenisFilter.value : '';
 
-        if (!tbody) return;
+        if (!tbody || !thead) return;
 
         // Summary always from full cache
         const allData = anomaliDataCache;
@@ -7496,6 +7520,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Store for pagination
         anomaliFilteredCache = sorted;
+
+        // Build dynamic thead based on selectedJenis
+        let dynamicColumnsHTML = '';
+        if (selectedJenis && selectedJenis.includes('Missing Value')) {
+            // A3
+            dynamicColumnsHTML = `<th onclick="sortAnomali('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 250px;">Nama Usaha & Catatan <span id="sort-icon-nama_krt"></span></th>`;
+        } else if (selectedJenis && selectedJenis.includes('Biaya Produksi')) {
+            // A5
+            dynamicColumnsHTML = `
+                <th onclick="sortAnomali('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th onclick="sortAnomali('pct_biaya')" style="padding: 0.7rem 0.8rem; text-align: center; cursor: pointer; user-select: none; white-space: nowrap; min-width: 90px;">% Biaya <span id="sort-icon-pct_biaya"></span></th>
+                <th onclick="sortAnomali('biaya_produksi')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 110px;">Biaya Produksi <span id="sort-icon-biaya_produksi"></span></th>
+                <th onclick="sortAnomali('total_pengeluaran')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pengeluaran <span id="sort-icon-total_pengeluaran"></span></th>`;
+        } else if (selectedJenis && selectedJenis.includes('Keuntungan Usaha')) {
+            // A6
+            dynamicColumnsHTML = `
+                <th onclick="sortAnomali('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th onclick="sortAnomali('total_pengeluaran')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pendapatan <span id="sort-icon-total_pengeluaran"></span></th>
+                <th onclick="sortAnomali('biaya_produksi')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pengeluaran <span id="sort-icon-biaya_produksi"></span></th>`;
+        } else {
+            // Generic / Semua
+            dynamicColumnsHTML = `
+                <th onclick="sortAnomali('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th onclick="sortAnomali('pct_biaya')" style="padding: 0.7rem 0.8rem; text-align: center; cursor: pointer; user-select: none; white-space: nowrap; min-width: 90px;">% Biaya <span id="sort-icon-pct_biaya"></span></th>
+                <th onclick="sortAnomali('biaya_produksi')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 110px;">Biaya Produksi <span id="sort-icon-biaya_produksi"></span></th>
+                <th onclick="sortAnomali('total_pengeluaran')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pengeluaran <span id="sort-icon-total_pengeluaran"></span></th>`;
+        }
+
+        thead.innerHTML = `
+            <tr style="background: var(--card-bg); border-bottom: 2px solid var(--card-border);">
+                <th onclick="sortAnomali('no')" style="padding: 0.7rem 0.8rem; text-align: center; width: 42px; cursor: pointer; user-select: none; white-space: nowrap;">No <span id="sort-icon-no"></span></th>
+                <th onclick="sortAnomali('kab_code')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 120px;">Kab/Kota <span id="sort-icon-kab_code"></span></th>
+                <th onclick="sortAnomali('jenis_anomali')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 140px;">Jenis Anomali <span id="sort-icon-jenis_anomali"></span></th>
+                <th onclick="sortAnomali('waktu_anomali')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 120px;">Tanggal <span id="sort-icon-waktu_anomali"></span></th>
+                ${dynamicColumnsHTML}
+                <th onclick="sortAnomali('nama_petugas')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Nama Petugas <span id="sort-icon-nama_petugas"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 180px;">Tindak Lanjut</th>
+                <th onclick="sortAnomali('status_anomali')" style="padding: 0.7rem 0.8rem; text-align: center; cursor: pointer; user-select: none; min-width: 110px;">Status <span id="sort-icon-status_anomali"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: center; min-width: 90px; color: var(--text-secondary); font-size: 0.75rem;">Simpan</th>
+            </tr>
+        `;
 
         // Update sort icons
         ['no', 'kab_code', 'jenis_anomali', 'waktu_anomali', 'nama_krt', 'pct_biaya', 'biaya_produksi', 'total_pengeluaran', 'status_anomali'].forEach(f => {
@@ -7549,6 +7614,63 @@ document.addEventListener('DOMContentLoaded', () => {
             const namaUsaha = row.nama_krt || '<span style="color:var(--text-secondary);font-style:italic;">-</span>';
             const globalIdx = start + idx + 1;
             const savedInfo = row.updated_by ? `<div style="font-size:0.68rem;color:var(--text-secondary);margin-top:0.15rem;">✓ ${row.updated_by}</div>` : '';
+            
+            // Map email/username to real name
+            let namaPetugas = row.nama_petugas || '';
+            if (window.userMap && window.userMap[namaPetugas]) {
+                namaPetugas = window.userMap[namaPetugas];
+            } else if (window.userMap && window.userMap[namaPetugas.split('@')[0]]) {
+                namaPetugas = window.userMap[namaPetugas.split('@')[0]];
+            }
+
+            let dynamicCells = '';
+            if (selectedJenis && selectedJenis.includes('Missing Value')) {
+                dynamicCells = `
+                    <td style="padding:0.6rem 0.8rem;max-width:250px;">
+                        <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
+                        ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
+                        ${row.catatan ? `<div style="font-size:0.74rem;color:#d97706;margin-top:0.25rem;line-height:1.3;font-weight:500;">💡 ${row.catatan}</div>` : ''}
+                        ${savedInfo}
+                    </td>`;
+            } else if (selectedJenis && selectedJenis.includes('Biaya Produksi')) {
+                dynamicCells = `
+                    <td style="padding:0.6rem 0.8rem;max-width:230px;">
+                        <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
+                        ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
+                        ${row.catatan ? `<div style="font-size:0.74rem;color:#d97706;margin-top:0.25rem;line-height:1.3;font-weight:500;">💡 ${row.catatan}</div>` : ''}
+                        ${savedInfo}
+                    </td>
+                    <td style="padding:0.6rem 0.8rem;text-align:center;">
+                        <span style="display:inline-block;padding:0.25rem 0.65rem;background:${pctBg};color:${pctColor};border-radius:99px;font-weight:800;font-size:0.82rem;white-space:nowrap;">${pct}%</span>
+                    </td>
+                    <td style="padding:0.6rem 0.8rem;text-align:right;font-weight:600;font-size:0.82rem;white-space:nowrap;">${fmtRp(row.biaya_produksi)}</td>
+                    <td style="padding:0.6rem 0.8rem;text-align:right;font-size:0.82rem;white-space:nowrap;color:var(--text-secondary);">${fmtRp(row.total_pengeluaran)}</td>`;
+            } else if (selectedJenis && selectedJenis.includes('Keuntungan Usaha')) {
+                // Wait, A6 notes usually store Pendapatan in "total_pengeluaran" because of schema limitations? No, A6 script stored Total Pendapatan in "total_pendapatan" but wait, schema doesn't have total_pendapatan! So in seed_all_anomali.py it just parsed it into catatan. 
+                // Wait, if it's not in DB schema, we just show it empty or 0 if it's missing. Let's just use what's in DB or parse from catatan. We will just leave it empty if we don't have the column in DB.
+                dynamicCells = `
+                    <td style="padding:0.6rem 0.8rem;max-width:230px;">
+                        <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
+                        ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
+                        ${row.catatan ? `<div style="font-size:0.74rem;color:#d97706;margin-top:0.25rem;line-height:1.3;font-weight:500;">💡 ${row.catatan}</div>` : ''}
+                        ${savedInfo}
+                    </td>
+                    <td style="padding:0.6rem 0.8rem;text-align:right;font-weight:600;font-size:0.82rem;white-space:nowrap;">-</td>
+                    <td style="padding:0.6rem 0.8rem;text-align:right;font-size:0.82rem;white-space:nowrap;color:var(--text-secondary);">${fmtRp(row.total_pengeluaran)}</td>`;
+            } else {
+                dynamicCells = `
+                    <td style="padding:0.6rem 0.8rem;max-width:230px;">
+                        <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
+                        ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
+                        ${row.catatan ? `<div style="font-size:0.74rem;color:#d97706;margin-top:0.25rem;line-height:1.3;font-weight:500;">💡 ${row.catatan}</div>` : ''}
+                        ${savedInfo}
+                    </td>
+                    <td style="padding:0.6rem 0.8rem;text-align:center;">
+                        <span style="display:inline-block;padding:0.25rem 0.65rem;background:${pctBg};color:${pctColor};border-radius:99px;font-weight:800;font-size:0.82rem;white-space:nowrap;">${pct}%</span>
+                    </td>
+                    <td style="padding:0.6rem 0.8rem;text-align:right;font-weight:600;font-size:0.82rem;white-space:nowrap;">${fmtRp(row.biaya_produksi)}</td>
+                    <td style="padding:0.6rem 0.8rem;text-align:right;font-size:0.82rem;white-space:nowrap;color:var(--text-secondary);">${fmtRp(row.total_pengeluaran)}</td>`;
+            }
 
             return `<tr id="anomali-row-${row.id}" style="border-bottom: 1px solid var(--card-border); transition: background 0.15s;" onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">
                 <td style="padding:0.6rem 0.8rem;text-align:center;color:var(--text-secondary);font-size:0.78rem;">${globalIdx}</td>
@@ -7557,20 +7679,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span style="font-size:0.78rem;">${jenisIcon} ${(row.jenis_anomali || '-').replace('Biaya Produksi ', '')}</span>
                 </td>
                 <td style="padding:0.6rem 0.8rem;white-space:nowrap;">${fmtDate(row.created_at)}</td>
-                <td style="padding:0.6rem 0.8rem;max-width:230px;">
-                    <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
-                    ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
-                    ${row.catatan ? `<div style="font-size:0.74rem;color:#d97706;margin-top:0.25rem;line-height:1.3;font-weight:500;">💡 ${row.catatan}</div>` : ''}
-                    ${savedInfo}
-                </td>
+                ${dynamicCells}
                 <td style="padding:0.6rem 0.8rem;min-width:130px;">
-                    ${row.nama_petugas ? `<div style="font-size:0.8rem;font-weight:600;color:var(--text-primary);">${row.nama_petugas}</div>` : `<span style="color:var(--text-secondary);font-size:0.78rem;font-style:italic;">-</span>`}
+                    ${namaPetugas ? `<div style="font-size:0.8rem;font-weight:600;color:var(--text-primary);">${namaPetugas}</div><div style="font-size:0.7rem;color:var(--text-secondary);">${row.nama_petugas}</div>` : `<span style="color:var(--text-secondary);font-size:0.78rem;font-style:italic;">-</span>`}
                 </td>
-                <td style="padding:0.6rem 0.8rem;text-align:center;">
-                    <span style="display:inline-block;padding:0.25rem 0.65rem;background:${pctBg};color:${pctColor};border-radius:99px;font-weight:800;font-size:0.82rem;white-space:nowrap;">${pct}%</span>
-                </td>
-                <td style="padding:0.6rem 0.8rem;text-align:right;font-weight:600;font-size:0.82rem;white-space:nowrap;">${fmtRp(row.biaya_produksi)}</td>
-                <td style="padding:0.6rem 0.8rem;text-align:right;font-size:0.82rem;white-space:nowrap;color:var(--text-secondary);">${fmtRp(row.total_pengeluaran)}</td>
                 <td style="padding:0.6rem 0.8rem;">
                     <textarea rows="2"
                         style="width:100%;min-width:160px;padding:0.3rem 0.5rem;border:1px solid var(--card-border);border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.8rem;resize:vertical;line-height:1.4;"

@@ -1931,44 +1931,8 @@
                         <table
                             style="width: 100%; border-collapse: collapse; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.82rem;"
                             id="anomali-table">
-                            <thead>
-                                <tr style="background: var(--card-bg); border-bottom: 2px solid var(--card-border);">
-                                    <th onclick="sortAnomali('no')"
-                                        style="padding: 0.7rem 0.8rem; text-align: center; width: 42px; cursor: pointer; user-select: none; white-space: nowrap;">
-                                        No <span id="sort-icon-no"></span></th>
-                                    <th onclick="sortAnomali('kab_code')"
-                                        style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 120px;">
-                                        Kab/Kota <span id="sort-icon-kab_code"></span></th>
-                                    <th onclick="sortAnomali('jenis_anomali')"
-                                        style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 140px;">
-                                        Jenis Anomali <span id="sort-icon-jenis_anomali"></span></th>
-                                    <th onclick="sortAnomali('waktu_anomali')"
-                                        style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 120px;">
-                                        Tanggal <span id="sort-icon-waktu_anomali"></span></th>
-                                    <th onclick="sortAnomali('nama_krt')"
-                                        style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">
-                                        Nama Usaha <span id="sort-icon-nama_krt"></span></th>
-                                    <th onclick="sortAnomali('nama_petugas')"
-                                        style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">
-                                        Nama Petugas <span id="sort-icon-nama_petugas"></span></th>
-                                    <th onclick="sortAnomali('pct_biaya')"
-                                        style="padding: 0.7rem 0.8rem; text-align: center; cursor: pointer; user-select: none; white-space: nowrap; min-width: 90px;">
-                                        % Biaya <span id="sort-icon-pct_biaya"></span></th>
-                                    <th onclick="sortAnomali('biaya_produksi')"
-                                        style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 110px;">
-                                        Biaya Produksi <span id="sort-icon-biaya_produksi"></span></th>
-                                    <th onclick="sortAnomali('total_pengeluaran')"
-                                        style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">
-                                        Total Pengeluaran <span id="sort-icon-total_pengeluaran"></span></th>
-                                    <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 180px;">Tindak
-                                        Lanjut</th>
-                                    <th onclick="sortAnomali('status_anomali')"
-                                        style="padding: 0.7rem 0.8rem; text-align: center; cursor: pointer; user-select: none; min-width: 110px;">
-                                        Status <span id="sort-icon-status_anomali"></span></th>
-                                    <th
-                                        style="padding: 0.7rem 0.8rem; text-align: center; min-width: 90px; color: var(--text-secondary); font-size: 0.75rem;">
-                                        Simpan</th>
-                                </tr>
+                            <thead id="anomali-thead">
+                                <!-- Generated dynamically by app.js based on anomaly type -->
                             </thead>
                             <tbody id="anomali-tbody">
                             </tbody>

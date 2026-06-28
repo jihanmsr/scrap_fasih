@@ -175,6 +175,11 @@ if ($action === 'upsert_store') {
         http_response_code(401);
         echo json_encode(['error' => 'Invalid credentials']);
     }
+} elseif ($action === 'get_users') {
+    $stmt = $pdo->prepare("SELECT username, full_name, role FROM users");
+    $stmt->execute();
+    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo json_encode($data);
 } elseif ($action === 'seed_users') {
     if (!is_array($input)) {
         echo json_encode(['error' => 'Input must be an array of users']);
