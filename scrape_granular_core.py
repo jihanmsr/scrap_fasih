@@ -836,8 +836,9 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
             tasks_umum = []
             
             kab_dict_to_process = {}
+            kab_filters_list = [x.strip() for x in kab_code_filter.split(',')] if kab_code_filter else []
             for k, v in cfg_umum["kab_region_map"].items():
-                if kab_code_filter and k != kab_code_filter:
+                if kab_filters_list and k not in kab_filters_list:
                     continue
                 kab_dict_to_process[k] = v
             total_desas = 0
@@ -901,14 +902,14 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
             if not survey_type_filter or survey_type_filter == "se_ub":
                 print(f"\\n--- Memulai Scraping {cfg_ub['label'].upper()} ---")
                 
-                kab_dict_ub = {}
+                kab_dict_to_process = {}
                 for k, v in cfg_ub["kab_region_map"].items():
-                    if kab_code_filter and k != kab_code_filter:
+                    if kab_filters_list and k not in kab_filters_list:
                         continue
-                    kab_dict_ub[k] = v
+                    kab_dict_to_process[k] = v
                     
                 total_kecs_ub = 0
-                for kab_code in kab_dict_ub:
+                for kab_code in kab_dict_to_process:
                     kab_data = region_map_full.get("kabupaten", {}).get(kab_code, {})
                     total_kecs_ub += len(kab_data.get("kecamatan", {}))
                     
@@ -1187,7 +1188,7 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
         # Local cache save
         suffix = ""
         if survey_type_filter: suffix += f"_{survey_type_filter}"
-        if kab_code_filter: suffix += f"_{kab_code_filter}"
+        if kab_code_filter: suffix += f"_{kab_code_filter.replace(',', '_')}"
         
         script_dir = os.path.dirname(os.path.abspath(__file__))
         out_filename = os.path.join(script_dir, f"granular_assignments{suffix}.json")

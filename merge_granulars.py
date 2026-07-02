@@ -402,15 +402,17 @@ def merge_granulars():
     js_content += f"window.PETUGAS_DATA_UMUM = {json.dumps(processed_petugas_umum, indent=4, ensure_ascii=False)};\n"
     js_content += f"window.PETUGAS_DATA_UB   = {json.dumps(processed_petugas_ub,   indent=4, ensure_ascii=False)};\n"
     js_content += """
-const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
-if (activeSubtab === 'se2026') {
-    window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM || [];
-    window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM || [];
-    window.PETUGAS_DATA = window.PETUGAS_DATA_UMUM || [];
-} else {
-    window.ASSIGN_DATA = window.ASSIGN_DATA_UB || [];
-    window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UB || [];
-    window.PETUGAS_DATA = window.PETUGAS_DATA_UB || [];
+{
+    const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+    if (activeSubtab === 'se2026') {
+        window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM || [];
+        window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM || [];
+        window.PETUGAS_DATA = window.PETUGAS_DATA_UMUM || [];
+    } else {
+        window.ASSIGN_DATA = window.ASSIGN_DATA_UB || [];
+        window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UB || [];
+        window.PETUGAS_DATA = window.PETUGAS_DATA_UB || [];
+    }
 }
 """
        # Write assign_data.js

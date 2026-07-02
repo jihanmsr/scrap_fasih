@@ -364,7 +364,13 @@ def compress_sls(sls_list):
     return [
         [
             item.get("sls_code", ""),
-            item.get("target_count", 0),
+            item.get("sls_name", "-"),
+            item.get("desa_name", "-"),
+            item.get("kec_name", "-"),
+            item.get("kab_name", "-"),
+            item.get("target_count", 0),  # total
+            item.get("target_count", 0),  # assigned
+            0,                            # unassigned
             item.get("sync_count", 0),
             item.get("officers", [])
         ]
@@ -591,9 +597,67 @@ async def fetch_api_safely(page, url, payload, token, timeout_seconds=120, max_r
                 return {"error": err_str}
             await asyncio.sleep(2)
 
+def reconstruct_daily_stats_in_db(supabase):
+    try:
+        print("[INFO] Memulai sinkronisasi otomatis grafik harian (daily_submission_stats)...")
+        r = supabase.table('dashboard_store').select('key').execute()
+        keys = sorted([x['key'] for x in r.data if x['key'].startswith('ipas_data:') or x['key'] == 'ipas_data'])
+        
+        def clean_kab_name(kab):
+            kab_clean = kab.replace("[", "").replace("]", "").strip()
+            words = [word for word in kab_clean.split() if not (word.isdigit() or (word.startswith("72") and len(word)==4))]
+            return " ".join(words).upper()
+            
+        date_data = {}
+        for key in keys:
+            if key == 'ipas_data':
+                date_str = datetime.datetime.now().strftime("%Y-%m-%d")
+            else:
+                date_str = key.split(':')[1]
+            res = supabase.table('dashboard_store').select('value').eq('key', key).execute()
+            if not res.data:
+                continue
+            val = res.data[0]['value']
+            if isinstance(val, str):
+                try: val = json.loads(val)
+                except: continue
+            date_data[date_str] = {"se_umum": {}, "se_ub": {}}
+            for survey_type in ["se_umum", "se_ub"]:
+                items = val.get(survey_type, [])
+                for item in items:
+                    kab = clean_kab_name(item.get("kabupaten", ""))
+                    submitted = item.get("total_submitted", 0)
+                    date_data[date_str][survey_type][kab] = submitted
+                    
+        sorted_dates = sorted(date_data.keys())
+        daily_stats = []
+        for i, date_str in enumerate(sorted_dates):
+            if i == 0:
+                for survey_type in ["se_umum", "se_ub"]:
+                    for kab, submitted in date_data[date_str][survey_type].items():
+                        daily_stats.append({
+                            "date": date_str, "count": submitted, "kab_name": kab, "survey_type": survey_type
+                        })
+            else:
+                prev_date_str = sorted_dates[i - 1]
+                for survey_type in ["se_umum", "se_ub"]:
+                    for kab, submitted in date_data[date_str][survey_type].items():
+                        prev_submitted = date_data[prev_date_str][survey_type].get(kab, 0)
+                        daily_diff = max(0, submitted - prev_submitted)
+                        daily_stats.append({
+                            "date": date_str, "count": daily_diff, "kab_name": kab, "survey_type": survey_type
+                        })
+                        
+        supabase.table("dashboard_store").delete().eq("key", "daily_submission_stats").execute()
+        supabase.table("dashboard_store").insert({"key": "daily_submission_stats", "value": daily_stats}).execute()
+        print(" ✅ Grafik harian (daily_submission_stats) berhasil disinkronkan!")
+    except Exception as re:
+        print(f"[WARNING] Gagal sinkronisasi grafik harian: {re}")
+
 # =====================================================================
 # PIPELINE UTAMA LAPORAN IPAS (DARI generate_ipas_report.py)
 # =====================================================================
+
 
 async def run_ipas_report_generation(page, xsrf_token):
     print("\n==============================================================")
@@ -1208,9 +1272,9 @@ async def run_ipas_report_generation(page, xsrf_token):
                     except Exception:
                         pass
             
-            if not has_recent_record and len(records_part) > 0:
-                print(f"  [INFO] Berhenti lebih awal karena halaman ini tidak memiliki record dari H-2 s/d Hari ini.")
-                break
+            # if not has_recent_record and len(records_part) > 0:
+            #     print(f"  [INFO] Berhenti lebih awal karena halaman ini tidak memiliki record dari H-2 s/d Hari ini.")
+            #     break
                 
             start += length
             if start >= res.get("totalHit", 0):
@@ -1292,8 +1356,10 @@ async def run_ipas_report_generation(page, xsrf_token):
                     if t_kec:
                         kec_s["two_days_ago_completed"] = t_kec.get("today_completed", 0)
                         kec_s["two_days_ago_completed_breakdown"] = t_kec.get("today_completed_breakdown", {})
-                        kec_s["two_days_ago_is_estimate"] = False  
-
+        # Force False so we always compute from BPS API instead of relying on frozen/empty snapshots
+        has_yesterday_snapshot = False
+        has_two_days_ago_snapshot = False
+        
         print("Mengolah riwayat tanggal dan mengelompokkan ke Kabupaten & Kecamatan...")
         kab_id_to_name = {k["id"]: k["name"] for k in survey_cfg["kabs"]}
         kab_code_to_name = {f"72{k['code']}": k["name"] for k in survey_cfg["kabs"]}
@@ -1536,6 +1602,11 @@ async def run_ipas_report_generation(page, xsrf_token):
             supabase.table("dashboard_store").delete().eq("key", daily_key).execute()
             supabase.table("dashboard_store").insert({"key": daily_key, "value": final_js_obj}).execute()
             print(f" ✅ Berhasil mengunggah data IPAS harian ({daily_key}) ke Supabase.")
+            
+            # Otomatis sinkronisasi tanggal asli inkremental
+            print("[INFO] Menjalankan sinkronisasi tanggal harian asli secara inkremental...")
+            import subprocess
+            subprocess.run(["python3", "scratch/sync_real_dates_incremental.py"])
         except Exception as e:
             print(f"[ERROR] Gagal mengunggah data IPAS ke Supabase: {e}")
 
@@ -1582,6 +1653,21 @@ async def check_session_valid(page, token):
 
 async def main():
     start_time = time.time()
+    SE_UMUM_BENCHMARK_TARGETS = {
+        "[01] BANGGAI KEPULAUAN": 45576,
+        "[02] BANGGAI": 144337,
+        "[03] MOROWALI": 50780,
+        "[04] POSO": 108963,
+        "[05] DONGGALA": 109532,
+        "[06] TOLI-TOLI": 79955,
+        "[07] BUOL": 59393,
+        "[08] PARIGI MOUTONG": 174474,
+        "[09] TOJO UNA-UNA": 60607,
+        "[10] SIGI": 108247,
+        "[11] BANGGAI LAUT": 28572,
+        "[12] MOROWALI UTARA": 43731,
+        "[71] PALU": 172294
+    }
     print("==============================================================")
     print("  MEMULAI SCRAPE PROGRES CEPAT (scrape_fast_progress.py)")
     print("==============================================================")
@@ -1699,6 +1785,20 @@ async def main():
         sls_breakdowns_umum = {}
         petugas_data_umum = {}
         assign_data_umum_map = {}
+        for k_code, k_name in KAB_NAMES.items():
+            total_bench = 0
+            for bench_name, val in SE_UMUM_BENCHMARK_TARGETS.items():
+                if k_name in bench_name or bench_name in k_name:
+                    total_bench = val
+                    break
+            assign_data_umum_map[k_code] = {
+                "kode_kab": k_code,
+                "nama_kab": k_name,
+                "total": total_bench,
+                "assigned": 0,
+                "have_not_assigned": total_bench,
+                "timestamp": datetime.datetime.now().isoformat()
+            }
 
         for row in raw_responsibility_umum:
             sls_code = row.get("region5Id")
@@ -1747,43 +1847,25 @@ async def main():
                 pet_info["approved_count"] += cats["approved"]
                 pet_info["rejected_count"] += cats["rejected"]
 
-            # SLS info
-            sls_info = sls_lookup.get(sls_code)
-            if sls_info:
-                kab_name = sls_info["kab_name"]
-                kec_name = sls_info["kec_name"]
-                
-                key = (kab_name, kec_name)
-                assign_data_umum_map.setdefault(key, {
-                    "kabupaten": kab_name,
-                    "kecamatan": kec_name,
-                    "total_prelist": 0,
-                    "total_draft": 0,
-                    "total_open": 0,
-                    "total_submitted": 0,
-                    "total_rejected": 0,
-                    "total_approved": 0,
-                    "total_submitted_pencacah": 0,
-                    "total_submitted_respondent": 0,
-                    "persentase": 0.0
-                })
-                
-                sum_info = assign_data_umum_map[key]
-                sum_info["total_prelist"] += target_count
-                cats = categorize_status(status_alias, target_count)
-                sum_info["total_draft"] += cats["draft"]
-                sum_info["total_open"] += cats["open"]
-                sum_info["total_submitted_pencacah"] += cats["submitted_pencacah"]
-                sum_info["total_submitted_respondent"] += cats["submitted_respondent"]
-                sum_info["total_submitted"] += cats["submitted"]
-                sum_info["total_rejected"] += cats["rejected"]
-                sum_info["total_approved"] += cats["approved"]
+            # Update Kabupaten aggregate
+            kab_code = sls_code[:4] if len(sls_code) >= 4 else None
+            if kab_code in assign_data_umum_map:
+                assign_data_umum_map[kab_code]["assigned"] += target_count
 
         # Pengelompokan Data SE UB
         sls_targets_ub = {}
         sls_breakdowns_ub = {}
         petugas_data_ub = {}
-        assign_data_ub_map = {}
+        assign_data_ub_map = {
+            "7200": {
+                "kode_kab": "7200",
+                "nama_kab": "SULAWESI TENGAH",
+                "total": 0,
+                "assigned": 0,
+                "have_not_assigned": 0,
+                "timestamp": datetime.datetime.now().isoformat()
+            }
+        }
 
         for row in raw_responsibility_ub:
             sls_code = row.get("region5Id")
@@ -1832,46 +1914,16 @@ async def main():
                 pet_info["approved_count"] += cats["approved"]
                 pet_info["rejected_count"] += cats["rejected"]
 
-            # SLS info
-            sls_info = sls_lookup.get(sls_code)
-            if sls_info:
-                kab_name = sls_info["kab_name"]
-                kec_name = sls_info["kec_name"]
-                
-                key = (kab_name, kec_name)
-                assign_data_ub_map.setdefault(key, {
-                    "kabupaten": kab_name,
-                    "kecamatan": kec_name,
-                    "total_prelist": 0,
-                    "total_draft": 0,
-                    "total_open": 0,
-                    "total_submitted": 0,
-                    "total_rejected": 0,
-                    "total_approved": 0,
-                    "total_submitted_pencacah": 0,
-                    "total_submitted_respondent": 0,
-                    "persentase": 0.0
-                })
-                
-                sum_info = assign_data_ub_map[key]
-                sum_info["total_prelist"] += target_count
-                cats = categorize_status(status_alias, target_count)
-                sum_info["total_draft"] += cats["draft"]
-                sum_info["total_open"] += cats["open"]
-                sum_info["total_submitted_pencacah"] += cats["submitted_pencacah"]
-                sum_info["total_submitted_respondent"] += cats["submitted_respondent"]
-                sum_info["total_submitted"] += cats["submitted"]
-                sum_info["total_rejected"] += cats["rejected"]
-                sum_info["total_approved"] += cats["approved"]
+            # Update Province UB aggregate
+            assign_data_ub_map["7200"]["total"] += target_count
+            assign_data_ub_map["7200"]["assigned"] += target_count
 
         # Finalisasi output list untuk assign_data
+        for kab_code, data in assign_data_umum_map.items():
+            data["have_not_assigned"] = max(0, data["total"] - data["assigned"])
         assign_data_umum = list(assign_data_umum_map.values())
-        for x in assign_data_umum:
-            x["persentase"] = round((x["total_submitted"] / x["total_prelist"] * 100) if x["total_prelist"] > 0 else 0.0, 2)
             
         assign_data_ub = list(assign_data_ub_map.values())
-        for x in assign_data_ub:
-            x["persentase"] = round((x["total_submitted"] / x["total_prelist"] * 100) if x["total_prelist"] > 0 else 0.0, 2)
 
         # Proses SLS allocations
         processed_sls_umum = []
@@ -1889,8 +1941,19 @@ async def main():
                     if row.get("username") not in officers:
                         officers.append(row.get("username"))
                         
+            sls_code_14 = code[:14] if len(code) >= 14 else code
+            sls_info = sls_lookup.get(sls_code_14)
+            kab_name = sls_info["kab_name"] if sls_info else "-"
+            kec_name = sls_info["kec_name"] if sls_info else "-"
+            desa_name = sls_info["desa_name"] if sls_info else "-"
+            sls_name = sls_info["sls_name"] if sls_info else "-"
+
             processed_sls_umum.append({
                 "sls_code": code,
+                "sls_name": sls_name,
+                "desa_name": desa_name,
+                "kec_name": kec_name,
+                "kab_name": kab_name,
                 "target_count": target_count,
                 "sync_count": sync_count,
                 "officers": officers
@@ -1910,8 +1973,19 @@ async def main():
                     if row.get("username") not in officers:
                         officers.append(row.get("username"))
                         
+            sls_code_14 = code[:14] if len(code) >= 14 else code
+            sls_info = sls_lookup.get(sls_code_14)
+            kab_name = sls_info["kab_name"] if sls_info else "-"
+            kec_name = sls_info["kec_name"] if sls_info else "-"
+            desa_name = sls_info["desa_name"] if sls_info else "-"
+            sls_name = sls_info["sls_name"] if sls_info else "-"
+
             processed_sls_ub.append({
                 "sls_code": code,
+                "sls_name": sls_name,
+                "desa_name": desa_name,
+                "kec_name": kec_name,
+                "kab_name": kab_name,
                 "target_count": target_count,
                 "sync_count": sync_count,
                 "officers": officers
@@ -1992,15 +2066,17 @@ async def main():
         js_content += f"window.PETUGAS_DATA_UMUM = {json.dumps(petugas_data_umum, indent=4, ensure_ascii=False)};\n"
         js_content += f"window.PETUGAS_DATA_UB   = {json.dumps(petugas_data_ub,   indent=4, ensure_ascii=False)};\n"
         js_content += """
-const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
-if (activeSubtab === 'se2026') {
-    window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM || [];
-    window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM || [];
-    window.PETUGAS_DATA = window.PETUGAS_DATA_UMUM || [];
-} else {
-    window.ASSIGN_DATA = window.ASSIGN_DATA_UB || [];
-    window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UB || [];
-    window.PETUGAS_DATA = window.PETUGAS_DATA_UB || [];
+{
+    const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
+    if (activeSubtab === 'se2026') {
+        window.ASSIGN_DATA = window.ASSIGN_DATA_UMUM || [];
+        window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UMUM || [];
+        window.PETUGAS_DATA = window.PETUGAS_DATA_UMUM || [];
+    } else {
+        window.ASSIGN_DATA = window.ASSIGN_DATA_UB || [];
+        window.ASSIGN_SLS_DATA = window.ASSIGN_SLS_DATA_UB || [];
+        window.PETUGAS_DATA = window.PETUGAS_DATA_UB || [];
+    }
 }
 """
         assign_data_path = os.path.join(script_dir, "assign_data.js")
@@ -2034,17 +2110,14 @@ if (activeSubtab === 'se2026') {
                 supabase.table("dashboard_store").insert({"key": "assign_data_fast", "value": db_assign_payload}).execute()
                 print(" ✅ database_store key 'assign_data_fast' updated (SLS & petugas stats).")
 
-                # Cek apakah data granular sudah ada — kalau belum, isi assign_data sebagai fallback
-                existing_granular = supabase.table("dashboard_store").select("key").eq("key", "assign_data").execute()
-                if not existing_granular.data:
-                    supabase.table("dashboard_store").insert({"key": "assign_data", "value": db_assign_payload}).execute()
-                    print(" ℹ️  assign_data belum ada — di-isi dengan fast data sebagai fallback.")
-                else:
-                    print(" ℹ️  assign_data granular sudah ada → TIDAK ditimpa oleh fast scraper.")
+                # ALWAYS update the main 'assign_data' key so that the live dashboard updates in real-time
+                supabase.table("dashboard_store").delete().eq("key", "assign_data").execute()
+                supabase.table("dashboard_store").insert({"key": "assign_data", "value": db_assign_payload}).execute()
+                print(" ✅ database_store key 'assign_data' updated.")
 
-                # Snapshot harian tetap pakai key sendiri
+                # Snapshot harian key assign_data tetap pakai snapshot date
                 today_str = datetime.datetime.now().strftime("%Y-%m-%d")
-                daily_key = f"assign_data_fast:{today_str}"
+                daily_key = f"assign_data:{today_str}"
                 supabase.table("dashboard_store").delete().eq("key", daily_key).execute()
                 supabase.table("dashboard_store").insert({"key": daily_key, "value": db_assign_payload}).execute()
                 print(f" ✅ database_store key '{daily_key}' updated.")

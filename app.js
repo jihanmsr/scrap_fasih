@@ -5,22 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('active_assign_subtab', 'se2026');
     }
 
-    // Initialize user map for mapping emails to full names
-    window.userMap = {};
-    fetch('https://dds-api.bpssulteng.id/api.php?action=get_users')
-        .then(res => res.json())
-        .then(data => {
-            if (Array.isArray(data)) {
-                data.forEach(user => {
-                    window.userMap[user.username] = user.full_name;
-                });
-                // Re-render email table if it's already rendered
-                if (typeof window.renderEmailUBTable === 'function') {
-                    window.renderEmailUBTable();
-                }
-            }
-        })
-        .catch(err => console.error('Failed to load user map:', err));
+    // Initialize user map from static file to avoid API failure during VPN
+    window.userMap = window.STATIC_USER_MAP || {};
 
     // Helper to get CSS theme colors resolved for Chart.js
     function getThemeColor(varName, fallback) {
@@ -169,79 +155,86 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 50);
     });
 
-    let supabaseClient = {
-        from: function(tableName) {
-            return {
-                select: function(cols) {
-                    let req = { tableName, eqCol: null, eqVal: null, isSingle: false, orderCol: null };
-                    let executor = {
-                        eq: function(col, val) { req.eqCol = col; req.eqVal = val; return executor; },
-                        single: function() { req.isSingle = true; return executor; },
-                        order: function(col, opts) { req.orderCol = col; return executor; },
-                        then: function(resolve, reject) {
-                            let action = 'get_' + tableName.replace('_data','');
-                            if (tableName === 'dashboard_store') action = 'get_store';
-                            fetch(`https://dds-api.bpssulteng.id/api.php?action=${action}`)
-                                .then(res => res.json())
-                                .then(data => {
-                                    if (req.eqCol && req.eqVal) {
-                                        data = data.filter(d => d[req.eqCol] === req.eqVal);
-                                    }
-                                    if (req.isSingle) {
-                                        if (data.length > 0) {
-                                            if (tableName === 'dashboard_store' && typeof data[0].value === 'string') {
-                                                try { data[0].value = JSON.parse(data[0].value); } catch(e){}
-                                            }
-                                            resolve({ data: data[0], error: null });
-                                        } else resolve({ data: null, error: { message: "No rows found" } });
-                                    } else {
-                                        resolve({ data: data, error: null });
-                                    }
-                                }).catch(err => resolve({ data: null, error: err }));
-                        }
-                    };
-                    return executor;
-                },
-                update: function(payload) {
-                    return {
-                        eq: async function(col, val) {
-                            try {
-                                const response = await fetch(`https://dds-api.bpssulteng.id/api.php?action=update_${tableName.replace('_data','')}`, {
-                                    method: 'POST',
-                                    headers: {'Content-Type': 'application/json'},
-                                    body: JSON.stringify({...payload, id: val})
-                                });
-                                const data = await response.json();
-                                return { data: data, error: null };
-                            } catch(e) { return { data: null, error: e }; }
-                        }
-                    };
-                }
-            };
-        }
-    };
-
-    // Add rpc method for mock client
-    supabaseClient.rpc = async function(fnName, params) {
-        if (fnName === 'check_login') {
-            try {
-                const response = await fetch(`https://dds-api.bpssulteng.id/api.php?action=check_login`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(params)
-                });
-                if (response.ok) {
-                    const data = await response.json();
-                    return { data: data, error: null };
-                } else {
-                    return { data: null, error: { message: "Invalid credentials" } };
-                }
-            } catch(e) {
-                return { data: null, error: e };
+    let supabaseClient;
+    if (typeof window.supabase !== 'undefined' && window.SUPABASE_URL && window.SUPABASE_KEY) {
+        supabaseClient = window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_KEY);
+        console.log("Initialized real Supabase client.");
+    } else {
+        console.log("Initializing mock Supabase client proxying to MySQL API.");
+        supabaseClient = {
+            from: function(tableName) {
+                return {
+                    select: function(cols) {
+                        let req = { tableName, eqCol: null, eqVal: null, isSingle: false, orderCol: null };
+                        let executor = {
+                            eq: function(col, val) { req.eqCol = col; req.eqVal = val; return executor; },
+                            single: function() { req.isSingle = true; return executor; },
+                            order: function(col, opts) { req.orderCol = col; return executor; },
+                            then: function(resolve, reject) {
+                                let action = 'get_' + tableName.replace('_data','');
+                                if (tableName === 'dashboard_store') action = 'get_store';
+                                fetch(`https://dds-api.bpssulteng.id/api.php?action=${action}`)
+                                    .then(res => res.json())
+                                    .then(data => {
+                                        if (req.eqCol && req.eqVal) {
+                                            data = data.filter(d => d[req.eqCol] === req.eqVal);
+                                        }
+                                        if (req.isSingle) {
+                                            if (data.length > 0) {
+                                                if (tableName === 'dashboard_store' && typeof data[0].value === 'string') {
+                                                    try { data[0].value = JSON.parse(data[0].value); } catch(e){}
+                                                }
+                                                resolve({ data: data[0], error: null });
+                                            } else resolve({ data: null, error: { message: "No rows found" } });
+                                        } else {
+                                            resolve({ data: data, error: null });
+                                        }
+                                    }).catch(err => resolve({ data: null, error: err }));
+                            }
+                        };
+                        return executor;
+                    },
+                    update: function(payload) {
+                        return {
+                            eq: async function(col, val) {
+                                try {
+                                    const response = await fetch(`https://dds-api.bpssulteng.id/api.php?action=update_${tableName.replace('_data','')}`, {
+                                        method: 'POST',
+                                        headers: {'Content-Type': 'application/json'},
+                                        body: JSON.stringify({...payload, id: val})
+                                    });
+                                    const data = await response.json();
+                                    return { data: data, error: null };
+                                } catch(e) { return { data: null, error: e }; }
+                            }
+                        };
+                    }
+                };
             }
-        }
-        return { data: null, error: { message: "Not implemented" } };
-    };
+        };
+
+        // Add rpc method for mock client
+        supabaseClient.rpc = async function(fnName, params) {
+            if (fnName === 'check_login') {
+                try {
+                    const response = await fetch(`https://dds-api.bpssulteng.id/api.php?action=check_login`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(params)
+                    });
+                    if (response.ok) {
+                        const data = await response.json();
+                        return { data: data, error: null };
+                    } else {
+                        return { data: null, error: { message: "Invalid credentials" } };
+                    }
+                } catch(e) {
+                    return { data: null, error: e };
+                }
+            }
+            return { data: null, error: { message: "Not implemented" } };
+        };
+    }
 
     let companies = [];
     let sourceData = [];
@@ -1012,8 +1005,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Sensus Ekonomi Dashboard Render Engine (Umum or UB)
-    window.renderSeDashboard = function (surveyType) {
+    window.renderSeDashboard = async function (surveyType) {
         const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
+        
+        // --- MySQL FETCH DASHBOARD KPI ---
+        let mysqlPrelist = 0;
+        let mysqlSelesai = 0;
+        let kpiLoadedFromMysql = false;
+
+        try {
+            const url = `https://dds-api.bpssulteng.id/api.php?action=get_dashboard_summary&survey=${surveyType}&kab=all`;
+            const res = await fetch(url);
+            const text = await res.text();
+            if (text.includes("DNS Sinkhole")) {
+                throw new Error("DNS Sinkhole block detected");
+            }
+            const data = JSON.parse(text);
+            
+            data.forEach(row => {
+                mysqlPrelist += parseInt(row.total_target) || 0;
+                mysqlSelesai += parseInt(row.selesai) || 0;
+            });
+            kpiLoadedFromMysql = true;
+        } catch (e) {
+            console.warn("Failed to load KPI from MySQL (falling back to Supabase/IPAS_DATA):", e.message);
+        }
+
+        // --- CONTINUE OLD BEHAVIOR FOR DAILY STATS ---
         const surveyData = ipasDataObj[surveyType] || [];
 
         // Build a lookup map of (kab_name, date, survey_type) -> count from window.DAILY_SUBMISSION_STATS
@@ -1215,6 +1233,12 @@ document.addEventListener('DOMContentLoaded', () => {
             prelist = ipasDataObj[provTotalKey];
         }
 
+        // Override with MySQL KPI if loaded successfully
+        if (kpiLoadedFromMysql && mysqlPrelist > 0) {
+            prelist = mysqlPrelist;
+            submitted = mysqlSelesai;
+        }
+
         const persentase = floorPct(submitted, prelist);
         const sisa = prelist - submitted;
 
@@ -1247,7 +1271,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update stats elements
         const prelistWrapperEl = document.getElementById(`${surveyType}-stat-total-prelist-wrapper`);
-        if (prelistWrapperEl) {
+        if (prelistWrapperEl && document.getElementById(`${surveyType}-stat-total-prelist`).textContent === '0') {
             const breakdown = {
                 "OPEN (Belum dikerjakan)": openVal,
                 "DRAFT (Sedang dikerjakan)": draft,
@@ -1277,11 +1301,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const provNewRumahTotalKey = surveyType + "_prov_new_rumah_total";
             const newUsahaProv = ipasDataObj[provNewTotalKey] || 0;
             const newRumahProv = ipasDataObj[provNewRumahTotalKey] || 0;
-            const targetAwal = prelist - newUsahaProv - newRumahProv;
 
             prelistWrapperEl.innerHTML = `
                 <div class="daily-progress-wrapper" style="display: flex; align-items: baseline; gap: 0.25rem; flex-direction: row;">
-                    <span id="${surveyType}-stat-total-prelist" style="font-weight: 800;">${formatNum(prelist)}</span>
+                    <span id="${surveyType}-stat-total-prelist" style="font-weight: 800;">${formatNum(prelist + newUsahaProv + newRumahProv)}</span>
                     <span class="daily-dropdown-trigger" onclick="window.toggleDailyPopover(event, this)" style="color: var(--primary); background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.25); margin-left: 0.25rem;">▼</span>
                     <div class="daily-popover">
                         <div class="popover-header" style="color: var(--primary);">BREAKDOWN STATUS ASSIGNMENT</div>
@@ -1289,7 +1312,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="popover-header" style="color: var(--primary); margin-top: 0.75rem;">SUMBER TOTAL TARGET</div>
                         <div class="popover-item" style="border-top: 1px dashed var(--card-border); margin-top: 0.25rem; padding-top: 0.25rem;">
                             <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: 600;">Target Awal</span>
-                            <span class="popover-count" style="color: var(--text-secondary);">${formatNum(targetAwal)}</span>
+                            <span class="popover-count" style="color: var(--text-secondary);">${formatNum(prelist)}</span>
                         </div>
                         <div class="popover-item">
                             <span style="font-size: 0.7rem; color: var(--primary); font-weight: 600;">Tambahan Usaha Baru</span>
@@ -1301,14 +1324,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="popover-item" style="border-top: 1px solid var(--card-border); margin-top: 0.25rem; padding-top: 0.25rem;">
                             <span style="font-size: 0.75rem; color: var(--primary); font-weight: 800;">Total Target Keseluruhan</span>
-                            <span class="popover-count" style="color: var(--primary);">${formatNum(prelist)}</span>
+                            <span class="popover-count" style="color: var(--primary);">${formatNum(prelist + newUsahaProv + newRumahProv)}</span>
                         </div>
                     </div>
                 </div>
             `;
-        } else {
+        } else if (document.getElementById(`${surveyType}-stat-total-prelist`)?.textContent === '0') {
             const prelistEl = document.getElementById(`${surveyType}-stat-total-prelist`);
-            if (prelistEl) prelistEl.textContent = formatNum(prelist);
+            if (prelistEl) prelistEl.textContent = formatNum(prelist + newUsahaProv + newRumahProv);
         }
 
         const newTodayEl = document.getElementById(`${surveyType}-stat-new-today`);
@@ -6280,104 +6303,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.updateGranularStatusFilterOptions = function () {
         const statusSelect = document.getElementById('assign-sls-status-filter');
-        if (!statusSelect || !window.GRANULAR_ASSIGNMENTS_DATA) return;
-
-        const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
-
-        const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
-        const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
-        const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
-        const desaVal = document.getElementById('assign-sls-desa-filter')?.value || 'all';
-        const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
-        const searchVal = document.getElementById('assign-sls-search-input')?.value.toLowerCase().trim() || '';
-
-        const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
-        const surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
-
-        const filteredForStatus = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
-            if (r.survey_type !== surveyTypeFilter) return false;
-            if (kabVal !== 'all' && (r.kab_name || '').toUpperCase() !== cleanKabVal) return false;
-            if (kecVal !== 'all' && r.kec_name !== kecVal) return false;
-            if (desaVal !== 'all' && r.desa_name !== desaVal) return false;
-            if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
-
-            if (searchVal) {
-                const matchText = (
-                    (r.data1 || '') + ' ' +
-                    (r.petugas_username || '') + ' ' +
-                    (r.petugas_fullname || '') + ' ' +
-                    (r.sls_name || '') + ' ' +
-                    (r.sls_code || '') + ' ' +
-                    (r.status || '')
-                ).toLowerCase();
-                if (!matchText.includes(searchVal)) return false;
-            }
-            return true;
-        });
-
-        const statusCounts = {};
-        let totalCount = 0;
-
-        filteredForStatus.forEach(r => {
-            if (r.status) {
-                statusCounts[r.status] = (statusCounts[r.status] || 0) + 1;
-                totalCount++;
-            }
-        });
-
+        if (!statusSelect) return;
         const currentSelectedStatus = statusSelect.value || 'all';
-
-        let optionsHTML = `<option value="all">Semua Status (${formatNum(totalCount)})</option>`;
-
-        const sortedStatuses = Object.keys(statusCounts).sort();
-        sortedStatuses.forEach(s => {
-            const count = statusCounts[s];
-            optionsHTML += `<option value="${s}">${s} (${formatNum(count)})</option>`;
+        
+        let optionsHTML = `<option value="all">Semua Status</option>`;
+        ['OPEN', 'DRAFT', 'SUBMITTED', 'REJECTED', 'APPROVED'].forEach(s => {
+            optionsHTML += `<option value="${s}">${s}</option>`;
         });
-
         statusSelect.innerHTML = optionsHTML;
-
-        if (currentSelectedStatus === 'all' || statusCounts[currentSelectedStatus]) {
-            statusSelect.value = currentSelectedStatus;
-        } else {
-            statusSelect.value = 'all';
-        }
+        statusSelect.value = currentSelectedStatus;
     };
 
+    
     async function loadGranularAssignmentsData(kabVal = null, surveyTypeFilter = null) {
         if (!kabVal) {
             kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
         }
         if (!surveyTypeFilter) {
             const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
-            if (surveyFilterEl) {
-                surveyTypeFilter = surveyFilterEl.value;
-            } else {
-                const activeSubtab = localStorage.getItem('active_assign_subtab') || 'se2026';
-                surveyTypeFilter = activeSubtab === 'se2026' ? 'se_umum' : 'se_ub';
-            }
+            surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value : (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
         }
 
         const tbody = document.getElementById('assign-sls-table-body');
-
-        // If se_umum and kabVal is 'all', show placeholder and do not load
         if (surveyTypeFilter === 'se_umum' && kabVal === 'all') {
-            window.GRANULAR_ASSIGNMENTS_DATA = null;
-            window.CURRENT_LOADED_PARTITION = null;
             if (tbody) {
-                tbody.innerHTML = `
-                    <tr>
-                        <td colspan="12" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
-                            Silakan pilih Kabupaten/Kota terlebih dahulu untuk memuat rincian data assignment.
-                        </td>
-                    </tr>
-                `;
+                tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; padding: 3rem; color: var(--text-secondary);">Silakan pilih Kabupaten/Kota terlebih dahulu untuk memuat rincian data assignment.</td></tr>`;
             }
-            if (window.renderPetugasSummaryTable) {
-                window.renderPetugasSummaryTable([]);
-            }
-
-            // Populating KPI cards with overall province data from IPAS_DATA to avoid showing 0
+            if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable([]);
+            
+            // Populating KPI cards with overall province data
             try {
                 const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
                 const surveyData = ipasDataObj[surveyTypeFilter] || [];
@@ -6401,159 +6355,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (totalEl) totalEl.textContent = totalAll.toLocaleString('id-ID');
                 if (selesaiEl) selesaiEl.innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
                 if (belumEl) belumEl.innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
-            } catch (kpiErr) {
-                console.warn("Failed to calculate provincial KPIs:", kpiErr);
-            }
+            } catch (e) {}
             return;
         }
 
-        // Determine partition key
-        let partKey = '';
-        if (surveyTypeFilter === 'se_ub') {
-            partKey = 'se_ub';
-        } else {
-            const match = kabVal.match(/\[(\d+)\]/);
-            if (match) {
-                partKey = `se_umum_72${match[1]}`;
-            } else {
-                partKey = 'se_umum_7201'; // fallback
+        // Fetch Petugas Summary from MySQL
+        const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+        try {
+            const url = `https://dds-api.bpssulteng.id/api.php?action=get_petugas_summary&survey=${surveyTypeFilter}&kab=${kabVal === 'all' ? '' : cleanKabVal}`;
+            const res = await fetch(url);
+            const data = await res.json();
+            window.PETUGAS_SUMMARY_MYSQL = data; 
+            if (window.renderPetugasSummaryTable) {
+                window.renderPetugasSummaryTable(null, true);
             }
+        } catch (e) {
+            console.error("Failed to fetch petugas summary:", e);
         }
 
-        const granularKey = `granular_assignments_${partKey}`;
-
-        if (window.CURRENT_LOADED_PARTITION === granularKey && window.GRANULAR_ASSIGNMENTS_DATA) {
-            window.updateGranularStatusFilterOptions();
-            window.renderGranularAssignmentsTable(false);
-            return;
-        }
-
-        if (isGranularLoading) return;
-        isGranularLoading = true;
-
-        if (tbody) {
-            tbody.innerHTML = `
-                <tr>
-                    <td colspan="12" style="text-align: center; padding: 3rem; color: var(--text-secondary);">
-                        <svg style="animation: spin 1s linear infinite; margin: 0 auto 1rem; width: 24px; height: 24px; color: var(--primary);" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle style="opacity: 0.25;" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                            <path style="opacity: 0.75;" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Memuat rincian data target assignment untuk wilayah terpilih...
-                    </td>
-                </tr>
-            `;
-        }
-
-        const snapshotDate = document.getElementById('select-snapshot-date')?.value || 'live';
-        let compressedData = null;
-
-        if (supabaseClient && snapshotDate !== 'local') {
-            try {
-                console.log(`Fetching granular partition (${granularKey}) from Supabase...`);
-                const { data, error } = await supabaseClient
-                    .from('dashboard_store')
-                    .select('value')
-                    .eq('key', granularKey)
-                    .single();
-
-                if (!error && data && data.value) {
-                    const val = data.value;
-                    if (val.is_chunked && val.total_chunks) {
-                        // Partisi besar di-upload dalam chunks — rakit ulang
-                        console.log(`Partition ${granularKey} is chunked (${val.total_chunks} chunks), fetching...`);
-                        const chunkParts = [];
-                        let chunksFetched = true;
-                        for (let ci = 0; ci < val.total_chunks; ci++) {
-                            const chunkKey = `${granularKey}__chunk_${ci}`;
-                            const { data: chunkData, error: chunkErr } = await supabaseClient
-                                .from('dashboard_store')
-                                .select('value')
-                                .eq('key', chunkKey)
-                                .single();
-                            if (!chunkErr && chunkData && chunkData.value && chunkData.value.compressed_data) {
-                                chunkParts.push(chunkData.value.compressed_data);
-                            } else {
-                                console.warn(`Failed to fetch chunk ${ci} for ${granularKey}:`, chunkErr);
-                                chunksFetched = false;
-                                break;
-                            }
-                        }
-                        if (chunksFetched && chunkParts.length === val.total_chunks) {
-                            compressedData = chunkParts.join('');
-                            console.log(`Successfully assembled ${val.total_chunks} chunks for ${granularKey}.`);
-                        }
-                    } else if (val.compressed_data) {
-                        compressedData = val.compressed_data;
-                        console.log(`Successfully fetched partition ${granularKey} from Supabase.`);
-                    }
-                }
-            } catch (e) {
-                console.warn("Failed to fetch granular data from Supabase:", e);
-            }
-        }
-
-        // Fallback to local files if offline or DB failed
-        if (!compressedData) {
-            try {
-                console.log(`Attempting local fallback for partition ${partKey}...`);
-                const response = await fetch(`granular_assignments_${partKey}.json`);
-                if (response.ok) {
-                    const localJson = await response.json();
-                    if (localJson && localJson.compressed_data) {
-                        compressedData = localJson.compressed_data;
-                        console.log(`Successfully loaded partition ${partKey} from local JSON file.`);
-                    }
-                }
-            } catch (e) {
-                console.warn("Local JSON fallback failed:", e);
-            }
-        }
-
-        // Script tag fallback for file:// protocol loading (where fetch fails due to CORS)
-        if (!compressedData) {
-            try {
-                const varName = `PARTITION_${partKey.toUpperCase()}`; // e.g. window.PARTITION_SE_UMUM_7201
-                if (window[varName]) {
-                    compressedData = window[varName].compressed_data;
-                    console.log(`Successfully loaded partition from preloaded window.${varName}`);
-                } else {
-                    console.log(`Attempting dynamic script tag fallback for ${partKey}...`);
-                    await new Promise((resolve) => {
-                        const script = document.createElement('script');
-                        script.src = `granular_assignments_${partKey}.js`;
-                        script.onload = () => resolve();
-                        script.onerror = () => resolve();
-                        document.head.appendChild(script);
-                    });
-                    if (window[varName]) {
-                        compressedData = window[varName].compressed_data;
-                        console.log(`Successfully loaded partition ${partKey} from dynamic script.`);
-                    }
-                }
-            } catch (jsErr) {
-                console.warn("Dynamic JS fallback failed:", jsErr);
-            }
-        }
-
-        if (compressedData) {
-            window.GRANULAR_ASSIGNMENTS_DATA = window.decompressAndParseGranular(compressedData);
-            window.CURRENT_LOADED_PARTITION = granularKey;
-            isGranularLoading = false;
-            window.updateGranularStatusFilterOptions();
-            window.renderGranularAssignmentsTable(true);
-        } else {
-            isGranularLoading = false;
-            if (tbody) {
-                tbody.innerHTML = `
-                    <tr>
-                        <td colspan="12" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
-                            Gagal memuat rincian data assignment dari database maupun file lokal. Harap periksa koneksi internet atau jalankan scrape_granular_assignments.py terlebih dahulu.
-                        </td>
-                    </tr>
-                `;
-            }
-        }
+        window.updateGranularStatusFilterOptions();
+        window.renderGranularAssignmentsTable(true);
     }
 
     // --- REKAP BELUM DITUGASKAN PER KECAMATAN ---
@@ -6933,6 +6754,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (Array.isArray(data)) {
             data.forEach(r => {
                 let petName = (r.petugas_username !== '-' && r.petugas_username) ? r.petugas_username : ((r.petugas_fullname !== '-' && r.petugas_fullname) ? r.petugas_fullname : null);
+                
+                // Coba konversi email/username ke nama asli menggunakan userMap
+                if (petName && window.userMap) {
+                    let mapped = window.userMap[petName] || window.userMap[petName.split('@')[0]];
+                    if (mapped) petName = mapped;
+                }
+
                 if (!petName) {
                     const isCompleted = r.status !== 'OPEN' && r.status !== 'DRAFT';
                     petName = isCompleted ? 'CAWI / Mandiri (Tanpa Petugas)' : 'Belum Ada Petugas';
@@ -7525,11 +7353,14 @@ document.addEventListener('DOMContentLoaded', () => {
         let dynamicColumnsHTML = '';
         if (selectedJenis && selectedJenis.includes('Missing Value')) {
             // A3
-            dynamicColumnsHTML = `<th onclick="sortAnomali('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 250px;">Nama Usaha & Catatan <span id="sort-icon-nama_krt"></span></th>`;
+            dynamicColumnsHTML = `
+                <th onclick="sortAnomali('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 250px;">Catatan</th>`;
         } else if (selectedJenis && selectedJenis.includes('Biaya Produksi')) {
             // A5
             dynamicColumnsHTML = `
                 <th onclick="sortAnomali('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 150px;">Catatan</th>
                 <th onclick="sortAnomali('pct_biaya')" style="padding: 0.7rem 0.8rem; text-align: center; cursor: pointer; user-select: none; white-space: nowrap; min-width: 90px;">% Biaya <span id="sort-icon-pct_biaya"></span></th>
                 <th onclick="sortAnomali('biaya_produksi')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 110px;">Biaya Produksi <span id="sort-icon-biaya_produksi"></span></th>
                 <th onclick="sortAnomali('total_pengeluaran')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pengeluaran <span id="sort-icon-total_pengeluaran"></span></th>`;
@@ -7537,12 +7368,18 @@ document.addEventListener('DOMContentLoaded', () => {
             // A6
             dynamicColumnsHTML = `
                 <th onclick="sortAnomali('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
-                <th onclick="sortAnomali('total_pengeluaran')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pendapatan <span id="sort-icon-total_pengeluaran"></span></th>
-                <th onclick="sortAnomali('biaya_produksi')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pengeluaran <span id="sort-icon-biaya_produksi"></span></th>`;
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 200px;">Catatan</th>
+                <th onclick="sortAnomali('total_pengeluaran')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pengeluaran <span id="sort-icon-total_pengeluaran"></span></th>`;
+        } else if (selectedJenis && selectedJenis.includes('Penyertaan Modal')) {
+            // A7
+            dynamicColumnsHTML = `
+                <th onclick="sortAnomali('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 250px;">Catatan</th>`;
         } else {
             // Generic / Semua
             dynamicColumnsHTML = `
                 <th onclick="sortAnomali('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 180px;">Catatan</th>
                 <th onclick="sortAnomali('pct_biaya')" style="padding: 0.7rem 0.8rem; text-align: center; cursor: pointer; user-select: none; white-space: nowrap; min-width: 90px;">% Biaya <span id="sort-icon-pct_biaya"></span></th>
                 <th onclick="sortAnomali('biaya_produksi')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 110px;">Biaya Produksi <span id="sort-icon-biaya_produksi"></span></th>
                 <th onclick="sortAnomali('total_pengeluaran')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pengeluaran <span id="sort-icon-total_pengeluaran"></span></th>`;
@@ -7624,52 +7461,40 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             let dynamicCells = '';
+            const cellNamaUsaha = `
+                <td style="padding:0.6rem 0.8rem;max-width:180px;">
+                    <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
+                    ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
+                    ${savedInfo}
+                </td>
+            `;
+            const cellCatatan = `
+                <td style="padding:0.6rem 0.8rem;max-width:250px;">
+                    ${row.catatan ? `<div style="font-size:0.75rem;color:#d97706;line-height:1.4;font-weight:500;">💡 ${row.catatan}</div>` : '<span style="color:var(--text-secondary);font-size:0.78rem;font-style:italic;">-</span>'}
+                </td>
+            `;
+            const cellPct = `
+                <td style="padding:0.6rem 0.8rem;text-align:center;">
+                    ${pct > 0 ? `<span style="display:inline-block;padding:0.25rem 0.65rem;background:${pctBg};color:${pctColor};border-radius:99px;font-weight:800;font-size:0.82rem;white-space:nowrap;">${pct}%</span>` : '-'}
+                </td>
+            `;
+            const cellBiaya = `
+                <td style="padding:0.6rem 0.8rem;text-align:right;font-weight:600;font-size:0.82rem;white-space:nowrap;">${row.biaya_produksi ? fmtRp(row.biaya_produksi) : '-'}</td>
+            `;
+            const cellPengeluaran = `
+                <td style="padding:0.6rem 0.8rem;text-align:right;font-size:0.82rem;white-space:nowrap;color:var(--text-secondary);">${row.total_pengeluaran ? fmtRp(row.total_pengeluaran) : '-'}</td>
+            `;
+
             if (selectedJenis && selectedJenis.includes('Missing Value')) {
-                dynamicCells = `
-                    <td style="padding:0.6rem 0.8rem;max-width:250px;">
-                        <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
-                        ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
-                        ${row.catatan ? `<div style="font-size:0.74rem;color:#d97706;margin-top:0.25rem;line-height:1.3;font-weight:500;">💡 ${row.catatan}</div>` : ''}
-                        ${savedInfo}
-                    </td>`;
+                dynamicCells = cellNamaUsaha + cellCatatan;
             } else if (selectedJenis && selectedJenis.includes('Biaya Produksi')) {
-                dynamicCells = `
-                    <td style="padding:0.6rem 0.8rem;max-width:230px;">
-                        <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
-                        ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
-                        ${row.catatan ? `<div style="font-size:0.74rem;color:#d97706;margin-top:0.25rem;line-height:1.3;font-weight:500;">💡 ${row.catatan}</div>` : ''}
-                        ${savedInfo}
-                    </td>
-                    <td style="padding:0.6rem 0.8rem;text-align:center;">
-                        <span style="display:inline-block;padding:0.25rem 0.65rem;background:${pctBg};color:${pctColor};border-radius:99px;font-weight:800;font-size:0.82rem;white-space:nowrap;">${pct}%</span>
-                    </td>
-                    <td style="padding:0.6rem 0.8rem;text-align:right;font-weight:600;font-size:0.82rem;white-space:nowrap;">${fmtRp(row.biaya_produksi)}</td>
-                    <td style="padding:0.6rem 0.8rem;text-align:right;font-size:0.82rem;white-space:nowrap;color:var(--text-secondary);">${fmtRp(row.total_pengeluaran)}</td>`;
+                dynamicCells = cellNamaUsaha + cellCatatan + cellPct + cellBiaya + cellPengeluaran;
             } else if (selectedJenis && selectedJenis.includes('Keuntungan Usaha')) {
-                // Wait, A6 notes usually store Pendapatan in "total_pengeluaran" because of schema limitations? No, A6 script stored Total Pendapatan in "total_pendapatan" but wait, schema doesn't have total_pendapatan! So in seed_all_anomali.py it just parsed it into catatan. 
-                // Wait, if it's not in DB schema, we just show it empty or 0 if it's missing. Let's just use what's in DB or parse from catatan. We will just leave it empty if we don't have the column in DB.
-                dynamicCells = `
-                    <td style="padding:0.6rem 0.8rem;max-width:230px;">
-                        <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
-                        ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
-                        ${row.catatan ? `<div style="font-size:0.74rem;color:#d97706;margin-top:0.25rem;line-height:1.3;font-weight:500;">💡 ${row.catatan}</div>` : ''}
-                        ${savedInfo}
-                    </td>
-                    <td style="padding:0.6rem 0.8rem;text-align:right;font-weight:600;font-size:0.82rem;white-space:nowrap;">-</td>
-                    <td style="padding:0.6rem 0.8rem;text-align:right;font-size:0.82rem;white-space:nowrap;color:var(--text-secondary);">${fmtRp(row.total_pengeluaran)}</td>`;
+                dynamicCells = cellNamaUsaha + cellCatatan + cellPengeluaran;
+            } else if (selectedJenis && selectedJenis.includes('Penyertaan Modal')) {
+                dynamicCells = cellNamaUsaha + cellCatatan;
             } else {
-                dynamicCells = `
-                    <td style="padding:0.6rem 0.8rem;max-width:230px;">
-                        <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
-                        ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
-                        ${row.catatan ? `<div style="font-size:0.74rem;color:#d97706;margin-top:0.25rem;line-height:1.3;font-weight:500;">💡 ${row.catatan}</div>` : ''}
-                        ${savedInfo}
-                    </td>
-                    <td style="padding:0.6rem 0.8rem;text-align:center;">
-                        <span style="display:inline-block;padding:0.25rem 0.65rem;background:${pctBg};color:${pctColor};border-radius:99px;font-weight:800;font-size:0.82rem;white-space:nowrap;">${pct}%</span>
-                    </td>
-                    <td style="padding:0.6rem 0.8rem;text-align:right;font-weight:600;font-size:0.82rem;white-space:nowrap;">${fmtRp(row.biaya_produksi)}</td>
-                    <td style="padding:0.6rem 0.8rem;text-align:right;font-size:0.82rem;white-space:nowrap;color:var(--text-secondary);">${fmtRp(row.total_pengeluaran)}</td>`;
+                dynamicCells = cellNamaUsaha + cellCatatan + cellPct + cellBiaya + cellPengeluaran;
             }
 
             return `<tr id="anomali-row-${row.id}" style="border-bottom: 1px solid var(--card-border); transition: background 0.15s;" onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">

@@ -49,3 +49,26 @@ CREATE TABLE users (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT IGNORE INTO users (username, password, full_name, role) VALUES ('admin', 'admin123', 'Administrator', 'admin');
+
+CREATE TABLE granular_targets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    assignment_id VARCHAR(100) UNIQUE NOT NULL,
+    survey_type VARCHAR(50),
+    kab_code VARCHAR(20),
+    kab_name VARCHAR(100),
+    kec_code VARCHAR(20),
+    kec_name VARCHAR(100),
+    desa_code VARCHAR(20),
+    desa_name VARCHAR(100),
+    sls_code VARCHAR(30),
+    sls_name VARCHAR(100),
+    target_id VARCHAR(100),
+    target_name VARCHAR(255),
+    status VARCHAR(50),
+    petugas_username VARCHAR(150),
+    petugas_fullname VARCHAR(255),
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_survey_kab (survey_type, kab_code),
+    INDEX idx_status (status),
+    INDEX idx_sls_code (sls_code)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

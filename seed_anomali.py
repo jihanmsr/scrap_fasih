@@ -95,7 +95,10 @@ def process_excel_file(filepath):
         nama_petugas = get_val(row, 'current_user_fullname') or ''
         nama_krt = get_val(row, 'nama_usaha') or get_val(row, 'nama_usaha_edit') or ''
         if not nama_krt and len(row) > 5:
-            nama_krt = row[5] if row[5] else ''
+            potensial_nama = str(row[5]).strip() if row[5] else ''
+            # Jangan gunakan assignment_id sebagai nama_krt
+            if len(potensial_nama) != 36 or '-' not in potensial_nama:
+                nama_krt = potensial_nama
 
         # Inisialisasi default
         total_pengeluaran = None
