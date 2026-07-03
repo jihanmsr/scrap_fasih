@@ -172,6 +172,13 @@ def main():
                     
                     print(f"  {kab_raw}: {len(scraped_biz)} tambahan")
                 
+                # Update prov-level totals (se_umum_prov_new_total & se_umum_prov_new_rumah_total)
+                total_prov_usaha = sum(kab.get("new_usaha_overall", 0) for kab in se_umum)
+                total_prov_rumah = sum(kab.get("new_rumah_overall", 0) for kab in se_umum)
+                val["se_umum_prov_new_total"] = total_prov_usaha
+                val["se_umum_prov_new_rumah_total"] = total_prov_rumah
+                print(f"\n✅ Provinsi: Total tambahan usaha = {total_prov_usaha}, rumah = {total_prov_rumah}")
+                
                 # Simpan lokal dulu (dengan new_businesses penuh untuk fallback)
                 with open(os.path.join(workspace_dir, "ipas_data.js"), "w", encoding="utf-8") as f:
                     f.write(f"window.IPAS_DATA = {json.dumps(val, indent=4)};\n")

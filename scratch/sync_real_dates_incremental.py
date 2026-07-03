@@ -497,6 +497,13 @@ async def main():
                             kec_item["new_rumah_today"] = sum(1 for b in kec_biz if b["type"] == "rumah" and b["date"] == "today")
                             kec_item["new_rumah_yesterday"] = sum(1 for b in kec_biz if b["type"] == "rumah" and b["date"] == "yesterday")
                     
+                    # Update prov-level totals (se_umum_prov_new_total & se_umum_prov_new_rumah_total)
+                    total_prov_usaha = sum(kab.get("new_usaha_overall", 0) for kab in se_umum)
+                    total_prov_rumah = sum(kab.get("new_rumah_overall", 0) for kab in se_umum)
+                    val["se_umum_prov_new_total"] = total_prov_usaha
+                    val["se_umum_prov_new_rumah_total"] = total_prov_rumah
+                    print(f"\n✅ Provinsi: Total tambahan usaha = {total_prov_usaha}, rumah = {total_prov_rumah}")
+
                     # Save locally to ipas_data.js for fallback (dengan data penuh)
                     ipas_js_path = os.path.join(os.path.dirname(script_dir), "ipas_data.js")
                     with open(ipas_js_path, "w", encoding="utf-8") as f:
