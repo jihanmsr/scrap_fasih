@@ -7300,6 +7300,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Auto-refresh rekap panel if open
+        const rekapModal = document.getElementById('rekap-belum-modal');
+        const rekapBelumOpen = rekapModal && rekapModal.style.display === 'flex';
         if (rekapBelumOpen && window.renderRekapBelum) {
             window.renderRekapBelum();
         }
@@ -8390,102 +8392,142 @@ window.executeExcelDownload = async function () {
 };
 
 async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
-    // Build summary per petugas from granular data loaded in memory + fallback to MySQL
-    const ipasData = window.IPAS_DATA || {};
-    const seData = ipasData[surveyType] || [];
+    if (!window.supabaseClient) {
+        if (statusEl) statusEl.textContent = '❌ Koneksi Supabase tidak tersedia.';
+        return;
+    }
 
     const cleanKabs = selectedKabs.map(k => k.replace(/^\[\d+\]\s*/, '').trim().toUpperCase());
+    let allGranularRecords = [];
 
-    // Try using granular data in memory
-    let rows = [];
-    const granularData = window.GRANULAR_ASSIGNMENTS_DATA;
-
-    if (granularData && granularData.length > 0) {
-        const filtered = granularData.filter(r => {
-            if (r.survey_type !== surveyType) return false;
-            const kabClean = (r.kab_name || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
-            return cleanKabs.includes(kabClean);
-        });
-
-        const petMap = {};
-        filtered.forEach(r => {
-            const name = r.petugas_fullname || r.petugas_username || 'Belum Ada Petugas';
-            const pengawas = r.pengawas_fullname || r.pengawas_username || '-';
-            const email = r.petugas_username || '-';
-            const kab = r.kab_name || '-';
-            const key = `${kab}|||${name}`;
-            if (!petMap[key]) {
-                petMap[key] = { kab, name, pengawas, email, total: 0, selesai: 0, belum: 0, open: 0, draft: 0, submitted: 0, rejected: 0, approved: 0 };
+    // Helper helper to fetch dynamically
+    const fetchGranularDataForKab = async (kabCode, sType) => {
+        const dbKey = `granular_assignments_${sType}_${kabCode}`;
+        const { data: dbData, error } = await window.supabaseClient
+            .from('dashboard_store')
+            .select('value')
+            .eq('key', dbKey)
+            .single();
+        if (error || !dbData || !dbData.value) return [];
+        
+        let payload = dbData.value;
+        if (typeof payload === 'string') {
+            try { payload = JSON.parse(payload); } catch(e) { return []; }
+        }
+        
+        let compressedData = '';
+        if (payload && payload.is_chunked) {
+            const totalChunks = payload.total_chunks;
+            const chunkKeys = [];
+            for (let i = 0; i < totalChunks; i++) {
+                chunkKeys.push(`${dbKey}__chunk_${i}`);
             }
-            petMap[key].total++;
-            const st = (r.status || '').toUpperCase();
-            if (st === 'OPEN') petMap[key].open++;
-            else if (st === 'DRAFT') petMap[key].draft++;
-            else if (st === 'SUBMITTED') petMap[key].submitted++;
-            else if (st === 'REJECTED') petMap[key].rejected++;
-            else if (st === 'APPROVED') petMap[key].approved++;
+            const chunkResults = await Promise.all(
+                chunkKeys.map(async (chunkKey) => {
+                    const { data, error: chunkErr } = await window.supabaseClient
+                        .from('dashboard_store')
+                        .select('value')
+                        .eq('key', chunkKey)
+                        .single();
+                    if (chunkErr || !data || !data.value) return '';
+                    let cp = data.value;
+                    if (typeof cp === 'string') {
+                        try { cp = JSON.parse(cp); } catch(e) { return ''; }
+                    }
+                    return cp.compressed_data || '';
+                })
+            );
+            compressedData = chunkResults.join('');
+        } else if (payload && payload.compressed_data) {
+            compressedData = payload.compressed_data;
+        }
+        
+        if (!compressedData) return [];
+        return window.decompressAndParseGranular ? window.decompressAndParseGranular(compressedData) : [];
+    };
 
-            if (st !== 'OPEN' && st !== 'DRAFT') petMap[key].selesai++;
-            else petMap[key].belum++;
-        });
+    // Load data from memory or fetch from Supabase
+    for (const kab of selectedKabs) {
+        const match = kab.match(/\[(\d+)\]/);
+        if (!match) continue;
+        const fullCode = `72${match[1]}`;
+        const kabClean = kab.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
 
-        rows = Object.values(petMap).map(p => ({
-            'Kabupaten/Kota': p.kab,
-            'Nama Petugas': p.name,
-            'Pengawas/Pencacah': p.pengawas,
-            'Email/Username': p.email,
-            'Total Target': p.total,
-            'Belum Selesai': p.belum,
-            'Selesai': p.selesai,
-            '% Capaian': p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) + '%' : '0.0%',
-            'OPEN': p.open,
-            'DRAFT': p.draft,
-            'SUBMITTED': p.submitted,
-            'REJECTED': p.rejected,
-            'APPROVED': p.approved
-        }));
-    } else {
-        // Fallback: try MySQL API per kab
-        if (statusEl) statusEl.textContent = '⏳ Mengambil data dari server...';
-        for (const kab of selectedKabs) {
-            const match = kab.match(/\[(\d+)\]/);
-            const kabCode = match ? `72${match[1]}` : '';
+        if (statusEl) statusEl.textContent = `⏳ Memuat data ${kab}...`;
+
+        // Check if currently loaded in memory
+        let isMatchMemory = false;
+        if (window.GRANULAR_ASSIGNMENTS_DATA && window.GRANULAR_ASSIGNMENTS_DATA.length > 0) {
+            const firstRec = window.GRANULAR_ASSIGNMENTS_DATA[0];
+            const memoryKabClean = (firstRec.kab_name || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+            if (memoryKabClean === kabClean) {
+                isMatchMemory = true;
+                const memFiltered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => r.survey_type === surveyType);
+                allGranularRecords.push(...memFiltered);
+            }
+        }
+
+        if (!isMatchMemory) {
             try {
-                const url = `https://dds-api.bpssulteng.id/api.php?action=get_petugas_summary&survey=${surveyType}&kab=${kabCode}`;
-                const res = await fetch(url);
-                const data = await res.json();
-                if (Array.isArray(data)) {
-                    data.forEach(r => {
-                        rows.push({
-                            'Kabupaten/Kota': kab,
-                            'Nama Petugas': r.petugas_fullname || r.petugas_username || 'Belum Ada Petugas',
-                            'Pengawas/Pencacah': r.pengawas_fullname || r.pengawas_username || '-',
-                            'Email/Username': r.petugas_username || '-',
-                            'Total Target': r.total_target || 0,
-                            'Belum Selesai': r.belum_selesai || 0,
-                            'Selesai': r.selesai || 0,
-                            '% Capaian': (r.total_target > 0 ? ((r.selesai / r.total_target) * 100).toFixed(1) : '0.0') + '%',
-                            'OPEN': r.open || 0,
-                            'DRAFT': r.draft || 0,
-                            'SUBMITTED': r.submitted || 0,
-                            'REJECTED': r.rejected || 0,
-                            'APPROVED': r.approved || 0
-                        });
-                    });
-                }
+                const records = await fetchGranularDataForKab(fullCode, surveyType);
+                allGranularRecords.push(...records);
             } catch (e) {
-                console.warn('Gagal ambil data kab', kab, e);
+                console.warn(`Gagal memuat data granular untuk ${kab}:`, e);
             }
         }
     }
 
-    if (rows.length === 0) {
+    if (allGranularRecords.length === 0) {
         if (statusEl) statusEl.textContent = '⚠️ Tidak ada data untuk diekspor.';
         return;
     }
 
+    if (statusEl) statusEl.textContent = '⏳ Menyusun rekapitulasi petugas...';
+
+    const petMap = {};
+    allGranularRecords.forEach(r => {
+        let name = r.petugas_fullname || r.petugas_username || 'Belum Ada Petugas';
+        if (name === '-' || !name.trim()) name = 'Belum Ada Petugas';
+        
+        const pengawas = r.pengawas_fullname || r.pengawas_username || '-';
+        const email = r.petugas_username || '-';
+        const kab = r.kab_name || '-';
+        const key = `${kab}|||${name}`;
+        
+        if (!petMap[key]) {
+            petMap[key] = { kab, name, pengawas, email, total: 0, selesai: 0, belum: 0, open: 0, draft: 0, submitted: 0, rejected: 0, approved: 0 };
+        }
+        petMap[key].total++;
+        const st = (r.status || '').toUpperCase();
+        if (st === 'OPEN') petMap[key].open++;
+        else if (st === 'DRAFT') petMap[key].draft++;
+        else if (st === 'SUBMITTED') petMap[key].submitted++;
+        else if (st === 'REJECTED') petMap[key].rejected++;
+        else if (st === 'APPROVED') petMap[key].approved++;
+
+        if (st !== 'OPEN' && st !== 'DRAFT') petMap[key].selesai++;
+        else petMap[key].belum++;
+    });
+
+    const rows = Object.values(petMap).map(p => ({
+        'Kabupaten/Kota': p.kab,
+        'Nama Petugas': p.name,
+        'Pengawas/Pencacah': p.pengawas,
+        'Email/Username': p.email,
+        'Total Target': p.total,
+        'Belum Selesai': p.belum,
+        'Selesai': p.selesai,
+        '% Capaian': p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) + '%' : '0.0%',
+        'OPEN': p.open,
+        'DRAFT': p.draft,
+        'SUBMITTED': p.submitted,
+        'REJECTED': p.rejected,
+        'APPROVED': p.approved
+    }));
+
     exportToCSV(rows, `rekap_petugas_${surveyType}_${new Date().toISOString().slice(0,10)}.csv`);
     if (statusEl) statusEl.textContent = `✅ ${rows.length} baris berhasil diunduh!`;
+}
 }
 
 async function downloadRawExcel(selectedKabs, surveyType, statusEl) {
