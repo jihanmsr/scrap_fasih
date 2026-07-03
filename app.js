@@ -6974,7 +6974,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
  
                 if (!petugasMap[petName]) {
-                    petugasMap[petName] = { name: petName, total: 0, selesai: 0, belum: 0 };
+                    petugasMap[petName] = { name: petName, email: r.petugas_username || '-', total: 0, selesai: 0, belum: 0 };
                 }
  
                 petugasMap[petName].total += 1;
@@ -7005,7 +7005,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const belum = parseInt(r.belum_selesai) || 0;
  
                 if (!petugasMap[petName]) {
-                    petugasMap[petName] = { name: petName, total: 0, selesai: 0, belum: 0 };
+                    petugasMap[petName] = { name: petName, email: r.petugas_username || '-', total: 0, selesai: 0, belum: 0 };
                 }
  
                 petugasMap[petName].total += total;
@@ -7040,6 +7040,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let valA, valB;
             switch (window.petugasSortField) {
                 case 'name': valA = a.name; valB = b.name; break;
+                case 'email': valA = a.email || ''; valB = b.email || ''; break;
                 case 'belum': valA = a.belum; valB = b.belum; break;
                 case 'selesai': valA = a.selesai; valB = b.selesai; break;
                 case 'pct': valA = (a.total > 0 ? a.selesai / a.total : 0); valB = (b.total > 0 ? b.selesai / b.total : 0); break;
@@ -7096,6 +7097,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${p.name}
                         </div>
                     </td>
+                    <td style="font-weight: 500; color: var(--text-secondary); font-family: monospace; font-size: 0.82rem;">${p.email}</td>
                     <td style="text-align: center; font-weight: 700; color: var(--text-primary); font-family: 'Outfit', sans-serif;">${p.total.toLocaleString('id-ID')}</td>
                     <td style="text-align: center; font-weight: 600; color: var(--color-bounced);">${p.belum.toLocaleString('id-ID')}</td>
                     <td style="text-align: center; font-weight: 600; color: var(--color-delivered);">${p.selesai.toLocaleString('id-ID')}</td>
@@ -8622,6 +8624,7 @@ function exportToCSV(rows, filename) {
     if (!rows || rows.length === 0) return;
     const headers = Object.keys(rows[0]);
     const csvLines = [
+        'sep=,',
         headers.join(','),
         ...rows.map(row => headers.map(h => {
             let val = row[h] == null ? '' : String(row[h]);
