@@ -5,7 +5,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 45576,
         "assigned": 3815,
         "have_not_assigned": 41761,
-        "timestamp": "2026-07-03T20:15:20.509904"
+        "timestamp": "2026-07-03T20:30:24.539373"
     },
     {
         "kode_kab": "7202",
@@ -13,7 +13,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 144337,
         "assigned": 4825,
         "have_not_assigned": 139512,
-        "timestamp": "2026-07-03T20:15:20.510344"
+        "timestamp": "2026-07-03T20:30:24.541452"
     },
     {
         "kode_kab": "7203",
@@ -21,7 +21,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 50780,
         "assigned": 2896,
         "have_not_assigned": 47884,
-        "timestamp": "2026-07-03T20:15:20.510351"
+        "timestamp": "2026-07-03T20:30:24.541458"
     },
     {
         "kode_kab": "7204",
@@ -29,15 +29,15 @@ window.ASSIGN_DATA_UMUM = [
         "total": 108963,
         "assigned": 3837,
         "have_not_assigned": 105126,
-        "timestamp": "2026-07-03T20:15:20.510355"
+        "timestamp": "2026-07-03T20:30:24.541462"
     },
     {
         "kode_kab": "7205",
         "nama_kab": "[05] DONGGALA",
         "total": 109532,
-        "assigned": 3508,
-        "have_not_assigned": 106024,
-        "timestamp": "2026-07-03T20:15:20.510359"
+        "assigned": 3509,
+        "have_not_assigned": 106023,
+        "timestamp": "2026-07-03T20:30:24.541465"
     },
     {
         "kode_kab": "7206",
@@ -45,7 +45,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 79955,
         "assigned": 3756,
         "have_not_assigned": 76199,
-        "timestamp": "2026-07-03T20:15:20.510363"
+        "timestamp": "2026-07-03T20:30:24.541468"
     },
     {
         "kode_kab": "7207",
@@ -53,15 +53,15 @@ window.ASSIGN_DATA_UMUM = [
         "total": 59393,
         "assigned": 3949,
         "have_not_assigned": 55444,
-        "timestamp": "2026-07-03T20:15:20.510367"
+        "timestamp": "2026-07-03T20:30:24.541472"
     },
     {
         "kode_kab": "7208",
         "nama_kab": "[08] PARIGI MOUTONG",
         "total": 174474,
-        "assigned": 3524,
-        "have_not_assigned": 170950,
-        "timestamp": "2026-07-03T20:15:20.510372"
+        "assigned": 3525,
+        "have_not_assigned": 170949,
+        "timestamp": "2026-07-03T20:30:24.541476"
     },
     {
         "kode_kab": "7209",
@@ -69,15 +69,15 @@ window.ASSIGN_DATA_UMUM = [
         "total": 60607,
         "assigned": 2918,
         "have_not_assigned": 57689,
-        "timestamp": "2026-07-03T20:15:20.510377"
+        "timestamp": "2026-07-03T20:30:24.541480"
     },
     {
         "kode_kab": "7210",
         "nama_kab": "[10] SIGI",
         "total": 108247,
-        "assigned": 3835,
-        "have_not_assigned": 104412,
-        "timestamp": "2026-07-03T20:15:20.510381"
+        "assigned": 3836,
+        "have_not_assigned": 104411,
+        "timestamp": "2026-07-03T20:30:24.541483"
     },
     {
         "kode_kab": "7211",
@@ -85,7 +85,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 28572,
         "assigned": 5747,
         "have_not_assigned": 22825,
-        "timestamp": "2026-07-03T20:15:20.510386"
+        "timestamp": "2026-07-03T20:30:24.541487"
     },
     {
         "kode_kab": "7212",
@@ -93,7 +93,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 43731,
         "assigned": 3236,
         "have_not_assigned": 40495,
-        "timestamp": "2026-07-03T20:15:20.510391"
+        "timestamp": "2026-07-03T20:30:24.541492"
     },
     {
         "kode_kab": "7271",
@@ -101,7 +101,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 172294,
         "assigned": 6971,
         "have_not_assigned": 165323,
-        "timestamp": "2026-07-03T20:15:20.510396"
+        "timestamp": "2026-07-03T20:30:24.541495"
     }
 ];
 window.ASSIGN_DATA_UB   = [
@@ -111,7 +111,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 688,
         "assigned": 688,
         "have_not_assigned": 0,
-        "timestamp": "2026-07-03T20:15:20.514035"
+        "timestamp": "2026-07-03T20:30:24.544534"
     }
 ];
 window.ASSIGN_SLS_DATA_UMUM = [
@@ -4797,8 +4797,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "OTI",
         "SINDUE TOBATA",
         "[05] DONGGALA",
-        208,
-        208,
+        209,
+        209,
         0,
         0,
         [
@@ -8507,8 +8507,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "SAUSU TORONO",
         "SAUSU",
         "[08] PARIGI MOUTONG",
-        128,
-        128,
+        129,
+        129,
         0,
         0,
         [
@@ -9585,8 +9585,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "TONGOA",
         "PALOLO",
         "[10] SIGI",
-        167,
-        167,
+        168,
+        168,
         0,
         0,
         [
@@ -34707,10 +34707,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "31844c4f-c6d4-4e79-8870-79c08989c50c",
         "username": "galangstat24050@gmail.com",
         "fullname": "galangstat24050@gmail.com",
-        "target_count": 315,
+        "target_count": 316,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 315,
+        "open_count": 316,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -36821,10 +36821,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "1244df87-240e-4394-96af-ffa87dfb213e",
         "username": "ibeibrahim980@gmail.com",
         "fullname": "ibeibrahim980@gmail.com",
-        "target_count": 501,
+        "target_count": 502,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 501,
+        "open_count": 502,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -39187,10 +39187,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "51a4a6b2-8a6a-42fa-851b-b280f85f35a2",
         "username": "irulmaulana58@gmail.com",
         "fullname": "irulmaulana58@gmail.com",
-        "target_count": 407,
+        "target_count": 408,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 407,
+        "open_count": 408,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
