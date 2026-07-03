@@ -6560,18 +6560,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Fetch Petugas Summary from MySQL
-        const matchCode = kabVal.match(/\[(\d+)\]/);
-        const kabCodeParam = (kabVal === 'all' || !matchCode) ? '' : `72${matchCode[1]}`;
-        try {
-            const url = `https://dds-api.bpssulteng.id/api.php?action=get_petugas_summary&survey=${surveyTypeFilter}&kab=${kabCodeParam}`;
-            const res = await fetch(url);
-            const data = await res.json();
-            window.PETUGAS_SUMMARY_MYSQL = data; 
-            if (window.renderPetugasSummaryTable) {
-                window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA);
+        const summarySection = document.getElementById('petugas-summary-section');
+        if (kabVal !== 'all') {
+            if (summarySection) summarySection.style.display = 'block';
+            const matchCode = kabVal.match(/\[(\d+)\]/);
+            const kabCodeParam = !matchCode ? '' : `72${matchCode[1]}`;
+            try {
+                const url = `https://dds-api.bpssulteng.id/api.php?action=get_petugas_summary&survey=${surveyTypeFilter}&kab=${kabCodeParam}`;
+                const res = await fetch(url);
+                const data = await res.json();
+                window.PETUGAS_SUMMARY_MYSQL = data; 
+                if (window.renderPetugasSummaryTable) {
+                    window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA);
+                }
+            } catch (e) {
+                console.error("Failed to fetch petugas summary:", e);
             }
-        } catch (e) {
-            console.error("Failed to fetch petugas summary:", e);
+        } else {
+            if (summarySection) summarySection.style.display = 'none';
         }
 
         window.updateGranularStatusFilterOptions();
