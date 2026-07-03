@@ -2006,34 +2006,50 @@
 
     <!-- ====== MODAL DOWNLOAD EXCEL PETUGAS ====== -->
     <div id="excel-download-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center; backdrop-filter:blur(4px);">
-        <div style="background:var(--card-bg); border-radius:1.25rem; box-shadow:0 24px 60px rgba(0,0,0,0.35); width:min(620px,95vw); max-height:90vh; overflow:hidden; display:flex; flex-direction:column; border:1px solid var(--card-border);">
+        <div style="background:var(--card-bg); border-radius:1.25rem; box-shadow:0 24px 60px rgba(0,0,0,0.35); width:min(580px,95vw); max-height:90vh; overflow:hidden; display:flex; flex-direction:column; border:1px solid var(--card-border);">
+            <!-- Header -->
             <div style="display:flex; align-items:center; justify-content:space-between; padding:1.25rem 1.5rem; border-bottom:1px solid var(--card-border); background:linear-gradient(135deg,rgba(34,197,94,0.08),transparent);">
                 <div style="display:flex; align-items:center; gap:0.75rem;">
                     <div style="width:36px;height:36px;border-radius:0.75rem;background:linear-gradient(135deg,#22c55e,#16a34a);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     </div>
                     <div>
-                        <div style="font-family:Outfit,sans-serif;font-weight:700;font-size:1rem;color:var(--text);">Download Data Excel</div>
-                        <div style="font-size:0.75rem;color:var(--text-secondary);">Pilih opsi &amp; kabupaten/kota yang ingin diunduh</div>
+                        <div style="font-family:Outfit,sans-serif;font-weight:700;font-size:1rem;color:var(--text);">Download Data</div>
+                        <div id="excel-modal-subtitle" style="font-size:0.75rem;color:var(--text-secondary);">Export tabel rekap petugas yang sedang tampil</div>
                     </div>
                 </div>
                 <button onclick="document.getElementById('excel-download-modal').style.display='none'" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;border-radius:0.5rem;line-height:1;">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                 </button>
             </div>
-            <div style="padding:1.5rem; overflow-y:auto; flex:1;">
-                <div style="margin-bottom:1.25rem;">
-                    <label style="display:block;font-size:0.78rem;font-weight:700;color:var(--text-secondary);margin-bottom:0.6rem;text-transform:uppercase;letter-spacing:0.06em;">Tipe Data</label>
+
+            <!-- Body -->
+            <div style="padding:1.5rem; overflow-y:auto; flex:1; display:flex; flex-direction:column; gap:1.25rem;">
+
+                <!-- Tipe Data -->
+                <div>
+                    <label style="display:block;font-size:0.78rem;font-weight:700;color:var(--text-secondary);margin-bottom:0.6rem;text-transform:uppercase;letter-spacing:0.06em;">Tipe Unduhan</label>
                     <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
-                        <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;padding:0.6rem 1rem;border-radius:0.75rem;border:2px solid var(--primary);background:rgba(249,115,22,0.06);font-size:0.85rem;font-weight:600;color:var(--primary);">
-                            <input type="radio" name="excel-type" value="summary" checked id="excel-type-summary" style="accent-color:var(--primary);"> &#x1F4CA; Rekapitulasi per Petugas
+                        <label id="lbl-type-summary" style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;padding:0.6rem 1rem;border-radius:0.75rem;border:2px solid var(--primary);background:rgba(249,115,22,0.06);font-size:0.85rem;font-weight:600;color:var(--primary);transition:all 0.2s;">
+                            <input type="radio" name="excel-type" value="summary" checked id="excel-type-summary" style="accent-color:var(--primary);" onchange="window.onExcelTypeChange()"> 📊 Rekapitulasi per Petugas
                         </label>
-                        <label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;padding:0.6rem 1rem;border-radius:0.75rem;border:2px solid var(--card-border);background:var(--card-bg);font-size:0.85rem;font-weight:600;color:var(--text);">
-                            <input type="radio" name="excel-type" value="raw" id="excel-type-raw" style="accent-color:var(--primary);"> &#x1F4CB; Data Raw (Per Target)
+                        <label id="lbl-type-raw" style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;padding:0.6rem 1rem;border-radius:0.75rem;border:2px solid var(--card-border);background:var(--card-bg);font-size:0.85rem;font-weight:600;color:var(--text);transition:all 0.2s;">
+                            <input type="radio" name="excel-type" value="raw" id="excel-type-raw" style="accent-color:var(--primary);" onchange="window.onExcelTypeChange()"> 📋 Data Rincian per Target
                         </label>
                     </div>
                 </div>
-                <div style="margin-bottom:1.25rem;">
+
+                <!-- Info panel (hanya untuk rekap) -->
+                <div id="excel-summary-info" style="background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:0.75rem;padding:0.85rem 1rem;display:flex;gap:0.6rem;align-items:flex-start;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <div style="font-size:0.82rem;color:var(--text-secondary);line-height:1.5;">
+                        Data yang diunduh adalah <strong style="color:var(--text);">tabel rekap petugas yang sedang tampil</strong> di layar — termasuk filter wilayah &amp; pencarian yang aktif.<br>
+                        Tidak perlu pilih kabupaten lagi. Pastikan filter wilayah sudah sesuai sebelum download.
+                    </div>
+                </div>
+
+                <!-- Pilih Kabupaten (hanya untuk raw) -->
+                <div id="excel-kab-section" style="display:none;">
                     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.6rem;">
                         <label style="font-size:0.78rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em;">Kabupaten / Kota</label>
                         <div style="display:flex;gap:0.5rem;">
@@ -2043,6 +2059,8 @@
                     </div>
                     <div id="excel-kab-checklist" style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;max-height:200px;overflow-y:auto;padding:0.75rem;background:var(--bg);border-radius:0.75rem;border:1px solid var(--card-border);"></div>
                 </div>
+
+                <!-- Jenis Survei -->
                 <div>
                     <label style="display:block;font-size:0.78rem;font-weight:700;color:var(--text-secondary);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em;">Jenis Survei</label>
                     <select id="excel-survey-type" style="width:100%;padding:0.6rem 0.75rem;border-radius:0.6rem;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text);font-size:0.85rem;font-family:Outfit,sans-serif;">
@@ -2051,6 +2069,8 @@
                     </select>
                 </div>
             </div>
+
+            <!-- Footer -->
             <div style="padding:1rem 1.5rem;border-top:1px solid var(--card-border);display:flex;gap:0.75rem;justify-content:flex-end;align-items:center;">
                 <span id="excel-download-status" style="font-size:0.8rem;color:var(--text-secondary);flex:1;"></span>
                 <button onclick="document.getElementById('excel-download-modal').style.display='none'" style="padding:0.6rem 1.25rem;border-radius:0.75rem;border:1px solid var(--card-border);background:transparent;color:var(--text-secondary);font-size:0.85rem;font-weight:600;cursor:pointer;font-family:Outfit,sans-serif;">Batal</button>

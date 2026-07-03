@@ -7090,6 +7090,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return (valA - valB) * window.petugasSortOrder;
         });
 
+        // Save for direct export (no DB re-fetch needed)
+        window.lastPetugasSummaryArr = arr;
+
         const tbody = document.getElementById('petugas-summary-table-body');
         if (!tbody) return;
 
@@ -8398,6 +8401,28 @@ window.openExcelDownloadModal = function () {
     modal.style.display = 'flex';
 };
 
+window.onExcelTypeChange = function () {
+    const tipe = document.querySelector('input[name="excel-type"]:checked')?.value || 'summary';
+    const summaryInfo = document.getElementById('excel-summary-info');
+    const kabSection = document.getElementById('excel-kab-section');
+    const subtitle = document.getElementById('excel-modal-subtitle');
+    const lblSummary = document.getElementById('lbl-type-summary');
+    const lblRaw = document.getElementById('lbl-type-raw');
+    if (tipe === 'summary') {
+        if (summaryInfo) summaryInfo.style.display = 'flex';
+        if (kabSection) kabSection.style.display = 'none';
+        if (subtitle) subtitle.textContent = 'Export tabel rekap petugas yang sedang tampil';
+        if (lblSummary) { lblSummary.style.borderColor = 'var(--primary)'; lblSummary.style.color = 'var(--primary)'; lblSummary.style.background = 'rgba(249,115,22,0.06)'; }
+        if (lblRaw) { lblRaw.style.borderColor = 'var(--card-border)'; lblRaw.style.color = 'var(--text)'; lblRaw.style.background = 'var(--card-bg)'; }
+    } else {
+        if (summaryInfo) summaryInfo.style.display = 'none';
+        if (kabSection) kabSection.style.display = 'block';
+        if (subtitle) subtitle.textContent = 'Pilih kabupaten yang ingin diunduh datanya';
+        if (lblRaw) { lblRaw.style.borderColor = 'var(--primary)'; lblRaw.style.color = 'var(--primary)'; lblRaw.style.background = 'rgba(249,115,22,0.06)'; }
+        if (lblSummary) { lblSummary.style.borderColor = 'var(--card-border)'; lblSummary.style.color = 'var(--text)'; lblSummary.style.background = 'var(--card-bg)'; }
+    }
+};
+
 window.executeExcelDownload = async function () {
     const statusEl = document.getElementById('excel-download-status');
     const btn = document.getElementById('btn-excel-execute');
@@ -8405,21 +8430,47 @@ window.executeExcelDownload = async function () {
     const tipeEl = document.querySelector('input[name="excel-type"]:checked');
     const tipe = tipeEl ? tipeEl.value : 'summary';
     const surveyType = document.getElementById('excel-survey-type')?.value || 'se_umum';
+    const surveyLabel = surveyType === 'se_umum' ? 'SE_Umum' : 'SE_UB';
+    const today = new Date().toISOString().slice(0, 10);
 
-    const selectedKabs = [...document.querySelectorAll('.excel-kab-check:checked')].map(c => c.value);
-    if (selectedKabs.length === 0) {
-        if (statusEl) statusEl.textContent = '⚠️ Pilih minimal satu kabupaten/kota.';
-        return;
-    }
+    // Get current kab from filter for filename
+    const kabFilterEl = document.getElementById('assign-sls-kab-filter');
+    const kabFilterVal = kabFilterEl ? kabFilterEl.value : 'all';
+    const kabLabel = kabFilterVal === 'all' ? 'Semua_Kab'
+        : kabFilterVal.replace(/^\[\d+\]\s*/, '').trim().replace(/\s+/g, '_').toUpperCase();
 
     if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
     if (statusEl) statusEl.textContent = '⏳ Menyiapkan data...';
 
     try {
         if (tipe === 'summary') {
-            await downloadSummaryExcel(selectedKabs, surveyType, statusEl);
+            // Export directly from the table already rendered on screen
+            const arr = window.lastPetugasSummaryArr;
+            if (!arr || arr.length === 0) {
+                if (statusEl) statusEl.textContent = '⚠️ Belum ada data tabel rekap yang tampil. Pilih kabupaten terlebih dahulu di halaman Progres Petugas.';
+                return;
+            }
+            const rows = arr.map((p, i) => ({
+                'No': i + 1,
+                'Nama Petugas': p.name || '-',
+                'Email / Username': p.email || '-',
+                'Total Target': p.total,
+                'Belum Selesai': p.belum,
+                'Selesai': p.selesai,
+                '% Capaian': p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) + '%' : '0.0%'
+            }));
+            exportToCSV(rows, `Rekap_Petugas_${surveyLabel}_${kabLabel}_${today}.csv`);
+            if (statusEl) statusEl.textContent = `✅ ${rows.length} baris berhasil diunduh!`;
         } else {
-            await downloadRawExcel(selectedKabs, surveyType, statusEl);
+            const selectedKabs = [...document.querySelectorAll('.excel-kab-check:checked')].map(c => c.value);
+            if (selectedKabs.length === 0) {
+                if (statusEl) statusEl.textContent = '⚠️ Pilih minimal satu kabupaten/kota.';
+                return;
+            }
+            const kabsLabel = selectedKabs.length === 1
+                ? selectedKabs[0].replace(/^\[\d+\]\s*/, '').trim().replace(/\s+/g, '_').toUpperCase()
+                : `${selectedKabs.length}_Kab`;
+            await downloadRawExcel(selectedKabs, surveyType, statusEl, `Raw_${surveyLabel}_${kabsLabel}_${today}.csv`);
         }
     } catch (e) {
         console.error('Download error:', e);
@@ -8614,7 +8665,7 @@ async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
     if (statusEl) statusEl.textContent = `✅ ${rows.length} baris berhasil diunduh!`;
 }
 
-async function downloadRawExcel(selectedKabs, surveyType, statusEl) {
+async function downloadRawExcel(selectedKabs, surveyType, statusEl, filename) {
     if (!window.supabaseClient) {
         if (statusEl) statusEl.textContent = '❌ Koneksi Supabase tidak tersedia.';
         return;
@@ -8699,7 +8750,8 @@ async function downloadRawExcel(selectedKabs, surveyType, statusEl) {
         return;
     }
 
-    exportToCSV(allRows, `raw_target_${surveyType}_${new Date().toISOString().slice(0,10)}.csv`);
+    const outFilename = filename || `Raw_Target_${surveyType === 'se_umum' ? 'SE_Umum' : 'SE_UB'}_${new Date().toISOString().slice(0,10)}.csv`;
+    exportToCSV(allRows, outFilename);
     if (statusEl) statusEl.textContent = `✅ ${allRows.length} baris berhasil diunduh!`;
 }
 
