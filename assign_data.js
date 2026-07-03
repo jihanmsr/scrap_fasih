@@ -3,9 +3,9 @@ window.ASSIGN_DATA_UMUM = [
         "kode_kab": "7201",
         "nama_kab": "[01] BANGGAI KEPULAUAN",
         "total": 45576,
-        "assigned": 3814,
-        "have_not_assigned": 41762,
-        "timestamp": "2026-07-03T19:54:20.049078"
+        "assigned": 3815,
+        "have_not_assigned": 41761,
+        "timestamp": "2026-07-03T20:15:20.509904"
     },
     {
         "kode_kab": "7202",
@@ -13,7 +13,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 144337,
         "assigned": 4825,
         "have_not_assigned": 139512,
-        "timestamp": "2026-07-03T19:54:20.049096"
+        "timestamp": "2026-07-03T20:15:20.510344"
     },
     {
         "kode_kab": "7203",
@@ -21,7 +21,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 50780,
         "assigned": 2896,
         "have_not_assigned": 47884,
-        "timestamp": "2026-07-03T19:54:20.049098"
+        "timestamp": "2026-07-03T20:15:20.510351"
     },
     {
         "kode_kab": "7204",
@@ -29,7 +29,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 108963,
         "assigned": 3837,
         "have_not_assigned": 105126,
-        "timestamp": "2026-07-03T19:54:20.049100"
+        "timestamp": "2026-07-03T20:15:20.510355"
     },
     {
         "kode_kab": "7205",
@@ -37,15 +37,15 @@ window.ASSIGN_DATA_UMUM = [
         "total": 109532,
         "assigned": 3508,
         "have_not_assigned": 106024,
-        "timestamp": "2026-07-03T19:54:20.049101"
+        "timestamp": "2026-07-03T20:15:20.510359"
     },
     {
         "kode_kab": "7206",
         "nama_kab": "[06] TOLI-TOLI",
         "total": 79955,
-        "assigned": 3755,
-        "have_not_assigned": 76200,
-        "timestamp": "2026-07-03T19:54:20.049103"
+        "assigned": 3756,
+        "have_not_assigned": 76199,
+        "timestamp": "2026-07-03T20:15:20.510363"
     },
     {
         "kode_kab": "7207",
@@ -53,7 +53,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 59393,
         "assigned": 3949,
         "have_not_assigned": 55444,
-        "timestamp": "2026-07-03T19:54:20.049104"
+        "timestamp": "2026-07-03T20:15:20.510367"
     },
     {
         "kode_kab": "7208",
@@ -61,7 +61,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 174474,
         "assigned": 3524,
         "have_not_assigned": 170950,
-        "timestamp": "2026-07-03T19:54:20.049106"
+        "timestamp": "2026-07-03T20:15:20.510372"
     },
     {
         "kode_kab": "7209",
@@ -69,7 +69,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 60607,
         "assigned": 2918,
         "have_not_assigned": 57689,
-        "timestamp": "2026-07-03T19:54:20.049107"
+        "timestamp": "2026-07-03T20:15:20.510377"
     },
     {
         "kode_kab": "7210",
@@ -77,23 +77,23 @@ window.ASSIGN_DATA_UMUM = [
         "total": 108247,
         "assigned": 3835,
         "have_not_assigned": 104412,
-        "timestamp": "2026-07-03T19:54:20.049109"
+        "timestamp": "2026-07-03T20:15:20.510381"
     },
     {
         "kode_kab": "7211",
         "nama_kab": "[11] BANGGAI LAUT",
         "total": 28572,
-        "assigned": 5746,
-        "have_not_assigned": 22826,
-        "timestamp": "2026-07-03T19:54:20.049111"
+        "assigned": 5747,
+        "have_not_assigned": 22825,
+        "timestamp": "2026-07-03T20:15:20.510386"
     },
     {
         "kode_kab": "7212",
         "nama_kab": "[12] MOROWALI UTARA",
         "total": 43731,
-        "assigned": 3235,
-        "have_not_assigned": 40496,
-        "timestamp": "2026-07-03T19:54:20.049113"
+        "assigned": 3236,
+        "have_not_assigned": 40495,
+        "timestamp": "2026-07-03T20:15:20.510391"
     },
     {
         "kode_kab": "7271",
@@ -101,7 +101,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 172294,
         "assigned": 6971,
         "have_not_assigned": 165323,
-        "timestamp": "2026-07-03T19:54:20.049115"
+        "timestamp": "2026-07-03T20:15:20.510396"
     }
 ];
 window.ASSIGN_DATA_UB   = [
@@ -111,7 +111,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 688,
         "assigned": 688,
         "have_not_assigned": 0,
-        "timestamp": "2026-07-03T19:54:20.050654"
+        "timestamp": "2026-07-03T20:15:20.514035"
     }
 ];
 window.ASSIGN_SLS_DATA_UMUM = [
@@ -191,8 +191,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "BAKA",
         "TINANGKUNG",
         "[01] BANGGAI KEPULAUAN",
-        197,
-        197,
+        198,
+        198,
         0,
         0,
         [
@@ -5637,8 +5637,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "GINUNGGUNG",
         "GALANG",
         "[06] TOLI-TOLI",
-        40,
-        40,
+        41,
+        41,
         0,
         0,
         [
@@ -10551,8 +10551,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "LOMPIO",
         "BANGGAI",
         "[11] BANGGAI LAUT",
-        179,
-        179,
+        180,
+        180,
         0,
         0,
         [
@@ -11531,8 +11531,8 @@ window.ASSIGN_SLS_DATA_UMUM = [
         "LEMBAH SUMARA",
         "SOYO JAYA",
         "[12] MOROWALI UTARA",
-        105,
-        105,
+        106,
+        106,
         0,
         0,
         [
@@ -24935,10 +24935,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "c8d0d7ce-8cb8-4b2e-9810-6320a640b9a3",
         "username": "arnianti90@gmail.com",
         "fullname": "arnianti90@gmail.com",
-        "target_count": 268,
+        "target_count": 269,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 268,
+        "open_count": 269,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -32075,10 +32075,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "59086c5c-1eec-4293-8f85-132912f116e3",
         "username": "fahrudindjibran7@gmail.com",
         "fullname": "fahrudindjibran7@gmail.com",
-        "target_count": 955,
+        "target_count": 956,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 955,
+        "open_count": 956,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -43303,10 +43303,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "cec25109-cd9e-44ff-bf22-0f23d99639aa",
         "username": "ma147696@gmail.com",
         "fullname": "ma147696@gmail.com",
-        "target_count": 455,
+        "target_count": 456,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 455,
+        "open_count": 456,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
@@ -43359,10 +43359,10 @@ window.PETUGAS_DATA_UMUM = [
         "id": "4433d7f2-d9de-49cb-8682-396dc8841141",
         "username": "madaputri1405@gmail.com",
         "fullname": "madaputri1405@gmail.com",
-        "target_count": 415,
+        "target_count": 416,
         "sync_count": 0,
         "draft_count": 0,
-        "open_count": 415,
+        "open_count": 416,
         "submitted_count": 0,
         "approved_count": 0,
         "rejected_count": 0,
