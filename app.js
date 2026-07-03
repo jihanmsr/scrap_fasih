@@ -8435,19 +8435,10 @@ async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
         return;
     }
 
-    const cleanKabs = selectedKabs.map(k => k.replace(/^\[\d+\]\s*/, '').trim().toUpperCase());
-    let allGranularRecords = [];
-
-    // Helper to fetch dynamically — per-kab key first, then combined key fallback
     const fetchGranularDataForKab = async (kabCode, sType, kabCleanName) => {
         const dbKey = `granular_assignments_${sType}_${kabCode}`;
-        const { data: dbData, error } = await window.supabaseClient
-            .from('dashboard_store')
-            .select('value')
-            .eq('key', dbKey)
-            .single();
         
-        const parsePayload = async (payload) => {
+        const parsePayload = async (payload, keyForChunks) => {
             if (typeof payload === 'string') {
                 try { payload = JSON.parse(payload); } catch(e) { return []; }
             }
@@ -8456,7 +8447,7 @@ async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
                 const totalChunks = payload.total_chunks;
                 const chunkKeys = [];
                 for (let i = 0; i < totalChunks; i++) {
-                    chunkKeys.push(`${dbKey}__chunk_${i}`);
+                    chunkKeys.push(`${keyForChunks}__chunk_${i}`);
                 }
                 const chunkResults = await Promise.all(
                     chunkKeys.map(async (chunkKey) => {
@@ -8478,11 +8469,22 @@ async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
                 compressedData = payload.compressed_data;
             }
             if (!compressedData) return [];
-            return window.decompressAndParseGranular ? window.decompressAndParseGranular(compressedData) : [];
+            try {
+                return window.decompressAndParseGranular ? window.decompressAndParseGranular(compressedData) : [];
+            } catch(decompErr) {
+                console.error('decompressAndParseGranular error:', decompErr);
+                return [];
+            }
         };
         
+        const { data: dbData, error } = await window.supabaseClient
+            .from('dashboard_store')
+            .select('value')
+            .eq('key', dbKey)
+            .single();
+        
         if (!error && dbData && dbData.value) {
-            return await parsePayload(dbData.value);
+            return await parsePayload(dbData.value, dbKey);
         }
         
         // Fallback: try combined key (e.g. granular_assignments_se_ub) and filter by kab
@@ -8493,18 +8495,21 @@ async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
             .eq('key', fallbackKey)
             .single();
         if (!fbError && fbData && fbData.value) {
-            const allRecords = await parsePayload(fbData.value);
+            const allRecords = await parsePayload(fbData.value, fallbackKey);
             if (allRecords && allRecords.length > 0 && kabCleanName) {
                 const filtered = allRecords.filter(r => {
                     const rKab = (r.kab_name || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
                     return rKab === kabCleanName.toUpperCase();
                 });
-                return filtered;
+                return filtered.length > 0 ? filtered : allRecords;
             }
             return allRecords;
         }
         return [];
     };
+
+    const cleanKabs = selectedKabs.map(k => k.replace(/^\[\d+\]\s*/, '').trim().toUpperCase());
+    let allGranularRecords = [];
 
     // Load data from memory or fetch from Supabase
     for (const kab of selectedKabs) {
