@@ -6515,12 +6515,45 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                         }
                         
-                        if (payload && payload.compressed_data) {
+                        if (payload && payload.is_chunked) {
+                            const totalChunks = payload.total_chunks;
+                            console.log(`Key ${dbKey} is chunked into ${totalChunks} chunks. Fetching in parallel...`);
+                            
+                            // Generate array of keys to fetch: key__chunk_0, key__chunk_1, etc.
+                            const chunkKeys = [];
+                            for (let i = 0; i < totalChunks; i++) {
+                                chunkKeys.push(`${dbKey}__chunk_${i}`);
+                            }
+                            
+                            // Fetch all chunks concurrently
+                            const chunkResults = await Promise.all(
+                                chunkKeys.map(async (chunkKey) => {
+                                    const { data, error } = await supabaseClient
+                                        .from('dashboard_store')
+                                        .select('value')
+                                        .eq('key', chunkKey)
+                                        .single();
+                                    if (error || !data) {
+                                        throw new Error(`Failed to fetch chunk ${chunkKey}: ${error?.message || 'No data'}`);
+                                    }
+                                    let chunkPayload = data.value;
+                                    if (typeof chunkPayload === 'string') {
+                                        chunkPayload = JSON.parse(chunkPayload);
+                                    }
+                                    return chunkPayload.compressed_data || '';
+                                })
+                            );
+                            
+                            // Reassemble the compressed data
+                            const assembledCompressedData = chunkResults.join('');
+                            console.log(`Reassembled compressed data: ${assembledCompressedData.length} chars.`);
+                            window.GRANULAR_ASSIGNMENTS_DATA = window.decompressAndParseGranular(assembledCompressedData);
+                        } else if (payload && payload.compressed_data) {
                             window.GRANULAR_ASSIGNMENTS_DATA = window.decompressAndParseGranular(payload.compressed_data);
                         } else {
                             window.GRANULAR_ASSIGNMENTS_DATA = payload;
                         }
-                        console.log(`Loaded ${window.GRANULAR_ASSIGNMENTS_DATA.length} granular assignments.`);
+                        console.log(`Loaded ${window.GRANULAR_ASSIGNMENTS_DATA ? window.GRANULAR_ASSIGNMENTS_DATA.length : 0} granular assignments.`);
                     } else {
                         console.warn(`Failed to fetch ${dbKey} from Supabase:`, dbError);
                         window.GRANULAR_ASSIGNMENTS_DATA = null;
@@ -8488,7 +8521,28 @@ async function downloadRawExcel(selectedKabs, surveyType, statusEl) {
             if (typeof payload === 'string') payload = JSON.parse(payload);
 
             let records = [];
-            if (payload && payload.compressed_data) {
+            if (payload && payload.is_chunked) {
+                const totalChunks = payload.total_chunks;
+                const chunkKeys = [];
+                for (let i = 0; i < totalChunks; i++) {
+                    chunkKeys.push(`${dbKey}__chunk_${i}`);
+                }
+                const chunkResults = await Promise.all(
+                    chunkKeys.map(async (chunkKey) => {
+                        const { data, error } = await window.supabaseClient
+                            .from('dashboard_store')
+                            .select('value')
+                            .eq('key', chunkKey)
+                            .single();
+                        if (error || !data) return '';
+                        let chunkPayload = data.value;
+                        if (typeof chunkPayload === 'string') chunkPayload = JSON.parse(chunkPayload);
+                        return chunkPayload.compressed_data || '';
+                    })
+                );
+                const assembled = chunkResults.join('');
+                records = window.decompressAndParseGranular ? window.decompressAndParseGranular(assembled) : [];
+            } else if (payload && payload.compressed_data) {
                 records = window.decompressAndParseGranular ? window.decompressAndParseGranular(payload.compressed_data) : [];
             } else if (Array.isArray(payload)) {
                 records = payload;
