@@ -6547,8 +6547,44 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                         console.log(`Loaded ${window.GRANULAR_ASSIGNMENTS_DATA ? window.GRANULAR_ASSIGNMENTS_DATA.length : 0} granular assignments.`);
                     } else {
-                        console.warn(`Failed to fetch ${dbKey} from Supabase:`, dbError);
-                        window.GRANULAR_ASSIGNMENTS_DATA = null;
+                        // Key per-kab not found — try fallback to combined key (e.g. granular_assignments_se_ub)
+                        const fallbackKey = `granular_assignments_${surveyTypeFilter}`;
+                        console.warn(`Key ${dbKey} not found, trying fallback key: ${fallbackKey}`);
+                        try {
+                            const { data: fbData, error: fbError } = await supabaseClient
+                                .from('dashboard_store')
+                                .select('value')
+                                .eq('key', fallbackKey)
+                                .single();
+                            if (!fbError && fbData && fbData.value) {
+                                let fbPayload = fbData.value;
+                                if (typeof fbPayload === 'string') { try { fbPayload = JSON.parse(fbPayload); } catch(e){} }
+                                let allRecords = null;
+                                if (fbPayload && fbPayload.compressed_data) {
+                                    allRecords = window.decompressAndParseGranular(fbPayload.compressed_data);
+                                } else if (Array.isArray(fbPayload)) {
+                                    allRecords = fbPayload;
+                                }
+                                if (allRecords && allRecords.length > 0) {
+                                    const cleanKabFb = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                                    const filtered = allRecords.filter(r => {
+                                        const rKab = (r.kab_name || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                                        return rKab === cleanKabFb;
+                                    });
+                                    window.GRANULAR_ASSIGNMENTS_DATA = filtered.length > 0 ? filtered : allRecords;
+                                    console.log(`Fallback: loaded ${window.GRANULAR_ASSIGNMENTS_DATA.length} records from ${fallbackKey}`);
+                                } else {
+                                    console.warn(`Fallback key ${fallbackKey} also has no data.`);
+                                    window.GRANULAR_ASSIGNMENTS_DATA = null;
+                                }
+                            } else {
+                                console.warn(`Fallback key ${fallbackKey} also not found:`, fbError?.message);
+                                window.GRANULAR_ASSIGNMENTS_DATA = null;
+                            }
+                        } catch (fbEx) {
+                            console.error('Fallback fetch error:', fbEx);
+                            window.GRANULAR_ASSIGNMENTS_DATA = null;
+                        }
                     }
                 } catch (e) {
                     console.error("Failed to load granular data from Supabase:", e);
@@ -8402,50 +8438,72 @@ async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
     const cleanKabs = selectedKabs.map(k => k.replace(/^\[\d+\]\s*/, '').trim().toUpperCase());
     let allGranularRecords = [];
 
-    // Helper helper to fetch dynamically
-    const fetchGranularDataForKab = async (kabCode, sType) => {
+    // Helper to fetch dynamically — per-kab key first, then combined key fallback
+    const fetchGranularDataForKab = async (kabCode, sType, kabCleanName) => {
         const dbKey = `granular_assignments_${sType}_${kabCode}`;
         const { data: dbData, error } = await window.supabaseClient
             .from('dashboard_store')
             .select('value')
             .eq('key', dbKey)
             .single();
-        if (error || !dbData || !dbData.value) return [];
         
-        let payload = dbData.value;
-        if (typeof payload === 'string') {
-            try { payload = JSON.parse(payload); } catch(e) { return []; }
-        }
-        
-        let compressedData = '';
-        if (payload && payload.is_chunked) {
-            const totalChunks = payload.total_chunks;
-            const chunkKeys = [];
-            for (let i = 0; i < totalChunks; i++) {
-                chunkKeys.push(`${dbKey}__chunk_${i}`);
+        const parsePayload = async (payload) => {
+            if (typeof payload === 'string') {
+                try { payload = JSON.parse(payload); } catch(e) { return []; }
             }
-            const chunkResults = await Promise.all(
-                chunkKeys.map(async (chunkKey) => {
-                    const { data, error: chunkErr } = await window.supabaseClient
-                        .from('dashboard_store')
-                        .select('value')
-                        .eq('key', chunkKey)
-                        .single();
-                    if (chunkErr || !data || !data.value) return '';
-                    let cp = data.value;
-                    if (typeof cp === 'string') {
-                        try { cp = JSON.parse(cp); } catch(e) { return ''; }
-                    }
-                    return cp.compressed_data || '';
-                })
-            );
-            compressedData = chunkResults.join('');
-        } else if (payload && payload.compressed_data) {
-            compressedData = payload.compressed_data;
+            let compressedData = '';
+            if (payload && payload.is_chunked) {
+                const totalChunks = payload.total_chunks;
+                const chunkKeys = [];
+                for (let i = 0; i < totalChunks; i++) {
+                    chunkKeys.push(`${dbKey}__chunk_${i}`);
+                }
+                const chunkResults = await Promise.all(
+                    chunkKeys.map(async (chunkKey) => {
+                        const { data, error: chunkErr } = await window.supabaseClient
+                            .from('dashboard_store')
+                            .select('value')
+                            .eq('key', chunkKey)
+                            .single();
+                        if (chunkErr || !data || !data.value) return '';
+                        let cp = data.value;
+                        if (typeof cp === 'string') {
+                            try { cp = JSON.parse(cp); } catch(e) { return ''; }
+                        }
+                        return cp.compressed_data || '';
+                    })
+                );
+                compressedData = chunkResults.join('');
+            } else if (payload && payload.compressed_data) {
+                compressedData = payload.compressed_data;
+            }
+            if (!compressedData) return [];
+            return window.decompressAndParseGranular ? window.decompressAndParseGranular(compressedData) : [];
+        };
+        
+        if (!error && dbData && dbData.value) {
+            return await parsePayload(dbData.value);
         }
         
-        if (!compressedData) return [];
-        return window.decompressAndParseGranular ? window.decompressAndParseGranular(compressedData) : [];
+        // Fallback: try combined key (e.g. granular_assignments_se_ub) and filter by kab
+        const fallbackKey = `granular_assignments_${sType}`;
+        const { data: fbData, error: fbError } = await window.supabaseClient
+            .from('dashboard_store')
+            .select('value')
+            .eq('key', fallbackKey)
+            .single();
+        if (!fbError && fbData && fbData.value) {
+            const allRecords = await parsePayload(fbData.value);
+            if (allRecords && allRecords.length > 0 && kabCleanName) {
+                const filtered = allRecords.filter(r => {
+                    const rKab = (r.kab_name || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                    return rKab === kabCleanName.toUpperCase();
+                });
+                return filtered;
+            }
+            return allRecords;
+        }
+        return [];
     };
 
     // Load data from memory or fetch from Supabase
@@ -8471,7 +8529,7 @@ async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
 
         if (!isMatchMemory) {
             try {
-                const records = await fetchGranularDataForKab(fullCode, surveyType);
+                const records = await fetchGranularDataForKab(fullCode, surveyType, kabClean);
                 allGranularRecords.push(...records);
             } catch (e) {
                 console.warn(`Gagal memuat data granular untuk ${kab}:`, e);

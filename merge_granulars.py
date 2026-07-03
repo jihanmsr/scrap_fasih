@@ -529,7 +529,7 @@ def merge_granulars():
         supabase = load_supabase_config()
         print("[MERGE] Mengunggah data partisi ke Supabase...")
         
-        # Upload se_ub partition if it exists
+        # Upload se_ub combined partition if it exists
         se_ub_path = os.path.join(script_dir, "granular_assignments_se_ub.json")
         if os.path.exists(se_ub_path):
             try:
@@ -542,7 +542,75 @@ def merge_granulars():
                         "updated_at": d.get("updated_at", datetime.now().isoformat())
                     }
                     save_key_to_supabase(supabase, "granular_assignments_se_ub", payload)
-                    print(" ✅ Berhasil mengunggah partisi se_ub ke Supabase.")
+                    print(" ✅ Berhasil mengunggah partisi se_ub (gabungan) ke Supabase.")
+                    
+                    # Also split per-kabupaten and upload each separately (like SE Umum)
+                    try:
+                        raw = gzip.decompress(base64.b64decode(comp))
+                        obj = json.loads(raw)
+                        regions = obj.get("regions", [])
+                        targets = obj.get("targets", [])
+                        petugas = obj.get("petugas", [])
+                        statuses = obj.get("statuses", [])
+                        remarks = obj.get("remarks", {})
+                        updated_at = d.get("updated_at", datetime.now().isoformat())
+                        
+                        if regions and targets:
+                            # Group region indices by kab_code (first 4 chars of region[0])
+                            kab_region_indices = {}
+                            for idx, reg in enumerate(regions):
+                                # reg = [kab_code, kab_name, kec_code, kec_name, desa_code, desa_name, sls_code, sls_name, ...]
+                                kab_code_r = str(reg[0])[:4] if reg else None
+                                if kab_code_r:
+                                    if kab_code_r not in kab_region_indices:
+                                        kab_region_indices[kab_code_r] = []
+                                    kab_region_indices[kab_code_r].append(idx)
+                            
+                            for kab_code_r, reg_indices in kab_region_indices.items():
+                                reg_idx_set = set(reg_indices)
+                                # Filter targets that reference these region indices
+                                kab_targets = [t for t in targets if (t[0] if isinstance(t, (list, tuple)) else t.get("regionIdx", -1)) in reg_idx_set]
+                                
+                                if not kab_targets:
+                                    continue
+                                
+                                # Build sub-regions list and re-map indices
+                                old_to_new = {old_idx: new_idx for new_idx, old_idx in enumerate(sorted(reg_idx_set))}
+                                new_regions = [regions[i] for i in sorted(reg_idx_set)]
+                                
+                                # Remap target regionIdx
+                                new_targets = []
+                                for t in kab_targets:
+                                    if isinstance(t, (list, tuple)):
+                                        t_list = list(t)
+                                        t_list[0] = old_to_new.get(t_list[0], t_list[0])
+                                        new_targets.append(t_list)
+                                    else:
+                                        t_copy = dict(t)
+                                        t_copy["regionIdx"] = old_to_new.get(t_copy.get("regionIdx", 0), 0)
+                                        new_targets.append(t_copy)
+                                
+                                kab_payload = {
+                                    "updated_at": updated_at,
+                                    "regions": new_regions,
+                                    "petugas": petugas,
+                                    "statuses": statuses,
+                                    "targets": new_targets,
+                                    "remarks": remarks
+                                }
+                                kab_json_str = json.dumps(kab_payload, ensure_ascii=False)
+                                kab_comp = gzip.compress(kab_json_str.encode("utf-8"))
+                                kab_b64 = base64.b64encode(kab_comp).decode("utf-8")
+                                kab_key = f"granular_assignments_se_ub_{kab_code_r}"
+                                save_key_to_supabase(supabase, kab_key, {
+                                    "compressed_data": kab_b64,
+                                    "updated_at": updated_at
+                                })
+                                print(f"  ✅ Upload per-kab SE UB: {kab_key} ({len(new_targets)} targets)")
+                        else:
+                            print("  [SKIP] se_ub gabungan tidak memiliki regions/targets, skip split per-kab.")
+                    except Exception as split_ex:
+                        print(f"  [WARN] Gagal split/upload se_ub per-kab: {split_ex}")
             except Exception as ex:
                 print(f" [ERROR] Gagal mengunggah partisi se_ub ke Supabase: {ex}")
                 
