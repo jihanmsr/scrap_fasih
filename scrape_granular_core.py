@@ -956,7 +956,7 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
                 completed_kecs_ub = 0
                 print(f"[INFO] Total Kecamatan yang akan di-query untuk SE UB: {total_kecs_ub}")
                 
-                for kab_code, kab_cfg in kab_dict_ub.items():
+                for kab_code, kab_cfg in kab_dict_to_process.items():
                     kab_data = region_map_full.get("kabupaten", {}).get(kab_code, {})
                     if not kab_data:
                         continue
