@@ -1052,16 +1052,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Helper to compute WITA date strings relative to updated_at
+        // Helper to compute WITA date strings relative to updated_at without timezone jumps
         const getWitaDateStr = (offsetDays = 0) => {
-            let d = new Date();
+            let baseDateStr = '';
             if (ipasDataObj && ipasDataObj.updated_at) {
-                d = new Date(ipasDataObj.updated_at);
+                baseDateStr = ipasDataObj.updated_at.substring(0, 10);
             }
+            
+            let d;
+            if (baseDateStr && /^\d{4}-\d{2}-\d{2}$/.test(baseDateStr)) {
+                const parts = baseDateStr.split('-');
+                d = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]), 12, 0, 0);
+            } else {
+                const now = new Date();
+                const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+                d = new Date(utc + (3600000 * 8));
+            }
+            
             if (offsetDays !== 0) d.setDate(d.getDate() + offsetDays);
-            const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-            const wita = new Date(utc + (3600000 * 8));
-            return `${wita.getFullYear()}-${String(wita.getMonth() + 1).padStart(2, '0')}-${String(wita.getDate()).padStart(2, '0')}`;
+            return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
         };
 
         const todayDateStr = getWitaDateStr(0);
@@ -8755,24 +8764,19 @@ window.renderTrenChart = function () {
         if (cls !== 'other') dateMap[d.date][cls] += (d.count || 0);
     });
 
-    let dates = Object.keys(dateMap).sort();
-    if (rangeVal > 0) dates = dates.slice(-rangeVal);
+    const dates = Object.keys(dateMap).sort();
+    if (dates.length === 0) return;
 
-    const submittedArr = dates.map(d => dateMap[d]?.submitted || 0);
-    const approvedArr = dates.map(d => dateMap[d]?.approved || 0);
-    const rejectedArr = dates.map(d => dateMap[d]?.rejected || 0);
+    // 1. Overall Arrays for summary cards & breakdown table
+    const overallSubmittedArr = dates.map(d => dateMap[d]?.submitted || 0);
+    const overallApprovedArr = dates.map(d => dateMap[d]?.approved || 0);
+    const overallRejectedArr = dates.map(d => dateMap[d]?.rejected || 0);
 
-    // Cumulative if needed
-    const toCumulative = (arr) => arr.reduce((acc, v, i) => { acc.push((acc[i-1] || 0) + v); return acc; }, []);
-    const sub = modeVal === 'cumulative' ? toCumulative(submittedArr) : submittedArr;
-    const appr = modeVal === 'cumulative' ? toCumulative(approvedArr) : approvedArr;
-    const rej = modeVal === 'cumulative' ? toCumulative(rejectedArr) : rejectedArr;
-
-    // Summary cards
-    const totalSub = submittedArr.reduce((a,b)=>a+b,0);
-    const totalAppr = approvedArr.reduce((a,b)=>a+b,0);
-    const totalRej = rejectedArr.reduce((a,b)=>a+b,0);
-    const combined = dates.map((d,i) => submittedArr[i] + approvedArr[i] + rejectedArr[i]);
+    // Summary cards (Overall)
+    const totalSub = overallSubmittedArr.reduce((a, b) => a + b, 0);
+    const totalAppr = overallApprovedArr.reduce((a, b) => a + b, 0);
+    const totalRej = overallRejectedArr.reduce((a, b) => a + b, 0);
+    const combined = dates.map((d, i) => overallSubmittedArr[i] + overallApprovedArr[i] + overallRejectedArr[i]);
     const peakVal = Math.max(...combined, 0);
     const peakIdx = combined.indexOf(peakVal);
 
@@ -8785,6 +8789,42 @@ window.renderTrenChart = function () {
     if (el('tren-chart-subtitle')) el('tren-chart-subtitle').textContent = modeVal === 'cumulative'
         ? 'Jumlah kumulatif assignment per status'
         : 'Jumlah assignment yang dikirim per hari';
+
+    // 2. Prepare sliced data specifically for Chart.js
+    let chartLabels = [...dates];
+    let sub = [];
+    let appr = [];
+    let rej = [];
+
+    const toCumulative = (arr) => arr.reduce((acc, v, i) => { acc.push((acc[i-1] || 0) + v); return acc; }, []);
+
+    if (modeVal === 'cumulative') {
+        const cumSub = toCumulative(overallSubmittedArr);
+        const cumAppr = toCumulative(overallApprovedArr);
+        const cumRej = toCumulative(overallRejectedArr);
+
+        if (rangeVal > 0) {
+            chartLabels = dates.slice(-rangeVal);
+            sub = cumSub.slice(-rangeVal);
+            appr = cumAppr.slice(-rangeVal);
+            rej = cumRej.slice(-rangeVal);
+        } else {
+            sub = cumSub;
+            appr = cumAppr;
+            rej = cumRej;
+        }
+    } else {
+        if (rangeVal > 0) {
+            chartLabels = dates.slice(-rangeVal);
+            sub = overallSubmittedArr.slice(-rangeVal);
+            appr = overallApprovedArr.slice(-rangeVal);
+            rej = overallRejectedArr.slice(-rangeVal);
+        } else {
+            sub = overallSubmittedArr;
+            appr = overallApprovedArr;
+            rej = overallRejectedArr;
+        }
+    }
 
     // Render Chart.js
     const canvas = document.getElementById('tren-chart-canvas');
@@ -8800,7 +8840,7 @@ window.renderTrenChart = function () {
     window._trenChartInstance = new Chart(canvas.getContext('2d'), {
         type: 'line',
         data: {
-            labels: dates,
+            labels: chartLabels,
             datasets: [
                 {
                     label: 'Submitted',
@@ -8808,7 +8848,7 @@ window.renderTrenChart = function () {
                     borderColor: '#3b82f6',
                     backgroundColor: 'rgba(59,130,246,0.08)',
                     borderWidth: 2.5,
-                    pointRadius: dates.length > 30 ? 1 : 3,
+                    pointRadius: chartLabels.length > 30 ? 1 : 3,
                     pointHoverRadius: 5,
                     tension: 0.35,
                     fill: modeVal === 'daily',
@@ -8819,7 +8859,7 @@ window.renderTrenChart = function () {
                     borderColor: '#22c55e',
                     backgroundColor: 'rgba(34,197,94,0.08)',
                     borderWidth: 2.5,
-                    pointRadius: dates.length > 30 ? 1 : 3,
+                    pointRadius: chartLabels.length > 30 ? 1 : 3,
                     pointHoverRadius: 5,
                     tension: 0.35,
                     fill: false,
@@ -8830,7 +8870,7 @@ window.renderTrenChart = function () {
                     borderColor: '#ef4444',
                     backgroundColor: 'rgba(239,68,68,0.08)',
                     borderWidth: 2,
-                    pointRadius: dates.length > 30 ? 1 : 3,
+                    pointRadius: chartLabels.length > 30 ? 1 : 3,
                     pointHoverRadius: 5,
                     tension: 0.35,
                     fill: false,
@@ -8872,12 +8912,9 @@ window.renderTrenChart = function () {
         }
     });
 
-    // Per-kab breakdown table
+    // Per-kab breakdown table (Overall - not affected by rentang filter)
     const kabMap = {};
-    const filteredFull = rangeVal > 0
-        ? filtered.filter(d => d.date >= dates[0])
-        : filtered;
-    filteredFull.forEach(d => {
+    filtered.forEach(d => {
         const kab = d.kab_name || 'Tidak Diketahui';
         if (!kabMap[kab]) kabMap[kab] = { submitted: 0, approved: 0, rejected: 0 };
         const cls = classify(d.status);
