@@ -8755,6 +8755,217 @@ async function downloadRawExcel(selectedKabs, surveyType, statusEl, filename) {
     if (statusEl) statusEl.textContent = `✅ ${allRows.length} baris berhasil diunduh!`;
 }
 
+// ================== TREN PROGRES CHART ==================
+
+window._trenChartInstance = null;
+
+window.initTrenFilters = function () {
+    const data = window.DAILY_SUBMISSION_STATS;
+    if (!Array.isArray(data) || data.length === 0) return;
+    const kabSet = new Set();
+    data.forEach(d => { if (d.kab_name) kabSet.add(d.kab_name); });
+    const kabFilter = document.getElementById('tren-kab-filter');
+    if (kabFilter && kabFilter.options.length <= 1) {
+        Array.from(kabSet).sort().forEach(kab => {
+            const opt = document.createElement('option');
+            opt.value = kab;
+            opt.textContent = kab.replace(/^\[\d+\]\s*/, '');
+            kabFilter.appendChild(opt);
+        });
+    }
+};
+
+window.renderTrenChart = function () {
+    const data = window.DAILY_SUBMISSION_STATS;
+    if (!Array.isArray(data) || data.length === 0) {
+        const tbody = document.getElementById('tren-kab-table-body');
+        if (tbody) tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:2rem;color:var(--text-secondary);">Data harian belum tersedia. Jalankan scraper untuk mengisi data.</td></tr>';
+        return;
+    }
+
+    const kabVal = document.getElementById('tren-kab-filter')?.value || 'all';
+    const surveyVal = document.getElementById('tren-survey-filter')?.value || 'all';
+    const modeVal = document.getElementById('tren-mode-filter')?.value || 'daily';
+    const rangeVal = parseInt(document.getElementById('tren-range-filter')?.value) || 0;
+
+    // Filter data
+    let filtered = data.filter(d => {
+        if (kabVal !== 'all' && d.kab_name !== kabVal) return false;
+        if (surveyVal !== 'all' && d.survey_type !== surveyVal) return false;
+        return true;
+    });
+
+    // Classify status
+    const classify = (status) => {
+        const s = (status || '').toUpperCase();
+        if (s.includes('SUBMITTED')) return 'submitted';
+        if (s.includes('APPROVED')) return 'approved';
+        if (s.includes('REJECTED') || s.includes('REVOKED')) return 'rejected';
+        return 'other';
+    };
+
+    // Aggregate by date
+    const dateMap = {};
+    filtered.forEach(d => {
+        if (!dateMap[d.date]) dateMap[d.date] = { submitted: 0, approved: 0, rejected: 0 };
+        const cls = classify(d.status);
+        if (cls !== 'other') dateMap[d.date][cls] += (d.count || 0);
+    });
+
+    let dates = Object.keys(dateMap).sort();
+    if (rangeVal > 0) dates = dates.slice(-rangeVal);
+
+    const submittedArr = dates.map(d => dateMap[d]?.submitted || 0);
+    const approvedArr = dates.map(d => dateMap[d]?.approved || 0);
+    const rejectedArr = dates.map(d => dateMap[d]?.rejected || 0);
+
+    // Cumulative if needed
+    const toCumulative = (arr) => arr.reduce((acc, v, i) => { acc.push((acc[i-1] || 0) + v); return acc; }, []);
+    const sub = modeVal === 'cumulative' ? toCumulative(submittedArr) : submittedArr;
+    const appr = modeVal === 'cumulative' ? toCumulative(approvedArr) : approvedArr;
+    const rej = modeVal === 'cumulative' ? toCumulative(rejectedArr) : rejectedArr;
+
+    // Summary cards
+    const totalSub = submittedArr.reduce((a,b)=>a+b,0);
+    const totalAppr = approvedArr.reduce((a,b)=>a+b,0);
+    const totalRej = rejectedArr.reduce((a,b)=>a+b,0);
+    const combined = dates.map((d,i) => submittedArr[i] + approvedArr[i] + rejectedArr[i]);
+    const peakVal = Math.max(...combined, 0);
+    const peakIdx = combined.indexOf(peakVal);
+
+    const el = id => document.getElementById(id);
+    if (el('tren-stat-submitted')) el('tren-stat-submitted').textContent = totalSub.toLocaleString('id-ID');
+    if (el('tren-stat-approved')) el('tren-stat-approved').textContent = totalAppr.toLocaleString('id-ID');
+    if (el('tren-stat-rejected')) el('tren-stat-rejected').textContent = totalRej.toLocaleString('id-ID');
+    if (el('tren-stat-peak')) el('tren-stat-peak').textContent = peakVal.toLocaleString('id-ID');
+    if (el('tren-stat-peak-date')) el('tren-stat-peak-date').textContent = peakIdx >= 0 ? dates[peakIdx] : '-';
+    if (el('tren-chart-subtitle')) el('tren-chart-subtitle').textContent = modeVal === 'cumulative'
+        ? 'Jumlah kumulatif assignment per status'
+        : 'Jumlah assignment yang dikirim per hari';
+
+    // Render Chart.js
+    const canvas = document.getElementById('tren-chart-canvas');
+    if (!canvas) return;
+    if (window._trenChartInstance) {
+        window._trenChartInstance.destroy();
+        window._trenChartInstance = null;
+    }
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const gridColor = isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.06)';
+    const textColor = isDark ? '#94a3b8' : '#64748b';
+
+    window._trenChartInstance = new Chart(canvas.getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: dates,
+            datasets: [
+                {
+                    label: 'Submitted',
+                    data: sub,
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59,130,246,0.08)',
+                    borderWidth: 2.5,
+                    pointRadius: dates.length > 30 ? 1 : 3,
+                    pointHoverRadius: 5,
+                    tension: 0.35,
+                    fill: modeVal === 'daily',
+                },
+                {
+                    label: 'Approved',
+                    data: appr,
+                    borderColor: '#22c55e',
+                    backgroundColor: 'rgba(34,197,94,0.08)',
+                    borderWidth: 2.5,
+                    pointRadius: dates.length > 30 ? 1 : 3,
+                    pointHoverRadius: 5,
+                    tension: 0.35,
+                    fill: false,
+                },
+                {
+                    label: 'Rejected',
+                    data: rej,
+                    borderColor: '#ef4444',
+                    backgroundColor: 'rgba(239,68,68,0.08)',
+                    borderWidth: 2,
+                    pointRadius: dates.length > 30 ? 1 : 3,
+                    pointHoverRadius: 5,
+                    tension: 0.35,
+                    fill: false,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: { color: textColor, font: { family: 'Outfit', size: 12, weight: '600' }, padding: 16, usePointStyle: true }
+                },
+                tooltip: {
+                    backgroundColor: isDark ? '#1e293b' : '#ffffff',
+                    titleColor: isDark ? '#f1f5f9' : '#0f172a',
+                    bodyColor: textColor,
+                    borderColor: isDark ? '#334155' : '#e2e8f0',
+                    borderWidth: 1,
+                    padding: 12,
+                    callbacks: {
+                        label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString('id-ID')}`
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: { color: gridColor },
+                    ticks: { color: textColor, font: { family: 'Outfit', size: 11 }, maxTicksLimit: 12, maxRotation: 45 }
+                },
+                y: {
+                    beginAtZero: true,
+                    grid: { color: gridColor },
+                    ticks: { color: textColor, font: { family: 'Outfit', size: 11 }, callback: v => v.toLocaleString('id-ID') }
+                }
+            }
+        }
+    });
+
+    // Per-kab breakdown table
+    const kabMap = {};
+    const filteredFull = rangeVal > 0
+        ? filtered.filter(d => d.date >= dates[0])
+        : filtered;
+    filteredFull.forEach(d => {
+        const kab = d.kab_name || 'Tidak Diketahui';
+        if (!kabMap[kab]) kabMap[kab] = { submitted: 0, approved: 0, rejected: 0 };
+        const cls = classify(d.status);
+        if (cls !== 'other') kabMap[kab][cls] += (d.count || 0);
+    });
+    const tbody = document.getElementById('tren-kab-table-body');
+    if (tbody) {
+        const kabArr = Object.entries(kabMap).sort((a,b) => (b[1].submitted+b[1].approved+b[1].rejected) - (a[1].submitted+a[1].approved+a[1].rejected));
+        tbody.innerHTML = kabArr.map(([kab, v]) => {
+            const total = v.submitted + v.approved + v.rejected;
+            return `<tr style="border-bottom:1px solid var(--card-border);">
+                <td style="padding:0.6rem 0.75rem;font-weight:600;color:var(--text);">${kab.replace(/^\[\d+\]\s*/, '')}</td>
+                <td style="text-align:right;padding:0.6rem 0.75rem;color:#3b82f6;font-weight:600;">${v.submitted.toLocaleString('id-ID')}</td>
+                <td style="text-align:right;padding:0.6rem 0.75rem;color:#22c55e;font-weight:600;">${v.approved.toLocaleString('id-ID')}</td>
+                <td style="text-align:right;padding:0.6rem 0.75rem;color:#ef4444;font-weight:600;">${v.rejected.toLocaleString('id-ID')}</td>
+                <td style="text-align:right;padding:0.6rem 0.75rem;color:var(--text);font-weight:700;">${total.toLocaleString('id-ID')}</td>
+            </tr>`;
+        }).join('');
+    }
+};
+
+// Hook into updateTimelineView to also render tren chart
+const _origUpdateTimeline = window.updateTimelineView;
+window.updateTimelineView = function (...args) {
+    if (_origUpdateTimeline) _origUpdateTimeline.apply(this, args);
+    window.initTrenFilters();
+    window.renderTrenChart();
+};
+
+// ================== END TREN PROGRES CHART ==================
+
 function exportToCSV(rows, filename) {
     if (!rows || rows.length === 0) return;
     const headers = Object.keys(rows[0]);
