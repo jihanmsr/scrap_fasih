@@ -22,6 +22,36 @@ def parse_iso_to_wita_date(iso_str):
     except Exception:
         return None
 
+def is_tambahan(code_identity):
+    if not code_identity:
+        return False
+    cleaned = code_identity.strip()
+    if not cleaned.startswith("72"):
+        return True
+    parts = [p.strip() for p in cleaned.split(" - ")]
+    if len(parts) < 2:
+        return False
+    source = parts[1].upper()
+    known_sources = {"DTSEN", "UMK", "UM", "UMB", "UMKM", "SE2026", "SE26", "PDRB", "PAPI", "CAWI", "CAPI", "UB"}
+    if source in known_sources:
+        return False
+    if source.startswith("SE26") or source.startswith("SE2026"):
+        return False
+    return True
+
+def classify_tambahan_simple(code_id, name):
+    code_id_upper = (code_id or "").upper()
+    name_upper = (name or "").upper()
+    if "BANGUNAN KOSONG" in name_upper or "RUMAH KOSONG" in name_upper or "KOSONG" in name_upper or "BANGUNAN KOSONG" in code_id_upper or "RUMAH KOSONG" in code_id_upper:
+        return "Bangunan/Rumah Kosong", False
+    if "1. YA" in code_id_upper or "1.YA" in code_id_upper or "1. YA" in name_upper or "1.YA" in name_upper:
+        return "Keluarga Usaha", True
+    if "2. TIDAK" in code_id_upper or "2.TIDAK" in code_id_upper or "2. TIDAK" in name_upper or "2.TIDAK" in name_upper:
+        return "Keluarga (Bukan Usaha)", False
+    if "KELUARGA" in name_upper:
+        return "Keluarga", False
+    return "Usaha Baru", True
+
 def check_port_open(port=9222):
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -110,6 +140,7 @@ async def main():
             
     # 2. Baca seluruh data granular se-Sulteng untuk mendata target selesai saat ini
     completed_targets = {} # target_id -> {status_str, kab_name, survey_type}
+    kab_new_businesses = {} # kab_name -> list of biz_items
     kab_codes = ["7201", "7202", "7203", "7204", "7205", "7206", "7207", "7208", "7209", "7210", "7211", "7212", "7271"]
     
     print("\nMendata seluruh target selesai se-Sulteng dari data granular...")
@@ -131,6 +162,8 @@ async def main():
                 
                 for t in targets:
                     tid = t[0]
+                    code_id = t[1]
+                    comp_name = t[2]
                     stat_idx = t[3]
                     reg_idx = t[5] if len(t) > 5 else 0
                     
@@ -141,6 +174,43 @@ async def main():
                     # Clean kabupaten name
                     kab_clean = " ".join([word for word in kab_raw.split() if not (word.isdigit() or (word.startswith("72") and len(word)==4))]).upper()
                     
+                    # Track tambahan (new business/rumah) targets
+                    if is_tambahan(code_id):
+                        epoch_val = t[6] if len(t) > 6 else 0
+                        date_lbl = "older"
+                        if epoch_val > 0:
+                            try:
+                                dt_sec = epoch_val / 1000.0 if epoch_val > 10**11 else float(epoch_val)
+                                dt_utc = datetime.fromtimestamp(dt_sec, tz=timezone.utc)
+                                wita_offset = timezone(timedelta(hours=8))
+                                dt_wita = dt_utc.astimezone(wita_offset)
+                                wita_date_str = dt_wita.strftime("%Y-%m-%d")
+                                
+                                today_wita = datetime.now(wita_offset).strftime("%Y-%m-%d")
+                                yesterday_wita = (datetime.now(wita_offset) - timedelta(days=1)).strftime("%Y-%m-%d")
+                                
+                                if wita_date_str == today_wita:
+                                    date_lbl = "today"
+                                elif wita_date_str == yesterday_wita:
+                                    date_lbl = "yesterday"
+                            except:
+                                pass
+                                
+                        jenis_lbl, is_usaha = classify_tambahan_simple(code_id, comp_name)
+                        status_str = statuses_list[stat_idx] if stat_idx < len(statuses_list) else "-"
+                        kec_name = reg_info[3].upper().strip() if len(reg_info) > 3 else "-"
+                        
+                        biz_item = {
+                            "name": comp_name,
+                            "code": code_id,
+                            "date": date_lbl,
+                            "status": status_str,
+                            "type": "usaha" if is_usaha else "rumah",
+                            "kecName": kec_name,
+                            "jenis": jenis_lbl
+                        }
+                        kab_new_businesses.setdefault(kab_clean, []).append(biz_item)
+
                     status_str = statuses_list[stat_idx] if stat_idx < len(statuses_list) else "-"
                     if status_str.upper() not in non_selesais:
                         completed_targets[tid] = {
@@ -367,6 +437,110 @@ async def main():
             supabase.table("dashboard_store").delete().eq("key", daily_key).execute()
             supabase.table("dashboard_store").insert({"key": daily_key, "value": daily_stats_data}).execute()
             print(f"✅ Key snapshot '{daily_key}' berhasil diperbarui!")
+            
+            # Patch ipas_data with new_businesses
+            print("\nMenarik 'ipas_data' dari Supabase untuk di-patch dengan new_businesses...")
+            res_ipas = supabase.table('dashboard_store').select('value').eq('key', 'ipas_data').execute()
+            if res_ipas.data:
+                val = res_ipas.data[0]['value']
+                if isinstance(val, str):
+                    try:
+                        val = json.loads(val)
+                    except Exception as e:
+                        print(f"[ERROR] Gagal parse ipas_data JSON dari Supabase: {e}")
+                        val = None
+                        
+                if val and isinstance(val, dict):
+                    # Update se_umum
+                    se_umum = val.get("se_umum", [])
+                    for kab_item in se_umum:
+                        kab_raw = kab_item.get("kabupaten", "")
+                        kab_clean = " ".join([word for word in kab_raw.split() if not (word.isdigit() or (word.startswith("72") and len(word)==4))]).upper()
+                        
+                        # Get scraped new businesses for this kab
+                        scraped_biz = kab_new_businesses.get(kab_clean, [])
+                        kab_item["new_businesses"] = scraped_biz
+                        
+                        # Recalculate daily counts
+                        n_usaha_today = sum(1 for b in scraped_biz if b["type"] == "usaha" and b["date"] == "today")
+                        n_usaha_yesterday = sum(1 for b in scraped_biz if b["type"] == "usaha" and b["date"] == "yesterday")
+                        n_rumah_today = sum(1 for b in scraped_biz if b["type"] == "rumah" and b["date"] == "today")
+                        n_rumah_yesterday = sum(1 for b in scraped_biz if b["type"] == "rumah" and b["date"] == "yesterday")
+                        n_usaha_overall = sum(1 for b in scraped_biz if b["type"] == "usaha")
+                        n_rumah_overall = sum(1 for b in scraped_biz if b["type"] == "rumah")
+                        
+                        kab_item["new_usaha_today"] = n_usaha_today
+                        kab_item["new_usaha_yesterday"] = n_usaha_yesterday
+                        kab_item["new_rumah_today"] = n_rumah_today
+                        kab_item["new_rumah_yesterday"] = n_rumah_yesterday
+                        kab_item["new_usaha_overall"] = n_usaha_overall
+                        kab_item["new_rumah_overall"] = n_rumah_overall
+                        
+                        # Update kecamatans
+                        kec_list = kab_item.get("kecamatan_list", [])
+                        for kec_item in kec_list:
+                            kec_name = (kec_item.get("kec_name") or "").upper().strip()
+                            kec_biz = [b for b in scraped_biz if b["kecName"] == kec_name]
+                            kec_item["new_businesses"] = kec_biz
+                            
+                            kec_item["new_usaha_today"] = sum(1 for b in kec_biz if b["type"] == "usaha" and b["date"] == "today")
+                            kec_item["new_usaha_yesterday"] = sum(1 for b in kec_biz if b["type"] == "usaha" and b["date"] == "yesterday")
+                            kec_item["new_rumah_today"] = sum(1 for b in kec_biz if b["type"] == "rumah" and b["date"] == "today")
+                            kec_item["new_rumah_yesterday"] = sum(1 for b in kec_biz if b["type"] == "rumah" and b["date"] == "yesterday")
+                    
+                    # Save locally to ipas_data.js for fallback (dengan data penuh)
+                    ipas_js_path = os.path.join(os.path.dirname(script_dir), "ipas_data.js")
+                    with open(ipas_js_path, "w", encoding="utf-8") as f:
+                        f.write(f"window.IPAS_DATA = {json.dumps(val, indent=4)};\n")
+                    print("✅ File lokal ipas_data.js berhasil diperbarui dengan data ter-patch!")
+
+                    # Buat versi slim untuk Supabase
+                    import copy
+                    val_slim = copy.deepcopy(val)
+                    new_biz_by_kab = {}
+                    for kab_item in val_slim.get("se_umum", []):
+                        kab_raw_key = kab_item.get("kabupaten", "")
+                        new_biz_by_kab[kab_raw_key] = kab_item.get("new_businesses", [])
+                        kab_item["new_businesses"] = []
+                        for kec_item in kab_item.get("kecamatan_list", []):
+                            kec_item["new_businesses"] = []
+
+                    # Upload updated ipas_data (slim) back to Supabase
+                    print("Mengunggah kembali 'ipas_data' (slim) ter-patch ke Supabase...")
+                    for attempt in range(1, 4):
+                        try:
+                            supabase.table("dashboard_store").delete().eq("key", "ipas_data").execute()
+                            supabase.table("dashboard_store").insert({"key": "ipas_data", "value": val_slim}).execute()
+                            print("✅ Key 'ipas_data' (slim) berhasil di-patch dengan new_businesses di Supabase!")
+                            break
+                        except Exception as e:
+                            print(f"[RETRY {attempt}] Gagal upload ipas_data slim: {e}")
+                            if attempt < 3:
+                                time.sleep(15)
+
+                    # Upload new_businesses per kabupaten sebagai key terpisah
+                    print("\nMengunggah new_businesses per kabupaten...")
+                    kab_code_map = {
+                        "BANGGAI KEPULAUAN": "7201", "BANGGAI": "7202", "MOROWALI": "7203",
+                        "POSO": "7204", "DONGGALA": "7205", "TOLI-TOLI": "7206", "BUOL": "7207",
+                        "PARIGI MOUTONG": "7208", "TOJO UNA-UNA": "7209", "SIGI": "7210",
+                        "BANGGAI LAUT": "7211", "MOROWALI UTARA": "7212", "PALU": "7271"
+                    }
+                    for kab_full, biz_list in new_biz_by_kab.items():
+                        # Clean kabupaten name
+                        kab_clean = " ".join([word for word in kab_full.split() if not (word.isdigit() or (word.startswith("72") and len(word)==4))]).upper()
+                        kab_code = kab_code_map.get(kab_clean, kab_clean.lower().replace(" ", "_"))
+                        nb_key = f"new_businesses_se_umum_{kab_code}"
+                        for attempt in range(1, 4):
+                            try:
+                                supabase.table("dashboard_store").delete().eq("key", nb_key).execute()
+                                supabase.table("dashboard_store").insert({"key": nb_key, "value": biz_list}).execute()
+                                print(f"  ✅ {nb_key}: {len(biz_list)} item")
+                                break
+                            except Exception as e:
+                                print(f"  [RETRY {attempt}] Gagal upload {nb_key}: {e}")
+                                if attempt < 3:
+                                    time.sleep(10)
         except Exception as e:
             print(f"[ERROR] Gagal mengunggah ke Supabase: {e}")
     else:
