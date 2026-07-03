@@ -8259,3 +8259,256 @@ document.addEventListener('DOMContentLoaded', () => {
         window.switchTab(activeTab);
     });
 });
+
+// ========== EXCEL DOWNLOAD FEATURE ==========
+
+window.openExcelDownloadModal = function () {
+    const modal = document.getElementById('excel-download-modal');
+    if (!modal) return;
+
+    // Populate kabkot checklist from IPAS_DATA
+    const checklist = document.getElementById('excel-kab-checklist');
+    const surveyType = document.getElementById('assign-sls-survey-filter')?.value || 'se_umum';
+    document.getElementById('excel-survey-type').value = surveyType;
+
+    const ipasData = window.IPAS_DATA || {};
+    const seData = ipasData[surveyType] || ipasData['se_umum'] || [];
+    const kabList = seData.map(k => k.kabupaten).filter(Boolean);
+
+    if (checklist) {
+        checklist.innerHTML = kabList.length === 0
+            ? '<span style="color:var(--text-secondary);font-size:0.82rem;">Data kabupaten belum tersedia.</span>'
+            : kabList.map(kab => {
+                const val = kab.replace(/"/g, '&quot;');
+                return `<label style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;padding:0.4rem 0.6rem;border-radius:0.5rem;background:var(--card-bg);border:1px solid var(--card-border);font-size:0.82rem;font-weight:500;color:var(--text);">
+                    <input type="checkbox" class="excel-kab-check" value="${val}" checked style="accent-color:var(--primary);width:14px;height:14px;">
+                    ${kab}
+                </label>`;
+            }).join('');
+    }
+
+    modal.style.display = 'flex';
+};
+
+window.executeExcelDownload = async function () {
+    const statusEl = document.getElementById('excel-download-status');
+    const btn = document.getElementById('btn-excel-execute');
+
+    const tipeEl = document.querySelector('input[name="excel-type"]:checked');
+    const tipe = tipeEl ? tipeEl.value : 'summary';
+    const surveyType = document.getElementById('excel-survey-type')?.value || 'se_umum';
+
+    const selectedKabs = [...document.querySelectorAll('.excel-kab-check:checked')].map(c => c.value);
+    if (selectedKabs.length === 0) {
+        if (statusEl) statusEl.textContent = '⚠️ Pilih minimal satu kabupaten/kota.';
+        return;
+    }
+
+    if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
+    if (statusEl) statusEl.textContent = '⏳ Menyiapkan data...';
+
+    try {
+        if (tipe === 'summary') {
+            await downloadSummaryExcel(selectedKabs, surveyType, statusEl);
+        } else {
+            await downloadRawExcel(selectedKabs, surveyType, statusEl);
+        }
+    } catch (e) {
+        console.error('Download error:', e);
+        if (statusEl) statusEl.textContent = '❌ Gagal: ' + e.message;
+    } finally {
+        if (btn) { btn.disabled = false; btn.style.opacity = '1'; }
+    }
+};
+
+async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
+    // Build summary per petugas from granular data loaded in memory + fallback to MySQL
+    const ipasData = window.IPAS_DATA || {};
+    const seData = ipasData[surveyType] || [];
+
+    const cleanKabs = selectedKabs.map(k => k.replace(/^\[\d+\]\s*/, '').trim().toUpperCase());
+
+    // Try using granular data in memory
+    let rows = [];
+    const granularData = window.GRANULAR_ASSIGNMENTS_DATA;
+
+    if (granularData && granularData.length > 0) {
+        const filtered = granularData.filter(r => {
+            if (r.survey_type !== surveyType) return false;
+            const kabClean = (r.kab_name || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+            return cleanKabs.includes(kabClean);
+        });
+
+        const petMap = {};
+        filtered.forEach(r => {
+            const name = r.petugas_fullname || r.petugas_username || 'Belum Ada Petugas';
+            const pengawas = r.pengawas_fullname || r.pengawas_username || '-';
+            const email = r.petugas_username || '-';
+            const kab = r.kab_name || '-';
+            const key = `${kab}|||${name}`;
+            if (!petMap[key]) {
+                petMap[key] = { kab, name, pengawas, email, total: 0, selesai: 0, belum: 0, open: 0, draft: 0, submitted: 0, rejected: 0, approved: 0 };
+            }
+            petMap[key].total++;
+            const st = (r.status || '').toUpperCase();
+            if (st === 'OPEN') petMap[key].open++;
+            else if (st === 'DRAFT') petMap[key].draft++;
+            else if (st === 'SUBMITTED') petMap[key].submitted++;
+            else if (st === 'REJECTED') petMap[key].rejected++;
+            else if (st === 'APPROVED') petMap[key].approved++;
+
+            if (st !== 'OPEN' && st !== 'DRAFT') petMap[key].selesai++;
+            else petMap[key].belum++;
+        });
+
+        rows = Object.values(petMap).map(p => ({
+            'Kabupaten/Kota': p.kab,
+            'Nama Petugas': p.name,
+            'Pengawas/Pencacah': p.pengawas,
+            'Email/Username': p.email,
+            'Total Target': p.total,
+            'Belum Selesai': p.belum,
+            'Selesai': p.selesai,
+            '% Capaian': p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) + '%' : '0.0%',
+            'OPEN': p.open,
+            'DRAFT': p.draft,
+            'SUBMITTED': p.submitted,
+            'REJECTED': p.rejected,
+            'APPROVED': p.approved
+        }));
+    } else {
+        // Fallback: try MySQL API per kab
+        if (statusEl) statusEl.textContent = '⏳ Mengambil data dari server...';
+        for (const kab of selectedKabs) {
+            const match = kab.match(/\[(\d+)\]/);
+            const kabCode = match ? `72${match[1]}` : '';
+            try {
+                const url = `https://dds-api.bpssulteng.id/api.php?action=get_petugas_summary&survey=${surveyType}&kab=${kabCode}`;
+                const res = await fetch(url);
+                const data = await res.json();
+                if (Array.isArray(data)) {
+                    data.forEach(r => {
+                        rows.push({
+                            'Kabupaten/Kota': kab,
+                            'Nama Petugas': r.petugas_fullname || r.petugas_username || 'Belum Ada Petugas',
+                            'Pengawas/Pencacah': r.pengawas_fullname || r.pengawas_username || '-',
+                            'Email/Username': r.petugas_username || '-',
+                            'Total Target': r.total_target || 0,
+                            'Belum Selesai': r.belum_selesai || 0,
+                            'Selesai': r.selesai || 0,
+                            '% Capaian': (r.total_target > 0 ? ((r.selesai / r.total_target) * 100).toFixed(1) : '0.0') + '%',
+                            'OPEN': r.open || 0,
+                            'DRAFT': r.draft || 0,
+                            'SUBMITTED': r.submitted || 0,
+                            'REJECTED': r.rejected || 0,
+                            'APPROVED': r.approved || 0
+                        });
+                    });
+                }
+            } catch (e) {
+                console.warn('Gagal ambil data kab', kab, e);
+            }
+        }
+    }
+
+    if (rows.length === 0) {
+        if (statusEl) statusEl.textContent = '⚠️ Tidak ada data untuk diekspor.';
+        return;
+    }
+
+    exportToCSV(rows, `rekap_petugas_${surveyType}_${new Date().toISOString().slice(0,10)}.csv`);
+    if (statusEl) statusEl.textContent = `✅ ${rows.length} baris berhasil diunduh!`;
+}
+
+async function downloadRawExcel(selectedKabs, surveyType, statusEl) {
+    if (!supabaseClient) {
+        if (statusEl) statusEl.textContent = '❌ Koneksi Supabase tidak tersedia.';
+        return;
+    }
+
+    const allRows = [];
+
+    for (const kab of selectedKabs) {
+        const match = kab.match(/\[(\d+)\]/);
+        if (!match) continue;
+        const fullCode = `72${match[1]}`;
+        const dbKey = `granular_assignments_${surveyType}_${fullCode}`;
+
+        if (statusEl) statusEl.textContent = `⏳ Memuat ${kab}...`;
+
+        try {
+            const { data: dbData, error } = await supabaseClient
+                .from('dashboard_store')
+                .select('value')
+                .eq('key', dbKey)
+                .single();
+
+            if (error || !dbData) {
+                console.warn(`Gagal muat ${dbKey}:`, error);
+                continue;
+            }
+
+            let payload = dbData.value;
+            if (typeof payload === 'string') payload = JSON.parse(payload);
+
+            let records = [];
+            if (payload && payload.compressed_data) {
+                records = window.decompressAndParseGranular ? window.decompressAndParseGranular(payload.compressed_data) : [];
+            } else if (Array.isArray(payload)) {
+                records = payload;
+            }
+
+            records.forEach(r => {
+                allRows.push({
+                    'Kabupaten/Kota': r.kab_name || kab,
+                    'Kecamatan': r.kec_name || '-',
+                    'Desa/Kelurahan': r.desa_name || '-',
+                    'SLS': r.sls_name || '-',
+                    'Kode Target': r.codeIdentity || '-',
+                    'Nama Target': r.data1 || '-',
+                    'Status': r.status || '-',
+                    'Nama Petugas': r.petugas_fullname || r.petugas_username || '-',
+                    'Email Petugas': r.petugas_username || '-',
+                    'Nama Pengawas': r.pengawas_fullname || r.pengawas_username || '-',
+                    'Email Pengawas': r.pengawas_username || '-',
+                    'Tanggal Modifikasi': r.dateModified || '-'
+                });
+            });
+        } catch (e) {
+            console.error('Error loading raw data for', kab, e);
+        }
+    }
+
+    if (allRows.length === 0) {
+        if (statusEl) statusEl.textContent = '⚠️ Tidak ada data untuk diekspor. Pastikan data granular sudah dimuat.';
+        return;
+    }
+
+    exportToCSV(allRows, `raw_target_${surveyType}_${new Date().toISOString().slice(0,10)}.csv`);
+    if (statusEl) statusEl.textContent = `✅ ${allRows.length} baris berhasil diunduh!`;
+}
+
+function exportToCSV(rows, filename) {
+    if (!rows || rows.length === 0) return;
+    const headers = Object.keys(rows[0]);
+    const csvLines = [
+        headers.join(','),
+        ...rows.map(row => headers.map(h => {
+            let val = row[h] == null ? '' : String(row[h]);
+            if (val.includes(',') || val.includes('"') || val.includes('\n')) {
+                val = '"' + val.replace(/"/g, '""') + '"';
+            }
+            return val;
+        }).join(','))
+    ];
+    const bom = '\uFEFF';
+    const blob = new Blob([bom + csvLines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
