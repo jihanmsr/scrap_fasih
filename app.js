@@ -1400,17 +1400,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             prelistWrapperEl.innerHTML = `
                 <div class="daily-progress-wrapper" style="display: flex; align-items: baseline; gap: 0.25rem; flex-direction: row;">
-                    <span id="${surveyType}-stat-total-prelist" style="font-weight: 800;">${formatNum(prelist + newUsahaProv + newRumahProv)}</span>
+                    <span id="${surveyType}-stat-total-prelist" style="font-weight: 800;">${formatNum(prelist)}</span>
                     <span class="daily-dropdown-trigger" onclick="window.toggleDailyPopover(event, this)" style="color: var(--primary); background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.25); margin-left: 0.25rem;">▼</span>
                     <div class="daily-popover">
                         <div class="popover-header" style="color: var(--primary);">BREAKDOWN STATUS ASSIGNMENT</div>
                         ${itemsHTML}
-                        <div class="popover-header" style="color: var(--primary); margin-top: 0.75rem;">SUMBER TOTAL TARGET</div>
+                        <div class="popover-header" style="color: var(--primary); margin-top: 0.75rem;">TAMBAHAN NONTARGET TERDETEKSI</div>
                         <div class="popover-item" style="border-top: 1px dashed var(--card-border); margin-top: 0.25rem; padding-top: 0.25rem;">
-                            <span style="font-size: 0.7rem; color: var(--text-secondary); font-weight: 600;">Target Awal</span>
-                            <span class="popover-count" style="color: var(--text-secondary);">${formatNum(prelist)}</span>
-                        </div>
-                        <div class="popover-item">
                             <span style="font-size: 0.7rem; color: var(--primary); font-weight: 600;">Tambahan Usaha Baru</span>
                             <span class="popover-count" style="color: var(--primary);">+${formatNum(newUsahaProv)}</span>
                         </div>
@@ -1419,8 +1415,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="popover-count" style="color: #ec4899;">+${formatNum(newRumahProv)}</span>
                         </div>
                         <div class="popover-item" style="border-top: 1px solid var(--card-border); margin-top: 0.25rem; padding-top: 0.25rem;">
-                            <span style="font-size: 0.75rem; color: var(--primary); font-weight: 800;">Total Target Keseluruhan</span>
-                            <span class="popover-count" style="color: var(--primary);">${formatNum(prelist + newUsahaProv + newRumahProv)}</span>
+                            <span style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 700; font-style: italic;">⚠ Sudah termasuk dalam total resmi FASIH</span>
                         </div>
                     </div>
                 </div>
