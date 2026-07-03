@@ -1612,6 +1612,41 @@ async def run_ipas_report_generation(page, xsrf_token):
         output_data[survey_key] = final_list
         output_data[f"{survey_key}_sls_status"] = sls_status_map
 
+    # OVERRIDE: Warisi detail progress harian (today, yesterday, two_days_ago) dari ipas_data yang saat ini ada di Supabase
+    # agar tidak dirusak oleh data tanggung API fast progress!
+    current_ipas = fetch_current_ipas_data(supabase)
+    if current_ipas and isinstance(current_ipas, dict):
+        print("\n[INFO] Mewarisi statistik completed H-2, H-1, Today dari ipas_data lama di Supabase...")
+        for survey_key in ["se_umum", "se_ub"]:
+            old_list = current_ipas.get(survey_key, [])
+            new_list = output_data.get(survey_key, [])
+            
+            # Map old list by kabupaten
+            old_map = {x.get("kabupaten"): x for x in old_list if x.get("kabupaten")}
+            for new_kab in new_list:
+                kab_name = new_kab.get("kabupaten")
+                old_kab = old_map.get(kab_name)
+                if old_kab:
+                    # Override kabupaten level
+                    for key in ["today_completed", "yesterday_completed", "two_days_ago_completed",
+                                "today_completed_breakdown", "yesterday_completed_breakdown", "two_days_ago_completed_breakdown",
+                                "two_days_ago_is_estimate", "new_businesses"]:
+                        if key in old_kab:
+                            new_kab[key] = old_kab[key]
+                            
+                    # Map old kecamatan by name/id
+                    old_kec_map = {x.get("kec_name"): x for x in old_kab.get("kecamatan_list", []) if x.get("kec_name")}
+                    for new_kec in new_kab.get("kecamatan_list", []):
+                        kec_name = new_kec.get("kec_name")
+                        old_kec = old_kec_map.get(kec_name)
+                        if old_kec:
+                            # Override kecamatan level
+                            for key in ["today_completed", "yesterday_completed", "two_days_ago_completed",
+                                        "today_completed_breakdown", "yesterday_completed_breakdown", "two_days_ago_completed_breakdown",
+                                        "two_days_ago_is_estimate", "new_businesses"]:
+                                if key in old_kec:
+                                    new_kec[key] = old_kec[key]
+
     now_str = datetime.datetime.now(local_tz).isoformat()
     final_js_obj = {
         "updated_at": now_str,
@@ -2157,18 +2192,6 @@ async def main():
                 supabase.table("dashboard_store").delete().eq("key", "assign_data_fast").execute()
                 supabase.table("dashboard_store").insert({"key": "assign_data_fast", "value": db_assign_payload}).execute()
                 print(" ✅ database_store key 'assign_data_fast' updated (SLS & petugas stats).")
-
-                # ALWAYS update the main 'assign_data' key so that the live dashboard updates in real-time
-                supabase.table("dashboard_store").delete().eq("key", "assign_data").execute()
-                supabase.table("dashboard_store").insert({"key": "assign_data", "value": db_assign_payload}).execute()
-                print(" ✅ database_store key 'assign_data' updated.")
-
-                # Snapshot harian key assign_data tetap pakai snapshot date
-                today_str = datetime.datetime.now().strftime("%Y-%m-%d")
-                daily_key = f"assign_data:{today_str}"
-                supabase.table("dashboard_store").delete().eq("key", daily_key).execute()
-                supabase.table("dashboard_store").insert({"key": daily_key, "value": db_assign_payload}).execute()
-                print(f" ✅ database_store key '{daily_key}' updated.")
             except Exception as e:
                 print(f"[ERROR] Gagal mengunggah assign_data ke Supabase: {e}")
 

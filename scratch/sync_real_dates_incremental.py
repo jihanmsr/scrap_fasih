@@ -222,9 +222,11 @@ async def main():
 
                     status_str = statuses_list[stat_idx] if stat_idx < len(statuses_list) else "-"
                     if status_str.upper() not in non_selesais:
+                        kec_name = reg_info[3].upper().strip() if len(reg_info) > 3 else "-"
                         completed_targets[tid] = {
                             "status": status_str,
                             "kab_name": kab_clean,
+                            "kec_name": kec_name,
                             "survey_type": "se_umum"
                         }
                         
@@ -460,12 +462,81 @@ async def main():
                         val = None
                         
                 if val and isinstance(val, dict):
+                    # Determine target dates in WITA (UTC+8)
+                    wita_offset = timezone(timedelta(hours=8))
+                    today_wita = datetime.now(wita_offset).strftime("%Y-%m-%d")
+                    yesterday_wita = (datetime.now(wita_offset) - timedelta(days=1)).strftime("%Y-%m-%d")
+                    two_days_ago_wita = (datetime.now(wita_offset) - timedelta(days=2)).strftime("%Y-%m-%d")
+
+                    # Aggregate granular target completions by (kab, kec, submit_date, status)
+                    completed_by_kab = {}  # kab_name -> stats
+                    completed_by_kec = {}  # (kab_name, kec_name) -> stats
+                    
+                    for tid, info in completed_targets.items():
+                        record = cached_dates.get(tid)
+                        if record and record.get("date"):
+                            s_date = record["date"]
+                            s_status = record.get("status") or info["status"]
+                            kab = info["kab_name"]
+                            kec = info["kec_name"]
+                            
+                            # Initialize maps
+                            completed_by_kab.setdefault(kab, {
+                                "today_completed": 0, "today_completed_breakdown": {},
+                                "yesterday_completed": 0, "yesterday_completed_breakdown": {},
+                                "two_days_ago_completed": 0, "two_days_ago_completed_breakdown": {}
+                            })
+                            completed_by_kec.setdefault((kab, kec), {
+                                "today_completed": 0, "today_completed_breakdown": {},
+                                "yesterday_completed": 0, "yesterday_completed_breakdown": {},
+                                "two_days_ago_completed": 0, "two_days_ago_completed_breakdown": {}
+                            })
+                            
+                            if s_date == today_wita:
+                                completed_by_kab[kab]["today_completed"] += 1
+                                bd = completed_by_kab[kab]["today_completed_breakdown"]
+                                bd[s_status] = bd.get(s_status, 0) + 1
+                                
+                                completed_by_kec[(kab, kec)]["today_completed"] += 1
+                                kbd = completed_by_kec[(kab, kec)]["today_completed_breakdown"]
+                                kbd[s_status] = kbd.get(s_status, 0) + 1
+                            elif s_date == yesterday_wita:
+                                completed_by_kab[kab]["yesterday_completed"] += 1
+                                bd = completed_by_kab[kab]["yesterday_completed_breakdown"]
+                                bd[s_status] = bd.get(s_status, 0) + 1
+                                
+                                completed_by_kec[(kab, kec)]["yesterday_completed"] += 1
+                                kbd = completed_by_kec[(kab, kec)]["yesterday_completed_breakdown"]
+                                kbd[s_status] = kbd.get(s_status, 0) + 1
+                            elif s_date == two_days_ago_wita:
+                                completed_by_kab[kab]["two_days_ago_completed"] += 1
+                                bd = completed_by_kab[kab]["two_days_ago_completed_breakdown"]
+                                bd[s_status] = bd.get(s_status, 0) + 1
+                                
+                                completed_by_kec[(kab, kec)]["two_days_ago_completed"] += 1
+                                kbd = completed_by_kec[(kab, kec)]["two_days_ago_completed_breakdown"]
+                                kbd[s_status] = kbd.get(s_status, 0) + 1
+
                     # Update se_umum
                     se_umum = val.get("se_umum", [])
                     for kab_item in se_umum:
                         kab_raw = kab_item.get("kabupaten", "")
                         kab_clean = clean_kab_name(kab_raw)
                         
+                        # Populate prelist completed details
+                        stats_kab = completed_by_kab.get(kab_clean, {
+                            "today_completed": 0, "today_completed_breakdown": {},
+                            "yesterday_completed": 0, "yesterday_completed_breakdown": {},
+                            "two_days_ago_completed": 0, "two_days_ago_completed_breakdown": {}
+                        })
+                        kab_item["today_completed"] = stats_kab["today_completed"]
+                        kab_item["today_completed_breakdown"] = stats_kab["today_completed_breakdown"]
+                        kab_item["yesterday_completed"] = stats_kab["yesterday_completed"]
+                        kab_item["yesterday_completed_breakdown"] = stats_kab["yesterday_completed_breakdown"]
+                        kab_item["two_days_ago_completed"] = stats_kab["two_days_ago_completed"]
+                        kab_item["two_days_ago_completed_breakdown"] = stats_kab["two_days_ago_completed_breakdown"]
+                        kab_item["two_days_ago_is_estimate"] = False
+
                         # Get scraped new businesses for this kab
                         scraped_biz = kab_new_businesses.get(kab_clean, [])
                         kab_item["new_businesses"] = scraped_biz
@@ -496,7 +567,20 @@ async def main():
                             kec_item["new_usaha_yesterday"] = sum(1 for b in kec_biz if b["type"] == "usaha" and b["date"] == "yesterday")
                             kec_item["new_rumah_today"] = sum(1 for b in kec_biz if b["type"] == "rumah" and b["date"] == "today")
                             kec_item["new_rumah_yesterday"] = sum(1 for b in kec_biz if b["type"] == "rumah" and b["date"] == "yesterday")
-                    
+                            
+                            stats_kec = completed_by_kec.get((kab_clean, kec_name), {
+                                "today_completed": 0, "today_completed_breakdown": {},
+                                "yesterday_completed": 0, "yesterday_completed_breakdown": {},
+                                "two_days_ago_completed": 0, "two_days_ago_completed_breakdown": {}
+                            })
+                            kec_item["today_completed"] = stats_kec["today_completed"]
+                            kec_item["today_completed_breakdown"] = stats_kec["today_completed_breakdown"]
+                            kec_item["yesterday_completed"] = stats_kec["yesterday_completed"]
+                            kec_item["yesterday_completed_breakdown"] = stats_kec["yesterday_completed_breakdown"]
+                            kec_item["two_days_ago_completed"] = stats_kec["two_days_ago_completed"]
+                            kec_item["two_days_ago_completed_breakdown"] = stats_kec["two_days_ago_completed_breakdown"]
+                            kec_item["two_days_ago_is_estimate"] = False
+
                     # Update prov-level totals (se_umum_prov_new_total & se_umum_prov_new_rumah_total)
                     total_prov_usaha = sum(kab.get("new_usaha_overall", 0) for kab in se_umum)
                     total_prov_rumah = sum(kab.get("new_rumah_overall", 0) for kab in se_umum)
