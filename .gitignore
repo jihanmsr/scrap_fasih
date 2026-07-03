@@ -15,6 +15,12 @@ Laporan_Progres_Petugas_*.xlsx
 hasil_export.csv
 granular_assignments.js
 granular_assignments.json
+playwright_chrome_profile*/
+target_real_dates.json
+scratch/reject_report.*
+scratch/ids_to_reject.json
+*.zip
+*.log
 granular_assignments_*.js
 granular_assignments_*.json
 *.json.bak

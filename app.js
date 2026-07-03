@@ -1111,23 +1111,91 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             return newBreakdown;
         };
-        const scaleKecamatans = (kecamatanList, targetCount, dayKey) => {
+        const scaleKecamatans = (kecamatanList, targetCount, dayKey, parentItem) => {
             if (!kecamatanList || kecamatanList.length === 0) return;
             const completedKey = `${dayKey}_completed`;
             const breakdownKey = `${dayKey}_completed_breakdown`;
 
             const sumKec = kecamatanList.reduce((acc, k) => acc + (k[completedKey] || 0), 0);
-            if (sumKec === targetCount) return;
-
+            
+            // If the raw BPS data had no kecamatan-level daily stats (sumKec === 0),
+            // or if the total count is 0
             if (sumKec === 0 || targetCount === 0) {
                 if (targetCount > 0) {
-                    const base = Math.floor(targetCount / kecamatanList.length);
-                    let remainder = targetCount % kecamatanList.length;
-                    kecamatanList.forEach(k => {
-                        k[completedKey] = base + (remainder > 0 ? 1 : 0);
-                        if (remainder > 0) remainder--;
-                        k[breakdownKey] = { "SUBMITTED BY Pencacah": k[completedKey] };
-                    });
+                    const totalSubmittedKec = kecamatanList.reduce((acc, k) => acc + (k.total_submitted || 0), 0);
+                    const parentBreakdownKey = `${dayKey}_completed_breakdown`;
+                    const parentBreakdown = parentItem ? parentItem[parentBreakdownKey] : null;
+
+                    if (totalSubmittedKec === 0) {
+                        // Even fallback if no kecamatan has completed targets yet
+                        const base = Math.floor(targetCount / kecamatanList.length);
+                        let remainder = targetCount % kecamatanList.length;
+                        kecamatanList.forEach(k => {
+                            k[completedKey] = base + (remainder > 0 ? 1 : 0);
+                            if (remainder > 0) remainder--;
+                            
+                            if (parentBreakdown && typeof parentBreakdown === 'object') {
+                                k[breakdownKey] = {};
+                                Object.entries(parentBreakdown).forEach(([status, val]) => {
+                                    k[breakdownKey][status] = Math.round(val / kecamatanList.length);
+                                });
+                            } else {
+                                k[breakdownKey] = { "SUBMITTED BY Pencacah": k[completedKey] };
+                            }
+                        });
+                    } else {
+                        // Proportional distribution fallback!
+                        let distributedSum = 0;
+                        kecamatanList.forEach(k => {
+                            const share = (k.total_submitted || 0) / totalSubmittedKec;
+                            k[completedKey] = Math.round(targetCount * share);
+                            distributedSum += k[completedKey];
+                            
+                            // Scale status breakdown from parent
+                            if (parentBreakdown && typeof parentBreakdown === 'object') {
+                                k[breakdownKey] = {};
+                                Object.entries(parentBreakdown).forEach(([status, val]) => {
+                                    k[breakdownKey][status] = Math.round(val * share);
+                                });
+                            } else {
+                                k[breakdownKey] = { "SUBMITTED BY Pencacah": k[completedKey] };
+                            }
+                        });
+                        
+                        // Adjust remainder to match exactly
+                        const diff = targetCount - distributedSum;
+                        if (diff !== 0) {
+                            let maxKec = null;
+                            let maxVal = -1;
+                            kecamatanList.forEach(k => {
+                                if ((k.total_submitted || 0) > maxVal) {
+                                    maxVal = k.total_submitted || 0;
+                                    maxKec = k;
+                                }
+                            });
+                            if (maxKec) {
+                                maxKec[completedKey] = Math.max(0, maxKec[completedKey] + diff);
+                                // Recalculate breakdown for the remainder adjustment
+                                const share = (maxKec.total_submitted || 0) / totalSubmittedKec;
+                                if (parentBreakdown && typeof parentBreakdown === 'object') {
+                                    maxKec[breakdownKey] = {};
+                                    let bdSum = 0;
+                                    Object.entries(parentBreakdown).forEach(([status, val]) => {
+                                        maxKec[breakdownKey][status] = Math.round(val * share);
+                                        bdSum += maxKec[breakdownKey][status];
+                                    });
+                                    // Adjust breakdown sum to match maxKec[completedKey]
+                                    const bdDiff = maxKec[completedKey] - bdSum;
+                                    const bdKeys = Object.keys(maxKec[breakdownKey]);
+                                    if (bdDiff !== 0 && bdKeys.length > 0) {
+                                        maxKec[breakdownKey][bdKeys[0]] = Math.max(0, maxKec[breakdownKey][bdKeys[0]] + bdDiff);
+                                    }
+                                } else {
+                                    maxKec[breakdownKey] = { "SUBMITTED BY Pencacah": maxKec[completedKey] };
+                                }
+                            }
+                        }
+                    }
                 } else {
                     kecamatanList.forEach(k => {
                         k[completedKey] = 0;
@@ -1136,6 +1204,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 return;
             }
+
+            // Normal path when BPS raw data has kecamatan-level daily stats
+            if (sumKec === targetCount) return;
 
             const scale = targetCount / sumKec;
             let newSum = 0;
@@ -1204,9 +1275,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Distribute and scale the uncapped count down to Kecamatans
-            scaleKecamatans(item.kecamatan_list, item.today_completed, 'today');
-            scaleKecamatans(item.kecamatan_list, item.yesterday_completed, 'yesterday');
-            scaleKecamatans(item.kecamatan_list, item.two_days_ago_completed, 'two_days_ago');
+            scaleKecamatans(item.kecamatan_list, item.today_completed, 'today', item);
+            scaleKecamatans(item.kecamatan_list, item.yesterday_completed, 'yesterday', item);
+            scaleKecamatans(item.kecamatan_list, item.two_days_ago_completed, 'two_days_ago', item);
         });
 
         // Calculate Summary
@@ -6346,11 +6417,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const tbody = document.getElementById('assign-sls-table-body');
-        if (surveyTypeFilter === 'se_umum' && kabVal === 'all') {
+        
+        if (kabVal === 'all') {
             if (tbody) {
                 tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; padding: 3rem; color: var(--text-secondary);">Silakan pilih Kabupaten/Kota terlebih dahulu untuk memuat rincian data assignment.</td></tr>`;
             }
-            if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable([]);
+            window.GRANULAR_ASSIGNMENTS_DATA = null;
             
             // Populating KPI cards with overall province data
             try {
@@ -6377,18 +6449,65 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (selesaiEl) selesaiEl.innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
                 if (belumEl) belumEl.innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
             } catch (e) {}
-            return;
+        } else {
+            // Fetch Granular Assignments from Supabase
+            const match = kabVal.match(/\[(\d+)\]/);
+            if (match && supabaseClient) {
+                const code = match[1];
+                const fullKabCode = `72${code}`;
+                const dbKey = `granular_assignments_${surveyTypeFilter}_${fullKabCode}`;
+                
+                if (tbody) {
+                    tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; padding: 3rem; color: var(--text-secondary);"><div class="loading-spinner" style="display:inline-block; margin-right:0.5rem; width:1.2rem; height:1.2rem; border:2px solid var(--primary); border-top-color:transparent; border-radius:50%; animation:spin 1s linear infinite;"></div> Memuat rincian data assignment dari database...</td></tr>`;
+                }
+                
+                try {
+                    console.log(`Fetching granular assignments for ${kabVal} (key: ${dbKey}) from Supabase...`);
+                    const { data: dbData, error: dbError } = await supabaseClient
+                        .from('dashboard_store')
+                        .select('value')
+                        .eq('key', dbKey)
+                        .single();
+                        
+                    if (!dbError && dbData && dbData.value) {
+                        let payload = dbData.value;
+                        if (typeof payload === 'string') {
+                            try {
+                                payload = JSON.parse(payload);
+                            } catch(pe) {
+                                console.error("Failed to parse payload string:", pe);
+                            }
+                        }
+                        
+                        if (payload && payload.compressed_data) {
+                            window.GRANULAR_ASSIGNMENTS_DATA = window.decompressAndParseGranular(payload.compressed_data);
+                        } else {
+                            window.GRANULAR_ASSIGNMENTS_DATA = payload;
+                        }
+                        console.log(`Loaded ${window.GRANULAR_ASSIGNMENTS_DATA.length} granular assignments.`);
+                    } else {
+                        console.warn(`Failed to fetch ${dbKey} from Supabase:`, dbError);
+                        window.GRANULAR_ASSIGNMENTS_DATA = null;
+                    }
+                } catch (e) {
+                    console.error("Failed to load granular data from Supabase:", e);
+                    window.GRANULAR_ASSIGNMENTS_DATA = null;
+                }
+            } else {
+                window.GRANULAR_ASSIGNMENTS_DATA = null;
+            }
         }
 
         // Fetch Petugas Summary from MySQL
-        const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+        const matchCode = kabVal.match(/\[(\d+)\]/);
+        const kabCodeParam = (kabVal === 'all' || !matchCode) ? '' : `72${matchCode[1]}`;
         try {
-            const url = `https://dds-api.bpssulteng.id/api.php?action=get_petugas_summary&survey=${surveyTypeFilter}&kab=${kabVal === 'all' ? '' : cleanKabVal}`;
+            const url = `https://dds-api.bpssulteng.id/api.php?action=get_petugas_summary&survey=${surveyTypeFilter}&kab=${kabCodeParam}`;
             const res = await fetch(url);
             const data = await res.json();
             window.PETUGAS_SUMMARY_MYSQL = data; 
             if (window.renderPetugasSummaryTable) {
-                window.renderPetugasSummaryTable(null, true);
+                window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA);
             }
         } catch (e) {
             console.error("Failed to fetch petugas summary:", e);
@@ -6772,7 +6891,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let belumAll = 0;
         let petugasMap = {};
 
-        if (Array.isArray(data)) {
+        if (Array.isArray(data) && data.length > 0) {
             data.forEach(r => {
                 let petName = (r.petugas_username !== '-' && r.petugas_username) ? r.petugas_username : ((r.petugas_fullname !== '-' && r.petugas_fullname) ? r.petugas_fullname : null);
                 
@@ -6781,19 +6900,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     let mapped = window.userMap[petName] || window.userMap[petName.split('@')[0]];
                     if (mapped) petName = mapped;
                 }
-
+ 
                 if (!petName) {
                     const isCompleted = r.status !== 'OPEN' && r.status !== 'DRAFT';
                     petName = isCompleted ? 'CAWI / Mandiri (Tanpa Petugas)' : 'Belum Ada Petugas';
                 }
-
+ 
                 if (!petugasMap[petName]) {
                     petugasMap[petName] = { name: petName, total: 0, selesai: 0, belum: 0 };
                 }
-
+ 
                 petugasMap[petName].total += 1;
                 totalAll += 1;
-
+ 
                 if (r.status === 'OPEN' || r.status === 'DRAFT') {
                     petugasMap[petName].belum += 1;
                     belumAll += 1;
@@ -6801,6 +6920,34 @@ document.addEventListener('DOMContentLoaded', () => {
                     petugasMap[petName].selesai += 1;
                     selesaiAll += 1;
                 }
+            });
+        } else {
+            const mysqlData = window.PETUGAS_SUMMARY_MYSQL || [];
+            mysqlData.forEach(r => {
+                let petName = r.petugas_fullname || r.petugas_username || 'Belum Ada Petugas';
+                if (petName === '-' || !petName.trim()) petName = 'Belum Ada Petugas';
+                
+                // Coba konversi email/username ke nama asli menggunakan userMap
+                if (petName && window.userMap) {
+                    let mapped = window.userMap[petName] || window.userMap[petName.split('@')[0]];
+                    if (mapped) petName = mapped;
+                }
+ 
+                const total = parseInt(r.total_target) || 0;
+                const selesai = parseInt(r.selesai) || 0;
+                const belum = parseInt(r.belum_selesai) || 0;
+ 
+                if (!petugasMap[petName]) {
+                    petugasMap[petName] = { name: petName, total: 0, selesai: 0, belum: 0 };
+                }
+ 
+                petugasMap[petName].total += total;
+                petugasMap[petName].selesai += selesai;
+                petugasMap[petName].belum += belum;
+                
+                totalAll += total;
+                selesaiAll += selesai;
+                belumAll += belum;
             });
         }
 
