@@ -8528,7 +8528,6 @@ async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
     exportToCSV(rows, `rekap_petugas_${surveyType}_${new Date().toISOString().slice(0,10)}.csv`);
     if (statusEl) statusEl.textContent = `✅ ${rows.length} baris berhasil diunduh!`;
 }
-}
 
 async function downloadRawExcel(selectedKabs, surveyType, statusEl) {
     if (!window.supabaseClient) {
