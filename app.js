@@ -5261,9 +5261,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (mainSubheader) mainSubheader.textContent = 'Daftar anomali dan tindak lanjut petugas di lapangan';
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
-            // Show anomali tab content (uses id="tab-anomali", not "tab-content-anomali")
-            const anomaliContent = document.getElementById('tab-anomali');
-            if (anomaliContent) anomaliContent.style.display = 'block';
             // Activate button
             const anomaliBtn = document.getElementById('tab-btn-anomali');
             if (anomaliBtn) anomaliBtn.classList.add('active');
@@ -7998,7 +7995,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Enter') {
             const anomaliSection = document.getElementById('anomali-login-section');
             if (anomaliSection && anomaliSection.style.display !== 'none' &&
-                document.getElementById('tab-anomali') && document.getElementById('tab-anomali').style.display !== 'none') {
+                document.getElementById('tab-content-anomali') && document.getElementById('tab-content-anomali').style.display !== 'none') {
                 window.loginAnomali();
             }
         }
