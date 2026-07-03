@@ -6274,74 +6274,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.updateTimelineView = function () {
-        const kabFilter = document.getElementById('timeline-kab-filter')?.value || 'all';
-        const typeFilter = document.getElementById('timeline-type-filter')?.value || 'all';
-
-        if (!window.DAILY_SUBMISSION_STATS || !Array.isArray(window.DAILY_SUBMISSION_STATS) || window.DAILY_SUBMISSION_STATS.length === 0) {
-            // Show empty state in KPI and table
-            const statTotal = document.getElementById('timeline-stat-total');
-            const statAvg = document.getElementById('timeline-stat-avg');
-            const statPeakDay = document.getElementById('timeline-stat-peak-day');
-            const substatPeakVal = document.getElementById('timeline-substat-peak-val');
-            if (statTotal) statTotal.innerText = '0';
-            if (statAvg) statAvg.innerText = '0';
-            if (statPeakDay) statPeakDay.innerText = '-';
-            if (substatPeakVal) substatPeakVal.innerText = '0 submit';
-            renderDailySubmissionChart([], []);
-            const tbody = document.getElementById('timeline-table-body');
-            if (tbody) tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:2rem;color:var(--text-secondary);">Data progres harian belum tersedia. Jalankan scrape_granular_assignments.py terlebih dahulu.</td></tr>`;
-            return;
-        }
-
-        const filtered = window.DAILY_SUBMISSION_STATS.filter(r => {
-            if (kabFilter !== 'all') {
-                // Dropdown values are like "[01] BANGGAI KEPULAUAN", data has "BANGGAI KEPULAUAN"
-                const cleanFilter = kabFilter.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
-                if ((r.kab_name || '').toUpperCase() !== cleanFilter) return false;
-            }
-            if (typeFilter !== 'all' && r.survey_type !== typeFilter) return false;
-            return true;
-        });
-
-        const dateMap = {};
-        filtered.forEach(r => {
-            const d = r.date;
-            if (!dateMap[d]) dateMap[d] = 0;
-            dateMap[d] += (r.count || 0);
-        });
-
-        const sortedDates = Object.keys(dateMap).sort();
-        const sortedCounts = sortedDates.map(d => dateMap[d]);
-
-        let total = 0;
-        let peakDay = '-';
-        let peakVal = 0;
-
-        sortedDates.forEach((d, idx) => {
-            const val = sortedCounts[idx];
-            total += val;
-            if (val > peakVal) {
-                peakVal = val;
-                peakDay = d;
-            }
-        });
-
-        const avg = sortedDates.length > 0 ? (total / sortedDates.length).toFixed(1) : 0;
-
-        const statTotal = document.getElementById('timeline-stat-total');
-        const statAvg = document.getElementById('timeline-stat-avg');
-        const statPeakDay = document.getElementById('timeline-stat-peak-day');
-        const substatPeakVal = document.getElementById('timeline-substat-peak-val');
-
-        const fmt = (n) => new Intl.NumberFormat('id-ID').format(n || 0);
-
-        if (statTotal) statTotal.innerText = fmt(total);
-        if (statAvg) statAvg.innerText = fmt(avg);
-        if (statPeakDay) statPeakDay.innerText = peakDay;
-        if (substatPeakVal) substatPeakVal.innerText = `${fmt(peakVal)} submit`;
-
-        renderDailySubmissionChart(sortedDates, sortedCounts);
-        renderTimelineTable(sortedDates, dateMap, kabFilter, typeFilter);
+        if (typeof window.initTrenFilters === 'function') window.initTrenFilters();
+        if (typeof window.renderTrenChart === 'function') window.renderTrenChart();
     };
 
     // --- GRANULAR DATA UTILITIES ---
