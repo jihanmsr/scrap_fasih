@@ -1612,11 +1612,11 @@ async def run_ipas_report_generation(page, xsrf_token):
         output_data[survey_key] = final_list
         output_data[f"{survey_key}_sls_status"] = sls_status_map
 
-    # OVERRIDE: Warisi detail progress harian (today, yesterday, two_days_ago) dari ipas_data yang saat ini ada di Supabase
-    # agar tidak dirusak oleh data tanggung API fast progress!
+    # OVERRIDE: Warisi detail progress harian dan total target dari ipas_data yang saat ini ada di Supabase
+    # agar tidak dirusak oleh data tanggung atau benchmark target lama!
     current_ipas = fetch_current_ipas_data(supabase)
     if current_ipas and isinstance(current_ipas, dict):
-        print("\n[INFO] Mewarisi statistik completed H-2, H-1, Today dari ipas_data lama di Supabase...")
+        print("\n[INFO] Mewarisi statistik completed H-2, H-1, Today dan target prelist dari ipas_data lama di Supabase...")
         for survey_key in ["se_umum", "se_ub"]:
             old_list = current_ipas.get(survey_key, [])
             new_list = output_data.get(survey_key, [])
@@ -1628,7 +1628,7 @@ async def run_ipas_report_generation(page, xsrf_token):
                 old_kab = old_map.get(kab_name)
                 if old_kab:
                     # Override kabupaten level
-                    for key in ["today_completed", "yesterday_completed", "two_days_ago_completed",
+                    for key in ["total_prelist", "today_completed", "yesterday_completed", "two_days_ago_completed",
                                 "today_completed_breakdown", "yesterday_completed_breakdown", "two_days_ago_completed_breakdown",
                                 "two_days_ago_is_estimate", "new_businesses"]:
                         if key in old_kab:
@@ -1641,7 +1641,7 @@ async def run_ipas_report_generation(page, xsrf_token):
                         old_kec = old_kec_map.get(kec_name)
                         if old_kec:
                             # Override kecamatan level
-                            for key in ["today_completed", "yesterday_completed", "two_days_ago_completed",
+                            for key in ["total_prelist", "today_completed", "yesterday_completed", "two_days_ago_completed",
                                         "today_completed_breakdown", "yesterday_completed_breakdown", "two_days_ago_completed_breakdown",
                                         "two_days_ago_is_estimate", "new_businesses"]:
                                 if key in old_kec:
@@ -1654,8 +1654,8 @@ async def run_ipas_report_generation(page, xsrf_token):
         "se_ub": output_data["se_ub"],
         "se_umum_sls_status": output_data.get("se_umum_sls_status", {}),
         "se_ub_sls_status": output_data.get("se_ub_sls_status", {}),
-        "se_umum_prov_total": output_data.get("se_umum_prov_total", 0),
-        "se_ub_prov_total": output_data.get("se_ub_prov_total", 0),
+        "se_umum_prov_total": current_ipas.get("se_umum_prov_total", output_data.get("se_umum_prov_total", 0)) if current_ipas else output_data.get("se_umum_prov_total", 0),
+        "se_ub_prov_total": current_ipas.get("se_ub_prov_total", output_data.get("se_ub_prov_total", 0)) if current_ipas else output_data.get("se_ub_prov_total", 0),
         "se_umum_prov_new_total": output_data.get("se_umum_prov_new_total", 0),
         "se_ub_prov_new_total": output_data.get("se_ub_prov_new_total", 0),
         "se_umum_prov_new_rumah_total": output_data.get("se_umum_prov_new_rumah_total", 0),
