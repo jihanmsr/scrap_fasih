@@ -8520,22 +8520,25 @@ async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
 
         if (statusEl) statusEl.textContent = `⏳ Memuat data ${kab}...`;
 
-        // Check if currently loaded in memory
+        // Check if currently loaded in memory — filter by BOTH kab AND survey_type
         let isMatchMemory = false;
         if (window.GRANULAR_ASSIGNMENTS_DATA && window.GRANULAR_ASSIGNMENTS_DATA.length > 0) {
-            const firstRec = window.GRANULAR_ASSIGNMENTS_DATA[0];
-            const memoryKabClean = (firstRec.kab_name || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
-            if (memoryKabClean === kabClean) {
+            const memFiltered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
+                const rKab = (r.kab_name || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                return rKab === kabClean && r.survey_type === surveyType;
+            });
+            if (memFiltered.length > 0) {
                 isMatchMemory = true;
-                const memFiltered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => r.survey_type === surveyType);
                 allGranularRecords.push(...memFiltered);
             }
         }
 
         if (!isMatchMemory) {
             try {
+                // Fetch then filter by survey_type
                 const records = await fetchGranularDataForKab(fullCode, surveyType, kabClean);
-                allGranularRecords.push(...records);
+                const filtered = records.filter(r => !r.survey_type || r.survey_type === surveyType);
+                allGranularRecords.push(...filtered);
             } catch (e) {
                 console.warn(`Gagal memuat data granular untuk ${kab}:`, e);
             }
@@ -8551,16 +8554,33 @@ async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
 
     const petMap = {};
     allGranularRecords.forEach(r => {
-        let name = r.petugas_fullname || r.petugas_username || 'Belum Ada Petugas';
-        if (name === '-' || !name.trim()) name = 'Belum Ada Petugas';
+        // Use username as unique key (matches dashboard logic), display fullname
+        const username = r.petugas_username && r.petugas_username !== '-' ? r.petugas_username : null;
+        let displayName = r.petugas_fullname && r.petugas_fullname !== '-' ? r.petugas_fullname : (username || null);
         
-        const pengawas = r.pengawas_fullname || r.pengawas_username || '-';
-        const email = r.petugas_username || '-';
+        // Apply userMap to convert username to real name (same as dashboard table)
+        if (username && window.userMap) {
+            const mapped = window.userMap[username] || window.userMap[username.split('@')[0]];
+            if (mapped) displayName = mapped;
+        }
+        
+        if (!displayName || !displayName.trim()) {
+            const isCompleted = r.status !== 'OPEN' && r.status !== 'DRAFT';
+            displayName = isCompleted ? 'CAWI / Mandiri (Tanpa Petugas)' : 'Belum Ada Petugas';
+        }
+        
+        const pengawas = r.pengawas_fullname && r.pengawas_fullname !== '-' ? r.pengawas_fullname : (r.pengawas_username || '-');
+        const email = username || '-';
         const kab = r.kab_name || '-';
-        const key = `${kab}|||${name}`;
+        // Key by kab + username to match dashboard grouping
+        const key = `${kab}|||${username || displayName}`;
         
         if (!petMap[key]) {
-            petMap[key] = { kab, name, pengawas, email, total: 0, selesai: 0, belum: 0, open: 0, draft: 0, submitted: 0, rejected: 0, approved: 0 };
+            petMap[key] = { kab, name: displayName, pengawas, email, total: 0, selesai: 0, belum: 0, open: 0, draft: 0, submitted: 0, rejected: 0, approved: 0 };
+        }
+        // Update display name (in case earlier record had only username)
+        if (displayName && displayName !== 'Belum Ada Petugas' && displayName !== 'CAWI / Mandiri (Tanpa Petugas)') {
+            petMap[key].name = displayName;
         }
         petMap[key].total++;
         const st = (r.status || '').toUpperCase();
