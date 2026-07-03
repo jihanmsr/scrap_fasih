@@ -368,17 +368,18 @@ if ($action === 'upsert_store') {
         $params[] = $surveyType;
     }
     if ($kabCode && $kabCode !== 'all') {
-        $where[] = "kab_code = ?";
+        $where[] = "(kab_code = ? OR kab_name = ?)";
+        $params[] = $kabCode;
         $params[] = $kabCode;
     }
     if ($kecCode && $kecCode !== 'all') {
-        $where[] = "kec_name = ?"; // In frontend, filter is by name, wait! I will just use kec_code. Wait, Frontend passes 'name' for kec, desa. Let's support both.
-        // Let's just use what frontend passes. The user's app.js passes names for kec/desa/sls filter.
-        $where[] = "kec_name = ?";
+        $where[] = "(kec_code = ? OR kec_name = ?)";
+        $params[] = $kecCode;
         $params[] = $kecCode;
     }
     if ($desaCode && $desaCode !== 'all') {
-        $where[] = "desa_name = ?";
+        $where[] = "(desa_code = ? OR desa_name = ?)";
+        $params[] = $desaCode;
         $params[] = $desaCode;
     }
     if ($slsCode && $slsCode !== 'all') {
@@ -435,7 +436,8 @@ if ($action === 'upsert_store') {
         $params[] = $surveyType;
     }
     if ($kabCode && $kabCode !== 'all') {
-        $where[] = "kab_code = ?";
+        $where[] = "(kab_code = ? OR kab_name = ?)";
+        $params[] = $kabCode;
         $params[] = $kabCode;
     }
     
@@ -474,7 +476,8 @@ if ($action === 'upsert_store') {
     $params = [$surveyType];
     
     if ($kabCode && $kabCode !== 'all') {
-        $where[] = "kab_code = ?";
+        $where[] = "(kab_code = ? OR kab_name = ?)";
+        $params[] = $kabCode;
         $params[] = $kabCode;
     }
     
@@ -528,7 +531,8 @@ if ($action === 'upsert_store') {
         $params[] = $surveyType;
     }
     if ($kabCode && $kabCode !== 'all') {
-        $where[] = "kab_code = ?";
+        $where[] = "(kab_code = ? OR kab_name = ?)";
+        $params[] = $kabCode;
         $params[] = $kabCode;
     }
     if ($kecName && $kecName !== 'all') {

@@ -423,15 +423,27 @@ def merge_granulars():
 
     # === GENERATE daily_submission_stats ===
     daily_stats_data = []
-    for (date_str, kab_name, s_type), cnt in daily_counts_dict.items():
-        daily_stats_data.append({
-            "date": date_str,
-            "kab_name": kab_name,
-            "survey_type": s_type,
-            "count": cnt
-        })
-
     stats_json_path = os.path.join(script_dir, "daily_submission_stats.json")
+    if os.path.exists(stats_json_path):
+        try:
+            with open(stats_json_path, "r", encoding="utf-8") as f:
+                existing_stats = json.load(f)
+            if isinstance(existing_stats, list) and len(existing_stats) > 0:
+                daily_stats_data = existing_stats
+                print(f"ℹ️ Menggunakan data timeline harian eksisting dari {stats_json_path} ({len(daily_stats_data)} baris)")
+        except Exception as e:
+            print(f"[WARNING] Gagal memuat timeline harian eksisting: {e}")
+
+    if not daily_stats_data:
+        print("⚠️ Data timeline harian eksisting kosong atau tidak ditemukan. Membuat baru dari daily_counts_dict...")
+        for (date_str, kab_name, s_type), cnt in daily_counts_dict.items():
+            daily_stats_data.append({
+                "date": date_str,
+                "kab_name": kab_name,
+                "survey_type": s_type,
+                "count": cnt
+            })
+
     with open(stats_json_path, "w", encoding="utf-8") as f:
         json.dump(daily_stats_data, f, indent=2)
     print(f"✅ Data timeline harian gabungan disimpan secara lokal ke {stats_json_path}")

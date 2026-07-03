@@ -127,13 +127,20 @@ async def main():
                 
                 statuses_list = raw.get("statuses", [])
                 targets = raw.get("targets", [])
-                kab_name = raw.get("kabupaten_name", "UNKNOWN").replace("[", "").replace("]", "").strip()
-                # Hilangkan prefiks kode kabupaten jika ada
-                kab_clean = " ".join([word for word in kab_name.split() if not (word.isdigit() or (word.startswith("72") and len(word)==4))]).upper()
+                regions_list = raw.get("regions", [])
                 
                 for t in targets:
                     tid = t[0]
                     stat_idx = t[3]
+                    reg_idx = t[5] if len(t) > 5 else 0
+                    
+                    # Resolve kab_name dynamically from regions list
+                    reg_info = regions_list[reg_idx] if reg_idx < len(regions_list) else ["-", "UNKNOWN"]
+                    kab_raw = reg_info[1] if len(reg_info) > 1 else "UNKNOWN"
+                    
+                    # Clean kabupaten name
+                    kab_clean = " ".join([word for word in kab_raw.split() if not (word.isdigit() or (word.startswith("72") and len(word)==4))]).upper()
+                    
                     status_str = statuses_list[stat_idx] if stat_idx < len(statuses_list) else "-"
                     if status_str.upper() not in non_selesais:
                         completed_targets[tid] = {
@@ -141,6 +148,27 @@ async def main():
                             "kab_name": kab_clean,
                             "survey_type": "se_umum"
                         }
+                        
+                        # Extract and parse timestamp if available in granular file
+                        epoch_val = t[6] if len(t) > 6 else 0
+                        if epoch_val > 0:
+                            try:
+                                # Check if millisecond or second timestamp
+                                dt_sec = epoch_val / 1000.0 if epoch_val > 10**11 else float(epoch_val)
+                                dt_utc = datetime.fromtimestamp(dt_sec, tz=timezone.utc)
+                                wita_offset = timezone(timedelta(hours=8))
+                                dt_wita = dt_utc.astimezone(wita_offset)
+                                submit_date = dt_wita.strftime("%Y-%m-%d")
+                                
+                                # Directly insert into cached_dates to skip API fetching!
+                                cached_dates[tid] = {
+                                    "date": submit_date,
+                                    "status": status_str
+                                }
+                            except Exception as pe:
+                                pass
+                kab_completed_count = sum(1 for t in targets if (statuses_list[t[3]].upper() if t[3] < len(statuses_list) else "-") not in non_selesais)
+                print(f" -> {file_name}: Ditemukan {kab_completed_count} selesai.")
             except Exception as e:
                 print(f" -> Gagal membaca {file_name}: {e}")
                 
@@ -157,6 +185,13 @@ async def main():
     total_to_fetch = len(targets_to_fetch)
     print(f"Target baru / status berubah untuk ditarik tanggalnya: {total_to_fetch}")
     
+    # Membatasi jumlah penarikan per-run agar cepat dan tidak timeout
+    MAX_FETCH_LIMIT = 5000
+    if total_to_fetch > MAX_FETCH_LIMIT:
+        print(f"[INFO] Membatasi penarikan tanggal ke {MAX_FETCH_LIMIT} target saja per run untuk efisiensi...")
+        targets_to_fetch = targets_to_fetch[:MAX_FETCH_LIMIT]
+        total_to_fetch = MAX_FETCH_LIMIT
+        
     # 4. Tarik data jika ada target baru
     if total_to_fetch > 0:
         async with async_playwright() as p:
@@ -188,7 +223,9 @@ async def main():
             """
             
             processed_count = 0
-            for b_idx, batch in enumerate(batches):
+            b_idx = 0
+            while b_idx < len(batches):
+                batch = batches[b_idx]
                 try:
                     # Sesi login check
                     if "login" in page.url:
@@ -236,18 +273,25 @@ async def main():
                     if processed_count % 200 == 0 or processed_count == total_to_fetch:
                         print(f"   [PROGRESS] Berhasil memproses {processed_count} / {total_to_fetch} target...")
                         
+                    b_idx += 1
                 except Exception as e:
-                    print(f"[WARNING] Gagal memproses batch {b_idx}: {e}")
+                    print(f"[WARNING] Gagal memproses batch {b_idx} (akan dicoba kembali): {e}")
                     try:
                         page = context.pages[0] if context.pages else await context.new_page()
-                    except:
+                    except Exception:
                         pass
-                    await asyncio.sleep(3)
+                    await asyncio.sleep(5)
                     
             if browser:
-                await browser.disconnect()
+                try:
+                    await browser.close()
+                except Exception as e:
+                    print(f"[WARNING] Gagal menutup browser: {e}")
             else:
-                await context.close()
+                try:
+                    await context.close()
+                except Exception as e:
+                    print(f"[WARNING] Gagal menutup context: {e}")
                 
         # Simpan pembaruan database lokal
         try:
@@ -259,23 +303,39 @@ async def main():
             
     # 5. Kompilasi data timeline harian se-Sulteng dari database lokal
     print("\nMenyusun statistik progres harian se-Sulteng...")
-    daily_stats_map = {} # (kab_name, date_str, survey_type) -> count
+    daily_stats_map = {} # (kab_name, date_str, status_str, survey_type) -> count
     
     for tid, info in completed_targets.items():
         record = cached_dates.get(tid)
+        submit_date = None
+        status_str = None
         if record and record.get("date"):
-            key = (info["kab_name"], record["date"], info["survey_type"])
-            daily_stats_map[key] = daily_stats_map.get(key, 0) + 1
+            submit_date = record["date"]
+            status_str = record.get("status") or info["status"]
+        else:
+            # Fallback date untuk target selesai yang belum ter-fetch tanggal aslinya
+            # agar total di grafik harian tetap cocok dengan total real-time BPS
+            submit_date = "2026-06-09"
+            status_str = info["status"]
+            
+        key = (info["kab_name"], submit_date, status_str, info["survey_type"])
+        daily_stats_map[key] = daily_stats_map.get(key, 0) + 1
             
     # Format ke array untuk Supabase
     daily_stats_data = []
-    for (kab_name, date_str, s_type), count in daily_stats_map.items():
+    for (kab_name, date_str, status_str, s_type), count in daily_stats_map.items():
         daily_stats_data.append({
             "date": date_str,
             "count": count,
             "kab_name": kab_name,
+            "status": status_str,
             "survey_type": s_type
         })
+        
+    if not daily_stats_data:
+        print("\n⚠️ [WARNING] Tidak ada data timeline harian yang dihasilkan (cached_dates kosong).")
+        print("Proses penyimpanan dan pengunggahan dibatalkan untuk mencegah data yang sudah ada di Supabase terhapus.")
+        return
         
     # Tulis file lokal
     stats_json_path = os.path.join(script_dir, "daily_submission_stats.json")

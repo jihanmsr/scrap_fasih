@@ -441,22 +441,50 @@ async def fetch_targets_with_drilldown(client, page, context, sem, survey_period
 def parse_date_to_epoch(date_str):
     if not date_str:
         return 0
+    if isinstance(date_str, (int, float)):
+        val = int(date_str)
+        return val // 1000 if val > 10**11 else val
+    if not isinstance(date_str, str):
+        return 0
+    cleaned = date_str.strip()
     try:
-        cleaned = date_str.strip()
         if cleaned.endswith("Z"):
             cleaned = cleaned[:-1] + "+00:00"
         dt = datetime.fromisoformat(cleaned)
         return int(dt.timestamp())
     except Exception:
-        return 0
+        pass
+        
+    import re
+    cleaned = re.sub(r',', '', cleaned)
+    cleaned = re.sub(r'\s+', ' ', cleaned)
+    
+    formats = [
+        '%b %d %Y %I:%M:%S %p',
+        '%B %d %Y %I:%M:%S %p',
+        '%Y-%m-%d %H:%M:%S',
+        '%d-%m-%Y %H:%M:%S',
+    ]
+    for fmt in formats:
+        try:
+            dt = datetime.strptime(cleaned, fmt)
+            return int(dt.timestamp())
+        except Exception:
+            pass
+            
+    return 0
 
 def get_wita_date_string(epoch_secs):
     if not epoch_secs:
         return None
-    dt_utc = datetime.fromtimestamp(epoch_secs, tz=timezone.utc)
-    wita_offset = timezone(timedelta(hours=8))
-    dt_wita = dt_utc.astimezone(wita_offset)
-    return dt_wita.strftime("%Y-%m-%d")
+    try:
+        sec = epoch_secs / 1000.0 if epoch_secs > 10**11 else float(epoch_secs)
+        dt_utc = datetime.fromtimestamp(sec, tz=timezone.utc)
+        wita_offset = timezone(timedelta(hours=8))
+        dt_wita = dt_utc.astimezone(wita_offset)
+        return dt_wita.strftime("%Y-%m-%d")
+    except Exception:
+        return None
 
 def resolve_pcl_pml(r, users_mapping):
     pcl_username = "-"
@@ -688,13 +716,27 @@ def save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data):
 
     # Flatten daily counts
     daily_stats_data = []
-    for (date_str, kab_name, s_type), cnt in daily_counts_dict.items():
-        daily_stats_data.append({
-            "date": date_str,
-            "kab_name": kab_name,
-            "survey_type": s_type,
-            "count": cnt
-        })
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    stats_json_path = os.path.join(script_dir, "daily_submission_stats.json")
+    if os.path.exists(stats_json_path):
+        try:
+            with open(stats_json_path, "r", encoding="utf-8") as f:
+                existing_stats = json.load(f)
+            if isinstance(existing_stats, list) and len(existing_stats) > 0:
+                daily_stats_data = existing_stats
+                print(f"ℹ️ Menggunakan data timeline harian eksisting dari {stats_json_path} ({len(daily_stats_data)} baris)")
+        except Exception as e:
+            print(f"[WARNING] Gagal memuat timeline harian eksisting: {e}")
+
+    if not daily_stats_data:
+        print("⚠️ Data timeline harian eksisting kosong atau tidak ditemukan. Membuat baru dari daily_counts_dict...")
+        for (date_str, kab_name, s_type), cnt in daily_counts_dict.items():
+            daily_stats_data.append({
+                "date": date_str,
+                "kab_name": kab_name,
+                "survey_type": s_type,
+                "count": cnt
+            })
         
     print(f"Compressed {len(compressed_targets)} targets.")
     
@@ -712,8 +754,6 @@ def save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data):
     base64_str = base64.b64encode(compressed_bytes).decode('utf-8')
     
     # Local cache save using absolute paths
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    stats_json_path = os.path.join(script_dir, "daily_submission_stats.json")
     with open(stats_json_path, "w", encoding="utf-8") as f:
         json.dump(daily_stats_data, f, indent=2)
         
@@ -1153,16 +1193,30 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
 
         # Flatten daily counts
         daily_stats_data = []
-        for (date_str, kab_name, s_type), cnt in daily_counts_dict.items():
-            daily_stats_data.append({
-                "date": date_str,
-                "kab_name": kab_name,
-                "survey_type": s_type,
-                "count": cnt
-            })
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        stats_json_path = os.path.join(script_dir, "daily_submission_stats.json")
+        if os.path.exists(stats_json_path):
+            try:
+                with open(stats_json_path, "r", encoding="utf-8") as f:
+                    existing_stats = json.load(f)
+                if isinstance(existing_stats, list) and len(existing_stats) > 0:
+                    daily_stats_data = existing_stats
+                    print(f"ℹ️ Menggunakan data timeline harian eksisting dari {stats_json_path} ({len(daily_stats_data)} baris)")
+            except Exception as e:
+                print(f"[WARNING] Gagal memuat timeline harian eksisting: {e}")
+
+        if not daily_stats_data:
+            print("⚠️ Data timeline harian eksisting kosong atau tidak ditemukan. Membuat baru dari daily_counts_dict...")
+            for (date_str, kab_name, s_type), cnt in daily_counts_dict.items():
+                daily_stats_data.append({
+                    "date": date_str,
+                    "kab_name": kab_name,
+                    "survey_type": s_type,
+                    "count": cnt
+                })
             
         print(f"Compressed {len(compressed_targets)} targets.")
-        print(f"Generated {len(daily_stats_data)} daily submission summary rows.")
+        print(f"Generated/Loaded {len(daily_stats_data)} daily submission summary rows.")
         
         # Save payload
         granular_payload = {

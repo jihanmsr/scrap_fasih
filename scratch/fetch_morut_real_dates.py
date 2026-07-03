@@ -178,7 +178,9 @@ async def main():
         """
         
         processed_count = 0
-        for b_idx, batch in enumerate(batches):
+        b_idx = 0
+        while b_idx < len(batches):
+            batch = batches[b_idx]
             try:
                 # Cek jika dialihkan ke halaman login saat proses berjalan
                 if "login" in page.url:
@@ -227,14 +229,15 @@ async def main():
                 if processed_count % 200 == 0 or processed_count == total_completed:
                     print(f"   [PROGRESS] Berhasil memproses {processed_count} / {total_completed} target...")
                     
+                b_idx += 1
             except Exception as e:
-                print(f"[WARNING] Gagal memproses batch {b_idx}: {e}")
+                print(f"[WARNING] Gagal memproses batch {b_idx} (akan dicoba kembali): {e}")
                 # Jika page crash atau context hancur, coba recover page
                 try:
                     page = context.pages[0] if context.pages else await context.new_page()
                 except:
                     pass
-                await asyncio.sleep(3)
+                await asyncio.sleep(5)
                 
         # Cleanup browser
         if browser:

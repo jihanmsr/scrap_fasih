@@ -609,6 +609,9 @@ def reconstruct_daily_stats_in_db(supabase):
             return " ".join(words).upper()
             
         date_data = {}
+        today_completed_data = {}
+        yesterday_completed_data = {}
+        
         for key in keys:
             if key == 'ipas_data':
                 date_str = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -629,28 +632,69 @@ def reconstruct_daily_stats_in_db(supabase):
                     submitted = item.get("total_submitted", 0)
                     date_data[date_str][survey_type][kab] = submitted
                     
+                    if key == 'ipas_data':
+                        tc = item.get("today_completed", 0)
+                        yc = item.get("yesterday_completed", 0)
+                        if tc > 0:
+                            today_completed_data.setdefault(survey_type, {})[kab] = tc
+                        if yc > 0:
+                            yesterday_completed_data.setdefault(survey_type, {})[kab] = yc
+                    
         sorted_dates = sorted(date_data.keys())
         daily_stats = []
+        
+        local_tz = datetime.timezone(datetime.timedelta(hours=8))
+        today_wita = datetime.datetime.now(local_tz).strftime("%Y-%m-%d")
+        yesterday_wita = (datetime.datetime.now(local_tz) - datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+        
         for i, date_str in enumerate(sorted_dates):
             if i == 0:
-                for survey_type in ["se_umum", "se_ub"]:
-                    for kab, submitted in date_data[date_str][survey_type].items():
-                        daily_stats.append({
-                            "date": date_str, "count": submitted, "kab_name": kab, "survey_type": survey_type
-                        })
-            else:
-                prev_date_str = sorted_dates[i - 1]
-                for survey_type in ["se_umum", "se_ub"]:
-                    for kab, submitted in date_data[date_str][survey_type].items():
-                        prev_submitted = date_data[prev_date_str][survey_type].get(kab, 0)
-                        daily_diff = max(0, submitted - prev_submitted)
+                continue
+            
+            prev_date_str = sorted_dates[i - 1]
+            try:
+                curr_d = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+                prev_d = datetime.datetime.strptime(prev_date_str, "%Y-%m-%d").date()
+                gap_days = (curr_d - prev_d).days
+            except:
+                gap_days = 99
+                
+            if gap_days != 1:
+                print(f"   [SKIP] Gap {gap_days} hari antara {prev_date_str} dan {date_str}, tidak digenerate (akan diisi dari API)")
+                continue
+            
+            for survey_type in ["se_umum", "se_ub"]:
+                for kab, submitted in date_data[date_str][survey_type].items():
+                    prev_submitted = date_data[prev_date_str][survey_type].get(kab, None)
+                    if prev_submitted is None:
+                        continue
+                    daily_diff = max(0, submitted - prev_submitted)
+                    if daily_diff > 0:
                         daily_stats.append({
                             "date": date_str, "count": daily_diff, "kab_name": kab, "survey_type": survey_type
                         })
+        
+        for survey_type in ["se_umum", "se_ub"]:
+            tc_map = today_completed_data.get(survey_type, {})
+            yc_map = yesterday_completed_data.get(survey_type, {})
+            
+            for kab, count in tc_map.items():
+                if count > 0:
+                    daily_stats = [x for x in daily_stats if not (x["date"] == today_wita and x["kab_name"] == kab and x["survey_type"] == survey_type)]
+                    daily_stats.append({
+                        "date": today_wita, "count": count, "kab_name": kab, "survey_type": survey_type
+                    })
+            
+            for kab, count in yc_map.items():
+                if count > 0:
+                    daily_stats = [x for x in daily_stats if not (x["date"] == yesterday_wita and x["kab_name"] == kab and x["survey_type"] == survey_type)]
+                    daily_stats.append({
+                        "date": yesterday_wita, "count": count, "kab_name": kab, "survey_type": survey_type
+                    })
                         
         supabase.table("dashboard_store").delete().eq("key", "daily_submission_stats").execute()
         supabase.table("dashboard_store").insert({"key": "daily_submission_stats", "value": daily_stats}).execute()
-        print(" ✅ Grafik harian (daily_submission_stats) berhasil disinkronkan!")
+        print(f" ✅ Grafik harian (daily_submission_stats) berhasil disinkronkan! Total {len(daily_stats)} entri.")
     except Exception as re:
         print(f"[WARNING] Gagal sinkronisasi grafik harian: {re}")
 
@@ -1607,6 +1651,10 @@ async def run_ipas_report_generation(page, xsrf_token):
             print("[INFO] Menjalankan sinkronisasi tanggal harian asli secara inkremental...")
             import subprocess
             subprocess.run(["python3", "scratch/sync_real_dates_incremental.py"])
+            
+            # Rekonstruksi grafik harian dari snapshot yang tersimpan di Supabase
+            # (menggabungkan diff snapshot + today/yesterday_completed dari API BPS)
+            reconstruct_daily_stats_in_db(supabase)
         except Exception as e:
             print(f"[ERROR] Gagal mengunggah data IPAS ke Supabase: {e}")
 

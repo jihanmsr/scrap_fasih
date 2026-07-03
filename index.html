@@ -92,6 +92,16 @@
                     Progres Petugas
                 </button>
 
+                <button class="btn-tab" id="tab-btn-timeline" onclick="switchTab('timeline')"
+                    title="Tren submit dan progres harian">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <path d="M3 3v18h18"></path>
+                        <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                    </svg>
+                    Tren Progres
+                </button>
+
                 <button class="btn-tab" id="tab-btn-anomali" onclick="switchTab('anomali')"
                     title="Pemantauan anomali dan tindak lanjut">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -1546,142 +1556,35 @@
             </div>
             <!-- Tab Content: Timeline / Progres Harian -->
             <div class="tab-content" id="tab-content-timeline" style="display: none;">
-
-                <!-- Filters Panel -->
-                <div class="filter-panel" style="padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
-                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-                        <div style="display: flex; flex-direction: column; gap: 0.35rem; min-width: 200px;">
-                            <label for="timeline-kab-filter"
-                                style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Kabupaten/Kota</label>
-                            <select class="region-select" id="timeline-kab-filter"
-                                onchange="window.updateTimelineView()">
-                                <option value="all">Semua Kabupaten</option>
-                                <option value="[01] BANGGAI KEPULAUAN">[01] BANGGAI KEPULAUAN</option>
-                                <option value="[02] BANGGAI">[02] BANGGAI</option>
-                                <option value="[03] MOROWALI">[03] MOROWALI</option>
-                                <option value="[04] POSO">[04] POSO</option>
-                                <option value="[05] DONGGALA">[05] DONGGALA</option>
-                                <option value="[06] TOLI-TOLI">[06] TOLI-TOLI</option>
-                                <option value="[07] BUOL">[07] BUOL</option>
-                                <option value="[08] PARIGI MOUTONG">[08] PARIGI MOUTONG</option>
-                                <option value="[09] TOJO UNA-UNA">[09] TOJO UNA-UNA</option>
-                                <option value="[10] SIGI">[10] SIGI</option>
-                                <option value="[11] BANGGAI LAUT">[11] BANGGAI LAUT</option>
-                                <option value="[12] MOROWALI UTARA">[12] MOROWALI UTARA</option>
-                                <option value="[71] PALU">[71] PALU</option>
-                            </select>
+                <!-- Coming Soon / Under Maintenance Page -->
+                <style>
+                    @keyframes pulse {
+                        0% { transform: scale(1); box-shadow: 0 8px 20px -6px var(--primary); }
+                        50% { transform: scale(1.05); box-shadow: 0 8px 25px -2px var(--primary); }
+                        100% { transform: scale(1); box-shadow: 0 8px 20px -6px var(--primary); }
+                    }
+                    @keyframes progressAnim {
+                        0% { width: 0%; }
+                        50% { width: 70%; }
+                        100% { width: 100%; }
+                    }
+                </style>
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; padding: 2rem;">
+                    <div style="background: rgba(255, 255, 255, 0.45); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 1.5rem; padding: 3.5rem 2.5rem; max-width: 500px; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08); display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                        <div class="coming-soon-icon" style="background: linear-gradient(135deg, var(--primary) 0%, #a855f7 100%); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 8px 20px -6px var(--primary); margin-bottom: 0.5rem; animation: pulse 2s infinite;">
+                            <svg fill="none" height="36" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="36">
+                                <path d="M3 3v18h18"></path>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                            </svg>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 0.35rem; min-width: 180px;">
-                            <label for="timeline-type-filter"
-                                style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Jenis
-                                Usaha</label>
-                            <select class="region-select" id="timeline-type-filter"
-                                onchange="window.updateTimelineView()">
-                                <option value="all">Semua Jenis (Umum & UB)</option>
-                                <option value="se_umum">Sensus Ekonomi Umum</option>
-                                <option value="se_ub">Sensus Ekonomi UB</option>
-                            </select>
+                        <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--text); margin: 0; line-height: 1.25;">Fitur Tren Progres Sedang Ditingkatkan</h2>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Kami sedang melakukan sinkronisasi database riwayat pengiriman data untuk menyajikan grafik sebaran progres harian yang lebih presisi dan akurat.</p>
+                        <div style="width: 100%; background: var(--border); height: 6px; border-radius: 3px; overflow: hidden; margin-top: 0.5rem; position: relative;">
+                            <div style="background: linear-gradient(90deg, var(--primary) 0%, #a855f7 100%); height: 100%; width: 65%; border-radius: 3px; animation: progressAnim 3s infinite ease-in-out;"></div>
                         </div>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem;">Segera Kembali</span>
                     </div>
                 </div>
-
-                <!-- KPI Summary Cards -->
-                <div class="stats-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-                    <div class="stat-card" style="padding: 1.25rem;">
-                        <div class="stat-label" style="font-size: 0.8rem;">Total Terkumpul (Submit/Approve)</div>
-                        <div class="stat-value" id="timeline-stat-total"
-                            style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">0</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
-                            id="timeline-substat-total">Survei Terpilih</div>
-                    </div>
-                    <div class="stat-card" style="padding: 1.25rem;">
-                        <div class="stat-label" style="font-size: 0.8rem;">Rata-rata Harian</div>
-                        <div class="stat-value" id="timeline-stat-avg"
-                            style="color: var(--color-delivered); font-size: 1.8rem; font-weight: 800;">0</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
-                            id="timeline-substat-avg">Submit per hari</div>
-                    </div>
-                    <div class="stat-card" style="padding: 1.25rem;">
-                        <div class="stat-label" style="font-size: 0.8rem;">Puncak Aktivitas</div>
-                        <div class="stat-value" id="timeline-stat-peak-day"
-                            style="color: #f59e0b; font-size: 1.5rem; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-top: 0.2rem; padding-bottom: 0.2rem;">
-                            -</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem;"
-                            id="timeline-substat-peak-val">0 submit</div>
-                    </div>
-                </div>
-
-                <!-- Line Chart Container -->
-                <div class="stats-section" style="margin-top: 0; margin-bottom: 1.5rem;">
-                    <h3
-                        style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 1rem;">
-                        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2.5"
-                            style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
-                            <path d="M3 3v18h18"></path>
-                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
-                        </svg>
-                        Grafik Progres Harian (Tren Penyerahan Sensus)
-                    </h3>
-                    <div
-                        style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); height: 350px; position: relative;">
-                        <canvas id="dailySubmissionChart"></canvas>
-                    </div>
-                </div>
-
-                <!-- Daily Report Table -->
-                <div class="stats-section" style="margin-top: 0;">
-                    <h3
-                        style="margin-top: 0; color: var(--text); font-size: 1.15rem; display: flex; align-items: center; font-family: 'Outfit', sans-serif; font-weight: 700; margin-bottom: 0.5rem;">
-                        <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2.5"
-                            style="margin-right: 0.75rem; color: var(--primary);" viewbox="0 0 24 24" width="18">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                        </svg>
-                        Detail Progres Submit per Tanggal
-                    </h3>
-                    <p
-                        style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.25rem; font-weight: 500;">
-                        Rincian jumlah berkas sensus yang ter-submit pada masing-masing hari.
-                    </p>
-                    <div style="overflow-x: auto; border-radius: 0.75rem; border: 1px solid var(--card-border);">
-                        <table
-                            style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.875rem;">
-                            <thead>
-                                <tr
-                                    style="background-color: var(--card-bg); border-bottom: 2px solid var(--card-border);">
-                                    <th
-                                        style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); width: 80px;">
-                                        No</th>
-                                    <th
-                                        style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); width: 150px;">
-                                        Tanggal</th>
-                                    <th
-                                        style="padding: 0.75rem 1.25rem; text-align: left; font-weight: 700; color: var(--text);">
-                                        Kabupaten/Kota</th>
-                                    <th
-                                        style="padding: 0.75rem 1.25rem; text-align: center; font-weight: 700; color: var(--text); width: 180px;">
-                                        Jenis Sensus</th>
-                                    <th
-                                        style="padding: 0.75rem 1.25rem; text-align: right; font-weight: 700; color: var(--text); width: 150px;">
-                                        Jumlah Submit</th>
-                                </tr>
-                            </thead>
-                            <tbody id="timeline-table-body">
-                                <tr>
-                                    <td colspan="5"
-                                        style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat
-                                        data progres harian...</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
 
 
             <div class="tab-content" id="tab-anomali" style="display: none;">

@@ -1034,13 +1034,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- CONTINUE OLD BEHAVIOR FOR DAILY STATS ---
         const surveyData = ipasDataObj[surveyType] || [];
 
-        // Build a lookup map of (kab_name, date, survey_type) -> count from window.DAILY_SUBMISSION_STATS
+        // Build a lookup map of (kab_name, date, survey_type) -> count and breakdown from window.DAILY_SUBMISSION_STATS
         const statsMap = {};
+        const statsBreakdownMap = {};
         if (window.DAILY_SUBMISSION_STATS && Array.isArray(window.DAILY_SUBMISSION_STATS)) {
             window.DAILY_SUBMISSION_STATS.forEach(r => {
                 if (r.date && r.kab_name && r.survey_type) {
                     const key = `${r.kab_name.toUpperCase()}_${r.date}_${r.survey_type}`;
-                    statsMap[key] = r.count || 0;
+                    statsMap[key] = (statsMap[key] || 0) + (r.count || 0);
+                    
+                    if (r.status) {
+                        if (!statsBreakdownMap[key]) statsBreakdownMap[key] = {};
+                        statsBreakdownMap[key][r.status] = (statsBreakdownMap[key][r.status] || 0) + (r.count || 0);
+                    }
                 }
             });
         }
@@ -1174,10 +1180,28 @@ document.addEventListener('DOMContentLoaded', () => {
             item.yesterday_completed = Math.max(item.yesterday_completed || 0, rawYesterday);
             item.two_days_ago_completed = Math.max(item.two_days_ago_completed || 0, rawTwoDays);
 
-            // Scale breakdowns to match the uncapped count
-            item.today_completed_breakdown = scaleBreakdown(item.today_completed_breakdown, item.today_completed);
-            item.yesterday_completed_breakdown = scaleBreakdown(item.yesterday_completed_breakdown, item.yesterday_completed);
-            item.two_days_ago_completed_breakdown = scaleBreakdown(item.two_days_ago_completed_breakdown, item.two_days_ago_completed);
+            // Scale breakdowns to match the uncapped count or load directly from sync cache
+            const keyToday = `${cleanKab}_${todayDateStr}_${surveyType}`;
+            const keyYesterday = `${cleanKab}_${yesterdayDateStr}_${surveyType}`;
+            const keyTwoDays = `${cleanKab}_${twoDaysDateStr}_${surveyType}`;
+
+            if (statsBreakdownMap[keyToday]) {
+                item.today_completed_breakdown = statsBreakdownMap[keyToday];
+            } else {
+                item.today_completed_breakdown = scaleBreakdown(item.today_completed_breakdown, item.today_completed);
+            }
+
+            if (statsBreakdownMap[keyYesterday]) {
+                item.yesterday_completed_breakdown = statsBreakdownMap[keyYesterday];
+            } else {
+                item.yesterday_completed_breakdown = scaleBreakdown(item.yesterday_completed_breakdown, item.yesterday_completed);
+            }
+
+            if (statsBreakdownMap[keyTwoDays]) {
+                item.two_days_ago_completed_breakdown = statsBreakdownMap[keyTwoDays];
+            } else {
+                item.two_days_ago_completed_breakdown = scaleBreakdown(item.two_days_ago_completed_breakdown, item.two_days_ago_completed);
+            }
 
             // Distribute and scale the uncapped count down to Kecamatans
             scaleKecamatans(item.kecamatan_list, item.today_completed, 'today');
@@ -1233,8 +1257,8 @@ document.addEventListener('DOMContentLoaded', () => {
             prelist = ipasDataObj[provTotalKey];
         }
 
-        // Override with MySQL KPI if loaded successfully
-        if (kpiLoadedFromMysql && mysqlPrelist > 0) {
+        // Override with MySQL KPI if loaded successfully and contains completed data
+        if (kpiLoadedFromMysql && mysqlPrelist > 0 && mysqlSelesai > 0) {
             prelist = mysqlPrelist;
             submitted = mysqlSelesai;
         }
@@ -1271,7 +1295,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update stats elements
         const prelistWrapperEl = document.getElementById(`${surveyType}-stat-total-prelist-wrapper`);
-        if (prelistWrapperEl && document.getElementById(`${surveyType}-stat-total-prelist`).textContent === '0') {
+        if (prelistWrapperEl) {
             const breakdown = {
                 "OPEN (Belum dikerjakan)": openVal,
                 "DRAFT (Sedang dikerjakan)": draft,
@@ -1329,9 +1353,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
             `;
-        } else if (document.getElementById(`${surveyType}-stat-total-prelist`)?.textContent === '0') {
-            const prelistEl = document.getElementById(`${surveyType}-stat-total-prelist`);
-            if (prelistEl) prelistEl.textContent = formatNum(prelist + newUsahaProv + newRumahProv);
         }
 
         const newTodayEl = document.getElementById(`${surveyType}-stat-new-today`);

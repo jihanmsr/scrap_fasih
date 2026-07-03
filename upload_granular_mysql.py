@@ -64,55 +64,60 @@ def main():
         data = json.loads(raw)
         
         survey_type = d.get('survey_type', 'se_umum')
+        regions = data.get('regions', [])
+        petugas = data.get('petugas', [])
+        statuses = data.get('statuses', [])
         targets = data.get('targets', [])
         
         chunk = []
         for t in targets:
-            if len(t) < 9: continue
+            if len(t) < 6: continue
             
-            target_id_str = t[1]
-            target_id_code = target_id_str.split(' - ')[0] if target_id_str else ''
-            kab_code = target_id_code[:4] if len(target_id_code) >= 4 else ''
-            kec_code = target_id_code[:7] if len(target_id_code) >= 7 else ''
-            desa_code = target_id_code[:10] if len(target_id_code) >= 10 else ''
-            sls_code = target_id_code[:14] if len(target_id_code) >= 14 else ''
-            
-            kab_name = region_map.get(kab_code, kab_code)
-            kec_name = region_map.get(kec_code, kec_code)
-            desa_name = region_map.get(desa_code, desa_code)
-            
-            status_num = t[6]
-            if status_num == 1:
-                status_str = "OPEN"
-            elif status_num == 2:
-                status_str = "DRAFT"
-            elif status_num == 3:
-                status_str = "SUBMITTED"
-            elif status_num == 4:
-                status_str = "APPROVED"
-            elif status_num == 5:
-                status_str = "REJECTED"
+            reg_idx = t[5]
+            if reg_idx >= 0 and reg_idx < len(regions):
+                reg = regions[reg_idx]
+                kab_code = reg[0]
+                kab_name = reg[1]
+                kec_code = reg[2]
+                kec_name = reg[3]
+                desa_code = reg[4]
+                desa_name = reg[5]
+                sls_code = reg[6]
+                sls_name = reg[7]
             else:
-                status_str = "UNKNOWN"
+                continue
+                
+            # Hilangkan kode kabupaten dari nama kabupaten
+            kab_clean = " ".join([word for word in kab_name.split() if not (word.isdigit() or (word.startswith("72") and len(word)==4))]).upper()
             
-            petugas_email = t[8] if len(t) > 8 else ''
+            stat_idx = t[3]
+            status_str = statuses[stat_idx] if stat_idx < len(statuses) else 'UNKNOWN'
+            
+            pet_idx = t[4]
+            if pet_idx >= 0 and pet_idx < len(petugas):
+                pet = petugas[pet_idx]
+                petugas_username = pet[0]
+                petugas_fullname = pet[1]
+            else:
+                petugas_username = '-'
+                petugas_fullname = '-'
             
             row = {
                 'assignment_id': t[0],
                 'survey_type': survey_type,
                 'kab_code': kab_code,
-                'kab_name': kab_name,
+                'kab_name': kab_clean,
                 'kec_code': kec_code,
                 'kec_name': kec_name,
                 'desa_code': desa_code,
                 'desa_name': desa_name,
                 'sls_code': sls_code,
-                'sls_name': '',
-                'target_id': target_id_str,
+                'sls_name': sls_name,
+                'target_id': t[1],
                 'target_name': t[2],
                 'status': status_str,
-                'petugas_username': petugas_email,
-                'petugas_fullname': petugas_email
+                'petugas_username': petugas_username,
+                'petugas_fullname': petugas_fullname
             }
             chunk.append(row)
             
