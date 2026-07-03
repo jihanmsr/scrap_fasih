@@ -1,17 +1,17 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-07-02T11:52:38.968275+08:00",
+  "updated_at": "2026-07-02T12:06:44.323834+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
       "total_prelist": 45576,
-      "total_draft": 1353,
-      "total_open": 32480,
-      "total_submitted": 11743,
-      "total_rejected": 783,
-      "total_approved": 4616,
-      "total_submitted_pencacah": 6250,
+      "total_draft": 1366,
+      "total_open": 32441,
+      "total_submitted": 11769,
+      "total_rejected": 777,
+      "total_approved": 4629,
+      "total_submitted_pencacah": 6269,
       "total_submitted_respondent": 94,
-      "persentase": 25.77,
+      "persentase": 25.82,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -23,20 +23,20 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 60,
-      "new_rumah_overall": 180,
+      "new_usaha_overall": 59,
+      "new_rumah_overall": 187,
       "new_businesses": [],
       "kecamatan_list": [
         {
           "kec_name": "TOTIKUM",
           "kec_id": "815d35b4-fc43-43b5-b2ff-afc30f187298",
-          "total_prelist": 4233,
-          "total_draft": 148,
-          "total_open": 3147,
-          "total_submitted": 938,
+          "total_prelist": 4232,
+          "total_draft": 150,
+          "total_open": 3143,
+          "total_submitted": 939,
           "total_rejected": 30,
           "total_approved": 463,
-          "total_submitted_pencacah": 440,
+          "total_submitted_pencacah": 441,
           "total_submitted_respondent": 5,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -49,20 +49,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 14,
+          "new_rumah_overall": 13,
           "new_businesses": [],
-          "persentase": 22.16
+          "persentase": 22.19
         },
         {
           "kec_name": "TOTIKUM SELATAN",
           "kec_id": "8cdd076e-5e25-4eed-bf63-3fbd427ac3c6",
-          "total_prelist": 3157,
-          "total_draft": 168,
-          "total_open": 2306,
-          "total_submitted": 683,
-          "total_rejected": 27,
-          "total_approved": 294,
-          "total_submitted_pencacah": 361,
+          "total_prelist": 3158,
+          "total_draft": 169,
+          "total_open": 2304,
+          "total_submitted": 685,
+          "total_rejected": 29,
+          "total_approved": 300,
+          "total_submitted_pencacah": 355,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -72,23 +72,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 2,
+          "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 5,
+          "new_rumah_overall": 7,
           "new_businesses": [],
-          "persentase": 21.63
+          "persentase": 21.69
         },
         {
           "kec_name": "TINANGKUNG",
           "kec_id": "6db0d206-23a2-4a19-8e59-8910954bf137",
-          "total_prelist": 7101,
-          "total_draft": 181,
-          "total_open": 5139,
-          "total_submitted": 1781,
+          "total_prelist": 7103,
+          "total_draft": 187,
+          "total_open": 5132,
+          "total_submitted": 1784,
           "total_rejected": 45,
           "total_approved": 725,
-          "total_submitted_pencacah": 986,
+          "total_submitted_pencacah": 989,
           "total_submitted_respondent": 25,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -98,23 +98,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 8,
+          "new_usaha_overall": 5,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 47,
+          "new_rumah_overall": 46,
           "new_businesses": [],
-          "persentase": 25.08
+          "persentase": 25.12
         },
         {
           "kec_name": "TINANGKUNG SELATAN",
           "kec_id": "af7151a7-5b03-4f11-9420-67a0e5755163",
-          "total_prelist": 2739,
+          "total_prelist": 2738,
           "total_draft": 87,
-          "total_open": 1870,
-          "total_submitted": 782,
+          "total_open": 1868,
+          "total_submitted": 783,
           "total_rejected": 26,
           "total_approved": 91,
-          "total_submitted_pencacah": 664,
+          "total_submitted_pencacah": 665,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -129,18 +129,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 2,
           "new_businesses": [],
-          "persentase": 28.55
+          "persentase": 28.6
         },
         {
           "kec_name": "TINANGKUNG UTARA",
           "kec_id": "08d262e1-dd9c-40a5-8891-0ea7c60556f1",
           "total_prelist": 3171,
           "total_draft": 98,
-          "total_open": 2169,
-          "total_submitted": 904,
+          "total_open": 2168,
+          "total_submitted": 905,
           "total_rejected": 19,
           "total_approved": 336,
-          "total_submitted_pencacah": 549,
+          "total_submitted_pencacah": 550,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -153,20 +153,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 9,
+          "new_rumah_overall": 11,
           "new_businesses": [],
-          "persentase": 28.51
+          "persentase": 28.54
         },
         {
           "kec_name": "LIANG",
           "kec_id": "6d5f82d4-8d29-4d72-bf4e-ff30bea5556b",
           "total_prelist": 3700,
-          "total_draft": 39,
-          "total_open": 2628,
-          "total_submitted": 1033,
-          "total_rejected": 81,
+          "total_draft": 38,
+          "total_open": 2626,
+          "total_submitted": 1036,
+          "total_rejected": 82,
           "total_approved": 239,
-          "total_submitted_pencacah": 711,
+          "total_submitted_pencacah": 713,
           "total_submitted_respondent": 2,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -179,20 +179,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 8,
+          "new_rumah_overall": 11,
           "new_businesses": [],
-          "persentase": 27.92
+          "persentase": 28.0
         },
         {
           "kec_name": "PELING TENGAH",
           "kec_id": "10596e9c-277d-4bf7-87df-c3610b508787",
-          "total_prelist": 3597,
-          "total_draft": 76,
-          "total_open": 2347,
-          "total_submitted": 1174,
+          "total_prelist": 3596,
+          "total_draft": 77,
+          "total_open": 2341,
+          "total_submitted": 1178,
           "total_rejected": 156,
           "total_approved": 633,
-          "total_submitted_pencacah": 383,
+          "total_submitted_pencacah": 387,
           "total_submitted_respondent": 2,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -202,23 +202,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 2,
+          "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 18,
+          "new_rumah_overall": 17,
           "new_businesses": [],
-          "persentase": 32.64
+          "persentase": 32.76
         },
         {
           "kec_name": "BULAGI",
           "kec_id": "19a74969-792a-4808-b058-a64a911265c5",
-          "total_prelist": 3760,
+          "total_prelist": 3761,
           "total_draft": 113,
-          "total_open": 2583,
-          "total_submitted": 1064,
-          "total_rejected": 52,
+          "total_open": 2577,
+          "total_submitted": 1071,
+          "total_rejected": 49,
           "total_approved": 355,
-          "total_submitted_pencacah": 656,
+          "total_submitted_pencacah": 666,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -231,20 +231,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 16,
+          "new_rumah_overall": 18,
           "new_businesses": [],
-          "persentase": 28.3
+          "persentase": 28.48
         },
         {
           "kec_name": "BULAGI SELATAN",
           "kec_id": "c6ba1730-dcc6-4481-8193-8b278f7af2c5",
-          "total_prelist": 3847,
+          "total_prelist": 3846,
           "total_draft": 83,
-          "total_open": 2908,
-          "total_submitted": 856,
+          "total_open": 2904,
+          "total_submitted": 859,
           "total_rejected": 125,
           "total_approved": 342,
-          "total_submitted_pencacah": 388,
+          "total_submitted_pencacah": 391,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -254,23 +254,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 19,
+          "new_usaha_overall": 20,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 14,
+          "new_rumah_overall": 13,
           "new_businesses": [],
-          "persentase": 22.25
+          "persentase": 22.33
         },
         {
           "kec_name": "BULAGI UTARA",
           "kec_id": "c8975e22-e6a1-42e8-bec8-56f1ccc380d8",
-          "total_prelist": 3296,
-          "total_draft": 112,
-          "total_open": 2296,
+          "total_prelist": 3295,
+          "total_draft": 114,
+          "total_open": 2293,
           "total_submitted": 888,
-          "total_rejected": 58,
-          "total_approved": 625,
-          "total_submitted_pencacah": 203,
+          "total_rejected": 52,
+          "total_approved": 627,
+          "total_submitted_pencacah": 207,
           "total_submitted_respondent": 2,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -283,19 +283,19 @@ window.IPAS_DATA = {
           "new_usaha_overall": 12,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 21,
+          "new_rumah_overall": 20,
           "new_businesses": [],
-          "persentase": 26.94
+          "persentase": 26.95
         },
         {
           "kec_name": "BUKO",
           "kec_id": "e82a8220-ba0f-4ffd-87c4-c0f134716259",
-          "total_prelist": 3671,
+          "total_prelist": 3670,
           "total_draft": 72,
-          "total_open": 2732,
-          "total_submitted": 867,
+          "total_open": 2730,
+          "total_submitted": 868,
           "total_rejected": 36,
-          "total_approved": 241,
+          "total_approved": 242,
           "total_submitted_pencacah": 590,
           "total_submitted_respondent": 0,
           "today_completed": 0,
@@ -309,20 +309,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 12,
+          "new_rumah_overall": 13,
           "new_businesses": [],
-          "persentase": 23.62
+          "persentase": 23.65
         },
         {
           "kec_name": "BUKO SELATAN",
           "kec_id": "3df1a02f-6314-4442-bd6b-17eaa2895e1a",
-          "total_prelist": 3039,
-          "total_draft": 53,
-          "total_open": 2267,
+          "total_prelist": 3040,
+          "total_draft": 55,
+          "total_open": 2266,
           "total_submitted": 719,
           "total_rejected": 128,
-          "total_approved": 272,
-          "total_submitted_pencacah": 319,
+          "total_approved": 276,
+          "total_submitted_pencacah": 315,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -332,26 +332,26 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 4,
+          "new_usaha_overall": 5,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 14,
+          "new_rumah_overall": 16,
           "new_businesses": [],
-          "persentase": 23.66
+          "persentase": 23.65
         }
       ]
     },
     {
       "kabupaten": "[02] BANGGAI",
       "total_prelist": 144337,
-      "total_draft": 3790,
-      "total_open": 104610,
-      "total_submitted": 35937,
-      "total_rejected": 1509,
-      "total_approved": 6597,
-      "total_submitted_pencacah": 27827,
+      "total_draft": 3804,
+      "total_open": 104550,
+      "total_submitted": 35983,
+      "total_rejected": 1524,
+      "total_approved": 6608,
+      "total_submitted_pencacah": 27847,
       "total_submitted_respondent": 4,
-      "persentase": 24.9,
+      "persentase": 24.93,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -363,20 +363,20 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 27,
-      "new_rumah_overall": 131,
+      "new_usaha_overall": 26,
+      "new_rumah_overall": 125,
       "new_businesses": [],
       "kecamatan_list": [
         {
           "kec_name": "TOILI",
           "kec_id": "45bfeee6-ffa4-4015-b66c-277ac2385dd6",
           "total_prelist": 8350,
-          "total_draft": 131,
-          "total_open": 5820,
-          "total_submitted": 2399,
-          "total_rejected": 323,
-          "total_approved": 916,
-          "total_submitted_pencacah": 1159,
+          "total_draft": 132,
+          "total_open": 5817,
+          "total_submitted": 2401,
+          "total_rejected": 325,
+          "total_approved": 917,
+          "total_submitted_pencacah": 1158,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -389,20 +389,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 10,
+          "new_rumah_overall": 4,
           "new_businesses": [],
-          "persentase": 28.73
+          "persentase": 28.75
         },
         {
           "kec_name": "TOILI BARAT",
           "kec_id": "e7d2c034-96e9-42b8-8581-9c94e821ccc6",
-          "total_prelist": 8904,
-          "total_draft": 373,
-          "total_open": 6176,
-          "total_submitted": 2355,
-          "total_rejected": 41,
+          "total_prelist": 8903,
+          "total_draft": 377,
+          "total_open": 6169,
+          "total_submitted": 2357,
+          "total_rejected": 40,
           "total_approved": 1093,
-          "total_submitted_pencacah": 1221,
+          "total_submitted_pencacah": 1224,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -417,18 +417,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 2,
           "new_businesses": [],
-          "persentase": 26.45
+          "persentase": 26.47
         },
         {
           "kec_name": "MOILONG",
           "kec_id": "af347cf2-2e0c-46da-a90a-d33666fe2eae",
-          "total_prelist": 7627,
+          "total_prelist": 7626,
           "total_draft": 394,
-          "total_open": 5700,
-          "total_submitted": 1533,
+          "total_open": 5698,
+          "total_submitted": 1534,
           "total_rejected": 116,
           "total_approved": 745,
-          "total_submitted_pencacah": 672,
+          "total_submitted_pencacah": 673,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -441,46 +441,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 8,
+          "new_rumah_overall": 7,
           "new_businesses": [],
-          "persentase": 20.1
+          "persentase": 20.12
         },
         {
           "kec_name": "TOILI JAYA",
           "kec_id": "fe467054-0aa6-4a68-976e-4865fddd905a",
           "total_prelist": 5597,
-          "total_draft": 102,
-          "total_open": 4034,
-          "total_submitted": 1461,
+          "total_draft": 103,
+          "total_open": 4031,
+          "total_submitted": 1463,
           "total_rejected": 13,
-          "total_approved": 661,
+          "total_approved": 663,
           "total_submitted_pencacah": 787,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 6,
-          "new_businesses": [],
-          "persentase": 26.1
-        },
-        {
-          "kec_name": "BATUI",
-          "kec_id": "369d51ff-11a4-4e80-b823-79cb11a55392",
-          "total_prelist": 6296,
-          "total_draft": 116,
-          "total_open": 5002,
-          "total_submitted": 1178,
-          "total_rejected": 10,
-          "total_approved": 99,
-          "total_submitted_pencacah": 1069,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -493,20 +467,46 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 8,
+          "new_rumah_overall": 6,
           "new_businesses": [],
-          "persentase": 18.71
+          "persentase": 26.14
+        },
+        {
+          "kec_name": "BATUI",
+          "kec_id": "369d51ff-11a4-4e80-b823-79cb11a55392",
+          "total_prelist": 6295,
+          "total_draft": 116,
+          "total_open": 4997,
+          "total_submitted": 1182,
+          "total_rejected": 11,
+          "total_approved": 101,
+          "total_submitted_pencacah": 1070,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 2,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 3,
+          "new_businesses": [],
+          "persentase": 18.78
         },
         {
           "kec_name": "BATUI SELATAN",
           "kec_id": "ada23cb6-f47e-4048-ae3d-2653ee8cb180",
           "total_prelist": 5212,
           "total_draft": 60,
-          "total_open": 4089,
-          "total_submitted": 1063,
+          "total_open": 4088,
+          "total_submitted": 1064,
           "total_rejected": 12,
           "total_approved": 89,
-          "total_submitted_pencacah": 962,
+          "total_submitted_pencacah": 963,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -521,14 +521,14 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 2,
           "new_businesses": [],
-          "persentase": 20.4
+          "persentase": 20.41
         },
         {
           "kec_name": "BUNTA",
           "kec_id": "f5258d9d-a53f-45e6-94fa-450b0ee5bf7f",
-          "total_prelist": 7274,
-          "total_draft": 376,
-          "total_open": 5331,
+          "total_prelist": 7275,
+          "total_draft": 378,
+          "total_open": 5330,
           "total_submitted": 1567,
           "total_rejected": 12,
           "total_approved": 76,
@@ -542,23 +542,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 6,
+          "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 4,
+          "new_rumah_overall": 5,
           "new_businesses": [],
           "persentase": 21.54
         },
         {
           "kec_name": "NUHON",
           "kec_id": "47925987-8247-41b2-ac48-d5bcd780a49d",
-          "total_prelist": 6722,
-          "total_draft": 132,
-          "total_open": 5084,
-          "total_submitted": 1506,
+          "total_prelist": 6723,
+          "total_draft": 134,
+          "total_open": 5081,
+          "total_submitted": 1508,
           "total_rejected": 6,
           "total_approved": 105,
-          "total_submitted_pencacah": 1395,
+          "total_submitted_pencacah": 1397,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -571,20 +571,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 6,
+          "new_rumah_overall": 7,
           "new_businesses": [],
-          "persentase": 22.4
+          "persentase": 22.43
         },
         {
           "kec_name": "SIMPANG RAYA",
           "kec_id": "97f3d4a0-a610-4046-888b-48faf72dcc17",
           "total_prelist": 5621,
-          "total_draft": 132,
-          "total_open": 3870,
-          "total_submitted": 1619,
+          "total_draft": 131,
+          "total_open": 3867,
+          "total_submitted": 1623,
           "total_rejected": 22,
           "total_approved": 17,
-          "total_submitted_pencacah": 1580,
+          "total_submitted_pencacah": 1584,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -599,18 +599,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 0,
           "new_businesses": [],
-          "persentase": 28.8
+          "persentase": 28.87
         },
         {
           "kec_name": "KINTOM",
           "kec_id": "53621f5b-b1ad-439d-a884-efe0b6bb3b00",
-          "total_prelist": 4104,
+          "total_prelist": 4105,
           "total_draft": 229,
-          "total_open": 2504,
-          "total_submitted": 1371,
+          "total_open": 2502,
+          "total_submitted": 1374,
           "total_rejected": 223,
-          "total_approved": 318,
-          "total_submitted_pencacah": 830,
+          "total_approved": 319,
+          "total_submitted_pencacah": 832,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -625,18 +625,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 10,
           "new_businesses": [],
-          "persentase": 33.41
+          "persentase": 33.47
         },
         {
           "kec_name": "LUWUK",
           "kec_id": "197a3800-64a8-410b-be92-0721ce1edd47",
-          "total_prelist": 16828,
-          "total_draft": 421,
-          "total_open": 11993,
-          "total_submitted": 4414,
+          "total_prelist": 16831,
+          "total_draft": 423,
+          "total_open": 11988,
+          "total_submitted": 4420,
           "total_rejected": 13,
           "total_approved": 157,
-          "total_submitted_pencacah": 4242,
+          "total_submitted_pencacah": 4248,
           "total_submitted_respondent": 2,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -646,23 +646,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
+          "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 11,
+          "new_rumah_overall": 12,
           "new_businesses": [],
-          "persentase": 26.23
+          "persentase": 26.26
         },
         {
           "kec_name": "LUWUK TIMUR",
           "kec_id": "0f54399d-bc23-4624-bedf-fe72921745d4",
-          "total_prelist": 4644,
+          "total_prelist": 4643,
           "total_draft": 24,
-          "total_open": 3611,
-          "total_submitted": 1009,
+          "total_open": 3607,
+          "total_submitted": 1012,
           "total_rejected": 0,
           "total_approved": 23,
-          "total_submitted_pencacah": 986,
+          "total_submitted_pencacah": 989,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -677,18 +677,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 3,
           "new_businesses": [],
-          "persentase": 21.73
+          "persentase": 21.8
         },
         {
           "kec_name": "LUWUK UTARA",
           "kec_id": "08e402a6-e6f9-4efa-b578-4a496126e8d3",
-          "total_prelist": 8637,
-          "total_draft": 184,
-          "total_open": 6261,
-          "total_submitted": 2192,
+          "total_prelist": 8636,
+          "total_draft": 185,
+          "total_open": 6258,
+          "total_submitted": 2193,
           "total_rejected": 159,
           "total_approved": 590,
-          "total_submitted_pencacah": 1443,
+          "total_submitted_pencacah": 1444,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -698,23 +698,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
+          "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 5,
           "new_businesses": [],
-          "persentase": 25.38
+          "persentase": 25.39
         },
         {
           "kec_name": "LUWUK SELATAN",
           "kec_id": "0b69db88-e899-475e-81bd-94f54622baa4",
-          "total_prelist": 12234,
-          "total_draft": 392,
-          "total_open": 9634,
-          "total_submitted": 2208,
+          "total_prelist": 12233,
+          "total_draft": 393,
+          "total_open": 9629,
+          "total_submitted": 2211,
           "total_rejected": 24,
           "total_approved": 383,
-          "total_submitted_pencacah": 1800,
+          "total_submitted_pencacah": 1803,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -729,148 +729,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 13,
           "new_businesses": [],
-          "persentase": 18.05
+          "persentase": 18.07
         },
         {
           "kec_name": "NAMBO",
           "kec_id": "978f2d5d-ca81-4b14-8e41-41b629e2c873",
-          "total_prelist": 4031,
+          "total_prelist": 4032,
           "total_draft": 29,
-          "total_open": 2614,
-          "total_submitted": 1388,
+          "total_open": 2613,
+          "total_submitted": 1390,
           "total_rejected": 7,
           "total_approved": 108,
-          "total_submitted_pencacah": 1273,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 2,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 1,
-          "new_businesses": [],
-          "persentase": 34.43
-        },
-        {
-          "kec_name": "PAGIMANA",
-          "kec_id": "1158aabf-3710-4ec4-8ab3-0021c2a7b48d",
-          "total_prelist": 8530,
-          "total_draft": 228,
-          "total_open": 6610,
-          "total_submitted": 1692,
-          "total_rejected": 49,
-          "total_approved": 244,
-          "total_submitted_pencacah": 1399,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 6,
-          "new_businesses": [],
-          "persentase": 19.84
-        },
-        {
-          "kec_name": "BUALEMO",
-          "kec_id": "1679ee85-fe8d-448c-a282-ced46abd8926",
-          "total_prelist": 6504,
-          "total_draft": 126,
-          "total_open": 4381,
-          "total_submitted": 1997,
-          "total_rejected": 352,
-          "total_approved": 242,
-          "total_submitted_pencacah": 1403,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 19,
-          "new_businesses": [],
-          "persentase": 30.7
-        },
-        {
-          "kec_name": "LOBU",
-          "kec_id": "1605d7e5-945f-4116-be14-46d2bb7fe99f",
-          "total_prelist": 1439,
-          "total_draft": 0,
-          "total_open": 1153,
-          "total_submitted": 286,
-          "total_rejected": 10,
-          "total_approved": 5,
-          "total_submitted_pencacah": 271,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
-          "new_businesses": [],
-          "persentase": 19.87
-        },
-        {
-          "kec_name": "LAMALA",
-          "kec_id": "3d02a578-d341-416f-a926-7eac46e007e1",
-          "total_prelist": 2320,
-          "total_draft": 6,
-          "total_open": 1657,
-          "total_submitted": 657,
-          "total_rejected": 8,
-          "total_approved": 78,
-          "total_submitted_pencacah": 571,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 2,
-          "new_businesses": [],
-          "persentase": 28.32
-        },
-        {
-          "kec_name": "MASAMA",
-          "kec_id": "7995aa5d-7d7e-4c8c-9abc-51c995bb2d5b",
-          "total_prelist": 4751,
-          "total_draft": 203,
-          "total_open": 3505,
-          "total_submitted": 1043,
-          "total_rejected": 28,
-          "total_approved": 258,
-          "total_submitted_pencacah": 757,
+          "total_submitted_pencacah": 1275,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -885,14 +755,144 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 3,
           "new_businesses": [],
+          "persentase": 34.47
+        },
+        {
+          "kec_name": "PAGIMANA",
+          "kec_id": "1158aabf-3710-4ec4-8ab3-0021c2a7b48d",
+          "total_prelist": 8531,
+          "total_draft": 228,
+          "total_open": 6607,
+          "total_submitted": 1696,
+          "total_rejected": 49,
+          "total_approved": 244,
+          "total_submitted_pencacah": 1403,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 0,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 8,
+          "new_businesses": [],
+          "persentase": 19.88
+        },
+        {
+          "kec_name": "BUALEMO",
+          "kec_id": "1679ee85-fe8d-448c-a282-ced46abd8926",
+          "total_prelist": 6504,
+          "total_draft": 126,
+          "total_open": 4381,
+          "total_submitted": 1997,
+          "total_rejected": 365,
+          "total_approved": 242,
+          "total_submitted_pencacah": 1390,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 2,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 17,
+          "new_businesses": [],
+          "persentase": 30.7
+        },
+        {
+          "kec_name": "LOBU",
+          "kec_id": "1605d7e5-945f-4116-be14-46d2bb7fe99f",
+          "total_prelist": 1439,
+          "total_draft": 0,
+          "total_open": 1151,
+          "total_submitted": 288,
+          "total_rejected": 10,
+          "total_approved": 5,
+          "total_submitted_pencacah": 273,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 0,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 0,
+          "new_businesses": [],
+          "persentase": 20.01
+        },
+        {
+          "kec_name": "LAMALA",
+          "kec_id": "3d02a578-d341-416f-a926-7eac46e007e1",
+          "total_prelist": 2320,
+          "total_draft": 6,
+          "total_open": 1656,
+          "total_submitted": 658,
+          "total_rejected": 8,
+          "total_approved": 78,
+          "total_submitted_pencacah": 572,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 0,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 3,
+          "new_businesses": [],
+          "persentase": 28.36
+        },
+        {
+          "kec_name": "MASAMA",
+          "kec_id": "7995aa5d-7d7e-4c8c-9abc-51c995bb2d5b",
+          "total_prelist": 4752,
+          "total_draft": 204,
+          "total_open": 3505,
+          "total_submitted": 1043,
+          "total_rejected": 28,
+          "total_approved": 259,
+          "total_submitted_pencacah": 756,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 3,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 3,
+          "new_businesses": [],
           "persentase": 21.95
         },
         {
           "kec_name": "MANTOH",
           "kec_id": "7d9a0b7a-ba1f-49da-a671-45ed09979fb2",
           "total_prelist": 2478,
-          "total_draft": 47,
-          "total_open": 1559,
+          "total_draft": 48,
+          "total_open": 1558,
           "total_submitted": 872,
           "total_rejected": 6,
           "total_approved": 11,
@@ -909,20 +909,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 3,
+          "new_rumah_overall": 2,
           "new_businesses": [],
           "persentase": 35.19
         },
         {
           "kec_name": "BALANTAK",
           "kec_id": "450c4990-c8a1-4d8b-8b87-a655c6f5c2b8",
-          "total_prelist": 2503,
+          "total_prelist": 2502,
           "total_draft": 1,
-          "total_open": 1462,
-          "total_submitted": 1040,
+          "total_open": 1459,
+          "total_submitted": 1042,
           "total_rejected": 69,
           "total_approved": 247,
-          "total_submitted_pencacah": 724,
+          "total_submitted_pencacah": 726,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -937,18 +937,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 2,
           "new_businesses": [],
-          "persentase": 41.55
+          "persentase": 41.65
         },
         {
           "kec_name": "BALANTAK SELATAN",
           "kec_id": "800b984c-163e-4cd7-bcd5-eec3bc3387ef",
           "total_prelist": 2002,
-          "total_draft": 84,
+          "total_draft": 83,
           "total_open": 1407,
-          "total_submitted": 511,
+          "total_submitted": 512,
           "total_rejected": 1,
           "total_approved": 18,
-          "total_submitted_pencacah": 492,
+          "total_submitted_pencacah": 493,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -963,7 +963,7 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 1,
           "new_businesses": [],
-          "persentase": 25.52
+          "persentase": 25.57
         },
         {
           "kec_name": "BALANTAK UTARA",
@@ -973,8 +973,8 @@ window.IPAS_DATA = {
           "total_open": 1151,
           "total_submitted": 576,
           "total_rejected": 5,
-          "total_approved": 114,
-          "total_submitted_pencacah": 457,
+          "total_approved": 118,
+          "total_submitted_pencacah": 453,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -987,7 +987,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 6,
+          "new_rumah_overall": 7,
           "new_businesses": [],
           "persentase": 33.35
         }
@@ -996,14 +996,14 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[03] MOROWALI",
       "total_prelist": 50780,
-      "total_draft": 1796,
-      "total_open": 39906,
-      "total_submitted": 9078,
-      "total_rejected": 331,
+      "total_draft": 1799,
+      "total_open": 39880,
+      "total_submitted": 9101,
+      "total_rejected": 329,
       "total_approved": 2760,
-      "total_submitted_pencacah": 5987,
+      "total_submitted_pencacah": 6012,
       "total_submitted_respondent": 0,
-      "persentase": 17.88,
+      "persentase": 17.92,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -1015,20 +1015,20 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 40,
-      "new_rumah_overall": 390,
+      "new_usaha_overall": 41,
+      "new_rumah_overall": 387,
       "new_businesses": [],
       "kecamatan_list": [
         {
           "kec_name": "MENUI KEPULAUAN",
           "kec_id": "287a90ba-d2ba-46ce-842c-52c854b005ad",
           "total_prelist": 2213,
-          "total_draft": 62,
-          "total_open": 1641,
-          "total_submitted": 510,
+          "total_draft": 61,
+          "total_open": 1639,
+          "total_submitted": 513,
           "total_rejected": 0,
           "total_approved": 0,
-          "total_submitted_pencacah": 510,
+          "total_submitted_pencacah": 513,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1043,7 +1043,7 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 4,
           "new_businesses": [],
-          "persentase": 23.05
+          "persentase": 23.18
         },
         {
           "kec_name": "SOMBORI KEPULAUAN",
@@ -1074,13 +1074,13 @@ window.IPAS_DATA = {
         {
           "kec_name": "BUNGKU SELATAN",
           "kec_id": "bd8c5caf-274f-48a4-8237-3e59f41d2b09",
-          "total_prelist": 3274,
-          "total_draft": 83,
-          "total_open": 2557,
-          "total_submitted": 634,
+          "total_prelist": 3276,
+          "total_draft": 82,
+          "total_open": 2555,
+          "total_submitted": 639,
           "total_rejected": 96,
           "total_approved": 464,
-          "total_submitted_pencacah": 74,
+          "total_submitted_pencacah": 79,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1090,23 +1090,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 10,
+          "new_usaha_overall": 11,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 20,
+          "new_rumah_overall": 24,
           "new_businesses": [],
-          "persentase": 19.36
+          "persentase": 19.51
         },
         {
           "kec_name": "BAHODOPI",
           "kec_id": "ef6b143e-383e-4275-8d76-cfd7f124d160",
-          "total_prelist": 11977,
-          "total_draft": 449,
-          "total_open": 9275,
-          "total_submitted": 2253,
+          "total_prelist": 11981,
+          "total_draft": 450,
+          "total_open": 9271,
+          "total_submitted": 2260,
           "total_rejected": 66,
           "total_approved": 525,
-          "total_submitted_pencacah": 1662,
+          "total_submitted_pencacah": 1669,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1116,23 +1116,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 10,
+          "new_usaha_overall": 9,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 166,
+          "new_rumah_overall": 163,
           "new_businesses": [],
-          "persentase": 18.81
+          "persentase": 18.86
         },
         {
           "kec_name": "BUNGKU PESISIR",
           "kec_id": "88fce2d6-754f-48fb-90f4-d7a7c1891856",
-          "total_prelist": 2035,
+          "total_prelist": 2034,
           "total_draft": 0,
-          "total_open": 1771,
-          "total_submitted": 264,
+          "total_open": 1769,
+          "total_submitted": 265,
           "total_rejected": 4,
           "total_approved": 0,
-          "total_submitted_pencacah": 260,
+          "total_submitted_pencacah": 261,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1147,18 +1147,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 1,
           "new_businesses": [],
-          "persentase": 12.97
+          "persentase": 13.03
         },
         {
           "kec_name": "BUNGKU TENGAH",
           "kec_id": "5a01cd1d-b702-485a-b67d-33d4c10e0d9a",
-          "total_prelist": 10340,
-          "total_draft": 352,
-          "total_open": 8148,
-          "total_submitted": 1840,
+          "total_prelist": 10339,
+          "total_draft": 353,
+          "total_open": 8144,
+          "total_submitted": 1842,
           "total_rejected": 24,
           "total_approved": 217,
-          "total_submitted_pencacah": 1599,
+          "total_submitted_pencacah": 1601,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1171,20 +1171,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 12,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 92,
+          "new_rumah_overall": 88,
           "new_businesses": [],
-          "persentase": 17.79
+          "persentase": 17.82
         },
         {
           "kec_name": "BUNGKU TIMUR",
           "kec_id": "8c1ff4fe-2afb-437d-9470-b92c19242ca9",
           "total_prelist": 4398,
-          "total_draft": 221,
-          "total_open": 3404,
-          "total_submitted": 773,
+          "total_draft": 222,
+          "total_open": 3402,
+          "total_submitted": 774,
           "total_rejected": 14,
           "total_approved": 242,
-          "total_submitted_pencacah": 517,
+          "total_submitted_pencacah": 518,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1194,23 +1194,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
+          "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 12,
           "new_businesses": [],
-          "persentase": 17.58
+          "persentase": 17.6
         },
         {
           "kec_name": "BUNGKU BARAT",
           "kec_id": "b210ab89-5b54-44c8-a3af-8ea0313524b1",
-          "total_prelist": 4797,
-          "total_draft": 191,
-          "total_open": 3767,
+          "total_prelist": 4796,
+          "total_draft": 192,
+          "total_open": 3765,
           "total_submitted": 839,
-          "total_rejected": 31,
+          "total_rejected": 30,
           "total_approved": 248,
-          "total_submitted_pencacah": 560,
+          "total_submitted_pencacah": 561,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1223,7 +1223,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 32,
+          "new_rumah_overall": 33,
           "new_businesses": [],
           "persentase": 17.49
         },
@@ -1231,12 +1231,12 @@ window.IPAS_DATA = {
           "kec_name": "BUMI RAYA",
           "kec_id": "0bf36300-6961-4bb9-946e-e906e38f8ca3",
           "total_prelist": 4533,
-          "total_draft": 190,
-          "total_open": 3561,
-          "total_submitted": 782,
+          "total_draft": 191,
+          "total_open": 3558,
+          "total_submitted": 784,
           "total_rejected": 46,
           "total_approved": 361,
-          "total_submitted_pencacah": 375,
+          "total_submitted_pencacah": 377,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1249,20 +1249,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 42,
+          "new_rumah_overall": 44,
           "new_businesses": [],
-          "persentase": 17.25
+          "persentase": 17.3
         },
         {
           "kec_name": "WITA PONDA",
           "kec_id": "1f5b8573-dd8a-49a5-b07d-da7c7064dd72",
-          "total_prelist": 6129,
+          "total_prelist": 6127,
           "total_draft": 193,
-          "total_open": 4940,
-          "total_submitted": 996,
-          "total_rejected": 50,
+          "total_open": 4936,
+          "total_submitted": 998,
+          "total_rejected": 49,
           "total_approved": 703,
-          "total_submitted_pencacah": 243,
+          "total_submitted_pencacah": 246,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1275,23 +1275,23 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 20,
+          "new_rumah_overall": 17,
           "new_businesses": [],
-          "persentase": 16.25
+          "persentase": 16.29
         }
       ]
     },
     {
       "kabupaten": "[04] POSO",
       "total_prelist": 108963,
-      "total_draft": 2678,
-      "total_open": 79986,
-      "total_submitted": 26299,
-      "total_rejected": 1540,
-      "total_approved": 8548,
-      "total_submitted_pencacah": 16164,
+      "total_draft": 2689,
+      "total_open": 79914,
+      "total_submitted": 26360,
+      "total_rejected": 1539,
+      "total_approved": 8571,
+      "total_submitted_pencacah": 16203,
       "total_submitted_respondent": 47,
-      "persentase": 24.14,
+      "persentase": 24.19,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -1303,72 +1303,20 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 26,
-      "new_rumah_overall": 103,
+      "new_usaha_overall": 27,
+      "new_rumah_overall": 98,
       "new_businesses": [],
       "kecamatan_list": [
         {
           "kec_name": "PAMONA SELATAN",
           "kec_id": "2d49f072-a4b9-44a3-bc96-7b58fccd7cb1",
-          "total_prelist": 9294,
-          "total_draft": 515,
-          "total_open": 6660,
-          "total_submitted": 2119,
+          "total_prelist": 9292,
+          "total_draft": 516,
+          "total_open": 6634,
+          "total_submitted": 2142,
           "total_rejected": 429,
-          "total_approved": 890,
-          "total_submitted_pencacah": 799,
-          "total_submitted_respondent": 1,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 5,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 6,
-          "new_businesses": [],
-          "persentase": 22.8
-        },
-        {
-          "kec_name": "PAMONA BARAT",
-          "kec_id": "80b80a02-030d-44d5-bc49-941449e7b210",
-          "total_prelist": 3968,
-          "total_draft": 128,
-          "total_open": 2791,
-          "total_submitted": 1049,
-          "total_rejected": 20,
-          "total_approved": 98,
-          "total_submitted_pencacah": 930,
-          "total_submitted_respondent": 1,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 6,
-          "new_businesses": [],
-          "persentase": 26.44
-        },
-        {
-          "kec_name": "PAMONA TENGGARA",
-          "kec_id": "f72225ba-53ec-49fb-ac83-5ac62c9ae840",
-          "total_prelist": 3265,
-          "total_draft": 134,
-          "total_open": 2453,
-          "total_submitted": 678,
-          "total_rejected": 98,
-          "total_approved": 263,
-          "total_submitted_pencacah": 316,
+          "total_approved": 900,
+          "total_submitted_pencacah": 812,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1383,18 +1331,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 3,
           "new_businesses": [],
-          "persentase": 20.77
+          "persentase": 23.05
         },
         {
-          "kec_name": "LORE SELATAN",
-          "kec_id": "0bf0fa56-87b8-41f8-8f33-23cec2dec82a",
-          "total_prelist": 2582,
-          "total_draft": 0,
-          "total_open": 1853,
-          "total_submitted": 729,
-          "total_rejected": 67,
-          "total_approved": 164,
-          "total_submitted_pencacah": 497,
+          "kec_name": "PAMONA BARAT",
+          "kec_id": "80b80a02-030d-44d5-bc49-941449e7b210",
+          "total_prelist": 3968,
+          "total_draft": 124,
+          "total_open": 2791,
+          "total_submitted": 1053,
+          "total_rejected": 20,
+          "total_approved": 98,
+          "total_submitted_pencacah": 934,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1407,9 +1355,61 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
+          "new_rumah_overall": 6,
+          "new_businesses": [],
+          "persentase": 26.54
+        },
+        {
+          "kec_name": "PAMONA TENGGARA",
+          "kec_id": "f72225ba-53ec-49fb-ac83-5ac62c9ae840",
+          "total_prelist": 3265,
+          "total_draft": 134,
+          "total_open": 2453,
+          "total_submitted": 678,
+          "total_rejected": 97,
+          "total_approved": 265,
+          "total_submitted_pencacah": 315,
+          "total_submitted_respondent": 1,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 3,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
           "new_rumah_overall": 2,
           "new_businesses": [],
-          "persentase": 28.23
+          "persentase": 20.77
+        },
+        {
+          "kec_name": "LORE SELATAN",
+          "kec_id": "0bf0fa56-87b8-41f8-8f33-23cec2dec82a",
+          "total_prelist": 2582,
+          "total_draft": 0,
+          "total_open": 1851,
+          "total_submitted": 731,
+          "total_rejected": 66,
+          "total_approved": 164,
+          "total_submitted_pencacah": 500,
+          "total_submitted_respondent": 1,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 0,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 0,
+          "new_businesses": [],
+          "persentase": 28.31
         },
         {
           "kec_name": "LORE BARAT",
@@ -1441,12 +1441,12 @@ window.IPAS_DATA = {
           "kec_name": "PAMONA PUSALEMBA",
           "kec_id": "f0977b34-a484-463a-a661-91be193bfbda",
           "total_prelist": 9985,
-          "total_draft": 324,
-          "total_open": 6989,
-          "total_submitted": 2672,
+          "total_draft": 322,
+          "total_open": 6987,
+          "total_submitted": 2676,
           "total_rejected": 54,
-          "total_approved": 884,
-          "total_submitted_pencacah": 1734,
+          "total_approved": 885,
+          "total_submitted_pencacah": 1737,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1456,23 +1456,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 2,
+          "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 16,
           "new_businesses": [],
-          "persentase": 26.76
+          "persentase": 26.8
         },
         {
           "kec_name": "PAMONA TIMUR",
           "kec_id": "e551c7f8-0656-4a55-b168-0b142205d03f",
-          "total_prelist": 5196,
-          "total_draft": 114,
-          "total_open": 3411,
-          "total_submitted": 1671,
+          "total_prelist": 5197,
+          "total_draft": 116,
+          "total_open": 3406,
+          "total_submitted": 1675,
           "total_rejected": 32,
           "total_approved": 169,
-          "total_submitted_pencacah": 1470,
+          "total_submitted_pencacah": 1474,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1485,19 +1485,19 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 4,
+          "new_rumah_overall": 5,
           "new_businesses": [],
-          "persentase": 32.16
+          "persentase": 32.23
         },
         {
           "kec_name": "PAMONA UTARA",
           "kec_id": "9da7b709-4f49-4912-9394-e4acab997078",
-          "total_prelist": 6336,
+          "total_prelist": 6335,
           "total_draft": 7,
-          "total_open": 4240,
-          "total_submitted": 2089,
-          "total_rejected": 64,
-          "total_approved": 1761,
+          "total_open": 4236,
+          "total_submitted": 2092,
+          "total_rejected": 65,
+          "total_approved": 1763,
           "total_submitted_pencacah": 263,
           "total_submitted_respondent": 1,
           "today_completed": 0,
@@ -1511,20 +1511,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 4,
+          "new_rumah_overall": 6,
           "new_businesses": [],
-          "persentase": 32.97
+          "persentase": 33.02
         },
         {
           "kec_name": "LORE UTARA",
           "kec_id": "78d3ff5c-a22d-4898-8495-fdfd56229b6a",
-          "total_prelist": 5847,
+          "total_prelist": 5848,
           "total_draft": 60,
           "total_open": 4273,
-          "total_submitted": 1514,
-          "total_rejected": 55,
+          "total_submitted": 1515,
+          "total_rejected": 54,
           "total_approved": 296,
-          "total_submitted_pencacah": 1163,
+          "total_submitted_pencacah": 1165,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1537,9 +1537,9 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 4,
+          "new_rumah_overall": 5,
           "new_businesses": [],
-          "persentase": 25.89
+          "persentase": 25.91
         },
         {
           "kec_name": "LORE TENGAH",
@@ -1549,8 +1549,8 @@ window.IPAS_DATA = {
           "total_open": 1616,
           "total_submitted": 342,
           "total_rejected": 12,
-          "total_approved": 192,
-          "total_submitted_pencacah": 137,
+          "total_approved": 191,
+          "total_submitted_pencacah": 138,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1563,7 +1563,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 1,
+          "new_rumah_overall": 2,
           "new_businesses": [],
           "persentase": 17.47
         },
@@ -1589,7 +1589,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 2,
+          "new_rumah_overall": 1,
           "new_businesses": [],
           "persentase": 21.48
         },
@@ -1598,11 +1598,11 @@ window.IPAS_DATA = {
           "kec_id": "889774f2-ca53-4527-9157-eacef47130f8",
           "total_prelist": 1604,
           "total_draft": 0,
-          "total_open": 1126,
-          "total_submitted": 478,
+          "total_open": 1125,
+          "total_submitted": 479,
           "total_rejected": 1,
           "total_approved": 82,
-          "total_submitted_pencacah": 395,
+          "total_submitted_pencacah": 396,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1617,14 +1617,14 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 0,
           "new_businesses": [],
-          "persentase": 29.8
+          "persentase": 29.86
         },
         {
           "kec_name": "POSO PESISIR",
           "kec_id": "9b9e0943-caf8-413a-8137-ea0d0b55d457",
           "total_prelist": 10542,
-          "total_draft": 388,
-          "total_open": 7840,
+          "total_draft": 390,
+          "total_open": 7838,
           "total_submitted": 2314,
           "total_rejected": 167,
           "total_approved": 191,
@@ -1638,19 +1638,19 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 4,
+          "new_usaha_overall": 5,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 15,
+          "new_rumah_overall": 7,
           "new_businesses": [],
           "persentase": 21.95
         },
         {
           "kec_name": "POSO PESISIR SELATAN",
           "kec_id": "12124e73-2ce5-4821-8bb3-13d614c0c00e",
-          "total_prelist": 4202,
+          "total_prelist": 4201,
           "total_draft": 16,
-          "total_open": 3284,
+          "total_open": 3283,
           "total_submitted": 902,
           "total_rejected": 43,
           "total_approved": 785,
@@ -1667,20 +1667,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 7,
+          "new_rumah_overall": 5,
           "new_businesses": [],
           "persentase": 21.47
         },
         {
           "kec_name": "POSO PESISIR UTARA",
           "kec_id": "dfc213a9-a637-42cf-beea-6b0226cd67ae",
-          "total_prelist": 6638,
-          "total_draft": 278,
-          "total_open": 4731,
-          "total_submitted": 1629,
+          "total_prelist": 6639,
+          "total_draft": 281,
+          "total_open": 4727,
+          "total_submitted": 1631,
           "total_rejected": 26,
           "total_approved": 753,
-          "total_submitted_pencacah": 850,
+          "total_submitted_pencacah": 852,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1695,18 +1695,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 6,
           "new_businesses": [],
-          "persentase": 24.54
+          "persentase": 24.57
         },
         {
           "kec_name": "LAGE",
           "kec_id": "e7e58105-458f-4278-a070-e3619d05d41b",
-          "total_prelist": 8763,
-          "total_draft": 226,
-          "total_open": 6655,
+          "total_prelist": 8762,
+          "total_draft": 227,
+          "total_open": 6653,
           "total_submitted": 1882,
-          "total_rejected": 131,
-          "total_approved": 663,
-          "total_submitted_pencacah": 1087,
+          "total_rejected": 132,
+          "total_approved": 672,
+          "total_submitted_pencacah": 1077,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1719,7 +1719,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 11,
+          "new_rumah_overall": 13,
           "new_businesses": [],
           "persentase": 21.48
         },
@@ -1727,12 +1727,12 @@ window.IPAS_DATA = {
           "kec_name": "POSO KOTA",
           "kec_id": "d99a5e42-aa17-4f26-aab4-b0eff5e45e03",
           "total_prelist": 11581,
-          "total_draft": 214,
-          "total_open": 8853,
-          "total_submitted": 2514,
+          "total_draft": 218,
+          "total_open": 8838,
+          "total_submitted": 2525,
           "total_rejected": 211,
           "total_approved": 770,
-          "total_submitted_pencacah": 1533,
+          "total_submitted_pencacah": 1544,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1745,20 +1745,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 6,
+          "new_rumah_overall": 8,
           "new_businesses": [],
-          "persentase": 21.71
+          "persentase": 21.8
         },
         {
           "kec_name": "POSO KOTA UTARA",
           "kec_id": "5c3b6cc3-1893-4785-b758-d1501b834647",
-          "total_prelist": 7430,
-          "total_draft": 38,
-          "total_open": 5773,
-          "total_submitted": 1619,
+          "total_prelist": 7431,
+          "total_draft": 40,
+          "total_open": 5769,
+          "total_submitted": 1622,
           "total_rejected": 25,
           "total_approved": 305,
-          "total_submitted_pencacah": 1287,
+          "total_submitted_pencacah": 1290,
           "total_submitted_respondent": 2,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1771,20 +1771,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 3,
+          "new_rumah_overall": 5,
           "new_businesses": [],
-          "persentase": 21.79
+          "persentase": 21.83
         },
         {
           "kec_name": "POSO KOTA SELATAN",
           "kec_id": "43ded262-d778-4704-aa2e-2932db6c98b9",
-          "total_prelist": 5892,
-          "total_draft": 151,
-          "total_open": 4523,
-          "total_submitted": 1218,
+          "total_prelist": 5894,
+          "total_draft": 153,
+          "total_open": 4520,
+          "total_submitted": 1221,
           "total_rejected": 20,
           "total_approved": 100,
-          "total_submitted_pencacah": 1098,
+          "total_submitted_pencacah": 1101,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1794,26 +1794,26 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
+          "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 7,
+          "new_rumah_overall": 8,
           "new_businesses": [],
-          "persentase": 20.67
+          "persentase": 20.72
         }
       ]
     },
     {
       "kabupaten": "[05] DONGGALA",
       "total_prelist": 109532,
-      "total_draft": 2246,
-      "total_open": 83788,
-      "total_submitted": 23498,
-      "total_rejected": 774,
-      "total_approved": 15971,
-      "total_submitted_pencacah": 6748,
+      "total_draft": 2244,
+      "total_open": 83748,
+      "total_submitted": 23540,
+      "total_rejected": 798,
+      "total_approved": 15991,
+      "total_submitted_pencacah": 6746,
       "total_submitted_respondent": 5,
-      "persentase": 21.45,
+      "persentase": 21.49,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -1825,20 +1825,20 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 0,
-      "new_rumah_overall": 0,
+      "new_usaha_overall": 35,
+      "new_rumah_overall": 205,
       "new_businesses": [],
       "kecamatan_list": [
         {
           "kec_name": "RIO PAKAVA",
           "kec_id": "4f40cdd6-5d07-4521-8801-bd7f680ff72c",
-          "total_prelist": 7476,
-          "total_draft": 250,
-          "total_open": 5655,
-          "total_submitted": 1571,
-          "total_rejected": 57,
-          "total_approved": 1216,
-          "total_submitted_pencacah": 298,
+          "total_prelist": 7475,
+          "total_draft": 249,
+          "total_open": 5648,
+          "total_submitted": 1578,
+          "total_rejected": 60,
+          "total_approved": 1227,
+          "total_submitted_pencacah": 291,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1848,12 +1848,12 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
+          "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
+          "new_rumah_overall": 25,
           "new_businesses": [],
-          "persentase": 21.01
+          "persentase": 21.11
         },
         {
           "kec_name": "PINEMBANI",
@@ -1877,20 +1877,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
+          "new_rumah_overall": 1,
           "new_businesses": [],
           "persentase": 26.91
         },
         {
           "kec_name": "BANAWA",
           "kec_id": "093f557f-6ee7-462b-921a-7f48359be640",
-          "total_prelist": 15448,
-          "total_draft": 358,
-          "total_open": 12266,
-          "total_submitted": 2824,
-          "total_rejected": 90,
-          "total_approved": 2213,
-          "total_submitted_pencacah": 516,
+          "total_prelist": 15447,
+          "total_draft": 357,
+          "total_open": 12262,
+          "total_submitted": 2828,
+          "total_rejected": 91,
+          "total_approved": 2217,
+          "total_submitted_pencacah": 515,
           "total_submitted_respondent": 5,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1900,23 +1900,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
+          "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
+          "new_rumah_overall": 20,
           "new_businesses": [],
-          "persentase": 18.28
+          "persentase": 18.31
         },
         {
           "kec_name": "BANAWA SELATAN",
           "kec_id": "168c5d87-5d05-4af4-8635-f4c7c2db83b4",
-          "total_prelist": 9580,
-          "total_draft": 146,
-          "total_open": 6998,
-          "total_submitted": 2436,
-          "total_rejected": 99,
-          "total_approved": 2091,
-          "total_submitted_pencacah": 246,
+          "total_prelist": 9582,
+          "total_draft": 150,
+          "total_open": 6995,
+          "total_submitted": 2437,
+          "total_rejected": 101,
+          "total_approved": 2093,
+          "total_submitted_pencacah": 243,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1926,10 +1926,10 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
+          "new_usaha_overall": 10,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
+          "new_rumah_overall": 12,
           "new_businesses": [],
           "persentase": 25.43
         },
@@ -1940,9 +1940,9 @@ window.IPAS_DATA = {
           "total_draft": 132,
           "total_open": 3240,
           "total_submitted": 828,
-          "total_rejected": 43,
-          "total_approved": 665,
-          "total_submitted_pencacah": 120,
+          "total_rejected": 57,
+          "total_approved": 654,
+          "total_submitted_pencacah": 117,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1955,20 +1955,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
+          "new_rumah_overall": 23,
           "new_businesses": [],
           "persentase": 19.71
         },
         {
           "kec_name": "LABUAN",
           "kec_id": "9ca6f8ff-7855-47c4-b574-908b94885b42",
-          "total_prelist": 5760,
-          "total_draft": 42,
-          "total_open": 4653,
-          "total_submitted": 1065,
-          "total_rejected": 44,
-          "total_approved": 498,
-          "total_submitted_pencacah": 523,
+          "total_prelist": 5759,
+          "total_draft": 41,
+          "total_open": 4652,
+          "total_submitted": 1066,
+          "total_rejected": 47,
+          "total_approved": 497,
+          "total_submitted_pencacah": 522,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -1978,23 +1978,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
+          "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
+          "new_rumah_overall": 16,
           "new_businesses": [],
-          "persentase": 18.49
+          "persentase": 18.51
         },
         {
           "kec_name": "TANANTOVEA",
           "kec_id": "5c8cbbde-3c0a-4099-a73d-6330f4994844",
-          "total_prelist": 5864,
-          "total_draft": 73,
-          "total_open": 4575,
-          "total_submitted": 1216,
+          "total_prelist": 5865,
+          "total_draft": 72,
+          "total_open": 4572,
+          "total_submitted": 1221,
           "total_rejected": 59,
           "total_approved": 759,
-          "total_submitted_pencacah": 398,
+          "total_submitted_pencacah": 403,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2007,20 +2007,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
+          "new_rumah_overall": 6,
           "new_businesses": [],
-          "persentase": 20.74
+          "persentase": 20.82
         },
         {
           "kec_name": "SINDUE",
           "kec_id": "4f18f752-a8b1-4326-9641-618e6921909b",
           "total_prelist": 8573,
-          "total_draft": 144,
-          "total_open": 6415,
-          "total_submitted": 2014,
+          "total_draft": 143,
+          "total_open": 6411,
+          "total_submitted": 2019,
           "total_rejected": 21,
-          "total_approved": 774,
-          "total_submitted_pencacah": 1219,
+          "total_approved": 781,
+          "total_submitted_pencacah": 1217,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2030,23 +2030,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
+          "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
+          "new_rumah_overall": 15,
           "new_businesses": [],
-          "persentase": 23.49
+          "persentase": 23.55
         },
         {
           "kec_name": "SINDUE TOMBUSABORA",
           "kec_id": "d91b97ef-4d10-495f-a94d-decdac2f17f7",
-          "total_prelist": 4589,
+          "total_prelist": 4590,
           "total_draft": 48,
           "total_open": 3538,
-          "total_submitted": 1003,
+          "total_submitted": 1004,
           "total_rejected": 20,
           "total_approved": 878,
-          "total_submitted_pencacah": 105,
+          "total_submitted_pencacah": 106,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2059,20 +2059,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
+          "new_rumah_overall": 12,
           "new_businesses": [],
-          "persentase": 21.86
+          "persentase": 21.87
         },
         {
           "kec_name": "SINDUE TOBATA",
           "kec_id": "d8e59f02-6dfb-40fd-af65-81c20d6cb73f",
           "total_prelist": 3640,
-          "total_draft": 24,
-          "total_open": 2514,
-          "total_submitted": 1102,
+          "total_draft": 25,
+          "total_open": 2512,
+          "total_submitted": 1103,
           "total_rejected": 17,
-          "total_approved": 1025,
-          "total_submitted_pencacah": 60,
+          "total_approved": 1031,
+          "total_submitted_pencacah": 55,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2082,12 +2082,12 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
+          "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
+          "new_rumah_overall": 15,
           "new_businesses": [],
-          "persentase": 30.27
+          "persentase": 30.3
         },
         {
           "kec_name": "SIRENJA",
@@ -2108,233 +2108,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
+          "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
+          "new_rumah_overall": 12,
           "new_businesses": [],
           "persentase": 27.81
         },
         {
           "kec_name": "BALAESANG",
           "kec_id": "491567bd-cd7f-4fd5-b9a4-4a08b894df7b",
-          "total_prelist": 8445,
-          "total_draft": 246,
-          "total_open": 6520,
-          "total_submitted": 1679,
+          "total_prelist": 8444,
+          "total_draft": 244,
+          "total_open": 6518,
+          "total_submitted": 1682,
           "total_rejected": 50,
-          "total_approved": 994,
-          "total_submitted_pencacah": 635,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
-          "new_businesses": [],
-          "persentase": 19.88
-        },
-        {
-          "kec_name": "BALAESANG TANJUNG",
-          "kec_id": "ae2467bd-10d2-436b-87a9-ec49c78e49cf",
-          "total_prelist": 3908,
-          "total_draft": 170,
-          "total_open": 2948,
-          "total_submitted": 790,
-          "total_rejected": 18,
-          "total_approved": 673,
-          "total_submitted_pencacah": 99,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
-          "new_businesses": [],
-          "persentase": 20.21
-        },
-        {
-          "kec_name": "DAMPELAS",
-          "kec_id": "539972d4-028f-442b-95c1-4b4cb7fa9224",
-          "total_prelist": 11134,
-          "total_draft": 267,
-          "total_open": 8624,
-          "total_submitted": 2243,
-          "total_rejected": 101,
-          "total_approved": 1471,
-          "total_submitted_pencacah": 671,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
-          "new_businesses": [],
-          "persentase": 20.15
-        },
-        {
-          "kec_name": "SOJOL",
-          "kec_id": "8421b303-1415-48dc-b8ef-1b808cac1372",
-          "total_prelist": 8837,
-          "total_draft": 164,
-          "total_open": 7031,
-          "total_submitted": 1642,
-          "total_rejected": 66,
-          "total_approved": 737,
-          "total_submitted_pencacah": 839,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
-          "new_businesses": [],
-          "persentase": 18.58
-        },
-        {
-          "kec_name": "SOJOL UTARA",
-          "kec_id": "cf6a1f78-8c15-4cef-b9ec-d6ff4019b5d9",
-          "total_prelist": 3483,
-          "total_draft": 31,
-          "total_open": 2745,
-          "total_submitted": 707,
-          "total_rejected": 26,
-          "total_approved": 552,
-          "total_submitted_pencacah": 129,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 0,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 0,
-          "new_businesses": [],
-          "persentase": 20.3
-        }
-      ]
-    },
-    {
-      "kabupaten": "[06] TOLI-TOLI",
-      "total_prelist": 79955,
-      "total_draft": 2030,
-      "total_open": 60247,
-      "total_submitted": 17678,
-      "total_rejected": 719,
-      "total_approved": 7591,
-      "total_submitted_pencacah": 9368,
-      "total_submitted_respondent": 0,
-      "persentase": 22.11,
-      "today_completed": 0,
-      "yesterday_completed": 0,
-      "two_days_ago_completed": 0,
-      "two_days_ago_is_estimate": false,
-      "today_completed_breakdown": {},
-      "yesterday_completed_breakdown": {},
-      "two_days_ago_completed_breakdown": {},
-      "new_usaha_today": 0,
-      "new_usaha_yesterday": 0,
-      "new_rumah_today": 0,
-      "new_rumah_yesterday": 0,
-      "new_usaha_overall": 67,
-      "new_rumah_overall": 214,
-      "new_businesses": [],
-      "kecamatan_list": [
-        {
-          "kec_name": "DAMPAL SELATAN",
-          "kec_id": "a7bf080a-3def-427c-a6c2-675b9161843b",
-          "total_prelist": 7934,
-          "total_draft": 52,
-          "total_open": 6332,
-          "total_submitted": 1550,
-          "total_rejected": 65,
-          "total_approved": 403,
-          "total_submitted_pencacah": 1082,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 9,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 4,
-          "new_businesses": [],
-          "persentase": 19.54
-        },
-        {
-          "kec_name": "DAMPAL UTARA",
-          "kec_id": "511c910b-ed62-4816-b1ed-492abc67fe54",
-          "total_prelist": 5032,
-          "total_draft": 184,
-          "total_open": 3616,
-          "total_submitted": 1232,
-          "total_rejected": 33,
-          "total_approved": 466,
-          "total_submitted_pencacah": 733,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 9,
-          "new_businesses": [],
-          "persentase": 24.48
-        },
-        {
-          "kec_name": "DONDO",
-          "kec_id": "a2937b90-81a6-4c92-b53b-44911931dbe6",
-          "total_prelist": 8061,
-          "total_draft": 29,
-          "total_open": 6344,
-          "total_submitted": 1688,
-          "total_rejected": 60,
-          "total_approved": 1110,
-          "total_submitted_pencacah": 518,
+          "total_approved": 995,
+          "total_submitted_pencacah": 637,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2347,20 +2137,230 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 12,
+          "new_rumah_overall": 16,
           "new_businesses": [],
-          "persentase": 20.94
+          "persentase": 19.92
+        },
+        {
+          "kec_name": "BALAESANG TANJUNG",
+          "kec_id": "ae2467bd-10d2-436b-87a9-ec49c78e49cf",
+          "total_prelist": 3909,
+          "total_draft": 171,
+          "total_open": 2947,
+          "total_submitted": 791,
+          "total_rejected": 18,
+          "total_approved": 674,
+          "total_submitted_pencacah": 99,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 1,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 5,
+          "new_businesses": [],
+          "persentase": 20.24
+        },
+        {
+          "kec_name": "DAMPELAS",
+          "kec_id": "539972d4-028f-442b-95c1-4b4cb7fa9224",
+          "total_prelist": 11135,
+          "total_draft": 267,
+          "total_open": 8617,
+          "total_submitted": 2251,
+          "total_rejected": 103,
+          "total_approved": 1471,
+          "total_submitted_pencacah": 677,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 4,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 14,
+          "new_businesses": [],
+          "persentase": 20.22
+        },
+        {
+          "kec_name": "SOJOL",
+          "kec_id": "8421b303-1415-48dc-b8ef-1b808cac1372",
+          "total_prelist": 8836,
+          "total_draft": 163,
+          "total_open": 7028,
+          "total_submitted": 1645,
+          "total_rejected": 66,
+          "total_approved": 737,
+          "total_submitted_pencacah": 842,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 2,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 10,
+          "new_businesses": [],
+          "persentase": 18.62
+        },
+        {
+          "kec_name": "SOJOL UTARA",
+          "kec_id": "cf6a1f78-8c15-4cef-b9ec-d6ff4019b5d9",
+          "total_prelist": 3482,
+          "total_draft": 31,
+          "total_open": 2742,
+          "total_submitted": 709,
+          "total_rejected": 25,
+          "total_approved": 552,
+          "total_submitted_pencacah": 132,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 0,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 3,
+          "new_businesses": [],
+          "persentase": 20.36
+        }
+      ]
+    },
+    {
+      "kabupaten": "[06] TOLI-TOLI",
+      "total_prelist": 79955,
+      "total_draft": 2039,
+      "total_open": 60208,
+      "total_submitted": 17708,
+      "total_rejected": 721,
+      "total_approved": 7607,
+      "total_submitted_pencacah": 9380,
+      "total_submitted_respondent": 0,
+      "persentase": 22.15,
+      "today_completed": 0,
+      "yesterday_completed": 0,
+      "two_days_ago_completed": 0,
+      "two_days_ago_is_estimate": false,
+      "today_completed_breakdown": {},
+      "yesterday_completed_breakdown": {},
+      "two_days_ago_completed_breakdown": {},
+      "new_usaha_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_today": 0,
+      "new_rumah_yesterday": 0,
+      "new_usaha_overall": 65,
+      "new_rumah_overall": 216,
+      "new_businesses": [],
+      "kecamatan_list": [
+        {
+          "kec_name": "DAMPAL SELATAN",
+          "kec_id": "a7bf080a-3def-427c-a6c2-675b9161843b",
+          "total_prelist": 7934,
+          "total_draft": 52,
+          "total_open": 6330,
+          "total_submitted": 1552,
+          "total_rejected": 68,
+          "total_approved": 404,
+          "total_submitted_pencacah": 1080,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 8,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 5,
+          "new_businesses": [],
+          "persentase": 19.56
+        },
+        {
+          "kec_name": "DAMPAL UTARA",
+          "kec_id": "511c910b-ed62-4816-b1ed-492abc67fe54",
+          "total_prelist": 5031,
+          "total_draft": 184,
+          "total_open": 3614,
+          "total_submitted": 1233,
+          "total_rejected": 33,
+          "total_approved": 466,
+          "total_submitted_pencacah": 734,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 0,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 9,
+          "new_businesses": [],
+          "persentase": 24.51
+        },
+        {
+          "kec_name": "DONDO",
+          "kec_id": "a2937b90-81a6-4c92-b53b-44911931dbe6",
+          "total_prelist": 8060,
+          "total_draft": 29,
+          "total_open": 6339,
+          "total_submitted": 1692,
+          "total_rejected": 61,
+          "total_approved": 1115,
+          "total_submitted_pencacah": 516,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 2,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 13,
+          "new_businesses": [],
+          "persentase": 20.99
         },
         {
           "kec_name": "OGODEIDE",
           "kec_id": "c6e474d6-064d-4afa-bde0-ff7fb454cdc3",
-          "total_prelist": 4515,
+          "total_prelist": 4514,
           "total_draft": 35,
-          "total_open": 3299,
+          "total_open": 3298,
           "total_submitted": 1181,
           "total_rejected": 22,
-          "total_approved": 784,
-          "total_submitted_pencacah": 375,
+          "total_approved": 786,
+          "total_submitted_pencacah": 373,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2373,20 +2373,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 7,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 15,
+          "new_rumah_overall": 12,
           "new_businesses": [],
           "persentase": 26.16
         },
         {
           "kec_name": "BASIDONDO",
           "kec_id": "66505253-c231-4272-9b94-dc6d3a71fd2a",
-          "total_prelist": 3668,
-          "total_draft": 97,
-          "total_open": 2698,
+          "total_prelist": 3667,
+          "total_draft": 99,
+          "total_open": 2695,
           "total_submitted": 873,
           "total_rejected": 5,
-          "total_approved": 861,
-          "total_submitted_pencacah": 7,
+          "total_approved": 863,
+          "total_submitted_pencacah": 5,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2401,18 +2401,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 11,
           "new_businesses": [],
-          "persentase": 23.8
+          "persentase": 23.81
         },
         {
           "kec_name": "BAOLAN",
           "kec_id": "1f4e43f8-9369-4617-80a1-26e4c366a490",
-          "total_prelist": 22939,
-          "total_draft": 717,
-          "total_open": 17526,
-          "total_submitted": 4696,
-          "total_rejected": 280,
-          "total_approved": 1863,
-          "total_submitted_pencacah": 2553,
+          "total_prelist": 22943,
+          "total_draft": 718,
+          "total_open": 17515,
+          "total_submitted": 4710,
+          "total_rejected": 277,
+          "total_approved": 1866,
+          "total_submitted_pencacah": 2567,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2422,23 +2422,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 14,
+          "new_usaha_overall": 13,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 76,
+          "new_rumah_overall": 77,
           "new_businesses": [],
-          "persentase": 20.47
+          "persentase": 20.53
         },
         {
           "kec_name": "LAMPASIO",
           "kec_id": "d607fcc3-89d5-44dc-bd31-7bd8321e0177",
           "total_prelist": 4338,
-          "total_draft": 128,
-          "total_open": 3245,
+          "total_draft": 129,
+          "total_open": 3244,
           "total_submitted": 965,
           "total_rejected": 95,
-          "total_approved": 396,
-          "total_submitted_pencacah": 474,
+          "total_approved": 398,
+          "total_submitted_pencacah": 472,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2448,10 +2448,10 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
+          "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 8,
+          "new_rumah_overall": 9,
           "new_businesses": [],
           "persentase": 22.25
         },
@@ -2459,12 +2459,12 @@ window.IPAS_DATA = {
           "kec_name": "GALANG",
           "kec_id": "224cc036-712f-468a-a169-ca7e662d7bfa",
           "total_prelist": 13367,
-          "total_draft": 515,
-          "total_open": 9518,
-          "total_submitted": 3334,
-          "total_rejected": 80,
+          "total_draft": 517,
+          "total_open": 9511,
+          "total_submitted": 3339,
+          "total_rejected": 79,
           "total_approved": 392,
-          "total_submitted_pencacah": 2862,
+          "total_submitted_pencacah": 2868,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2477,19 +2477,19 @@ window.IPAS_DATA = {
           "new_usaha_overall": 14,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 15,
+          "new_rumah_overall": 16,
           "new_businesses": [],
-          "persentase": 24.94
+          "persentase": 24.98
         },
         {
           "kec_name": "TOLITOLI UTARA",
           "kec_id": "66294627-db5d-409e-bdc7-302d3bd7b4d7",
           "total_prelist": 6674,
           "total_draft": 61,
-          "total_open": 5135,
-          "total_submitted": 1478,
-          "total_rejected": 41,
-          "total_approved": 790,
+          "total_open": 5132,
+          "total_submitted": 1481,
+          "total_rejected": 43,
+          "total_approved": 791,
           "total_submitted_pencacah": 647,
           "total_submitted_respondent": 0,
           "today_completed": 0,
@@ -2503,20 +2503,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 7,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 29,
+          "new_rumah_overall": 30,
           "new_businesses": [],
-          "persentase": 22.15
+          "persentase": 22.19
         },
         {
           "kec_name": "DAKO PEMEAN",
           "kec_id": "b55f6be9-6f94-41f6-95b9-03467952b4b0",
           "total_prelist": 3427,
-          "total_draft": 212,
-          "total_open": 2534,
-          "total_submitted": 681,
+          "total_draft": 215,
+          "total_open": 2530,
+          "total_submitted": 682,
           "total_rejected": 38,
           "total_approved": 526,
-          "total_submitted_pencacah": 117,
+          "total_submitted_pencacah": 118,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2529,23 +2529,23 @@ window.IPAS_DATA = {
           "new_usaha_overall": 6,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 35,
+          "new_rumah_overall": 34,
           "new_businesses": [],
-          "persentase": 19.87
+          "persentase": 19.9
         }
       ]
     },
     {
       "kabupaten": "[07] BUOL",
       "total_prelist": 59393,
-      "total_draft": 2192,
-      "total_open": 43773,
-      "total_submitted": 13428,
-      "total_rejected": 1116,
-      "total_approved": 3532,
-      "total_submitted_pencacah": 8734,
+      "total_draft": 2211,
+      "total_open": 43735,
+      "total_submitted": 13447,
+      "total_rejected": 1119,
+      "total_approved": 3546,
+      "total_submitted_pencacah": 8736,
       "total_submitted_respondent": 46,
-      "persentase": 22.61,
+      "persentase": 22.64,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -2557,20 +2557,20 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 84,
-      "new_rumah_overall": 167,
+      "new_usaha_overall": 83,
+      "new_rumah_overall": 168,
       "new_businesses": [],
       "kecamatan_list": [
         {
           "kec_name": "LAKEA",
           "kec_id": "9500a712-af0e-402d-aa10-de7305b3f0f9",
-          "total_prelist": 4237,
-          "total_draft": 59,
-          "total_open": 3109,
+          "total_prelist": 4236,
+          "total_draft": 61,
+          "total_open": 3106,
           "total_submitted": 1069,
-          "total_rejected": 155,
+          "total_rejected": 158,
           "total_approved": 255,
-          "total_submitted_pencacah": 658,
+          "total_submitted_pencacah": 655,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2583,20 +2583,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 15,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 21,
+          "new_rumah_overall": 20,
           "new_businesses": [],
-          "persentase": 25.23
+          "persentase": 25.24
         },
         {
           "kec_name": "BIAU",
           "kec_id": "65adffaa-4bb1-411e-894b-497d04d34415",
-          "total_prelist": 13816,
-          "total_draft": 535,
-          "total_open": 10175,
-          "total_submitted": 3106,
-          "total_rejected": 303,
+          "total_prelist": 13818,
+          "total_draft": 539,
+          "total_open": 10166,
+          "total_submitted": 3113,
+          "total_rejected": 304,
           "total_approved": 536,
-          "total_submitted_pencacah": 2261,
+          "total_submitted_pencacah": 2267,
           "total_submitted_respondent": 6,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2611,18 +2611,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 30,
           "new_businesses": [],
-          "persentase": 22.48
+          "persentase": 22.53
         },
         {
           "kec_name": "KARAMAT",
           "kec_id": "939ea2e7-0848-40a1-a6d8-fff5162b86bf",
-          "total_prelist": 3588,
-          "total_draft": 38,
-          "total_open": 2811,
+          "total_prelist": 3587,
+          "total_draft": 39,
+          "total_open": 2809,
           "total_submitted": 739,
           "total_rejected": 53,
-          "total_approved": 196,
-          "total_submitted_pencacah": 488,
+          "total_approved": 197,
+          "total_submitted_pencacah": 487,
           "total_submitted_respondent": 2,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2642,13 +2642,13 @@ window.IPAS_DATA = {
         {
           "kec_name": "MOMUNU",
           "kec_id": "1327182c-39b6-445a-99cb-f9f2064b707a",
-          "total_prelist": 6356,
-          "total_draft": 405,
-          "total_open": 4556,
-          "total_submitted": 1395,
+          "total_prelist": 6355,
+          "total_draft": 407,
+          "total_open": 4552,
+          "total_submitted": 1396,
           "total_rejected": 126,
           "total_approved": 405,
-          "total_submitted_pencacah": 863,
+          "total_submitted_pencacah": 864,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2661,20 +2661,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 9,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 20,
+          "new_rumah_overall": 19,
           "new_businesses": [],
-          "persentase": 21.95
+          "persentase": 21.97
         },
         {
           "kec_name": "TILOAN",
           "kec_id": "8685eb3e-968f-4bf2-a4d3-51d7cac83480",
           "total_prelist": 3618,
-          "total_draft": 55,
-          "total_open": 2549,
-          "total_submitted": 1014,
-          "total_rejected": 74,
-          "total_approved": 283,
-          "total_submitted_pencacah": 656,
+          "total_draft": 56,
+          "total_open": 2547,
+          "total_submitted": 1015,
+          "total_rejected": 70,
+          "total_approved": 284,
+          "total_submitted_pencacah": 660,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2684,23 +2684,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 11,
+          "new_usaha_overall": 12,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 9,
           "new_businesses": [],
-          "persentase": 28.03
+          "persentase": 28.05
         },
         {
           "kec_name": "BOKAT",
           "kec_id": "a7ad0568-6cb5-4a81-aa91-c4e2eca8ca6b",
-          "total_prelist": 6535,
-          "total_draft": 189,
-          "total_open": 4914,
-          "total_submitted": 1432,
-          "total_rejected": 165,
-          "total_approved": 693,
-          "total_submitted_pencacah": 570,
+          "total_prelist": 6536,
+          "total_draft": 190,
+          "total_open": 4908,
+          "total_submitted": 1438,
+          "total_rejected": 166,
+          "total_approved": 702,
+          "total_submitted_pencacah": 566,
           "total_submitted_respondent": 4,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2713,18 +2713,18 @@ window.IPAS_DATA = {
           "new_usaha_overall": 6,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 27,
+          "new_rumah_overall": 31,
           "new_businesses": [],
-          "persentase": 21.91
+          "persentase": 22.0
         },
         {
           "kec_name": "BUKAL",
           "kec_id": "05826f63-ec31-48d7-a062-ecef50f28cd1",
           "total_prelist": 5442,
-          "total_draft": 173,
-          "total_open": 4246,
-          "total_submitted": 1023,
-          "total_rejected": 66,
+          "total_draft": 174,
+          "total_open": 4244,
+          "total_submitted": 1024,
+          "total_rejected": 67,
           "total_approved": 208,
           "total_submitted_pencacah": 748,
           "total_submitted_respondent": 1,
@@ -2741,18 +2741,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 11,
           "new_businesses": [],
-          "persentase": 18.8
+          "persentase": 18.82
         },
         {
           "kec_name": "BUNOBOGU",
           "kec_id": "b1862982-cfa7-4442-a701-5a2a3b250ffa",
           "total_prelist": 3773,
-          "total_draft": 226,
-          "total_open": 2576,
-          "total_submitted": 971,
+          "total_draft": 228,
+          "total_open": 2572,
+          "total_submitted": 973,
           "total_rejected": 86,
           "total_approved": 366,
-          "total_submitted_pencacah": 519,
+          "total_submitted_pencacah": 521,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2765,20 +2765,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 5,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 12,
+          "new_rumah_overall": 13,
           "new_businesses": [],
-          "persentase": 25.74
+          "persentase": 25.79
         },
         {
           "kec_name": "GADUNG",
           "kec_id": "6fabf945-8b2f-4368-b0e2-81ab1392dd7e",
           "total_prelist": 4563,
-          "total_draft": 106,
-          "total_open": 3343,
+          "total_draft": 108,
+          "total_open": 3341,
           "total_submitted": 1114,
           "total_rejected": 50,
-          "total_approved": 239,
-          "total_submitted_pencacah": 824,
+          "total_approved": 241,
+          "total_submitted_pencacah": 822,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2791,19 +2791,19 @@ window.IPAS_DATA = {
           "new_usaha_overall": 6,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 14,
+          "new_rumah_overall": 16,
           "new_businesses": [],
           "persentase": 24.41
         },
         {
           "kec_name": "PALELEH",
           "kec_id": "221d02af-3d4c-45e8-aa1c-153b4be77aad",
-          "total_prelist": 4944,
-          "total_draft": 241,
-          "total_open": 3788,
-          "total_submitted": 915,
+          "total_prelist": 4943,
+          "total_draft": 243,
+          "total_open": 3784,
+          "total_submitted": 916,
           "total_rejected": 9,
-          "total_approved": 274,
+          "total_approved": 275,
           "total_submitted_pencacah": 631,
           "total_submitted_respondent": 1,
           "today_completed": 0,
@@ -2819,18 +2819,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 6,
           "new_businesses": [],
-          "persentase": 18.51
+          "persentase": 18.53
         },
         {
           "kec_name": "PALELEH BARAT",
           "kec_id": "84894353-d654-44f0-adbd-6c0f0233f743",
           "total_prelist": 2390,
-          "total_draft": 97,
-          "total_open": 1670,
+          "total_draft": 98,
+          "total_open": 1669,
           "total_submitted": 623,
-          "total_rejected": 29,
+          "total_rejected": 30,
           "total_approved": 77,
-          "total_submitted_pencacah": 516,
+          "total_submitted_pencacah": 515,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2840,10 +2840,10 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 9,
+          "new_usaha_overall": 7,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 17,
+          "new_rumah_overall": 13,
           "new_businesses": [],
           "persentase": 26.07
         }
@@ -2852,14 +2852,14 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[08] PARIGI MOUTONG",
       "total_prelist": 174474,
-      "total_draft": 2532,
-      "total_open": 129477,
-      "total_submitted": 42465,
-      "total_rejected": 1878,
-      "total_approved": 13693,
-      "total_submitted_pencacah": 26889,
+      "total_draft": 2545,
+      "total_open": 129411,
+      "total_submitted": 42518,
+      "total_rejected": 1863,
+      "total_approved": 13699,
+      "total_submitted_pencacah": 26951,
       "total_submitted_respondent": 5,
-      "persentase": 24.34,
+      "persentase": 24.37,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -2871,20 +2871,20 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 49,
-      "new_rumah_overall": 153,
+      "new_usaha_overall": 53,
+      "new_rumah_overall": 163,
       "new_businesses": [],
       "kecamatan_list": [
         {
           "kec_name": "SAUSU",
           "kec_id": "7edaff7e-8716-46ed-9c95-4572b6118ea8",
-          "total_prelist": 7939,
+          "total_prelist": 7938,
           "total_draft": 95,
-          "total_open": 6148,
-          "total_submitted": 1696,
+          "total_open": 6143,
+          "total_submitted": 1700,
           "total_rejected": 61,
           "total_approved": 243,
-          "total_submitted_pencacah": 1392,
+          "total_submitted_pencacah": 1396,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2899,18 +2899,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 5,
           "new_businesses": [],
-          "persentase": 21.36
+          "persentase": 21.42
         },
         {
           "kec_name": "TORUE",
           "kec_id": "f8a0bc27-18ff-4713-9b8f-8a3a1adf8df7",
           "total_prelist": 8376,
-          "total_draft": 12,
-          "total_open": 6293,
-          "total_submitted": 2071,
-          "total_rejected": 75,
+          "total_draft": 14,
+          "total_open": 6288,
+          "total_submitted": 2074,
+          "total_rejected": 74,
           "total_approved": 248,
-          "total_submitted_pencacah": 1748,
+          "total_submitted_pencacah": 1752,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2923,20 +2923,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 2,
+          "new_rumah_overall": 3,
           "new_businesses": [],
-          "persentase": 24.73
+          "persentase": 24.76
         },
         {
           "kec_name": "BALINGGI",
           "kec_id": "12585f97-0cbd-465d-8397-14f4d0cd14a2",
           "total_prelist": 6900,
           "total_draft": 2,
-          "total_open": 5214,
-          "total_submitted": 1684,
-          "total_rejected": 36,
+          "total_open": 5211,
+          "total_submitted": 1687,
+          "total_rejected": 34,
           "total_approved": 515,
-          "total_submitted_pencacah": 1133,
+          "total_submitted_pencacah": 1138,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -2951,14 +2951,14 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 2,
           "new_businesses": [],
-          "persentase": 24.41
+          "persentase": 24.45
         },
         {
           "kec_name": "PARIGI",
           "kec_id": "1118cb16-dd43-4601-9bc7-9635fb91b815",
-          "total_prelist": 13499,
-          "total_draft": 73,
-          "total_open": 10947,
+          "total_prelist": 13498,
+          "total_draft": 75,
+          "total_open": 10944,
           "total_submitted": 2479,
           "total_rejected": 160,
           "total_approved": 295,
@@ -2977,18 +2977,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 4,
           "new_businesses": [],
-          "persentase": 18.36
+          "persentase": 18.37
         },
         {
           "kec_name": "PARIGI SELATAN",
           "kec_id": "ebe507a5-cf3c-44d5-8608-91ab3da7b5a1",
-          "total_prelist": 8803,
+          "total_prelist": 8802,
           "total_draft": 100,
-          "total_open": 7194,
-          "total_submitted": 1509,
-          "total_rejected": 73,
-          "total_approved": 415,
-          "total_submitted_pencacah": 1021,
+          "total_open": 7192,
+          "total_submitted": 1510,
+          "total_rejected": 74,
+          "total_approved": 416,
+          "total_submitted_pencacah": 1020,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3001,9 +3001,9 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 9,
+          "new_rumah_overall": 10,
           "new_businesses": [],
-          "persentase": 17.14
+          "persentase": 17.16
         },
         {
           "kec_name": "PARIGI BARAT",
@@ -3012,9 +3012,9 @@ window.IPAS_DATA = {
           "total_draft": 45,
           "total_open": 2484,
           "total_submitted": 510,
-          "total_rejected": 20,
-          "total_approved": 105,
-          "total_submitted_pencacah": 385,
+          "total_rejected": 19,
+          "total_approved": 107,
+          "total_submitted_pencacah": 384,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3027,16 +3027,16 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 4,
+          "new_rumah_overall": 3,
           "new_businesses": [],
           "persentase": 16.78
         },
         {
           "kec_name": "PARIGI UTARA",
           "kec_id": "e8a994c9-45e1-4c50-a81e-8c2a43909c92",
-          "total_prelist": 2370,
+          "total_prelist": 2369,
           "total_draft": 37,
-          "total_open": 1980,
+          "total_open": 1979,
           "total_submitted": 353,
           "total_rejected": 5,
           "total_approved": 345,
@@ -3055,18 +3055,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 1,
           "new_businesses": [],
-          "persentase": 14.89
+          "persentase": 14.9
         },
         {
           "kec_name": "PARIGI TENGAH",
           "kec_id": "fd134760-3a4b-4e3f-970e-0629934cf6c7",
-          "total_prelist": 3386,
-          "total_draft": 220,
-          "total_open": 2221,
-          "total_submitted": 945,
-          "total_rejected": 107,
+          "total_prelist": 3385,
+          "total_draft": 219,
+          "total_open": 2220,
+          "total_submitted": 946,
+          "total_rejected": 102,
           "total_approved": 531,
-          "total_submitted_pencacah": 307,
+          "total_submitted_pencacah": 313,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3081,18 +3081,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 3,
           "new_businesses": [],
-          "persentase": 27.91
+          "persentase": 27.95
         },
         {
           "kec_name": "AMPIBABO",
           "kec_id": "12e93053-5586-46d4-adc5-205e654b9d88",
           "total_prelist": 9132,
-          "total_draft": 131,
-          "total_open": 6250,
-          "total_submitted": 2751,
-          "total_rejected": 84,
+          "total_draft": 133,
+          "total_open": 6246,
+          "total_submitted": 2753,
+          "total_rejected": 81,
           "total_approved": 1690,
-          "total_submitted_pencacah": 977,
+          "total_submitted_pencacah": 982,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3107,18 +3107,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 2,
           "new_businesses": [],
-          "persentase": 30.12
+          "persentase": 30.15
         },
         {
           "kec_name": "KASIMBAR",
           "kec_id": "e7ca4fb3-409f-42b0-a0ca-4c74df90c56c",
           "total_prelist": 9201,
-          "total_draft": 142,
-          "total_open": 6890,
+          "total_draft": 144,
+          "total_open": 6888,
           "total_submitted": 2169,
-          "total_rejected": 93,
+          "total_rejected": 94,
           "total_approved": 851,
-          "total_submitted_pencacah": 1225,
+          "total_submitted_pencacah": 1224,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3140,11 +3140,11 @@ window.IPAS_DATA = {
           "kec_id": "b13929ff-7daa-46a7-8f3c-7c967b512580",
           "total_prelist": 6337,
           "total_draft": 0,
-          "total_open": 4168,
-          "total_submitted": 2169,
+          "total_open": 4166,
+          "total_submitted": 2171,
           "total_rejected": 132,
-          "total_approved": 357,
-          "total_submitted_pencacah": 1680,
+          "total_approved": 360,
+          "total_submitted_pencacah": 1679,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3154,101 +3154,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 6,
+          "new_usaha_overall": 7,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 12,
+          "new_rumah_overall": 13,
           "new_businesses": [],
-          "persentase": 34.23
+          "persentase": 34.26
         },
         {
           "kec_name": "SINIU",
           "kec_id": "a5719653-4a62-478c-bc63-86a4c4e0e46d",
           "total_prelist": 4013,
-          "total_draft": 175,
-          "total_open": 2530,
-          "total_submitted": 1308,
+          "total_draft": 177,
+          "total_open": 2527,
+          "total_submitted": 1309,
           "total_rejected": 37,
           "total_approved": 191,
-          "total_submitted_pencacah": 1080,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 9,
-          "new_businesses": [],
-          "persentase": 32.59
-        },
-        {
-          "kec_name": "TINOMBO",
-          "kec_id": "0d34a059-18b6-45da-9168-d4dea9488fd6",
-          "total_prelist": 8176,
-          "total_draft": 46,
-          "total_open": 6046,
-          "total_submitted": 2084,
-          "total_rejected": 217,
-          "total_approved": 1022,
-          "total_submitted_pencacah": 845,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 2,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 18,
-          "new_businesses": [],
-          "persentase": 25.49
-        },
-        {
-          "kec_name": "TINOMBO SELATAN",
-          "kec_id": "a111edd6-85c3-4f88-8f2c-7c53cd83b0ac",
-          "total_prelist": 11181,
-          "total_draft": 456,
-          "total_open": 7672,
-          "total_submitted": 3053,
-          "total_rejected": 70,
-          "total_approved": 955,
-          "total_submitted_pencacah": 2028,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 29,
-          "new_businesses": [],
-          "persentase": 27.31
-        },
-        {
-          "kec_name": "SIDOAN",
-          "kec_id": "59976328-9cd8-4890-b1a8-a78c6f02e454",
-          "total_prelist": 5460,
-          "total_draft": 113,
-          "total_open": 4515,
-          "total_submitted": 832,
-          "total_rejected": 21,
-          "total_approved": 455,
-          "total_submitted_pencacah": 356,
+          "total_submitted_pencacah": 1081,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3261,20 +3183,98 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 3,
+          "new_rumah_overall": 9,
           "new_businesses": [],
-          "persentase": 15.24
+          "persentase": 32.62
+        },
+        {
+          "kec_name": "TINOMBO",
+          "kec_id": "0d34a059-18b6-45da-9168-d4dea9488fd6",
+          "total_prelist": 8176,
+          "total_draft": 46,
+          "total_open": 6042,
+          "total_submitted": 2088,
+          "total_rejected": 220,
+          "total_approved": 1021,
+          "total_submitted_pencacah": 847,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 3,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 18,
+          "new_businesses": [],
+          "persentase": 25.54
+        },
+        {
+          "kec_name": "TINOMBO SELATAN",
+          "kec_id": "a111edd6-85c3-4f88-8f2c-7c53cd83b0ac",
+          "total_prelist": 11183,
+          "total_draft": 458,
+          "total_open": 7665,
+          "total_submitted": 3060,
+          "total_rejected": 70,
+          "total_approved": 956,
+          "total_submitted_pencacah": 2034,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 5,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 32,
+          "new_businesses": [],
+          "persentase": 27.36
+        },
+        {
+          "kec_name": "SIDOAN",
+          "kec_id": "59976328-9cd8-4890-b1a8-a78c6f02e454",
+          "total_prelist": 5461,
+          "total_draft": 114,
+          "total_open": 4513,
+          "total_submitted": 834,
+          "total_rejected": 21,
+          "total_approved": 455,
+          "total_submitted_pencacah": 358,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 2,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 4,
+          "new_businesses": [],
+          "persentase": 15.27
         },
         {
           "kec_name": "TOMINI",
           "kec_id": "ef80a49e-9d83-467e-8995-206c1103af77",
-          "total_prelist": 7000,
+          "total_prelist": 6999,
           "total_draft": 147,
-          "total_open": 4891,
+          "total_open": 4890,
           "total_submitted": 1962,
-          "total_rejected": 115,
+          "total_rejected": 111,
           "total_approved": 571,
-          "total_submitted_pencacah": 1276,
+          "total_submitted_pencacah": 1280,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3294,13 +3294,13 @@ window.IPAS_DATA = {
         {
           "kec_name": "MEPANGA",
           "kec_id": "72a3039e-e0fa-40c3-bb2a-aab294784d68",
-          "total_prelist": 11715,
+          "total_prelist": 11714,
           "total_draft": 68,
-          "total_open": 9169,
-          "total_submitted": 2478,
-          "total_rejected": 122,
+          "total_open": 9167,
+          "total_submitted": 2479,
+          "total_rejected": 121,
           "total_approved": 949,
-          "total_submitted_pencacah": 1407,
+          "total_submitted_pencacah": 1409,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3315,18 +3315,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 10,
           "new_businesses": [],
-          "persentase": 21.15
+          "persentase": 21.16
         },
         {
           "kec_name": "PALASA",
           "kec_id": "20faf16f-54f4-4829-91a2-a458cf0e45fd",
-          "total_prelist": 9820,
+          "total_prelist": 9821,
           "total_draft": 70,
-          "total_open": 7748,
-          "total_submitted": 2002,
+          "total_open": 7743,
+          "total_submitted": 2008,
           "total_rejected": 126,
           "total_approved": 171,
-          "total_submitted_pencacah": 1705,
+          "total_submitted_pencacah": 1711,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3339,20 +3339,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 5,
+          "new_rumah_overall": 6,
           "new_businesses": [],
-          "persentase": 20.39
+          "persentase": 20.45
         },
         {
           "kec_name": "MOUTONG",
           "kec_id": "83d8e49d-1cd7-453f-8542-629d6f602ae2",
-          "total_prelist": 9067,
+          "total_prelist": 9066,
           "total_draft": 16,
-          "total_open": 6936,
-          "total_submitted": 2115,
-          "total_rejected": 39,
-          "total_approved": 564,
-          "total_submitted_pencacah": 1512,
+          "total_open": 6934,
+          "total_submitted": 2116,
+          "total_rejected": 40,
+          "total_approved": 563,
+          "total_submitted_pencacah": 1513,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3367,18 +3367,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 3,
           "new_businesses": [],
-          "persentase": 23.33
+          "persentase": 23.34
         },
         {
           "kec_name": "BOLANO LAMBUNU",
           "kec_id": "1dc08110-bfa6-4157-afcf-163a7a31ee13",
-          "total_prelist": 8730,
-          "total_draft": 352,
-          "total_open": 5624,
-          "total_submitted": 2754,
-          "total_rejected": 78,
-          "total_approved": 1380,
-          "total_submitted_pencacah": 1296,
+          "total_prelist": 8729,
+          "total_draft": 354,
+          "total_open": 5619,
+          "total_submitted": 2756,
+          "total_rejected": 77,
+          "total_approved": 1381,
+          "total_submitted_pencacah": 1298,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3391,16 +3391,16 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 9,
+          "new_rumah_overall": 8,
           "new_businesses": [],
-          "persentase": 31.55
+          "persentase": 31.57
         },
         {
           "kec_name": "TAOPA",
           "kec_id": "eef80b48-ab88-4243-b0ab-9bd61208f9ac",
           "total_prelist": 5875,
-          "total_draft": 91,
-          "total_open": 4251,
+          "total_draft": 92,
+          "total_open": 4250,
           "total_submitted": 1533,
           "total_rejected": 35,
           "total_approved": 314,
@@ -3425,12 +3425,12 @@ window.IPAS_DATA = {
           "kec_name": "BOLANO",
           "kec_id": "fa5a857c-f56b-4c61-a119-42d8a2632797",
           "total_prelist": 6749,
-          "total_draft": 111,
-          "total_open": 4900,
-          "total_submitted": 1738,
-          "total_rejected": 66,
+          "total_draft": 109,
+          "total_open": 4899,
+          "total_submitted": 1741,
+          "total_rejected": 65,
           "total_approved": 311,
-          "total_submitted_pencacah": 1361,
+          "total_submitted_pencacah": 1365,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3443,20 +3443,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 5,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 4,
+          "new_rumah_overall": 6,
           "new_businesses": [],
-          "persentase": 25.75
+          "persentase": 25.8
         },
         {
           "kec_name": "ONGKA MALINO",
           "kec_id": "ad36f493-23a3-46bb-b036-508508581915",
-          "total_prelist": 7705,
+          "total_prelist": 7706,
           "total_draft": 30,
-          "total_open": 5406,
-          "total_submitted": 2269,
-          "total_rejected": 106,
+          "total_open": 5397,
+          "total_submitted": 2279,
+          "total_rejected": 104,
           "total_approved": 1215,
-          "total_submitted_pencacah": 948,
+          "total_submitted_pencacah": 960,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3466,26 +3466,26 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 5,
+          "new_usaha_overall": 6,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 8,
+          "new_rumah_overall": 10,
           "new_businesses": [],
-          "persentase": 29.45
+          "persentase": 29.57
         }
       ]
     },
     {
       "kabupaten": "[09] TOJO UNA-UNA",
       "total_prelist": 60607,
-      "total_draft": 1064,
-      "total_open": 43407,
-      "total_submitted": 16136,
+      "total_draft": 1071,
+      "total_open": 43390,
+      "total_submitted": 16146,
       "total_rejected": 1459,
-      "total_approved": 7371,
-      "total_submitted_pencacah": 7302,
+      "total_approved": 7378,
+      "total_submitted_pencacah": 7305,
       "total_submitted_respondent": 4,
-      "persentase": 26.62,
+      "persentase": 26.64,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -3497,20 +3497,20 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 55,
-      "new_rumah_overall": 177,
+      "new_usaha_overall": 54,
+      "new_rumah_overall": 183,
       "new_businesses": [],
       "kecamatan_list": [
         {
           "kec_name": "TOJO BARAT",
           "kec_id": "82804cbe-8c3d-4a4e-b06d-ea475721eb43",
           "total_prelist": 4977,
-          "total_draft": 173,
-          "total_open": 3485,
-          "total_submitted": 1319,
+          "total_draft": 174,
+          "total_open": 3483,
+          "total_submitted": 1320,
           "total_rejected": 195,
           "total_approved": 381,
-          "total_submitted_pencacah": 743,
+          "total_submitted_pencacah": 744,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3525,7 +3525,7 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 5,
           "new_businesses": [],
-          "persentase": 26.5
+          "persentase": 26.52
         },
         {
           "kec_name": "TOJO",
@@ -3535,8 +3535,8 @@ window.IPAS_DATA = {
           "total_open": 3924,
           "total_submitted": 1315,
           "total_rejected": 136,
-          "total_approved": 556,
-          "total_submitted_pencacah": 623,
+          "total_approved": 557,
+          "total_submitted_pencacah": 622,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3556,13 +3556,13 @@ window.IPAS_DATA = {
         {
           "kec_name": "ULUBONGKA",
           "kec_id": "38034715-8fc4-4aa8-b887-752b8bd83417",
-          "total_prelist": 7020,
+          "total_prelist": 7019,
           "total_draft": 46,
-          "total_open": 4736,
-          "total_submitted": 2238,
+          "total_open": 4734,
+          "total_submitted": 2239,
           "total_rejected": 104,
-          "total_approved": 1069,
-          "total_submitted_pencacah": 1064,
+          "total_approved": 1076,
+          "total_submitted_pencacah": 1058,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3575,19 +3575,19 @@ window.IPAS_DATA = {
           "new_usaha_overall": 8,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 38,
+          "new_rumah_overall": 41,
           "new_businesses": [],
-          "persentase": 31.88
+          "persentase": 31.9
         },
         {
           "kec_name": "AMPANA TETE",
           "kec_id": "c5d104a9-0aa2-4ba8-a8c8-1c211de4f455",
           "total_prelist": 10480,
-          "total_draft": 133,
-          "total_open": 7167,
+          "total_draft": 135,
+          "total_open": 7165,
           "total_submitted": 3180,
-          "total_rejected": 215,
-          "total_approved": 2138,
+          "total_rejected": 214,
+          "total_approved": 2139,
           "total_submitted_pencacah": 827,
           "total_submitted_respondent": 0,
           "today_completed": 0,
@@ -3608,13 +3608,13 @@ window.IPAS_DATA = {
         {
           "kec_name": "AMPANA KOTA",
           "kec_id": "ee81aba3-2a27-4035-a8ec-f46af32b90fb",
-          "total_prelist": 8228,
-          "total_draft": 215,
-          "total_open": 6033,
-          "total_submitted": 1980,
-          "total_rejected": 237,
-          "total_approved": 1071,
-          "total_submitted_pencacah": 671,
+          "total_prelist": 8229,
+          "total_draft": 217,
+          "total_open": 6030,
+          "total_submitted": 1982,
+          "total_rejected": 239,
+          "total_approved": 1069,
+          "total_submitted_pencacah": 673,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3627,20 +3627,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 3,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 48,
+          "new_rumah_overall": 49,
           "new_businesses": [],
-          "persentase": 24.06
+          "persentase": 24.09
         },
         {
           "kec_name": "RATOLINDO",
           "kec_id": "7d333cb8-ca0e-4ded-8b02-ba02fa79bd9f",
           "total_prelist": 11926,
-          "total_draft": 154,
-          "total_open": 9054,
-          "total_submitted": 2718,
-          "total_rejected": 269,
+          "total_draft": 155,
+          "total_open": 9051,
+          "total_submitted": 2720,
+          "total_rejected": 268,
           "total_approved": 948,
-          "total_submitted_pencacah": 1500,
+          "total_submitted_pencacah": 1503,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3650,12 +3650,12 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 12,
+          "new_usaha_overall": 11,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 28,
           "new_businesses": [],
-          "persentase": 22.79
+          "persentase": 22.81
         },
         {
           "kec_name": "UNA - UNA",
@@ -3688,11 +3688,11 @@ window.IPAS_DATA = {
           "kec_id": "b7c11a88-a917-46c7-9e85-1408fd8cedf9",
           "total_prelist": 1889,
           "total_draft": 12,
-          "total_open": 1327,
-          "total_submitted": 550,
+          "total_open": 1325,
+          "total_submitted": 552,
           "total_rejected": 78,
           "total_approved": 170,
-          "total_submitted_pencacah": 302,
+          "total_submitted_pencacah": 304,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3707,18 +3707,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 9,
           "new_businesses": [],
-          "persentase": 29.12
+          "persentase": 29.22
         },
         {
           "kec_name": "TOGEAN",
           "kec_id": "807deb70-de48-4df9-9475-768b0e8612a0",
-          "total_prelist": 3294,
+          "total_prelist": 3295,
           "total_draft": 34,
-          "total_open": 2386,
-          "total_submitted": 874,
+          "total_open": 2385,
+          "total_submitted": 876,
           "total_rejected": 69,
           "total_approved": 394,
-          "total_submitted_pencacah": 411,
+          "total_submitted_pencacah": 413,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3731,15 +3731,15 @@ window.IPAS_DATA = {
           "new_usaha_overall": 5,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 7,
+          "new_rumah_overall": 8,
           "new_businesses": [],
-          "persentase": 26.53
+          "persentase": 26.59
         },
         {
           "kec_name": "WALEA KEPULAUAN",
           "kec_id": "dab5d5a2-5e96-488f-8746-2bae6ad0b6d2",
-          "total_prelist": 1577,
-          "total_draft": 74,
+          "total_prelist": 1578,
+          "total_draft": 75,
           "total_open": 1114,
           "total_submitted": 389,
           "total_rejected": 10,
@@ -3757,9 +3757,9 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 2,
+          "new_rumah_overall": 3,
           "new_businesses": [],
-          "persentase": 24.67
+          "persentase": 24.65
         },
         {
           "kec_name": "WALEA BESAR",
@@ -3818,14 +3818,14 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[10] SIGI",
       "total_prelist": 108247,
-      "total_draft": 1741,
-      "total_open": 81352,
-      "total_submitted": 25154,
-      "total_rejected": 1609,
-      "total_approved": 9660,
-      "total_submitted_pencacah": 13872,
+      "total_draft": 1743,
+      "total_open": 81311,
+      "total_submitted": 25193,
+      "total_rejected": 1625,
+      "total_approved": 9662,
+      "total_submitted_pencacah": 13893,
       "total_submitted_respondent": 13,
-      "persentase": 23.24,
+      "persentase": 23.27,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -3837,8 +3837,8 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 48,
-      "new_rumah_overall": 178,
+      "new_usaha_overall": 47,
+      "new_rumah_overall": 177,
       "new_businesses": [],
       "kecamatan_list": [
         {
@@ -3846,11 +3846,37 @@ window.IPAS_DATA = {
           "kec_id": "a33c878a-c4ce-4715-ab70-507111c528e9",
           "total_prelist": 3318,
           "total_draft": 2,
-          "total_open": 2237,
-          "total_submitted": 1079,
+          "total_open": 2236,
+          "total_submitted": 1080,
           "total_rejected": 87,
-          "total_approved": 425,
-          "total_submitted_pencacah": 567,
+          "total_approved": 429,
+          "total_submitted_pencacah": 564,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 0,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 4,
+          "new_businesses": [],
+          "persentase": 32.55
+        },
+        {
+          "kec_name": "KULAWI SELATAN",
+          "kec_id": "596691eb-1b84-4e6d-b01b-19c0e367b590",
+          "total_prelist": 3565,
+          "total_draft": 8,
+          "total_open": 2683,
+          "total_submitted": 874,
+          "total_rejected": 16,
+          "total_approved": 200,
+          "total_submitted_pencacah": 658,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3865,44 +3891,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 4,
           "new_businesses": [],
-          "persentase": 32.52
-        },
-        {
-          "kec_name": "KULAWI SELATAN",
-          "kec_id": "596691eb-1b84-4e6d-b01b-19c0e367b590",
-          "total_prelist": 3565,
-          "total_draft": 8,
-          "total_open": 2684,
-          "total_submitted": 873,
-          "total_rejected": 14,
-          "total_approved": 198,
-          "total_submitted_pencacah": 661,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 3,
-          "new_businesses": [],
-          "persentase": 24.49
+          "persentase": 24.52
         },
         {
           "kec_name": "KULAWI",
           "kec_id": "21cc28f2-e251-4908-9ce6-90e0a2f150cd",
-          "total_prelist": 6167,
+          "total_prelist": 6168,
           "total_draft": 14,
           "total_open": 5135,
-          "total_submitted": 1018,
-          "total_rejected": 100,
+          "total_submitted": 1019,
+          "total_rejected": 99,
           "total_approved": 515,
-          "total_submitted_pencacah": 403,
+          "total_submitted_pencacah": 405,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3912,19 +3912,19 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 5,
+          "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 10,
+          "new_rumah_overall": 6,
           "new_businesses": [],
-          "persentase": 16.51
+          "persentase": 16.52
         },
         {
           "kec_name": "LINDU",
           "kec_id": "2cff5ba2-925a-4543-a8c3-c9657785dbca",
-          "total_prelist": 2017,
+          "total_prelist": 2016,
           "total_draft": 4,
-          "total_open": 1616,
+          "total_open": 1615,
           "total_submitted": 397,
           "total_rejected": 21,
           "total_approved": 108,
@@ -3943,18 +3943,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 3,
           "new_businesses": [],
-          "persentase": 19.68
+          "persentase": 19.69
         },
         {
           "kec_name": "NOKILALAKI",
           "kec_id": "56ecc10a-f3bf-44fb-92c8-197bc17127c9",
-          "total_prelist": 2250,
+          "total_prelist": 2251,
           "total_draft": 4,
           "total_open": 1745,
-          "total_submitted": 501,
+          "total_submitted": 502,
           "total_rejected": 18,
           "total_approved": 479,
-          "total_submitted_pencacah": 4,
+          "total_submitted_pencacah": 5,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3964,23 +3964,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
+          "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 28,
           "new_businesses": [],
-          "persentase": 22.27
+          "persentase": 22.3
         },
         {
           "kec_name": "PALOLO",
           "kec_id": "be388afe-d903-4264-a8b8-37b4fda22a88",
-          "total_prelist": 11662,
-          "total_draft": 236,
-          "total_open": 9324,
-          "total_submitted": 2102,
+          "total_prelist": 11665,
+          "total_draft": 237,
+          "total_open": 9315,
+          "total_submitted": 2113,
           "total_rejected": 97,
-          "total_approved": 1406,
-          "total_submitted_pencacah": 599,
+          "total_approved": 1409,
+          "total_submitted_pencacah": 607,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -3990,23 +3990,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 9,
+          "new_usaha_overall": 8,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 24,
+          "new_rumah_overall": 23,
           "new_businesses": [],
-          "persentase": 18.02
+          "persentase": 18.11
         },
         {
           "kec_name": "GUMBASA",
           "kec_id": "73a8378b-cd0b-4761-bde9-f8746044e41d",
-          "total_prelist": 5621,
-          "total_draft": 73,
-          "total_open": 4001,
+          "total_prelist": 5620,
+          "total_draft": 74,
+          "total_open": 3999,
           "total_submitted": 1547,
-          "total_rejected": 228,
+          "total_rejected": 229,
           "total_approved": 331,
-          "total_submitted_pencacah": 988,
+          "total_submitted_pencacah": 987,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4021,18 +4021,96 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 2,
           "new_businesses": [],
-          "persentase": 27.52
+          "persentase": 27.53
         },
         {
           "kec_name": "DOLO SELATAN",
           "kec_id": "fb9dcba4-ab2a-4dd7-898e-b987fd04ad46",
           "total_prelist": 6924,
-          "total_draft": 76,
-          "total_open": 5005,
+          "total_draft": 77,
+          "total_open": 5004,
           "total_submitted": 1843,
-          "total_rejected": 188,
+          "total_rejected": 187,
           "total_approved": 513,
-          "total_submitted_pencacah": 1142,
+          "total_submitted_pencacah": 1143,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 1,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 5,
+          "new_businesses": [],
+          "persentase": 26.62
+        },
+        {
+          "kec_name": "DOLO BARAT",
+          "kec_id": "8abf6762-528b-4387-ab8e-5bbfd1bd4ff1",
+          "total_prelist": 6748,
+          "total_draft": 253,
+          "total_open": 4411,
+          "total_submitted": 2084,
+          "total_rejected": 254,
+          "total_approved": 1102,
+          "total_submitted_pencacah": 728,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 2,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 12,
+          "new_businesses": [],
+          "persentase": 30.88
+        },
+        {
+          "kec_name": "TANAMBULAVA",
+          "kec_id": "f46c850a-a828-405e-b077-fe937ebc9c87",
+          "total_prelist": 4205,
+          "total_draft": 94,
+          "total_open": 2933,
+          "total_submitted": 1178,
+          "total_rejected": 22,
+          "total_approved": 422,
+          "total_submitted_pencacah": 734,
+          "total_submitted_respondent": 0,
+          "today_completed": 0,
+          "yesterday_completed": 0,
+          "two_days_ago_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {},
+          "new_usaha_today": 0,
+          "new_usaha_yesterday": 0,
+          "new_usaha_overall": 4,
+          "new_rumah_today": 0,
+          "new_rumah_yesterday": 0,
+          "new_rumah_overall": 14,
+          "new_businesses": [],
+          "persentase": 28.01
+        },
+        {
+          "kec_name": "DOLO",
+          "kec_id": "a74c23ad-508c-476a-ad16-542172650e06",
+          "total_prelist": 10029,
+          "total_draft": 141,
+          "total_open": 7246,
+          "total_submitted": 2642,
+          "total_rejected": 50,
+          "total_approved": 415,
+          "total_submitted_pencacah": 2177,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4047,96 +4125,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 8,
           "new_businesses": [],
-          "persentase": 26.62
-        },
-        {
-          "kec_name": "DOLO BARAT",
-          "kec_id": "8abf6762-528b-4387-ab8e-5bbfd1bd4ff1",
-          "total_prelist": 6748,
-          "total_draft": 257,
-          "total_open": 4414,
-          "total_submitted": 2077,
-          "total_rejected": 255,
-          "total_approved": 1102,
-          "total_submitted_pencacah": 720,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 2,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 11,
-          "new_businesses": [],
-          "persentase": 30.78
-        },
-        {
-          "kec_name": "TANAMBULAVA",
-          "kec_id": "f46c850a-a828-405e-b077-fe937ebc9c87",
-          "total_prelist": 4205,
-          "total_draft": 94,
-          "total_open": 2936,
-          "total_submitted": 1175,
-          "total_rejected": 23,
-          "total_approved": 416,
-          "total_submitted_pencacah": 736,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 4,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 12,
-          "new_businesses": [],
-          "persentase": 27.94
-        },
-        {
-          "kec_name": "DOLO",
-          "kec_id": "a74c23ad-508c-476a-ad16-542172650e06",
-          "total_prelist": 10030,
-          "total_draft": 142,
-          "total_open": 7248,
-          "total_submitted": 2640,
-          "total_rejected": 49,
-          "total_approved": 415,
-          "total_submitted_pencacah": 2176,
-          "total_submitted_respondent": 0,
-          "today_completed": 0,
-          "yesterday_completed": 0,
-          "two_days_ago_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed_breakdown": {},
-          "new_usaha_today": 0,
-          "new_usaha_yesterday": 0,
-          "new_usaha_overall": 1,
-          "new_rumah_today": 0,
-          "new_rumah_yesterday": 0,
-          "new_rumah_overall": 7,
-          "new_businesses": [],
-          "persentase": 26.32
+          "persentase": 26.34
         },
         {
           "kec_name": "SIGI BIROMARU",
           "kec_id": "4f84b7b6-595b-4892-adbd-db4c77d9c96d",
-          "total_prelist": 19589,
-          "total_draft": 310,
-          "total_open": 15183,
-          "total_submitted": 4096,
-          "total_rejected": 160,
-          "total_approved": 1224,
-          "total_submitted_pencacah": 2712,
+          "total_prelist": 19587,
+          "total_draft": 314,
+          "total_open": 15173,
+          "total_submitted": 4100,
+          "total_rejected": 162,
+          "total_approved": 1222,
+          "total_submitted_pencacah": 2716,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4149,20 +4149,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 10,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 39,
+          "new_rumah_overall": 40,
           "new_businesses": [],
-          "persentase": 20.91
+          "persentase": 20.93
         },
         {
           "kec_name": "SIGI KOTA",
           "kec_id": "f58e07d8-4dad-4ecc-9297-e66165fcb191",
-          "total_prelist": 6953,
-          "total_draft": 276,
-          "total_open": 5274,
-          "total_submitted": 1403,
-          "total_rejected": 61,
-          "total_approved": 1116,
-          "total_submitted_pencacah": 226,
+          "total_prelist": 6952,
+          "total_draft": 274,
+          "total_open": 5272,
+          "total_submitted": 1406,
+          "total_rejected": 72,
+          "total_approved": 1107,
+          "total_submitted_pencacah": 227,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4175,20 +4175,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 8,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 11,
+          "new_rumah_overall": 14,
           "new_businesses": [],
-          "persentase": 20.18
+          "persentase": 20.22
         },
         {
           "kec_name": "MARAWOLA",
           "kec_id": "c8020894-4d15-433a-8de4-31ea83480352",
-          "total_prelist": 12579,
-          "total_draft": 215,
-          "total_open": 9769,
-          "total_submitted": 2595,
-          "total_rejected": 66,
-          "total_approved": 707,
-          "total_submitted_pencacah": 1820,
+          "total_prelist": 12580,
+          "total_draft": 217,
+          "total_open": 9766,
+          "total_submitted": 2597,
+          "total_rejected": 67,
+          "total_approved": 705,
+          "total_submitted_pencacah": 1823,
           "total_submitted_respondent": 2,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4198,12 +4198,12 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 3,
+          "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 4,
+          "new_rumah_overall": 6,
           "new_businesses": [],
-          "persentase": 20.63
+          "persentase": 20.64
         },
         {
           "kec_name": "MARAWOLA BARAT",
@@ -4234,13 +4234,13 @@ window.IPAS_DATA = {
         {
           "kec_name": "KINOVARO",
           "kec_id": "78a16357-c302-4f7c-9fa6-4c20c38ab82a",
-          "total_prelist": 4371,
+          "total_prelist": 4372,
           "total_draft": 27,
-          "total_open": 3103,
-          "total_submitted": 1241,
-          "total_rejected": 183,
+          "total_open": 3101,
+          "total_submitted": 1244,
+          "total_rejected": 185,
           "total_approved": 293,
-          "total_submitted_pencacah": 765,
+          "total_submitted_pencacah": 766,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4253,23 +4253,23 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 11,
+          "new_rumah_overall": 7,
           "new_businesses": [],
-          "persentase": 28.39
+          "persentase": 28.45
         }
       ]
     },
     {
       "kabupaten": "[11] BANGGAI LAUT",
       "total_prelist": 28572,
-      "total_draft": 402,
-      "total_open": 20304,
-      "total_submitted": 7866,
-      "total_rejected": 388,
-      "total_approved": 5135,
-      "total_submitted_pencacah": 2318,
+      "total_draft": 404,
+      "total_open": 20292,
+      "total_submitted": 7876,
+      "total_rejected": 393,
+      "total_approved": 5132,
+      "total_submitted_pencacah": 2326,
       "total_submitted_respondent": 25,
-      "persentase": 27.53,
+      "persentase": 27.57,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -4282,7 +4282,7 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
       "new_usaha_overall": 22,
-      "new_rumah_overall": 184,
+      "new_rumah_overall": 181,
       "new_businesses": [],
       "kecamatan_list": [
         {
@@ -4290,11 +4290,11 @@ window.IPAS_DATA = {
           "kec_id": "3d771ffa-25dc-4292-a9d3-538f78762950",
           "total_prelist": 3428,
           "total_draft": 31,
-          "total_open": 2458,
-          "total_submitted": 939,
+          "total_open": 2455,
+          "total_submitted": 942,
           "total_rejected": 66,
           "total_approved": 707,
-          "total_submitted_pencacah": 166,
+          "total_submitted_pencacah": 169,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4309,7 +4309,7 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 25,
           "new_businesses": [],
-          "persentase": 27.39
+          "persentase": 27.48
         },
         {
           "kec_name": "LABOBO",
@@ -4341,12 +4341,12 @@ window.IPAS_DATA = {
           "kec_name": "BANGGAI UTARA",
           "kec_id": "f7028561-08bc-4482-a1ad-da94b0aa612f",
           "total_prelist": 2831,
-          "total_draft": 121,
-          "total_open": 2083,
-          "total_submitted": 627,
+          "total_draft": 123,
+          "total_open": 2079,
+          "total_submitted": 629,
           "total_rejected": 16,
           "total_approved": 150,
-          "total_submitted_pencacah": 461,
+          "total_submitted_pencacah": 463,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4361,18 +4361,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 27,
           "new_businesses": [],
-          "persentase": 22.15
+          "persentase": 22.22
         },
         {
           "kec_name": "BANGGAI",
           "kec_id": "2592bed7-1f8c-407a-8544-c19e8948d0e7",
-          "total_prelist": 10435,
+          "total_prelist": 10436,
           "total_draft": 85,
-          "total_open": 7238,
-          "total_submitted": 3112,
-          "total_rejected": 169,
-          "total_approved": 1819,
-          "total_submitted_pencacah": 1102,
+          "total_open": 7236,
+          "total_submitted": 3115,
+          "total_rejected": 170,
+          "total_approved": 1817,
+          "total_submitted_pencacah": 1106,
           "total_submitted_respondent": 22,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4385,9 +4385,9 @@ window.IPAS_DATA = {
           "new_usaha_overall": 4,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 65,
+          "new_rumah_overall": 64,
           "new_businesses": [],
-          "persentase": 29.82
+          "persentase": 29.85
         },
         {
           "kec_name": "BANGGAI TENGAH",
@@ -4411,7 +4411,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 5,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 27,
+          "new_rumah_overall": 26,
           "new_businesses": [],
           "persentase": 29.62
         },
@@ -4420,11 +4420,11 @@ window.IPAS_DATA = {
           "kec_id": "844993c2-c95c-4061-8d23-1e5c34a5e52c",
           "total_prelist": 2162,
           "total_draft": 4,
-          "total_open": 1509,
-          "total_submitted": 649,
-          "total_rejected": 38,
-          "total_approved": 221,
-          "total_submitted_pencacah": 390,
+          "total_open": 1507,
+          "total_submitted": 651,
+          "total_rejected": 41,
+          "total_approved": 219,
+          "total_submitted_pencacah": 391,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4437,9 +4437,9 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 5,
+          "new_rumah_overall": 6,
           "new_businesses": [],
-          "persentase": 30.02
+          "persentase": 30.11
         },
         {
           "kec_name": "BOKAN KEPULAUAN",
@@ -4448,9 +4448,9 @@ window.IPAS_DATA = {
           "total_draft": 34,
           "total_open": 3211,
           "total_submitted": 999,
-          "total_rejected": 67,
-          "total_approved": 828,
-          "total_submitted_pencacah": 104,
+          "total_rejected": 68,
+          "total_approved": 829,
+          "total_submitted_pencacah": 102,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4463,7 +4463,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 5,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 32,
+          "new_rumah_overall": 30,
           "new_businesses": [],
           "persentase": 23.54
         }
@@ -4472,12 +4472,12 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[12] MOROWALI UTARA",
       "total_prelist": 43731,
-      "total_draft": 745,
-      "total_open": 34690,
-      "total_submitted": 8296,
+      "total_draft": 748,
+      "total_open": 34686,
+      "total_submitted": 8297,
       "total_rejected": 441,
-      "total_approved": 3356,
-      "total_submitted_pencacah": 4498,
+      "total_approved": 3361,
+      "total_submitted_pencacah": 4494,
       "total_submitted_respondent": 1,
       "persentase": 18.97,
       "today_completed": 0,
@@ -4491,8 +4491,8 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 80,
-      "new_rumah_overall": 218,
+      "new_usaha_overall": 81,
+      "new_rumah_overall": 220,
       "new_businesses": [],
       "kecamatan_list": [
         {
@@ -4502,9 +4502,9 @@ window.IPAS_DATA = {
           "total_draft": 52,
           "total_open": 3394,
           "total_submitted": 641,
-          "total_rejected": 55,
+          "total_rejected": 54,
           "total_approved": 242,
-          "total_submitted_pencacah": 344,
+          "total_submitted_pencacah": 345,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4517,7 +4517,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 2,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 16,
+          "new_rumah_overall": 17,
           "new_businesses": [],
           "persentase": 15.68
         },
@@ -4529,8 +4529,8 @@ window.IPAS_DATA = {
           "total_open": 4660,
           "total_submitted": 896,
           "total_rejected": 9,
-          "total_approved": 826,
-          "total_submitted_pencacah": 61,
+          "total_approved": 831,
+          "total_submitted_pencacah": 56,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4543,7 +4543,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 6,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 18,
+          "new_rumah_overall": 19,
           "new_businesses": [],
           "persentase": 15.91
         },
@@ -4576,13 +4576,13 @@ window.IPAS_DATA = {
         {
           "kec_name": "PETASIA TIMUR",
           "kec_id": "27551ce3-6793-439e-933e-2067627aacb0",
-          "total_prelist": 6921,
-          "total_draft": 117,
+          "total_prelist": 6922,
+          "total_draft": 118,
           "total_open": 5621,
           "total_submitted": 1183,
-          "total_rejected": 9,
+          "total_rejected": 10,
           "total_approved": 425,
-          "total_submitted_pencacah": 748,
+          "total_submitted_pencacah": 747,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4592,7 +4592,7 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 18,
+          "new_usaha_overall": 19,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 25,
@@ -4603,8 +4603,8 @@ window.IPAS_DATA = {
           "kec_name": "PETASIA",
           "kec_id": "d073602c-65dc-42a5-8adb-9cb36538fc5c",
           "total_prelist": 7218,
-          "total_draft": 214,
-          "total_open": 5884,
+          "total_draft": 215,
+          "total_open": 5883,
           "total_submitted": 1120,
           "total_rejected": 21,
           "total_approved": 242,
@@ -4621,7 +4621,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 17,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 57,
+          "new_rumah_overall": 58,
           "new_businesses": [],
           "persentase": 15.52
         },
@@ -4656,11 +4656,11 @@ window.IPAS_DATA = {
           "kec_id": "52d02a96-c109-435d-afd8-4627b862e4ab",
           "total_prelist": 2917,
           "total_draft": 145,
-          "total_open": 2014,
-          "total_submitted": 758,
+          "total_open": 2013,
+          "total_submitted": 759,
           "total_rejected": 4,
           "total_approved": 65,
-          "total_submitted_pencacah": 689,
+          "total_submitted_pencacah": 690,
           "total_submitted_respondent": 0,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4675,7 +4675,7 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 21,
           "new_businesses": [],
-          "persentase": 25.99
+          "persentase": 26.02
         },
         {
           "kec_name": "SOYO JAYA",
@@ -4707,8 +4707,8 @@ window.IPAS_DATA = {
           "kec_name": "BUNGKU UTARA",
           "kec_id": "b298ed68-e867-42ba-aed0-31312ed37c05",
           "total_prelist": 4971,
-          "total_draft": 15,
-          "total_open": 3831,
+          "total_draft": 16,
+          "total_open": 3830,
           "total_submitted": 1125,
           "total_rejected": 119,
           "total_approved": 315,
@@ -4725,7 +4725,7 @@ window.IPAS_DATA = {
           "new_usaha_overall": 7,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 25,
+          "new_rumah_overall": 24,
           "new_businesses": [],
           "persentase": 22.63
         },
@@ -4760,14 +4760,14 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[71] PALU",
       "total_prelist": 172294,
-      "total_draft": 8156,
-      "total_open": 139530,
-      "total_submitted": 24608,
-      "total_rejected": 1244,
-      "total_approved": 11478,
-      "total_submitted_pencacah": 11861,
+      "total_draft": 8161,
+      "total_open": 139505,
+      "total_submitted": 24628,
+      "total_rejected": 1243,
+      "total_approved": 11485,
+      "total_submitted_pencacah": 11875,
       "total_submitted_respondent": 25,
-      "persentase": 14.28,
+      "persentase": 14.29,
       "today_completed": 0,
       "yesterday_completed": 0,
       "two_days_ago_completed": 0,
@@ -4779,20 +4779,20 @@ window.IPAS_DATA = {
       "new_usaha_yesterday": 0,
       "new_rumah_today": 0,
       "new_rumah_yesterday": 0,
-      "new_usaha_overall": 67,
-      "new_rumah_overall": 489,
+      "new_usaha_overall": 73,
+      "new_rumah_overall": 473,
       "new_businesses": [],
       "kecamatan_list": [
         {
           "kec_name": "PALU BARAT",
           "kec_id": "145b6633-6e57-44d8-b62c-9dbe124af04a",
-          "total_prelist": 20793,
-          "total_draft": 741,
-          "total_open": 16620,
-          "total_submitted": 3432,
-          "total_rejected": 90,
+          "total_prelist": 20796,
+          "total_draft": 745,
+          "total_open": 16616,
+          "total_submitted": 3435,
+          "total_rejected": 86,
           "total_approved": 714,
-          "total_submitted_pencacah": 2625,
+          "total_submitted_pencacah": 2632,
           "total_submitted_respondent": 3,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4802,23 +4802,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 14,
+          "new_usaha_overall": 20,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 37,
+          "new_rumah_overall": 41,
           "new_businesses": [],
-          "persentase": 16.51
+          "persentase": 16.52
         },
         {
           "kec_name": "TATANGA",
           "kec_id": "c3a96057-476b-4a0e-b08b-c5143d46ecfd",
-          "total_prelist": 24007,
-          "total_draft": 467,
-          "total_open": 20239,
-          "total_submitted": 3301,
-          "total_rejected": 263,
-          "total_approved": 1451,
-          "total_submitted_pencacah": 1586,
+          "total_prelist": 24005,
+          "total_draft": 466,
+          "total_open": 20235,
+          "total_submitted": 3304,
+          "total_rejected": 265,
+          "total_approved": 1454,
+          "total_submitted_pencacah": 1584,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4833,18 +4833,18 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 52,
           "new_businesses": [],
-          "persentase": 13.75
+          "persentase": 13.76
         },
         {
           "kec_name": "ULUJADI",
           "kec_id": "8ec30a25-67aa-421a-a887-f1b683ff2371",
-          "total_prelist": 15401,
-          "total_draft": 486,
-          "total_open": 12136,
-          "total_submitted": 2779,
+          "total_prelist": 15402,
+          "total_draft": 488,
+          "total_open": 12133,
+          "total_submitted": 2781,
           "total_rejected": 93,
-          "total_approved": 1870,
-          "total_submitted_pencacah": 815,
+          "total_approved": 1871,
+          "total_submitted_pencacah": 816,
           "total_submitted_respondent": 1,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4854,23 +4854,23 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 4,
+          "new_usaha_overall": 5,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 56,
+          "new_rumah_overall": 37,
           "new_businesses": [],
-          "persentase": 18.04
+          "persentase": 18.06
         },
         {
           "kec_name": "PALU SELATAN",
           "kec_id": "2b67d591-f1f8-4bc5-b655-968adf0d20f9",
-          "total_prelist": 32142,
-          "total_draft": 2271,
-          "total_open": 25665,
-          "total_submitted": 4206,
+          "total_prelist": 32140,
+          "total_draft": 2270,
+          "total_open": 25662,
+          "total_submitted": 4208,
           "total_rejected": 160,
-          "total_approved": 2500,
-          "total_submitted_pencacah": 1540,
+          "total_approved": 2501,
+          "total_submitted_pencacah": 1541,
           "total_submitted_respondent": 6,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4880,10 +4880,10 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "new_usaha_today": 0,
           "new_usaha_yesterday": 0,
-          "new_usaha_overall": 8,
+          "new_usaha_overall": 7,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 84,
+          "new_rumah_overall": 79,
           "new_businesses": [],
           "persentase": 13.09
         },
@@ -4891,12 +4891,12 @@ window.IPAS_DATA = {
           "kec_name": "PALU TIMUR",
           "kec_id": "1eba08ca-b70b-45fc-b51c-3d4f697093ef",
           "total_prelist": 21838,
-          "total_draft": 1050,
-          "total_open": 17672,
-          "total_submitted": 3116,
-          "total_rejected": 145,
-          "total_approved": 938,
-          "total_submitted_pencacah": 2031,
+          "total_draft": 1052,
+          "total_open": 17667,
+          "total_submitted": 3119,
+          "total_rejected": 144,
+          "total_approved": 939,
+          "total_submitted_pencacah": 2034,
           "total_submitted_respondent": 2,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4909,20 +4909,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 0,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 26,
+          "new_rumah_overall": 28,
           "new_businesses": [],
-          "persentase": 14.27
+          "persentase": 14.28
         },
         {
           "kec_name": "MANTIKULORE",
           "kec_id": "9138f47c-c2c1-4e86-9faa-bec0250ff6b0",
-          "total_prelist": 38662,
+          "total_prelist": 38663,
           "total_draft": 1844,
-          "total_open": 31767,
-          "total_submitted": 5051,
-          "total_rejected": 305,
+          "total_open": 31763,
+          "total_submitted": 5056,
+          "total_rejected": 307,
           "total_approved": 2164,
-          "total_submitted_pencacah": 2580,
+          "total_submitted_pencacah": 2583,
           "total_submitted_respondent": 2,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4935,9 +4935,9 @@ window.IPAS_DATA = {
           "new_usaha_overall": 30,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 211,
+          "new_rumah_overall": 214,
           "new_businesses": [],
-          "persentase": 13.06
+          "persentase": 13.08
         },
         {
           "kec_name": "PALU UTARA",
@@ -4961,20 +4961,20 @@ window.IPAS_DATA = {
           "new_usaha_overall": 1,
           "new_rumah_today": 0,
           "new_rumah_yesterday": 0,
-          "new_rumah_overall": 20,
+          "new_rumah_overall": 19,
           "new_businesses": [],
           "persentase": 14.31
         },
         {
           "kec_name": "TAWAELI",
           "kec_id": "fbe9ae12-e179-4253-9350-99782221afa6",
-          "total_prelist": 9171,
-          "total_draft": 601,
-          "total_open": 7283,
-          "total_submitted": 1287,
+          "total_prelist": 9170,
+          "total_draft": 600,
+          "total_open": 7281,
+          "total_submitted": 1289,
           "total_rejected": 74,
-          "total_approved": 732,
-          "total_submitted_pencacah": 479,
+          "total_approved": 733,
+          "total_submitted_pencacah": 480,
           "total_submitted_respondent": 2,
           "today_completed": 0,
           "yesterday_completed": 0,
@@ -4989,7 +4989,7 @@ window.IPAS_DATA = {
           "new_rumah_yesterday": 0,
           "new_rumah_overall": 3,
           "new_businesses": [],
-          "persentase": 14.03
+          "persentase": 14.06
         }
       ]
     }
@@ -8812,8 +8812,8 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[10] SIGI",
       "total_prelist": 22,
-      "total_draft": 3,
-      "total_open": 16,
+      "total_draft": 4,
+      "total_open": 15,
       "total_submitted": 3,
       "total_rejected": 0,
       "total_approved": 3,
@@ -9989,15 +9989,108 @@ window.IPAS_DATA = {
     }
   ],
   "se_umum_sls_status": {
-    "72010400100004": {
+    "72010500120002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72010300170006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72010510010003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 7,
+        "DRAFT": 1,
+        "REJECTED BY Pengawas": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72010300100003": {
+      "target": {
+        "DRAFT": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72010410070002": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72010310080002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "REJECTED BY Pengawas": 3
+      },
+      "nontarget": {}
+    },
+    "72010600040004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72010400150006": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72010510060007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72010400140014": {
       "target": {
         "DRAFT": 3,
         "SUBMITTED BY Pencacah": 1
       },
+      "nontarget": {}
+    },
+    "72010600060001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 8,
+        "REJECTED BY Pengawas": 5
+      },
+      "nontarget": {}
+    },
+    "72010400140007": {
+      "target": {
+        "DRAFT": 3,
+        "APPROVED BY Pengawas": 1
+      },
       "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 4,
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 5
       }
+    },
+    "72010400210014": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72010400100004": {
+      "target": {
+        "DRAFT": 4,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
     },
     "72010610080003": {
       "target": {
@@ -10013,19 +10106,13 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72010600040004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {}
-    },
     "72010500030004": {
       "target": {
-        "DRAFT": 2,
+        "DRAFT": 3,
         "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {
-        "DRAFT": 1,
+        "DRAFT": 2,
         "SUBMITTED BY Pencacah": 1
       }
     },
@@ -10045,7 +10132,7 @@ window.IPAS_DATA = {
     },
     "72010600090002": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "APPROVED BY Pengawas": 2
@@ -10056,7 +10143,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72010620050002": {
@@ -10071,12 +10158,12 @@ window.IPAS_DATA = {
     "72010620020002": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 6,
-        "REJECTED BY Pengawas": 9
+        "SUBMITTED BY Pencacah": 10,
+        "REJECTED BY Pengawas": 6
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 5
+        "SUBMITTED BY Pencacah": 4,
+        "REJECTED BY Pengawas": 3
       }
     },
     "72010600120007": {
@@ -10085,6 +10172,7 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1,
         "APPROVED BY Pengawas": 7
       }
     },
@@ -10107,7 +10195,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72010620030006": {
@@ -10144,14 +10232,8 @@ window.IPAS_DATA = {
         "DRAFT": 4
       },
       "nontarget": {
-        "DRAFT": 1
+        "DRAFT": 2
       }
-    },
-    "72010400210014": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
     },
     "72010600080002": {
       "target": {
@@ -10169,16 +10251,9 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72010400140014": {
-      "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72010510100004": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 2
       },
       "nontarget": {
         "DRAFT": 1
@@ -10192,8 +10267,7 @@ window.IPAS_DATA = {
     },
     "72010300120008": {
       "target": {
-        "DRAFT": 4,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 4
       },
       "nontarget": {
         "DRAFT": 1,
@@ -10202,6 +10276,7 @@ window.IPAS_DATA = {
     },
     "72010600080004": {
       "target": {
+        "SUBMITTED BY Pencacah": 1,
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {
@@ -10215,15 +10290,10 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72010300170006": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
     "72010610100004": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -10231,14 +10301,18 @@ window.IPAS_DATA = {
       "target": {
         "DRAFT": 3
       },
-      "nontarget": {}
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
     },
-    "72010400150006": {
+    "72010500110002": {
       "target": {
-        "DRAFT": 3
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 14,
+        "REJECTED BY Pengawas": 2
       },
       "nontarget": {
-        "DRAFT": 1
+        "REJECTED BY Pengawas": 1
       }
     },
     "72010420010003": {
@@ -10247,7 +10321,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 5
       }
     },
     "72010420050004": {
@@ -10287,21 +10361,11 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72010510010003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 8,
-        "REJECTED BY Pengawas": 3,
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3
-      }
-    },
     "72010410060002": {
       "target": {
-        "SUBMITTED BY Pencacah": 6,
+        "SUBMITTED BY Pencacah": 7,
         "REJECTED BY Pengawas": 1,
-        "DRAFT": 3
+        "DRAFT": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -10323,7 +10387,7 @@ window.IPAS_DATA = {
     },
     "72010700090001": {
       "target": {
-        "APPROVED BY Pengawas": 3,
+        "APPROVED BY Pengawas": 4,
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {
@@ -10355,6 +10419,16 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 3
       }
     },
+    "72010310050005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 4
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 3
+      }
+    },
     "72010300120003": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -10366,7 +10440,7 @@ window.IPAS_DATA = {
     "72010620040003": {
       "target": {
         "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 10
+        "APPROVED BY Pengawas": 12
       },
       "nontarget": {
         "APPROVED BY Pengawas": 4,
@@ -10382,8 +10456,8 @@ window.IPAS_DATA = {
     },
     "72010620100003": {
       "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -10396,7 +10470,35 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
+    "72010710100001": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 5
+      },
+      "nontarget": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 1
+      }
+    },
     "72010420030001": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72010700150003": {
+      "target": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "DRAFT": 2,
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72010400150008": {
       "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -10418,6 +10520,12 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
       }
+    },
+    "72010510070004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
     },
     "72010600120006": {
       "target": {
@@ -10449,18 +10557,30 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72010310080002": {
+    "72010310080003": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72010310080003": {
+    "72010400200012": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "APPROVED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 9
       },
-      "nontarget": {}
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72010510030003": {
+      "target": {
+        "APPROVED BY Pengawas": 2,
+        "REJECTED BY Pengawas": 4
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 1
+      }
     },
     "72010620010008": {
       "target": {
@@ -10468,33 +10588,28 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72010400140007": {
-      "target": {
-        "DRAFT": 4,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "DRAFT": 4,
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 5
-      }
-    },
     "72010610030003": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4
       }
     },
     "72010620060003": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
       },
       "nontarget": {}
     },
+    "72010500140004": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
     "72010310080001": {
       "target": {
-        "SUBMITTED BY Pencacah": 3,
-        "REJECTED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -10508,11 +10623,22 @@ window.IPAS_DATA = {
     },
     "72010600120005": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 7,
-        "REJECTED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 4,
+        "APPROVED BY Pengawas": 7
       },
       "nontarget": {}
+    },
+    "72010400220004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5,
+        "DRAFT": 1,
+        "APPROVED BY Pengawas": 5
+      },
+      "nontarget": {
+        "DRAFT": 4,
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 2
+      }
     },
     "72010420050003": {
       "target": {
@@ -10525,31 +10651,17 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72010300100003": {
-      "target": {
-        "DRAFT": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72010510010002": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72010710100001": {
+    "72010600070003": {
       "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 5
+        "SUBMITTED BY Pencacah": 4
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1
-      }
+      "nontarget": {}
     },
     "72010610150002": {
       "target": {
@@ -10567,46 +10679,29 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72010600070003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72010610150001": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72010310050005": {
+    "72010400100008": {
       "target": {
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
-    },
-    "72010400220004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6,
-        "DRAFT": 1,
-        "APPROVED BY Pengawas": 5
-      },
-      "nontarget": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 2
-      }
-    },
-    "72010700150003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 6
       },
       "nontarget": {
+        "SUBMITTED BY Pencacah": 4,
+        "APPROVED BY Pengawas": 4
+      }
+    },
+    "72010710090003": {
+      "target": {
         "DRAFT": 1,
         "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "DRAFT": 2
       }
     },
     "72010600020004": {
@@ -10614,6 +10709,13 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
+    },
+    "72010600040001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
+      },
+      "nontarget": {}
     },
     "72010620100004": {
       "target": {
@@ -10631,34 +10733,27 @@ window.IPAS_DATA = {
     },
     "72010310050030": {
       "target": {
-        "APPROVED BY Pengawas": 1
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {}
-    },
-    "72010710090003": {
-      "target": {
-        "REJECTED BY Pengawas": 1,
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72010400100008": {
-      "target": {
-        "DRAFT": 2,
-        "APPROVED BY Pengawas": 6
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3,
-        "APPROVED BY Pengawas": 4
-      }
     },
     "72010310050029": {
       "target": {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
+    },
+    "72010310080004": {
+      "target": {
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72010420040001": {
+      "target": {},
+      "nontarget": {
+        "DRAFT": 1
+      }
     },
     "72010300160001": {
       "target": {
@@ -10670,12 +10765,26 @@ window.IPAS_DATA = {
     },
     "72010310050002": {
       "target": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 8
+        "APPROVED BY Pengawas": 10,
+        "REJECTED BY Pengawas": 1
       },
       "nontarget": {
         "APPROVED BY Pengawas": 2
       }
+    },
+    "72010700080003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72010610020005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
     },
     "72010420020013": {
       "target": {
@@ -10686,8 +10795,8 @@ window.IPAS_DATA = {
     "72010710050002": {
       "target": {
         "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 20,
-        "SUBMITTED BY Pencacah": 17
+        "APPROVED BY Pengawas": 24,
+        "SUBMITTED BY Pencacah": 7
       },
       "nontarget": {}
     },
@@ -10711,7 +10820,7 @@ window.IPAS_DATA = {
     },
     "72010400160001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
+        "SUBMITTED BY Pencacah": 3,
         "DRAFT": 1,
         "APPROVED BY Pengawas": 3
       },
@@ -10720,27 +10829,11 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       }
     },
-    "72010600040001": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {}
-    },
     "72010420010002": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
-    },
-    "72010510030003": {
-      "target": {
-        "APPROVED BY Pengawas": 2,
-        "REJECTED BY Pengawas": 4
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
-      }
     },
     "72010420010004": {
       "target": {
@@ -10750,11 +10843,10 @@ window.IPAS_DATA = {
     },
     "72010300130004": {
       "target": {
-        "DRAFT": 4
+        "DRAFT": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72010500070001": {
@@ -10805,14 +10897,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 1
       }
     },
-    "72010700080003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72010620030005": {
       "target": {},
       "nontarget": {
@@ -10843,7 +10927,7 @@ window.IPAS_DATA = {
     "72010300100004": {
       "target": {
         "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -10924,7 +11008,7 @@ window.IPAS_DATA = {
     },
     "72010400150011": {
       "target": {
-        "SUBMITTED BY Pencacah": 4,
+        "SUBMITTED BY Pencacah": 3,
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
@@ -10933,7 +11017,7 @@ window.IPAS_DATA = {
     },
     "72010510060001": {
       "target": {
-        "REJECTED BY Pengawas": 6,
+        "REJECTED BY Pengawas": 4,
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
@@ -10946,9 +11030,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2,
         "APPROVED BY Pengawas": 2
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72010710090002": {
       "target": {
@@ -11069,13 +11151,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72010600060001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 7,
-        "REJECTED BY Pengawas": 6
-      },
-      "nontarget": {}
-    },
     "72010610150003": {
       "target": {
         "APPROVED BY Pengawas": 6
@@ -11164,14 +11239,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       }
     },
-    "72010400200012": {
-      "target": {
-        "SUBMITTED BY Pencacah": 9
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
     "72010700180001": {
       "target": {
         "APPROVED BY Pengawas": 2,
@@ -11196,14 +11263,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       }
     },
-    "72010500110002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 14,
-        "REJECTED BY Pengawas": 2
-      },
-      "nontarget": {}
-    },
     "72010400150005": {
       "target": {
         "APPROVED BY Pengawas": 1
@@ -11224,11 +11283,9 @@ window.IPAS_DATA = {
     },
     "72010500070005": {
       "target": {
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 4
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72010400140011": {
       "target": {
@@ -11241,8 +11298,7 @@ window.IPAS_DATA = {
     "72010410010002": {
       "target": {
         "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 1,
-        "DRAFT": 1
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
     },
@@ -11282,18 +11338,13 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 4
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72010510090001": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REVOKED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {
-        "REVOKED BY Pengawas": 1
-      }
+      "nontarget": {}
     },
     "72010400200002": {
       "target": {
@@ -11308,7 +11359,7 @@ window.IPAS_DATA = {
       "target": {},
       "nontarget": {
         "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72010400120008": {
@@ -11361,11 +11412,11 @@ window.IPAS_DATA = {
       "target": {
         "APPROVED BY Pengawas": 2,
         "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 3,
+        "SUBMITTED BY Pencacah": 1,
         "DRAFT": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2,
+        "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 2
       }
     },
@@ -11373,9 +11424,7 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72010300120005": {
       "target": {
@@ -11408,60 +11457,114 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72010610010005": {
+    "72020210060005": {
       "target": {
-        "SUBMITTED BY Pencacah": 14
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72010510020001": {
+    "72020530020011": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72020120060002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020600200014": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72020200080004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72020510020002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {}
+    },
+    "72020500090035": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {}
+    },
+    "72020100230005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020520110007": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020320010013": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
       "nontarget": {}
     },
-    "72010310070003": {
+    "72020310130007": {
+      "target": {
+        "DRAFT": 5
+      },
+      "nontarget": {
+        "DRAFT": 5
+      }
+    },
+    "72020510100001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020110150008": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {}
+    },
+    "72020500250004": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020710020001": {
       "target": {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
     },
-    "72010420030003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72010400150008": {
+    "72020540110001": {
       "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72010620030004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72010510100003": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72010510040003": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72010400140013": {
-      "target": {
-        "DRAFT": 1
-      },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
       }
@@ -11477,7 +11580,7 @@ window.IPAS_DATA = {
     },
     "72020720030002": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -11485,18 +11588,10 @@ window.IPAS_DATA = {
     },
     "72020820100002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72020200080004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3
       }
     },
     "72020610020003": {
@@ -11530,18 +11625,10 @@ window.IPAS_DATA = {
     },
     "72020500090001": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
         "DRAFT": 1
-      }
-    },
-    "72020510100001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
       }
     },
     "72020520090003": {
@@ -11592,7 +11679,8 @@ window.IPAS_DATA = {
     },
     "72020400170001": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 4
@@ -11613,16 +11701,17 @@ window.IPAS_DATA = {
     "72020110110006": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 2
+        "DRAFT": 4
       },
       "nontarget": {}
     },
     "72020500230016": {
       "target": {
-        "DRAFT": 3
+        "DRAFT": 4
       },
       "nontarget": {
-        "DRAFT": 1
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72020600210001": {
@@ -11634,14 +11723,13 @@ window.IPAS_DATA = {
     "72020110110007": {
       "target": {
         "DRAFT": 5,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72020720100002": {
       "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -11652,12 +11740,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
-    },
-    "72020510020002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 7
-      },
-      "nontarget": {}
     },
     "72020110150005": {
       "target": {
@@ -11685,16 +11767,8 @@ window.IPAS_DATA = {
     "72020500090030": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72020100230005": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
       }
     },
     "72020520030001": {
@@ -11741,7 +11815,9 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1,
         "DRAFT": 1
       },
-      "nontarget": {}
+      "nontarget": {
+        "DRAFT": 1
+      }
     },
     "72020100240003": {
       "target": {},
@@ -11751,7 +11827,7 @@ window.IPAS_DATA = {
     },
     "72020110030004": {
       "target": {
-        "DRAFT": 3
+        "DRAFT": 4
       },
       "nontarget": {
         "DRAFT": 1
@@ -11765,7 +11841,7 @@ window.IPAS_DATA = {
     },
     "72020200180007": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -11803,7 +11879,7 @@ window.IPAS_DATA = {
     },
     "72020300200001": {
       "target": {
-        "DRAFT": 6
+        "DRAFT": 7
       },
       "nontarget": {
         "DRAFT": 5
@@ -11824,14 +11900,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72020520110007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72020500090002": {
       "target": {
         "SUBMITTED BY Pencacah": 3
@@ -11843,15 +11911,6 @@ window.IPAS_DATA = {
         "DRAFT": 1
       },
       "nontarget": {}
-    },
-    "72020120060002": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72020500100008": {
       "target": {},
@@ -11869,11 +11928,10 @@ window.IPAS_DATA = {
     },
     "72020300460002": {
       "target": {
-        "DRAFT": 3
+        "DRAFT": 2
       },
       "nontarget": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 2
       }
     },
     "72020600180001": {
@@ -11895,8 +11953,8 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72020710020002": {
@@ -11905,15 +11963,10 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72020500090035": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
-    },
     "72020400030002": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -11925,14 +11978,14 @@ window.IPAS_DATA = {
     },
     "72020520040008": {
       "target": {
-        "DRAFT": 3,
+        "DRAFT": 4,
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72020130090001": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 2
       },
       "nontarget": {}
     },
@@ -11955,11 +12008,13 @@ window.IPAS_DATA = {
         "DRAFT": 1,
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {}
+      "nontarget": {
+        "DRAFT": 1
+      }
     },
     "72020310070002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -11973,8 +12028,7 @@ window.IPAS_DATA = {
     },
     "72020300430002": {
       "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 1
       },
       "nontarget": {
         "DRAFT": 1
@@ -11990,20 +12044,12 @@ window.IPAS_DATA = {
     },
     "72020610140002": {
       "target": {
-        "REJECTED BY Pengawas": 36,
+        "REJECTED BY Pengawas": 8,
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
         "DRAFT": 1,
-        "REJECTED BY Pengawas": 12
-      }
-    },
-    "72020310130007": {
-      "target": {
-        "DRAFT": 4
-      },
-      "nontarget": {
-        "DRAFT": 4
+        "REJECTED BY Pengawas": 10
       }
     },
     "72020520090010": {
@@ -12012,10 +12058,18 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72020540110001": {
-      "target": {},
+    "72020600290002": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72020130030002": {
+      "target": {
+        "APPROVED BY Pengawas": 2
+      },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72020100450010": {
@@ -12023,14 +12077,6 @@ window.IPAS_DATA = {
         "DRAFT": 4
       },
       "nontarget": {}
-    },
-    "72020130030002": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
     },
     "72020120120010": {
       "target": {
@@ -12042,7 +12088,7 @@ window.IPAS_DATA = {
     },
     "72020600430001": {
       "target": {
-        "SUBMITTED BY Pencacah": 4,
+        "SUBMITTED BY Pencacah": 5,
         "DRAFT": 1
       },
       "nontarget": {
@@ -12051,8 +12097,19 @@ window.IPAS_DATA = {
     },
     "72020100200004": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72020700120002": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020610050002": {
+      "target": {
+        "REJECTED BY Pengawas": 3
       },
       "nontarget": {}
     },
@@ -12066,9 +12123,7 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 4
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72020500130006": {
       "target": {
@@ -12086,15 +12141,9 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72020610050002": {
-      "target": {
-        "REJECTED BY Pengawas": 2
-      },
-      "nontarget": {}
-    },
     "72020110020001": {
       "target": {
-        "SUBMITTED BY Pencacah": 15
+        "SUBMITTED BY Pencacah": 17
       },
       "nontarget": {}
     },
@@ -12106,7 +12155,7 @@ window.IPAS_DATA = {
     },
     "72020120090002": {
       "target": {
-        "DRAFT": 4
+        "DRAFT": 5
       },
       "nontarget": {
         "DRAFT": 2
@@ -12114,7 +12163,7 @@ window.IPAS_DATA = {
     },
     "72020200190008": {
       "target": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {}
     },
@@ -12126,19 +12175,16 @@ window.IPAS_DATA = {
     },
     "72020610130001": {
       "target": {
-        "REJECTED BY Pengawas": 9
+        "REJECTED BY Pengawas": 13
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 3
+        "REJECTED BY Pengawas": 6
       }
     },
     "72020100240004": {
-      "target": {
-        "REJECTED BY Pengawas": 2
-      },
+      "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72020400110004": {
@@ -12146,12 +12192,20 @@ window.IPAS_DATA = {
         "DRAFT": 4
       },
       "nontarget": {
-        "DRAFT": 1
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72020510090007": {
       "target": {
         "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72020500130003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4,
+        "DRAFT": 4
       },
       "nontarget": {}
     },
@@ -12175,20 +12229,13 @@ window.IPAS_DATA = {
     },
     "72020800190001": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
-    },
-    "72020500130003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3,
-        "DRAFT": 4
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {}
     },
     "72020130010002": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 2
       },
       "nontarget": {
         "DRAFT": 2
@@ -12200,25 +12247,31 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72020110110005": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
     "72020820030001": {
       "target": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 4
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 3
+        "APPROVED BY Pengawas": 4
+      }
+    },
+    "72020110110005": {
+      "target": {
+        "DRAFT": 3
+      },
+      "nontarget": {
+        "DRAFT": 1
       }
     },
     "72020400100003": {
       "target": {
         "DRAFT": 5
+      },
+      "nontarget": {}
+    },
+    "72020320010009": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -12243,7 +12296,7 @@ window.IPAS_DATA = {
     "72020130030001": {
       "target": {},
       "nontarget": {
-        "APPROVED BY Pengawas": 1
+        "APPROVED BY Pengawas": 2
       }
     },
     "72020210070004": {
@@ -12258,7 +12311,7 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72020320010009": {
+    "72020200110003": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
@@ -12289,12 +12342,6 @@ window.IPAS_DATA = {
         "DRAFT": 2
       }
     },
-    "72020200110003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72020520090005": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -12308,6 +12355,12 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72020110080001": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
     "72020130050003": {
       "target": {},
       "nontarget": {
@@ -12316,25 +12369,24 @@ window.IPAS_DATA = {
     },
     "72020200110002": {
       "target": {
-        "SUBMITTED BY Pencacah": 9
+        "SUBMITTED BY Pencacah": 11
       },
       "nontarget": {}
     },
     "72020820010003": {
       "target": {
-        "APPROVED BY Pengawas": 4
+        "APPROVED BY Pengawas": 5
       },
       "nontarget": {}
     },
     "72020400030001": {
       "target": {
-        "APPROVED BY Pengawas": 5,
-        "REJECTED BY Pengawas": 5
+        "APPROVED BY Pengawas": 6,
+        "REJECTED BY Pengawas": 3
       },
       "nontarget": {
         "APPROVED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "REJECTED BY Pengawas": 1
       }
     },
     "72020610080002": {
@@ -12344,22 +12396,16 @@ window.IPAS_DATA = {
       "nontarget": {}
     },
     "72020540100002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
+      "target": {},
       "nontarget": {
         "DRAFT": 2
       }
     },
     "72020200090003": {
       "target": {
-        "SUBMITTED BY Pencacah": 8,
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 20
+        "SUBMITTED BY Pencacah": 6
       },
-      "nontarget": {
-        "APPROVED BY Pengawas": 5
-      }
+      "nontarget": {}
     },
     "72020510120003": {
       "target": {
@@ -12377,7 +12423,7 @@ window.IPAS_DATA = {
     },
     "72020710110001": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
@@ -12386,7 +12432,7 @@ window.IPAS_DATA = {
     },
     "72020530100009": {
       "target": {
-        "DRAFT": 3
+        "DRAFT": 4
       },
       "nontarget": {}
     },
@@ -12396,6 +12442,12 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       }
     },
+    "72020620030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
     "72020300320011": {
       "target": {
         "DRAFT": 1
@@ -12404,14 +12456,14 @@ window.IPAS_DATA = {
     },
     "72020320090001": {
       "target": {
-        "SUBMITTED BY Pencacah": 7,
-        "DRAFT": 3
+        "SUBMITTED BY Pencacah": 8,
+        "DRAFT": 2
       },
       "nontarget": {}
     },
     "72020300420001": {
       "target": {
-        "DRAFT": 6
+        "DRAFT": 4
       },
       "nontarget": {}
     },
@@ -12419,7 +12471,17 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {}
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020200140001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
     },
     "72020100230001": {
       "target": {
@@ -12427,13 +12489,11 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72020200140001": {
+    "72020810040002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
+      },
+      "nontarget": {}
     },
     "72020800310003": {
       "target": {
@@ -12443,33 +12503,39 @@ window.IPAS_DATA = {
     },
     "72020210030001": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 2
       },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72020130070001": {
+      "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
     },
     "72020320080003": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
     "72020530070003": {
       "target": {
-        "OPEN": 76
+        "OPEN": 97
       },
       "nontarget": {}
     },
     "72020530070005": {
       "target": {
-        "OPEN": 136
+        "OPEN": 165
       },
       "nontarget": {}
     },
     "72020530070004": {
       "target": {
-        "OPEN": 42,
+        "OPEN": 52,
         "DRAFT": 1
       },
       "nontarget": {
@@ -12478,14 +12544,7 @@ window.IPAS_DATA = {
     },
     "72020530070006": {
       "target": {
-        "OPEN": 76
-      },
-      "nontarget": {}
-    },
-    "72020110150008": {
-      "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 1
+        "OPEN": 92
       },
       "nontarget": {}
     },
@@ -12513,23 +12572,23 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72020610140003": {
+      "target": {
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
     "72020500110003": {
       "target": {
-        "SUBMITTED BY Pencacah": 16
+        "SUBMITTED BY Pencacah": 15
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
-      }
+      "nontarget": {}
     },
     "72020100380002": {
       "target": {
-        "APPROVED BY Pengawas": 15,
-        "REJECTED BY Pengawas": 17
+        "APPROVED BY Pengawas": 5
       },
-      "nontarget": {
-        "REJECTED BY Pengawas": 4
-      }
+      "nontarget": {}
     },
     "72020810020002": {
       "target": {},
@@ -12539,17 +12598,12 @@ window.IPAS_DATA = {
     },
     "72020500230005": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 2
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72020600180002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
+      "target": {},
       "nontarget": {
         "DRAFT": 1
       }
@@ -12568,92 +12622,62 @@ window.IPAS_DATA = {
     },
     "72020310080001": {
       "target": {
-        "SUBMITTED BY Pencacah": 7
-      },
-      "nontarget": {}
-    },
-    "72020110080009": {
-      "target": {
-        "REJECTED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {}
     },
     "72020100450008": {
       "target": {},
       "nontarget": {
-        "DRAFT": 2
-      }
-    },
-    "72020120070010": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
-    },
-    "72020540040002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020200230001": {
-      "target": {
         "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72020520010004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
       }
     },
-    "72020100220004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020620060001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020210070003": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72020610200005": {
-      "target": {
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 4
-      }
-    },
-    "72020100450003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 8
-      },
-      "nontarget": {}
-    },
-    "72020120160003": {
+    "72030210040001": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 28
       }
     },
-    "72020310170001": {
+    "72030210070018": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72030400020003": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1,
+        "REVOKED BY Pengawas": 1
       },
-      "nontarget": {}
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72030310060001": {
+      "target": {
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72030200150006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72030220080005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
     },
     "72030300250003": {
       "target": {
@@ -12664,15 +12688,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "DRAFT": 2,
         "APPROVED BY Pengawas": 13
-      }
-    },
-    "72030400020003": {
-      "target": {
-        "REVOKED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
       }
     },
     "72030310050007": {
@@ -12689,19 +12704,10 @@ window.IPAS_DATA = {
     "72030300220007": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72030310060001": {
-      "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72030300140001": {
@@ -12718,12 +12724,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72030210040001": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 24
-      }
-    },
     "72030210040003": {
       "target": {},
       "nontarget": {
@@ -12733,7 +12733,7 @@ window.IPAS_DATA = {
     "72030410080008": {
       "target": {},
       "nontarget": {
-        "DRAFT": 2
+        "DRAFT": 3
       }
     },
     "72030210060015": {
@@ -12741,7 +12741,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 36,
+        "SUBMITTED BY Pencacah": 35,
         "APPROVED BY Pengawas": 2,
         "REVOKED BY Pengawas": 5
       }
@@ -12771,20 +12771,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72030210070018": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72030200150006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
     "72030210080006": {
       "target": {},
       "nontarget": {
@@ -12796,13 +12782,13 @@ window.IPAS_DATA = {
       "target": {},
       "nontarget": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 7
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72030210080001": {
       "target": {},
       "nontarget": {
-        "DRAFT": 3,
+        "DRAFT": 4,
         "SUBMITTED BY Pencacah": 2
       }
     },
@@ -12840,7 +12826,7 @@ window.IPAS_DATA = {
     "72030400080001": {
       "target": {},
       "nontarget": {
-        "DRAFT": 6
+        "DRAFT": 7
       }
     },
     "72030410120003": {
@@ -12853,10 +12839,18 @@ window.IPAS_DATA = {
     },
     "72030310010009": {
       "target": {
-        "DRAFT": 5,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 5
       },
       "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72030410030001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 5,
         "DRAFT": 1
       }
     },
@@ -12868,7 +12862,7 @@ window.IPAS_DATA = {
     },
     "72030420030007": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -12936,7 +12930,7 @@ window.IPAS_DATA = {
     "72030410050003": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 2
+        "DRAFT": 4
       },
       "nontarget": {
         "DRAFT": 3
@@ -12951,14 +12945,16 @@ window.IPAS_DATA = {
     "72030210030004": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 13
+        "SUBMITTED BY Pencacah": 12
       }
     },
     "72030310040005": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
-      "nontarget": {}
+      "nontarget": {
+        "DRAFT": 1
+      }
     },
     "72030300220002": {
       "target": {
@@ -12975,7 +12971,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "DRAFT": 1
+        "DRAFT": 2
       }
     },
     "72030410080004": {
@@ -12983,6 +12979,12 @@ window.IPAS_DATA = {
       "nontarget": {
         "DRAFT": 1
       }
+    },
+    "72030300200009": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
     },
     "72030410080005": {
       "target": {
@@ -13007,7 +13009,7 @@ window.IPAS_DATA = {
     "72030400080007": {
       "target": {
         "APPROVED BY Pengawas": 1,
-        "REVOKED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 1,
         "DRAFT": 1
       },
       "nontarget": {
@@ -13031,8 +13033,8 @@ window.IPAS_DATA = {
     },
     "72030100020002": {
       "target": {
-        "DRAFT": 37,
-        "SUBMITTED BY Pencacah": 2
+        "DRAFT": 36,
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -13056,15 +13058,28 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72030420030015": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
     "72030420060007": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
+    "72030200090004": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 2
+      }
+    },
     "72030100022001": {
       "target": {
-        "SUBMITTED BY Pencacah": 22
+        "SUBMITTED BY Pencacah": 24
       },
       "nontarget": {}
     },
@@ -13077,16 +13092,9 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72030200090004": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72030420090002": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 3
@@ -13097,15 +13105,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "DRAFT": 2,
         "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72030410030001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 4,
-        "DRAFT": 1
       }
     },
     "72030200060001": {
@@ -13143,8 +13142,7 @@ window.IPAS_DATA = {
     },
     "72030310020005": {
       "target": {
-        "REJECTED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1
+        "REJECTED BY Pengawas": 2
       },
       "nontarget": {}
     },
@@ -13177,8 +13175,7 @@ window.IPAS_DATA = {
     },
     "72030410090001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -13283,7 +13280,7 @@ window.IPAS_DATA = {
       "nontarget": {
         "APPROVED BY Pengawas": 21,
         "REVOKED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 7
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72030210040005": {
@@ -13504,14 +13501,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72030220080005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72030420010009": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -13526,10 +13515,10 @@ window.IPAS_DATA = {
     },
     "72030420080001": {
       "target": {
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72030420010008": {
@@ -13579,7 +13568,7 @@ window.IPAS_DATA = {
     },
     "72030200150004": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 6
@@ -13642,8 +13631,7 @@ window.IPAS_DATA = {
         "DRAFT": 1
       },
       "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 1
       }
     },
     "72030300210006": {
@@ -13686,40 +13674,99 @@ window.IPAS_DATA = {
     "72030210070010": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       }
     },
-    "72030410070006": {
+    "72040700100001": {
+      "target": {
+        "DRAFT": 10
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72040100170006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72040710050008": {
+      "target": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72040320010010": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72040710020001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72040310100001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72040200090002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72040700090001": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
+        "EDITED BY Admin Kabupaten": 2
       },
       "nontarget": {}
     },
-    "72030210060012": {
-      "target": {},
+    "72040500050006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72040700070009": {
+      "target": {
+        "DRAFT": 2
+      },
       "nontarget": {
-        "REVOKED BY Pengawas": 1
+        "DRAFT": 1
       }
     },
-    "72030220090002": {
+    "72040300080001": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 3
       },
       "nontarget": {}
     },
-    "72030310010001": {
+    "72040520020014": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72040300090012": {
-      "target": {
-        "DRAFT": 1
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 1
+        "DRAFT": 1
+      }
+    },
+    "72040300050018": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "DRAFT": 2
       }
     },
     "72040720050006": {
@@ -13727,6 +13774,32 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {}
+    },
+    "72040100150008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 16
+      },
+      "nontarget": {}
+    },
+    "72040100020001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72040100010001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 7
+      },
+      "nontarget": {}
+    },
+    "72040300090012": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
     },
     "72040400200014": {
       "target": {},
@@ -13743,7 +13816,8 @@ window.IPAS_DATA = {
     "72040400190015": {
       "target": {},
       "nontarget": {
-        "DRAFT": 1
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72040600160002": {
@@ -13751,15 +13825,6 @@ window.IPAS_DATA = {
         "DRAFT": 2
       },
       "nontarget": {}
-    },
-    "72040710050008": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
     },
     "72040520070002": {
       "target": {
@@ -13787,7 +13852,8 @@ window.IPAS_DATA = {
     },
     "72040100200001": {
       "target": {
-        "SUBMITTED BY Pencacah": 7
+        "SUBMITTED BY Pencacah": 7,
+        "OPEN": 1
       },
       "nontarget": {}
     },
@@ -13799,14 +13865,13 @@ window.IPAS_DATA = {
     },
     "72040100210003": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
+        "SUBMITTED BY Pencacah": 1,
         "DRAFT": 3,
-        "REJECTED BY Pengawas": 6
+        "REJECTED BY Pengawas": 7
       },
       "nontarget": {
         "DRAFT": 1,
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 2
       }
     },
     "72040510070001": {
@@ -13831,32 +13896,16 @@ window.IPAS_DATA = {
     },
     "72040100130005": {
       "target": {
-        "DRAFT": 1,
-        "APPROVED BY Pengawas": 5
+        "DRAFT": 2,
+        "APPROVED BY Pengawas": 7
       },
       "nontarget": {}
     },
     "72040100180005": {
       "target": {
-        "DRAFT": 1,
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {}
-    },
-    "72040710020001": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
-    },
-    "72040700070009": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {
         "DRAFT": 1
-      }
+      },
+      "nontarget": {}
     },
     "72040420030003": {
       "target": {},
@@ -13866,11 +13915,11 @@ window.IPAS_DATA = {
     },
     "72040400190012": {
       "target": {
-        "SUBMITTED BY Pencacah": 3,
+        "SUBMITTED BY Pencacah": 2,
         "APPROVED BY Pengawas": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72040500080005": {
@@ -13887,25 +13936,17 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72040520020014": {
+    "72040710050002": {
       "target": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 2
+        "DRAFT": 2
       },
       "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72040710050002": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4
       }
     },
     "72040120020004": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -13923,8 +13964,7 @@ window.IPAS_DATA = {
         "DRAFT": 2
       },
       "nontarget": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 2
       }
     },
     "72040120030004": {
@@ -13933,15 +13973,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72040100150008": {
-      "target": {
-        "SUBMITTED BY Pencacah": 14
-      },
-      "nontarget": {}
-    },
     "72040300310005": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -13950,7 +13984,7 @@ window.IPAS_DATA = {
     "72040500080001": {
       "target": {
         "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 5
+        "REJECTED BY Pengawas": 6
       },
       "nontarget": {}
     },
@@ -13967,15 +14001,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72040300080001": {
-      "target": {
-        "DRAFT": 3
-      },
-      "nontarget": {}
-    },
     "72040100130001": {
       "target": {
-        "SUBMITTED BY Pencacah": 7,
+        "SUBMITTED BY Pencacah": 8,
         "DRAFT": 1
       },
       "nontarget": {}
@@ -13983,12 +14011,6 @@ window.IPAS_DATA = {
     "72040100020016": {
       "target": {
         "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72040100010001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 7
       },
       "nontarget": {}
     },
@@ -14001,14 +14023,6 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72040700100001": {
-      "target": {
-        "DRAFT": 8
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
     "72040100190009": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
@@ -14018,7 +14032,7 @@ window.IPAS_DATA = {
     },
     "72040100170003": {
       "target": {
-        "SUBMITTED BY Pencacah": 15
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {}
     },
@@ -14045,7 +14059,7 @@ window.IPAS_DATA = {
     "72040510090001": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1
+        "REJECTED BY Pengawas": 2
       },
       "nontarget": {
         "REJECTED BY Pengawas": 1
@@ -14053,7 +14067,7 @@ window.IPAS_DATA = {
     },
     "72040100150012": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 12
       },
       "nontarget": {}
     },
@@ -14085,9 +14099,11 @@ window.IPAS_DATA = {
       "nontarget": {}
     },
     "72040720030010": {
-      "target": {},
-      "nontarget": {
+      "target": {
         "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 2
       }
     },
     "72040400200010": {
@@ -14099,7 +14115,7 @@ window.IPAS_DATA = {
     "72040100200004": {
       "target": {
         "OPEN": 3,
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -14114,11 +14130,11 @@ window.IPAS_DATA = {
     },
     "72040300080004": {
       "target": {
-        "SUBMITTED BY Pencacah": 9
+        "SUBMITTED BY Pencacah": 8
       },
       "nontarget": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 4
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72040520110010": {
@@ -14129,12 +14145,22 @@ window.IPAS_DATA = {
     },
     "72040100030002": {
       "target": {
-        "REJECTED BY Pengawas": 4,
-        "APPROVED BY Pengawas": 12,
+        "REJECTED BY Pengawas": 5,
+        "APPROVED BY Pengawas": 17,
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72040520050011": {
+      "target": {
+        "DRAFT": 6,
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "DRAFT": 1,
         "SUBMITTED BY Pencacah": 1
       }
     },
@@ -14152,44 +14178,30 @@ window.IPAS_DATA = {
     },
     "72040520060008": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4,
+        "DRAFT": 1
       },
       "nontarget": {}
-    },
-    "72040520050011": {
-      "target": {
-        "DRAFT": 5,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
     },
     "72040200050002": {
       "target": {
         "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 15
+        "SUBMITTED BY Pencacah": 17
       },
       "nontarget": {}
     },
     "72040500140001": {
       "target": {
-        "DRAFT": 4
+        "DRAFT": 5
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 2
       }
     },
     "72040110050002": {
       "target": {
         "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {}
-    },
-    "72040700090001": {
-      "target": {
-        "EDITED BY Admin Kabupaten": 2
       },
       "nontarget": {}
     },
@@ -14205,9 +14217,16 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72040420020008": {
+      "target": {
+        "OPEN": 59,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
     "72040420020009": {
       "target": {
-        "OPEN": 39
+        "OPEN": 44
       },
       "nontarget": {}
     },
@@ -14237,7 +14256,7 @@ window.IPAS_DATA = {
     },
     "72040300090005": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "REJECTED BY Pengawas": 1,
@@ -14248,7 +14267,7 @@ window.IPAS_DATA = {
     "72040310040001": {
       "target": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
         "DRAFT": 1
@@ -14272,9 +14291,15 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72040410070003": {
+      "target": {},
+      "nontarget": {
+        "REVOKED BY Pengawas": 1
+      }
+    },
     "72040430020002": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -14285,16 +14310,15 @@ window.IPAS_DATA = {
       "nontarget": {}
     },
     "72040700070006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
+      "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 3
       }
     },
     "72040320010005": {
       "target": {
-        "EDITED BY Admin Kabupaten": 1
+        "EDITED BY Admin Kabupaten": 1,
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
     },
@@ -14309,14 +14333,13 @@ window.IPAS_DATA = {
         "DRAFT": 2
       },
       "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 1
       }
     },
     "72040100130007": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
+        "DRAFT": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
@@ -14339,19 +14362,17 @@ window.IPAS_DATA = {
     },
     "72040320030010": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72040300050018": {
+    "72040100170008": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
-      "nontarget": {
-        "DRAFT": 2
-      }
+      "nontarget": {}
     },
     "72040720050003": {
       "target": {},
@@ -14359,11 +14380,13 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72040100170008": {
+    "72040700120001": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 9
       },
-      "nontarget": {}
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
     },
     "72040410020001": {
       "target": {},
@@ -14378,23 +14401,26 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72040100150009": {
+      "target": {
+        "SUBMITTED BY Pencacah": 12
+      },
+      "nontarget": {}
+    },
     "72040310030005": {
       "target": {
         "DRAFT": 1
       },
       "nontarget": {}
     },
-    "72040100150009": {
-      "target": {
-        "SUBMITTED BY Pencacah": 9
-      },
-      "nontarget": {}
+    "72040300050004": {
+      "target": {},
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
     },
     "72040500120001": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
+      "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
@@ -14408,6 +14434,12 @@ window.IPAS_DATA = {
     "72040100160003": {
       "target": {
         "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72040100140003": {
+      "target": {
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {}
     },
@@ -14425,24 +14457,9 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72040100140003": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72040700120001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72040120050005": {
       "target": {
-        "SUBMITTED BY Pencacah": 7,
-        "APPROVED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 9
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -14458,7 +14475,7 @@ window.IPAS_DATA = {
     },
     "72040320030011": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -14479,17 +14496,17 @@ window.IPAS_DATA = {
     },
     "72040600120006": {
       "target": {
-        "DRAFT": 3
+        "DRAFT": 4
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 2,
         "DRAFT": 1
       }
     },
     "72040310100005": {
       "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 13
+        "DRAFT": 5,
+        "SUBMITTED BY Pencacah": 11
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -14503,7 +14520,7 @@ window.IPAS_DATA = {
     },
     "72040700060008": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 8
       },
       "nontarget": {}
     },
@@ -14511,15 +14528,15 @@ window.IPAS_DATA = {
       "target": {},
       "nontarget": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72040600120004": {
       "target": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 4
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 3
       }
     },
     "72040110020011": {
@@ -14528,22 +14545,42 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72040710020005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
     "72040110030012": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 3
       }
     },
+    "72040320010008": {
+      "target": {},
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
+    },
     "72040320010007": {
       "target": {
-        "REJECTED BY Pengawas": 2,
+        "REJECTED BY Pengawas": 3,
         "APPROVED BY Pengawas": 2
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 2,
         "REJECTED BY Pengawas": 1
+      }
+    },
+    "72040310060003": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72040600111003": {
@@ -14560,10 +14597,10 @@ window.IPAS_DATA = {
     },
     "72040600110008": {
       "target": {
-        "APPROVED BY Pengawas": 5
+        "APPROVED BY Pengawas": 7
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 3
       }
     },
     "72040500100001": {
@@ -14595,13 +14632,13 @@ window.IPAS_DATA = {
     "72040120090001": {
       "target": {
         "REJECTED BY Pengawas": 4,
-        "APPROVED BY Pengawas": 6
+        "APPROVED BY Pengawas": 7
       },
       "nontarget": {}
     },
     "72040100150006": {
       "target": {
-        "SUBMITTED BY Pencacah": 13
+        "SUBMITTED BY Pencacah": 18
       },
       "nontarget": {}
     },
@@ -14613,7 +14650,7 @@ window.IPAS_DATA = {
     },
     "72040410010007": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -14627,8 +14664,7 @@ window.IPAS_DATA = {
     },
     "72040110050003": {
       "target": {
-        "SUBMITTED BY Pencacah": 3,
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -14637,11 +14673,10 @@ window.IPAS_DATA = {
     "72040300050001": {
       "target": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 1
       }
     },
     "72040600100004": {
@@ -14650,21 +14685,15 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72040710020005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72040600100003": {
       "target": {
-        "APPROVED BY Pengawas": 16
+        "APPROVED BY Pengawas": 18
       },
       "nontarget": {}
     },
     "72040100010009": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -14679,8 +14708,8 @@ window.IPAS_DATA = {
     },
     "72040300050005": {
       "target": {
-        "OPEN": 56,
-        "DRAFT": 5
+        "OPEN": 76,
+        "DRAFT": 6
       },
       "nontarget": {}
     },
@@ -14692,7 +14721,13 @@ window.IPAS_DATA = {
     },
     "72040600030001": {
       "target": {
-        "REJECTED BY Pengawas": 9
+        "REJECTED BY Pengawas": 10
+      },
+      "nontarget": {}
+    },
+    "72040510040007": {
+      "target": {
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
     },
@@ -14745,12 +14780,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72040320010010": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {}
-    },
     "72040500100003": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -14762,12 +14791,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
-    },
-    "72040100020001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
     },
     "72040700060009": {
       "target": {},
@@ -14789,31 +14812,30 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       }
     },
+    "72040720020006": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 6
+      }
+    },
     "72040500050002": {
       "target": {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "DRAFT": 1,
-        "REJECTED BY Pengawas": 1
+        "DRAFT": 1
       }
-    },
-    "72040720020006": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 5
-      }
-    },
-    "72040420020008": {
-      "target": {
-        "OPEN": 54,
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {}
     },
     "72040320080001": {
       "target": {
         "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72040120060004": {
+      "target": {
+        "REJECTED BY Pengawas": 3,
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {}
     },
@@ -14822,15 +14844,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
-    },
-    "72040120060004": {
-      "target": {
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
-      }
     },
     "72040120010005": {
       "target": {
@@ -14848,7 +14861,7 @@ window.IPAS_DATA = {
     },
     "72040420020007": {
       "target": {
-        "OPEN": 54
+        "OPEN": 60
       },
       "nontarget": {}
     },
@@ -14866,27 +14879,25 @@ window.IPAS_DATA = {
     },
     "72040400230012": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
+      },
+      "nontarget": {}
     },
     "72040100140002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72040710070005": {
       "target": {
-        "APPROVED BY Pengawas": 5
+        "APPROVED BY Pengawas": 4
       },
       "nontarget": {}
     },
     "72040700080004": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -14896,171 +14907,1320 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72040420010018": {
+    "72050820030002": {
       "target": {
-        "OPEN": 42,
-        "SUBMITTED BY Pencacah": 1
+        "REVOKED BY Pengawas": 9,
+        "APPROVED BY Pengawas": 3,
+        "REJECTED BY Pengawas": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "REVOKED BY Pengawas": 14,
+        "DRAFT": 1,
+        "REJECTED BY Pengawas": 4
       }
     },
-    "72040100010005": {
+    "72051400020009": {
       "target": {
-        "REJECTED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72040600150003": {
+    "72050800250005": {
       "target": {
-        "APPROVED BY Pengawas": 2,
+        "DRAFT": 1,
         "REJECTED BY Pengawas": 1
       },
-      "nontarget": {}
+      "nontarget": {
+        "DRAFT": 1,
+        "REJECTED BY Pengawas": 1
+      }
     },
-    "72040200050001": {
+    "72051400100001": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 4
+      }
+    },
+    "72051310070002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 6,
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 2,
         "REJECTED BY Pengawas": 1
       }
     },
-    "72040510080005": {
+    "72051000010003": {
       "target": {
-        "APPROVED BY Pengawas": 3
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 10
       },
       "nontarget": {}
     },
-    "72040100140004": {
+    "72051400030002": {
       "target": {
-        "SUBMITTED BY Pencacah": 9
+        "SUBMITTED BY Pencacah": 1
       },
+      "nontarget": {}
+    },
+    "72051000160001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72050910030009": {
+      "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
-    "72040500110003": {
+    "72050900070002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
+      }
+    },
+    "72051300190002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 7
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051600050003": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72051400060006": {
+      "target": {
+        "DRAFT": 9,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051610030005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72050800200006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 5
+      },
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050410110008": {
+      "target": {
+        "APPROVED BY Pengawas": 16
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72050900100003": {
       "target": {
         "REJECTED BY Pengawas": 4
       },
-      "nontarget": {
-        "REJECTED BY Pengawas": 5
-      }
+      "nontarget": {}
     },
-    "72040120021002": {
-      "target": {},
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
-    },
-    "72040120021001": {
-      "target": {},
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
-    },
-    "72040300050012": {
+    "72050800220003": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "DRAFT": 2,
+        "REJECTED BY Pengawas": 3
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72051300100003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5,
+        "REJECTED BY Pengawas": 5,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 4,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051600080003": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050800220006": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72050800250002": {
+      "target": {
+        "DRAFT": 2
       },
       "nontarget": {}
     },
-    "72040520050018": {
+    "72051000160002": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {}
-    },
-    "72040510060005": {
-      "target": {
-        "APPROVED BY Pengawas": 2
-      },
       "nontarget": {
-        "APPROVED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 4
       }
     },
-    "72040520050014": {
+    "72051010060001": {
       "target": {
+        "DRAFT": 1,
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "DRAFT": 1
       }
     },
-    "72040400170008": {
+    "72051200060001": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 9
+      }
+    },
+    "72051400100003": {
+      "target": {},
+      "nontarget": {
+        "DRAFT": 2,
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72050800200001": {
+      "target": {
+        "DRAFT": 2,
+        "APPROVED BY Pengawas": 6,
+        "REJECTED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72050410050005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 2,
+        "APPROVED BY Pengawas": 12
+      },
+      "nontarget": {
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72051000030002": {
+      "target": {
+        "DRAFT": 2,
+        "REVOKED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 4,
+        "EDITED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {}
+    },
+    "72050810100002": {
+      "target": {
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 3,
+        "APPROVED BY Pengawas": 4
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72050800210009": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72051020020004": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {}
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
     },
-    "72040100150011": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
+    "72050410020011": {
+      "target": {},
+      "nontarget": {
+        "DRAFT": 3,
+        "APPROVED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 1
+      }
     },
-    "72040200050008": {
+    "72051600050002": {
       "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72040100150005": {
-      "target": {
-        "APPROVED BY Pengawas": 8,
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 1,
         "REJECTED BY Pengawas": 1
       },
-      "nontarget": {}
+      "nontarget": {
+        "APPROVED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 1
+      }
     },
-    "72040100140001": {
+    "72050810030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 3
+      }
+    },
+    "72051000020003": {
+      "target": {
+        "DRAFT": 2,
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 4
+      }
+    },
+    "72051400050001": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72040120010009": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72040100010006": {
+    "72050510010012": {
       "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72040120010008": {
+    "72050800240006": {
+      "target": {
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
+      }
+    },
+    "72050800280004": {
+      "target": {
+        "APPROVED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 8,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72050510080008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72051400060003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051020020002": {
+      "target": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 19,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 3
+      }
+    },
+    "72050820050001": {
+      "target": {
+        "REJECTED BY Pengawas": 3,
+        "APPROVED BY Pengawas": 9
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2,
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72050510050009": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72050900080003": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050820020001": {
       "target": {
         "DRAFT": 1
       },
       "nontarget": {}
     },
-    "72040120020002": {
+    "72051010010002": {
+      "target": {
+        "APPROVED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72051400060004": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "DRAFT": 6
+      }
+    },
+    "72051400050007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72050810090004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {}
+    },
+    "72050800230007": {
+      "target": {
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72051200140001": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2,
+        "REVOKED BY Pengawas": 1
+      }
+    },
+    "72051200080002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72050800250001": {
       "target": {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
     },
-    "72040430030003": {
+    "72050820070002": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {}
+    },
+    "72050810110003": {
+      "target": {
+        "DRAFT": 7
+      },
+      "nontarget": {
+        "DRAFT": 2
+      }
+    },
+    "72051310050002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72050910010003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72051300130003": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72040410040004": {
+    "72050810130002": {
       "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {}
+    },
+    "72051600080002": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72051300080003": {
+      "target": {
+        "APPROVED BY Pengawas": 34,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 3,
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72050800230003": {
+      "target": {
+        "DRAFT": 4
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72050800270010": {
+      "target": {},
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72051010030002": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72051000070001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 11
+      },
+      "nontarget": {}
+    },
+    "72051600030016": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72050410050002": {
+      "target": {
+        "APPROVED BY Pengawas": 39,
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72051300120001": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {}
+    },
+    "72051600060002": {
+      "target": {
+        "DRAFT": 4
+      },
+      "nontarget": {}
+    },
+    "72050900120001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 5
+      }
+    },
+    "72050900110001": {
+      "target": {
+        "REJECTED BY Pengawas": 3,
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "REVOKED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72051400080010": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72051600040011": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72051020010001": {
+      "target": {
+        "APPROVED BY Pengawas": 7,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72051300150001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "REJECTED BY Pengawas": 4
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 3
+      }
+    },
+    "72051600050004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72051000010002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72050820060002": {
+      "target": {
+        "REVOKED BY Pengawas": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050800210018": {
+      "target": {
+        "APPROVED BY Pengawas": 3,
+        "REJECTED BY Pengawas": 7
+      },
+      "nontarget": {}
+    },
+    "72051010050001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72050410021001": {
+      "target": {
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {}
+    },
+    "72050910060001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72051010040002": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72050810030002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 13
+      },
+      "nontarget": {
+        "DRAFT": 9
+      }
+    },
+    "72051600040012": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72050820080001": {
+      "target": {
+        "APPROVED BY Pengawas": 9
+      },
+      "nontarget": {}
+    },
+    "72050410090001": {
+      "target": {
+        "DRAFT": 4
+      },
+      "nontarget": {}
+    },
+    "72051600020001": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051400010002": {
+      "target": {
+        "REJECTED BY Pengawas": 7,
+        "REVOKED BY Pengawas": 13
+      },
+      "nontarget": {}
+    },
+    "72051400050008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72051310060004": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050810080001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72051610010001": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {}
+    },
+    "72050410021002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 7
+      },
+      "nontarget": {}
+    },
+    "72051310040001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72050800140004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051600010017": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72051610030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051000010001": {
+      "target": {
+        "APPROVED BY Pengawas": 24
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72051000170003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051200090002": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050410110006": {
+      "target": {
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 3
+      }
+    },
+    "72051400050002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 8
+      },
+      "nontarget": {}
+    },
+    "72051400090002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72050410050001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {}
+    },
+    "72051000020001": {
+      "target": {
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 3
+      }
+    },
+    "72051300110006": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050800270002": {
+      "target": {
+        "APPROVED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051020030001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {}
+    },
+    "72050410050003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 19
+      },
+      "nontarget": {}
+    },
+    "72051010040001": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051000020005": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 4
+      }
+    },
+    "72050810160001": {
+      "target": {},
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72050810050003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {}
+    },
+    "72050910030006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051000030001": {
+      "target": {
+        "APPROVED BY Pengawas": 11,
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {}
     },
-    "72040200050009": {
+    "72050810070002": {
       "target": {
+        "APPROVED BY Pengawas": 4
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72050410100006": {
+      "target": {
+        "REJECTED BY Pengawas": 7
+      },
+      "nontarget": {}
+    },
+    "72050410140003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 3
+      }
+    },
+    "72050800290007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72050810110001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72050900110003": {
+      "target": {
+        "REVOKED BY Pengawas": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 3
+      }
+    },
+    "72051400080012": {
+      "target": {},
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72051020030004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 1,
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {}
+    },
+    "72050800210007": {
+      "target": {
+        "APPROVED BY Pengawas": 5,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72051000010005": {
+      "target": {
+        "REJECTED BY Pengawas": 2,
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {}
+    },
+    "72051600130003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72051300170003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72050810180001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72051600040006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72050900070001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050800260010": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {}
+    },
+    "72051300090002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72050800130008": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72051400010001": {
+      "target": {
+        "REJECTED BY Pengawas": 8
+      },
+      "nontarget": {}
+    },
+    "72050800210008": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 3
+      }
+    },
+    "72051600050001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050810140004": {
+      "target": {
+        "REJECTED BY Pengawas": 21
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 2
+      }
+    },
+    "72050410060007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 36
+      },
+      "nontarget": {}
+    },
+    "72050410020001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72051300080007": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051020040001": {
+      "target": {
+        "REJECTED BY Pengawas": 8,
+        "APPROVED BY Pengawas": 4
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 9
+      }
+    },
+    "72050910020012": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051020020006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72051300200003": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050410060008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 8
+      },
+      "nontarget": {}
+    },
+    "72051610040005": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050820070001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72051300160003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72050910070001": {
+      "target": {
+        "REJECTED BY Pengawas": 2
+      },
+      "nontarget": {}
+    },
+    "72050410140005": {
+      "target": {
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "REVOKED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 3
+      }
+    },
+    "72050410070001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72051000010004": {
+      "target": {
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {}
+    },
+    "72050810020001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72051610040003": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050900110002": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72050410010008": {
+      "target": {
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72051010020003": {
+      "target": {},
+      "nontarget": {
+        "APPROVED BY Pengawas": 7
+      }
+    },
+    "72051020020003": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2
+      }
+    },
+    "72050410040013": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72051020060003": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72050900070003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72060400200006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 11
+      }
+    },
+    "72060500110011": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72060400140011": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72060500070008": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {}
+    },
+    "72060400170031": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "APPROVED BY Pengawas": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72060610040001": {
+      "target": {
+        "DRAFT": 3,
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72060400130016": {
+      "target": {},
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72060600072002": {
+      "target": {},
+      "nontarget": {
+        "APPROVED BY Pengawas": 1
+      }
+    },
+    "72060100050001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "REJECTED BY Pengawas": 3
+      },
+      "nontarget": {}
+    },
+    "72060500080004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
+    "72060500050009": {
+      "target": {
+        "DRAFT": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72060410050004": {
+      "target": {
+        "DRAFT": 3
+      },
+      "nontarget": {}
+    },
+    "72060610010007": {
+      "target": {
+        "DRAFT": 4,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "DRAFT": 3,
+        "REJECTED BY Pengawas": 5
+      }
+    },
+    "72060100010004": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
     },
     "72060300120003": {
       "target": {
@@ -15108,7 +16268,7 @@ window.IPAS_DATA = {
     "72060400130026": {
       "target": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -15132,30 +16292,11 @@ window.IPAS_DATA = {
     },
     "72060320100002": {
       "target": {
-        "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {
         "DRAFT": 1,
         "APPROVED BY Pengawas": 2
-      }
-    },
-    "72060610010007": {
-      "target": {
-        "DRAFT": 3,
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {
-        "DRAFT": 3,
-        "REJECTED BY Pengawas": 5
-      }
-    },
-    "72060500050009": {
-      "target": {
-        "DRAFT": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
       }
     },
     "72060200010002": {
@@ -15172,7 +16313,7 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72060310010006": {
@@ -15180,15 +16321,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
-    },
-    "72060610040001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72060600110001": {
       "target": {
@@ -15214,7 +16346,7 @@ window.IPAS_DATA = {
     },
     "72060500080001": {
       "target": {
-        "SUBMITTED BY Pencacah": 12
+        "SUBMITTED BY Pencacah": 13
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 9
@@ -15222,7 +16354,8 @@ window.IPAS_DATA = {
     },
     "72060600100004": {
       "target": {
-        "DRAFT": 5
+        "DRAFT": 5,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "DRAFT": 1
@@ -15236,7 +16369,7 @@ window.IPAS_DATA = {
     },
     "72060600080004": {
       "target": {
-        "SUBMITTED BY Pencacah": 7
+        "SUBMITTED BY Pencacah": 8
       },
       "nontarget": {}
     },
@@ -15288,7 +16421,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3,
+        "SUBMITTED BY Pencacah": 4,
         "REJECTED BY Pengawas": 1
       }
     },
@@ -15316,12 +16449,12 @@ window.IPAS_DATA = {
     },
     "72060400140002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3,
-        "APPROVED BY Pengawas": 18
+        "SUBMITTED BY Pencacah": 5,
+        "APPROVED BY Pengawas": 19
       },
       "nontarget": {
         "DRAFT": 4,
-        "SUBMITTED BY Pencacah": 4,
+        "SUBMITTED BY Pencacah": 3,
         "APPROVED BY Pengawas": 13,
         "REJECTED BY Pengawas": 1
       }
@@ -15364,20 +16497,22 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72060400170031": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 5
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
     "72060400160049": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
+    },
+    "72060300050001": {
+      "target": {
+        "REVOKED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 2,
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
     },
     "72060400180001": {
       "target": {},
@@ -15388,7 +16523,7 @@ window.IPAS_DATA = {
     "72060610010002": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4
       }
     },
     "72060300040006": {
@@ -15425,11 +16560,11 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       }
     },
-    "72060500110011": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+    "72060100010007": {
+      "target": {
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
     },
     "72060410030009": {
       "target": {
@@ -15440,7 +16575,7 @@ window.IPAS_DATA = {
     "72060600090009": {
       "target": {
         "SUBMITTED BY Pencacah": 4,
-        "REVOKED BY Pengawas": 3
+        "REVOKED BY Pengawas": 5
       },
       "nontarget": {
         "REJECTED BY Pengawas": 1
@@ -15453,29 +16588,24 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 5
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72060400160015": {
       "target": {
         "DRAFT": 1
       },
-      "nontarget": {}
+      "nontarget": {
+        "DRAFT": 1
+      }
     },
     "72060100030007": {
       "target": {
         "DRAFT": 1
       },
       "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 1
       }
-    },
-    "72060410050004": {
-      "target": {
-        "DRAFT": 3
-      },
-      "nontarget": {}
     },
     "72060200030007": {
       "target": {
@@ -15506,32 +16636,34 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72060100030011": {
+      "target": {
+        "REJECTED BY Pengawas": 4,
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
+    },
     "72060600110002": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72060500080013": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
-      },
-      "nontarget": {}
-    },
-    "72060100030011": {
-      "target": {
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 9
       },
       "nontarget": {}
     },
     "72060400190011": {
       "target": {
+        "APPROVED BY Pengawas": 5,
         "REJECTED BY Pengawas": 3,
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
@@ -15546,31 +16678,32 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
+    "72060400170026": {
+      "target": {
+        "SUBMITTED BY Pencacah": 11,
+        "REJECTED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2,
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72060400160052": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
     "72060320020009": {
       "target": {
-        "DRAFT": 1,
+        "DRAFT": 2,
         "APPROVED BY Pengawas": 3
       },
       "nontarget": {
         "DRAFT": 1
       }
-    },
-    "72060300050001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72060500080004": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
     },
     "72060600100011": {
       "target": {
@@ -15586,16 +16719,6 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 1
       }
     },
-    "72060400170026": {
-      "target": {
-        "SUBMITTED BY Pencacah": 10,
-        "REJECTED BY Pengawas": 10
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 3
-      }
-    },
     "72060500060006": {
       "target": {
         "DRAFT": 2
@@ -15604,12 +16727,18 @@ window.IPAS_DATA = {
     },
     "72060500050016": {
       "target": {
-        "DRAFT": 1,
+        "DRAFT": 2,
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "DRAFT": 1
       }
+    },
+    "72060300100002": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {}
     },
     "72060400170032": {
       "target": {
@@ -15619,17 +16748,9 @@ window.IPAS_DATA = {
     },
     "72060320010002": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 2
       },
       "nontarget": {}
-    },
-    "72060400200006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 7
-      }
     },
     "72060400190006": {
       "target": {},
@@ -15648,48 +16769,56 @@ window.IPAS_DATA = {
     "72060500060001": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 5,
-        "APPROVED BY Pengawas": 16,
-        "REJECTED BY Pengawas": 7
+        "SUBMITTED BY Pencacah": 6,
+        "APPROVED BY Pengawas": 8,
+        "REJECTED BY Pengawas": 6
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 4
+        "APPROVED BY Pengawas": 3
       }
     },
     "72060300130006": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 6
+        "APPROVED BY Pengawas": 9
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 3
       }
     },
     "72060300120006": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
-    "72060600072002": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72060310080002": {
       "target": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 3
       }
     },
     "72060410050012": {
       "target": {
         "REJECTED BY Pengawas": 1,
         "APPROVED BY Pengawas": 9
+      },
+      "nontarget": {}
+    },
+    "72060400160001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72060300100009": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -15704,8 +16833,7 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 4
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "DRAFT": 1
+        "APPROVED BY Pengawas": 2
       }
     },
     "72060600090008": {
@@ -15724,13 +16852,13 @@ window.IPAS_DATA = {
     },
     "72060200070002": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {}
     },
     "72060300030006": {
       "target": {
-        "APPROVED BY Pengawas": 7
+        "APPROVED BY Pengawas": 8
       },
       "nontarget": {
         "APPROVED BY Pengawas": 1
@@ -15764,6 +16892,13 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72060300040005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
     "72060410070006": {
       "target": {
         "SUBMITTED BY Pencacah": 2
@@ -15775,7 +16910,7 @@ window.IPAS_DATA = {
     },
     "72060400120021": {
       "target": {
-        "DRAFT": 1,
+        "DRAFT": 2,
         "APPROVED BY Pengawas": 2
       },
       "nontarget": {}
@@ -15785,7 +16920,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 4
       }
     },
     "72060500030013": {
@@ -15797,25 +16932,19 @@ window.IPAS_DATA = {
     },
     "72060600060018": {
       "target": {
-        "APPROVED BY Pengawas": 7,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 8
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 4,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 5
       }
     },
     "72060400180004": {
       "target": {
         "DRAFT": 1,
         "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 4,
-        "REVOKED BY Pengawas": 1
+        "APPROVED BY Pengawas": 4
       },
-      "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72060610040009": {
       "target": {
@@ -15844,14 +16973,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72060400160001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
-      }
-    },
     "72060400160005": {
       "target": {
         "SUBMITTED BY Pencacah": 5,
@@ -15862,16 +16983,10 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       }
     },
-    "72060400140011": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72060400160004": {
       "target": {
         "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -15879,8 +16994,8 @@ window.IPAS_DATA = {
     },
     "72060400190002": {
       "target": {
-        "SUBMITTED BY Pencacah": 6,
-        "DRAFT": 1
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -15902,8 +17017,7 @@ window.IPAS_DATA = {
     },
     "72060400120001": {
       "target": {
-        "APPROVED BY Pengawas": 7,
-        "REJECTED BY Pengawas": 1
+        "APPROVED BY Pengawas": 5
       },
       "nontarget": {
         "REJECTED BY Pengawas": 1
@@ -15924,6 +17038,12 @@ window.IPAS_DATA = {
       "nontarget": {
         "APPROVED BY Pengawas": 4
       }
+    },
+    "72060500060012": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {}
     },
     "72060400140006": {
       "target": {
@@ -15959,15 +17079,9 @@ window.IPAS_DATA = {
         "DRAFT": 2
       }
     },
-    "72060500060012": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
     "72060400160007": {
       "target": {
-        "REJECTED BY Pengawas": 3
+        "REJECTED BY Pengawas": 4
       },
       "nontarget": {}
     },
@@ -16002,11 +17116,10 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 7,
         "DRAFT": 2,
-        "APPROVED BY Pengawas": 7,
-        "REJECTED BY Pengawas": 1
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 4
+        "APPROVED BY Pengawas": 2
       }
     },
     "72060410030010": {
@@ -16015,21 +17128,21 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72060320010006": {
+      "target": {
+        "DRAFT": 10,
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2
+      }
+    },
     "72060320030015": {
       "target": {
         "APPROVED BY Pengawas": 8
       },
       "nontarget": {
         "DRAFT": 1
-      }
-    },
-    "72060320010006": {
-      "target": {
-        "DRAFT": 9,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2
       }
     },
     "72060200020011": {
@@ -16083,7 +17196,7 @@ window.IPAS_DATA = {
     "72060500030015": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -16097,9 +17210,7 @@ window.IPAS_DATA = {
       "target": {
         "APPROVED BY Pengawas": 5
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 4
-      }
+      "nontarget": {}
     },
     "72060200120002": {
       "target": {
@@ -16116,12 +17227,6 @@ window.IPAS_DATA = {
     "72060200020013": {
       "target": {
         "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72060500070008": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -16299,12 +17404,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72060300040005": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
     "72060400120023": {
       "target": {
         "APPROVED BY Pengawas": 5,
@@ -16354,7 +17453,7 @@ window.IPAS_DATA = {
     },
     "72060400150019": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -16372,17 +17471,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72060100050001": {
-      "target": {
-        "REJECTED BY Pengawas": 4,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72060100040004": {
       "target": {
-        "REJECTED BY Pengawas": 6,
-        "APPROVED BY Pengawas": 1
+        "REJECTED BY Pengawas": 6
       },
       "nontarget": {
         "APPROVED BY Pengawas": 4
@@ -16390,20 +17481,19 @@ window.IPAS_DATA = {
     },
     "72060500010002": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 3
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72060500140004": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72060400170025": {
       "target": {
-        "REJECTED BY Pengawas": 3
+        "REJECTED BY Pengawas": 1
       },
       "nontarget": {}
     },
@@ -16431,59 +17521,106 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72060400160036": {
-      "target": {},
+    "72070110050012": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72070200220003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5,
+        "DRAFT": 2
+      },
       "nontarget": {
-        "REVOKED BY Pengawas": 1
+        "APPROVED BY Pengawas": 2,
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
       }
     },
-    "72060500020003": {
+    "72070210030017": {
       "target": {
+        "SUBMITTED BY Pencacah": 4,
+        "APPROVED BY Pengawas": 10
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 5
+      }
+    },
+    "72070410050004": {
+      "target": {
+        "DRAFT": 4
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72070110020006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
         "DRAFT": 1
       },
       "nontarget": {}
     },
-    "72060200090001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
+    "72070300190003": {
+      "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72060310100007": {
+    "72070200160002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "DRAFT": 5
       },
       "nontarget": {}
     },
-    "72060400140001": {
+    "72070110010001": {
       "target": {
-        "REJECTED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 5
       }
     },
-    "72060200010005": {
+    "72070110060009": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72060400140021": {
-      "target": {
-        "DRAFT": 1,
-        "REJECTED BY Pengawas": 1
+        "DRAFT": 3,
+        "APPROVED BY Pengawas": 5
       },
       "nontarget": {}
     },
     "72070500130003": {
       "target": {
-        "REVOKED BY Pengawas": 1,
-        "DRAFT": 1
+        "DRAFT": 1,
+        "REVOKED BY Pengawas": 1
       },
       "nontarget": {}
+    },
+    "72070300070002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 1
+      }
+    },
+    "72070110030004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {}
+    },
+    "72070110030026": {
+      "target": {
+        "DRAFT": 1,
+        "REJECTED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 2
+      }
     },
     "72070210050001": {
       "target": {
@@ -16491,30 +17628,25 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72070110030004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {}
-    },
     "72070300080008": {
       "target": {
         "DRAFT": 2,
         "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 13
+        "APPROVED BY Pengawas": 19,
+        "REVOKED BY Pengawas": 1
       },
       "nontarget": {
-        "DRAFT": 3,
+        "DRAFT": 4,
         "APPROVED BY Pengawas": 2
       }
     },
     "72070400010003": {
       "target": {
-        "DRAFT": 6,
+        "DRAFT": 7,
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "DRAFT": 1
+        "DRAFT": 2
       }
     },
     "72070110030007": {
@@ -16529,19 +17661,19 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 2,
         "OPEN": 1,
-        "DRAFT": 1
+        "DRAFT": 2
       },
       "nontarget": {}
     },
     "72070110040002": {
       "target": {
-        "SUBMITTED BY Pencacah": 7
+        "SUBMITTED BY Pencacah": 8
       },
       "nontarget": {}
     },
     "72070510030003": {
       "target": {
-        "REJECTED BY Pengawas": 1,
+        "REJECTED BY Pengawas": 2,
         "APPROVED BY Pengawas": 10,
         "SUBMITTED BY Pencacah": 1
       },
@@ -16569,12 +17701,12 @@ window.IPAS_DATA = {
       "target": {},
       "nontarget": {
         "DRAFT": 6,
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       }
     },
     "72070200160010": {
       "target": {
-        "DRAFT": 4,
+        "DRAFT": 5,
         "OPEN": 1
       },
       "nontarget": {
@@ -16584,7 +17716,7 @@ window.IPAS_DATA = {
     },
     "72070300150004": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 2
       },
       "nontarget": {
         "DRAFT": 1
@@ -16608,14 +17740,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72070410050004": {
-      "target": {
-        "DRAFT": 3
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
     "72070300080001": {
       "target": {
         "APPROVED BY Pengawas": 1,
@@ -16634,7 +17758,7 @@ window.IPAS_DATA = {
     },
     "72070310050006": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -16650,17 +17774,15 @@ window.IPAS_DATA = {
     },
     "72070510040006": {
       "target": {
-        "DRAFT": 4
+        "DRAFT": 3
       },
-      "nontarget": {
-        "DRAFT": 1
-      }
+      "nontarget": {}
     },
     "72070310040001": {
       "target": {
         "DRAFT": 3,
+        "REJECTED BY Pengawas": 4,
         "APPROVED BY Pengawas": 12,
-        "REJECTED BY Pengawas": 3,
         "REVOKED BY Pengawas": 1
       },
       "nontarget": {
@@ -16682,14 +17804,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       }
     },
-    "72070110010001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 4
-      }
-    },
     "72070310060002": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -16706,9 +17820,8 @@ window.IPAS_DATA = {
     },
     "72070500080004": {
       "target": {
-        "DRAFT": 1,
-        "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 3,
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {
         "DRAFT": 2
@@ -16727,19 +17840,10 @@ window.IPAS_DATA = {
     "72070400130013": {
       "target": {
         "OPEN": 1,
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72070300070002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 2
       }
     },
     "72070310090001": {
@@ -16760,7 +17864,7 @@ window.IPAS_DATA = {
     "72070110030024": {
       "target": {
         "APPROVED BY Pengawas": 13,
-        "REJECTED BY Pengawas": 2,
+        "REJECTED BY Pengawas": 3,
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
@@ -16780,17 +17884,16 @@ window.IPAS_DATA = {
     },
     "72070110050001": {
       "target": {
-        "SUBMITTED BY Pencacah": 5,
-        "DRAFT": 2
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 1
       }
     },
     "72070110060015": {
       "target": {
-        "DRAFT": 2
+        "DRAFT": 3
       },
       "nontarget": {}
     },
@@ -16801,12 +17904,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "DRAFT": 1
       }
-    },
-    "72070200160002": {
-      "target": {
-        "DRAFT": 5
-      },
-      "nontarget": {}
     },
     "72070210030018": {
       "target": {
@@ -16819,24 +17916,26 @@ window.IPAS_DATA = {
     },
     "72070300080012": {
       "target": {
-        "APPROVED BY Pengawas": 3
+        "APPROVED BY Pengawas": 5
       },
       "nontarget": {
         "DRAFT": 2,
         "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 4
+        "APPROVED BY Pengawas": 5
       }
     },
     "72070300150001": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 9
       },
-      "nontarget": {}
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
     },
     "72070120060001": {
       "target": {
-        "DRAFT": 5
+        "DRAFT": 6
       },
       "nontarget": {}
     },
@@ -16846,11 +17945,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72070110030026": {
+    "72070200090002": {
       "target": {
-        "DRAFT": 1,
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 2
+        "DRAFT": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2,
@@ -16859,7 +17956,7 @@ window.IPAS_DATA = {
     },
     "72070100190007": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
@@ -16870,18 +17967,31 @@ window.IPAS_DATA = {
       "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 1
+        "DRAFT": 1,
+        "REJECTED BY Pengawas": 2
       }
+    },
+    "72070200130002": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {}
     },
     "72070110050004": {
       "target": {
         "DRAFT": 7,
-        "SUBMITTED BY Pencacah": 9
+        "SUBMITTED BY Pencacah": 8
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 2
+        "DRAFT": 3
       }
+    },
+    "72070300160001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
     },
     "72070110040007": {
       "target": {
@@ -16894,14 +18004,13 @@ window.IPAS_DATA = {
     },
     "72070510050002": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 2
       },
       "nontarget": {}
     },
-    "72070110060009": {
+    "72070400060011": {
       "target": {
-        "DRAFT": 2,
-        "APPROVED BY Pengawas": 5
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -16917,7 +18026,7 @@ window.IPAS_DATA = {
     "72070100090003": {
       "target": {
         "APPROVED BY Pengawas": 4,
-        "REJECTED BY Pengawas": 4
+        "REJECTED BY Pengawas": 7
       },
       "nontarget": {
         "APPROVED BY Pengawas": 3,
@@ -16936,16 +18045,8 @@ window.IPAS_DATA = {
         "DRAFT": 2
       },
       "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 1
       }
-    },
-    "72070110020006": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
     },
     "72070210030001": {
       "target": {
@@ -16953,16 +18054,12 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72070200220003": {
+    "72070310090009": {
       "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 5,
+        "OPEN": 2
       },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
-      }
+      "nontarget": {}
     },
     "72070200160014": {
       "target": {},
@@ -16980,24 +18077,17 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       }
     },
-    "72070310090009": {
-      "target": {
-        "OPEN": 2,
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
-    },
     "72070110040008": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
+        "SUBMITTED BY Pencacah": 2,
         "DRAFT": 1
       }
     },
     "72070100100003": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "DRAFT": 1
@@ -17026,24 +18116,21 @@ window.IPAS_DATA = {
     },
     "72070210060004": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 2
       },
       "nontarget": {}
     },
-    "72070200090002": {
+    "72070210080002": {
       "target": {
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 2
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 1
-      }
+      "nontarget": {}
     },
     "72070300070001": {
       "target": {},
       "nontarget": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72070310040004": {
@@ -17055,7 +18142,7 @@ window.IPAS_DATA = {
     },
     "72070310030007": {
       "target": {
-        "DRAFT": 3
+        "DRAFT": 4
       },
       "nontarget": {
         "DRAFT": 1
@@ -17074,21 +18161,11 @@ window.IPAS_DATA = {
     "72070310010008": {
       "target": {
         "APPROVED BY Pengawas": 4,
-        "SUBMITTED BY Pencacah": 6,
-        "REJECTED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {
         "APPROVED BY Pengawas": 1,
         "SUBMITTED BY Pencacah": 4
-      }
-    },
-    "72070210030017": {
-      "target": {
-        "APPROVED BY Pengawas": 10,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 4
       }
     },
     "72070100110003": {
@@ -17132,7 +18209,7 @@ window.IPAS_DATA = {
     },
     "72070410040010": {
       "target": {
-        "APPROVED BY Pengawas": 4
+        "APPROVED BY Pengawas": 5
       },
       "nontarget": {
         "APPROVED BY Pengawas": 1
@@ -17140,14 +18217,13 @@ window.IPAS_DATA = {
     },
     "72070110030015": {
       "target": {
-        "APPROVED BY Pengawas": 3,
-        "SUBMITTED BY Pencacah": 2
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {}
     },
     "72070500070004": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -17159,7 +18235,7 @@ window.IPAS_DATA = {
     },
     "72070500110003": {
       "target": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {}
     },
@@ -17171,7 +18247,7 @@ window.IPAS_DATA = {
     },
     "72070410070007": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -17179,7 +18255,7 @@ window.IPAS_DATA = {
     },
     "72070410040007": {
       "target": {
-        "APPROVED BY Pengawas": 3,
+        "APPROVED BY Pengawas": 4,
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {
@@ -17196,7 +18272,7 @@ window.IPAS_DATA = {
     },
     "72070200070006": {
       "target": {
-        "DRAFT": 7,
+        "DRAFT": 8,
         "APPROVED BY Pengawas": 4
       },
       "nontarget": {
@@ -17212,7 +18288,7 @@ window.IPAS_DATA = {
     "72070120030001": {
       "target": {
         "REJECTED BY Pengawas": 5,
-        "APPROVED BY Pengawas": 7
+        "APPROVED BY Pengawas": 8
       },
       "nontarget": {}
     },
@@ -17308,9 +18384,7 @@ window.IPAS_DATA = {
       "nontarget": {}
     },
     "72070300210003": {
-      "target": {
-        "DRAFT": 1
-      },
+      "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 5
       }
@@ -17326,12 +18400,10 @@ window.IPAS_DATA = {
     },
     "72070110030002": {
       "target": {
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 14
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 11
       },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
+      "nontarget": {}
     },
     "72070110060018": {
       "target": {
@@ -17368,7 +18440,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72070110030014": {
@@ -17440,9 +18512,7 @@ window.IPAS_DATA = {
       "nontarget": {}
     },
     "72070210080001": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
+      "target": {},
       "nontarget": {
         "APPROVED BY Pengawas": 1
       }
@@ -17491,24 +18561,16 @@ window.IPAS_DATA = {
     },
     "72070510060006": {
       "target": {
-        "APPROVED BY Pengawas": 3
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 3,
+        "APPROVED BY Pengawas": 1,
         "REJECTED BY Pengawas": 2
       }
     },
     "72070510060005": {
       "target": {
         "APPROVED BY Pengawas": 20
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
-    },
-    "72070210080002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -17527,8 +18589,7 @@ window.IPAS_DATA = {
     "72070500090006": {
       "target": {
         "APPROVED BY Pengawas": 10,
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "REJECTED BY Pengawas": 1
       },
       "nontarget": {}
     },
@@ -17552,7 +18613,7 @@ window.IPAS_DATA = {
     },
     "72070120030002": {
       "target": {
-        "SUBMITTED BY Pencacah": 10
+        "SUBMITTED BY Pencacah": 9
       },
       "nontarget": {
         "APPROVED BY Pengawas": 1,
@@ -17562,8 +18623,7 @@ window.IPAS_DATA = {
     "72070300150005": {
       "target": {
         "DRAFT": 1,
-        "REJECTED BY Pengawas": 3,
-        "APPROVED BY Pengawas": 2
+        "REJECTED BY Pengawas": 2
       },
       "nontarget": {
         "DRAFT": 1,
@@ -17574,8 +18634,7 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 3,
         "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 3,
-        "DRAFT": 1
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {}
     },
@@ -17610,8 +18669,7 @@ window.IPAS_DATA = {
     },
     "72070300190002": {
       "target": {
-        "APPROVED BY Pengawas": 14,
-        "DRAFT": 1
+        "APPROVED BY Pengawas": 14
       },
       "nontarget": {}
     },
@@ -17652,8 +18710,7 @@ window.IPAS_DATA = {
     },
     "72070200170008": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 3
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -17680,11 +18737,9 @@ window.IPAS_DATA = {
       }
     },
     "72070100190004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
+      "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       }
     },
     "72070300210002": {
@@ -17693,25 +18748,31 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72070110030013": {
-      "target": {},
-      "nontarget": {
+    "72080420110001": {
+      "target": {
         "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72070310080008": {
-      "target": {
-        "REJECTED BY Pengawas": 2
       },
       "nontarget": {}
     },
-    "72070100110004": {
+    "72080100040009": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72070510030004": {
+    "72080100130004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080120070006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {}
+    },
+    "72080330090001": {
       "target": {
         "DRAFT": 3
       },
@@ -17719,33 +18780,165 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72070110050012": {
+    "72080410090006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080410020006": {
+      "target": {
+        "DRAFT": 6,
+        "OPEN": 1
+      },
+      "nontarget": {
+        "DRAFT": 2
+      }
+    },
+    "72080210010007": {
+      "target": {
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72080640100001": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72080640110001": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080300080003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
+    "72080100010003": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72070100120012": {
+    "72080240060001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72080300130001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72070510020001": {
+    "72080310100004": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72080640020003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {}
+    },
+    "72080410050002": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2,
+        "DRAFT": 2
+      }
+    },
+    "72080520050006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72080410200001": {
+      "target": {
+        "DRAFT": 8,
+        "OPEN": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72080400100001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 4
+      }
+    },
+    "72080320060003": {
       "target": {},
       "nontarget": {
+        "SUBMITTED BY Pencacah": 2,
         "APPROVED BY Pengawas": 1
       }
     },
-    "72070300180007": {
+    "72080300220002": {
       "target": {
-        "REJECTED BY Pengawas": 9
+        "SUBMITTED BY Pencacah": 5
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080630100002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
+    },
+    "72080200160007": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72080300100002": {
+      "target": {
+        "DRAFT": 4
       },
       "nontarget": {}
     },
-    "72070410050001": {
+    "72080100130005": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 6
+      },
+      "nontarget": {}
+    },
+    "72080240050004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -17757,7 +18950,7 @@ window.IPAS_DATA = {
     },
     "72080110010002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -17769,14 +18962,14 @@ window.IPAS_DATA = {
     },
     "72080300080004": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
     "72080330050004": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2,
@@ -17800,8 +18993,7 @@ window.IPAS_DATA = {
     },
     "72080200170002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -17855,7 +19047,7 @@ window.IPAS_DATA = {
     },
     "72080100020003": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -17870,14 +19062,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
-    },
-    "72080200160007": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
     },
     "72080100020004": {
       "target": {},
@@ -17896,22 +19080,13 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72080410050002": {
-      "target": {
-        "DRAFT": 1,
         "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 1
       }
     },
     "72080210070007": {
       "target": {
-        "DRAFT": 5
+        "DRAFT": 5,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -17920,24 +19095,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
-    },
-    "72080410020006": {
-      "target": {
-        "DRAFT": 5,
-        "OPEN": 1
-      },
-      "nontarget": {
-        "DRAFT": 2
-      }
-    },
-    "72080240060001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3,
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
     },
     "72080400120003": {
       "target": {
@@ -17968,12 +19125,6 @@ window.IPAS_DATA = {
     "72080110010004": {
       "target": {
         "REVOKED BY Pengawas": 2
-      },
-      "nontarget": {}
-    },
-    "72080240050004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -18017,7 +19168,7 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 2,
         "APPROVED BY Pengawas": 1,
-        "DRAFT": 12
+        "DRAFT": 11
       },
       "nontarget": {}
     },
@@ -18028,12 +19179,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "DRAFT": 1
       }
-    },
-    "72080300080003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
     },
     "72080110070001": {
       "target": {
@@ -18058,24 +19203,12 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080640020003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
-    },
-    "72080100130005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {}
-    },
     "72080420060005": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "DRAFT": 1,
+        "DRAFT": 2,
         "SUBMITTED BY Pencacah": 1
       }
     },
@@ -18101,20 +19234,6 @@ window.IPAS_DATA = {
         "DRAFT": 2
       }
     },
-    "72080300220002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080300100002": {
-      "target": {
-        "DRAFT": 4
-      },
-      "nontarget": {}
-    },
     "72080100140003": {
       "target": {
         "DRAFT": 3
@@ -18126,15 +19245,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 4
-      }
-    },
-    "72080330090001": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 6
       }
     },
     "72080520100002": {
@@ -18145,15 +19256,18 @@ window.IPAS_DATA = {
     },
     "72080520020001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
-      "nontarget": {}
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
     },
     "72080410140003": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
+        "DRAFT": 1,
         "SUBMITTED BY Pencacah": 1
       }
     },
@@ -18167,14 +19281,14 @@ window.IPAS_DATA = {
     },
     "72080240020001": {
       "target": {
-        "SUBMITTED BY Pencacah": 13,
+        "SUBMITTED BY Pencacah": 15,
         "REJECTED BY Pengawas": 2
       },
       "nontarget": {}
     },
     "72080620040001": {
       "target": {
-        "DRAFT": 5
+        "DRAFT": 6
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -18190,7 +19304,7 @@ window.IPAS_DATA = {
     },
     "72080200160011": {
       "target": {
-        "DRAFT": 2
+        "DRAFT": 3
       },
       "nontarget": {
         "DRAFT": 1
@@ -18238,7 +19352,7 @@ window.IPAS_DATA = {
         "DRAFT": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72080600060001": {
@@ -18273,13 +19387,13 @@ window.IPAS_DATA = {
     "72080610180002": {
       "target": {
         "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
     "72080600010001": {
       "target": {
-        "REJECTED BY Pengawas": 5
+        "REJECTED BY Pengawas": 6
       },
       "nontarget": {
         "REJECTED BY Pengawas": 2
@@ -18288,7 +19402,7 @@ window.IPAS_DATA = {
     "72080630030001": {
       "target": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -18302,13 +19416,13 @@ window.IPAS_DATA = {
     },
     "72080110010001": {
       "target": {
-        "DRAFT": 3,
+        "DRAFT": 4,
         "REJECTED BY Pengawas": 1,
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72080410030004": {
@@ -18341,7 +19455,7 @@ window.IPAS_DATA = {
     },
     "72080400080004": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -18377,7 +19491,7 @@ window.IPAS_DATA = {
     },
     "72080220060001": {
       "target": {
-        "SUBMITTED BY Pencacah": 9,
+        "SUBMITTED BY Pencacah": 10,
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
@@ -18387,16 +19501,6 @@ window.IPAS_DATA = {
         "DRAFT": 1
       },
       "nontarget": {}
-    },
-    "72080400100001": {
-      "target": {
-        "APPROVED BY Pengawas": 3,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 4
-      }
     },
     "72080520020004": {
       "target": {
@@ -18419,13 +19523,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080320060003": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 1
-      }
-    },
     "72080640080004": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -18440,9 +19537,9 @@ window.IPAS_DATA = {
     },
     "72080410140001": {
       "target": {
-        "DRAFT": 5,
-        "REJECTED BY Pengawas": 5,
-        "APPROVED BY Pengawas": 3
+        "DRAFT": 7,
+        "APPROVED BY Pengawas": 4,
+        "REJECTED BY Pengawas": 5
       },
       "nontarget": {
         "DRAFT": 2,
@@ -18464,17 +19561,34 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
+    "72080410040008": {
+      "target": {
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
     "72080640090004": {
       "target": {
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 8
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 4
       }
     },
+    "72080420010002": {
+      "target": {
+        "APPROVED BY Pengawas": 2,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
     "72080610170004": {
       "target": {
-        "DRAFT": 8,
+        "DRAFT": 10,
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
@@ -18515,7 +19629,7 @@ window.IPAS_DATA = {
     },
     "72080640130002": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 7
       },
       "nontarget": {}
     },
@@ -18534,7 +19648,7 @@ window.IPAS_DATA = {
     },
     "72080120040007": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -18560,7 +19674,7 @@ window.IPAS_DATA = {
     },
     "72080640040001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -18568,7 +19682,7 @@ window.IPAS_DATA = {
     },
     "72080630060001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -18580,21 +19694,12 @@ window.IPAS_DATA = {
     },
     "72080240050002": {
       "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 15
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 11
       },
       "nontarget": {
         "DRAFT": 1,
         "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080410200001": {
-      "target": {
-        "DRAFT": 7,
-        "OPEN": 1
-      },
-      "nontarget": {
-        "DRAFT": 1
       }
     },
     "72080610010002": {
@@ -18627,7 +19732,7 @@ window.IPAS_DATA = {
     },
     "72080200130001": {
       "target": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
@@ -18636,13 +19741,13 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 6
       }
     },
     "72080410020005": {
       "target": {},
       "nontarget": {
-        "DRAFT": 4
+        "DRAFT": 6
       }
     },
     "72080120070001": {
@@ -18653,7 +19758,7 @@ window.IPAS_DATA = {
     },
     "72080110010005": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -18663,14 +19768,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72080630100002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
       }
     },
     "72080620030006": {
@@ -18691,8 +19788,16 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72080640100001": {
-      "target": {},
+    "72080500190001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 20
+      },
+      "nontarget": {}
+    },
+    "72080400280001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
@@ -18700,12 +19805,6 @@ window.IPAS_DATA = {
     "72080310130001": {
       "target": {
         "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080500190001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 16
       },
       "nontarget": {}
     },
@@ -18720,6 +19819,12 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
       }
+    },
+    "72080100040002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
     },
     "72080220010003": {
       "target": {
@@ -18743,13 +19848,19 @@ window.IPAS_DATA = {
     },
     "72080300120002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72080110010008": {
+      "target": {
+        "OPEN": 1
       },
       "nontarget": {}
     },
     "72080120030006": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -18768,21 +19879,27 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 4
       }
     },
-    "72080410090004": {
+    "72080520070002": {
       "target": {
         "SUBMITTED BY Pencacah": 2
       },
+      "nontarget": {}
+    },
+    "72080410090004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
+      },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72080510090004": {
       "target": {
         "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72080600020005": {
@@ -18798,6 +19915,12 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
+    },
+    "72080300060004": {
+      "target": {
+        "DRAFT": 3
+      },
+      "nontarget": {}
     },
     "72080520050001": {
       "target": {},
@@ -18815,7 +19938,7 @@ window.IPAS_DATA = {
     },
     "72080220030005": {
       "target": {
-        "APPROVED BY Pengawas": 1
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {
         "APPROVED BY Pengawas": 3
@@ -18830,7 +19953,7 @@ window.IPAS_DATA = {
     },
     "72080400170001": {
       "target": {
-        "REJECTED BY Pengawas": 9,
+        "REJECTED BY Pengawas": 11,
         "REVOKED BY Pengawas": 1
       },
       "nontarget": {
@@ -18844,6 +19967,13 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
+    },
+    "72080310030003": {
+      "target": {
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {}
     },
     "72080330010001": {
       "target": {
@@ -18861,25 +19991,20 @@ window.IPAS_DATA = {
     },
     "72080600230002": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
-    "72080520070002": {
+    "72080510140003": {
       "target": {
+        "DRAFT": 1,
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72080500070004": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {}
-    },
-    "72080300060004": {
-      "target": {
-        "DRAFT": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -18892,7 +20017,7 @@ window.IPAS_DATA = {
     },
     "72080320020004": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -18908,21 +20033,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080120070006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72080100040009": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72080320020002": {
       "target": {
-        "APPROVED BY Pengawas": 6
+        "APPROVED BY Pengawas": 7
       },
       "nontarget": {}
     },
@@ -18932,9 +20045,17 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080400280001": {
+    "72080400130005": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080640030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -18942,10 +20063,17 @@ window.IPAS_DATA = {
     },
     "72080610310003": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080630040001": {
+      "target": {},
+      "nontarget": {
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 1
       }
     },
     "72080620050005": {
@@ -18954,12 +20082,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 3
-      }
-    },
-    "72080630040001": {
-      "target": {},
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
       }
     },
     "72080640110005": {
@@ -18988,16 +20110,38 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72080120060002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72080300230002": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
     "72080300110002": {
       "target": {
         "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
     },
+    "72080520100006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
     "72080320090001": {
       "target": {},
       "nontarget": {
-        "APPROVED BY Pengawas": 4
+        "APPROVED BY Pengawas": 5
       }
     },
     "72080210010017": {
@@ -19008,17 +20152,9 @@ window.IPAS_DATA = {
     },
     "72080230050001": {
       "target": {
-        "DRAFT": 4
+        "DRAFT": 1
       },
       "nontarget": {}
-    },
-    "72080640030003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72080610010006": {
       "target": {
@@ -19046,7 +20182,8 @@ window.IPAS_DATA = {
     "72080240030004": {
       "target": {
         "APPROVED BY Pengawas": 2,
-        "REJECTED BY Pengawas": 3
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 2
       },
       "nontarget": {}
     },
@@ -19058,7 +20195,7 @@ window.IPAS_DATA = {
     },
     "72080110060002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -19072,7 +20209,7 @@ window.IPAS_DATA = {
     "72080320090004": {
       "target": {},
       "nontarget": {
-        "APPROVED BY Pengawas": 7
+        "APPROVED BY Pengawas": 8
       }
     },
     "72080510030001": {
@@ -19095,8 +20232,14 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 2
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 3
+        "APPROVED BY Pengawas": 4
       }
+    },
+    "72080640070003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
     },
     "72080520040001": {
       "target": {
@@ -19116,15 +20259,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080120060002": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72080210010014": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -19132,13 +20269,11 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72080100170004": {
       "target": {
-        "REJECTED BY Pengawas": 3
+        "REJECTED BY Pengawas": 4
       },
       "nontarget": {}
     },
@@ -19148,9 +20283,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080640070003": {
+    "72080610310005": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 5
       },
       "nontarget": {}
     },
@@ -19161,13 +20296,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "REJECTED BY Pengawas": 2
       }
-    },
-    "72080420010002": {
-      "target": {
-        "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
     },
     "72080240050001": {
       "target": {
@@ -19181,15 +20309,9 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080610310005": {
-      "target": {
-        "APPROVED BY Pengawas": 4
-      },
-      "nontarget": {}
-    },
     "72080610020002": {
       "target": {
-        "SUBMITTED BY Pencacah": 13
+        "SUBMITTED BY Pencacah": 14
       },
       "nontarget": {}
     },
@@ -19201,8 +20323,7 @@ window.IPAS_DATA = {
     },
     "72080520110001": {
       "target": {
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "REJECTED BY Pengawas": 1
       },
       "nontarget": {}
     },
@@ -19231,7 +20352,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72080510100006": {
@@ -19243,7 +20364,7 @@ window.IPAS_DATA = {
     },
     "72080610170003": {
       "target": {
-        "SUBMITTED BY Pencacah": 10
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {}
     },
@@ -19271,14 +20392,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72080400130005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72080610160001": {
       "target": {
         "DRAFT": 1
@@ -19305,20 +20418,12 @@ window.IPAS_DATA = {
     },
     "72080600020001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
     "72080510040001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72080510140003": {
-      "target": {
-        "DRAFT": 1,
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
@@ -19328,21 +20433,13 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72080640020005": {
       "target": {
-        "REJECTED BY Pengawas": 16,
-        "APPROVED BY Pengawas": 19
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
-      }
-    },
-    "72080310030003": {
-      "target": {
-        "APPROVED BY Pengawas": 2
+        "REJECTED BY Pengawas": 9,
+        "APPROVED BY Pengawas": 11
       },
       "nontarget": {}
     },
@@ -19354,7 +20451,7 @@ window.IPAS_DATA = {
     },
     "72080300070002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -19384,7 +20481,7 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 1
       }
     },
     "72080320040002": {
@@ -19395,7 +20492,7 @@ window.IPAS_DATA = {
     },
     "72080600060002": {
       "target": {
-        "SUBMITTED BY Pencacah": 18
+        "SUBMITTED BY Pencacah": 9
       },
       "nontarget": {}
     },
@@ -19407,12 +20504,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 7
       }
     },
-    "72080410040008": {
-      "target": {
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
     "72080600250002": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -19421,7 +20512,7 @@ window.IPAS_DATA = {
     },
     "72080600250001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -19435,7 +20526,7 @@ window.IPAS_DATA = {
     },
     "72080510050001": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -19455,117 +20546,53 @@ window.IPAS_DATA = {
     },
     "72080320040001": {
       "target": {
-        "APPROVED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 8
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
-      }
-    },
-    "72080500110002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080330050002": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72080110050012": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72080330070001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080100130001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72080410150003": {
-      "target": {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 2
+        "REJECTED BY Pengawas": 1
       }
     },
-    "72080410180002": {
+    "72090500100001": {
       "target": {
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
-    "72080640050002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
-    },
-    "72080640110007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72080600260002": {
+    "72090300090002": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {}
-    },
-    "72080630090002": {
-      "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080120060001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080410040001": {
-      "target": {
         "SUBMITTED BY Pencacah": 4
+      }
+    },
+    "72090500030004": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72090100060003": {
+      "target": {
+        "DRAFT": 2
       },
       "nontarget": {}
     },
-    "72080620030003": {
+    "72090300090007": {
       "target": {
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {}
-    },
-    "72080640050003": {
-      "target": {
+        "REJECTED BY Pengawas": 1,
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {}
-    },
-    "72080640030004": {
-      "target": {
+      "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
+      }
     },
-    "72080620020006": {
+    "72090400050008": {
       "target": {
+        "DRAFT": 1,
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
@@ -19582,15 +20609,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 3
-      }
-    },
-    "72090500030004": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "DRAFT": 1
       }
     },
     "72090510080008": {
@@ -19628,16 +20646,16 @@ window.IPAS_DATA = {
       "target": {
         "DRAFT": 2,
         "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 10
+        "APPROVED BY Pengawas": 11
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 8,
+        "APPROVED BY Pengawas": 9,
         "DRAFT": 1
       }
     },
     "72090500010004": {
       "target": {
-        "SUBMITTED BY Pencacah": 6,
+        "SUBMITTED BY Pencacah": 7,
         "APPROVED BY Pengawas": 10,
         "REJECTED BY Pengawas": 4
       },
@@ -19646,20 +20664,19 @@ window.IPAS_DATA = {
     "72090500100009": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 5,
-        "APPROVED BY Pengawas": 1
+        "REJECTED BY Pengawas": 1
       },
       "nontarget": {}
     },
     "72090300010003": {
       "target": {
-        "SUBMITTED BY Pencacah": 7,
-        "REJECTED BY Pengawas": 11,
-        "APPROVED BY Pengawas": 11
+        "SUBMITTED BY Pencacah": 8,
+        "REJECTED BY Pengawas": 10,
+        "APPROVED BY Pengawas": 12
       },
       "nontarget": {
         "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 13
+        "APPROVED BY Pengawas": 14
       }
     },
     "72090510200014": {
@@ -19704,7 +20721,9 @@ window.IPAS_DATA = {
       }
     },
     "72090100020002": {
-      "target": {},
+      "target": {
+        "DRAFT": 1
+      },
       "nontarget": {
         "DRAFT": 1
       }
@@ -19718,19 +20737,19 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
+    "72090700110003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
     "72090500010002": {
       "target": {
-        "REVOKED BY Pengawas": 5
+        "REVOKED BY Pengawas": 7
       },
       "nontarget": {
         "REVOKED BY Pengawas": 5
       }
-    },
-    "72090100060003": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {}
     },
     "72090100120001": {
       "target": {
@@ -19751,13 +20770,13 @@ window.IPAS_DATA = {
     },
     "72090510090006": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 2
       },
       "nontarget": {}
     },
     "72090510110001": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -19766,7 +20785,7 @@ window.IPAS_DATA = {
         "REVOKED BY Pengawas": 1
       },
       "nontarget": {
-        "DRAFT": 1,
+        "DRAFT": 2,
         "SUBMITTED BY Pencacah": 1
       }
     },
@@ -19840,6 +20859,12 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72090400110001": {
+      "target": {
+        "DRAFT": 5
+      },
+      "nontarget": {}
+    },
     "72090700010001": {
       "target": {
         "REJECTED BY Pengawas": 3
@@ -19859,6 +20884,16 @@ window.IPAS_DATA = {
       "nontarget": {
         "DRAFT": 3,
         "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72090510110009": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 12
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 1
       }
     },
     "72090500140003": {
@@ -19907,21 +20942,12 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72090300090007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72090700050006": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72090300140008": {
@@ -19950,6 +20976,14 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72090500010005": {
+      "target": {
+        "DRAFT": 3
+      },
+      "nontarget": {
+        "DRAFT": 3
+      }
+    },
     "72090510050006": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
@@ -19968,17 +21002,14 @@ window.IPAS_DATA = {
       }
     },
     "72090700020001": {
-      "target": {
-        "APPROVED BY Pengawas": 2,
-        "REJECTED BY Pengawas": 1
-      },
+      "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
       }
     },
     "72090610020001": {
       "target": {
-        "SUBMITTED BY Pencacah": 4,
+        "SUBMITTED BY Pencacah": 6,
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {}
@@ -19992,7 +21023,7 @@ window.IPAS_DATA = {
     "72090200150001": {
       "target": {
         "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 2
+        "APPROVED BY Pengawas": 3
       },
       "nontarget": {
         "APPROVED BY Pengawas": 4,
@@ -20005,11 +21036,15 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72090400110001": {
+    "72090300140004": {
       "target": {
-        "DRAFT": 4
+        "APPROVED BY Pengawas": 7,
+        "REJECTED BY Pengawas": 2
       },
-      "nontarget": {}
+      "nontarget": {
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 2
+      }
     },
     "72090500030003": {
       "target": {
@@ -20029,17 +21064,9 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 9
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 5,
-        "REJECTED BY Pengawas": 2,
+        "SUBMITTED BY Pencacah": 6,
+        "REJECTED BY Pengawas": 1,
         "APPROVED BY Pengawas": 2
-      }
-    },
-    "72090500010005": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {
-        "DRAFT": 3
       }
     },
     "72090400130002": {
@@ -20050,21 +21077,25 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72090300140004": {
+    "72090100020004": {
       "target": {
-        "APPROVED BY Pengawas": 5,
-        "REJECTED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
-      }
+      "nontarget": {}
     },
     "72090200220001": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
+    },
+    "72090510090011": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
     },
     "72090200140002": {
       "target": {
@@ -20091,11 +21122,13 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72090500100001": {
+    "72090300170006": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 4
       },
-      "nontarget": {}
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
+      }
     },
     "72090500120006": {
       "target": {
@@ -20169,22 +21202,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
-    },
-    "72090300170006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3
-      }
-    },
-    "72090510090011": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72090400010012": {
       "target": {
@@ -20344,15 +21361,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72090300090002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 3
-      }
-    },
     "72090500150005": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -20450,15 +21458,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "APPROVED BY Pengawas": 5
-      }
-    },
-    "72090510110009": {
-      "target": {
-        "REJECTED BY Pengawas": 13
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
       }
     },
     "72090200170001": {
@@ -20589,8 +21588,7 @@ window.IPAS_DATA = {
     },
     "72090500010009": {
       "target": {
-        "APPROVED BY Pengawas": 6,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 6
       },
       "nontarget": {
         "APPROVED BY Pengawas": 1
@@ -20685,29 +21683,132 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72090700040008": {
+    "72100600030011": {
       "target": {
-        "APPROVED BY Pengawas": 12
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {}
     },
-    "72090510200001": {
+    "72100800100003": {
+      "target": {
+        "DRAFT": 3
+      },
+      "nontarget": {}
+    },
+    "72100600150001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 5
+      }
+    },
+    "72101500040002": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 3
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
+      }
+    },
+    "72101300050001": {
+      "target": {},
+      "nontarget": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72101200110005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72101210090004": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72101300030014": {
+      "target": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72101500060003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72101200120002": {
+      "target": {
+        "DRAFT": 30
+      },
+      "nontarget": {
+        "DRAFT": 7,
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72101200100002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72100900090003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {}
+    },
+    "72100100130005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72101500010003": {
       "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72090810030007": {
+    "72101500070002": {
       "target": {
-        "DRAFT": 1
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72090700040007": {
+    "72100600170007": {
       "target": {
-        "APPROVED BY Pengawas": 8
+        "DRAFT": 4,
+        "APPROVED BY Pengawas": 4
       },
-      "nontarget": {}
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72100500050008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72100900120003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 7
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 4
+      }
     },
     "72100800050003": {
       "target": {
@@ -20736,12 +21837,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 2
       }
     },
-    "72101200100002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
     "72100900070005": {
       "target": {
         "SUBMITTED BY Pencacah": 3
@@ -20759,22 +21854,9 @@ window.IPAS_DATA = {
         "DRAFT": 4
       }
     },
-    "72101300050001": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72101500070001": {
       "target": {
         "SUBMITTED BY Pencacah": 6
-      },
-      "nontarget": {}
-    },
-    "72100600030011": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -20795,7 +21877,7 @@ window.IPAS_DATA = {
     },
     "72101200110014": {
       "target": {
-        "SUBMITTED BY Pencacah": 14
+        "SUBMITTED BY Pencacah": 15
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -20824,11 +21906,12 @@ window.IPAS_DATA = {
     "72101210010003": {
       "target": {
         "REVOKED BY Pengawas": 3,
+        "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 2
       },
       "nontarget": {
         "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1,
+        "SUBMITTED BY Pencacah": 2,
         "APPROVED BY Pengawas": 1
       }
     },
@@ -20850,28 +21933,10 @@ window.IPAS_DATA = {
     },
     "72101200160006": {
       "target": {
-        "DRAFT": 3
+        "DRAFT": 5
       },
       "nontarget": {
         "DRAFT": 1
-      }
-    },
-    "72101500040002": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72101200120002": {
-      "target": {
-        "DRAFT": 29
-      },
-      "nontarget": {
-        "DRAFT": 7,
-        "SUBMITTED BY Pencacah": 2
       }
     },
     "72101200120033": {
@@ -20899,7 +21964,7 @@ window.IPAS_DATA = {
     },
     "72101210010006": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -20929,20 +21994,17 @@ window.IPAS_DATA = {
     },
     "72100600150005": {
       "target": {
-        "SUBMITTED BY Pencacah": 7,
-        "APPROVED BY Pengawas": 5
+        "SUBMITTED BY Pencacah": 7
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72101200120009": {
       "target": {
         "SUBMITTED BY Pencacah": 3,
-        "REJECTED BY Pengawas": 3,
-        "REVOKED BY Pengawas": 3,
-        "APPROVED BY Pengawas": 1
+        "REJECTED BY Pengawas": 4,
+        "REVOKED BY Pengawas": 5
       },
       "nontarget": {
         "REVOKED BY Pengawas": 5,
@@ -20970,19 +22032,10 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72100600170007": {
-      "target": {
-        "DRAFT": 4,
-        "APPROVED BY Pengawas": 3
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
     "72101210060005": {
       "target": {
         "SUBMITTED BY Pencacah": 2,
-        "REVOKED BY Pengawas": 1,
+        "REVOKED BY Pengawas": 2,
         "REJECTED BY Pengawas": 3
       },
       "nontarget": {
@@ -21011,12 +22064,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72101500060003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
     "72101210030001": {
       "target": {
         "SUBMITTED BY Pencacah": 1
@@ -21026,7 +22073,7 @@ window.IPAS_DATA = {
     "72101200120032": {
       "target": {
         "DRAFT": 3,
-        "APPROVED BY Pengawas": 4
+        "APPROVED BY Pengawas": 5
       },
       "nontarget": {}
     },
@@ -21038,7 +22085,8 @@ window.IPAS_DATA = {
     },
     "72101100070003": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 1
       },
       "nontarget": {
         "APPROVED BY Pengawas": 3,
@@ -21078,6 +22126,7 @@ window.IPAS_DATA = {
     "72100700050005": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 1,
         "APPROVED BY Pengawas": 1,
         "OPEN": 1
       },
@@ -21106,7 +22155,7 @@ window.IPAS_DATA = {
     },
     "72100700070007": {
       "target": {
-        "DRAFT": 2
+        "DRAFT": 3
       },
       "nontarget": {}
     },
@@ -21124,7 +22173,7 @@ window.IPAS_DATA = {
     },
     "72100600010008": {
       "target": {
-        "SUBMITTED BY Pencacah": 13
+        "SUBMITTED BY Pencacah": 16
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -21151,17 +22200,18 @@ window.IPAS_DATA = {
     "72100600030010": {
       "target": {
         "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 6,
-        "DRAFT": 2
+        "APPROVED BY Pengawas": 5,
+        "DRAFT": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3,
+        "SUBMITTED BY Pencacah": 2,
         "APPROVED BY Pengawas": 2
       }
     },
     "72101200090001": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2,
+        "REVOKED BY Pengawas": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 5,
@@ -21194,28 +22244,30 @@ window.IPAS_DATA = {
     },
     "72101200120017": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
     "72101300040001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72100800100003": {
-      "target": {
-        "DRAFT": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
     "72100300110002": {
       "target": {
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 7
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72100600130010": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 3
       }
     },
     "72100900020004": {
@@ -21231,14 +22283,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72100600130010": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
       }
     },
     "72101200120015": {
@@ -21257,7 +22301,7 @@ window.IPAS_DATA = {
     },
     "72101500040006": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -21275,6 +22319,14 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72100600160002": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "DRAFT": 1
       }
     },
     "72100600060001": {
@@ -21301,16 +22353,17 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       }
     },
     "72100200030004": {
       "target": {
-        "APPROVED BY Pengawas": 2,
-        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 3,
+        "REJECTED BY Pengawas": 3,
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
+        "APPROVED BY Pengawas": 1,
         "REJECTED BY Pengawas": 1,
         "SUBMITTED BY Pencacah": 2
       }
@@ -21325,12 +22378,13 @@ window.IPAS_DATA = {
     "72100900020009": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4
       }
     },
     "72101100050009": {
       "target": {
-        "DRAFT": 1
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
@@ -21352,6 +22406,13 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72101000040016": {
+      "target": {
+        "APPROVED BY Pengawas": 6,
+        "REJECTED BY Pengawas": 2
+      },
+      "nontarget": {}
+    },
     "72100800011004": {
       "target": {
         "SUBMITTED BY Pencacah": 2
@@ -21364,19 +22425,18 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72100900120003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 4
-      }
-    },
     "72101200140001": {
       "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
+    },
+    "72101210060008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 3,
+        "APPROVED BY Pengawas": 2
+      },
+      "nontarget": {}
     },
     "72100200110003": {
       "target": {
@@ -21395,7 +22455,7 @@ window.IPAS_DATA = {
     "72101000010005": {
       "target": {
         "OPEN": 1,
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -21417,7 +22477,7 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 32
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 9
+        "REJECTED BY Pengawas": 3
       }
     },
     "72100700060001": {
@@ -21440,7 +22500,7 @@ window.IPAS_DATA = {
     },
     "72101100040007": {
       "target": {
-        "APPROVED BY Pengawas": 3
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {}
     },
@@ -21455,44 +22515,29 @@ window.IPAS_DATA = {
     "72101300040008": {
       "target": {
         "REJECTED BY Pengawas": 2,
-        "REVOKED BY Pengawas": 2,
+        "REVOKED BY Pengawas": 4,
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {}
-    },
-    "72100500050008": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 2,
-        "APPROVED BY Pengawas": 8
-      },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       }
     },
-    "72101210060008": {
+    "72100900040003": {
       "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "APPROVED BY Pengawas": 1
+        "DRAFT": 1
       },
       "nontarget": {}
     },
     "72100100070005": {
       "target": {
-        "APPROVED BY Pengawas": 23,
+        "APPROVED BY Pengawas": 27,
         "REJECTED BY Pengawas": 8
       },
       "nontarget": {}
     },
     "72100600172002": {
       "target": {
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72100600160002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
+        "REJECTED BY Pengawas": 2
       },
       "nontarget": {}
     },
@@ -21518,25 +22563,30 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72101000040016": {
+    "72101500040001": {
       "target": {
-        "APPROVED BY Pengawas": 3,
-        "REJECTED BY Pengawas": 2
+        "REJECTED BY Pengawas": 2,
+        "REVOKED BY Pengawas": 1
       },
-      "nontarget": {}
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
     },
     "72100800040009": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 34
+        "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {
-        "REJECTED BY Pengawas": 3
-      }
+      "nontarget": {}
+    },
+    "72101500040008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
     },
     "72100600030002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -21548,7 +22598,7 @@ window.IPAS_DATA = {
     },
     "72101000040003": {
       "target": {
-        "SUBMITTED BY Pencacah": 9
+        "SUBMITTED BY Pencacah": 11
       },
       "nontarget": {}
     },
@@ -21563,15 +22613,22 @@ window.IPAS_DATA = {
         "DRAFT": 1,
         "SUBMITTED BY Pencacah": 2
       },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72100900050008": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
       "nontarget": {}
     },
-    "72101500040001": {
+    "72101000040007": {
       "target": {
-        "REJECTED BY Pengawas": 1,
-        "REVOKED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
-        "REVOKED BY Pengawas": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72101200162001": {
@@ -21588,7 +22645,7 @@ window.IPAS_DATA = {
     },
     "72101200120031": {
       "target": {
-        "APPROVED BY Pengawas": 8
+        "APPROVED BY Pengawas": 9
       },
       "nontarget": {}
     },
@@ -21619,26 +22676,10 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72101000040007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
     "72101210060009": {
       "target": {},
       "nontarget": {
         "APPROVED BY Pengawas": 1
-      }
-    },
-    "72100600150001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 3
       }
     },
     "72100600010006": {
@@ -21650,30 +22691,30 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       }
     },
+    "72101000040011": {
+      "target": {
+        "APPROVED BY Pengawas": 3
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 8
+      }
+    },
     "72100600010002": {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
-    "72101000040011": {
-      "target": {
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 6
-      }
-    },
     "72101100110006": {
       "target": {
-        "SUBMITTED BY Pencacah": 1,
+        "SUBMITTED BY Pencacah": 2,
         "DRAFT": 1
       },
       "nontarget": {}
     },
     "72100800010010": {
       "target": {
-        "SUBMITTED BY Pencacah": 7
+        "SUBMITTED BY Pencacah": 8
       },
       "nontarget": {}
     },
@@ -21687,10 +22728,10 @@ window.IPAS_DATA = {
     },
     "72101210080001": {
       "target": {
-        "REVOKED BY Pengawas": 28
+        "REVOKED BY Pengawas": 36
       },
       "nontarget": {
-        "REVOKED BY Pengawas": 3
+        "REVOKED BY Pengawas": 5
       }
     },
     "72101000010004": {
@@ -21716,7 +22757,7 @@ window.IPAS_DATA = {
     "72101300100005": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72101400100002": {
@@ -21731,22 +22772,21 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72100600180003": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
     "72100600180004": {
       "target": {
-        "APPROVED BY Pengawas": 7
+        "APPROVED BY Pengawas": 8
       },
       "nontarget": {}
     },
     "72101200120001": {
       "target": {
         "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72101300030014": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 2
       },
       "nontarget": {}
     },
@@ -21758,14 +22798,14 @@ window.IPAS_DATA = {
     },
     "72100600010001": {
       "target": {
-        "SUBMITTED BY Pencacah": 12
+        "SUBMITTED BY Pencacah": 13
       },
       "nontarget": {}
     },
     "72100800040001": {
       "target": {
         "SUBMITTED BY Pencacah": 4,
-        "REVOKED BY Pengawas": 19,
+        "REVOKED BY Pengawas": 17,
         "REJECTED BY Pengawas": 1
       },
       "nontarget": {
@@ -21774,19 +22814,18 @@ window.IPAS_DATA = {
     },
     "72101210090003": {
       "target": {
-        "APPROVED BY Pengawas": 1
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {}
     },
     "72100600170006": {
       "target": {
         "REJECTED BY Pengawas": 3,
-        "APPROVED BY Pengawas": 4,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 4
       },
       "nontarget": {
         "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 4,
+        "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 1
       }
     },
@@ -21795,12 +22834,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
-    },
-    "72100900040003": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
     },
     "72100200080001": {
       "target": {
@@ -21848,9 +22881,15 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       }
     },
+    "72101200130010": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
     "72101100070014": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -21862,7 +22901,7 @@ window.IPAS_DATA = {
     },
     "72100900080002": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -21932,8 +22971,7 @@ window.IPAS_DATA = {
     },
     "72101100040008": {
       "target": {
-        "SUBMITTED BY Pencacah": 3,
-        "REJECTED BY Pengawas": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -21975,12 +23013,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72101210090004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
     "72100300160004": {
       "target": {
         "SUBMITTED BY Pencacah": 2,
@@ -21988,7 +23020,7 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 7
+        "APPROVED BY Pengawas": 1
       }
     },
     "72100700030003": {
@@ -22043,7 +23075,7 @@ window.IPAS_DATA = {
     },
     "72101100100002": {
       "target": {
-        "SUBMITTED BY Pencacah": 14
+        "SUBMITTED BY Pencacah": 11
       },
       "nontarget": {}
     },
@@ -22078,36 +23110,24 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
-    "72100600220002": {
+    "72110400050009": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72101500030001": {
-      "target": {
-        "APPROVED BY Pengawas": 4
-      },
-      "nontarget": {}
-    },
-    "72100100130004": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72101300090007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
-    },
-    "72100100090001": {
-      "target": {
+        "SUBMITTED BY Pencacah": 6,
         "APPROVED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 1
+        "REJECTED BY Pengawas": 1,
+        "DRAFT": 2
       },
       "nontarget": {}
+    },
+    "72110400030003": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 8,
+        "REVOKED BY Pengawas": 1
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 4
+      }
     },
     "72110100060003": {
       "target": {
@@ -22134,7 +23154,7 @@ window.IPAS_DATA = {
     },
     "72110100060002": {
       "target": {
-        "SUBMITTED BY Pencacah": 4,
+        "SUBMITTED BY Pencacah": 7,
         "REJECTED BY Pengawas": 6,
         "APPROVED BY Pengawas": 7
       },
@@ -22145,7 +23165,7 @@ window.IPAS_DATA = {
     "72110600030002": {
       "target": {
         "REJECTED BY Pengawas": 2,
-        "REVOKED BY Pengawas": 7
+        "REVOKED BY Pengawas": 8
       },
       "nontarget": {}
     },
@@ -22157,8 +23177,8 @@ window.IPAS_DATA = {
     },
     "72110700120004": {
       "target": {
-        "SUBMITTED BY Pencacah": 4,
-        "REJECTED BY Pengawas": 9
+        "SUBMITTED BY Pencacah": 5,
+        "REJECTED BY Pengawas": 8
       },
       "nontarget": {}
     },
@@ -22170,7 +23190,7 @@ window.IPAS_DATA = {
     },
     "72110400010003": {
       "target": {
-        "REVOKED BY Pengawas": 2,
+        "REVOKED BY Pengawas": 3,
         "REJECTED BY Pengawas": 1,
         "SUBMITTED BY Pencacah": 8
       },
@@ -22221,13 +23241,13 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2,
+        "SUBMITTED BY Pencacah": 3,
         "APPROVED BY Pengawas": 6
       }
     },
     "72110400020002": {
       "target": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 6
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
@@ -22235,7 +23255,7 @@ window.IPAS_DATA = {
     },
     "72110400080001": {
       "target": {
-        "DRAFT": 6
+        "DRAFT": 5
       },
       "nontarget": {
         "DRAFT": 6
@@ -22244,9 +23264,11 @@ window.IPAS_DATA = {
     "72110600030005": {
       "target": {
         "REJECTED BY Pengawas": 4,
-        "REVOKED BY Pengawas": 9
+        "REVOKED BY Pengawas": 10
       },
-      "nontarget": {}
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
+      }
     },
     "72110700110001": {
       "target": {
@@ -22287,21 +23309,12 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 8
       }
     },
-    "72110400050009": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5,
-        "APPROVED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 1,
-        "DRAFT": 2
-      },
-      "nontarget": {}
-    },
     "72110300020002": {
       "target": {
-        "DRAFT": 4,
+        "DRAFT": 5,
+        "SUBMITTED BY Pencacah": 14,
         "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 12
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {
         "DRAFT": 5,
@@ -22310,7 +23323,8 @@ window.IPAS_DATA = {
     },
     "72110400010002": {
       "target": {
-        "REJECTED BY Pengawas": 8
+        "REJECTED BY Pengawas": 8,
+        "REVOKED BY Pengawas": 1
       },
       "nontarget": {
         "REJECTED BY Pengawas": 1
@@ -22330,7 +23344,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 5
       }
     },
     "72110100010001": {
@@ -22346,7 +23360,7 @@ window.IPAS_DATA = {
     },
     "72110600060003": {
       "target": {
-        "SUBMITTED BY Pencacah": 14
+        "SUBMITTED BY Pencacah": 16
       },
       "nontarget": {}
     },
@@ -22356,11 +23370,23 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72110700080001": {
+      "target": {
+        "REJECTED BY Pengawas": 3,
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 6
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 2
+      }
+    },
     "72110300010001": {
       "target": {
         "DRAFT": 2
       },
-      "nontarget": {}
+      "nontarget": {
+        "DRAFT": 1
+      }
     },
     "72110300010002": {
       "target": {
@@ -22368,16 +23394,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72110700080001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 5
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 2
       }
     },
     "72110400040002": {
@@ -22388,9 +23404,17 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 9
       }
     },
+    "72110400060002": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
     "72110700030002": {
       "target": {
-        "SUBMITTED BY Pencacah": 6
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -22415,9 +23439,7 @@ window.IPAS_DATA = {
     },
     "72110700150001": {
       "target": {
-        "APPROVED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
@@ -22463,12 +23485,11 @@ window.IPAS_DATA = {
     },
     "72110500060002": {
       "target": {
-        "SUBMITTED BY Pencacah": 8,
+        "SUBMITTED BY Pencacah": 7,
         "APPROVED BY Pengawas": 19
       },
       "nontarget": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
+        "DRAFT": 1
       }
     },
     "72110500070001": {
@@ -22483,7 +23504,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 8
+        "SUBMITTED BY Pencacah": 7
       }
     },
     "72110100050002": {
@@ -22553,7 +23574,7 @@ window.IPAS_DATA = {
     "72110500060001": {
       "target": {
         "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
@@ -22620,15 +23641,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "APPROVED BY Pengawas": 1,
         "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72110400030003": {
-      "target": {
-        "REJECTED BY Pengawas": 9,
-        "REVOKED BY Pengawas": 1
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 4
       }
     },
     "72110700120001": {
@@ -22796,26 +23808,18 @@ window.IPAS_DATA = {
     },
     "72110700150002": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 10
+        "SUBMITTED BY Pencacah": 9
       }
     },
     "72110300060002": {
       "target": {
-        "DRAFT": 5,
-        "SUBMITTED BY Pencacah": 5
+        "DRAFT": 4,
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {}
-    },
-    "72110400060002": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
     },
     "72110300050003": {
       "target": {
@@ -22841,9 +23845,7 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
+      "nontarget": {}
     },
     "72110300040004": {
       "target": {
@@ -22854,26 +23856,19 @@ window.IPAS_DATA = {
     "72110400050003": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 2
       }
     },
-    "72110700110002": {
+    "72120900100001": {
       "target": {
-        "APPROVED BY Pengawas": 1
+        "DRAFT": 4,
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
-    "72110700150003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72120700050002": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -22889,10 +23884,10 @@ window.IPAS_DATA = {
     },
     "72120500080006": {
       "target": {
-        "DRAFT": 5
+        "DRAFT": 6
       },
       "nontarget": {
-        "DRAFT": 9
+        "DRAFT": 10
       }
     },
     "72121000050005": {
@@ -22903,16 +23898,7 @@ window.IPAS_DATA = {
     },
     "72120600020002": {
       "target": {
-        "SUBMITTED BY Pencacah": 11
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72120900100001": {
-      "target": {
-        "DRAFT": 3,
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED BY Pencacah": 10
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -22965,7 +23951,7 @@ window.IPAS_DATA = {
     "72120100050001": {
       "target": {},
       "nontarget": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 5
       }
     },
     "72120800020002": {
@@ -22995,6 +23981,14 @@ window.IPAS_DATA = {
         "DRAFT": 2
       }
     },
+    "72120400120001": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "DRAFT": 6
+      }
+    },
     "72120300090004": {
       "target": {
         "SUBMITTED BY Pencacah": 3,
@@ -23004,14 +23998,6 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 4,
         "EDITED BY Pengawas": 1
-      }
-    },
-    "72120400120001": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {
-        "DRAFT": 5
       }
     },
     "72120200110002": {
@@ -23050,12 +24036,11 @@ window.IPAS_DATA = {
     },
     "72120200080005": {
       "target": {
-        "SUBMITTED BY Pencacah": 5,
-        "APPROVED BY Pengawas": 6
+        "SUBMITTED BY Pencacah": 4,
+        "APPROVED BY Pengawas": 7
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 2
       }
     },
     "72120800100002": {
@@ -23138,14 +24123,32 @@ window.IPAS_DATA = {
     },
     "72120200080004": {
       "target": {
-        "APPROVED BY Pengawas": 9,
+        "APPROVED BY Pengawas": 10,
         "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1,
         "OPEN": 2
       },
       "nontarget": {
-        "APPROVED BY Pengawas": 4
+        "APPROVED BY Pengawas": 5
       }
+    },
+    "72120400110002": {
+      "target": {
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 3,
+        "SUBMITTED BY Pencacah": 7,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1,
+        "SUBMITTED BY Pencacah": 1,
+        "DRAFT": 1
+      }
+    },
+    "72120200060004": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
     },
     "72120200060002": {
       "target": {
@@ -23226,18 +24229,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "DRAFT": 3
-      }
-    },
-    "72120400110002": {
-      "target": {
-        "APPROVED BY Pengawas": 3,
-        "SUBMITTED BY Pencacah": 8,
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
       }
     },
     "72120300060003": {
@@ -23756,7 +24747,7 @@ window.IPAS_DATA = {
     },
     "72121000050002": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -23992,7 +24983,7 @@ window.IPAS_DATA = {
     },
     "72121000070001": {
       "target": {
-        "SUBMITTED BY Pencacah": 9
+        "SUBMITTED BY Pencacah": 7
       },
       "nontarget": {}
     },
@@ -24048,25 +25039,97 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72120700082001": {
+    "72710310010003": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72710120010019": {
       "target": {
-        "SUBMITTED BY Pencacah": 3
+        "DRAFT": 5,
+        "SUBMITTED BY Pencacah": 1,
+        "REJECTED BY Pengawas": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 5,
+        "DRAFT": 1,
+        "APPROVED BY Pengawas": 2,
+        "EDITED BY Pengawas": 1
+      }
+    },
+    "72710300040005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 2,
+        "APPROVED BY Pengawas": 1,
+        "DRAFT": 1
+      }
+    },
+    "72710410040019": {
+      "target": {
+        "SUBMITTED BY Pencacah": 4,
+        "DRAFT": 1
+      },
+      "nontarget": {
+        "APPROVED BY Pengawas": 1,
+        "DRAFT": 1
+      }
+    },
+    "72710310020019": {
+      "target": {
+        "DRAFT": 2
+      },
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
+    "72710310010006": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72710300050029": {
+      "target": {},
+      "nontarget": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 9
+      }
+    },
+    "72710100070008": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 21,
+        "APPROVED BY Pengawas": 1,
+        "DRAFT": 11
+      }
+    },
+    "72710300030007": {
+      "target": {
+        "DRAFT": 3
+      },
+      "nontarget": {
+        "DRAFT": 3
+      }
+    },
+    "72710300010005": {
+      "target": {
+        "SUBMITTED BY Pencacah": 7
+      },
+      "nontarget": {}
+    },
+    "72710110030001": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
     },
     "72710110020006": {
       "target": {},
       "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72710410040019": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2,
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1,
         "DRAFT": 1
       }
     },
@@ -24084,7 +25147,7 @@ window.IPAS_DATA = {
       "nontarget": {
         "REJECTED BY Pengawas": 3,
         "DRAFT": 3,
-        "REVOKED BY Pengawas": 4
+        "REVOKED BY Pengawas": 5
       }
     },
     "72710200080031": {
@@ -24104,8 +25167,8 @@ window.IPAS_DATA = {
       "nontarget": {
         "DRAFT": 1,
         "SUBMITTED BY Pencacah": 2,
-        "REJECTED BY Pengawas": 16,
-        "REVOKED BY Pengawas": 8
+        "REJECTED BY Pengawas": 20,
+        "REVOKED BY Pengawas": 5
       }
     },
     "72710120050006": {
@@ -24117,12 +25180,6 @@ window.IPAS_DATA = {
         "DRAFT": 2,
         "APPROVED BY Pengawas": 2
       }
-    },
-    "72710300010005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 5
-      },
-      "nontarget": {}
     },
     "72710120030002": {
       "target": {},
@@ -24147,31 +25204,10 @@ window.IPAS_DATA = {
     },
     "72710110060011": {
       "target": {
-        "SUBMITTED BY Pencacah": 11
+        "SUBMITTED BY Pencacah": 12
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72710120010019": {
-      "target": {
-        "DRAFT": 5,
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {
-        "DRAFT": 1,
-        "APPROVED BY Pengawas": 2,
-        "SUBMITTED BY Pencacah": 4,
-        "EDITED BY Pengawas": 1
-      }
-    },
-    "72710100070008": {
-      "target": {},
-      "nontarget": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 18,
-        "DRAFT": 7
       }
     },
     "72710300050030": {
@@ -24184,7 +25220,8 @@ window.IPAS_DATA = {
     },
     "72710300010004": {
       "target": {
-        "DRAFT": 7,
+        "DRAFT": 8,
+        "APPROVED BY Pengawas": 1,
         "SUBMITTED BY Pencacah": 12
       },
       "nontarget": {
@@ -24201,7 +25238,8 @@ window.IPAS_DATA = {
     "72710310020010": {
       "target": {
         "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 1
+        "REJECTED BY Pengawas": 1,
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {}
     },
@@ -24246,12 +25284,11 @@ window.IPAS_DATA = {
     },
     "72710120040001": {
       "target": {
-        "DRAFT": 2,
-        "APPROVED BY Pengawas": 2
+        "DRAFT": 3,
+        "APPROVED BY Pengawas": 1
       },
       "nontarget": {
-        "DRAFT": 2,
-        "APPROVED BY Pengawas": 1
+        "DRAFT": 3
       }
     },
     "72710200090025": {
@@ -24261,21 +25298,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "DRAFT": 2,
         "APPROVED BY Pengawas": 22
-      }
-    },
-    "72710300030007": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {
-        "DRAFT": 3
-      }
-    },
-    "72710300050029": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 9,
-        "DRAFT": 1
       }
     },
     "72710400040013": {
@@ -24295,9 +25317,7 @@ window.IPAS_DATA = {
       }
     },
     "72710120010002": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
+      "target": {},
       "nontarget": {
         "DRAFT": 2
       }
@@ -24333,16 +25353,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 6
-      }
-    },
-    "72710300040005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 1,
-        "DRAFT": 1
       }
     },
     "72710200070036": {
@@ -24384,7 +25394,7 @@ window.IPAS_DATA = {
     },
     "72710120030015": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
@@ -24412,6 +25422,7 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 1,
         "APPROVED BY Pengawas": 1
       }
     },
@@ -24448,7 +25459,9 @@ window.IPAS_DATA = {
       }
     },
     "72710410030004": {
-      "target": {},
+      "target": {
+        "DRAFT": 1
+      },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1
       }
@@ -24492,9 +25505,7 @@ window.IPAS_DATA = {
       "target": {
         "SUBMITTED BY Pencacah": 1
       },
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
+      "nontarget": {}
     },
     "72710400040001": {
       "target": {},
@@ -24516,12 +25527,6 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       }
     },
-    "72710310020019": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
     "72710200050012": {
       "target": {},
       "nontarget": {
@@ -24530,7 +25535,7 @@ window.IPAS_DATA = {
     },
     "72710100110023": {
       "target": {
-        "SUBMITTED BY Pencacah": 4
+        "SUBMITTED BY Pencacah": 5
       },
       "nontarget": {}
     },
@@ -24539,7 +25544,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 5
       }
     },
     "72710310010013": {
@@ -24548,6 +25553,15 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 2
+      }
+    },
+    "72710200070022": {
+      "target": {
+        "DRAFT": 2,
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "REJECTED BY Pengawas": 1
       }
     },
     "72710200090010": {
@@ -24583,8 +25597,7 @@ window.IPAS_DATA = {
     "72710400020011": {
       "target": {
         "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1,
-        "APPROVED BY Pengawas": 4
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 1,
@@ -24623,6 +25636,18 @@ window.IPAS_DATA = {
         "DRAFT": 2
       }
     },
+    "72710200070009": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72710200090011": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
     "72710310060044": {
       "target": {
         "DRAFT": 1,
@@ -24640,6 +25665,12 @@ window.IPAS_DATA = {
       "nontarget": {
         "APPROVED BY Pengawas": 1
       }
+    },
+    "72710410050001": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
     },
     "72710200090018": {
       "target": {
@@ -24663,8 +25694,8 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 2
+        "REJECTED BY Pengawas": 2,
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72710310060023": {
@@ -24672,7 +25703,7 @@ window.IPAS_DATA = {
       "nontarget": {
         "REJECTED BY Pengawas": 2,
         "SUBMITTED BY Pencacah": 7,
-        "APPROVED BY Pengawas": 7
+        "APPROVED BY Pengawas": 1
       }
     },
     "72710310030011": {
@@ -24683,8 +25714,7 @@ window.IPAS_DATA = {
     },
     "72710120020001": {
       "target": {
-        "APPROVED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 1
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {}
     },
@@ -24700,15 +25730,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72710200070022": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
-      }
-    },
     "72710310010012": {
       "target": {
         "DRAFT": 3,
@@ -24719,23 +25740,23 @@ window.IPAS_DATA = {
         "DRAFT": 1
       }
     },
-    "72710200080027": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
     "72710310060053": {
       "target": {
         "REJECTED BY Pengawas": 1,
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 24,
-        "REJECTED BY Pengawas": 14,
-        "REVOKED BY Pengawas": 3
+        "SUBMITTED BY Pencacah": 25,
+        "REJECTED BY Pengawas": 15,
+        "REVOKED BY Pengawas": 2
+      }
+    },
+    "72710200080027": {
+      "target": {
+        "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72710110020012": {
@@ -24754,9 +25775,15 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 1
       }
     },
+    "72710300050014": {
+      "target": {
+        "OPEN": 1
+      },
+      "nontarget": {}
+    },
     "72710300010014": {
       "target": {
-        "SUBMITTED BY Pencacah": 1
+        "SUBMITTED BY Pencacah": 2
       },
       "nontarget": {}
     },
@@ -24780,9 +25807,15 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72710110010013": {
+      "target": {
+        "DRAFT": 1
+      },
+      "nontarget": {}
+    },
     "72710100050001": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -24791,7 +25824,7 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 3
+        "SUBMITTED BY Pencacah": 4
       }
     },
     "72710300040015": {
@@ -24808,6 +25841,13 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 1
       }
     },
+    "72710310080002": {
+      "target": {},
+      "nontarget": {
+        "APPROVED BY Pengawas": 2,
+        "REJECTED BY Pengawas": 1
+      }
+    },
     "72710410010002": {
       "target": {
         "DRAFT": 1
@@ -24820,13 +25860,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {
         "DRAFT": 2
-      }
-    },
-    "72710310080002": {
-      "target": {},
-      "nontarget": {
-        "REJECTED BY Pengawas": 1,
-        "APPROVED BY Pengawas": 1
       }
     },
     "72710120020019": {
@@ -24842,7 +25875,7 @@ window.IPAS_DATA = {
     "72710310062001": {
       "target": {},
       "nontarget": {
-        "REJECTED BY Pengawas": 6,
+        "REJECTED BY Pengawas": 7,
         "REVOKED BY Pengawas": 6
       }
     },
@@ -24868,6 +25901,12 @@ window.IPAS_DATA = {
       "nontarget": {
         "SUBMITTED BY Pencacah": 2,
         "APPROVED BY Pengawas": 1
+      }
+    },
+    "72710310010031": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72710300050009": {
@@ -24946,8 +25985,8 @@ window.IPAS_DATA = {
     },
     "72710110060006": {
       "target": {
-        "APPROVED BY Pengawas": 14,
-        "REJECTED BY Pengawas": 4,
+        "APPROVED BY Pengawas": 17,
+        "REJECTED BY Pengawas": 5,
         "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {}
@@ -24981,6 +26020,12 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72710100060002": {
+      "target": {},
+      "nontarget": {
+        "DRAFT": 1
+      }
+    },
     "72710110040009": {
       "target": {
         "SUBMITTED BY Pencacah": 2,
@@ -24992,10 +26037,16 @@ window.IPAS_DATA = {
     },
     "72710110010023": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
+      }
+    },
+    "72710100060015": {
+      "target": {},
+      "nontarget": {
+        "SUBMITTED BY Pencacah": 1
       }
     },
     "72710200050024": {
@@ -25007,9 +26058,22 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 2
       }
     },
+    "72710200080014": {
+      "target": {
+        "APPROVED BY Pengawas": 1
+      },
+      "nontarget": {}
+    },
     "72710110030015": {
       "target": {
         "SUBMITTED BY Pencacah": 1
+      },
+      "nontarget": {}
+    },
+    "72710300010010": {
+      "target": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 3
       },
       "nontarget": {}
     },
@@ -25017,6 +26081,16 @@ window.IPAS_DATA = {
       "target": {},
       "nontarget": {
         "SUBMITTED BY Pencacah": 3
+      }
+    },
+    "72710120030003": {
+      "target": {
+        "DRAFT": 8,
+        "SUBMITTED BY Pencacah": 2
+      },
+      "nontarget": {
+        "DRAFT": 1,
+        "SUBMITTED BY Pencacah": 2
       }
     },
     "72710120030009": {
@@ -25038,22 +26112,6 @@ window.IPAS_DATA = {
       "nontarget": {
         "APPROVED BY Pengawas": 1
       }
-    },
-    "72710120030003": {
-      "target": {
-        "DRAFT": 7,
-        "SUBMITTED BY Pencacah": 4
-      },
-      "nontarget": {
-        "DRAFT": 2,
-        "SUBMITTED BY Pencacah": 3
-      }
-    },
-    "72710300010010": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {}
     },
     "72710200050035": {
       "target": {},
@@ -25277,7 +26335,7 @@ window.IPAS_DATA = {
     },
     "72710110050005": {
       "target": {
-        "SUBMITTED BY Pencacah": 2
+        "SUBMITTED BY Pencacah": 1
       },
       "nontarget": {
         "SUBMITTED BY Pencacah": 4
@@ -25298,7 +26356,7 @@ window.IPAS_DATA = {
     "72710200050003": {
       "target": {},
       "nontarget": {
-        "REJECTED BY Pengawas": 13
+        "REJECTED BY Pengawas": 7
       }
     },
     "72710110040001": {
@@ -25311,8 +26369,7 @@ window.IPAS_DATA = {
     },
     "72710110030034": {
       "target": {
-        "APPROVED BY Pengawas": 2,
-        "REJECTED BY Pengawas": 3
+        "APPROVED BY Pengawas": 2
       },
       "nontarget": {
         "REJECTED BY Pengawas": 3
@@ -25328,12 +26385,9 @@ window.IPAS_DATA = {
     },
     "72710400010015": {
       "target": {
-        "APPROVED BY Pengawas": 8,
-        "REJECTED BY Pengawas": 1
+        "APPROVED BY Pengawas": 5
       },
-      "nontarget": {
-        "REJECTED BY Pengawas": 1
-      }
+      "nontarget": {}
     },
     "72710110010003": {
       "target": {
@@ -25367,559 +26421,9 @@ window.IPAS_DATA = {
     },
     "72710120040003": {
       "target": {
-        "REJECTED BY Pengawas": 3,
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {
-        "REJECTED BY Pengawas": 13,
-        "APPROVED BY Pengawas": 4
-      }
-    },
-    "72710200040015": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72710310010015": {
-      "target": {
-        "REJECTED BY Pengawas": 1
+        "REJECTED BY Pengawas": 3
       },
       "nontarget": {}
-    },
-    "72710120050015": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72050820030002": {
-      "target": {
-        "REVOKED BY Pengawas": 8
-      },
-      "nontarget": {
-        "REVOKED BY Pengawas": 11
-      }
-    },
-    "72080100010003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080300130001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080310100004": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72050800250005": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72040500050006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020320010013": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020600200014": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72051400100001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72051400020009": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72051310070002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "REJECTED BY Pengawas": 2
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72080520050006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72051000010003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72051400030002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72051000160001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 3
-      },
-      "nontarget": {}
-    },
-    "72100900090003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72050910030009": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72100100130005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72050900070002": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72101500010003": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72101500070002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72090400050008": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72020500250004": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72051300190002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72051600050003": {
-      "target": {
-        "DRAFT": 1,
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72080410090006": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72020530020011": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72020710020001": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72060100010004": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72051400060006": {
-      "target": {
-        "DRAFT": 3
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72051610030005": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72050800200006": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 2
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72050410110008": {
-      "target": {
-        "APPROVED BY Pengawas": 2
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72050900100003": {
-      "target": {
-        "REJECTED BY Pengawas": 2
-      },
-      "nontarget": {}
-    },
-    "72010410070002": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72050800220003": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72051300100003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72051600080003": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72050800220006": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72050800250002": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72051000160002": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 2
-      }
-    },
-    "72051010060001": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72010510060007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72051200060001": {
-      "target": {},
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
-    },
-    "72051400100003": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72050800200001": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72050410050005": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72051000030002": {
-      "target": {
-        "DRAFT": 2,
-        "REVOKED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72050810100002": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72050800210009": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {}
-    },
-    "72051020020004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72050410020011": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72051600050002": {
-      "target": {},
-      "nontarget": {
-        "APPROVED BY Pengawas": 1
-      }
-    },
-    "72050810030003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1,
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72051000020003": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {}
-    },
-    "72051400050001": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72050510010012": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72050800240006": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72050800280004": {
-      "target": {
-        "APPROVED BY Pengawas": 1,
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72050510080008": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72051400060003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72051020020002": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72050820050001": {
-      "target": {
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72050510050009": {
-      "target": {
-        "SUBMITTED BY Pencacah": 2
-      },
-      "nontarget": {}
-    },
-    "72050900080003": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72050820020001": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72051010010002": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72051400060004": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 2
-      }
-    },
-    "72051400050007": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72050810090004": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72050800230007": {
-      "target": {
-        "REJECTED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72051200140001": {
-      "target": {},
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72051200080002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72050800250001": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72050820070002": {
-      "target": {
-        "DRAFT": 2
-      },
-      "nontarget": {}
-    },
-    "72050810110003": {
-      "target": {
-        "DRAFT": 1
-      },
-      "nontarget": {}
-    },
-    "72051310050002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72050910010003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {
-        "SUBMITTED BY Pencacah": 1
-      }
-    },
-    "72051300130003": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72050810130002": {
-      "target": {
-        "SUBMITTED BY Pencacah": 1
-      },
-      "nontarget": {}
-    },
-    "72051600080002": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72051300080003": {
-      "target": {
-        "APPROVED BY Pengawas": 1
-      },
-      "nontarget": {}
-    },
-    "72050800230003": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 1
-      }
-    },
-    "72050800270010": {
-      "target": {},
-      "nontarget": {
-        "DRAFT": 1
-      }
     }
   },
   "se_ub_sls_status": {
@@ -28641,6 +29145,13 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
+    "72101200110005": {
+      "target": {
+        "DRAFT": 1,
+        "OPEN": 1
+      },
+      "nontarget": {}
+    },
     "72101200120012": {
       "target": {
         "DRAFT": 1,
@@ -28706,12 +29217,6 @@ window.IPAS_DATA = {
     "72101200120004": {
       "target": {
         "OPEN": 1
-      },
-      "nontarget": {}
-    },
-    "72101200110005": {
-      "target": {
-        "OPEN": 2
       },
       "nontarget": {}
     },
@@ -29270,6 +29775,12 @@ window.IPAS_DATA = {
     "72120000000000": {
       "target": {
         "OPEN": 1
+      },
+      "nontarget": {}
+    },
+    "72710200070011": {
+      "target": {
+        "OPEN": 2
       },
       "nontarget": {}
     },
@@ -30226,12 +30737,6 @@ window.IPAS_DATA = {
       },
       "nontarget": {}
     },
-    "72710200070011": {
-      "target": {
-        "OPEN": 2
-      },
-      "nontarget": {}
-    },
     "72710200070004": {
       "target": {
         "OPEN": 1
@@ -30547,8 +31052,8 @@ window.IPAS_DATA = {
   },
   "se_umum_prov_total": 1186461,
   "se_ub_prov_total": 1271,
-  "se_umum_prov_new_total": 625,
+  "se_umum_prov_new_total": 666,
   "se_ub_prov_new_total": 6,
-  "se_umum_prov_new_rumah_total": 2584,
+  "se_umum_prov_new_rumah_total": 2783,
   "se_ub_prov_new_rumah_total": 0
 };
