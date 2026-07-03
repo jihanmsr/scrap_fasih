@@ -746,7 +746,12 @@ def scrape_via_api():
                     try:
                         res = http_session.post(email_datatable_url, json=email_payload, timeout=30)
                         if res.status_code == 200:
-                            res_eval_email = {"status": 200, "json": res.json()}
+                            content_type = res.headers.get("Content-Type", "").lower()
+                            if "html" in content_type or "<html" in res.text[:100].lower():
+                                logging.warning(f"Terdeteksi redirect login HTML (SSO) saat meminta riwayat email. Sesi dianggap kadaluarsa.")
+                                res_eval_email = {"status": 401}
+                            else:
+                                res_eval_email = {"status": 200, "json": res.json()}
                         else:
                             res_eval_email = {"status": res.status_code}
                         break
@@ -761,7 +766,12 @@ def scrape_via_api():
                     try:
                         res = http_session.get(email_events_url, timeout=30)
                         if res.status_code == 200:
-                            res_eval_events = {"status": 200, "json": res.json()}
+                            content_type = res.headers.get("Content-Type", "").lower()
+                            if "html" in content_type or "<html" in res.text[:100].lower():
+                                logging.warning(f"Terdeteksi redirect login HTML (SSO) saat meminta events email. Sesi dianggap kadaluarsa.")
+                                res_eval_events = {"status": 401}
+                            else:
+                                res_eval_events = {"status": 200, "json": res.json()}
                         else:
                             res_eval_events = {"status": res.status_code}
                         break
