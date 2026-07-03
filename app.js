@@ -5549,9 +5549,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     .single()
                 );
                 if (!timelineError && timelineDbData && timelineDbData.value) {
-                    window.DAILY_SUBMISSION_STATS = timelineDbData.value;
+                    let tv = timelineDbData.value;
+                    // Normalize: could be array, or object wrapping array
+                    if (Array.isArray(tv)) {
+                        window.DAILY_SUBMISSION_STATS = tv;
+                    } else if (tv && typeof tv === 'object') {
+                        // Try common wrapper keys
+                        window.DAILY_SUBMISSION_STATS = tv.data || tv.stats || tv.records || [];
+                    } else {
+                        window.DAILY_SUBMISSION_STATS = [];
+                    }
                     timelineLoadedFromDb = true;
-                    console.log(`Loaded DAILY_SUBMISSION_STATS (${timelineKey}) from Supabase.`);
+                    console.log(`Loaded DAILY_SUBMISSION_STATS (${timelineKey}) from Supabase. Count: ${window.DAILY_SUBMISSION_STATS.length}`);
                 }
             } catch (e) {
                 console.warn(`Failed to fetch DAILY_SUBMISSION_STATS (${timelineKey}) from Supabase:`, e);
@@ -8960,8 +8969,32 @@ window.renderTrenChart = function () {
 const _origUpdateTimeline = window.updateTimelineView;
 window.updateTimelineView = function (...args) {
     if (_origUpdateTimeline) _origUpdateTimeline.apply(this, args);
-    window.initTrenFilters();
-    window.renderTrenChart();
+
+    const doRender = () => {
+        window.initTrenFilters();
+        window.renderTrenChart();
+    };
+
+    const data = window.DAILY_SUBMISSION_STATS;
+    if (!Array.isArray(data) || data.length === 0) {
+        // Try loading from local JS file as fallback
+        const existing = document.querySelector('script[src*="daily_submission_stats.js"]');
+        const src = (typeof getScriptUrl === 'function' ? getScriptUrl('daily_submission_stats.js') : 'daily_submission_stats.js')
+            + '?t=' + Date.now();
+        // Remove old if exists to force reload
+        if (existing) existing.remove();
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = () => {
+            // After loading, DAILY_SUBMISSION_STATS should be set by the JS file
+            if (!Array.isArray(window.DAILY_SUBMISSION_STATS)) window.DAILY_SUBMISSION_STATS = [];
+            doRender();
+        };
+        script.onerror = () => doRender();
+        document.head.appendChild(script);
+    } else {
+        doRender();
+    }
 };
 
 // ================== END TREN PROGRES CHART ==================
