@@ -205,6 +205,33 @@ def main():
                             time.sleep(15)
                         else:
                             print("[ERROR] Semua percobaan upload ipas_data gagal.")
+                
+                # Upload new_businesses per kabupaten sebagai key terpisah
+                # Format key: new_businesses_se_umum_<kab_clean>
+                # contoh: new_businesses_se_umum_BANGGAI KEPULAUAN
+                print("\nMengunggah new_businesses per kabupaten...")
+                kab_code_map = {
+                    "BANGGAI KEPULAUAN": "7201", "BANGGAI": "7202", "MOROWALI": "7203",
+                    "POSO": "7204", "DONGGALA": "7205", "TOLI-TOLI": "7206", "BUOL": "7207",
+                    "PARIGI MOUTONG": "7208", "TOJO UNA-UNA": "7209", "SIGI": "7210",
+                    "BANGGAI LAUT": "7211", "MOROWALI UTARA": "7212", "PALU": "7271"
+                }
+                for kab_full, biz_list in new_biz_by_kab.items():
+                    kab_clean = clean_kab_name(kab_full)
+                    kab_code = kab_code_map.get(kab_clean, kab_clean.lower().replace(" ", "_"))
+                    nb_key = f"new_businesses_se_umum_{kab_code}"
+                    for attempt in range(1, max_retries + 1):
+                        try:
+                            supabase.table("dashboard_store").delete().eq("key", nb_key).execute()
+                            supabase.table("dashboard_store").insert({"key": nb_key, "value": biz_list}).execute()
+                            print(f"  ✅ {nb_key}: {len(biz_list)} item")
+                            break
+                        except Exception as e:
+                            print(f"  [RETRY {attempt}] Gagal upload {nb_key}: {e}")
+                            if attempt < max_retries:
+                                time.sleep(10)
+                            else:
+                                print(f"  [ERROR] Gagal upload {nb_key}.")
         except Exception as e:
             print(f"[ERROR] Gagal patch Supabase: {e}")
 

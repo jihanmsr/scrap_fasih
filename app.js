@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let supabaseClient;
     if (typeof window.supabase !== 'undefined' && window.SUPABASE_URL && window.SUPABASE_KEY) {
         supabaseClient = window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_KEY);
+        window.supabaseClient = supabaseClient; // expose globally for download functions
         console.log("Initialized real Supabase client.");
     } else {
         console.log("Initializing mock Supabase client proxying to MySQL API.");
@@ -5005,6 +5006,41 @@ document.addEventListener('DOMContentLoaded', () => {
             try { activeModalBusinesses = JSON.parse(encodedBusinessesJSON); } catch (err) { activeModalBusinesses = []; }
         }
 
+        // Jika kosong, coba fetch dari Supabase (ipas_data slim - new_businesses disimpan terpisah)
+        if (activeModalBusinesses.length === 0 && supabaseClient) {
+            const surveyType = document.getElementById('assign-sls-survey-filter')?.value || 'se_umum';
+            const kabCodeMap = {
+                'BANGGAI KEPULAUAN': '7201', 'BANGGAI': '7202', 'MOROWALI': '7203',
+                'POSO': '7204', 'DONGGALA': '7205', 'TOLI-TOLI': '7206', 'BUOL': '7207',
+                'PARIGI MOUTONG': '7208', 'TOJO UNA-UNA': '7209', 'SIGI': '7210',
+                'BANGGAI LAUT': '7211', 'MOROWALI UTARA': '7212', 'PALU': '7271'
+            };
+            const kabCode = kabCodeMap[cleanKab] || null;
+            if (kabCode) {
+                const nbKey = `new_businesses_${surveyType}_${kabCode}`;
+                // Show loading state
+                const container = document.getElementById('modal-business-list');
+                if (container) container.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--text-secondary);">Memuat data dari server...</div>';
+                supabaseClient.from('dashboard_store').select('value').eq('key', nbKey).single().then(({ data, error }) => {
+                    if (!error && data && data.value) {
+                        let biz = data.value;
+                        if (typeof biz === 'string') try { biz = JSON.parse(biz); } catch(e) { biz = []; }
+                        activeModalBusinesses = Array.isArray(biz) ? biz : [];
+                        // Cache ke IPAS_DATA agar tidak perlu fetch ulang
+                        const ipasDataObj = window.IPAS_DATA || {};
+                        const surveyArr = ipasDataObj[surveyType] || [];
+                        const kabItem = surveyArr.find(k => (k.kabupaten || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase() === cleanKab);
+                        if (kabItem) kabItem.new_businesses = activeModalBusinesses;
+                    } else {
+                        activeModalBusinesses = [];
+                    }
+                    renderModalList();
+                }).catch(() => { activeModalBusinesses = []; renderModalList(); });
+                modal.classList.add('active');
+                return;
+            }
+        }
+
         renderModalList();
         modal.classList.add('active');
     };
@@ -8421,7 +8457,7 @@ async function downloadSummaryExcel(selectedKabs, surveyType, statusEl) {
 }
 
 async function downloadRawExcel(selectedKabs, surveyType, statusEl) {
-    if (!supabaseClient) {
+    if (!window.supabaseClient) {
         if (statusEl) statusEl.textContent = '❌ Koneksi Supabase tidak tersedia.';
         return;
     }
@@ -8437,7 +8473,7 @@ async function downloadRawExcel(selectedKabs, surveyType, statusEl) {
         if (statusEl) statusEl.textContent = `⏳ Memuat ${kab}...`;
 
         try {
-            const { data: dbData, error } = await supabaseClient
+            const { data: dbData, error } = await window.supabaseClient
                 .from('dashboard_store')
                 .select('value')
                 .eq('key', dbKey)
