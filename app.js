@@ -8635,13 +8635,26 @@ function exportToCSV(rows, filename) {
         }).join(','))
     ];
     const bom = '\uFEFF';
-    const blob = new Blob([bom + csvLines.join('\n')], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    const csvText = bom + csvLines.join('\n');
+
+    if (window.location.protocol === 'file:') {
+        // Fallback for file:// protocol: Chrome blocks custom filenames via Blob URL download attribute
+        const encodedUri = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csvText);
+        const a = document.createElement('a');
+        a.href = encodedUri;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    } else {
+        const blob = new Blob([csvText], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
 }
