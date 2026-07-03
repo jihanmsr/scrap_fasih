@@ -6657,6 +6657,13 @@ window.DAILY_SUBMISSION_STATS = [
         "survey_type": "se_umum"
     },
     {
+        "date": "2026-07-02",
+        "count": 1,
+        "kab_name": "PALU",
+        "status": "SUBMITTED RESPONDENT",
+        "survey_type": "se_umum"
+    },
+    {
         "date": "2026-05-29",
         "count": 4,
         "kab_name": "PALU",
@@ -6671,252 +6678,406 @@ window.DAILY_SUBMISSION_STATS = [
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-26",
-        "count": 118,
-        "kab_name": "PALU",
-        "status": "REJECTED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-26",
-        "count": 4,
-        "kab_name": "PALU",
-        "status": "EDITED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-25",
-        "count": 1635,
+        "date": "2026-07-03",
+        "count": 1163,
         "kab_name": "PALU",
         "status": "SUBMITTED BY PENCACAH",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-25",
-        "count": 285,
-        "kab_name": "PALU",
-        "status": "REJECTED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-24",
-        "count": 107,
-        "kab_name": "PALU",
-        "status": "REJECTED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-24",
-        "count": 990,
+        "date": "2026-07-01",
+        "count": 1073,
         "kab_name": "PALU",
         "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-30",
+        "count": 1229,
+        "kab_name": "PALU",
+        "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-29",
+        "count": 1093,
+        "kab_name": "PALU",
+        "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-27",
+        "count": 912,
+        "kab_name": "PALU",
+        "status": "APPROVED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-27",
+        "count": 847,
+        "kab_name": "PALU",
+        "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-26",
+        "count": 775,
+        "kab_name": "PALU",
+        "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-02",
+        "count": 1390,
+        "kab_name": "PALU",
+        "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-01",
+        "count": 122,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
         "date": "2026-06-23",
-        "count": 861,
+        "count": 548,
         "kab_name": "PALU",
         "status": "SUBMITTED BY PENCACAH",
         "survey_type": "se_umum"
     },
     {
         "date": "2026-06-22",
-        "count": 781,
-        "kab_name": "PALU",
-        "status": "SUBMITTED BY PENCACAH",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-21",
-        "count": 536,
-        "kab_name": "PALU",
-        "status": "SUBMITTED BY PENCACAH",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-20",
-        "count": 651,
-        "kab_name": "PALU",
-        "status": "SUBMITTED BY PENCACAH",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-19",
-        "count": 483,
-        "kab_name": "PALU",
-        "status": "SUBMITTED BY PENCACAH",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-16",
-        "count": 135,
-        "kab_name": "PALU",
-        "status": "APPROVED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-26",
-        "count": 848,
-        "kab_name": "PALU",
-        "status": "SUBMITTED BY PENCACAH",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-17",
         "count": 500,
         "kab_name": "PALU",
         "status": "SUBMITTED BY PENCACAH",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-16",
-        "count": 250,
+        "date": "2026-06-21",
+        "count": 360,
+        "kab_name": "PALU",
+        "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-28",
+        "count": 904,
+        "kab_name": "PALU",
+        "status": "APPROVED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-27",
+        "count": 90,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-19",
+        "count": 303,
         "kab_name": "PALU",
         "status": "SUBMITTED BY PENCACAH",
         "survey_type": "se_umum"
     },
     {
         "date": "2026-06-18",
-        "count": 487,
+        "count": 340,
         "kab_name": "PALU",
         "status": "SUBMITTED BY PENCACAH",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-26",
-        "count": 681,
+        "date": "2026-06-17",
+        "count": 367,
         "kab_name": "PALU",
-        "status": "APPROVED BY PENGAWAS",
+        "status": "SUBMITTED BY PENCACAH",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-22",
-        "count": 19,
-        "kab_name": "PALU",
-        "status": "REJECTED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-15",
-        "count": 124,
+        "date": "2026-06-25",
+        "count": 853,
         "kab_name": "PALU",
         "status": "SUBMITTED BY PENCACAH",
         "survey_type": "se_umum"
     },
     {
         "date": "2026-06-24",
-        "count": 801,
+        "count": 580,
+        "kab_name": "PALU",
+        "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-20",
+        "count": 399,
+        "kab_name": "PALU",
+        "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-16",
+        "count": 156,
+        "kab_name": "PALU",
+        "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-03",
+        "count": 1069,
         "kab_name": "PALU",
         "status": "APPROVED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-23",
-        "count": 51,
-        "kab_name": "PALU",
-        "status": "REJECTED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-17",
-        "count": 23,
-        "kab_name": "PALU",
-        "status": "REJECTED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-23",
-        "count": 896,
+        "date": "2026-07-02",
+        "count": 1046,
         "kab_name": "PALU",
         "status": "APPROVED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-22",
-        "count": 254,
+        "date": "2026-06-30",
+        "count": 1434,
+        "kab_name": "PALU",
+        "status": "APPROVED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-28",
+        "count": 874,
+        "kab_name": "PALU",
+        "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-23",
+        "count": 805,
         "kab_name": "PALU",
         "status": "APPROVED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
         "date": "2026-06-20",
-        "count": 60,
-        "kab_name": "PALU",
-        "status": "REJECTED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-21",
-        "count": 43,
-        "kab_name": "PALU",
-        "status": "REJECTED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-21",
-        "count": 448,
+        "count": 400,
         "kab_name": "PALU",
         "status": "APPROVED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-18",
-        "count": 208,
+        "date": "2026-06-29",
+        "count": 1071,
         "kab_name": "PALU",
         "status": "APPROVED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-11",
-        "count": 2,
-        "kab_name": "PALU",
-        "status": "SUBMITTED RESPONDENT",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-18",
-        "count": 58,
-        "kab_name": "PALU",
-        "status": "REJECTED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
         "date": "2026-06-25",
-        "count": 1262,
+        "count": 1172,
         "kab_name": "PALU",
         "status": "APPROVED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-19",
-        "count": 223,
+        "date": "2026-06-24",
+        "count": 718,
         "kab_name": "PALU",
         "status": "APPROVED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-17",
-        "count": 182,
-        "kab_name": "PALU",
-        "status": "APPROVED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-19",
-        "count": 32,
+        "date": "2026-06-24",
+        "count": 27,
         "kab_name": "PALU",
         "status": "REJECTED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-20",
-        "count": 481,
+        "date": "2026-07-02",
+        "count": 103,
+        "kab_name": "PALU",
+        "status": "EDITED BY ADMIN KABUPATEN",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-28",
+        "count": 25,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-17",
+        "count": 146,
         "kab_name": "PALU",
         "status": "APPROVED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
+        "date": "2026-07-03",
+        "count": 75,
+        "kab_name": "PALU",
+        "status": "EDITED BY ADMIN KABUPATEN",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-03",
+        "count": 293,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-30",
+        "count": 135,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
         "date": "2026-06-18",
+        "count": 28,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-18",
+        "count": 178,
+        "kab_name": "PALU",
+        "status": "APPROVED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-20",
+        "count": 8,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-16",
+        "count": 117,
+        "kab_name": "PALU",
+        "status": "APPROVED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-21",
+        "count": 372,
+        "kab_name": "PALU",
+        "status": "APPROVED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-19",
+        "count": 194,
+        "kab_name": "PALU",
+        "status": "APPROVED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-01",
+        "count": 937,
+        "kab_name": "PALU",
+        "status": "APPROVED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-02",
+        "count": 176,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-26",
+        "count": 876,
+        "kab_name": "PALU",
+        "status": "APPROVED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-23",
+        "count": 10,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-22",
+        "count": 232,
+        "kab_name": "PALU",
+        "status": "APPROVED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-21",
+        "count": 16,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-03",
+        "count": 5,
+        "kab_name": "PALU",
+        "status": "REVOKED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-29",
+        "count": 63,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-01",
+        "count": 40,
+        "kab_name": "PALU",
+        "status": "EDITED BY ADMIN KABUPATEN",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-22",
+        "count": 13,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-26",
+        "count": 61,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-03",
+        "count": 36,
+        "kab_name": "PALU",
+        "status": "COMPLETED BY ADMIN KABUPATEN",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-30",
+        "count": 34,
+        "kab_name": "PALU",
+        "status": "EDITED BY ADMIN KABUPATEN",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-25",
+        "count": 36,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-24",
         "count": 1,
         "kab_name": "PALU",
         "status": "SUBMITTED RESPONDENT",
@@ -6924,35 +7085,42 @@ window.DAILY_SUBMISSION_STATS = [
     },
     {
         "date": "2026-06-15",
-        "count": 19,
+        "count": 16,
         "kab_name": "PALU",
         "status": "APPROVED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-16",
-        "count": 10,
-        "kab_name": "PALU",
-        "status": "REJECTED BY PENGAWAS",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-06",
-        "count": 1,
+        "date": "2026-07-01",
+        "count": 2,
         "kab_name": "PALU",
         "status": "SUBMITTED RESPONDENT",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-26",
-        "count": 1,
+        "date": "2026-06-30",
+        "count": 20,
         "kab_name": "PALU",
         "status": "REVOKED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-22",
-        "count": 1,
+        "date": "2026-07-02",
+        "count": 35,
+        "kab_name": "PALU",
+        "status": "COMPLETED BY ADMIN KABUPATEN",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-27",
+        "count": 3,
+        "kab_name": "PALU",
+        "status": "REVOKED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-26",
+        "count": 2,
         "kab_name": "PALU",
         "status": "REVOKED BY PENGAWAS",
         "survey_type": "se_umum"
@@ -6965,17 +7133,80 @@ window.DAILY_SUBMISSION_STATS = [
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-15",
-        "count": 4,
+        "date": "2026-06-19",
+        "count": 24,
         "kab_name": "PALU",
         "status": "REJECTED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-25",
-        "count": 3,
+        "date": "2026-06-16",
+        "count": 8,
         "kab_name": "PALU",
-        "status": "REVOKED BY PENGAWAS",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-18",
+        "count": 1,
+        "kab_name": "PALU",
+        "status": "SUBMITTED RESPONDENT",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-15",
+        "count": 94,
+        "kab_name": "PALU",
+        "status": "SUBMITTED BY PENCACAH",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-03",
+        "count": 1,
+        "kab_name": "PALU",
+        "status": "REJECTED BY ADMIN KABUPATEN",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-30",
+        "count": 2,
+        "kab_name": "PALU",
+        "status": "EDITED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-17",
+        "count": 10,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-11",
+        "count": 2,
+        "kab_name": "PALU",
+        "status": "SUBMITTED RESPONDENT",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-29",
+        "count": 1,
+        "kab_name": "PALU",
+        "status": "REJECTED BY ADMIN KABUPATEN",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-06",
+        "count": 1,
+        "kab_name": "PALU",
+        "status": "SUBMITTED RESPONDENT",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-27",
+        "count": 2,
+        "kab_name": "PALU",
+        "status": "EDITED BY PENGAWAS",
         "survey_type": "se_umum"
     },
     {
@@ -6986,8 +7217,92 @@ window.DAILY_SUBMISSION_STATS = [
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-23",
+        "date": "2026-06-15",
+        "count": 2,
+        "kab_name": "PALU",
+        "status": "REJECTED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-01",
         "count": 1,
+        "kab_name": "PALU",
+        "status": "COMPLETED BY ADMIN KABUPATEN",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-29",
+        "count": 1,
+        "kab_name": "PALU",
+        "status": "SUBMITTED RESPONDENT",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-21",
+        "count": 1,
+        "kab_name": "PALU",
+        "status": "REVOKED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-02",
+        "count": 24,
+        "kab_name": "PALU",
+        "status": "REVOKED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-28",
+        "count": 3,
+        "kab_name": "PALU",
+        "status": "EDITED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-28",
+        "count": 3,
+        "kab_name": "PALU",
+        "status": "REVOKED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-01",
+        "count": 3,
+        "kab_name": "PALU",
+        "status": "REVOKED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-02",
+        "count": 1,
+        "kab_name": "PALU",
+        "status": "EDITED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-07-01",
+        "count": 1,
+        "kab_name": "PALU",
+        "status": "EDITED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-26",
+        "count": 2,
+        "kab_name": "PALU",
+        "status": "EDITED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-25",
+        "count": 1,
+        "kab_name": "PALU",
+        "status": "REVOKED BY PENGAWAS",
+        "survey_type": "se_umum"
+    },
+    {
+        "date": "2026-06-29",
+        "count": 3,
         "kab_name": "PALU",
         "status": "REVOKED BY PENGAWAS",
         "survey_type": "se_umum"
@@ -7000,14 +7315,7 @@ window.DAILY_SUBMISSION_STATS = [
         "survey_type": "se_umum"
     },
     {
-        "date": "2026-06-24",
-        "count": 1,
-        "kab_name": "PALU",
-        "status": "SUBMITTED RESPONDENT",
-        "survey_type": "se_umum"
-    },
-    {
-        "date": "2026-06-21",
+        "date": "2026-06-23",
         "count": 1,
         "kab_name": "PALU",
         "status": "REVOKED BY PENGAWAS",
