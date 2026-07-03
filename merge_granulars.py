@@ -614,37 +614,103 @@ def merge_granulars():
             except Exception as ex:
                 print(f" [ERROR] Gagal mengunggah partisi se_ub ke Supabase: {ex}")
                 
-        # Upload each se_umum partition
+        # Upload each se_umum partition, splitting combined ones if needed
         all_partition_success = True
         failed_partitions = []
         for fpath in sorted(glob.glob(os.path.join(script_dir, "granular_assignments_se_umum_*.json"))):
-            key = "unknown"
             try:
                 basename = os.path.basename(fpath)
-                kab_code = basename.split("_")[-1].split(".")[0] # e.g. 7201
-                key = f"granular_assignments_se_umum_{kab_code}"
                 with open(fpath, "r", encoding="utf-8") as f:
                     d = json.load(f)
                 comp = d.get("compressed_data")
-                if comp:
-                    mb_size = len(comp) / (1024*1024)
-                    print(f" -> Upload {key} ({mb_size:.1f} MB)...")
-                    payload = {
-                        "compressed_data": comp,
-                        "updated_at": d.get("updated_at", datetime.now().isoformat())
-                    }
+                if not comp:
+                    continue
+                
+                # Decompress to split by kabupaten
+                raw = gzip.decompress(base64.b64decode(comp))
+                obj = json.loads(raw)
+                regions = obj.get("regions", [])
+                targets = obj.get("targets", [])
+                petugas = obj.get("petugas", [])
+                statuses = obj.get("statuses", [])
+                remarks = obj.get("remarks", {})
+                updated_at = d.get("updated_at", datetime.now().isoformat())
+                
+                if not regions or not targets:
+                    # Fallback upload directly if empty
+                    kab_code = basename.split("_")[-1].split(".")[0]
+                    key = f"granular_assignments_se_umum_{kab_code}"
+                    payload = {"compressed_data": comp, "updated_at": updated_at}
                     save_key_to_supabase(supabase, key, payload)
-                    print(f" ✅ Berhasil mengunggah partisi {key} ke Supabase.")
+                    print(f" ✅ [Direct] Berhasil mengunggah partisi {key} ke Supabase.")
+                    continue
+                
+                # Group region indices by kab_code (first 4 chars of region[0])
+                kab_region_indices = {}
+                for idx, reg in enumerate(regions):
+                    # reg = [kab_code, kab_name, kec_code, kec_name, desa_code, desa_name, sls_code, sls_name, ...]
+                    kab_code_r = str(reg[0])[:4] if reg else None
+                    if kab_code_r:
+                        if kab_code_r not in kab_region_indices:
+                            kab_region_indices[kab_code_r] = []
+                        kab_region_indices[kab_code_r].append(idx)
+                
+                # Split and upload for each kabupaten found in this partition file
+                for kab_code_r, reg_indices in kab_region_indices.items():
+                    reg_idx_set = set(reg_indices)
+                    # Filter targets referencing these regions
+                    kab_targets = [t for t in targets if (t[5] if isinstance(t, (list, tuple)) else t.get("regionIdx", -1)) in reg_idx_set]
+                    
+                    if not kab_targets:
+                        continue
+                    
+                    # Map old region index to new sub-regions index
+                    old_to_new = {old_idx: new_idx for new_idx, old_idx in enumerate(sorted(reg_idx_set))}
+                    new_regions = [regions[i] for i in sorted(reg_idx_set)]
+                    
+                    # Remap regionIdx in targets list (position 5 in target array)
+                    new_targets = []
+                    for t in kab_targets:
+                        if isinstance(t, (list, tuple)):
+                            t_list = list(t)
+                            t_list[5] = old_to_new.get(t_list[5], t_list[5])
+                            new_targets.append(t_list)
+                        else:
+                            t_copy = dict(t)
+                            t_copy["regionIdx"] = old_to_new.get(t_copy.get("regionIdx", 0), 0)
+                            new_targets.append(t_copy)
+                    
+                    kab_payload = {
+                        "updated_at": updated_at,
+                        "regions": new_regions,
+                        "petugas": petugas,
+                        "statuses": statuses,
+                        "targets": new_targets,
+                        "remarks": remarks
+                    }
+                    
+                    kab_json_str = json.dumps(kab_payload, ensure_ascii=False)
+                    kab_comp = gzip.compress(kab_json_str.encode("utf-8"))
+                    kab_b64 = base64.b64encode(kab_comp).decode("utf-8")
+                    kab_key = f"granular_assignments_se_umum_{kab_code_r}"
+                    
+                    mb_size = len(kab_b64) / (1024*1024)
+                    print(f" -> Upload {kab_key} ({mb_size:.1f} MB)...")
+                    save_key_to_supabase(supabase, kab_key, {
+                        "compressed_data": kab_b64,
+                        "updated_at": updated_at
+                    })
+                    print(f"  ✅ Berhasil mengunggah partisi {kab_key} ke Supabase.")
+                    
             except Exception as ex:
-                print(f" [ERROR] Gagal mengunggah partisi {key} ke Supabase: {ex}")
+                print(f" [ERROR] Gagal memproses/mengunggah file partisi {fpath}: {ex}")
                 all_partition_success = False
-                failed_partitions.append(key)
+                failed_partitions.append(fpath)
                 
         if all_partition_success:
             print("✅ SINKRONISASI PARTISI SUPABASE BERHASIL!")
         else:
-            print(f"⚠️  SINKRONISASI PARTISI SELESAI DENGAN {len(failed_partitions)} GAGAL: {', '.join(failed_partitions)}")
-            print("    Partisi yang gagal perlu di-upload ulang secara manual.")
+            print(f"⚠️  SINKRONISASI PARTISI SELESAI DENGAN {len(failed_partitions)} GAGAL.")
     except Exception as e:
         print(f"[ERROR] Gagal mengunggah partisi ke Supabase: {e}")
  
