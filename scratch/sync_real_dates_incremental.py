@@ -124,6 +124,15 @@ async def get_browser_context(p):
         print(f"[ERROR] Fallback gagal: {e}")
         return None, None, None, False
 
+def clean_kab_name(kab_raw):
+    if not kab_raw:
+        return "UNKNOWN"
+    import re
+    cleaned = re.sub(r'\[\d+\]', '', kab_raw)
+    cleaned = cleaned.replace('[', '').replace(']', '')
+    words = [word for word in cleaned.split() if not (word.isdigit() or (word.startswith("72") and len(word)==4))]
+    return " ".join(words).upper().strip()
+
 async def main():
     script_dir = "/Users/jihanmaisaroh/scrap_fasih"
     db_path = os.path.join(script_dir, "target_real_dates.json")
@@ -172,7 +181,7 @@ async def main():
                     kab_raw = reg_info[1] if len(reg_info) > 1 else "UNKNOWN"
                     
                     # Clean kabupaten name
-                    kab_clean = " ".join([word for word in kab_raw.split() if not (word.isdigit() or (word.startswith("72") and len(word)==4))]).upper()
+                    kab_clean = clean_kab_name(kab_raw)
                     
                     # Track tambahan (new business/rumah) targets
                     if is_tambahan(code_id):
@@ -455,7 +464,7 @@ async def main():
                     se_umum = val.get("se_umum", [])
                     for kab_item in se_umum:
                         kab_raw = kab_item.get("kabupaten", "")
-                        kab_clean = " ".join([word for word in kab_raw.split() if not (word.isdigit() or (word.startswith("72") and len(word)==4))]).upper()
+                        kab_clean = clean_kab_name(kab_raw)
                         
                         # Get scraped new businesses for this kab
                         scraped_biz = kab_new_businesses.get(kab_clean, [])
@@ -528,7 +537,7 @@ async def main():
                     }
                     for kab_full, biz_list in new_biz_by_kab.items():
                         # Clean kabupaten name
-                        kab_clean = " ".join([word for word in kab_full.split() if not (word.isdigit() or (word.startswith("72") and len(word)==4))]).upper()
+                        kab_clean = clean_kab_name(kab_full)
                         kab_code = kab_code_map.get(kab_clean, kab_clean.lower().replace(" ", "_"))
                         nb_key = f"new_businesses_se_umum_{kab_code}"
                         for attempt in range(1, 4):
