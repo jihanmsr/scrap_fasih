@@ -422,27 +422,40 @@ def merge_granulars():
     print("✅ Generate ulang assign_data.js berhasil (via granular)!")
 
     # === GENERATE daily_submission_stats ===
+    # SELALU pakai daily_counts_dict dari epoch_mod sebagai SUMBER UTAMA
+    # (berisi hitungan lengkap semua target granular berdasarkan tanggal modifikasi)
     daily_stats_data = []
     stats_json_path = os.path.join(script_dir, "daily_submission_stats.json")
+
+    print(f"📊 Membangun daily_submission_stats dari {len(daily_counts_dict)} entri epoch_mod...")
+    granular_stats = {}  # key: (date, kab_name, survey_type) → count
+    for (date_str, kab_name, s_type), cnt in daily_counts_dict.items():
+        granular_stats[(date_str, kab_name, s_type)] = cnt
+
+    # Tambahkan data lama untuk tanggal yang TIDAK ter-cover granular
     if os.path.exists(stats_json_path):
         try:
             with open(stats_json_path, "r", encoding="utf-8") as f:
                 existing_stats = json.load(f)
             if isinstance(existing_stats, list) and len(existing_stats) > 0:
-                daily_stats_data = existing_stats
-                print(f"ℹ️ Menggunakan data timeline harian eksisting dari {stats_json_path} ({len(daily_stats_data)} baris)")
+                added_old = 0
+                for row in existing_stats:
+                    k = (row.get("date",""), row.get("kab_name",""), row.get("survey_type",""))
+                    if k not in granular_stats:
+                        granular_stats[k] = row.get("count", 0)
+                        added_old += 1
+                if added_old:
+                    print(f"ℹ️ Ditambahkan {added_old} entri lama (tidak ter-cover granular)")
         except Exception as e:
             print(f"[WARNING] Gagal memuat timeline harian eksisting: {e}")
 
-    if not daily_stats_data:
-        print("⚠️ Data timeline harian eksisting kosong atau tidak ditemukan. Membuat baru dari daily_counts_dict...")
-        for (date_str, kab_name, s_type), cnt in daily_counts_dict.items():
-            daily_stats_data.append({
-                "date": date_str,
-                "kab_name": kab_name,
-                "survey_type": s_type,
-                "count": cnt
-            })
+    # Konversi ke list dan sort by date
+    daily_stats_data = [
+        {"date": date_str, "kab_name": kab_name, "survey_type": s_type, "count": cnt}
+        for (date_str, kab_name, s_type), cnt in granular_stats.items()
+    ]
+    daily_stats_data.sort(key=lambda x: (x["date"], x["kab_name"]))
+    print(f"✅ daily_submission_stats: {len(daily_stats_data)} entri total")
 
     with open(stats_json_path, "w", encoding="utf-8") as f:
         json.dump(daily_stats_data, f, indent=2)

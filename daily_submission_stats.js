@@ -1,1115 +1,1976 @@
 window.DAILY_SUBMISSION_STATS = [
   {
-    "date": "2026-07-03",
-    "count": 960,
+    "date": "2026-05-19",
     "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-04",
-    "count": 160,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-03",
-    "count": 684,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-04",
-    "count": 93,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-20",
-    "count": 160,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-24",
-    "count": 251,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-04",
-    "count": 71,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-02",
-    "count": 82,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-02",
-    "count": 507,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-26",
-    "count": 57,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-26",
-    "count": 341,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-25",
-    "count": 383,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-21",
-    "count": 265,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-29",
-    "count": 401,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-28",
-    "count": 556,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-28",
-    "count": 291,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-28",
-    "count": 40,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-27",
-    "count": 634,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-25",
-    "count": 330,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-24",
-    "count": 278,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-23",
-    "count": 241,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-22",
-    "count": 8,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-16",
-    "count": 26,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-02",
-    "count": 754,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-01",
-    "count": 811,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-30",
-    "count": 857,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-29",
-    "count": 683,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-19",
-    "count": 180,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-19",
-    "count": 55,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-18",
-    "count": 78,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-17",
-    "count": 64,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-26",
-    "count": 376,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-23",
-    "count": 363,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-01",
-    "count": 393,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-30",
-    "count": 340,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-24",
-    "count": 27,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-22",
-    "count": 133,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-22",
-    "count": 231,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-27",
-    "count": 343,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-14",
-    "count": 39,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-03",
-    "count": 159,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-25",
-    "count": 54,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-29",
-    "count": 28,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-21",
-    "count": 35,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-18",
-    "count": 85,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-16",
-    "count": 36,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-03",
-    "count": 31,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-01",
-    "count": 66,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-27",
-    "count": 50,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-29",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-20",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-19",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-17",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-16",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-15",
-    "count": 4,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-13",
-    "count": 3,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-11",
-    "count": 6,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-10",
-    "count": 6,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-09",
-    "count": 7,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-08",
-    "count": 2,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-05",
-    "count": 4,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-04",
-    "count": 3,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-03",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-02",
-    "count": 2,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-05-26",
-    "count": 2,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-05-25",
-    "count": 2,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-05-22",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
+    "survey_type": "se_umum",
+    "count": 2
   },
   {
     "date": "2026-05-20",
-    "count": 4,
     "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
+    "survey_type": "se_umum",
+    "count": 4
   },
   {
-    "date": "2026-05-19",
-    "count": 2,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
+    "date": "2026-05-20",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 6
   },
   {
-    "date": "2026-06-30",
-    "count": 46,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "date": "2026-05-20",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 6
   },
   {
-    "date": "2026-06-21",
-    "count": 76,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
+    "date": "2026-05-21",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 6
   },
   {
-    "date": "2026-06-20",
-    "count": 66,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
+    "date": "2026-05-21",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 3
   },
   {
-    "date": "2026-06-17",
-    "count": 5,
+    "date": "2026-05-22",
     "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "survey_type": "se_umum",
+    "count": 1
   },
   {
-    "date": "2026-06-19",
-    "count": 7,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "date": "2026-05-22",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 3
   },
   {
-    "date": "2026-06-17",
-    "count": 19,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
+    "date": "2026-05-22",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 4
   },
   {
-    "date": "2026-07-01",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "date": "2026-05-22",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 5
   },
   {
-    "date": "2026-06-23",
-    "count": 22,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "date": "2026-05-23",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 1
   },
   {
-    "date": "2026-06-16",
-    "count": 5,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "date": "2026-05-23",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1
   },
   {
-    "date": "2026-06-20",
-    "count": 8,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "date": "2026-05-23",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 2
   },
   {
-    "date": "2026-07-02",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "EDITED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "date": "2026-05-24",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1
   },
   {
-    "date": "2026-06-28",
-    "count": 1,
+    "date": "2026-05-25",
     "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "survey_type": "se_umum",
+    "count": 2
   },
   {
-    "date": "2026-06-26",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "date": "2026-05-25",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 5
   },
   {
-    "date": "2026-07-03",
-    "count": 4,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "EDITED BY ADMIN KABUPATEN",
-    "survey_type": "se_umum"
+    "date": "2026-05-25",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 4
   },
   {
-    "date": "2026-06-30",
-    "count": 2,
+    "date": "2026-05-26",
     "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "survey_type": "se_umum",
+    "count": 2
   },
   {
-    "date": "2026-06-18",
-    "count": 3,
+    "date": "2026-05-26",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 6
+  },
+  {
+    "date": "2026-05-26",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 8
+  },
+  {
+    "date": "2026-05-26",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-05-26",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-05-27",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 2
+  },
+  {
+    "date": "2026-05-27",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 2
+  },
+  {
+    "date": "2026-05-28",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 3
+  },
+  {
+    "date": "2026-05-29",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 5
+  },
+  {
+    "date": "2026-05-29",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 4
+  },
+  {
+    "date": "2026-05-29",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 2
+  },
+  {
+    "date": "2026-05-30",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 8
+  },
+  {
+    "date": "2026-05-31",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 2
+  },
+  {
+    "date": "2026-06-01",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-02",
     "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "survey_type": "se_umum",
+    "count": 2
+  },
+  {
+    "date": "2026-06-02",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 2
+  },
+  {
+    "date": "2026-06-02",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-02",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-03",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-03",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-03",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-04",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 3
+  },
+  {
+    "date": "2026-06-04",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-04",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 3
+  },
+  {
+    "date": "2026-06-05",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 4
+  },
+  {
+    "date": "2026-06-05",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-05",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-05",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-06",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-06",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-08",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 2
+  },
+  {
+    "date": "2026-06-08",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 3
+  },
+  {
+    "date": "2026-06-09",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 7
+  },
+  {
+    "date": "2026-06-09",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-09",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-10",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 6
+  },
+  {
+    "date": "2026-06-10",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 5
+  },
+  {
+    "date": "2026-06-11",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 6
+  },
+  {
+    "date": "2026-06-11",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 2
+  },
+  {
+    "date": "2026-06-11",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 3
+  },
+  {
+    "date": "2026-06-11",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 7
+  },
+  {
+    "date": "2026-06-12",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 3
+  },
+  {
+    "date": "2026-06-12",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 2
+  },
+  {
+    "date": "2026-06-12",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 3
+  },
+  {
+    "date": "2026-06-12",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-13",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 3
+  },
+  {
+    "date": "2026-06-13",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-13",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 2
+  },
+  {
+    "date": "2026-06-13",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 11
+  },
+  {
+    "date": "2026-06-14",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 39
+  },
+  {
+    "date": "2026-06-14",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 1
+  },
+  {
+    "date": "2026-06-14",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 2
   },
   {
     "date": "2026-06-15",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-24",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 166
   },
   {
     "date": "2026-06-15",
-    "count": 4,
     "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-02",
-    "count": 2,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-29",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "EDITED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-30",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "SUBMITTED RESPONDENT",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-30",
-    "count": 2,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "EDITED BY ADMIN KABUPATEN",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-29",
-    "count": 1,
-    "kab_name": "BANGGAI KEPULAUAN",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-29",
-    "count": 510,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-28",
-    "count": 683,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-27",
-    "count": 640,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-26",
-    "count": 282,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-26",
-    "count": 151,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-26",
-    "count": 24,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-23",
-    "count": 259,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-03",
-    "count": 190,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-02",
-    "count": 742,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-22",
-    "count": 177,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-25",
-    "count": 321,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-24",
-    "count": 158,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-02",
-    "count": 288,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-02",
-    "count": 47,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-01",
-    "count": 795,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-01",
-    "count": 214,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-29",
-    "count": 347,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-28",
-    "count": 272,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-28",
-    "count": 25,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-27",
-    "count": 296,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-27",
-    "count": 42,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-25",
-    "count": 266,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-24",
-    "count": 171,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-23",
-    "count": 137,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-17",
-    "count": 184,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-19",
-    "count": 160,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-21",
-    "count": 246,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-21",
-    "count": 54,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-01",
-    "count": 46,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-30",
-    "count": 712,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-18",
-    "count": 203,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-03",
-    "count": 125,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-02",
-    "count": 20,
-    "kab_name": "MOROWALI",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-30",
-    "count": 241,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-19",
-    "count": 124,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-18",
-    "count": 87,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-17",
-    "count": 84,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-16",
-    "count": 16,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-20",
-    "count": 196,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-16",
-    "count": 70,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-20",
-    "count": 57,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-03",
-    "count": 19,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-20",
-    "count": 8,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-29",
-    "count": 10,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-23",
-    "count": 2,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-22",
-    "count": 61,
-    "kab_name": "MOROWALI",
-    "status": "APPROVED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-01",
-    "count": 21,
-    "kab_name": "MOROWALI",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-27",
-    "count": 1,
-    "kab_name": "MOROWALI",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-03",
-    "count": 4,
-    "kab_name": "MOROWALI",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-30",
-    "count": 18,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-25",
-    "count": 1,
-    "kab_name": "MOROWALI",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-07-03",
-    "count": 2,
-    "kab_name": "MOROWALI",
-    "status": "EDITED BY ADMIN KABUPATEN",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-27",
-    "count": 1,
-    "kab_name": "MOROWALI",
-    "status": "EDITED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-24",
-    "count": 5,
-    "kab_name": "MOROWALI",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-24",
-    "count": 6,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-21",
-    "count": 15,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
-  },
-  {
-    "date": "2026-06-25",
-    "count": 3,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "survey_type": "se_umum",
+    "count": 8
   },
   {
     "date": "2026-06-15",
-    "count": 4,
-    "kab_name": "MOROWALI",
-    "status": "SUBMITTED BY PENCACAH",
-    "survey_type": "se_umum"
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 15
   },
   {
-    "date": "2026-06-22",
-    "count": 1,
+    "date": "2026-06-15",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 25
+  },
+  {
+    "date": "2026-06-15",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 12
+  },
+  {
+    "date": "2026-06-15",
     "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "survey_type": "se_umum",
+    "count": 4
+  },
+  {
+    "date": "2026-06-15",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 12
+  },
+  {
+    "date": "2026-06-15",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 111
+  },
+  {
+    "date": "2026-06-15",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 85
+  },
+  {
+    "date": "2026-06-15",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 104
+  },
+  {
+    "date": "2026-06-15",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 88
+  },
+  {
+    "date": "2026-06-15",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 42
+  },
+  {
+    "date": "2026-06-15",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 9
   },
   {
     "date": "2026-06-16",
-    "count": 1,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 734
   },
   {
-    "date": "2026-06-28",
-    "count": 2,
-    "kab_name": "MOROWALI",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "date": "2026-06-16",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 64
   },
   {
-    "date": "2026-07-02",
-    "count": 1,
+    "date": "2026-06-16",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 88
+  },
+  {
+    "date": "2026-06-16",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 105
+  },
+  {
+    "date": "2026-06-16",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 173
+  },
+  {
+    "date": "2026-06-16",
     "kab_name": "MOROWALI",
-    "status": "EDITED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "survey_type": "se_umum",
+    "count": 88
+  },
+  {
+    "date": "2026-06-16",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 47
+  },
+  {
+    "date": "2026-06-16",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 280
+  },
+  {
+    "date": "2026-06-16",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 298
+  },
+  {
+    "date": "2026-06-16",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 362
+  },
+  {
+    "date": "2026-06-16",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 199
+  },
+  {
+    "date": "2026-06-16",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 186
+  },
+  {
+    "date": "2026-06-16",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 54
   },
   {
     "date": "2026-06-17",
-    "count": 2,
-    "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 1062
   },
   {
-    "date": "2026-06-30",
-    "count": 1,
-    "kab_name": "MOROWALI",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "date": "2026-06-17",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 88
   },
   {
-    "date": "2026-06-16",
-    "count": 1,
+    "date": "2026-06-17",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 112
+  },
+  {
+    "date": "2026-06-17",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 130
+  },
+  {
+    "date": "2026-06-17",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 414
+  },
+  {
+    "date": "2026-06-17",
     "kab_name": "MOROWALI",
-    "status": "REVOKED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "survey_type": "se_umum",
+    "count": 270
+  },
+  {
+    "date": "2026-06-17",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 215
+  },
+  {
+    "date": "2026-06-17",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 520
+  },
+  {
+    "date": "2026-06-17",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 523
+  },
+  {
+    "date": "2026-06-17",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 548
+  },
+  {
+    "date": "2026-06-17",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 323
+  },
+  {
+    "date": "2026-06-17",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 278
+  },
+  {
+    "date": "2026-06-17",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 97
   },
   {
     "date": "2026-06-18",
-    "count": 2,
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 1102
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 164
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 131
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 205
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 413
+  },
+  {
+    "date": "2026-06-18",
     "kab_name": "MOROWALI",
-    "status": "REJECTED BY PENGAWAS",
-    "survey_type": "se_umum"
+    "survey_type": "se_umum",
+    "count": 292
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 337
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 532
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 523
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 953
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 438
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 403
+  },
+  {
+    "date": "2026-06-18",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 276
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 949
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 239
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 134
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 179
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 479
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 284
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 350
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 515
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 641
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1116
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 418
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 471
+  },
+  {
+    "date": "2026-06-19",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 412
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 1139
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 233
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 223
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 358
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 530
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 261
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 341
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 800
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 872
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1199
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 628
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 573
+  },
+  {
+    "date": "2026-06-20",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 643
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 1267
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 374
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 405
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 364
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 654
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 315
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 265
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 739
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 1187
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1054
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 762
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 782
+  },
+  {
+    "date": "2026-06-21",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 723
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 1365
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 360
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 184
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 596
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 914
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 239
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 343
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 738
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 1139
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1506
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 950
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 592
+  },
+  {
+    "date": "2026-06-22",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 725
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 1638
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 600
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 309
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 925
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 1166
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 398
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 469
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 1357
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 1941
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1724
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 1163
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 860
+  },
+  {
+    "date": "2026-06-23",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 976
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 2066
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 535
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 651
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 996
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 1176
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 340
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 464
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 1319
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 2228
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1502
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 1270
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 780
+  },
+  {
+    "date": "2026-06-24",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 951
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 3377
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 741
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 441
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1063
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 1851
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 591
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 599
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 2021
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 3078
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 2006
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 2106
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1189
+  },
+  {
+    "date": "2026-06-25",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 1521
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 2534
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 724
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 379
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 601
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 1316
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 457
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 571
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 1707
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 2833
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1728
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 1498
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 856
+  },
+  {
+    "date": "2026-06-26",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 1345
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 3079
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 978
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 695
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 970
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 1330
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 980
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 732
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 1821
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 3995
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1995
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 1820
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1203
+  },
+  {
+    "date": "2026-06-27",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 1366
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 2543
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 831
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 568
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1123
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 1607
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 982
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 610
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 1766
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 4122
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1297
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 1211
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1181
+  },
+  {
+    "date": "2026-06-28",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 1348
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 3112
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 980
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 716
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1213
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 2213
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 867
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 573
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 2131
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 3590
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1932
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 2329
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1528
+  },
+  {
+    "date": "2026-06-29",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 1335
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 3698
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 1115
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 567
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1065
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 2529
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 972
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 691
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 2805
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 4477
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1559
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 2330
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1332
+  },
+  {
+    "date": "2026-06-30",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 1638
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 3654
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 1152
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 571
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1529
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 2397
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 1076
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 697
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 2100
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 4793
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 2284
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 3034
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1397
+  },
+  {
+    "date": "2026-07-01",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 1729
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 3079
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 1225
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 769
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 1621
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 3266
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 1098
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 751
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 2684
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 4888
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 3159
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 3885
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1929
+  },
+  {
+    "date": "2026-07-02",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 2079
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 4697
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 1624
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 1863
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 2016
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 5233
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 340
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 1105
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 3832
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 7641
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 4069
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 5030
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 2302
+  },
+  {
+    "date": "2026-07-03",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 3414
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 21
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 1755
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 84
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 48
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 181
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 25
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 289
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 76
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 75
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 221
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 97
+  },
+  {
+    "date": "2026-07-04",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 56
+  },
+  {
+    "date": "2026-07-05",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 706
   }
 ];

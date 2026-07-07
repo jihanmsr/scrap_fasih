@@ -886,7 +886,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'total_open')" style="font-family: 'Outfit', sans-serif; text-align: right; color: #3b82f6; vertical-align: middle;">
                     Open${getIcon('total_open')}
                 </th>
-                <th colspan="4" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-delivered); border-bottom: 1px solid var(--card-border);">
+                <th colspan="5" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-delivered); border-bottom: 1px solid var(--card-border);">
                     Submitted (Selesai)
                 </th>
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'persentase')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
@@ -900,14 +900,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 <th class="sortable" onclick="sortSeTable('${surveyType}', 'total_submitted')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
                     Total${getIcon('total_submitted')}
                 </th>
-                <th class="sortable" onclick="sortSeTable('${surveyType}', 'today_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-opened); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
-                    ${getFormattedDateLabels().today}${getIcon('today_completed')}
+                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-opened); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                    Pencacah
                 </th>
-                <th class="sortable" onclick="sortSeTable('${surveyType}', 'yesterday_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: #f59e0b; font-size: 0.8rem; padding: 0.4rem 0.75rem;">
-                    ${getFormattedDateLabels().yesterday}${getIcon('yesterday_completed')}
+                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #d97706; font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                    Respondent
                 </th>
-                <th class="sortable" onclick="sortSeTable('${surveyType}', 'two_days_ago_completed')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-clicked); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
-                    ${getFormattedDateLabels().h2}${getIcon('two_days_ago_completed')}
+                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #047857; font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                    Approved
+                </th>
+                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #dc2626; font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                    Rejected
                 </th>
             </tr>
         `;
@@ -1294,9 +1297,21 @@ document.addEventListener('DOMContentLoaded', () => {
         let prelist = 0, draft = 0, openVal = 0, submitted = 0, rejected = 0, approved = 0, today = 0, yesterday = 0, twoDaysAgo = 0, newToday = 0, newRumahToday = 0;
         let submittedPencacah = 0, submittedRespondent = 0;
 
-        let todayBreakdown = {};
-        let yesterdayBreakdown = {};
-        let twoDaysAgoBreakdown = {};
+        const statusColors = {
+            "DRAFT": "#f59e0b",
+            "OPEN": "#3b82f6",
+            "SUBMITTED BY Pencacah": "#10b981",
+            "SUBMITTED RESPONDENT": "#d97706",
+            "APPROVED BY Pengawas": "#047857",
+            "REJECTED BY Pengawas": "#dc2626",
+            "EDITED BY Admin Kabupaten": "#6366f1",
+            "REVOKED BY Pengawas": "#a855f7",
+            "COMPLETED BY Admin Kabupaten": "#14b8a6",
+            "REJECTED BY Admin Kabupaten": "#ef4444",
+            "EDITED BY Pengawas": "#ec4899"
+        };
+        const statusSums = {};
+        Object.keys(statusColors).forEach(st => statusSums[st] = 0);
 
         surveyData.forEach(item => {
             prelist += item.total_prelist || 0;
@@ -1313,6 +1328,13 @@ document.addEventListener('DOMContentLoaded', () => {
             newToday += item.new_usaha_today || 0;
             newRumahToday += item.new_rumah_today || 0;
             item.sisa_usaha = Math.max(0, (item.total_prelist || 0) - (item.total_submitted || 0));
+
+            // Sum BPS status breakdown
+            if (item.breakdown) {
+                for (const [st, val] of Object.entries(item.breakdown)) {
+                    statusSums[st] = (statusSums[st] || 0) + val;
+                }
+            }
 
             // Sum breakdowns for province
             if (item.today_completed_breakdown) {
@@ -1613,6 +1635,52 @@ document.addEventListener('DOMContentLoaded', () => {
                 vsYesterdayWrapper.innerHTML = `<span style="color: var(--color-bounced); background-color: rgba(239, 68, 68, 0.1); padding: 0.15rem 0.45rem; border-radius: 0.5rem; font-weight: 700; font-size: 0.75rem;">▼ vs ${formatNum(yesterday)} kemarin</span>`;
             }
         }
+
+        // Dynamically build the expanded stats grid
+        const statsExpandedEl = document.getElementById(`${surveyType}-stats-expanded`);
+        if (statsExpandedEl) {
+            let cardsHTML = '';
+            const majorStatuses = ["OPEN", "SUBMITTED BY Pencacah", "APPROVED BY Pengawas", "DRAFT", "REJECTED BY Pengawas", "SUBMITTED RESPONDENT"];
+            
+            Object.entries(statusColors).forEach(([st, color]) => {
+                const sumVal = statusSums[st] || 0;
+                if (sumVal > 0 || majorStatuses.includes(st)) {
+                    const pctOfTotal = prelist > 0 ? ((sumVal / prelist) * 100).toFixed(2) : '0.00';
+                    cardsHTML += `
+                        <div class="stat-card-compact" style="--stat-color: ${color};">
+                            <div class="stat-label" style="font-size: 0.7rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${st}">${st}</div>
+                            <div class="stat-value" style="font-family: monospace; font-weight: 800; font-size: 1.25rem;">${formatNum(sumVal)}</div>
+                            <div class="stat-subtext" style="font-size: 0.65rem; color: var(--text-secondary); font-weight: 600;">(${pctOfTotal}%)</div>
+                        </div>
+                    `;
+                }
+            });
+            
+            // Tambahan (Non-Target) Card
+            cardsHTML += `
+                <div class="stat-card-compact" style="--stat-color: var(--primary); cursor: pointer;" onclick="openProvincialNewBusinessesModal('${surveyType}', 'all')">
+                    <div class="stat-label" style="font-size: 0.7rem; font-weight: 700; white-space: nowrap;">TAMBAHAN (NON-TARGET)</div>
+                    <div class="stat-value" style="font-family: monospace; font-weight: 800; font-size: 1.25rem;">${formatNum(newOverall + newRumahOverall)}</div>
+                    <div class="stat-subtext" style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.2;">
+                        <span>${formatNum(newOverall)} usaha | ${formatNum(newRumahOverall)} rumah</span>
+                        <br/><span style="color: var(--color-delivered);">+${formatNum(newToday + newRumahToday)} hari ini</span>
+                    </div>
+                </div>
+            `;
+            
+            // Sisa Target Card
+            const sisaUsahaNum = Math.max(0, prelist - submitted);
+            const sisaPct = prelist > 0 ? ((sisaUsahaNum / prelist) * 100).toFixed(2) : '0.00';
+            cardsHTML += `
+                <div class="stat-card-compact" style="--stat-color: var(--text-secondary);">
+                    <div class="stat-label" style="font-size: 0.7rem; font-weight: 700; white-space: nowrap;">SISA TARGET</div>
+                    <div class="stat-value" style="font-family: monospace; font-weight: 800; font-size: 1.25rem;">${formatNum(sisaUsahaNum)}</div>
+                    <div class="stat-subtext" style="font-size: 0.65rem; color: var(--text-secondary); font-weight: 600;">(${sisaPct}%)</div>
+                </div>
+            `;
+            
+            statsExpandedEl.innerHTML = cardsHTML;
+        }
         // Render Table with Filtering & Sorting
         if (!window.expandedSeKabs) {
             window.expandedSeKabs = { se_umum: {}, se_ub: {} };
@@ -1723,25 +1791,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (thead) {
                 thead.innerHTML = `
                     <tr>
-                        <th style="font-family:'Outfit',sans-serif;">Kabupaten/Kota</th>
-                        <th style="font-family:'Outfit',sans-serif;">Kecamatan</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--text-secondary);">Total Target</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:#f59e0b;">Draft</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:#3b82f6;">Open</th>
-                        <th colspan="4" style="font-family:'Outfit',sans-serif;text-align:center;color:var(--color-delivered);border-bottom:2px solid rgba(16,185,129,0.3);">Submitted (Selesai)</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:center;">% Capaian</th>
+                        <th rowspan="2" style="font-family:'Outfit',sans-serif; vertical-align: middle;">Kabupaten/Kota</th>
+                        <th rowspan="2" style="font-family:'Outfit',sans-serif; vertical-align: middle;">Kecamatan</th>
+                        <th rowspan="2" style="font-family:'Outfit',sans-serif;text-align:right;color:var(--text-secondary); vertical-align: middle;">Total Target</th>
+                        <th rowspan="2" style="font-family:'Outfit',sans-serif;text-align:right;color:#f59e0b; vertical-align: middle;">Draft</th>
+                        <th rowspan="2" style="font-family:'Outfit',sans-serif;text-align:right;color:#3b82f6; vertical-align: middle;">Open</th>
+                        <th colspan="5" style="font-family:'Outfit',sans-serif;text-align:center;color:var(--color-delivered);border-bottom:1px solid var(--card-border);">Submitted (Selesai)</th>
+                        <th rowspan="2" style="font-family:'Outfit',sans-serif;text-align:center; vertical-align: middle;">% Capaian</th>
                     </tr>
                     <tr>
-                        <th style="padding:0.3rem 0;"></th>
-                        <th style="padding:0.3rem 0;"></th>
-                        <th style="padding:0.3rem 0;"></th>
-                        <th style="padding:0.3rem 0;"></th>
-                        <th style="padding:0.3rem 0;"></th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-delivered);font-size:0.8rem;padding:0.3rem 0.75rem;">Total</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-opened);font-size:0.8rem;padding:0.3rem 0.75rem;">Hari Ini</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:#f59e0b;font-size:0.8rem;padding:0.3rem 0.75rem;">Kemarin</th>
-                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-clicked);font-size:0.8rem;padding:0.3rem 0.75rem;">H-2</th>
-                        <th style="padding:0.3rem 0;"></th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-delivered);font-size:0.8rem;padding:0.4rem 0.75rem;">Total</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:var(--color-opened);font-size:0.8rem;padding:0.4rem 0.75rem;">Pencacah</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:#d97706;font-size:0.8rem;padding:0.4rem 0.75rem;">Respondent</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:#047857;font-size:0.8rem;padding:0.4rem 0.75rem;">Approved</th>
+                        <th style="font-family:'Outfit',sans-serif;text-align:right;color:#dc2626;font-size:0.8rem;padding:0.4rem 0.75rem;">Rejected</th>
                     </tr>
                 `;
             }
@@ -1766,19 +1829,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     pct >= 50 ? 'background-color:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2);' :
                         'background-color:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2);';
 
-                const tdToday = getDailyProgressCellHTML(kec.today_completed, kec.today_completed_breakdown, 'HARI INI: KEC. ' + kec.kec_name);
-                const tdYesterday = getDailyProgressCellHTML(kec.yesterday_completed, kec.yesterday_completed_breakdown, 'KEMARIN: KEC. ' + kec.kec_name);
-                const isEstimate = kec.two_days_ago_is_estimate;
-                const tdTwoDays = getDailyProgressCellHTML(kec.two_days_ago_completed, kec.two_days_ago_completed_breakdown, 'H-2: KEC. ' + kec.kec_name, isEstimate);
-
-                const kecTotalBreakdown = {
-                    "APPROVED BY Pengawas": kec.total_approved || 0,
-                    "REJECTED BY Pengawas": kec.total_rejected || 0,
-                    "SUBMITTED BY Pencacah": kec.total_submitted_pencacah || 0,
-                    "SUBMITTED RESPONDENT": kec.total_submitted_respondent || 0
-                };
-                const tdTotal = getDailyProgressCellHTML(kec.total_submitted, kecTotalBreakdown, 'TOTAL DOKUMEN SELESAI: KEC. ' + kec.kec_name);
-
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td style="font-size:0.8rem;color:var(--text-secondary);font-weight:600;">${kec.kab_name.replace(/\[\d+\] /, '')}</td>
@@ -1786,10 +1836,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td style="text-align:right;font-family:monospace;color:var(--text-secondary);">${formatNum(kec.total_prelist)}</td>
                     <td style="text-align:right;font-family:monospace;color:#f59e0b;">${formatNum(kec.total_draft)}</td>
                     <td style="text-align:right;font-family:monospace;color:#3b82f6;">${formatNum(kec.total_open)}</td>
-                    <td style="text-align:right;font-family:monospace;font-weight:700;color:var(--color-delivered);">${tdTotal}</td>
-                    <td style="text-align:right;font-family:monospace;">${tdToday}</td>
-                    <td style="text-align:right;font-family:monospace;">${tdYesterday}</td>
-                    <td style="text-align:right;font-family:monospace;">${tdTwoDays}</td>
+                    <td style="text-align:right;font-family:monospace;font-weight:700;color:var(--color-delivered);">${formatNum(kec.total_submitted)}</td>
+                    <td style="text-align:right;font-family:monospace;color:var(--color-opened);">${formatNum(kec.total_submitted_pencacah)}</td>
+                    <td style="text-align:right;font-family:monospace;color:#d97706;">${formatNum(kec.total_submitted_respondent)}</td>
+                    <td style="text-align:right;font-family:monospace;color:#047857;">${formatNum(kec.total_approved)}</td>
+                    <td style="text-align:right;font-family:monospace;color:#dc2626;">${formatNum(kec.total_rejected)}</td>
                     <td style="text-align:center;">
                         <span style="display:inline-block;padding:0.2rem 0.5rem;border-radius:0.5rem;font-size:0.75rem;font-weight:700;${pctClass}">${pct}%</span>
                     </td>
@@ -2077,18 +2128,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span style="font-size: 0.6rem; color: var(--text-muted);">+${item.new_usaha_today + item.new_rumah_today} hari ini</span>
                 </div>`;
 
-            const tdToday = getDailyProgressCellHTML(item.today_completed, item.today_completed_breakdown, 'HARI INI: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
-            const tdYesterday = getDailyProgressCellHTML(item.yesterday_completed, item.yesterday_completed_breakdown, 'KEMARIN: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
-            const tdTwoDays = getDailyProgressCellHTML(item.two_days_ago_completed, item.two_days_ago_completed_breakdown, 'H-2: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''), item.two_days_ago_is_estimate);
-
-            const totalBreakdown = {
-                "APPROVED BY Pengawas": item.total_approved || 0,
-                "REJECTED BY Pengawas": item.total_rejected || 0,
-                "SUBMITTED BY Pencacah": item.total_submitted_pencacah || 0,
-                "SUBMITTED RESPONDENT": item.total_submitted_respondent || 0
-            };
-            const tdTotal = getDailyProgressCellHTML(item.total_submitted, totalBreakdown, 'TOTAL DOKUMEN SELESAI: KAB. ' + item.kabupaten.replace(/\[\d+\] /, ''));
-
             row.innerHTML = `
                 <td style="font-weight: 700; color: var(--text-primary);">
                     <div class="expand-trigger" style="display: inline-flex; align-items: center; gap: 0.5rem; width: 100%;">
@@ -2100,10 +2139,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td style="text-align: right; font-family: monospace; font-weight: 500; color: #f59e0b;">${formatNum(item.total_draft)}</td>
                 <td style="text-align: right; font-family: monospace; font-weight: 500; color: #3b82f6;">${formatNum(item.total_open)}</td>
                 
-                <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-delivered);">${tdTotal}</td>
-                <td style="text-align: right; font-family: monospace;">${tdToday}</td>
-                <td style="text-align: right; font-family: monospace;">${tdYesterday}</td>
-                <td style="text-align: right; font-family: monospace;">${tdTwoDays}</td>
+                <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-delivered);">${formatNum(item.total_submitted)}</td>
+                <td style="text-align: right; font-family: monospace; color: var(--color-opened);">${formatNum(item.total_submitted_pencacah)}</td>
+                <td style="text-align: right; font-family: monospace; color: #d97706;">${formatNum(item.total_submitted_respondent)}</td>
+                <td style="text-align: right; font-family: monospace; color: #047857;">${formatNum(item.total_approved)}</td>
+                <td style="text-align: right; font-family: monospace; color: #dc2626;">${formatNum(item.total_rejected)}</td>
                 
                 <td style="text-align: center;">
                     <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; ${pctClass}">
@@ -2195,10 +2235,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     const kecEscaped = (item.kabupaten.replace(/\[\d+\] /, '') + ' - ' + kec.kec_name).replace(/'/g, "\\'");
                     const encodedKecBusinessesJSON = encodeURIComponent(JSON.stringify(kec.new_businesses || []));
 
+                    const overall_total = (kec.new_usaha_overall || 0) + (kec.new_rumah_overall || 0);
+                    const overall_usaha = kec.new_usaha_overall || 0;
+                    const overall_rumah = kec.new_rumah_overall || 0;
+                    const today_total = (kec.new_usaha_today || 0) + (kec.new_rumah_today || 0);
                     const kecPenambahanBadge = `<div onclick="openNewBusinessesModal('${kecEscaped}', '${encodedKecBusinessesJSON}', 'all')" style="cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.1rem;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
-                            <span style="font-weight: 800; color: var(--primary); font-size: 0.85rem;">${formatNum(kec.new_usaha_overall + kec.new_rumah_overall)}</span>
-                            <span style="font-size: 0.65rem; font-weight: 600; color: var(--text-secondary);">${kec.new_usaha_overall} usaha | ${kec.new_rumah_overall} rumah</span>
-                            <span style="font-size: 0.6rem; color: var(--text-muted);">+${kec.new_usaha_today + kec.new_rumah_today} hari ini</span>
+                            <span style="font-weight: 800; color: var(--primary); font-size: 0.85rem;">${formatNum(overall_total)}</span>
+                            <span style="font-size: 0.65rem; font-weight: 600; color: var(--text-secondary);">${overall_usaha} usaha | ${overall_rumah} rumah</span>
+                            <span style="font-size: 0.6rem; color: var(--text-muted);">+${today_total} hari ini</span>
                         </div>`;
 
                     kecRow.innerHTML = `
@@ -2208,9 +2252,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         <td style="text-align: right; font-family: monospace; font-weight: 500; color: #3b82f6;">${formatNum(kec.total_open)}</td>
                         
                         <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--color-delivered);">${formatNum(kec.total_submitted)}</td>
-                        <td style="text-align: right; font-family: monospace;">${kecToday}</td>
-                        <td style="text-align: right; font-family: monospace;">${kecYesterday}</td>
-                        <td style="text-align: right; font-family: monospace;">${kecTwoDays}</td>
+                        <td style="text-align: right; font-family: monospace; color: var(--color-opened);">${formatNum(kec.total_submitted_pencacah)}</td>
+                        <td style="text-align: right; font-family: monospace; color: #d97706;">${formatNum(kec.total_submitted_respondent)}</td>
+                        <td style="text-align: right; font-family: monospace; color: #047857;">${formatNum(kec.total_approved)}</td>
+                        <td style="text-align: right; font-family: monospace; color: #dc2626;">${formatNum(kec.total_rejected)}</td>
                         
                         <td style="text-align: center;">
                             <span style="display: inline-block; padding: 0.2rem 0.4rem; border-radius: 0.4rem; font-size: 0.7rem; font-weight: 800; ${kPctClass}">
@@ -7582,7 +7627,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Build dynamic thead based on selectedJenis
         let dynamicColumnsHTML = '';
-        if (selectedJenis && selectedJenis.includes('Missing Value')) {
+        if (selectedJenis && selectedJenis.includes('Missing')) {
             // A3
             dynamicColumnsHTML = `
                 <th onclick="sortAnomali('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
@@ -7684,11 +7729,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const savedInfo = row.updated_by ? `<div style="font-size:0.68rem;color:var(--text-secondary);margin-top:0.15rem;">✓ ${row.updated_by}</div>` : '';
             
             // Map email/username to real name
-            let namaPetugas = row.nama_petugas || '';
-            if (window.userMap && window.userMap[namaPetugas]) {
-                namaPetugas = window.userMap[namaPetugas];
-            } else if (window.userMap && window.userMap[namaPetugas.split('@')[0]]) {
-                namaPetugas = window.userMap[namaPetugas.split('@')[0]];
+            let rawPetugas = row.nama_petugas || '';
+            let namaPetugas = rawPetugas;
+            
+            // Hapus suffix role seperti ' (Pengawas)' atau ' (Pencacah)' untuk lookup
+            let cleanUsername = rawPetugas.replace(/\s*\([^)]*\)$/, '').trim();
+            
+            if (window.userMap) {
+                if (window.userMap[cleanUsername]) {
+                    namaPetugas = window.userMap[cleanUsername];
+                } else if (window.userMap[cleanUsername.toLowerCase()]) {
+                    namaPetugas = window.userMap[cleanUsername.toLowerCase()];
+                } else if (cleanUsername.includes('@') && window.userMap[cleanUsername.split('@')[0]]) {
+                    namaPetugas = window.userMap[cleanUsername.split('@')[0]];
+                }
+            }
+            
+            // Jika tidak ketemu di map dan string asli masih berupa email, tetap tampilkan email tapi bersihkan
+            if (namaPetugas === rawPetugas && !namaPetugas) {
+                namaPetugas = '';
             }
 
             let dynamicCells = '';
@@ -7716,19 +7775,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td style="padding:0.6rem 0.8rem;text-align:right;font-size:0.82rem;white-space:nowrap;color:var(--text-secondary);">${row.total_pengeluaran ? fmtRp(row.total_pengeluaran) : '-'}</td>
             `;
 
-            if (selectedJenis && selectedJenis.includes('Missing Value')) {
-                dynamicCells = cellNamaUsaha + cellCatatan;
+
+            if (selectedJenis && selectedJenis.includes('Missing')) {
+                dynamicCells = `${cellNamaUsaha}${cellCatatan}`;
             } else if (selectedJenis && selectedJenis.includes('Biaya Produksi')) {
-                dynamicCells = cellNamaUsaha + cellCatatan + cellPct + cellBiaya + cellPengeluaran;
+                dynamicCells = `${cellNamaUsaha}${cellCatatan}${cellPct}${cellBiaya}${cellPengeluaran}`;
             } else if (selectedJenis && selectedJenis.includes('Keuntungan Usaha')) {
-                dynamicCells = cellNamaUsaha + cellCatatan + cellPengeluaran;
+                dynamicCells = `${cellNamaUsaha}${cellCatatan}${cellPengeluaran}`;
             } else if (selectedJenis && selectedJenis.includes('Penyertaan Modal')) {
-                dynamicCells = cellNamaUsaha + cellCatatan;
+                dynamicCells = `${cellNamaUsaha}${cellCatatan}`;
             } else {
-                dynamicCells = cellNamaUsaha + cellCatatan + cellPct + cellBiaya + cellPengeluaran;
+                dynamicCells = `${cellNamaUsaha}${cellCatatan}${cellPct}${cellBiaya}${cellPengeluaran}`;
             }
 
-            return `<tr id="anomali-row-${row.id}" style="border-bottom: 1px solid var(--card-border); transition: background 0.15s;" onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">
+            return `<tr id="anomali-row-${row.id}" style="border-bottom:1px solid var(--card-border);">
                 <td style="padding:0.6rem 0.8rem;text-align:center;color:var(--text-secondary);font-size:0.78rem;">${globalIdx}</td>
                 <td style="padding:0.6rem 0.8rem;font-weight:600;font-size:0.82rem;white-space:nowrap;">${row.kab_code || '-'}</td>
                 <td style="padding:0.6rem 0.8rem;">

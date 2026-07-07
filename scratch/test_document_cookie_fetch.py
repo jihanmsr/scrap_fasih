@@ -1,0 +1,62 @@
+import asyncio
+import os
+import sys
+from playwright.async_api import async_playwright
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from scrape_granular_core import get_authenticated_context
+
+async def main():
+    async with async_playwright() as p:
+        print("Connecting to browser...")
+        browser, context, page = await get_authenticated_context(p)
+        if not page:
+            print("Failed to connect.")
+            return
+            
+        print("Active Page URL:", page.url)
+        
+        url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-progress-assignment"
+        
+        payload = {
+            "surveyPeriodId": "fd68e454-ba45-4b85-8205-f3bf777ded24",
+            "assignmentStatusAlias": None,
+            "assignmentErrorStatusType": -1,
+            "data1": None, "data2": None, "data3": None, "data4": None, "data5": None,
+            "data6": None, "data7": None, "data8": None, "data9": None, "data10": None,
+            "regionId": None,
+            "region1Id": "5214ecb2-bef1-4a86-9446-451cf430928e",
+            "region2Id": "bc32354f-1245-426f-b2cf-a5733e1295ad",
+            "currentUserId": None,
+            "userIdResponsibility": None
+        }
+        
+        print("Executing fetch using token from document.cookie...")
+        res = await page.evaluate("""
+            async ({url, payload}) => {
+                try {
+                    const cookieMatch = document.cookie.split('; ').find(row => row.startsWith('XSRF-TOKEN='));
+                    if (!cookieMatch) return { error: 'XSRF-TOKEN cookie not found in document.cookie' };
+                    const token = decodeURIComponent(cookieMatch.split('=')[1]);
+                    
+                    const r = await fetch(url, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "x-xsrf-token": token
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                    const text = await r.text();
+                    return { ok: r.ok, status: r.status, text_length: text.length, text_sample: text.substring(0, 300) };
+                } catch (e) {
+                    return { error: e.toString() };
+                }
+            }
+        """, {"url": url, "payload": payload})
+        
+        print("Fetch Result:", res)
+        await browser.close()
+
+if __name__ == "__main__":
+    asyncio.run(main())
