@@ -2042,3 +2042,101 @@ th.sortable:hover {
 .regions-details[open] .chevron-icon {
     transform: rotate(180deg);
 }
+
+/* Premium BPS FASIH Summary Card styles */
+.summary-premium-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+    .summary-premium-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.summary-premium-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.25rem 2rem;
+    border-radius: 1.25rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+}
+.summary-premium-card:hover {
+    transform: translateY(-5px);
+}
+.summary-premium-card.card-primary {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.09) 0%, rgba(99, 102, 241, 0.02) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.12);
+}
+.summary-premium-card.card-primary:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 18px 40px -12px rgba(99, 102, 241, 0.22);
+}
+.summary-premium-card.card-secondary {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.08) 0%, rgba(249, 115, 22, 0.02) 100%);
+    border: 1px solid rgba(249, 115, 22, 0.15);
+    box-shadow: 0 10px 30px -10px rgba(249, 115, 22, 0.1);
+}
+.summary-premium-card.card-secondary:hover {
+    border-color: rgba(249, 115, 22, 0.3);
+    box-shadow: 0 18px 40px -12px rgba(249, 115, 22, 0.2);
+}
+.premium-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.01em;
+}
+.premium-description {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+    max-width: 80%;
+}
+.premium-percentage {
+    font-size: 3.25rem;
+    font-weight: 850;
+    font-family: 'Outfit', sans-serif;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.02em;
+}
+.premium-count {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+.premium-action-btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+.premium-action-btn:hover {
+    color: #4f46e5;
+    transform: translateX(3px);
+}
+.premium-action-btn.btn-secondary {
+    color: #d97706;
+}
+.premium-action-btn.btn-secondary:hover {
+    color: #b45309;
+}

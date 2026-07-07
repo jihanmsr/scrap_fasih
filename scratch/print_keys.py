@@ -1,18 +1,25 @@
+import os
 import json
+from supabase import create_client
 
-with open("scratch/sample_rejected_records.json", "r") as f:
-    records = json.load(f)
+def main():
+    env = {}
+    with open(".env", "r") as f:
+        for line in f:
+            if "=" in line:
+                k, v = line.strip().split("=", 1)
+                env[k.strip()] = v.strip().strip('"').strip("'")
+    url = env.get("SUPABASE_URL")
+    key = env.get("SUPABASE_KEY")
+    supabase = create_client(url, key)
     
-if records:
-    rec = records[0]
-    for k, v in rec.items():
-        if isinstance(v, (dict, list)):
-            print(f"{k}: ({type(v).__name__} of size {len(v)})")
-        else:
-            print(f"{k}: {v}")
-    
-    print("\n--- assignmentResponsibility breakdown ---")
-    for resp in rec.get("assignmentResponsibility", []):
-        print(json.dumps(resp, indent=2))
-else:
-    print("No records found.")
+    res = supabase.table("dashboard_store").select("value").eq("key", "granular_assignments").execute()
+    if res.data:
+        val = res.data[0]["value"]
+        print("Keys inside val:", list(val.keys()) if isinstance(val, dict) else "Not a dict")
+        if isinstance(val, dict):
+            for k, v in val.items():
+                print(f"Key: {k}, Type: {type(v)}, Sample/Length: {len(str(v)) if v else 0}")
+                
+if __name__ == "__main__":
+    main()

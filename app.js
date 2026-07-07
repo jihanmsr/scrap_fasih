@@ -1296,6 +1296,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Calculate Summary
         let prelist = 0, draft = 0, openVal = 0, submitted = 0, rejected = 0, approved = 0, today = 0, yesterday = 0, twoDaysAgo = 0, newToday = 0, newRumahToday = 0;
         let submittedPencacah = 0, submittedRespondent = 0;
+        const todayBreakdown = {};
+        const yesterdayBreakdown = {};
+        const twoDaysAgoBreakdown = {};
 
         const statusColors = {
             "DRAFT": "#f59e0b",
@@ -1471,6 +1474,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const percentEl = document.getElementById(`${surveyType}-stat-percentage`);
         if (percentEl) percentEl.textContent = `(${persentase}%)`;
 
+        // Populate premium BPS summary cards
+        const premiumPctEl = document.getElementById(`${surveyType}-stat-premium-pct`);
+        if (premiumPctEl) premiumPctEl.textContent = `${persentase} %`;
+
+        const premiumCountEl = document.getElementById(`${surveyType}-stat-premium-count`);
+        if (premiumCountEl) premiumCountEl.textContent = `${formatNum(submitted)} dari ${formatNum(prelist)} Assignment`;
+
         const submittedWrapperEl = document.getElementById(`${surveyType}-stat-submitted-wrapper`);
         if (submittedWrapperEl) {
             const breakdown = {
@@ -1555,15 +1565,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        const todayEl = document.getElementById(`${surveyType}-stat-today`);
-        if (todayEl) todayEl.innerHTML = getDailyProgressCellHTML(today, todayBreakdown, 'SUBMIT HARI INI');
-
-        const yesterdayEl = document.getElementById(`${surveyType}-stat-yesterday`);
-        if (yesterdayEl) yesterdayEl.innerHTML = getDailyProgressCellHTML(yesterday, yesterdayBreakdown, 'SUBMIT KEMARIN');
-
-        const twoDaysEl = document.getElementById(`${surveyType}-stat-2days`);
-        if (twoDaysEl) twoDaysEl.innerHTML = getDailyProgressCellHTML(twoDaysAgo, twoDaysAgoBreakdown, 'SUBMIT 2 HARI LALU');
-
         // Calculate and set card percentages with dynamic precision for small numbers
         const formatPctVal = (v, tot) => {
             if (tot <= 0) return '0.00';
@@ -1571,18 +1572,81 @@ document.addEventListener('DOMContentLoaded', () => {
             if (pct > 0 && pct < 0.01) return pct.toFixed(4);
             return pct.toFixed(2);
         };
-        const pctToday = formatPctVal(today, prelist);
-        const pctYesterday = formatPctVal(yesterday, prelist);
-        const pctTwoDays = formatPctVal(twoDaysAgo, prelist);
 
-        const todayPctEl = document.getElementById(`${surveyType}-stat-today-pct`);
-        if (todayPctEl) todayPctEl.textContent = `(${pctToday}%)`;
+        const updateDailyStatCard = (count, breakdown, cardId, pctId, title, isAlwaysEmpty = false) => {
+            const countEl = document.getElementById(cardId);
+            const pctEl = document.getElementById(pctId);
+            const cardEl = countEl?.closest('.stat-card-compact');
+            if (countEl) {
+                if (isAlwaysEmpty) {
+                    countEl.innerHTML = `<span style="font-weight: 800; font-size: 1.6rem; color: var(--text-secondary); line-height: 1.1;">-</span>`;
+                    if (pctEl) pctEl.textContent = '';
+                    if (cardEl) {
+                        cardEl.setAttribute('title', 'Tidak ada penarikan data pada hari ini sehingga data tidak tersedia');
+                        cardEl.style.cursor = 'help';
+                    }
+                } else if (!count || count <= 0) {
+                    countEl.innerHTML = `<span style="color: var(--text-secondary); font-size: 0.72rem; font-weight: 600; text-transform: uppercase;">Belum ada data</span>`;
+                    if (pctEl) pctEl.textContent = '';
+                    if (cardEl) {
+                        cardEl.removeAttribute('title');
+                        cardEl.style.cursor = 'default';
+                    }
+                } else {
+                    countEl.innerHTML = getDailyProgressCellHTML(count, breakdown, title);
+                    if (pctEl) {
+                        const pctVal = formatPctVal(count, prelist);
+                        pctEl.textContent = `(${pctVal}%)`;
+                    }
+                    if (cardEl) {
+                        cardEl.removeAttribute('title');
+                        cardEl.style.cursor = 'default';
+                    }
+                }
+            }
+        };
 
-        const yesterdayPctEl = document.getElementById(`${surveyType}-stat-yesterday-pct`);
-        if (yesterdayPctEl) yesterdayPctEl.textContent = `(${pctYesterday}%)`;
+        updateDailyStatCard(today, todayBreakdown, `${surveyType}-stat-today`, `${surveyType}-stat-today-pct`, 'SUBMIT HARI INI', false);
+        updateDailyStatCard(yesterday, yesterdayBreakdown, `${surveyType}-stat-yesterday`, `${surveyType}-stat-yesterday-pct`, 'SUBMIT KEMARIN', true);
+        updateDailyStatCard(twoDaysAgo, twoDaysAgoBreakdown, `${surveyType}-stat-2days`, `${surveyType}-stat-2days-pct`, 'SUBMIT 2 HARI LALU', true);
 
-        const twoDaysPctEl = document.getElementById(`${surveyType}-stat-2days-pct`);
-        if (twoDaysPctEl) twoDaysPctEl.textContent = `(${pctTwoDays}%)`;
+        // Populate Regency/City Ranking List
+        const rankingListEl = document.getElementById(`${surveyType}-ranking-list`);
+        if (rankingListEl) {
+            const sortedForRanking = [...surveyData]
+                .map(item => {
+                    const tot = item.total_prelist || 0;
+                    const sub = item.total_submitted || 0;
+                    const pct = tot > 0 ? (sub / tot) * 100 : 0;
+                    return { item, pct };
+                })
+                .sort((a, b) => b.pct - a.pct);
+
+            rankingListEl.innerHTML = sortedForRanking.map((entry, idx) => {
+                const item = entry.item;
+                const pct = entry.pct;
+                const rawName = item.kabupaten || "";
+                const cleanName = rawName.replace(/\[\d+\]\s*/, "").trim();
+                
+                let rankIcon = `${idx + 1}.`;
+                if (idx === 0) rankIcon = "🥇";
+                else if (idx === 1) rankIcon = "🥈";
+                else if (idx === 2) rankIcon = "🥉";
+
+                return `
+                <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; padding: 0.25rem 0; border-bottom: 1px dashed rgba(249, 115, 22, 0.12);">
+                    <div style="display: flex; align-items: center; gap: 0.45rem; max-width: 65%;">
+                        <span style="font-size: 0.95rem; font-weight: 800; min-width: 22px; display: inline-block; text-align: center;">${rankIcon}</span>
+                        <span style="font-weight: 750; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${cleanName}">${cleanName}</span>
+                    </div>
+                    <div style="text-align: right;">
+                        <span style="font-weight: 850; color: #a8542a;">${pct.toFixed(2)}%</span>
+                        <div style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.1;">${formatNum(item.total_submitted)} / ${formatNum(item.total_prelist)}</div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
 
         // Total Tambahan Usaha card (kumulatif)
         let newOverall = 0;
@@ -1722,13 +1786,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Read view level selector
         const viewLevel = document.getElementById(`${surveyType}-view-level`)?.value || 'kabupaten';
+        const kabFilterEl = document.getElementById(`${surveyType}-kab-filter`);
+
+        // Show/hide kabupaten filter dropdown based on view mode
+        if (kabFilterEl) {
+            kabFilterEl.style.display = viewLevel === 'kecamatan' ? '' : 'none';
+        }
 
         // Update title and toggle expand/collapse visibility
         const tableTitleEl = document.getElementById(`${surveyType}-table-title`);
         const expandCollapseEl = document.getElementById(`${surveyType}-expand-collapse-btns`);
         if (tableTitleEl) {
-            const titles = { kabupaten: 'Rincian per Kabupaten/Kota', kecamatan: 'Rincian per Kecamatan', petugas: 'Rincian per Petugas' };
-            tableTitleEl.textContent = titles[viewLevel] || titles.kabupaten;
+            const selectedKab = kabFilterEl?.value || 'all';
+            if (viewLevel === 'kecamatan' && selectedKab !== 'all') {
+                const kabLabel = selectedKab.replace(/\[\d+\]\s*/, '').trim();
+                tableTitleEl.textContent = `Ranking Kecamatan — ${kabLabel}`;
+            } else {
+                const titles = { kabupaten: 'Rincian per Kabupaten/Kota', kecamatan: 'Ranking Kecamatan (Semua Kab/Kota)', petugas: 'Rincian per Petugas' };
+                tableTitleEl.textContent = titles[viewLevel] || titles.kabupaten;
+            }
         }
         if (expandCollapseEl) {
             expandCollapseEl.style.display = viewLevel === 'kabupaten' ? '' : 'none';
@@ -1769,9 +1845,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ===== KECAMATAN FLAT LIST RENDERER =====
         function renderKecamatanFlatList() {
-            // Build flat list of all kecamatan from all kabupaten
+            // Read kabupaten filter
+            const selectedKab = document.getElementById(`${surveyType}-kab-filter`)?.value || 'all';
+            const isFiltered = selectedKab !== 'all';
+
+            // Build flat list of all kecamatan from selected kabupaten
             const allKecs = [];
             surveyData.forEach(kab => {
+                // Apply kabupaten filter
+                if (isFiltered && kab.kabupaten !== selectedKab) return;
                 (kab.kecamatan_list || []).forEach(kec => {
                     if (!kec.kec_name || kec.kec_name === '-') return;
                     // Apply search filter
@@ -1785,13 +1867,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
+            // Sort by persentase desc, then total_prelist desc
+            allKecs.sort((a, b) => {
+                const pctA = parseFloat(a.persentase) || 0;
+                const pctB = parseFloat(b.persentase) || 0;
+                if (pctA !== pctB) return pctB - pctA;
+                return (b.total_prelist || 0) - (a.total_prelist || 0);
+            });
+
             // Render kecamatan-specific headers
             const table = document.querySelector(`#tab-content-${surveyType} .ipas-table`);
             const thead = table?.querySelector('thead');
             if (thead) {
+                const kabCol = isFiltered ? '' : `<th rowspan="2" style="font-family:'Outfit',sans-serif; vertical-align: middle; color:var(--text-secondary); font-size:0.8rem;">Kab/Kota</th>`;
                 thead.innerHTML = `
                     <tr>
-                        <th rowspan="2" style="font-family:'Outfit',sans-serif; vertical-align: middle;">Kabupaten/Kota</th>
+                        <th rowspan="2" style="font-family:'Outfit',sans-serif; vertical-align: middle; text-align:center; min-width:45px;">#</th>
+                        ${kabCol}
                         <th rowspan="2" style="font-family:'Outfit',sans-serif; vertical-align: middle;">Kecamatan</th>
                         <th rowspan="2" style="font-family:'Outfit',sans-serif;text-align:right;color:var(--text-secondary); vertical-align: middle;">Total Target</th>
                         <th rowspan="2" style="font-family:'Outfit',sans-serif;text-align:right;color:#f59e0b; vertical-align: middle;">Draft</th>
@@ -1811,27 +1903,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
             tbody.innerHTML = '';
             if (allKecs.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" style="text-align:center;padding:3rem 1rem;color:var(--text-secondary);">Tidak ada kecamatan yang cocok dengan pencarian.</td></tr>`;
+                const colSpan = isFiltered ? 12 : 13;
+                tbody.innerHTML = `<tr><td colspan="${colSpan}" style="text-align:center;padding:3rem 1rem;color:var(--text-secondary);">Tidak ada kecamatan yang cocok dengan pencarian.</td></tr>`;
                 return;
             }
 
-            // Sort by persentase desc, then total_prelist desc
-            allKecs.sort((a, b) => {
-                const pctA = parseFloat(a.persentase) || 0;
-                const pctB = parseFloat(b.persentase) || 0;
-                if (pctA !== pctB) return pctB - pctA;
-                return (b.total_prelist || 0) - (a.total_prelist || 0);
-            });
-
-            allKecs.forEach(kec => {
+            allKecs.forEach((kec, idx) => {
+                const rank = idx + 1;
                 const pct = parseFloat(kec.persentase) || 0;
                 const pctClass = pct >= 80 ? 'background-color:rgba(16,185,129,0.1);color:#10b981;border:1px solid rgba(16,185,129,0.2);' :
                     pct >= 50 ? 'background-color:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2);' :
                         'background-color:rgba(239,68,68,0.1);color:#ef4444;border:1px solid rgba(239,68,68,0.2);';
 
+                const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '';
+                const rankDisplay = medal
+                    ? `<span style="font-size:1.1rem;">${medal}</span>`
+                    : `<span style="font-size:0.75rem;color:var(--text-secondary);font-weight:600;">${rank}</span>`;
+
+                const kabCell = isFiltered ? '' : `<td style="font-size:0.78rem;color:var(--text-secondary);font-weight:600;white-space:nowrap;">${kec.kab_name.replace(/\[\d+\] /, '')}</td>`;
+
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td style="font-size:0.8rem;color:var(--text-secondary);font-weight:600;">${kec.kab_name.replace(/\[\d+\] /, '')}</td>
+                    <td style="text-align:center;padding:0.5rem 0.4rem;">${rankDisplay}</td>
+                    ${kabCell}
                     <td style="font-weight:600;color:var(--text-primary);">${kec.kec_name}</td>
                     <td style="text-align:right;font-family:monospace;color:var(--text-secondary);">${formatNum(kec.total_prelist)}</td>
                     <td style="text-align:right;font-family:monospace;color:#f59e0b;">${formatNum(kec.total_draft)}</td>
@@ -2337,9 +2431,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let next = 'line';
             if (current === 'bar') {
                 next = 'line';
-            } else if (current === 'line') {
-                next = 'line_daily';
-            } else if (current === 'line_daily') {
+            } else {
                 next = 'bar';
             }
             window.currentChartType[type] = next;
@@ -2512,21 +2604,46 @@ document.addEventListener('DOMContentLoaded', () => {
                     labels: sortedForBar.map(i => i.kabupaten.replace(/\[\d+\] /g, '')),
                     datasets: [
                         {
-                            label: 'Total Target',
-                            data: sortedForBar.map(i => i.total_prelist || 0),
-                            backgroundColor: 'rgba(239, 68, 68, 0.85)', // Red
+                            label: 'Approved',
+                            data: sortedForBar.map(i => i.total_approved || 0),
+                            backgroundColor: '#047857', // Green
                             borderRadius: 4,
-                            grouped: false,
+                            order: 1
+                        },
+                        {
+                            label: 'Submitted Respondent',
+                            data: sortedForBar.map(i => i.total_submitted_respondent || 0),
+                            backgroundColor: '#d97706', // Orange
+                            borderRadius: 4,
                             order: 2
                         },
                         {
-                            label: 'Submitted (Selesai)',
-                            data: sortedForBar.map(i => i.total_submitted || 0),
-                            backgroundColor: 'rgba(16, 185, 129, 0.85)', // Green
+                            label: 'Submitted Pencacah',
+                            data: sortedForBar.map(i => i.total_submitted_pencacah || 0),
+                            backgroundColor: '#10b981', // Teal/Light Green
                             borderRadius: 4,
-                            minBarLength: 6,
-                            grouped: false,
-                            order: 1
+                            order: 3
+                        },
+                        {
+                            label: 'Rejected',
+                            data: sortedForBar.map(i => i.total_rejected || 0),
+                            backgroundColor: '#ef4444', // Red
+                            borderRadius: 4,
+                            order: 4
+                        },
+                        {
+                            label: 'Draft',
+                            data: sortedForBar.map(i => i.total_draft || 0),
+                            backgroundColor: '#f59e0b', // Yellow/Orange
+                            borderRadius: 4,
+                            order: 5
+                        },
+                        {
+                            label: 'Open',
+                            data: sortedForBar.map(i => i.total_open || 0),
+                            backgroundColor: '#3b82f6', // Blue
+                            borderRadius: 4,
+                            order: 6
                         }
                     ]
                 };
@@ -2543,12 +2660,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     scales: {
                         y: {
-                            stacked: false,
+                            stacked: true,
                             grid: { color: gridColor },
                             ticks: { color: textColor }
                         },
                         x: {
-                            stacked: false,
+                            stacked: true,
                             grid: { display: false },
                             ticks: {
                                 color: textColor,
@@ -5302,6 +5419,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (mainSubheader) mainSubheader.textContent = 'Detail target tugas sampai level terbawah per kecamatan';
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            // Always show summary section and render immediately from IPAS_DATA
+            const summarySection = document.getElementById('petugas-summary-section');
+            if (summarySection) summarySection.style.display = 'block';
+            if (window.renderPetugasSummaryTable) {
+                window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA || null);
+            }
             if (typeof window.loadGranularAssignmentsData === 'function') {
                 window.loadGranularAssignmentsData();
             }
@@ -6424,7 +6547,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentSelectedStatus = statusSelect.value || 'all';
         
         let optionsHTML = `<option value="all">Semua Status</option>`;
-        ['OPEN', 'DRAFT', 'SUBMITTED', 'REJECTED', 'APPROVED'].forEach(s => {
+        [
+            'OPEN', 
+            'DRAFT', 
+            'SUBMITTED BY Pencacah', 
+            'SUBMITTED RESPONDENT', 
+            'APPROVED BY Pengawas', 
+            'REJECTED BY Pengawas', 
+            'EDITED BY Admin Kabupaten', 
+            'REVOKED BY Pengawas', 
+            'COMPLETED BY Admin Kabupaten', 
+            'REJECTED BY Admin Kabupaten'
+        ].forEach(s => {
             optionsHTML += `<option value="${s}">${s}</option>`;
         });
         statusSelect.innerHTML = optionsHTML;
@@ -6594,8 +6728,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Fetch Petugas Summary from MySQL
         const summarySection = document.getElementById('petugas-summary-section');
+        // Always show the summary section (toggle visible for both Petugas and Desa)
+        if (summarySection) summarySection.style.display = 'block';
+
         if (kabVal !== 'all') {
-            if (summarySection) summarySection.style.display = 'block';
             const matchCode = kabVal.match(/\[(\d+)\]/);
             const kabCodeParam = !matchCode ? '' : `72${matchCode[1]}`;
             try {
@@ -6608,9 +6744,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } catch (e) {
                 console.error("Failed to fetch petugas summary:", e);
+                if (window.renderPetugasSummaryTable) {
+                    window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA);
+                }
             }
         } else {
-            if (summarySection) summarySection.style.display = 'none';
+            // No kab selected: Petugas table shows empty, but Desa view can use IPAS_DATA
+            window.PETUGAS_SUMMARY_MYSQL = [];
+            if (window.renderPetugasSummaryTable) {
+                window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA);
+            }
         }
 
         window.updateGranularStatusFilterOptions();
@@ -6975,7 +7118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.sortPetugasSummary = function (field) {
         if (window.petugasSortField === field) {
-            window.petugasSortOrder *= -1; // toggle
+            window.petugasSortOrder *= -1;
         } else {
             window.petugasSortField = field;
             window.petugasSortOrder = field === 'name' ? 1 : -1;
@@ -6985,7 +7128,139 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // ===== GRANULAR SUMMARY VIEW TOGGLE =====
+    window.granularSummaryView = window.granularSummaryView || 'petugas';
+    window.desaSortField = window.desaSortField || 'total';
+    window.desaSortOrder = window.desaSortOrder || -1;
+
+    window.switchGranularSummaryView = function(view) {
+        window.granularSummaryView = view;
+
+        const btnPetugas = document.getElementById('btn-summary-petugas');
+        const btnDesa = document.getElementById('btn-summary-desa');
+        const petugasContainer = document.getElementById('petugas-summary-table-container');
+        const desaContainer = document.getElementById('desa-summary-table-container');
+        const searchInput = document.getElementById('petugas-summary-search-input');
+        const titleEl = document.getElementById('petugas-summary-title');
+        const descEl = document.getElementById('petugas-summary-desc');
+
+        if (view === 'petugas') {
+            btnPetugas?.classList.add('active');
+            btnDesa?.classList.remove('active');
+            if (petugasContainer) petugasContainer.style.display = 'block';
+            if (desaContainer) desaContainer.style.display = 'none';
+            if (searchInput) searchInput.placeholder = 'Cari nama petugas...';
+            if (titleEl) titleEl.innerHTML = `<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right:0.75rem;color:var(--primary);" viewbox="0 0 24 24" width="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Rekapitulasi Capaian per Petugas`;
+            if (descEl) descEl.textContent = 'Data agregat progres masing-masing petugas (berdasarkan wilayah terpilih di filter atas).';
+        } else {
+            btnPetugas?.classList.remove('active');
+            btnDesa?.classList.add('active');
+            if (petugasContainer) petugasContainer.style.display = 'none';
+            if (desaContainer) desaContainer.style.display = 'block';
+            if (searchInput) searchInput.placeholder = 'Cari nama kecamatan/desa...';
+            if (titleEl) titleEl.innerHTML = `<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right:0.75rem;color:var(--primary);" viewbox="0 0 24 24" width="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Rekapitulasi Capaian per Kecamatan`;
+            if (descEl) descEl.textContent = 'Data progres pengerjaan per kecamatan. Pilih kabupaten di atas untuk rincian per desa.';
+        }
+
+        if (window.renderPetugasSummaryTable) {
+            window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA || null);
+        }
+    };
+
+    window.sortDesaSummary = function(field) {
+        if (window.desaSortField === field) {
+            window.desaSortOrder *= -1;
+        } else {
+            window.desaSortField = field;
+            window.desaSortOrder = (field === 'desa' || field === 'kec') ? 1 : -1;
+        }
+        document.querySelectorAll('.sort-icon-desa').forEach(el => { el.textContent = ''; });
+        const currentTh = document.querySelector(`[onclick="window.sortDesaSummary('${field}')"] .sort-icon-desa`);
+        if (currentTh) currentTh.textContent = window.desaSortOrder === 1 ? ' ▲' : ' ▼';
+        if (window.renderPetugasSummaryTable) {
+            window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA || null);
+        }
+    };
+
     window.renderPetugasSummaryTable = function (data) {
+        if (window.granularSummaryView === 'desa') {
+            let totalAll = 0, selesaiAll = 0, belumAll = 0, desaMap = {};
+            
+            if (Array.isArray(data) && data.length > 0) {
+                // Granular mode: aggregate per desa from granular assignment records
+                data.forEach(r => {
+                    const kecName = r.kec_name || '-', desaName = r.desa_name || '-', key = `${kecName} | ${desaName}`;
+                    if (!desaMap[key]) desaMap[key] = { kec: kecName, desa: desaName, total: 0, selesai: 0, belum: 0 };
+                    desaMap[key].total += 1; totalAll += 1;
+                    if (r.status === 'OPEN' || r.status === 'DRAFT') { desaMap[key].belum += 1; belumAll += 1; }
+                    else { desaMap[key].selesai += 1; selesaiAll += 1; }
+                });
+            } else {
+                // Fallback: aggregate from IPAS_DATA kecamatan list (always available)
+                const surveyFilter = document.getElementById('assign-sls-survey-filter')?.value || 'se_umum';
+                const kabFilter = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+                const ipasData = window.IPAS_DATA || {};
+                const seData = ipasData[surveyFilter] || ipasData['se_umum'] || [];
+                
+                seData.forEach(kab => {
+                    // If a kab is selected, filter to that kab only
+                    if (kabFilter !== 'all') {
+                        const cleanKab = kabFilter.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                        const cleanItemKab = (kab.kabupaten || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                        if (cleanItemKab !== cleanKab) return;
+                    }
+                    (kab.kecamatan_list || []).forEach(kec => {
+                        if (!kec.kec_name || kec.kec_name === '-') return;
+                        const key = `${kec.kec_name} | (data per kecamatan)`;
+                        const total = kec.total_prelist || 0;
+                        const selesai = kec.total_submitted || 0;
+                        const belum = Math.max(0, total - selesai);
+                        if (!desaMap[key]) desaMap[key] = { kec: kec.kec_name, desa: '(data per kecamatan)', total: 0, selesai: 0, belum: 0 };
+                        desaMap[key].total += total;
+                        desaMap[key].selesai += selesai;
+                        desaMap[key].belum += belum;
+                        totalAll += total; selesaiAll += selesai; belumAll += belum;
+                    });
+                });
+            }
+            
+            if (totalAll > 0) {
+                const pctSelesaiAll = ((selesaiAll / totalAll) * 100).toFixed(1);
+                const pctBelumAll = ((belumAll / totalAll) * 100).toFixed(1);
+                const petStatTotal = document.getElementById('petugas-stat-total'), petStatSelesai = document.getElementById('petugas-stat-selesai'), petStatBelum = document.getElementById('petugas-stat-belum');
+                if (petStatTotal) petStatTotal.textContent = totalAll.toLocaleString('id-ID');
+                if (petStatSelesai) petStatSelesai.innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
+                if (petStatBelum) petStatBelum.innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+            }
+            let arr = Object.values(desaMap);
+            const searchInput = document.getElementById('petugas-summary-search-input');
+            if (searchInput && searchInput.value.trim()) { const term = searchInput.value.toLowerCase().trim(); arr = arr.filter(d => d.desa.toLowerCase().includes(term) || d.kec.toLowerCase().includes(term)); }
+            arr.sort((a, b) => {
+                let valA, valB;
+                switch (window.desaSortField) {
+                    case 'kec': valA = a.kec; valB = b.kec; break;
+                    case 'desa': valA = a.desa; valB = b.desa; break;
+                    case 'belum': valA = a.belum; valB = b.belum; break;
+                    case 'selesai': valA = a.selesai; valB = b.selesai; break;
+                    case 'pct': valA = (a.total > 0 ? a.selesai / a.total : 0); valB = (b.total > 0 ? b.selesai / b.total : 0); break;
+                    default: valA = a.total; valB = b.total; break;
+                }
+                return (typeof valA === 'string' ? valA.localeCompare(valB) : (valA - valB)) * window.desaSortOrder;
+            });
+            window.lastDesaSummaryArr = arr;
+            const tbody = document.getElementById('desa-summary-table-body');
+            if (!tbody) return;
+            if (arr.length === 0) { tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; padding: 2rem; color: var(--text-secondary);">${(!data || data.length === 0) ? 'Silakan muat data atau pilih wilayah terlebih dahulu...' : 'Tidak ada desa yang cocok dengan pencarian...'}</td></tr>`; return; }
+            let html = '';
+            arr.forEach((d, i) => {
+                const pct = d.total > 0 ? ((d.selesai / d.total) * 100).toFixed(1) : 0, isComplete = pct === "100.0";
+                const badgeHtml = isComplete ? `<div style="background: rgba(34, 197, 94, 0.1); color: var(--color-delivered); border: 1px solid rgba(34, 197, 94, 0.2); padding: 0.25rem 0.5rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 700;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Tuntas</div>` : `<div style="display: flex; align-items: center; gap: 0.5rem; width: 100%;"><div style="flex-grow: 1; height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px; overflow: hidden;"><div style="height: 100%; width: ${pct}%; background: var(--primary); border-radius: 3px;"></div></div><span style="font-weight: 700; color: var(--text-primary); min-width: 35px; text-align: right;">${pct}%</span></div>`;
+                html += `<tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s;"><td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${i + 1}</td><td style="font-weight: 600; color: var(--text-primary);">${d.kec}</td><td style="font-weight: 600; color: var(--text-primary);">${d.desa}</td><td style="text-align: center; font-family: monospace; font-weight: 700;">${d.total.toLocaleString('id-ID')}</td><td style="text-align: center; font-family: monospace; color: #ef4444;">${d.belum.toLocaleString('id-ID')}</td><td style="text-align: center; font-family: monospace; color: var(--color-delivered); font-weight: 700;">${d.selesai.toLocaleString('id-ID')}</td><td style="text-align: center;">${badgeHtml}</td></tr>`;
+            });
+            tbody.innerHTML = html;
+            return;
+        }
+
         let totalAll = 0;
         let selesaiAll = 0;
         let belumAll = 0;
@@ -6995,7 +7270,6 @@ document.addEventListener('DOMContentLoaded', () => {
             data.forEach(r => {
                 let petName = (r.petugas_username !== '-' && r.petugas_username) ? r.petugas_username : ((r.petugas_fullname !== '-' && r.petugas_fullname) ? r.petugas_fullname : null);
                 
-                // Coba konversi email/username ke nama asli menggunakan userMap
                 if (petName && window.userMap) {
                     let mapped = window.userMap[petName] || window.userMap[petName.split('@')[0]];
                     if (mapped) petName = mapped;
@@ -7027,7 +7301,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 let petName = r.petugas_fullname || r.petugas_username || 'Belum Ada Petugas';
                 if (petName === '-' || !petName.trim()) petName = 'Belum Ada Petugas';
                 
-                // Coba konversi email/username ke nama asli menggunakan userMap
                 if (petName && window.userMap) {
                     let mapped = window.userMap[petName] || window.userMap[petName.split('@')[0]];
                     if (mapped) petName = mapped;
@@ -7061,14 +7334,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let arr = Object.values(petugasMap);
 
-        // Search filter
         const searchInput = document.getElementById('petugas-summary-search-input');
         if (searchInput && searchInput.value.trim()) {
             const term = searchInput.value.toLowerCase().trim();
             arr = arr.filter(p => p.name.toLowerCase().includes(term));
         }
 
-        // Apply Sort
         arr.sort((a, b) => {
             let valA, valB;
             switch (window.petugasSortField) {
@@ -7087,17 +7358,21 @@ document.addEventListener('DOMContentLoaded', () => {
             return (valA - valB) * window.petugasSortOrder;
         });
 
-        // Save for direct export (no DB re-fetch needed)
         window.lastPetugasSummaryArr = arr;
 
         const tbody = document.getElementById('petugas-summary-table-body');
         if (!tbody) return;
 
         if (arr.length === 0) {
+            const kabFilter = document.getElementById('assign-sls-kab-filter')?.value || 'all';
             if (!data || data.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Silakan muat data atau pilih wilayah terlebih dahulu...</td></tr>';
+                if (kabFilter === 'all') {
+                    tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2.5rem 1rem; color: var(--text-secondary);"><div style="font-size:1.5rem;margin-bottom:0.5rem;">📋</div><div style="font-weight:600;margin-bottom:0.35rem;color:var(--text);">Pilih Kabupaten/Kota terlebih dahulu</div><div style="font-size:0.82rem;">Gunakan dropdown filter di atas untuk memuat data rekap petugas per kabupaten.</div></td></tr>';
+                } else {
+                    tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Silakan muat data atau pilih wilayah terlebih dahulu...</td></tr>';
+                }
             } else {
-                tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada petugas yang cocok dengan pencarian...</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada petugas yang cocok dengan pencarian...</td></tr>';
             }
             return;
         }
@@ -7133,17 +7408,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${p.name}
                         </div>
                     </td>
-                    <td style="font-weight: 500; color: var(--text-secondary); font-family: monospace; font-size: 0.82rem;">${p.email}</td>
-                    <td style="text-align: center; font-weight: 700; color: var(--text-primary); font-family: 'Outfit', sans-serif;">${p.total.toLocaleString('id-ID')}</td>
-                    <td style="text-align: center; font-weight: 600; color: var(--color-bounced);">${p.belum.toLocaleString('id-ID')}</td>
-                    <td style="text-align: center; font-weight: 600; color: var(--color-delivered);">${p.selesai.toLocaleString('id-ID')}</td>
+                    <td style="font-size: 0.85rem; font-family: monospace; color: var(--text-secondary);">${p.email}</td>
+                    <td style="text-align: center; font-family: monospace; font-weight: 700;">${p.total.toLocaleString('id-ID')}</td>
+                    <td style="text-align: center; font-family: monospace; color: #ef4444;">${p.belum.toLocaleString('id-ID')}</td>
+                    <td style="text-align: center; font-family: monospace; color: var(--color-delivered); font-weight: 700;">${p.selesai.toLocaleString('id-ID')}</td>
                     <td style="text-align: center;">${badgeHtml}</td>
                 </tr>
             `;
         });
         tbody.innerHTML = html;
 
-        // Update sort icons
         const headers = document.querySelectorAll('#petugas-summary-table-body').length > 0 ? document.getElementById('petugas-summary-table-body').parentElement.querySelectorAll('th') : [];
         headers.forEach(th => {
             const iconSpan = th.querySelector('.sort-icon');
@@ -8456,23 +8730,44 @@ window.executeExcelDownload = async function () {
 
     try {
         if (tipe === 'summary') {
-            // Export directly from the table already rendered on screen
-            const arr = window.lastPetugasSummaryArr;
-            if (!arr || arr.length === 0) {
-                if (statusEl) statusEl.textContent = '⚠️ Belum ada data tabel rekap yang tampil. Pilih kabupaten terlebih dahulu di halaman Progres Petugas.';
-                return;
+            if (window.granularSummaryView === 'desa') {
+                const arr = window.lastDesaSummaryArr;
+                if (!arr || arr.length === 0) {
+                    if (statusEl) statusEl.textContent = '⚠️ Belum ada data rekap desa yang tampil. Pilih kabupaten terlebih dahulu.';
+                    if (btn) { btn.disabled = false; btn.style.opacity = '1'; }
+                    return;
+                }
+                const rows = arr.map((d, i) => ({
+                    'No': i + 1,
+                    'Kecamatan': d.kec || '-',
+                    'Desa / Kelurahan': d.desa || '-',
+                    'Total Target': d.total,
+                    'Belum Selesai': d.belum,
+                    'Selesai': d.selesai,
+                    '% Capaian': d.total > 0 ? ((d.selesai / d.total) * 100).toFixed(1) + '%' : '0.0%'
+                }));
+                exportToCSV(rows, `Rekap_Desa_${surveyLabel}_${kabLabel}_${today}.csv`);
+                if (statusEl) statusEl.textContent = `✅ ${rows.length} baris rekap desa berhasil diunduh!`;
+            } else {
+                // Export directly from the table already rendered on screen
+                const arr = window.lastPetugasSummaryArr;
+                if (!arr || arr.length === 0) {
+                    if (statusEl) statusEl.textContent = '⚠️ Belum ada data tabel rekap yang tampil. Pilih kabupaten terlebih dahulu di halaman Detail.';
+                    if (btn) { btn.disabled = false; btn.style.opacity = '1'; }
+                    return;
+                }
+                const rows = arr.map((p, i) => ({
+                    'No': i + 1,
+                    'Nama Petugas': p.name || '-',
+                    'Email / Username': p.email || '-',
+                    'Total Target': p.total,
+                    'Belum Selesai': p.belum,
+                    'Selesai': p.selesai,
+                    '% Capaian': p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) + '%' : '0.0%'
+                }));
+                exportToCSV(rows, `Rekap_Petugas_${surveyLabel}_${kabLabel}_${today}.csv`);
+                if (statusEl) statusEl.textContent = `✅ ${rows.length} baris berhasil diunduh!`;
             }
-            const rows = arr.map((p, i) => ({
-                'No': i + 1,
-                'Nama Petugas': p.name || '-',
-                'Email / Username': p.email || '-',
-                'Total Target': p.total,
-                'Belum Selesai': p.belum,
-                'Selesai': p.selesai,
-                '% Capaian': p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) + '%' : '0.0%'
-            }));
-            exportToCSV(rows, `Rekap_Petugas_${surveyLabel}_${kabLabel}_${today}.csv`);
-            if (statusEl) statusEl.textContent = `✅ ${rows.length} baris berhasil diunduh!`;
         } else {
             const selectedKabs = [...document.querySelectorAll('.excel-kab-check:checked')].map(c => c.value);
             if (selectedKabs.length === 0) {

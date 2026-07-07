@@ -324,6 +324,9 @@ def process_survey_type_data(survey_type, old_data, results_map, region_map_sult
     return new_data
 
 def reconstruct_daily_stats_in_db(supabase):
+    print("[INFO] Skipping daily submission stats recalculation from snapshots (using granular timestamps instead).")
+    return
+
     try:
         print("[INFO] Memulai sinkronisasi otomatis grafik harian (daily_submission_stats)...")
         r = supabase.table('dashboard_store').select('key').execute()
@@ -429,6 +432,29 @@ async def run_download_and_update():
         if not page:
             print("[ERROR] Browser Chrome aktif tidak ditemukan. Harap pastikan Chrome berjalan dengan remote debugging port (9222) dan Anda sudah login ke FASIH.")
             return
+            
+        # Ensure we are on a FASIH page (not a local file), so cookies/session work for API fetch
+        current_url = page.url
+        if "fasih-sm.bps.go.id" not in current_url:
+            print(f"[WARNING] Page aktif bukan FASIH ({current_url}). Mencari tab FASIH lain...")
+            fasih_page = None
+            for pg in context.pages:
+                if "fasih-sm.bps.go.id" in pg.url:
+                    fasih_page = pg
+                    break
+            if fasih_page:
+                page = fasih_page
+                print(f"[INFO] Menggunakan tab FASIH: {page.url}")
+            else:
+                print("[INFO] Tidak ada tab FASIH aktif. Menavigasi ke FASIH untuk menggunakan sesi yang ada...")
+                await page.goto("https://fasih-sm.bps.go.id/app/surveys", wait_until="domcontentloaded", timeout=30000)
+                import asyncio as _asyncio
+                await _asyncio.sleep(3)
+                print(f"[INFO] Halaman sekarang: {page.url}")
+                if "login" in page.url.lower():
+                    print("[ERROR] Sesi FASIH expired - silakan login ulang di Chrome terlebih dahulu.")
+                    await browser.close()
+                    return
             
         print("Koneksi berhasil. Mengambil XSRF-TOKEN...")
         cookies = await context.cookies()

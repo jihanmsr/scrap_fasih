@@ -1,64 +1,38 @@
 import asyncio
-import os
-import sys
+import json
 from playwright.async_api import async_playwright
-
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from scrape_granular_core import get_authenticated_context
 
 async def main():
     async with async_playwright() as p:
         print("Connecting to browser...")
-        browser, context, page = await get_authenticated_context(p)
-        if not browser:
-            print("Failed to connect.")
+        browser = await p.chromium.connect_over_cdp("http://127.0.0.1:9222")
+        context = browser.contexts[0]
+        
+        local_page = next((pg for pg in context.pages if "index.html" in pg.url), None)
+        if not local_page:
+            print("Local page not found.")
+            await browser.close()
             return
             
-        local_page = None
-        for pg in context.pages:
-            if "index.html" in pg.url:
-                local_page = pg
-                break
-                
-        if not local_page:
-            local_page = context.pages[0]
-            
-        print("Using Page URL:", local_page.url)
-        
-        # Check window.IPAS_DATA
+        print("Evaluating window.IPAS_DATA...")
         res = await local_page.evaluate("""
             () => {
                 return {
-                    has_ipas: typeof window.IPAS_DATA !== 'undefined',
-                    keys: window.IPAS_DATA ? Object.keys(window.IPAS_DATA) : [],
-                    se_umum_len: window.IPAS_DATA && window.IPAS_DATA.se_umum ? window.IPAS_DATA.se_umum.length : 0,
-                    se_umum_prov_total: window.IPAS_DATA ? window.IPAS_DATA.se_umum_prov_total : null
+                    has_data: !!window.IPAS_DATA,
+                    updated_at: window.IPAS_DATA?.updated_at || 'none',
+                    se_umum_len: window.IPAS_DATA?.se_umum?.length || 0,
+                    se_ub_len: window.IPAS_DATA?.se_ub?.length || 0,
+                    prov_total: window.IPAS_DATA?.se_umum_prov_total || 0,
+                    sample_kab: window.IPAS_DATA?.se_umum?.[0] ? {
+                        kabupaten: window.IPAS_DATA.se_umum[0].kabupaten,
+                        total_prelist: window.IPAS_DATA.se_umum[0].total_prelist,
+                        breakdown: window.IPAS_DATA.se_umum[0].breakdown || null
+                    } : null
                 };
             }
         """)
-        print("window.IPAS_DATA status:", res)
-        
-        # Also print console errors
-        print("Checking for console errors...")
-        # (We can listen to console event, but since this is immediate, we just reload and listen)
-        
-        local_page.on("console", lambda msg: print(f"Browser Console {msg.type}: {msg.text}"))
-        print("Reloading page...")
-        await local_page.reload()
-        print("Waiting 5 seconds...")
-        await asyncio.sleep(5)
-        
-        res = await local_page.evaluate("""
-            () => {
-                return {
-                    has_ipas: typeof window.IPAS_DATA !== 'undefined',
-                    keys: window.IPAS_DATA ? Object.keys(window.IPAS_DATA) : [],
-                    se_umum_len: window.IPAS_DATA && window.IPAS_DATA.se_umum ? window.IPAS_DATA.se_umum.length : 0,
-                    se_umum_prov_total: window.IPAS_DATA ? window.IPAS_DATA.se_umum_prov_total : null
-                };
-            }
-        """)
-        print("window.IPAS_DATA AFTER reload:", res)
+        print("window.IPAS_DATA state:")
+        print(json.dumps(res, indent=2))
         
         await browser.close()
 

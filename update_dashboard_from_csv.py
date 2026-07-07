@@ -74,7 +74,7 @@ def load_local_ipas_data():
         print(f"[ERROR] Failed to load local ipas_data.js: {e}")
         return None
 
-def scale_kecamatan_list(kecamatan_list, new_kab_values):
+def scale_kecamatan_list(kecamatan_list, new_kab_values, kab_breakdown=None):
     fields_to_scale = [
         "total_prelist", "total_draft", "total_open", "total_submitted",
         "total_rejected", "total_approved", "total_submitted_pencacah", "total_submitted_respondent"
@@ -108,6 +108,39 @@ def scale_kecamatan_list(kecamatan_list, new_kab_values):
                 max_kec = max(kecamatan_list, key=lambda x: x.get(field, 0))
                 max_kec[field] = max(0, max_kec.get(field, 0) + diff)
                 
+    # Scale breakdown statuses
+    if kab_breakdown:
+        for k in kecamatan_list:
+            k["breakdown"] = {}
+            
+        for status_key, total_val in kab_breakdown.items():
+            is_target_related = status_key.upper() in ["OPEN", "DRAFT"]
+            if is_target_related:
+                prev_sum = sum(k.get("total_prelist", 0) for k in kecamatan_list)
+            else:
+                prev_sum = sum(k.get("total_submitted", 0) for k in kecamatan_list)
+                
+            if prev_sum == 0:
+                num_kec = len(kecamatan_list)
+                if num_kec > 0:
+                    base = total_val // num_kec
+                    rem = total_val % num_kec
+                    for idx, k in enumerate(kecamatan_list):
+                        k["breakdown"][status_key] = base + (1 if idx < rem else 0)
+            else:
+                scale = total_val / prev_sum
+                current_sum = 0
+                for k in kecamatan_list:
+                    ref_val = k.get("total_prelist", 0) if is_target_related else k.get("total_submitted", 0)
+                    val = int(round(ref_val * scale))
+                    k["breakdown"][status_key] = val
+                    current_sum += val
+                    
+                diff = total_val - current_sum
+                if diff != 0 and len(kecamatan_list) > 0:
+                    max_kec = max(kecamatan_list, key=lambda x: x.get("total_prelist", 0) if is_target_related else x.get("total_submitted", 0))
+                    max_kec["breakdown"][status_key] = max(0, max_kec["breakdown"].get(status_key, 0) + diff)
+
     for k in kecamatan_list:
         pre = k.get("total_prelist", 0)
         sub = k.get("total_submitted", 0)
@@ -123,6 +156,9 @@ def get_bd_val(breakdown, key):
     return 0
 
 def reconstruct_daily_stats_in_db(supabase):
+    print("[INFO] Skipping daily submission stats recalculation from snapshots (using granular timestamps instead).")
+    return
+
     try:
         print("[INFO] Memulai sinkronisasi otomatis grafik harian (daily_submission_stats)...")
         r = supabase.table('dashboard_store').select('key').execute()
@@ -327,6 +363,9 @@ def main():
         total_prelist = draft + open_val + total_submitted
         persentase = round((total_submitted / total_prelist * 100), 2) if total_prelist > 0 else 0.0
         
+        # Build breakdown dictionary
+        kab_breakdown = {k: v for k, v in row.items() if k.upper() not in ["WILAYAH", "LABEL"]}
+        
         new_kab_values = {
             "total_prelist": total_prelist,
             "total_draft": draft,
@@ -352,12 +391,13 @@ def main():
             "new_usaha_overall": prev_kab.get("new_usaha_overall", 0),
             "new_rumah_overall": prev_kab.get("new_rumah_overall", 0),
             "new_businesses": prev_kab.get("new_businesses", []),
-            "kecamatan_list": prev_kab.get("kecamatan_list", [])
+            "kecamatan_list": prev_kab.get("kecamatan_list", []),
+            "breakdown": kab_breakdown
         }
         
         # Scale kecamatan_list
         if kab_obj["kecamatan_list"]:
-            scale_kecamatan_list(kab_obj["kecamatan_list"], new_kab_values)
+            scale_kecamatan_list(kab_obj["kecamatan_list"], new_kab_values, kab_breakdown)
             
         # Daily Stats Update
         if delta_days == 0:
