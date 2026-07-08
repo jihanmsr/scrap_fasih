@@ -2160,7 +2160,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     completedTarget += slsDone;
                     if (slsDone > 0 && slsTotal > 0) completedSls++;
                 });
-
+                const pMap = window.PETUGAS_PROGRESS_MAP || {};
+                const ukey = (officer.username || '').toLowerCase().trim();
+                const pData = pMap[ukey];
+                
+                if (pData) {
+                    const mapCompleted = (pData.submitted_pencacah || 0) + (pData.submitted_respondent || 0) + (pData.approved || 0);
+                    if (mapCompleted > completedTarget) {
+                        totalTarget = Math.max(totalTarget, pData.target || 0);
+                        completedTarget = mapCompleted;
+                    }
+                }
 
                 const progPct = totalTarget > 0 ? Math.min(100, Math.round((completedTarget / totalTarget) * 100)) : 0;
 
@@ -6967,19 +6977,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (kabVal !== 'all') {
             const matchCode = kabVal.match(/\[(\d+)\]/);
             const kabCodeParam = !matchCode ? '' : `72${matchCode[1]}`;
-            try {
-                const url = `https://dds-api.bpssulteng.id/api.php?action=get_petugas_summary&survey=${surveyTypeFilter}&kab=${kabCodeParam}`;
-                const res = await fetch(url);
-                const data = await res.json();
-                window.PETUGAS_SUMMARY_MYSQL = data; 
-                if (window.renderPetugasSummaryTable) {
-                    window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA);
-                }
-            } catch (e) {
-                console.error("Failed to fetch petugas summary:", e);
-                if (window.renderPetugasSummaryTable) {
-                    window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA);
-                }
+            if (window.MYSQL_DATA_STATIC && window.MYSQL_DATA_STATIC[kabCodeParam]) {
+                window.PETUGAS_SUMMARY_MYSQL = window.MYSQL_DATA_STATIC[kabCodeParam];
+            } else {
+                window.PETUGAS_SUMMARY_MYSQL = [];
+            }
+            if (window.renderPetugasSummaryTable) {
+                window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA);
             }
         } else {
             // No kab selected: Petugas table shows empty, but Desa view can use IPAS_DATA
@@ -7346,7 +7350,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.renderGranularAssignmentsTable(true);
     };
 
-    window.petugasSortField = window.petugasSortField || 'total';
+    window.petugasSortField = window.petugasSortField || 'pct';
     window.petugasSortOrder = window.petugasSortOrder || -1;
 
     window.sortPetugasSummary = function (field) {
@@ -7500,60 +7504,87 @@ document.addEventListener('DOMContentLoaded', () => {
         let petugasMap = {};
         
         let mitraMap = {};
+        let nameToEmailMap = {};
         if (window.MITRA_DATA && Array.isArray(window.MITRA_DATA)) {
             window.MITRA_DATA.forEach(m => {
-                if (m.email) mitraMap[m.email.trim().toLowerCase()] = m.nama.trim();
-                if (m.nama) mitraMap[m.nama.trim().toLowerCase()] = m.nama.trim();
+                if (m.email) {
+                    mitraMap[m.email.trim().toLowerCase()] = m.nama.trim();
+                }
+                if (m.nama) {
+                    const cleanName = m.nama.trim().toLowerCase();
+                    mitraMap[cleanName] = m.nama.trim();
+                    if (m.email) nameToEmailMap[cleanName] = m.email.trim().toLowerCase();
+                }
             });
         }
 
-        if (Array.isArray(data) && data.length > 0) {
+        // Fall back to mysqlData if at Kabupaten level, because Supabase data is outdated for Tojo Una-Una and lacks emails
+        const kabVal = document.getElementById('sls-kab-filter') ? document.getElementById('sls-kab-filter').value : 'all';
+        const kecVal = document.getElementById('sls-kec-filter') ? document.getElementById('sls-kec-filter').value : 'all';
+        const isKabLevel = kabVal !== 'all' && kecVal === 'all';
+        const useGranular = Array.isArray(data) && data.length > 0 && !isKabLevel;
+
+        if (useGranular) {
             data.forEach(r => {
-                let petName = (r.petugas_username !== '-' && r.petugas_username) ? r.petugas_username : ((r.petugas_fullname !== '-' && r.petugas_fullname) ? r.petugas_fullname : null);
+                let ukey = (r.petugas_username !== '-' && r.petugas_username) ? r.petugas_username.trim().toLowerCase() : null;
                 
-                if (petName) {
-                    const checkName = petName.trim().toLowerCase();
-                    if (mitraMap[checkName]) {
-                        petName = mitraMap[checkName];
+                let displayName = (r.petugas_fullname !== '-' && r.petugas_fullname) ? r.petugas_fullname : ukey;
+                if (!ukey) {
+                    const isCompleted = r.status !== 'OPEN' && r.status !== 'DRAFT';
+                    displayName = isCompleted ? 'CAWI / Mandiri (Tanpa Petugas)' : 'Belum Ada Petugas';
+                    ukey = displayName; // use display name as fallback key
+                } else {
+                    // Resolve nice name for the email
+                    if (mitraMap[ukey]) {
+                        displayName = mitraMap[ukey];
                     } else if (window.userMap) {
-                        let mapped = window.userMap[petName] || window.userMap[petName.split('@')[0]];
-                        if (mapped) petName = mapped;
+                        let mapped = window.userMap[ukey] || window.userMap[ukey.split('@')[0]];
+                        if (mapped) displayName = mapped;
                     }
                 }
  
-                if (!petName) {
-                    const isCompleted = r.status !== 'OPEN' && r.status !== 'DRAFT';
-                    petName = isCompleted ? 'CAWI / Mandiri (Tanpa Petugas)' : 'Belum Ada Petugas';
+                if (!petugasMap[ukey]) {
+                    petugasMap[ukey] = { name: displayName, email: r.petugas_username || '-', emails: new Set(), total: 0, selesai: 0, belum: 0 };
+                    if (r.petugas_username && r.petugas_username !== '-') {
+                        petugasMap[ukey].emails.add(r.petugas_username.trim().toLowerCase());
+                    }
                 }
  
-                if (!petugasMap[petName]) {
-                    petugasMap[petName] = { name: petName, email: r.petugas_username || '-', total: 0, selesai: 0, belum: 0 };
-                }
- 
-                petugasMap[petName].total += 1;
+                petugasMap[ukey].total += 1;
                 totalAll += 1;
  
                 if (r.status === 'OPEN' || r.status === 'DRAFT') {
-                    petugasMap[petName].belum += 1;
+                    petugasMap[ukey].belum += 1;
                     belumAll += 1;
                 } else {
-                    petugasMap[petName].selesai += 1;
+                    petugasMap[ukey].selesai += 1;
                     selesaiAll += 1;
                 }
             });
         } else {
             const mysqlData = window.PETUGAS_SUMMARY_MYSQL || [];
             mysqlData.forEach(r => {
-                let petName = r.petugas_fullname || r.petugas_username || 'Belum Ada Petugas';
-                if (petName === '-' || !petName.trim()) petName = 'Belum Ada Petugas';
+                let displayName = r.petugas_fullname || r.petugas_username || 'Belum Ada Petugas';
+                if (displayName === '-' || !displayName.trim()) displayName = 'Belum Ada Petugas';
                 
-                if (petName !== 'Belum Ada Petugas') {
-                    const checkName = petName.trim().toLowerCase();
-                    if (mitraMap[checkName]) {
-                        petName = mitraMap[checkName];
+                let ukey = (r.petugas_username !== '-' && r.petugas_username) ? r.petugas_username.trim().toLowerCase() : null;
+                
+                // If MySQL data doesn't have email (which is common for API), recover it from MITRA_DATA
+                if (!ukey && displayName !== 'Belum Ada Petugas') {
+                    const cleanName = displayName.trim().toLowerCase();
+                    if (nameToEmailMap[cleanName]) {
+                        ukey = nameToEmailMap[cleanName];
+                    }
+                }
+                
+                if (!ukey) {
+                    ukey = displayName;
+                } else {
+                    if (mitraMap[ukey]) {
+                        displayName = mitraMap[ukey];
                     } else if (window.userMap) {
-                        let mapped = window.userMap[petName] || window.userMap[petName.split('@')[0]];
-                        if (mapped) petName = mapped;
+                        let mapped = window.userMap[ukey] || window.userMap[ukey.split('@')[0]];
+                        if (mapped) displayName = mapped;
                     }
                 }
  
@@ -7561,16 +7592,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 const selesai = parseInt(r.selesai) || 0;
                 const belum = parseInt(r.belum_selesai) || 0;
  
-                if (!petugasMap[petName]) {
-                    petugasMap[petName] = { name: petName, email: r.petugas_username || '-', total: 0, selesai: 0, belum: 0 };
+                if (!petugasMap[ukey]) {
+                    // Set email field properly so it shows up in the table column
+                    petugasMap[ukey] = { name: displayName, email: ukey !== displayName ? ukey : '-', emails: new Set(), total: 0, selesai: 0, belum: 0 };
+                    if (ukey !== displayName) {
+                        petugasMap[ukey].emails.add(ukey);
+                    }
                 }
  
-                petugasMap[petName].total += total;
-                petugasMap[petName].selesai += selesai;
-                petugasMap[petName].belum += belum;
+                petugasMap[ukey].total += total;
+                petugasMap[ukey].selesai += selesai;
+                petugasMap[ukey].belum += belum;
             });
         }
 
+
+        // --- SINKRONISASI DENGAN PETUGAS_PROGRESS_MAP (DATA GRANULAR TERBARU) ---
+        if (window.PETUGAS_PROGRESS_MAP) {
+            Object.values(petugasMap).forEach(p => {
+                let pTotal = 0, pSelesai = 0, pBelum = 0;
+                let foundAny = false;
+                if (p.emails) {
+                    p.emails.forEach(email => {
+                        const pMapData = window.PETUGAS_PROGRESS_MAP[email];
+                        if (pMapData) {
+                            foundAny = true;
+                            pTotal += pMapData.target || 0;
+                            pSelesai += (pMapData.submitted_pencacah || 0) + (pMapData.submitted_respondent || 0) + (pMapData.approved || 0);
+                            pBelum += (pMapData.open || 0) + (pMapData.draft || 0);
+                        }
+                    });
+                }
+                if (foundAny) {
+                    // Hanya override jika hasil sinkronisasi menunjukkan progres yang LEBIH BESAR
+                    // Ini mencegah downgrade data jika file PETUGAS_PROGRESS_MAP ternyata yang outdated (seperti Poso)
+                    if (pSelesai > p.selesai) {
+                        p.total = Math.max(p.total, pTotal);
+                        p.selesai = pSelesai;
+                        p.belum = pBelum;
+                    }
+                }
+            });
+        }
 
         // Re-calculate totals after possible sync
         totalAll = 0; selesaiAll = 0; belumAll = 0;
@@ -7590,6 +7653,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let arr = Object.values(petugasMap);
 
+        // Jangan tampilkan CAWI / Mandiri atau Belum Ada Petugas di dalam daftar baris agar tidak terlihat menumpuk
+        arr = arr.filter(p => p.name !== 'Belum Ada Petugas' && p.name !== 'CAWI / Mandiri (Tanpa Petugas)');
+
         const searchInput = document.getElementById('petugas-summary-search-input');
         if (searchInput && searchInput.value.trim()) {
             const term = searchInput.value.toLowerCase().trim();
@@ -7598,20 +7664,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         arr.sort((a, b) => {
             let valA, valB;
-            switch (window.petugasSortField) {
+            // Default to 'pct' (Capaian) if not specified
+            const sortField = window.petugasSortField || 'pct';
+            const sortOrder = window.petugasSortOrder || -1;
+            
+            switch (sortField) {
                 case 'name': valA = a.name; valB = b.name; break;
                 case 'email': valA = a.email || ''; valB = b.email || ''; break;
                 case 'belum': valA = a.belum; valB = b.belum; break;
                 case 'selesai': valA = a.selesai; valB = b.selesai; break;
-                case 'pct': valA = (a.total > 0 ? a.selesai / a.total : 0); valB = (b.total > 0 ? b.selesai / b.total : 0); break;
-                case 'total':
+                case 'total': valA = a.total; valB = b.total; break;
+                case 'pct':
                 default:
-                    valA = a.total; valB = b.total; break;
+                    valA = (a.total > 0 ? a.selesai / a.total : 0); 
+                    valB = (b.total > 0 ? b.selesai / b.total : 0); 
+                    break;
             }
             if (typeof valA === 'string') {
-                return valA.localeCompare(valB) * window.petugasSortOrder;
+                return valA.localeCompare(valB) * sortOrder;
             }
-            return (valA - valB) * window.petugasSortOrder;
+            return (valA - valB) * sortOrder;
         });
 
         window.lastPetugasSummaryArr = arr;
