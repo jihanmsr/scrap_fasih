@@ -5359,8 +5359,69 @@ document.addEventListener('DOMContentLoaded', () => {
             try { activeModalBusinesses = JSON.parse(encodedBusinessesJSON); } catch (err) { activeModalBusinesses = []; }
         }
 
-        // Jika kosong, coba fetch dari Supabase (ipas_data slim - new_businesses disimpan terpisah)
-        if (activeModalBusinesses.length === 0 && supabaseClient) {
+        // Jika kosong, coba filter dari GRANULAR_ASSIGNMENTS_DATA
+        if (activeModalBusinesses.length === 0 && window.GRANULAR_ASSIGNMENTS_DATA && window.GRANULAR_ASSIGNMENTS_DATA.length > 0) {
+            const isTambahan = (codeId) => {
+                if (!codeId) return false;
+                const cleaned = String(codeId).trim();
+                if (!cleaned.startsWith("72")) return true;
+                let parts = cleaned.split("-").map(p => p.trim()).filter(Boolean);
+                if (parts.length < 2) parts = cleaned.split(" - ").map(p => p.trim()).filter(Boolean);
+                if (parts.length < 2) return false;
+                const known = ["DTSEN", "UMK", "UM", "UMB", "UMKM", "SE2026", "SE26", "PDRB", "PAPI", "CAWI", "CAPI", "UB"];
+                return !known.includes(parts[1].toUpperCase());
+            };
+
+            let targetKab = cleanKab;
+            let targetKec = null;
+            if (cleanKab.includes(' - ')) {
+                const parts = cleanKab.split(' - ');
+                targetKab = parts[0].trim();
+                targetKec = parts[1].trim();
+            }
+
+            const extracted = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
+                const rKab = (r.kab_name || r.kabupaten || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                if (rKab !== targetKab) return false;
+                if (targetKec) {
+                    const rKec = (r.kec_name || r.kecamatan || '').trim().toUpperCase();
+                    if (rKec !== targetKec) return false;
+                }
+                return isTambahan(r.kode_target || r.code_identity);
+            });
+
+            activeModalBusinesses = extracted.map(r => {
+                let type = "Keluarga (Bukan Usaha)", isUsaha = false;
+                const cId = (r.kode_target || r.code_identity || "").toUpperCase();
+                const n = (r.usaha_name || r.name || "").toUpperCase();
+                
+                if (n.includes("BANGUNAN KOSONG") || n.includes("RUMAH KOSONG") || n.includes("KOSONG") || cId.includes("BANGUNAN KOSONG") || cId.includes("RUMAH KOSONG")) {
+                    type = "Bangunan/Rumah Kosong";
+                    isUsaha = false;
+                } else if (cId.includes("1. YA") || cId.includes("1.YA") || n.includes("1. YA") || n.includes("1.YA")) {
+                    type = "Keluarga Usaha";
+                    isUsaha = true;
+                } else if (cId.includes("2. TIDAK") || cId.includes("2.TIDAK") || n.includes("2. TIDAK") || n.includes("2.TIDAK") || n.includes("KELUARGA")) {
+                    type = "Keluarga (Bukan Usaha)";
+                    isUsaha = false;
+                } else {
+                    type = "Usaha Tambahan";
+                    isUsaha = true;
+                }
+                
+                return {
+                    name: r.usaha_name || r.name || '-',
+                    code: r.kode_target || r.code_identity || '-',
+                    sls: r.sls_name || r.sls || '-',
+                    is_usaha: isUsaha,
+                    type: type,
+                    timestamp: r.last_updated || r.timestamp || ''
+                };
+            });
+        }
+
+        // Jika MASIH kosong, coba fetch dari Supabase (ipas_data slim - new_businesses disimpan terpisah)
+        if (activeModalBusinesses.length === 0 && typeof supabaseClient !== 'undefined' && supabaseClient) {
             const surveyType = document.getElementById('assign-sls-survey-filter')?.value || 'se_umum';
             const kabCodeMap = {
                 'BANGGAI KEPULAUAN': '7201', 'BANGGAI': '7202', 'MOROWALI': '7203',
