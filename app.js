@@ -2583,26 +2583,49 @@ document.addEventListener('DOMContentLoaded', () => {
         const provTwoDaysHTML = getDailyProgressCellHTML(twoDaysAgo, twoDaysAgoBreakdown, 'H-2: SULAWESI TENGAH');
 
         provRow.innerHTML = `
-            <td style="font-weight: 800; color: var(--text-primary);">[72] PROVINSI SULAWESI TENGAH</td>
-            <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--text-secondary);">${formatNum(prelist)}</td>
-            <td style="text-align: right; font-family: monospace; font-weight: 700; color: #f59e0b;">${formatNum(draft)}</td>
-            <td style="text-align: right; font-family: monospace; font-weight: 700; color: #3b82f6;">${formatNum(openVal)}</td>
+            <td style="font-weight: 800; color: var(--text-primary); position: sticky; left: 0; background: linear-gradient(rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.08)), var(--card-bg); z-index: 25; border-bottom: 2px solid var(--card-border);">[72] SULAWESI TENGAH</td>
+            <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--text-secondary); border-bottom: 2px solid var(--card-border);">${formatNum(prelist)}</td>
+            <td style="text-align: right; font-family: monospace; font-weight: 700; color: #f59e0b; border-bottom: 2px solid var(--card-border);">${formatNum(draft)}</td>
+            <td style="text-align: right; font-family: monospace; font-weight: 700; color: #3b82f6; border-bottom: 2px solid var(--card-border);">${formatNum(openVal)}</td>
             
-            <td style="text-align: right; font-family: monospace; font-weight: 800; color: var(--color-delivered);">${formatNum(submitted)}</td>
-            <td style="text-align: right; font-family: monospace;">${provTodayHTML}</td>
-            <td style="text-align: right; font-family: monospace;">${provYesterdayHTML}</td>
-            <td style="text-align: right; font-family: monospace;">${provTwoDaysHTML}</td>
+            <td style="text-align: right; font-family: monospace; font-weight: 800; color: var(--color-delivered); border-bottom: 2px solid var(--card-border);">${formatNum(submitted)}</td>
+            <td style="text-align: right; font-family: monospace; border-bottom: 2px solid var(--card-border);">${provTodayHTML}</td>
+            <td style="text-align: right; font-family: monospace; border-bottom: 2px solid var(--card-border);">${provYesterdayHTML}</td>
+            <td style="text-align: right; font-family: monospace; border-bottom: 2px solid var(--card-border);">${provTwoDaysHTML}</td>
             
-            <td style="text-align: center;">
+            <td style="text-align: center; border-bottom: 2px solid var(--card-border);">
                 <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; ${provPctClass}">
                     ${persentase}%
                 </span>
             </td>
-            <td style="text-align: center;">
+            <td style="text-align: center; border-bottom: 2px solid var(--card-border);">
                 ${provPenambahanBadge}
             </td>
         `;
-        tbody.appendChild(provRow);
+        
+        const table = tbody.closest('.ipas-table');
+        if (table) {
+            let tfoot = table.querySelector('tfoot');
+            if (!tfoot) {
+                tfoot = document.createElement('tfoot');
+                tfoot.style.position = 'sticky';
+                tfoot.style.bottom = '0';
+                tfoot.style.zIndex = '20';
+                tfoot.style.background = 'var(--card-bg)';
+                tfoot.style.boxShadow = '0 -2px 10px rgba(0,0,0,0.05)';
+                table.appendChild(tfoot);
+            }
+            tfoot.innerHTML = '';
+            tfoot.appendChild(provRow);
+            
+            // Ensure table wrapper has enough padding so badge isn't cut off
+            const wrapper = table.closest('.ipas-table-wrapper');
+            if (wrapper) {
+                wrapper.style.paddingBottom = '10px';
+            }
+        } else {
+            tbody.appendChild(provRow);
+        }
 
         // Render Chart
         if (!window.currentChartType) window.currentChartType = { se_umum: 'bar', se_ub: 'bar' };
@@ -7484,14 +7507,27 @@ document.addEventListener('DOMContentLoaded', () => {
         let selesaiAll = 0;
         let belumAll = 0;
         let petugasMap = {};
+        
+        let mitraMap = {};
+        if (window.MITRA_DATA && Array.isArray(window.MITRA_DATA)) {
+            window.MITRA_DATA.forEach(m => {
+                if (m.email) mitraMap[m.email.trim().toLowerCase()] = m.nama.trim();
+                if (m.nama) mitraMap[m.nama.trim().toLowerCase()] = m.nama.trim();
+            });
+        }
 
         if (Array.isArray(data) && data.length > 0) {
             data.forEach(r => {
                 let petName = (r.petugas_username !== '-' && r.petugas_username) ? r.petugas_username : ((r.petugas_fullname !== '-' && r.petugas_fullname) ? r.petugas_fullname : null);
                 
-                if (petName && window.userMap) {
-                    let mapped = window.userMap[petName] || window.userMap[petName.split('@')[0]];
-                    if (mapped) petName = mapped;
+                if (petName) {
+                    const checkName = petName.trim().toLowerCase();
+                    if (mitraMap[checkName]) {
+                        petName = mitraMap[checkName];
+                    } else if (window.userMap) {
+                        let mapped = window.userMap[petName] || window.userMap[petName.split('@')[0]];
+                        if (mapped) petName = mapped;
+                    }
                 }
  
                 if (!petName) {
@@ -7520,9 +7556,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 let petName = r.petugas_fullname || r.petugas_username || 'Belum Ada Petugas';
                 if (petName === '-' || !petName.trim()) petName = 'Belum Ada Petugas';
                 
-                if (petName && window.userMap) {
-                    let mapped = window.userMap[petName] || window.userMap[petName.split('@')[0]];
-                    if (mapped) petName = mapped;
+                if (petName !== 'Belum Ada Petugas') {
+                    const checkName = petName.trim().toLowerCase();
+                    if (mitraMap[checkName]) {
+                        petName = mitraMap[checkName];
+                    } else if (window.userMap) {
+                        let mapped = window.userMap[petName] || window.userMap[petName.split('@')[0]];
+                        if (mapped) petName = mapped;
+                    }
                 }
  
                 const total = parseInt(r.total_target) || 0;
