@@ -1,25 +1,18 @@
 import asyncio
-import os
-import sys
 from playwright.async_api import async_playwright
-
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from scrape_granular_core import get_authenticated_context
 
 async def main():
     async with async_playwright() as p:
-        print("Connecting to browser...")
-        browser, context, page = await get_authenticated_context(p)
-        if not page:
-            print("Failed to connect.")
-            return
-            
-        print("All Open Pages:")
-        for idx, pg in enumerate(context.pages):
-            content_len = len(await pg.content())
-            print(f"Tab {idx}: URL={pg.url} Title={await pg.title()} ContentLength={content_len}")
-            
-        await browser.close()
+        try:
+            browser = await p.chromium.connect_over_cdp("http://127.0.0.1:9222")
+            for i, context in enumerate(browser.contexts):
+                print(f"Context {i}:")
+                for page in context.pages:
+                    print(f"  URL: {page.url}")
+                    print(f"  Title: {await page.title()}")
+            await browser.close()
+        except Exception as e:
+            print("Error connecting:", e)
 
 if __name__ == "__main__":
     asyncio.run(main())

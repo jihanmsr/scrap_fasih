@@ -1,4 +1,79 @@
 import asyncio
+import asyncio as _asyncio
+import gzip
+import base64
+import glob
+
+def is_tambahan(code_identity):
+    if not code_identity:
+        return False
+    cleaned = code_identity.strip()
+    if not cleaned.startswith("72"):
+        return True
+    parts = [p.strip() for p in cleaned.split(" - ")]
+    if len(parts) < 2:
+        return False
+    source = parts[1].upper()
+    known_sources = {"DTSEN", "UMK", "UM", "UMB", "UMKM", "SE2026", "SE26", "PDRB", "PAPI", "CAWI", "CAPI", "UB"}
+    if source in known_sources:
+        return False
+    if source.startswith("SE26") or source.startswith("SE2026"):
+        return False
+    return True
+
+def classify_tambahan_simple(code_id, name):
+    code_id_upper = (code_id or "").upper()
+    name_upper = (name or "").upper()
+    if "BANGUNAN KOSONG" in name_upper or "RUMAH KOSONG" in name_upper or "KOSONG" in name_upper or "BANGUNAN KOSONG" in code_id_upper or "RUMAH KOSONG" in code_id_upper:
+        return "Bangunan/Rumah Kosong", False
+    if "1. YA" in code_id_upper or "1.YA" in code_id_upper or "1. YA" in name_upper or "1.YA" in name_upper:
+        return "Keluarga Usaha", True
+    if "2. TIDAK" in code_id_upper or "2.TIDAK" in code_id_upper or "2. TIDAK" in name_upper or "2.TIDAK" in name_upper:
+        return "Keluarga (Bukan Usaha)", False
+    if "KELUARGA" in name_upper:
+        return "Keluarga", False
+    return "Usaha Baru", True
+
+def get_real_tambahan():
+    files = glob.glob(os.path.join(script_dir, "granular_assignments_se_umum_*.json"))
+    kab_counts = {}
+    kec_counts = {}
+    for fpath in files:
+        try:
+            with open(fpath, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            comp = data.get("compressed_data")
+            if comp:
+                raw = json.loads(gzip.decompress(base64.b64decode(comp)).decode('utf-8'))
+                targets = raw.get("targets", [])
+                regions = raw.get("regions", [])
+                for t in targets:
+                    code_id = t[1]
+                    comp_name = t[2]
+                    reg_idx = t[5] if len(t) > 5 else 0
+                    if is_tambahan(code_id):
+                        jenis_lbl, is_usaha = classify_tambahan_simple(code_id, comp_name)
+                        reg_info = regions[reg_idx] if reg_idx < len(regions) else []
+                        if len(reg_info) > 3:
+                            kab_raw = reg_info[1]
+                            kec_raw = reg_info[3].upper().strip()
+                            kab_clean = re.sub(r'\[\d+\]', '', kab_raw).replace('[','').replace(']','').strip()
+                            kab_clean = " ".join([w for w in kab_clean.split() if not (w.isdigit() or w.startswith("72"))]).upper().strip()
+                            
+                            if kab_clean not in kab_counts:
+                                kab_counts[kab_clean] = {"usaha": 0, "rumah": 0}
+                            if is_usaha: kab_counts[kab_clean]["usaha"] += 1
+                            else: kab_counts[kab_clean]["rumah"] += 1
+                            
+                            kec_key = f"{kab_clean}_{kec_raw}"
+                            if kec_key not in kec_counts:
+                                kec_counts[kec_key] = {"usaha": 0, "rumah": 0}
+                            if is_usaha: kec_counts[kec_key]["usaha"] += 1
+                            else: kec_counts[kec_key]["rumah"] += 1
+        except Exception as e:
+            pass
+    return kab_counts, kec_counts
+
 import os
 import sys
 import json
@@ -447,13 +522,15 @@ async def run_download_and_update():
                 print(f"[INFO] Menggunakan tab FASIH: {page.url}")
             else:
                 print("[INFO] Tidak ada tab FASIH aktif. Menavigasi ke FASIH untuk menggunakan sesi yang ada...")
-                await page.goto("https://fasih-sm.bps.go.id/app/surveys", wait_until="domcontentloaded", timeout=30000)
+                await page.goto("https://fasih-sm.bps.go.id/app/surveys", wait_until="networkidle", timeout=30000)
                 import asyncio as _asyncio
-                await _asyncio.sleep(3)
+
+                await _asyncio.sleep(5)
                 print(f"[INFO] Halaman sekarang: {page.url}")
                 if "login" in page.url.lower():
                     print("[ERROR] Sesi FASIH expired - silakan login ulang di Chrome terlebih dahulu.")
-                    await browser.close()
+                    if browser:
+                        await browser.close()
                     return
             
         print("Koneksi berhasil. Mengambil XSRF-TOKEN...")
@@ -462,7 +539,8 @@ async def run_download_and_update():
         token = unquote(token_raw) if token_raw else ""
         if not token:
             print("[ERROR] XSRF-TOKEN tidak ditemukan. Harap buka halaman FASIH di browser.")
-            await browser.close()
+            if browser:
+                await browser.close()
             return
             
         # Inisialisasi Supabase
@@ -618,8 +696,8 @@ async def run_download_and_update():
                 else:
                     print(f"  [WARNING] Response tidak dikenal untuk kabupaten {code}: {res}")
                     compiled_results[label][code] = []
-                    
-        await browser.close()
+        if browser:
+            await browser.close()
         
         print("\nMemulai pemrosesan data...")
         new_se_umum = process_survey_type_data("se_umum", current_ipas.get("se_umum", []), compiled_results["se_umum"], region_map_full, delta_days)
@@ -635,6 +713,51 @@ async def run_download_and_update():
         prov_se_ub_new = sum(k.get("new_usaha_overall", 0) for k in new_se_ub)
         prov_se_ub_new_rumah = sum(k.get("new_rumah_overall", 0) for k in new_se_ub)
         
+        # Injeksi Delta dari Excel
+        try:
+            import pandas as pd
+            import os
+            excel_path = "Progres Sulteng Fasih SM SE2026.xlsx"
+            if os.path.exists(excel_path):
+                xls = pd.ExcelFile(excel_path)
+                valid_sheets = [s for s in xls.sheet_names if 'Juli' in s or 'Agustus' in s or 'Juni' in s]
+                if valid_sheets:
+                    last_sheet = valid_sheets[-1]
+                    df_last = pd.read_excel(excel_path, sheet_name=last_sheet)
+                    last_pct_map = {}
+                    for _, row in df_last.iterrows():
+                        if pd.notna(row.get('Wilayah')):
+                            try:
+                                wcode = str(int(float(row['Wilayah'])))
+                                pct = float(row.get('Persentase', 0))
+                                last_pct_map[wcode] = pct
+                            except Exception:
+                                pass
+                    
+                    KAB_MAPPING = {
+                        "7201": "[01] BANGGAI KEPULAUAN", "7202": "[02] BANGGAI", "7203": "[03] MOROWALI",
+                        "7204": "[04] POSO", "7205": "[05] DONGGALA", "7206": "[06] TOLI-TOLI",
+                        "7207": "[07] BUOL", "7208": "[08] PARIGI MOUTONG", "7209": "[09] TOJO UNA-UNA",
+                        "7210": "[10] SIGI", "7211": "[11] BANGGAI LAUT", "7212": "[12] MOROWALI UTARA",
+                        "7271": "[71] PALU"
+                    }
+                    def apply_delta(survey_data):
+                        for kab in survey_data:
+                            kab_name = kab.get("kabupaten")
+                            code = next((k for k, v in KAB_MAPPING.items() if v == kab_name), None)
+                            pct_now = float(kab.get("persentase", 0))
+                            if code and code in last_pct_map:
+                                delta = pct_now - last_pct_map[code]
+                                kab["delta_persen"] = round(delta, 2)
+                            else:
+                                kab["delta_persen"] = 0.0
+                    
+                    apply_delta(new_se_umum)
+                    apply_delta(new_se_ub)
+                    print(f" ✅ Berhasil menghitung delta berdasarkan sheet Excel terakhir ({last_sheet}).")
+        except Exception as e:
+            print(f" [WARNING] Gagal menghitung delta dari Excel: {e}")
+
         final_js_obj = {
             "updated_at": now_iso,
             "se_umum": new_se_umum,

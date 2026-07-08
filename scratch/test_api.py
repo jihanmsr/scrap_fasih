@@ -1,9 +1,13 @@
-import asyncio
-import httpx
+import urllib.request
+import json
+import ssl
 
-async def test_api():
-    token = "" # We need a token, but let's just use the current token if possible? No, we don't have it.
-    pass
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
-if __name__ == "__main__":
-    asyncio.run(test_api())
+url = "https://dds-api.bpssulteng.id/api.php?action=get_dashboard_summary&survey=se_umum&kab="
+req = urllib.request.Request(url)
+with urllib.request.urlopen(req, context=ctx) as response:
+    data = json.loads(response.read().decode('utf-8'))
+    print(json.dumps(data[:2], indent=2))

@@ -892,6 +892,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'persentase')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
                     % Capaian${getIcon('persentase')}
                 </th>
+                <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'delta_persen')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
+                    Delta (%)${getIcon('delta_persen')}
+                </th>
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'new_usaha_overall')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
                     Tambahan (Non-Target)${getIcon('new_usaha_overall')}
                 </th>
@@ -1372,6 +1375,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const persentase = floorPct(submitted, prelist);
         const sisa = prelist - submitted;
 
+        // Calculate Provincial Delta dynamically from item deltas
+        let sumSelesaiYesterday = 0;
+        let sumTargetYesterday = 0;
+        surveyData.forEach(item => {
+            const pctNow = item.persentase || 0;
+            const itemDelta = item.delta_persen || 0;
+            const pctYesterday = pctNow - itemDelta;
+            sumSelesaiYesterday += (pctYesterday / 100) * (item.total_prelist || 0);
+            sumTargetYesterday += (item.total_prelist || 0);
+        });
+        const provPctYesterday = sumTargetYesterday > 0 ? (sumSelesaiYesterday / sumTargetYesterday) * 100 : 0;
+        let provDelta = parseFloat(persentase) - provPctYesterday;
+        if (Math.abs(provDelta) < 0.01) provDelta = 0;
+
         // Format helper
         const formatNum = (num) => new Intl.NumberFormat('id-ID').format(num || 0);
 
@@ -1501,6 +1518,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="daily-progress-wrapper" style="display: flex; align-items: baseline; gap: 0.25rem; flex-direction: row;">
                     <span id="${surveyType}-stat-submitted" style="font-weight: 700;">${formatNum(submitted)}</span>
                     <span id="${surveyType}-stat-percentage" style="font-size: 0.85rem; font-weight: 700; color: var(--color-delivered);">(${persentase}%)</span>
+                    ${provDelta !== 0 ? `<span style="font-size: 0.75rem; font-weight: 800; color: ${provDelta > 0 ? '#22c55e' : (provDelta < 0 ? '#ef4444' : 'inherit')}; margin-left: 0.2rem;">${provDelta > 0 ? '+' : ''}${provDelta.toFixed(2)}%</span>` : ''}
                     <span class="daily-dropdown-trigger" onclick="window.toggleDailyPopover(event, this)" style="color: var(--color-delivered); background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.25); margin-left: 0.25rem;">▼</span>
                     <div class="daily-popover">
                         <div class="popover-header" style="color: var(--color-delivered);">BREAKDOWN TOTAL SELESAI</div>
@@ -1622,30 +1640,99 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .sort((a, b) => b.pct - a.pct);
 
-            rankingListEl.innerHTML = sortedForRanking.map((entry, idx) => {
-                const item = entry.item;
-                const pct = entry.pct;
-                const rawName = item.kabupaten || "";
-                const cleanName = rawName.replace(/\[\d+\]\s*/, "").trim();
-                
-                let rankIcon = `${idx + 1}.`;
-                if (idx === 0) rankIcon = "🥇";
-                else if (idx === 1) rankIcon = "🥈";
-                else if (idx === 2) rankIcon = "🥉";
+            const renderRankingList = (limit) => {
+                let html = sortedForRanking.slice(0, limit).map((entry, idx) => {
+                    const item = entry.item;
+                    const pct = entry.pct;
+                    const rawName = item.kabupaten || "";
+                    const cleanName = rawName.replace(/\[\d+\]\s*/, "").trim();
+                    
+                    let rankIcon = `${idx + 1}.`;
+                    if (idx === 0) rankIcon = "🥇";
+                    else if (idx === 1) rankIcon = "🥈";
+                    else if (idx === 2) rankIcon = "🥉";
 
-                return `
-                <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; padding: 0.25rem 0; border-bottom: 1px dashed rgba(249, 115, 22, 0.12);">
-                    <div style="display: flex; align-items: center; gap: 0.45rem; max-width: 65%;">
-                        <span style="font-size: 0.95rem; font-weight: 800; min-width: 22px; display: inline-block; text-align: center;">${rankIcon}</span>
-                        <span style="font-weight: 750; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${cleanName}">${cleanName}</span>
+                    let deltaHtml = "";
+                    if (item.delta_persen !== undefined && item.delta_persen !== 0) {
+                        const d = item.delta_persen;
+                        const color = d > 0 ? "#22c55e" : (d < 0 ? "#ef4444" : "var(--text-secondary)");
+                        const sign = d > 0 ? "+" : "";
+                        deltaHtml = `<span style="font-size: 0.65rem; color: ${color}; font-weight: 800; margin-left: 4px;" title="Delta dibanding kemarin">(${sign}${d.toFixed(2)}%)</span>`;
+                    }
+
+                    return `
+                    <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; padding: 0.25rem 0; border-bottom: 1px dashed rgba(249, 115, 22, 0.12);">
+                        <div style="display: flex; align-items: center; gap: 0.45rem; max-width: 60%;">
+                            <span style="font-size: 0.95rem; font-weight: 800; min-width: 22px; display: inline-block; text-align: center;">${rankIcon}</span>
+                            <span style="font-weight: 750; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${cleanName}">${cleanName}</span>
+                        </div>
+                        <div style="text-align: right;">
+                            <span style="font-weight: 850; color: #a8542a;">${pct.toFixed(2)}%</span>${deltaHtml}
+                            <div style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.1;">${formatNum(item.total_submitted)} / ${formatNum(item.total_prelist)}</div>
+                        </div>
                     </div>
-                    <div style="text-align: right;">
-                        <span style="font-weight: 850; color: #a8542a;">${pct.toFixed(2)}%</span>
-                        <div style="font-size: 0.65rem; color: var(--text-secondary); line-height: 1.1;">${formatNum(item.total_submitted)} / ${formatNum(item.total_prelist)}</div>
-                    </div>
-                </div>
-                `;
-            }).join('');
+                    `;
+                }).join('');
+
+                if (limit < sortedForRanking.length) {
+                    html += `<button onclick="window.openRankingModal('${surveyType}')" style="margin-top: 0.5rem; width: 100%; background: rgba(99, 102, 241, 0.1); color: var(--primary); border: none; padding: 0.4rem; border-radius: 4px; font-weight: 700; cursor: pointer; font-size: 0.75rem;">Lihat Selengkapnya</button>`;
+                }
+
+                rankingListEl.innerHTML = html;
+            };
+
+            window[`rankingData_${surveyType}`] = sortedForRanking;
+
+            if (!window.openRankingModal) {
+                window.openRankingModal = (sType) => {
+                    const data = window[`rankingData_${sType}`] || [];
+                    const modalBody = document.getElementById('ranking-modal-body');
+                    if (modalBody) {
+                        modalBody.innerHTML = data.map((entry, idx) => {
+                            const item = entry.item;
+                            const pct = entry.pct;
+                            const rawName = item.kabupaten || "";
+                            const cleanName = rawName.replace(/\[\d+\]\s*/, "").trim();
+                            
+                            let rankIcon = `${idx + 1}.`;
+                            if (idx === 0) rankIcon = "🥇";
+                            else if (idx === 1) rankIcon = "🥈";
+                            else if (idx === 2) rankIcon = "🥉";
+
+                            let deltaHtml = "";
+                            if (item.delta_persen !== undefined && item.delta_persen !== 0) {
+                                const d = item.delta_persen;
+                                const color = d > 0 ? "#22c55e" : (d < 0 ? "#ef4444" : "var(--text-secondary)");
+                                const sign = d > 0 ? "+" : "";
+                                deltaHtml = `<span style="font-size: 0.75rem; color: ${color}; font-weight: 800; margin-left: 6px;">(${sign}${d.toFixed(2)}%)</span>`;
+                            }
+
+                            return `
+                            <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; padding: 0.35rem 0; border-bottom: 1px dashed rgba(249, 115, 22, 0.15);">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <span style="font-size: 0.9rem; font-weight: 800; min-width: 24px; text-align: center;">${rankIcon}</span>
+                                    <span style="font-weight: 750; color: var(--text-primary);">${cleanName}</span>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span style="font-weight: 850; color: #a8542a; font-size: 0.95rem;">${pct.toFixed(2)}%</span>${deltaHtml}
+                                    <div style="font-size: 0.7rem; color: var(--text-secondary); line-height: 1.1; margin-top: 1px;">Selesai: ${formatNum(item.total_submitted)} / ${formatNum(item.total_prelist)}</div>
+                                </div>
+                            </div>
+                            `;
+                        }).join('');
+                    }
+                    const modal = document.getElementById('ranking-modal');
+                    if (modal) {
+                        modal.style.display = 'flex';
+                    }
+                };
+            }
+
+            const currentLimit = 5;
+            if (rankingListEl) {
+                rankingListEl.style.maxHeight = '165px';
+            }
+            renderRankingList(currentLimit);
         }
 
         // Total Tambahan Usaha card (kumulatif)
@@ -1755,17 +1842,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const searchVal = (document.getElementById(`${surveyType}-search-input`).value || '').toLowerCase().trim();
         const capaianFilterVal = document.getElementById(`${surveyType}-capaian-filter`)?.value || 'all';
+        const kabFilterEl = document.getElementById(`${surveyType}-kab-filter`);
+        const selectedKab = kabFilterEl?.value || 'all';
         const tbody = document.getElementById(`${surveyType}-table-body`);
         tbody.innerHTML = '';
 
         let filtered = surveyData.map(item => {
+            // Check if filtered by kab
+            if (selectedKab !== 'all' && item.kabupaten !== selectedKab) return null;
+
             const kabMatch = item.kabupaten.toLowerCase().includes(searchVal);
             const matchingKecs = (item.kecamatan_list || []).filter(kec =>
                 kec.kec_name.toLowerCase().includes(searchVal)
             );
 
             if (kabMatch || matchingKecs.length > 0) {
-                if (!kabMatch && matchingKecs.length > 0 && searchVal !== "") {
+                if ((!kabMatch && matchingKecs.length > 0 && searchVal !== "") || selectedKab !== 'all') {
                     window.expandedSeKabs[surveyType][item.kabupaten] = true;
                 }
                 return item;
@@ -1786,11 +1878,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Read view level selector
         const viewLevel = document.getElementById(`${surveyType}-view-level`)?.value || 'kabupaten';
-        const kabFilterEl = document.getElementById(`${surveyType}-kab-filter`);
 
-        // Show/hide kabupaten filter dropdown based on view mode
+        // Always show kabupaten filter dropdown for Rincian Kabupaten and Ranking Kecamatan
         if (kabFilterEl) {
-            kabFilterEl.style.display = viewLevel === 'kecamatan' ? '' : 'none';
+            kabFilterEl.style.display = (viewLevel === 'kecamatan' || viewLevel === 'kabupaten') ? '' : 'none';
+        }
+
+        // Render Top 3 Kecamatan if filtered by Kab
+        const topKecContainer = document.getElementById(`${surveyType}-top-kecamatan-container`);
+        if (topKecContainer) {
+            if (viewLevel === 'kabupaten' && selectedKab !== 'all') {
+                const kabData = surveyData.find(k => k.kabupaten === selectedKab);
+                if (kabData) {
+                    const sortedKecs = (kabData.kecamatan_list || []).filter(k => k.kec_name !== '-' && !k.kec_name.includes('[000]')).sort((a, b) => b.persentase - a.persentase);
+                    const top3 = sortedKecs.slice(0, 3);
+                    const kabDelta = kabData.delta_persen || 0;
+                    const deltaColor = kabDelta > 0 ? '#22c55e' : (kabDelta < 0 ? '#ef4444' : 'var(--text-secondary)');
+                    const deltaSign = kabDelta > 0 ? '+' : '';
+
+                    let html = `
+                        <div style="flex: 1; min-width: 200px; display: flex; flex-direction: column; justify-content: center;">
+                            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Total Capaian</div>
+                            <div style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary); margin-top: 0.2rem;">${kabData.persentase}%</div>
+                            <div style="font-size: 0.85rem; font-weight: 700; color: ${deltaColor}; margin-top: 0.2rem;">${deltaSign}${kabDelta.toFixed(2)}% vs Kemarin</div>
+                        </div>
+                        <div style="flex: 3; display: flex; flex-direction: column;">
+                            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 0.5rem;">Top 3 Kecamatan Tertinggi</div>
+                            <div style="display: flex; gap: 1rem;">
+                    `;
+                    top3.forEach((k, idx) => {
+                        const medal = idx === 0 ? '🥇' : idx === 1 ? '🥈' : '🥉';
+                        html += `
+                            <div style="flex: 1; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.5rem; padding: 0.75rem; display: flex; flex-direction: column;">
+                                <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <span style="font-size: 1.25rem;">${medal}</span>
+                                    <span style="font-size: 1.1rem; font-weight: 800; color: var(--color-delivered);">${k.persentase}%</span>
+                                </div>
+                                <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-primary); margin-top: 0.5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${k.kec_name}">${k.kec_name}</div>
+                                <div style="font-size: 0.65rem; color: var(--text-secondary); margin-top: 0.2rem;">Selesai: ${formatNum(k.total_submitted)} / ${formatNum(k.total_prelist)}</div>
+                            </div>
+                        `;
+                    });
+                    html += `</div></div>`;
+                    topKecContainer.innerHTML = html;
+                    topKecContainer.style.display = 'flex';
+                }
+            } else {
+                topKecContainer.style.display = 'none';
+            }
         }
 
         // Update title and toggle expand/collapse visibility
@@ -2121,7 +2256,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (filtered.length === 0) {
             tbody.innerHTML = `
                 <tr>
-                    <td colspan="11" style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary);">
+                    <td colspan="12" style="text-align: center; padding: 3rem 1rem; color: var(--text-secondary);">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin: 0 auto 0.5rem; opacity: 0.5;">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.008 1.24l.885 1.77a2.25 2.25 0 002.007 1.24h1.98a2.25 2.25 0 002.007-1.24l.885-1.77a2.25 2.25 0 012.007-1.24h3.86m-18 0h18"></path>
                         </svg>
@@ -2160,6 +2295,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'persentase':
                     valA = parseFloat(a.persentase) || 0;
                     valB = parseFloat(b.persentase) || 0;
+                    break;
+                case 'delta_persen':
+                    valA = parseFloat(a.delta_persen) || 0;
+                    valB = parseFloat(b.delta_persen) || 0;
                     break;
                 case 'sisa_usaha':
                     valA = a.sisa_usaha || 0;
@@ -2243,6 +2382,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; ${pctClass}">
                         ${item.persentase}%
                     </span>
+                </td>
+                <td style="text-align: center;">
+                    ${item.delta_persen !== undefined && item.delta_persen !== 0 ? 
+                        `<span style="font-size: 0.8rem; font-weight: 800; color: ${item.delta_persen > 0 ? '#22c55e' : (item.delta_persen < 0 ? '#ef4444' : 'inherit')};">
+                            ${item.delta_persen > 0 ? '+' : ''}${item.delta_persen.toFixed(2)}%
+                        </span>` 
+                        : `<span style="font-size: 0.8rem; color: var(--text-muted);">-</span>`}
                 </td>
                 <td style="text-align: center;">
                     ${penambahanBadge}
@@ -9363,3 +9509,112 @@ function exportToCSV(rows, filename) {
         URL.revokeObjectURL(url);
     }
 }
+
+window.downloadCurrentSeTable = function(surveyType) {
+    const viewLevel = document.getElementById(`${surveyType}-view-level`)?.value || 'kabupaten';
+    const searchVal = (document.getElementById(`${surveyType}-search-input`)?.value || '').toLowerCase().trim();
+    const ipasDataObj = window.IPAS_DATA || { se_umum: [], se_ub: [] };
+    const surveyData = ipasDataObj[surveyType] || [];
+    const dateToday = new Date().toISOString().slice(0, 10);
+    const labelUpper = surveyType.toUpperCase();
+
+    let exportRows = [];
+    let outFilename = `Rekap_${labelUpper}_${viewLevel}_${dateToday}.csv`;
+
+    if (viewLevel === 'kabupaten') {
+        const capaianFilterVal = document.getElementById(`${surveyType}-capaian-filter`)?.value || 'all';
+        const selectedKab = document.getElementById(`${surveyType}-kab-filter`)?.value || 'all';
+
+        let filtered = surveyData.filter(item => {
+            if (selectedKab !== 'all' && item.kabupaten !== selectedKab) return false;
+
+            const kabMatch = item.kabupaten.toLowerCase().includes(searchVal);
+            const matchingKecs = (item.kecamatan_list || []).filter(kec =>
+                kec.kec_name.toLowerCase().includes(searchVal)
+            );
+            return kabMatch || matchingKecs.length > 0;
+        });
+
+        if (capaianFilterVal !== 'all') {
+            filtered = filtered.filter(item => {
+                const pct = parseFloat(item.persentase) || 0;
+                if (capaianFilterVal === 'high') return pct >= 80;
+                if (capaianFilterVal === 'med') return pct >= 50 && pct < 80;
+                if (capaianFilterVal === 'low') return pct < 50;
+                return true;
+            });
+        }
+
+        exportRows = filtered.map(item => ({
+            'Kabupaten/Kota': item.kabupaten,
+            'Total Target': item.total_prelist,
+            'Draft': item.total_draft,
+            'Open': item.total_open,
+            'Submitted (Selesai)': item.total_submitted,
+            '% Capaian': `${item.persentase}%`,
+            'Sisa Usaha': item.new_usaha_overall || 0
+        }));
+    } else if (viewLevel === 'kecamatan') {
+        const selectedKab = document.getElementById(`${surveyType}-kab-filter`)?.value || 'all';
+        const isFiltered = selectedKab !== 'all';
+        const capaianFilterVal = document.getElementById(`${surveyType}-capaian-filter`)?.value || 'all';
+
+        const allKecs = [];
+        surveyData.forEach(kab => {
+            if (isFiltered && kab.kabupaten !== selectedKab) return;
+            (kab.kecamatan_list || []).forEach(kec => {
+                if (!kec.kec_name || kec.kec_name === '-') return;
+                if (searchVal && !kec.kec_name.toLowerCase().includes(searchVal) && !kab.kabupaten.toLowerCase().includes(searchVal)) return;
+
+                const pct = parseFloat(kec.persentase) || 0;
+                if (capaianFilterVal === 'high' && pct < 80) return;
+                if (capaianFilterVal === 'med' && (pct < 50 || pct >= 80)) return;
+                if (capaianFilterVal === 'low' && pct >= 50) return;
+
+                allKecs.push({ ...kec, kab_name: kab.kabupaten });
+            });
+        });
+
+        allKecs.sort((a, b) => {
+            const pctA = parseFloat(a.persentase) || 0;
+            const pctB = parseFloat(b.persentase) || 0;
+            if (pctA !== pctB) return pctB - pctA;
+            return (b.total_prelist || 0) - (a.total_prelist || 0);
+        });
+
+        if (isFiltered) {
+            const kabLabel = selectedKab.replace(/\[\d+\]\s*/, '').trim().replace(/\s+/g, '_');
+            outFilename = `Ranking_Kecamatan_${labelUpper}_${kabLabel}_${dateToday}.csv`;
+        } else {
+            outFilename = `Ranking_Kecamatan_Semua_Kab_${labelUpper}_${dateToday}.csv`;
+        }
+
+        exportRows = allKecs.map((kec, idx) => {
+            const rowData = {
+                'Rank': idx + 1,
+                'Kecamatan': kec.kec_name,
+                'Total Target': kec.total_prelist,
+                'Draft': kec.total_draft,
+                'Open': kec.total_open,
+                'Submitted (Total)': kec.total_submitted,
+                'Submitted Pencacah': kec.total_submitted_pencacah,
+                'Submitted Respondent': kec.total_submitted_respondent,
+                'Approved': kec.total_approved,
+                'Rejected': kec.total_rejected,
+                '% Capaian': `${kec.persentase}%`
+            };
+            if (!isFiltered) {
+                // Add Kabupaten column at start of object
+                return Object.assign({ 'Kabupaten/Kota': kec.kab_name.replace(/\[\d+\] /, '') }, rowData);
+            }
+            return rowData;
+        });
+    }
+
+    if (exportRows.length === 0) {
+        alert('Tidak ada data yang bisa diexport dengan filter aktif.');
+        return;
+    }
+
+    exportToCSV(exportRows, outFilename);
+};

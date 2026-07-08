@@ -5,6 +5,21 @@ import sys
 import time
 import base64
 import gzip
+
+import sqlite3
+def get_petugas_name_from_db(email, default_name):
+    try:
+        conn = sqlite3.connect(os.path.join(os.path.dirname(__file__), 'master_data.db'))
+        c = conn.cursor()
+        c.execute("SELECT nama_petugas FROM master_petugas WHERE email = ?", (email,))
+        row = c.fetchone()
+        conn.close()
+        if row and row[0]:
+            return row[0]
+    except:
+        pass
+    return default_name
+
 import datetime
 import socket
 import subprocess
@@ -2094,7 +2109,7 @@ async def main():
             formatted_petugas_umum.append({
                 "id": u.get("id") or u.get("userId"),
                 "username": username,
-                "fullname": u.get("fullname") or u.get("name") or username,
+                "fullname": get_petugas_name_from_db(username, u.get("fullname") or u.get("name") or username),
                 "target_count": pet_stats.get("target_count", 0),
                 "sync_count": pet_stats.get("sync_count", 0),
                 "draft_count": pet_stats.get("draft_count", 0),
@@ -2125,7 +2140,7 @@ async def main():
             formatted_petugas_ub.append({
                 "id": u.get("id") or u.get("userId"),
                 "username": username,
-                "fullname": u.get("fullname") or u.get("name") or username,
+                "fullname": get_petugas_name_from_db(username, u.get("fullname") or u.get("name") or username),
                 "target_count": pet_stats.get("target_count", 0),
                 "sync_count": pet_stats.get("sync_count", 0),
                 "draft_count": pet_stats.get("draft_count", 0),
