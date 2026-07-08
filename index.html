@@ -15,6 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="daily_submission_stats.js"></script>
+    <script src="daily_summary.js"></script>
 
     <link rel="stylesheet" href="style.css">
     <style>
@@ -127,7 +128,7 @@
                         <line x1="8" y1="2" x2="8" y2="6"></line>
                         <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
-                    Detail
+                    Progres Petugas
                 </button>
 
 <!-- <button class="btn-tab" id="tab-btn-timeline" onclick="switchTab('timeline')"
@@ -870,6 +871,8 @@
                             </div>
                         </div>
                     </div>
+                    
+
                 </div> <!-- End of se_umum-sub-ringkasan -->
 
                 <div id="se_umum-sub-tabel" style="display: none;">
@@ -2205,7 +2208,9 @@
     <script src="supabase_config.js"></script>
     <script src="users.js?v=2"></script>
     <script src="auth.js"></script>
-    <script src="app.js?v=4"></script>
+    <script src="daily_summary.js"></script>
+    <script src="petugas_progress.js"></script>
+    <script src="app.js?v=4" defer></script>
 
     <script>
         function switchSubTab(surveyType, subTab) {

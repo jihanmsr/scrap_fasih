@@ -1044,10 +1044,27 @@ document.addEventListener('DOMContentLoaded', () => {
         // Build a lookup map of (kab_name, date, survey_type) -> count and breakdown from window.DAILY_SUBMISSION_STATS
         const statsMap = {};
         const statsBreakdownMap = {};
-        if (window.DAILY_SUBMISSION_STATS && Array.isArray(window.DAILY_SUBMISSION_STATS)) {
+        if (window.DAILY_SUMMARY && Array.isArray(window.DAILY_SUMMARY)) {
+            window.DAILY_SUMMARY.forEach(r => {
+                if (r.tanggal && r.kabupaten) {
+                    const key = `${r.kabupaten.toUpperCase()}_${r.tanggal}_${surveyType}`;
+                    // We only have combined stats from granular_data, so we'll apply them to se_umum
+                    // If you want accurate split later, the DB needs survey_type column.
+                    if (surveyType === 'se_umum') {
+                        statsMap[key] = (statsMap[key] || 0) + (r.total_submitted || 0);
+                        
+                        if (!statsBreakdownMap[key]) statsBreakdownMap[key] = {};
+                        statsBreakdownMap[key]["APPROVED BY Pengawas"] = (statsBreakdownMap[key]["APPROVED BY Pengawas"] || 0) + (r.total_approved || 0);
+                        statsBreakdownMap[key]["REJECTED BY Pengawas"] = (statsBreakdownMap[key]["REJECTED BY Pengawas"] || 0) + (r.total_rejected || 0);
+                        statsBreakdownMap[key]["SUBMITTED BY Pencacah"] = (statsBreakdownMap[key]["SUBMITTED BY Pencacah"] || 0) + (r.total_submitted || 0);
+                    }
+                }
+            });
+        } else if (window.DAILY_SUBMISSION_STATS && Array.isArray(window.DAILY_SUBMISSION_STATS)) {
             window.DAILY_SUBMISSION_STATS.forEach(r => {
                 if (r.date && r.kab_name && r.survey_type) {
-                    const key = `${r.kab_name.toUpperCase()}_${r.date}_${r.survey_type}`;
+                    const cleanKab = r.kab_name.replace(/\[\d+\]\s*/, '').trim().toUpperCase();
+                    const key = `${cleanKab}_${r.date}_${r.survey_type}`;
                     statsMap[key] = (statsMap[key] || 0) + (r.count || 0);
                     
                     if (r.status) {
@@ -1328,9 +1345,7 @@ document.addEventListener('DOMContentLoaded', () => {
             approved += item.total_approved || 0;
             submittedPencacah += item.total_submitted_pencacah || 0;
             submittedRespondent += item.total_submitted_respondent || 0;
-            today += item.today_completed || 0;
-            yesterday += item.yesterday_completed || 0;
-            twoDaysAgo += item.two_days_ago_completed || 0;
+            // today, yesterday, twoDaysAgo will be calculated exactly from DAILY_SUMMARY below
             newToday += item.new_usaha_today || 0;
             newRumahToday += item.new_rumah_today || 0;
             item.sisa_usaha = Math.max(0, (item.total_prelist || 0) - (item.total_submitted || 0));
@@ -1624,9 +1639,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
+        // Recalculate exactly from DAILY_SUMMARY for accurate daily counts
+        if (window.DAILY_SUMMARY && window.DAILY_SUMMARY.length > 0) {
+            today = 0; yesterday = 0; twoDaysAgo = 0;
+            window.DAILY_SUMMARY.forEach(row => {
+                if (row.tanggal === todayDateStr) today += (row.total_submitted || 0);
+                if (row.tanggal === yesterdayDateStr) yesterday += (row.total_submitted || 0);
+                if (row.tanggal === twoDaysDateStr) twoDaysAgo += (row.total_submitted || 0);
+            });
+        }
+
         updateDailyStatCard(today, todayBreakdown, `${surveyType}-stat-today`, `${surveyType}-stat-today-pct`, 'SUBMIT HARI INI', false);
-        updateDailyStatCard(yesterday, yesterdayBreakdown, `${surveyType}-stat-yesterday`, `${surveyType}-stat-yesterday-pct`, 'SUBMIT KEMARIN', true);
-        updateDailyStatCard(twoDaysAgo, twoDaysAgoBreakdown, `${surveyType}-stat-2days`, `${surveyType}-stat-2days-pct`, 'SUBMIT 2 HARI LALU', true);
+        updateDailyStatCard(yesterday, yesterdayBreakdown, `${surveyType}-stat-yesterday`, `${surveyType}-stat-yesterday-pct`, 'SUBMIT KEMARIN', false);
+        updateDailyStatCard(twoDaysAgo, twoDaysAgoBreakdown, `${surveyType}-stat-2days`, `${surveyType}-stat-2days-pct`, 'SUBMIT 2 HARI LALU', false);
 
         // Populate Regency/City Ranking List
         const rankingListEl = document.getElementById(`${surveyType}-ranking-list`);
@@ -2136,6 +2161,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (slsDone > 0 && slsTotal > 0) completedSls++;
                 });
 
+                // Gunakan data dari PETUGAS_PROGRESS_MAP jika tersedia
+                const pMap = window.PETUGAS_PROGRESS_MAP || {};
+                const ukey = (officer.username || '').toLowerCase().trim();
+                const pData = pMap[ukey];
+                
+                if (pData) {
+                    totalTarget = pData.target || 0;
+                    completedTarget = (pData.submitted_pencacah || 0) + (pData.submitted_respondent || 0) + (pData.approved || 0);
+                }
+                
                 const progPct = totalTarget > 0 ? Math.min(100, Math.round((completedTarget / totalTarget) * 100)) : 0;
 
                 const kabCodes = [...kabSet];
@@ -2829,7 +2864,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 options: chartOptions
             });
         }
+        
+        if (surveyType === 'se_umum') {
+
+        }
     };
+
+    // Grafik tren harian telah dihapus sesuai permintaan user.
 
     // Helpers for dynamic loading last updated status
     let isSupabaseUsedGlobal = false;
@@ -7463,12 +7504,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 petugasMap[petName].total += total;
                 petugasMap[petName].selesai += selesai;
                 petugasMap[petName].belum += belum;
-                
-                totalAll += total;
-                selesaiAll += selesai;
-                belumAll += belum;
             });
         }
+
+        // --- SINKRONISASI DENGAN PETUGAS_PROGRESS_MAP (DATA GRANULAR TERBARU) ---
+        if (window.PETUGAS_PROGRESS_MAP) {
+            Object.values(petugasMap).forEach(p => {
+                const ukey = (p.email || '').toLowerCase().trim();
+                const pMapData = window.PETUGAS_PROGRESS_MAP[ukey];
+                if (pMapData) {
+                    p.total = pMapData.target || 0;
+                    p.selesai = (pMapData.submitted_pencacah || 0) + (pMapData.submitted_respondent || 0) + (pMapData.approved || 0);
+                    p.belum = (pMapData.open || 0) + (pMapData.draft || 0);
+                }
+            });
+        }
+
+        // Re-calculate totals after possible sync
+        totalAll = 0; selesaiAll = 0; belumAll = 0;
+        Object.values(petugasMap).forEach(p => {
+            totalAll += p.total;
+            selesaiAll += p.selesai;
+            belumAll += p.belum;
+        });
 
         if (Array.isArray(data) && data.length > 0) {
             const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;

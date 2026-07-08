@@ -35,7 +35,9 @@ def classify_tambahan_simple(code_id, name):
     return "Usaha Baru", True
 
 def get_real_tambahan():
-    files = glob.glob(os.path.join(script_dir, "granular_assignments_se_umum_*.json"))
+    import os
+    script_dir_local = os.path.dirname(os.path.abspath(__file__))
+    files = glob.glob(os.path.join(script_dir_local, "granular_assignments_se_umum_*.json"))
     kab_counts = {}
     kec_counts = {}
     for fpath in files:
@@ -399,9 +401,6 @@ def process_survey_type_data(survey_type, old_data, results_map, region_map_sult
     return new_data
 
 def reconstruct_daily_stats_in_db(supabase):
-    print("[INFO] Skipping daily submission stats recalculation from snapshots (using granular timestamps instead).")
-    return
-
     try:
         print("[INFO] Memulai sinkronisasi otomatis grafik harian (daily_submission_stats)...")
         r = supabase.table('dashboard_store').select('key').execute()
@@ -758,6 +757,25 @@ async def run_download_and_update():
         except Exception as e:
             print(f" [WARNING] Gagal menghitung delta dari Excel: {e}")
 
+        # --- INJECT REAL TAMBAHAN FROM GRANULAR DB ---
+        kab_counts, kec_counts = get_real_tambahan()
+        import re
+        for kab in new_se_umum:
+            kab_clean = re.sub(r'\[\d+\]', '', kab["kabupaten"]).replace('[','').replace(']','').strip()
+            kab_clean = " ".join([w for w in kab_clean.split() if not (w.isdigit() or w.startswith("72"))]).upper().strip()
+            kab["new_usaha_overall"] = kab_counts.get(kab_clean, {}).get("usaha", 0)
+            kab["new_rumah_overall"] = kab_counts.get(kab_clean, {}).get("rumah", 0)
+            
+            for kec in kab.get("kecamatan_list", []):
+                kec_name = kec.get("kec_name", "").upper().strip()
+                kec_name_clean = re.sub(r'\[\d+\]', '', kec_name).replace('[','').replace(']','').strip()
+                kec_key = f"{kab_clean}_{kec_name_clean}"
+                kec["new_usaha_overall"] = kec_counts.get(kec_key, {}).get("usaha", 0)
+                kec["new_rumah_overall"] = kec_counts.get(kec_key, {}).get("rumah", 0)
+                
+        prov_se_umum_new = sum(k.get("new_usaha_overall", 0) for k in new_se_umum)
+        prov_se_umum_new_rumah = sum(k.get("new_rumah_overall", 0) for k in new_se_umum)
+        
         final_js_obj = {
             "updated_at": now_iso,
             "se_umum": new_se_umum,
@@ -776,6 +794,22 @@ async def run_download_and_update():
         with open("ipas_data.js", "w", encoding="utf-8") as f:
             f.write(f"window.IPAS_DATA = {json.dumps(final_js_obj, ensure_ascii=False, indent=2)};\n")
         print(" ✅ File lokal ipas_data.js berhasil diperbarui.")
+        
+        try:
+            import sqlite3
+            db_p = '/Users/jihanmaisaroh/scrap_fasih/granular_data.db'
+            if os.path.exists(db_p):
+                cn = sqlite3.connect(db_p)
+                cr = cn.cursor()
+                cr.execute("SELECT tanggal, kabupaten, total_aktivitas, total_submitted, total_approved, total_rejected, total_usaha_tambahan FROM daily_summary ORDER BY tanggal ASC, kabupaten ASC")
+                rows = cr.fetchall()
+                data = [{"tanggal": r[0], "kabupaten": r[1], "total_aktivitas": r[2], "total_submitted": r[3], "total_approved": r[4], "total_rejected": r[5], "total_usaha_tambahan": r[6]} for r in rows]
+                cn.close()
+                with open("daily_summary.js", "w", encoding="utf-8") as fw:
+                    fw.write(f"window.DAILY_SUMMARY = {json.dumps(data, indent=2)};\n")
+                print(" ✅ File lokal daily_summary.js berhasil diperbarui.")
+        except Exception as e:
+            print(f" [WARNING] Gagal update daily_summary.js: {e}")
         
         if supabase:
             try:
