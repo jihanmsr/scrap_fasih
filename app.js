@@ -2161,16 +2161,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (slsDone > 0 && slsTotal > 0) completedSls++;
                 });
 
-                // Gunakan data dari PETUGAS_PROGRESS_MAP jika tersedia
-                const pMap = window.PETUGAS_PROGRESS_MAP || {};
-                const ukey = (officer.username || '').toLowerCase().trim();
-                const pData = pMap[ukey];
-                
-                if (pData) {
-                    totalTarget = pData.target || 0;
-                    completedTarget = (pData.submitted_pencacah || 0) + (pData.submitted_respondent || 0) + (pData.approved || 0);
-                }
-                
+
                 const progPct = totalTarget > 0 ? Math.min(100, Math.round((completedTarget / totalTarget) * 100)) : 0;
 
                 const kabCodes = [...kabSet];
@@ -7580,18 +7571,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // --- SINKRONISASI DENGAN PETUGAS_PROGRESS_MAP (DATA GRANULAR TERBARU) ---
-        if (window.PETUGAS_PROGRESS_MAP) {
-            Object.values(petugasMap).forEach(p => {
-                const ukey = (p.email || '').toLowerCase().trim();
-                const pMapData = window.PETUGAS_PROGRESS_MAP[ukey];
-                if (pMapData) {
-                    p.total = pMapData.target || 0;
-                    p.selesai = (pMapData.submitted_pencacah || 0) + (pMapData.submitted_respondent || 0) + (pMapData.approved || 0);
-                    p.belum = (pMapData.open || 0) + (pMapData.draft || 0);
-                }
-            });
-        }
 
         // Re-calculate totals after possible sync
         totalAll = 0; selesaiAll = 0; belumAll = 0;
