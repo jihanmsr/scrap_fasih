@@ -22,6 +22,7 @@
     --table-header-bg: #121824;
     --table-sticky-bg: #161c2d;
     --table-hover-sticky-bg: #1d2438;
+    --tfoot-sticky-bg: #222942;
     --color-queued: #9ca3af;
     --color-delivered: #10b981;
     --color-opened: #3b82f6;
@@ -59,6 +60,7 @@
     --table-header-bg: #f1f5f9;
     --table-sticky-bg: #ffffff;
     --table-hover-sticky-bg: #f8fafc;
+    --tfoot-sticky-bg: #f2f3fd;
     --color-queued: #64748b;
     --color-delivered: #16a34a;
     --color-opened: #2563eb;

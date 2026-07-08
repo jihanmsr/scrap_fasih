@@ -2583,7 +2583,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const provTwoDaysHTML = getDailyProgressCellHTML(twoDaysAgo, twoDaysAgoBreakdown, 'H-2: SULAWESI TENGAH');
 
         provRow.innerHTML = `
-            <td style="font-weight: 800; color: var(--text-primary); position: sticky; left: 0; background: linear-gradient(rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.08)), var(--card-bg); z-index: 25; border-bottom: 2px solid var(--card-border);">[72] SULAWESI TENGAH</td>
+            <td style="font-weight: 800; color: var(--text-primary); position: sticky; left: 0; background-color: var(--tfoot-sticky-bg); z-index: 25; border-bottom: 2px solid var(--card-border);">[72] SULAWESI TENGAH</td>
             <td style="text-align: right; font-family: monospace; font-weight: 700; color: var(--text-secondary); border-bottom: 2px solid var(--card-border);">${formatNum(prelist)}</td>
             <td style="text-align: right; font-family: monospace; font-weight: 700; color: #f59e0b; border-bottom: 2px solid var(--card-border);">${formatNum(draft)}</td>
             <td style="text-align: right; font-family: monospace; font-weight: 700; color: #3b82f6; border-bottom: 2px solid var(--card-border);">${formatNum(openVal)}</td>
