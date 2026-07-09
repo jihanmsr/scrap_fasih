@@ -16,6 +16,11 @@ load_dotenv()
 LOCAL_API_URL = os.getenv("LOCAL_API_URL", "https://dds-api.bpssulteng.id/api.php")
 import requests
 
+# Global variables to store session data
+global_session_cookies = []
+global_local_storage = {}
+session_refresh_lock = None
+
 def post_to_api(action, json_data):
     # Bypass DNS Sinkhole BPS by hitting the real IP directly and spoofing the Host header
     url = "https://103.5.51.154/api.php"
@@ -131,6 +136,9 @@ _session_valid_count = 0
 
 async def refresh_session_if_needed(client, page, context):
     global _session_valid_count
+    global session_refresh_lock
+    if session_refresh_lock is None:
+        pass # Will be initialized in main
     async with session_refresh_lock:
         cookies = await context.cookies()
         cookie_dict = {c["name"]: c["value"] for c in cookies}
@@ -627,7 +635,7 @@ def save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data):
                 if resp.get("currentSurveyRoleName") == "Pencacah":
                     pcl_status = resp.get("assignmentResponsibilityStatusId")
                     if pcl_status and pcl_status.upper() == "SUBMITTED":
-                        if "Pengawas" in status or status.upper() == "APPROVED":
+                        if "Pengawas" in status or status.upper() in ["APPROVED", "OPEN", "DRAFT"]:
                             status = "SUBMITTED BY Pencacah"
                     break
 
@@ -688,7 +696,7 @@ def save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data):
                 if resp.get("currentSurveyRoleName") == "Pencacah":
                     pcl_status = resp.get("assignmentResponsibilityStatusId")
                     if pcl_status and pcl_status.upper() == "SUBMITTED":
-                        if "Pengawas" in status or status.upper() == "APPROVED":
+                        if "Pengawas" in status or status.upper() in ["APPROVED", "OPEN", "DRAFT"]:
                             status = "SUBMITTED BY Pencacah"
                     break
 
@@ -765,6 +773,8 @@ def save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data):
 
 async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
     print("[START] Mulai proses penarikan seluruh data secara granular...")
+    global session_refresh_lock
+    session_refresh_lock = asyncio.Lock()
     global users_mapping, region_map_full
     users_mapping = {}
     try:

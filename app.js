@@ -7510,11 +7510,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Fall back to mysqlData if at Kabupaten level, because Supabase data is outdated for Tojo Una-Una and lacks emails
+        // Fall back to mysqlData if at Kabupaten level ONLY for Tojo Una-Una (7209), because Supabase data is outdated for Tojo Una-Una and lacks emails.
+        // For other Kabupatens (like Palu), they have fresh granular data, so DO NOT fall back to mysqlData!
         const kabVal = document.getElementById('sls-kab-filter') ? document.getElementById('sls-kab-filter').value : 'all';
-        const kecVal = document.getElementById('sls-kec-filter') ? document.getElementById('sls-kec-filter').value : 'all';
-        const isKabLevel = kabVal !== 'all' && kecVal === 'all';
-        const useGranular = Array.isArray(data) && data.length > 0 && !isKabLevel;
+        const isKabLevel = kabVal !== 'all' &&
+            (document.getElementById('sls-kec-filter') ? document.getElementById('sls-kec-filter').value : 'all') === 'all' &&
+            (document.getElementById('sls-desa-filter') ? document.getElementById('sls-desa-filter').value : 'all') === 'all' &&
+            (document.getElementById('sls-sls-filter') ? document.getElementById('sls-sls-filter').value : 'all') === 'all';
+
+        // Check if granular data exists.
+        const useGranular = Array.isArray(data) && data.length > 0 && !(isKabLevel && kabVal.includes('7209'));
 
         if (useGranular) {
             data.forEach(r => {
@@ -7600,7 +7605,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         // --- SINKRONISASI DENGAN PETUGAS_PROGRESS_MAP (DATA GRANULAR TERBARU) ---
-        if (window.PETUGAS_PROGRESS_MAP) {
+        // ONLY sync if we fell back to MySQL data (!useGranular). If we used granular data, 
+        // the counts are already perfectly accurate for the selected region.
+        if (!useGranular && window.PETUGAS_PROGRESS_MAP) {
             Object.values(petugasMap).forEach(p => {
                 let pTotal = 0, pSelesai = 0, pBelum = 0;
                 let foundAny = false;
@@ -7672,10 +7679,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     valB = (b.total > 0 ? b.selesai / b.total : 0); 
                     break;
             }
-            if (typeof valA === 'string') {
-                return valA.localeCompare(valB) * sortOrder;
+            if (typeof valA === 'string' && typeof valB === 'string') {
+                const cmp = valA.localeCompare(valB) * sortOrder;
+                if (cmp !== 0) return cmp;
+            } else {
+                const cmp = (valA - valB) * sortOrder;
+                if (cmp !== 0) return cmp;
             }
-            return (valA - valB) * sortOrder;
+            
+            // Secondary sort by TOTAL TARGET (descending) if there's a tie (e.g. all 0.0% capaian)
+            if (a.total !== b.total) {
+                return b.total - a.total;
+            }
+            
+            // Tertiary sort by name (ascending)
+            return a.name.localeCompare(b.name);
         });
 
         window.lastPetugasSummaryArr = arr;

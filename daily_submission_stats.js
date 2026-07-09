@@ -693,7 +693,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-18",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 478
+    "count": 477
   },
   {
     "date": "2026-06-18",
@@ -849,7 +849,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-20",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 711
+    "count": 707
   },
   {
     "date": "2026-06-20",
@@ -927,7 +927,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-21",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 668
+    "count": 663
   },
   {
     "date": "2026-06-21",
@@ -1083,7 +1083,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-23",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1235
+    "count": 1230
   },
   {
     "date": "2026-06-23",
@@ -1161,7 +1161,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-24",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1172
+    "count": 1171
   },
   {
     "date": "2026-06-24",
@@ -1395,7 +1395,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-27",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1568
+    "count": 1565
   },
   {
     "date": "2026-06-27",
@@ -1473,7 +1473,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-28",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1536
+    "count": 1531
   },
   {
     "date": "2026-06-28",
@@ -1551,7 +1551,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-29",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1863
+    "count": 1862
   },
   {
     "date": "2026-06-29",
@@ -1629,7 +1629,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-06-30",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 2330
+    "count": 2316
   },
   {
     "date": "2026-06-30",
@@ -1707,7 +1707,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-07-01",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1633
+    "count": 1626
   },
   {
     "date": "2026-07-01",
@@ -1785,7 +1785,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-07-02",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1905
+    "count": 1891
   },
   {
     "date": "2026-07-02",
@@ -1863,7 +1863,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-07-03",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 2627
+    "count": 2624
   },
   {
     "date": "2026-07-03",
@@ -1941,7 +1941,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-07-04",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 3434
+    "count": 3433
   },
   {
     "date": "2026-07-04",
@@ -2061,7 +2061,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-07-06",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 3009
+    "count": 3008
   },
   {
     "date": "2026-07-06",
@@ -2121,7 +2121,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-07-07",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 4123
+    "count": 4085
   },
   {
     "date": "2026-07-07",
@@ -2181,7 +2181,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-07-08",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 4835
+    "count": 4698
   },
   {
     "date": "2026-07-08",
@@ -2217,7 +2217,7 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-07-09",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1346
+    "count": 1746
   },
   {
     "date": "2026-07-09",
