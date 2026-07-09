@@ -393,7 +393,7 @@
     "date": "2026-06-13",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 11
+    "count": 6
   },
   {
     "date": "2026-06-14",
@@ -477,7 +477,7 @@
     "date": "2026-06-15",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 88
+    "count": 73
   },
   {
     "date": "2026-06-15",
@@ -555,7 +555,7 @@
     "date": "2026-06-16",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 199
+    "count": 163
   },
   {
     "date": "2026-06-16",
@@ -633,7 +633,7 @@
     "date": "2026-06-17",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 323
+    "count": 258
   },
   {
     "date": "2026-06-17",
@@ -711,7 +711,7 @@
     "date": "2026-06-18",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 438
+    "count": 400
   },
   {
     "date": "2026-06-18",
@@ -789,7 +789,7 @@
     "date": "2026-06-19",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 418
+    "count": 351
   },
   {
     "date": "2026-06-19",
@@ -867,7 +867,7 @@
     "date": "2026-06-20",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 628
+    "count": 519
   },
   {
     "date": "2026-06-20",
@@ -945,7 +945,7 @@
     "date": "2026-06-21",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 762
+    "count": 627
   },
   {
     "date": "2026-06-21",
@@ -1023,7 +1023,7 @@
     "date": "2026-06-22",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 950
+    "count": 718
   },
   {
     "date": "2026-06-22",
@@ -1101,7 +1101,7 @@
     "date": "2026-06-23",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 1163
+    "count": 1000
   },
   {
     "date": "2026-06-23",
@@ -1179,7 +1179,7 @@
     "date": "2026-06-24",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 1270
+    "count": 1060
   },
   {
     "date": "2026-06-24",
@@ -1257,7 +1257,7 @@
     "date": "2026-06-25",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 2106
+    "count": 1756
   },
   {
     "date": "2026-06-25",
@@ -1335,7 +1335,7 @@
     "date": "2026-06-26",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 1498
+    "count": 1163
   },
   {
     "date": "2026-06-26",
@@ -1413,7 +1413,7 @@
     "date": "2026-06-27",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 1820
+    "count": 1436
   },
   {
     "date": "2026-06-27",
@@ -1491,7 +1491,7 @@
     "date": "2026-06-28",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 1211
+    "count": 825
   },
   {
     "date": "2026-06-28",
@@ -1569,7 +1569,7 @@
     "date": "2026-06-29",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 2329
+    "count": 1796
   },
   {
     "date": "2026-06-29",
@@ -1647,7 +1647,7 @@
     "date": "2026-06-30",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 2330
+    "count": 1628
   },
   {
     "date": "2026-06-30",
@@ -1725,7 +1725,7 @@
     "date": "2026-07-01",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 3034
+    "count": 2004
   },
   {
     "date": "2026-07-01",
@@ -1803,7 +1803,7 @@
     "date": "2026-07-02",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 3885
+    "count": 2570
   },
   {
     "date": "2026-07-02",
@@ -1881,7 +1881,7 @@
     "date": "2026-07-03",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 5030
+    "count": 2956
   },
   {
     "date": "2026-07-03",
@@ -1959,7 +1959,7 @@
     "date": "2026-07-04",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 221
+    "count": 3995
   },
   {
     "date": "2026-07-04",
@@ -2011,6 +2011,12 @@
   },
   {
     "date": "2026-07-05",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 2744
+  },
+  {
+    "date": "2026-07-05",
     "kab_name": "TOJO UNA-UNA",
     "survey_type": "se_umum",
     "count": 1664
@@ -2056,6 +2062,12 @@
     "kab_name": "POSO",
     "survey_type": "se_umum",
     "count": 3108
+  },
+  {
+    "date": "2026-07-06",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 3585
   },
   {
     "date": "2026-07-06",
@@ -2107,6 +2119,12 @@
   },
   {
     "date": "2026-07-07",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 4128
+  },
+  {
+    "date": "2026-07-07",
     "kab_name": "TOJO UNA-UNA",
     "survey_type": "se_umum",
     "count": 2401
@@ -2155,6 +2173,12 @@
   },
   {
     "date": "2026-07-08",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 4927
+  },
+  {
+    "date": "2026-07-08",
     "kab_name": "TOJO UNA-UNA",
     "survey_type": "se_umum",
     "count": 492
@@ -2164,5 +2188,11 @@
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
     "count": 1020
+  },
+  {
+    "date": "2026-07-09",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 1010
   }
 ]
