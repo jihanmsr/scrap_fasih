@@ -61,83 +61,119 @@ async def run():
                 break
                 
         if not token:
-            print("[WARNING] Anda belum login. Silakan login ke FASIH di browser Chrome yang baru saja terbuka, lalu jalankan ulang script ini!")
+            print("[WARNING] Anda belum login!")
+            print("=========================================================================")
+            print("  Silakan login ke web FASIH di jendela Chrome yang baru saja terbuka.")
+            print("  Skrip ini akan otomatis menunggu sampai Anda berhasil login...")
+            print("=========================================================================")
+            
+            # Wait until the URL changes to surveys or dashboard after login
+            try:
+                await page.wait_for_url("**/surveys**", timeout=120000) # wait up to 2 minutes
+                await asyncio.sleep(5)
+                # re-fetch cookies after login
+                cookies = await context.cookies()
+                for c in cookies:
+                    if c["name"] == "XSRF-TOKEN":
+                        from urllib.parse import unquote
+                        token = unquote(c["value"])
+                        break
+            except Exception as e:
+                print("[ERROR] Waktu login habis (2 menit) atau halaman ditutup. Silakan ulangi.")
+                await context.close()
+                return
+
+        if not token:
+            print("[ERROR] Gagal mendapatkan token setelah login. Menghentikan skrip.")
             await context.close()
             return
             
         print(f"[INFO] Token berhasil didapatkan! Mulai menyedot data...")
 
+        with open("/Users/jihanmaisaroh/scrap_fasih/region_map_sulteng_full.json", "r") as f:
+            region_map = json.load(f)
+            
+        kabupaten_list = region_map.get("kabupaten", {})
+        print(f"[INFO] Ditemukan {len(kabupaten_list)} Kabupaten/Kota untuk ditarik datanya.")
+
         all_results = []
         
-        for role_name, role_id in ROLES.items():
-            current_page = 0
+        for kab_code, kab_data in kabupaten_list.items():
+            kab_name = kab_data.get("kab_name")
+            kab_id = kab_data.get("kab_id")
+            
             print(f"\n======================================")
-            print(f"Menarik Data Role: {role_name}")
+            print(f"Menarik Data Kabupaten: {kab_name}")
             print(f"======================================")
             
-            while True:
-                print(f" -> Mengambil halaman {current_page}...")
-                payload = PAYLOAD_TEMPLATE.copy()
-                payload["surveyRoleId"] = role_id
-                payload["page"] = current_page
+            for role_name, role_id in ROLES.items():
+                current_page = 0
+                print(f" -> Role: {role_name}")
                 
-                res = None
-                try:
-                    res = await page.evaluate("""
-                        async ({url, payload, token}) => {
-                            try {
-                                const r = await fetch(url, {
-                                    method: "POST",
-                                    headers: { 
-                                        "Content-Type": "application/json", 
-                                        "X-XSRF-TOKEN": token,
-                                        "Accept": "application/json, text/plain, */*"
-                                    },
-                                    body: JSON.stringify(payload)
-                                });
-                                if (!r.ok) {
-                                    const text = await r.text();
-                                    return { _error: `HTTP ${r.status}: ${text}`, status: r.status };
+                while True:
+                    print(f"    -> Mengambil halaman {current_page}...")
+                    payload = PAYLOAD_TEMPLATE.copy()
+                    payload["surveyRoleId"] = role_id
+                    payload["page"] = current_page
+                    payload["region"]["region2Id"] = kab_id
+                    
+                    res = None
+                    try:
+                        res = await page.evaluate("""
+                            async ({url, payload, token}) => {
+                                try {
+                                    const r = await fetch(url, {
+                                        method: "POST",
+                                        headers: { 
+                                            "Content-Type": "application/json", 
+                                            "X-XSRF-TOKEN": token,
+                                            "Accept": "application/json, text/plain, */*"
+                                        },
+                                        body: JSON.stringify(payload)
+                                    });
+                                    if (!r.ok) {
+                                        const text = await r.text();
+                                        return { _error: `HTTP ${r.status}: ${text}`, status: r.status };
+                                    }
+                                    return await r.json();
+                                } catch (e) {
+                                    return { _error: e.toString(), status: 0 };
                                 }
-                                return await r.json();
-                            } catch (e) {
-                                return { _error: e.toString(), status: 0 };
                             }
-                        }
-                    """, {"url": DATATABLE_URL, "payload": payload, "token": token})
-                except Exception as e:
-                    print(f"[ERROR] Exception dari Python Playwright: {e}")
-                    res = {"_error": str(e), "status": 0}
-                
-                if not res or "_error" in res:
-                    err_msg = res.get("_error", "Unknown error")
-                    status = res.get("status", 0)
-                    print(f"[ERROR] Gagal mengambil halaman {current_page}: HTTP {status} - {err_msg[:100]}")
+                        """, {"url": DATATABLE_URL, "payload": payload, "token": token})
+                    except Exception as e:
+                        print(f"[ERROR] Exception dari Python Playwright: {e}")
+                        res = {"_error": str(e), "status": 0}
                     
-                    # Status 0 berarti masalah koneksi lokal/Chrome, 502/503/504 BPS Down. Semuanya kita RETRY.
-                    if status in [0, 502, 503, 504]:
-                        print("[INFO] Error koneksi / Server BPS sibuk. Menunggu 5 detik lalu mengulang halaman ini secara otomatis...")
-                        await asyncio.sleep(5)
-                        continue # Ulangi halaman yang sama
-                    else:
-                        print("[ERROR] Error ditolak (seperti 400 atau 401). Menghentikan.")
+                    if not res or "_error" in res:
+                        err_msg = res.get("_error", "Unknown error")
+                        status = res.get("status", 0)
+                        print(f"[ERROR] Gagal mengambil halaman {current_page}: HTTP {status} - {err_msg[:100]}")
+                        
+                        # Status 0 berarti masalah koneksi lokal/Chrome, 502/503/504 BPS Down. Semuanya kita RETRY.
+                        if status in [0, 502, 503, 504]:
+                            print("[INFO] Error koneksi / Server BPS sibuk. Menunggu 5 detik lalu mengulang halaman ini secara otomatis...")
+                            await asyncio.sleep(5)
+                            continue # Ulangi halaman yang sama
+                        else:
+                            print("[ERROR] Error ditolak (seperti 400 atau 401). Menghentikan.")
+                            break
+                        
+                    content = res.get("data", {}).get("content", [])
+                    if not content:
+                        print(f"    [INFO] Selesai di halaman {current_page}.")
                         break
-                    
-                content = res.get("data", {}).get("content", [])
-                if not content:
-                    print(f"[INFO] Role {role_name} selesai di halaman {current_page}.")
-                    break
-                    
-                for c in content:
-                    c["assigned_role"] = role_name
-                all_results.extend(content)
-                current_page += 1
-                await asyncio.sleep(1.0)
+                        
+                    for c in content:
+                        c["assigned_role"] = role_name
+                    all_results.extend(content)
+                    current_page += 1
+                    await asyncio.sleep(1.0)
             
-        csv_file = "/Users/jihanmaisaroh/scrap_fasih/fast_petugas_palu.csv"
+        csv_file = "/Users/jihanmaisaroh/scrap_fasih/fast_petugas_all.csv"
         with open(csv_file, mode='w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow(["Email", "Role", "Region Code", "Total Target", "OPEN", "DRAFT", "SUBMITTED BY Pencacah", "APPROVED BY Pengawas", "REJECTED BY Pengawas"])
+            writer.writerow(["Email", "Role", "Region Code", "Total Target", "OPEN", "DRAFT", "SUBMITTED BY Pencacah", "SUBMITTED RESPONDENT", "APPROVED BY Pengawas", "REJECTED BY Pengawas", "REVOKED BY Pengawas", "EDITED BY Pengawas", "EDITED BY Admin Kabupaten", "REJECTED BY Admin Kabupaten", "COMPLETED BY Admin Kabupaten"])
             
             for row in all_results:
                 email = row.get("email", "")
@@ -145,37 +181,59 @@ async def run():
                 for r_sum in row.get("regionSummary", []):
                     reg_code = r_sum.get("regionCode", "")
                     status_breakdown = r_sum.get("statusBreakdown", [])
-                    counts = {"OPEN": 0, "DRAFT": 0, "SUBMITTED BY PENCACAH": 0, "APPROVED BY PENGAWAS": 0, "REJECTED BY PENGAWAS": 0}
+                    
+                    counts = {
+                        "OPEN": 0, "DRAFT": 0, "SUBMITTED BY PENCACAH": 0, "SUBMITTED RESPONDENT": 0,
+                        "APPROVED BY PENGAWAS": 0, "REJECTED BY PENGAWAS": 0, "REVOKED BY PENGAWAS": 0,
+                        "EDITED BY PENGAWAS": 0, "EDITED BY ADMIN KABUPATEN": 0,
+                        "REJECTED BY ADMIN KABUPATEN": 0, "COMPLETED BY ADMIN KABUPATEN": 0
+                    }
                     total = r_sum.get("total", 0)
                     for st in status_breakdown:
                         st_name = st.get("status", "").upper()
-                        counts[st_name] = st.get("count", 0)
-                    writer.writerow([email, role, reg_code, total, counts.get("OPEN",0), counts.get("DRAFT",0), counts.get("SUBMITTED BY PENCACAH",0), counts.get("APPROVED BY PENGAWAS",0), counts.get("REJECTED BY PENGAWAS",0)])
+                        if st_name in counts:
+                            counts[st_name] = st.get("count", 0)
+                        else:
+                            counts[st_name] = st.get("count", 0) # just in case there are others
+                            
+                    writer.writerow([
+                        email, role, reg_code, total,
+                        counts.get("OPEN",0), counts.get("DRAFT",0),
+                        counts.get("SUBMITTED BY PENCACAH",0), counts.get("SUBMITTED RESPONDENT",0),
+                        counts.get("APPROVED BY PENGAWAS",0), counts.get("REJECTED BY PENGAWAS",0),
+                        counts.get("REVOKED BY PENGAWAS",0), counts.get("EDITED BY PENGAWAS",0),
+                        counts.get("EDITED BY ADMIN KABUPATEN",0), counts.get("REJECTED BY ADMIN KABUPATEN",0),
+                        counts.get("COMPLETED BY ADMIN KABUPATEN",0)
+                    ])
                     
         print(f"\n[SUCCESS] Berhasil! Data CSV tersimpan di {csv_file}")
         
-        petugas_map = {}
+        petugas_map = {
+            "Pencacah": {},
+            "Pengawas": {}
+        }
         for row in all_results:
             email = row.get("email", "").strip().lower()
-            if not email: continue
+            role = row.get("assigned_role", "")
+            if not email or not role: continue
             
-            if email not in petugas_map:
-                petugas_map[email] = {
+            if email not in petugas_map[role]:
+                petugas_map[role][email] = {
                     "target": 0, "submitted_pencacah": 0, "submitted_respondent": 0,
                     "approved": 0, "rejected": 0, "draft": 0, "open": 0
                 }
                 
             for r_sum in row.get("regionSummary", []):
-                petugas_map[email]["target"] += r_sum.get("total", 0)
+                petugas_map[role][email]["target"] += r_sum.get("total", 0)
                 for st in r_sum.get("statusBreakdown", []):
                     s_name = st.get("status", "").upper()
                     s_count = st.get("count", 0)
-                    if s_name == "OPEN": petugas_map[email]["open"] += s_count
-                    elif s_name == "DRAFT": petugas_map[email]["draft"] += s_count
-                    elif s_name == "SUBMITTED BY PENCACAH": petugas_map[email]["submitted_pencacah"] += s_count
-                    elif s_name == "SUBMITTED RESPONDENT": petugas_map[email]["submitted_respondent"] += s_count
-                    elif "APPROVED" in s_name: petugas_map[email]["approved"] += s_count
-                    elif "REJECTED" in s_name: petugas_map[email]["rejected"] += s_count
+                    if s_name == "OPEN": petugas_map[role][email]["open"] += s_count
+                    elif s_name == "DRAFT": petugas_map[role][email]["draft"] += s_count
+                    elif s_name == "SUBMITTED BY PENCACAH": petugas_map[role][email]["submitted_pencacah"] += s_count
+                    elif s_name == "SUBMITTED RESPONDENT": petugas_map[role][email]["submitted_respondent"] += s_count
+                    elif "APPROVED" in s_name: petugas_map[role][email]["approved"] += s_count
+                    elif "REJECTED" in s_name: petugas_map[role][email]["rejected"] += s_count
 
         js_file = "/Users/jihanmaisaroh/scrap_fasih/fast_petugas_progress.js"
         with open(js_file, "w") as f:

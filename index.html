@@ -475,6 +475,11 @@
                         </svg>
                         Rekapitulasi Capaian per Petugas
                     </h3>
+                    
+                    <div class="d-flex gap-2 mb-3" style="display: none !important;">
+                        <button class="btn-tab active" id="tab-pencacah" onclick="window.setPetugasTab('Pencacah')" style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.8rem;">Pencacah</button>
+                        <button class="btn-tab" id="tab-pengawas" onclick="window.setPetugasTab('Pengawas')" style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.8rem;">Pengawas</button>
+                    </div>
                     <div
                         style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
                         <p id="petugas-summary-desc"
@@ -2220,7 +2225,8 @@
     <script src="mysql_data.js"></script>
     <script src="new_businesses_data.js"></script>
     <script src="daily_summary.js"></script>
-    <script src="petugas_progress.js"></script>    <script src="fast_petugas_progress.js"></script>
+    <script src="petugas_progress.js"></script>    <script src="petugas_phones.js"></script>
+    <script src="fast_petugas_progress.js"></script>
     <script src="app.js?v=7" defer></script>
 
     <script>

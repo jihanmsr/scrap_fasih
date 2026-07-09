@@ -35,45 +35,39 @@ def classify_tambahan_simple(code_id, name):
     return "Usaha Baru", True
 
 def get_real_tambahan():
+    import sqlite3
+    import re
     import os
-    script_dir_local = os.path.dirname(os.path.abspath(__file__))
-    files = glob.glob(os.path.join(script_dir_local, "granular_assignments_se_umum_*.json"))
     kab_counts = {}
     kec_counts = {}
-    for fpath in files:
-        try:
-            with open(fpath, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            comp = data.get("compressed_data")
-            if comp:
-                raw = json.loads(gzip.decompress(base64.b64decode(comp)).decode('utf-8'))
-                targets = raw.get("targets", [])
-                regions = raw.get("regions", [])
-                for t in targets:
-                    code_id = t[1]
-                    comp_name = t[2]
-                    reg_idx = t[5] if len(t) > 5 else 0
-                    if is_tambahan(code_id):
-                        jenis_lbl, is_usaha = classify_tambahan_simple(code_id, comp_name)
-                        reg_info = regions[reg_idx] if reg_idx < len(regions) else []
-                        if len(reg_info) > 3:
-                            kab_raw = reg_info[1]
-                            kec_raw = reg_info[3].upper().strip()
-                            kab_clean = re.sub(r'\[\d+\]', '', kab_raw).replace('[','').replace(']','').strip()
-                            kab_clean = " ".join([w for w in kab_clean.split() if not (w.isdigit() or w.startswith("72"))]).upper().strip()
-                            
-                            if kab_clean not in kab_counts:
-                                kab_counts[kab_clean] = {"usaha": 0, "rumah": 0}
-                            if is_usaha: kab_counts[kab_clean]["usaha"] += 1
-                            else: kab_counts[kab_clean]["rumah"] += 1
-                            
-                            kec_key = f"{kab_clean}_{kec_raw}"
-                            if kec_key not in kec_counts:
-                                kec_counts[kec_key] = {"usaha": 0, "rumah": 0}
-                            if is_usaha: kec_counts[kec_key]["usaha"] += 1
-                            else: kec_counts[kec_key]["rumah"] += 1
-        except Exception as e:
-            pass
+    db_path = '/Users/jihanmaisaroh/scrap_fasih/granular_data.db'
+    if not os.path.exists(db_path): return kab_counts, kec_counts
+    try:
+        conn = sqlite3.connect(db_path)
+        c = conn.cursor()
+        c.execute("SELECT kabupaten, kecamatan, is_usaha FROM granular_records WHERE is_tambahan=1")
+        rows = c.fetchall()
+        for row in rows:
+            kab_raw = row[0]
+            kec_raw = row[1].upper().strip()
+            is_usaha = row[2]
+            
+            kab_clean = re.sub(r'\[\d+\]', '', kab_raw).replace('[','').replace(']','').strip()
+            kab_clean = " ".join([w for w in kab_clean.split() if not (w.isdigit() or w.startswith("72"))]).upper().strip()
+            
+            if kab_clean not in kab_counts:
+                kab_counts[kab_clean] = {"usaha": 0, "rumah": 0}
+            if is_usaha: kab_counts[kab_clean]["usaha"] += 1
+            else: kab_counts[kab_clean]["rumah"] += 1
+            
+            kec_key = f"{kab_clean}_{kec_raw}"
+            if kec_key not in kec_counts:
+                kec_counts[kec_key] = {"usaha": 0, "rumah": 0}
+            if is_usaha: kec_counts[kec_key]["usaha"] += 1
+            else: kec_counts[kec_key]["rumah"] += 1
+        conn.close()
+    except Exception as e:
+        print(f"DB Error: {e}")
     return kab_counts, kec_counts
 
 import os
@@ -713,49 +707,23 @@ async def run_download_and_update():
         prov_se_ub_new_rumah = sum(k.get("new_rumah_overall", 0) for k in new_se_ub)
         
         # Injeksi Delta dari Excel
+        # --- AUTOMATIC DELTA CALCULATION ---
         try:
-            import pandas as pd
-            import os
-            excel_path = "Progres Sulteng Fasih SM SE2026.xlsx"
-            if os.path.exists(excel_path):
-                xls = pd.ExcelFile(excel_path)
-                valid_sheets = [s for s in xls.sheet_names if 'Juli' in s or 'Agustus' in s or 'Juni' in s]
-                if valid_sheets:
-                    last_sheet = valid_sheets[-1]
-                    df_last = pd.read_excel(excel_path, sheet_name=last_sheet)
-                    last_pct_map = {}
-                    for _, row in df_last.iterrows():
-                        if pd.notna(row.get('Wilayah')):
-                            try:
-                                wcode = str(int(float(row['Wilayah'])))
-                                pct = float(row.get('Persentase', 0))
-                                last_pct_map[wcode] = pct
-                            except Exception:
-                                pass
-                    
-                    KAB_MAPPING = {
-                        "7201": "[01] BANGGAI KEPULAUAN", "7202": "[02] BANGGAI", "7203": "[03] MOROWALI",
-                        "7204": "[04] POSO", "7205": "[05] DONGGALA", "7206": "[06] TOLI-TOLI",
-                        "7207": "[07] BUOL", "7208": "[08] PARIGI MOUTONG", "7209": "[09] TOJO UNA-UNA",
-                        "7210": "[10] SIGI", "7211": "[11] BANGGAI LAUT", "7212": "[12] MOROWALI UTARA",
-                        "7271": "[71] PALU"
-                    }
-                    def apply_delta(survey_data):
-                        for kab in survey_data:
-                            kab_name = kab.get("kabupaten")
-                            code = next((k for k, v in KAB_MAPPING.items() if v == kab_name), None)
-                            pct_now = float(kab.get("persentase", 0))
-                            if code and code in last_pct_map:
-                                delta = pct_now - last_pct_map[code]
-                                kab["delta_persen"] = round(delta, 2)
-                            else:
-                                kab["delta_persen"] = 0.0
-                    
-                    apply_delta(new_se_umum)
-                    apply_delta(new_se_ub)
-                    print(f" ✅ Berhasil menghitung delta berdasarkan sheet Excel terakhir ({last_sheet}).")
+            def apply_auto_delta(survey_data):
+                for kab in survey_data:
+                    today_comp = kab.get("today_completed", 0)
+                    total_prelist = kab.get("total_prelist", 0)
+                    if total_prelist > 0:
+                        delta = (today_comp / total_prelist) * 100
+                        kab["delta_persen"] = round(delta, 2)
+                    else:
+                        kab["delta_persen"] = 0.0
+            
+            apply_auto_delta(new_se_umum)
+            apply_auto_delta(new_se_ub)
+            print(" ✅ Berhasil menghitung delta harian secara otomatis dari data FASIH.")
         except Exception as e:
-            print(f" [WARNING] Gagal menghitung delta dari Excel: {e}")
+            print(f" [WARNING] Gagal menghitung delta otomatis: {e}")
 
         # --- INJECT REAL TAMBAHAN FROM GRANULAR DB ---
         kab_counts, kec_counts = get_real_tambahan()
