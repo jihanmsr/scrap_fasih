@@ -7523,39 +7523,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (useGranular) {
             data.forEach(r => {
-                let ukey = (r.petugas_username !== '-' && r.petugas_username) ? r.petugas_username.trim().toLowerCase() : null;
+                // Proses Pencacah
+                let ukeyPencacah = (r.petugas_username !== '-' && r.petugas_username) ? r.petugas_username.trim().toLowerCase() : null;
+                let displayPencacah = (r.petugas_fullname !== '-' && r.petugas_fullname) ? r.petugas_fullname : ukeyPencacah;
                 
-                let displayName = (r.petugas_fullname !== '-' && r.petugas_fullname) ? r.petugas_fullname : ukey;
-                if (!ukey) {
+                if (!ukeyPencacah) {
                     const isCompleted = r.status !== 'OPEN' && r.status !== 'DRAFT';
-                    displayName = isCompleted ? 'CAWI / Mandiri (Tanpa Petugas)' : 'Belum Ada Petugas';
-                    ukey = displayName; // use display name as fallback key
+                    displayPencacah = isCompleted ? 'CAWI / Mandiri (Tanpa Petugas)' : 'Belum Ada Petugas';
+                    ukeyPencacah = displayPencacah;
                 } else {
-                    // Resolve nice name for the email
-                    if (mitraMap[ukey]) {
-                        displayName = mitraMap[ukey];
+                    if (mitraMap[ukeyPencacah]) {
+                        displayPencacah = mitraMap[ukeyPencacah];
                     } else if (window.userMap) {
-                        let mapped = window.userMap[ukey] || window.userMap[ukey.split('@')[0]];
-                        if (mapped) displayName = mapped;
+                        let mapped = window.userMap[ukeyPencacah] || window.userMap[ukeyPencacah.split('@')[0]];
+                        if (mapped) displayPencacah = mapped;
                     }
                 }
  
-                if (!petugasMap[ukey]) {
-                    petugasMap[ukey] = { name: displayName, email: r.petugas_username || '-', emails: new Set(), total: 0, selesai: 0, belum: 0 };
+                if (!petugasMap[ukeyPencacah]) {
+                    petugasMap[ukeyPencacah] = { name: displayPencacah, email: r.petugas_username || '-', emails: new Set(), total: 0, selesai: 0, belum: 0 };
                     if (r.petugas_username && r.petugas_username !== '-') {
-                        petugasMap[ukey].emails.add(r.petugas_username.trim().toLowerCase());
+                        petugasMap[ukeyPencacah].emails.add(r.petugas_username.trim().toLowerCase());
                     }
                 }
  
-                petugasMap[ukey].total += 1;
+                petugasMap[ukeyPencacah].total += 1;
                 totalAll += 1;
  
                 if (r.status === 'OPEN' || r.status === 'DRAFT') {
-                    petugasMap[ukey].belum += 1;
+                    petugasMap[ukeyPencacah].belum += 1;
                     belumAll += 1;
                 } else {
-                    petugasMap[ukey].selesai += 1;
+                    petugasMap[ukeyPencacah].selesai += 1;
                     selesaiAll += 1;
+                }
+
+                // Proses Pengawas (agar tidak dobel hitung di totalAll, update hanya untuk map Pengawas)
+                let ukeyPengawas = (r.pengawas_username !== '-' && r.pengawas_username) ? r.pengawas_username.trim().toLowerCase() : null;
+                if (ukeyPengawas) {
+                    let displayPengawas = (r.pengawas_fullname !== '-' && r.pengawas_fullname) ? r.pengawas_fullname : ukeyPengawas;
+                    if (mitraMap[ukeyPengawas]) {
+                        displayPengawas = mitraMap[ukeyPengawas];
+                    } else if (window.userMap) {
+                        let mapped = window.userMap[ukeyPengawas] || window.userMap[ukeyPengawas.split('@')[0]];
+                        if (mapped) displayPengawas = mapped;
+                    }
+
+                    if (!petugasMap[ukeyPengawas]) {
+                        petugasMap[ukeyPengawas] = { name: displayPengawas, email: r.pengawas_username, emails: new Set([ukeyPengawas]), total: 0, selesai: 0, belum: 0 };
+                    }
+
+                    petugasMap[ukeyPengawas].total += 1;
+                    if (r.status === 'OPEN' || r.status === 'DRAFT') {
+                        petugasMap[ukeyPengawas].belum += 1;
+                    } else {
+                        petugasMap[ukeyPengawas].selesai += 1;
+                    }
                 }
             });
         } else {
@@ -7605,62 +7628,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         // --- SINKRONISASI DENGAN PETUGAS_PROGRESS_MAP (DATA FAST TERBARU) ---
-        // KITA SELALU GUNAKAN INI JIKA ADA, KARENA USER MEMINTA DATA TARGET DARI FAST!
-        if (window.PETUGAS_PROGRESS_MAP) {
-            // Pertama, update data yang sudah ada di MySQL/Granular
-            Object.values(petugasMap).forEach(p => {
-                let pTotal = 0, pSelesai = 0, pBelum = 0;
-                let foundAny = false;
-                if (p.emails) {
-                    p.emails.forEach(email => {
-                        const pMapData = window.PETUGAS_PROGRESS_MAP[email];
-                        if (pMapData) {
-                            foundAny = true;
-                            pTotal += pMapData.target || 0;
-                            pSelesai += (pMapData.submitted_pencacah || 0) + (pMapData.submitted_respondent || 0) + (pMapData.approved || 0);
-                            pBelum += (pMapData.open || 0) + (pMapData.draft || 0);
-                            pMapData._used = true; // Tandai sudah dipakai
-                        }
-                    });
-                }
-                if (foundAny) {
-                    // Paksa pakai data FAST karena ini yang paling valid menurut user
-                    p.total = pTotal;
-                    p.selesai = pSelesai;
-                    p.belum = pBelum;
-                }
-            });
-
-            // Kedua, tambahkan petugas dari FAST yang kebetulan belum ada di MySQL/Granular
-            for (const [email, pMapData] of Object.entries(window.PETUGAS_PROGRESS_MAP)) {
-                if (!pMapData._used) {
-                    const pSelesai = (pMapData.submitted_pencacah || 0) + (pMapData.submitted_respondent || 0) + (pMapData.approved || 0);
-                    const pBelum = (pMapData.open || 0) + (pMapData.draft || 0);
-                    
-                    petugasMap[email] = {
-                        name: email, // Jika tidak ada nama, gunakan email sebagai nama
-                        email: email,
-                        emails: new Set([email]),
-                        total: pMapData.target || 0,
-                        selesai: pSelesai,
-                        belum: pBelum
-                    };
-                }
-            }
+        // --- PISAHKAN LOGIKA KARTU ATAS DAN TABEL BAWAH ---
+        // 1. KARTU ATAS: Gunakan murni perhitungan Granular (totalAll, selesaiAll, belumAll)
+        if (Array.isArray(data) && data.length > 0) {
+            const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;
+            const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
+            document.getElementById('petugas-stat-total').textContent = totalAll.toLocaleString('id-ID');
+            document.getElementById('petugas-stat-selesai').innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
+            document.getElementById('petugas-stat-belum').innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
         }
 
-        // HAPUS perhitungan ulang totalAll dari petugasMap
-        // Kita biarkan totalAll, selesaiAll, dan belumAll memakai perhitungan asli (Granular)
-        // karena itu menghitung "jumlah usaha" (183.760), bukan "beban kerja petugas" yang double-counted.
-        
-        // Update DOM untuk kartu atas (Total Usaha, bukan Total Beban Petugas)
-        const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;
-        const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
-        document.getElementById('petugas-stat-total').textContent = totalAll.toLocaleString('id-ID');
-        document.getElementById('petugas-stat-selesai').innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
-        document.getElementById('petugas-stat-belum').innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+        // 2. TABEL PETUGAS: Gunakan murni data dari CSV FAST (window.PETUGAS_PROGRESS_MAP)
+        let arr = [];
+        if (window.PETUGAS_PROGRESS_MAP) {
+            for (const [email, pMapData] of Object.entries(window.PETUGAS_PROGRESS_MAP)) {
+                let displayName = email;
+                if (mitraMap && mitraMap[email]) {
+                    displayName = mitraMap[email];
+                } else if (window.userMap) {
+                    let mapped = window.userMap[email] || window.userMap[email.split('@')[0]];
+                    if (mapped) displayName = mapped;
+                }
 
-        let arr = Object.values(petugasMap);
+                const pTotal = pMapData.target || 0;
+                const pBelum = (pMapData.open || 0) + (pMapData.draft || 0);
+                const pSelesai = pTotal - pBelum; // "selain open draft itu jd submit"
+
+                arr.push({
+                    name: displayName,
+                    email: email,
+                    total: pTotal,
+                    selesai: pSelesai,
+                    belum: pBelum
+                });
+            }
+        } else {
+            arr = Object.values(petugasMap);
+        }
 
         // Jangan tampilkan CAWI / Mandiri atau Belum Ada Petugas di dalam daftar baris agar tidak terlihat menumpuk
         arr = arr.filter(p => p.name !== 'Belum Ada Petugas' && p.name !== 'CAWI / Mandiri (Tanpa Petugas)');
