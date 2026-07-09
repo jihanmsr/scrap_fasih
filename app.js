@@ -7604,10 +7604,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
 
-        // --- SINKRONISASI DENGAN PETUGAS_PROGRESS_MAP (DATA GRANULAR TERBARU) ---
-        // ONLY sync if we fell back to MySQL data (!useGranular). If we used granular data, 
-        // the counts are already perfectly accurate for the selected region.
-        if (!useGranular && window.PETUGAS_PROGRESS_MAP) {
+        // --- SINKRONISASI DENGAN PETUGAS_PROGRESS_MAP (DATA FAST TERBARU) ---
+        // KITA SELALU GUNAKAN INI JIKA ADA, KARENA USER MEMINTA DATA TARGET DARI FAST!
+        if (window.PETUGAS_PROGRESS_MAP) {
+            // Pertama, update data yang sudah ada di MySQL/Granular
             Object.values(petugasMap).forEach(p => {
                 let pTotal = 0, pSelesai = 0, pBelum = 0;
                 let foundAny = false;
@@ -7619,36 +7619,46 @@ document.addEventListener('DOMContentLoaded', () => {
                             pTotal += pMapData.target || 0;
                             pSelesai += (pMapData.submitted_pencacah || 0) + (pMapData.submitted_respondent || 0) + (pMapData.approved || 0);
                             pBelum += (pMapData.open || 0) + (pMapData.draft || 0);
+                            pMapData._used = true; // Tandai sudah dipakai
                         }
                     });
                 }
                 if (foundAny) {
-                    // Hanya override jika hasil sinkronisasi menunjukkan progres yang LEBIH BESAR
-                    // Ini mencegah downgrade data jika file PETUGAS_PROGRESS_MAP ternyata yang outdated (seperti Poso)
-                    if (pSelesai > p.selesai) {
-                        p.total = Math.max(p.total, pTotal);
-                        p.selesai = pSelesai;
-                        p.belum = pBelum;
-                    }
+                    // Paksa pakai data FAST karena ini yang paling valid menurut user
+                    p.total = pTotal;
+                    p.selesai = pSelesai;
+                    p.belum = pBelum;
                 }
             });
+
+            // Kedua, tambahkan petugas dari FAST yang kebetulan belum ada di MySQL/Granular
+            for (const [email, pMapData] of Object.entries(window.PETUGAS_PROGRESS_MAP)) {
+                if (!pMapData._used) {
+                    const pSelesai = (pMapData.submitted_pencacah || 0) + (pMapData.submitted_respondent || 0) + (pMapData.approved || 0);
+                    const pBelum = (pMapData.open || 0) + (pMapData.draft || 0);
+                    
+                    petugasMap[email] = {
+                        name: email, // Jika tidak ada nama, gunakan email sebagai nama
+                        email: email,
+                        emails: new Set([email]),
+                        total: pMapData.target || 0,
+                        selesai: pSelesai,
+                        belum: pBelum
+                    };
+                }
+            }
         }
 
-        // Re-calculate totals after possible sync
-        totalAll = 0; selesaiAll = 0; belumAll = 0;
-        Object.values(petugasMap).forEach(p => {
-            totalAll += p.total;
-            selesaiAll += p.selesai;
-            belumAll += p.belum;
-        });
-
-        if (Array.isArray(data) && data.length > 0) {
-            const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;
-            const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
-            document.getElementById('petugas-stat-total').textContent = totalAll.toLocaleString('id-ID');
-            document.getElementById('petugas-stat-selesai').innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
-            document.getElementById('petugas-stat-belum').innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
-        }
+        // HAPUS perhitungan ulang totalAll dari petugasMap
+        // Kita biarkan totalAll, selesaiAll, dan belumAll memakai perhitungan asli (Granular)
+        // karena itu menghitung "jumlah usaha" (183.760), bukan "beban kerja petugas" yang double-counted.
+        
+        // Update DOM untuk kartu atas (Total Usaha, bukan Total Beban Petugas)
+        const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;
+        const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
+        document.getElementById('petugas-stat-total').textContent = totalAll.toLocaleString('id-ID');
+        document.getElementById('petugas-stat-selesai').innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
+        document.getElementById('petugas-stat-belum').innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
 
         let arr = Object.values(petugasMap);
 
@@ -7658,7 +7668,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const searchInput = document.getElementById('petugas-summary-search-input');
         if (searchInput && searchInput.value.trim()) {
             const term = searchInput.value.toLowerCase().trim();
-            arr = arr.filter(p => p.name.toLowerCase().includes(term));
+            arr = arr.filter(p => p.name.toLowerCase().includes(term) || (p.email && p.email.toLowerCase().includes(term)));
         }
 
         arr.sort((a, b) => {
