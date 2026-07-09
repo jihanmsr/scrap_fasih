@@ -1639,16 +1639,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        // Recalculate exactly from DAILY_SUMMARY for accurate daily counts
-        if (window.DAILY_SUMMARY && window.DAILY_SUMMARY.length > 0) {
-            today = 0; yesterday = 0; twoDaysAgo = 0;
-            window.DAILY_SUMMARY.forEach(row => {
-                if (row.tanggal === todayDateStr) today += (row.total_submitted || 0);
-                if (row.tanggal === yesterdayDateStr) yesterday += (row.total_submitted || 0);
-                if (row.tanggal === twoDaysDateStr) twoDaysAgo += (row.total_submitted || 0);
-            });
-        }
-
+        // Removed: Overwriting today/yesterday/twoDaysAgo from DAILY_SUMMARY
+        // IPAS_DATA already contains the live delta calculated by the python script
         updateDailyStatCard(today, todayBreakdown, `${surveyType}-stat-today`, `${surveyType}-stat-today-pct`, 'SUBMIT HARI INI', false);
         updateDailyStatCard(yesterday, yesterdayBreakdown, `${surveyType}-stat-yesterday`, `${surveyType}-stat-yesterday-pct`, 'SUBMIT KEMARIN', false);
         updateDailyStatCard(twoDaysAgo, twoDaysAgoBreakdown, `${surveyType}-stat-2days`, `${surveyType}-stat-2days-pct`, 'SUBMIT 2 HARI LALU', false);

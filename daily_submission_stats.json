@@ -459,7 +459,7 @@
     "date": "2026-06-15",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 111
+    "count": 90
   },
   {
     "date": "2026-06-15",
@@ -537,7 +537,7 @@
     "date": "2026-06-16",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 280
+    "count": 256
   },
   {
     "date": "2026-06-16",
@@ -615,7 +615,7 @@
     "date": "2026-06-17",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 520
+    "count": 474
   },
   {
     "date": "2026-06-17",
@@ -693,7 +693,7 @@
     "date": "2026-06-18",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 532
+    "count": 478
   },
   {
     "date": "2026-06-18",
@@ -771,7 +771,7 @@
     "date": "2026-06-19",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 515
+    "count": 468
   },
   {
     "date": "2026-06-19",
@@ -849,7 +849,7 @@
     "date": "2026-06-20",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 800
+    "count": 711
   },
   {
     "date": "2026-06-20",
@@ -927,7 +927,7 @@
     "date": "2026-06-21",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 739
+    "count": 668
   },
   {
     "date": "2026-06-21",
@@ -1005,7 +1005,7 @@
     "date": "2026-06-22",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 738
+    "count": 672
   },
   {
     "date": "2026-06-22",
@@ -1083,7 +1083,7 @@
     "date": "2026-06-23",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1357
+    "count": 1235
   },
   {
     "date": "2026-06-23",
@@ -1161,7 +1161,7 @@
     "date": "2026-06-24",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1319
+    "count": 1172
   },
   {
     "date": "2026-06-24",
@@ -1239,7 +1239,7 @@
     "date": "2026-06-25",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 2021
+    "count": 1752
   },
   {
     "date": "2026-06-25",
@@ -1317,7 +1317,7 @@
     "date": "2026-06-26",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1707
+    "count": 1490
   },
   {
     "date": "2026-06-26",
@@ -1395,7 +1395,7 @@
     "date": "2026-06-27",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1821
+    "count": 1568
   },
   {
     "date": "2026-06-27",
@@ -1473,7 +1473,7 @@
     "date": "2026-06-28",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1766
+    "count": 1536
   },
   {
     "date": "2026-06-28",
@@ -1551,7 +1551,7 @@
     "date": "2026-06-29",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 2131
+    "count": 1863
   },
   {
     "date": "2026-06-29",
@@ -1629,7 +1629,7 @@
     "date": "2026-06-30",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 2805
+    "count": 2330
   },
   {
     "date": "2026-06-30",
@@ -1707,7 +1707,7 @@
     "date": "2026-07-01",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 2100
+    "count": 1633
   },
   {
     "date": "2026-07-01",
@@ -1785,7 +1785,7 @@
     "date": "2026-07-02",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 2684
+    "count": 1905
   },
   {
     "date": "2026-07-02",
@@ -1863,7 +1863,7 @@
     "date": "2026-07-03",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 3832
+    "count": 2627
   },
   {
     "date": "2026-07-03",
@@ -1941,7 +1941,7 @@
     "date": "2026-07-04",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 289
+    "count": 3434
   },
   {
     "date": "2026-07-04",
@@ -1999,6 +1999,12 @@
   },
   {
     "date": "2026-07-05",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 2813
+  },
+  {
+    "date": "2026-07-05",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
     "count": 5361
@@ -2050,6 +2056,12 @@
     "kab_name": "MOROWALI",
     "survey_type": "se_umum",
     "count": 1075
+  },
+  {
+    "date": "2026-07-06",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 3009
   },
   {
     "date": "2026-07-06",
@@ -2107,6 +2119,12 @@
   },
   {
     "date": "2026-07-07",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 4123
+  },
+  {
+    "date": "2026-07-07",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
     "count": 7014
@@ -2161,6 +2179,12 @@
   },
   {
     "date": "2026-07-08",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 4835
+  },
+  {
+    "date": "2026-07-08",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
     "count": 1738
@@ -2188,6 +2212,12 @@
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
     "count": 1020
+  },
+  {
+    "date": "2026-07-09",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 1346
   },
   {
     "date": "2026-07-09",
