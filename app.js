@@ -6037,7 +6037,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Dynamically reload assign_data.js
             await new Promise((resolve) => {
                 const script = document.createElement('script');
-                script.src = getScriptUrl('assign_data.js');
+                script.src = getScriptUrl('fast_master_assign_data.js');
                 script.onload = () => resolve();
                 script.onerror = () => resolve();
                 document.head.appendChild(script);
