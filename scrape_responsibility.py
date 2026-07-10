@@ -28,8 +28,8 @@ PAYLOAD_TEMPLATE = {
 }
 
 ROLES = {
-    "Pencacah": "93bcf446-c4c1-4462-8ed0-4b0f7ae89e52",
-    "Pengawas": "6d7d919a-45e5-4779-bb87-2905b49fd31a"
+    "Pencacah": "6d7d919a-45e5-4779-bb87-2905b49fd31a",
+    "Pengawas": "93bcf446-c4c1-4462-8ed0-4b0f7ae89e52"
 }
 
 async def run():
@@ -220,7 +220,9 @@ async def run():
             if email not in petugas_map[role]:
                 petugas_map[role][email] = {
                     "target": 0, "submitted_pencacah": 0, "submitted_respondent": 0,
-                    "approved": 0, "rejected": 0, "draft": 0, "open": 0
+                    "approved": 0, "rejected": 0, "draft": 0, "open": 0,
+                    "revoked": 0, "edited_pengawas": 0, "edited_admin": 0,
+                    "completed_admin": 0
                 }
                 
             for r_sum in row.get("regionSummary", []):
@@ -233,7 +235,12 @@ async def run():
                     elif s_name == "SUBMITTED BY PENCACAH": petugas_map[role][email]["submitted_pencacah"] += s_count
                     elif s_name == "SUBMITTED RESPONDENT": petugas_map[role][email]["submitted_respondent"] += s_count
                     elif "APPROVED" in s_name: petugas_map[role][email]["approved"] += s_count
+                    elif "REJECTED BY ADMIN" in s_name: petugas_map[role][email]["rejected"] += s_count
                     elif "REJECTED" in s_name: petugas_map[role][email]["rejected"] += s_count
+                    elif "REVOKED" in s_name: petugas_map[role][email]["revoked"] += s_count
+                    elif "EDITED BY PENGAWAS" in s_name: petugas_map[role][email]["edited_pengawas"] += s_count
+                    elif "EDITED BY ADMIN" in s_name: petugas_map[role][email]["edited_admin"] += s_count
+                    elif "COMPLETED BY ADMIN" in s_name: petugas_map[role][email]["completed_admin"] += s_count
 
         js_file = "/Users/jihanmaisaroh/scrap_fasih/fast_petugas_progress.js"
         with open(js_file, "w") as f:

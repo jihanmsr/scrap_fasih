@@ -545,6 +545,22 @@
                             </tbody>
                         </table>
                     </div>
+                    
+                    <!-- Pagination Petugas Summary -->
+                    <div id="petugas-summary-pagination"
+                        style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; flex-wrap: wrap; gap: 0.75rem; padding: 0.25rem 0.5rem;">
+                        <div style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;"
+                            id="petugas-summary-pagination-info">Menampilkan 0 - 0 dari 0 Petugas</div>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <select id="petugas-summary-per-page" onchange="window.changePetugasSummaryPerPage()" style="padding: 0.25rem 0.5rem; border-radius: 4px; border: 1px solid var(--border); font-size: 0.85rem; cursor: pointer; outline: none; background: white;">
+                                <option value="10">10 baris</option>
+                                <option value="25" selected>25 baris</option>
+                                <option value="50">50 baris</option>
+                                <option value="100">100 baris</option>
+                            </select>
+                            <div style="display: flex; gap: 0.35rem; align-items: center;" id="petugas-summary-pagination-buttons"></div>
+                        </div>
+                    </div>
 
                     <!-- Desa Table Container -->
                     <div id="desa-summary-table-container" class="ipas-table-wrapper" style="display: none; max-height: 400px; overflow-y: auto;">

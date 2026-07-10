@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Pagination defaults
+    window.petugasSummaryCurrentPage = window.petugasSummaryCurrentPage || 1;
+    window.petugasSummaryPerPage = window.petugasSummaryPerPage || 25;
+    
+    window.changePetugasSummaryPerPage = function() {
+        const select = document.getElementById('petugas-summary-per-page');
+        if (select) {
+            window.petugasSummaryPerPage = parseInt(select.value) || 25;
+            window.petugasSummaryCurrentPage = 1;
+            if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered);
+        }
+    };
+
+    window.changePetugasSummaryPage = function(page) {
+        window.petugasSummaryCurrentPage = page;
+        if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered);
+    };
+
     // Sanitize localStorage active_assign_subtab to avoid loading UB data by default
     const initialSubtab = localStorage.getItem('active_assign_subtab');
     if (initialSubtab === 'ub' || initialSubtab === 'se_ub') {
@@ -3606,7 +3624,24 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        
+        // Apply Sort Logic
+        if (window.slsSort && window.slsSort.column) {
+            filtered.sort((a, b) => {
+                let valA = a[window.slsSort.column] || '';
+                let valB = b[window.slsSort.column] || '';
+                if (typeof valA === 'string') valA = valA.toLowerCase();
+                if (typeof valB === 'string') valB = valB.toLowerCase();
+                
+                let cmp = 0;
+                if (valA < valB) cmp = -1;
+                if (valA > valB) cmp = 1;
+                return window.slsSort.order === 'asc' ? cmp : -cmp;
+            });
+        }
+        
         // 5. Pagination logic
+
         const totalFiltered = filtered.length;
         const maxPage = Math.ceil(totalFiltered / SLS_ITEMS_PER_PAGE);
         if (window.slsCurrentPage > maxPage) window.slsCurrentPage = maxPage;
@@ -7492,7 +7527,7 @@ document.addEventListener('DOMContentLoaded', () => {
             arr.forEach((d, i) => {
                 const pct = d.total > 0 ? ((d.selesai / d.total) * 100).toFixed(1) : 0, isComplete = pct === "100.0";
                 const badgeHtml = isComplete ? `<div style="background: rgba(34, 197, 94, 0.1); color: var(--color-delivered); border: 1px solid rgba(34, 197, 94, 0.2); padding: 0.25rem 0.5rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 700;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Tuntas</div>` : `<div style="display: flex; align-items: center; gap: 0.5rem; width: 100%;"><div style="flex-grow: 1; height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px; overflow: hidden;"><div style="height: 100%; width: ${pct}%; background: var(--primary); border-radius: 3px;"></div></div><span style="font-weight: 700; color: var(--text-primary); min-width: 35px; text-align: right;">${pct}%</span></div>`;
-                html += `<tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s;"><td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${i + 1}</td><td style="font-weight: 600; color: var(--text-primary);">${d.kec}</td><td style="font-weight: 600; color: var(--text-primary);">${d.desa}</td><td style="text-align: center; font-family: monospace; font-weight: 700;">${d.total.toLocaleString('id-ID')}</td><td style="text-align: center; font-family: monospace; color: #ef4444;">${d.belum.toLocaleString('id-ID')}</td><td style="text-align: center; font-family: monospace; color: var(--color-delivered); font-weight: 700;">${d.selesai.toLocaleString('id-ID')}</td><td style="text-align: center;">${badgeHtml}</td></tr>`;
+                html += `<tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s;"><td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${idxReal + 1}</td><td style="font-weight: 600; color: var(--text-primary);">${d.kec}</td><td style="font-weight: 600; color: var(--text-primary);">${d.desa}</td><td style="text-align: center; font-family: monospace; font-weight: 700;">${d.total.toLocaleString('id-ID')}</td><td style="text-align: center; font-family: monospace; color: #ef4444;">${d.belum.toLocaleString('id-ID')}</td><td style="text-align: center; font-family: monospace; color: var(--color-delivered); font-weight: 700;">${d.selesai.toLocaleString('id-ID')}</td><td style="text-align: center;">${badgeHtml}</td></tr>`;
             });
             tbody.innerHTML = html;
             return;
@@ -7785,8 +7820,46 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        
+        const totalPetugas = arr.length;
+        const totalPetugasPages = Math.ceil(totalPetugas / window.petugasSummaryPerPage) || 1;
+        if (window.petugasSummaryCurrentPage > totalPetugasPages) window.petugasSummaryCurrentPage = totalPetugasPages;
+        if (window.petugasSummaryCurrentPage < 1) window.petugasSummaryCurrentPage = 1;
+        
+        const startPIdx = (window.petugasSummaryCurrentPage - 1) * window.petugasSummaryPerPage;
+        const endPIdx = Math.min(startPIdx + window.petugasSummaryPerPage, totalPetugas);
+        const paginatedArr = arr.slice(startPIdx, endPIdx);
+        
+        const petugasInfo = document.getElementById('petugas-summary-pagination-info');
+        if (petugasInfo) {
+            petugasInfo.textContent = `Menampilkan ${startPIdx + 1} - ${endPIdx} dari ${totalPetugas} Petugas`;
+        }
+        
+        const petugasBtns = document.getElementById('petugas-summary-pagination-buttons');
+        if (petugasBtns) {
+            let btnsHtml = '';
+            btnsHtml += `<button class="page-btn" ${window.petugasSummaryCurrentPage === 1 ? 'disabled' : ''} onclick="window.changePetugasSummaryPage(1)">Awal</button>`;
+            btnsHtml += `<button class="page-btn" ${window.petugasSummaryCurrentPage === 1 ? 'disabled' : ''} onclick="window.changePetugasSummaryPage(${window.petugasSummaryCurrentPage - 1})">Sebelumnya</button>`;
+
+            let startPage = Math.max(1, window.petugasSummaryCurrentPage - 2);
+            let endPage = Math.min(totalPetugasPages, startPage + 4);
+            if (endPage - startPage < 4) {
+                startPage = Math.max(1, endPage - 4);
+            }
+
+            for (let p = startPage; p <= endPage; p++) {
+                btnsHtml += `<button class="page-btn ${p === window.petugasSummaryCurrentPage ? 'active' : ''}" onclick="window.changePetugasSummaryPage(${p})">${p}</button>`;
+            }
+
+            btnsHtml += `<button class="page-btn" ${window.petugasSummaryCurrentPage === totalPetugasPages ? 'disabled' : ''} onclick="window.changePetugasSummaryPage(${window.petugasSummaryCurrentPage + 1})">Berikutnya</button>`;
+            btnsHtml += `<button class="page-btn" ${window.petugasSummaryCurrentPage === totalPetugasPages ? 'disabled' : ''} onclick="window.changePetugasSummaryPage(${totalPetugasPages})">Akhir</button>`;
+            petugasBtns.innerHTML = btnsHtml;
+        }
+
         let html = '';
-        arr.forEach((p, i) => {
+        paginatedArr.forEach((p, i) => {
+            const idxReal = startPIdx + i;
+
             const pct = p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) : 0;
             const isComplete = pct === "100.0";
 
@@ -7826,7 +7899,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             html += `
                 <tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s;">
-                    <td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${i + 1}</td>
+                    <td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${idxReal + 1}</td>
                     <td style="font-weight: 600; color: var(--text-primary);">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
                             <div style="width: 24px; height: 24px; border-radius: 50%; background: rgba(249, 115, 22, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700;">
@@ -8031,6 +8104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const pagBtns = document.getElementById('assign-sls-pagination-buttons');
         if (pagBtns) {
             let btnsHtml = '';
+            btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === 1 ? 'disabled' : ''} onclick="window.setGranularPage(1)">Awal</button>`;
             btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === 1 ? 'disabled' : ''} onclick="window.setGranularPage(${window.granularCurrentPage - 1})">Sebelumnya</button>`;
 
             let startPage = Math.max(1, window.granularCurrentPage - 2);
@@ -8044,6 +8118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === totalPages ? 'disabled' : ''} onclick="window.setGranularPage(${window.granularCurrentPage + 1})">Berikutnya</button>`;
+            btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === totalPages ? 'disabled' : ''} onclick="window.setGranularPage(${totalPages})">Akhir</button>`;
             pagBtns.innerHTML = btnsHtml;
         }
 
