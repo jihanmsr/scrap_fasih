@@ -7672,50 +7672,55 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        if (window.PETUGAS_PROGRESS_MAP && window.PETUGAS_PROGRESS_MAP[window.currentPetugasTab]) {
-            const roleData = window.PETUGAS_PROGRESS_MAP[window.currentPetugasTab];
-            for (const [email, pMapData] of Object.entries(roleData)) {
-                let isPetugasInKabupaten = false;
-                if (kabFilter !== 'all' && window.PETUGAS_REGION_MAP) {
-                    const kabPrefixMatch = kabFilter.match(/\[(\d+)\]/);
-                    const kabPrefix = kabPrefixMatch ? kabPrefixMatch[1] : '';
-                    
-                    const regions = window.PETUGAS_REGION_MAP[email.toLowerCase()];
-                    if (regions && regions.length > 0) {
-                        isPetugasInKabupaten = regions.some(rc => {
-                            if (!rc) return false;
-                            return kabPrefix && rc.startsWith('72' + kabPrefix);
+        if (window.PETUGAS_PROGRESS_MAP) {
+            ['Pencacah', 'Pengawas'].forEach(roleKey => {
+                if (window.PETUGAS_PROGRESS_MAP[roleKey]) {
+                    const roleData = window.PETUGAS_PROGRESS_MAP[roleKey];
+                    for (const [email, pMapData] of Object.entries(roleData)) {
+                        let isPetugasInKabupaten = false;
+                        if (kabFilter !== 'all' && window.PETUGAS_REGION_MAP) {
+                            const kabPrefixMatch = kabFilter.match(/\[(\d+)\]/);
+                            const kabPrefix = kabPrefixMatch ? kabPrefixMatch[1] : '';
+                            
+                            const regions = window.PETUGAS_REGION_MAP[email.toLowerCase()];
+                            if (regions && regions.length > 0) {
+                                isPetugasInKabupaten = regions.some(rc => {
+                                    if (!rc) return false;
+                                    return kabPrefix && rc.startsWith('72' + kabPrefix);
+                                });
+                            }
+                        } else {
+                            isPetugasInKabupaten = true;
+                        }
+                        
+                        if (!isPetugasInKabupaten) {
+                            continue;
+                        }
+
+                        let displayName = email;
+                        if (mitraMap && mitraMap[email]) {
+                            displayName = mitraMap[email];
+                        } else if (window.userMap) {
+                            let mapped = window.userMap[email] || window.userMap[email.split('@')[0]];
+                            if (mapped) displayName = mapped;
+                        }
+
+                        const pTotal = pMapData.target || 0;
+                        const pBelum = (pMapData.open || 0) + (pMapData.draft || 0);
+                        const pSelesai = pTotal - pBelum; // "selain open draft itu jd submit"
+
+                        arr.push({
+                            name: displayName,
+                            email: email,
+                            total: pTotal,
+                            selesai: pSelesai,
+                            belum: pBelum,
+                            role: roleKey
                         });
                     }
-                } else {
-                    isPetugasInKabupaten = true;
                 }
-                
-                if (!isPetugasInKabupaten) {
-                    continue;
-                }
-
-                let displayName = email;
-                if (mitraMap && mitraMap[email]) {
-                    displayName = mitraMap[email];
-                } else if (window.userMap) {
-                    let mapped = window.userMap[email] || window.userMap[email.split('@')[0]];
-                    if (mapped) displayName = mapped;
-                }
-
-                const pTotal = pMapData.target || 0;
-                const pBelum = (pMapData.open || 0) + (pMapData.draft || 0);
-                const pSelesai = pTotal - pBelum; // "selain open draft itu jd submit"
-
-                arr.push({
-                    name: displayName,
-                    email: email,
-                    total: pTotal,
-                    selesai: pSelesai,
-                    belum: pBelum
-                });
-            }
-        } else if (!window.PETUGAS_PROGRESS_MAP) {
+            });
+        } else {
             arr = Object.values(petugasMap);
         }
 
@@ -7812,6 +7817,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
+            let roleBadge = "";
+            if (p.role === 'Pengawas') {
+                roleBadge = `<span style="font-size: 0.6rem; padding: 2px 6px; background: rgba(249, 115, 22, 0.1); color: var(--primary); border: 1px solid rgba(249, 115, 22, 0.2); border-radius: 4px; font-weight: 700;">PML</span>`;
+            } else if (p.role === 'Pencacah') {
+                roleBadge = `<span style="font-size: 0.6rem; padding: 2px 6px; background: rgba(59, 130, 246, 0.1); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 4px; font-weight: 700;">PPL</span>`;
+            }
+
             html += `
                 <tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s;">
                     <td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${i + 1}</td>
@@ -7820,7 +7832,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div style="width: 24px; height: 24px; border-radius: 50%; background: rgba(249, 115, 22, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700;">
                                 ${p.name.substring(0, 2).toUpperCase()}
                             </div>
-                            ${p.name}
+                            <div style="display: flex; flex-direction: column; gap: 2px;">
+                                <div style="display: flex; align-items: center; gap: 6px;">
+                                    ${p.name} ${roleBadge}
+                                </div>
+                            </div>
                         </div>
                     </td>
                     <td style="font-size: 0.85rem; font-family: monospace; color: var(--text-secondary);">
