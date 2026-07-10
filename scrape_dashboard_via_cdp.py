@@ -520,20 +520,34 @@ async def run_download_and_update():
 
                 await _asyncio.sleep(5)
                 print(f"[INFO] Halaman sekarang: {page.url}")
-                if "login" in page.url.lower():
-                    print("[ERROR] Sesi FASIH expired - silakan login ulang di Chrome terlebih dahulu.")
-                    if browser:
-                        await browser.close()
-                    return
-            
+                
         print("Koneksi berhasil. Mengambil XSRF-TOKEN...")
         cookies = await context.cookies()
         token_raw = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), "")
         token = unquote(token_raw) if token_raw else ""
+        
+        if not token or "login" in page.url.lower():
+            print("[WARNING] Anda belum login atau sesi expired!")
+            print("=========================================================================")
+            print("  Silakan pindah ke jendela Chrome dan lakukan LOGIN secara manual.")
+            print("  Skrip ini akan otomatis menunggu sampai Anda berhasil masuk (maks 2 menit)...")
+            print("=========================================================================")
+            try:
+                import asyncio as _asyncio
+                await page.wait_for_url("**/surveys**", timeout=120000)
+                await _asyncio.sleep(5)
+                # re-fetch cookies after login
+                cookies = await context.cookies()
+                token_raw = next((c["value"] for c in cookies if c["name"] == "XSRF-TOKEN"), "")
+                token = unquote(token_raw) if token_raw else ""
+            except Exception as e:
+                print("[ERROR] Waktu login habis (2 menit) atau halaman ditutup. Silakan ulangi.")
+                if browser: await browser.close()
+                return
+
         if not token:
-            print("[ERROR] XSRF-TOKEN tidak ditemukan. Harap buka halaman FASIH di browser.")
-            if browser:
-                await browser.close()
+            print("[ERROR] Gagal mendapatkan token setelah login. Menghentikan skrip.")
+            if browser: await browser.close()
             return
             
         # Inisialisasi Supabase
