@@ -7671,9 +7671,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         // --- SINKRONISASI DENGAN PETUGAS_PROGRESS_MAP (DATA FAST TERBARU) ---
-        // --- PISAHKAN LOGIKA KARTU ATAS DAN TABEL BAWAH ---
-        // 1. KARTU ATAS: Gunakan murni perhitungan Granular (totalAll, selesaiAll, belumAll)
-        if (Array.isArray(data) && data.length > 0) {
+        // KARTU ATAS DIHITUNG ULANG DARI DATA FAST (PENCACAH SAJA AGAR TIDAK DOUBLE COUNT)
+        const kabFilterDashboard = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        if (window.PETUGAS_PROGRESS_MAP && window.PETUGAS_PROGRESS_MAP['Pencacah']) {
+            let realTotalAll = 0;
+            let realSelesaiAll = 0;
+            let realBelumAll = 0;
+            
+            for (const [email, pMapData] of Object.entries(window.PETUGAS_PROGRESS_MAP['Pencacah'])) {
+                let isPetugasInKabupaten = false;
+                if (kabFilterDashboard !== 'all' && window.PETUGAS_REGION_MAP) {
+                    const kabPrefixMatch = kabFilterDashboard.match(/\[(\d+)\]/);
+                    const kabPrefix = kabPrefixMatch ? kabPrefixMatch[1] : '';
+                    const regions = window.PETUGAS_REGION_MAP[email.toLowerCase()];
+                    if (regions && regions.length > 0) {
+                        isPetugasInKabupaten = regions.some(rc => rc && kabPrefix && rc.startsWith('72' + kabPrefix));
+                    }
+                } else {
+                    isPetugasInKabupaten = true;
+                }
+                
+                if (isPetugasInKabupaten) {
+                    const pTotal = pMapData.target || 0;
+                    const pBelum = (pMapData.open || 0) + (pMapData.draft || 0);
+                    const pSelesai = pTotal - pBelum;
+                    
+                    realTotalAll += pTotal;
+                    realSelesaiAll += pSelesai;
+                    realBelumAll += pBelum;
+                }
+            }
+            
+            const pctSelesaiAll = realTotalAll > 0 ? ((realSelesaiAll / realTotalAll) * 100).toFixed(1) : 0;
+            const pctBelumAll = realTotalAll > 0 ? ((realBelumAll / realTotalAll) * 100).toFixed(1) : 0;
+            
+            const totalEl = document.getElementById('petugas-stat-total');
+            const selesaiEl = document.getElementById('petugas-stat-selesai');
+            const belumEl = document.getElementById('petugas-stat-belum');
+            
+            if (totalEl) totalEl.textContent = realTotalAll.toLocaleString('id-ID');
+            if (selesaiEl) selesaiEl.innerHTML = `${realSelesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
+            if (belumEl) belumEl.innerHTML = `${realBelumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+        } else if (Array.isArray(data) && data.length > 0) {
+            // Fallback
             const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;
             const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
             document.getElementById('petugas-stat-total').textContent = totalAll.toLocaleString('id-ID');
