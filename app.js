@@ -9950,15 +9950,49 @@ window.downloadCurrentSeTable = function(surveyType) {
             });
         }
 
-        exportRows = filtered.map(item => ({
-            'Kabupaten/Kota': item.kabupaten,
-            'Total Target': item.total_prelist,
-            'Draft': item.total_draft,
-            'Open': item.total_open,
-            'Submitted (Selesai)': item.total_submitted,
-            '% Capaian': `${item.persentase}%`,
-            'Sisa Usaha': item.new_usaha_overall || 0
-        }));
+        let totalPrelist = 0, totalDraft = 0, totalOpen = 0, totalSubmitted = 0;
+
+        exportRows = filtered.map(item => {
+            const prelist = item.total_prelist || 0;
+            const draft = item.total_draft || 0;
+            const open = item.total_open || 0;
+            const submitted = item.total_submitted || 0;
+            const sisaUsaha = Math.max(0, prelist - submitted);
+            const pctCapaian = `${item.persentase || 0}%`;
+            const delta = item.delta_persen !== undefined && item.delta_persen !== null
+                ? `+${parseFloat(item.delta_persen).toFixed(2)}%`
+                : '';
+
+            totalPrelist += prelist;
+            totalDraft += draft;
+            totalOpen += open;
+            totalSubmitted += submitted;
+
+            return {
+                'Kabupaten/Kota': item.kabupaten,
+                'Total Target': prelist,
+                'Draft': draft,
+                'Open': open,
+                'Submitted (Selesai)': submitted,
+                '% Capaian': pctCapaian,
+                'Sisa Usaha': sisaUsaha,
+                'Delta (%)': delta
+            };
+        });
+
+        // Add cumulative SELTENG total row
+        const totalSisaUsaha = Math.max(0, totalPrelist - totalSubmitted);
+        const totalPct = totalPrelist > 0 ? ((totalSubmitted / totalPrelist) * 100).toFixed(2) + '%' : '0.00%';
+        exportRows.push({
+            'Kabupaten/Kota': 'SULAWESI TENGAH',
+            'Total Target': totalPrelist,
+            'Draft': totalDraft,
+            'Open': totalOpen,
+            'Submitted (Selesai)': totalSubmitted,
+            '% Capaian': totalPct,
+            'Sisa Usaha': totalSisaUsaha,
+            'Delta (%)': ''
+        });
     } else if (viewLevel === 'kecamatan') {
         const selectedKab = document.getElementById(`${surveyType}-kab-filter`)?.value || 'all';
         const isFiltered = selectedKab !== 'all';
