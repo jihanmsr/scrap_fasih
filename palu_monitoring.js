@@ -1,312 +1,205 @@
 // ═══════════════════════════════════════════════════════════════════════════
-// palu_monitoring.js — Monitoring Khusus Kota Palu (sub-tab Progres Petugas)
+// palu_monitoring.js — Monitoring Harian Per-Petugas Kota Palu
 // ═══════════════════════════════════════════════════════════════════════════
-
 (function () {
     const DEADLINE = new Date('2026-07-15T23:59:59');
     const PALU_KAB_CODE = '7271';
     const PALU_KAB_NAME = '[71] PALU';
+    let _showAllDates = false; // toggle history columns
 
-    function fmt(n) {
-        if (n == null || isNaN(n)) return '0';
-        return Number(n).toLocaleString('id-ID');
-    }
+    function fmt(n) { if (n == null || isNaN(n)) return '0'; return Number(n).toLocaleString('id-ID'); }
     function pct(a, b) { return (!b || b === 0) ? 0 : Math.min(100, (a / b) * 100); }
     function toDateStr(d) { return d.toISOString().slice(0, 10); }
+    function daysUntilDeadline() { return Math.max(0, Math.ceil((DEADLINE - new Date()) / 86400000)); }
 
-    function daysUntilDeadline() {
-        const diff = DEADLINE - new Date();
-        return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-    }
-
-    // Cari data IPAS Palu — coba beberapa format nama
     function getPaluIpas(surveyType) {
-        const ipas = window.IPAS_DATA || {};
-        const data = ipas[surveyType] || [];
-        return data.find(d =>
-            d.kabupaten === PALU_KAB_NAME ||
-            d.kabupaten === 'PALU' ||
-            (d.kabupaten || '').includes('PALU')
-        ) || null;
+        const data = (window.IPAS_DATA || {})[surveyType] || [];
+        return data.find(d => (d.kabupaten||'').includes('PALU')) || null;
     }
-
     function getPaluPetugasEmails() {
         const regionMap = window.PETUGAS_REGION_MAP || {};
-        const paluEmails = new Set();
-        for (const [email, slsList] of Object.entries(regionMap)) {
-            if (Array.isArray(slsList) && slsList.some(s => String(s).startsWith(PALU_KAB_CODE))) {
-                paluEmails.add(email.toLowerCase());
-            }
-        }
-        return paluEmails;
+        const s = new Set();
+        for (const [email, sls] of Object.entries(regionMap))
+            if (Array.isArray(sls) && sls.some(x => String(x).startsWith(PALU_KAB_CODE)))
+                s.add(email.toLowerCase());
+        return s;
     }
 
-    function getPaluPetugasData() {
+    // ── Build pivot data from PETUGAS_DAILY_PALU ────────────────────────────
+    function getPivotData() {
+        const daily = window.PETUGAS_DAILY_PALU || {};
         const paluEmails = getPaluPetugasEmails();
         const progressMap = window.PETUGAS_PROGRESS_MAP || {};
         const users = window.PETUGAS_USERS || {};
-        let all = [];
+
+        // Get current totals from fast_petugas_progress
+        const curTotals = {};
         const traverse = (obj) => {
-            for (const [key, val] of Object.entries(obj)) {
-                if (val && typeof val === 'object' && 'target' in val) {
-                    if (paluEmails.has(key.toLowerCase())) {
-                        const name = users[key] || users[key.split('@')[0]] || key.split('@')[0];
-                        const total = val.target || 0;
-                        const submitted = (val.submitted_pencacah || 0) + (val.approved || 0);
-                        const sisa = Math.max(0, total - submitted);
-                        const pctCap = pct(submitted, total);
-                        const hariLeft = daysUntilDeadline();
-                        const perHari = hariLeft > 0 ? Math.ceil(sisa / hariLeft) : sisa;
-                        all.push({ email: key, name, total, submitted,
-                            selesai: val.approved || 0, inProgress: val.submitted_pencacah || 0,
-                            sisa, pctCap, perHari });
-                    }
-                } else if (val && typeof val === 'object') {
-                    traverse(val);
-                }
+            for (const [k, v] of Object.entries(obj)) {
+                if (v && typeof v === 'object' && 'target' in v) {
+                    curTotals[k.toLowerCase()] = {
+                        target: v.target || 0,
+                        selesai: (v.submitted_pencacah || 0) + (v.approved || 0),
+                        name: users[k] || users[k.split('@')[0]] || k.split('@')[0]
+                    };
+                } else if (v && typeof v === 'object') { traverse(v); }
             }
         };
         traverse(progressMap);
-        all.sort((a, b) => a.pctCap - b.pctCap);
-        return all;
-    }
 
-    function getPaluDailyStats(surveyType) {
-        const stats = window.DAILY_SUBMISSION_STATS || [];
-        const sType = surveyType === 'se_ub' ? 'se_ub' : 'se_umum';
-        const filtered = stats.filter(s => s.kab_name === 'PALU' && s.survey_type === sType);
-        const grouped = {};
-        filtered.forEach(s => {
-            if (!grouped[s.date]) grouped[s.date] = 0;
-            grouped[s.date] += s.count || 0;
-        });
-        return grouped;
-    }
+        // Collect all snapshot dates
+        const allDatesSet = new Set();
+        for (const d of Object.values(daily)) Object.keys(d.snapshots || {}).forEach(dt => allDatesSet.add(dt));
+        const allDates = [...allDatesSet].sort();
 
-    // ── Petugas Table (PERTAMA - lebih urgent) ───────────────────────────────
-    function renderPetugasTable() {
-        const petugasList = getPaluPetugasData();
-        if (petugasList.length === 0) {
-            return '<div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:2rem;text-align:center;color:var(--text-secondary);margin-bottom:1.25rem;">Data petugas Palu tidak ditemukan.</div>';
+        // Build rows
+        const rows = [];
+        const emails = new Set([...paluEmails, ...Object.keys(daily)]);
+        for (const email of emails) {
+            const snap = daily[email] || {};
+            const cur = curTotals[email] || {};
+            const name = snap.name || cur.name || email.split('@')[0];
+            const target = cur.target || snap.target || 0;
+            const selesaiNow = cur.selesai || 0;
+            const sisa = Math.max(0, target - selesaiNow);
+            const pctNow = pct(selesaiNow, target);
+            const hariLeft = daysUntilDeadline();
+            const perHari = hariLeft > 0 ? Math.ceil(sisa / hariLeft) : sisa;
+            const snapshots = snap.snapshots || {};
+            // Compute daily deltas: for each date, delta = snapshots[date] - snapshots[prevDate]
+            const deltas = {};
+            for (let i = 0; i < allDates.length; i++) {
+                const d = allDates[i];
+                const prev = i > 0 ? (snapshots[allDates[i-1]] || 0) : 0;
+                const cur_val = snapshots[d];
+                if (cur_val !== undefined) deltas[d] = cur_val - prev;
+            }
+            rows.push({ email, name, target, selesaiNow, sisa, pctNow, perHari, snapshots, deltas });
         }
+        rows.sort((a, b) => a.pctNow - b.pctNow);
+        return { rows, allDates };
+    }
+
+    // ── Petugas Pivot Table ─────────────────────────────────────────────────
+    function renderPetugasTable(surveyType) {
+        const { rows, allDates } = getPivotData();
+        if (rows.length === 0) return '<div style="padding:2rem;text-align:center;color:var(--text-secondary);">Data tidak ditemukan.</div>';
+
+        const today = toDateStr(new Date());
+        // Dates to show: always show today. History = toggle
+        const visibleDates = _showAllDates ? allDates : allDates.filter(d => d === today);
+        const hiddenCount = allDates.filter(d => d !== today).length;
+
         const thBase = 'padding:0.5rem 0.6rem;font-size:0.72rem;font-weight:700;color:#fff;white-space:nowrap;';
-        const rows = petugasList.map((p, idx) => {
-            const capVal = p.pctCap;
-            let badge;
-            if (capVal < 15) badge = '<span style="background:#fef2f2;color:#dc2626;border:1px solid #fca5a5;border-radius:0.4rem;padding:0.1rem 0.4rem;font-size:0.65rem;font-weight:700;">🔴 KRITIS</span>';
-            else if (capVal < 30) badge = '<span style="background:#fffbeb;color:#d97706;border:1px solid #fcd34d;border-radius:0.4rem;padding:0.1rem 0.4rem;font-size:0.65rem;font-weight:700;">🟡 KEJAR</span>';
-            else badge = '<span style="background:#f0fdf4;color:#16a34a;border:1px solid #86efac;border-radius:0.4rem;padding:0.1rem 0.4rem;font-size:0.65rem;font-weight:700;">🟢 OK</span>';
+        const thDate = 'padding:0.5rem 0.6rem;font-size:0.72rem;font-weight:700;color:#fff;white-space:nowrap;text-align:center;min-width:80px;';
+
+        // Date column headers
+        const dateHeaders = visibleDates.map(d => {
+            const dObj = new Date(d + 'T00:00:00');
+            const label = dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' });
+            const isToday = d === today;
+            return '<th style="' + thDate + (isToday ? 'background:rgba(99,102,241,0.3);' : '') + '">' +
+                label + (isToday ? '<br><span style="font-size:0.6rem;font-weight:400;">hari ini</span>' : '<br><span style="font-size:0.6rem;font-weight:400;">delta</span>') +
+                '</th>';
+        }).join('');
+
+        const tableRows = rows.map((p, idx) => {
+            const capVal = p.pctNow;
             const barColor = capVal < 15 ? '#dc2626' : capVal < 30 ? '#f59e0b' : '#22c55e';
+            let badge = capVal < 15
+                ? '<span style="font-size:0.6rem;color:#dc2626;border:1px solid #fca5a5;border-radius:0.3rem;padding:0.05rem 0.35rem;background:#fef2f2;">🔴 KRITIS</span>'
+                : capVal < 30
+                ? '<span style="font-size:0.6rem;color:#d97706;border:1px solid #fcd34d;border-radius:0.3rem;padding:0.05rem 0.35rem;background:#fffbeb;">🟡 KEJAR</span>'
+                : '<span style="font-size:0.6rem;color:#16a34a;border:1px solid #86efac;border-radius:0.3rem;padding:0.05rem 0.35rem;background:#f0fdf4;">🟢 OK</span>';
             const bar = '<div style="width:100%;background:var(--card-border);border-radius:9999px;height:4px;margin-top:2px;"><div style="width:' + Math.min(100, capVal).toFixed(1) + '%;background:' + barColor + ';height:4px;border-radius:9999px;"></div></div>';
             const rowBg = idx % 2 === 0 ? '' : 'rgba(99,102,241,0.03)';
-            const td = 'padding:0.45rem 0.6rem;font-size:0.78rem;border-bottom:1px solid var(--card-border);text-align:right;';
-            const tdL = 'padding:0.45rem 0.6rem;font-size:0.78rem;border-bottom:1px solid var(--card-border);text-align:left;';
+            const td = 'padding:0.45rem 0.6rem;font-size:0.78rem;border-bottom:1px solid var(--card-border);text-align:right;vertical-align:middle;';
+            const tdL = 'padding:0.45rem 0.6rem;font-size:0.78rem;border-bottom:1px solid var(--card-border);text-align:left;vertical-align:middle;';
+            const tdC = 'padding:0.45rem 0.6rem;font-size:0.78rem;border-bottom:1px solid var(--card-border);text-align:center;vertical-align:middle;';
+
+            // Date columns: show delta (how many submitted that day) or cumulative for today
+            const dateCells = visibleDates.map(d => {
+                const isToday = d === today;
+                const snapVal = p.snapshots[d]; // cumulative as of that date
+                const delta = p.deltas[d];
+
+                if (isToday) {
+                    // Show cumulative total (selesai saat ini)
+                    const val = p.selesaiNow;
+                    const color = capVal < 15 ? '#dc2626' : capVal < 30 ? '#f59e0b' : '#22c55e';
+                    return '<td style="' + tdC + 'background:rgba(99,102,241,0.06);font-weight:700;color:' + color + ';">' + fmt(val) + '</td>';
+                } else {
+                    // Show delta for that historical day
+                    if (delta === undefined || snapVal === undefined) {
+                        return '<td style="' + tdC + 'color:var(--text-secondary);">—</td>';
+                    }
+                    const dColor = delta > 0 ? '#16a34a' : delta < 0 ? '#dc2626' : 'var(--text-secondary)';
+                    const dSign = delta > 0 ? '+' : '';
+                    return '<td style="' + tdC + '">' +
+                        '<div style="font-weight:700;color:' + dColor + ';">' + dSign + fmt(delta) + '</div>' +
+                        '<div style="font-size:0.63rem;color:var(--text-secondary);">' + fmt(snapVal) + '</div>' +
+                        '</td>';
+                }
+            }).join('');
+
             return '<tr style="background:' + rowBg + '">' +
                 '<td style="' + tdL + 'color:var(--text-secondary);font-weight:600;">' + (idx+1) + '</td>' +
-                '<td style="' + tdL + '"><div style="font-weight:600;color:var(--text-primary);font-size:0.8rem;">' + p.name + '</div><div style="font-size:0.65rem;color:var(--text-secondary);">' + p.email + '</div></td>' +
-                '<td style="' + td + '">' + fmt(p.total) + '</td>' +
-                '<td style="' + td + 'color:#22c55e;font-weight:700;">' + fmt(p.submitted) + '</td>' +
-                '<td style="' + td + 'color:#3b82f6;">' + fmt(p.sisa) + '</td>' +
+                '<td style="' + tdL + '"><div style="font-weight:600;color:var(--text-primary);font-size:0.8rem;">' + p.name + '</div><div style="font-size:0.63rem;color:var(--text-secondary);">' + p.email + '</div></td>' +
+                '<td style="' + td + '">' + fmt(p.target) + '</td>' +
+                dateCells +
                 '<td style="' + td + '"><div style="font-weight:700;color:' + barColor + ';">' + capVal.toFixed(1) + '%</div>' + bar + '</td>' +
                 '<td style="' + td + 'color:#f59e0b;font-weight:700;">' + fmt(p.perHari) + '/hr</td>' +
                 '<td style="' + tdL + '">' + badge + '</td>' +
             '</tr>';
         }).join('');
-        const totTarget = petugasList.reduce((a, b) => a + b.total, 0);
-        const totSub = petugasList.reduce((a, b) => a + b.submitted, 0);
-        const totSisa = petugasList.reduce((a, b) => a + b.sisa, 0);
+
+        const totTarget = rows.reduce((a, b) => a + b.target, 0);
+        const totSub = rows.reduce((a, b) => a + b.selesaiNow, 0);
+        const totDateCells = visibleDates.map(d => {
+            if (d === today) {
+                return '<td style="padding:0.6rem;text-align:center;font-weight:700;color:#22c55e;">' + fmt(totSub) + '</td>';
+            }
+            const totDelta = rows.reduce((a, b) => a + (b.deltas[d] || 0), 0);
+            return '<td style="padding:0.6rem;text-align:center;font-weight:700;color:' + (totDelta > 0 ? '#22c55e' : '#dc2626') + ';">' + (totDelta >= 0 ? '+' : '') + fmt(totDelta) + '</td>';
+        }).join('');
+
+        const toggleLabel = _showAllDates
+            ? '🙈 Sembunyikan history (' + hiddenCount + ' tgl)'
+            : '📅 Tampilkan history (' + hiddenCount + ' tgl)';
+
         return `
         <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;overflow:hidden;margin-bottom:1.25rem;">
-            <div style="padding:0.9rem 1.25rem;border-bottom:1px solid var(--card-border);display:flex;justify-content:space-between;align-items:center;">
+            <div style="padding:0.9rem 1.25rem;border-bottom:1px solid var(--card-border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
                 <div style="font-weight:700;font-size:0.9rem;color:var(--text-primary);">
-                    👥 Petugas Palu <span style="font-size:0.75rem;font-weight:400;color:var(--text-secondary);">(capaian terendah di atas)</span>
+                    👥 Progress Petugas Palu
+                    <span style="font-size:0.75rem;font-weight:400;color:var(--text-secondary);margin-left:0.5rem;">(capaian terendah di atas · ${rows.length} petugas)</span>
                 </div>
-                <div style="font-size:0.75rem;color:var(--text-secondary);">${petugasList.length} petugas</div>
+                <button onclick="window.togglePaluHistory()" style="padding:0.35rem 0.8rem;border-radius:0.6rem;border:1px solid var(--card-border);font-family:Outfit,sans-serif;font-size:0.75rem;font-weight:600;cursor:pointer;background:transparent;color:var(--text-secondary);">
+                    ${toggleLabel}
+                </button>
             </div>
-            <div style="overflow-x:auto;max-height:400px;overflow-y:auto;">
+            <div style="overflow-x:auto;max-height:480px;overflow-y:auto;">
                 <table style="width:100%;border-collapse:collapse;">
-                    <thead style="position:sticky;top:0;z-index:1;">
+                    <thead style="position:sticky;top:0;z-index:2;">
                         <tr style="background:linear-gradient(135deg,#1e3a5f,#1a3050);">
                             <th style="${thBase}text-align:left;">No</th>
                             <th style="${thBase}text-align:left;">Petugas</th>
                             <th style="${thBase}text-align:right;">Target</th>
-                            <th style="${thBase}text-align:right;">Selesai</th>
-                            <th style="${thBase}text-align:right;">Sisa</th>
-                            <th style="${thBase}text-align:right;">%</th>
+                            ${dateHeaders}
+                            <th style="${thBase}text-align:right;">% Capaian</th>
                             <th style="${thBase}text-align:right;">Wajib/Hari</th>
                             <th style="${thBase}text-align:left;">Status</th>
                         </tr>
                     </thead>
                     <tbody>
-                        ${rows}
-                        <tr style="background:rgba(99,102,241,0.08);font-weight:700;">
-                            <td colspan="2" style="padding:0.6rem;font-size:0.78rem;color:var(--text-primary);">TOTAL (${petugasList.length})</td>
-                            <td style="padding:0.6rem;text-align:right;font-size:0.78rem;">${fmt(totTarget)}</td>
-                            <td style="padding:0.6rem;text-align:right;font-size:0.78rem;color:#22c55e;">${fmt(totSub)}</td>
-                            <td style="padding:0.6rem;text-align:right;font-size:0.78rem;color:#3b82f6;">${fmt(totSisa)}</td>
+                        ${tableRows}
+                        <tr style="background:rgba(99,102,241,0.08);font-weight:700;position:sticky;bottom:0;">
+                            <td colspan="3" style="padding:0.6rem;font-size:0.78rem;color:var(--text-primary);">TOTAL (${rows.length})</td>
+                            ${totDateCells}
                             <td style="padding:0.6rem;text-align:right;font-size:0.78rem;">${pct(totSub,totTarget).toFixed(1)}%</td>
                             <td colspan="2"></td>
                         </tr>
                     </tbody>
-                </table>
-            </div>
-        </div>`;
-    }
-
-    // ── Daily Tracker Table (KEDUA - di bawah petugas) ───────────────────────
-    function renderDailyTable(surveyType) {
-        const ipasData = getPaluIpas(surveyType);
-        const totalTarget = ipasData ? (ipasData.total_prelist || 0) : 0;
-        const totalSubmitted = ipasData ? (ipasData.total_submitted || 0) : 0;
-        const sisa = Math.max(0, totalTarget - totalSubmitted);
-        const dailyStats = getPaluDailyStats(surveyType);
-
-        const today = new Date(); today.setHours(0,0,0,0);
-        const deadline = new Date('2026-07-15T00:00:00');
-
-        const allDates = Object.keys(dailyStats).sort();
-        const historyDates = allDates.filter(d => d <= toDateStr(today));
-
-        // Future dates: tomorrow → 15 Jul
-        const futureDates = [];
-        const cur = new Date(today); cur.setDate(cur.getDate() + 1);
-        while (cur <= deadline) { futureDates.push(toDateStr(cur)); cur.setDate(cur.getDate() + 1); }
-
-        // Show last 7 history + today + future
-        const showHistory = historyDates.slice(-7);
-        const showDates = [...showHistory, toDateStr(today), ...futureDates];
-
-        const hariLeft = daysUntilDeadline();
-        const targetPerHari = totalTarget > 0 && hariLeft > 0 ? Math.ceil(sisa / hariLeft) : 0;
-
-        // Avg 3 hari terakhir real data
-        const last3 = historyDates.slice(-3).map(d => dailyStats[d] || 0);
-        const avg3 = last3.length > 0 ? Math.round(last3.reduce((a,b) => a+b, 0) / last3.length) : 0;
-
-        // Compute running cumulative anchored to IPAS total
-        // Strategy: cumulative[today] ≈ totalSubmitted
-        // Work backwards for past days, forward for future
-        const todayCount = dailyStats[toDateStr(today)] || 0;
-        const cumAsOfYesterday = totalSubmitted - todayCount;
-
-        // Build cumulative map for shown dates
-        // First compute backwards from yesterday
-        const cumMap = {};
-        let runBack = cumAsOfYesterday;
-        const shownHistory = [...showHistory].reverse();
-        shownHistory.forEach(d => {
-            cumMap[d] = runBack;
-            runBack -= (dailyStats[d] || 0);
-        });
-        // Today
-        cumMap[toDateStr(today)] = totalSubmitted;
-        // Future: forward projection
-        let runFwd = totalSubmitted;
-        futureDates.forEach(d => {
-            runFwd += avg3;
-            cumMap[d] = runFwd;
-        });
-
-        const thStyle = 'padding:0.5rem 0.75rem;font-size:0.75rem;font-weight:700;color:#fff;white-space:nowrap;text-align:center;';
-        const thLeftStyle = 'padding:0.5rem 0.75rem;font-size:0.75rem;font-weight:700;color:#fff;white-space:nowrap;text-align:left;';
-
-        let prevCount = null;
-        let rows = '';
-
-        showDates.forEach((dateStr, i) => {
-            const isToday = dateStr === toDateStr(today);
-            const isFuture = dateStr > toDateStr(today);
-            const isPast = !isToday && !isFuture;
-
-            const count = isPast ? (dailyStats[dateStr] || 0)
-                : isToday ? todayCount
-                : avg3;
-
-            const cum = cumMap[dateStr] || 0;
-            const pctCum = totalTarget > 0 ? ((cum / totalTarget) * 100).toFixed(2) + '%' : '—';
-
-            // delta vs previous day in table
-            const delta = prevCount !== null ? count - prevCount : null;
-            const deltaVsTarget = targetPerHari > 0 ? count - targetPerHari : null;
-
-            prevCount = isFuture ? avg3 : count;
-
-            let rowBg = '', countColor = 'var(--text-primary)', statusBadge = '';
-            if (isFuture) {
-                rowBg = 'rgba(99,102,241,0.04)'; countColor = '#6366f1';
-                statusBadge = '<span style="font-size:0.65rem;color:#6366f1;background:rgba(99,102,241,0.1);padding:0.1rem 0.4rem;border-radius:0.3rem;">PROYEKSI</span>';
-            } else if (isToday && count === 0) {
-                rowBg = 'rgba(245,158,11,0.06)'; countColor = '#d97706';
-                statusBadge = '<span style="font-size:0.65rem;color:#d97706;background:rgba(245,158,11,0.1);padding:0.1rem 0.4rem;border-radius:0.3rem;">BELUM DITARIK</span>';
-            } else if (targetPerHari > 0 && count >= targetPerHari) {
-                rowBg = 'rgba(34,197,94,0.04)'; countColor = '#16a34a';
-                statusBadge = '<span style="font-size:0.65rem;color:#16a34a;background:rgba(34,197,94,0.1);padding:0.1rem 0.4rem;border-radius:0.3rem;">✓ TERCAPAI</span>';
-            } else if (count > 0) {
-                rowBg = 'rgba(239,68,68,0.04)'; countColor = '#dc2626';
-                statusBadge = '<span style="font-size:0.65rem;color:#dc2626;background:rgba(239,68,68,0.1);padding:0.1rem 0.4rem;border-radius:0.3rem;">✗ KURANG</span>';
-            } else {
-                statusBadge = '<span style="font-size:0.65rem;color:var(--text-secondary);padding:0.1rem 0.4rem;">—</span>';
-            }
-
-            const dateObj = new Date(dateStr + 'T00:00:00');
-            const dateLabel = dateObj.toLocaleDateString('id-ID', { weekday: 'short', day: 'numeric', month: 'short' });
-            const dayLabel = isToday ? '<strong style="color:var(--text-primary);">HARI INI (' + dateLabel + ')</strong>' : dateLabel;
-
-            // Delta vs target: green if positive, red if negative
-            let deltaVsStr = '—';
-            if (deltaVsTarget !== null && (count > 0 || isFuture)) {
-                const dColor = deltaVsTarget >= 0 ? '#16a34a' : '#dc2626';
-                const dSign = deltaVsTarget >= 0 ? '+' : '';
-                deltaVsStr = '<span style="color:' + dColor + ';font-weight:600;">' + dSign + fmt(deltaVsTarget) + '</span>';
-            }
-
-            // Delta vs previous day (hari sebelumnya)
-            let deltaDayStr = '—';
-            if (delta !== null) {
-                const dColor2 = delta >= 0 ? '#16a34a' : '#dc2626';
-                const dSign2 = delta >= 0 ? '+' : '';
-                deltaDayStr = '<span style="color:' + dColor2 + ';">' + dSign2 + fmt(delta) + '</span>';
-            }
-
-            const td = 'padding:0.5rem 0.6rem;font-size:0.8rem;border-bottom:1px solid var(--card-border);text-align:center;';
-            const tdL = 'padding:0.5rem 0.6rem;font-size:0.8rem;border-bottom:1px solid var(--card-border);text-align:left;';
-            rows += '<tr style="background:' + rowBg + '">' +
-                '<td style="' + tdL + '">' + dayLabel + '</td>' +
-                '<td style="' + td + 'font-weight:700;color:' + countColor + ';">' + fmt(count) + (isFuture ? '<div style="font-size:0.63rem;color:var(--text-secondary);">avg 3hr</div>' : '') + '</td>' +
-                '<td style="' + td + '">' + deltaDayStr + '</td>' +
-                '<td style="' + td + '">' + deltaVsStr + '</td>' +
-                '<td style="' + td + 'font-weight:600;">' + (totalTarget > 0 ? fmt(cum) : '—') + '</td>' +
-                '<td style="' + td + '">' + pctCum + '</td>' +
-                '<td style="' + tdL + '">' + statusBadge + '</td>' +
-            '</tr>';
-        });
-
-        const targetInfo = targetPerHari > 0
-            ? 'Target/hari: <b>' + fmt(targetPerHari) + '</b> | Rata-rata 3 hari: <b>' + fmt(avg3) + '</b>'
-            : 'Rata-rata 3 hari: <b>' + fmt(avg3) + '</b> <span style="color:#d97706;">(target/hari tidak dapat dihitung — data IPAS belum tersedia)</span>';
-
-        return `
-        <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;overflow:hidden;">
-            <div style="padding:0.9rem 1.25rem;border-bottom:1px solid var(--card-border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
-                <div style="font-weight:700;font-size:0.9rem;color:var(--text-primary);">
-                    📅 Tracker Harian — Kemarin s/d 15 Juli
-                </div>
-                <div style="font-size:0.75rem;color:var(--text-secondary);">${targetInfo}</div>
-            </div>
-            <div style="overflow-x:auto;">
-                <table style="width:100%;border-collapse:collapse;">
-                    <thead>
-                        <tr style="background:linear-gradient(135deg,#1e3a5f,#1a3050);">
-                            <th style="${thLeftStyle}">Tanggal</th>
-                            <th style="${thStyle}">Submit Hari Ini</th>
-                            <th style="${thStyle}">∆ vs Hari Sebelumnya</th>
-                            <th style="${thStyle}">∆ vs Target/Hari</th>
-                            <th style="${thStyle}">Kumulatif</th>
-                            <th style="${thStyle}">% Capaian</th>
-                            <th style="${thLeftStyle}">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>${rows}</tbody>
                 </table>
             </div>
         </div>`;
@@ -321,72 +214,74 @@
         const capaian = pct(submitted, total);
         const hariLeft = daysUntilDeadline();
         const targetPerHari = total > 0 && hariLeft > 0 ? Math.ceil(sisa / hariLeft) : 0;
-        const dailyStats = getPaluDailyStats(surveyType);
-        const allDates = Object.keys(dailyStats).sort();
-        const last3Dates = allDates.slice(-3);
-        const avgLast3 = last3Dates.length > 0 ? Math.round(last3Dates.reduce((a, d) => a + (dailyStats[d]||0), 0) / last3Dates.length) : 0;
-        const projDays = avgLast3 > 0 ? Math.ceil(sisa / avgLast3) : 999;
+        const dailyStats = (window.DAILY_SUBMISSION_STATS || [])
+            .filter(s => s.kab_name === 'PALU' && s.survey_type === (surveyType === 'se_ub' ? 'se_ub' : 'se_umum'));
+        const grouped = {};
+        dailyStats.forEach(s => { grouped[s.date] = (grouped[s.date]||0) + s.count; });
+        const sortedDates = Object.keys(grouped).sort();
+        const last3 = sortedDates.slice(-3).map(d => grouped[d]||0);
+        const avg3 = last3.length > 0 ? Math.round(last3.reduce((a,b)=>a+b,0)/last3.length) : 0;
+        const projDays = avg3 > 0 ? Math.ceil(sisa / avg3) : 999;
         const projDate = new Date(); projDate.setDate(projDate.getDate() + projDays);
         const projDateStr = projDate.toLocaleDateString('id-ID', { day: 'numeric', month: 'long' });
-        const onTrack = targetPerHari > 0 && avgLast3 >= targetPerHari;
-        const statusColor = noData ? '#6366f1' : (capaian >= 50 ? '#16a34a' : capaian >= 25 ? '#d97706' : '#dc2626');
-        const statusText = noData ? '— (data IPAS belum tersedia)' : (capaian >= 50 ? '🟢 AMAN' : capaian >= 25 ? '🟡 WASPADA' : '🔴 KRITIS');
+        const onTrack = targetPerHari > 0 && avg3 >= targetPerHari;
+        const sColor = noData ? '#6366f1' : capaian >= 50 ? '#16a34a' : capaian >= 25 ? '#d97706' : '#dc2626';
         const projColor = onTrack ? '#16a34a' : '#dc2626';
-
         return `
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin-bottom:1.25rem;">
-            <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.75rem;padding:1rem;border-left:3px solid ${statusColor};">
-                <div style="font-size:0.7rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;">Capaian Palu</div>
-                <div style="font-size:1.8rem;font-weight:800;color:${statusColor};">${noData ? '—' : capaian.toFixed(1) + '%'}</div>
-                <div style="font-size:0.75rem;color:var(--text-secondary);">${statusText}</div>
-                ${!noData ? '<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:2px;">' + fmt(submitted) + ' / ' + fmt(total) + '</div>' : ''}
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0.75rem;margin-bottom:1.25rem;">
+            <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.75rem;padding:1rem;border-left:3px solid ${sColor};">
+                <div style="font-size:0.68rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;">Capaian Palu</div>
+                <div style="font-size:1.8rem;font-weight:800;color:${sColor};">${noData?'—':capaian.toFixed(1)+'%'}</div>
+                <div style="font-size:0.72rem;color:var(--text-secondary);">${noData?'data IPAS belum tersedia':fmt(submitted)+'/'+fmt(total)}</div>
             </div>
             <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.75rem;padding:1rem;border-left:3px solid #3b82f6;">
-                <div style="font-size:0.7rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;">Sisa Usaha</div>
-                <div style="font-size:1.8rem;font-weight:800;color:#3b82f6;">${noData ? '—' : fmt(sisa)}</div>
-                <div style="font-size:0.75rem;color:var(--text-secondary);">Sisa ${hariLeft} hari lagi</div>
+                <div style="font-size:0.68rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;">Sisa Usaha</div>
+                <div style="font-size:1.8rem;font-weight:800;color:#3b82f6;">${noData?'—':fmt(sisa)}</div>
+                <div style="font-size:0.72rem;color:var(--text-secondary);">Sisa ${hariLeft} hari</div>
             </div>
             <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.75rem;padding:1rem;border-left:3px solid #f59e0b;">
-                <div style="font-size:0.7rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;">Target/Hari</div>
-                <div style="font-size:1.8rem;font-weight:800;color:#f59e0b;">${targetPerHari > 0 ? fmt(targetPerHari) : '—'}</div>
-                <div style="font-size:0.75rem;color:var(--text-secondary);">Avg 3 hari: ${fmt(avgLast3)}/hari</div>
+                <div style="font-size:0.68rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;">Target/Hari</div>
+                <div style="font-size:1.8rem;font-weight:800;color:#f59e0b;">${targetPerHari>0?fmt(targetPerHari):'—'}</div>
+                <div style="font-size:0.72rem;color:var(--text-secondary);">Avg 3 hari: ${fmt(avg3)}/hari</div>
             </div>
             <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.75rem;padding:1rem;border-left:3px solid ${projColor};">
-                <div style="font-size:0.7rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;">Proyeksi Selesai</div>
-                <div style="font-size:1.3rem;font-weight:800;color:${projColor};line-height:1.2;">${projDays < 200 ? projDateStr : '—'}</div>
-                <div style="font-size:0.75rem;color:${projColor};font-weight:600;">${noData ? '' : (onTrack ? '✅ On track' : '⚠️ Tidak akan selesai tgl 15')}</div>
+                <div style="font-size:0.68rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;">Proyeksi Selesai</div>
+                <div style="font-size:1.2rem;font-weight:800;color:${projColor};line-height:1.2;">${projDays<200?projDateStr:'—'}</div>
+                <div style="font-size:0.72rem;color:${projColor};font-weight:600;">${noData?'':onTrack?'✅ On track':'⚠️ Tidak selesai tgl 15'}</div>
             </div>
         </div>`;
     }
 
-    // ── Survey type toggle ───────────────────────────────────────────────────
     function renderSurveyToggle(active) {
-        const base = 'padding:0.4rem 0.9rem;border-radius:0.6rem;border:1px solid var(--card-border);font-family:Outfit,sans-serif;font-size:0.78rem;font-weight:600;cursor:pointer;transition:all 0.2s;';
-        const activeStyle = 'background:linear-gradient(135deg,#6366f1,#4f46e5);color:#fff;';
-        const inactiveStyle = 'background:transparent;color:var(--text-secondary);';
-        return `
-        <div style="display:flex;gap:0.5rem;margin-bottom:1rem;">
-            <button onclick="window.renderPaluMonitoring('se_umum')" style="${base}${active==='se_umum'?activeStyle:inactiveStyle}">SE Umum</button>
-            <button onclick="window.renderPaluMonitoring('se_ub')" style="${base}${active==='se_ub'?activeStyle:inactiveStyle}">SE UB</button>
+        const base = 'padding:0.4rem 0.9rem;border-radius:0.6rem;border:1px solid var(--card-border);font-family:Outfit,sans-serif;font-size:0.78rem;font-weight:600;cursor:pointer;';
+        return `<div style="display:flex;gap:0.5rem;margin-bottom:1rem;">
+            <button onclick="window.renderPaluMonitoring('se_umum')" style="${base}${active==='se_umum'?'background:linear-gradient(135deg,#6366f1,#4f46e5);color:#fff;':'background:transparent;color:var(--text-secondary);'}">SE Umum</button>
+            <button onclick="window.renderPaluMonitoring('se_ub')" style="${base}${active==='se_ub'?'background:linear-gradient(135deg,#6366f1,#4f46e5);color:#fff;':'background:transparent;color:var(--text-secondary);'}">SE UB</button>
         </div>`;
     }
 
-    // ── Main render ──────────────────────────────────────────────────────────
-    window.renderPaluMonitoring = function (surveyType) {
+    window.togglePaluHistory = function() {
+        _showAllDates = !_showAllDates;
+        const container = document.getElementById('palu-monitoring-container');
+        if (!container) return;
+        const tableDiv = container.querySelector('[data-palu-table]');
+        if (tableDiv) tableDiv.outerHTML = renderPetugasTable(window._paluSurveyType || 'se_umum');
+        else window.renderPaluMonitoring(window._paluSurveyType || 'se_umum');
+    };
+
+    window.renderPaluMonitoring = function(surveyType) {
         surveyType = surveyType || 'se_umum';
+        window._paluSurveyType = surveyType;
         const container = document.getElementById('palu-monitoring-container');
         if (!container) return;
         const ipasData = getPaluIpas(surveyType);
-
-        // ORDER: toggle → summary cards → petugas table → daily tracker
         container.innerHTML =
             renderSurveyToggle(surveyType) +
             renderSummaryCards(ipasData, surveyType) +
-            renderPetugasTable() +
-            renderDailyTable(surveyType);
+            '<div data-palu-table>' + renderPetugasTable(surveyType) + '</div>';
     };
 
-    window.initPaluMonitoring = function () {
+    window.initPaluMonitoring = function() {
         window.renderPaluMonitoring('se_umum');
     };
 })();
