@@ -7418,31 +7418,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const btnPetugas = document.getElementById('btn-summary-petugas');
         const btnDesa = document.getElementById('btn-summary-desa');
+        const btnPalu = document.getElementById('btn-summary-palu');
         const petugasContainer = document.getElementById('petugas-summary-table-container');
         const desaContainer = document.getElementById('desa-summary-table-container');
+        const paluContainer = document.getElementById('palu-monitoring-container');
         const searchInput = document.getElementById('petugas-summary-search-input');
         const titleEl = document.getElementById('petugas-summary-title');
         const descEl = document.getElementById('petugas-summary-desc');
 
+        // Reset all active states
+        btnPetugas?.classList.remove('active');
+        btnDesa?.classList.remove('active');
+        btnPalu?.classList.remove('active');
+        if (petugasContainer) petugasContainer.style.display = 'none';
+        if (desaContainer) desaContainer.style.display = 'none';
+        if (paluContainer) paluContainer.style.display = 'none';
+
         if (view === 'petugas') {
             btnPetugas?.classList.add('active');
-            btnDesa?.classList.remove('active');
             if (petugasContainer) petugasContainer.style.display = 'block';
-            if (desaContainer) desaContainer.style.display = 'none';
             if (searchInput) searchInput.placeholder = 'Cari nama petugas...';
             if (titleEl) titleEl.innerHTML = `<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right:0.75rem;color:var(--primary);" viewbox="0 0 24 24" width="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Rekapitulasi Capaian per Petugas`;
             if (descEl) descEl.innerHTML = 'Data agregat progres masing-masing petugas (berdasarkan wilayah terpilih di filter atas). <span class="badge bg-primary ms-2" style="font-size:0.7rem; vertical-align:middle;">Live FAST CSV</span>';
+        } else if (view === 'palu') {
+            btnPalu?.classList.add('active');
+            if (paluContainer) paluContainer.style.display = 'block';
+            if (searchInput) searchInput.placeholder = '';
+            if (titleEl) titleEl.innerHTML = `🔴 Monitoring Harian Kota Palu`;
+            if (descEl) descEl.innerHTML = 'Pantau progres harian petugas Palu hingga 15 Juli 2026. Data diurutkan dari capaian terendah.';
+            if (typeof window.initPaluMonitoring === 'function') {
+                window.initPaluMonitoring();
+            }
         } else {
-            btnPetugas?.classList.remove('active');
             btnDesa?.classList.add('active');
-            if (petugasContainer) petugasContainer.style.display = 'none';
             if (desaContainer) desaContainer.style.display = 'block';
             if (searchInput) searchInput.placeholder = 'Cari nama kecamatan/desa...';
             if (titleEl) titleEl.innerHTML = `<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right:0.75rem;color:var(--primary);" viewbox="0 0 24 24" width="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Rekapitulasi Capaian per Kecamatan / Desa`;
             if (descEl) descEl.innerHTML = 'Data progres pengerjaan per kecamatan/desa. <span class="badge bg-secondary ms-2" style="font-size:0.7rem; vertical-align:middle;">Sumber: Data Granular (Detail)</span><br><small class="text-muted mt-1 d-block"><i class="fas fa-info-circle me-1"></i> Data pada tabel ini bergantung pada tarikan Granular terakhir dan mungkin sedikit delay dibandingkan tabel Petugas.</small>';
         }
 
-        if (window.renderPetugasSummaryTable) {
+        if (view !== 'palu' && window.renderPetugasSummaryTable) {
             window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA || null);
         }
     };
