@@ -7815,7 +7815,17 @@ document.addEventListener('DOMContentLoaded', () => {
                             total: pTotal,
                             selesai: pSelesai,
                             belum: pBelum,
-                            role: roleKey
+                            role: roleKey,
+                            open: pMapData.open || 0,
+                            draft: pMapData.draft || 0,
+                            submitted_pencacah: pMapData.submitted_pencacah || 0,
+                            approved: pMapData.approved || 0,
+                            completed_admin: pMapData.completed_admin || 0,
+                            rejected: pMapData.rejected || 0,
+                            revoked: pMapData.revoked || 0,
+                            edited_pengawas: pMapData.edited_pengawas || 0,
+                            edited_admin: pMapData.edited_admin || 0,
+                            submitted_respondent: pMapData.submitted_respondent || 0
                         });
                     }
                 }
@@ -7964,37 +7974,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let deltaHtml = "";
             if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
-                const dates = Object.keys(window.PETUGAS_HISTORY_MAP).sort();
-                dates.forEach((d, dIdx) => {
+                const allDates = Object.keys(window.PETUGAS_HISTORY_MAP).sort();
+                allDates.forEach((d, dIdx) => {
+                    if (d === "2026-07-09") return; // Hide July 9th
+                    
                     let dVal = undefined;
-                    let cumVal = 0;
+                    let dPct = undefined;
+                    let dHtmlDetails = "";
+                    
                     if (window.PETUGAS_HISTORY_MAP[d] && window.PETUGAS_HISTORY_MAP[d][p.role] && window.PETUGAS_HISTORY_MAP[d][p.role][p.email]) {
                         const hSnap = window.PETUGAS_HISTORY_MAP[d][p.role][p.email];
-                        if (p.role === 'Pengawas') {
-                            cumVal = (hSnap.completed_admin || 0);
-                        } else {
-                            cumVal = (hSnap.submitted_pencacah || 0) + (hSnap.approved || 0);
-                        }
                         
-                        let prevCum = 0;
                         if (dIdx > 0) {
-                            const prevDate = dates[dIdx-1];
+                            const prevDate = allDates[dIdx-1];
                             if (window.PETUGAS_HISTORY_MAP[prevDate] && window.PETUGAS_HISTORY_MAP[prevDate][p.role] && window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email]) {
                                 const pSnap = window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email];
+                                
+                                const getD = (k) => (hSnap[k] || 0) - (pSnap[k] || 0);
+                                
+                                const dSubPPL = getD('submitted_pencacah');
+                                const dSubResp = getD('submitted_respondent');
+                                const dAppr = getD('approved');
+                                const dRej = getD('rejected');
+                                const dRev = getD('revoked');
+                                const dEdPml = getD('edited_pengawas');
+                                const dEdAdm = getD('edited_admin');
+                                const dCompAdm = getD('completed_admin');
+                                
+                                let target = hSnap.target || p.total || 1;
+                                let pTarget = pSnap.target || p.total || 1;
+                                let currCum = 0, prevCum = 0;
+                                
                                 if (p.role === 'Pengawas') {
-                                    prevCum = (pSnap.completed_admin || 0);
+                                    dVal = dCompAdm;
+                                    currCum = hSnap.completed_admin || 0;
+                                    prevCum = pSnap.completed_admin || 0;
                                 } else {
+                                    dVal = dSubPPL + dAppr;
+                                    currCum = (hSnap.submitted_pencacah || 0) + (hSnap.approved || 0);
                                     prevCum = (pSnap.submitted_pencacah || 0) + (pSnap.approved || 0);
                                 }
+                                
+                                dPct = (currCum / target * 100) - (prevCum / pTarget * 100);
+                                
+                                if (dSubPPL > 0) dHtmlDetails += `<span style="color:#3b82f6">Submit PPL: +${dSubPPL}</span>`;
+                                if (dAppr > 0) dHtmlDetails += `<span style="color:#10b981">Approved: +${dAppr}</span>`;
+                                if (dCompAdm > 0) dHtmlDetails += `<span style="color:#8b5cf6">Completed: +${dCompAdm}</span>`;
+                                if (dRej > 0) dHtmlDetails += `<span style="color:#ef4444">Rejected: +${dRej}</span>`;
+                                if (dRev > 0) dHtmlDetails += `<span style="color:#f43f5e">Revoked: +${dRev}</span>`;
+                                if (dEdPml > 0) dHtmlDetails += `<span style="color:#8b5cf6">Edited PML: +${dEdPml}</span>`;
+                                if (dEdAdm > 0) dHtmlDetails += `<span style="color:#d946ef">Edited Admin: +${dEdAdm}</span>`;
+                                if (dSubResp > 0) dHtmlDetails += `<span style="color:#0ea5e9">Submit Resp: +${dSubResp}</span>`;
                             }
                         }
-                        dVal = cumVal - prevCum;
                     }
                     if (dVal === undefined) {
                         deltaHtml += `<td style="text-align: center; color: var(--text-secondary);">—</td>`;
                     } else {
                         const dColor = dVal > 0 ? '#16a34a' : (dVal === 0 ? '#d97706' : '#dc2626');
-                        deltaHtml += `<td style="text-align: center; font-weight: 700; color: ${dColor}; background: ${dIdx === dates.length-1 ? 'rgba(99,102,241,0.04)' : 'transparent'};">+${dVal.toLocaleString('id-ID')}</td>`;
+                        deltaHtml += `<td style="text-align: center; background: ${dIdx === allDates.length-1 ? 'rgba(99,102,241,0.04)' : 'transparent'};">
+                            <div style="font-weight: 700; color: ${dColor}; font-size: 1.05em;">
+                                ${dVal > 0 ? '+' : ''}${dVal.toLocaleString('id-ID')}
+                                <span style="font-size: 0.75em; opacity: 0.85; margin-left: 2px;">(${dPct > 0 ? '+' : ''}${dPct.toFixed(1).replace('.', ',')}%)</span>
+                            </div>
+                            <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px; display: flex; flex-direction: column; gap: 2px;">
+                                ${dHtmlDetails}
+                            </div>
+                        </td>`;
                     }
                 });
             }
@@ -8021,8 +8067,26 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </td>
                     <td style="text-align: center; font-family: monospace; font-weight: 700;">${p.total.toLocaleString('id-ID')}</td>
-                    <td style="text-align: center; font-family: monospace; color: #ef4444;">${p.belum.toLocaleString('id-ID')}</td>
-                    <td style="text-align: center; font-family: monospace; color: var(--color-delivered); font-weight: 700;">${p.selesai.toLocaleString('id-ID')}</td>
+                    <td style="text-align: center; font-family: monospace; color: #ef4444;">
+                        <div style="font-size: 1.05em; font-weight: 700;">${p.belum.toLocaleString('id-ID')}</div>
+                        <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px; display: flex; flex-direction: column; gap: 2px;">
+                            ${p.open > 0 ? `<span style="color:#64748b">Open: ${p.open}</span>` : ''}
+                            ${p.draft > 0 ? `<span style="color:#f59e0b">Draft: ${p.draft}</span>` : ''}
+                        </div>
+                    </td>
+                    <td style="text-align: center; font-family: monospace; color: var(--color-delivered);">
+                        <div style="font-size: 1.05em; font-weight: 700;">${p.selesai.toLocaleString('id-ID')}</div>
+                        <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px; display: flex; flex-direction: column; gap: 2px;">
+                            ${p.submitted_pencacah > 0 ? `<span style="color:#3b82f6">Submit PPL: ${p.submitted_pencacah}</span>` : ''}
+                            ${p.submitted_respondent > 0 ? `<span style="color:#0ea5e9">Submit Resp: ${p.submitted_respondent}</span>` : ''}
+                            ${p.approved > 0 ? `<span style="color:#10b981">Approved: ${p.approved}</span>` : ''}
+                            ${p.completed_admin > 0 ? `<span style="color:#8b5cf6">Completed: ${p.completed_admin}</span>` : ''}
+                            ${p.rejected > 0 ? `<span style="color:#ef4444">Rejected: ${p.rejected}</span>` : ''}
+                            ${p.revoked > 0 ? `<span style="color:#f43f5e">Revoked: ${p.revoked}</span>` : ''}
+                            ${p.edited_pengawas > 0 ? `<span style="color:#8b5cf6">Edited PML: ${p.edited_pengawas}</span>` : ''}
+                            ${p.edited_admin > 0 ? `<span style="color:#d946ef">Edited Admin: ${p.edited_admin}</span>` : ''}
+                        </div>
+                    </td>
                     ${deltaHtml}
                     <td style="text-align: center;">${badgeHtml}</td>
                 </tr>
@@ -8037,6 +8101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
                 const dates = Object.keys(window.PETUGAS_HISTORY_MAP).sort();
                 dates.forEach((d, idx) => {
+                    if (d === "2026-07-09") return; // Hide July 9th
                     const isLast = idx === dates.length - 1;
                     const dObj = new Date(d + 'T00:00:00');
                     const label = dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' });
@@ -8069,6 +8134,79 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+        window.lastPetugasSummaryArr = arr;
+    };
+
+    window.downloadPetugasSummaryExcel = function () {
+        if (!window.lastPetugasSummaryArr || window.lastPetugasSummaryArr.length === 0) {
+            alert("Tidak ada data untuk diunduh.");
+            return;
+        }
+        
+        const headers = ["Nama Petugas", "Email / Username", "Role", "Total Target", "Belum Selesai (Total)", "Open", "Draft", "Selesai (Total)", "Submit PPL", "Submit Respondent", "Approved", "Completed Admin", "Rejected", "Revoked", "Edited PML", "Edited Admin"];
+        
+        let dates = [];
+        if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
+            dates = Object.keys(window.PETUGAS_HISTORY_MAP).sort().filter(d => d !== "2026-07-09");
+            dates.forEach(d => {
+                const dObj = new Date(d + 'T00:00:00');
+                headers.push(dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }) + " (Delta)");
+                headers.push(dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }) + " (%)");
+            });
+        }
+        headers.push("% Capaian");
+
+        const rows = window.lastPetugasSummaryArr.map(p => {
+            const row = [
+                p.name, p.email, p.role, p.total, p.belum, 
+                p.open || 0, p.draft || 0, 
+                p.selesai, 
+                p.submitted_pencacah || 0, p.submitted_respondent || 0, p.approved || 0, p.completed_admin || 0,
+                p.rejected || 0, p.revoked || 0, p.edited_pengawas || 0, p.edited_admin || 0
+            ];
+            
+            if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
+                dates.forEach((d, dIdx) => {
+                    let dVal = "";
+                    let dPct = "";
+                    
+                    if (window.PETUGAS_HISTORY_MAP[d] && window.PETUGAS_HISTORY_MAP[d][p.role] && window.PETUGAS_HISTORY_MAP[d][p.role][p.email]) {
+                        if (dIdx > 0) {
+                            const prevDate = dates[dIdx-1];
+                            const hSnap = window.PETUGAS_HISTORY_MAP[d][p.role][p.email];
+                            if (window.PETUGAS_HISTORY_MAP[prevDate] && window.PETUGAS_HISTORY_MAP[prevDate][p.role] && window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email]) {
+                                const pSnap = window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email];
+                                
+                                const getD = (k) => (hSnap[k] || 0) - (pSnap[k] || 0);
+                                if (p.role === 'Pengawas') {
+                                    dVal = getD('completed_admin');
+                                } else {
+                                    dVal = getD('submitted_pencacah') + getD('approved');
+                                }
+                                
+                                let target = hSnap.target || p.total || 1;
+                                let pTarget = pSnap.target || p.total || 1;
+                                let currCum = p.role === 'Pengawas' ? (hSnap.completed_admin || 0) : ((hSnap.submitted_pencacah || 0) + (hSnap.approved || 0));
+                                let prevCum = p.role === 'Pengawas' ? (pSnap.completed_admin || 0) : ((pSnap.submitted_pencacah || 0) + (pSnap.approved || 0));
+                                
+                                dPct = ((currCum / target * 100) - (prevCum / pTarget * 100)).toFixed(1).replace('.', ',');
+                                dVal = dVal > 0 ? "+" + dVal : dVal.toString();
+                                dPct = parseFloat(dPct.replace(',','.')) > 0 ? "+" + dPct + "%" : dPct + "%";
+                            }
+                        }
+                    }
+                    row.push(dVal);
+                    row.push(dPct);
+                });
+            }
+            
+            const pct = p.total > 0 ? (p.selesai / p.total * 100).toFixed(1).replace('.', ',') + '%' : '0%';
+            row.push(pct);
+            
+            return row;
+        });
+        
+        exportToCSV(`rekap_progres_petugas_${new Date().toISOString().slice(0,10)}.csv`, headers, rows);
     };
 
     window.renderGranularAssignmentsTable = function (resetPage = true) {
