@@ -7429,10 +7429,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset all active states
         btnPetugas?.classList.remove('active');
         btnDesa?.classList.remove('active');
-        btnPalu?.classList.remove('active');
         if (petugasContainer) petugasContainer.style.display = 'none';
         if (desaContainer) desaContainer.style.display = 'none';
-        if (paluContainer) paluContainer.style.display = 'none';
 
         if (view === 'petugas') {
             btnPetugas?.classList.add('active');
@@ -7440,15 +7438,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (searchInput) searchInput.placeholder = 'Cari nama petugas...';
             if (titleEl) titleEl.innerHTML = `<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right:0.75rem;color:var(--primary);" viewbox="0 0 24 24" width="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Rekapitulasi Capaian per Petugas`;
             if (descEl) descEl.innerHTML = 'Data agregat progres masing-masing petugas (berdasarkan wilayah terpilih di filter atas). <span class="badge bg-primary ms-2" style="font-size:0.7rem; vertical-align:middle;">Live FAST CSV</span>';
-        } else if (view === 'palu') {
-            btnPalu?.classList.add('active');
-            if (paluContainer) paluContainer.style.display = 'block';
-            if (searchInput) searchInput.placeholder = '';
-            if (titleEl) titleEl.innerHTML = `🔴 Monitoring Harian Kota Palu`;
-            if (descEl) descEl.innerHTML = 'Pantau progres harian petugas Palu hingga 15 Juli 2026. Data diurutkan dari capaian terendah.';
-            if (typeof window.initPaluMonitoring === 'function') {
-                window.initPaluMonitoring();
-            }
         } else {
             btnDesa?.classList.add('active');
             if (desaContainer) desaContainer.style.display = 'block';
@@ -7457,7 +7446,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (descEl) descEl.innerHTML = 'Data progres pengerjaan per kecamatan/desa. <span class="badge bg-secondary ms-2" style="font-size:0.7rem; vertical-align:middle;">Sumber: Data Granular (Detail)</span><br><small class="text-muted mt-1 d-block"><i class="fas fa-info-circle me-1"></i> Data pada tabel ini bergantung pada tarikan Granular terakhir dan mungkin sedikit delay dibandingkan tabel Petugas.</small>';
         }
 
-        if (view !== 'palu' && window.renderPetugasSummaryTable) {
+        if (window.renderPetugasSummaryTable) {
             window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA || null);
         }
     };
@@ -7472,6 +7461,19 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.sort-icon-desa').forEach(el => { el.textContent = ''; });
         const currentTh = document.querySelector(`[onclick="window.sortDesaSummary('${field}')"] .sort-icon-desa`);
         if (currentTh) currentTh.textContent = window.desaSortOrder === 1 ? ' ▲' : ' ▼';
+        if (window.renderPetugasSummaryTable) {
+            window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA || null);
+        }
+    };
+
+    window._showPetugasHistory = false;
+    window.togglePetugasHistory = function() {
+        window._showPetugasHistory = !window._showPetugasHistory;
+        const btn = document.getElementById('btn-toggle-history-petugas');
+        if (btn) {
+            btn.innerHTML = window._showPetugasHistory ? '🙈 Sembunyikan History' : '📅 Tampilkan History';
+            btn.style.background = window._showPetugasHistory ? 'rgba(99,102,241,0.1)' : 'transparent';
+        }
         if (window.renderPetugasSummaryTable) {
             window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA || null);
         }
@@ -7960,6 +7962,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 roleBadge = `<span style="font-size: 0.6rem; padding: 2px 6px; background: rgba(59, 130, 246, 0.1); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 4px; font-weight: 700;">PPL</span>`;
             }
 
+            let deltaHtml = "";
+            if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
+                const dates = Object.keys(window.PETUGAS_HISTORY_MAP).sort();
+                dates.forEach((d, dIdx) => {
+                    let dVal = undefined;
+                    let cumVal = 0;
+                    if (window.PETUGAS_HISTORY_MAP[d] && window.PETUGAS_HISTORY_MAP[d][p.role] && window.PETUGAS_HISTORY_MAP[d][p.role][p.email]) {
+                        const hSnap = window.PETUGAS_HISTORY_MAP[d][p.role][p.email];
+                        if (p.role === 'Pengawas') {
+                            cumVal = (hSnap.completed_admin || 0);
+                        } else {
+                            cumVal = (hSnap.submitted_pencacah || 0) + (hSnap.approved || 0);
+                        }
+                        
+                        let prevCum = 0;
+                        if (dIdx > 0) {
+                            const prevDate = dates[dIdx-1];
+                            if (window.PETUGAS_HISTORY_MAP[prevDate] && window.PETUGAS_HISTORY_MAP[prevDate][p.role] && window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email]) {
+                                const pSnap = window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email];
+                                if (p.role === 'Pengawas') {
+                                    prevCum = (pSnap.completed_admin || 0);
+                                } else {
+                                    prevCum = (pSnap.submitted_pencacah || 0) + (pSnap.approved || 0);
+                                }
+                            }
+                        }
+                        dVal = cumVal - prevCum;
+                    }
+                    if (dVal === undefined) {
+                        deltaHtml += `<td style="text-align: center; color: var(--text-secondary);">—</td>`;
+                    } else {
+                        const dColor = dVal > 0 ? '#16a34a' : (dVal === 0 ? '#d97706' : '#dc2626');
+                        deltaHtml += `<td style="text-align: center; font-weight: 700; color: ${dColor}; background: ${dIdx === dates.length-1 ? 'rgba(99,102,241,0.04)' : 'transparent'};">+${dVal.toLocaleString('id-ID')}</td>`;
+                    }
+                });
+            }
+
             html += `
                 <tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s;">
                     <td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${idxReal + 1}</td>
@@ -7984,11 +8023,41 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td style="text-align: center; font-family: monospace; font-weight: 700;">${p.total.toLocaleString('id-ID')}</td>
                     <td style="text-align: center; font-family: monospace; color: #ef4444;">${p.belum.toLocaleString('id-ID')}</td>
                     <td style="text-align: center; font-family: monospace; color: var(--color-delivered); font-weight: 700;">${p.selesai.toLocaleString('id-ID')}</td>
+                    ${deltaHtml}
                     <td style="text-align: center;">${badgeHtml}</td>
                 </tr>
             `;
         });
         tbody.innerHTML = html;
+
+        // Render Head
+        const thead = document.getElementById('petugas-summary-table-head');
+        if (thead) {
+            let thHistory = "";
+            if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
+                const dates = Object.keys(window.PETUGAS_HISTORY_MAP).sort();
+                dates.forEach((d, idx) => {
+                    const isLast = idx === dates.length - 1;
+                    const dObj = new Date(d + 'T00:00:00');
+                    const label = dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' });
+                    const sublabel = isLast ? '<br><span style="font-size:0.6rem;font-weight:400;opacity:0.8;">terakhir</span>' : '<br><span style="font-size:0.6rem;font-weight:400;opacity:0.7;">delta</span>';
+                    thHistory += `<th style="text-align: center; width: 75px; ${isLast ? 'background:rgba(99,102,241,0.1);' : ''}">${label}${sublabel}</th>`;
+                });
+            }
+            
+            thead.innerHTML = `
+                <tr>
+                    <th style="width: 60px; text-align: center;">No</th>
+                    <th style="text-align: left; cursor: pointer;" onclick="window.sortPetugasSummary('name')">Nama Petugas <span class="sort-icon"></span></th>
+                    <th style="text-align: left; cursor: pointer;" onclick="window.sortPetugasSummary('email')">Email / Username <span class="sort-icon"></span></th>
+                    <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('total')">Total Target <span class="sort-icon"></span></th>
+                    <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('belum')">Belum Selesai <span class="sort-icon"></span></th>
+                    <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('selesai')">Selesai <span class="sort-icon"></span></th>
+                    ${thHistory}
+                    <th style="text-align: center; width: 120px; cursor: pointer;" onclick="window.sortPetugasSummary('pct')">% Capaian <span class="sort-icon"></span></th>
+                </tr>
+            `;
+        }
 
         const headers = document.querySelectorAll('#petugas-summary-table-body').length > 0 ? document.getElementById('petugas-summary-table-body').parentElement.querySelectorAll('th') : [];
         headers.forEach(th => {

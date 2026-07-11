@@ -242,6 +242,28 @@ async def run():
                     elif "EDITED BY ADMIN" in s_name: petugas_map[role][email]["edited_admin"] += s_count
                     elif "COMPLETED BY ADMIN" in s_name: petugas_map[role][email]["completed_admin"] += s_count
 
+        # ── Update Progress History ──
+        import datetime, re
+        history_file = "/Users/jihanmaisaroh/scrap_fasih/fast_petugas_history.js"
+        history_map = {}
+        if os.path.exists(history_file):
+            try:
+                with open(history_file, 'r') as f:
+                    content = f.read()
+                    start = content.find('{')
+                    end = content.rfind('}') + 1
+                    if start != -1 and end != 0:
+                        history_map = json.loads(content[start:end])
+            except Exception as e:
+                print(f"[WARNING] Failed to parse {history_file}: {e}")
+
+        today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+        history_map[today_str] = petugas_map
+        
+        with open(history_file, "w", encoding='utf-8') as f:
+            f.write(f"window.PETUGAS_HISTORY_MAP = {json.dumps(history_map, indent=4)};\n")
+        print(f"[SUCCESS] History map disimpan di {history_file} (Total: {len(history_map)} hari)")
+
         js_file = "/Users/jihanmaisaroh/scrap_fasih/fast_petugas_progress.js"
         with open(js_file, "w") as f:
             f.write(f"window.PETUGAS_PROGRESS_MAP = {json.dumps(petugas_map, indent=4)};\n")
