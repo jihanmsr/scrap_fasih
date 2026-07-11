@@ -5719,6 +5719,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (loggedUser) {
                 window.showAnomaliDataSection();
             }
+        } else if (tabId === 'palu') {
+            if (mainHeader) mainHeader.textContent = '🔴 Monitoring Harian Kota Palu';
+            if (mainSubheader) mainSubheader.textContent = 'Pantau progres petugas Palu secara detail hingga 15 Juli 2026';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            if (typeof window.initPaluMonitoring === 'function') {
+                window.initPaluMonitoring();
+            }
         } else {
             if (mainHeader) mainHeader.textContent = 'Pemantauan Email Usaha Besar';
             if (mainSubheader) mainSubheader.textContent = 'Daftar pemantauan status pengiriman email kuesioner kepada responden Usaha Besar (UB)';
