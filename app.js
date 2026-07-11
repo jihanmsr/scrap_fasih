@@ -9980,7 +9980,22 @@ window.downloadCurrentSeTable = function(surveyType) {
             };
         });
 
-        // Add cumulative SELTENG total row
+        // Calculate province delta using weighted average (same logic as dashboard)
+        let sumSelesaiYesterday = 0, sumTargetYesterday = 0;
+        filtered.forEach(item => {
+            const pctNow = parseFloat(item.persentase) || 0;
+            const itemDelta = parseFloat(item.delta_persen) || 0;
+            const pctYesterday = pctNow - itemDelta;
+            sumSelesaiYesterday += (pctYesterday / 100) * (item.total_prelist || 0);
+            sumTargetYesterday += (item.total_prelist || 0);
+        });
+        const provPctNow = totalPrelist > 0 ? (totalSubmitted / totalPrelist) * 100 : 0;
+        const provPctYesterday = sumTargetYesterday > 0 ? (sumSelesaiYesterday / sumTargetYesterday) * 100 : 0;
+        let provDelta = provPctNow - provPctYesterday;
+        if (Math.abs(provDelta) < 0.01) provDelta = 0;
+        const provDeltaStr = provDelta !== 0 ? (provDelta >= 0 ? '+' : '') + provDelta.toFixed(2) + '%' : '';
+
+        // Add cumulative SULAWESI TENGAH total row
         const totalSisaUsaha = Math.max(0, totalPrelist - totalSubmitted);
         const totalPct = totalPrelist > 0 ? ((totalSubmitted / totalPrelist) * 100).toFixed(2) + '%' : '0.00%';
         exportRows.push({
@@ -9991,7 +10006,7 @@ window.downloadCurrentSeTable = function(surveyType) {
             'Submitted (Selesai)': totalSubmitted,
             '% Capaian': totalPct,
             'Sisa Usaha': totalSisaUsaha,
-            'Delta (%)': ''
+            'Delta (%)': provDeltaStr
         });
     } else if (viewLevel === 'kecamatan') {
         const selectedKab = document.getElementById(`${surveyType}-kab-filter`)?.value || 'all';
