@@ -153,15 +153,6 @@
                     </svg>
                     Pemantauan Anomali
                 </button>
-                <button class="btn-tab" id="tab-btn-palu" onclick="switchTab('palu')"
-                    title="Monitoring harian khusus Kota Palu" style="border-left:3px solid #dc2626;">
-                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    <span style="color:#ef4444;font-weight:700;">🔴 Monitor Palu</span>
-                </button>
             </nav>
 
             <div class="sidebar-footer"
@@ -470,6 +461,7 @@
                     <div class="tabs-navigation" id="granular-summary-toggle" style="justify-content: flex-start; margin-top: 1rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem; gap: 0.5rem;">
                         <button class="btn-tab active" id="btn-summary-petugas" onclick="window.switchGranularSummaryView('petugas')" style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.8rem;">Rekap Progres Petugas</button>
                         <button class="btn-tab" id="btn-summary-desa" onclick="window.switchGranularSummaryView('desa')" style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.8rem;">Rekap Progres Desa</button>
+                        <button class="btn-tab" id="btn-summary-palu" onclick="window.switchGranularSummaryView('palu')" style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.8rem; border-left: 2px solid #dc2626;">🔴 Monitor Palu</button>
                     </div>
 
                     <h3 id="petugas-summary-title"
