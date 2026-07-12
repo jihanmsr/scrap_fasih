@@ -7324,8 +7324,6 @@ document.addEventListener('DOMContentLoaded', () => {
             await loadGranularAssignmentsData(kabVal, surveyTypeFilter);
         }
 
-        if (!window.GRANULAR_ASSIGNMENTS_DATA) return;
-
         const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
 
         if (changedLevel === 'kab') {
@@ -7335,11 +7333,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
             } else {
                 const kecs = new Set();
-                window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
-                    if ((r.kab_name || '').toUpperCase() === cleanKabVal && r.kec_name && r.kec_name !== '-') {
-                        kecs.add(r.kec_name);
+                if (window.GRANULAR_ASSIGNMENTS_DATA) {
+                    window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
+                        if ((r.kab_name || '').toUpperCase() === cleanKabVal && r.kec_name && r.kec_name !== '-') {
+                            kecs.add(r.kec_name);
+                        }
+                    });
+                } else if (window.IPAS_DATA) {
+                    const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
+                    const surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value : (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
+                    const surveyData = window.IPAS_DATA[surveyTypeFilter] || [];
+                    const kabData = surveyData.find(k => k.kabupaten === kabVal);
+                    if (kabData && kabData.kecamatan_list) {
+                        kabData.kecamatan_list.forEach(k => {
+                            if (k.kecamatan && k.kecamatan !== '[000] -') {
+                                kecs.add(k.kecamatan);
+                            }
+                        });
                     }
-                });
+                }
                 const sortedKecs = Array.from(kecs).sort();
                 if (kecSelect) {
                     kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>' +
@@ -7356,11 +7368,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
             } else {
                 const desas = new Set();
-                window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
-                    if ((r.kab_name || '').toUpperCase() === cleanKabVal && r.kec_name === kecVal && r.desa_name && r.desa_name !== '-') {
-                        desas.add(r.desa_name);
-                    }
-                });
+                if (window.GRANULAR_ASSIGNMENTS_DATA) {
+                    window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
+                        if ((r.kab_name || '').toUpperCase() === cleanKabVal && r.kec_name === kecVal && r.desa_name && r.desa_name !== '-') {
+                            desas.add(r.desa_name);
+                        }
+                    });
+                }
                 const sortedDesas = Array.from(desas).sort();
                 if (desaSelect) {
                     desaSelect.innerHTML = '<option value="all">Semua Desa</option>' +
@@ -7376,11 +7390,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
             } else {
                 const slss = new Set();
-                window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
-                    if ((r.kab_name || '').toUpperCase() === cleanKabVal && r.kec_name === kecVal && r.desa_name === desaVal && r.sls_name && r.sls_name !== '-') {
-                        slss.add(`${r.sls_code} - ${r.sls_name}`);
-                    }
-                });
+                if (window.GRANULAR_ASSIGNMENTS_DATA) {
+                    window.GRANULAR_ASSIGNMENTS_DATA.forEach(r => {
+                        if ((r.kab_name || '').toUpperCase() === cleanKabVal && r.kec_name === kecVal && r.desa_name === desaVal && r.sls_name && r.sls_name !== '-') {
+                            slss.add(`${r.sls_code} - ${r.sls_name}`);
+                        }
+                    });
+                }
                 const sortedSlss = Array.from(slss).sort();
                 if (slsSelect) {
                     slsSelect.innerHTML = '<option value="all">Semua SLS</option>' +
