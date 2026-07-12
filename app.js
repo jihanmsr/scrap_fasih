@@ -7710,29 +7710,57 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        // --- PREPARE WILAYAH PREFIX ---
+        const kabFilterDashboard = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        const kecFilterDashboard = document.getElementById('assign-sls-kec-filter')?.value || 'all';
+        
+        let resolvedKabPrefix = '';
+        const kabPrefixMatch = kabFilterDashboard.match(/\[(\d+)\]/);
+        if (kabPrefixMatch) resolvedKabPrefix = kabPrefixMatch[1];
+
+        let resolvedKecPrefix = '';
+        const kecPrefixMatch = kecFilterDashboard.match(/\[(\d+)\]/);
+        if (kecPrefixMatch) {
+            resolvedKecPrefix = kecPrefixMatch[1];
+        } else if (kecFilterDashboard !== 'all' && window.IPAS_DATA) {
+            const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
+            const surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value : (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
+            const surveyData = window.IPAS_DATA[surveyTypeFilter] || [];
+            const kabData = surveyData.find(k => k.kabupaten === kabFilterDashboard);
+            if (kabData && kabData.kecamatan_list) {
+                const foundKec = kabData.kecamatan_list.find(k => k.kecamatan.toUpperCase().includes(kecFilterDashboard.toUpperCase()));
+                if (foundKec) {
+                    const foundMatch = foundKec.kecamatan.match(/\[(\d+)\]/);
+                    if (foundMatch) resolvedKecPrefix = foundMatch[1];
+                }
+            }
+        }
 
         // --- SINKRONISASI DENGAN PETUGAS_PROGRESS_MAP (DATA FAST TERBARU) ---
         // KARTU ATAS DIHITUNG ULANG DARI DATA FAST (PENCACAH SAJA AGAR TIDAK DOUBLE COUNT)
-        const kabFilterDashboard = document.getElementById('assign-sls-kab-filter')?.value || 'all';
         if (window.PETUGAS_PROGRESS_MAP && window.PETUGAS_PROGRESS_MAP['Pencacah']) {
             let realTotalAll = 0;
             let realSelesaiAll = 0;
             let realBelumAll = 0;
             
             for (const [email, pMapData] of Object.entries(window.PETUGAS_PROGRESS_MAP['Pencacah'])) {
-                let isPetugasInKabupaten = false;
-                if (kabFilterDashboard !== 'all' && window.PETUGAS_REGION_MAP) {
-                    const kabPrefixMatch = kabFilterDashboard.match(/\[(\d+)\]/);
-                    const kabPrefix = kabPrefixMatch ? kabPrefixMatch[1] : '';
+                let isPetugasInWilayah = false;
+                if ((kabFilterDashboard !== 'all' || kecFilterDashboard !== 'all') && window.PETUGAS_REGION_MAP) {
                     const regions = window.PETUGAS_REGION_MAP[email.toLowerCase()];
                     if (regions && regions.length > 0) {
-                        isPetugasInKabupaten = regions.some(rc => rc && kabPrefix && rc.startsWith('72' + kabPrefix));
+                        isPetugasInWilayah = regions.some(rc => {
+                            if (!rc) return false;
+                            let match = true;
+                            if (resolvedKabPrefix) match = match && rc.startsWith('72' + resolvedKabPrefix);
+                            if (resolvedKabPrefix && resolvedKecPrefix) match = match && rc.startsWith('72' + resolvedKabPrefix + resolvedKecPrefix);
+                            return match;
+                        });
                     }
                 } else {
-                    isPetugasInKabupaten = true;
+                    isPetugasInWilayah = true;
                 }
                 
-                if (isPetugasInKabupaten) {
+                if (isPetugasInWilayah) {
                     const pTotal = pMapData.target || 0;
                     const pBelum = (pMapData.open || 0) + (pMapData.draft || 0);
                     const pSelesai = pTotal - pBelum;
@@ -7763,12 +7791,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 2. TABEL PETUGAS: Gunakan murni data dari CSV FAST (window.PETUGAS_PROGRESS_MAP)
-        const kabFilter = document.getElementById('assign-sls-kab-filter')?.value || 'all';
-        const kecFilter = document.getElementById('assign-sls-kec-filter')?.value || 'all';
         const tbody = document.getElementById('petugas-summary-table-body');
         if (!tbody) return;
 
-        if (kabFilter === 'all') {
+        if (kabFilterDashboard === 'all') {
             tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2.5rem 1rem; color: var(--text-secondary);"><div style="font-size:1.5rem;margin-bottom:0.5rem;">📋</div><div style="font-weight:600;margin-bottom:0.35rem;color:var(--text);">Pilih Kabupaten/Kota terlebih dahulu</div><div style="font-size:0.82rem;">Gunakan dropdown filter di atas untuk memuat data rekap petugas per kabupaten.</div></td></tr>';
             return;
         }
@@ -7795,20 +7821,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     const roleData = window.PETUGAS_PROGRESS_MAP[roleKey];
                     for (const [email, pMapData] of Object.entries(roleData)) {
                         let isPetugasInWilayah = false;
-                        if ((kabFilter !== 'all' || kecFilter !== 'all') && window.PETUGAS_REGION_MAP) {
-                            const kabPrefixMatch = kabFilter.match(/\[(\d+)\]/);
-                            const kabPrefix = kabPrefixMatch ? kabPrefixMatch[1] : '';
-                            
-                            const kecPrefixMatch = kecFilter.match(/\[(\d+)\]/);
-                            const kecPrefix = kecPrefixMatch ? kecPrefixMatch[1] : '';
-                            
+                        if ((kabFilterDashboard !== 'all' || kecFilterDashboard !== 'all') && window.PETUGAS_REGION_MAP) {
                             const regions = window.PETUGAS_REGION_MAP[email.toLowerCase()];
                             if (regions && regions.length > 0) {
                                 isPetugasInWilayah = regions.some(rc => {
                                     if (!rc) return false;
                                     let match = true;
-                                    if (kabPrefix) match = match && rc.startsWith('72' + kabPrefix);
-                                    if (kabPrefix && kecPrefix) match = match && rc.startsWith('72' + kabPrefix + kecPrefix);
+                                    if (resolvedKabPrefix) match = match && rc.startsWith('72' + resolvedKabPrefix);
+                                    if (resolvedKabPrefix && resolvedKecPrefix) match = match && rc.startsWith('72' + resolvedKabPrefix + resolvedKecPrefix);
                                     return match;
                                 });
                             }
