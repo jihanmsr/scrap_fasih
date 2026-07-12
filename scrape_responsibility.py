@@ -49,7 +49,7 @@ async def run():
         page = context.pages[0] if context.pages else await context.new_page()
         
         print("[INFO] Mengakses FASIH...")
-        await page.goto("https://fasih-sm.bps.go.id/app/auth/login")
+        await page.goto("https://fasih-sm.bps.go.id/app/auth/login", timeout=120000)
         
         import re
         try:
@@ -69,7 +69,7 @@ async def run():
                 await context.close()
                 return
 
-        await page.goto("https://fasih-sm.bps.go.id/app/analytic/assignment/assignment-status")
+        await page.goto("https://fasih-sm.bps.go.id/app/analytic/assignment/assignment-status", timeout=120000)
         await page.wait_for_load_state("networkidle")
         
         cookies = await context.cookies()
@@ -156,7 +156,7 @@ async def run():
                         if "HTML Response" in res.get('_error') or "Unauthenticated" in res.get('_error'):
                             print("[INFO] Terdeteksi sesi/token mati. Mencoba refresh halaman untuk mengambil token baru...")
                             try:
-                                await page.goto("https://fasih-sm.bps.go.id/app/analytic/assignment/assignment-status")
+                                await page.goto("https://fasih-sm.bps.go.id/app/analytic/assignment/assignment-status", timeout=120000)
                                 await page.wait_for_load_state("networkidle")
                                 cookies = await page.context.cookies()
                                 for c in cookies:
@@ -259,12 +259,32 @@ async def run():
             today_str = datetime.datetime.now().strftime("%Y-%m-%d")
             history_map[today_str] = petugas_map
             
-            with open(history_file, "w", encoding='utf-8') as f: f.write(f"window.PETUGAS_HISTORY_MAP = {json.dumps(history_map, indent=4)};\\n")
-            with open("/Users/jihanmaisaroh/scrap_fasih/fast_petugas_progress.js", "w") as f: f.write(f"window.PETUGAS_PROGRESS_MAP = {json.dumps(petugas_map, indent=4)};\\n")
+            with open(history_file, "w", encoding='utf-8') as f: f.write(f"window.PETUGAS_HISTORY_MAP = {json.dumps(history_map, indent=4)};\n")
+            with open("/Users/jihanmaisaroh/scrap_fasih/fast_petugas_progress.js", "w") as f: f.write(f"window.PETUGAS_PROGRESS_MAP = {json.dumps(petugas_map, indent=4)};\n")
+            
+            # --- START REGION MAP SAVE ---
+            region_map = {}
+            for row in all_results:
+                email = row.get("email", "").strip().lower()
+                role = row.get("assigned_role", "")
+                if not email or not role: continue
+                
+                if email not in region_map:
+                    region_map[email] = []
+                    
+                for r_sum in row.get("regionSummary", []):
+                    reg_code = r_sum.get("regionCode", "")
+                    if reg_code and reg_code not in region_map[email]:
+                        region_map[email].append(reg_code)
+            
+            with open("/Users/jihanmaisaroh/scrap_fasih/petugas_region_map.js", "w", encoding='utf-8') as f:
+                f.write(f"window.PETUGAS_REGION_MAP = {json.dumps(region_map)};\n")
+            # --- END REGION MAP SAVE ---
+            
             print(f"    [INFO] Auto-save progresif berhasil untuk {kab_name}. Data aman.")
             # --- END PROGRESIF SAVE ---
 
-        print(f"\\n[SUCCESS] Berhasil ditarik semua!")
+        print(f"\n[SUCCESS] Berhasil ditarik semua!")
 
         # (Progressive save sudah menghandle CSV dan History JS)
         

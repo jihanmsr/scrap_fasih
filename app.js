@@ -7466,12 +7466,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    window._showPetugasHistory = false;
+    window._showPetugasHistory = true;
     window.togglePetugasHistory = function() {
         window._showPetugasHistory = !window._showPetugasHistory;
         const btn = document.getElementById('btn-toggle-history-petugas');
         if (btn) {
-            btn.innerHTML = window._showPetugasHistory ? '🙈 Sembunyikan History' : '📅 Tampilkan History';
+            btn.innerHTML = window._showPetugasHistory ? 'Sembunyikan History' : 'Tampilkan History';
             btn.style.background = window._showPetugasHistory ? 'rgba(99,102,241,0.1)' : 'transparent';
         }
         if (window.renderPetugasSummaryTable) {
@@ -7805,9 +7805,14 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (mapped) displayName = mapped;
                         }
 
-                        const pTotal = pMapData.target || 0;
-                        const pBelum = (pMapData.open || 0) + (pMapData.draft || 0);
-                        const pSelesai = pTotal - pBelum; // "selain open draft itu jd submit"
+                        const pBelum = (pMapData.open || 0) + (pMapData.draft || 0) + (pMapData.rejected || 0) + (pMapData.revoked || 0);
+                        const pSelesaiReal = (pMapData.submitted_pencacah || 0) + (pMapData.approved || 0) + 
+                                             (pMapData.edited_admin || 0) + (pMapData.completed_admin || 0) + 
+                                             (pMapData.submitted_respondent || 0) + (pMapData.edited_pengawas || 0);
+                        // Total sebaiknya adalah jumlah dari assign aktual (belum + selesai), ATAU target asli jika lebih besar
+                        const pTotal = Math.max(pMapData.target || 0, pBelum + pSelesaiReal);
+                        // Selalu gunakan pSelesaiReal agar tidak pernah minus atau over-inflated
+                        const pSelesai = pSelesaiReal;
 
                         arr.push({
                             name: displayName,
@@ -7835,7 +7840,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Jangan tampilkan CAWI / Mandiri atau Belum Ada Petugas di dalam daftar baris agar tidak terlihat menumpuk
-        arr = arr.filter(p => p.name !== 'Belum Ada Petugas' && p.name !== 'CAWI / Mandiri (Tanpa Petugas)');
+        arr = arr.filter(p => p.name !== 'Belum Ada Petugas' && p.name !== 'CAWI / Mandiri (Tanpa Petugas)' && (!p.role || p.role === window.currentPetugasTab));
 
         const searchInput = document.getElementById('petugas-summary-search-input');
         if (searchInput && searchInput.value.trim()) {

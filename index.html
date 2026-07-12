@@ -476,7 +476,7 @@
                         Rekapitulasi Capaian per Petugas
                     </h3>
                     
-                    <div class="d-flex gap-2 mb-3" style="display: none !important;">
+                    <div class="d-flex gap-2 mb-3">
                         <button class="btn-tab active" id="tab-pencacah" onclick="window.setPetugasTab('Pencacah')" style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.8rem;">Pencacah</button>
                         <button class="btn-tab" id="tab-pengawas" onclick="window.setPetugasTab('Pengawas')" style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.8rem;">Pengawas</button>
                     </div>
@@ -501,8 +501,8 @@
                         </div>
                         <button id="btn-toggle-history-petugas"
                             onclick="window.togglePetugasHistory()"
-                            style="display: flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--text-secondary); border: 1px solid var(--border-light); border-radius: 0.6rem; padding: 0.5rem 1rem; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s; white-space: nowrap;">
-                            📅 Tampilkan History
+                            style="display: flex; align-items: center; gap: 0.5rem; background: rgba(99,102,241,0.1); color: var(--text-secondary); border: 1px solid var(--border-light); border-radius: 0.6rem; padding: 0.5rem 1rem; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s; white-space: nowrap;">
+                            Sembunyikan History
                         </button>
                         <button id="btn-download-excel-petugas"
                             onclick="window.downloadPetugasSummaryExcel()"
@@ -2249,9 +2249,9 @@
     <script src="new_businesses_data.js"></script>
     <script src="daily_summary.js"></script>
     <script src="petugas_progress.js"></script>    <script src="petugas_phones.js"></script>
-    <script src="petugas_region_map.js"></script>
-    <script src="fast_petugas_progress.js"></script>
-    <script src="fast_petugas_history.js"></script>
+    <script src="petugas_region_map.js?v=20260712"></script>
+    <script src="fast_petugas_progress.js?v=20260712"></script>
+    <script src="fast_petugas_history.js?v=20260712"></script>
     <script src="app.js?v=8" defer></script>
 
     <script>
