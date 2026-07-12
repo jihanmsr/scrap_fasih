@@ -7748,6 +7748,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 2. TABEL PETUGAS: Gunakan murni data dari CSV FAST (window.PETUGAS_PROGRESS_MAP)
         const kabFilter = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+        const kecFilter = document.getElementById('assign-sls-kec-filter')?.value || 'all';
         const tbody = document.getElementById('petugas-summary-table-body');
         if (!tbody) return;
 
@@ -7777,23 +7778,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (window.PETUGAS_PROGRESS_MAP[roleKey]) {
                     const roleData = window.PETUGAS_PROGRESS_MAP[roleKey];
                     for (const [email, pMapData] of Object.entries(roleData)) {
-                        let isPetugasInKabupaten = false;
-                        if (kabFilter !== 'all' && window.PETUGAS_REGION_MAP) {
+                        let isPetugasInWilayah = false;
+                        if ((kabFilter !== 'all' || kecFilter !== 'all') && window.PETUGAS_REGION_MAP) {
                             const kabPrefixMatch = kabFilter.match(/\[(\d+)\]/);
                             const kabPrefix = kabPrefixMatch ? kabPrefixMatch[1] : '';
                             
+                            const kecPrefixMatch = kecFilter.match(/\[(\d+)\]/);
+                            const kecPrefix = kecPrefixMatch ? kecPrefixMatch[1] : '';
+                            
                             const regions = window.PETUGAS_REGION_MAP[email.toLowerCase()];
                             if (regions && regions.length > 0) {
-                                isPetugasInKabupaten = regions.some(rc => {
+                                isPetugasInWilayah = regions.some(rc => {
                                     if (!rc) return false;
-                                    return kabPrefix && rc.startsWith('72' + kabPrefix);
+                                    let match = true;
+                                    if (kabPrefix) match = match && rc.startsWith('72' + kabPrefix);
+                                    if (kabPrefix && kecPrefix) match = match && rc.startsWith('72' + kabPrefix + kecPrefix);
+                                    return match;
                                 });
                             }
                         } else {
-                            isPetugasInKabupaten = true;
+                            isPetugasInWilayah = true;
                         }
                         
-                        if (!isPetugasInKabupaten) {
+                        if (!isPetugasInWilayah) {
                             continue;
                         }
 
