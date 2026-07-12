@@ -7442,6 +7442,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const titleEl = document.getElementById('petugas-summary-title');
         const descEl = document.getElementById('petugas-summary-desc');
 
+        const paginationContainer = document.getElementById('petugas-summary-pagination');
+
         // Reset all active states
         btnPetugas?.classList.remove('active');
         btnDesa?.classList.remove('active');
@@ -7451,12 +7453,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (view === 'petugas') {
             btnPetugas?.classList.add('active');
             if (petugasContainer) petugasContainer.style.display = 'block';
+            if (paginationContainer) paginationContainer.style.display = 'flex';
             if (searchInput) searchInput.placeholder = 'Cari nama petugas...';
             if (titleEl) titleEl.innerHTML = `<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right:0.75rem;color:var(--primary);" viewbox="0 0 24 24" width="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Rekapitulasi Capaian per Petugas`;
             if (descEl) descEl.innerHTML = 'Data agregat progres masing-masing petugas (berdasarkan wilayah terpilih di filter atas). <span class="badge bg-primary ms-2" style="font-size:0.7rem; vertical-align:middle;">Live FAST CSV</span>';
         } else {
             btnDesa?.classList.add('active');
             if (desaContainer) desaContainer.style.display = 'block';
+            if (paginationContainer) paginationContainer.style.display = 'none';
             if (searchInput) searchInput.placeholder = 'Cari nama kecamatan/desa...';
             if (titleEl) titleEl.innerHTML = `<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right:0.75rem;color:var(--primary);" viewbox="0 0 24 24" width="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Rekapitulasi Capaian per Kecamatan / Desa`;
             if (descEl) descEl.innerHTML = 'Data progres pengerjaan per kecamatan/desa. <span class="badge bg-secondary ms-2" style="font-size:0.7rem; vertical-align:middle;">Sumber: Data Granular (Detail)</span><br><small class="text-muted mt-1 d-block"><i class="fas fa-info-circle me-1"></i> Data pada tabel ini bergantung pada tarikan Granular terakhir dan mungkin sedikit delay dibandingkan tabel Petugas.</small>';
@@ -7498,10 +7502,54 @@ document.addEventListener('DOMContentLoaded', () => {
     window.renderPetugasSummaryTable = function (data) {
         if (window.granularSummaryView === 'desa') {
             let totalAll = 0, selesaiAll = 0, belumAll = 0, desaMap = {};
+            const kabFilter = document.getElementById('assign-sls-kab-filter')?.value || 'all';
+            const kecFilter = document.getElementById('assign-sls-kec-filter')?.value || 'all';
+            
+            // Prepare clean prefixes for filtering
+            let resolvedKabPrefix = null;
+            const kabPrefixMatch = kabFilter.match(/\[(\d+)\]/);
+            if (kabPrefixMatch) resolvedKabPrefix = kabPrefixMatch[1];
+
+            let resolvedKecPrefix = null;
+            const kecPrefixMatch = kecFilter.match(/\[(\d+)\]/);
+            if (kecPrefixMatch) {
+                resolvedKecPrefix = kecPrefixMatch[1];
+            } else if (kecFilter !== 'all' && window.IPAS_DATA) {
+                const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
+                const surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value : (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
+                const surveyData = window.IPAS_DATA[surveyTypeFilter] || [];
+                const kabData = surveyData.find(k => k.kabupaten === kabFilter);
+                if (kabData && kabData.kecamatan_list) {
+                    const foundKec = kabData.kecamatan_list.find(k => k.kecamatan.toUpperCase().includes(kecFilter.toUpperCase()));
+                    if (foundKec) {
+                        const foundMatch = foundKec.kecamatan.match(/\[(\d+)\]/);
+                        if (foundMatch) resolvedKecPrefix = foundMatch[1];
+                    }
+                }
+            }
             
             if (Array.isArray(data) && data.length > 0) {
                 // Granular mode: aggregate per desa from granular assignment records
                 data.forEach(r => {
+                    if (kabFilter !== 'all' || kecFilter !== 'all') {
+                        const rc = r.kode_sls || '';
+                        if (rc) {
+                            let match = true;
+                            if (resolvedKabPrefix) match = match && rc.startsWith('72' + resolvedKabPrefix);
+                            if (resolvedKabPrefix && resolvedKecPrefix) match = match && rc.startsWith('72' + resolvedKabPrefix + resolvedKecPrefix);
+                            if (!match) return; // Skip this row!
+                        } else {
+                            // Fallback if kode_sls doesn't exist, try matching by name
+                            const rKab = (r.kab_name || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                            const cleanKab = kabFilter !== 'all' ? kabFilter.replace(/^\[\d+\]\s*/, '').trim().toUpperCase() : null;
+                            if (cleanKab && rKab !== cleanKab) return;
+                            
+                            const rKec = (r.kec_name || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                            const cleanKec = kecFilter !== 'all' ? kecFilter.replace(/^\[\d+\]\s*/, '').trim().toUpperCase() : null;
+                            if (cleanKec && !rKec.includes(cleanKec)) return;
+                        }
+                    }
+
                     const kecName = r.kec_name || '-', desaName = r.desa_name || '-', key = `${kecName} | ${desaName}`;
                     if (!desaMap[key]) desaMap[key] = { kec: kecName, desa: desaName, total: 0, selesai: 0, belum: 0 };
                     desaMap[key].total += 1; totalAll += 1;
@@ -7511,24 +7559,32 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 // Fallback: aggregate from IPAS_DATA kecamatan list (always available)
                 const surveyFilter = document.getElementById('assign-sls-survey-filter')?.value || 'se_umum';
-                const kabFilter = document.getElementById('assign-sls-kab-filter')?.value || 'all';
                 const ipasData = window.IPAS_DATA || {};
                 const seData = ipasData[surveyFilter] || ipasData['se_umum'] || [];
                 
+                const cleanKab = kabFilter !== 'all' ? kabFilter.replace(/^\[\d+\]\s*/, '').trim().toUpperCase() : null;
+                const cleanKec = kecFilter !== 'all' ? kecFilter.replace(/^\[\d+\]\s*/, '').trim().toUpperCase() : null;
+                
                 seData.forEach(kab => {
                     // If a kab is selected, filter to that kab only
-                    if (kabFilter !== 'all') {
-                        const cleanKab = kabFilter.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                    if (cleanKab) {
                         const cleanItemKab = (kab.kabupaten || '').replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
                         if (cleanItemKab !== cleanKab) return;
                     }
                     (kab.kecamatan_list || []).forEach(kec => {
-                        if (!kec.kec_name || kec.kec_name === '-') return;
-                        const key = `${kec.kec_name} | (data per kecamatan)`;
+                        const kecNameToCheck = kec.kec_name || kec.kecamatan || '-';
+                        if (kecNameToCheck === '-') return;
+                        
+                        if (cleanKec) {
+                            const rKec = kecNameToCheck.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+                            if (!rKec.includes(cleanKec)) return;
+                        }
+                        
+                        const key = `${kecNameToCheck} | (data per kecamatan)`;
                         const total = kec.total_prelist || 0;
                         const selesai = kec.total_submitted || 0;
                         const belum = Math.max(0, total - selesai);
-                        if (!desaMap[key]) desaMap[key] = { kec: kec.kec_name, desa: '(data per kecamatan)', total: 0, selesai: 0, belum: 0 };
+                        if (!desaMap[key]) desaMap[key] = { kec: kecNameToCheck, desa: '(data per kecamatan)', total: 0, selesai: 0, belum: 0 };
                         desaMap[key].total += total;
                         desaMap[key].selesai += selesai;
                         desaMap[key].belum += belum;
@@ -7568,7 +7624,7 @@ document.addEventListener('DOMContentLoaded', () => {
             arr.forEach((d, i) => {
                 const pct = d.total > 0 ? ((d.selesai / d.total) * 100).toFixed(1) : 0, isComplete = pct === "100.0";
                 const badgeHtml = isComplete ? `<div style="background: rgba(34, 197, 94, 0.1); color: var(--color-delivered); border: 1px solid rgba(34, 197, 94, 0.2); padding: 0.25rem 0.5rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 700;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Tuntas</div>` : `<div style="display: flex; align-items: center; gap: 0.5rem; width: 100%;"><div style="flex-grow: 1; height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px; overflow: hidden;"><div style="height: 100%; width: ${pct}%; background: var(--primary); border-radius: 3px;"></div></div><span style="font-weight: 700; color: var(--text-primary); min-width: 35px; text-align: right;">${pct}%</span></div>`;
-                html += `<tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s;"><td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${idxReal + 1}</td><td style="font-weight: 600; color: var(--text-primary);">${d.kec}</td><td style="font-weight: 600; color: var(--text-primary);">${d.desa}</td><td style="text-align: center; font-family: monospace; font-weight: 700;">${d.total.toLocaleString('id-ID')}</td><td style="text-align: center; font-family: monospace; color: #ef4444;">${d.belum.toLocaleString('id-ID')}</td><td style="text-align: center; font-family: monospace; color: var(--color-delivered); font-weight: 700;">${d.selesai.toLocaleString('id-ID')}</td><td style="text-align: center;">${badgeHtml}</td></tr>`;
+                html += `<tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s;"><td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${i + 1}</td><td style="font-weight: 600; color: var(--text-primary);">${d.kec}</td><td style="font-weight: 600; color: var(--text-primary);">${d.desa}</td><td style="text-align: center; font-family: monospace; font-weight: 700;">${d.total.toLocaleString('id-ID')}</td><td style="text-align: center; font-family: monospace; color: #ef4444;">${d.belum.toLocaleString('id-ID')}</td><td style="text-align: center; font-family: monospace; color: var(--color-delivered); font-weight: 700;">${d.selesai.toLocaleString('id-ID')}</td><td style="text-align: center;">${badgeHtml}</td></tr>`;
             });
             tbody.innerHTML = html;
             return;
