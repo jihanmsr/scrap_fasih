@@ -7805,10 +7805,22 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (mapped) displayName = mapped;
                         }
 
-                        const pBelum = (pMapData.open || 0) + (pMapData.draft || 0) + (pMapData.rejected || 0) + (pMapData.revoked || 0);
-                        const pSelesaiReal = (pMapData.submitted_pencacah || 0) + (pMapData.approved || 0) + 
-                                             (pMapData.edited_admin || 0) + (pMapData.completed_admin || 0) + 
-                                             (pMapData.submitted_respondent || 0) + (pMapData.edited_pengawas || 0);
+                        let pBelum = 0;
+                        let pSelesaiReal = 0;
+
+                        if (roleKey === 'Pengawas') {
+                            pSelesaiReal = (pMapData.approved || 0) + (pMapData.rejected || 0) + (pMapData.revoked || 0);
+                            pBelum = (pMapData.open || 0) + (pMapData.draft || 0) + (pMapData.submitted_pencacah || 0) + 
+                                     (pMapData.edited_admin || 0) + (pMapData.completed_admin || 0) + 
+                                     (pMapData.submitted_respondent || 0) + (pMapData.edited_pengawas || 0);
+                        } else {
+                            // Pencacah: Selain Open dan Draft adalah Selesai
+                            pBelum = (pMapData.open || 0) + (pMapData.draft || 0);
+                            pSelesaiReal = (pMapData.submitted_pencacah || 0) + (pMapData.approved || 0) + (pMapData.rejected || 0) + 
+                                           (pMapData.edited_admin || 0) + (pMapData.completed_admin || 0) + (pMapData.submitted_respondent || 0) + 
+                                           (pMapData.revoked || 0) + (pMapData.edited_pengawas || 0);
+                        }
+
                         // Total sebaiknya adalah jumlah dari assign aktual (belum + selesai), ATAU target asli jika lebih besar
                         const pTotal = Math.max(pMapData.target || 0, pBelum + pSelesaiReal);
                         // Selalu gunakan pSelesaiReal agar tidak pernah minus atau over-inflated
@@ -8011,14 +8023,19 @@ document.addEventListener('DOMContentLoaded', () => {
                                 let currCum = 0, prevCum = 0;
                                 
                                 if (p.role === 'Pengawas') {
-                                    dVal = dCompAdm;
-                                    currCum = hSnap.completed_admin || 0;
-                                    prevCum = pSnap.completed_admin || 0;
+                                    currCum = (hSnap.approved || 0) + (hSnap.rejected || 0) + (hSnap.revoked || 0);
+                                    prevCum = (pSnap.approved || 0) + (pSnap.rejected || 0) + (pSnap.revoked || 0);
                                 } else {
-                                    dVal = dSubPPL + dAppr;
-                                    currCum = (hSnap.submitted_pencacah || 0) + (hSnap.approved || 0);
-                                    prevCum = (pSnap.submitted_pencacah || 0) + (pSnap.approved || 0);
+                                    // Pencacah: Selain Open dan Draft
+                                    currCum = (hSnap.submitted_pencacah || 0) + (hSnap.approved || 0) + (hSnap.rejected || 0) + 
+                                              (hSnap.edited_admin || 0) + (hSnap.completed_admin || 0) + (hSnap.submitted_respondent || 0) + 
+                                              (hSnap.revoked || 0) + (hSnap.edited_pengawas || 0);
+                                    prevCum = (pSnap.submitted_pencacah || 0) + (pSnap.approved || 0) + (pSnap.rejected || 0) + 
+                                              (pSnap.edited_admin || 0) + (pSnap.completed_admin || 0) + (pSnap.submitted_respondent || 0) + 
+                                              (pSnap.revoked || 0) + (pSnap.edited_pengawas || 0);
                                 }
+                                
+                                dVal = currCum - prevCum;
                                 
                                 dPct = (currCum / target * 100) - (prevCum / pTarget * 100);
                                 
