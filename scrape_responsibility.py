@@ -224,13 +224,24 @@ async def run():
                 if not email or not role: continue
                 
                 if email not in petugas_map[role]:
-                    petugas_map[role][email] = { "target": 0, "submitted_pencacah": 0, "submitted_respondent": 0, "approved": 0, "rejected": 0, "draft": 0, "open": 0, "revoked": 0, "edited_pengawas": 0, "edited_admin": 0, "completed_admin": 0 }
+                    petugas_map[role][email] = { "target": 0, "submitted_pencacah": 0, "submitted_respondent": 0, "approved": 0, "rejected": 0, "draft": 0, "open": 0, "revoked": 0, "edited_pengawas": 0, "edited_admin": 0, "completed_admin": 0, "sls_details": {} }
                     
                 for r_sum in row.get("regionSummary", []):
+                    reg_code = r_sum.get("regionCode", "")
                     petugas_map[role][email]["target"] += r_sum.get("total", 0)
+                    
+                    if "sls_details" not in petugas_map[role][email]:
+                        petugas_map[role][email]["sls_details"] = {}
+                    if reg_code not in petugas_map[role][email]["sls_details"]:
+                        petugas_map[role][email]["sls_details"][reg_code] = {"total": 0, "status": {}}
+                    petugas_map[role][email]["sls_details"][reg_code]["total"] += r_sum.get("total", 0)
+
                     for st in r_sum.get("statusBreakdown", []):
                         s_name = st.get("status", "").upper()
                         s_count = st.get("count", 0)
+                        
+                        petugas_map[role][email]["sls_details"][reg_code]["status"][s_name] = petugas_map[role][email]["sls_details"][reg_code]["status"].get(s_name, 0) + s_count
+                        
                         if s_name == "OPEN": petugas_map[role][email]["open"] += s_count
                         elif s_name == "DRAFT": petugas_map[role][email]["draft"] += s_count
                         elif s_name == "SUBMITTED BY PENCACAH": petugas_map[role][email]["submitted_pencacah"] += s_count

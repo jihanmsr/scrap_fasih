@@ -501,23 +501,31 @@ async def run_download_and_update():
             print("[ERROR] Browser Chrome aktif tidak ditemukan. Harap pastikan Chrome berjalan dengan remote debugging port (9222) dan Anda sudah login ke FASIH.")
             return
             
-        # Ensure we are on a FASIH page (not a local file), so cookies/session work for API fetch
         current_url = page.url
-        if "fasih-sm.bps.go.id" not in current_url:
-            print(f"[WARNING] Page aktif bukan FASIH ({current_url}). Mencari tab FASIH lain...")
+        if "fasih-sm.bps.go.id/app" not in current_url:
+            print(f"[WARNING] Page aktif bukan Dashboard FASIH ({current_url}). Mencari tab FASIH lain...")
             fasih_page = None
+            # Prioritize /app/ tab first
             for pg in context.pages:
-                if "fasih-sm.bps.go.id" in pg.url:
+                if "fasih-sm.bps.go.id/app" in pg.url:
                     fasih_page = pg
                     break
+            
+            # Fallback to any tab with fasih-sm.bps.go.id
+            if not fasih_page:
+                for pg in context.pages:
+                    if "fasih-sm.bps.go.id" in pg.url:
+                        fasih_page = pg
+                        break
+
             if fasih_page:
                 page = fasih_page
+                await page.bring_to_front()
                 print(f"[INFO] Menggunakan tab FASIH: {page.url}")
             else:
                 print("[INFO] Tidak ada tab FASIH aktif. Menavigasi ke FASIH untuk menggunakan sesi yang ada...")
-                await page.goto("https://fasih-sm.bps.go.id/app/surveys", wait_until="networkidle", timeout=30000)
+                await page.goto("https://fasih-sm.bps.go.id/app/auth/login?redirect_to=https://fasih-sm.bps.go.id/app/surveys", timeout=60000)
                 import asyncio as _asyncio
-
                 await _asyncio.sleep(5)
                 print(f"[INFO] Halaman sekarang: {page.url}")
                 
@@ -534,7 +542,7 @@ async def run_download_and_update():
             print("=========================================================================")
             try:
                 import asyncio as _asyncio
-                await page.wait_for_url("**/surveys**", timeout=120000)
+                await page.wait_for_url("**/app/**", timeout=120000)
                 await _asyncio.sleep(5)
                 # re-fetch cookies after login
                 cookies = await context.cookies()

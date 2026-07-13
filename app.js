@@ -8167,7 +8167,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             html += `
-                <tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s;">
+                <tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s; cursor: pointer;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'" onclick="window.showPetugasSLSDetail('${p.email}', '${p.role}', '${p.name.replace(/'/g, "\\'")}')">
                     <td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${idxReal + 1}</td>
                     <td style="font-weight: 600; color: var(--text-primary);">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -8256,6 +8256,76 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         window.lastPetugasSummaryArr = arr;
+    };
+
+    window.showPetugasSLSDetail = function(email, role, name) {
+        if (!window.PETUGAS_REGION_MAP || !window.PETUGAS_REGION_MAP[role] || !window.PETUGAS_REGION_MAP[role][email] || !window.PETUGAS_REGION_MAP[role][email].sls_details) {
+            alert("Rincian SLS belum tersedia untuk petugas ini. Silakan jalankan ulang pembaruan data (responsibility) untuk mengambil detail SLS.");
+            return;
+        }
+
+        const slsDetails = window.PETUGAS_REGION_MAP[role][email].sls_details;
+        const modal = document.getElementById('petugas-sls-modal');
+        if (!modal) return;
+        
+        document.getElementById('petugas-sls-title').textContent = `Detail SLS: ${name}`;
+        document.getElementById('petugas-sls-subtitle').textContent = `Role: ${role} | Email: ${email}`;
+        
+        const tbody = document.getElementById('petugas-sls-tbody');
+        let html = '';
+        
+        Object.keys(slsDetails).sort().forEach(regCode => {
+            const detail = slsDetails[regCode];
+            
+            // Try to find Desa Name
+            let desaName = "-";
+            const kecCode = regCode.substring(0, 7);
+            if (window.IPAS_DATA && window.IPAS_DATA[kecCode] && window.IPAS_DATA[kecCode].desa) {
+                const desaObj = window.IPAS_DATA[kecCode].desa.find(d => d.kode_desa === regCode.substring(0, 10));
+                if (desaObj) {
+                    desaName = desaObj.nama_desa;
+                }
+            }
+            
+            let statusHtml = '';
+            if (detail.status) {
+                Object.keys(detail.status).forEach(k => {
+                    let color = '#64748b'; // default
+                    if (k === 'OPEN') color = '#64748b';
+                    else if (k === 'DRAFT') color = '#f59e0b';
+                    else if (k === 'SUBMITTED BY PENCACAH') color = '#3b82f6';
+                    else if (k === 'SUBMITTED RESPONDENT') color = '#0ea5e9';
+                    else if (k.includes('APPROVED')) color = '#10b981';
+                    else if (k.includes('COMPLETED')) color = '#8b5cf6';
+                    else if (k.includes('REJECTED')) color = '#ef4444';
+                    else if (k.includes('REVOKED')) color = '#f43f5e';
+                    else if (k.includes('EDITED')) color = '#d946ef';
+                    
+                    statusHtml += `<div style="display:flex; justify-content:space-between; margin-bottom:2px; font-size:0.8rem;">
+                        <span style="color:${color};">${k}</span>
+                        <span style="font-weight:700; font-family:monospace;">${detail.status[k]}</span>
+                    </div>`;
+                });
+            }
+            
+            html += `
+                <tr>
+                    <td style="padding:0.75rem 1rem; border-bottom:1px solid var(--border-light);">
+                        <div style="font-family:monospace; font-weight:700; color:var(--text-primary);">${regCode}</div>
+                        <div style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">${desaName}</div>
+                    </td>
+                    <td style="padding:0.75rem 1rem; border-bottom:1px solid var(--border-light); text-align:center; font-family:monospace; font-weight:700;">
+                        ${detail.total}
+                    </td>
+                    <td style="padding:0.75rem 1rem; border-bottom:1px solid var(--border-light);">
+                        ${statusHtml}
+                    </td>
+                </tr>
+            `;
+        });
+        
+        tbody.innerHTML = html;
+        modal.style.display = 'flex';
     };
 
     window.downloadPetugasSummaryExcel = function () {

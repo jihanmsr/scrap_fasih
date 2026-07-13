@@ -50,36 +50,6 @@ def check_port_open(port=9222):
         return False
 
 async def get_authenticated_context(p):
-    ports_to_try = [9223, 9222]
-    if CDP_PORT_OVERRIDE:
-        ports_to_try = [int(CDP_PORT_OVERRIDE)] + ports_to_try
-    for port in ports_to_try:
-        if check_port_open(port):
-            try:
-                browser = await p.chromium.connect_over_cdp(f"http://127.0.0.1:{port}")
-                context = browser.contexts[0] if browser.contexts else await browser.new_context()
-                
-                has_fasih = False
-                target_page = None
-                for page in context.pages:
-                    if "fasih-sm.bps.go.id" in page.url:
-                        has_fasih = True
-                        target_page = page
-                        break
-                        
-                if has_fasih:
-                    print(f"[INFO] Terhubung ke browser aktif dengan sesi FASIH di port {port}")
-                    return browser, context, target_page
-                else:
-                    target_page = context.pages[0] if context.pages else await context.new_page()
-                    fallback = (browser, context, target_page, port)
-            except Exception:
-                pass
-
-    if 'fallback' in locals():
-        browser, context, target_page, port = fallback
-        print(f"[INFO] Terhubung ke browser di port {port} (tidak ada tab FASIH aktif)")
-        return browser, context, target_page
 
     abs_user_data_dir = os.path.abspath(USER_DATA_DIR)
     chrome_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
