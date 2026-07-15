@@ -5029,7 +5029,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         rows.forEach(row => {
             csvContent += row.map(cell => {
-                const str = String(cell === null || cell === undefined ? "" : cell);
+                let str = String(cell === null || cell === undefined ? "" : cell);
+                if (/^[-+=@]/.test(str)) {
+                    str = "'" + str;
+                }
                 return `"${str.replace(/"/g, '""')}"`;
             }).join(",") + "\n";
         });
@@ -8259,12 +8262,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.showPetugasSLSDetail = function(email, role, name) {
-        if (!window.PETUGAS_REGION_MAP || !window.PETUGAS_REGION_MAP[role] || !window.PETUGAS_REGION_MAP[role][email] || !window.PETUGAS_REGION_MAP[role][email].sls_details) {
+        if (!window.PETUGAS_PROGRESS_MAP || !window.PETUGAS_PROGRESS_MAP[role] || !window.PETUGAS_PROGRESS_MAP[role][email] || !window.PETUGAS_PROGRESS_MAP[role][email].sls_details) {
             alert("Rincian SLS belum tersedia untuk petugas ini. Silakan jalankan ulang pembaruan data (responsibility) untuk mengambil detail SLS.");
             return;
         }
 
-        const slsDetails = window.PETUGAS_REGION_MAP[role][email].sls_details;
+        const slsDetails = window.PETUGAS_PROGRESS_MAP[role][email].sls_details;
         const modal = document.getElementById('petugas-sls-modal');
         if (!modal) return;
         
@@ -8329,6 +8332,23 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.downloadPetugasSummaryExcel = function () {
+        const kabFilter = document.getElementById('petugas-kab-filter');
+        const selectedKab = kabFilter ? kabFilter.value : 'ALL';
+        
+        if (selectedKab === 'ALL') {
+            const dateInput = prompt("Data raw (CSV) tersedia mulai tanggal 11. Masukkan tanggal yang ingin didownload (Format YYYY-MM-DD):", "2026-07-11");
+            if (dateInput) {
+                const url = `fast_petugas_all_${dateInput}.csv`;
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = url;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+            return;
+        }
+
         if (!window.lastPetugasSummaryArr || window.lastPetugasSummaryArr.length === 0) {
             alert("Tidak ada data untuk diunduh.");
             return;
@@ -8369,16 +8389,23 @@ document.addEventListener('DOMContentLoaded', () => {
                                 const pSnap = window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email];
                                 
                                 const getD = (k) => (hSnap[k] || 0) - (pSnap[k] || 0);
+                                
+                                let currCum = 0, prevCum = 0;
                                 if (p.role === 'Pengawas') {
-                                    dVal = getD('completed_admin');
+                                    currCum = (hSnap.approved || 0) + (hSnap.rejected || 0) + (hSnap.revoked || 0);
+                                    prevCum = (pSnap.approved || 0) + (pSnap.rejected || 0) + (pSnap.revoked || 0);
                                 } else {
-                                    dVal = getD('submitted_pencacah') + getD('approved');
+                                    currCum = (hSnap.submitted_pencacah || 0) + (hSnap.approved || 0) + (hSnap.rejected || 0) + 
+                                              (hSnap.edited_admin || 0) + (hSnap.completed_admin || 0) + (hSnap.submitted_respondent || 0) + 
+                                              (hSnap.revoked || 0) + (hSnap.edited_pengawas || 0);
+                                    prevCum = (pSnap.submitted_pencacah || 0) + (pSnap.approved || 0) + (pSnap.rejected || 0) + 
+                                              (pSnap.edited_admin || 0) + (pSnap.completed_admin || 0) + (pSnap.submitted_respondent || 0) + 
+                                              (pSnap.revoked || 0) + (pSnap.edited_pengawas || 0);
                                 }
                                 
+                                dVal = currCum - prevCum;
                                 let target = hSnap.target || p.total || 1;
                                 let pTarget = pSnap.target || p.total || 1;
-                                let currCum = p.role === 'Pengawas' ? (hSnap.completed_admin || 0) : ((hSnap.submitted_pencacah || 0) + (hSnap.approved || 0));
-                                let prevCum = p.role === 'Pengawas' ? (pSnap.completed_admin || 0) : ((pSnap.submitted_pencacah || 0) + (pSnap.approved || 0));
                                 
                                 dPct = ((currCum / target * 100) - (prevCum / pTarget * 100)).toFixed(1).replace('.', ',');
                                 dVal = dVal > 0 ? "+" + dVal : dVal.toString();
@@ -10305,6 +10332,9 @@ function exportToCSV(rows, filename) {
         headers.join(','),
         ...rows.map(row => headers.map(h => {
             let val = row[h] == null ? '' : String(row[h]);
+            if (/^[-+=@]/.test(val)) {
+                val = "'" + val;
+            }
             if (val.includes(',') || val.includes('"') || val.includes('\n')) {
                 val = '"' + val.replace(/"/g, '""') + '"';
             }

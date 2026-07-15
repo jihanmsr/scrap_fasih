@@ -39,11 +39,11 @@ async def run():
         chrome_path = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
         
         context = await p.chromium.launch_persistent_context(
-            user_data_dir=abs_user_data_dir,
-            executable_path=chrome_path,
-            headless=False,
-            ignore_default_args=["--enable-automation"],
-            args=["--no-first-run", "--no-default-browser-check", "--disable-blink-features=AutomationControlled"]
+                user_data_dir=abs_user_data_dir,
+                executable_path=chrome_path,
+                headless=False,
+                ignore_default_args=["--enable-automation"],
+                args=["--no-first-run", "--no-default-browser-check", "--disable-blink-features=AutomationControlled"]
         )
         
         page = context.pages[0] if context.pages else await context.new_page()
@@ -53,27 +53,27 @@ async def run():
         
         import re
         try:
-            # Menggunakan regex baru karena URL BPS sudah berubah menjadi /app/surveys/...
-            await page.wait_for_url(re.compile(r".*surveys.*"), timeout=5000)
-            print("[INFO] Sudah login!")
+                # Menggunakan regex baru karena URL BPS sudah berubah menjadi /app/surveys/...
+                await page.wait_for_url(re.compile(r".*surveys.*"), timeout=5000)
+                print("[INFO] Sudah login!")
         except:
-            print("[WARNING] Anda belum login!")
-            print("=========================================================================")
-            print("  Silakan login ke web FASIH di jendela Chrome yang baru saja terbuka.")
-            print("  Skrip ini akan otomatis menunggu sampai Anda berhasil login...")
-            print("=========================================================================")
+                print("[WARNING] Anda belum login!")
+                print("=========================================================================")
+                print("  Silakan login ke web FASIH di jendela Chrome yang baru saja terbuka.")
+                print("  Skrip ini akan otomatis menunggu sampai Anda berhasil login...")
+                print("=========================================================================")
             
-            try:
-                await page.wait_for_url(re.compile(r".*surveys.*"), timeout=300000)
-                print("[INFO] Berhasil login manual!")
-                # Arahkan langsung ke URL dasbor baru untuk memastikan cookies F5 beres
-                await page.goto("https://fasih-sm.bps.go.id/app/surveys/a0429e96-51a5-477b-a415-485f9c153004/fd68e454-ba45-4b85-8205-f3bf777ded24", timeout=120000)
-                await page.wait_for_load_state("networkidle")
-            except Exception as login_err:
-                print(f"[ERROR] Gagal menunggu login manual: {login_err}")
-                print("[ERROR] Waktu login habis atau halaman ditutup. Silakan ulangi.")
-                await context.close()
-                return
+                try:
+                    await page.wait_for_url(re.compile(r".*surveys.*"), timeout=300000)
+                    print("[INFO] Berhasil login manual!")
+                    # Arahkan langsung ke URL dasbor baru untuk memastikan cookies F5 beres
+                    await page.goto("https://fasih-sm.bps.go.id/app/surveys/a0429e96-51a5-477b-a415-485f9c153004/fd68e454-ba45-4b85-8205-f3bf777ded24", timeout=120000)
+                    await page.wait_for_load_state("networkidle")
+                except Exception as login_err:
+                    print(f"[ERROR] Gagal menunggu login manual: {login_err}")
+                    print("[ERROR] Waktu login habis atau halaman ditutup. Silakan ulangi.")
+                    await context.close()
+                    return
 
         await page.goto("https://fasih-sm.bps.go.id/app/analytic/assignment/assignment-status", timeout=120000)
         await page.wait_for_load_state("networkidle")
@@ -81,20 +81,20 @@ async def run():
         cookies = await context.cookies()
         token = ""
         for c in cookies:
-            if c["name"] == "XSRF-TOKEN":
-                from urllib.parse import unquote
-                token = unquote(c["value"])
-                break
+                if c["name"] == "XSRF-TOKEN":
+                    from urllib.parse import unquote
+                    token = unquote(c["value"])
+                    break
 
         if not token:
-            print("[ERROR] Gagal mendapatkan token setelah login. Menghentikan skrip.")
-            await context.close()
-            return
+                print("[ERROR] Gagal mendapatkan token setelah login. Menghentikan skrip.")
+                await context.close()
+                return
             
         print(f"[INFO] Token berhasil didapatkan! Mulai menyedot data...")
 
         with open("/Users/jihanmaisaroh/scrap_fasih/region_map_sulteng_full.json", "r") as f:
-            region_map = json.load(f)
+                region_map = json.load(f)
             
         kabupaten_list = region_map.get("kabupaten", {})
         print(f"[INFO] Ditemukan {len(kabupaten_list)} Kabupaten/Kota untuk ditarik datanya.")
@@ -102,17 +102,16 @@ async def run():
         all_results = []
         
         for role_name, role_id in ROLES.items():
-            for kab_code, kab_info in kabupaten_list.items():
-                kab_id = kab_info["kab_id"]
-                kab_name = kab_info["kab_name"]
-                
+            for kab in kabupaten_list:
+                kab_id = kab['id']
+                kab_name = kab['name']
                 current_page = 0
                 print(f"\n======================================")
                 print(f"Menarik Data Role: {role_name} - {kab_name}")
                 print(f"======================================")
                 retries = 0
                 max_retries = 35
-                
+            
                 while True:
                     print(f"    -> Mengambil halaman {current_page}...")
                     # Payload PERSIS seperti yang dikirim Chrome (semua region = null, size = 10)
@@ -124,7 +123,7 @@ async def run():
                         "search": "",
                         "target": "TARGET_ONLY",
                         "region": {
-                            "region1Id": None, "region2Id": kab_id, "region3Id": None, 
+                        "region1Id": None, "region2Id": kab_id, "region3Id": None, 
                             "region4Id": None, "region5Id": None, "region6Id": None, 
                             "region7Id": None, "region8Id": None, "region9Id": None, "region10Id": None
                         },
