@@ -36,7 +36,8 @@ def check_port_open(port=9223):
 import requests
 
 def create_http_session(cookies, xsrf_token):
-    session = requests.Session()
+    import httpx
+    session = httpx.Client(http2=True, verify=False)
     for c in cookies:
         session.cookies.set(
             c['name'],
@@ -45,10 +46,21 @@ def create_http_session(cookies, xsrf_token):
             path=c.get('path', '/')
         )
     headers = {
+        "Accept": "*/*",
+        "Accept-Language": "en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7",
         "Content-Type": "application/json",
-        "X-XSRF-TOKEN": xsrf_token,
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "application/json, text/plain, */*"
+        "Origin": "https://fasih-sm.bps.go.id",
+        "Priority": "u=1, i",
+        "Referer": "https://fasih-sm.bps.go.id/app/surveys/ecddb52e-f392-403c-a963-47391f217010/37526b20-81c8-42f5-a895-6190137d7394/data",
+        "Sec-Ch-Ua": '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Sec-Ch-Ua-Platform": '"macOS"',
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+        "X-Requested-With": "XMLHttpRequest",
+        "x-xsrf-token": xsrf_token
     }
     session.headers.update(headers)
     return session
@@ -553,7 +565,9 @@ def scrape_via_api():
                     res_eval = None
                     for attempt in range(1, 6):
                         try:
-                            res = http_session.post(datatable_url, json=payload, timeout=60)
+                            import json
+                            payload_str = json.dumps(payload, separators=(',', ':'))
+                            res = http_session.post(datatable_url, content=payload_str, timeout=60)
                             status_code = res.status_code
                             if status_code == 200:
                                 res_eval = {"status": 200, "json": res.json()}
@@ -744,7 +758,9 @@ def scrape_via_api():
                 res_eval_email = None
                 for attempt in range(1, 4):
                     try:
-                        res = http_session.post(email_datatable_url, json=email_payload, timeout=30)
+                        import json
+                        payload_str = json.dumps(email_payload, separators=(',', ':'))
+                        res = http_session.post(email_datatable_url, content=payload_str, timeout=30)
                         if res.status_code == 200:
                             content_type = res.headers.get("Content-Type", "").lower()
                             if "html" in content_type or "<html" in res.text[:100].lower():
