@@ -542,7 +542,7 @@ async def run_download_and_update():
             print("=========================================================================")
             try:
                 import asyncio as _asyncio
-                await page.wait_for_url("**/app/**", timeout=120000)
+                await page.wait_for_url("**/app/surveys**", timeout=120000)
                 await _asyncio.sleep(5)
                 # re-fetch cookies after login
                 cookies = await context.cookies()
@@ -608,7 +608,7 @@ async def run_download_and_update():
         delta_days = (now.date() - prev_date).days
         print(f"[INFO] Tanggal saat ini (WITA): {now_date_str}. Tanggal update terakhir: {prev_date_str}. Selisih: {delta_days} hari.")
         
-        url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-progress-assignment"
+        url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-user-assignment"
         
         compiled_results = {} # survey_type -> kab_code -> kec_list
         
@@ -638,65 +638,70 @@ async def run_download_and_update():
                     "userIdResponsibility": None
                 })
                            
-            # Register the bypassed listener if not registered yet
-            await page.evaluate("""
-                () => {
-                    if (window.hasBypassBatchListener) return;
-                    window.hasBypassBatchListener = true;
-                    
-                    window.addEventListener('run-sync-batch-bypass', async (e) => {
-                        const { url, payloads, token } = e.detail;
-                        const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-                        const results = [];
-                        
-                        for (const payload of payloads) {
-                            try {
-                                const r = await fetch(url, {
-                                    method: "POST",
-                                    headers: {
-                                        "Content-Type": "application/json",
-                                        "x-xsrf-token": token
-                                    },
-                                    body: JSON.stringify(payload)
-                                });
-                                if (!r.ok) {
-                                    results.push({ error: `HTTP ${r.status}` });
-                                } else {
-                                    const data = await r.json();
-                                    results.push(data);
-                                }
-                            } catch (err) {
-                                results.push({ error: err.toString() });
-                            }
-                            await delay(300);
-                        }
-                        
-                        window.dispatchEvent(new CustomEvent('run-sync-batch-bypass-result', {
-                            detail: results
-                        }));
-                    });
-                }
-            """)
+            import httpx
             
-            # Start listening for the result promise
-            result_promise = page.evaluate("""
-                () => new Promise((resolve) => {
-                    window.addEventListener('run-sync-batch-bypass-result', (e) => {
-                        resolve(e.detail);
-                    }, { once: true });
-                })
-            """)
+            cookie_dict = {c["name"]: c["value"] for c in cookies}
+            results = []
             
-            # Trigger the batch via event dispatch
-            await page.evaluate("""
-                ({url, payloads, token}) => {
-                    window.dispatchEvent(new CustomEvent('run-sync-batch-bypass', {
-                        detail: { url, payloads, token }
-                    }));
-                }
-            """, {"url": url, "payloads": payloads, "token": token})
-            
-            results = await result_promise
+            import json
+            headers = {
+                "Accept": "*/*",
+                "Accept-Language": "en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7",
+                "Content-Type": "application/json",
+                "Origin": "https://fasih-sm.bps.go.id",
+                "Priority": "u=1, i",
+                "Referer": "https://fasih-sm.bps.go.id/app/surveys/a0429e96-51a5-477b-a415-485f9c153004/fd68e454-ba45-4b85-8205-f3bf777ded24",
+                "Sec-Ch-Ua": '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
+                "Sec-Ch-Ua-Mobile": "?0",
+                "Sec-Ch-Ua-Platform": '"macOS"',
+                "Sec-Fetch-Dest": "empty",
+                "Sec-Fetch-Mode": "cors",
+                "Sec-Fetch-Site": "same-origin",
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+                "X-Requested-With": "XMLHttpRequest",
+                "x-xsrf-token": token
+            }
+            async with httpx.AsyncClient(cookies=cookie_dict, timeout=httpx.Timeout(60.0)) as client:
+                for payload in payloads:
+                    retries = 0
+                    max_retries = 10
+                    kab_data = None
+                    while retries < max_retries:
+                        try:
+                            headers["x-xsrf-token"] = token
+                            payload_str = json.dumps(payload, separators=(',', ':'))
+                            r = await client.post(
+                                url,
+                                content=payload_str,
+                                headers=headers
+                            )
+                            if r.status_code != 200:
+                                raise Exception(f"HTTP {r.status_code} - {r.text[:50]}")
+                            
+                            kab_data = r.json()
+                            break # Success!
+                        except Exception as e:
+                            retries += 1
+                            print(f"  [ERROR] Gagal ambil data kabupaten (Percobaan {retries}/{max_retries}): {e}")
+                            print("  [INFO] Terdeteksi blokir F5 WAF. Memuat ulang cookie...")
+                            try:
+                                await page.reload(wait_until="networkidle")
+                                new_cookies = await page.context.cookies()
+                                cookie_dict = {c["name"]: c["value"] for c in new_cookies}
+                                client.cookies.update(cookie_dict)
+                                for c in new_cookies:
+                                    if c["name"] == "XSRF-TOKEN":
+                                        token = unquote(c["value"])
+                                        break
+                                print("  [INFO] Token baru berhasil didapatkan!")
+                            except Exception as refr_e:
+                                print(f"  [ERROR] Gagal refresh: {refr_e}")
+                            await asyncio.sleep(5)
+                            
+                    if kab_data:
+                        results.append(kab_data)
+                    else:
+                        results.append({"error": "Gagal total setelah retries."})
             
             # Map results to compiled dict
             compiled_results[label] = {}
