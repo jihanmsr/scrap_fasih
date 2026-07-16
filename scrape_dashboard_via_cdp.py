@@ -1,3 +1,4 @@
+import json
 import asyncio
 import asyncio as _asyncio
 import gzip
@@ -72,7 +73,7 @@ def get_real_tambahan():
 
 import os
 import sys
-import json
+
 import datetime
 import re
 import socket
@@ -578,6 +579,7 @@ async def run_download_and_update():
                 res = supabase.table("dashboard_store").select("value").eq("key", "ipas_data").execute()
                 if res.data:
                     current_ipas = res.data[0]['value']
+
                     if isinstance(current_ipas, str):
                         current_ipas = json.loads(current_ipas)
             except Exception as e:
@@ -643,7 +645,7 @@ async def run_download_and_update():
             cookie_dict = {c["name"]: c["value"] for c in cookies}
             results = []
             
-            import json
+            
             headers = {
                 "Accept": "*/*",
                 "Accept-Language": "en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7",

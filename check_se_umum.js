@@ -1,0 +1,10 @@
+const fs = require('fs');
+const content = fs.readFileSync('ipas_data.js', 'utf-8');
+const start = content.indexOf('{');
+const end = content.lastIndexOf('}') + 1;
+const data = JSON.parse(content.substring(start, end));
+console.log("SE UMUM KABS:", data.se_umum.length);
+console.log("SE UMUM TOTAL PRELIST:", data.se_umum.reduce((acc, k) => acc + k.total_prelist, 0));
+console.log(data.se_umum[0].kabupaten);
+console.log(data.se_umum[0].total_submitted);
+console.log(data.se_umum[0].today_completed);
