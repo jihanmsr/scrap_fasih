@@ -608,7 +608,7 @@ async def run_download_and_update():
         delta_days = (now.date() - prev_date).days
         print(f"[INFO] Tanggal saat ini (WITA): {now_date_str}. Tanggal update terakhir: {prev_date_str}. Selisih: {delta_days} hari.")
         
-        url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-user-assignment"
+        url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-progress-assignment"
         
         compiled_results = {} # survey_type -> kab_code -> kec_list
         
