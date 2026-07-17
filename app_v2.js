@@ -7969,17 +7969,49 @@ document.addEventListener('DOMContentLoaded', () => {
             const sortField = window.petugasSortField || 'pct';
             const sortOrder = window.petugasSortOrder || -1;
             
-            switch (sortField) {
-                case 'name': valA = a.name; valB = b.name; break;
-                case 'email': valA = a.email || ''; valB = b.email || ''; break;
-                case 'belum': valA = a.belum; valB = b.belum; break;
-                case 'selesai': valA = a.selesai; valB = b.selesai; break;
-                case 'total': valA = a.total; valB = b.total; break;
-                case 'pct':
-                default:
-                    valA = (a.total > 0 ? a.selesai / a.total : 0); 
-                    valB = (b.total > 0 ? b.selesai / b.total : 0); 
-                    break;
+            if (sortField.startsWith('history_')) {
+                const targetDate = sortField.split('_')[1];
+                const getHistoryVal = (pItem) => {
+                    if (window.PETUGAS_HISTORY_MAP && window.PETUGAS_HISTORY_MAP[targetDate]) {
+                        const allDates = Object.keys(window.PETUGAS_HISTORY_MAP).sort();
+                        const dIdx = allDates.indexOf(targetDate);
+                        if (dIdx > 0) {
+                            const prevDate = allDates[dIdx-1];
+                            const hSnap = window.PETUGAS_HISTORY_MAP[targetDate][pItem.role]?.[pItem.email] || {};
+                            const pSnap = window.PETUGAS_HISTORY_MAP[prevDate][pItem.role]?.[pItem.email] || {};
+                            
+                            let currCum = 0, prevCum = 0;
+                            if (pItem.role === 'Pengawas') {
+                                currCum = (hSnap.approved || 0) + (hSnap.rejected || 0) + (hSnap.revoked || 0);
+                                prevCum = (pSnap.approved || 0) + (pSnap.rejected || 0) + (pSnap.revoked || 0);
+                            } else {
+                                currCum = (hSnap.submitted_pencacah || 0) + (hSnap.approved || 0) + (hSnap.rejected || 0) + 
+                                          (hSnap.edited_admin || 0) + (hSnap.completed_admin || 0) + (hSnap.submitted_respondent || 0) + 
+                                          (hSnap.revoked || 0) + (hSnap.edited_pengawas || 0);
+                                prevCum = (pSnap.submitted_pencacah || 0) + (pSnap.approved || 0) + (pSnap.rejected || 0) + 
+                                          (pSnap.edited_admin || 0) + (pSnap.completed_admin || 0) + (pSnap.submitted_respondent || 0) + 
+                                          (pSnap.revoked || 0) + (pSnap.edited_pengawas || 0);
+                            }
+                            return currCum - prevCum;
+                        }
+                    }
+                    return 0;
+                };
+                valA = getHistoryVal(a);
+                valB = getHistoryVal(b);
+            } else {
+                switch (sortField) {
+                    case 'name': valA = a.name; valB = b.name; break;
+                    case 'email': valA = a.email || ''; valB = b.email || ''; break;
+                    case 'belum': valA = a.belum; valB = b.belum; break;
+                    case 'selesai': valA = a.selesai; valB = b.selesai; break;
+                    case 'total': valA = a.total; valB = b.total; break;
+                    case 'pct':
+                    default:
+                        valA = (a.total > 0 ? a.selesai / a.total : 0); 
+                        valB = (b.total > 0 ? b.selesai / b.total : 0); 
+                        break;
+                }
             }
             if (typeof valA === 'string' && typeof valB === 'string') {
                 const cmp = valA.localeCompare(valB) * sortOrder;
@@ -8142,14 +8174,21 @@ document.addEventListener('DOMContentLoaded', () => {
                                 
                                 dPct = (currCum / target * 100) - (prevCum / pTarget * 100);
                                 
-                                if (dSubPPL > 0) dHtmlDetails += `<span style="color:#3b82f6">Submit PPL: +${dSubPPL}</span>`;
-                                if (dAppr > 0) dHtmlDetails += `<span style="color:#10b981">Approved: +${dAppr}</span>`;
-                                if (dCompAdm > 0) dHtmlDetails += `<span style="color:#8b5cf6">Completed: +${dCompAdm}</span>`;
-                                if (dRej > 0) dHtmlDetails += `<span style="color:#ef4444">Rejected: +${dRej}</span>`;
-                                if (dRev > 0) dHtmlDetails += `<span style="color:#f43f5e">Revoked: +${dRev}</span>`;
-                                if (dEdPml > 0) dHtmlDetails += `<span style="color:#8b5cf6">Edited PML: +${dEdPml}</span>`;
-                                if (dEdAdm > 0) dHtmlDetails += `<span style="color:#d946ef">Edited Admin: +${dEdAdm}</span>`;
-                                if (dSubResp > 0) dHtmlDetails += `<span style="color:#0ea5e9">Submit Resp: +${dSubResp}</span>`;
+                                const dTargetVal = getD('target');
+                                const dOpen = getD('open');
+                                const dDraft = getD('draft');
+                                
+                                if (dTargetVal !== 0) dHtmlDetails += `<span style="color:#64748b">Target: ${dTargetVal > 0 ? '+' : ''}${dTargetVal}</span>`;
+                                if (dOpen !== 0) dHtmlDetails += `<span style="color:#64748b">Open: ${dOpen > 0 ? '+' : ''}${dOpen}</span>`;
+                                if (dDraft !== 0) dHtmlDetails += `<span style="color:#64748b">Draft: ${dDraft > 0 ? '+' : ''}${dDraft}</span>`;
+                                if (dSubPPL !== 0) dHtmlDetails += `<span style="color:#3b82f6">Submit PPL: ${dSubPPL > 0 ? '+' : ''}${dSubPPL}</span>`;
+                                if (dAppr !== 0) dHtmlDetails += `<span style="color:#10b981">Approved: ${dAppr > 0 ? '+' : ''}${dAppr}</span>`;
+                                if (dCompAdm !== 0) dHtmlDetails += `<span style="color:#8b5cf6">Completed: ${dCompAdm > 0 ? '+' : ''}${dCompAdm}</span>`;
+                                if (dRej !== 0) dHtmlDetails += `<span style="color:#ef4444">Rejected: ${dRej > 0 ? '+' : ''}${dRej}</span>`;
+                                if (dRev !== 0) dHtmlDetails += `<span style="color:#f43f5e">Revoked: ${dRev > 0 ? '+' : ''}${dRev}</span>`;
+                                if (dEdPml !== 0) dHtmlDetails += `<span style="color:#8b5cf6">Edited PML: ${dEdPml > 0 ? '+' : ''}${dEdPml}</span>`;
+                                if (dEdAdm !== 0) dHtmlDetails += `<span style="color:#d946ef">Edited Admin: ${dEdAdm > 0 ? '+' : ''}${dEdAdm}</span>`;
+                                if (dSubResp !== 0) dHtmlDetails += `<span style="color:#0ea5e9">Submit Resp: ${dSubResp > 0 ? '+' : ''}${dSubResp}</span>`;
                             }
                         }
                     }
@@ -8231,7 +8270,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const dObj = new Date(d + 'T00:00:00');
                     const label = dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' });
                     const sublabel = isLast ? '<br><span style="font-size:0.6rem;font-weight:400;opacity:0.8;">terakhir</span>' : '<br><span style="font-size:0.6rem;font-weight:400;opacity:0.7;">delta</span>';
-                    thHistory += `<th style="text-align: center; width: 75px; ${isLast ? 'background:rgba(99,102,241,0.1);' : ''}">${label}${sublabel}</th>`;
+                    thHistory += `<th style="text-align: center; width: 75px; cursor: pointer; ${isLast ? 'background:rgba(99,102,241,0.1);' : ''}" onclick="window.sortPetugasSummary('history_${d}')">${label}${sublabel} <span class="sort-icon"></span></th>`;
                 });
             }
             
@@ -10277,7 +10316,26 @@ window.renderTrenChart = function () {
     });
     const tbody = document.getElementById('tren-kab-table-body');
     if (tbody) {
-        const kabArr = Object.entries(kabMap).sort((a,b) => (b[1].submitted+b[1].approved+b[1].rejected) - (a[1].submitted+a[1].approved+a[1].rejected));
+        let kabArr = Object.entries(kabMap);
+        const sortCol = window.trenKabSortCol || 'total';
+        const sortDir = window.trenKabSortDir || 'desc';
+        
+        kabArr.sort((a, b) => {
+            let valA, valB;
+            if (sortCol === 'kab') {
+                valA = a[0]; valB = b[0];
+            } else if (sortCol === 'total') {
+                valA = a[1].submitted + a[1].approved + a[1].rejected;
+                valB = b[1].submitted + b[1].approved + b[1].rejected;
+            } else {
+                valA = a[1][sortCol]; valB = b[1][sortCol];
+            }
+            
+            if (valA < valB) return sortDir === 'asc' ? -1 : 1;
+            if (valA > valB) return sortDir === 'asc' ? 1 : -1;
+            return 0;
+        });
+        
         tbody.innerHTML = kabArr.map(([kab, v]) => {
             const total = v.submitted + v.approved + v.rejected;
             return `<tr style="border-bottom:1px solid var(--card-border);">
@@ -10289,6 +10347,26 @@ window.renderTrenChart = function () {
             </tr>`;
         }).join('');
     }
+};
+
+window.sortTrenKabTable = function(col) {
+    if (window.trenKabSortCol === col) {
+        window.trenKabSortDir = window.trenKabSortDir === 'asc' ? 'desc' : 'asc';
+    } else {
+        window.trenKabSortCol = col;
+        window.trenKabSortDir = 'desc';
+    }
+    
+    // Update UI indicators
+    ['kab', 'submitted', 'approved', 'rejected', 'total'].forEach(c => {
+        const span = document.getElementById('tren-kab-sort-' + c);
+        if (span) {
+            span.style.color = c === window.trenKabSortCol ? 'inherit' : 'transparent';
+            span.textContent = c === window.trenKabSortCol ? (window.trenKabSortDir === 'asc' ? '▲' : '▼') : '▼';
+        }
+    });
+    
+    window.renderTrenChart();
 };
 
 // Hook into updateTimelineView to also render tren chart

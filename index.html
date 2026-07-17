@@ -1921,11 +1921,11 @@
                         <table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
                             <thead>
                                 <tr style="border-bottom:2px solid var(--card-border);">
-                                    <th style="text-align:left;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">Kabupaten / Kota</th>
-                                    <th style="text-align:right;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:#3b82f6;text-transform:uppercase;">Submitted</th>
-                                    <th style="text-align:right;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:#22c55e;text-transform:uppercase;">Approved</th>
-                                    <th style="text-align:right;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:#ef4444;text-transform:uppercase;">Rejected</th>
-                                    <th style="text-align:right;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;">Total</th>
+                                    <th onclick="window.sortTrenKabTable('kab')" style="cursor:pointer;text-align:left;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">Kabupaten / Kota <span id="tren-kab-sort-kab" style="color:transparent;">▼</span></th>
+                                    <th onclick="window.sortTrenKabTable('submitted')" style="cursor:pointer;text-align:right;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:#3b82f6;text-transform:uppercase;">Submitted <span id="tren-kab-sort-submitted" style="color:transparent;">▼</span></th>
+                                    <th onclick="window.sortTrenKabTable('approved')" style="cursor:pointer;text-align:right;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:#22c55e;text-transform:uppercase;">Approved <span id="tren-kab-sort-approved" style="color:transparent;">▼</span></th>
+                                    <th onclick="window.sortTrenKabTable('rejected')" style="cursor:pointer;text-align:right;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:#ef4444;text-transform:uppercase;">Rejected <span id="tren-kab-sort-rejected" style="color:transparent;">▼</span></th>
+                                    <th onclick="window.sortTrenKabTable('total')" style="cursor:pointer;text-align:right;padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;">Total <span id="tren-kab-sort-total">▼</span></th>
                                 </tr>
                             </thead>
                             <tbody id="tren-kab-table-body">
