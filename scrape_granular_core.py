@@ -347,7 +347,7 @@ async def get_regions(client, page, context, sem, level, parent_code_key, parent
         return [raw_data]
     return []
 
-async def fetch_targets_with_drilldown(client, page, context, sem, survey_period_id, region1_id, level, current_region_id, current_region_code, current_region_name, label, status_filter=None):
+async def fetch_targets_with_drilldown(client, page, context, sem, survey_period_id, region1_id, level, current_region_id, current_region_code, current_region_name, label, status_filter=None, filter_target_type=""):
     start = 0
     length = 1000
     all_records = []
@@ -379,7 +379,7 @@ async def fetch_targets_with_drilldown(client, page, context, sem, survey_period
             "start": start, "length": length, "columns": columns_payload, "order": [], "search": {"value": status_filter or "", "regex": False},
             "assignmentExtraParam": {
                 "region1Id": region1_id, "surveyPeriodId": survey_period_id,
-                "assignmentErrorStatusType": -1, "filterTargetType": "", param_key: current_region_id
+                "assignmentErrorStatusType": -1, "filterTargetType": filter_target_type, param_key: current_region_id
             }
         }
         
@@ -389,6 +389,9 @@ async def fetch_targets_with_drilldown(client, page, context, sem, survey_period
             break
             
         records = res["searchData"]
+        for r in records:
+            r["_target_type"] = filter_target_type
+            
         total = res.get("totalHit", 0)
         if total >= 1000 and level == 4:
             if start == 0:
@@ -410,7 +413,7 @@ async def fetch_targets_with_drilldown(client, page, context, sem, survey_period
                             return await fetch_targets_with_drilldown(
                                 client, page, context, sem,
                                 survey_period_id, region1_id,
-                                5, sls_id, sls_full_code, sls_name, label, status_filter=None
+                                5, sls_id, sls_full_code, sls_name, label, status_filter, filter_target_type
                             )
                         return []
 
@@ -641,8 +644,11 @@ def save_local_data_intermediate(raw_se_umum_data, raw_se_ub_data):
         pet_idx = get_petugas_idx(pcl_username, pcl_fullname)
         pengawas_idx = get_petugas_idx(pml_username, pml_fullname)
         
+        ttype = r.get("_target_type", "")
+        flag_val = 2 if ttype == "NON_TARGET_ONLY" else 0
+        
         compressed_targets.append([
-            tid, code_id, name, stat_idx, pet_idx, reg_idx, epoch_mod, 0, pengawas_idx
+            tid, code_id, name, stat_idx, pet_idx, reg_idx, epoch_mod, flag_val, pengawas_idx
         ])
         
         status_upper = status.upper()
@@ -923,7 +929,14 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
                                 fetch_targets_with_drilldown(
                                     client, page, context, sem_umum,
                                     cfg_umum["survey_period_id"], cfg_umum["region1_id"],
-                                    4, desa_data["desa_id"], desa_code, desa_name, "SE Umum"
+                                    4, desa_data["desa_id"], desa_code, desa_name, "SE Umum", None, "TARGET_ONLY"
+                                )
+                            )
+                            tasks_umum_all.append(
+                                fetch_targets_with_drilldown(
+                                    client, page, context, sem_umum,
+                                    cfg_umum["survey_period_id"], cfg_umum["region1_id"],
+                                    4, desa_data["desa_id"], desa_code, desa_name, "SE Umum", None, "NON_TARGET_ONLY"
                                 )
                             )
                             
@@ -964,18 +977,19 @@ async def scrape_all_granular(survey_type_filter=None, kab_code_filter=None):
                         continue
                         
                     kab_name = kab_cfg["name"]
-                    print(f"\\n[>] Memulai Kabupaten (SE UB): {kab_name} [{kab_code}]")
+                    print(f"\n[>] Memulai Kabupaten (SE UB): {kab_name} [{kab_code}]")
                     
                     tasks_ub_kab = []
                     for kec_code, kec_data in kab_data.get("kecamatan", {}).items():
                         kec_name = kec_data.get("kec_name", "-")
-                        tasks_ub_kab.append(
-                            fetch_targets_with_drilldown(
-                                client, page, context, sem,
-                                cfg_ub["survey_period_id"], cfg_ub["region1_id"],
-                                3, kec_data["kec_id"], kec_code, kec_name, "SE UB"
+                        for status_filter in ["", "OPEN", "SUBMITTED", "APPROVED", "REJECTED", "REVOKED"]:
+                            tasks_ub_kab.append(
+                                fetch_targets_with_drilldown(
+                                    client, page, context, sem,
+                                    cfg_ub["survey_period_id"], cfg_ub["region1_id"],
+                                    3, kec_data["kec_id"], kec_code, kec_name, "SE UB", status_filter
+                                )
                             )
-                        )
                         
                     if tasks_ub_kab:
                         for coro in asyncio.as_completed(tasks_ub_kab):
