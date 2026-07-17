@@ -6755,8 +6755,9 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < len; i++) {
                 bytes[i] = binaryString.charCodeAt(i);
             }
-            const decompressed = pako.ungzip(bytes, { to: 'string' });
-            return JSON.parse(decompressed);
+            const decompressed = pako.ungzip(bytes);
+            const jsonString = new TextDecoder("utf-8").decode(decompressed);
+            return JSON.parse(jsonString);
         } catch (e) {
             console.error("Failed to decompress payload:", e);
             return null;
@@ -6773,6 +6774,70 @@ document.addEventListener('DOMContentLoaded', () => {
                 bytes[i] = binaryString.charCodeAt(i);
             }
             const decompressed = pako.ungzip(bytes, { to: 'string' });
+
+// --- FETCH ASSIGNMENT DATA FROM BPS API ---
+window.fetchAssignments = async function(start = 0, length = 1000) {
+  const payload = {
+    start,
+    length,
+    columns: [
+      { data: "id", orderable: true },
+      { data: "codeIdentity", orderable: true },
+      { data: "data1", orderable: true },
+      { data: "data2", orderable: true },
+      { data: "data3", orderable: true },
+      { data: "data4", orderable: true },
+      { data: "data5", orderable: true },
+      { data: "data6", orderable: true },
+      { data: "data7", orderable: true },
+      { data: "data8", orderable: true },
+      { data: "data9", orderable: true },
+      { data: "data10", orderable: true }
+    ],
+    order: [],
+    search: { value: "", regex: false },
+    assignmentExtraParam: {
+      region1Id: "5214ecb2-bef1-4a86-9446-451cf430928e",
+      region2Id: "bc32354f-1245-426f-b2cf-a5733e1295ad",
+      surveyPeriodId: "fd68e454-ba45-4b85-8205-f3bf777ded24",
+      assignmentErrorStatusType: -1,
+      filterTargetType: "TARGET_ONLY"
+    }
+  };
+
+  const response = await fetch('https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/datatable-all-user-survey-periode', {
+    method: 'POST',
+    credentials: 'include', // send cookies / session automatically
+    headers: {
+      'Accept': '*/*',
+      'Content-Type': 'application/json',
+      // CSRF token might be present as a meta tag; include if found
+      'X-XSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || ''
+    },
+    body: JSON.stringify(payload)
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch assignments – HTTP ${response.status}`);
+  }
+  return await response.json();
+};
+
+// Helper to fetch ALL pages (recursive pagination)
+window.fetchAllAssignments = async function() {
+  const all = [];
+  let start = 0;
+  const length = 1000; // max per request (adjust as needed)
+  while (true) {
+    const data = await window.fetchAssignments(start, length);
+    const records = data.searchData || [];
+    if (records.length === 0) break;
+    all.push(...records);
+    start += length;
+  }
+  return all;
+};
+
             const payload = JSON.parse(decompressed);
 
             const regions = payload.regions || [];

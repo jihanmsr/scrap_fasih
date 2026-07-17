@@ -179,21 +179,43 @@ async def safe_post(client, page, context, sem, url, payload, max_retries=4):
         is_session_issue = False
         async with sem:
             try:
-                r = await client.post(url, json=payload)
-                if r.status_code == 200:
-                    try:
-                        res = r.json()
-                        if isinstance(res, dict) and ("searchData" in res or "searchAggregation" in res or "totalHit" in res):
+                cookies = await context.cookies()
+                token = ""
+                for c in cookies:
+                    if c["name"] == "XSRF-TOKEN":
+                        from urllib.parse import unquote
+                        token = unquote(c["value"])
+                        break
+
+                res = await page.evaluate("""
+                    async ({url, token, payload}) => {
+                        try {
+                            const r = await fetch(url, {
+                                method: "POST",
+                                headers: { 
+                                    "X-XSRF-TOKEN": token,
+                                    "Accept": "*/*",
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify(payload)
+                            });
+                            if (!r.ok) return { _error: `HTTP ${r.status}`, _status: r.status };
+                            return await r.json();
+                        } catch (e) {
+                            return { _error: e.toString(), _status: 0 };
+                        }
+                    }
+                """, {"url": url, "token": token, "payload": payload})
+
+                if res and isinstance(res, dict):
+                    if "_error" not in res:
+                        if "searchData" in res or "searchAggregation" in res or "totalHit" in res:
                             return res
-                    except Exception:
-                        pass
-                if attempt > 0:
-                    print(f"[WARNING] POST invalid (status {r.status_code}, attempt {attempt+1}/{max_retries}). Session issue?", flush=True)
-                is_session_issue = (
-                    r.status_code in [401, 403] or
-                    "login" in str(r.url).lower() or
-                    (r.status_code == 200 and not r.text.strip().startswith("{"))
-                )
+                    else:
+                        status_code = res.get("_status", 0)
+                        status_err = res["_error"]
+                        print(f"[WARNING] POST response invalid ({status_err}, attempt {attempt+1}/{max_retries}).", flush=True)
+                        is_session_issue = (status_code in [401, 403, 0])
             except Exception as e:
                 print(f"[WARNING] POST request exception: {e}", flush=True)
                 is_session_issue = True
