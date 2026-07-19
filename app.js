@@ -10689,7 +10689,8 @@ window.downloadCurrentSeTable = function(surveyType) {
     exportToCSV(exportRows, outFilename);
 };function updateCountdownSE2026() {
     const countdownDaysEl = document.getElementById('countdown-days');
-    if (!countdownDaysEl) return;
+    const seUmumCountdownEl = document.getElementById('se-umum-countdown-days');
+    if (!countdownDaysEl && !seUmumCountdownEl) return;
     
     if (window._se2026CountdownInterval) {
         clearInterval(window._se2026CountdownInterval);
@@ -10703,7 +10704,8 @@ window.downloadCurrentSeTable = function(surveyType) {
         let diff = endDate - now;
         
         if (diff <= 0) {
-            countdownDaysEl.innerHTML = `0 Hari <span style="font-size: 1.1rem; opacity: 0.9; font-variant-numeric: tabular-nums;">00:00:00</span>`;
+            if (countdownDaysEl) countdownDaysEl.innerHTML = `0 Hari <span style="font-size: 1.1rem; opacity: 0.9; font-variant-numeric: tabular-nums;">00:00:00</span>`;
+            if (seUmumCountdownEl) seUmumCountdownEl.innerHTML = `0 Hari <span style="font-size: 0.8rem; opacity: 0.9;">00:00:00</span>`;
             if (window._se2026CountdownInterval) clearInterval(window._se2026CountdownInterval);
             return;
         }
@@ -10726,7 +10728,8 @@ window.downloadCurrentSeTable = function(surveyType) {
         let mm = m.toString().padStart(2, '0');
         let ss = s.toString().padStart(2, '0');
         
-        countdownDaysEl.innerHTML = `${remainingWorkingDays} Hari <span style="font-size: 1.15rem; opacity: 0.95; font-variant-numeric: tabular-nums; letter-spacing: 1px;">${hh}:${mm}:${ss}</span>`;
+        if (countdownDaysEl) countdownDaysEl.innerHTML = `${remainingWorkingDays} Hari <span style="font-size: 1.15rem; opacity: 0.95; font-variant-numeric: tabular-nums; letter-spacing: 1px;">${hh}:${mm}:${ss}</span>`;
+        if (seUmumCountdownEl) seUmumCountdownEl.innerHTML = `${remainingWorkingDays} Hari <span style="font-size: 0.8rem; opacity: 0.9;">${hh}:${mm}:${ss}</span>`;
     };
     
     tick();
