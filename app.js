@@ -6961,6 +6961,7 @@ window.fetchAllAssignments = async function() {
                 if (totalEl) totalEl.textContent = totalAll.toLocaleString('id-ID');
                 if (selesaiEl) selesaiEl.innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
                 if (belumEl) belumEl.innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+                if (typeof updateCountdownSE2026 === 'function') updateCountdownSE2026(belumAll);
             } catch (e) {}
         } else {
             // Fetch Granular Assignments from Supabase
@@ -7668,6 +7669,7 @@ window.fetchAllAssignments = async function() {
                 if (petStatTotal) petStatTotal.textContent = totalAll.toLocaleString('id-ID');
                 if (petStatSelesai) petStatSelesai.innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
                 if (petStatBelum) petStatBelum.innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+                if (typeof updateCountdownSE2026 === 'function') updateCountdownSE2026(belumAll);
             }
             let arr = Object.values(desaMap);
             const searchInput = document.getElementById('petugas-summary-search-input');
@@ -7905,6 +7907,7 @@ window.fetchAllAssignments = async function() {
             if (totalEl) totalEl.textContent = realTotalAll.toLocaleString('id-ID');
             if (selesaiEl) selesaiEl.innerHTML = `${realSelesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
             if (belumEl) belumEl.innerHTML = `${realBelumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+            if (typeof updateCountdownSE2026 === 'function') updateCountdownSE2026(realBelumAll);
         } else if (Array.isArray(data) && data.length > 0) {
             // Fallback
             const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;
@@ -7912,6 +7915,7 @@ window.fetchAllAssignments = async function() {
             document.getElementById('petugas-stat-total').textContent = totalAll.toLocaleString('id-ID');
             document.getElementById('petugas-stat-selesai').innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
             document.getElementById('petugas-stat-belum').innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+            if (typeof updateCountdownSE2026 === 'function') updateCountdownSE2026(belumAll);
         }
 
         // 2. TABEL PETUGAS: Gunakan murni data dari CSV FAST (window.PETUGAS_PROGRESS_MAP)
@@ -8070,6 +8074,7 @@ window.fetchAllAssignments = async function() {
                     case 'belum': valA = a.belum; valB = b.belum; break;
                     case 'selesai': valA = a.selesai; valB = b.selesai; break;
                     case 'total': valA = a.total; valB = b.total; break;
+                    case 'target_harian': valA = a.belum; valB = b.belum; break;
                     case 'pct':
                     default:
                         valA = (a.total > 0 ? a.selesai / a.total : 0); 
@@ -8145,6 +8150,18 @@ window.fetchAllAssignments = async function() {
             btnsHtml += `<button class="page-btn" ${window.petugasSummaryCurrentPage === totalPetugasPages ? 'disabled' : ''} onclick="window.changePetugasSummaryPage(${window.petugasSummaryCurrentPage + 1})">Berikutnya</button>`;
             btnsHtml += `<button class="page-btn" ${window.petugasSummaryCurrentPage === totalPetugasPages ? 'disabled' : ''} onclick="window.changePetugasSummaryPage(${totalPetugasPages})">Akhir</button>`;
             petugasBtns.innerHTML = btnsHtml;
+        }
+
+        const endDate = new Date('2026-08-31T00:00:00');
+        let today = new Date();
+        today.setHours(0, 0, 0, 0);
+        let remainingWorkingDays = 0;
+        if (today <= endDate) {
+            let curDate = new Date(today);
+            while (curDate <= endDate) {
+                if (curDate.getDay() !== 0) remainingWorkingDays++;
+                curDate.setDate(curDate.getDate() + 1);
+            }
         }
 
         let html = '';
@@ -8315,6 +8332,10 @@ window.fetchAllAssignments = async function() {
                             ${p.edited_admin > 0 ? `<span style="color:#d946ef">Edited Admin: ${p.edited_admin}</span>` : ''}
                         </div>
                     </td>
+                    <td style="text-align: center; font-family: monospace; color: var(--primary);">
+                        <div style="font-size: 1.05em; font-weight: 700;">${remainingWorkingDays > 0 ? Math.ceil(p.belum / remainingWorkingDays).toLocaleString('id-ID') : 0}</div>
+                        <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px;">Sisa ${remainingWorkingDays} hari kerja</div>
+                    </td>
                     ${deltaHtml}
                     <td style="text-align: center;">${badgeHtml}</td>
                 </tr>
@@ -8346,6 +8367,7 @@ window.fetchAllAssignments = async function() {
                     <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('total')">Total Target <span class="sort-icon"></span></th>
                     <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('belum')">Belum Selesai <span class="sort-icon"></span></th>
                     <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('selesai')">Selesai <span class="sort-icon"></span></th>
+                    <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('target_harian')">Target Harian <span class="sort-icon"></span></th>
                     ${thHistory}
                     <th style="text-align: center; width: 120px; cursor: pointer;" onclick="window.sortPetugasSummary('pct')">% Capaian <span class="sort-icon"></span></th>
                 </tr>
@@ -10665,4 +10687,48 @@ window.downloadCurrentSeTable = function(surveyType) {
     }
 
     exportToCSV(exportRows, outFilename);
-};
+};function updateCountdownSE2026() {
+    const countdownDaysEl = document.getElementById('countdown-days');
+    if (!countdownDaysEl) return;
+    
+    if (window._se2026CountdownInterval) {
+        clearInterval(window._se2026CountdownInterval);
+    }
+    
+    // Target akhir 31 Agustus 2026 23:59:59
+    const endDate = new Date('2026-08-31T23:59:59');
+    
+    const tick = () => {
+        let now = new Date();
+        let diff = endDate - now;
+        
+        if (diff <= 0) {
+            countdownDaysEl.innerHTML = `0 Hari <span style="font-size: 1.1rem; opacity: 0.9; font-variant-numeric: tabular-nums;">00:00:00</span>`;
+            if (window._se2026CountdownInterval) clearInterval(window._se2026CountdownInterval);
+            return;
+        }
+        
+        let today = new Date(now);
+        today.setHours(0, 0, 0, 0);
+        
+        let remainingWorkingDays = 0;
+        let curDate = new Date(today);
+        while (curDate <= endDate) {
+            if (curDate.getDay() !== 0) remainingWorkingDays++;
+            curDate.setDate(curDate.getDate() + 1);
+        }
+        
+        let h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        let s = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        let hh = h.toString().padStart(2, '0');
+        let mm = m.toString().padStart(2, '0');
+        let ss = s.toString().padStart(2, '0');
+        
+        countdownDaysEl.innerHTML = `${remainingWorkingDays} Hari <span style="font-size: 1.15rem; opacity: 0.95; font-variant-numeric: tabular-nums; letter-spacing: 1px;">${hh}:${mm}:${ss}</span>`;
+    };
+    
+    tick();
+    window._se2026CountdownInterval = setInterval(tick, 1000);
+}
