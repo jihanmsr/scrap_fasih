@@ -9817,8 +9817,8 @@ window.executeExcelDownload = async function () {
                             if (!kec.desa) continue;
                             for (const desaCode of Object.keys(kec.desa)) {
                                 lookup[desaCode] = {
-                                    kec: kec.kec_name,
-                                    desa: kec.desa[desaCode].desa_name
+                                    kec: `[${kecCode}] ${kec.kec_name}`,
+                                    desa: `[${desaCode}] ${kec.desa[desaCode].desa_name}`
                                 };
                             }
                         }
