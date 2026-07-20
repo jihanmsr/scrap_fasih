@@ -15,6 +15,7 @@
         rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script src="daily_submission_stats.js"></script>
     <script src="daily_summary.js"></script>
 
@@ -2480,6 +2481,27 @@
                         <option value="se_ub">SE UB</option>
                     </select>
                 </div>
+                
+                <!-- Format File -->
+                <div>
+                    <label style="display:block;font-size:0.78rem;font-weight:700;color:var(--text-secondary);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em;">Format File</label>
+                    <select id="excel-file-format" style="width:100%;padding:0.6rem 0.75rem;border-radius:0.6rem;border:1px solid var(--card-border);background:var(--card-bg);color:var(--text);font-size:0.85rem;font-family:Outfit,sans-serif;">
+                        <option value="excel">Excel (.xlsx)</option>
+                        <option value="csv">CSV (.csv)</option>
+                    </select>
+                </div>
+
+                <!-- Opsi Tambahan -->
+                <div>
+                    <label style="display:block;font-size:0.78rem;font-weight:700;color:var(--text-secondary);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em;">Opsi Tambahan</label>
+                    <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:var(--text);cursor:pointer;">
+                        <input type="checkbox" id="excel-include-region" style="accent-color:var(--primary);width:16px;height:16px;">
+                        Sertakan Wilayah (Kecamatan & Desa)
+                    </label>
+                    <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.3rem;margin-left:1.8rem;">
+                        Data wilayah akan ditarik (fetch) secara otomatis, mungkin butuh waktu beberapa detik.
+                    </div>
+                </div>
             </div>
 
             <!-- Footer -->
@@ -2488,7 +2510,7 @@
                 <button onclick="document.getElementById('excel-download-modal').style.display='none'" style="padding:0.6rem 1.25rem;border-radius:0.75rem;border:1px solid var(--card-border);background:transparent;color:var(--text-secondary);font-size:0.85rem;font-weight:600;cursor:pointer;font-family:Outfit,sans-serif;">Batal</button>
                 <button onclick="window.executeExcelDownload()" style="padding:0.6rem 1.5rem;border-radius:0.75rem;border:none;background:linear-gradient(135deg,#22c55e,#16a34a);color:white;font-size:0.85rem;font-weight:700;cursor:pointer;font-family:Outfit,sans-serif;box-shadow:0 4px 12px rgba(34,197,94,0.35);display:flex;align-items:center;gap:0.5rem;" id="btn-excel-execute">
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    Download CSV
+                    Download
                 </button>
             </div>
         </div>

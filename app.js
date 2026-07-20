@@ -8479,78 +8479,14 @@ window.fetchAllAssignments = async function() {
             alert("Tidak ada data untuk diunduh.");
             return;
         }
-        
-        const headers = ["Nama Petugas", "Email / Username", "Role", "Total Target", "Belum Selesai (Total)", "Open", "Draft", "Selesai (Total)", "Submit PPL", "Submit Respondent", "Approved", "Completed Admin", "Rejected", "Revoked", "Edited PML", "Edited Admin"];
-        
-        let dates = [];
-        if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
-            dates = Object.keys(window.PETUGAS_HISTORY_MAP).sort().filter(d => d !== "2026-07-09");
-            dates.forEach(d => {
-                const dObj = new Date(d + 'T00:00:00');
-                headers.push(dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }) + " (Delta)");
-                headers.push(dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }) + " (%)");
-            });
-        }
-        headers.push("% Capaian");
 
-        const rows = window.lastPetugasSummaryArr.map(p => {
-            const row = [
-                p.name, p.email, p.role, p.total, p.belum, 
-                p.open || 0, p.draft || 0, 
-                p.selesai, 
-                p.submitted_pencacah || 0, p.submitted_respondent || 0, p.approved || 0, p.completed_admin || 0,
-                p.rejected || 0, p.revoked || 0, p.edited_pengawas || 0, p.edited_admin || 0
-            ];
-            
-            if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
-                dates.forEach((d, dIdx) => {
-                    let dVal = "";
-                    let dPct = "";
-                    
-                    if (window.PETUGAS_HISTORY_MAP[d] && window.PETUGAS_HISTORY_MAP[d][p.role] && window.PETUGAS_HISTORY_MAP[d][p.role][p.email]) {
-                        if (dIdx > 0) {
-                            const prevDate = dates[dIdx-1];
-                            const hSnap = window.PETUGAS_HISTORY_MAP[d][p.role][p.email];
-                            if (window.PETUGAS_HISTORY_MAP[prevDate] && window.PETUGAS_HISTORY_MAP[prevDate][p.role] && window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email]) {
-                                const pSnap = window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email];
-                                
-                                const getD = (k) => (hSnap[k] || 0) - (pSnap[k] || 0);
-                                
-                                let currCum = 0, prevCum = 0;
-                                if (p.role === 'Pengawas') {
-                                    currCum = (hSnap.approved || 0) + (hSnap.rejected || 0) + (hSnap.revoked || 0);
-                                    prevCum = (pSnap.approved || 0) + (pSnap.rejected || 0) + (pSnap.revoked || 0);
-                                } else {
-                                    currCum = (hSnap.submitted_pencacah || 0) + (hSnap.approved || 0) + (hSnap.rejected || 0) + 
-                                              (hSnap.edited_admin || 0) + (hSnap.completed_admin || 0) + (hSnap.submitted_respondent || 0) + 
-                                              (hSnap.revoked || 0) + (hSnap.edited_pengawas || 0);
-                                    prevCum = (pSnap.submitted_pencacah || 0) + (pSnap.approved || 0) + (pSnap.rejected || 0) + 
-                                              (pSnap.edited_admin || 0) + (pSnap.completed_admin || 0) + (pSnap.submitted_respondent || 0) + 
-                                              (pSnap.revoked || 0) + (pSnap.edited_pengawas || 0);
-                                }
-                                
-                                dVal = currCum - prevCum;
-                                let target = hSnap.target || p.total || 1;
-                                let pTarget = pSnap.target || p.total || 1;
-                                
-                                dPct = ((currCum / target * 100) - (prevCum / pTarget * 100)).toFixed(1).replace('.', ',');
-                                dVal = dVal > 0 ? "+" + dVal : dVal.toString();
-                                dPct = parseFloat(dPct.replace(',','.')) > 0 ? "+" + dPct + "%" : dPct + "%";
-                            }
-                        }
-                    }
-                    row.push(dVal);
-                    row.push(dPct);
-                });
-            }
-            
-            const pct = p.total > 0 ? (p.selesai / p.total * 100).toFixed(1).replace('.', ',') + '%' : '0%';
-            row.push(pct);
-            
-            return row;
-        });
-        
-        exportToCSV(`rekap_progres_petugas_${new Date().toISOString().slice(0,10)}.csv`, headers, rows);
+        const modal = document.getElementById('excel-download-modal');
+        if (modal) {
+            const summaryTypeEl = document.getElementById('excel-type-summary');
+            if (summaryTypeEl) summaryTypeEl.checked = true;
+            if (window.onExcelTypeChange) window.onExcelTypeChange();
+            modal.style.display = 'flex';
+        }
     };
 
     window.renderGranularAssignmentsTable = function (resetPage = true) {
@@ -9843,6 +9779,9 @@ window.executeExcelDownload = async function () {
     const surveyType = document.getElementById('excel-survey-type')?.value || 'se_umum';
     const surveyLabel = surveyType === 'se_umum' ? 'SE_Umum' : 'SE_UB';
     const today = new Date().toISOString().slice(0, 10);
+    
+    const format = document.getElementById('excel-file-format')?.value || 'csv';
+    const includeRegion = document.getElementById('excel-include-region')?.checked || false;
 
     // Get current kab from filter for filename
     const kabFilterEl = document.getElementById('assign-sls-kab-filter');
@@ -9852,6 +9791,48 @@ window.executeExcelDownload = async function () {
 
     if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
     if (statusEl) statusEl.textContent = '⏳ Menyiapkan data...';
+
+    // Helper to fetch region
+    let regionLookup = null;
+    if (includeRegion) {
+        if (statusEl) statusEl.textContent = '⏳ Mengambil data wilayah (1/2)...';
+        try {
+            if (!window.ALL_REGIONS_MAP) {
+                await new Promise((resolve, reject) => {
+                    const script = document.createElement('script');
+                    script.src = 'region_map_sulteng_full.js';
+                    script.onload = resolve;
+                    script.onerror = reject;
+                    document.head.appendChild(script);
+                });
+                
+                const data = window.REGION_MAP_SULTENG_FULL;
+                const lookup = {};
+                if (data && data.kabupaten) {
+                    for (const kabCode of Object.keys(data.kabupaten)) {
+                        const kab = data.kabupaten[kabCode];
+                        if (!kab.kecamatan) continue;
+                        for (const kecCode of Object.keys(kab.kecamatan)) {
+                            const kec = kab.kecamatan[kecCode];
+                            if (!kec.desa) continue;
+                            for (const desaCode of Object.keys(kec.desa)) {
+                                lookup[desaCode] = {
+                                    kec: kec.kec_name,
+                                    desa: kec.desa[desaCode].desa_name
+                                };
+                            }
+                        }
+                    }
+                }
+                window.ALL_REGIONS_MAP = lookup;
+            }
+            regionLookup = window.ALL_REGIONS_MAP;
+            if (statusEl) statusEl.textContent = '⏳ Data wilayah siap. (2/2)...';
+        } catch (e) {
+            console.error('Gagal load wilayah js', e);
+            if (statusEl) statusEl.textContent = '⚠️ Gagal meload file wilayah. Mengabaikan opsi wilayah.';
+        }
+    }
 
     try {
         if (tipe === 'summary') {
@@ -9871,7 +9852,17 @@ window.executeExcelDownload = async function () {
                     'Selesai': d.selesai,
                     '% Capaian': d.total > 0 ? ((d.selesai / d.total) * 100).toFixed(1) + '%' : '0.0%'
                 }));
-                exportToCSV(rows, `Rekap_Desa_${surveyLabel}_${kabLabel}_${today}.csv`);
+                
+                const ext = format === 'excel' ? '.xlsx' : '.csv';
+                const filename = `Rekap_Desa_${surveyLabel}_${kabLabel}_${today}${ext}`;
+                if (format === 'excel' && typeof XLSX !== 'undefined') {
+                    const ws = XLSX.utils.json_to_sheet(rows);
+                    const wb = XLSX.utils.book_new();
+                    XLSX.utils.book_append_sheet(wb, ws, "Rekap Desa");
+                    XLSX.writeFile(wb, filename);
+                } else {
+                    exportToCSV(rows, filename);
+                }
                 if (statusEl) statusEl.textContent = `✅ ${rows.length} baris rekap desa berhasil diunduh!`;
             } else {
                 // Export directly from the table already rendered on screen
@@ -9881,16 +9872,112 @@ window.executeExcelDownload = async function () {
                     if (btn) { btn.disabled = false; btn.style.opacity = '1'; }
                     return;
                 }
-                const rows = arr.map((p, i) => ({
-                    'No': i + 1,
-                    'Nama Petugas': p.name || '-',
-                    'Email / Username': p.email || '-',
-                    'Total Target': p.total,
-                    'Belum Selesai': p.belum,
-                    'Selesai': p.selesai,
-                    '% Capaian': p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) + '%' : '0.0%'
-                }));
-                exportToCSV(rows, `Rekap_Petugas_${surveyLabel}_${kabLabel}_${today}.csv`);
+                let dates = [];
+                if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
+                    dates = Object.keys(window.PETUGAS_HISTORY_MAP).sort().filter(d => d !== "2026-07-09");
+                }
+
+                const rows = arr.map((p, i) => {
+                    const rowData = {
+                        'No': i + 1,
+                        'Nama Petugas': p.name || '-',
+                        'Email / Username': p.email || '-',
+                        'Role': p.role || '-'
+                    };
+
+                    if (includeRegion && regionLookup && window.PETUGAS_REGION_MAP && p.email) {
+                        const slsList = window.PETUGAS_REGION_MAP[p.email] || [];
+                        const kecSet = new Set();
+                        const desaSet = new Set();
+                        slsList.forEach(sls => {
+                            const desaCode = sls.substring(0, 10);
+                            if (regionLookup[desaCode]) {
+                                if (regionLookup[desaCode].kec && regionLookup[desaCode].kec !== '-') kecSet.add(regionLookup[desaCode].kec);
+                                if (regionLookup[desaCode].desa && regionLookup[desaCode].desa !== '-') desaSet.add(regionLookup[desaCode].desa);
+                            }
+                        });
+                        rowData['Kecamatan'] = kecSet.size > 0 ? Array.from(kecSet).sort().join(', ') : '-';
+                        rowData['Desa'] = desaSet.size > 0 ? Array.from(desaSet).sort().join(', ') : '-';
+                    }
+
+                    rowData['Total Target'] = p.total;
+                    rowData['Belum Selesai (Total)'] = p.belum;
+                    rowData['Open'] = p.open || 0;
+                    rowData['Draft'] = p.draft || 0;
+                    rowData['Selesai (Total)'] = p.selesai;
+                    rowData['Submit PPL'] = p.submitted_pencacah || 0;
+                    rowData['Submit Respondent'] = p.submitted_respondent || 0;
+                    rowData['Approved'] = p.approved || 0;
+                    rowData['Completed Admin'] = p.completed_admin || 0;
+                    rowData['Rejected'] = p.rejected || 0;
+                    rowData['Revoked'] = p.revoked || 0;
+                    rowData['Edited PML'] = p.edited_pengawas || 0;
+                    rowData['Edited Admin'] = p.edited_admin || 0;
+                    
+                    if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
+                        dates.forEach((d, dIdx) => {
+                            let dVal = "";
+                            let dPct = "";
+                            
+                            if (window.PETUGAS_HISTORY_MAP[d] && window.PETUGAS_HISTORY_MAP[d][p.role] && window.PETUGAS_HISTORY_MAP[d][p.role][p.email]) {
+                                if (dIdx > 0) {
+                                    const prevDate = dates[dIdx-1];
+                                    const hSnap = window.PETUGAS_HISTORY_MAP[d][p.role][p.email];
+                                    if (window.PETUGAS_HISTORY_MAP[prevDate] && window.PETUGAS_HISTORY_MAP[prevDate][p.role] && window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email]) {
+                                        const pSnap = window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email];
+                                        
+                                        const getD = (k) => (hSnap[k] || 0) - (pSnap[k] || 0);
+                                        
+                                        let currCum = 0, prevCum = 0;
+                                        if (p.role === 'Pengawas') {
+                                            currCum = (hSnap.approved || 0) + (hSnap.rejected || 0) + (hSnap.revoked || 0);
+                                            prevCum = (pSnap.approved || 0) + (pSnap.rejected || 0) + (pSnap.revoked || 0);
+                                        } else {
+                                            currCum = (hSnap.submitted_pencacah || 0) + (hSnap.approved || 0) + (hSnap.rejected || 0) + 
+                                                      (hSnap.edited_admin || 0) + (hSnap.completed_admin || 0) + (hSnap.submitted_respondent || 0) + 
+                                                      (hSnap.revoked || 0) + (hSnap.edited_pengawas || 0);
+                                            prevCum = (pSnap.submitted_pencacah || 0) + (pSnap.approved || 0) + (pSnap.rejected || 0) + 
+                                                      (pSnap.edited_admin || 0) + (pSnap.completed_admin || 0) + (pSnap.submitted_respondent || 0) + 
+                                                      (pSnap.revoked || 0) + (pSnap.edited_pengawas || 0);
+                                        }
+                                        
+                                        dVal = currCum - prevCum;
+                                        let target = hSnap.target || p.total || 1;
+                                        let pTarget = pSnap.target || p.total || 1;
+                                        
+                                        dPct = ((currCum / target * 100) - (prevCum / pTarget * 100)).toFixed(1).replace('.', ',');
+                                        dVal = dVal > 0 ? "+" + dVal : dVal.toString();
+                                        dPct = parseFloat(dPct.replace(',','.')) > 0 ? "+" + dPct + "%" : dPct + "%";
+                                    }
+                                }
+                            }
+                            
+                            const dObj = new Date(d + 'T00:00:00');
+                            const labelDelta = dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }) + " (Delta)";
+                            const labelPct = dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }) + " (%)";
+                            
+                            if (dIdx > 0) {
+                                rowData[labelDelta] = dVal;
+                                rowData[labelPct] = dPct;
+                            }
+                        });
+                    }
+                    
+                    rowData['% Capaian'] = p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) + '%' : '0.0%';
+                    return rowData;
+                });
+                
+                const ext = format === 'excel' ? '.xlsx' : '.csv';
+                const suffixW = includeRegion ? '_Wilayah' : '';
+                const filename = `Rekap_Petugas_${surveyLabel}_${kabLabel}${suffixW}_${today}${ext}`;
+                if (format === 'excel' && typeof XLSX !== 'undefined') {
+                    const ws = XLSX.utils.json_to_sheet(rows);
+                    const wb = XLSX.utils.book_new();
+                    XLSX.utils.book_append_sheet(wb, ws, "Rekap Petugas");
+                    XLSX.writeFile(wb, filename);
+                } else {
+                    exportToCSV(rows, filename);
+                }
                 if (statusEl) statusEl.textContent = `✅ ${rows.length} baris berhasil diunduh!`;
             }
         } else {
@@ -9902,7 +9989,7 @@ window.executeExcelDownload = async function () {
             const kabsLabel = selectedKabs.length === 1
                 ? selectedKabs[0].replace(/^\[\d+\]\s*/, '').trim().replace(/\s+/g, '_').toUpperCase()
                 : `${selectedKabs.length}_Kab`;
-            await downloadRawExcel(selectedKabs, surveyType, statusEl, `Raw_${surveyLabel}_${kabsLabel}_${today}.csv`);
+            await downloadRawExcel(selectedKabs, surveyType, statusEl, `Raw_${surveyLabel}_${kabsLabel}_${today}.csv`); // Raw tetep default CSV for now to avoid freezing
         }
     } catch (e) {
         console.error('Download error:', e);
