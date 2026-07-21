@@ -11,7 +11,7 @@ PAYLOAD_TEMPLATE = {
     "size": 10,
     "page": 0,
     "search": "",
-    "target": "TARGET_ONLY",
+    "target": "ALL",
     "region": {
         "region1Id": "5214ecb2-bef1-4a86-9446-451cf430928e",
         "region2Id": "4ab6ca2f-7952-4e8e-a94d-b6dd933e5d44",
@@ -122,7 +122,7 @@ async def run():
                         "size": 10,
                         "page": current_page,
                         "search": "",
-                        "target": "TARGET_ONLY",
+                        "target": "ALL",
                         "region": {
                             "region1Id": None, "region2Id": kab_id, "region3Id": None, 
                             "region4Id": None, "region5Id": None, "region6Id": None, 
@@ -186,8 +186,8 @@ async def run():
                         retries += 1
                         print(f"[ERROR] Gagal mengambil halaman {current_page} (Percobaan {retries}/{max_retries}): {res.get('_error')}")
                     
-                        print("[INFO] Terdeteksi blokir F5 WAF / Sesi mati / Error. Memuat ulang halaman dasbor untuk mendapat cookie baru...")
-                        if True:
+                        if "504" not in res.get('_error', '') and "502" not in res.get('_error', ''):
+                            print("[INFO] Terdeteksi blokir F5 WAF / Sesi mati. Memuat ulang halaman dasbor untuk mendapat cookie baru...")
                             try:
                                 # URL baru dasbor survei (URL lama assignment-status sudah 404)
                                 await page.goto("https://fasih-sm.bps.go.id/app/surveys/a0429e96-51a5-477b-a415-485f9c153004/fd68e454-ba45-4b85-8205-f3bf777ded24", timeout=120000)
@@ -202,16 +202,16 @@ async def run():
                             except Exception as refr_e:
                                 print(f"[ERROR] Gagal refresh token: {refr_e}")
                         
-                            if retries >= max_retries:
-                                print(f"[WARNING] Gagal total setelah {max_retries} percobaan di halaman {current_page}. Melewati halaman ini secara paksa agar script bisa lanjut!")
-                                current_page += 1
-                                retries = 0
-                                continue
-                        
-                            wait_time = 5 if retries < 5 else 15
-                            print(f"[INFO] Menunggu {wait_time} detik lalu mengulang...")
-                            await asyncio.sleep(wait_time)
+                        if retries >= max_retries:
+                            print(f"[WARNING] Gagal total setelah {max_retries} percobaan di halaman {current_page}. Melewati halaman ini secara paksa agar script bisa lanjut!")
+                            current_page += 1
+                            retries = 0
                             continue
+                        
+                        wait_time = 5 if retries < 5 else 15
+                        print(f"[INFO] Menunggu {wait_time} detik lalu mengulang...")
+                        await asyncio.sleep(wait_time)
+                        continue
                     
                     retries = 0 
                 
