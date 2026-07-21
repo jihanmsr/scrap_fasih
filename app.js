@@ -5915,6 +5915,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.IPAS_DATA = ipasDbData.value;
                     ipasLoadedFromDb = true;
                     console.log(`Loaded IPAS_DATA (${ipasKey}) from Supabase.`);
+                    if (typeof window.updateDashboardDateLabels === 'function' && window.IPAS_DATA.updated_at) {
+                        window.updateDashboardDateLabels(window.IPAS_DATA.updated_at);
+                    }
                 }
             } catch (e) {
                 console.warn(`Failed to fetch IPAS_DATA (${ipasKey}) from Supabase:`, e);

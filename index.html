@@ -2469,9 +2469,11 @@
             }
         }
 
-        document.addEventListener("DOMContentLoaded", function () {
+        window.updateDashboardDateLabels = function(baseDateStr) {
             let t = new Date();
-            if (window.IPAS_DATA && window.IPAS_DATA.updated_at) {
+            if (baseDateStr) {
+                t = new Date(baseDateStr);
+            } else if (window.IPAS_DATA && window.IPAS_DATA.updated_at) {
                 t = new Date(window.IPAS_DATA.updated_at);
             }
             const getWitaDate = (baseDate, offsetDays) => {
@@ -2493,17 +2495,23 @@
 
             // Replace in stat-label divs
             document.querySelectorAll('.stat-label').forEach(el => {
-                if (el.textContent.includes('Submit Hari Ini')) el.innerHTML = 'Submit ' + strToday;
-                if (el.textContent.includes('Submit Kemarin')) el.innerHTML = 'Submit ' + strYesterday;
-                if (el.textContent.includes('Submit 2 Hari Lalu')) el.innerHTML = 'Submit ' + strH2;
+                const txt = el.textContent;
+                if (txt.includes('Submit Hari Ini') || txt.includes('Hari Ini (')) el.innerHTML = 'Submit ' + strToday;
+                if (txt.includes('Submit Kemarin') || txt.includes('Kemarin (')) el.innerHTML = 'Submit ' + strYesterday;
+                if (txt.includes('Submit 2 Hari Lalu') || txt.includes('2 Hari Lalu (')) el.innerHTML = 'Submit ' + strH2;
             });
 
             // Replace in th elements
             document.querySelectorAll('th').forEach(el => {
-                if (el.textContent.includes('Progres (Hari Ini | Kemarin)')) {
+                const txt = el.textContent;
+                if (txt.includes('Progres (Hari Ini | Kemarin)') || txt.includes('Progres (Hari Ini (')) {
                     el.innerHTML = 'Progres (' + strToday + ' | ' + strYesterday + ')';
                 }
             });
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            window.updateDashboardDateLabels();
         });
     </script>
 
