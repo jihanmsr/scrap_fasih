@@ -1,3 +1,4 @@
+import subprocess
 import json
 import asyncio
 import asyncio as _asyncio
@@ -821,7 +822,19 @@ async def run_download_and_update():
             except Exception as e:
                 print(f"[ERROR] Gagal mengunggah data ke Supabase: {e}")
                 
+        
+        # Auto-push ke GitHub agar Vercel otomatis update
+        print("\n🚀 Mengunggah data terbaru ke GitHub untuk update Vercel...")
+        try:
+            subprocess.run(["git", "add", "ipas_data.js", "daily_summary.js", "fast_master_assign_sls.js", "fast_petugas_progress.js", "fast_petugas_history.js", "petugas_region_map.js"], check=True)
+            subprocess.run(["git", "commit", "-m", "Auto-update data dari scraper"], check=True)
+            subprocess.run(["git", "push", "origin", "main"], check=True)
+            print("✅ Berhasil push ke GitHub! Website Vercel akan otomatis terupdate dalam ~30 detik.")
+        except Exception as e:
+            print(f"⚠️ Gagal push ke GitHub (Mungkin tidak ada perubahan data atau error git): {e}")
+            
         print("\n🎉 PEMBARUAN DASHBOARD SELESAI SECARA INSTAN!")
+
 
 if __name__ == "__main__":
     asyncio.run(run_download_and_update())

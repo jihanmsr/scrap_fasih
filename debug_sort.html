@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="petugas-summary-table-container">
+<table id="table">
+<thead id="petugas-summary-table-head"></thead>
+<tbody id="petugas-summary-table-body"></tbody>
+</table>
+</div>
+<script>
+window.PETUGAS_HISTORY_MAP = {
+    "2026-07-13": {
+        "Pencacah": {
+            "test1@gmail.com": { submitted_pencacah: 2 },
+            "test2@gmail.com": { submitted_pencacah: 1 }
+        }
+    },
+    "2026-07-14": {
+        "Pencacah": {
+            "test1@gmail.com": { submitted_pencacah: 20 },
+            "test2@gmail.com": { submitted_pencacah: 18 }
+        }
+    }
+};
+
+window.PETUGAS_PROGRESS_MAP = {
+    "Pencacah": {
+        "test1@gmail.com": { target: 100 },
+        "test2@gmail.com": { target: 100 }
+    }
+};
+
+window.petugasSummaryCurrentPage = 1;
+window.petugasSummaryPerPage = 10;
+window._showPetugasHistory = true;
+
+window.petugasSortField = 'pct';
+window.petugasSortOrder = -1;
+
+window.sortPetugasSummary = function (field) {
+    if (window.petugasSortField === field) {
+        window.petugasSortOrder *= -1;
+    } else {
+        window.petugasSortField = field;
+        window.petugasSortOrder = field === 'name' ? 1 : -1;
+    }
+    window.renderPetugasSummaryTable();
+};
+
+window.renderPetugasSummaryTable = function() {
+    let arr = [];
+    ['Pencacah'].forEach(roleKey => {
+        for (const [email, pMapData] of Object.entries(window.PETUGAS_PROGRESS_MAP[roleKey])) {
+            arr.push({ name: email, email: email, role: roleKey, total: 100, selesai: 0, belum: 100 });
+        }
+    });
+
+    arr.sort((a, b) => {
+        let valA, valB;
+        const sortOrder = window.petugasSortOrder;
+        const sortField = window.petugasSortField;
+
+        if (sortField.startsWith('history_')) {
+            const targetDate = sortField.replace('history_', '');
+            const allDates = Object.keys(window.PETUGAS_HISTORY_MAP || {}).sort();
+            const dIdx = allDates.indexOf(targetDate);
+            const getHistoryVal = (pItem) => {
+                if (window.PETUGAS_HISTORY_MAP && window.PETUGAS_HISTORY_MAP[targetDate] && window.PETUGAS_HISTORY_MAP[targetDate][pItem.role]) {
+                    if (dIdx > 0) {
+                        const prevDate = allDates[dIdx-1];
+                        const hSnap = window.PETUGAS_HISTORY_MAP[targetDate][pItem.role]?.[pItem.email] || {};
+                        const pSnap = window.PETUGAS_HISTORY_MAP[prevDate][pItem.role]?.[pItem.email] || {};
+                        
+                        let currCum = (hSnap.submitted_pencacah || 0);
+                        let prevCum = (pSnap.submitted_pencacah || 0);
+                        return currCum - prevCum;
+                    }
+                }
+                return 0;
+            };
+            valA = getHistoryVal(a);
+            valB = getHistoryVal(b);
+        } else {
+            valA = 0; valB = 0;
+        }
+
+        const cmp = (valA - valB) * sortOrder;
+        if (cmp !== 0) return cmp;
+        return a.name.localeCompare(b.name);
+    });
+
+    console.log("SORTED ARR: ", arr.map(x => x.email));
+};
+
+window.sortPetugasSummary('history_2026-07-14');
+</script>
+</body>
+</html>

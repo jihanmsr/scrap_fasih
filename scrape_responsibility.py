@@ -1,3 +1,4 @@
+import subprocess
 import asyncio
 import json
 import csv
@@ -335,6 +336,19 @@ async def run():
 
         # (Progressive save sudah menghandle CSV dan History JS)
         
+        
+        # Auto-push ke GitHub agar Vercel otomatis update
+        print("\n🚀 Mengunggah data terbaru ke GitHub untuk update Vercel...")
+        try:
+            subprocess.run(["git", "add", "."], check=True)
+            subprocess.run(["git", "commit", "-m", "Auto-update data dari scraper"], check=True)
+            subprocess.run(["git", "push", "origin", "main"], check=True)
+            print("✅ Berhasil push ke GitHub! Website Vercel akan otomatis terupdate dalam ~30 detik.")
+        except Exception as e:
+            print(f"⚠️ Gagal push ke GitHub (Mungkin tidak ada perubahan data atau error git): {e}")
+            
+        print("\n🎉 PEMBARUAN SELESAI SECARA INSTAN!")
+
         await context.close()
 
 if __name__ == "__main__":
