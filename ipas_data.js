@@ -463,7 +463,9 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 662
       },
-      "delta_persen": 0.89
+      "delta_persen": 0.89,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[02] BANGGAI",
@@ -1266,7 +1268,9 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 952,
         "REJECTED BY PENGAWAS": 352
       },
-      "delta_persen": 0.73
+      "delta_persen": 0.73,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[03] MOROWALI",
@@ -1618,7 +1622,9 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1083
       },
-      "delta_persen": 1.65
+      "delta_persen": 1.65,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[04] POSO",
@@ -2296,7 +2302,9 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 1118,
         "REJECTED BY PENGAWAS": 118
       },
-      "delta_persen": 0.62
+      "delta_persen": 0.62,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[05] DONGGALA",
@@ -2865,7 +2873,9 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1199
       },
-      "delta_persen": 0.91
+      "delta_persen": 0.91,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[06] TOLI-TOLI",
@@ -3223,7 +3233,9 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 366,
         "SUBMITTED BY PENCACAH": 334
       },
-      "delta_persen": 0.68
+      "delta_persen": 0.68,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[07] BUOL",
@@ -3661,7 +3673,9 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 871,
         "REJECTED BY PENGAWAS": 2
       },
-      "delta_persen": 0.55
+      "delta_persen": 0.55,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[08] PARIGI MOUTONG",
@@ -4442,7 +4456,9 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 1360,
         "SUBMITTED BY PENCACAH": 506
       },
-      "delta_persen": 0.96
+      "delta_persen": 0.96,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[09] TOJO UNA-UNA",
@@ -4900,7 +4916,9 @@ window.IPAS_DATA = {
         "REJECTED BY PENGAWAS": 26,
         "SUBMITTED BY PENCACAH": 149
       },
-      "delta_persen": 0.86
+      "delta_persen": 0.86,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[10] SIGI",
@@ -5478,7 +5496,9 @@ window.IPAS_DATA = {
         "REJECTED BY PENGAWAS": 40,
         "SUBMITTED BY PENCACAH": 284
       },
-      "delta_persen": 0.7
+      "delta_persen": 0.7,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[11] BANGGAI LAUT",
@@ -5775,7 +5795,9 @@ window.IPAS_DATA = {
         "REJECTED BY PENGAWAS": 11,
         "SUBMITTED BY PENCACAH": 182
       },
-      "delta_persen": 0.97
+      "delta_persen": 0.97,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[12] MOROWALI UTARA",
@@ -6159,7 +6181,9 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 396,
         "REJECTED BY PENGAWAS": 36
       },
-      "delta_persen": 0.67
+      "delta_persen": 0.67,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[71] PALU",
@@ -6508,7 +6532,9 @@ window.IPAS_DATA = {
         "REJECTED BY PENGAWAS": 197,
         "SUBMITTED RESPONDENT": 1
       },
-      "delta_persen": 0.49
+      "delta_persen": 0.49,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     }
   ],
   "se_ub": [
@@ -6789,7 +6815,9 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0
+      "delta_persen": 0.0,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[02] BANGGAI",
@@ -7398,7 +7426,9 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "REJECTED BY PENGAWAS": 3
       },
-      "delta_persen": 0.58
+      "delta_persen": 0.58,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[03] MOROWALI",
@@ -7691,7 +7721,9 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0
+      "delta_persen": 0.0,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[04] POSO",
@@ -8163,7 +8195,9 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0
+      "delta_persen": 0.0,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[05] DONGGALA",
@@ -8592,7 +8626,9 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0
+      "delta_persen": 0.0,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[06] TOLI-TOLI",
@@ -8865,7 +8901,9 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0
+      "delta_persen": 0.0,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[07] BUOL",
@@ -9142,7 +9180,9 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0
+      "delta_persen": 0.0,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[08] PARIGI MOUTONG",
@@ -9721,7 +9761,9 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 3
       },
-      "delta_persen": 0.0
+      "delta_persen": 0.0,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[09] TOJO UNA-UNA",
@@ -10015,7 +10057,9 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0
+      "delta_persen": 0.0,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[10] SIGI",
@@ -10393,7 +10437,9 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0
+      "delta_persen": 0.0,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[11] BANGGAI LAUT",
@@ -10571,7 +10617,9 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0
+      "delta_persen": 0.0,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[12] MOROWALI UTARA",
@@ -10875,7 +10923,9 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0
+      "delta_persen": 0.0,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     },
     {
       "kabupaten": "[71] PALU",
@@ -11157,7 +11207,9 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 1
       },
-      "delta_persen": 0.24
+      "delta_persen": 0.24,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.0
     }
   ],
   "se_umum_sls_status": {
