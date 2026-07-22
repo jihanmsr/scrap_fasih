@@ -463,8 +463,8 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 662
       },
-      "delta_persen": 0.89,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 2.75,
+      "delta_kemarin_persen": 2.69,
       "delta_lusa_persen": 0.0
     },
     {
@@ -1268,8 +1268,8 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 952,
         "REJECTED BY PENGAWAS": 352
       },
-      "delta_persen": 0.73,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 1.36,
+      "delta_kemarin_persen": 2.89,
       "delta_lusa_persen": 0.0
     },
     {
@@ -1622,8 +1622,8 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1083
       },
-      "delta_persen": 1.65,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 2.37,
+      "delta_kemarin_persen": 3.07,
       "delta_lusa_persen": 0.0
     },
     {
@@ -2302,8 +2302,8 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 1118,
         "REJECTED BY PENGAWAS": 118
       },
-      "delta_persen": 0.62,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 1.95,
+      "delta_kemarin_persen": 4.57,
       "delta_lusa_persen": 0.0
     },
     {
@@ -2873,8 +2873,8 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1199
       },
-      "delta_persen": 0.91,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 1.69,
+      "delta_kemarin_persen": 2.22,
       "delta_lusa_persen": 0.0
     },
     {
@@ -3233,8 +3233,8 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 366,
         "SUBMITTED BY PENCACAH": 334
       },
-      "delta_persen": 0.68,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 0.7,
+      "delta_kemarin_persen": 1.61,
       "delta_lusa_persen": 0.0
     },
     {
@@ -3673,8 +3673,8 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 871,
         "REJECTED BY PENGAWAS": 2
       },
-      "delta_persen": 0.55,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 3.1,
+      "delta_kemarin_persen": 2.45,
       "delta_lusa_persen": 0.0
     },
     {
@@ -4456,8 +4456,8 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 1360,
         "SUBMITTED BY PENCACAH": 506
       },
-      "delta_persen": 0.96,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 0.24,
+      "delta_kemarin_persen": 8.93,
       "delta_lusa_persen": 0.0
     },
     {
@@ -4916,8 +4916,8 @@ window.IPAS_DATA = {
         "REJECTED BY PENGAWAS": 26,
         "SUBMITTED BY PENCACAH": 149
       },
-      "delta_persen": 0.86,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 1.37,
+      "delta_kemarin_persen": 4.22,
       "delta_lusa_persen": 0.0
     },
     {
@@ -5496,8 +5496,8 @@ window.IPAS_DATA = {
         "REJECTED BY PENGAWAS": 40,
         "SUBMITTED BY PENCACAH": 284
       },
-      "delta_persen": 0.7,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 0.89,
+      "delta_kemarin_persen": 1.68,
       "delta_lusa_persen": 0.0
     },
     {
@@ -5795,8 +5795,8 @@ window.IPAS_DATA = {
         "REJECTED BY PENGAWAS": 11,
         "SUBMITTED BY PENCACAH": 182
       },
-      "delta_persen": 0.97,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 0.5,
+      "delta_kemarin_persen": 2.72,
       "delta_lusa_persen": 0.0
     },
     {
@@ -6181,8 +6181,8 @@ window.IPAS_DATA = {
         "APPROVED BY PENGAWAS": 396,
         "REJECTED BY PENGAWAS": 36
       },
-      "delta_persen": 0.67,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": -0.16,
+      "delta_kemarin_persen": 3.59,
       "delta_lusa_persen": 0.0
     },
     {
@@ -6532,8 +6532,8 @@ window.IPAS_DATA = {
         "REJECTED BY PENGAWAS": 197,
         "SUBMITTED RESPONDENT": 1
       },
-      "delta_persen": 0.49,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 1.51,
+      "delta_kemarin_persen": 2.85,
       "delta_lusa_persen": 0.0
     }
   ],
@@ -6816,7 +6816,7 @@ window.IPAS_DATA = {
       "today_completed": 0,
       "today_completed_breakdown": {},
       "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.0,
+      "delta_kemarin_persen": 266.67,
       "delta_lusa_persen": 0.0
     },
     {
@@ -7426,8 +7426,8 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "REJECTED BY PENGAWAS": 3
       },
-      "delta_persen": 0.58,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 40.7,
+      "delta_kemarin_persen": 31.98,
       "delta_lusa_persen": 0.0
     },
     {
@@ -7721,8 +7721,8 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 432.02,
+      "delta_kemarin_persen": 378.65,
       "delta_lusa_persen": 0.0
     },
     {
@@ -8195,8 +8195,8 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 552.17,
+      "delta_kemarin_persen": 406.52,
       "delta_lusa_persen": 0.0
     },
     {
@@ -8626,8 +8626,8 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 573.68,
+      "delta_kemarin_persen": 1482.46,
       "delta_lusa_persen": 0.0
     },
     {
@@ -8901,8 +8901,8 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 20.69,
+      "delta_kemarin_persen": -46.55,
       "delta_lusa_persen": 0.0
     },
     {
@@ -9180,8 +9180,8 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 176.47,
+      "delta_kemarin_persen": 417.65,
       "delta_lusa_persen": 0.0
     },
     {
@@ -9761,8 +9761,8 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 3
       },
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 549.23,
+      "delta_kemarin_persen": 1320.0,
       "delta_lusa_persen": 0.0
     },
     {
@@ -10057,8 +10057,8 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 833.33,
+      "delta_kemarin_persen": -253.33,
       "delta_lusa_persen": 0.0
     },
     {
@@ -10437,8 +10437,8 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 609.09,
+      "delta_kemarin_persen": 236.36,
       "delta_lusa_persen": 0.0
     },
     {
@@ -10617,8 +10617,8 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 842.86,
+      "delta_kemarin_persen": 1400.0,
       "delta_lusa_persen": 0.0
     },
     {
@@ -10923,8 +10923,8 @@ window.IPAS_DATA = {
       "new_rumah_today": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": -5.62,
+      "delta_kemarin_persen": -93.82,
       "delta_lusa_persen": 0.0
     },
     {
@@ -11207,8 +11207,8 @@ window.IPAS_DATA = {
       "today_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 1
       },
-      "delta_persen": 0.24,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 475.18,
+      "delta_kemarin_persen": 653.22,
       "delta_lusa_persen": 0.0
     }
   ],
