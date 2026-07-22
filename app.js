@@ -7491,9 +7491,9 @@ window.fetchAllAssignments = async function() {
             window.petugasSortField = field;
             window.petugasSortOrder = field === 'name' ? 1 : -1;
         }
-        const dataToRender = window.lastBaseFiltered || window.GRANULAR_ASSIGNMENTS_DATA || null;
-        if (dataToRender && window.renderPetugasSummaryTable) {
-            window.renderPetugasSummaryTable(dataToRender);
+        window.petugasSummaryCurrentPage = 1;
+        if (window.renderPetugasSummaryTable) {
+            window.renderPetugasSummaryTable(window.lastBaseFiltered || window.GRANULAR_ASSIGNMENTS_DATA || []);
         }
     };
 
