@@ -910,8 +910,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'persentase')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
                     % Capaian${getIcon('persentase')}
                 </th>
-                <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'delta_persen')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
-                    Delta (%)${getIcon('delta_persen')}
+                <th colspan="3" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--color-opened); border-bottom: 1px solid var(--card-border);">
+                    Delta Kinerja (%)
                 </th>
                 <th rowspan="2" class="sortable" onclick="sortSeTable('${surveyType}', 'new_usaha_overall')" style="font-family: 'Outfit', sans-serif; text-align: center; vertical-align: middle;">
                     Tambahan (Non-Target)${getIcon('new_usaha_overall')}
@@ -932,6 +932,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 </th>
                 <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #dc2626; font-size: 0.8rem; padding: 0.4rem 0.75rem;">
                     Rejected
+                </th>
+                <th class="sortable" onclick="sortSeTable('${surveyType}', 'delta_lusa_persen')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--text-secondary); font-size: 0.8rem; padding: 0.4rem 0.75rem; border-left: 1px solid var(--card-border);">
+                    H-2${getIcon('delta_lusa_persen')}
+                </th>
+                <th class="sortable" onclick="sortSeTable('${surveyType}', 'delta_kemarin_persen')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--text-secondary); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                    H-1${getIcon('delta_kemarin_persen')}
+                </th>
+                <th class="sortable" onclick="sortSeTable('${surveyType}', 'delta_persen')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--primary); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                    Hari Ini${getIcon('delta_persen')}
                 </th>
             </tr>
         `;
@@ -2340,6 +2349,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     valA = parseFloat(a.delta_persen) || 0;
                     valB = parseFloat(b.delta_persen) || 0;
                     break;
+                case 'delta_kemarin_persen':
+                    valA = parseFloat(a.delta_kemarin_persen) || 0;
+                    valB = parseFloat(b.delta_kemarin_persen) || 0;
+                    break;
+                case 'delta_lusa_persen':
+                    valA = parseFloat(a.delta_lusa_persen) || 0;
+                    valB = parseFloat(b.delta_lusa_persen) || 0;
+                    break;
+                case 'delta_kemarin_persen':
+                    valA = parseFloat(a.delta_kemarin_persen) || 0;
+                    valB = parseFloat(b.delta_kemarin_persen) || 0;
+                    break;
+                case 'delta_lusa_persen':
+                    valA = parseFloat(a.delta_lusa_persen) || 0;
+                    valB = parseFloat(b.delta_lusa_persen) || 0;
+                    break;
                 case 'sisa_usaha':
                     valA = a.sisa_usaha || 0;
                     valB = b.sisa_usaha || 0;
@@ -2422,6 +2447,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; ${pctClass}">
                         ${item.persentase}%
                     </span>
+                </td>
+                <td style="text-align: center;">
+                    ${item.delta_lusa_persen !== undefined && item.delta_lusa_persen !== 0 ? 
+                        `<span style="font-size: 0.8rem; font-weight: 700; color: ${item.delta_lusa_persen > 0 ? '#22c55e' : (item.delta_lusa_persen < 0 ? '#ef4444' : 'inherit')};">
+                            ${item.delta_lusa_persen > 0 ? '+' : ''}${item.delta_lusa_persen.toFixed(2)}%
+                        </span>` 
+                        : `<span style="font-size: 0.8rem; color: var(--text-muted);">-</span>`}
+                </td>
+                <td style="text-align: center;">
+                    ${item.delta_kemarin_persen !== undefined && item.delta_kemarin_persen !== 0 ? 
+                        `<span style="font-size: 0.8rem; font-weight: 700; color: ${item.delta_kemarin_persen > 0 ? '#22c55e' : (item.delta_kemarin_persen < 0 ? '#ef4444' : 'inherit')};">
+                            ${item.delta_kemarin_persen > 0 ? '+' : ''}${item.delta_kemarin_persen.toFixed(2)}%
+                        </span>` 
+                        : `<span style="font-size: 0.8rem; color: var(--text-muted);">-</span>`}
                 </td>
                 <td style="text-align: center;">
                     ${item.delta_persen !== undefined && item.delta_persen !== 0 ? 
