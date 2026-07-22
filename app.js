@@ -9989,9 +9989,11 @@ window.executeExcelDownload = async function () {
                                         let target = hSnap.target || p.total || 1;
                                         let pTarget = pSnap.target || p.total || 1;
                                         
-                                        dPct = ((currCum / target * 100) - (prevCum / pTarget * 100)).toFixed(1).replace('.', ',');
-                                        dVal = dVal > 0 ? "+" + dVal : dVal.toString();
-                                        dPct = parseFloat(dPct.replace(',','.')) > 0 ? "+" + dPct + "%" : dPct + "%";
+                                        let rawPct = (currCum / target * 100) - (prevCum / pTarget * 100);
+                                        
+                                        // Export numbers directly so Excel can sum them
+                                        dVal = isNaN(dVal) ? 0 : dVal;
+                                        dPct = isNaN(rawPct) ? 0 : parseFloat(rawPct.toFixed(2));
                                     }
                                 }
                             }
