@@ -890,7 +890,26 @@ header {
     box-shadow: var(--shadow-sm);
     position: relative;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--text-secondary) var(--card-bg);
 }
+
+.ipas-table-wrapper::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+.ipas-table-wrapper::-webkit-scrollbar-track {
+    background: var(--card-bg);
+    border-radius: 4px;
+}
+.ipas-table-wrapper::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 4px;
+}
+.ipas-table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--text-primary);
+}
+
 
 .ipas-table {
     width: 100%;
