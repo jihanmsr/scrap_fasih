@@ -255,6 +255,8 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    supabaseClient = null; // FORCE LOCAL ONLY
+
     let companies = [];
     let sourceData = [];
     let se_umumData = window.IPAS_DATA ? window.IPAS_DATA.se_umum : [];
