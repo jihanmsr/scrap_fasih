@@ -205,6 +205,21 @@ async def run():
                         
                         if retries >= max_retries:
                             print(f"[WARNING] Gagal total setelah {max_retries} percobaan di halaman {current_page}. Melewati halaman ini secara paksa agar script bisa lanjut!")
+                            # --- AUTO-LOG MISSING PAGE ---
+                            missing_log_file = "/Users/jihanmaisaroh/scrap_fasih/missing_pages_log.json"
+                            missing_data = []
+                            if os.path.exists(missing_log_file):
+                                try:
+                                    with open(missing_log_file, 'r') as mf:
+                                        missing_data = json.load(mf)
+                                except: pass
+                            
+                            new_entry = {"role": role_name, "kab_name": kab_name, "page": current_page}
+                            if new_entry not in missing_data:
+                                missing_data.append(new_entry)
+                                with open(missing_log_file, 'w') as mf:
+                                    json.dump(missing_data, mf, indent=4)
+                            # -----------------------------
                             current_page += 1
                             retries = 0
                             continue
