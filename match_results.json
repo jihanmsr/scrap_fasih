@@ -1,0 +1,1026 @@
+[
+  {
+    "id": "393",
+    "target_name": "SAKURA, UD",
+    "matches": []
+  },
+  {
+    "id": "394",
+    "target_name": "PT INDONESIA RUIPU NICKEL AND CHROME ALLOY",
+    "matches": []
+  },
+  {
+    "id": "395",
+    "target_name": "PT LESTARI SMELTER INDONESIA",
+    "matches": [
+      {
+        "company_name": "LESTARI SMELTER INDONESIA",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "396",
+    "target_name": "PT KINRUI NEW TECHNOLOGIES INDONESIA",
+    "matches": []
+  },
+  {
+    "id": "397",
+    "target_name": "PT KINXIANG NEW ENERGY TECHNOLOGIES INDONESIA",
+    "matches": [
+      {
+        "company_name": "Kinxiang New Energy Technologies Indonesia, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "398",
+    "target_name": "PT INDONESIA GUANG CHING NICKEL AND STAINLESS STEEL INDUSTRY",
+    "matches": [
+      {
+        "company_name": "INDONESIA GUANG CHING NICKEL AND STAINLESS STEEL INDUSTRY TKA",
+        "survey_status": "OPEN",
+        "status": "Bounced",
+        "timestamp": "02 Jun 2026, 07:54:53"
+      },
+      {
+        "company_name": "INDONESIA GUANG CHING NICKEL AND STAINLESS STEEL INDUSTRY TKA",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "02 Jun 2026, 07:54:49"
+      }
+    ]
+  },
+  {
+    "id": "399",
+    "target_name": "PT ZHAO HUI NICKEL",
+    "matches": [
+      {
+        "company_name": "ZHAO HUI NICKEL, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "400",
+    "target_name": "PT BUKIT SMELTER INDONESIA",
+    "matches": [
+      {
+        "company_name": "BUKIT SMELTER INDONESIA",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      },
+      {
+        "company_name": "INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "15 Jun 2026, 19:24:22"
+      },
+      {
+        "company_name": "INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "09 Jun 2026, 11:15:14"
+      },
+      {
+        "company_name": "INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "09 Jun 2026, 11:15:13"
+      },
+      {
+        "company_name": "INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "09 Jun 2026, 09:54:48"
+      },
+      {
+        "company_name": "INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "09 Jun 2026, 09:54:45"
+      },
+      {
+        "company_name": "INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "02 Jun 2026, 00:47:51"
+      },
+      {
+        "company_name": "INTERNUSA MAJU PERKASA - BUKIT SMELTER INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "02 Jun 2026, 00:47:47"
+      }
+    ]
+  },
+  {
+    "id": "401",
+    "target_name": "PT QING SHUI ECO MATERIAL",
+    "matches": [
+      {
+        "company_name": "QING SHUI ECO MATERIAL, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "402",
+    "target_name": "PT CAHAYA SMELTER INDONESIA",
+    "matches": [
+      {
+        "company_name": "CAHAYA SMELTER INDONESIA",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "403",
+    "target_name": "PT DEXIN STEEL INDONESIA",
+    "matches": [
+      {
+        "company_name": "DEXIN STEEL INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "02 Jun 2026, 07:49:02"
+      },
+      {
+        "company_name": "DEXIN STEEL INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "02 Jun 2026, 07:48:55"
+      }
+    ]
+  },
+  {
+    "id": "404",
+    "target_name": "PT HENGJAYA NICKEL INDUSTRY",
+    "matches": [
+      {
+        "company_name": "HENGJAYA NICKEL INDUSTRY",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "02 Jun 2026, 03:45:21"
+      },
+      {
+        "company_name": "HENGJAYA NICKEL INDUSTRY",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "02 Jun 2026, 03:45:18"
+      }
+    ]
+  },
+  {
+    "id": "405",
+    "target_name": "PT CNGR DING XING NEW ENERGY",
+    "matches": [
+      {
+        "company_name": "CNGR DING XING NEW ENERGY, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "406",
+    "target_name": "PT QING FENG FERROCHROME",
+    "matches": [
+      {
+        "company_name": "QING FENG FERROCHROME",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "02 Jun 2026, 03:16:09"
+      },
+      {
+        "company_name": "QING FENG FERROCHROME",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "02 Jun 2026, 03:16:03"
+      }
+    ]
+  },
+  {
+    "id": "407",
+    "target_name": "PT BINTANGDELAPAN MINERAL",
+    "matches": [
+      {
+        "company_name": "BINTANGDELAPAN MINERAL, PT",
+        "survey_status": "DRAFT",
+        "status": "Opened",
+        "timestamp": "23 Jun 2026, 15:20:02"
+      },
+      {
+        "company_name": "BINTANGDELAPAN MINERAL, PT",
+        "survey_status": "DRAFT",
+        "status": "Clicked",
+        "timestamp": "23 Jun 2026, 15:20:01"
+      },
+      {
+        "company_name": "BINTANGDELAPAN MINERAL, PT",
+        "survey_status": "DRAFT",
+        "status": "Opened",
+        "timestamp": "23 Jun 2026, 10:48:49"
+      },
+      {
+        "company_name": "BINTANGDELAPAN MINERAL, PT",
+        "survey_status": "DRAFT",
+        "status": "Delivered",
+        "timestamp": "23 Jun 2026, 10:48:41"
+      },
+      {
+        "company_name": "BINTANGDELAPAN MINERAL, PT",
+        "survey_status": "DRAFT",
+        "status": "Queued",
+        "timestamp": "23 Jun 2026, 10:48:40"
+      },
+      {
+        "company_name": "BINTANGDELAPAN MINERAL, PT",
+        "survey_status": "DRAFT",
+        "status": "Delivered",
+        "timestamp": "23 Jun 2026, 10:33:17"
+      },
+      {
+        "company_name": "BINTANGDELAPAN MINERAL, PT",
+        "survey_status": "DRAFT",
+        "status": "Queued",
+        "timestamp": "23 Jun 2026, 10:33:13"
+      }
+    ]
+  },
+  {
+    "id": "408",
+    "target_name": "PT WALSIN NICKEL INDUSTRIAL INDONESIA",
+    "matches": [
+      {
+        "company_name": "WALSIN NICKEL INDUSTRIAL INDONESIA",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "409",
+    "target_name": "CEMERLANG SERVIS PERAWATAN",
+    "matches": [
+      {
+        "company_name": "CEMERLANG SERVIS PERAWATAN",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "410",
+    "target_name": "PT MERDEKA TSINGSHAN INDONESIA",
+    "matches": [
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "11 Jun 2026, 17:00:09"
+      },
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "09 Jun 2026, 11:02:35"
+      },
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "09 Jun 2026, 11:01:20"
+      },
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Clicked",
+        "timestamp": "09 Jun 2026, 10:59:12"
+      },
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "09 Jun 2026, 10:58:54"
+      },
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "09 Jun 2026, 10:58:53"
+      },
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "05 Jun 2026, 16:19:24"
+      },
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "02 Jun 2026, 08:04:45"
+      },
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "02 Jun 2026, 01:03:48"
+      },
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Clicked",
+        "timestamp": "01 Jun 2026, 22:58:35"
+      },
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "01 Jun 2026, 22:58:34"
+      },
+      {
+        "company_name": "MERDEKA TSINGSHAN INDONESIA",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "01 Jun 2026, 22:58:30"
+      }
+    ]
+  },
+  {
+    "id": "411",
+    "target_name": "PT INDONESIA BTR NEW ENERGY MATERIALS",
+    "matches": []
+  },
+  {
+    "id": "412",
+    "target_name": "PT ESG NEW ENERGY MATERIAL",
+    "matches": [
+      {
+        "company_name": "PT ESG NEW ENERGY MATERIAL",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "413",
+    "target_name": "TAIXIN STAINLESS STEEL INDONESIA",
+    "matches": [
+      {
+        "company_name": "TAIXIN STAINLESS STEEL INDONESIA",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "414",
+    "target_name": "PT XINHENG METAL INDONESIA",
+    "matches": [
+      {
+        "company_name": "PT Xinheng Metal Indonesia",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      },
+      {
+        "company_name": "PT Xinheng Metal Indonesia",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "415",
+    "target_name": "PT SULAWESI MINING INVESMENT",
+    "matches": []
+  },
+  {
+    "id": "416",
+    "target_name": "PT YONG WANG INDONESIA",
+    "matches": [
+      {
+        "company_name": "YONG WANG INDONESIA, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "417",
+    "target_name": "PT CHENGTOK LITHIUM INDONESIA",
+    "matches": [
+      {
+        "company_name": "CHENGTOK LITHIUM INDONESIA, PT",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "23 Jun 2026, 17:18:32"
+      },
+      {
+        "company_name": "CHENGTOK LITHIUM INDONESIA, PT",
+        "survey_status": "OPEN",
+        "status": "Clicked",
+        "timestamp": "23 Jun 2026, 15:30:14"
+      },
+      {
+        "company_name": "CHENGTOK LITHIUM INDONESIA, PT",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "23 Jun 2026, 15:30:10"
+      },
+      {
+        "company_name": "CHENGTOK LITHIUM INDONESIA, PT",
+        "survey_status": "OPEN",
+        "status": "Clicked",
+        "timestamp": "23 Jun 2026, 13:39:31"
+      },
+      {
+        "company_name": "CHENGTOK LITHIUM INDONESIA, PT",
+        "survey_status": "OPEN",
+        "status": "Clicked",
+        "timestamp": "23 Jun 2026, 13:39:30"
+      },
+      {
+        "company_name": "CHENGTOK LITHIUM INDONESIA, PT",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "23 Jun 2026, 13:33:15"
+      },
+      {
+        "company_name": "CHENGTOK LITHIUM INDONESIA, PT",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "23 Jun 2026, 10:34:22"
+      },
+      {
+        "company_name": "CHENGTOK LITHIUM INDONESIA, PT",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "23 Jun 2026, 10:34:20"
+      }
+    ]
+  },
+  {
+    "id": "418",
+    "target_name": "PT INDONESIA QINGMEI ENERGY MATERIALS",
+    "matches": [
+      {
+        "company_name": "PT Indonesia Qingmei Energy Materials",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "-",
+        "timestamp": "-"
+      },
+      {
+        "company_name": "PT Indonesia Qingmei Energy Materials",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "419",
+    "target_name": "PT CHENGSENG NEW ENERGY",
+    "matches": [
+      {
+        "company_name": "PT Chengseng New Energy",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      },
+      {
+        "company_name": "PT Chengseng New Energy",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "420",
+    "target_name": "PT OCEAN SKY METAL INDUSTRY",
+    "matches": [
+      {
+        "company_name": "OCEAN SKY METAL INDUSTRY, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "421",
+    "target_name": "MARS METAL INDUSTRY, PT",
+    "matches": [
+      {
+        "company_name": "MARS METAL INDUSTRY, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "422",
+    "target_name": "PT SEAWING NEW ENERGY",
+    "matches": [
+      {
+        "company_name": "Seawing New Energy, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      },
+      {
+        "company_name": "Seawing New Energy, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "423",
+    "target_name": "PT INDONESIA MOROWALI INDUSTRIAL PARK",
+    "matches": [
+      {
+        "company_name": "INDONESIA MOROWALI INDUSTRIAL PARK PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "424",
+    "target_name": "PT HUAYUE NICKEL COBALT",
+    "matches": [
+      {
+        "company_name": "HUAYUE NICKEL COBALT",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "12 Jun 2026, 11:30:26"
+      },
+      {
+        "company_name": "HUAYUE NICKEL COBALT",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "05 Jun 2026, 14:09:16"
+      },
+      {
+        "company_name": "HUAYUE NICKEL COBALT",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "02 Jun 2026, 02:15:13"
+      },
+      {
+        "company_name": "HUAYUE NICKEL COBALT",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "02 Jun 2026, 02:15:10"
+      }
+    ]
+  },
+  {
+    "id": "425",
+    "target_name": "PT QING KOTA METAL INDONESIA",
+    "matches": [
+      {
+        "company_name": "QING KOTA METAL INDONESIA, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "426",
+    "target_name": "TELUK METAL INDUSTRY, PT",
+    "matches": [
+      {
+        "company_name": "TELUK METAL INDUSTRY, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "427",
+    "target_name": "PT RANGER NICKEL INDUSTRY",
+    "matches": []
+  },
+  {
+    "id": "428",
+    "target_name": "PT DETIAN COKING INDONESIA",
+    "matches": [
+      {
+        "company_name": "Detian Coking Indonesia",
+        "survey_status": "OPEN",
+        "status": "Bounced",
+        "timestamp": "02 Jun 2026, 04:45:27"
+      },
+      {
+        "company_name": "Detian Coking Indonesia",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "02 Jun 2026, 04:43:12"
+      }
+    ]
+  },
+  {
+    "id": "429",
+    "target_name": "PT HUANENG METAL INDUSTRY",
+    "matches": [
+      {
+        "company_name": "HUANENG METAL INDUSTRY",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "09 Jun 2026, 11:03:49"
+      },
+      {
+        "company_name": "HUANENG METAL INDUSTRY",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "09 Jun 2026, 11:03:46"
+      },
+      {
+        "company_name": "HUANENG METAL INDUSTRY",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "01 Jun 2026, 23:41:22"
+      },
+      {
+        "company_name": "HUANENG METAL INDUSTRY",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "01 Jun 2026, 23:41:18"
+      },
+      {
+        "company_name": "HUANENG METAL INDUSTRY",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "09 Jun 2026, 11:03:49"
+      },
+      {
+        "company_name": "HUANENG METAL INDUSTRY",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "09 Jun 2026, 11:03:46"
+      },
+      {
+        "company_name": "HUANENG METAL INDUSTRY",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "01 Jun 2026, 23:41:22"
+      },
+      {
+        "company_name": "HUANENG METAL INDUSTRY",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "01 Jun 2026, 23:41:18"
+      }
+    ]
+  },
+  {
+    "id": "430",
+    "target_name": "PT ORACLE NICKEL INDONESIA",
+    "matches": []
+  },
+  {
+    "id": "431",
+    "target_name": "PT ZHONGTSING NEW ENERGY",
+    "matches": [
+      {
+        "company_name": "ZHONGTSING NEW ENERGY, PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "432",
+    "target_name": "PT INDONESIA MOROWALI INDUSTRIAL PARK (#83)",
+    "matches": [
+      {
+        "company_name": "INDONESIA MOROWALI INDUSTRIAL PARK PT",
+        "survey_status": "OPEN",
+        "status": "-",
+        "timestamp": "-"
+      }
+    ]
+  },
+  {
+    "id": "433",
+    "target_name": "HUAYUE NICKEL COBALT",
+    "matches": [
+      {
+        "company_name": "HUAYUE NICKEL COBALT",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "12 Jun 2026, 11:30:26"
+      },
+      {
+        "company_name": "HUAYUE NICKEL COBALT",
+        "survey_status": "OPEN",
+        "status": "Opened",
+        "timestamp": "05 Jun 2026, 14:09:16"
+      },
+      {
+        "company_name": "HUAYUE NICKEL COBALT",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "02 Jun 2026, 02:15:13"
+      },
+      {
+        "company_name": "HUAYUE NICKEL COBALT",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "02 Jun 2026, 02:15:10"
+      }
+    ]
+  },
+  {
+    "id": "434",
+    "target_name": "PT INDONESIA TSINGSHAN STAINLESS STEEL",
+    "matches": [
+      {
+        "company_name": "INDONESIA TSINGSHAN STAINLESS STEEL",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "02 Jun 2026, 02:23:23"
+      },
+      {
+        "company_name": "INDONESIA TSINGSHAN STAINLESS STEEL",
+        "survey_status": "OPEN",
+        "status": "Bounced",
+        "timestamp": "02 Jun 2026, 02:23:23"
+      }
+    ]
+  },
+  {
+    "id": "435",
+    "target_name": "PT GUANGCHINGDE METAL ROLLING",
+    "matches": [
+      {
+        "company_name": "GUANGCHINGDE METAL ROLLING",
+        "survey_status": "OPEN",
+        "status": "Delivered",
+        "timestamp": "02 Jun 2026, 08:30:51"
+      },
+      {
+        "company_name": "GUANGCHINGDE METAL ROLLING",
+        "survey_status": "OPEN",
+        "status": "Queued",
+        "timestamp": "02 Jun 2026, 08:30:46"
+      }
+    ]
+  },
+  {
+    "id": "436",
+    "target_name": "PT MEIMING NEW ENERGY MATERIAL",
+    "matches": [
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "-",
+        "timestamp": "-"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "30 Jun 2026, 19:36:11"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Delivered",
+        "timestamp": "30 Jun 2026, 19:33:19"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Queued",
+        "timestamp": "30 Jun 2026, 19:33:15"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Clicked",
+        "timestamp": "30 Jun 2026, 19:24:57"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "30 Jun 2026, 19:24:52"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Clicked",
+        "timestamp": "29 Jun 2026, 19:19:24"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "29 Jun 2026, 19:19:14"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Clicked",
+        "timestamp": "29 Jun 2026, 18:38:58"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "29 Jun 2026, 18:38:52"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "29 Jun 2026, 10:47:54"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "29 Jun 2026, 10:47:45"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "29 Jun 2026, 10:39:49"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "25 Jun 2026, 13:34:52"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "25 Jun 2026, 13:34:43"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Delivered",
+        "timestamp": "25 Jun 2026, 11:54:32"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Delivered",
+        "timestamp": "25 Jun 2026, 11:54:31"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Queued",
+        "timestamp": "25 Jun 2026, 11:54:28"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "-",
+        "timestamp": "-"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "30 Jun 2026, 19:36:11"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Delivered",
+        "timestamp": "30 Jun 2026, 19:33:19"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Queued",
+        "timestamp": "30 Jun 2026, 19:33:15"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Clicked",
+        "timestamp": "30 Jun 2026, 19:24:57"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "30 Jun 2026, 19:24:52"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Clicked",
+        "timestamp": "29 Jun 2026, 19:19:24"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "29 Jun 2026, 19:19:14"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Clicked",
+        "timestamp": "29 Jun 2026, 18:38:58"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "29 Jun 2026, 18:38:52"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "29 Jun 2026, 10:47:54"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "29 Jun 2026, 10:47:45"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "29 Jun 2026, 10:39:49"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "25 Jun 2026, 13:34:52"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Opened",
+        "timestamp": "25 Jun 2026, 13:34:43"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Delivered",
+        "timestamp": "25 Jun 2026, 11:54:32"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Delivered",
+        "timestamp": "25 Jun 2026, 11:54:31"
+      },
+      {
+        "company_name": "MEIMING NEW ENERGY MATERIAL, PT",
+        "survey_status": "SUBMITTED RESPONDENT",
+        "status": "Queued",
+        "timestamp": "25 Jun 2026, 11:54:28"
+      }
+    ]
+  },
+  {
+    "id": "437",
+    "target_name": "PT TSHINGSHAN STEEL INDONESIA",
+    "matches": []
+  }
+]
