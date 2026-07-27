@@ -308,7 +308,7 @@ async def fetch_responsibility_report(page, token, survey_period_id, role_id, ta
                     "size": size,
                     "page": page_idx,
                     "search": "",
-                    "target": "TARGET_ONLY",
+                    "target": target_type,
                     "region": make_region(kab_id=kab_id),
                     "regionSummaryLevel": 6
                 }
@@ -343,7 +343,7 @@ async def fetch_responsibility_report(page, token, survey_period_id, role_id, ta
                 "size": size,
                 "page": page_idx,
                 "search": "",
-                "target": "TARGET_ONLY",
+                "target": target_type,
                 "region": make_region(),
                 "regionSummaryLevel": 6
             }
@@ -1875,8 +1875,8 @@ async def main():
             json.dump(users_map, f, indent=2)
         print(" ✅ Mapping user ID diperbarui.")
 
-        raw_responsibility_umum = await fetch_responsibility_report(page, token, SE_UMUM_PERIOD, ROLE_PENCACAH_UMUM, "TARGET_ONLY")
-        raw_responsibility_ub = await fetch_responsibility_report(page, token, SE_UB_PERIOD, ROLE_PENCACAH_UB, "TARGET_ONLY")
+        raw_responsibility_umum = await fetch_responsibility_report(page, token, SE_UMUM_PERIOD, ROLE_PENCACAH_UMUM, "ALL")
+        raw_responsibility_ub = await fetch_responsibility_report(page, token, SE_UB_PERIOD, ROLE_PENCACAH_UB, "ALL")
 
         # Pengelompokan Data SE Umum
         sls_targets_umum = {}
