@@ -224,7 +224,7 @@ async def run():
                             retries = 0
                             continue
                         
-                        wait_time = 5 if retries < 5 else 15
+                        wait_time = 15 if retries < 5 else 30
                         print(f"[INFO] Menunggu {wait_time} detik lalu mengulang...")
                         await asyncio.sleep(wait_time)
                         continue
@@ -242,7 +242,9 @@ async def run():
                         c["assigned_role"] = role_name
                     all_results.extend(content)
                     current_page += 1
-                    await asyncio.sleep(1.0)
+                    
+                    # Tambah jeda 3 detik tiap halaman agar tidak dianggap SPAM oleh server
+                    await asyncio.sleep(3.0)
             
                 # --- PROGRESIF SAVE ---
                 # Kita simpan CSV dan JS setiap kali selesai 1 Role, agar kalau error datanya tidak hilang!

@@ -1,2 +1,3 @@
-2026/07/27-15:42:43.960 6dc2f Creating DB /Users/jihanmaisaroh/scrap_fasih/playwright_profile_baru/Default/shared_proto_db/metadata since it was missing.
-2026/07/27-15:42:43.968 6dc2f Reusing MANIFEST /Users/jihanmaisaroh/scrap_fasih/playwright_profile_baru/Default/shared_proto_db/metadata/MANIFEST-000001
+2026/07/28-12:01:37.158 135ba1 Reusing MANIFEST /Users/jihanmaisaroh/scrap_fasih/playwright_profile_baru/Default/shared_proto_db/metadata/MANIFEST-000001
+2026/07/28-12:01:37.173 135ba1 Recovering log #3
+2026/07/28-12:01:37.174 135ba1 Reusing old log /Users/jihanmaisaroh/scrap_fasih/playwright_profile_baru/Default/shared_proto_db/metadata/000003.log 
