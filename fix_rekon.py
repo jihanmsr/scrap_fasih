@@ -29,7 +29,7 @@ with open('app.js', 'r') as f:
 rekon_header_logic = """
         } else if (tabId === 'rekon') {
             if (mainHeader) mainHeader.textContent = 'Rekap Lintas Sistem';
-            if (mainSubheader) mainSubheader.textContent = 'Perbandingan muatan SLS vs alokasi Fasih vs SQL Lab';
+            if (mainSubheader) mainSubheader.textContent = 'Monitoring target awal dengan realisasi';
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
 """

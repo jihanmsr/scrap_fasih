@@ -26,7 +26,7 @@ tab_content = """
     <!-- TAB REKONSILIASI -->
     <div class="tab-content" id="tab-content-rekon" style="display: none; padding: 1rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Rekonsiliasi Lintas Sistem (Muatan vs Fasih vs SQL Lab)</h2>
+            <h2>Monitoring target awal dengan realisasi</h2>
         </div>
 
         <!-- SUMMARY CARDS -->
