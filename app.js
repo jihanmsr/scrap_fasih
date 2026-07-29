@@ -5751,7 +5751,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         } else if (tabId === 'rekon') {
             if (mainHeader) mainHeader.textContent = 'Rekap Lintas Sistem';
-            if (mainSubheader) mainSubheader.textContent = 'Perbandingan muatan SLS vs alokasi Fasih vs SQL Lab';
+            if (mainSubheader) mainSubheader.textContent = 'Monitoring target awal dengan realisasi';
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
         } else if (tabId === 'anomali') {
