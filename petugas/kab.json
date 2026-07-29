@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": "bc32354f-1245-426f-b2cf-a5733e1295ad",
+      "fullCode": "7201",
+      "code": "01",
+      "name": "BANGGAI KEPULAUAN"
+    },
+    {
+      "id": "530e9ca5-86ba-434e-9b04-405102e6d900",
+      "fullCode": "7202",
+      "code": "02",
+      "name": "BANGGAI"
+    },
+    {
+      "id": "9783f0c1-f047-477f-8840-11eae7cf70e2",
+      "fullCode": "7203",
+      "code": "03",
+      "name": "MOROWALI"
+    },
+    {
+      "id": "fb9cd9f0-c4c0-4a37-9041-57190693f625",
+      "fullCode": "7204",
+      "code": "04",
+      "name": "POSO"
+    },
+    {
+      "id": "289f1ff3-a6ad-4c9b-a49f-7b454d03a33f",
+      "fullCode": "7205",
+      "code": "05",
+      "name": "DONGGALA"
+    },
+    {
+      "id": "d833fdce-ebfb-429b-a1bb-8966239fd8e4",
+      "fullCode": "7206",
+      "code": "06",
+      "name": "TOLI-TOLI"
+    },
+    {
+      "id": "c523694a-2e72-4570-9489-da2d7b119fe7",
+      "fullCode": "7207",
+      "code": "07",
+      "name": "BUOL"
+    },
+    {
+      "id": "25c59fd9-afd5-4c1a-9dfb-42bb697a7434",
+      "fullCode": "7208",
+      "code": "08",
+      "name": "PARIGI MOUTONG"
+    },
+    {
+      "id": "736c4c22-51d1-44be-8b2c-aa197d9459a4",
+      "fullCode": "7209",
+      "code": "09",
+      "name": "TOJO UNA-UNA"
+    },
+    {
+      "id": "0061da62-2a47-4dee-b8d0-239b33e2c59d",
+      "fullCode": "7210",
+      "code": "10",
+      "name": "SIGI"
+    },
+    {
+      "id": "eed1a3e7-b81d-4fc7-b0d6-61257c1449b2",
+      "fullCode": "7211",
+      "code": "11",
+      "name": "BANGGAI LAUT"
+    },
+    {
+      "id": "d05ef8fd-b5e4-414f-9a83-8cdea03e0767",
+      "fullCode": "7212",
+      "code": "12",
+      "name": "MOROWALI UTARA"
+    },
+    {
+      "id": "4ab6ca2f-7952-4e8e-a94d-b6dd933e5d44",
+      "fullCode": "7271",
+      "code": "71",
+      "name": "PALU"
+    }
+  ]
+}

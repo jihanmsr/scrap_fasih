@@ -15,6 +15,10 @@ with open(latest_csv, 'r', encoding='utf-8') as f:
     reader = csv.DictReader(f)
     for row in reader:
         email = row.get("Email", "").strip().lower()
+        if not email:
+            email = row.get("assigneeEmail", "").strip().lower()
+        if not email:
+            email = row.get("assigneeUsername", "").strip().lower()
         reg = row.get("Region Code", "").strip()
         if email and reg:
             if email not in region_map:

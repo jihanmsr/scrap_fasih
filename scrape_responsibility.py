@@ -97,7 +97,11 @@ async def run():
         with open("/Users/jihanmaisaroh/scrap_fasih/region_map_sulteng_full.json", "r") as f:
             region_map = json.load(f)
             
+        import sys
+        target_kab = sys.argv[1] if len(sys.argv) > 1 else None
         kabupaten_list = region_map.get("kabupaten", {})
+        if target_kab:
+            kabupaten_list = {k: v for k, v in kabupaten_list.items() if k == target_kab}
         print(f"[INFO] Ditemukan {len(kabupaten_list)} Kabupaten/Kota untuk ditarik datanya.")
 
         all_results = []
@@ -107,150 +111,157 @@ async def run():
                 kab_id = kab_info["kab_id"]
                 kab_name = kab_info["kab_name"]
                 
-                current_page = 0
+                kecamatan_list = kab_info.get("kecamatan", {})
                 print(f"\n======================================")
-                print(f"Menarik Data Role: {role_name} - {kab_name}")
+                print(f"Menarik Data Role: {role_name} - {kab_name} ({len(kecamatan_list)} Kecamatan)")
                 print(f"======================================")
-                retries = 0
-                max_retries = 35
-                
-                while True:
-                    print(f"    -> Mengambil halaman {current_page}...")
-                    # Payload PERSIS seperti yang dikirim Chrome (semua region = null, size = 10)
-                    payload = {
-                        "surveyPeriodId": "fd68e454-ba45-4b85-8205-f3bf777ded24",
-                        "surveyRoleId": role_id,
-                        "size": 10,
-                        "page": current_page,
-                        "search": "",
-                        "target": "ALL",
-                        "region": {
-                            "region1Id": None, "region2Id": kab_id, "region3Id": None, 
-                            "region4Id": None, "region5Id": None, "region6Id": None, 
-                            "region7Id": None, "region8Id": None, "region9Id": None, "region10Id": None
-                        },
-                        "regionSummaryLevel": 6
-                    }
-                
-                    try:
-                        # Kita gunakan httpx sama seperti scrape_granular_core.py yang terbukti sukses menembus F5!
-                        import httpx
+
+                for kec_code, kec_info in kecamatan_list.items():
+                    kec_id = kec_info["kec_id"]
+                    kec_name = kec_info["kec_name"]
                     
-                        # Ambil cookies dari Playwright
-                        cookies = await page.context.cookies()
-                        token = ""
-                        cookie_dict = {}
-                        for c in cookies:
-                            cookie_dict[c["name"]] = c["value"]
-                            if c["name"] == "XSRF-TOKEN":
-                                import urllib.parse
-                                token = urllib.parse.unquote(c["value"])
-                            
-                        headers = {
-                            "Accept": "*/*",
-                            "Accept-Language": "en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7",
-                            "Content-Type": "application/json",
-                            "Origin": "https://fasih-sm.bps.go.id",
-                            "Priority": "u=1, i",
-                            "Sec-CH-UA": '"Not;A=Brand";v="8", "Chromium";v="150", "Google Chrome";v="150"',
-                            "Sec-CH-UA-Mobile": "?0",
-                            "Sec-CH-UA-Platform": '"macOS"',
-                            "Sec-Fetch-Dest": "empty",
-                            "Sec-Fetch-Mode": "cors",
-                            "Sec-Fetch-Site": "same-origin",
-                            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/150.0.0.0",
-                            "X-XSRF-TOKEN": token
+                    current_page = 0
+                    retries = 0
+                    max_retries = 35
+                    
+                    while True:
+                        print(f"    -> Mengambil hal {current_page} (Kec: {kec_name})...")
+                        # Payload PERSIS seperti yang dikirim Chrome (semua region = null, size = 10)
+                        payload = {
+                            "surveyPeriodId": "fd68e454-ba45-4b85-8205-f3bf777ded24",
+                            "surveyRoleId": role_id,
+                            "size": 10,
+                            "page": current_page,
+                            "search": "",
+                            "target": "ALL",
+                            "region": {
+                                "region1Id": None, "region2Id": kab_id, "region3Id": kec_id, 
+                                "region4Id": None, "region5Id": None, "region6Id": None, 
+                                "region7Id": None, "region8Id": None, "region9Id": None, "region10Id": None
+                            },
+                            "regionSummaryLevel": 6
                         }
                     
-                        async with httpx.AsyncClient(http2=True, verify=False, timeout=60.0) as client:
-                            # Set cookies manual
-                            for k, v in cookie_dict.items():
-                                client.cookies.set(k, v, domain="fasih-sm.bps.go.id")
+                        try:
+                            # Kita gunakan httpx sama seperti scrape_granular_core.py yang terbukti sukses menembus F5!
+                            import httpx
+                        
+                            # Ambil cookies dari Playwright
+                            cookies = await page.context.cookies()
+                            token = ""
+                            cookie_dict = {}
+                            for c in cookies:
+                                cookie_dict[c["name"]] = c["value"]
+                                if c["name"] == "XSRF-TOKEN":
+                                    import urllib.parse
+                                    token = urllib.parse.unquote(c["value"])
+                                
+                            headers = {
+                                "Accept": "*/*",
+                                "Accept-Language": "en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7",
+                                "Content-Type": "application/json",
+                                "Origin": "https://fasih-sm.bps.go.id",
+                                "Priority": "u=1, i",
+                                "Sec-CH-UA": '"Not;A=Brand";v="8", "Chromium";v="150", "Google Chrome";v="150"',
+                                "Sec-CH-UA-Mobile": "?0",
+                                "Sec-CH-UA-Platform": '"macOS"',
+                                "Sec-Fetch-Dest": "empty",
+                                "Sec-Fetch-Mode": "cors",
+                                "Sec-Fetch-Site": "same-origin",
+                                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/150.0.0.0",
+                                "X-XSRF-TOKEN": token
+                            }
+                        
+                            async with httpx.AsyncClient(http2=True, verify=False, timeout=60.0) as client:
+                                # Set cookies manual
+                                for k, v in cookie_dict.items():
+                                    client.cookies.set(k, v, domain="fasih-sm.bps.go.id")
+                                
+                                # Dump JSON tanpa spasi persis seperti browser
+                                payload_str = json.dumps(payload, separators=(',', ':'))
                             
-                            # Dump JSON tanpa spasi persis seperti browser
-                            payload_str = json.dumps(payload, separators=(',', ':'))
-                        
-                            r = await client.post(DATATABLE_URL, content=payload_str, headers=headers)
-                        
-                            if r.status_code == 200:
-                                # BUG FIX: r.json() ALREADY has "data" key!
-                                res = {"api_response": r.json(), "status": 200}
-                            else:
-                                res = {"_error": f"HTTP {r.status_code} - {r.text}", "status": r.status_code}
+                                r = await client.post(DATATABLE_URL, content=payload_str, headers=headers)
                             
-                    except Exception as e:
-                        err_msg = repr(e)
-                        print(f"[ERROR] Exception dari httpx: {err_msg}")
-                        res = {"_error": err_msg or "Unknown Error", "status": 0}
-                    
-                    if res and "_error" in res:
-                        retries += 1
-                        print(f"[ERROR] Gagal mengambil halaman {current_page} (Percobaan {retries}/{max_retries}): {res.get('_error')}")
-                    
-                        if "504" not in res.get('_error', '') and "502" not in res.get('_error', ''):
-                            print("[INFO] Terdeteksi blokir F5 WAF / Sesi mati. Memuat ulang halaman dasbor untuk mendapat cookie baru...")
-                            try:
-                                # URL baru dasbor survei (URL lama assignment-status sudah 404)
-                                await page.goto("https://fasih-sm.bps.go.id/app/surveys/a0429e96-51a5-477b-a415-485f9c153004/fd68e454-ba45-4b85-8205-f3bf777ded24", timeout=120000)
-                                await page.wait_for_load_state("networkidle")
-                                cookies = await page.context.cookies()
-                                for c in cookies:
-                                    if c["name"] == "XSRF-TOKEN":
-                                        from urllib.parse import unquote
-                                        token = unquote(c["value"])
-                                        print("[INFO] Token baru berhasil didapatkan!")
-                                        break
-                            except Exception as refr_e:
-                                print(f"[ERROR] Gagal refresh token: {refr_e}")
+                                if r.status_code == 200:
+                                    # BUG FIX: r.json() ALREADY has "data" key!
+                                    res = {"api_response": r.json(), "status": 200}
+                                else:
+                                    res = {"_error": f"HTTP {r.status_code} - {r.text}", "status": r.status_code}
+                                
+                        except Exception as e:
+                            err_msg = repr(e)
+                            print(f"[ERROR] Exception dari httpx: {err_msg}")
+                            res = {"_error": err_msg or "Unknown Error", "status": 0}
                         
-                        if retries >= max_retries:
-                            print(f"[WARNING] Gagal total setelah {max_retries} percobaan di halaman {current_page}. Melewati halaman ini secara paksa agar script bisa lanjut!")
-                            # --- AUTO-LOG MISSING PAGE ---
-                            missing_log_file = "/Users/jihanmaisaroh/scrap_fasih/missing_pages_log.json"
-                            missing_data = []
-                            if os.path.exists(missing_log_file):
+                        if res and "_error" in res:
+                            retries += 1
+                            print(f"[ERROR] Gagal mengambil halaman {current_page} (Percobaan {retries}/{max_retries}): {res.get('_error')}")
+                        
+                            if "504" not in res.get('_error', '') and "502" not in res.get('_error', ''):
+                                print("[INFO] Terdeteksi blokir F5 WAF / Sesi mati. Memuat ulang halaman dasbor untuk mendapat cookie baru...")
                                 try:
-                                    with open(missing_log_file, 'r') as mf:
-                                        missing_data = json.load(mf)
-                                except: pass
+                                    # URL baru dasbor survei (URL lama assignment-status sudah 404)
+                                    await page.goto("https://fasih-sm.bps.go.id/app/surveys/a0429e96-51a5-477b-a415-485f9c153004/fd68e454-ba45-4b85-8205-f3bf777ded24", timeout=120000)
+                                    await page.wait_for_load_state("networkidle")
+                                    cookies = await page.context.cookies()
+                                    for c in cookies:
+                                        if c["name"] == "XSRF-TOKEN":
+                                            from urllib.parse import unquote
+                                            token = unquote(c["value"])
+                                            print("[INFO] Token baru berhasil didapatkan!")
+                                            break
+                                except Exception as refr_e:
+                                    print(f"[ERROR] Gagal refresh token: {refr_e}")
                             
-                            new_entry = {"role": role_name, "kab_name": kab_name, "page": current_page}
-                            if new_entry not in missing_data:
-                                missing_data.append(new_entry)
-                                with open(missing_log_file, 'w') as mf:
-                                    json.dump(missing_data, mf, indent=4)
-                            # -----------------------------
-                            current_page += 1
-                            retries = 0
+                            if retries >= max_retries:
+                                print(f"[WARNING] Gagal total setelah {max_retries} percobaan di halaman {current_page}. Melewati halaman ini secara paksa agar script bisa lanjut!")
+                                # --- AUTO-LOG MISSING PAGE ---
+                                missing_log_file = "/Users/jihanmaisaroh/scrap_fasih/missing_pages_log.json"
+                                missing_data = []
+                                if os.path.exists(missing_log_file):
+                                    try:
+                                        with open(missing_log_file, 'r') as mf:
+                                            missing_data = json.load(mf)
+                                    except: pass
+                                
+                                new_entry = {"role": role_name, "kab_name": kab_name, "page": current_page}
+                                if new_entry not in missing_data:
+                                    missing_data.append(new_entry)
+                                    with open(missing_log_file, 'w') as mf:
+                                        json.dump(missing_data, mf, indent=4)
+                                # -----------------------------
+                                current_page += 1
+                                retries = 0
+                                continue
+                            
+                            wait_time = 15 if retries < 5 else 30
+                            print(f"[INFO] Menunggu {wait_time} detik lalu mengulang...")
+                            await asyncio.sleep(wait_time)
                             continue
                         
-                        wait_time = 15 if retries < 5 else 30
-                        print(f"[INFO] Menunggu {wait_time} detik lalu mengulang...")
-                        await asyncio.sleep(wait_time)
-                        continue
+                        retries = 0 
                     
-                    retries = 0 
+                        # BUG FIX: extract from api_response -> data -> content
+                        content = res.get("api_response", {}).get("data", {}).get("content", [])
+                        if not content:
+                            print(f"    [INFO] Selesai! Tidak ada data lagi setelah halaman {current_page-1} (Kec: {kec_name}).")
+                            break
+                        
+                        print(f"    [INFO] Sukses menarik {len(content)} data pada halaman {current_page} (Kec: {kec_name}).")
+                        for c in content:
+                            c["assigned_role"] = role_name
+                        all_results.extend(content)
+                        current_page += 1
+                        
+                        # Tambah jeda 3 detik tiap halaman agar tidak dianggap SPAM oleh server
+                        await asyncio.sleep(3.0)
                 
-                    # BUG FIX: extract from api_response -> data -> content
-                    content = res.get("api_response", {}).get("data", {}).get("content", [])
-                    if not content:
-                        print(f"    [INFO] Selesai! Tidak ada data lagi setelah halaman {current_page-1}.")
-                        break
-                    
-                    print(f"    [INFO] Sukses menarik {len(content)} data pada halaman {current_page}.")
-                    for c in content:
-                        c["assigned_role"] = role_name
-                    all_results.extend(content)
-                    current_page += 1
-                    
-                    # Tambah jeda 3 detik tiap halaman agar tidak dianggap SPAM oleh server
-                    await asyncio.sleep(3.0)
-            
                 # --- PROGRESIF SAVE ---
                 # Kita simpan CSV dan JS setiap kali selesai 1 Role, agar kalau error datanya tidak hilang!
                 import datetime
                 today_str = datetime.datetime.now().strftime("%Y-%m-%d")
-                csv_file = f"/Users/jihanmaisaroh/scrap_fasih/fast_petugas_all_{today_str}.csv"
+                kab_suffix = f"_{target_kab}" if target_kab else ""
+                csv_file = f"/Users/jihanmaisaroh/scrap_fasih/fast_petugas_all{kab_suffix}_{today_str}.csv"
                 with open(csv_file, mode='w', newline='', encoding='utf-8') as f:
                     writer = csv.writer(f)
                     writer.writerow(["Email", "Role", "Region Code", "Total Target", "OPEN", "DRAFT", "SUBMITTED BY Pencacah", "SUBMITTED RESPONDENT", "APPROVED BY Pengawas", "REJECTED BY Pengawas", "REVOKED BY Pengawas", "EDITED BY Pengawas", "EDITED BY Admin Kabupaten", "REJECTED BY Admin Kabupaten", "COMPLETED BY Admin Kabupaten"])
@@ -293,20 +304,22 @@ async def run():
                         for st in r_sum.get("statusBreakdown", []):
                             s_name = st.get("status", "").upper()
                             s_count = st.get("count", 0)
+                            
+                            status_map = petugas_map[role][email]["sls_details"][reg_code]["status"]
+                            if s_name not in status_map: status_map[s_name] = 0
+                            status_map[s_name] += st.get("count", 0)
                         
-                            petugas_map[role][email]["sls_details"][reg_code]["status"][s_name] = petugas_map[role][email]["sls_details"][reg_code]["status"].get(s_name, 0) + s_count
-                        
-                            if s_name == "OPEN": petugas_map[role][email]["open"] += s_count
-                            elif s_name == "DRAFT": petugas_map[role][email]["draft"] += s_count
-                            elif s_name == "SUBMITTED BY PENCACAH": petugas_map[role][email]["submitted_pencacah"] += s_count
-                            elif s_name == "SUBMITTED RESPONDENT": petugas_map[role][email]["submitted_respondent"] += s_count
-                            elif "APPROVED" in s_name: petugas_map[role][email]["approved"] += s_count
-                            elif "REJECTED BY ADMIN" in s_name: petugas_map[role][email]["rejected"] += s_count
-                            elif "REJECTED" in s_name: petugas_map[role][email]["rejected"] += s_count
-                            elif "REVOKED" in s_name: petugas_map[role][email]["revoked"] += s_count
-                            elif "EDITED BY PENGAWAS" in s_name: petugas_map[role][email]["edited_pengawas"] += s_count
-                            elif "EDITED BY ADMIN" in s_name: petugas_map[role][email]["edited_admin"] += s_count
-                            elif "COMPLETED BY ADMIN" in s_name: petugas_map[role][email]["completed_admin"] += s_count
+                            if s_name == "OPEN": petugas_map[role][email]["open"] += st.get("count", 0)
+                            elif s_name == "DRAFT": petugas_map[role][email]["draft"] += st.get("count", 0)
+                            elif s_name == "SUBMITTED BY PENCACAH": petugas_map[role][email]["submitted_pencacah"] += st.get("count", 0)
+                            elif s_name == "SUBMITTED RESPONDENT": petugas_map[role][email]["submitted_respondent"] += st.get("count", 0)
+                            elif "APPROVED" in s_name: petugas_map[role][email]["approved"] += st.get("count", 0)
+                            elif "REJECTED BY ADMIN" in s_name: petugas_map[role][email]["rejected"] += st.get("count", 0)
+                            elif "REJECTED" in s_name: petugas_map[role][email]["rejected"] += st.get("count", 0)
+                            elif "REVOKED" in s_name: petugas_map[role][email]["revoked"] += st.get("count", 0)
+                            elif "EDITED BY PENGAWAS" in s_name: petugas_map[role][email]["edited_pengawas"] += st.get("count", 0)
+                            elif "EDITED BY ADMIN" in s_name: petugas_map[role][email]["edited_admin"] += st.get("count", 0)
+                            elif "COMPLETED BY ADMIN" in s_name: petugas_map[role][email]["completed_admin"] += st.get("count", 0)
 
                 import datetime, re
                 history_file = "/Users/jihanmaisaroh/scrap_fasih/fast_petugas_history.js"
