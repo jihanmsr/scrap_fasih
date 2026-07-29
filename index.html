@@ -2410,221 +2410,8 @@
             </div>
         </div>
     </div>
-    </main>
-    </div>
-    <div class="modal-overlay" id="businesses-modal">
-        <div class="modal-container">
-            <div class="modal-header">
-                <h3 class="modal-title" id="modal-title-text">Daftar Usaha Baru</h3>
-                <button class="modal-close-btn" onclick="closeNewBusinessesModal()" aria-label="Close modal">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-search-wrapper">
-                    <svg class="modal-search-icon" width="16" height="16" fill="none" stroke="currentColor"
-                        stroke-width="2.5" viewBox="0 0 24 24">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="M21 21l-4.35-4.35"></path>
-                    </svg>
-                    <input class="modal-search-input" id="modal-search-input" placeholder="Cari nama usaha atau kode..."
-                        type="text" oninput="filterModalList()" />
-                </div>
-                <div id="modal-business-list"
-                    style="border: 1px solid var(--card-border); border-radius: 0.75rem; overflow: hidden; background: rgba(0,0,0,0.05); max-height: 400px; overflow-y: auto;">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Pako library for base64 gzip decompression -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js?v=20260730_v1"></script>
-    <script src="supabase_config.js?v=20260730_v1"></script>
-    <script src="users.js?v=2"></script>
-    <script src="auth.js?v=20260730_v1"></script>
-    <script src="mitra_data.js?v=20260730_v1"></script>
-    <script src="mysql_data.js?v=20260730_v1"></script>
-    <script src="new_businesses_data.js?v=20260730_v1"></script>
-    <script src="ipas_data.js?v=20260730_v1"></script>
-    <script src="daily_summary.js?v=20260730_v1"></script>
-    <script src="rekon_data.js"></script>
-    <script src="rekon.js"></script>
-    <script src="petugas_progress.js?v=20260730_v1"></script>
-    <script src="petugas_phones.js?v=20260730_v1"></script>
-    <script src="petugas_region_map.js?v=20260730_v1"></script>
-    <script src="fast_petugas_progress.js?v=20260730_v1"></script>
-    <script src="fast_petugas_history.js?v=20260730_v1"></script>
-    <script src="app.js?v=20260730_v1" defer></script>
-
-    <script>
-        function switchSubTab(surveyType, subTab) {
-            const ringkasanDiv = document.getElementById(`${surveyType}-sub-ringkasan`);
-            const tabelDiv = document.getElementById(`${surveyType}-sub-tabel`);
-            const btnRingkasan = document.getElementById(`${surveyType}-sub-btn-ringkasan`);
-            const btnTabel = document.getElementById(`${surveyType}-sub-btn-tabel`);
-
-            if (!ringkasanDiv || !tabelDiv || !btnRingkasan || !btnTabel) return;
-
-            if (subTab === 'ringkasan') {
-                ringkasanDiv.style.display = 'block';
-                tabelDiv.style.display = 'none';
-
-                btnRingkasan.classList.add('active');
-                btnTabel.classList.remove('active');
-            } else {
-                ringkasanDiv.style.display = 'none';
-                tabelDiv.style.display = 'block';
-
-                btnRingkasan.classList.remove('active');
-                btnTabel.classList.add('active');
-            }
-        }
-
-        window.updateDashboardDateLabels = function(baseDateStr) {
-            let t = new Date();
-            if (baseDateStr) {
-                t = new Date(baseDateStr);
-            } else if (window.IPAS_DATA && window.IPAS_DATA.updated_at) {
-                t = new Date(window.IPAS_DATA.updated_at);
-            }
-            const getWitaDate = (baseDate, offsetDays) => {
-                const d = new Date(baseDate);
-                if (offsetDays !== 0) d.setDate(d.getDate() + offsetDays);
-                const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-                return new Date(utc + (3600000 * 8));
-            };
-            const tWita = getWitaDate(t, 0);
-            const yWita = getWitaDate(t, -1);
-            const h2Wita = getWitaDate(t, -2);
-
-            const fmt = d => String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0');
-
-            const strToday = "Hari Ini (" + fmt(tWita) + ")";
-            const strYesterday = "Kemarin (" + fmt(yWita) + ")";
-            const strH2 = "2 Hari Lalu (" + fmt(h2Wita) + ")";
-            const strH2B = "H-2 (" + fmt(h2Wita) + ")";
-
-            // Replace in stat-label divs
-            document.querySelectorAll('.stat-label').forEach(el => {
-                const txt = el.textContent;
-                if (txt.includes('Submit Hari Ini') || txt.includes('Hari Ini (')) el.innerHTML = 'Submit ' + strToday;
-                if (txt.includes('Submit Kemarin') || txt.includes('Kemarin (')) el.innerHTML = 'Submit ' + strYesterday;
-                if (txt.includes('Submit 2 Hari Lalu') || txt.includes('2 Hari Lalu (')) el.innerHTML = 'Submit ' + strH2;
-            });
-
-            // Replace in th elements
-            document.querySelectorAll('th').forEach(el => {
-                const txt = el.textContent;
-                if (txt.includes('Progres (Hari Ini | Kemarin)') || txt.includes('Progres (Hari Ini (')) {
-                    el.innerHTML = 'Progres (' + strToday + ' | ' + strYesterday + ')';
-                }
-            });
-        };
-
-        document.addEventListener("DOMContentLoaded", function () {
-            window.updateDashboardDateLabels();
-        });
-    </script>
-
-    <!-- Modal Rekap Belum Ditugaskan -->
-    <div id="rekap-belum-modal"
-        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center; font-family:'Plus Jakarta Sans',sans-serif;">
-        <div
-            style="background:white; border-radius:1rem; width:90%; max-width:900px; max-height:85vh; display:flex; flex-direction:column; box-shadow:0 10px 25px rgba(0,0,0,0.2);">
-            <div
-                style="padding:0.75rem 1.25rem; border-bottom:1px solid var(--card-border); display:flex; justify-content:space-between; align-items:center; flex-shrink:0;">
-                <h3
-                    style="margin:0; font-family:'Outfit',sans-serif; color:var(--text-primary); display:flex; align-items:center; gap:0.5rem;">
-                    <svg width="20" height="20" fill="none" stroke="#ef4444" stroke-width="2.5" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                    </svg>
-                    Rekap Usaha Belum Ditugaskan
-                </h3>
-                <button onclick="document.getElementById('rekap-belum-modal').style.display='none'"
-                    style="background:none; border:none; font-size:1.5rem; color:var(--text-secondary); cursor:pointer;">&times;</button>
-            </div>
-            <div
-                style="padding:0.5rem 1.25rem; background:rgba(239,68,68,0.05); border-bottom:1px solid var(--card-border); flex-shrink:0;">
-                <div id="rekap-belum-modal-summary" style="font-weight:700; color:#ef4444; font-size:0.9rem;">Memuat
-                    data...</div>
-            </div>
-            <div style="padding:1.5rem; overflow-y:auto; flex-grow:1;">
-                <div style="border-radius:0.75rem; border:1px solid var(--card-border); overflow:hidden;">
-                    <table style="width:100%; border-collapse:collapse; text-align:left;">
-                        <thead>
-                            <tr>
-                                <th
-                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase; text-align:center;">
-                                </th>
-                                <th
-                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase;">
-                                    Kab/Kota</th>
-                                <th
-                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase;">
-                                    Kecamatan</th>
-                                <th
-                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase; text-align:right;">
-                                    Total Usaha</th>
-                                <th
-                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase; text-align:right;">
-                                    Belum</th>
-                                <th
-                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase; text-align:right;">
-                                    Sudah</th>
-                                <th
-                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase; text-align:center;">
-                                    % Assign</th>
-                            </tr>
-                        </thead>
-                        <tbody id="rekap-belum-modal-tbody">
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ====== MODAL RANKING ====== -->
-    <div id="ranking-modal"
-        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center; backdrop-filter:blur(4px);">
-        <div
-            style="background:var(--card-bg); width:90%; max-width:500px; border-radius:1rem; box-shadow:0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); overflow:hidden; border:1px solid var(--card-border); display:flex; flex-direction:column; max-height:85vh;">
-            <div
-                style="padding:0.75rem 1.25rem; border-bottom:1px solid var(--card-border); display:flex; justify-content:space-between; align-items:center; background:rgba(249, 115, 22, 0.05);">
-                <div>
-                    <h3 id="ranking-modal-title"
-                        style="margin:0;font-size:1rem;font-weight:800;color:var(--text-primary);display:flex;align-items:center;gap:0.5rem;">
-                        🏆 Ranking Kabupaten/Kota
-                    </h3>
-                </div>
-                <button onclick="document.getElementById('ranking-modal').style.display='none'"
-                    style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;border-radius:0.5rem;line-height:1;">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M18 6L6 18M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div id="ranking-modal-body"
-                style="padding:0.5rem 1.25rem; overflow-y:auto; flex:1; display:flex; flex-direction:column; gap:0.5rem;">
-                <!-- Content goes here -->
-            </div>
-            <div
-                style="padding:0.5rem 1.25rem; border-top:1px solid var(--card-border); background:var(--bg-body); display:flex; justify-content:flex-end;">
-                <button onclick="document.getElementById('ranking-modal').style.display='none'"
-                    style="padding:0.6rem 1.25rem;border-radius:0.75rem;border:1px solid var(--card-border);background:transparent;color:var(--text-secondary);font-size:0.85rem;font-weight:600;cursor:pointer;font-family:Outfit,sans-serif;">Tutup</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ====== MODAL DOWNLOAD EXCEL PETUGAS ====== -->
     
-    <!-- TAB REKONSILIASI -->
+<!-- TAB REKONSILIASI -->
     <div class="tab-content" id="tab-content-rekon" style="display: none; padding: 1rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
             <h2>Monitoring target awal dengan realisasi</h2>
@@ -2898,6 +2685,223 @@
                 </div>
             </div>
         </div>
-</body>
 
+
+
+</main>
+    </div>
+    <div class="modal-overlay" id="businesses-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title-text">Daftar Usaha Baru</h3>
+                <button class="modal-close-btn" onclick="closeNewBusinessesModal()" aria-label="Close modal">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-search-wrapper">
+                    <svg class="modal-search-icon" width="16" height="16" fill="none" stroke="currentColor"
+                        stroke-width="2.5" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                    <input class="modal-search-input" id="modal-search-input" placeholder="Cari nama usaha atau kode..."
+                        type="text" oninput="filterModalList()" />
+                </div>
+                <div id="modal-business-list"
+                    style="border: 1px solid var(--card-border); border-radius: 0.75rem; overflow: hidden; background: rgba(0,0,0,0.05); max-height: 400px; overflow-y: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pako library for base64 gzip decompression -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js?v=20260730_v1"></script>
+    <script src="supabase_config.js?v=20260730_v1"></script>
+    <script src="users.js?v=2"></script>
+    <script src="auth.js?v=20260730_v1"></script>
+    <script src="mitra_data.js?v=20260730_v1"></script>
+    <script src="mysql_data.js?v=20260730_v1"></script>
+    <script src="new_businesses_data.js?v=20260730_v1"></script>
+    <script src="ipas_data.js?v=20260730_v1"></script>
+    <script src="daily_summary.js?v=20260730_v1"></script>
+    <script src="rekon_data.js"></script>
+    <script src="rekon.js"></script>
+    <script src="petugas_progress.js?v=20260730_v1"></script>
+    <script src="petugas_phones.js?v=20260730_v1"></script>
+    <script src="petugas_region_map.js?v=20260730_v1"></script>
+    <script src="fast_petugas_progress.js?v=20260730_v1"></script>
+    <script src="fast_petugas_history.js?v=20260730_v1"></script>
+    <script src="app.js?v=20260730_v1" defer></script>
+
+    <script>
+        function switchSubTab(surveyType, subTab) {
+            const ringkasanDiv = document.getElementById(`${surveyType}-sub-ringkasan`);
+            const tabelDiv = document.getElementById(`${surveyType}-sub-tabel`);
+            const btnRingkasan = document.getElementById(`${surveyType}-sub-btn-ringkasan`);
+            const btnTabel = document.getElementById(`${surveyType}-sub-btn-tabel`);
+
+            if (!ringkasanDiv || !tabelDiv || !btnRingkasan || !btnTabel) return;
+
+            if (subTab === 'ringkasan') {
+                ringkasanDiv.style.display = 'block';
+                tabelDiv.style.display = 'none';
+
+                btnRingkasan.classList.add('active');
+                btnTabel.classList.remove('active');
+            } else {
+                ringkasanDiv.style.display = 'none';
+                tabelDiv.style.display = 'block';
+
+                btnRingkasan.classList.remove('active');
+                btnTabel.classList.add('active');
+            }
+        }
+
+        window.updateDashboardDateLabels = function(baseDateStr) {
+            let t = new Date();
+            if (baseDateStr) {
+                t = new Date(baseDateStr);
+            } else if (window.IPAS_DATA && window.IPAS_DATA.updated_at) {
+                t = new Date(window.IPAS_DATA.updated_at);
+            }
+            const getWitaDate = (baseDate, offsetDays) => {
+                const d = new Date(baseDate);
+                if (offsetDays !== 0) d.setDate(d.getDate() + offsetDays);
+                const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+                return new Date(utc + (3600000 * 8));
+            };
+            const tWita = getWitaDate(t, 0);
+            const yWita = getWitaDate(t, -1);
+            const h2Wita = getWitaDate(t, -2);
+
+            const fmt = d => String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0');
+
+            const strToday = "Hari Ini (" + fmt(tWita) + ")";
+            const strYesterday = "Kemarin (" + fmt(yWita) + ")";
+            const strH2 = "2 Hari Lalu (" + fmt(h2Wita) + ")";
+            const strH2B = "H-2 (" + fmt(h2Wita) + ")";
+
+            // Replace in stat-label divs
+            document.querySelectorAll('.stat-label').forEach(el => {
+                const txt = el.textContent;
+                if (txt.includes('Submit Hari Ini') || txt.includes('Hari Ini (')) el.innerHTML = 'Submit ' + strToday;
+                if (txt.includes('Submit Kemarin') || txt.includes('Kemarin (')) el.innerHTML = 'Submit ' + strYesterday;
+                if (txt.includes('Submit 2 Hari Lalu') || txt.includes('2 Hari Lalu (')) el.innerHTML = 'Submit ' + strH2;
+            });
+
+            // Replace in th elements
+            document.querySelectorAll('th').forEach(el => {
+                const txt = el.textContent;
+                if (txt.includes('Progres (Hari Ini | Kemarin)') || txt.includes('Progres (Hari Ini (')) {
+                    el.innerHTML = 'Progres (' + strToday + ' | ' + strYesterday + ')';
+                }
+            });
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            window.updateDashboardDateLabels();
+        });
+    </script>
+
+    <!-- Modal Rekap Belum Ditugaskan -->
+    <div id="rekap-belum-modal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center; font-family:'Plus Jakarta Sans',sans-serif;">
+        <div
+            style="background:white; border-radius:1rem; width:90%; max-width:900px; max-height:85vh; display:flex; flex-direction:column; box-shadow:0 10px 25px rgba(0,0,0,0.2);">
+            <div
+                style="padding:0.75rem 1.25rem; border-bottom:1px solid var(--card-border); display:flex; justify-content:space-between; align-items:center; flex-shrink:0;">
+                <h3
+                    style="margin:0; font-family:'Outfit',sans-serif; color:var(--text-primary); display:flex; align-items:center; gap:0.5rem;">
+                    <svg width="20" height="20" fill="none" stroke="#ef4444" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    Rekap Usaha Belum Ditugaskan
+                </h3>
+                <button onclick="document.getElementById('rekap-belum-modal').style.display='none'"
+                    style="background:none; border:none; font-size:1.5rem; color:var(--text-secondary); cursor:pointer;">&times;</button>
+            </div>
+            <div
+                style="padding:0.5rem 1.25rem; background:rgba(239,68,68,0.05); border-bottom:1px solid var(--card-border); flex-shrink:0;">
+                <div id="rekap-belum-modal-summary" style="font-weight:700; color:#ef4444; font-size:0.9rem;">Memuat
+                    data...</div>
+            </div>
+            <div style="padding:1.5rem; overflow-y:auto; flex-grow:1;">
+                <div style="border-radius:0.75rem; border:1px solid var(--card-border); overflow:hidden;">
+                    <table style="width:100%; border-collapse:collapse; text-align:left;">
+                        <thead>
+                            <tr>
+                                <th
+                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase; text-align:center;">
+                                </th>
+                                <th
+                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase;">
+                                    Kab/Kota</th>
+                                <th
+                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase;">
+                                    Kecamatan</th>
+                                <th
+                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase; text-align:right;">
+                                    Total Usaha</th>
+                                <th
+                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase; text-align:right;">
+                                    Belum</th>
+                                <th
+                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase; text-align:right;">
+                                    Sudah</th>
+                                <th
+                                    style="padding:0.75rem 1rem; font-size:0.75rem; font-weight:700; color:var(--text-secondary); background:var(--card-bg); border-bottom:1px solid var(--card-border); text-transform:uppercase; text-align:center;">
+                                    % Assign</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rekap-belum-modal-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ====== MODAL RANKING ====== -->
+    <div id="ranking-modal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center; backdrop-filter:blur(4px);">
+        <div
+            style="background:var(--card-bg); width:90%; max-width:500px; border-radius:1rem; box-shadow:0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); overflow:hidden; border:1px solid var(--card-border); display:flex; flex-direction:column; max-height:85vh;">
+            <div
+                style="padding:0.75rem 1.25rem; border-bottom:1px solid var(--card-border); display:flex; justify-content:space-between; align-items:center; background:rgba(249, 115, 22, 0.05);">
+                <div>
+                    <h3 id="ranking-modal-title"
+                        style="margin:0;font-size:1rem;font-weight:800;color:var(--text-primary);display:flex;align-items:center;gap:0.5rem;">
+                        🏆 Ranking Kabupaten/Kota
+                    </h3>
+                </div>
+                <button onclick="document.getElementById('ranking-modal').style.display='none'"
+                    style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;border-radius:0.5rem;line-height:1;">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div id="ranking-modal-body"
+                style="padding:0.5rem 1.25rem; overflow-y:auto; flex:1; display:flex; flex-direction:column; gap:0.5rem;">
+                <!-- Content goes here -->
+            </div>
+            <div
+                style="padding:0.5rem 1.25rem; border-top:1px solid var(--card-border); background:var(--bg-body); display:flex; justify-content:flex-end;">
+                <button onclick="document.getElementById('ranking-modal').style.display='none'"
+                    style="padding:0.6rem 1.25rem;border-radius:0.75rem;border:1px solid var(--card-border);background:transparent;color:var(--text-secondary);font-size:0.85rem;font-weight:600;cursor:pointer;font-family:Outfit,sans-serif;">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== MODAL DOWNLOAD EXCEL PETUGAS ====== -->
+    
+    
+</body>
 </html>
