@@ -5748,6 +5748,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof window.loadGranularAssignmentsData === 'function') {
                 window.loadGranularAssignmentsData();
             }
+        
+        } else if (tabId === 'rekon') {
+            if (mainHeader) mainHeader.textContent = 'Rekap Lintas Sistem';
+            if (mainSubheader) mainSubheader.textContent = 'Perbandingan muatan SLS vs alokasi Fasih vs SQL Lab';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
         } else if (tabId === 'anomali') {
             if (mainHeader) mainHeader.textContent = 'Pemantauan Anomali';
             if (mainSubheader) mainSubheader.textContent = 'Daftar anomali dan tindak lanjut petugas di lapangan';
