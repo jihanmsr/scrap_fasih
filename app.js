@@ -918,28 +918,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 </th>
             </tr>
             <tr>
-                <th class="sortable" onclick="sortSeTable('${surveyType}', 'total_submitted')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                <th class="sortable" onclick="sortSeTable('${surveyType}', 'total_submitted')" style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-delivered); font-size: 0.9rem; padding: 0.4rem 0.75rem;">
                     Total${getIcon('total_submitted')}
                 </th>
-                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-opened); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: var(--color-opened); font-size: 0.9rem; padding: 0.4rem 0.75rem;">
                     Pencacah
                 </th>
-                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #d97706; font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #d97706; font-size: 0.9rem; padding: 0.4rem 0.75rem;">
                     Respondent
                 </th>
-                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #047857; font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #047857; font-size: 0.9rem; padding: 0.4rem 0.75rem;">
                     Approved
                 </th>
-                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #dc2626; font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                <th style="font-family: 'Outfit', sans-serif; text-align: right; color: #dc2626; font-size: 0.9rem; padding: 0.4rem 0.75rem;">
                     Rejected
                 </th>
-                <th class="sortable" onclick="sortSeTable('${surveyType}', 'delta_lusa_persen')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--text-secondary); font-size: 0.8rem; padding: 0.4rem 0.75rem; border-left: 1px solid var(--card-border);">
+                <th class="sortable" onclick="sortSeTable('${surveyType}', 'delta_lusa_persen')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--text-secondary); font-size: 0.9rem; padding: 0.4rem 0.75rem; border-left: 1px solid var(--card-border);">
                     H-2${getIcon('delta_lusa_persen')}
                 </th>
-                <th class="sortable" onclick="sortSeTable('${surveyType}', 'delta_kemarin_persen')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--text-secondary); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                <th class="sortable" onclick="sortSeTable('${surveyType}', 'delta_kemarin_persen')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--text-secondary); font-size: 0.9rem; padding: 0.4rem 0.75rem;">
                     H-1${getIcon('delta_kemarin_persen')}
                 </th>
-                <th class="sortable" onclick="sortSeTable('${surveyType}', 'delta_persen')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--primary); font-size: 0.8rem; padding: 0.4rem 0.75rem;">
+                <th class="sortable" onclick="sortSeTable('${surveyType}', 'delta_persen')" style="font-family: 'Outfit', sans-serif; text-align: center; color: var(--primary); font-size: 0.9rem; padding: 0.4rem 0.75rem;">
                     Hari Ini${getIcon('delta_persen')}
                 </th>
             </tr>
@@ -1703,7 +1703,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // if (item.delta_persen !== undefined && item.delta_persen !== 0) { ... }
 
                     return `
-                    <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; padding: 0.25rem 0; border-bottom: 1px dashed rgba(249, 115, 22, 0.12);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.9rem; padding: 0.25rem 0; border-bottom: 1px dashed rgba(249, 115, 22, 0.12);">
                         <div style="display: flex; align-items: center; gap: 0.45rem; max-width: 60%;">
                             <span style="font-size: 0.95rem; font-weight: 800; min-width: 22px; display: inline-block; text-align: center;">${rankIcon}</span>
                             <span style="font-weight: 750; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${cleanName}">${cleanName}</span>
@@ -1936,12 +1936,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     let html = `
                         <div style="flex: 1; min-width: 200px; display: flex; flex-direction: column; justify-content: center;">
-                            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Total Capaian</div>
+                            <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">Total Capaian</div>
                             <div style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary); margin-top: 0.2rem;">${kabData.persentase}%</div>
                             <div style="font-size: 0.85rem; font-weight: 700; color: ${deltaColor}; margin-top: 0.2rem;">${deltaSign}${kabDelta.toFixed(2)}% vs Kemarin</div>
                         </div>
                         <div style="flex: 3; display: flex; flex-direction: column;">
-                            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 0.5rem;">Top 3 Kecamatan Tertinggi</div>
+                            <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 0.5rem;">Top 3 Kecamatan Tertinggi</div>
                             <div style="display: flex; gap: 1rem;">
                     `;
                     top3.forEach((k, idx) => {
@@ -2450,24 +2450,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 </td>
                 <td style="text-align: center;">
                     ${item.delta_lusa_persen !== undefined && item.delta_lusa_persen !== 0 ? 
-                        `<span style="font-size: 0.8rem; font-weight: 700; color: ${item.delta_lusa_persen > 0 ? '#22c55e' : (item.delta_lusa_persen < 0 ? '#ef4444' : 'inherit')};">
+                        `<span style="font-size: 0.9rem; font-weight: 700; color: ${item.delta_lusa_persen > 0 ? '#22c55e' : (item.delta_lusa_persen < 0 ? '#ef4444' : 'inherit')};">
                             ${item.delta_lusa_persen > 0 ? '+' : ''}${item.delta_lusa_persen.toFixed(2)}%
                         </span>` 
-                        : `<span style="font-size: 0.8rem; color: var(--text-muted);">-</span>`}
+                        : `<span style="font-size: 0.9rem; color: var(--text-muted);">-</span>`}
                 </td>
                 <td style="text-align: center;">
                     ${item.delta_kemarin_persen !== undefined && item.delta_kemarin_persen !== 0 ? 
-                        `<span style="font-size: 0.8rem; font-weight: 700; color: ${item.delta_kemarin_persen > 0 ? '#22c55e' : (item.delta_kemarin_persen < 0 ? '#ef4444' : 'inherit')};">
+                        `<span style="font-size: 0.9rem; font-weight: 700; color: ${item.delta_kemarin_persen > 0 ? '#22c55e' : (item.delta_kemarin_persen < 0 ? '#ef4444' : 'inherit')};">
                             ${item.delta_kemarin_persen > 0 ? '+' : ''}${item.delta_kemarin_persen.toFixed(2)}%
                         </span>` 
-                        : `<span style="font-size: 0.8rem; color: var(--text-muted);">-</span>`}
+                        : `<span style="font-size: 0.9rem; color: var(--text-muted);">-</span>`}
                 </td>
                 <td style="text-align: center;">
                     ${item.delta_persen !== undefined && item.delta_persen !== 0 ? 
-                        `<span style="font-size: 0.8rem; font-weight: 800; color: ${item.delta_persen > 0 ? '#22c55e' : (item.delta_persen < 0 ? '#ef4444' : 'inherit')};">
+                        `<span style="font-size: 0.9rem; font-weight: 800; color: ${item.delta_persen > 0 ? '#22c55e' : (item.delta_persen < 0 ? '#ef4444' : 'inherit')};">
                             ${item.delta_persen > 0 ? '+' : ''}${item.delta_persen.toFixed(2)}%
                         </span>` 
-                        : `<span style="font-size: 0.8rem; color: var(--text-muted);">-</span>`}
+                        : `<span style="font-size: 0.9rem; color: var(--text-muted);">-</span>`}
                 </td>
                 <td style="text-align: center;">
                     ${penambahanBadge}
@@ -3737,8 +3737,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!btnContainer) return;
         btnContainer.innerHTML = '';
 
-        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
-        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
+        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.9rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
+        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.9rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
 
         // First & Prev buttons
         if (window.slsCurrentPage > 1) {
@@ -3769,7 +3769,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (startPage > 2) {
                 const dots = document.createElement('span');
                 dots.textContent = '...';
-                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.9rem; padding: 0 0.25rem;';
                 btnContainer.appendChild(dots);
             }
         }
@@ -3793,7 +3793,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (endPage < maxPage - 1) {
                 const dots = document.createElement('span');
                 dots.textContent = '...';
-                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.9rem; padding: 0 0.25rem;';
                 btnContainer.appendChild(dots);
             }
 
@@ -4196,7 +4196,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 Terdeteksi <strong>${totalOverloadedPencacah} Pencacah</strong> dengan beban kerja di atas <strong>800 target tugas</strong>. Hal ini dapat mempengaruhi kualitas pendataan sensus.
                             </div>
                         </div>
-                        <button class="btn-action" onclick="document.getElementById('petugas-workload-filter').value='overloaded'; document.getElementById('petugas-role-filter').value='Pencacah'; window.renderPetugasTable();" style="background: #ef4444; color: white; border: none; font-size: 0.8rem; padding: 0.5rem 0.75rem; border-radius: 0.5rem; height: auto; cursor: pointer;">
+                        <button class="btn-action" onclick="document.getElementById('petugas-workload-filter').value='overloaded'; document.getElementById('petugas-role-filter').value='Pencacah'; window.renderPetugasTable();" style="background: #ef4444; color: white; border: none; font-size: 0.9rem; padding: 0.5rem 0.75rem; border-radius: 0.5rem; height: auto; cursor: pointer;">
                             Lihat Daftar
                         </button>
                     </div>
@@ -4427,7 +4427,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                             <div style="display: flex; flex-direction: column;">
                                 <span style="font-weight: 600; color: var(--text-primary);">${hl(item.username || '-')}${unassignedBadgeHtml}</span>
-                                <span style="font-size: 0.8rem; color: var(--text-secondary);">${hl(item.email || '-')}</span>
+                                <span style="font-size: 0.9rem; color: var(--text-secondary);">${hl(item.email || '-')}</span>
                                 ${waHtml}
                             </div>
                         </div>
@@ -4458,7 +4458,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 Rincian Wilayah Tugas (SLS) untuk ${item.username}
                             </h5>
                             <div style="overflow-x: auto;">
-                                <table style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.8rem;">
+                                <table style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 0.9rem;">
                                     <thead>
                                         <tr style="border-bottom: 2px solid var(--card-border); text-align: left; background: rgba(0,0,0,0.01);">
                                             <th style="padding: 0.5rem; width: 40px; text-align: center; color: var(--text-secondary);">No</th>
@@ -4903,8 +4903,8 @@ document.addEventListener('DOMContentLoaded', () => {
         btnContainer.innerHTML = '';
         if (maxPage <= 1) return;
 
-        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
-        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
+        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.9rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
+        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.9rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
 
         // Prev button
         if (window.syncCurrentPage > 1) {
@@ -4935,7 +4935,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (startPage > 2) {
                 const dots = document.createElement('span');
                 dots.textContent = '...';
-                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.9rem; padding: 0 0.25rem;';
                 btnContainer.appendChild(dots);
             }
         }
@@ -4959,7 +4959,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (endPage < maxPage - 1) {
                 const dots = document.createElement('span');
                 dots.textContent = '...';
-                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.9rem; padding: 0 0.25rem;';
                 btnContainer.appendChild(dots);
             }
 
@@ -4990,8 +4990,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!btnContainer) return;
         btnContainer.innerHTML = '';
 
-        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
-        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
+        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.9rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
+        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.9rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
 
         if (window.petugasCurrentPage > 1) {
             const prevBtn = document.createElement('button');
@@ -5017,7 +5017,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (startPage > 2) {
                 const dots = document.createElement('span');
                 dots.textContent = '...';
-                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.9rem; padding: 0 0.25rem;';
                 btnContainer.appendChild(dots);
             }
         }
@@ -5038,7 +5038,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (endPage < maxPage - 1) {
                 const dots = document.createElement('span');
                 dots.textContent = '...';
-                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.9rem; padding: 0 0.25rem;';
                 btnContainer.appendChild(dots);
             }
 
@@ -6494,8 +6494,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!btnContainer) return;
         btnContainer.innerHTML = '';
 
-        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
-        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
+        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.9rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
+        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.9rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
 
         if (window.diffCurrentPage > 1) {
             const prevBtn = document.createElement('button');
@@ -6521,7 +6521,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (startPage > 2) {
                 const dots = document.createElement('span');
                 dots.textContent = '...';
-                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.9rem; padding: 0 0.25rem;';
                 btnContainer.appendChild(dots);
             }
         }
@@ -6542,7 +6542,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (endPage < maxPage - 1) {
                 const dots = document.createElement('span');
                 dots.textContent = '...';
-                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.8rem; padding: 0 0.25rem;';
+                dots.style.cssText = 'color: var(--text-secondary); font-size: 0.9rem; padding: 0 0.25rem;';
                 btnContainer.appendChild(dots);
             }
 
@@ -7255,7 +7255,7 @@ window.fetchAllAssignments = async function() {
                 <td style="${tdBase} text-align: center; font-size: 0.75rem; color: var(--text-secondary);">
                     ${canExpand ? `<span id="rekap-icon-${i}" style="font-size:0.8rem; color:#ef4444;">▶</span>` : `<span style="color:#22c55e;">✓</span>`}
                 </td>
-                <td style="${tdBase} font-size: 0.8rem; color: var(--text-secondary);">${r.kab}</td>
+                <td style="${tdBase} font-size: 0.9rem; color: var(--text-secondary);">${r.kab}</td>
                 <td style="${tdBase} font-weight: 600;">${r.kec}</td>
                 <td style="${tdBase} text-align: right; font-weight: 600;">${r.total.toLocaleString('id-ID')}</td>
                 <td style="${tdBase} text-align: right; font-weight: 700; color: ${r.unassigned > 0 ? '#ef4444' : '#22c55e'};">
@@ -7311,7 +7311,7 @@ window.fetchAllAssignments = async function() {
                 });
 
                 const thS = 'padding: 0.4rem 0.75rem; font-size: 0.71rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-secondary); background: var(--card-bg); border-bottom: 1.5px solid var(--card-border); white-space: nowrap;';
-                const tdS = 'padding: 0.42rem 0.75rem; font-size: 0.8rem; border-bottom: 1px solid var(--card-border);';
+                const tdS = 'padding: 0.42rem 0.75rem; font-size: 0.9rem; border-bottom: 1px solid var(--card-border);';
 
                 const tableRows = sorted.map((u, j) => `
                     <tr onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">
@@ -7968,7 +7968,7 @@ window.fetchAllAssignments = async function() {
             if (totalEl) totalEl.textContent = realTotalAll.toLocaleString('id-ID');
             if (selesaiEl) selesaiEl.innerHTML = `${realSelesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
             if (belumEl) belumEl.innerHTML = `${realBelumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
-            if (targetHarianEl) targetHarianEl.innerHTML = `${targetHarian.toFixed(1).replace('.', ',')} <span style="font-size: 0.8rem; opacity: 0.8; font-weight: 500;">assignment/petugas/hari</span>`;
+            if (targetHarianEl) targetHarianEl.innerHTML = `${targetHarian.toFixed(1).replace('.', ',')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">assignment/petugas/hari</span>`;
             if (typeof updateCountdownSE2026 === 'function') updateCountdownSE2026(realBelumAll);
         } else if (Array.isArray(data) && data.length > 0) {
             // Fallback
@@ -7988,7 +7988,7 @@ window.fetchAllAssignments = async function() {
             document.getElementById('petugas-stat-belum').innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
             
             const targetHarianEl = document.getElementById('petugas-stat-target-harian');
-            if (targetHarianEl) targetHarianEl.innerHTML = `${targetHarian.toFixed(1).replace('.', ',')} <span style="font-size: 0.8rem; opacity: 0.8; font-weight: 500;">assignment/petugas/hari</span>`;
+            if (targetHarianEl) targetHarianEl.innerHTML = `${targetHarian.toFixed(1).replace('.', ',')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">assignment/petugas/hari</span>`;
             
             if (typeof updateCountdownSE2026 === 'function') updateCountdownSE2026(belumAll);
         }
@@ -8702,18 +8702,18 @@ window.fetchAllAssignments = async function() {
             html += `
                 <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;">
                     <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-weight: 600; color: var(--text-secondary);">${no}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 600; color: var(--text-primary); font-size: 0.8rem;">${r.kab_name}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary);">${r.kec_name}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary);">${r.desa_name}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary);">${r.sls_name} <span style="font-size:0.7rem; color:var(--text-secondary); display:block; font-family:monospace;">${r.sls_code}</span></td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 600; color: var(--text-primary); font-size: 0.9rem;">${r.kab_name}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.9rem; color: var(--text-primary);">${r.kec_name}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.9rem; color: var(--text-primary);">${r.desa_name}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.9rem; color: var(--text-primary);">${r.sls_name} <span style="font-size:0.7rem; color:var(--text-secondary); display:block; font-family:monospace;">${r.sls_code}</span></td>
                     <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.85rem; color: var(--text-primary);">${petugasLabel}</td>
                     <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.85rem; color: var(--text-primary);">${pengawasLabel}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 600; font-family: monospace; font-size: 0.8rem; color: var(--text-primary);">${r.codeIdentity || '-'}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 600; font-family: monospace; font-size: 0.9rem; color: var(--text-primary);">${r.codeIdentity || '-'}</td>
                     <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 700; color: var(--text-primary); font-size: 0.85rem;">${r.data1}</td>
                     <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle;">
                         <span class="table-badge ${statusBadgeClass}">${r.status}</span>
                     </td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary); white-space: nowrap;">${formattedDate}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-size: 0.9rem; color: var(--text-primary); white-space: nowrap;">${formattedDate}</td>
                     <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.75rem; color: var(--text-primary); max-width: 250px; word-wrap: break-word; line-height: 1.3;">
                         ${r.remark || '-'}
                     </td>
@@ -10870,7 +10870,7 @@ window.downloadCurrentSeTable = function(surveyType) {
         
         if (diff <= 0) {
             if (countdownDaysEl) countdownDaysEl.innerHTML = `0 Hari <span style="font-size: 1.1rem; opacity: 0.9; font-variant-numeric: tabular-nums;">00:00:00</span>`;
-            if (seUmumCountdownEl) seUmumCountdownEl.innerHTML = `0 Hari <span style="font-size: 0.8rem; opacity: 0.9;">00:00:00</span>`;
+            if (seUmumCountdownEl) seUmumCountdownEl.innerHTML = `0 Hari <span style="font-size: 0.9rem; opacity: 0.9;">00:00:00</span>`;
             if (window._se2026CountdownInterval) clearInterval(window._se2026CountdownInterval);
             return;
         }
@@ -10894,7 +10894,7 @@ window.downloadCurrentSeTable = function(surveyType) {
         let ss = s.toString().padStart(2, '0');
         
         if (countdownDaysEl) countdownDaysEl.innerHTML = `${remainingWorkingDays} Hari <span style="font-size: 1.15rem; opacity: 0.95; font-variant-numeric: tabular-nums; letter-spacing: 1px;">${hh}:${mm}:${ss}</span>`;
-        if (seUmumCountdownEl) seUmumCountdownEl.innerHTML = `${remainingWorkingDays} Hari <span style="font-size: 0.8rem; opacity: 0.9;">${hh}:${mm}:${ss}</span>`;
+        if (seUmumCountdownEl) seUmumCountdownEl.innerHTML = `${remainingWorkingDays} Hari <span style="font-size: 0.9rem; opacity: 0.9;">${hh}:${mm}:${ss}</span>`;
     };
     
     tick();
