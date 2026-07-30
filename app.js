@@ -2582,6 +2582,27 @@ document.addEventListener('DOMContentLoaded', () => {
                             </span>
                         </td>
                         <td style="text-align: center;">
+                            ${kec.delta_lusa_persen !== undefined && kec.delta_lusa_persen !== 0 ?
+                            `<span style="font-size: 0.85rem; font-weight: 700; color: ${kec.delta_lusa_persen > 0 ? '#22c55e' : (kec.delta_lusa_persen < 0 ? '#ef4444' : 'inherit')};">
+                                    ${kec.delta_lusa_persen > 0 ? '+' : ''}${kec.delta_lusa_persen.toFixed(2)}%
+                                </span>`
+                            : `<span style="font-size: 0.85rem; color: var(--text-muted);">-</span>`}
+                        </td>
+                        <td style="text-align: center;">
+                            ${kec.delta_kemarin_persen !== undefined && kec.delta_kemarin_persen !== 0 ?
+                            `<span style="font-size: 0.85rem; font-weight: 700; color: ${kec.delta_kemarin_persen > 0 ? '#22c55e' : (kec.delta_kemarin_persen < 0 ? '#ef4444' : 'inherit')};">
+                                    ${kec.delta_kemarin_persen > 0 ? '+' : ''}${kec.delta_kemarin_persen.toFixed(2)}%
+                                </span>`
+                            : `<span style="font-size: 0.85rem; color: var(--text-muted);">-</span>`}
+                        </td>
+                        <td style="text-align: center;">
+                            ${kec.delta_persen !== undefined && kec.delta_persen !== 0 ?
+                            `<span style="font-size: 0.85rem; font-weight: 800; color: ${kec.delta_persen > 0 ? '#22c55e' : (kec.delta_persen < 0 ? '#ef4444' : 'inherit')};">
+                                    ${kec.delta_persen > 0 ? '+' : ''}${kec.delta_persen.toFixed(2)}%
+                                </span>`
+                            : `<span style="font-size: 0.85rem; color: var(--text-muted);">-</span>`}
+                        </td>
+                        <td style="text-align: center;">
                             ${kecPenambahanBadge}
                         </td>
                     `;
@@ -2622,9 +2643,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span style="font-size: 0.65rem; font-weight: 600; color: var(--text-muted);">+${newToday + newRumahToday} hari ini | +${newYesterday + newRumahYesterday} kmrn</span>
             </div>`;
 
-        const provTodayHTML = getDailyProgressCellHTML(today, todayBreakdown, 'HARI INI: SULAWESI TENGAH');
-        const provYesterdayHTML = getDailyProgressCellHTML(yesterday, yesterdayBreakdown, 'KEMARIN: SULAWESI TENGAH');
-        const provTwoDaysHTML = getDailyProgressCellHTML(twoDaysAgo, twoDaysAgoBreakdown, 'H-2: SULAWESI TENGAH');
+        const provDeltaLusa = prelist > 0 ? (twoDaysAgo / prelist) * 100 : 0;
+        const provDeltaKemarin = prelist > 0 ? (yesterday / prelist) * 100 : 0;
+        const provDeltaHariIni = prelist > 0 ? (today / prelist) * 100 : 0;
+
+        const getProvDeltaHTML = (delta) => {
+            if (delta === 0) return `<span style="font-size: 0.9rem; color: var(--text-muted);">-</span>`;
+            return `<span style="font-size: 0.9rem; font-weight: 700; color: ${delta > 0 ? '#22c55e' : '#ef4444'};">${delta > 0 ? '+' : ''}${delta.toFixed(2)}%</span>`;
+        };
 
         provRow.innerHTML = `
             <td style="font-weight: 800; color: var(--text-primary); position: sticky; left: 0; background-color: var(--tfoot-sticky-bg); z-index: 25; border-bottom: 2px solid var(--card-border);">[72] SULAWESI TENGAH</td>
@@ -2633,14 +2659,24 @@ document.addEventListener('DOMContentLoaded', () => {
             <td style="text-align: right; font-family: monospace; font-weight: 700; color: #3b82f6; border-bottom: 2px solid var(--card-border);">${formatNum(openVal)}</td>
             
             <td style="text-align: right; font-family: monospace; font-weight: 800; color: var(--color-delivered); border-bottom: 2px solid var(--card-border);">${formatNum(submitted)}</td>
-            <td style="text-align: right; font-family: monospace; border-bottom: 2px solid var(--card-border);">${provTodayHTML}</td>
-            <td style="text-align: right; font-family: monospace; border-bottom: 2px solid var(--card-border);">${provYesterdayHTML}</td>
-            <td style="text-align: right; font-family: monospace; border-bottom: 2px solid var(--card-border);">${provTwoDaysHTML}</td>
+            <td style="text-align: right; font-family: monospace; color: var(--color-opened); border-bottom: 2px solid var(--card-border);">${formatNum(submittedPencacah)}</td>
+            <td style="text-align: right; font-family: monospace; color: #d97706; border-bottom: 2px solid var(--card-border);">${formatNum(submittedRespondent)}</td>
+            <td style="text-align: right; font-family: monospace; color: #047857; border-bottom: 2px solid var(--card-border);">${formatNum(approved)}</td>
+            <td style="text-align: right; font-family: monospace; color: #dc2626; border-bottom: 2px solid var(--card-border);">${formatNum(rejected)}</td>
             
             <td style="text-align: center; border-bottom: 2px solid var(--card-border);">
                 <span style="display: inline-block; padding: 0.25rem 0.5rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 800; ${provPctClass}">
                     ${persentase}%
                 </span>
+            </td>
+            <td style="text-align: center; border-bottom: 2px solid var(--card-border);">
+                ${getProvDeltaHTML(provDeltaLusa)}
+            </td>
+            <td style="text-align: center; border-bottom: 2px solid var(--card-border);">
+                ${getProvDeltaHTML(provDeltaKemarin)}
+            </td>
+            <td style="text-align: center; border-bottom: 2px solid var(--card-border);">
+                ${getProvDeltaHTML(provDeltaHariIni)}
             </td>
             <td style="text-align: center; border-bottom: 2px solid var(--card-border);">
                 ${provPenambahanBadge}

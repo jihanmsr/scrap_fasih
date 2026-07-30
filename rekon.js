@@ -133,8 +133,18 @@ function renderRekon() {
         const sortKey = rekonSortConfig.sls.key;
         const sortDir = rekonSortConfig.sls.dir === 'asc' ? 1 : -1;
         filtered.sort((a, b) => {
-            let valA = a[sortKey];
-            let valB = b[sortKey];
+            let valA, valB;
+            if (sortKey === 'muatan_utp') { valA = a.jml_utp_subsektor || 0; valB = b.jml_utp_subsektor || 0; }
+            else if (sortKey === 'realisasi_utp') { valA = a.total_utp || 0; valB = b.total_utp || 0; }
+            else if (sortKey === 'diff_utp') { valA = (a.total_utp || 0) - (a.jml_utp_subsektor || 0); valB = (b.total_utp || 0) - (b.jml_utp_subsektor || 0); }
+            else if (sortKey === 'muatan_sbr') { valA = a.Total_usaha_SBR || 0; valB = b.Total_usaha_SBR || 0; }
+            else if (sortKey === 'realisasi_sbr') { valA = a.total_sbr || 0; valB = b.total_sbr || 0; }
+            else if (sortKey === 'diff_sbr') { valA = (a.total_sbr || 0) - (a.Total_usaha_SBR || 0); valB = (b.total_sbr || 0) - (b.Total_usaha_SBR || 0); }
+            else if (sortKey === 'muatan_keluarga') { valA = a.keluarga || 0; valB = b.keluarga || 0; }
+            else if (sortKey === 'realisasi_keluarga') { valA = 0; valB = 0; }
+            else if (sortKey === 'diff_keluarga') { valA = -(a.keluarga || 0); valB = -(b.keluarga || 0); }
+            else { valA = a[sortKey]; valB = b[sortKey]; }
+
             if (typeof valA === 'string') valA = valA.toLowerCase();
             if (typeof valB === 'string') valB = valB.toLowerCase();
             if (valA < valB) return -1 * sortDir;
@@ -144,21 +154,44 @@ function renderRekon() {
 
         const tbody = document.getElementById('rekon-table-sls');
         tbody.innerHTML = '';
-        let totTarget = 0, totRealisasi = 0;
+        let m_utp_tot = 0, r_utp_tot = 0;
+        let m_sbr_tot = 0, r_sbr_tot = 0;
+        let m_kel_tot = 0, r_kel_tot = 0;
 
         filtered.forEach(d => {
-            totTarget += d.target_awal || 0;
-            totRealisasi += d.realisasi || 0;
-            const diff = d.diff || 0;
-            const diffColor = diff !== 0 ? '#b91c1c' : 'inherit';
+            const m_utp = d.jml_utp_subsektor || 0;
+            const m_sbr = d.Total_usaha_SBR || 0;
+            const m_kel = d.keluarga || 0;
+            
+            const r_utp = d.total_utp || 0;
+            const r_sbr = d.total_sbr || 0;
+            const r_kel = 0; // Not available in SLS data
+            
+            m_utp_tot += m_utp; r_utp_tot += r_utp;
+            m_sbr_tot += m_sbr; r_sbr_tot += r_sbr;
+            m_kel_tot += m_kel; r_kel_tot += r_kel;
+
+            const diff_utp = r_utp - m_utp;
+            const diff_sbr = r_sbr - m_sbr;
+            const diff_kel = r_kel - m_kel;
+
+            const diffColorUTP = diff_utp < 0 ? '#b91c1c' : (diff_utp > 0 ? '#15803d' : 'inherit');
+            const diffColorSBR = diff_sbr < 0 ? '#b91c1c' : (diff_sbr > 0 ? '#15803d' : 'inherit');
+            const diffColorKel = diff_kel < 0 ? '#b91c1c' : (diff_kel > 0 ? '#15803d' : 'inherit');
 
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${d.sls_id}</td>
                 <td>${d.nmkab} - ${d.nmkec} - ${d.nmdesa} - ${d.nmsls}</td>
-                <td style="text-align: right;">${d.target_awal.toLocaleString('id-ID')}</td>
-                <td style="text-align: right;">${d.realisasi.toLocaleString('id-ID')}</td>
-                <td style="text-align: right; color: ${diffColor}; font-weight: bold;">${diff.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${m_utp.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${r_utp.toLocaleString('id-ID')}</td>
+                <td style="text-align: right; color: ${diffColorUTP}; font-weight: bold;">${diff_utp.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${m_sbr.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${r_sbr.toLocaleString('id-ID')}</td>
+                <td style="text-align: right; color: ${diffColorSBR}; font-weight: bold;">${diff_sbr.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${m_kel.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${r_kel.toLocaleString('id-ID')}</td>
+                <td style="text-align: right; color: ${diffColorKel}; font-weight: bold;">${diff_kel.toLocaleString('id-ID')}</td>
             `;
             tbody.appendChild(tr);
         });
@@ -166,9 +199,9 @@ function renderRekon() {
         // Update Summary Cards
         document.getElementById('rekon-summary').innerHTML = `
             <div class="summary-card"><div class="label">Total SLS Filtered</div><div class="value">${filtered.length}</div></div>
-            <div class="summary-card"><div class="label">Total Muatan (UTP+SBR)</div><div class="value">${totTarget.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Total Realisasi (UTP+SBR)</div><div class="value">${totRealisasi.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Total Selisih (Realisasi - Muatan)</div><div class="value" style="color: ${totRealisasi - totTarget !== 0 ? '#b91c1c' : 'inherit'}">${(totRealisasi - totTarget).toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">UTP (Rls/Muatan)</div><div class="value">${r_utp_tot.toLocaleString('id-ID')} / ${m_utp_tot.toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">SBR (Rls/Muatan)</div><div class="value">${r_sbr_tot.toLocaleString('id-ID')} / ${m_sbr_tot.toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Keluarga (Rls/Muatan)</div><div class="value">${r_kel_tot.toLocaleString('id-ID')} / ${m_kel_tot.toLocaleString('id-ID')}</div></div>
         `;
 
     } else {
@@ -184,8 +217,20 @@ function renderRekon() {
         const sortKey = rekonSortConfig.petugas.key;
         const sortDir = rekonSortConfig.petugas.dir === 'asc' ? 1 : -1;
         filtered.sort((a, b) => {
-            let valA = a[sortKey];
-            let valB = b[sortKey];
+            let valA, valB;
+            if (sortKey === 'muatan_utp') { valA = a.total_muatan_assigned || 0; valB = b.total_muatan_assigned || 0; }
+            else if (sortKey === 'realisasi_utp') { valA = a.total_usaha || 0; valB = b.total_usaha || 0; }
+            else if (sortKey === 'diff_utp') { valA = (a.total_usaha || 0) - (a.total_muatan_assigned || 0); valB = (b.total_usaha || 0) - (b.total_muatan_assigned || 0); }
+            else if (sortKey === 'muatan_sbr') { valA = 0; valB = 0; }
+            else if (sortKey === 'realisasi_sbr') { valA = 0; valB = 0; }
+            else if (sortKey === 'diff_sbr') { valA = 0; valB = 0; }
+            else if (sortKey === 'muatan_keluarga') { valA = 0; valB = 0; }
+            else if (sortKey === 'realisasi_keluarga') { valA = a.total_keluarga || 0; valB = b.total_keluarga || 0; }
+            else if (sortKey === 'diff_keluarga') { valA = a.total_keluarga || 0; valB = b.total_keluarga || 0; }
+            else { valA = a[sortKey]; valB = b[sortKey]; }
+
+            if (typeof valA === 'string') valA = valA.toLowerCase();
+            if (typeof valB === 'string') valB = valB.toLowerCase();
             if (valA < valB) return -1 * sortDir;
             if (valA > valB) return 1 * sortDir;
             return 0;
@@ -194,21 +239,43 @@ function renderRekon() {
         const tbody = document.getElementById('rekon-table-petugas');
         tbody.innerHTML = '';
 
-        let totTarget = 0, totRealisasi = 0;
+        let m_utp_tot = 0, r_utp_tot = 0;
+        let m_sbr_tot = 0, r_sbr_tot = 0;
+        let m_kel_tot = 0, r_kel_tot = 0;
 
         filtered.forEach(d => {
-            totTarget += d.target_awal || 0;
-            totRealisasi += d.realisasi || 0;
+            const m_utp = d.total_muatan_assigned || 0;
+            const m_sbr = 0; // Not separated in data
+            const m_kel = 0; // Not separated in data
 
-            const diff = d.diff || 0;
-            const diffColor = diff !== 0 ? '#b91c1c' : 'inherit';
+            const r_utp = d.total_usaha || 0;
+            const r_sbr = 0; // Not separated in data
+            const r_kel = d.total_keluarga || 0;
+
+            m_utp_tot += m_utp; r_utp_tot += r_utp;
+            m_sbr_tot += m_sbr; r_sbr_tot += r_sbr;
+            m_kel_tot += m_kel; r_kel_tot += r_kel;
+
+            const diff_utp = r_utp - m_utp;
+            const diff_sbr = r_sbr - m_sbr;
+            const diff_kel = r_kel - m_kel;
+
+            const diffColorUTP = diff_utp < 0 ? '#b91c1c' : (diff_utp > 0 ? '#15803d' : 'inherit');
+            const diffColorSBR = diff_sbr < 0 ? '#b91c1c' : (diff_sbr > 0 ? '#15803d' : 'inherit');
+            const diffColorKel = diff_kel < 0 ? '#b91c1c' : (diff_kel > 0 ? '#15803d' : 'inherit');
 
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${d.email}</td>
-                <td style="text-align: right;">${d.target_awal.toLocaleString('id-ID')}</td>
-                <td style="text-align: right;">${d.realisasi.toLocaleString('id-ID')}</td>
-                <td style="text-align: right; color: ${diffColor}; font-weight: bold;">${diff.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${m_utp.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${r_utp.toLocaleString('id-ID')}</td>
+                <td style="text-align: right; color: ${diffColorUTP}; font-weight: bold;">${diff_utp.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${m_sbr.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${r_sbr.toLocaleString('id-ID')}</td>
+                <td style="text-align: right; color: ${diffColorSBR}; font-weight: bold;">${diff_sbr.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${m_kel.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${r_kel.toLocaleString('id-ID')}</td>
+                <td style="text-align: right; color: ${diffColorKel}; font-weight: bold;">${diff_kel.toLocaleString('id-ID')}</td>
             `;
             tbody.appendChild(tr);
         });
@@ -216,9 +283,9 @@ function renderRekon() {
         // Update Summary Cards
         document.getElementById('rekon-summary').innerHTML = `
             <div class="summary-card"><div class="label">Total Petugas</div><div class="value">${filtered.length}</div></div>
-            <div class="summary-card"><div class="label">Total Muatan (UTP+SBR)</div><div class="value">${totTarget.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Total Realisasi (UTP+SBR)</div><div class="value">${totRealisasi.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Selisih Realisasi dan Muatan</div><div class="value" style="color: ${totRealisasi - totTarget !== 0 ? '#b91c1c' : 'inherit'}">${(totRealisasi - totTarget).toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">UTP (Rls/Muatan)</div><div class="value">${r_utp_tot.toLocaleString('id-ID')} / ${m_utp_tot.toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">SBR (Rls/Muatan)</div><div class="value">${r_sbr_tot.toLocaleString('id-ID')} / ${m_sbr_tot.toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Keluarga (Rls/Muatan)</div><div class="value">${r_kel_tot.toLocaleString('id-ID')} / ${m_kel_tot.toLocaleString('id-ID')}</div></div>
         `;
     }
 }

@@ -278,6 +278,66 @@ def process_survey_type_data(survey_type, old_data, results_map, region_map_sult
         # Convert map to list and sort alphabetically by kecamatan name
         kec_list_final = sorted(kec_data_map.values(), key=lambda x: x["kecamatan"])
         
+        # Process delta trackers for each kecamatan
+        prev_kec_list = prev_kab.get("kecamatan_list", [])
+        prev_kec_map = {k.get("kecamatan"): k for k in prev_kec_list}
+        
+        for curr_kec in kec_list_final:
+            kec_name = curr_kec["kecamatan"]
+            prev_kec = prev_kec_map.get(kec_name, {})
+            
+            if delta_days == 0:
+                curr_kec["yesterday_completed"] = prev_kec.get("yesterday_completed", 0)
+                curr_kec["yesterday_completed_breakdown"] = prev_kec.get("yesterday_completed_breakdown", {})
+                curr_kec["two_days_ago_completed"] = prev_kec.get("two_days_ago_completed", 0)
+                curr_kec["two_days_ago_completed_breakdown"] = prev_kec.get("two_days_ago_completed_breakdown", {})
+                
+                b_submitted = prev_kec.get("total_submitted", 0) - prev_kec.get("today_completed", 0)
+                b_approved = prev_kec.get("total_approved", 0) - get_bd_val(prev_kec.get("today_completed_breakdown"), "APPROVED BY PENGAWAS")
+                b_rejected = prev_kec.get("total_rejected", 0) - get_bd_val(prev_kec.get("today_completed_breakdown"), "REJECTED BY PENGAWAS")
+                b_pencacah = prev_kec.get("total_submitted_pencacah", 0) - get_bd_val(prev_kec.get("today_completed_breakdown"), "SUBMITTED BY PENCACAH")
+                b_respondent = prev_kec.get("total_submitted_respondent", 0) - get_bd_val(prev_kec.get("today_completed_breakdown"), "SUBMITTED RESPONDENT")
+            else:
+                if delta_days == 1:
+                    curr_kec["two_days_ago_completed"] = prev_kec.get("yesterday_completed", 0)
+                    curr_kec["two_days_ago_completed_breakdown"] = prev_kec.get("yesterday_completed_breakdown", {})
+                    curr_kec["yesterday_completed"] = prev_kec.get("today_completed", 0)
+                    curr_kec["yesterday_completed_breakdown"] = prev_kec.get("today_completed_breakdown", {})
+                elif delta_days == 2:
+                    curr_kec["two_days_ago_completed"] = prev_kec.get("today_completed", 0)
+                    curr_kec["two_days_ago_completed_breakdown"] = prev_kec.get("today_completed_breakdown", {})
+                    curr_kec["yesterday_completed"] = 0
+                    curr_kec["yesterday_completed_breakdown"] = {}
+                else:
+                    curr_kec["two_days_ago_completed"] = 0
+                    curr_kec["two_days_ago_completed_breakdown"] = {}
+                    curr_kec["yesterday_completed"] = 0
+                    curr_kec["yesterday_completed_breakdown"] = {}
+                    
+                b_submitted = prev_kec.get("total_submitted", 0)
+                b_approved = prev_kec.get("total_approved", 0)
+                b_rejected = prev_kec.get("total_rejected", 0)
+                b_pencacah = prev_kec.get("total_submitted_pencacah", 0)
+                b_respondent = prev_kec.get("total_submitted_respondent", 0)
+                
+            today_comp_kec = max(0, curr_kec["total_submitted"] - b_submitted)
+            today_bd_kec = {}
+            
+            inc_appr_kec = max(0, curr_kec["total_approved"] - b_approved)
+            if inc_appr_kec > 0: today_bd_kec["APPROVED BY PENGAWAS"] = inc_appr_kec
+                
+            inc_rej_kec = max(0, curr_kec["total_rejected"] - b_rejected)
+            if inc_rej_kec > 0: today_bd_kec["REJECTED BY PENGAWAS"] = inc_rej_kec
+                
+            inc_penc_kec = max(0, curr_kec["total_submitted_pencacah"] - b_pencacah)
+            if inc_penc_kec > 0: today_bd_kec["SUBMITTED BY PENCACAH"] = inc_penc_kec
+                
+            inc_resp_kec = max(0, curr_kec["total_submitted_respondent"] - b_respondent)
+            if inc_resp_kec > 0: today_bd_kec["SUBMITTED RESPONDENT"] = inc_resp_kec
+                
+            curr_kec["today_completed"] = today_comp_kec
+            curr_kec["today_completed_breakdown"] = today_bd_kec
+
         # Sum breakdowns for kabupaten
         kab_breakdown = {}
         for k_code, k_obj in kec_data_map.items():
@@ -753,6 +813,21 @@ async def run_download_and_update():
                         kab["delta_persen"] = 0.0
                         kab["delta_kemarin_persen"] = 0.0
                         kab["delta_lusa_persen"] = 0.0
+                    
+                    for kec in kab.get("kecamatan_list", []):
+                        k_today = kec.get("today_completed", 0)
+                        k_yest = kec.get("yesterday_completed", 0)
+                        k_lusa = kec.get("two_days_ago_completed", 0)
+                        k_total = kec.get("total_prelist", 0)
+                        
+                        if k_total > 0:
+                            kec["delta_persen"] = round((k_today / k_total) * 100, 2)
+                            kec["delta_kemarin_persen"] = round((k_yest / k_total) * 100, 2)
+                            kec["delta_lusa_persen"] = round((k_lusa / k_total) * 100, 2)
+                        else:
+                            kec["delta_persen"] = 0.0
+                            kec["delta_kemarin_persen"] = 0.0
+                            kec["delta_lusa_persen"] = 0.0
             
             apply_auto_delta(new_se_umum)
             apply_auto_delta(new_se_ub)
