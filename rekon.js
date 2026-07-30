@@ -11,8 +11,10 @@ let rekonSortConfig = {
 
 async function loadRekonData() {
     try {
-        if (window.rekonSlsData) rekonSlsData = window.rekonSlsData;
-        if (window.rekonPetugasData) rekonPetugasData = window.rekonPetugasData;
+        const resSls = await fetch('rekon_sls.json?v=' + Date.now());
+        rekonSlsData = await resSls.json();
+        const resPetugas = await fetch('rekon_petugas.json?v=' + Date.now());
+        rekonPetugasData = await resPetugas.json();
         
         initRekonFilters();
         renderRekon();
