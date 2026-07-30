@@ -1,5 +1,5 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-07-30T13:02:49.807035+08:00",
+  "updated_at": "2026-07-30T13:17:10.035247+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
@@ -444,22 +444,22 @@ window.IPAS_DATA = {
         "COMPLETED BY Admin Kabupaten": 6,
         "REJECTED BY Admin Kabupaten": 21
       },
-      "two_days_ago_completed": 846,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 374,
-        "SUBMITTED BY PENCACAH": 474
-      },
       "yesterday_completed": 950,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 835,
         "REJECTED BY PENGAWAS": 33,
         "SUBMITTED BY PENCACAH": 82
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 846,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 374,
+        "SUBMITTED BY PENCACAH": 474
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 1006,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 756,
@@ -1259,23 +1259,23 @@ window.IPAS_DATA = {
         "COMPLETED BY Admin Kabupaten": 17,
         "EDITED BY Pengawas": 1
       },
-      "two_days_ago_completed": 2014,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 949,
-        "REJECTED BY PENGAWAS": 207,
-        "SUBMITTED BY PENCACAH": 858
-      },
       "yesterday_completed": 2003,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1369,
         "REJECTED BY PENGAWAS": 210,
         "SUBMITTED BY PENCACAH": 424
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 2014,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 949,
+        "REJECTED BY PENGAWAS": 207,
+        "SUBMITTED BY PENCACAH": 858
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 2351,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1493,
@@ -1625,22 +1625,22 @@ window.IPAS_DATA = {
         "EDITED BY Admin Kabupaten": 65,
         "REJECTED BY Admin Kabupaten": 6
       },
-      "two_days_ago_completed": 935,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 721,
-        "SUBMITTED BY PENCACAH": 234
-      },
       "yesterday_completed": 750,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 651,
         "REJECTED BY PENGAWAS": 3,
         "SUBMITTED BY PENCACAH": 96
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 935,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 721,
+        "SUBMITTED BY PENCACAH": 234
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 942,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 508,
@@ -2307,22 +2307,22 @@ window.IPAS_DATA = {
         "REJECTED BY Admin Kabupaten": 1,
         "SUBMITTED RESPONDENT": 48
       },
+      "yesterday_completed": 1975,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 488,
+        "SUBMITTED BY PENCACAH": 1607
+      },
       "two_days_ago_completed": 1625,
       "two_days_ago_completed_breakdown": {
         "APPROVED BY PENGAWAS": 945,
         "REJECTED BY PENGAWAS": 53,
         "SUBMITTED BY PENCACAH": 627
       },
-      "yesterday_completed": 1975,
-      "yesterday_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 488,
-        "SUBMITTED BY PENCACAH": 1607
-      },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 2301,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 956,
@@ -2880,21 +2880,21 @@ window.IPAS_DATA = {
         "REJECTED BY Admin Kabupaten": 28,
         "SUBMITTED RESPONDENT": 5
       },
-      "two_days_ago_completed": 1946,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1792,
-        "SUBMITTED BY PENCACAH": 155
-      },
       "yesterday_completed": 1812,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1157,
         "SUBMITTED BY PENCACAH": 658
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 1946,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 1792,
+        "SUBMITTED BY PENCACAH": 155
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 2291,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1696,
@@ -3246,23 +3246,23 @@ window.IPAS_DATA = {
         "COMPLETED BY Admin Kabupaten": 1,
         "EDITED BY Pengawas": 1
       },
-      "two_days_ago_completed": 1449,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 890,
-        "REJECTED BY PENGAWAS": 115,
-        "SUBMITTED BY PENCACAH": 444
-      },
       "yesterday_completed": 1311,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 812,
         "REJECTED BY PENGAWAS": 112,
         "SUBMITTED BY PENCACAH": 387
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 1449,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 890,
+        "REJECTED BY PENGAWAS": 115,
+        "SUBMITTED BY PENCACAH": 444
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 1252,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 510,
@@ -3691,22 +3691,22 @@ window.IPAS_DATA = {
         "EDITED BY Admin Kabupaten": 207,
         "SUBMITTED RESPONDENT": 46
       },
+      "yesterday_completed": 1014,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 842,
+        "REJECTED BY PENGAWAS": 245
+      },
       "two_days_ago_completed": 944,
       "two_days_ago_completed_breakdown": {
         "APPROVED BY PENGAWAS": 738,
         "REJECTED BY PENGAWAS": 76,
         "SUBMITTED BY PENCACAH": 130
       },
-      "yesterday_completed": 1014,
-      "yesterday_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 842,
-        "REJECTED BY PENGAWAS": 245
-      },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 1157,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 588,
@@ -4484,21 +4484,21 @@ window.IPAS_DATA = {
         "REJECTED BY Admin Kabupaten": 12,
         "REVOKED BY Admin Kabupaten": 2
       },
-      "two_days_ago_completed": 2712,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1631,
-        "SUBMITTED BY PENCACAH": 1134
-      },
       "yesterday_completed": 3074,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1748,
         "SUBMITTED BY PENCACAH": 1400
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 2712,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 1631,
+        "SUBMITTED BY PENCACAH": 1134
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 3164,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 2082,
@@ -4952,12 +4952,6 @@ window.IPAS_DATA = {
         "EDITED BY Pengawas": 1,
         "SUBMITTED RESPONDENT": 23
       },
-      "two_days_ago_completed": 1127,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 834,
-        "REJECTED BY PENGAWAS": 98,
-        "SUBMITTED BY PENCACAH": 195
-      },
       "yesterday_completed": 1016,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 550,
@@ -4965,11 +4959,17 @@ window.IPAS_DATA = {
         "SUBMITTED BY PENCACAH": 433,
         "SUBMITTED RESPONDENT": 6
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 1127,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 834,
+        "REJECTED BY PENGAWAS": 98,
+        "SUBMITTED BY PENCACAH": 195
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 1069,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 929,
@@ -5510,23 +5510,23 @@ window.IPAS_DATA = {
         "SUBMITTED RESPONDENT": 8,
         "REJECTED BY Admin Kabupaten": 11
       },
-      "two_days_ago_completed": 1856,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1712,
-        "REJECTED BY PENGAWAS": 37,
-        "SUBMITTED BY PENCACAH": 107
-      },
       "yesterday_completed": 1983,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1534,
         "REJECTED BY PENGAWAS": 63,
         "SUBMITTED BY PENCACAH": 386
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 1856,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 1712,
+        "REJECTED BY PENGAWAS": 37,
+        "SUBMITTED BY PENCACAH": 107
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 2300,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1348,
@@ -5819,22 +5819,22 @@ window.IPAS_DATA = {
         "SUBMITTED RESPONDENT": 24,
         "EDITED BY Pengawas": 1
       },
-      "two_days_ago_completed": 461,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 253,
-        "SUBMITTED BY PENCACAH": 214
-      },
       "yesterday_completed": 534,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 189,
         "REJECTED BY PENGAWAS": 8,
         "SUBMITTED BY PENCACAH": 337
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 461,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 253,
+        "SUBMITTED BY PENCACAH": 214
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 508,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 283,
@@ -6215,20 +6215,20 @@ window.IPAS_DATA = {
         "COMPLETED BY Admin Kabupaten": 35,
         "SUBMITTED RESPONDENT": 1
       },
-      "two_days_ago_completed": 848,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 894
-      },
       "yesterday_completed": 813,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 825,
         "REJECTED BY PENGAWAS": 93
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 848,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 894
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 678,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 878,
@@ -6565,12 +6565,6 @@ window.IPAS_DATA = {
         "REVOKED BY Admin Kabupaten": 6,
         "EDITED BY Pengawas": 3
       },
-      "two_days_ago_completed": 2166,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 2086,
-        "REJECTED BY PENGAWAS": 165,
-        "SUBMITTED RESPONDENT": 20
-      },
       "yesterday_completed": 2535,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1794,
@@ -6578,11 +6572,17 @@ window.IPAS_DATA = {
         "SUBMITTED BY PENCACAH": 710,
         "SUBMITTED RESPONDENT": 21
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 2166,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 2086,
+        "REJECTED BY PENGAWAS": 165,
+        "SUBMITTED RESPONDENT": 20
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 2196,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1924,
@@ -6862,15 +6862,15 @@ window.IPAS_DATA = {
         "total": 6,
         "SUBMITTED RESPONDENT": 6
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
       "yesterday_completed": 0,
       "yesterday_completed_breakdown": {},
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
       "delta_persen": 0.0,
@@ -7471,18 +7471,18 @@ window.IPAS_DATA = {
         "REJECTED BY Pengawas": 3,
         "SUBMITTED RESPONDENT": 2
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
       "yesterday_completed": 4,
       "yesterday_completed_breakdown": {
         "REJECTED BY PENGAWAS": 1,
         "SUBMITTED BY PENCACAH": 3
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
       "delta_persen": 0.0,
@@ -7770,17 +7770,17 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 29,
         "SUBMITTED RESPONDENT": 8
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
       "yesterday_completed": 1,
       "yesterday_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 1
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
       "delta_persen": 0.0,
@@ -8245,20 +8245,20 @@ window.IPAS_DATA = {
         "SUBMITTED RESPONDENT": 3,
         "APPROVED BY Pengawas": 4
       },
+      "yesterday_completed": 2,
+      "yesterday_completed_breakdown": {
+        "SUBMITTED BY PENCACAH": 2
+      },
       "two_days_ago_completed": 5,
       "two_days_ago_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 4,
         "SUBMITTED RESPONDENT": 1
       },
-      "yesterday_completed": 2,
-      "yesterday_completed_breakdown": {
-        "SUBMITTED BY PENCACAH": 2
-      },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
       "delta_persen": 0.0,
@@ -8675,19 +8675,19 @@ window.IPAS_DATA = {
         "APPROVED BY Pengawas": 56,
         "SUBMITTED BY Pencacah": 1
       },
-      "two_days_ago_completed": 3,
-      "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 6
-      },
       "yesterday_completed": 1,
       "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 3
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 3,
+      "two_days_ago_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 6
+      },
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 1
@@ -8958,15 +8958,15 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 3,
         "EDITED BY Admin Kabupaten": 1
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
       "yesterday_completed": 0,
       "yesterday_completed_breakdown": {},
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
       "delta_persen": 0.0,
@@ -9237,15 +9237,15 @@ window.IPAS_DATA = {
         "OPEN": 2,
         "APPROVED BY Pengawas": 1
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
       "yesterday_completed": 0,
       "yesterday_completed_breakdown": {},
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
       "delta_persen": 0.0,
@@ -9818,15 +9818,15 @@ window.IPAS_DATA = {
         "COMPLETED BY Admin Kabupaten": 2,
         "DRAFT": 1
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
       "yesterday_completed": 0,
       "yesterday_completed_breakdown": {},
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 2
@@ -10119,15 +10119,15 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 6,
         "SUBMITTED RESPONDENT": 3
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
       "yesterday_completed": 0,
       "yesterday_completed_breakdown": {},
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
       "delta_persen": 0.0,
@@ -10501,17 +10501,17 @@ window.IPAS_DATA = {
         "OPEN": 5,
         "DRAFT": 1
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
       "yesterday_completed": 1,
       "yesterday_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 1
       },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 1,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 2
@@ -10685,15 +10685,15 @@ window.IPAS_DATA = {
         "SUBMITTED RESPONDENT": 6,
         "OPEN": 1
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
       "yesterday_completed": 0,
       "yesterday_completed_breakdown": {},
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
       "delta_persen": 0.0,
@@ -10989,20 +10989,20 @@ window.IPAS_DATA = {
         "SUBMITTED RESPONDENT": 4,
         "SUBMITTED BY Pencacah": 21
       },
+      "yesterday_completed": 0,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 16
+      },
       "two_days_ago_completed": 9,
       "two_days_ago_completed_breakdown": {
         "APPROVED BY PENGAWAS": 2,
         "SUBMITTED BY PENCACAH": 7
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 16
-      },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {},
       "delta_persen": 0.0,
@@ -11270,20 +11270,20 @@ window.IPAS_DATA = {
         "REVOKED BY Pengawas": 1,
         "SUBMITTED BY Pencacah": 4
       },
+      "yesterday_completed": 1,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 5
+      },
       "two_days_ago_completed": 10,
       "two_days_ago_completed_breakdown": {
         "APPROVED BY PENGAWAS": 8,
         "REJECTED BY PENGAWAS": 9
       },
-      "yesterday_completed": 1,
-      "yesterday_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 5
-      },
-      "new_usaha_yesterday": 0,
-      "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
+      "new_usaha_yesterday": 0,
+      "new_rumah_yesterday": 0,
       "today_completed": 0,
       "today_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1,
