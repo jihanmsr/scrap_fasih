@@ -14,10 +14,10 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js?v=20260730_v3"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js?v=20260730_v3"></script>
-    <script src="daily_submission_stats.js?v=20260730_v3"></script>
-    <script src="daily_summary.js?v=20260730_v3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js?v=20260730_v4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js?v=20260730_v4"></script>
+    <script src="daily_submission_stats.js?v=20260730_v4"></script>
+    <script src="daily_summary.js?v=20260730_v4"></script>
         
     <link rel="stylesheet" href="style.css?v=7">
     <style>
@@ -2413,7 +2413,7 @@
 <!-- TAB REKONSILIASI -->
     <div class="tab-content" id="tab-content-rekon" style="display: none; padding: 1rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Monitoring target awal dengan realisasi</h2>
+            <h2>Monitoring Target Awal dengan Realisasi</h2>
         </div>
 
         <!-- SUMMARY CARDS -->
@@ -2448,9 +2448,9 @@
                     <tr>
                         <th class="sortable" onclick="sortRekon('sls', 'sls_id')">ID SLS</th>
                         <th class="sortable" onclick="sortRekon('sls', 'nmkab')">Kab/Kec/Desa</th>
-                        <th class="sortable" onclick="sortRekon('sls', 'total_muatan')">Total Muatan (UTP+SBR+Kel)</th>
-                        <th class="sortable" onclick="sortRekon('sls', 'fasih_target_pencacah')">Target Fasih (Pencacah)</th>
-                        <th class="sortable" onclick="sortRekon('sls', 'diff_fasih_vs_muatan_total')">Selisih (Fasih - Muatan)</th>
+                        <th class="sortable" onclick="sortRekon('sls', 'total_muatan')">Total Muatan (UTP+SBR)</th>
+                        <th class="sortable" onclick="sortRekon('sls', 'total_sqllab')">Target SQL Lab</th>
+                        <th class="sortable" onclick="sortRekon('sls', 'diff_muatan_vs_sqllab')">Selisih (Muatan - SQL Lab)</th>
                     </tr>
                 </thead>
                 <tbody id="rekon-table-sls"></tbody>
@@ -2464,10 +2464,8 @@
                     <tr>
                         <th class="sortable" onclick="sortRekon('petugas', 'email')">Email Petugas</th>
                         <th class="sortable" onclick="sortRekon('petugas', 'total_muatan_assigned')">Beban Muatan (Assign)</th>
-                        <th class="sortable" onclick="sortRekon('petugas', 'total_fasih')">Target Fasih</th>
                         <th class="sortable" onclick="sortRekon('petugas', 'total_sqllab')">Target SQL Lab</th>
-                        <th class="sortable" onclick="sortRekon('petugas', 'diff_fasih_vs_muatan')">Fasih vs Muatan</th>
-                        <th class="sortable" onclick="sortRekon('petugas', 'diff_fasih_vs_sqllab')">Fasih vs SQL Lab</th>
+                        <th class="sortable" onclick="sortRekon('petugas', 'diff_muatan_vs_sqllab')">Selisih (Muatan - SQL Lab)</th>
                     </tr>
                 </thead>
                 <tbody id="rekon-table-petugas"></tbody>
@@ -2718,23 +2716,23 @@
     </div>
 
     <!-- Pako library for base64 gzip decompression -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js?v=20260730_v3"></script>
-    <script src="supabase_config.js?v=20260730_v3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js?v=20260730_v4"></script>
+    <script src="supabase_config.js?v=20260730_v4"></script>
     <script src="users.js?v=2"></script>
-    <script src="auth.js?v=20260730_v3"></script>
-    <script src="mitra_data.js?v=20260730_v3"></script>
-    <script src="mysql_data.js?v=20260730_v3"></script>
-    <script src="new_businesses_data.js?v=20260730_v3"></script>
-    <script src="ipas_data.js?v=20260730_v3"></script>
-    <script src="daily_summary.js?v=20260730_v3"></script>
+    <script src="auth.js?v=20260730_v4"></script>
+    <script src="mitra_data.js?v=20260730_v4"></script>
+    <script src="mysql_data.js?v=20260730_v4"></script>
+    <script src="new_businesses_data.js?v=20260730_v4"></script>
+    <script src="ipas_data.js?v=20260730_v4"></script>
+    <script src="daily_summary.js?v=20260730_v4"></script>
         <script src="rekon_data.js?v=1785371784631"></script>
     <script src="rekon.js?v=1785371784631"></script>
-    <script src="petugas_progress.js?v=20260730_v3"></script>
-    <script src="petugas_phones.js?v=20260730_v3"></script>
-    <script src="petugas_region_map.js?v=20260730_v3"></script>
-    <script src="fast_petugas_progress.js?v=20260730_v3"></script>
-    <script src="fast_petugas_history.js?v=20260730_v3"></script>
-    <script src="app.js?v=20260730_v3" defer></script>
+    <script src="petugas_progress.js?v=20260730_v4"></script>
+    <script src="petugas_phones.js?v=20260730_v4"></script>
+    <script src="petugas_region_map.js?v=20260730_v4"></script>
+    <script src="fast_petugas_progress.js?v=20260730_v4"></script>
+    <script src="fast_petugas_history.js?v=20260730_v4"></script>
+    <script src="app.js?v=20260730_v4" defer></script>
 
     <script>
         function switchSubTab(surveyType, subTab) {

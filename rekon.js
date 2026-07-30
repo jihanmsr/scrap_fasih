@@ -3,8 +3,8 @@ let rekonSlsData = [];
 let rekonPetugasData = [];
 let currentRekonSubTab = 'sls';
 let rekonSortConfig = {
-    sls: { key: 'diff_fasih_vs_muatan_total', dir: 'desc' },
-    petugas: { key: 'diff_fasih_vs_muatan', dir: 'desc' }
+    sls: { key: 'diff_muatan_vs_sqllab', dir: 'desc' },
+    petugas: { key: 'diff_muatan_vs_sqllab', dir: 'desc' }
 };
 
 // Load Data
@@ -144,20 +144,20 @@ function renderRekon() {
 
         const tbody = document.getElementById('rekon-table-sls');
         tbody.innerHTML = '';
-        let totMuatan = 0, totFasih = 0;
+        let totMuatan = 0, totSql = 0;
 
         filtered.forEach(d => {
             totMuatan += d.total_muatan || 0;
-            totFasih += d.fasih_target_pencacah || 0;
-            const diff = d.diff_fasih_vs_muatan_total || 0;
-            const diffColor = diff > 0 ? '#b91c1c' : (diff < 0 ? '#0369a1' : 'inherit');
+            totSql += d.total_sqllab || 0;
+            const diff = d.diff_muatan_vs_sqllab || 0;
+            const diffColor = diff !== 0 ? '#b91c1c' : 'inherit';
             
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${d.sls_id}</td>
                 <td>${d.nmkab} - ${d.nmkec} - ${d.nmdesa} - ${d.nmsls}</td>
                 <td style="text-align: right;">${d.total_muatan.toLocaleString('id-ID')}</td>
-                <td style="text-align: right;">${d.fasih_target_pencacah.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${d.total_sqllab.toLocaleString('id-ID')}</td>
                 <td style="text-align: right; color: ${diffColor}; font-weight: bold;">${diff.toLocaleString('id-ID')}</td>
             `;
             tbody.appendChild(tr);
@@ -166,9 +166,9 @@ function renderRekon() {
         // Update Summary Cards
         document.getElementById('rekon-summary').innerHTML = `
             <div class="summary-card"><div class="label">Total SLS Filtered</div><div class="value">${filtered.length}</div></div>
-            <div class="summary-card"><div class="label">Total Muatan (UTP+SBR+Kel)</div><div class="value">${totMuatan.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Total Target Fasih</div><div class="value">${totFasih.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Total Selisih (Fasih - Muatan)</div><div class="value" style="color: ${totFasih - totMuatan > 0 ? '#b91c1c' : 'inherit'}">${(totFasih - totMuatan).toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Total Muatan (UTP+SBR)</div><div class="value">${totMuatan.toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Total Target SQL Lab</div><div class="value">${totSql.toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Total Selisih (Muatan - SQL Lab)</div><div class="value" style="color: ${totMuatan - totSql !== 0 ? '#b91c1c' : 'inherit'}">${(totMuatan - totSql).toLocaleString('id-ID')}</div></div>
         `;
 
     } else {
@@ -194,24 +194,21 @@ function renderRekon() {
         const tbody = document.getElementById('rekon-table-petugas');
         tbody.innerHTML = '';
         
-        let totMuatan = 0, totFasih = 0, totSql = 0;
+        let totMuatan = 0, totSql = 0;
 
         filtered.forEach(d => {
             totMuatan += d.total_muatan_assigned || 0;
-            totFasih += d.total_fasih || 0;
             totSql += d.total_sqllab || 0;
 
-            const diffMuatan = d.diff_fasih_vs_muatan || 0;
-            const diffSql = d.diff_fasih_vs_sqllab || 0;
+            const diff = d.diff_muatan_vs_sqllab || 0;
+            const diffColor = diff !== 0 ? '#b91c1c' : 'inherit';
             
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${d.email}</td>
                 <td style="text-align: right;">${d.total_muatan_assigned.toLocaleString('id-ID')}</td>
-                <td style="text-align: right;">${d.total_fasih.toLocaleString('id-ID')}</td>
                 <td style="text-align: right;">${d.total_sqllab.toLocaleString('id-ID')}</td>
-                <td style="text-align: right; color: ${diffMuatan > 0 ? '#b91c1c' : 'inherit'}">${diffMuatan.toLocaleString('id-ID')}</td>
-                <td style="text-align: right; color: ${diffSql > 0 ? '#b91c1c' : 'inherit'}">${diffSql.toLocaleString('id-ID')}</td>
+                <td style="text-align: right; color: ${diffColor}; font-weight: bold;">${diff.toLocaleString('id-ID')}</td>
             `;
             tbody.appendChild(tr);
         });
@@ -220,8 +217,8 @@ function renderRekon() {
         document.getElementById('rekon-summary').innerHTML = `
             <div class="summary-card"><div class="label">Total Petugas</div><div class="value">${filtered.length}</div></div>
             <div class="summary-card"><div class="label">Total Beban Muatan</div><div class="value">${totMuatan.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Total Target Fasih</div><div class="value">${totFasih.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Selisih Fasih vs Muatan</div><div class="value" style="color: ${totFasih - totMuatan > 0 ? '#b91c1c' : 'inherit'}">${(totFasih - totMuatan).toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Total Target SQL Lab</div><div class="value">${totSql.toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Selisih Muatan vs SQL Lab</div><div class="value" style="color: ${totMuatan - totSql !== 0 ? '#b91c1c' : 'inherit'}">${(totMuatan - totSql).toLocaleString('id-ID')}</div></div>
         `;
     }
 }
