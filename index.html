@@ -2413,7 +2413,7 @@
 <!-- TAB REKONSILIASI -->
     <div class="tab-content" id="tab-content-rekon" style="display: none; padding: 1rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Monitoring Target Awal dengan Realisasi</h2>
+            <h2>Monitoring Muatan dengan Realisasi</h2>
         </div>
 
         <!-- SUMMARY CARDS -->
@@ -2448,9 +2448,9 @@
                     <tr>
                         <th class="sortable" onclick="sortRekon('sls', 'sls_id')">ID SLS</th>
                         <th class="sortable" onclick="sortRekon('sls', 'nmkab')">Kab/Kec/Desa</th>
-                        <th class="sortable" onclick="sortRekon('sls', 'total_muatan')">Total Muatan (UTP+SBR)</th>
-                        <th class="sortable" onclick="sortRekon('sls', 'total_sqllab')">Target SQL Lab</th>
-                        <th class="sortable" onclick="sortRekon('sls', 'diff_muatan_vs_sqllab')">Selisih (Muatan - SQL Lab)</th>
+                        <th class="sortable" onclick="sortRekon('sls', 'target_awal')">Muatan (UTP+SBR)</th>
+                        <th class="sortable" onclick="sortRekon('sls', 'realisasi')">Realisasi (UTP+SBR)</th>
+                        <th class="sortable" onclick="sortRekon('sls', 'diff')">Selisih (Realisasi - Muatan)</th>
                     </tr>
                 </thead>
                 <tbody id="rekon-table-sls"></tbody>
@@ -2463,9 +2463,9 @@
                 <thead>
                     <tr>
                         <th class="sortable" onclick="sortRekon('petugas', 'email')">Email Petugas</th>
-                        <th class="sortable" onclick="sortRekon('petugas', 'total_muatan_assigned')">Beban Muatan (Assign)</th>
-                        <th class="sortable" onclick="sortRekon('petugas', 'total_sqllab')">Target SQL Lab</th>
-                        <th class="sortable" onclick="sortRekon('petugas', 'diff_muatan_vs_sqllab')">Selisih (Muatan - SQL Lab)</th>
+                        <th class="sortable" onclick="sortRekon('petugas', 'target_awal')">Muatan (UTP+SBR)</th>
+                        <th class="sortable" onclick="sortRekon('petugas', 'realisasi')">Realisasi (UTP+SBR)</th>
+                        <th class="sortable" onclick="sortRekon('petugas', 'diff')">Selisih (Realisasi - Muatan)</th>
                     </tr>
                 </thead>
                 <tbody id="rekon-table-petugas"></tbody>
@@ -2725,8 +2725,8 @@
     <script src="new_businesses_data.js?v=20260730_v4"></script>
     <script src="ipas_data.js?v=20260730_v4"></script>
     <script src="daily_summary.js?v=20260730_v4"></script>
-        <script src="rekon_data.js?v=1785371784631"></script>
-    <script src="rekon.js?v=1785371784631"></script>
+        <script src="rekon_data.js?v=1785374272334"></script>
+    <script src="rekon.js?v=1785374272334"></script>
     <script src="petugas_progress.js?v=20260730_v4"></script>
     <script src="petugas_phones.js?v=20260730_v4"></script>
     <script src="petugas_region_map.js?v=20260730_v4"></script>

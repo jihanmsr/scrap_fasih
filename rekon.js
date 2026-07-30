@@ -3,8 +3,8 @@ let rekonSlsData = [];
 let rekonPetugasData = [];
 let currentRekonSubTab = 'sls';
 let rekonSortConfig = {
-    sls: { key: 'diff_muatan_vs_sqllab', dir: 'desc' },
-    petugas: { key: 'diff_muatan_vs_sqllab', dir: 'desc' }
+    sls: { key: 'diff', dir: 'desc' },
+    petugas: { key: 'diff', dir: 'desc' }
 };
 
 // Load Data
@@ -13,7 +13,7 @@ async function loadRekonData() {
     try {
         if (window.rekonSlsData) rekonSlsData = window.rekonSlsData;
         if (window.rekonPetugasData) rekonPetugasData = window.rekonPetugasData;
-        
+
         initRekonFilters();
         renderRekon();
     } catch (e) {
@@ -51,7 +51,7 @@ function initRekonFilters() {
     // Populate Kab
     const kabs = getUniqueValues(rekonSlsData, 'nmkab');
     populateSelect('rekon-filter-kab', kabs, 'Semua Kab');
-    
+
     // Populate Petugas for Petugas Tab
     const petugasSet = new Set();
     rekonPetugasData.forEach(d => petugasSet.add(d.email));
@@ -86,10 +86,10 @@ function switchRekonSubTab(subTab) {
     currentRekonSubTab = subTab;
     document.getElementById('rekon-sub-btn-sls').classList.toggle('active', subTab === 'sls');
     document.getElementById('rekon-sub-btn-petugas').classList.toggle('active', subTab === 'petugas');
-    
+
     document.getElementById('rekon-sub-sls').style.display = subTab === 'sls' ? 'block' : 'none';
     document.getElementById('rekon-sub-petugas').style.display = subTab === 'petugas' ? 'block' : 'none';
-    
+
     // Toggle relevant filters
     const showSlsFilters = subTab === 'sls';
     document.getElementById('rekon-filter-kab').style.display = showSlsFilters ? 'inline-block' : 'none';
@@ -97,7 +97,7 @@ function switchRekonSubTab(subTab) {
     document.getElementById('rekon-filter-desa').style.display = showSlsFilters ? 'inline-block' : 'none';
     document.getElementById('rekon-filter-sls').style.display = showSlsFilters ? 'inline-block' : 'none';
     document.getElementById('rekon-filter-petugas').style.display = !showSlsFilters ? 'inline-block' : 'none';
-    
+
     renderRekon();
 }
 
@@ -113,7 +113,7 @@ function sortRekon(type, key) {
 
 function renderRekon() {
     const search = document.getElementById('rekon-filter-search').value.toLowerCase();
-    
+
     if (currentRekonSubTab === 'sls') {
         const kab = document.getElementById('rekon-filter-kab').value;
         const kec = document.getElementById('rekon-filter-kec').value;
@@ -121,8 +121,8 @@ function renderRekon() {
         const sls = document.getElementById('rekon-filter-sls').value;
 
         let filtered = rekonSlsData.filter(d => {
-            const matchSearch = String(d.sls_id).toLowerCase().includes(search) || 
-                                (d.nmdesa && String(d.nmdesa).toLowerCase().includes(search));
+            const matchSearch = String(d.sls_id).toLowerCase().includes(search) ||
+                (d.nmdesa && String(d.nmdesa).toLowerCase().includes(search));
             const matchKab = !kab || d.nmkab === kab;
             const matchKec = !kec || d.nmkec === kec;
             const matchDesa = !desa || d.nmdesa === desa;
@@ -144,20 +144,20 @@ function renderRekon() {
 
         const tbody = document.getElementById('rekon-table-sls');
         tbody.innerHTML = '';
-        let totMuatan = 0, totSql = 0;
+        let totTarget = 0, totRealisasi = 0;
 
         filtered.forEach(d => {
-            totMuatan += d.total_muatan || 0;
-            totSql += d.total_sqllab || 0;
-            const diff = d.diff_muatan_vs_sqllab || 0;
+            totTarget += d.target_awal || 0;
+            totRealisasi += d.realisasi || 0;
+            const diff = d.diff || 0;
             const diffColor = diff !== 0 ? '#b91c1c' : 'inherit';
-            
+
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${d.sls_id}</td>
                 <td>${d.nmkab} - ${d.nmkec} - ${d.nmdesa} - ${d.nmsls}</td>
-                <td style="text-align: right;">${d.total_muatan.toLocaleString('id-ID')}</td>
-                <td style="text-align: right;">${d.total_sqllab.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${d.target_awal.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${d.realisasi.toLocaleString('id-ID')}</td>
                 <td style="text-align: right; color: ${diffColor}; font-weight: bold;">${diff.toLocaleString('id-ID')}</td>
             `;
             tbody.appendChild(tr);
@@ -166,15 +166,15 @@ function renderRekon() {
         // Update Summary Cards
         document.getElementById('rekon-summary').innerHTML = `
             <div class="summary-card"><div class="label">Total SLS Filtered</div><div class="value">${filtered.length}</div></div>
-            <div class="summary-card"><div class="label">Total Muatan (UTP+SBR)</div><div class="value">${totMuatan.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Total Target SQL Lab</div><div class="value">${totSql.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Total Selisih (Muatan - SQL Lab)</div><div class="value" style="color: ${totMuatan - totSql !== 0 ? '#b91c1c' : 'inherit'}">${(totMuatan - totSql).toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Total Muatan (UTP+SBR)</div><div class="value">${totTarget.toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Total Realisasi (UTP+SBR)</div><div class="value">${totRealisasi.toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Total Selisih (Realisasi - Muatan)</div><div class="value" style="color: ${totRealisasi - totTarget !== 0 ? '#b91c1c' : 'inherit'}">${(totRealisasi - totTarget).toLocaleString('id-ID')}</div></div>
         `;
 
     } else {
         // Petugas
         const emailFilter = document.getElementById('rekon-filter-petugas').value;
-        
+
         let filtered = rekonPetugasData.filter(d => {
             const matchSearch = String(d.email).toLowerCase().includes(search);
             const matchEmail = !emailFilter || d.email === emailFilter;
@@ -193,21 +193,21 @@ function renderRekon() {
 
         const tbody = document.getElementById('rekon-table-petugas');
         tbody.innerHTML = '';
-        
-        let totMuatan = 0, totSql = 0;
+
+        let totTarget = 0, totRealisasi = 0;
 
         filtered.forEach(d => {
-            totMuatan += d.total_muatan_assigned || 0;
-            totSql += d.total_sqllab || 0;
+            totTarget += d.target_awal || 0;
+            totRealisasi += d.realisasi || 0;
 
-            const diff = d.diff_muatan_vs_sqllab || 0;
+            const diff = d.diff || 0;
             const diffColor = diff !== 0 ? '#b91c1c' : 'inherit';
-            
+
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${d.email}</td>
-                <td style="text-align: right;">${d.total_muatan_assigned.toLocaleString('id-ID')}</td>
-                <td style="text-align: right;">${d.total_sqllab.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${d.target_awal.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${d.realisasi.toLocaleString('id-ID')}</td>
                 <td style="text-align: right; color: ${diffColor}; font-weight: bold;">${diff.toLocaleString('id-ID')}</td>
             `;
             tbody.appendChild(tr);
@@ -216,9 +216,9 @@ function renderRekon() {
         // Update Summary Cards
         document.getElementById('rekon-summary').innerHTML = `
             <div class="summary-card"><div class="label">Total Petugas</div><div class="value">${filtered.length}</div></div>
-            <div class="summary-card"><div class="label">Total Beban Muatan</div><div class="value">${totMuatan.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Total Target SQL Lab</div><div class="value">${totSql.toLocaleString('id-ID')}</div></div>
-            <div class="summary-card"><div class="label">Selisih Muatan vs SQL Lab</div><div class="value" style="color: ${totMuatan - totSql !== 0 ? '#b91c1c' : 'inherit'}">${(totMuatan - totSql).toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Total Muatan (UTP+SBR)</div><div class="value">${totTarget.toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Total Realisasi (UTP+SBR)</div><div class="value">${totRealisasi.toLocaleString('id-ID')}</div></div>
+            <div class="summary-card"><div class="label">Selisih Realisasi dan Muatan</div><div class="value" style="color: ${totRealisasi - totTarget !== 0 ? '#b91c1c' : 'inherit'}">${(totRealisasi - totTarget).toLocaleString('id-ID')}</div></div>
         `;
     }
 }
