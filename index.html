@@ -14,10 +14,10 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js?v=20260730_v1"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js?v=20260730_v1"></script>
-    <script src="daily_submission_stats.js?v=20260730_v1"></script>
-    <script src="daily_summary.js?v=20260730_v1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js?v=20260730_v3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js?v=20260730_v3"></script>
+    <script src="daily_submission_stats.js?v=20260730_v3"></script>
+    <script src="daily_summary.js?v=20260730_v3"></script>
         
     <link rel="stylesheet" href="style.css?v=7">
     <style>
@@ -474,6 +474,11 @@
                             style="color: white; font-size: 1.85rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">0 Hari
                         </div>
 
+                    </div>
+                    <div class="stat-card-compact" style="--stat-color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.2); background: rgba(245, 158, 11, 0.05);">
+                        <div class="stat-label" style="color: #d97706; font-weight: 700;">Target Harian</div>
+                        <div class="stat-value" id="petugas-stat-target-harian" style="color: #b45309; font-size: 1.6rem;">0 <span
+                                style="font-size: 0.8rem; opacity: 0.8; font-weight: 500;">assignment/petugas/hari</span></div>
                     </div>
                 </div>
 
@@ -2714,23 +2719,23 @@
     </div>
 
     <!-- Pako library for base64 gzip decompression -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js?v=20260730_v1"></script>
-    <script src="supabase_config.js?v=20260730_v1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js?v=20260730_v3"></script>
+    <script src="supabase_config.js?v=20260730_v3"></script>
     <script src="users.js?v=2"></script>
-    <script src="auth.js?v=20260730_v1"></script>
-    <script src="mitra_data.js?v=20260730_v1"></script>
-    <script src="mysql_data.js?v=20260730_v1"></script>
-    <script src="new_businesses_data.js?v=20260730_v1"></script>
-    <script src="ipas_data.js?v=20260730_v1"></script>
-    <script src="daily_summary.js?v=20260730_v1"></script>
+    <script src="auth.js?v=20260730_v3"></script>
+    <script src="mitra_data.js?v=20260730_v3"></script>
+    <script src="mysql_data.js?v=20260730_v3"></script>
+    <script src="new_businesses_data.js?v=20260730_v3"></script>
+    <script src="ipas_data.js?v=20260730_v3"></script>
+    <script src="daily_summary.js?v=20260730_v3"></script>
         <script src="rekon_data.js?v=1785371784631"></script>
     <script src="rekon.js?v=1785371784631"></script>
-    <script src="petugas_progress.js?v=20260730_v1"></script>
-    <script src="petugas_phones.js?v=20260730_v1"></script>
-    <script src="petugas_region_map.js?v=20260730_v1"></script>
-    <script src="fast_petugas_progress.js?v=20260730_v1"></script>
-    <script src="fast_petugas_history.js?v=20260730_v1"></script>
-    <script src="app.js?v=20260730_v1" defer></script>
+    <script src="petugas_progress.js?v=20260730_v3"></script>
+    <script src="petugas_phones.js?v=20260730_v3"></script>
+    <script src="petugas_region_map.js?v=20260730_v3"></script>
+    <script src="fast_petugas_progress.js?v=20260730_v3"></script>
+    <script src="fast_petugas_history.js?v=20260730_v3"></script>
+    <script src="app.js?v=20260730_v3" defer></script>
 
     <script>
         function switchSubTab(surveyType, subTab) {

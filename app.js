@@ -7917,6 +7917,7 @@ window.fetchAllAssignments = async function() {
             let realTotalAll = 0;
             let realSelesaiAll = 0;
             let realBelumAll = 0;
+            let realTotalPetugasAll = 0;
             
             for (const [email, pMapData] of Object.entries(window.PETUGAS_PROGRESS_MAP['Pencacah'])) {
                 let isPetugasInWilayah = false;
@@ -7943,27 +7944,52 @@ window.fetchAllAssignments = async function() {
                     realTotalAll += pTotal;
                     realSelesaiAll += pSelesai;
                     realBelumAll += pBelum;
+                    
+                    // Count this officer if they have any target
+                    if (pTotal > 0) realTotalPetugasAll++;
                 }
             }
             
             const pctSelesaiAll = realTotalAll > 0 ? ((realSelesaiAll / realTotalAll) * 100).toFixed(1) : 0;
             const pctBelumAll = realTotalAll > 0 ? ((realBelumAll / realTotalAll) * 100).toFixed(1) : 0;
             
+            let remainingDays = Math.ceil((new Date('2026-08-17T23:59:59') - new Date()) / (1000 * 60 * 60 * 24));
+            if (remainingDays < 1) remainingDays = 1;
+            let targetHarian = 0;
+            if (realTotalPetugasAll > 0) {
+                targetHarian = (realBelumAll / realTotalPetugasAll) / remainingDays;
+            }
+            
             const totalEl = document.getElementById('petugas-stat-total');
             const selesaiEl = document.getElementById('petugas-stat-selesai');
             const belumEl = document.getElementById('petugas-stat-belum');
+            const targetHarianEl = document.getElementById('petugas-stat-target-harian');
             
             if (totalEl) totalEl.textContent = realTotalAll.toLocaleString('id-ID');
             if (selesaiEl) selesaiEl.innerHTML = `${realSelesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
             if (belumEl) belumEl.innerHTML = `${realBelumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+            if (targetHarianEl) targetHarianEl.innerHTML = `${targetHarian.toFixed(1).replace('.', ',')} <span style="font-size: 0.8rem; opacity: 0.8; font-weight: 500;">assignment/petugas/hari</span>`;
             if (typeof updateCountdownSE2026 === 'function') updateCountdownSE2026(realBelumAll);
         } else if (Array.isArray(data) && data.length > 0) {
             // Fallback
             const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;
             const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
+            
+            const uniquePetugas = new Set(data.map(d => d.email)).size;
+            let remainingDays = Math.ceil((new Date('2026-08-17T23:59:59') - new Date()) / (1000 * 60 * 60 * 24));
+            if (remainingDays < 1) remainingDays = 1;
+            let targetHarian = 0;
+            if (uniquePetugas > 0) {
+                targetHarian = (belumAll / uniquePetugas) / remainingDays;
+            }
+            
             document.getElementById('petugas-stat-total').textContent = totalAll.toLocaleString('id-ID');
             document.getElementById('petugas-stat-selesai').innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
             document.getElementById('petugas-stat-belum').innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+            
+            const targetHarianEl = document.getElementById('petugas-stat-target-harian');
+            if (targetHarianEl) targetHarianEl.innerHTML = `${targetHarian.toFixed(1).replace('.', ',')} <span style="font-size: 0.8rem; opacity: 0.8; font-weight: 500;">assignment/petugas/hari</span>`;
+            
             if (typeof updateCountdownSE2026 === 'function') updateCountdownSE2026(belumAll);
         }
 
