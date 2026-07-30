@@ -1,5 +1,5 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-07-30T13:17:10.035247+08:00",
+  "updated_at": "2026-07-30T13:21:19.673194+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
@@ -39,6 +39,9 @@ window.IPAS_DATA = {
             "DRAFT": 121,
             "SUBMITTED RESPONDENT": 50
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 129,
           "new_rumah_overall": 0
         },
@@ -71,6 +74,9 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 4,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 341,
           "new_rumah_overall": 157
         },
@@ -103,6 +109,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 11,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 200,
           "new_rumah_overall": 113
         },
@@ -136,6 +145,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 5,
             "EDITED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 1027,
           "new_rumah_overall": 474
         },
@@ -168,6 +180,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 2,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 249,
           "new_rumah_overall": 119
         },
@@ -200,6 +215,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 2,
             "EDITED BY Admin Kabupaten": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 221,
           "new_rumah_overall": 101
         },
@@ -232,6 +250,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 2,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 318,
           "new_rumah_overall": 225
         },
@@ -265,6 +286,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 11,
             "SUBMITTED RESPONDENT": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 237,
           "new_rumah_overall": 229
         },
@@ -297,6 +321,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 3,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 288,
           "new_rumah_overall": 314
         },
@@ -331,6 +358,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 1,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 312,
           "new_rumah_overall": 117
         },
@@ -363,6 +393,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 3,
             "SUBMITTED RESPONDENT": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 217,
           "new_rumah_overall": 105
         },
@@ -393,6 +426,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 141,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 295,
           "new_rumah_overall": 158
         },
@@ -426,6 +462,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 1,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 254,
           "new_rumah_overall": 147
         }
@@ -507,6 +546,9 @@ window.IPAS_DATA = {
             "total": 1,
             "OPEN": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 0,
           "new_rumah_overall": 0
         },
@@ -538,6 +580,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 8,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 261,
           "new_rumah_overall": 221
         },
@@ -568,6 +613,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 66,
             "REVOKED BY Pengawas": 13
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 564,
           "new_rumah_overall": 208
         },
@@ -598,6 +646,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 66,
             "REVOKED BY Pengawas": 5
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 261,
           "new_rumah_overall": 196
         },
@@ -628,6 +679,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 40,
             "REJECTED BY Pengawas": 26
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 369,
           "new_rumah_overall": 132
         },
@@ -658,6 +712,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 32,
             "REVOKED BY Pengawas": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 319,
           "new_rumah_overall": 120
         },
@@ -688,6 +745,9 @@ window.IPAS_DATA = {
             "DRAFT": 65,
             "REVOKED BY Pengawas": 12
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 220,
           "new_rumah_overall": 127
         },
@@ -718,6 +778,9 @@ window.IPAS_DATA = {
             "DRAFT": 643,
             "REVOKED BY Pengawas": 6
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 406,
           "new_rumah_overall": 172
         },
@@ -748,6 +811,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 251,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 166,
           "new_rumah_overall": 313
         },
@@ -780,6 +846,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 4,
             "REJECTED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 322,
           "new_rumah_overall": 164
         },
@@ -812,6 +881,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 9,
             "COMPLETED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 215,
           "new_rumah_overall": 178
         },
@@ -844,6 +916,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 2,
             "SUBMITTED RESPONDENT": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 863,
           "new_rumah_overall": 819
         },
@@ -874,6 +949,9 @@ window.IPAS_DATA = {
             "DRAFT": 130,
             "REVOKED BY Pengawas": 8
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 260,
           "new_rumah_overall": 155
         },
@@ -905,6 +983,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 2,
             "COMPLETED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 543,
           "new_rumah_overall": 292
         },
@@ -938,6 +1019,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 4,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 667,
           "new_rumah_overall": 656
         },
@@ -970,6 +1054,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 2,
             "COMPLETED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 188,
           "new_rumah_overall": 66
         },
@@ -1002,6 +1089,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 12,
             "COMPLETED BY Admin Kabupaten": 8
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 363,
           "new_rumah_overall": 143
         },
@@ -1032,6 +1122,9 @@ window.IPAS_DATA = {
             "DRAFT": 258,
             "REVOKED BY Pengawas": 14
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 428,
           "new_rumah_overall": 282
         },
@@ -1061,6 +1154,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 31,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 45,
           "new_rumah_overall": 15
         },
@@ -1091,6 +1187,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 29,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 133,
           "new_rumah_overall": 67
         },
@@ -1121,6 +1220,9 @@ window.IPAS_DATA = {
             "DRAFT": 230,
             "REVOKED BY Pengawas": 7
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 210,
           "new_rumah_overall": 117
         },
@@ -1152,6 +1254,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 4,
             "EDITED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 233,
           "new_rumah_overall": 88
         },
@@ -1183,6 +1288,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 1,
             "EDITED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 215,
           "new_rumah_overall": 92
         },
@@ -1213,6 +1321,9 @@ window.IPAS_DATA = {
             "DRAFT": 116,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 95,
           "new_rumah_overall": 84
         },
@@ -1241,6 +1352,9 @@ window.IPAS_DATA = {
             "OPEN": 495,
             "REJECTED BY Pengawas": 215
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 146,
           "new_rumah_overall": 103
         }
@@ -1328,6 +1442,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 45,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 35,
           "new_rumah_overall": 20
         },
@@ -1357,6 +1474,9 @@ window.IPAS_DATA = {
             "APPROVED BY Pengawas": 46,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 87,
           "new_rumah_overall": 4
         },
@@ -1388,6 +1508,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 13,
             "REVOKED BY Pengawas": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 274,
           "new_rumah_overall": 137
         },
@@ -1420,6 +1543,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 1,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 1716,
           "new_rumah_overall": 1724
         },
@@ -1449,6 +1575,9 @@ window.IPAS_DATA = {
             "DRAFT": 77,
             "REJECTED BY Pengawas": 8
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 81,
           "new_rumah_overall": 106
         },
@@ -1482,6 +1611,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 1,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 853,
           "new_rumah_overall": 787
         },
@@ -1515,6 +1647,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 2,
             "REVOKED BY Pengawas": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 395,
           "new_rumah_overall": 85
         },
@@ -1545,6 +1680,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 15,
             "COMPLETED BY Admin Kabupaten": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 514,
           "new_rumah_overall": 293
         },
@@ -1576,6 +1714,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 31,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 428,
           "new_rumah_overall": 381
         },
@@ -1608,6 +1749,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 10,
             "REJECTED BY Admin Kabupaten": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 285,
           "new_rumah_overall": 182
         }
@@ -1691,6 +1835,9 @@ window.IPAS_DATA = {
             "OPEN": 59,
             "SUBMITTED RESPONDENT": 39
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 101,
           "new_rumah_overall": 0
         },
@@ -1725,6 +1872,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 1,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 340,
           "new_rumah_overall": 214
         },
@@ -1757,6 +1907,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 6,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 134,
           "new_rumah_overall": 156
         },
@@ -1788,6 +1941,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 10,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 111,
           "new_rumah_overall": 58
         },
@@ -1820,6 +1976,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 1,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 30,
           "new_rumah_overall": 14
         },
@@ -1850,6 +2009,9 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 10,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 32,
           "new_rumah_overall": 22
         },
@@ -1881,6 +2043,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 79,
             "REVOKED BY Pengawas": 30
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 414,
           "new_rumah_overall": 309
         },
@@ -1913,6 +2078,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 28,
             "COMPLETED BY Admin Kabupaten": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 217,
           "new_rumah_overall": 171
         },
@@ -1946,6 +2114,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 6,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 273,
           "new_rumah_overall": 176
         },
@@ -1977,6 +2148,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 54,
             "REVOKED BY Pengawas": 10
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 296,
           "new_rumah_overall": 405
         },
@@ -2009,6 +2183,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 8,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 65,
           "new_rumah_overall": 23
         },
@@ -2040,6 +2217,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 10,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 110,
           "new_rumah_overall": 58
         },
@@ -2070,6 +2250,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 7,
             "EDITED BY Admin Kabupaten": 5
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 35,
           "new_rumah_overall": 52
         },
@@ -2101,6 +2284,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 56,
             "REVOKED BY Pengawas": 12
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 358,
           "new_rumah_overall": 335
         },
@@ -2132,6 +2318,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 34,
             "REVOKED BY Pengawas": 7
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 134,
           "new_rumah_overall": 122
         },
@@ -2163,6 +2352,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 78,
             "REVOKED BY Pengawas": 13
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 254,
           "new_rumah_overall": 142
         },
@@ -2195,6 +2387,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 10,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 259,
           "new_rumah_overall": 281
         },
@@ -2227,6 +2422,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 13,
             "COMPLETED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 400,
           "new_rumah_overall": 270
         },
@@ -2259,6 +2457,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 5,
             "SUBMITTED RESPONDENT": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 312,
           "new_rumah_overall": 218
         },
@@ -2290,6 +2491,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 14,
             "REVOKED BY Pengawas": 8
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 207,
           "new_rumah_overall": 306
         }
@@ -2378,6 +2582,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 14,
             "REJECTED BY Admin Kabupaten": 5
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 529,
           "new_rumah_overall": 406
         },
@@ -2408,6 +2615,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 12,
             "REVOKED BY Pengawas": 9
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 112,
           "new_rumah_overall": 32
         },
@@ -2442,6 +2652,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 4,
             "REJECTED BY Admin Kabupaten": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 746,
           "new_rumah_overall": 605
         },
@@ -2475,6 +2688,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 28,
             "REJECTED BY Admin Kabupaten": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 643,
           "new_rumah_overall": 430
         },
@@ -2507,6 +2723,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 5,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 265,
           "new_rumah_overall": 97
         },
@@ -2539,6 +2758,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 14,
             "DRAFT": 8
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 251,
           "new_rumah_overall": 338
         },
@@ -2570,6 +2792,9 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 25,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 337,
           "new_rumah_overall": 244
         },
@@ -2603,6 +2828,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 7,
             "REJECTED BY Admin Kabupaten": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 453,
           "new_rumah_overall": 291
         },
@@ -2635,6 +2863,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 9,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 305,
           "new_rumah_overall": 276
         },
@@ -2667,6 +2898,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 4,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 241,
           "new_rumah_overall": 197
         },
@@ -2700,6 +2934,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 4,
             "REJECTED BY Admin Kabupaten": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 378,
           "new_rumah_overall": 463
         },
@@ -2733,6 +2970,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 31,
             "REJECTED BY Admin Kabupaten": 5
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 470,
           "new_rumah_overall": 376
         },
@@ -2766,6 +3006,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 6,
             "REJECTED BY Admin Kabupaten": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 208,
           "new_rumah_overall": 221
         },
@@ -2799,6 +3042,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 8,
             "REJECTED BY Admin Kabupaten": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 786,
           "new_rumah_overall": 390
         },
@@ -2832,6 +3078,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 2,
             "COMPLETED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 455,
           "new_rumah_overall": 264
         },
@@ -2863,6 +3112,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 6,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 129,
           "new_rumah_overall": 114
         }
@@ -2947,6 +3199,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 35,
             "EDITED BY Admin Kabupaten": 12
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 634,
           "new_rumah_overall": 439
         },
@@ -2978,6 +3233,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 21,
             "REVOKED BY Pengawas": 5
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 341,
           "new_rumah_overall": 363
         },
@@ -3010,6 +3268,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 18,
             "REVOKED BY Pengawas": 6
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 590,
           "new_rumah_overall": 487
         },
@@ -3042,6 +3303,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 12,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 399,
           "new_rumah_overall": 419
         },
@@ -3071,6 +3335,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 162,
             "REJECTED BY Pengawas": 8
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 359,
           "new_rumah_overall": 180
         },
@@ -3105,6 +3372,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 1,
             "EDITED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 2260,
           "new_rumah_overall": 1595
         },
@@ -3135,6 +3405,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 72,
             "REVOKED BY Pengawas": 7
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 388,
           "new_rumah_overall": 155
         },
@@ -3166,6 +3439,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 31,
             "EDITED BY Admin Kabupaten": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 1289,
           "new_rumah_overall": 761
         },
@@ -3197,6 +3473,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 63,
             "REVOKED BY Pengawas": 18
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 616,
           "new_rumah_overall": 409
         },
@@ -3229,6 +3508,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 4,
             "REJECTED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 344,
           "new_rumah_overall": 187
         }
@@ -3312,6 +3594,9 @@ window.IPAS_DATA = {
             "OPEN": 39,
             "SUBMITTED RESPONDENT": 26
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 42,
           "new_rumah_overall": 0
         },
@@ -3346,6 +3631,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 3,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 419,
           "new_rumah_overall": 248
         },
@@ -3379,6 +3667,9 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 6,
             "EDITED BY Admin Kabupaten": 5
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 1290,
           "new_rumah_overall": 448
         },
@@ -3412,6 +3703,9 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 2,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 241,
           "new_rumah_overall": 90
         },
@@ -3445,6 +3739,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 3,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 457,
           "new_rumah_overall": 243
         },
@@ -3478,6 +3775,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 2,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 322,
           "new_rumah_overall": 153
         },
@@ -3512,6 +3812,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 9,
             "SUBMITTED RESPONDENT": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 533,
           "new_rumah_overall": 224
         },
@@ -3546,6 +3849,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 11,
             "SUBMITTED RESPONDENT": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 446,
           "new_rumah_overall": 96
         },
@@ -3577,6 +3883,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 30,
             "EDITED BY Admin Kabupaten": 22
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 359,
           "new_rumah_overall": 102
         },
@@ -3610,6 +3919,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 9,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 552,
           "new_rumah_overall": 77
         },
@@ -3642,6 +3954,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 13,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 399,
           "new_rumah_overall": 126
         },
@@ -3674,6 +3989,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 11,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 204,
           "new_rumah_overall": 102
         }
@@ -3761,6 +4079,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 4,
             "EDITED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 633,
           "new_rumah_overall": 272
         },
@@ -3792,6 +4113,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 122,
             "REVOKED BY Pengawas": 15
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 718,
           "new_rumah_overall": 285
         },
@@ -3823,6 +4147,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 3,
             "DRAFT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 337,
           "new_rumah_overall": 64
         },
@@ -3857,6 +4184,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 3,
             "EDITED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 692,
           "new_rumah_overall": 524
         },
@@ -3888,6 +4218,9 @@ window.IPAS_DATA = {
             "DRAFT": 39,
             "REVOKED BY Pengawas": 8
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 375,
           "new_rumah_overall": 394
         },
@@ -3920,6 +4253,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 5,
             "EDITED BY Admin Kabupaten": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 164,
           "new_rumah_overall": 49
         },
@@ -3953,6 +4289,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 1,
             "REVOKED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 127,
           "new_rumah_overall": 30
         },
@@ -3984,6 +4323,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 47,
             "REVOKED BY Pengawas": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 183,
           "new_rumah_overall": 115
         },
@@ -4017,6 +4359,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 7,
             "REVOKED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 525,
           "new_rumah_overall": 384
         },
@@ -4048,6 +4393,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 93,
             "REVOKED BY Pengawas": 16
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 469,
           "new_rumah_overall": 359
         },
@@ -4080,6 +4428,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 10,
             "REJECTED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 337,
           "new_rumah_overall": 354
         },
@@ -4113,6 +4464,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 1,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 222,
           "new_rumah_overall": 272
         },
@@ -4145,6 +4499,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 65,
             "REVOKED BY Pengawas": 5
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 600,
           "new_rumah_overall": 282
         },
@@ -4178,6 +4535,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 15,
             "EDITED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 908,
           "new_rumah_overall": 482
         },
@@ -4209,6 +4569,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 41,
             "REVOKED BY Pengawas": 28
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 327,
           "new_rumah_overall": 197
         },
@@ -4241,6 +4604,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 7,
             "EDITED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 365,
           "new_rumah_overall": 173
         },
@@ -4273,6 +4639,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 15,
             "EDITED BY Admin Kabupaten": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 732,
           "new_rumah_overall": 457
         },
@@ -4305,6 +4674,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 19,
             "EDITED BY Admin Kabupaten": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 630,
           "new_rumah_overall": 317
         },
@@ -4337,6 +4709,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 23,
             "EDITED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 340,
           "new_rumah_overall": 156
         },
@@ -4369,6 +4744,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 9,
             "EDITED BY Admin Kabupaten": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 609,
           "new_rumah_overall": 414
         },
@@ -4401,6 +4779,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 6,
             "EDITED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 174,
           "new_rumah_overall": 115
         },
@@ -4434,6 +4815,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 4,
             "EDITED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 504,
           "new_rumah_overall": 228
         },
@@ -4465,6 +4849,9 @@ window.IPAS_DATA = {
             "DRAFT": 107,
             "REVOKED BY Pengawas": 12
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 526,
           "new_rumah_overall": 388
         }
@@ -4547,6 +4934,9 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 19,
             "OPEN": 10
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 0,
           "new_rumah_overall": 0
         },
@@ -4579,6 +4969,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 5,
             "EDITED BY Admin Kabupaten": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 387,
           "new_rumah_overall": 208
         },
@@ -4612,6 +5005,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 2,
             "REVOKED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 407,
           "new_rumah_overall": 215
         },
@@ -4646,6 +5042,9 @@ window.IPAS_DATA = {
             "EDITED BY Pengawas": 1,
             "REVOKED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 629,
           "new_rumah_overall": 255
         },
@@ -4679,6 +5078,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 13,
             "REVOKED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 692,
           "new_rumah_overall": 206
         },
@@ -4712,6 +5114,9 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 2,
             "REVOKED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 591,
           "new_rumah_overall": 402
         },
@@ -4744,6 +5149,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 9,
             "SUBMITTED RESPONDENT": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 647,
           "new_rumah_overall": 664
         },
@@ -4775,6 +5183,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 18,
             "REVOKED BY Pengawas": 18
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 216,
           "new_rumah_overall": 165
         },
@@ -4806,6 +5217,9 @@ window.IPAS_DATA = {
             "DRAFT": 1,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 117,
           "new_rumah_overall": 53
         },
@@ -4838,6 +5252,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 3,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 255,
           "new_rumah_overall": 74
         },
@@ -4870,6 +5287,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 2,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 138,
           "new_rumah_overall": 84
         },
@@ -4902,6 +5322,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 1,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 88,
           "new_rumah_overall": 33
         },
@@ -4934,6 +5357,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 2,
             "EDITED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 49,
           "new_rumah_overall": 88
         }
@@ -5022,6 +5448,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 12,
             "REVOKED BY Pengawas": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 135,
           "new_rumah_overall": 32
         },
@@ -5054,6 +5483,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 3,
             "EDITED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 180,
           "new_rumah_overall": 54
         },
@@ -5084,6 +5516,9 @@ window.IPAS_DATA = {
             "DRAFT": 15,
             "REVOKED BY Pengawas": 9
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 197,
           "new_rumah_overall": 104
         },
@@ -5114,6 +5549,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 4,
             "DRAFT": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 112,
           "new_rumah_overall": 12
         },
@@ -5144,6 +5582,9 @@ window.IPAS_DATA = {
             "DRAFT": 13,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 106,
           "new_rumah_overall": 59
         },
@@ -5176,6 +5617,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 4,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 468,
           "new_rumah_overall": 281
         },
@@ -5206,6 +5650,9 @@ window.IPAS_DATA = {
             "DRAFT": 150,
             "REVOKED BY Pengawas": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 211,
           "new_rumah_overall": 162
         },
@@ -5236,6 +5683,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 82,
             "REVOKED BY Pengawas": 12
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 373,
           "new_rumah_overall": 258
         },
@@ -5267,6 +5717,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 69,
             "REVOKED BY Pengawas": 5
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 432,
           "new_rumah_overall": 291
         },
@@ -5298,6 +5751,9 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 22,
             "REVOKED BY Pengawas": 6
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 193,
           "new_rumah_overall": 100
         },
@@ -5331,6 +5787,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 6,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 372,
           "new_rumah_overall": 266
         },
@@ -5364,6 +5823,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 34,
             "SUBMITTED RESPONDENT": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 1298,
           "new_rumah_overall": 560
         },
@@ -5398,6 +5860,9 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 2,
             "REJECTED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 397,
           "new_rumah_overall": 316
         },
@@ -5431,6 +5896,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 2,
             "SUBMITTED RESPONDENT": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 655,
           "new_rumah_overall": 615
         },
@@ -5461,6 +5929,9 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 5,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 144,
           "new_rumah_overall": 36
         },
@@ -5493,6 +5964,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 2,
             "REVOKED BY Pengawas": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 144,
           "new_rumah_overall": 118
         }
@@ -5575,6 +6049,9 @@ window.IPAS_DATA = {
             "DRAFT": 1,
             "OPEN": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 2,
           "new_rumah_overall": 0
         },
@@ -5608,6 +6085,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 1,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 232,
           "new_rumah_overall": 89
         },
@@ -5640,6 +6120,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 1,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 130,
           "new_rumah_overall": 48
         },
@@ -5671,6 +6154,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 9,
             "REJECTED BY Pengawas": 6
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 171,
           "new_rumah_overall": 83
         },
@@ -5704,6 +6190,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 7,
             "EDITED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 370,
           "new_rumah_overall": 549
         },
@@ -5735,6 +6224,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 5,
             "DRAFT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 142,
           "new_rumah_overall": 168
         },
@@ -5768,6 +6260,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 2,
             "REJECTED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 68,
           "new_rumah_overall": 106
         },
@@ -5801,6 +6296,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 1,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 261,
           "new_rumah_overall": 163
         }
@@ -5882,6 +6380,9 @@ window.IPAS_DATA = {
             "total": 1,
             "OPEN": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 1,
           "new_rumah_overall": 0
         },
@@ -5914,6 +6415,9 @@ window.IPAS_DATA = {
             "REJECTED BY Admin Kabupaten": 3,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 84,
           "new_rumah_overall": 56
         },
@@ -5946,6 +6450,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 2,
             "REVOKED BY Pengawas": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 285,
           "new_rumah_overall": 92
         },
@@ -5978,6 +6485,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 7,
             "COMPLETED BY Admin Kabupaten": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 249,
           "new_rumah_overall": 51
         },
@@ -6011,6 +6521,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 5,
             "SUBMITTED RESPONDENT": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 430,
           "new_rumah_overall": 207
         },
@@ -6042,6 +6555,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 2,
             "COMPLETED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 414,
           "new_rumah_overall": 188
         },
@@ -6073,6 +6589,9 @@ window.IPAS_DATA = {
             "DRAFT": 3,
             "COMPLETED BY Admin Kabupaten": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 120,
           "new_rumah_overall": 57
         },
@@ -6104,6 +6623,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 21,
             "EDITED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 92,
           "new_rumah_overall": 124
         },
@@ -6136,6 +6658,9 @@ window.IPAS_DATA = {
             "EDITED BY Admin Kabupaten": 6,
             "REVOKED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 185,
           "new_rumah_overall": 122
         },
@@ -6167,6 +6692,9 @@ window.IPAS_DATA = {
             "DRAFT": 6,
             "EDITED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 237,
           "new_rumah_overall": 72
         },
@@ -6198,6 +6726,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 10,
             "COMPLETED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 191,
           "new_rumah_overall": 19
         }
@@ -6277,6 +6808,9 @@ window.IPAS_DATA = {
             "DRAFT": 24,
             "OPEN": 14
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 12,
           "new_rumah_overall": 0
         },
@@ -6311,6 +6845,9 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 7,
             "REJECTED BY Admin Kabupaten": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 1030,
           "new_rumah_overall": 831
         },
@@ -6345,6 +6882,9 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 5,
             "REJECTED BY Admin Kabupaten": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 792,
           "new_rumah_overall": 1031
         },
@@ -6379,6 +6919,9 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 3,
             "REVOKED BY Admin Kabupaten": 1
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 693,
           "new_rumah_overall": 955
         },
@@ -6413,6 +6956,9 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 7,
             "EDITED BY Pengawas": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 1731,
           "new_rumah_overall": 986
         },
@@ -6447,6 +6993,9 @@ window.IPAS_DATA = {
             "REVOKED BY Admin Kabupaten": 5,
             "SUBMITTED RESPONDENT": 4
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 567,
           "new_rumah_overall": 894
         },
@@ -6480,6 +7029,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 32,
             "SUBMITTED RESPONDENT": 7
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 1870,
           "new_rumah_overall": 1803
         },
@@ -6513,6 +7065,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 14,
             "SUBMITTED RESPONDENT": 3
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 339,
           "new_rumah_overall": 399
         },
@@ -6546,6 +7101,9 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 3,
             "REVOKED BY Pengawas": 2
           },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 303,
           "new_rumah_overall": 261
         }
@@ -6629,7 +7187,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[031] TOTIKUM SELATAN",
@@ -6649,7 +7210,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] TINANGKUNG",
@@ -6672,7 +7236,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 5,
             "SUBMITTED RESPONDENT": 5
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[041] TINANGKUNG SELATAN",
@@ -6692,7 +7259,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[042] TINANGKUNG UTARA",
@@ -6712,7 +7282,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[050] LIANG",
@@ -6732,7 +7305,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[051] PELING TENGAH",
@@ -6752,7 +7328,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[060] BULAGI",
@@ -6775,7 +7354,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "SUBMITTED RESPONDENT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[061] BULAGI SELATAN",
@@ -6795,7 +7377,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[062] BULAGI UTARA",
@@ -6815,7 +7400,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[070] BUKO",
@@ -6835,7 +7423,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[071] BUKO SELATAN",
@@ -6855,7 +7446,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -6914,7 +7508,10 @@ window.IPAS_DATA = {
             "total": 7,
             "DRAFT": 5,
             "SUBMITTED BY Pencacah": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[011] TOILI BARAT",
@@ -6938,7 +7535,10 @@ window.IPAS_DATA = {
             "total": 7,
             "SUBMITTED BY Pencacah": 4,
             "DRAFT": 3
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[012] MOILONG",
@@ -6961,7 +7561,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 6,
             "DRAFT": 6
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[013] TOILI JAYA",
@@ -6985,7 +7588,10 @@ window.IPAS_DATA = {
             "total": 4,
             "SUBMITTED BY Pencacah": 3,
             "DRAFT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[020] BATUI",
@@ -7010,7 +7616,10 @@ window.IPAS_DATA = {
             "DRAFT": 4,
             "SUBMITTED BY Pencacah": 3,
             "OPEN": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[021] BATUI SELATAN",
@@ -7035,7 +7644,10 @@ window.IPAS_DATA = {
             "DRAFT": 1,
             "OPEN": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[030] BUNTA",
@@ -7060,7 +7672,10 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 3,
             "DRAFT": 2,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[031] NUHON",
@@ -7083,7 +7698,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 6,
             "OPEN": 6
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[032] SIMPANG RAYA",
@@ -7106,7 +7724,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] KINTOM",
@@ -7129,7 +7750,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[050] LUWUK",
@@ -7155,7 +7779,10 @@ window.IPAS_DATA = {
             "DRAFT": 9,
             "OPEN": 8,
             "REJECTED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[051] LUWUK TIMUR",
@@ -7179,7 +7806,10 @@ window.IPAS_DATA = {
             "total": 4,
             "DRAFT": 3,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[052] LUWUK UTARA",
@@ -7205,7 +7835,10 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 2,
             "DRAFT": 1,
             "SUBMITTED RESPONDENT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[053] LUWUK SELATAN",
@@ -7230,7 +7863,10 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 12,
             "DRAFT": 11,
             "OPEN": 8
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[054] NAMBO",
@@ -7254,7 +7890,10 @@ window.IPAS_DATA = {
             "total": 3,
             "SUBMITTED BY Pencacah": 2,
             "SUBMITTED RESPONDENT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[060] PAGIMANA",
@@ -7280,7 +7919,10 @@ window.IPAS_DATA = {
             "OPEN": 1,
             "REJECTED BY Pengawas": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[061] BUALEMO",
@@ -7303,7 +7945,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 5,
             "OPEN": 5
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[062] LOBU",
@@ -7323,7 +7968,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[070] LAMALA",
@@ -7343,7 +7991,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[071] MASAMA",
@@ -7367,7 +8018,10 @@ window.IPAS_DATA = {
             "total": 3,
             "DRAFT": 2,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[072] MANTOH",
@@ -7390,7 +8044,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "DRAFT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[080] BALANTAK",
@@ -7413,7 +8070,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 3,
             "OPEN": 3
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[081] BALANTAK SELATAN",
@@ -7436,7 +8096,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[082] BALANTAK UTARA",
@@ -7460,7 +8123,10 @@ window.IPAS_DATA = {
             "total": 2,
             "DRAFT": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -7526,7 +8192,10 @@ window.IPAS_DATA = {
             "total": 9,
             "OPEN": 7,
             "SUBMITTED RESPONDENT": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[010] MENUI KEPULAUAN",
@@ -7546,7 +8215,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[011] SOMBORI KEPULAUAN",
@@ -7569,7 +8241,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "OPEN": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[020] BUNGKU SELATAN",
@@ -7589,7 +8264,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[021] BAHODOPI",
@@ -7615,7 +8293,10 @@ window.IPAS_DATA = {
             "DRAFT": 24,
             "SUBMITTED BY Pencacah": 15,
             "SUBMITTED RESPONDENT": 5
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[022] BUNGKU PESISIR",
@@ -7638,7 +8319,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 14,
             "OPEN": 14
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[030] BUNGKU TENGAH",
@@ -7664,7 +8348,10 @@ window.IPAS_DATA = {
             "DRAFT": 8,
             "OPEN": 8,
             "SUBMITTED RESPONDENT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[031] BUNGKU TIMUR",
@@ -7689,7 +8376,10 @@ window.IPAS_DATA = {
             "OPEN": 6,
             "DRAFT": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] BUNGKU BARAT",
@@ -7712,7 +8402,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 15,
             "OPEN": 15
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[041] BUMI RAYA",
@@ -7735,7 +8428,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[042] WITA PONDA",
@@ -7760,7 +8456,10 @@ window.IPAS_DATA = {
             "DRAFT": 2,
             "OPEN": 2,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -7825,7 +8524,10 @@ window.IPAS_DATA = {
             "DRAFT": 5,
             "SUBMITTED BY Pencacah": 2,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[011] PAMONA BARAT",
@@ -7848,7 +8550,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "SUBMITTED RESPONDENT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[012] PAMONA TENGGARA",
@@ -7868,7 +8573,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[020] LORE SELATAN",
@@ -7892,7 +8600,10 @@ window.IPAS_DATA = {
             "total": 2,
             "APPROVED BY Pengawas": 1,
             "DRAFT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[021] LORE BARAT",
@@ -7912,7 +8623,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[030] PAMONA PUSALEMBA",
@@ -7938,7 +8652,10 @@ window.IPAS_DATA = {
             "DRAFT": 6,
             "OPEN": 2,
             "SUBMITTED RESPONDENT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[031] PAMONA TIMUR",
@@ -7961,7 +8678,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "DRAFT": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[032] PAMONA UTARA",
@@ -7986,7 +8706,10 @@ window.IPAS_DATA = {
             "DRAFT": 1,
             "OPEN": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] LORE UTARA",
@@ -8009,7 +8732,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "APPROVED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[041] LORE TENGAH",
@@ -8029,7 +8755,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[042] LORE TIMUR",
@@ -8049,7 +8778,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[043] LORE PEORE",
@@ -8069,7 +8801,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[050] POSO PESISIR",
@@ -8092,7 +8827,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "SUBMITTED BY Pencacah": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[051] POSO PESISIR SELATAN",
@@ -8115,7 +8853,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[052] POSO PESISIR UTARA",
@@ -8138,7 +8879,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "APPROVED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[060] LAGE",
@@ -8158,7 +8902,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[070] POSO KOTA",
@@ -8184,7 +8931,10 @@ window.IPAS_DATA = {
             "OPEN": 10,
             "DRAFT": 3,
             "SUBMITTED RESPONDENT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[071] POSO KOTA UTARA",
@@ -8209,7 +8959,10 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 10,
             "OPEN": 2,
             "DRAFT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[072] POSO KOTA SELATAN",
@@ -8234,7 +8987,10 @@ window.IPAS_DATA = {
             "OPEN": 3,
             "SUBMITTED BY Pencacah": 3,
             "APPROVED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -8301,7 +9057,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[041] RIO PAKAVA",
@@ -8324,7 +9083,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 7,
             "APPROVED BY Pengawas": 7
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[051] PINEMBANI",
@@ -8344,7 +9106,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[080] BANAWA",
@@ -8367,7 +9132,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 16,
             "APPROVED BY Pengawas": 16
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[081] BANAWA SELATAN",
@@ -8390,7 +9158,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 5,
             "APPROVED BY Pengawas": 5
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[082] BANAWA TENGAH",
@@ -8413,7 +9184,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "APPROVED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[090] LABUAN",
@@ -8436,7 +9210,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 4,
             "APPROVED BY Pengawas": 4
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[091] TANANTOVEA",
@@ -8459,7 +9236,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "APPROVED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[100] SINDUE",
@@ -8482,7 +9262,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[101] SINDUE TOMBUSABORA",
@@ -8505,7 +9288,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 3,
             "APPROVED BY Pengawas": 3
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[102] SINDUE TOBATA",
@@ -8528,7 +9314,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[120] SIRENJA",
@@ -8551,7 +9340,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[130] BALAESANG",
@@ -8574,7 +9366,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 3,
             "APPROVED BY Pengawas": 3
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[131] BALAESANG TANJUNG",
@@ -8597,7 +9392,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[140] DAMPELAS",
@@ -8621,7 +9419,10 @@ window.IPAS_DATA = {
             "total": 4,
             "APPROVED BY Pengawas": 3,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[160] SOJOL",
@@ -8644,7 +9445,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "APPROVED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[161] SOJOL UTARA",
@@ -8667,7 +9471,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -8733,7 +9540,10 @@ window.IPAS_DATA = {
             "total": 5,
             "DRAFT": 4,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[020] DAMPAL UTARA",
@@ -8757,7 +9567,10 @@ window.IPAS_DATA = {
             "total": 2,
             "APPROVED BY Pengawas": 1,
             "DRAFT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[030] DONDO",
@@ -8780,7 +9593,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[031] OGODEIDE",
@@ -8803,7 +9619,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[032] BASIDONDO",
@@ -8823,7 +9642,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] BAOLAN",
@@ -8851,7 +9673,10 @@ window.IPAS_DATA = {
             "APPROVED BY Pengawas": 3,
             "SUBMITTED BY Pencacah": 2,
             "EDITED BY Admin Kabupaten": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[041] LAMPASIO",
@@ -8874,7 +9699,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "OPEN": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[050] GALANG",
@@ -8900,7 +9728,10 @@ window.IPAS_DATA = {
             "DRAFT": 1,
             "OPEN": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[060] TOLITOLI UTARA",
@@ -8923,7 +9754,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "APPROVED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[061] DAKO PEMEAN",
@@ -8946,7 +9780,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "OPEN": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -9006,7 +9843,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[011] BIAU",
@@ -9032,7 +9872,10 @@ window.IPAS_DATA = {
             "DRAFT": 2,
             "SUBMITTED RESPONDENT": 2,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[012] KARAMAT",
@@ -9052,7 +9895,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[020] MOMUNU",
@@ -9072,7 +9918,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[021] TILOAN",
@@ -9092,7 +9941,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[030] BOKAT",
@@ -9112,7 +9964,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[031] BUKAL",
@@ -9135,7 +9990,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "DRAFT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] BUNOBOGU",
@@ -9158,7 +10016,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[041] GADUNG",
@@ -9178,7 +10039,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[050] PALELEH",
@@ -9203,7 +10067,10 @@ window.IPAS_DATA = {
             "APPROVED BY Pengawas": 1,
             "DRAFT": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[051] PALELEH BARAT",
@@ -9226,7 +10093,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -9288,7 +10158,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "DRAFT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[010] SAUSU",
@@ -9311,7 +10184,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 3,
             "OPEN": 3
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[011] TORUE",
@@ -9335,7 +10211,10 @@ window.IPAS_DATA = {
             "total": 7,
             "OPEN": 5,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[012] BALINGGI",
@@ -9355,7 +10234,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[020] PARIGI",
@@ -9379,7 +10261,10 @@ window.IPAS_DATA = {
             "total": 15,
             "OPEN": 13,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[021] PARIGI SELATAN",
@@ -9403,7 +10288,10 @@ window.IPAS_DATA = {
             "total": 4,
             "APPROVED BY Pengawas": 2,
             "OPEN": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[022] PARIGI BARAT",
@@ -9423,7 +10311,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[023] PARIGI UTARA",
@@ -9446,7 +10337,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[024] PARIGI TENGAH",
@@ -9469,7 +10363,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[030] AMPIBABO",
@@ -9493,7 +10390,10 @@ window.IPAS_DATA = {
             "total": 4,
             "OPEN": 3,
             "REJECTED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[031] KASIMBAR",
@@ -9517,7 +10417,10 @@ window.IPAS_DATA = {
             "total": 3,
             "OPEN": 2,
             "COMPLETED BY Admin Kabupaten": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[032] TORIBULU",
@@ -9540,7 +10443,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "APPROVED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[033] SINIU",
@@ -9560,7 +10466,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] TINOMBO",
@@ -9584,7 +10493,10 @@ window.IPAS_DATA = {
             "total": 5,
             "OPEN": 3,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[041] TINOMBO SELATAN",
@@ -9607,7 +10519,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[042] SIDOAN",
@@ -9627,7 +10542,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[050] TOMINI",
@@ -9647,7 +10565,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[051] MEPANGA",
@@ -9671,7 +10592,10 @@ window.IPAS_DATA = {
             "total": 7,
             "OPEN": 4,
             "APPROVED BY Pengawas": 3
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[052] PALASA",
@@ -9691,7 +10615,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[060] MOUTONG",
@@ -9716,7 +10643,10 @@ window.IPAS_DATA = {
             "REJECTED BY Pengawas": 2,
             "APPROVED BY Pengawas": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[061] BOLANO LAMBUNU",
@@ -9741,7 +10671,10 @@ window.IPAS_DATA = {
             "OPEN": 3,
             "APPROVED BY Pengawas": 1,
             "COMPLETED BY Admin Kabupaten": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[062] TAOPA",
@@ -9761,7 +10694,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[063] BOLANO",
@@ -9784,7 +10720,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[064] ONGKA MALINO",
@@ -9807,7 +10746,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -9871,7 +10813,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "DRAFT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[020] TOJO",
@@ -9895,7 +10840,10 @@ window.IPAS_DATA = {
             "total": 2,
             "OPEN": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[030] ULUBONGKA",
@@ -9915,7 +10863,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] AMPANA TETE",
@@ -9938,7 +10889,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "SUBMITTED BY Pencacah": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[050] AMPANA KOTA",
@@ -9963,7 +10917,10 @@ window.IPAS_DATA = {
             "DRAFT": 1,
             "SUBMITTED BY Pencacah": 1,
             "SUBMITTED RESPONDENT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[051] RATOLINDO",
@@ -9989,7 +10946,10 @@ window.IPAS_DATA = {
             "OPEN": 2,
             "SUBMITTED RESPONDENT": 2,
             "DRAFT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[060] UNA - UNA",
@@ -10009,7 +10969,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[061] BATUDAKA",
@@ -10029,7 +10992,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[070] TOGEAN",
@@ -10049,7 +11015,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[080] WALEA KEPULAUAN",
@@ -10069,7 +11038,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[081] WALEA BESAR",
@@ -10089,7 +11061,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[082] TALATAKO",
@@ -10109,7 +11084,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -10167,7 +11145,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[020] KULAWI SELATAN",
@@ -10187,7 +11168,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[030] KULAWI",
@@ -10210,7 +11194,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] LINDU",
@@ -10230,7 +11217,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[050] NOKILALAKI",
@@ -10250,7 +11240,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[060] PALOLO",
@@ -10274,7 +11267,10 @@ window.IPAS_DATA = {
             "total": 2,
             "APPROVED BY Pengawas": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[070] GUMBASA",
@@ -10297,7 +11293,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "APPROVED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[080] DOLO SELATAN",
@@ -10317,7 +11316,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[090] DOLO BARAT",
@@ -10337,7 +11339,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[100] TANAMBULAVA",
@@ -10357,7 +11362,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[110] DOLO",
@@ -10381,7 +11389,10 @@ window.IPAS_DATA = {
             "total": 2,
             "APPROVED BY Pengawas": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[120] SIGI BIROMARU",
@@ -10406,7 +11417,10 @@ window.IPAS_DATA = {
             "APPROVED BY Pengawas": 8,
             "OPEN": 3,
             "DRAFT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[121] SIGI KOTA",
@@ -10429,7 +11443,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "APPROVED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[130] MARAWOLA",
@@ -10452,7 +11469,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 2,
             "APPROVED BY Pengawas": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[140] MARAWOLA BARAT",
@@ -10472,7 +11492,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[150] KINOVARO",
@@ -10492,7 +11515,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -10553,7 +11579,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[020] LABOBO",
@@ -10573,7 +11602,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[030] BANGGAI UTARA",
@@ -10593,7 +11625,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] BANGGAI",
@@ -10617,7 +11652,10 @@ window.IPAS_DATA = {
             "total": 7,
             "SUBMITTED RESPONDENT": 6,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[050] BANGGAI TENGAH",
@@ -10637,7 +11675,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[060] BANGGAI SELATAN",
@@ -10657,7 +11698,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[070] BOKAN KEPULAUAN",
@@ -10677,7 +11721,10 @@ window.IPAS_DATA = {
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
-          "breakdown": {}
+          "breakdown": {},
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -10736,7 +11783,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 1,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[010] MORI ATAS",
@@ -10760,7 +11810,10 @@ window.IPAS_DATA = {
             "total": 14,
             "APPROVED BY Pengawas": 9,
             "OPEN": 5
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[020] LEMBO",
@@ -10784,7 +11837,10 @@ window.IPAS_DATA = {
             "total": 20,
             "OPEN": 16,
             "DRAFT": 4
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[030] LEMBO RAYA",
@@ -10807,7 +11863,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 5,
             "OPEN": 5
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] PETASIA TIMUR",
@@ -10833,7 +11892,10 @@ window.IPAS_DATA = {
             "APPROVED BY Pengawas": 5,
             "DRAFT": 4,
             "SUBMITTED RESPONDENT": 3
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[050] PETASIA",
@@ -10859,7 +11921,10 @@ window.IPAS_DATA = {
             "APPROVED BY Pengawas": 17,
             "SUBMITTED BY Pencacah": 9,
             "SUBMITTED RESPONDENT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[060] PETASIA BARAT",
@@ -10883,7 +11948,10 @@ window.IPAS_DATA = {
             "total": 3,
             "SUBMITTED BY Pencacah": 2,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[070] MORI UTARA",
@@ -10907,7 +11975,10 @@ window.IPAS_DATA = {
             "total": 3,
             "SUBMITTED BY Pencacah": 2,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[080] SOYO JAYA",
@@ -10930,7 +12001,10 @@ window.IPAS_DATA = {
           "breakdown": {
             "total": 10,
             "OPEN": 10
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[090] BUNGKU UTARA",
@@ -10954,7 +12028,10 @@ window.IPAS_DATA = {
             "total": 3,
             "SUBMITTED BY Pencacah": 2,
             "OPEN": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[100] MAMOSALATO",
@@ -10978,7 +12055,10 @@ window.IPAS_DATA = {
             "total": 8,
             "SUBMITTED BY Pencacah": 6,
             "OPEN": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
@@ -11047,7 +12127,10 @@ window.IPAS_DATA = {
             "APPROVED BY Pengawas": 41,
             "OPEN": 11,
             "SUBMITTED RESPONDENT": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[010] PALU BARAT",
@@ -11075,7 +12158,10 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 2,
             "DRAFT": 1,
             "REVOKED BY Pengawas": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[011] TATANGA",
@@ -11100,7 +12186,10 @@ window.IPAS_DATA = {
             "OPEN": 15,
             "APPROVED BY Pengawas": 2,
             "DRAFT": 1
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[012] ULUJADI",
@@ -11127,7 +12216,10 @@ window.IPAS_DATA = {
             "DRAFT": 2,
             "REJECTED BY Pengawas": 2,
             "SUBMITTED BY Pencacah": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[020] PALU SELATAN",
@@ -11153,7 +12245,10 @@ window.IPAS_DATA = {
             "APPROVED BY Pengawas": 22,
             "DRAFT": 7,
             "SUBMITTED RESPONDENT": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[030] PALU TIMUR",
@@ -11180,7 +12275,10 @@ window.IPAS_DATA = {
             "DRAFT": 13,
             "SUBMITTED RESPONDENT": 3,
             "SUBMITTED BY Pencacah": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[031] MANTIKULORE",
@@ -11206,7 +12304,10 @@ window.IPAS_DATA = {
             "APPROVED BY Pengawas": 12,
             "SUBMITTED RESPONDENT": 5,
             "DRAFT": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[040] PALU UTARA",
@@ -11231,7 +12332,10 @@ window.IPAS_DATA = {
             "OPEN": 8,
             "APPROVED BY Pengawas": 5,
             "SUBMITTED RESPONDENT": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[041] TAWAELI",
@@ -11257,7 +12361,10 @@ window.IPAS_DATA = {
             "APPROVED BY Pengawas": 7,
             "SUBMITTED RESPONDENT": 4,
             "DRAFT": 2
-          }
+          },
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.0
         }
       ],
       "breakdown": {
