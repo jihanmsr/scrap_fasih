@@ -13,6 +13,8 @@ from session_manager_petugas import get_session
 #     if f.startswith("response_") and f.endswith(".json")
 # }
 
+import datetime
+today_str = datetime.datetime.now().strftime("%Y-%m-%d")
 OUTPUT_DIR = "petugas"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -140,12 +142,11 @@ def main():
                     time.sleep(0.5)
 
             # Save once after the loop is complete
-            with open(os.path.join(OUTPUT_DIR, f"response_{role_name}_{kode_kab}.json"), "w", encoding="utf-8") as f:
+            with open(os.path.join(OUTPUT_DIR, f"response_{role_name}_{kode_kab}_{today_str}.json"), "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=4)
                 
             
             # -- Append ke CSV --
-            today_str = datetime.datetime.now().strftime("%Y-%m-%d")
             csv_file = f"/Users/jihanmaisaroh/scrap_fasih/fast_petugas_all_{today_str}.csv"
             
             # Buat header jika file belum ada
@@ -190,8 +191,8 @@ def main():
             print(f"\n=== Memproses kabupaten: {kode_kab} - {kab_name} ===")
 
             # Skip jika output sudah ada untuk kedua role
-            output_pengawas = os.path.join(OUTPUT_DIR, f"response_pengawas_{kode_kab}.json")
-            output_pencacah = os.path.join(OUTPUT_DIR, f"response_pencacah_{kode_kab}.json")
+            output_pengawas = os.path.join(OUTPUT_DIR, f"response_pengawas_{kode_kab}_{today_str}.json")
+            output_pencacah = os.path.join(OUTPUT_DIR, f"response_pencacah_{kode_kab}_{today_str}.json")
             if os.path.exists(output_pengawas) and os.path.exists(output_pencacah):
                 print(f"  Sudah ada, skip.")
                 continue
