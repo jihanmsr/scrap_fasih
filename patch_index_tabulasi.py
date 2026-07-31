@@ -11,8 +11,8 @@ new_sls_thead = """                <thead>
                     <tr>
                         <th rowspan="2" class="sortable" onclick="sortRekon('sls', 'sls_id')">ID SLS</th>
                         <th rowspan="2" class="sortable" onclick="sortRekon('sls', 'nmkab')">Kab/Kec/Desa</th>
-                        <th colspan="3" style="text-align: center; background: rgba(59,130,246,0.1); border-bottom: 1px solid var(--card-border);">SE UMUM (UTP)</th>
-                        <th colspan="3" style="text-align: center; background: rgba(16,185,129,0.1); border-bottom: 1px solid var(--card-border);">USAHA BESAR (SBR)</th>
+                        <th colspan="3" style="text-align: center; background: rgba(59,130,246,0.1); border-bottom: 1px solid var(--card-border);">USAHA (UTP)</th>
+                        <th colspan="3" style="text-align: center; background: rgba(16,185,129,0.1); border-bottom: 1px solid var(--card-border);">USAHA (SBR)</th>
                         <th colspan="3" style="text-align: center; background: rgba(245,158,11,0.1); border-bottom: 1px solid var(--card-border);">KELUARGA</th>
                     </tr>
                     <tr>
@@ -36,8 +36,8 @@ content = re.sub(r'                <thead>\n                    <tr>\n          
 new_petugas_thead = """                <thead>
                     <tr>
                         <th rowspan="2" class="sortable" onclick="sortRekon('petugas', 'email')">Email Petugas</th>
-                        <th colspan="3" style="text-align: center; background: rgba(59,130,246,0.1); border-bottom: 1px solid var(--card-border);">SE UMUM (UTP)</th>
-                        <th colspan="3" style="text-align: center; background: rgba(16,185,129,0.1); border-bottom: 1px solid var(--card-border);">USAHA BESAR (SBR)</th>
+                        <th colspan="3" style="text-align: center; background: rgba(59,130,246,0.1); border-bottom: 1px solid var(--card-border);">USAHA (UTP)</th>
+                        <th colspan="3" style="text-align: center; background: rgba(16,185,129,0.1); border-bottom: 1px solid var(--card-border);">USAHA (SBR)</th>
                         <th colspan="3" style="text-align: center; background: rgba(245,158,11,0.1); border-bottom: 1px solid var(--card-border);">KELUARGA</th>
                     </tr>
                     <tr>

@@ -1,6 +1,7 @@
-import csv, json, os
+import csv, json, os, datetime
 
-csv_file = "/Users/jihanmaisaroh/scrap_fasih/fast_petugas_all_2026-07-29.csv"
+today_str = datetime.datetime.now().strftime("%Y-%m-%d")
+csv_file = f"/Users/jihanmaisaroh/scrap_fasih/fast_petugas_all_{today_str}.csv"
 petugas_map = { "Pencacah": {}, "Pengawas": {} }
 
 with open(csv_file, 'r', encoding='utf-8') as f:
