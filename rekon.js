@@ -155,8 +155,8 @@ function renderRekon() {
             else if (sortKey === 'realisasi_sbr') { valA = a.total_sbr || 0; valB = b.total_sbr || 0; }
             else if (sortKey === 'diff_sbr') { valA = (a.total_sbr || 0) - (a.Total_usaha_SBR || 0); valB = (b.total_sbr || 0) - (b.Total_usaha_SBR || 0); }
             else if (sortKey === 'muatan_keluarga') { valA = a.keluarga || 0; valB = b.keluarga || 0; }
-            else if (sortKey === 'realisasi_keluarga') { valA = 0; valB = 0; }
-            else if (sortKey === 'diff_keluarga') { valA = -(a.keluarga || 0); valB = -(b.keluarga || 0); }
+            else if (sortKey === 'realisasi_keluarga') { valA = a.total_keluarga || 0; valB = b.total_keluarga || 0; }
+            else if (sortKey === 'diff_keluarga') { valA = (a.total_keluarga || 0) - (a.keluarga || 0); valB = (b.total_keluarga || 0) - (b.keluarga || 0); }
             else { valA = a[sortKey]; valB = b[sortKey]; }
 
             if (typeof valA === 'string') valA = valA.toLowerCase();
@@ -179,7 +179,7 @@ function renderRekon() {
             
             const r_utp = d.total_utp || 0;
             const r_sbr = d.total_sbr || 0;
-            const r_kel = 0; // Not available in SLS data
+            const r_kel = d.total_keluarga || 0;
             
             m_utp_tot += m_utp; r_utp_tot += r_utp;
             m_sbr_tot += m_sbr; r_sbr_tot += r_sbr;
@@ -235,12 +235,12 @@ function renderRekon() {
             if (sortKey === 'muatan_utp') { valA = a.total_muatan_assigned || 0; valB = b.total_muatan_assigned || 0; }
             else if (sortKey === 'realisasi_utp') { valA = a.total_usaha || 0; valB = b.total_usaha || 0; }
             else if (sortKey === 'diff_utp') { valA = (a.total_usaha || 0) - (a.total_muatan_assigned || 0); valB = (b.total_usaha || 0) - (b.total_muatan_assigned || 0); }
-            else if (sortKey === 'muatan_sbr') { valA = 0; valB = 0; }
-            else if (sortKey === 'realisasi_sbr') { valA = 0; valB = 0; }
-            else if (sortKey === 'diff_sbr') { valA = 0; valB = 0; }
-            else if (sortKey === 'muatan_keluarga') { valA = 0; valB = 0; }
+            else if (sortKey === 'muatan_sbr') { valA = a.Total_usaha_SBR || 0; valB = b.Total_usaha_SBR || 0; }
+            else if (sortKey === 'realisasi_sbr') { valA = a.total_sbr || 0; valB = b.total_sbr || 0; }
+            else if (sortKey === 'diff_sbr') { valA = (a.total_sbr || 0) - (a.Total_usaha_SBR || 0); valB = (b.total_sbr || 0) - (b.Total_usaha_SBR || 0); }
+            else if (sortKey === 'muatan_keluarga') { valA = a.keluarga || 0; valB = b.keluarga || 0; }
             else if (sortKey === 'realisasi_keluarga') { valA = a.total_keluarga || 0; valB = b.total_keluarga || 0; }
-            else if (sortKey === 'diff_keluarga') { valA = a.total_keluarga || 0; valB = b.total_keluarga || 0; }
+            else if (sortKey === 'diff_keluarga') { valA = (a.total_keluarga || 0) - (a.keluarga || 0); valB = (b.total_keluarga || 0) - (b.keluarga || 0); }
             else { valA = a[sortKey]; valB = b[sortKey]; }
 
             if (typeof valA === 'string') valA = valA.toLowerCase();
@@ -259,11 +259,11 @@ function renderRekon() {
 
         filtered.forEach(d => {
             const m_utp = d.total_muatan_assigned || 0;
-            const m_sbr = 0; // Not separated in data
-            const m_kel = 0; // Not separated in data
+            const m_sbr = d.Total_usaha_SBR || 0;
+            const m_kel = d.keluarga || 0;
 
             const r_utp = d.total_usaha || 0;
-            const r_sbr = 0; // Not separated in data
+            const r_sbr = d.total_sbr || 0;
             const r_kel = d.total_keluarga || 0;
 
             m_utp_tot += m_utp; r_utp_tot += r_utp;

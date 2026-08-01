@@ -9,9 +9,9 @@ df_awal = pd.read_excel('muatan/muatan_sls_72 2.xlsx')
 df_awal['sls_id'] = df_awal['idsubsls_25_2'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
 df_awal['target_awal'] = df_awal['jml_utp_subsektor'].fillna(0) + df_awal['Total_usaha_SBR'].fillna(0)
 
-print("2. Membaca Rekap UTP dan SBR.xlsx (Realisasi)...")
-df_real = pd.read_excel('muatan/Rekap UTP dan SBR.xlsx')
-df_real['sls_id'] = df_real['level_6_full_code'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
+print("2. Membaca Rekap SBR, UTP, Keluarga.xlsx (Realisasi)...")
+df_real = pd.read_excel('Rekap SBR, UTP, Keluarga.xlsx')
+df_real['sls_id'] = df_real['idsls'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
 df_real['realisasi'] = df_real['total_utp'].fillna(0) + df_real['total_sbr'].fillna(0)
 
 print("3. Membaca pemetaan SLS ke Petugas dari granular_assignments_se_umum_*.json...")
@@ -39,8 +39,8 @@ df_sql['email'] = df_sql['email'].astype(str).str.lower().str.strip()
 
 print("4. Menggabungkan data level SLS...")
 # Merge awal dan real
-df_sls = pd.merge(df_awal[['sls_id', 'target_awal', 'nmkab', 'nmkec', 'nmdesa', 'nmsls']], 
-                  df_real[['sls_id', 'realisasi']], on='sls_id', how='outer').fillna(0)
+df_sls = pd.merge(df_awal[['sls_id', 'target_awal', 'jml_utp_subsektor', 'Total_usaha_SBR', 'keluarga', 'nmkab', 'nmkec', 'nmdesa', 'nmsls']], 
+                  df_real[['sls_id', 'realisasi', 'total_utp', 'total_sbr', 'total_keluarga']], on='sls_id', how='outer').fillna(0)
 
 # Fill missing region names for those that only exist in realisasi
 with open('region_map_sulteng_full.json') as f:
@@ -65,11 +65,23 @@ df_sls['nmsls'] = df_sls['nmsls'].replace(0, '-')
 df_sls['diff'] = df_sls['realisasi'] - df_sls['target_awal']
 
 print("5. Menggabungkan data level Petugas...")
-df_petugas_map = pd.merge(df_sql, df_sls[['sls_id', 'target_awal', 'realisasi']], on='sls_id', how='left').fillna(0)
+df_petugas_map = pd.merge(df_sql, df_sls[['sls_id', 'target_awal', 'realisasi', 'jml_utp_subsektor', 'Total_usaha_SBR', 'keluarga', 'total_utp', 'total_sbr', 'total_keluarga']], on='sls_id', how='left').fillna(0)
 df_petugas = df_petugas_map.groupby('email').agg({
     'target_awal': 'sum',
-    'realisasi': 'sum'
+    'realisasi': 'sum',
+    'jml_utp_subsektor': 'sum',
+    'Total_usaha_SBR': 'sum',
+    'keluarga': 'sum',
+    'total_utp': 'sum',
+    'total_sbr': 'sum',
+    'total_keluarga': 'sum'
 }).reset_index()
+
+# Rename columns to match what rekon.js Petugas table expects for sorting
+df_petugas = df_petugas.rename(columns={
+    'jml_utp_subsektor': 'total_muatan_assigned',
+    'total_utp': 'total_usaha'
+})
 df_petugas['diff'] = df_petugas['realisasi'] - df_petugas['target_awal']
 
 print("6. Menyimpan ke rekon_data.js...")
