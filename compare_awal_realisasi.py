@@ -11,7 +11,7 @@ df_awal['target_awal'] = df_awal['jml_utp_subsektor'].fillna(0) + df_awal['Total
 
 print("2. Membaca Rekap SBR, UTP, Keluarga.xlsx (Realisasi)...")
 df_real = pd.read_excel('Rekap SBR, UTP, Keluarga.xlsx')
-df_real['sls_id'] = df_real['idsls'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
+df_real['sls_id'] = df_real['idsls'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip() + df_real['kdsubsls'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip().str.zfill(2)
 df_real['realisasi'] = df_real['total_utp'].fillna(0) + df_real['total_sbr'].fillna(0)
 
 print("3. Membaca pemetaan SLS ke Petugas dari granular_assignments_se_umum_*.json...")
