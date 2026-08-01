@@ -1,2 +1,3 @@
-2026/07/31-12:10:44.438 236d46 Creating DB /Users/jihanmaisaroh/scrap_fasih/petugas/chrome_profile/Default/shared_proto_db since it was missing.
-2026/07/31-12:10:44.442 236d46 Reusing MANIFEST /Users/jihanmaisaroh/scrap_fasih/petugas/chrome_profile/Default/shared_proto_db/MANIFEST-000001
+2026/08/01-13:46:07.025 129b30 Reusing MANIFEST /Users/jihanmaisaroh/scrap_fasih/petugas/chrome_profile/Default/shared_proto_db/MANIFEST-000001
+2026/08/01-13:46:07.026 129b30 Recovering log #3
+2026/08/01-13:46:07.026 129b30 Reusing old log /Users/jihanmaisaroh/scrap_fasih/petugas/chrome_profile/Default/shared_proto_db/000003.log 
