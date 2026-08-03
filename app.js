@@ -10936,3 +10936,47 @@ window.downloadCurrentSeTable = function (surveyType) {
     tick();
     window._se2026CountdownInterval = setInterval(tick, 1000);
 }
+
+window.downloadDesaSummaryExcel = function () {
+    if (!window.desaSummaryData || window.desaSummaryData.length === 0) {
+        alert("Tidak ada data desa untuk didownload.");
+        return;
+    }
+    let csv = "Kecamatan,Desa/Kelurahan,Total Target,Belum Selesai,Selesai,Persentase\n";
+    window.desaSummaryData.forEach(d => {
+        let pct = d.total > 0 ? ((d.selesai / d.total) * 100).toFixed(1) : 0;
+        csv += `"${d.kec}","${d.desa}",${d.total},${d.belum},${d.selesai},"${pct}%"\n`;
+    });
+    let blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    let link = document.createElement("a");
+    let url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute("download", "rekap_desa_sulteng.csv");
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
+window.downloadEmailTable = function () {
+    const table = document.querySelector('.company-table');
+    if (!table) return;
+    let csv = [];
+    let rows = table.querySelectorAll('tr');
+    for (let i = 0; i < rows.length; i++) {
+        let row = [], cols = rows[i].querySelectorAll('td, th');
+        for (let j = 0; j < cols.length; j++) {
+            let data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, ' ').replace(/"/g, '""');
+            row.push('"' + data + '"');
+        }
+        csv.push(row.join(','));
+    }
+    let blob = new Blob([csv.join('\n')], { type: 'text/csv;charset=utf-8;' });
+    let link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "tabel_status_email.csv";
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};

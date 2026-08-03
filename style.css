@@ -2161,3 +2161,55 @@ th.sortable:hover {
 .premium-action-btn.btn-secondary:hover {
     color: #b45309;
 }
+
+/* MOBILE UI/UX IMPROVEMENTS */
+@media (max-width: 768px) {
+    /* Improve Search & Filters */
+    .search-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    .search-wrapper, .sort-select {
+        width: 100% !important;
+        flex: 1 1 100% !important;
+        max-width: none !important;
+    }
+    
+    /* Make all tables scrollable on mobile */
+    .table-scroll, .ipas-table-wrapper {
+        overflow-x: auto !important;
+        width: 100% !important;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 8px;
+    }
+    .company-table, .ipas-table {
+        min-width: 800px;
+    }
+
+    /* Stack Header Actions */
+    .header-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .btn-action {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Stats Grid adjust */
+    .compact-stats {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    
+    /* Tabs adjust */
+    .tabs-navigation {
+        flex-wrap: wrap;
+    }
+    .btn-tab {
+        flex: 1 1 45%;
+        text-align: center;
+        justify-content: center;
+    }
+}
