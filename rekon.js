@@ -16,6 +16,12 @@ async function loadRekonData() {
             // Clean up garbage rows (e.g., nmkab is 0 or '-')
             rekonSlsData = window.rekonSlsData.filter(d => d.nmkab && d.nmkab !== 0 && d.nmkab !== '-');
             
+            rekonSlsData.forEach(d => {
+                if (typeof d.nmkab === 'string') {
+                    d.nmkab = d.nmkab.replace(/^\[\d+\]\s*/, '');
+                }
+            });
+            
             // Remove .0 from sls_id if present
             rekonSlsData.forEach(d => {
                 if (typeof d.sls_id === 'number') {
