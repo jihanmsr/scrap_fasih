@@ -9,8 +9,8 @@ df_awal = pd.read_excel('muatan/muatan_sls_72 2.xlsx', dtype={'idsubsls_25_2': s
 df_awal['sls_id'] = df_awal['idsubsls_25_2'].str.strip()
 df_awal['target_awal'] = df_awal['jml_utp_subsektor'].fillna(0) + df_awal['Total_usaha_SBR'].fillna(0) + df_awal['keluarga'].fillna(0)
 
-print("2. Membaca Rekap SBR, UTP, Keluarga_03_08.xlsx (Realisasi)...")
-df_real = pd.read_excel('Rekap SBR, UTP, Keluarga_03_08.xlsx')
+print("2. Membaca Rekap SBR, UTP, Keluarga_*.xlsx (Realisasi)...")
+df_real = pd.read_excel(max(glob.glob('Rekap SBR, UTP, Keluarga_*.xlsx')))
 df_real['idsls_str'] = df_real['level_5_full_code'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
 df_real['kdsubsls_str'] = pd.to_numeric(df_real['level_6_code'], errors='coerce').fillna(0).astype(int).astype(str).str.zfill(2)
 df_real['sls_id'] = df_real['idsls_str'] + df_real['kdsubsls_str']
