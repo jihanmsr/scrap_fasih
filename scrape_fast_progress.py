@@ -2156,6 +2156,41 @@ async def main():
         petugas_data_umum = merge_user_records(formatted_petugas_umum)
         petugas_data_ub = merge_user_records(formatted_petugas_ub)
 
+        # PATCH: INJECT MISSING ENUMERATORS FROM EXCEL
+        import glob
+        excel_files = glob.glob('Rekap Progress Petugas*.xlsx')
+        if excel_files:
+            latest_excel = max(excel_files, key=os.path.getctime)
+            try:
+                import pandas as pd
+                df = pd.read_excel(latest_excel)
+                df_p = df[df['pencacah_email'].notna() & (df['pencacah_email'] != '')]
+                excel_petugas_regions = {}
+                for _, row in df_p.iterrows():
+                    email = str(row['pencacah_email']).strip()
+                    if email not in excel_petugas_regions:
+                        excel_petugas_regions[email] = []
+                    reg_code = str(row['level_5_full_code']).replace(".0", "")
+                    if not any(r['regionCode'] == reg_code for r in excel_petugas_regions[email]):
+                        excel_petugas_regions[email].append({"regionCode": reg_code, "regionName": "-"})
+                
+                existing_emails = {p.get('email', p.get('username')) for p in petugas_data_umum}
+                added = 0
+                for email, regions in excel_petugas_regions.items():
+                    if email not in existing_emails:
+                        petugas_data_umum.append({
+                            "username": email,
+                            "email": email,
+                            "fullname": "-",
+                            "roleName": "Pencacah",
+                            "regions": regions,
+                            "totalRegions": len(regions)
+                        })
+                        added += 1
+                print(f"  [PATCH] Berhasil menambah {added} petugas dari {latest_excel}")
+            except Exception as e:
+                print(f"  [WARNING] Gagal membaca Excel untuk menambah enumerator: {e}")
+
         # Simpan assign_data.js secara lokal
         js_content = f"window.ASSIGN_DATA_UMUM = {json.dumps(assign_data_umum, indent=4, ensure_ascii=False)};\n"
         js_content += f"window.ASSIGN_DATA_UB   = {json.dumps(assign_data_ub,   indent=4, ensure_ascii=False)};\n"
