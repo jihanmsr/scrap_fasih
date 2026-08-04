@@ -159727,6 +159727,2936 @@ window.PETUGAS_PROGRESS_MAP = {
                     }
                 }
             }
+        },
+        "darnidarsono20@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "ikramamurah@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "marselinomaimali19@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "lilisamrullah48@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "arsandi281001@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "gitakourow14@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "sitisarahmaliada506@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "arjunbauwasarjun@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "viniyabu99@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "crazycerno@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "madaputri1405@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "fadilahsabrina07@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "tikoalutania@gmail.com": {
+            "target": 2,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 2,
+            "sls_details": {}
+        },
+        "apriyaninani1234@gmail.com": {
+            "target": 2,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 2,
+            "sls_details": {}
+        },
+        "lindalorenza2001@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "amrullahwidiamrullah@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "ririnmahruf3@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "lisadjaafar149@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "yulitamangemba08@gmail.com": {
+            "target": 1,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 1,
+            "sls_details": {}
+        },
+        "musrifasutamin@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "mohbondanprawira@gmail.com": {
+            "target": 11,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 11,
+            "sls_details": {}
+        },
+        "aulianilma03@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "irmansyahhrusdi798@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "endatatunduk.uml2020@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "cprasetyo282@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "wirdaa2001@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "pattipeilohynoriance@gmail.com": {
+            "target": 13,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 13,
+            "sls_details": {}
+        },
+        "mayabukamo95@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "yenayolusi2000@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "sapnadahlan1@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "jemiantomaliko421@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "sahrul4869@gmail.com": {
+            "target": 12,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 12,
+            "sls_details": {}
+        },
+        "batekondeprendi@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "naditayusuf@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "djsanty162@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "lahawinn@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "nursftr98@gmail.com": {
+            "target": 1,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 1,
+            "sls_details": {}
+        },
+        "gitaanalestari@gmail.com": {
+            "target": 14,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 14,
+            "sls_details": {}
+        },
+        "nurislamia558@gmail.com": {
+            "target": 11,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 11,
+            "sls_details": {}
+        },
+        "amyaina32@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "febiolatriana91@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "dwiputrijaya20@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "arsyahbilal5920@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "9gitalamondjong@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "karinasyafika@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "ariestamanggapariska@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "niswanveby4@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "subaeraafdianti@gmail.com": {
+            "target": 12,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 12,
+            "sls_details": {}
+        },
+        "rahmah786888@gmail.com": {
+            "target": 12,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 12,
+            "sls_details": {}
+        },
+        "arsimila98@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "enor93990@gmail.com": {
+            "target": 12,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 12,
+            "sls_details": {}
+        },
+        "dickyfaperta@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "irvianasuryaningsihirvhy@gmail.com": {
+            "target": 12,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 12,
+            "sls_details": {}
+        },
+        "hermanhermankdi@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "melaniathaar3@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "melindasari039@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "mohvickri4@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "faikaturrahmapika@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "saramaya235@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "lestaridwisri96@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "fathirahmad617@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "ainunmamase9@gmail.com": {
+            "target": 11,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 11,
+            "sls_details": {}
+        },
+        "dewiratnasari872@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "yulianitanjung11@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "sitiramadanusman@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "reskisaputri042@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "mardiahlusiani03@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "mardiana.marna77@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "rn9037702@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "dapzy1277@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "nurfadilahasrin5@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "ratih10@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "phiansaputra31@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "isticatur833@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "deswitachan021@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "irnasarizayn22@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "sartynsartyn1@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "litaj952@gmail.com": {
+            "target": 1,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 1,
+            "sls_details": {}
+        },
+        "florinerosesumaiku@gmail.com": {
+            "target": 1,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 1,
+            "sls_details": {}
+        },
+        "kesyasupai30@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "yanttansala-pppk@bps.go.id": {
+            "target": 1,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 1,
+            "sls_details": {}
+        },
+        "dwikadekdwi726@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "yuanballa553@gmail.com": {
+            "target": 2,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 2,
+            "sls_details": {}
+        },
+        "p.a.indahlestari@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "271perjalananbps101@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "anindadwimulianingtyas@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "darmanghalibsyah@gmail.com": {
+            "target": 13,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 13,
+            "sls_details": {}
+        },
+        "sefanyajr6@gmail.com": {
+            "target": 14,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 14,
+            "sls_details": {}
+        },
+        "restyadindap@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "tiranaaygias55@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "anafadriana507@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "shintbella10@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "riaariska1214@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "myoktaviani19@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "155perjalananbps101@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "sitihardina39@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "riskaika1811@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "kasmianti0703@gamail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "mutmainnahmasud95@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "fiqianas98@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "elisatoanaka5485@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "mozaikylh@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "wullanagustira05@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "supiatisunusi@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "aprinaabdulhamid@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "dimasdjalalemba@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "najmaumma696@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "mohr0401@gmail.com": {
+            "target": 12,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 12,
+            "sls_details": {}
+        },
+        "saputrahardiansyah26@gmail.com": {
+            "target": 12,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 12,
+            "sls_details": {}
+        },
+        "sitirahmatun141122@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "fahrulwahyudin09@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "yantyulfha@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "zulzulkiflinr@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "ayuadam742@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "fitria554433@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "delvianasukmanrantemai@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "37perjalananbps101@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "11perjalananbps101@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "sartinsahli@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "sriwahyun460@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "daristamelin@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "antitingting752@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "zeafandri@gmail.com": {
+            "target": 2,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 2,
+            "sls_details": {}
+        },
+        "lusyiana805@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "rainblast99@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "442perjalananbps71@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "mohmukasyaf@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "464perjalananbps71@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "ulyarahmy11@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "magfira066@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "irayuliastari1@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "ammargonggol@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "tasyi679@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "susantitolis2018@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "novianivhy34@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "ibrahimanthonie0707@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "erwinpradistyaa@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "mohhamkadahlan271299@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "intanprdtha24@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "andisingkarahmadana@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "trimuliadi00@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "fitriwahyuningsih116@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "mohtaufanalfareza@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "nurinurhasanah46@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "raramutiara353@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "aliflibiya254@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "sayidatunnisah@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "nurulayustina198@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "pratiwihalil101@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "ammankmuhsalman@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "iketutpujaastawadiputra@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "dessy261297@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "muhainiyusuf@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "nahdatulrahman@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "smia89864@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "hasnirizal06@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "ma147696@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "andinipontoh1@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "sugengarrauf@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "lyliburhan99@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "idjafar095@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "sitierlinaarahmanerlina@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "efry0222@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "ulfiani.ani992@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "riskasafitri306@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "irulmaulana58@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "fdwiasviani@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "bulanswk@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "selvitalimanda4@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "nadiasukardi11@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "ayuhandani13@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "shintarahma253@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "bernoldisuayong@gmail.com": {
+            "target": 2,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 2,
+            "sls_details": {}
+        },
+        "sultanafiat@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "gipongagip112@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "fauziahjiaa@gmail.com": {
+            "target": 2,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 2,
+            "sls_details": {}
+        },
+        "zaituntun992@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "malaikatputih402@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "annisarifka.fika@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "arifasdaenajah@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "mhmmadandri0@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "veraravael@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "tuananca6@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "abdulrafin88@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "anandatrilisa@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "nurnisa061194@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "badraalami2011@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "www.deayusuf009@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "fahrapalahuata@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "cyumkkalsumarlapaiyo@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "andimumainah@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "aanahmad010896@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "arisaice13@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "almutamaya8@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "ernawatiica12@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "aniandriani983@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "sri238063@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "candamarthen502@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "sandinuari1313@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "animmarni07@gmail.com": {
+            "target": 1,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 1,
+            "sls_details": {}
+        },
+        "andiafdhal0407@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "humairasapena26@gmail.com": {
+            "target": 11,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 11,
+            "sls_details": {}
+        },
+        "dunggioyunis@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "hendra09nov@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "alifakib65@gmail.com": {
+            "target": 2,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 2,
+            "sls_details": {}
+        },
+        "irfanmencarinafka@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "faradeafeybe@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "subanbakribakri@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "rahmatkasni018@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "angelchintiakountul@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "deaalisya2805@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "nurpauzi13@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "mohrizky109@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "galaxypunya514@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "widoktaviana56@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "sukmalauri@gmail.com": {
+            "target": 2,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 2,
+            "sls_details": {}
+        },
+        "katrina.lavenia@bps.go.id": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "mustabsyirahbasri01@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "hestikasim54@gmail.com": {
+            "target": 1,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 1,
+            "sls_details": {}
+        },
+        "fitraapok2001@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "lutfiahadjim@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "milamonsongan@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "lidiadduhan@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "snty345@gmail.co": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "windamauli23@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "marsinapunya@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "nursalamsalma357@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "husranstatistikbps@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "imha05183@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "pildawatiskambada@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "wiwinmoledjo@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "dumalasirnawati@gmail.com": {
+            "target": 11,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 11,
+            "sls_details": {}
+        },
+        "dhesyparabak21@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "mheldamonapa@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "sarahdwiyanaaa@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "rezaaradityaa70@gmail.com": {
+            "target": 11,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 11,
+            "sls_details": {}
+        },
+        "alyalore26@gmail.com": {
+            "target": 10,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 10,
+            "sls_details": {}
+        },
+        "hestytokidu@gmail.com": {
+            "target": 13,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 13,
+            "sls_details": {}
+        },
+        "lyndhajhordan@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "anisuryani090691@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "liskurnia151017@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "manurungchelsea864@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "supriantjo777@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "sadariaria091@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "nurlindaindah14@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "nuradhasupu@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "friscaameliatiurmapasaribu@gmail.com": {
+            "target": 3,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 3,
+            "sls_details": {}
+        },
+        "arnianti90@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "marufnih95@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "euisintan1324@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "darasistapingki@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "danieltebisi3@gmail.com": {
+            "target": 16,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 16,
+            "sls_details": {}
+        },
+        "r99277030@gmail.com": {
+            "target": 16,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 16,
+            "sls_details": {}
+        },
+        "danielndola93@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "komariahmasna@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "fatiiimaahh0504@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "renady64@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "tiarasavitri677@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "adrianimaulidya@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "ramadhanazainal@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "afifahnasar0@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "auraghina3@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "sitiirahma167@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "aqsalfahrezi8@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "fanyalvionita044@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "raihanugrah92@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "nursalamyoso@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "arulyotolembah77@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "syiselfiii@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "mhmmdrfki.1204@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "emailnyaipng@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "tiarajamaldwi12@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "stevaniweol00@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "kennyjevon512@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "dewimateka@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "ucokpalukirana@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "arifaiapuasapai@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
+        },
+        "pramudya.ananta17@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
+        },
+        "fildzadayana09@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "yuliandaridessy519@gmail.com": {
+            "target": 6,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 6,
+            "sls_details": {}
+        },
+        "nurjanah030500@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "yasharahsan@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "zulfikarikel@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "arfitapepita@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "nazwanatalia6@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "intelektualinteraksi@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "dewysartika2004@gmail.com": {
+            "target": 7,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 7,
+            "sls_details": {}
+        },
+        "pnovita535@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "nawangoktavia3@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "aliviaanindya1@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "pamusurian7@gmail.com": {
+            "target": 8,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 8,
+            "sls_details": {}
+        },
+        "yulindamayantii98@gmail.com": {
+            "target": 9,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 9,
+            "sls_details": {}
+        },
+        "tiosatrioululalbab14@gmail.com": {
+            "target": 5,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 5,
+            "sls_details": {}
         }
     },
     "Pengawas": {
