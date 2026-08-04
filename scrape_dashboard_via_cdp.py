@@ -153,6 +153,13 @@ def process_survey_type_data(survey_type, old_data, results_map, region_map_sult
             continue
             
         kec_list = results_map[wilayah_code]
+        
+        # SAFETY CHECK: If kec_list is empty but we previously had data, KEEP the old data!
+        if not kec_list and prev_kab.get("total_prelist", 0) > 0:
+            print(f"  [WARNING] API return kosong untuk {kab_name}. Menggunakan data kemarin.")
+            new_data.append(prev_kab)
+            continue
+            
         region_kab_info = region_kabupaten.get(wilayah_code, {})
         
         # Initialize and build the kecamatan list from the region map
