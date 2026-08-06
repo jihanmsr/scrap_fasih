@@ -2835,13 +2835,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "BANGGAI KEPULAUAN",
     "survey_type": "se_umum",
-    "count": 827
+    "count": 752
   },
   {
     "date": "2026-08-05",
     "kab_name": "BANGGAI KEPULAUAN",
     "survey_type": "se_umum",
-    "count": 826
+    "count": 901
   },
   {
     "date": "2026-08-04",
@@ -2853,13 +2853,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 2484
+    "count": 1775
   },
   {
     "date": "2026-08-05",
     "kab_name": "BANGGAI",
     "survey_type": "se_umum",
-    "count": 2483
+    "count": 3192
   },
   {
     "date": "2026-08-04",
@@ -2871,13 +2871,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "MOROWALI",
     "survey_type": "se_umum",
-    "count": 863
+    "count": 909
   },
   {
     "date": "2026-08-05",
     "kab_name": "MOROWALI",
     "survey_type": "se_umum",
-    "count": 863
+    "count": 817
   },
   {
     "date": "2026-08-04",
@@ -2889,13 +2889,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "POSO",
     "survey_type": "se_umum",
-    "count": 2305
+    "count": 1989
   },
   {
     "date": "2026-08-05",
     "kab_name": "POSO",
     "survey_type": "se_umum",
-    "count": 2304
+    "count": 2620
   },
   {
     "date": "2026-08-04",
@@ -2907,13 +2907,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 1976
+    "count": 2493
   },
   {
     "date": "2026-08-05",
     "kab_name": "DONGGALA",
     "survey_type": "se_umum",
-    "count": 1976
+    "count": 1459
   },
   {
     "date": "2026-08-04",
@@ -2925,13 +2925,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
-    "count": 1606
+    "count": 2057
   },
   {
     "date": "2026-08-05",
     "kab_name": "TOLI-TOLI",
     "survey_type": "se_umum",
-    "count": 1605
+    "count": 1154
   },
   {
     "date": "2026-08-04",
@@ -2943,13 +2943,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "BUOL",
     "survey_type": "se_umum",
-    "count": 869
+    "count": 653
   },
   {
     "date": "2026-08-05",
     "kab_name": "BUOL",
     "survey_type": "se_umum",
-    "count": 868
+    "count": 1084
   },
   {
     "date": "2026-08-04",
@@ -2961,13 +2961,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 2997
+    "count": 2890
   },
   {
     "date": "2026-08-05",
     "kab_name": "PARIGI MOUTONG",
     "survey_type": "se_umum",
-    "count": 2997
+    "count": 3104
   },
   {
     "date": "2026-08-04",
@@ -2979,13 +2979,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "TOJO UNA-UNA",
     "survey_type": "se_umum",
-    "count": 998
+    "count": 1086
   },
   {
     "date": "2026-08-05",
     "kab_name": "TOJO UNA-UNA",
     "survey_type": "se_umum",
-    "count": 998
+    "count": 910
   },
   {
     "date": "2026-08-04",
@@ -2997,13 +2997,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 2092
+    "count": 1784
   },
   {
     "date": "2026-08-05",
     "kab_name": "SIGI",
     "survey_type": "se_umum",
-    "count": 2092
+    "count": 2400
   },
   {
     "date": "2026-08-04",
@@ -3015,13 +3015,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "BANGGAI LAUT",
     "survey_type": "se_umum",
-    "count": 292
+    "count": 312
   },
   {
     "date": "2026-08-05",
     "kab_name": "BANGGAI LAUT",
     "survey_type": "se_umum",
-    "count": 291
+    "count": 271
   },
   {
     "date": "2026-08-04",
@@ -3033,13 +3033,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "MOROWALI UTARA",
     "survey_type": "se_umum",
-    "count": 725
+    "count": 589
   },
   {
     "date": "2026-08-05",
     "kab_name": "MOROWALI UTARA",
     "survey_type": "se_umum",
-    "count": 725
+    "count": 861
   },
   {
     "date": "2026-08-04",
@@ -3051,13 +3051,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1265
+    "count": 997
   },
   {
     "date": "2026-08-05",
     "kab_name": "PALU",
     "survey_type": "se_umum",
-    "count": 1264
+    "count": 1532
   },
   {
     "date": "2026-08-04",
@@ -3069,13 +3069,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "BANGGAI",
     "survey_type": "se_ub",
-    "count": 7
+    "count": 5
   },
   {
     "date": "2026-08-05",
     "kab_name": "BANGGAI",
     "survey_type": "se_ub",
-    "count": 6
+    "count": 8
   },
   {
     "date": "2026-08-06",
@@ -3141,13 +3141,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "MOROWALI UTARA",
     "survey_type": "se_ub",
-    "count": 2
+    "count": 3
   },
   {
     "date": "2026-08-05",
     "kab_name": "MOROWALI UTARA",
     "survey_type": "se_ub",
-    "count": 2
+    "count": 1
   },
   {
     "date": "2026-08-04",
@@ -3159,13 +3159,13 @@ window.DAILY_SUBMISSION_STATS = [
     "date": "2026-08-06",
     "kab_name": "PALU",
     "survey_type": "se_ub",
-    "count": 5
+    "count": 6
   },
   {
     "date": "2026-08-05",
     "kab_name": "PALU",
     "survey_type": "se_ub",
-    "count": 4
+    "count": 3
   },
   {
     "date": "2026-08-04",
