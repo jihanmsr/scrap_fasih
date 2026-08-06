@@ -2830,5 +2830,347 @@ window.DAILY_SUBMISSION_STATS = [
     "kab_name": "TOJO UNA-UNA",
     "survey_type": "se_umum",
     "count": 942
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 827
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 826
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "BANGGAI KEPULAUAN",
+    "survey_type": "se_umum",
+    "count": 841
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 2484
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 2483
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_umum",
+    "count": 2506
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 863
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 863
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_umum",
+    "count": 886
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 2305
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 2304
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "POSO",
+    "survey_type": "se_umum",
+    "count": 1866
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 1976
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 1976
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_umum",
+    "count": 2466
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 1606
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 1605
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_umum",
+    "count": 1565
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 869
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 868
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "BUOL",
+    "survey_type": "se_umum",
+    "count": 913
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 2997
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 2997
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_umum",
+    "count": 3042
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 998
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 998
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_umum",
+    "count": 1128
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 2092
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 2092
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "SIGI",
+    "survey_type": "se_umum",
+    "count": 1897
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 292
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 291
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "BANGGAI LAUT",
+    "survey_type": "se_umum",
+    "count": 310
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 725
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 725
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_umum",
+    "count": 853
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 1265
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 1264
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "PALU",
+    "survey_type": "se_umum",
+    "count": 1699
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_ub",
+    "count": 7
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "BANGGAI",
+    "survey_type": "se_ub",
+    "count": 6
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_ub",
+    "count": 1
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "MOROWALI",
+    "survey_type": "se_ub",
+    "count": 6
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "DONGGALA",
+    "survey_type": "se_ub",
+    "count": 1
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "TOLI-TOLI",
+    "survey_type": "se_ub",
+    "count": 2
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "BUOL",
+    "survey_type": "se_ub",
+    "count": 1
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "PARIGI MOUTONG",
+    "survey_type": "se_ub",
+    "count": 15
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_ub",
+    "count": 2
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "TOJO UNA-UNA",
+    "survey_type": "se_ub",
+    "count": 1
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "SIGI",
+    "survey_type": "se_ub",
+    "count": 2
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "SIGI",
+    "survey_type": "se_ub",
+    "count": 1
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_ub",
+    "count": 2
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_ub",
+    "count": 2
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "MOROWALI UTARA",
+    "survey_type": "se_ub",
+    "count": 5
+  },
+  {
+    "date": "2026-08-06",
+    "kab_name": "PALU",
+    "survey_type": "se_ub",
+    "count": 5
+  },
+  {
+    "date": "2026-08-05",
+    "kab_name": "PALU",
+    "survey_type": "se_ub",
+    "count": 4
+  },
+  {
+    "date": "2026-08-04",
+    "kab_name": "PALU",
+    "survey_type": "se_ub",
+    "count": 1
   }
 ];

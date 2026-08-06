@@ -162657,6 +162657,16 @@ window.PETUGAS_PROGRESS_MAP = {
             "draft": 0,
             "open": 5,
             "sls_details": {}
+        },
+        "inibukandidin@gmail.com": {
+            "target": 4,
+            "submitted_pencacah": 0,
+            "submitted_respondent": 0,
+            "approved": 0,
+            "rejected": 0,
+            "draft": 0,
+            "open": 4,
+            "sls_details": {}
         }
     },
     "Pengawas": {
