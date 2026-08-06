@@ -25,6 +25,10 @@ for _, row in df_p.iterrows():
             "rejected": 0,
             "draft": 0,
             "open": 0,
+            "revoked": 0,
+            "edited_pengawas": 0,
+            "edited_admin": 0,
+            "completed_admin": 0,
             "sls_details": {}
         }
         region_patch[email] = []
@@ -32,9 +36,17 @@ for _, row in df_p.iterrows():
     if reg_code not in region_patch[email]:
         region_patch[email].append(reg_code)
     
-    # Increase target count for this sls
-    progress_patch[email]['target'] += 1
-    progress_patch[email]['open'] += 1
+    progress_patch[email]['target'] += row.get('open', 0) + row.get('draft', 0) + row.get('submitted_respondent', 0) + row.get('submitted_by_pencacah', 0) + row.get('edited_by_pengawas', 0) + row.get('rejected_by_pengawas', 0) + row.get('approved_by_pengawas', 0) + row.get('revoked_by_pengawas', 0) + row.get('edited_by_admin_kabupaten', 0) + row.get('rejected_by_admin_kabupaten', 0) + row.get('revoked_by_admin_kabupaten', 0) + row.get('completed_by_admin_kabupaten', 0)
+    progress_patch[email]['open'] += row.get('open', 0)
+    progress_patch[email]['draft'] += row.get('draft', 0)
+    progress_patch[email]['submitted_respondent'] += row.get('submitted_respondent', 0)
+    progress_patch[email]['submitted_pencacah'] += row.get('submitted_by_pencacah', 0)
+    progress_patch[email]['approved'] += row.get('approved_by_pengawas', 0)
+    progress_patch[email]['rejected'] += row.get('rejected_by_pengawas', 0)
+    progress_patch[email]['revoked'] += row.get('revoked_by_pengawas', 0)
+    progress_patch[email]['edited_pengawas'] += row.get('edited_by_pengawas', 0)
+    progress_patch[email]['edited_admin'] += row.get('edited_by_admin_kabupaten', 0)
+    progress_patch[email]['completed_admin'] += row.get('completed_by_admin_kabupaten', 0)
 
 # 1. Patch fast_petugas_progress.js
 with open('fast_petugas_progress.js', 'r', encoding='utf-8') as f:
@@ -49,10 +61,14 @@ if match:
     added = 0
     for email, data in progress_patch.items():
         if email not in prog_map['Pencacah']:
-            prog_map['Pencacah'][email] = data
             added += 1
+        
+        # Preserve sls_details if it existed
+        existing_data = prog_map['Pencacah'].get(email, {})
+        data['sls_details'] = existing_data.get('sls_details', {})
+        prog_map['Pencacah'][email] = data
             
-    print(f"Added {added} enumerators to PETUGAS_PROGRESS_MAP")
+    print(f"Added {added} new enumerators and updated stats for all in PETUGAS_PROGRESS_MAP")
     
     new_prog_json = json.dumps(prog_map, indent=4, ensure_ascii=False)
     content_prog = content_prog[:match.start(1)] + new_prog_json + content_prog[match.end(1):]
