@@ -88685,6 +88685,290 @@ window.ASSIGN_DATA_UMUM = [
             }
         ],
         "totalRegions": 9
+    },
+    {
+        "username": "wandamangnga@gmail.com",
+        "email": "wandamangnga@gmail.com",
+        "fullname": "-",
+        "roleName": "Pencacah",
+        "regions": [
+            {
+                "regionCode": "72010510070003",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010510070004",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010510070008",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010510070009",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010510070010",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010510072001",
+                "regionName": "-"
+            }
+        ],
+        "totalRegions": 6
+    },
+    {
+        "username": "laehsumarto@gmail.com",
+        "email": "laehsumarto@gmail.com",
+        "fullname": "-",
+        "roleName": "Pencacah",
+        "regions": [
+            {
+                "regionCode": "72010610030003",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010610030004",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010610032001",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010710020001",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010710020002",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010710020003",
+                "regionName": "-"
+            }
+        ],
+        "totalRegions": 6
+    },
+    {
+        "username": "hermontuboi92@gmail.com",
+        "email": "hermontuboi92@gmail.com",
+        "fullname": "-",
+        "roleName": "Pencacah",
+        "regions": [
+            {
+                "regionCode": "72010610120003",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010610130002",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010610130003",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010610132001",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010610160001",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010610160002",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010610162001",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010610200001",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010610200002",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72010610200003",
+                "regionName": "-"
+            }
+        ],
+        "totalRegions": 10
+    },
+    {
+        "username": "karnotudaan@gmail.com",
+        "email": "karnotudaan@gmail.com",
+        "fullname": "-",
+        "roleName": "Pencacah",
+        "regions": [
+            {
+                "regionCode": "72020500090012",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020500090013",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020500090014",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020500090015",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020500090016",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020500090017",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020500090019",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020500230013",
+                "regionName": "-"
+            }
+        ],
+        "totalRegions": 8
+    },
+    {
+        "username": "nurafriantinyamun@gmail.com",
+        "email": "nurafriantinyamun@gmail.com",
+        "fullname": "-",
+        "roleName": "Pencacah",
+        "regions": [
+            {
+                "regionCode": "72020710070001",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020710130001",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020710130002",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020710130003",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020710130004",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020710130005",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020710130006",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020710130007",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72020710130008",
+                "regionName": "-"
+            }
+        ],
+        "totalRegions": 9
+    },
+    {
+        "username": "muningmompala02@gmail.com",
+        "email": "muningmompala02@gmail.com",
+        "fullname": "-",
+        "roleName": "Pencacah",
+        "regions": [
+            {
+                "regionCode": "72040510090001",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72040510090002",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72040510090003",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72040510090004",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72040510090005",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72040510090006",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72040510091001",
+                "regionName": "-"
+            }
+        ],
+        "totalRegions": 7
+    },
+    {
+        "username": "alamsyah22988@gmail.com",
+        "email": "alamsyah22988@gmail.com",
+        "fullname": "-",
+        "roleName": "Pencacah",
+        "regions": [
+            {
+                "regionCode": "72040700090003",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72040700090006",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72040700090007",
+                "regionName": "-"
+            }
+        ],
+        "totalRegions": 3
+    },
+    {
+        "username": "inibukandidin@gmail.com",
+        "email": "inibukandidin@gmail.com",
+        "fullname": "-",
+        "roleName": "Pencacah",
+        "regions": [
+            {
+                "regionCode": "72710300040024",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72710300040026",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72710300040027",
+                "regionName": "-"
+            },
+            {
+                "regionCode": "72710300050001",
+                "regionName": "-"
+            }
+        ],
+        "totalRegions": 4
     }
 ];
 window.ASSIGN_DATA_UB   = [

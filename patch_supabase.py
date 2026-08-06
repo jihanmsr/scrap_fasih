@@ -44,7 +44,8 @@ assign_payload = json.loads(raw_str)
 petugas_umum = assign_payload.get("petugas_data_umum", [])
 
 print("Loading Excel data...")
-excel_file = 'Rekap Progress Petugas 03_08.xlsx'
+import glob
+excel_file = max(glob.glob('Rekap Progress Petugas*.xlsx'))
 df = pd.read_excel(excel_file)
 df_p = df[df['pencacah_email'].notna() & (df['pencacah_email'] != '')]
 

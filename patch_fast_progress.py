@@ -2,7 +2,8 @@ import pandas as pd
 import json
 import re
 
-excel_file = 'Rekap Progress Petugas 03_08.xlsx'
+import glob
+excel_file = max(glob.glob('Rekap Progress Petugas*.xlsx'))
 js_file = 'fast_petugas_progress.js'
 
 print("Loading Excel data...")
