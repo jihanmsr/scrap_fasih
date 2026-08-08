@@ -35,3 +35,4 @@ def process_excel(excel_path, date_str):
 process_excel('Rekap Progress Petugas 05_08 14.30.xlsx', '2026-08-05')
 process_excel('Rekap Progress Petugas 06_08.xlsx', '2026-08-06')
 process_excel('Rekap Progress Petugas 07_08.xlsx', '2026-08-07')
+process_excel('Rekap Progress Petugas 08_08.xlsx', '2026-08-08')

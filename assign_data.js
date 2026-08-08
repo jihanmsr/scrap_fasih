@@ -5,7 +5,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 50146,
         "assigned": 24170,
         "have_not_assigned": 25976,
-        "timestamp": "2026-07-16T13:43:48.476961"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7202",
@@ -13,7 +13,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 158548,
         "assigned": 84287,
         "have_not_assigned": 74261,
-        "timestamp": "2026-07-16T14:09:03.507762"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7203",
@@ -21,7 +21,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 60706,
         "assigned": 35770,
         "have_not_assigned": 24936,
-        "timestamp": "2026-07-16T14:14:02.174001"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7204",
@@ -29,7 +29,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 115057,
         "assigned": 60165,
         "have_not_assigned": 54892,
-        "timestamp": "2026-07-16T14:33:52.997692"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7205",
@@ -37,7 +37,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 121294,
         "assigned": 61051,
         "have_not_assigned": 60243,
-        "timestamp": "2026-07-16T14:46:44.331322"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7206",
@@ -45,7 +45,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 89409,
         "assigned": 46548,
         "have_not_assigned": 42861,
-        "timestamp": "2026-07-16T14:59:47.471717"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7207",
@@ -53,7 +53,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 64173,
         "assigned": 34048,
         "have_not_assigned": 30125,
-        "timestamp": "2026-07-16T15:16:50.709121"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7208",
@@ -61,7 +61,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 185702,
         "assigned": 97101,
         "have_not_assigned": 88601,
-        "timestamp": "2026-07-16T15:53:12.983582"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7209",
@@ -69,7 +69,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 65521,
         "assigned": 33122,
         "have_not_assigned": 32399,
-        "timestamp": "2026-07-18T11:33:57.721831"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7210",
@@ -77,7 +77,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 117538,
         "assigned": 59878,
         "have_not_assigned": 57660,
-        "timestamp": "2026-07-18T12:36:41.124990"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7211",
@@ -85,7 +85,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 30847,
         "assigned": 14533,
         "have_not_assigned": 16314,
-        "timestamp": "2026-07-18T13:27:51.862719"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7212",
@@ -93,7 +93,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-07-18T13:28:26.378395"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "kode_kab": "7271",
@@ -101,7 +101,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-07-18T13:28:26.378395"
+        "timestamp": "2026-08-08T14:09:00.000000"
     },
     {
         "username": "alfiandialfiandi99@gmail.com",
@@ -88978,7 +88978,7 @@ window.ASSIGN_DATA_UB   = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-07-18T13:28:19.939298"
+        "timestamp": "2026-08-08T14:09:00.000000"
     }
 ];
 window.ASSIGN_SLS_DATA_UMUM = [
