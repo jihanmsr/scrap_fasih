@@ -10898,21 +10898,21 @@ window.downloadCurrentSeTable = function (surveyType) {
     }
 
     // Target akhir 31 Agustus 2026 23:59:59
-    const endDate = new Date('2026-08-31T23:59:59');
+    // Gunakan constructor yang cross-browser safe (Tahun, Bulan-1, Tanggal, Jam, Menit, Detik)
+    const endDate = new Date(2026, 7, 31, 23, 59, 59);
 
     const tick = () => {
         let now = new Date();
-        let diff = endDate - now;
+        let diff = endDate.getTime() - now.getTime();
 
-        if (diff <= 0) {
+        if (diff <= 0 || isNaN(diff)) {
             if (countdownDaysEl) countdownDaysEl.innerHTML = `0 Hari <span style="font-size: 1.1rem; opacity: 0.9; font-variant-numeric: tabular-nums;">00:00:00</span>`;
             if (seUmumCountdownEl) seUmumCountdownEl.innerHTML = `0 Hari <span style="font-size: 0.9rem; opacity: 0.9;">00:00:00</span>`;
             if (window._se2026CountdownInterval) clearInterval(window._se2026CountdownInterval);
             return;
         }
 
-        let today = new Date(now);
-        today.setHours(0, 0, 0, 0);
+        let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
         let remainingWorkingDays = 0;
         let curDate = new Date(today);
