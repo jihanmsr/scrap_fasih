@@ -264,12 +264,15 @@ function renderRekon() {
             if (sortKey === 'muatan_utp') { valA = a.m_utp; valB = b.m_utp; }
             else if (sortKey === 'realisasi_utp') { valA = a.r_utp; valB = b.r_utp; }
             else if (sortKey === 'diff_utp') { valA = a.r_utp - a.m_utp; valB = b.r_utp - b.m_utp; }
+            else if (sortKey === 'pct_utp') { valA = a.m_utp ? (a.r_utp/a.m_utp)*100 : 0; valB = b.m_utp ? (b.r_utp/b.m_utp)*100 : 0; }
             else if (sortKey === 'muatan_sbr') { valA = a.m_sbr; valB = b.m_sbr; }
             else if (sortKey === 'realisasi_sbr') { valA = a.r_sbr; valB = b.r_sbr; }
             else if (sortKey === 'diff_sbr') { valA = a.r_sbr - a.m_sbr; valB = b.r_sbr - b.m_sbr; }
+            else if (sortKey === 'pct_sbr') { valA = a.m_sbr ? (a.r_sbr/a.m_sbr)*100 : 0; valB = b.m_sbr ? (b.r_sbr/b.m_sbr)*100 : 0; }
             else if (sortKey === 'muatan_keluarga') { valA = a.m_kel; valB = b.m_kel; }
             else if (sortKey === 'realisasi_keluarga') { valA = a.r_kel; valB = b.r_kel; }
             else if (sortKey === 'diff_keluarga') { valA = a.r_kel - a.m_kel; valB = b.r_kel - b.m_kel; }
+            else if (sortKey === 'pct_keluarga') { valA = a.m_kel ? (a.r_kel/a.m_kel)*100 : 0; valB = b.m_kel ? (b.r_kel/b.m_kel)*100 : 0; }
             else { valA = a[sortKey]; valB = b[sortKey]; }
 
             if (typeof valA === 'string') valA = valA.toLowerCase();
@@ -298,18 +301,25 @@ function renderRekon() {
             const diffColorSBR = diff_sbr < 0 ? '#b91c1c' : (diff_sbr > 0 ? '#15803d' : 'inherit');
             const diffColorKel = diff_kel < 0 ? '#b91c1c' : (diff_kel > 0 ? '#15803d' : 'inherit');
 
+            const pct_utp = d.m_utp ? ((d.r_utp / d.m_utp) * 100).toFixed(2) : 0;
+            const pct_sbr = d.m_sbr ? ((d.r_sbr / d.m_sbr) * 100).toFixed(2) : 0;
+            const pct_kel = d.m_kel ? ((d.r_kel / d.m_kel) * 100).toFixed(2) : 0;
+            
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${d.nmkab}</td>
                 <td style="text-align: right;">${d.m_utp.toLocaleString('id-ID')}</td>
                 <td style="text-align: right;">${d.r_utp.toLocaleString('id-ID')}</td>
                 <td style="text-align: right; color: ${diffColorUTP}; font-weight: bold;">${diff_utp.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${pct_utp}%</td>
                 <td style="text-align: right;">${d.m_sbr.toLocaleString('id-ID')}</td>
                 <td style="text-align: right;">${d.r_sbr.toLocaleString('id-ID')}</td>
                 <td style="text-align: right; color: ${diffColorSBR}; font-weight: bold;">${diff_sbr.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${pct_sbr}%</td>
                 <td style="text-align: right;">${d.m_kel.toLocaleString('id-ID')}</td>
                 <td style="text-align: right;">${d.r_kel.toLocaleString('id-ID')}</td>
                 <td style="text-align: right; color: ${diffColorKel}; font-weight: bold;">${diff_kel.toLocaleString('id-ID')}</td>
+                <td style="text-align: right;">${pct_kel}%</td>
             `;
             tbody.appendChild(tr);
         });

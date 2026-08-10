@@ -14,12 +14,12 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js?v=1786348555_v1"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js?v=1786348555_v1"></script>
-    <script src="daily_submission_stats.js?v=1786348555_v1"></script>
-    <script src="daily_summary.js?v=1786348555_v1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js?v=1786348796_v1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js?v=1786348796_v1"></script>
+    <script src="daily_submission_stats.js?v=1786348796_v1"></script>
+    <script src="daily_summary.js?v=1786348796_v1"></script>
 
-    <link rel="stylesheet" href="style.css?v=1786348555">
+    <link rel="stylesheet" href="style.css?v=1786348796">
     <style>
         /* Sub Tab Navigation Styles */
         .sub-tabs-container {
@@ -2441,7 +2441,7 @@
                         Level SLS
                     </button>
                     <button class="btn-sub-tab" id="rekon-sub-btn-kabkot" onclick="switchRekonSubTab('kabkot')">
-                        Level Kab/Kota
+                        Rekap Kab/Kota
                     </button>
                     <button class="btn-sub-tab" id="rekon-sub-btn-petugas" onclick="switchRekonSubTab('petugas')">
                         Level Petugas
@@ -2526,13 +2526,13 @@
                         <thead>
                             <tr>
                                 <th rowspan="2" class="sortable" onclick="sortRekon('kabkot', 'nmkab')">Kab/Kota</th>
-                                <th colspan="3"
+                                <th colspan="4"
                                     style="text-align: center; background: rgba(59,130,246,0.1); border-bottom: 1px solid var(--card-border);">
                                     USAHA (UTP)</th>
-                                <th colspan="3"
+                                <th colspan="4"
                                     style="text-align: center; background: rgba(16,185,129,0.1); border-bottom: 1px solid var(--card-border);">
                                     USAHA (SBR)</th>
-                                <th colspan="3"
+                                <th colspan="4"
                                     style="text-align: center; background: rgba(245,158,11,0.1); border-bottom: 1px solid var(--card-border);">
                                     KELUARGA</th>
                             </tr>
@@ -2541,14 +2541,17 @@
                                 <th class="sortable" onclick="sortRekon('kabkot', 'muatan_utp')" style="text-align:right;">Muatan</th>
                                 <th class="sortable" onclick="sortRekon('kabkot', 'realisasi_utp')" style="text-align:right;">Realisasi</th>
                                 <th class="sortable" onclick="sortRekon('kabkot', 'diff_utp')" style="text-align:right;">Selisih</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'pct_utp')" style="text-align:right;">% Capaian</th>
                                 <!-- SBR -->
                                 <th class="sortable" onclick="sortRekon('kabkot', 'muatan_sbr')" style="text-align:right;">Muatan</th>
                                 <th class="sortable" onclick="sortRekon('kabkot', 'realisasi_sbr')" style="text-align:right;">Realisasi</th>
                                 <th class="sortable" onclick="sortRekon('kabkot', 'diff_sbr')" style="text-align:right;">Selisih</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'pct_sbr')" style="text-align:right;">% Capaian</th>
                                 <!-- KELUARGA -->
                                 <th class="sortable" onclick="sortRekon('kabkot', 'muatan_keluarga')" style="text-align:right;">Muatan</th>
                                 <th class="sortable" onclick="sortRekon('kabkot', 'realisasi_keluarga')" style="text-align:right;">Realisasi</th>
                                 <th class="sortable" onclick="sortRekon('kabkot', 'diff_keluarga')" style="text-align:right;">Selisih</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'pct_keluarga')" style="text-align:right;">% Capaian</th>
                             </tr>
                         </thead>
                         <tbody id="rekon-table-kabkot"></tbody>
@@ -2858,23 +2861,23 @@
     </div>
 
     <!-- Pako library for base64 gzip decompression -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js?v=1786348555_v1"></script>
-    <script src="supabase_config.js?v=1786348555_v1"></script>
-    <script src="users.js?v=1786348555"></script>
-    <script src="auth.js?v=1786348555_v1"></script>
-    <script src="mitra_data.js?v=1786348555_v1"></script>
-    <script src="mysql_data.js?v=1786348555_v1"></script>
-    <script src="new_businesses_data.js?v=1786348555_v1"></script>
-    <script src="ipas_data.js?v=1786348555_v1"></script>
-    <script src="daily_summary.js?v=1786348555_v1"></script>
-    <script src="rekon_data.js?v=1786348555"></script>
-    <script src="rekon.js?v=1786348555"></script>
-    <script src="petugas_progress.js?v=1786348555_v1"></script>
-    <script src="petugas_phones.js?v=1786348555_v1"></script>
-    <script src="petugas_region_map.js?v=1786348555_v1"></script>
-    <script src="fast_petugas_progress.js?v=1786348555_v1"></script>
-    <script src="fast_petugas_history.js?v=1786348555_v1"></script>
-    <script src="app.js?v=1786348555_v1" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js?v=1786348796_v1"></script>
+    <script src="supabase_config.js?v=1786348796_v1"></script>
+    <script src="users.js?v=1786348796"></script>
+    <script src="auth.js?v=1786348796_v1"></script>
+    <script src="mitra_data.js?v=1786348796_v1"></script>
+    <script src="mysql_data.js?v=1786348796_v1"></script>
+    <script src="new_businesses_data.js?v=1786348796_v1"></script>
+    <script src="ipas_data.js?v=1786348796_v1"></script>
+    <script src="daily_summary.js?v=1786348796_v1"></script>
+    <script src="rekon_data.js?v=1786348796"></script>
+    <script src="rekon.js?v=1786348796"></script>
+    <script src="petugas_progress.js?v=1786348796_v1"></script>
+    <script src="petugas_phones.js?v=1786348796_v1"></script>
+    <script src="petugas_region_map.js?v=1786348796_v1"></script>
+    <script src="fast_petugas_progress.js?v=1786348796_v1"></script>
+    <script src="fast_petugas_history.js?v=1786348796_v1"></script>
+    <script src="app.js?v=1786348796_v1" defer></script>
 
     <script>
         function switchSubTab(surveyType, subTab) {
