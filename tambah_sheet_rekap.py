@@ -11,6 +11,8 @@ df = pd.read_excel(FILE, sheet_name='muatan_sls')
 df['usaha'] = df['umkm_keluarga'] + df['jml_utp_subsektor'] + df['Total_usaha_SBR']
 
 id_sls    = ['kdprov','nmprov','kdkab','nmkab','kdkec','nmkec','kddesa','nmdesa','kdsls','kdsubsls','nmsls']
+id_desa   = ['kdprov','nmprov','kdkab','nmkab','kdkec','nmkec','kddesa','nmdesa']
+id_kec    = ['kdprov','nmprov','kdkab','nmkab','kdkec','nmkec']
 id_kabkot = ['kdprov','nmprov','kdkab','nmkab']
 
 agg = dict(
@@ -22,9 +24,13 @@ agg = dict(
 )
 
 rekap_sls    = df.groupby(id_sls,    as_index=False).agg(**agg)
+rekap_desa   = df.groupby(id_desa,   as_index=False).agg(**agg)
+rekap_kec    = df.groupby(id_kec,    as_index=False).agg(**agg)
 rekap_kabkot = df.groupby(id_kabkot, as_index=False).agg(**agg)
 
 print(f"  Per SLS    : {len(rekap_sls):,} baris")
+print(f"  Per Desa   : {len(rekap_desa):,} baris")
+print(f"  Per Kec    : {len(rekap_kec):,} baris")
 print(f"  Per KabKot : {len(rekap_kabkot):,} baris")
 
 # ── 2. Style helpers ──────────────────────────────────────────────────────────
@@ -103,12 +109,10 @@ for i, row in rekap_sls.iterrows():
         ws1.cell(r, c).value = v
         style_data(ws1.cell(r, c), align=RIGHT if c > 11 else LEFT)
 
-    # Rumus usaha di kolom P = M + N + O
     cell_u = ws1.cell(r, 16)
     cell_u.value = f"=M{r}+N{r}+O{r}"
     style_data(cell_u, fill=FILL_FORMULA)
 
-# Baris total
 tr = len(rekap_sls) + 2
 ws1.cell(tr, 11).value = "TOTAL"
 style_data(ws1.cell(tr, 11), bold=True, fill=FILL_TOTAL, align=RIGHT)
@@ -123,15 +127,99 @@ for i, w in enumerate(col_w_sls, 1):
 ws1.freeze_panes = 'A2'
 ws1.row_dimensions[1].height = 35
 
-# ── 6. Sheet Rekap_KabKot ─────────────────────────────────────────────────────
+# ── 6. Sheet Rekap_Desa ───────────────────────────────────────────────────────
+print("  Menulis sheet Rekap_Desa...")
+ws_desa = wb.create_sheet('Rekap_Desa')
+
+headers_desa = [
+    'Kode Prov','Nama Prov','Kode Kab','Nama Kab/Kota',
+    'Kode Kec','Nama Kec','Kode Desa','Nama Desa',
+    'Keluarga','UMKM Keluarga','UTP Subsektor','SBR',
+    'Usaha\n(=UMKM+UTP+SBR)'
+]
+ws_desa.append(headers_desa)
+for c in range(1, len(headers_desa)+1):
+    style_header(ws_desa.cell(1, c))
+
+for i, row in rekap_desa.iterrows():
+    r = i + 2
+    vals = [
+        row.kdprov, row.nmprov, row.kdkab, row.nmkab,
+        row.kdkec,  row.nmkec,  row.kddesa, row.nmdesa,
+        row.keluarga, row.umkm_keluarga, row.utp_subsektor, row.sbr,
+    ]
+    for c, v in enumerate(vals, 1):
+        ws_desa.cell(r, c).value = v
+        style_data(ws_desa.cell(r, c), align=RIGHT if c > 8 else LEFT)
+
+    cell_u = ws_desa.cell(r, 13)
+    cell_u.value = f"=J{r}+K{r}+L{r}"
+    style_data(cell_u, fill=FILL_FORMULA)
+
+tr_desa = len(rekap_desa) + 2
+ws_desa.cell(tr_desa, 8).value = "TOTAL"
+style_data(ws_desa.cell(tr_desa, 8), bold=True, fill=FILL_TOTAL, align=RIGHT)
+for c_idx, col_l in [(9,'I'),(10,'J'),(11,'K'),(12,'L'),(13,'M')]:
+    cell = ws_desa.cell(tr_desa, c_idx)
+    cell.value = f"=SUM({col_l}2:{col_l}{tr_desa-1})"
+    style_data(cell, bold=True, fill=FILL_TOTAL)
+
+col_w_desa = [8,16,8,22,8,18,8,24,12,15,15,12,18]
+for i, w in enumerate(col_w_desa, 1):
+    ws_desa.column_dimensions[get_column_letter(i)].width = w
+ws_desa.freeze_panes = 'A2'
+ws_desa.row_dimensions[1].height = 35
+
+# ── 7. Sheet Rekap_Kecamatan ──────────────────────────────────────────────────
+print("  Menulis sheet Rekap_Kecamatan...")
+ws_kec = wb.create_sheet('Rekap_Kecamatan')
+
+headers_kec = [
+    'Kode Prov','Nama Prov','Kode Kab','Nama Kab/Kota',
+    'Kode Kec','Nama Kec',
+    'Keluarga','UMKM Keluarga','UTP Subsektor','SBR',
+    'Usaha\n(=UMKM+UTP+SBR)'
+]
+ws_kec.append(headers_kec)
+for c in range(1, len(headers_kec)+1):
+    style_header(ws_kec.cell(1, c))
+
+for i, row in rekap_kec.iterrows():
+    r = i + 2
+    vals = [
+        row.kdprov, row.nmprov, row.kdkab, row.nmkab,
+        row.kdkec,  row.nmkec,
+        row.keluarga, row.umkm_keluarga, row.utp_subsektor, row.sbr,
+    ]
+    for c, v in enumerate(vals, 1):
+        ws_kec.cell(r, c).value = v
+        style_data(ws_kec.cell(r, c), align=RIGHT if c > 6 else LEFT)
+
+    cell_u = ws_kec.cell(r, 11)
+    cell_u.value = f"=H{r}+I{r}+J{r}"
+    style_data(cell_u, fill=FILL_FORMULA)
+
+tr_kec = len(rekap_kec) + 2
+ws_kec.cell(tr_kec, 6).value = "TOTAL"
+style_data(ws_kec.cell(tr_kec, 6), bold=True, fill=FILL_TOTAL, align=RIGHT)
+for c_idx, col_l in [(7,'G'),(8,'H'),(9,'I'),(10,'J'),(11,'K')]:
+    cell = ws_kec.cell(tr_kec, c_idx)
+    cell.value = f"=SUM({col_l}2:{col_l}{tr_kec-1})"
+    style_data(cell, bold=True, fill=FILL_TOTAL)
+
+col_w_kec = [8,16,8,22,8,18,12,15,15,12,18]
+for i, w in enumerate(col_w_kec, 1):
+    ws_kec.column_dimensions[get_column_letter(i)].width = w
+ws_kec.freeze_panes = 'A2'
+ws_kec.row_dimensions[1].height = 35
+
+# ── 8. Sheet Rekap_KabKot ─────────────────────────────────────────────────────
 print("  Menulis sheet Rekap_KabKot...")
 ws2 = wb.create_sheet('Rekap_KabKot')
-SLS_SHEET = 'Rekap_SLS'
 
 headers_kk = [
     'Kode Prov','Nama Prov','Kode Kab','Nama Kab/Kota',
-    'Keluarga\n(SUMIF)', 'UMKM Keluarga\n(SUMIF)',
-    'UTP Subsektor\n(SUMIF)', 'SBR\n(SUMIF)',
+    'Keluarga', 'UMKM Keluarga', 'UTP Subsektor', 'SBR',
     'Usaha\n(=UMKM+UTP+SBR)'
 ]
 ws2.append(headers_kk)
@@ -145,15 +233,12 @@ for i, row in rekap_kabkot.iterrows():
     ws2.cell(r,3).value = row.kdkab;   style_data(ws2.cell(r,3), align=CENTER)
     ws2.cell(r,4).value = row.nmkab;   style_data(ws2.cell(r,4), align=LEFT)
 
-    # SUMIF ke Rekap_SLS: kode kab ada di kolom C, data di L/M/N/O
-    def sif(sum_col):
-        return f"=SUMIF('{SLS_SHEET}'!C:C,C{r},'{SLS_SHEET}'!{sum_col}:{sum_col})"
+    ws2.cell(r,5).value = row.keluarga;       style_data(ws2.cell(r,5), align=RIGHT)
+    ws2.cell(r,6).value = row.umkm_keluarga;  style_data(ws2.cell(r,6), align=RIGHT)
+    ws2.cell(r,7).value = row.utp_subsektor;  style_data(ws2.cell(r,7), align=RIGHT)
+    ws2.cell(r,8).value = row.sbr;            style_data(ws2.cell(r,8), align=RIGHT)
 
-    ws2.cell(r,5).value = sif('L');  style_data(ws2.cell(r,5), fill=FILL_FORMULA)
-    ws2.cell(r,6).value = sif('M');  style_data(ws2.cell(r,6), fill=FILL_FORMULA)
-    ws2.cell(r,7).value = sif('N');  style_data(ws2.cell(r,7), fill=FILL_FORMULA)
-    ws2.cell(r,8).value = sif('O');  style_data(ws2.cell(r,8), fill=FILL_FORMULA)
-    ws2.cell(r,9).value = f"=F{r}+G{r}+H{r}"
+    ws2.cell(r,9).value = f"=E{r}+F{r}+G{r}+H{r}"
     style_data(ws2.cell(r,9), fill=FILL_FORMULA)
 
 # Total row
@@ -171,7 +256,7 @@ for i, w in enumerate(col_w_kk, 1):
 ws2.freeze_panes = 'A2'
 ws2.row_dimensions[1].height = 40
 
-# ── 7. Simpan ─────────────────────────────────────────────────────────────────
+# ── 9. Simpan ─────────────────────────────────────────────────────────────────
 print("Menyimpan file...")
 wb.save(FILE)
 print(f"\n✅ Selesai! File disimpan: {FILE}")

@@ -207,7 +207,10 @@ function renderRekon() {
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${d.sls_id}</td>
-                <td>${d.nmkab} - ${d.nmkec} - ${d.nmdesa} - ${d.nmsls}</td>
+                <td>${d.nmkab}</td>
+                <td>${d.nmkec}</td>
+                <td>${d.nmdesa}</td>
+                <td>${d.nmsls}</td>
                 <td style="text-align: right;">${m_utp.toLocaleString('id-ID')}</td>
                 <td style="text-align: right;">${r_utp.toLocaleString('id-ID')}</td>
                 <td style="text-align: right; color: ${diffColorUTP}; font-weight: bold;">${diff_utp.toLocaleString('id-ID')}</td>

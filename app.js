@@ -9693,48 +9693,90 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const data = anomaliDataCache;
 
-        // Build pivot: kab → { sama, sangat, dominan, total, biaya, belum, diproses, selesai }
+        // Build hierarchical pivot: kab -> kec -> desa -> sls
         const pivot = {};
-        data.forEach(row => {
-            const kab = row.kab_code || 'Lainnya';
-            if (!pivot[kab]) pivot[kab] = { melebihi: 0, sama: 0, sangat: 0, dominan: 0, total: 0, biaya: 0, belum: 0, diproses: 0, selesai: 0 };
-            const p = pivot[kab];
+        
+        function getStats() {
+            return { melebihi: 0, sama: 0, sangat: 0, dominan: 0, total: 0, biaya: 0, belum: 0, diproses: 0, selesai: 0 };
+        }
+        function addStats(p, row) {
             p.total++;
             p.biaya += row.biaya_produksi || 0;
             if ((row.jenis_anomali || '').includes('Melebihi')) p.melebihi++;
             else if ((row.jenis_anomali || '').includes('Sama')) p.sama++;
             else if ((row.jenis_anomali || '').includes('Sangat')) p.sangat++;
             else p.dominan++;
+            
             if (row.status_anomali == 3) p.selesai++;
             else if (row.status_anomali == 2) p.diproses++;
             else p.belum++;
-        });
+        }
 
-        const kabs = Object.keys(pivot).sort();
-        const totals = { melebihi: 0, sama: 0, sangat: 0, dominan: 0, total: 0, biaya: 0, belum: 0, diproses: 0, selesai: 0 };
-        kabs.forEach(k => {
-            Object.keys(totals).forEach(f => totals[f] += pivot[k][f]);
+        const totals = getStats();
+
+        data.forEach(row => {
+            const kab = row.kab_code || 'Lainnya';
+            const kec = row.kec_code || 'Lainnya';
+            const desa = row.desa_code || 'Lainnya';
+            const sls = row.sls_code || 'Lainnya';
+
+            if (!pivot[kab]) pivot[kab] = { stats: getStats(), children: {} };
+            if (!pivot[kab].children[kec]) pivot[kab].children[kec] = { stats: getStats(), children: {} };
+            if (!pivot[kab].children[kec].children[desa]) pivot[kab].children[kec].children[desa] = { stats: getStats(), children: {} };
+            if (!pivot[kab].children[kec].children[desa].children[sls]) pivot[kab].children[kec].children[desa].children[sls] = { stats: getStats() };
+
+            addStats(pivot[kab].stats, row);
+            addStats(pivot[kab].children[kec].stats, row);
+            addStats(pivot[kab].children[kec].children[desa].stats, row);
+            addStats(pivot[kab].children[kec].children[desa].children[sls].stats, row);
+            addStats(totals, row);
         });
 
         const thStyle = 'padding: 0.55rem 0.75rem; font-size: 0.75rem; font-weight: 700; text-align: center; white-space: nowrap; letter-spacing: 0.04em; text-transform: uppercase; background: var(--card-bg); color: var(--text-secondary); border-bottom: 2px solid var(--card-border);';
         const thLeftStyle = thStyle.replace('text-align: center', 'text-align: left');
         const tdStyle = (align = 'center') => `padding: 0.5rem 0.75rem; font-size: 0.82rem; text-align: ${align}; border-bottom: 1px solid var(--card-border); vertical-align: middle;`;
-
         const badge = (n, color, bg) => n > 0 ? `<span style="display:inline-block;padding:0.15rem 0.55rem;background:${bg};color:${color};border-radius:99px;font-weight:700;font-size:0.78rem;">${n}</span>` : `<span style="color:var(--text-secondary);font-size:0.78rem;">-</span>`;
 
-        const rows = kabs.map(kab => {
-            const p = pivot[kab];
+        function renderRow(label, p, paddingLeft, type, parentKab, parentKec, parentDesa) {
             const pct = p.total > 0 ? Math.round((p.selesai / p.total) * 100) : 0;
             const pctColor = pct >= 80 ? '#22c55e' : pct >= 40 ? '#f59e0b' : '#ef4444';
             const barW = pct;
-            return `<tr onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">
-                <td style="${tdStyle('left')} font-weight: 600;">${kab}</td>
+            
+            let idAttr = '';
+            let classAttr = '';
+            let btn = '';
+            let rowStyle = '';
+            
+            if (type === 'kab') {
+                classAttr = 'row-kab';
+                btn = `<button class="btn-expand" onclick="window.toggleTabulasiRow(this, 'kab', '${label}', '', '', '')" style="background:none;border:none;cursor:pointer;font-size:0.7rem;margin-right:0.3rem;">▶</button>`;
+                rowStyle = 'background: rgba(99, 102, 241, 0.05); font-weight: 700;';
+            } else if (type === 'kec') {
+                classAttr = 'row-kec';
+                idAttr = `data-parent-kab="${parentKab}"`;
+                btn = `<button class="btn-expand" onclick="window.toggleTabulasiRow(this, 'kec', '${parentKab}', '${label}', '', '')" style="background:none;border:none;cursor:pointer;font-size:0.7rem;margin-right:0.3rem;">▶</button>`;
+                rowStyle = 'display: none; background: rgba(99, 102, 241, 0.02); font-weight: 600;';
+            } else if (type === 'desa') {
+                classAttr = 'row-desa';
+                idAttr = `data-parent-kec="${parentKab}-${parentKec}"`;
+                btn = `<button class="btn-expand" onclick="window.toggleTabulasiRow(this, 'desa', '${parentKab}', '${parentKec}', '${label}', '')" style="background:none;border:none;cursor:pointer;font-size:0.7rem;margin-right:0.3rem;">▶</button>`;
+                rowStyle = 'display: none; background: #fff; font-weight: 500;';
+            } else {
+                classAttr = 'row-sls';
+                idAttr = `data-parent-desa="${parentKab}-${parentKec}-${parentDesa}"`;
+                rowStyle = 'display: none; background: #fafafa; font-size: 0.78rem;';
+            }
+
+            return `<tr class="${classAttr}" ${idAttr} style="${rowStyle}" onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">
+                <td style="${tdStyle('left')} padding-left: ${paddingLeft}rem;">
+                    ${btn}${label}
+                </td>
                 <td style="${tdStyle()}">${badge(p.melebihi, '#ef4444', 'rgba(239,68,68,0.1)')}</td>
                 <td style="${tdStyle()}">${badge(p.sama, '#ef4444', 'rgba(239,68,68,0.1)')}</td>
                 <td style="${tdStyle()}">${badge(p.sangat, '#f97316', 'rgba(249,115,22,0.1)')}</td>
                 <td style="${tdStyle()}">${badge(p.dominan, '#f59e0b', 'rgba(245,158,11,0.1)')}</td>
                 <td style="${tdStyle()} font-weight: 700;">${p.total}</td>
-                <td style="${tdStyle('right')} font-size: 0.78rem; color: var(--text-secondary);">${fmtRp(p.biaya)}</td>
+                <td style="${tdStyle('right')} font-size: 0.78rem; color: var(--text-secondary);">${window.fmtRp ? window.fmtRp(p.biaya) : p.biaya}</td>
                 <td style="${tdStyle()}">
                     ${badge(p.belum, '#ef4444', 'rgba(239,68,68,0.1)')}
                     ${p.diproses > 0 ? badge(p.diproses, '#f59e0b', 'rgba(245,158,11,0.1)') : ''}
@@ -9749,7 +9791,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </td>
             </tr>`;
-        }).join('');
+        }
+
+        let rows = '';
+        Object.keys(pivot).sort().forEach(kab => {
+            rows += renderRow(kab, pivot[kab].stats, 0.75, 'kab', kab, '', '');
+            Object.keys(pivot[kab].children).sort().forEach(kec => {
+                rows += renderRow(kec, pivot[kab].children[kec].stats, 2, 'kec', kab, kec, '');
+                Object.keys(pivot[kab].children[kec].children).sort().forEach(desa => {
+                    rows += renderRow(desa, pivot[kab].children[kec].children[desa].stats, 3.5, 'desa', kab, kec, desa);
+                    Object.keys(pivot[kab].children[kec].children[desa].children).sort().forEach(sls => {
+                        rows += renderRow(sls, pivot[kab].children[kec].children[desa].children[sls].stats, 5, 'sls', kab, kec, desa);
+                    });
+                });
+            });
+        });
 
         // Totals row
         const totalPct = totals.total > 0 ? Math.round((totals.selesai / totals.total) * 100) : 0;
@@ -9761,7 +9817,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td style="${tdStyle()} font-weight: 700;">${totals.sangat}</td>
             <td style="${tdStyle()} font-weight: 700;">${totals.dominan}</td>
             <td style="${tdStyle()} font-weight: 800; font-size: 0.9rem;">${totals.total}</td>
-            <td style="${tdStyle('right')} font-weight: 700; font-size: 0.78rem;">${fmtRp(totals.biaya)}</td>
+            <td style="${tdStyle('right')} font-weight: 700; font-size: 0.78rem;">${window.fmtRp ? window.fmtRp(totals.biaya) : totals.biaya}</td>
             <td style="${tdStyle()}">
                 ${badge(totals.belum, '#ef4444', 'rgba(239,68,68,0.1)')}
                 ${totals.diproses > 0 ? badge(totals.diproses, '#f59e0b', 'rgba(245,158,11,0.1)') : ''}
@@ -9781,7 +9837,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <table style="width:100%;border-collapse:collapse;font-family:'Plus Jakarta Sans',sans-serif;min-width:700px;">
                 <thead>
                     <tr>
-                        <th style="${thLeftStyle} min-width:140px;">Kab/Kota</th>
+                        <th style="${thLeftStyle} min-width:250px;">Wilayah</th>
                         <th style="${thStyle} color:#ef4444;">⛔ Melebihi</th>
                         <th style="${thStyle} color:#ef4444;">⚠️ Sama</th>
                         <th style="${thStyle} color:#f97316;">🔴 Sangat Dom.</th>
@@ -9796,27 +9852,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 <tfoot>${totalsRow}</tfoot>
             </table>
             <div style="margin-top:0.6rem;font-size:0.73rem;color:var(--text-secondary);">
-                * Klik header tabel di bawah untuk sort. TL = Tindak Lanjut. Klik baris kab/kota untuk filter tabel.
+                * Klik icon ▶ untuk melihat rincian per kecamatan, desa, hingga SLS.
             </div>`;
-
-        // Make rows clickable to filter
-        const trs = container.querySelectorAll('tbody tr');
-        trs.forEach((tr, i) => {
-            tr.style.cursor = 'pointer';
-            tr.title = 'Klik untuk filter ke ' + kabs[i];
-            tr.addEventListener('click', () => {
-                const sel = document.getElementById('anomali-filter-kab');
-                if (sel) {
-                    sel.value = kabs[i];
-                    window.filterAnomaliTable();
-                    // Scroll to table
-                    const tbl = document.getElementById('anomali-table');
-                    if (tbl) tbl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
     }
 
+    window.toggleTabulasiRow = function(btn, type, id1, id2, id3, id4) {
+        const table = btn.closest('table');
+        const isExpanded = btn.textContent.includes('▼');
+        btn.textContent = isExpanded ? '▶' : '▼';
+        
+        let targetClass = '';
+        let targetAttr = '';
+        let targetValue = '';
+        if (type === 'kab') {
+            targetClass = 'row-kec';
+            targetAttr = 'data-parent-kab';
+            targetValue = id1;
+        } else if (type === 'kec') {
+            targetClass = 'row-desa';
+            targetAttr = 'data-parent-kec';
+            targetValue = id1 + '-' + id2;
+        } else if (type === 'desa') {
+            targetClass = 'row-sls';
+            targetAttr = 'data-parent-desa';
+            targetValue = id1 + '-' + id2 + '-' + id3;
+        }
+        
+        const children = table.querySelectorAll(`tr.${targetClass}[${targetAttr}="${targetValue}"]`);
+        children.forEach(tr => {
+            if (isExpanded) {
+                tr.style.display = 'none';
+                const childBtn = tr.querySelector('.btn-expand');
+                if (childBtn && childBtn.textContent.includes('▼')) {
+                    childBtn.click();
+                }
+            } else {
+                tr.style.display = 'table-row';
+            }
+        });
+    };
+    
     // ========== END ANOMALI FEATURE ==========
 
     // Initial Execution
