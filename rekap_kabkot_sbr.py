@@ -1,7 +1,8 @@
 import pandas as pd
 import json
+import glob
 
-df_real = pd.read_excel('Rekap SBR, UTP, Keluarga_10_08.xlsx')
+df_real = pd.read_excel(max(glob.glob('Rekap SBR, UTP, Keluarga_*.xlsx')))
 df_real['idsls_str'] = df_real['level_5_full_code'].astype(str).str.replace(r'\.0$', '', regex=True).str.strip()
 
 with open('region_map_sulteng_full.json') as f:
@@ -40,6 +41,6 @@ df_total = pd.DataFrame([{
 }])
 df_rekap = pd.concat([df_rekap, df_total], ignore_index=True)
 
-out_file = 'Laporan_Rekap_KabKot_SBR_UTP_Keluarga_10_08.xlsx'
+out_file = max(glob.glob('Rekap SBR, UTP, Keluarga_*.xlsx')).replace('Rekap SBR, UTP, Keluarga_', 'Laporan_Rekap_KabKot_SBR_UTP_Keluarga_')
 df_rekap.to_excel(out_file, index=False)
 print("Berhasil dibuat:", out_file)
