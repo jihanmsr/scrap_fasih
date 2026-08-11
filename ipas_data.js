@@ -62,13 +62,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 109,
             "REJECTED BY PENGAWAS": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 97,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 97,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 43,
             "SUBMITTED BY PENCACAH": 58
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5082,
             "APPROVED BY Pengawas": 2891,
@@ -104,14 +104,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 23,
             "SUBMITTED BY PENCACAH": 13
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 50,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 50,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 21,
             "REJECTED BY PENGAWAS": 23,
             "SUBMITTED BY PENCACAH": 6
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3785,
             "APPROVED BY Pengawas": 1854,
@@ -146,14 +146,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 169,
             "REJECTED BY PENGAWAS": 59
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 154,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 154,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 46,
             "REJECTED BY PENGAWAS": 11,
             "SUBMITTED BY PENCACAH": 99
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 9510,
             "APPROVED BY Pengawas": 4787,
@@ -188,14 +188,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 18,
             "SUBMITTED BY PENCACAH": 35
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 44,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 44,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 19,
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 22
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3468,
             "APPROVED BY Pengawas": 1209,
@@ -230,12 +230,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 60,
             "SUBMITTED BY PENCACAH": 61
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 40,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 40,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 58
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3864,
             "APPROVED BY Pengawas": 1893,
@@ -271,13 +271,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 25,
             "SUBMITTED BY PENCACAH": 48
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 56,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 56,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 23,
             "SUBMITTED BY PENCACAH": 37
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4405,
             "APPROVED BY Pengawas": 2303,
@@ -311,14 +311,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 93,
             "SUBMITTED BY PENCACAH": 50
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 54,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 54,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 9,
             "SUBMITTED BY PENCACAH": 51,
             "SUBMITTED RESPONDENT": 2
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4307,
             "APPROVED BY Pengawas": 2782,
@@ -354,12 +354,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 114,
             "REJECTED BY PENGAWAS": 4
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 48,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 48,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 72
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4579,
             "APPROVED BY Pengawas": 3104,
@@ -394,13 +394,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 82,
             "REJECTED BY PENGAWAS": 5
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 47,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 47,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 48,
             "SUBMITTED BY PENCACAH": 4
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4328,
             "APPROVED BY Pengawas": 2686,
@@ -436,14 +436,14 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "APPROVED BY PENGAWAS": 103
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 38,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 38,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 15,
             "REJECTED BY PENGAWAS": 6,
             "SUBMITTED BY PENCACAH": 17
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3860,
             "APPROVED BY Pengawas": 2533,
@@ -479,13 +479,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 12,
             "SUBMITTED BY PENCACAH": 36
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 21,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 21,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 12,
             "REJECTED BY PENGAWAS": 9
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4422,
             "APPROVED BY Pengawas": 1867,
@@ -519,13 +519,13 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "APPROVED BY PENGAWAS": 99
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 61,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 61,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 51,
             "SUBMITTED BY PENCACAH": 11
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3730,
             "APPROVED BY Pengawas": 2368,
@@ -558,14 +558,14 @@ window.IPAS_DATA = {
         "COMPLETED BY Admin Kabupaten": 88,
         "REJECTED BY Admin Kabupaten": 21
       },
-      "two_days_ago_completed": 709,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 709,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 417,
         "REJECTED BY PENGAWAS": 13,
         "SUBMITTED BY PENCACAH": 281
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -642,13 +642,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 183,
             "SUBMITTED BY PENCACAH": 26
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 90,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 90,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 99,
             "REJECTED BY PENGAWAS": 28
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 9624,
             "APPROVED BY Pengawas": 4933,
@@ -685,13 +685,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 44,
             "SUBMITTED BY PENCACAH": 139
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 153,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 153,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 97,
             "SUBMITTED BY PENCACAH": 56
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10180,
             "APPROVED BY Pengawas": 6096,
@@ -725,13 +725,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 132,
             "REJECTED BY PENGAWAS": 9
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 61,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 61,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 53,
             "REJECTED BY PENGAWAS": 24
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8423,
             "APPROVED BY Pengawas": 3770,
@@ -766,14 +766,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 23
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 196,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 196,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 53,
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 141
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6920,
             "APPROVED BY Pengawas": 3898,
@@ -807,13 +807,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 85
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 60,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 60,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 17,
             "SUBMITTED BY PENCACAH": 44
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7618,
             "APPROVED BY Pengawas": 3357,
@@ -848,13 +848,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 12,
             "SUBMITTED BY PENCACAH": 41
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 115,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 115,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 41,
             "SUBMITTED BY PENCACAH": 76
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6317,
             "APPROVED BY Pengawas": 2509,
@@ -889,14 +889,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 175
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 72,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 72,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 24,
             "REJECTED BY PENGAWAS": 9,
             "SUBMITTED BY PENCACAH": 39
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8763,
             "SUBMITTED BY Pencacah": 2965,
@@ -931,14 +931,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 41,
             "SUBMITTED BY PENCACAH": 93
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 103,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 103,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 58,
             "REJECTED BY PENGAWAS": 41,
             "SUBMITTED BY PENCACAH": 4
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7931,
             "SUBMITTED BY Pencacah": 3677,
@@ -972,13 +972,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 282,
             "REJECTED BY PENGAWAS": 8
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 143,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 143,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 172,
             "REJECTED BY PENGAWAS": 24
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7006,
             "APPROVED BY Pengawas": 3353,
@@ -1015,13 +1015,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 17,
             "SUBMITTED BY PENCACAH": 21
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 53,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 53,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 44,
             "SUBMITTED BY PENCACAH": 12
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5141,
             "SUBMITTED BY Pencacah": 2156,
@@ -1057,13 +1057,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 36,
             "SUBMITTED BY PENCACAH": 383
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 263,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 263,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 151,
             "SUBMITTED BY PENCACAH": 113
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 19739,
             "SUBMITTED BY Pencacah": 8117,
@@ -1097,12 +1097,12 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 265
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 133,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 133,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 134
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5561,
             "APPROVED BY Pengawas": 2041,
@@ -1135,13 +1135,13 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 220
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 216,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 216,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 65,
             "SUBMITTED BY PENCACAH": 152
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10201,
             "SUBMITTED BY Pencacah": 3686,
@@ -1177,13 +1177,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 294
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 158,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 158,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 81,
             "SUBMITTED BY PENCACAH": 79
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 15199,
             "APPROVED BY Pengawas": 5447,
@@ -1220,13 +1220,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 5,
             "SUBMITTED BY PENCACAH": 113
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 30,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 30,
+          "yesterday_completed_breakdown": {
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 29
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5087,
             "SUBMITTED BY Pencacah": 2858,
@@ -1262,14 +1262,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 13,
             "SUBMITTED BY PENCACAH": 145
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 65,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 65,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 19,
             "REJECTED BY PENGAWAS": 10,
             "SUBMITTED BY PENCACAH": 36
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10138,
             "SUBMITTED BY Pencacah": 3775,
@@ -1304,14 +1304,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 240
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 116,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 116,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 42,
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 70
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7816,
             "APPROVED BY Pengawas": 5776,
@@ -1345,13 +1345,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 11,
             "SUBMITTED BY PENCACAH": 36
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 20,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 20,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 18,
             "SUBMITTED BY PENCACAH": 6
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1682,
             "SUBMITTED BY Pencacah": 755,
@@ -1385,13 +1385,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 57,
             "REJECTED BY PENGAWAS": 11
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 19,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 19,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 39,
             "REJECTED BY PENGAWAS": 2
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2811,
             "APPROVED BY Pengawas": 1488,
@@ -1424,12 +1424,12 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 102
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 53,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 53,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 149
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5691,
             "APPROVED BY Pengawas": 2177,
@@ -1464,13 +1464,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 49,
             "SUBMITTED BY PENCACAH": 20
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 42,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 42,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 18,
             "REJECTED BY PENGAWAS": 40
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3130,
             "SUBMITTED BY Pencacah": 1470,
@@ -1506,12 +1506,12 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 58
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 49,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 49,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 109
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3326,
             "APPROVED BY Pengawas": 1301,
@@ -1547,14 +1547,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 25,
             "SUBMITTED BY PENCACAH": 33
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 21,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 21,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 2,
             "REJECTED BY PENGAWAS": 17,
             "SUBMITTED BY PENCACAH": 2
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2393,
             "SUBMITTED BY Pencacah": 630,
@@ -1588,13 +1588,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 25,
             "REJECTED BY PENGAWAS": 17
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 21,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 21,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 18,
             "REJECTED BY PENGAWAS": 21
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2178,
             "APPROVED BY Pengawas": 836,
@@ -1626,14 +1626,14 @@ window.IPAS_DATA = {
         "COMPLETED BY Admin Kabupaten": 17,
         "EDITED BY Pengawas": 1
       },
-      "two_days_ago_completed": 2252,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 2252,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1369,
         "REJECTED BY PENGAWAS": 204,
         "SUBMITTED BY PENCACAH": 679
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -1680,12 +1680,12 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "APPROVED BY PENGAWAS": 11
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 7,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 7,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 7
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2460,
             "APPROVED BY Pengawas": 2194,
@@ -1718,12 +1718,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 76,
             "REJECTED BY PENGAWAS": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 44,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 44,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 47
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1489,
             "APPROVED BY Pengawas": 1167,
@@ -1757,14 +1757,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 40,
             "SUBMITTED BY PENCACAH": 68
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 47,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 47,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 32,
             "REJECTED BY PENGAWAS": 5,
             "SUBMITTED BY PENCACAH": 10
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4670,
             "APPROVED BY Pengawas": 3150,
@@ -1800,13 +1800,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 15,
             "SUBMITTED BY PENCACAH": 267
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 407,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 407,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 404,
             "SUBMITTED BY PENCACAH": 5
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 20996,
             "APPROVED BY Pengawas": 8963,
@@ -1841,13 +1841,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 22,
             "SUBMITTED BY PENCACAH": 18
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 23,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 23,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 9,
             "SUBMITTED BY PENCACAH": 14
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2353,
             "OPEN": 1036,
@@ -1881,14 +1881,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 59,
             "SUBMITTED BY PENCACAH": 312
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 88,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 88,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 31,
             "REJECTED BY PENGAWAS": 34,
             "SUBMITTED BY PENCACAH": 23
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 13742,
             "OPEN": 4872,
@@ -1923,13 +1923,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 126
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 48,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 48,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 41,
             "REJECTED BY PENGAWAS": 10
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5453,
             "APPROVED BY Pengawas": 1867,
@@ -1965,14 +1965,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 127
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 55,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 55,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 14,
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 40
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6585,
             "APPROVED BY Pengawas": 2923,
@@ -2006,12 +2006,12 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "APPROVED BY PENGAWAS": 116
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 59,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 59,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 72
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5951,
             "APPROVED BY Pengawas": 2706,
@@ -2047,13 +2047,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 89,
             "REJECTED BY PENGAWAS": 53
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 41,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 41,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 41,
             "REJECTED BY PENGAWAS": 35
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7583,
             "APPROVED BY Pengawas": 3213,
@@ -2085,14 +2085,14 @@ window.IPAS_DATA = {
         "EDITED BY Admin Kabupaten": 81,
         "REJECTED BY Admin Kabupaten": 5
       },
-      "two_days_ago_completed": 819,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 819,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 579,
         "REJECTED BY PENGAWAS": 67,
         "SUBMITTED BY PENCACAH": 173
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -2170,13 +2170,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 257,
             "REJECTED BY PENGAWAS": 33
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 123,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 123,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 102,
             "REJECTED BY PENGAWAS": 85
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10620,
             "APPROVED BY Pengawas": 6109,
@@ -2212,13 +2212,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 101,
             "REJECTED BY PENGAWAS": 37
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 70,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 70,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 67,
             "REJECTED BY PENGAWAS": 34
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4539,
             "APPROVED BY Pengawas": 2295,
@@ -2252,13 +2252,13 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "APPROVED BY PENGAWAS": 127
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 85,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 85,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 56,
             "SUBMITTED BY PENCACAH": 34
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3615,
             "APPROVED BY Pengawas": 2841,
@@ -2293,13 +2293,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 21,
             "SUBMITTED BY PENCACAH": 76
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 35,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 35,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 8,
             "SUBMITTED BY PENCACAH": 27
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2875,
             "APPROVED BY Pengawas": 2473,
@@ -2334,13 +2334,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 23,
             "SUBMITTED BY PENCACAH": 12
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 16,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 16,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 22
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1328,
             "APPROVED BY Pengawas": 1204,
@@ -2374,13 +2374,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 209
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 214,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 214,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 97,
             "SUBMITTED BY PENCACAH": 117
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 11387,
             "APPROVED BY Pengawas": 5930,
@@ -2414,13 +2414,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 124,
             "SUBMITTED BY PENCACAH": 104
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 84,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 84,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 94,
             "REJECTED BY PENGAWAS": 2
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6069,
             "APPROVED BY Pengawas": 2490,
@@ -2455,14 +2455,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 133,
             "SUBMITTED BY PENCACAH": 121
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 104,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 104,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 29,
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 71
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7136,
             "APPROVED BY Pengawas": 4380,
@@ -2498,13 +2498,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 138,
             "SUBMITTED BY PENCACAH": 7
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 104,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 104,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 185,
             "REJECTED BY PENGAWAS": 15
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6933,
             "APPROVED BY Pengawas": 4487,
@@ -2539,13 +2539,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 64
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 62,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 62,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 24,
             "SUBMITTED BY PENCACAH": 43
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2365,
             "APPROVED BY Pengawas": 1261,
@@ -2581,13 +2581,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 113
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 79,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 79,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 36,
             "SUBMITTED BY PENCACAH": 43
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2784,
             "APPROVED BY Pengawas": 1333,
@@ -2621,12 +2621,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 5,
             "SUBMITTED BY PENCACAH": 20
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 9,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 9,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 12
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1864,
             "SUBMITTED BY Pencacah": 853,
@@ -2660,14 +2660,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 287
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 191,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 191,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 69,
             "REJECTED BY PENGAWAS": 22,
             "SUBMITTED BY PENCACAH": 100
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 12288,
             "APPROVED BY Pengawas": 5061,
@@ -2701,14 +2701,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 88,
             "SUBMITTED BY PENCACAH": 115
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 107,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 107,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 65,
             "REJECTED BY PENGAWAS": 10,
             "SUBMITTED BY PENCACAH": 32
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4741,
             "APPROVED BY Pengawas": 3225,
@@ -2742,13 +2742,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 78,
             "SUBMITTED BY PENCACAH": 130
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 116,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 116,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 228,
             "REJECTED BY PENGAWAS": 11
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7693,
             "APPROVED BY Pengawas": 4343,
@@ -2783,14 +2783,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 274
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 188,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 188,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 121,
             "REJECTED BY PENGAWAS": 66,
             "SUBMITTED BY PENCACAH": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10097,
             "APPROVED BY Pengawas": 4360,
@@ -2825,14 +2825,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 244,
             "SUBMITTED BY PENCACAH": 149
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 256,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 256,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 132,
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 122
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 12795,
             "APPROVED BY Pengawas": 6673,
@@ -2868,13 +2868,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 12,
             "SUBMITTED BY PENCACAH": 110
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 154,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 154,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 85,
             "SUBMITTED BY PENCACAH": 73
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8467,
             "APPROVED BY Pengawas": 4345,
@@ -2908,13 +2908,13 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 204
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 128,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 128,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 8,
             "SUBMITTED BY PENCACAH": 121
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7421,
             "APPROVED BY Pengawas": 2879,
@@ -2944,14 +2944,14 @@ window.IPAS_DATA = {
         "COMPLETED BY Admin Kabupaten": 23,
         "SUBMITTED RESPONDENT": 48
       },
-      "two_days_ago_completed": 2125,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 2125,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1409,
         "REJECTED BY PENGAWAS": 224,
         "SUBMITTED BY PENCACAH": 492
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -3000,14 +3000,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 40
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 181,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 181,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 116,
             "REJECTED BY PENGAWAS": 10,
             "SUBMITTED BY PENCACAH": 55
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10232,
             "APPROVED BY Pengawas": 7644,
@@ -3044,13 +3044,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 16
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 69,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 69,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 57,
             "SUBMITTED BY PENCACAH": 14
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1617,
             "APPROVED BY Pengawas": 1233,
@@ -3084,12 +3084,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 406,
             "REJECTED BY PENGAWAS": 11
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 197,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 197,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 305
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 18541,
             "APPROVED BY Pengawas": 13860,
@@ -3125,14 +3125,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 197,
             "SUBMITTED BY PENCACAH": 65
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 139,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 139,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 35,
             "REJECTED BY PENGAWAS": 16,
             "SUBMITTED BY PENCACAH": 88
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 12009,
             "APPROVED BY Pengawas": 9312,
@@ -3169,13 +3169,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 6,
             "SUBMITTED BY PENCACAH": 44
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 66,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 66,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 45,
             "SUBMITTED BY PENCACAH": 29
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4983,
             "APPROVED BY Pengawas": 3446,
@@ -3210,14 +3210,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 129,
             "REJECTED BY PENGAWAS": 2
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 88,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 88,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 42,
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 45
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7172,
             "APPROVED BY Pengawas": 3473,
@@ -3253,13 +3253,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 16
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 116,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 116,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 151,
             "REJECTED BY PENGAWAS": 9
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7454,
             "APPROVED BY Pengawas": 5644,
@@ -3294,13 +3294,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 168,
             "SUBMITTED BY PENCACAH": 107
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 129,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 129,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 70,
             "SUBMITTED BY PENCACAH": 59
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10431,
             "APPROVED BY Pengawas": 5964,
@@ -3335,12 +3335,12 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "APPROVED BY PENGAWAS": 160
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 63,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 63,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 67
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5961,
             "APPROVED BY Pengawas": 5174,
@@ -3376,13 +3376,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 13
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 65,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 65,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 68,
             "REJECTED BY PENGAWAS": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4626,
             "APPROVED BY Pengawas": 4053,
@@ -3416,13 +3416,13 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "APPROVED BY PENGAWAS": 245
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 132,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 132,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 29,
             "SUBMITTED BY PENCACAH": 110
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 9311,
             "APPROVED BY Pengawas": 6013,
@@ -3457,13 +3457,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 96,
             "SUBMITTED BY PENCACAH": 118
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 162,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 162,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 187,
             "REJECTED BY PENGAWAS": 4
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10151,
             "APPROVED BY Pengawas": 7804,
@@ -3498,13 +3498,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 99,
             "SUBMITTED BY PENCACAH": 79
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 124,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 124,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 124,
             "REJECTED BY PENGAWAS": 3
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5079,
             "APPROVED BY Pengawas": 4194,
@@ -3539,14 +3539,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 63,
             "SUBMITTED BY PENCACAH": 161
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 119,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 119,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 57,
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 58
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 13327,
             "APPROVED BY Pengawas": 7713,
@@ -3582,13 +3582,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 15,
             "SUBMITTED BY PENCACAH": 193
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 149,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 149,
+          "yesterday_completed_breakdown": {
             "REJECTED BY PENGAWAS": 6,
             "SUBMITTED BY PENCACAH": 167
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 11191,
             "SUBMITTED BY Pencacah": 4916,
@@ -3624,12 +3624,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 30,
             "SUBMITTED BY PENCACAH": 77
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 38,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 38,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 43
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4338,
             "APPROVED BY Pengawas": 3637,
@@ -3660,14 +3660,14 @@ window.IPAS_DATA = {
         "REJECTED BY Admin Kabupaten": 23,
         "SUBMITTED RESPONDENT": 5
       },
-      "two_days_ago_completed": 1837,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 1837,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1372,
         "REJECTED BY PENGAWAS": 37,
         "SUBMITTED BY PENCACAH": 428
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -3744,13 +3744,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 154
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 134,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 134,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 46,
             "SUBMITTED BY PENCACAH": 113
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 9767,
             "APPROVED BY Pengawas": 5292,
@@ -3785,13 +3785,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 125,
             "SUBMITTED BY PENCACAH": 106
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 80,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 80,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 44,
             "SUBMITTED BY PENCACAH": 37
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6202,
             "APPROVED BY Pengawas": 3834,
@@ -3827,12 +3827,12 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 140
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 136,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 136,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 193
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10411,
             "APPROVED BY Pengawas": 8627,
@@ -3868,12 +3868,12 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 51
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 292,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 292,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 293
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5965,
             "APPROVED BY Pengawas": 5202,
@@ -3907,14 +3907,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 93,
             "SUBMITTED BY PENCACAH": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 64,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 64,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 59,
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 4
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4672,
             "APPROVED BY Pengawas": 3437,
@@ -3949,13 +3949,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 7,
             "SUBMITTED BY PENCACAH": 136
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 322,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 322,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 206,
             "SUBMITTED BY PENCACAH": 121
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 29672,
             "APPROVED BY Pengawas": 14289,
@@ -3993,13 +3993,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 6
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 60,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 60,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 78,
             "REJECTED BY PENGAWAS": 18
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5307,
             "APPROVED BY Pengawas": 3260,
@@ -4034,13 +4034,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 237,
             "SUBMITTED BY PENCACAH": 230
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 258,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 258,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 248,
             "SUBMITTED BY PENCACAH": 13
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 16421,
             "APPROVED BY Pengawas": 11140,
@@ -4075,14 +4075,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 160,
             "SUBMITTED BY PENCACAH": 91
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 163,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 163,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 134,
             "REJECTED BY PENGAWAS": 13,
             "SUBMITTED BY PENCACAH": 16
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8649,
             "APPROVED BY Pengawas": 5757,
@@ -4117,12 +4117,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 71,
             "SUBMITTED BY PENCACAH": 19
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 44,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 44,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 53
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4267,
             "APPROVED BY Pengawas": 2761,
@@ -4153,13 +4153,13 @@ window.IPAS_DATA = {
         "COMPLETED BY Admin Kabupaten": 2,
         "EDITED BY Pengawas": 1
       },
-      "two_days_ago_completed": 1553,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 1553,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1299,
         "SUBMITTED BY PENCACAH": 263
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -4237,13 +4237,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 30,
             "SUBMITTED BY PENCACAH": 33
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 127,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 127,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 134,
             "REJECTED BY PENGAWAS": 8
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5357,
             "APPROVED BY Pengawas": 3345,
@@ -4281,14 +4281,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 20,
             "SUBMITTED BY PENCACAH": 236
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 488,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 488,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 393,
             "SUBMITTED BY PENCACAH": 103,
             "SUBMITTED RESPONDENT": 2
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 16106,
             "APPROVED BY Pengawas": 8779,
@@ -4324,13 +4324,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 135,
             "REJECTED BY PENGAWAS": 16
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 69,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 69,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 45,
             "SUBMITTED BY PENCACAH": 26
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4249,
             "APPROVED BY Pengawas": 3110,
@@ -4368,13 +4368,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 30,
             "SUBMITTED BY PENCACAH": 64
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 72,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 72,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 52,
             "SUBMITTED BY PENCACAH": 20
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7690,
             "APPROVED BY Pengawas": 5000,
@@ -4411,13 +4411,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 58,
             "SUBMITTED BY PENCACAH": 79
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 96,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 96,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 23,
             "SUBMITTED BY PENCACAH": 75
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4215,
             "APPROVED BY Pengawas": 2564,
@@ -4452,13 +4452,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 133,
             "SUBMITTED BY PENCACAH": 128
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 95,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 95,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 17,
             "SUBMITTED BY PENCACAH": 81
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7860,
             "APPROVED BY Pengawas": 5309,
@@ -4496,13 +4496,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 47
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 109,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 109,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 101,
             "SUBMITTED BY PENCACAH": 9
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6492,
             "APPROVED BY Pengawas": 4304,
@@ -4540,13 +4540,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 52
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 90,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 90,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 83,
             "SUBMITTED BY PENCACAH": 8
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4568,
             "APPROVED BY Pengawas": 2861,
@@ -4581,13 +4581,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 109,
             "SUBMITTED BY PENCACAH": 13
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 88,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 88,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 96,
             "SUBMITTED BY PENCACAH": 5
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5551,
             "APPROVED BY Pengawas": 3610,
@@ -4623,13 +4623,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 132,
             "REJECTED BY PENGAWAS": 6
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 94,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 94,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 57,
             "SUBMITTED BY PENCACAH": 44
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5919,
             "APPROVED BY Pengawas": 3731,
@@ -4664,12 +4664,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 13,
             "SUBMITTED BY PENCACAH": 15
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 16,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 16,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 17
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2779,
             "APPROVED BY Pengawas": 1816,
@@ -4701,14 +4701,14 @@ window.IPAS_DATA = {
         "EDITED BY Admin Kabupaten": 642,
         "SUBMITTED RESPONDENT": 49
       },
-      "two_days_ago_completed": 1344,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 1344,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1001,
         "SUBMITTED BY PENCACAH": 373,
         "SUBMITTED RESPONDENT": 2
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -4756,13 +4756,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 77,
             "SUBMITTED BY PENCACAH": 196
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 164,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 164,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 32,
             "SUBMITTED BY PENCACAH": 135
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 9486,
             "SUBMITTED BY Pencacah": 3889,
@@ -4797,14 +4797,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 125,
             "SUBMITTED BY PENCACAH": 191
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 165,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 165,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 95,
             "REJECTED BY PENGAWAS": 9,
             "SUBMITTED BY PENCACAH": 61
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10446,
             "APPROVED BY Pengawas": 5176,
@@ -4838,13 +4838,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 41,
             "SUBMITTED BY PENCACAH": 140
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 122,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 122,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 15,
             "SUBMITTED BY PENCACAH": 110
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7684,
             "SUBMITTED BY Pencacah": 3778,
@@ -4878,13 +4878,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 158,
             "SUBMITTED BY PENCACAH": 324
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 111,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 111,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 108,
             "SUBMITTED BY PENCACAH": 12
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 15559,
             "OPEN": 5402,
@@ -4921,13 +4921,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 66,
             "SUBMITTED BY PENCACAH": 298
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 126,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 126,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 154,
             "REJECTED BY PENGAWAS": 8
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10145,
             "APPROVED BY Pengawas": 4951,
@@ -4963,14 +4963,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 8,
             "SUBMITTED BY PENCACAH": 119
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 85,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 85,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 40,
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 44
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3347,
             "APPROVED BY Pengawas": 1677,
@@ -5004,12 +5004,12 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "APPROVED BY PENGAWAS": 143
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 39,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 39,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 190
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2661,
             "APPROVED BY Pengawas": 1971,
@@ -5042,13 +5042,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 68,
             "REJECTED BY PENGAWAS": 88
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 38,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 38,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 37,
             "SUBMITTED BY PENCACAH": 2
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4064,
             "APPROVED BY Pengawas": 2116,
@@ -5082,13 +5082,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 276,
             "REJECTED BY PENGAWAS": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 249,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 249,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 191,
             "SUBMITTED BY PENCACAH": 67
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10621,
             "APPROVED BY Pengawas": 9444,
@@ -5124,12 +5124,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 294,
             "SUBMITTED BY PENCACAH": 209
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 94,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 94,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 189
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10737,
             "APPROVED BY Pengawas": 5714,
@@ -5164,13 +5164,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 134,
             "REJECTED BY PENGAWAS": 73
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 115,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 115,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 102,
             "SUBMITTED BY PENCACAH": 38
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7522,
             "APPROVED BY Pengawas": 5819,
@@ -5206,12 +5206,12 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 31,
             "SUBMITTED BY PENCACAH": 9
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 84,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 84,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 92
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4823,
             "APPROVED BY Pengawas": 2224,
@@ -5247,13 +5247,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 15
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 125,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 125,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 101,
             "SUBMITTED BY PENCACAH": 24
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 9452,
             "APPROVED BY Pengawas": 7250,
@@ -5289,12 +5289,12 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 242
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 225,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 225,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 236
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 13679,
             "APPROVED BY Pengawas": 6920,
@@ -5331,14 +5331,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 148
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 85,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 85,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 71,
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 12
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6399,
             "APPROVED BY Pengawas": 3760,
@@ -5374,13 +5374,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 11,
             "SUBMITTED BY PENCACAH": 26
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 124,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 124,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 164,
             "REJECTED BY PENGAWAS": 9
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7918,
             "APPROVED BY Pengawas": 6027,
@@ -5415,13 +5415,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 251,
             "SUBMITTED BY PENCACAH": 88
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 174,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 174,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 212,
             "REJECTED BY PENGAWAS": 20
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 14507,
             "APPROVED BY Pengawas": 7415,
@@ -5457,13 +5457,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 7,
             "SUBMITTED BY PENCACAH": 72
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 130,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 130,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 162,
             "REJECTED BY PENGAWAS": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 11236,
             "APPROVED BY Pengawas": 8464,
@@ -5499,13 +5499,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 188,
             "SUBMITTED BY PENCACAH": 85
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 101,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 101,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 94,
             "SUBMITTED BY PENCACAH": 38
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 9886,
             "APPROVED BY Pengawas": 4468,
@@ -5540,13 +5540,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 78,
             "SUBMITTED BY PENCACAH": 197
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 156,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 156,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 81,
             "SUBMITTED BY PENCACAH": 81
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10364,
             "APPROVED BY Pengawas": 6507,
@@ -5581,13 +5581,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 72,
             "REJECTED BY PENGAWAS": 47
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 44,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 44,
+          "yesterday_completed_breakdown": {
             "REJECTED BY PENGAWAS": 13,
             "SUBMITTED BY PENCACAH": 33
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6744,
             "APPROVED BY Pengawas": 2290,
@@ -5622,13 +5622,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 135,
             "SUBMITTED BY PENCACAH": 68
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 102,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 102,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 130,
             "REJECTED BY PENGAWAS": 45
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7904,
             "APPROVED BY Pengawas": 3552,
@@ -5665,13 +5665,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 63
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 111,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 111,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 96,
             "SUBMITTED BY PENCACAH": 24
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 9251,
             "APPROVED BY Pengawas": 7161,
@@ -5704,13 +5704,13 @@ window.IPAS_DATA = {
         "REVOKED BY Admin Kabupaten": 3,
         "REJECTED BY Admin Kabupaten": 2
       },
-      "two_days_ago_completed": 2769,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 2769,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 2590,
         "SUBMITTED BY PENCACAH": 218
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -5789,13 +5789,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 43
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 58,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 58,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 39,
             "SUBMITTED BY PENCACAH": 20
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6008,
             "APPROVED BY Pengawas": 2507,
@@ -5831,12 +5831,12 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 81
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 83,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 83,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 84
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6037,
             "APPROVED BY Pengawas": 4106,
@@ -5872,13 +5872,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 97,
             "SUBMITTED BY PENCACAH": 102
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 91,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 91,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 74,
             "SUBMITTED BY PENCACAH": 19
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8358,
             "APPROVED BY Pengawas": 5823,
@@ -5915,13 +5915,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 8,
             "SUBMITTED BY PENCACAH": 80
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 163,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 163,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 150,
             "SUBMITTED BY PENCACAH": 19
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 12360,
             "APPROVED BY Pengawas": 8836,
@@ -5958,14 +5958,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 27,
             "SUBMITTED BY PENCACAH": 106
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 169,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 169,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 78,
             "REJECTED BY PENGAWAS": 8,
             "SUBMITTED BY PENCACAH": 83
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10095,
             "APPROVED BY Pengawas": 4902,
@@ -6003,13 +6003,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 17,
             "SUBMITTED BY PENCACAH": 79
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 155,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 155,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 73,
             "SUBMITTED BY PENCACAH": 112
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 13278,
             "APPROVED BY Pengawas": 7121,
@@ -6044,14 +6044,14 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 69
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 62,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 62,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 44,
             "REJECTED BY PENGAWAS": 8,
             "SUBMITTED BY PENCACAH": 10
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3324,
             "APPROVED BY Pengawas": 1052,
@@ -6085,13 +6085,13 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 57
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 37,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 37,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 36,
             "REJECTED BY PENGAWAS": 2
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2171,
             "APPROVED BY Pengawas": 1043,
@@ -6125,13 +6125,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 46
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 50,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 50,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 40,
             "REJECTED BY PENGAWAS": 16
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3892,
             "APPROVED BY Pengawas": 1914,
@@ -6164,12 +6164,12 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 49
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 19,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 19,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 19
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1966,
             "APPROVED BY Pengawas": 904,
@@ -6204,12 +6204,12 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 49
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 14,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 14,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 16
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1671,
             "SUBMITTED BY Pencacah": 702,
@@ -6244,13 +6244,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 31,
             "SUBMITTED BY PENCACAH": 12
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 51,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 51,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 25,
             "SUBMITTED BY PENCACAH": 39
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2048,
             "APPROVED BY Pengawas": 917,
@@ -6282,13 +6282,13 @@ window.IPAS_DATA = {
         "REVOKED BY Admin Kabupaten": 4,
         "SUBMITTED RESPONDENT": 28
       },
-      "two_days_ago_completed": 952,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 952,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 558,
         "SUBMITTED BY PENCACAH": 414
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -6336,13 +6336,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 96,
             "SUBMITTED BY PENCACAH": 54
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 163,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 163,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 26,
             "SUBMITTED BY PENCACAH": 152
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3716,
             "APPROVED BY Pengawas": 2495,
@@ -6376,13 +6376,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 128,
             "REJECTED BY PENGAWAS": 2
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 99,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 99,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 332,
             "REJECTED BY PENGAWAS": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3950,
             "APPROVED BY Pengawas": 2168,
@@ -6417,14 +6417,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 12,
             "SUBMITTED BY PENCACAH": 195
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 168,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 168,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 118,
             "REJECTED BY PENGAWAS": 5,
             "SUBMITTED BY PENCACAH": 45
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6928,
             "APPROVED BY Pengawas": 3966,
@@ -6459,12 +6459,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 36,
             "SUBMITTED BY PENCACAH": 59
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 34,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 34,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 34
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2277,
             "APPROVED BY Pengawas": 1450,
@@ -6498,13 +6498,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 67,
             "SUBMITTED BY PENCACAH": 42
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 57,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 57,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 61,
             "REJECTED BY PENGAWAS": 4
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2620,
             "APPROVED BY Pengawas": 2105,
@@ -6537,13 +6537,13 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 218
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 134,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 134,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 47,
             "SUBMITTED BY PENCACAH": 88
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 13156,
             "APPROVED BY Pengawas": 7101,
@@ -6578,14 +6578,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 11,
             "SUBMITTED BY PENCACAH": 121
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 133,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 133,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 35,
             "REJECTED BY PENGAWAS": 12,
             "SUBMITTED BY PENCACAH": 86
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6644,
             "APPROVED BY Pengawas": 3941,
@@ -6619,12 +6619,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 64,
             "SUBMITTED BY PENCACAH": 79
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 122,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 122,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 136
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8552,
             "APPROVED BY Pengawas": 5237,
@@ -6660,14 +6660,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 7,
             "SUBMITTED BY PENCACAH": 129
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 105,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 105,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 102,
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8450,
             "APPROVED BY Pengawas": 6035,
@@ -6702,13 +6702,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 26
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 45,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 45,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 37,
             "SUBMITTED BY PENCACAH": 8
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5021,
             "APPROVED BY Pengawas": 3744,
@@ -6743,13 +6743,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 6,
             "SUBMITTED BY PENCACAH": 74
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 135,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 135,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 96,
             "SUBMITTED BY PENCACAH": 50
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 11007,
             "APPROVED BY Pengawas": 5819,
@@ -6784,14 +6784,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 6,
             "SUBMITTED BY PENCACAH": 152
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 231,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 231,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 215,
             "REJECTED BY PENGAWAS": 7,
             "SUBMITTED BY PENCACAH": 9
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 23295,
             "APPROVED BY Pengawas": 14811,
@@ -6827,14 +6827,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 193,
             "SUBMITTED BY PENCACAH": 62
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 140,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 140,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 115,
             "REJECTED BY PENGAWAS": 5,
             "SUBMITTED BY PENCACAH": 20
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8712,
             "APPROVED BY Pengawas": 6447,
@@ -6869,14 +6869,14 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "APPROVED BY PENGAWAS": 434
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 256,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 256,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 53,
             "REJECTED BY PENGAWAS": 7,
             "SUBMITTED BY PENCACAH": 196
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 14961,
             "APPROVED BY Pengawas": 10057,
@@ -6912,12 +6912,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 77,
             "SUBMITTED BY PENCACAH": 14
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 13,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 13,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 21
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2638,
             "APPROVED BY Pengawas": 2161,
@@ -6952,13 +6952,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 131,
             "SUBMITTED BY PENCACAH": 90
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 65,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 65,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 51,
             "SUBMITTED BY PENCACAH": 33
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4886,
             "APPROVED BY Pengawas": 2741,
@@ -6991,13 +6991,13 @@ window.IPAS_DATA = {
         "SUBMITTED RESPONDENT": 8,
         "REJECTED BY Admin Kabupaten": 3
       },
-      "two_days_ago_completed": 1900,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 1900,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1416,
         "SUBMITTED BY PENCACAH": 487
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -7075,14 +7075,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 11,
             "SUBMITTED BY PENCACAH": 14
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 28,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 28,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 24,
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 3
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3924,
             "APPROVED BY Pengawas": 2945,
@@ -7119,13 +7119,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 45,
             "SUBMITTED BY PENCACAH": 52
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 36,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 36,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 29,
             "SUBMITTED BY PENCACAH": 7
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2392,
             "APPROVED BY Pengawas": 1543,
@@ -7160,13 +7160,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 15,
             "REJECTED BY PENGAWAS": 3
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 13,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 13,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 19,
             "REJECTED BY PENGAWAS": 2
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3205,
             "APPROVED BY Pengawas": 2014,
@@ -7200,13 +7200,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 206,
             "REJECTED BY PENGAWAS": 5
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 118,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 118,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 40,
             "SUBMITTED BY PENCACAH": 87
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 12219,
             "APPROVED BY Pengawas": 9564,
@@ -7243,13 +7243,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 35,
             "SUBMITTED BY PENCACAH": 48
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 38,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 38,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 60,
             "REJECTED BY PENGAWAS": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3844,
             "APPROVED BY Pengawas": 3156,
@@ -7283,13 +7283,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 5,
             "SUBMITTED BY PENCACAH": 18
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 15,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 15,
+          "yesterday_completed_breakdown": {
             "REJECTED BY PENGAWAS": 12,
             "SUBMITTED BY PENCACAH": 17
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2575,
             "APPROVED BY Pengawas": 1772,
@@ -7324,13 +7324,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 85,
             "SUBMITTED BY PENCACAH": 7
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 43,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 43,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 20,
             "SUBMITTED BY PENCACAH": 25
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4968,
             "APPROVED BY Pengawas": 3085,
@@ -7365,14 +7365,14 @@ window.IPAS_DATA = {
         "SUBMITTED RESPONDENT": 24,
         "EDITED BY Pengawas": 1
       },
-      "two_days_ago_completed": 291,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 291,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 178,
         "REJECTED BY PENGAWAS": 5,
         "SUBMITTED BY PENCACAH": 108
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -7448,12 +7448,12 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 12,
             "SUBMITTED BY PENCACAH": 163
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 42,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 42,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 75
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4795,
             "APPROVED BY Pengawas": 2772,
@@ -7489,14 +7489,14 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 5,
             "SUBMITTED BY PENCACAH": 130
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 58,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 58,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 13,
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 44
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6202,
             "APPROVED BY Pengawas": 3599,
@@ -7531,13 +7531,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 27,
             "SUBMITTED BY PENCACAH": 62
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 27,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 27,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 16,
             "REJECTED BY PENGAWAS": 27
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3417,
             "APPROVED BY Pengawas": 2405,
@@ -7572,12 +7572,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 24,
             "SUBMITTED BY PENCACAH": 205
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 73,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 73,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 75
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8324,
             "APPROVED BY Pengawas": 4085,
@@ -7614,13 +7614,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 63
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 109,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 109,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 66,
             "SUBMITTED BY PENCACAH": 43
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8514,
             "SUBMITTED BY Pencacah": 2891,
@@ -7655,12 +7655,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 5,
             "SUBMITTED BY PENCACAH": 65
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 29,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 29,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 30
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3010,
             "APPROVED BY Pengawas": 1938,
@@ -7695,13 +7695,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 82
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 52,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 52,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 10,
             "SUBMITTED BY PENCACAH": 99
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3700,
             "APPROVED BY Pengawas": 1947,
@@ -7735,13 +7735,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 23,
             "SUBMITTED BY PENCACAH": 36
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 18,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 18,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 18,
             "SUBMITTED BY PENCACAH": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3677,
             "APPROVED BY Pengawas": 2359,
@@ -7776,13 +7776,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 109,
             "SUBMITTED BY PENCACAH": 15
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 53,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 53,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 44,
             "SUBMITTED BY PENCACAH": 9
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5232,
             "APPROVED BY Pengawas": 3380,
@@ -7817,12 +7817,12 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 7,
             "SUBMITTED BY PENCACAH": 63
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 33,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 33,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 48
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3617,
             "APPROVED BY Pengawas": 1686,
@@ -7852,13 +7852,13 @@ window.IPAS_DATA = {
         "REVOKED BY Pengawas": 110,
         "SUBMITTED RESPONDENT": 1
       },
-      "two_days_ago_completed": 494,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 494,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 165,
         "SUBMITTED BY PENCACAH": 408
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -7936,14 +7936,14 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 311,
             "SUBMITTED BY PENCACAH": 56
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 159,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 159,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 6,
             "REJECTED BY PENGAWAS": 6,
             "SUBMITTED BY PENCACAH": 147
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 24934,
             "APPROVED BY Pengawas": 8868,
@@ -7981,13 +7981,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 8,
             "SUBMITTED BY PENCACAH": 464
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 328,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 328,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 72,
             "SUBMITTED BY PENCACAH": 267
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 28925,
             "APPROVED BY Pengawas": 10550,
@@ -8024,13 +8024,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 164,
             "SUBMITTED BY PENCACAH": 87
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 155,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 155,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 131,
             "SUBMITTED BY PENCACAH": 51
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 18515,
             "APPROVED BY Pengawas": 8761,
@@ -8068,13 +8068,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 51
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 294,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 294,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 144,
             "SUBMITTED BY PENCACAH": 162
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 39936,
             "APPROVED BY Pengawas": 16352,
@@ -8113,12 +8113,12 @@ window.IPAS_DATA = {
             "SUBMITTED BY PENCACAH": 29,
             "SUBMITTED RESPONDENT": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 196,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 196,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 236
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 24765,
             "APPROVED BY Pengawas": 10751,
@@ -8155,13 +8155,13 @@ window.IPAS_DATA = {
             "APPROVED BY PENGAWAS": 324,
             "SUBMITTED BY PENCACAH": 350
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 305,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 305,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 427,
             "REJECTED BY PENGAWAS": 45
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 50253,
             "APPROVED BY Pengawas": 20721,
@@ -8198,13 +8198,13 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 7,
             "SUBMITTED BY PENCACAH": 234
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 77,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 77,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 86,
             "REJECTED BY PENGAWAS": 5
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 12506,
             "APPROVED BY Pengawas": 5144,
@@ -8241,12 +8241,12 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 78
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 128,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 128,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 128
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 11164,
             "APPROVED BY Pengawas": 4813,
@@ -8281,13 +8281,13 @@ window.IPAS_DATA = {
         "REVOKED BY Admin Kabupaten": 6,
         "EDITED BY Pengawas": 2
       },
-      "two_days_ago_completed": 1642,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 1642,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1230,
         "SUBMITTED BY PENCACAH": 418
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -8653,12 +8653,12 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 1,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 7,
             "SUBMITTED BY Pencacah": 7
@@ -8708,12 +8708,12 @@ window.IPAS_DATA = {
           "persentase": 100.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 3,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 3,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 3
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6,
             "SUBMITTED BY Pencacah": 6
@@ -8736,12 +8736,12 @@ window.IPAS_DATA = {
           "persentase": 100.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 1,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 4,
             "SUBMITTED BY Pencacah": 4
@@ -8933,12 +8933,12 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 4
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 2,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 2,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 2
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 53,
             "SUBMITTED BY Pencacah": 45,
@@ -9308,12 +9308,12 @@ window.IPAS_DATA = {
         "OPEN": 3,
         "SUBMITTED RESPONDENT": 2
       },
-      "two_days_ago_completed": 7,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 7,
+      "yesterday_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 7
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -9513,12 +9513,12 @@ window.IPAS_DATA = {
           "persentase": 53.57,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 1,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 28,
             "APPROVED BY Pengawas": 13,
@@ -9652,12 +9652,12 @@ window.IPAS_DATA = {
         "EDITED BY Admin Kabupaten": 1,
         "SUBMITTED BY Pencacah": 1
       },
-      "two_days_ago_completed": 1,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 1,
+      "yesterday_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 1
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -10725,12 +10725,12 @@ window.IPAS_DATA = {
           "persentase": 40.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 1,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5,
             "DRAFT": 3,
@@ -10781,12 +10781,12 @@ window.IPAS_DATA = {
           "persentase": 100.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 1,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1,
             "SUBMITTED BY Pencacah": 1
@@ -10891,12 +10891,12 @@ window.IPAS_DATA = {
           "persentase": 100.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 2,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 2,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 2
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2,
             "SUBMITTED BY Pencacah": 2
@@ -10996,12 +10996,12 @@ window.IPAS_DATA = {
         "SUBMITTED RESPONDENT": 14,
         "EDITED BY Admin Kabupaten": 1
       },
-      "two_days_ago_completed": 4,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 4,
+      "yesterday_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 4
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -12020,12 +12020,12 @@ window.IPAS_DATA = {
           "persentase": 100.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 1,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1,
             "SUBMITTED BY Pencacah": 1
@@ -12314,12 +12314,12 @@ window.IPAS_DATA = {
         "DRAFT": 1,
         "OPEN": 1
       },
-      "two_days_ago_completed": 1,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 1,
+      "yesterday_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 1
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -13011,12 +13011,12 @@ window.IPAS_DATA = {
           "persentase": 85.71,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 3,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 3,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 3
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 14,
             "APPROVED BY Pengawas": 9,
@@ -13297,12 +13297,12 @@ window.IPAS_DATA = {
         "COMPLETED BY Admin Kabupaten": 1,
         "REJECTED BY Pengawas": 2
       },
-      "two_days_ago_completed": 3,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 3,
+      "yesterday_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 3
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -13378,12 +13378,12 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 1,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 43,
             "APPROVED BY Pengawas": 23,
@@ -13414,12 +13414,12 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 3
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 1,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 18,
             "OPEN": 8,
@@ -13476,11 +13476,11 @@ window.IPAS_DATA = {
             "REJECTED BY PENGAWAS": 1
           },
           "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 2
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 69,
             "APPROVED BY Pengawas": 38,
@@ -13507,12 +13507,12 @@ window.IPAS_DATA = {
           "persentase": 45.24,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 1,
-          "two_days_ago_completed_breakdown": {
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1
           },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 126,
             "OPEN": 57,
@@ -13630,12 +13630,12 @@ window.IPAS_DATA = {
         "SUBMITTED BY Pencacah": 5,
         "SUBMITTED RESPONDENT": 20
       },
-      "two_days_ago_completed": 3,
-      "two_days_ago_completed_breakdown": {
+      "two_days_ago_completed": 0,
+      "two_days_ago_completed_breakdown": {},
+      "yesterday_completed": 3,
+      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 5
       },
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
