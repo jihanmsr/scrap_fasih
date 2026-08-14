@@ -18,6 +18,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js?v=1786348796_v1"></script>
     <script src="daily_submission_stats.js?v=1786348796_v1"></script>
     <script src="daily_summary.js?v=1786348796_v1"></script>
+    <script src="open_subsls_data.js"></script>
+    <script src="open_subsls.js"></script>
 
     <link rel="stylesheet" href="style.css?v=1786348796">
     <style>
@@ -102,6 +104,15 @@
                         <line x1="6" x2="6" y1="20" y2="14"></line>
                     </svg>
                     Sensus Ekonomi UB
+                </button>
+                <button class="btn-tab" id="tab-btn-open_subsls" onclick="switchTab('open_subsls')">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    SLS Open
                 </button>
                 <button class="btn-tab" id="tab-btn-email" onclick="switchTab('email')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -246,6 +257,69 @@
                     </button>
                 </div>
             </header>
+            <div class="tab-content" id="tab-content-open_subsls" style="display: none; padding: 1.5rem;">
+                <div class="stats-section">
+                    <h3 class="section-title-stats">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.5rem;" viewbox="0 0 24 24" width="16">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        Pemantauan SLS Status FULL OPEN (Belum Dikerjakan)
+                    </h3>
+                    <div class="compact-stats" style="grid-template-columns: repeat(auto-fit, minmax(200px, 250px)); justify-content: flex-start;">
+                        <div class="stat-card-compact" style="--stat-color: var(--primary);">
+                            <div class="stat-label">Total Sub SLS FULL OPEN</div>
+                            <div class="stat-value" id="stat-subsls-total">0</div>
+                        </div>
+                        <div class="stat-card-compact" style="--stat-color: #f59e0b;">
+                            <div class="stat-label">Total Prelist</div>
+                            <div class="stat-value" id="stat-subsls-prelist">0</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-panel" style="margin-top: 1rem;">
+                    <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+                        <input type="text" id="subsls-search-input" class="search-input" placeholder="Cari Kode / Nama Wilayah / Nama Petugas..." style="flex: 1 1 300px;">
+                        <select class="sort-select" id="subsls-filter-kab" onchange="window.filterSubSlsData()">
+                            <option value="">Semua Kabupaten</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ipas-table-wrapper" style="margin-top: 1rem; max-height: 500px; overflow-y: auto;">
+                    <table class="ipas-table" id="table-subsls-open">
+                        <thead>
+                            <tr>
+                                <th style="width: 15%; cursor: pointer;" onclick="window.sortSubSls('kode_sub_sls')">Kode Sub-SLS <span id="sort-kode_sub_sls">↕</span></th>
+                                <th style="cursor: pointer;" onclick="window.sortSubSls('kabupaten')">Kabupaten <span id="sort-kabupaten">↕</span></th>
+                                <th style="cursor: pointer;" onclick="window.sortSubSls('kecamatan')">Kecamatan <span id="sort-kecamatan">↕</span></th>
+                                <th style="cursor: pointer;" onclick="window.sortSubSls('desa')">Desa <span id="sort-desa">↕</span></th>
+                                <th style="cursor: pointer;" onclick="window.sortSubSls('nama_sub_sls')">SLS <span id="sort-nama_sub_sls">↕</span></th>
+                                <th style="cursor: pointer;" onclick="window.sortSubSls('nama_petugas')">Nama Petugas <span id="sort-nama_petugas">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="window.sortSubSls('jumlah_prelist')">Jumlah Prelist <span id="sort-jumlah_prelist">↕</span></th>
+                            </tr>
+                            <tr class="column-filters">
+                                <th><input type="text" id="col-filter-kode_sub_sls" class="search-input" placeholder="Filter Kode..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
+                                <th><input type="text" id="col-filter-kabupaten" class="search-input" placeholder="Filter Kab..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
+                                <th><input type="text" id="col-filter-kecamatan" class="search-input" placeholder="Filter Kec..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
+                                <th><input type="text" id="col-filter-desa" class="search-input" placeholder="Filter Desa..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
+                                <th><input type="text" id="col-filter-nama_sub_sls" class="search-input" placeholder="Filter SLS..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
+                                <th><input type="text" id="col-filter-nama_petugas" class="search-input" placeholder="Filter Petugas..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-subsls-open">
+                            <!-- Data will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination" id="pagination-subsls-open" style="margin-top: 1rem;">
+                    <!-- Pagination controls -->
+                </div>
+            </div>
+
             <div class="tab-content" id="tab-content-email" style="display: none;">
                 <div class="stats-section">
                     <h3 class="section-title-stats">

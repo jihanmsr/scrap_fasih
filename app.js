@@ -5803,6 +5803,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (loggedUser) {
                 window.showAnomaliDataSection();
             }
+        } else if (tabId === 'open_subsls') {
+            if (mainHeader) mainHeader.textContent = 'Pemantauan SLS Open';
+            if (mainSubheader) mainSubheader.textContent = 'Daftar SLS yang masih berstatus OPEN dan pemantauan kelengkapan petugas.';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
         } else if (tabId === 'palu') {
             if (mainHeader) mainHeader.textContent = '🔴 Monitoring Harian Kota Palu';
             if (mainSubheader) mainSubheader.textContent = 'Pantau progres petugas Palu secara detail hingga 15 Juli 2026';

@@ -664,8 +664,8 @@ async def run_download_and_update():
         # Date Calculations (WITA)
         local_tz = datetime.timezone(datetime.timedelta(hours=8))
         now = datetime.datetime.now(local_tz)
-        now_iso = now.isoformat()
-        now_date_str = now.strftime("%Y-%m-%d")
+        now_iso = "2026-08-11T23:59:00+08:00"
+        now_date_str = "2026-08-11"
         
         prev_updated_at = current_ipas.get("updated_at", "")
         prev_date_str = prev_updated_at[:10] if prev_updated_at else now_date_str
@@ -675,7 +675,7 @@ async def run_download_and_update():
         except Exception:
             prev_date = now.date()
             
-        delta_days = (now.date() - prev_date).days
+        delta_days = 1
         print(f"[INFO] Tanggal saat ini (WITA): {now_date_str}. Tanggal update terakhir: {prev_date_str}. Selisih: {delta_days} hari.")
         
         url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-progress-assignment"

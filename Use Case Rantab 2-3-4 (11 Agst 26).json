@@ -1,0 +1,3770 @@
+{
+  "id": "409b1997-c011-47b1-95d7-fee5469d6ef1",
+  "name": "Use Case Rantab 2-3-4",
+  "project_id": "95cf9d25-e2f8-4de6-a463-e602831c68ba",
+  "owner": "diah.henisa",
+  "share_to": [
+    {
+      "username": "admin",
+      "role": "collaborator"
+    }
+  ],
+  "nodes": [
+    {
+      "key": 2,
+      "type": 1,
+      "name": "Nested [31]",
+      "data": {
+        "input": {
+          "project_id": "95cf9d25-e2f8-4de6-a463-e602831c68ba",
+          "dataset_id": "14249b70-cb3b-4905-8db6-557e8d2687ad",
+          "location": "se2026_exploration/delta/se2026_nested",
+          "format": "delta",
+          "version": null,
+          "rows": null,
+          "columns": [],
+          "test": false,
+          "readOnly": false,
+          "cols": null
+        },
+        "output": {}
+      }
+    },
+    {
+      "key": 4,
+      "type": 8,
+      "name": "Mutate 1 Skala Usaha",
+      "data": {
+        "input": {
+          "node_id": "5",
+          "name": "skala_usaha_2",
+          "overwrite": false,
+          "test": false,
+          "mutateMode": "Recode",
+          "cases": [
+            {
+              "label": "Mikro",
+              "condition": "((tahun_operasi <= 2025) AND (total_pendapatan <= 2000000000))\r\nOR\r\n((tahun_operasi = 2026) AND ((total_pendapatan_bln * 12) <= 2000000000))"
+            },
+            {
+              "label": "Kecil",
+              "condition": "((tahun_operasi <= 2025) AND (total_pendapatan > 2000000000) AND (total_pendapatan <= 15000000000))\r\nOR\r\n((tahun_operasi = 2026) AND ((total_pendapatan_bln * 12) > 2000000000) AND ((total_pendapatan* 12) <= 15000000000))"
+            },
+            {
+              "label": "Menengah",
+              "condition": "((tahun_operasi <= 2025) AND (total_pendapatan > 15000000000) AND (total_pendapatan <= 50000000000))\r\nOR\r\n((tahun_operasi = 2026) AND ((total_pendapatan_bln * 12) > 15000000000) AND ((total_pendapatan* 12) <= 50000000000))"
+            },
+            {
+              "label": "Besar",
+              "condition": "((tahun_operasi <= 2025) AND (total_pendapatan > 50000000000))\r\nOR\r\n((tahun_operasi = 2026) AND ((total_pendapatan_bln * 12) > 50000000000))"
+            }
+          ],
+          "default_value": "Tidak Terklasifikasi",
+          "location": "",
+          "format": "delta",
+          "variables": [
+            {
+              "name": "alamat_kp",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha_utama",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha_var",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha_view",
+              "type": "string"
+            },
+            {
+              "name": "art_pengusaha_filter",
+              "type": "string"
+            },
+            {
+              "name": "aset_lain_bln",
+              "type": "double"
+            },
+            {
+              "name": "aset_lain_thn",
+              "type": "double"
+            },
+            {
+              "name": "aset_tanah_bln",
+              "type": "double"
+            },
+            {
+              "name": "aset_usaha_thn",
+              "type": "double"
+            },
+            {
+              "name": "asing",
+              "type": "integer"
+            },
+            {
+              "name": "asing_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "assignment_date_modified",
+              "type": "timestamp"
+            },
+            {
+              "name": "assignment_id",
+              "type": "string"
+            },
+            {
+              "name": "assignment_id_timestamp",
+              "type": "string"
+            },
+            {
+              "name": "assignment_listing",
+              "type": "boolean"
+            },
+            {
+              "name": "assignment_status_alias",
+              "type": "string"
+            },
+            {
+              "name": "assignment_status_id",
+              "type": "integer"
+            },
+            {
+              "name": "badan_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "badan_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "barang_non_pddk_label",
+              "type": "string"
+            },
+            {
+              "name": "barang_non_pddk_value",
+              "type": "string"
+            },
+            {
+              "name": "beli_jasa_non_pddk_label",
+              "type": "string"
+            },
+            {
+              "name": "beli_jasa_non_pddk_value",
+              "type": "string"
+            },
+            {
+              "name": "belum_bpom",
+              "type": "integer"
+            },
+            {
+              "name": "belum_halal",
+              "type": "integer"
+            },
+            {
+              "name": "biaya_pembelian",
+              "type": "double"
+            },
+            {
+              "name": "biaya_pembelian_bln",
+              "type": "double"
+            },
+            {
+              "name": "biaya_produksi",
+              "type": "double"
+            },
+            {
+              "name": "biaya_produksi_bln",
+              "type": "double"
+            },
+            {
+              "name": "cek_asetBln_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_asetBln_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_asetThn_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_asetThn_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_input27c_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_input27c_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_input31c_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_input31c_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_kbli_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_kbli_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_nib",
+              "type": "string"
+            },
+            {
+              "name": "cek_output26f_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_output26f_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_output30f_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_output30f_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_bayar_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_bayar_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_jk_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_jk_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "desa_l",
+              "type": "string"
+            },
+            {
+              "name": "digital_label",
+              "type": "string"
+            },
+            {
+              "name": "digital_value",
+              "type": "string"
+            },
+            {
+              "name": "eks",
+              "type": "string"
+            },
+            {
+              "name": "email",
+              "type": "string"
+            },
+            {
+              "name": "email_kp",
+              "type": "string"
+            },
+            {
+              "name": "gaji",
+              "type": "double"
+            },
+            {
+              "name": "gaji_bln",
+              "type": "double"
+            },
+            {
+              "name": "halal_label",
+              "type": "string"
+            },
+            {
+              "name": "halal_value",
+              "type": "string"
+            },
+            {
+              "name": "hasilCekNIB",
+              "type": "string"
+            },
+            {
+              "name": "hasilPemadananNIK_l",
+              "type": "string"
+            },
+            {
+              "name": "hp",
+              "type": "string"
+            },
+            {
+              "name": "id_pmss",
+              "type": "string"
+            },
+            {
+              "name": "idsbr",
+              "type": "string"
+            },
+            {
+              "name": "index1",
+              "type": "string"
+            },
+            {
+              "name": "info_total",
+              "type": "integer"
+            },
+            {
+              "name": "info_total_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "info_total_didirikan_var",
+              "type": "string"
+            },
+            {
+              "name": "info_total_var",
+              "type": "string"
+            },
+            {
+              "name": "input",
+              "type": "string"
+            },
+            {
+              "name": "internet_beli_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_beli_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_distribusi_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_distribusi_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_lainnya_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_lainnya_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_pesanan_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_pesanan_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_produksi_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_produksi_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_promosi_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_promosi_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_value",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "is_prelist2",
+              "type": "string"
+            },
+            {
+              "name": "izin_edar_label",
+              "type": "string"
+            },
+            {
+              "name": "izin_edar_value",
+              "type": "string"
+            },
+            {
+              "name": "jaringan_label",
+              "type": "string"
+            },
+            {
+              "name": "jaringan_value",
+              "type": "string"
+            },
+            {
+              "name": "jasa_non_pddk_label",
+              "type": "string"
+            },
+            {
+              "name": "jasa_non_pddk_value",
+              "type": "string"
+            },
+            {
+              "name": "jenis_kawasan_label",
+              "type": "string"
+            },
+            {
+              "name": "jenis_kawasan_value",
+              "type": "string"
+            },
+            {
+              "name": "jenis_kegiatan",
+              "type": "string"
+            },
+            {
+              "name": "jenis_koperasi_label",
+              "type": "string"
+            },
+            {
+              "name": "jenis_koperasi_value",
+              "type": "string"
+            },
+            {
+              "name": "jenis_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "jenis_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "jk_label",
+              "type": "string"
+            },
+            {
+              "name": "jk_value",
+              "type": "string"
+            },
+            {
+              "name": "jk_var",
+              "type": "string"
+            },
+            {
+              "name": "jumlah_kc",
+              "type": "integer"
+            },
+            {
+              "name": "kab_kp_label",
+              "type": "string"
+            },
+            {
+              "name": "kab_kp_value",
+              "type": "string"
+            },
+            {
+              "name": "kab_l",
+              "type": "string"
+            },
+            {
+              "name": "kab_usaha_utama_label",
+              "type": "string"
+            },
+            {
+              "name": "kab_usaha_utama_value",
+              "type": "string"
+            },
+            {
+              "name": "kategori",
+              "type": "string"
+            },
+            {
+              "name": "kategori_2025",
+              "type": "string"
+            },
+            {
+              "name": "kbli_akhir",
+              "type": "string"
+            },
+            {
+              "name": "kbli_cawi",
+              "type": "string"
+            },
+            {
+              "name": "kbli_genai_cawi",
+              "type": "string"
+            },
+            {
+              "name": "kbli_genai_label",
+              "type": "string"
+            },
+            {
+              "name": "kbli_genai_value",
+              "type": "string"
+            },
+            {
+              "name": "kbli_label",
+              "type": "string"
+            },
+            {
+              "name": "kbli_prelist",
+              "type": "string"
+            },
+            {
+              "name": "kbli_value",
+              "type": "string"
+            },
+            {
+              "name": "keberadaan_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "keberadaan_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "kec_l",
+              "type": "string"
+            },
+            {
+              "name": "keg_jasa_label",
+              "type": "string"
+            },
+            {
+              "name": "keg_jasa_value",
+              "type": "string"
+            },
+            {
+              "name": "keg_penjualan_label",
+              "type": "string"
+            },
+            {
+              "name": "keg_penjualan_value",
+              "type": "string"
+            },
+            {
+              "name": "keg_utama",
+              "type": "string"
+            },
+            {
+              "name": "klasifikasi_label",
+              "type": "string"
+            },
+            {
+              "name": "klasifikasi_value",
+              "type": "string"
+            },
+            {
+              "name": "kode_area",
+              "type": "string"
+            },
+            {
+              "name": "kode_keberadaan_usaha",
+              "type": "string"
+            },
+            {
+              "name": "kode_pos",
+              "type": "string"
+            },
+            {
+              "name": "kodesls_l",
+              "type": "string"
+            },
+            {
+              "name": "koperasi_kdkmp_label",
+              "type": "string"
+            },
+            {
+              "name": "koperasi_kdkmp_value",
+              "type": "string"
+            },
+            {
+              "name": "lap_keuangan_label",
+              "type": "string"
+            },
+            {
+              "name": "lap_keuangan_value",
+              "type": "string"
+            },
+            {
+              "name": "layanan_mamin_label",
+              "type": "string"
+            },
+            {
+              "name": "layanan_mamin_value",
+              "type": "string"
+            },
+            {
+              "name": "level_1_code",
+              "type": "string"
+            },
+            {
+              "name": "level_1_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_1_name",
+              "type": "string"
+            },
+            {
+              "name": "level_10_code",
+              "type": "string"
+            },
+            {
+              "name": "level_10_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_10_name",
+              "type": "string"
+            },
+            {
+              "name": "level_2_code",
+              "type": "string"
+            },
+            {
+              "name": "level_2_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_2_name",
+              "type": "string"
+            },
+            {
+              "name": "level_3_code",
+              "type": "string"
+            },
+            {
+              "name": "level_3_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_3_name",
+              "type": "string"
+            },
+            {
+              "name": "level_4_code",
+              "type": "string"
+            },
+            {
+              "name": "level_4_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_4_name",
+              "type": "string"
+            },
+            {
+              "name": "level_5_code",
+              "type": "string"
+            },
+            {
+              "name": "level_5_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_5_name",
+              "type": "string"
+            },
+            {
+              "name": "level_6_code",
+              "type": "string"
+            },
+            {
+              "name": "level_6_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_6_name",
+              "type": "string"
+            },
+            {
+              "name": "level_7_code",
+              "type": "string"
+            },
+            {
+              "name": "level_7_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_7_name",
+              "type": "string"
+            },
+            {
+              "name": "level_8_code",
+              "type": "string"
+            },
+            {
+              "name": "level_8_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_8_name",
+              "type": "string"
+            },
+            {
+              "name": "level_9_code",
+              "type": "string"
+            },
+            {
+              "name": "level_9_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_9_name",
+              "type": "string"
+            },
+            {
+              "name": "lokasi_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "lokasi_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "luas_tanah_bln",
+              "type": "integer"
+            },
+            {
+              "name": "luas_tanah_thn",
+              "type": "integer"
+            },
+            {
+              "name": "mitra_kdkmp_label",
+              "type": "string"
+            },
+            {
+              "name": "mitra_kdkmp_value",
+              "type": "string"
+            },
+            {
+              "name": "msg_error_kategori",
+              "type": "string"
+            },
+            {
+              "name": "nama_kawasan",
+              "type": "string"
+            },
+            {
+              "name": "nama_kek_ki_label",
+              "type": "string"
+            },
+            {
+              "name": "nama_kek_ki_value",
+              "type": "string"
+            },
+            {
+              "name": "nama_komersial",
+              "type": "string"
+            },
+            {
+              "name": "nama_kp",
+              "type": "string"
+            },
+            {
+              "name": "nama_usaha",
+              "type": "string"
+            },
+            {
+              "name": "nama_usaha_edit",
+              "type": "string"
+            },
+            {
+              "name": "negara_kp_label",
+              "type": "string"
+            },
+            {
+              "name": "negara_kp_value",
+              "type": "string"
+            },
+            {
+              "name": "nib",
+              "type": "string"
+            },
+            {
+              "name": "nib_lainnya",
+              "type": "string"
+            },
+            {
+              "name": "nik_pengusaha",
+              "type": "string"
+            },
+            {
+              "name": "nik_pengusaha_var",
+              "type": "string"
+            },
+            {
+              "name": "nilai_pendapatan",
+              "type": "double"
+            },
+            {
+              "name": "nilai_pendapatan_bln",
+              "type": "double"
+            },
+            {
+              "name": "no_bang_l",
+              "type": "string"
+            },
+            {
+              "name": "no_telp",
+              "type": "string"
+            },
+            {
+              "name": "no_usaha",
+              "type": "string"
+            },
+            {
+              "name": "non_operasional",
+              "type": "double"
+            },
+            {
+              "name": "non_operasional_bln",
+              "type": "double"
+            },
+            {
+              "name": "non_profit",
+              "type": "integer"
+            },
+            {
+              "name": "non_publik",
+              "type": "integer"
+            },
+            {
+              "name": "nonprofit_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "nonpublik_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "operasional",
+              "type": "double"
+            },
+            {
+              "name": "operasional_bln",
+              "type": "double"
+            },
+            {
+              "name": "pemerintah",
+              "type": "integer"
+            },
+            {
+              "name": "pemerintah_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "pendapatan_lain",
+              "type": "double"
+            },
+            {
+              "name": "pendapatan_lain_bln",
+              "type": "double"
+            },
+            {
+              "name": "pendapatan_online",
+              "type": "integer"
+            },
+            {
+              "name": "pendapatan_online_bln",
+              "type": "integer"
+            },
+            {
+              "name": "pengusaha",
+              "type": "string"
+            },
+            {
+              "name": "pengusaha_var_label",
+              "type": "string"
+            },
+            {
+              "name": "pengusaha_var_prelist",
+              "type": "string"
+            },
+            {
+              "name": "pengusaha_var_value",
+              "type": "string"
+            },
+            {
+              "name": "peran_mbg_label",
+              "type": "string"
+            },
+            {
+              "name": "peran_mbg_value",
+              "type": "string"
+            },
+            {
+              "name": "perlindungan_lingkungan_label",
+              "type": "string"
+            },
+            {
+              "name": "perlindungan_lingkungan_value",
+              "type": "string"
+            },
+            {
+              "name": "pilih_umkm_options",
+              "type": "string"
+            },
+            {
+              "name": "pilih_umkm_sls_label",
+              "type": "string"
+            },
+            {
+              "name": "pilih_umkm_sls_value",
+              "type": "string"
+            },
+            {
+              "name": "pribadi",
+              "type": "integer"
+            },
+            {
+              "name": "pribadi_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "produk",
+              "type": "string"
+            },
+            {
+              "name": "produk_sendiri_label",
+              "type": "string"
+            },
+            {
+              "name": "produk_sendiri_value",
+              "type": "string"
+            },
+            {
+              "name": "produk_seni_label",
+              "type": "string"
+            },
+            {
+              "name": "produk_seni_value",
+              "type": "string"
+            },
+            {
+              "name": "produksi_lingkungan_label",
+              "type": "string"
+            },
+            {
+              "name": "produksi_lingkungan_value",
+              "type": "string"
+            },
+            {
+              "name": "proses",
+              "type": "string"
+            },
+            {
+              "name": "prov_kp_label",
+              "type": "string"
+            },
+            {
+              "name": "prov_kp_value",
+              "type": "string"
+            },
+            {
+              "name": "prov_l",
+              "type": "string"
+            },
+            {
+              "name": "prov_usaha_utama_label",
+              "type": "string"
+            },
+            {
+              "name": "prov_usaha_utama_value",
+              "type": "string"
+            },
+            {
+              "name": "publik",
+              "type": "integer"
+            },
+            {
+              "name": "publik_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "punya_nib_label",
+              "type": "string"
+            },
+            {
+              "name": "punya_nib_value",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_bln_label",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_bln_value",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_thn_label",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_thn_value",
+              "type": "string"
+            },
+            {
+              "name": "result_callnib",
+              "type": "string"
+            },
+            {
+              "name": "result_callnik_l",
+              "type": "string"
+            },
+            {
+              "name": "result_gen_ai",
+              "type": "string"
+            },
+            {
+              "name": "rt",
+              "type": "string"
+            },
+            {
+              "name": "rw",
+              "type": "string"
+            },
+            {
+              "name": "skala_usaha",
+              "type": "string"
+            },
+            {
+              "name": "sls_l",
+              "type": "string"
+            },
+            {
+              "name": "sudah_bpom",
+              "type": "integer"
+            },
+            {
+              "name": "sudah_halal",
+              "type": "integer"
+            },
+            {
+              "name": "survey_period_id",
+              "type": "string"
+            },
+            {
+              "name": "survey_period_name",
+              "type": "string"
+            },
+            {
+              "name": "tahun_operasi",
+              "type": "integer"
+            },
+            {
+              "name": "tidak_nib_label",
+              "type": "string"
+            },
+            {
+              "name": "tidak_nib_value",
+              "type": "string"
+            },
+            {
+              "name": "tk_dibayar",
+              "type": "integer"
+            },
+            {
+              "name": "tk_laki",
+              "type": "integer"
+            },
+            {
+              "name": "tk_pr",
+              "type": "integer"
+            },
+            {
+              "name": "tk_tdk_dibayar",
+              "type": "integer"
+            },
+            {
+              "name": "total_aset_bln",
+              "type": "string"
+            },
+            {
+              "name": "total_aset_thn",
+              "type": "double"
+            },
+            {
+              "name": "total_aset_thn_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pendapatan",
+              "type": "double"
+            },
+            {
+              "name": "total_pendapatan_bln",
+              "type": "double"
+            },
+            {
+              "name": "total_pendapatan_bln_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pendapatan_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pengeluaran",
+              "type": "double"
+            },
+            {
+              "name": "total_pengeluaran_bln",
+              "type": "double"
+            },
+            {
+              "name": "total_pengeluaran_bln_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pengeluaran_var",
+              "type": "string"
+            },
+            {
+              "name": "total_tk_bayar",
+              "type": "integer"
+            },
+            {
+              "name": "total_tk_bayar_var",
+              "type": "string"
+            },
+            {
+              "name": "total_tk_jk",
+              "type": "integer"
+            },
+            {
+              "name": "total_tk_jk_var",
+              "type": "string"
+            },
+            {
+              "name": "umur",
+              "type": "integer"
+            },
+            {
+              "name": "umur_pj_var",
+              "type": "string"
+            },
+            {
+              "name": "var_hiden_pml",
+              "type": "string"
+            },
+            {
+              "name": "var_kbli",
+              "type": "string"
+            },
+            {
+              "name": "var_narasi",
+              "type": "string"
+            },
+            {
+              "name": "website",
+              "type": "string"
+            },
+            {
+              "name": "cek5",
+              "type": "string"
+            }
+          ],
+          "version": null
+        },
+        "output": {}
+      }
+    },
+    {
+      "key": 5,
+      "type": 4,
+      "name": "se2026_nested_31_edit_skema",
+      "data": {
+        "input": {
+          "node_id": "2",
+          "location": "",
+          "format": "delta",
+          "columns": [
+            {
+              "column": "tahun_operasi",
+              "new_type": "integer"
+            }
+          ],
+          "version": null,
+          "test": true,
+          "variables": [
+            {
+              "name": "alamat_kp",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha_utama",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha_var",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha_view",
+              "type": "string"
+            },
+            {
+              "name": "art_pengusaha_filter",
+              "type": "string"
+            },
+            {
+              "name": "aset_lain_bln",
+              "type": "double"
+            },
+            {
+              "name": "aset_lain_thn",
+              "type": "double"
+            },
+            {
+              "name": "aset_tanah_bln",
+              "type": "double"
+            },
+            {
+              "name": "aset_usaha_thn",
+              "type": "double"
+            },
+            {
+              "name": "asing",
+              "type": "integer"
+            },
+            {
+              "name": "asing_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "assignment_date_modified",
+              "type": "timestamp"
+            },
+            {
+              "name": "assignment_id",
+              "type": "string"
+            },
+            {
+              "name": "assignment_id_timestamp",
+              "type": "string"
+            },
+            {
+              "name": "assignment_listing",
+              "type": "boolean"
+            },
+            {
+              "name": "assignment_status_alias",
+              "type": "string"
+            },
+            {
+              "name": "assignment_status_id",
+              "type": "integer"
+            },
+            {
+              "name": "badan_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "badan_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "barang_non_pddk_label",
+              "type": "string"
+            },
+            {
+              "name": "barang_non_pddk_value",
+              "type": "string"
+            },
+            {
+              "name": "beli_jasa_non_pddk_label",
+              "type": "string"
+            },
+            {
+              "name": "beli_jasa_non_pddk_value",
+              "type": "string"
+            },
+            {
+              "name": "belum_bpom",
+              "type": "integer"
+            },
+            {
+              "name": "belum_halal",
+              "type": "integer"
+            },
+            {
+              "name": "biaya_pembelian",
+              "type": "double"
+            },
+            {
+              "name": "biaya_pembelian_bln",
+              "type": "double"
+            },
+            {
+              "name": "biaya_produksi",
+              "type": "double"
+            },
+            {
+              "name": "biaya_produksi_bln",
+              "type": "double"
+            },
+            {
+              "name": "cek_asetBln_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_asetBln_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_asetThn_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_asetThn_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_input27c_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_input27c_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_input31c_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_input31c_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_kbli_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_kbli_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_nib",
+              "type": "string"
+            },
+            {
+              "name": "cek_output26f_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_output26f_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_output30f_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_output30f_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_bayar_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_bayar_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_jk_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_jk_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "desa_l",
+              "type": "string"
+            },
+            {
+              "name": "digital_label",
+              "type": "string"
+            },
+            {
+              "name": "digital_value",
+              "type": "string"
+            },
+            {
+              "name": "eks",
+              "type": "string"
+            },
+            {
+              "name": "email",
+              "type": "string"
+            },
+            {
+              "name": "email_kp",
+              "type": "string"
+            },
+            {
+              "name": "gaji",
+              "type": "double"
+            },
+            {
+              "name": "gaji_bln",
+              "type": "double"
+            },
+            {
+              "name": "halal_label",
+              "type": "string"
+            },
+            {
+              "name": "halal_value",
+              "type": "string"
+            },
+            {
+              "name": "hasilCekNIB",
+              "type": "string"
+            },
+            {
+              "name": "hasilPemadananNIK_l",
+              "type": "string"
+            },
+            {
+              "name": "hp",
+              "type": "string"
+            },
+            {
+              "name": "id_pmss",
+              "type": "string"
+            },
+            {
+              "name": "idsbr",
+              "type": "string"
+            },
+            {
+              "name": "index1",
+              "type": "string"
+            },
+            {
+              "name": "info_total",
+              "type": "integer"
+            },
+            {
+              "name": "info_total_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "info_total_didirikan_var",
+              "type": "string"
+            },
+            {
+              "name": "info_total_var",
+              "type": "string"
+            },
+            {
+              "name": "input",
+              "type": "string"
+            },
+            {
+              "name": "internet_beli_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_beli_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_distribusi_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_distribusi_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_lainnya_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_lainnya_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_pesanan_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_pesanan_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_produksi_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_produksi_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_promosi_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_promosi_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_value",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "is_prelist2",
+              "type": "string"
+            },
+            {
+              "name": "izin_edar_label",
+              "type": "string"
+            },
+            {
+              "name": "izin_edar_value",
+              "type": "string"
+            },
+            {
+              "name": "jaringan_label",
+              "type": "string"
+            },
+            {
+              "name": "jaringan_value",
+              "type": "string"
+            },
+            {
+              "name": "jasa_non_pddk_label",
+              "type": "string"
+            },
+            {
+              "name": "jasa_non_pddk_value",
+              "type": "string"
+            },
+            {
+              "name": "jenis_kawasan_label",
+              "type": "string"
+            },
+            {
+              "name": "jenis_kawasan_value",
+              "type": "string"
+            },
+            {
+              "name": "jenis_kegiatan",
+              "type": "string"
+            },
+            {
+              "name": "jenis_koperasi_label",
+              "type": "string"
+            },
+            {
+              "name": "jenis_koperasi_value",
+              "type": "string"
+            },
+            {
+              "name": "jenis_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "jenis_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "jk_label",
+              "type": "string"
+            },
+            {
+              "name": "jk_value",
+              "type": "string"
+            },
+            {
+              "name": "jk_var",
+              "type": "string"
+            },
+            {
+              "name": "jumlah_kc",
+              "type": "integer"
+            },
+            {
+              "name": "kab_kp_label",
+              "type": "string"
+            },
+            {
+              "name": "kab_kp_value",
+              "type": "string"
+            },
+            {
+              "name": "kab_l",
+              "type": "string"
+            },
+            {
+              "name": "kab_usaha_utama_label",
+              "type": "string"
+            },
+            {
+              "name": "kab_usaha_utama_value",
+              "type": "string"
+            },
+            {
+              "name": "kategori",
+              "type": "string"
+            },
+            {
+              "name": "kategori_2025",
+              "type": "string"
+            },
+            {
+              "name": "kbli_akhir",
+              "type": "string"
+            },
+            {
+              "name": "kbli_cawi",
+              "type": "string"
+            },
+            {
+              "name": "kbli_genai_cawi",
+              "type": "string"
+            },
+            {
+              "name": "kbli_genai_label",
+              "type": "string"
+            },
+            {
+              "name": "kbli_genai_value",
+              "type": "string"
+            },
+            {
+              "name": "kbli_label",
+              "type": "string"
+            },
+            {
+              "name": "kbli_prelist",
+              "type": "string"
+            },
+            {
+              "name": "kbli_value",
+              "type": "string"
+            },
+            {
+              "name": "keberadaan_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "keberadaan_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "kec_l",
+              "type": "string"
+            },
+            {
+              "name": "keg_jasa_label",
+              "type": "string"
+            },
+            {
+              "name": "keg_jasa_value",
+              "type": "string"
+            },
+            {
+              "name": "keg_penjualan_label",
+              "type": "string"
+            },
+            {
+              "name": "keg_penjualan_value",
+              "type": "string"
+            },
+            {
+              "name": "keg_utama",
+              "type": "string"
+            },
+            {
+              "name": "klasifikasi_label",
+              "type": "string"
+            },
+            {
+              "name": "klasifikasi_value",
+              "type": "string"
+            },
+            {
+              "name": "kode_area",
+              "type": "string"
+            },
+            {
+              "name": "kode_keberadaan_usaha",
+              "type": "string"
+            },
+            {
+              "name": "kode_pos",
+              "type": "string"
+            },
+            {
+              "name": "kodesls_l",
+              "type": "string"
+            },
+            {
+              "name": "koperasi_kdkmp_label",
+              "type": "string"
+            },
+            {
+              "name": "koperasi_kdkmp_value",
+              "type": "string"
+            },
+            {
+              "name": "lap_keuangan_label",
+              "type": "string"
+            },
+            {
+              "name": "lap_keuangan_value",
+              "type": "string"
+            },
+            {
+              "name": "layanan_mamin_label",
+              "type": "string"
+            },
+            {
+              "name": "layanan_mamin_value",
+              "type": "string"
+            },
+            {
+              "name": "level_1_code",
+              "type": "string"
+            },
+            {
+              "name": "level_1_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_1_name",
+              "type": "string"
+            },
+            {
+              "name": "level_10_code",
+              "type": "string"
+            },
+            {
+              "name": "level_10_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_10_name",
+              "type": "string"
+            },
+            {
+              "name": "level_2_code",
+              "type": "string"
+            },
+            {
+              "name": "level_2_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_2_name",
+              "type": "string"
+            },
+            {
+              "name": "level_3_code",
+              "type": "string"
+            },
+            {
+              "name": "level_3_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_3_name",
+              "type": "string"
+            },
+            {
+              "name": "level_4_code",
+              "type": "string"
+            },
+            {
+              "name": "level_4_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_4_name",
+              "type": "string"
+            },
+            {
+              "name": "level_5_code",
+              "type": "string"
+            },
+            {
+              "name": "level_5_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_5_name",
+              "type": "string"
+            },
+            {
+              "name": "level_6_code",
+              "type": "string"
+            },
+            {
+              "name": "level_6_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_6_name",
+              "type": "string"
+            },
+            {
+              "name": "level_7_code",
+              "type": "string"
+            },
+            {
+              "name": "level_7_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_7_name",
+              "type": "string"
+            },
+            {
+              "name": "level_8_code",
+              "type": "string"
+            },
+            {
+              "name": "level_8_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_8_name",
+              "type": "string"
+            },
+            {
+              "name": "level_9_code",
+              "type": "string"
+            },
+            {
+              "name": "level_9_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_9_name",
+              "type": "string"
+            },
+            {
+              "name": "lokasi_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "lokasi_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "luas_tanah_bln",
+              "type": "integer"
+            },
+            {
+              "name": "luas_tanah_thn",
+              "type": "integer"
+            },
+            {
+              "name": "mitra_kdkmp_label",
+              "type": "string"
+            },
+            {
+              "name": "mitra_kdkmp_value",
+              "type": "string"
+            },
+            {
+              "name": "msg_error_kategori",
+              "type": "string"
+            },
+            {
+              "name": "nama_kawasan",
+              "type": "string"
+            },
+            {
+              "name": "nama_kek_ki_label",
+              "type": "string"
+            },
+            {
+              "name": "nama_kek_ki_value",
+              "type": "string"
+            },
+            {
+              "name": "nama_komersial",
+              "type": "string"
+            },
+            {
+              "name": "nama_kp",
+              "type": "string"
+            },
+            {
+              "name": "nama_usaha",
+              "type": "string"
+            },
+            {
+              "name": "nama_usaha_edit",
+              "type": "string"
+            },
+            {
+              "name": "negara_kp_label",
+              "type": "string"
+            },
+            {
+              "name": "negara_kp_value",
+              "type": "string"
+            },
+            {
+              "name": "nib",
+              "type": "string"
+            },
+            {
+              "name": "nib_lainnya",
+              "type": "string"
+            },
+            {
+              "name": "nik_pengusaha",
+              "type": "string"
+            },
+            {
+              "name": "nik_pengusaha_var",
+              "type": "string"
+            },
+            {
+              "name": "nilai_pendapatan",
+              "type": "double"
+            },
+            {
+              "name": "nilai_pendapatan_bln",
+              "type": "double"
+            },
+            {
+              "name": "no_bang_l",
+              "type": "string"
+            },
+            {
+              "name": "no_telp",
+              "type": "string"
+            },
+            {
+              "name": "no_usaha",
+              "type": "string"
+            },
+            {
+              "name": "non_operasional",
+              "type": "double"
+            },
+            {
+              "name": "non_operasional_bln",
+              "type": "double"
+            },
+            {
+              "name": "non_profit",
+              "type": "integer"
+            },
+            {
+              "name": "non_publik",
+              "type": "integer"
+            },
+            {
+              "name": "nonprofit_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "nonpublik_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "operasional",
+              "type": "double"
+            },
+            {
+              "name": "operasional_bln",
+              "type": "double"
+            },
+            {
+              "name": "pemerintah",
+              "type": "integer"
+            },
+            {
+              "name": "pemerintah_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "pendapatan_lain",
+              "type": "double"
+            },
+            {
+              "name": "pendapatan_lain_bln",
+              "type": "double"
+            },
+            {
+              "name": "pendapatan_online",
+              "type": "integer"
+            },
+            {
+              "name": "pendapatan_online_bln",
+              "type": "integer"
+            },
+            {
+              "name": "pengusaha",
+              "type": "string"
+            },
+            {
+              "name": "pengusaha_var_label",
+              "type": "string"
+            },
+            {
+              "name": "pengusaha_var_prelist",
+              "type": "string"
+            },
+            {
+              "name": "pengusaha_var_value",
+              "type": "string"
+            },
+            {
+              "name": "peran_mbg_label",
+              "type": "string"
+            },
+            {
+              "name": "peran_mbg_value",
+              "type": "string"
+            },
+            {
+              "name": "perlindungan_lingkungan_label",
+              "type": "string"
+            },
+            {
+              "name": "perlindungan_lingkungan_value",
+              "type": "string"
+            },
+            {
+              "name": "pilih_umkm_options",
+              "type": "string"
+            },
+            {
+              "name": "pilih_umkm_sls_label",
+              "type": "string"
+            },
+            {
+              "name": "pilih_umkm_sls_value",
+              "type": "string"
+            },
+            {
+              "name": "pribadi",
+              "type": "integer"
+            },
+            {
+              "name": "pribadi_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "produk",
+              "type": "string"
+            },
+            {
+              "name": "produk_sendiri_label",
+              "type": "string"
+            },
+            {
+              "name": "produk_sendiri_value",
+              "type": "string"
+            },
+            {
+              "name": "produk_seni_label",
+              "type": "string"
+            },
+            {
+              "name": "produk_seni_value",
+              "type": "string"
+            },
+            {
+              "name": "produksi_lingkungan_label",
+              "type": "string"
+            },
+            {
+              "name": "produksi_lingkungan_value",
+              "type": "string"
+            },
+            {
+              "name": "proses",
+              "type": "string"
+            },
+            {
+              "name": "prov_kp_label",
+              "type": "string"
+            },
+            {
+              "name": "prov_kp_value",
+              "type": "string"
+            },
+            {
+              "name": "prov_l",
+              "type": "string"
+            },
+            {
+              "name": "prov_usaha_utama_label",
+              "type": "string"
+            },
+            {
+              "name": "prov_usaha_utama_value",
+              "type": "string"
+            },
+            {
+              "name": "publik",
+              "type": "integer"
+            },
+            {
+              "name": "publik_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "punya_nib_label",
+              "type": "string"
+            },
+            {
+              "name": "punya_nib_value",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_bln_label",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_bln_value",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_thn_label",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_thn_value",
+              "type": "string"
+            },
+            {
+              "name": "result_callnib",
+              "type": "string"
+            },
+            {
+              "name": "result_callnik_l",
+              "type": "string"
+            },
+            {
+              "name": "result_gen_ai",
+              "type": "string"
+            },
+            {
+              "name": "rt",
+              "type": "string"
+            },
+            {
+              "name": "rw",
+              "type": "string"
+            },
+            {
+              "name": "skala_usaha",
+              "type": "string"
+            },
+            {
+              "name": "sls_l",
+              "type": "string"
+            },
+            {
+              "name": "sudah_bpom",
+              "type": "integer"
+            },
+            {
+              "name": "sudah_halal",
+              "type": "integer"
+            },
+            {
+              "name": "survey_period_id",
+              "type": "string"
+            },
+            {
+              "name": "survey_period_name",
+              "type": "string"
+            },
+            {
+              "name": "tahun_operasi",
+              "type": "string"
+            },
+            {
+              "name": "tidak_nib_label",
+              "type": "string"
+            },
+            {
+              "name": "tidak_nib_value",
+              "type": "string"
+            },
+            {
+              "name": "tk_dibayar",
+              "type": "integer"
+            },
+            {
+              "name": "tk_laki",
+              "type": "integer"
+            },
+            {
+              "name": "tk_pr",
+              "type": "integer"
+            },
+            {
+              "name": "tk_tdk_dibayar",
+              "type": "integer"
+            },
+            {
+              "name": "total_aset_bln",
+              "type": "string"
+            },
+            {
+              "name": "total_aset_thn",
+              "type": "double"
+            },
+            {
+              "name": "total_aset_thn_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pendapatan",
+              "type": "double"
+            },
+            {
+              "name": "total_pendapatan_bln",
+              "type": "double"
+            },
+            {
+              "name": "total_pendapatan_bln_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pendapatan_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pengeluaran",
+              "type": "double"
+            },
+            {
+              "name": "total_pengeluaran_bln",
+              "type": "double"
+            },
+            {
+              "name": "total_pengeluaran_bln_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pengeluaran_var",
+              "type": "string"
+            },
+            {
+              "name": "total_tk_bayar",
+              "type": "integer"
+            },
+            {
+              "name": "total_tk_bayar_var",
+              "type": "string"
+            },
+            {
+              "name": "total_tk_jk",
+              "type": "integer"
+            },
+            {
+              "name": "total_tk_jk_var",
+              "type": "string"
+            },
+            {
+              "name": "umur",
+              "type": "integer"
+            },
+            {
+              "name": "umur_pj_var",
+              "type": "string"
+            },
+            {
+              "name": "var_hiden_pml",
+              "type": "string"
+            },
+            {
+              "name": "var_kbli",
+              "type": "string"
+            },
+            {
+              "name": "var_narasi",
+              "type": "string"
+            },
+            {
+              "name": "website",
+              "type": "string"
+            },
+            {
+              "name": "cek5",
+              "type": "string"
+            }
+          ],
+          "editingSchema": "cast-types"
+        },
+        "output": {}
+      }
+    },
+    {
+      "key": 13,
+      "type": 6,
+      "name": "Use Case 3 Jumlah Usaha/Perusahaan menurut Wilayah dan Skala Usaha",
+      "data": {
+        "input": {
+          "node_id": "31",
+          "useFilter": false,
+          "filter": "",
+          "rows": [
+            "level_2_name"
+          ],
+          "type": "delta",
+          "cols": [
+            "skala_usaha"
+          ],
+          "formulaSelected": "",
+          "value": "",
+          "weight": "",
+          "percentile": 25,
+          "numerator": "",
+          "denominator": "",
+          "base": "1",
+          "formula": "n()",
+          "columnAliases": {
+            "level_2_name": "Wilayah",
+            "skala_usaha": "Skala Usaha"
+          },
+          "virtualColumns": [],
+          "tableCalcMode": "none"
+        },
+        "output": {}
+      }
+    },
+    {
+      "key": 18,
+      "type": 6,
+      "name": "Use Case 4 Jumlah Tenaga Kerja dan Rata-rata Upah Menurut Lapangan Usaha",
+      "data": {
+        "input": {
+          "node_id": "31",
+          "useFilter": false,
+          "filter": "!is.na(kategori)",
+          "rows": [
+            "kategori_usaha"
+          ],
+          "type": "delta",
+          "cols": [],
+          "formulaSelected": "Sum",
+          "value": [
+            "tk_laki",
+            "tk_pr",
+            "total_tk_jk",
+            "tk_dibayar",
+            "tk_tdk_dibayar",
+            "total_tk_bayar",
+            "gaji"
+          ],
+          "weight": "",
+          "percentile": 25,
+          "numerator": "",
+          "denominator": "",
+          "base": "1",
+          "formula": "sum(tk_laki) as tk_laki, sum(tk_pr) as tk_pr, sum(total_tk_jk) as total_tk_jk, sum(tk_dibayar) as tk_dibayar, sum(tk_tdk_dibayar) as tk_tdk_dibayar, sum(total_tk_bayar) as total_tk_bayar, sum(gaji) as gaji",
+          "columnAliases": {
+            "kategori": "Lapangan Usaha"
+          },
+          "virtualColumns": [
+            {
+              "id": "vc_1786266884353",
+              "name": "Rata-Rata Upah",
+              "formula": "gaji/total_tk_jk"
+            }
+          ],
+          "tableCalcMode": "none",
+          "raw_query": {
+            "rules": [
+              {
+                "id": "8e1a00f7-46cd-4b11-a9d7-5bfdaa4b3082",
+                "field": "kategori",
+                "operator": "notNull",
+                "valueSource": "value",
+                "value": ""
+              }
+            ],
+            "id": "31187869-026f-496e-9e62-525c37aae900"
+          }
+        },
+        "output": {}
+      }
+    },
+    {
+      "key": 25,
+      "type": 34,
+      "name": "AI Report Generator 25",
+      "data": {
+        "input": {
+          "content": "",
+          "location": ""
+        }
+      }
+    },
+    {
+      "key": 31,
+      "type": 8,
+      "name": "Mutate 2 Kategori Usaha",
+      "data": {
+        "input": {
+          "node_id": "4",
+          "location": "",
+          "format": "delta",
+          "name": "kategori_usaha",
+          "overwrite": false,
+          "version": null,
+          "test": false,
+          "variables": [
+            {
+              "name": "alamat_kp",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha_utama",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha_var",
+              "type": "string"
+            },
+            {
+              "name": "alamat_usaha_view",
+              "type": "string"
+            },
+            {
+              "name": "art_pengusaha_filter",
+              "type": "string"
+            },
+            {
+              "name": "aset_lain_bln",
+              "type": "double"
+            },
+            {
+              "name": "aset_lain_thn",
+              "type": "double"
+            },
+            {
+              "name": "aset_tanah_bln",
+              "type": "double"
+            },
+            {
+              "name": "aset_usaha_thn",
+              "type": "double"
+            },
+            {
+              "name": "asing",
+              "type": "integer"
+            },
+            {
+              "name": "asing_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "assignment_date_modified",
+              "type": "timestamp"
+            },
+            {
+              "name": "assignment_id",
+              "type": "string"
+            },
+            {
+              "name": "assignment_id_timestamp",
+              "type": "string"
+            },
+            {
+              "name": "assignment_listing",
+              "type": "boolean"
+            },
+            {
+              "name": "assignment_status_alias",
+              "type": "string"
+            },
+            {
+              "name": "assignment_status_id",
+              "type": "integer"
+            },
+            {
+              "name": "badan_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "badan_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "barang_non_pddk_label",
+              "type": "string"
+            },
+            {
+              "name": "barang_non_pddk_value",
+              "type": "string"
+            },
+            {
+              "name": "beli_jasa_non_pddk_label",
+              "type": "string"
+            },
+            {
+              "name": "beli_jasa_non_pddk_value",
+              "type": "string"
+            },
+            {
+              "name": "belum_bpom",
+              "type": "integer"
+            },
+            {
+              "name": "belum_halal",
+              "type": "integer"
+            },
+            {
+              "name": "biaya_pembelian",
+              "type": "double"
+            },
+            {
+              "name": "biaya_pembelian_bln",
+              "type": "double"
+            },
+            {
+              "name": "biaya_produksi",
+              "type": "double"
+            },
+            {
+              "name": "biaya_produksi_bln",
+              "type": "double"
+            },
+            {
+              "name": "cek_asetBln_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_asetBln_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_asetThn_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_asetThn_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_input27c_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_input27c_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_input31c_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_input31c_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_kbli_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_kbli_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_nib",
+              "type": "string"
+            },
+            {
+              "name": "cek_output26f_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_output26f_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_output30f_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_output30f_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_bayar_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_bayar_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_jk_pml_label",
+              "type": "string"
+            },
+            {
+              "name": "cek_tk_jk_pml_value",
+              "type": "string"
+            },
+            {
+              "name": "desa_l",
+              "type": "string"
+            },
+            {
+              "name": "digital_label",
+              "type": "string"
+            },
+            {
+              "name": "digital_value",
+              "type": "string"
+            },
+            {
+              "name": "eks",
+              "type": "string"
+            },
+            {
+              "name": "email",
+              "type": "string"
+            },
+            {
+              "name": "email_kp",
+              "type": "string"
+            },
+            {
+              "name": "gaji",
+              "type": "double"
+            },
+            {
+              "name": "gaji_bln",
+              "type": "double"
+            },
+            {
+              "name": "halal_label",
+              "type": "string"
+            },
+            {
+              "name": "halal_value",
+              "type": "string"
+            },
+            {
+              "name": "hasilCekNIB",
+              "type": "string"
+            },
+            {
+              "name": "hasilPemadananNIK_l",
+              "type": "string"
+            },
+            {
+              "name": "hp",
+              "type": "string"
+            },
+            {
+              "name": "id_pmss",
+              "type": "string"
+            },
+            {
+              "name": "idsbr",
+              "type": "string"
+            },
+            {
+              "name": "index1",
+              "type": "string"
+            },
+            {
+              "name": "info_total",
+              "type": "integer"
+            },
+            {
+              "name": "info_total_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "info_total_didirikan_var",
+              "type": "string"
+            },
+            {
+              "name": "info_total_var",
+              "type": "string"
+            },
+            {
+              "name": "input",
+              "type": "string"
+            },
+            {
+              "name": "internet_beli_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_beli_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_distribusi_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_distribusi_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_lainnya_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_lainnya_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_pesanan_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_pesanan_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_produksi_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_produksi_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_promosi_label",
+              "type": "string"
+            },
+            {
+              "name": "internet_promosi_value",
+              "type": "string"
+            },
+            {
+              "name": "internet_value",
+              "type": "string"
+            },
+            {
+              "name": "is_active",
+              "type": "boolean"
+            },
+            {
+              "name": "is_prelist2",
+              "type": "string"
+            },
+            {
+              "name": "izin_edar_label",
+              "type": "string"
+            },
+            {
+              "name": "izin_edar_value",
+              "type": "string"
+            },
+            {
+              "name": "jaringan_label",
+              "type": "string"
+            },
+            {
+              "name": "jaringan_value",
+              "type": "string"
+            },
+            {
+              "name": "jasa_non_pddk_label",
+              "type": "string"
+            },
+            {
+              "name": "jasa_non_pddk_value",
+              "type": "string"
+            },
+            {
+              "name": "jenis_kawasan_label",
+              "type": "string"
+            },
+            {
+              "name": "jenis_kawasan_value",
+              "type": "string"
+            },
+            {
+              "name": "jenis_kegiatan",
+              "type": "string"
+            },
+            {
+              "name": "jenis_koperasi_label",
+              "type": "string"
+            },
+            {
+              "name": "jenis_koperasi_value",
+              "type": "string"
+            },
+            {
+              "name": "jenis_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "jenis_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "jk_label",
+              "type": "string"
+            },
+            {
+              "name": "jk_value",
+              "type": "string"
+            },
+            {
+              "name": "jk_var",
+              "type": "string"
+            },
+            {
+              "name": "jumlah_kc",
+              "type": "integer"
+            },
+            {
+              "name": "kab_kp_label",
+              "type": "string"
+            },
+            {
+              "name": "kab_kp_value",
+              "type": "string"
+            },
+            {
+              "name": "kab_l",
+              "type": "string"
+            },
+            {
+              "name": "kab_usaha_utama_label",
+              "type": "string"
+            },
+            {
+              "name": "kab_usaha_utama_value",
+              "type": "string"
+            },
+            {
+              "name": "kategori",
+              "type": "string"
+            },
+            {
+              "name": "kategori_2025",
+              "type": "string"
+            },
+            {
+              "name": "kbli_akhir",
+              "type": "string"
+            },
+            {
+              "name": "kbli_cawi",
+              "type": "string"
+            },
+            {
+              "name": "kbli_genai_cawi",
+              "type": "string"
+            },
+            {
+              "name": "kbli_genai_label",
+              "type": "string"
+            },
+            {
+              "name": "kbli_genai_value",
+              "type": "string"
+            },
+            {
+              "name": "kbli_label",
+              "type": "string"
+            },
+            {
+              "name": "kbli_prelist",
+              "type": "string"
+            },
+            {
+              "name": "kbli_value",
+              "type": "string"
+            },
+            {
+              "name": "keberadaan_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "keberadaan_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "kec_l",
+              "type": "string"
+            },
+            {
+              "name": "keg_jasa_label",
+              "type": "string"
+            },
+            {
+              "name": "keg_jasa_value",
+              "type": "string"
+            },
+            {
+              "name": "keg_penjualan_label",
+              "type": "string"
+            },
+            {
+              "name": "keg_penjualan_value",
+              "type": "string"
+            },
+            {
+              "name": "keg_utama",
+              "type": "string"
+            },
+            {
+              "name": "klasifikasi_label",
+              "type": "string"
+            },
+            {
+              "name": "klasifikasi_value",
+              "type": "string"
+            },
+            {
+              "name": "kode_area",
+              "type": "string"
+            },
+            {
+              "name": "kode_keberadaan_usaha",
+              "type": "string"
+            },
+            {
+              "name": "kode_pos",
+              "type": "string"
+            },
+            {
+              "name": "kodesls_l",
+              "type": "string"
+            },
+            {
+              "name": "koperasi_kdkmp_label",
+              "type": "string"
+            },
+            {
+              "name": "koperasi_kdkmp_value",
+              "type": "string"
+            },
+            {
+              "name": "lap_keuangan_label",
+              "type": "string"
+            },
+            {
+              "name": "lap_keuangan_value",
+              "type": "string"
+            },
+            {
+              "name": "layanan_mamin_label",
+              "type": "string"
+            },
+            {
+              "name": "layanan_mamin_value",
+              "type": "string"
+            },
+            {
+              "name": "level_1_code",
+              "type": "string"
+            },
+            {
+              "name": "level_1_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_1_name",
+              "type": "string"
+            },
+            {
+              "name": "level_10_code",
+              "type": "string"
+            },
+            {
+              "name": "level_10_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_10_name",
+              "type": "string"
+            },
+            {
+              "name": "level_2_code",
+              "type": "string"
+            },
+            {
+              "name": "level_2_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_2_name",
+              "type": "string"
+            },
+            {
+              "name": "level_3_code",
+              "type": "string"
+            },
+            {
+              "name": "level_3_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_3_name",
+              "type": "string"
+            },
+            {
+              "name": "level_4_code",
+              "type": "string"
+            },
+            {
+              "name": "level_4_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_4_name",
+              "type": "string"
+            },
+            {
+              "name": "level_5_code",
+              "type": "string"
+            },
+            {
+              "name": "level_5_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_5_name",
+              "type": "string"
+            },
+            {
+              "name": "level_6_code",
+              "type": "string"
+            },
+            {
+              "name": "level_6_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_6_name",
+              "type": "string"
+            },
+            {
+              "name": "level_7_code",
+              "type": "string"
+            },
+            {
+              "name": "level_7_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_7_name",
+              "type": "string"
+            },
+            {
+              "name": "level_8_code",
+              "type": "string"
+            },
+            {
+              "name": "level_8_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_8_name",
+              "type": "string"
+            },
+            {
+              "name": "level_9_code",
+              "type": "string"
+            },
+            {
+              "name": "level_9_full_code",
+              "type": "string"
+            },
+            {
+              "name": "level_9_name",
+              "type": "string"
+            },
+            {
+              "name": "lokasi_usaha_label",
+              "type": "string"
+            },
+            {
+              "name": "lokasi_usaha_value",
+              "type": "string"
+            },
+            {
+              "name": "luas_tanah_bln",
+              "type": "integer"
+            },
+            {
+              "name": "luas_tanah_thn",
+              "type": "integer"
+            },
+            {
+              "name": "mitra_kdkmp_label",
+              "type": "string"
+            },
+            {
+              "name": "mitra_kdkmp_value",
+              "type": "string"
+            },
+            {
+              "name": "msg_error_kategori",
+              "type": "string"
+            },
+            {
+              "name": "nama_kawasan",
+              "type": "string"
+            },
+            {
+              "name": "nama_kek_ki_label",
+              "type": "string"
+            },
+            {
+              "name": "nama_kek_ki_value",
+              "type": "string"
+            },
+            {
+              "name": "nama_komersial",
+              "type": "string"
+            },
+            {
+              "name": "nama_kp",
+              "type": "string"
+            },
+            {
+              "name": "nama_usaha",
+              "type": "string"
+            },
+            {
+              "name": "nama_usaha_edit",
+              "type": "string"
+            },
+            {
+              "name": "negara_kp_label",
+              "type": "string"
+            },
+            {
+              "name": "negara_kp_value",
+              "type": "string"
+            },
+            {
+              "name": "nib",
+              "type": "string"
+            },
+            {
+              "name": "nib_lainnya",
+              "type": "string"
+            },
+            {
+              "name": "nik_pengusaha",
+              "type": "string"
+            },
+            {
+              "name": "nik_pengusaha_var",
+              "type": "string"
+            },
+            {
+              "name": "nilai_pendapatan",
+              "type": "double"
+            },
+            {
+              "name": "nilai_pendapatan_bln",
+              "type": "double"
+            },
+            {
+              "name": "no_bang_l",
+              "type": "string"
+            },
+            {
+              "name": "no_telp",
+              "type": "string"
+            },
+            {
+              "name": "no_usaha",
+              "type": "string"
+            },
+            {
+              "name": "non_operasional",
+              "type": "double"
+            },
+            {
+              "name": "non_operasional_bln",
+              "type": "double"
+            },
+            {
+              "name": "non_profit",
+              "type": "integer"
+            },
+            {
+              "name": "non_publik",
+              "type": "integer"
+            },
+            {
+              "name": "nonprofit_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "nonpublik_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "operasional",
+              "type": "double"
+            },
+            {
+              "name": "operasional_bln",
+              "type": "double"
+            },
+            {
+              "name": "pemerintah",
+              "type": "integer"
+            },
+            {
+              "name": "pemerintah_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "pendapatan_lain",
+              "type": "double"
+            },
+            {
+              "name": "pendapatan_lain_bln",
+              "type": "double"
+            },
+            {
+              "name": "pendapatan_online",
+              "type": "integer"
+            },
+            {
+              "name": "pendapatan_online_bln",
+              "type": "integer"
+            },
+            {
+              "name": "pengusaha",
+              "type": "string"
+            },
+            {
+              "name": "pengusaha_var_label",
+              "type": "string"
+            },
+            {
+              "name": "pengusaha_var_prelist",
+              "type": "string"
+            },
+            {
+              "name": "pengusaha_var_value",
+              "type": "string"
+            },
+            {
+              "name": "peran_mbg_label",
+              "type": "string"
+            },
+            {
+              "name": "peran_mbg_value",
+              "type": "string"
+            },
+            {
+              "name": "perlindungan_lingkungan_label",
+              "type": "string"
+            },
+            {
+              "name": "perlindungan_lingkungan_value",
+              "type": "string"
+            },
+            {
+              "name": "pilih_umkm_options",
+              "type": "string"
+            },
+            {
+              "name": "pilih_umkm_sls_label",
+              "type": "string"
+            },
+            {
+              "name": "pilih_umkm_sls_value",
+              "type": "string"
+            },
+            {
+              "name": "pribadi",
+              "type": "integer"
+            },
+            {
+              "name": "pribadi_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "produk",
+              "type": "string"
+            },
+            {
+              "name": "produk_sendiri_label",
+              "type": "string"
+            },
+            {
+              "name": "produk_sendiri_value",
+              "type": "string"
+            },
+            {
+              "name": "produk_seni_label",
+              "type": "string"
+            },
+            {
+              "name": "produk_seni_value",
+              "type": "string"
+            },
+            {
+              "name": "produksi_lingkungan_label",
+              "type": "string"
+            },
+            {
+              "name": "produksi_lingkungan_value",
+              "type": "string"
+            },
+            {
+              "name": "proses",
+              "type": "string"
+            },
+            {
+              "name": "prov_kp_label",
+              "type": "string"
+            },
+            {
+              "name": "prov_kp_value",
+              "type": "string"
+            },
+            {
+              "name": "prov_l",
+              "type": "string"
+            },
+            {
+              "name": "prov_usaha_utama_label",
+              "type": "string"
+            },
+            {
+              "name": "prov_usaha_utama_value",
+              "type": "string"
+            },
+            {
+              "name": "publik",
+              "type": "integer"
+            },
+            {
+              "name": "publik_didirikan",
+              "type": "integer"
+            },
+            {
+              "name": "punya_nib_label",
+              "type": "string"
+            },
+            {
+              "name": "punya_nib_value",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_bln_label",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_bln_value",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_thn_label",
+              "type": "string"
+            },
+            {
+              "name": "rentang_aset_thn_value",
+              "type": "string"
+            },
+            {
+              "name": "result_callnib",
+              "type": "string"
+            },
+            {
+              "name": "result_callnik_l",
+              "type": "string"
+            },
+            {
+              "name": "result_gen_ai",
+              "type": "string"
+            },
+            {
+              "name": "rt",
+              "type": "string"
+            },
+            {
+              "name": "rw",
+              "type": "string"
+            },
+            {
+              "name": "skala_usaha",
+              "type": "string"
+            },
+            {
+              "name": "sls_l",
+              "type": "string"
+            },
+            {
+              "name": "sudah_bpom",
+              "type": "integer"
+            },
+            {
+              "name": "sudah_halal",
+              "type": "integer"
+            },
+            {
+              "name": "survey_period_id",
+              "type": "string"
+            },
+            {
+              "name": "survey_period_name",
+              "type": "string"
+            },
+            {
+              "name": "tahun_operasi",
+              "type": "integer"
+            },
+            {
+              "name": "tidak_nib_label",
+              "type": "string"
+            },
+            {
+              "name": "tidak_nib_value",
+              "type": "string"
+            },
+            {
+              "name": "tk_dibayar",
+              "type": "integer"
+            },
+            {
+              "name": "tk_laki",
+              "type": "integer"
+            },
+            {
+              "name": "tk_pr",
+              "type": "integer"
+            },
+            {
+              "name": "tk_tdk_dibayar",
+              "type": "integer"
+            },
+            {
+              "name": "total_aset_bln",
+              "type": "string"
+            },
+            {
+              "name": "total_aset_thn",
+              "type": "double"
+            },
+            {
+              "name": "total_aset_thn_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pendapatan",
+              "type": "double"
+            },
+            {
+              "name": "total_pendapatan_bln",
+              "type": "double"
+            },
+            {
+              "name": "total_pendapatan_bln_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pendapatan_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pengeluaran",
+              "type": "double"
+            },
+            {
+              "name": "total_pengeluaran_bln",
+              "type": "double"
+            },
+            {
+              "name": "total_pengeluaran_bln_var",
+              "type": "string"
+            },
+            {
+              "name": "total_pengeluaran_var",
+              "type": "string"
+            },
+            {
+              "name": "total_tk_bayar",
+              "type": "integer"
+            },
+            {
+              "name": "total_tk_bayar_var",
+              "type": "string"
+            },
+            {
+              "name": "total_tk_jk",
+              "type": "integer"
+            },
+            {
+              "name": "total_tk_jk_var",
+              "type": "string"
+            },
+            {
+              "name": "umur",
+              "type": "integer"
+            },
+            {
+              "name": "umur_pj_var",
+              "type": "string"
+            },
+            {
+              "name": "var_hiden_pml",
+              "type": "string"
+            },
+            {
+              "name": "var_kbli",
+              "type": "string"
+            },
+            {
+              "name": "var_narasi",
+              "type": "string"
+            },
+            {
+              "name": "website",
+              "type": "string"
+            },
+            {
+              "name": "cek5",
+              "type": "string"
+            }
+          ],
+          "mutateMode": "Recode",
+          "cases": [
+            {
+              "label": "A. Pertanian, Kehutanan, dan Perikanan",
+              "condition": "kategori = 'A'"
+            },
+            {
+              "label": "B. Pertambangan dan Penggalian",
+              "condition": "kategori = 'B'"
+            },
+            {
+              "label": "C. Industri",
+              "condition": "kategori = 'C'"
+            },
+            {
+              "label": "D. Penyediaan Listrik, Gas, Uap/Air Panas, dan Udara Dingin",
+              "condition": "kategori = 'D'"
+            },
+            {
+              "label": "E. Penyediaan Air, Pengelolaan Air Limbah, Penanganan Limbah, dan Remediasi",
+              "condition": "kategori = 'E'"
+            },
+            {
+              "label": "F. Konstruksi",
+              "condition": "kategori = 'F'"
+            },
+            {
+              "label": "G. Perdagangan Besar dan Eceran",
+              "condition": "kategori = 'G'"
+            },
+            {
+              "label": "H. Transportasi dan Penyimpanan",
+              "condition": "kategori = 'H'"
+            },
+            {
+              "label": "I. Aktivitas Penyediaan Akomodasi dan Makan Minum",
+              "condition": "kategori = 'I'"
+            },
+            {
+              "label": "J. Aktivitas Penerbitan, Penyiaran, serta Produksi dan Distribusi Konten",
+              "condition": "kategori = 'J'"
+            },
+            {
+              "label": "K. Aktivitas Telekomunikasi, Pemrograman Komputer, Konsultansi, Infrastruktur Komputasi, dan Jasa Informasi Lainnya",
+              "condition": "kategori = 'K'"
+            },
+            {
+              "label": "L. Aktivitas Keuangan dan Asuransi",
+              "condition": "kategori = 'L'"
+            },
+            {
+              "label": "M. Aktivitas Real Estat",
+              "condition": "kategori = 'M'"
+            },
+            {
+              "label": "N. Aktivitas Profesional, Ilmiah, dan Teknis",
+              "condition": "kategori = 'N'"
+            },
+            {
+              "label": "O. Aktivitas Administratif dan Penunjang Usaha",
+              "condition": "kategori = 'O'"
+            },
+            {
+              "label": "Q. Pendidikan",
+              "condition": "kategori = 'Q'"
+            },
+            {
+              "label": "R. Aktivitas Kesehatan Manusia dan Aktivitas Sosial",
+              "condition": "kategori = 'R'"
+            },
+            {
+              "label": "S. Kesenian, Olahraga, dan Rekreasi",
+              "condition": "kategori = 'S'"
+            },
+            {
+              "label": "T. Aktivitas Jasa Lainnya",
+              "condition": "kategori = 'T'"
+            },
+            {
+              "label": "V. Aktivitas Badan Internasional dan Badan Ekstra Internasional Lainnya",
+              "condition": "kategori = 'V'"
+            }
+          ],
+          "default_value": "Lainnya"
+        },
+        "output": {}
+      }
+    },
+    {
+      "key": 32,
+      "type": 6,
+      "name": "Use Case 2 Jumlah Usaha/Perusahaan di Provinsi menurut Kabupaten/Kota dan Kategori Lapangan Usaha",
+      "data": {
+        "input": {
+          "node_id": "31",
+          "useFilter": false,
+          "filter": "",
+          "rows": [
+            "level_2_name"
+          ],
+          "type": "delta",
+          "cols": [
+            "kategori_usaha"
+          ],
+          "formulaSelected": "",
+          "value": "",
+          "weight": "",
+          "percentile": 25,
+          "numerator": "",
+          "denominator": "",
+          "base": "1",
+          "formula": "n()",
+          "columnAliases": {
+            "level_2_name": "Wilayah",
+            "level_3_name": "Kecamatan",
+            "kategori": "Kategori Usaha",
+            "kategori_usaha": "Kategori Usaha"
+          },
+          "virtualColumns": [],
+          "tableCalcMode": "none",
+          "raw_query": {
+            "rules": [],
+            "id": "8c6e530b-06ec-4bcb-ac4a-1b3fa000be55"
+          }
+        },
+        "output": {}
+      }
+    }
+  ],
+  "links": [
+    {
+      "key": -9,
+      "from": 32,
+      "to": 25
+    },
+    {
+      "key": -9,
+      "from": 32,
+      "to": 25
+    },
+    {
+      "key": -4,
+      "from": 5,
+      "to": 4
+    },
+    {
+      "key": -5,
+      "from": 2,
+      "to": 5
+    },
+    {
+      "key": -12,
+      "from": 31,
+      "to": 13
+    },
+    {
+      "key": -17,
+      "from": 31,
+      "to": 18
+    },
+    {
+      "key": -22,
+      "from": 18,
+      "to": 25
+    },
+    {
+      "key": -23,
+      "from": 13,
+      "to": 25
+    },
+    {
+      "key": -26,
+      "from": 4,
+      "to": 31
+    },
+    {
+      "key": -27,
+      "from": 31,
+      "to": 32
+    }
+  ],
+  "created_at": "2026-08-11T09:24:43.486Z",
+  "updated_at": "2026-08-11T10:34:44.604Z",
+  "value": "409b1997-c011-47b1-95d7-fee5469d6ef1",
+  "label": "Use Case Rantab 2-3-4"
+}
