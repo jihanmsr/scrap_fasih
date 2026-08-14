@@ -239,6 +239,8 @@ function renderTable() {
         return;
     }
 
+    const marked = JSON.parse(localStorage.getItem('marked_subsls_open') || '[]');
+
     paginatedData.forEach(item => {
         const tr = document.createElement('tr');
         const isUnassigned = !item.nama_petugas;
@@ -246,14 +248,25 @@ function renderTable() {
             ? '<span style="color: #ef4444; font-weight: 600; font-size: 0.8rem; background: rgba(239, 68, 68, 0.1); padding: 2px 6px; border-radius: 4px;">BELUM DIASSIGN</span>'
             : `<span style="color: var(--text-primary); font-weight: 500;">${item.nama_petugas}</span>`;
 
+        const isMarked = marked.includes(item.kode_sub_sls);
+        if (isMarked) {
+            tr.style.opacity = '0.5';
+            tr.style.backgroundColor = '#f9fafb';
+        }
+
         tr.innerHTML = `
-            <td style="font-family: monospace; font-weight: 600;">${item.kode_sub_sls || '-'}</td>
-            <td>${item.kabupaten || '-'}</td>
-            <td>${item.kecamatan || '-'}</td>
-            <td>${item.desa || '-'}</td>
-            <td>${item.nama_sub_sls || item.sls || '-'}</td>
+            <td style="font-family: monospace; font-weight: 600; ${isMarked ? 'text-decoration: line-through;' : ''}">${item.kode_sub_sls || '-'}</td>
+            <td style="${isMarked ? 'text-decoration: line-through;' : ''}">${item.kabupaten || '-'}</td>
+            <td style="${isMarked ? 'text-decoration: line-through;' : ''}">${item.kecamatan || '-'}</td>
+            <td style="${isMarked ? 'text-decoration: line-through;' : ''}">${item.desa || '-'}</td>
+            <td style="${isMarked ? 'text-decoration: line-through;' : ''}">${item.nama_sub_sls || item.sls || '-'}</td>
             <td>${petugasHtml}</td>
             <td style="text-align: right; font-weight: 600;">${item.jumlah_prelist || 0}</td>
+            <td style="text-align: center;">
+                <input type="checkbox" style="width: 18px; height: 18px; cursor: pointer;" 
+                       ${isMarked ? 'checked' : ''} 
+                       onchange="window.toggleSelesai('${item.kode_sub_sls}', this.checked, this)">
+            </td>
         `;
         tbody.appendChild(tr);
     });
@@ -291,3 +304,55 @@ function renderTable() {
         pagination.appendChild(nextBtn);
     }
 }
+
+
+
+window.downloadSubSlsExcel = function() {
+    if (!filteredData || filteredData.length === 0) {
+        alert('Tidak ada data untuk diunduh.');
+        return;
+    }
+
+    const exportData = filteredData.map(item => ({
+        'Kode Sub-SLS': item.kode_sub_sls || '',
+        'Kabupaten': item.kabupaten || '',
+        'Kecamatan': item.kecamatan || '',
+        'Desa': item.desa || '',
+        'SLS': item.sls || item.nama_sub_sls || '',
+        'Nama Petugas': item.nama_petugas || 'BELUM DIASSIGN',
+        'Jumlah Prelist': parseInt(item.jumlah_prelist) || 0
+    }));
+
+    const ws = XLSX.utils.json_to_sheet(exportData);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "SLS_Open");
+    XLSX.writeFile(wb, "Data_SLS_Open.xlsx");
+};
+
+window.toggleSelesai = function(kodeSubSls, isChecked, checkboxEl) {
+    let marked = JSON.parse(localStorage.getItem('marked_subsls_open') || '[]');
+    if (isChecked) {
+        if (!marked.includes(kodeSubSls)) marked.push(kodeSubSls);
+    } else {
+        marked = marked.filter(k => k !== kodeSubSls);
+    }
+    localStorage.setItem('marked_subsls_open', JSON.stringify(marked));
+    
+    // Style the row immediately without full re-render to avoid losing focus
+    const tr = checkboxEl.closest('tr');
+    if (tr) {
+        if (isChecked) {
+            tr.style.opacity = '0.5';
+            tr.style.backgroundColor = '#f9fafb';
+            Array.from(tr.children).forEach((td, idx) => {
+                if(idx < 5) td.style.textDecoration = 'line-through';
+            });
+        } else {
+            tr.style.opacity = '1';
+            tr.style.backgroundColor = '';
+            Array.from(tr.children).forEach((td, idx) => {
+                if(idx < 5) td.style.textDecoration = 'none';
+            });
+        }
+    }
+};

@@ -10,6 +10,7 @@
         name="description" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet" />
@@ -105,33 +106,6 @@
                     </svg>
                     Sensus Ekonomi UB
                 </button>
-                <button class="btn-tab" id="tab-btn-open_subsls" onclick="switchTab('open_subsls')">
-                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" y1="8" x2="12" y2="12"></line>
-                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                    </svg>
-                    SLS Open
-                </button>
-                <button class="btn-tab" id="tab-btn-email" onclick="switchTab('email')">
-                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    Pemantauan Email UB
-                </button>
-                <button class="btn-tab" id="tab-btn-assign" onclick="switchTab('assign')">
-                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    Alokasi Petugas
-                </button>
                 <button class="btn-tab" id="tab-btn-target" onclick="switchTab('target')"
                     title="Daftar rincian target & status pengerjaan">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -175,6 +149,35 @@
                         <line x1="12" y1="17" x2="12.01" y2="17"></line>
                     </svg>
                     Pemantauan Anomali
+                </button>
+
+                <button class="btn-tab" id="tab-btn-open_subsls" onclick="switchTab('open_subsls')">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    SLS Open
+                </button>
+
+                <button class="btn-tab" id="tab-btn-email" onclick="switchTab('email')">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Pemantauan Email UB
+                </button>
+                <button class="btn-tab" id="tab-btn-assign" onclick="switchTab('assign')">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Alokasi Petugas
                 </button>
             </nav>
 
@@ -280,11 +283,15 @@
                 </div>
                 
                 <div class="filter-panel" style="margin-top: 1rem;">
-                    <div class="search-row" style="flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-                        <input type="text" id="subsls-search-input" class="search-input" placeholder="Cari Kode / Nama Wilayah / Nama Petugas..." style="flex: 1 1 300px;">
-                        <select class="sort-select" id="subsls-filter-kab" onchange="window.filterSubSlsData()">
+                    <div class="search-row" style="display: flex; gap: 0.75rem; align-items: center;">
+                        <input type="text" id="subsls-search-input" class="search-input" placeholder="Cari Kode / Nama Wilayah / Nama Petugas..." style="flex: 1; min-width: 0;">
+                        <select class="sort-select" id="subsls-filter-kab" onchange="window.filterSubSlsData()" style="width: 250px; flex-shrink: 0;">
                             <option value="">Semua Kabupaten</option>
                         </select>
+                        <button onclick="window.downloadSubSlsExcel()" style="padding: 8px 16px; background-color: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500; display: flex; align-items: center; gap: 8px; flex-shrink: 0;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Download Excel
+                        </button>
                     </div>
                 </div>
 
@@ -299,6 +306,7 @@
                                 <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'nama_sub_sls')">SLS <span>&#x25BC;</span></th>
                                 <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'nama_petugas')">Nama Petugas <span>&#x25BC;</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="window.toggleExcelFilter(event, 'jumlah_prelist')">Jumlah Prelist <span>&#x25BC;</span></th>
+                                <th style="text-align: center;">Tandai Selesai</th>
                             </tr>
                         </thead>
                         <tbody id="tbody-subsls-open">

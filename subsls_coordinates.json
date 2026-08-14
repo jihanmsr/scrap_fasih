@@ -1,0 +1,1222 @@
+[
+    {
+        "kabupaten": "BANGGAI KEPULAUAN",
+        "kecamatan": "TOTIKUM",
+        "desa": "KOMBUTOKAN",
+        "kode_sub_sls": "7201030017100100",
+        "nama_sub_sls": "PERKEBUNAN",
+        "jumlah_prelist": "67",
+        "latitude": -1.3566735,
+        "longitude": 123.555775
+    },
+    {
+        "kabupaten": "BANGGAI KEPULAUAN",
+        "kecamatan": "TOTIKUM SELATAN",
+        "desa": "TONUSON",
+        "kode_sub_sls": "7201031001100100",
+        "nama_sub_sls": "PERKEBUNAN",
+        "jumlah_prelist": "1",
+        "latitude": -1.508063,
+        "longitude": 123.443777
+    },
+    {
+        "kabupaten": "BANGGAI KEPULAUAN",
+        "kecamatan": "TOTIKUM SELATAN",
+        "desa": "KANALI",
+        "kode_sub_sls": "7201031006100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": -1.419625,
+        "longitude": 123.468195
+    },
+    {
+        "kabupaten": "BANGGAI KEPULAUAN",
+        "kecamatan": "PELING TENGAH",
+        "desa": "PATUKUKI",
+        "kode_sub_sls": "7201051007200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "2",
+        "latitude": -1.44144,
+        "longitude": 123.19399
+    },
+    {
+        "kabupaten": "BANGGAI KEPULAUAN",
+        "kecamatan": "BULAGI UTARA",
+        "desa": "LUK PANENTENG",
+        "kode_sub_sls": "7201062010200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "2",
+        "latitude": -1.21733,
+        "longitude": 122.981569
+    },
+    {
+        "kabupaten": "BANGGAI KEPULAUAN",
+        "kecamatan": "BUKO",
+        "desa": "BATANGONO",
+        "kode_sub_sls": "7201070009200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "7",
+        "latitude": -1.368701,
+        "longitude": 122.83105
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "MOILONG",
+        "desa": "TOILI",
+        "kode_sub_sls": "7202012008100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "10",
+        "latitude": -1.375606357,
+        "longitude": 122.3103861
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "BATUI",
+        "desa": "ONDO-ONDOLU I",
+        "kode_sub_sls": "7202020011200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -1.283802167,
+        "longitude": 122.5096771166667
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "BATUI",
+        "desa": "USO",
+        "kode_sub_sls": "7202020019500100",
+        "nama_sub_sls": "TERBANGUN BUKAN PEMUKIMAN",
+        "jumlah_prelist": "7",
+        "latitude": -1.2511205,
+        "longitude": 122.62732
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "LUWUK TIMUR",
+        "desa": "LAUWON",
+        "kode_sub_sls": "7202051008200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -0.832309,
+        "longitude": 122.9324972
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "LUWUK TIMUR",
+        "desa": "BUKIT MULYA",
+        "kode_sub_sls": "7202051013200100",
+        "nama_sub_sls": "PERKEBUNAN",
+        "jumlah_prelist": "3",
+        "latitude": -0.8045467,
+        "longitude": 123.072007
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "LUWUK UTARA",
+        "desa": "BUMI BERINGIN",
+        "kode_sub_sls": "7202052002200100",
+        "nama_sub_sls": "KEBUN TANDOS",
+        "jumlah_prelist": "4",
+        "latitude": -0.896512,
+        "longitude": 122.8390847
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "LUWUK UTARA",
+        "desa": "SALODIK",
+        "kode_sub_sls": "7202052007100100",
+        "nama_sub_sls": "PERKEBUNAN",
+        "jumlah_prelist": "1",
+        "latitude": -0.8320254,
+        "longitude": 122.8634295
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "LUWUK SELATAN",
+        "desa": "BUKIT MAMBUAL",
+        "kode_sub_sls": "7202053006200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -0.9729547,
+        "longitude": 122.7753172
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "PAGIMANA",
+        "desa": "PAKOWA",
+        "kode_sub_sls": "7202060011100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "2",
+        "latitude": -0.7835588,
+        "longitude": 122.5718229
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "PAGIMANA",
+        "desa": "LAMO",
+        "kode_sub_sls": "7202060012100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": -0.7698268,
+        "longitude": 122.6049368
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "PAGIMANA",
+        "desa": "HOHUDONGAN",
+        "kode_sub_sls": "7202060016100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": -0.795333,
+        "longitude": 122.643932
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "BUALEMO",
+        "desa": "NIPA KALEMOAN",
+        "kode_sub_sls": "7202061017100200",
+        "nama_sub_sls": "PERTANIAN",
+        "jumlah_prelist": "1",
+        "latitude": -0.57483,
+        "longitude": 123.2049583
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "MASAMA",
+        "desa": "SERESE",
+        "kode_sub_sls": "7202071010100100",
+        "nama_sub_sls": "PERTANIAN SAWAH",
+        "jumlah_prelist": "1",
+        "latitude": -0.8708685,
+        "longitude": 123.1442906
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "MASAMA",
+        "desa": "SERESE",
+        "kode_sub_sls": "7202071010100200",
+        "nama_sub_sls": "PERTANIAN SAWAH",
+        "jumlah_prelist": "3",
+        "latitude": -0.859395,
+        "longitude": 123.1730717
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "MASAMA",
+        "desa": "DUATA KARYA",
+        "kode_sub_sls": "7202071011200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -0.8319457,
+        "longitude": 123.1829413
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "BALANTAK SELATAN",
+        "desa": "BOOY",
+        "kode_sub_sls": "7202081003100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": -0.9364406,
+        "longitude": 123.3430033
+    },
+    {
+        "kabupaten": "BANGGAI",
+        "kecamatan": "BALANTAK UTARA",
+        "desa": "PANGKALASEANG BARU",
+        "kode_sub_sls": "7202082006100100",
+        "nama_sub_sls": "KEBUN KELAPA",
+        "jumlah_prelist": "1",
+        "latitude": -0.6887358,
+        "longitude": 123.365447
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "FATUFIA",
+        "kode_sub_sls": "7203021005000107",
+        "nama_sub_sls": "DUSUN 1",
+        "jumlah_prelist": "7",
+        "latitude": -2.808568525,
+        "longitude": 122.1542544
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "KEUREA",
+        "kode_sub_sls": "7203021006001203",
+        "nama_sub_sls": "RT 1 DUSUN 4",
+        "jumlah_prelist": "13",
+        "latitude": -2.795578036,
+        "longitude": 122.14781
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "KEUREA",
+        "kode_sub_sls": "7203021006001204",
+        "nama_sub_sls": "RT 1 DUSUN 4",
+        "jumlah_prelist": "4",
+        "latitude": -2.79708,
+        "longitude": 122.14954
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "KEUREA",
+        "kode_sub_sls": "7203021006001205",
+        "nama_sub_sls": "RT 1 DUSUN 4",
+        "jumlah_prelist": "9",
+        "latitude": -2.800868847,
+        "longitude": 122.1480615
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "KEUREA",
+        "kode_sub_sls": "7203021006001415",
+        "nama_sub_sls": "RT 1 DUSUN 5",
+        "jumlah_prelist": "7",
+        "latitude": -2.799945457,
+        "longitude": 122.1354535
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "KEUREA",
+        "kode_sub_sls": "7203021006001510",
+        "nama_sub_sls": "RT 2 DUSUN 5",
+        "jumlah_prelist": "1",
+        "latitude": -2.80585208,
+        "longitude": 122.1279877
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "KEUREA",
+        "kode_sub_sls": "7203021006001512",
+        "nama_sub_sls": "RT 2 DUSUN 5",
+        "jumlah_prelist": "2",
+        "latitude": -2.805195407,
+        "longitude": 122.1282464
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "KEUREA",
+        "kode_sub_sls": "7203021006001513",
+        "nama_sub_sls": "RT 2 DUSUN 5",
+        "jumlah_prelist": "1",
+        "latitude": -2.804899766,
+        "longitude": 122.1279484
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "BAHOMAKMUR",
+        "kode_sub_sls": "7203021007002001",
+        "nama_sub_sls": "RT 4 DUSUN 5",
+        "jumlah_prelist": "2",
+        "latitude": -2.809287517,
+        "longitude": 122.1452633
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "BAHOMAKMUR",
+        "kode_sub_sls": "7203021007002017",
+        "nama_sub_sls": "RT 4 DUSUN 5",
+        "jumlah_prelist": "1",
+        "latitude": -2.809087815,
+        "longitude": 122.1489147
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "BAHOMAKMUR",
+        "kode_sub_sls": "7203021007002022",
+        "nama_sub_sls": "RT 4 DUSUN 5",
+        "jumlah_prelist": "1",
+        "latitude": -2.811152898,
+        "longitude": 122.1483399
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "BAHODOPI",
+        "kode_sub_sls": "7203021008000217",
+        "nama_sub_sls": "DUSUN 2",
+        "jumlah_prelist": "5",
+        "latitude": -2.801874356,
+        "longitude": 122.1155061
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BAHODOPI",
+        "desa": "BAHODOPI",
+        "kode_sub_sls": "7203021008000402",
+        "nama_sub_sls": "DUSUN 4",
+        "jumlah_prelist": "41",
+        "latitude": -2.794148711,
+        "longitude": 122.11364
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BUNGKU TENGAH",
+        "desa": "SAKITA",
+        "kode_sub_sls": "7203030014100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": -2.562818184,
+        "longitude": 121.9558485
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BUNGKU TENGAH",
+        "desa": "MATANSALA",
+        "kode_sub_sls": "7203030021100100",
+        "nama_sub_sls": "LAHAN PERTANIAN MASYARAKAT",
+        "jumlah_prelist": "46",
+        "latitude": -2.5400225473564,
+        "longitude": 121.9590819
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BUNGKU TENGAH",
+        "desa": "BAHORURU",
+        "kode_sub_sls": "7203030022100100",
+        "nama_sub_sls": "KEBUN MASYARAKAT",
+        "jumlah_prelist": "5",
+        "latitude": -2.527835603,
+        "longitude": 121.9475105
+    },
+    {
+        "kabupaten": "MOROWALI",
+        "kecamatan": "BUNGKU TENGAH",
+        "desa": "IPI",
+        "kode_sub_sls": "7203030023200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "6",
+        "latitude": -2.541598,
+        "longitude": 121.9309805
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "PAMONA TENGGARA",
+        "desa": "TOKILO",
+        "kode_sub_sls": "7204012006100300",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -2.02411,
+        "longitude": 120.71
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "PAMONA TENGGARA",
+        "desa": "KOROBONO",
+        "kode_sub_sls": "7204012007100200",
+        "nama_sub_sls": "PERSAWAHAN",
+        "jumlah_prelist": "1",
+        "latitude": -2.04932,
+        "longitude": 120.72953
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "PAMONA TENGGARA",
+        "desa": "KOROBONO",
+        "kode_sub_sls": "7204012007200300",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -2.04866,
+        "longitude": 120.74666
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "PAMONA TIMUR",
+        "desa": "PANCASILA I",
+        "kode_sub_sls": "7204031002100200",
+        "nama_sub_sls": "PERTANIAN SAWAH (TIMUR)",
+        "jumlah_prelist": "1",
+        "latitude": -1.919975,
+        "longitude": 120.9141217
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "PAMONA TIMUR",
+        "desa": "OMPO DIDIRI",
+        "kode_sub_sls": "7204031009200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -1.7723683,
+        "longitude": 120.7566767
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "PAMONA UTARA",
+        "desa": "SAWIDAGO",
+        "kode_sub_sls": "7204032003200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -1.73454,
+        "longitude": 120.667033
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "LORE TENGAH",
+        "desa": "ROMPO",
+        "kode_sub_sls": "7204041006100100",
+        "nama_sub_sls": "SAWAH (BARAT)",
+        "jumlah_prelist": "1",
+        "latitude": -1.604104,
+        "longitude": 120.2900719
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "POSO PESISIR",
+        "desa": "MAPANE",
+        "kode_sub_sls": "7204050003200100",
+        "nama_sub_sls": "RAWA",
+        "jumlah_prelist": "1",
+        "latitude": -1.41274,
+        "longitude": 120.66444
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "POSO PESISIR",
+        "desa": "TABALU",
+        "kode_sub_sls": "7204050015100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "2",
+        "latitude": -1.4343009,
+        "longitude": 120.660245
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "POSO PESISIR SELATAN",
+        "desa": "TANGKURA",
+        "kode_sub_sls": "7204051004100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": -1.48192,
+        "longitude": 120.636
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "LAGE",
+        "desa": "TAMPEMADORO",
+        "kode_sub_sls": "7204060001100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "2",
+        "latitude": -1.5545312,
+        "longitude": 120.736766
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "LAGE",
+        "desa": "PANDIRI",
+        "kode_sub_sls": "7204060002200200",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -1.50857,
+        "longitude": 120.757843
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "LAGE",
+        "desa": "TAMBARO",
+        "kode_sub_sls": "7204060004100200",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "4",
+        "latitude": -1.462943787450424,
+        "longitude": 120.759339
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "LAGE",
+        "desa": "TAGOLU",
+        "kode_sub_sls": "7204060006100200",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": -1.44175,
+        "longitude": 120.75992
+    },
+    {
+        "kabupaten": "POSO",
+        "kecamatan": "LAGE",
+        "desa": "SILANCA",
+        "kode_sub_sls": "7204060008100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "5",
+        "latitude": -1.443705,
+        "longitude": 120.7978128
+    },
+    {
+        "kabupaten": "DONGGALA",
+        "kecamatan": "SINDUE TOMBUSABORA",
+        "desa": "SALOYA",
+        "kode_sub_sls": "7205101002100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": -0.493964,
+        "longitude": 119.829867
+    },
+    {
+        "kabupaten": "DONGGALA",
+        "kecamatan": "DAMPELAS",
+        "desa": "RERANG",
+        "kode_sub_sls": "7205140010000102",
+        "nama_sub_sls": "DUSUN 001",
+        "jumlah_prelist": "1",
+        "latitude": 0.29346461,
+        "longitude": 119.8745019
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "DAMPAL SELATAN",
+        "desa": "TAMPIALA",
+        "kode_sub_sls": "7206010002100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "3",
+        "latitude": 0.7394783,
+        "longitude": 120.2026917
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "DAMPAL SELATAN",
+        "desa": "SONI",
+        "kode_sub_sls": "7206010003100100",
+        "nama_sub_sls": "SAWAH",
+        "jumlah_prelist": "2",
+        "latitude": 0.764395,
+        "longitude": 120.2473817
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "BASIDONDO",
+        "desa": "KAYULOMPA",
+        "kode_sub_sls": "7206032003000700",
+        "nama_sub_sls": "RT 4 DUSUN FLAMBOYAN",
+        "jumlah_prelist": "67",
+        "latitude": 0.748542,
+        "longitude": 120.6734217
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "BAOLAN",
+        "desa": "PANASAKAN",
+        "kode_sub_sls": "7206040014002500",
+        "nama_sub_sls": "RT 3 RW 12",
+        "jumlah_prelist": "71",
+        "latitude": 1.0495388,
+        "longitude": 120.814449
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "BAOLAN",
+        "desa": "BARU",
+        "kode_sub_sls": "7206040016000900",
+        "nama_sub_sls": "RT 004 RW X",
+        "jumlah_prelist": "65",
+        "latitude": 1.0328691732,
+        "longitude": 120.8128677
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "BAOLAN",
+        "desa": "BARU",
+        "kode_sub_sls": "7206040016003200",
+        "nama_sub_sls": "RT 004 RW V",
+        "jumlah_prelist": "81",
+        "latitude": 1.0428,
+        "longitude": 120.82068955391203
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "BAOLAN",
+        "desa": "BUNTUNA",
+        "kode_sub_sls": "7206040019000900",
+        "nama_sub_sls": "RT 10 RW 5 DUSUN TAMANDAYO",
+        "jumlah_prelist": "49",
+        "latitude": 0.9967078,
+        "longitude": 120.7971544
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "BAOLAN",
+        "desa": "BUNTUNA",
+        "kode_sub_sls": "7206040019200100",
+        "nama_sub_sls": "HUTAN BUNTUNA",
+        "jumlah_prelist": "1",
+        "latitude": 0.991787238306247,
+        "longitude": 120.80012556499679
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "LAMPASIO",
+        "desa": "MAIBUA",
+        "kode_sub_sls": "7206041002000100",
+        "nama_sub_sls": "RT 001 DUSUN MENTARI ABADI",
+        "jumlah_prelist": "35",
+        "latitude": 0.8889059,
+        "longitude": 120.9224952
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "LAMPASIO",
+        "desa": "MAIBUA",
+        "kode_sub_sls": "7206041002000200",
+        "nama_sub_sls": "RT 002 DUSUN MENTARI ABADI",
+        "jumlah_prelist": "48",
+        "latitude": 0.8840556,
+        "longitude": 120.9243963
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "LAMPASIO",
+        "desa": "SIBEA",
+        "kode_sub_sls": "7206041003100200",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": 0.9065874,
+        "longitude": 120.8649158
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "LAMPASIO",
+        "desa": "SALUGAN",
+        "kode_sub_sls": "7206041006100200",
+        "nama_sub_sls": "SAWAH",
+        "jumlah_prelist": "1",
+        "latitude": 0.907281,
+        "longitude": 120.8403833
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "LAMPASIO",
+        "desa": "LAMPASIO",
+        "kode_sub_sls": "7206041007000200",
+        "nama_sub_sls": "RT 2 DUSUN UJUNG",
+        "jumlah_prelist": "29",
+        "latitude": 0.89773,
+        "longitude": 120.7965067
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "LAMPASIO",
+        "desa": "LAMPASIO",
+        "kode_sub_sls": "7206041007200300",
+        "nama_sub_sls": "RAWA",
+        "jumlah_prelist": "2",
+        "latitude": 0.8861615,
+        "longitude": 120.80319
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "LAMPASIO",
+        "desa": "TINADING",
+        "kode_sub_sls": "7206041008001800",
+        "nama_sub_sls": "RT 02 DUSUN 5",
+        "jumlah_prelist": "39",
+        "latitude": 0.93078,
+        "longitude": 120.82272
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "LAMPASIO",
+        "desa": "TINADING",
+        "kode_sub_sls": "7206041008002000",
+        "nama_sub_sls": "RT 01 DUSUN 7",
+        "jumlah_prelist": "48",
+        "latitude": 0.9220953,
+        "longitude": 120.8045803
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "GALANG",
+        "desa": "OGOMOLI",
+        "kode_sub_sls": "7206050001000400",
+        "nama_sub_sls": "RT 1 DUSUN PABBIRING",
+        "jumlah_prelist": "74",
+        "latitude": 1.0739715,
+        "longitude": 120.8030311
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "GALANG",
+        "desa": "OGOMOLI",
+        "kode_sub_sls": "7206050001001200",
+        "nama_sub_sls": "RT 3 DUSUN LABENGGA",
+        "jumlah_prelist": "24",
+        "latitude": 1.0712383,
+        "longitude": 120.8676868
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "TOLITOLI UTARA",
+        "desa": "LAULALANG",
+        "kode_sub_sls": "7206060006001700",
+        "nama_sub_sls": "RT 2 DUSUN LAONGO",
+        "jumlah_prelist": "61",
+        "latitude": 1.3155505,
+        "longitude": 120.9130567
+    },
+    {
+        "kabupaten": "TOLI-TOLI",
+        "kecamatan": "TOLITOLI UTARA",
+        "desa": "SALUMPAGA",
+        "kode_sub_sls": "7206060007001900",
+        "nama_sub_sls": "RT 018 DUSUN HARAPAN JAYA",
+        "jumlah_prelist": "26",
+        "latitude": 1.3068308,
+        "longitude": 120.9420427
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "LAKEA",
+        "desa": "LAKEA 1",
+        "kode_sub_sls": "7207010011100100",
+        "nama_sub_sls": "SAWAH",
+        "jumlah_prelist": "1",
+        "latitude": 1.234375,
+        "longitude": 121.22443
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BIAU",
+        "desa": "KAMPUNG BUGIS",
+        "kode_sub_sls": "7207011001100100",
+        "nama_sub_sls": "KEBUN KELAPA SAWIT",
+        "jumlah_prelist": "2",
+        "latitude": 1.136944,
+        "longitude": 121.450922
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BIAU",
+        "desa": "LEOK 1",
+        "kode_sub_sls": "7207011006100100",
+        "nama_sub_sls": "KEBUN 1",
+        "jumlah_prelist": "2",
+        "latitude": 1.20503248372481,
+        "longitude": 121.4052078
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BIAU",
+        "desa": "LEOK 1",
+        "kode_sub_sls": "7207011006200200",
+        "nama_sub_sls": "HUTAN 1",
+        "jumlah_prelist": "1",
+        "latitude": 1.214409,
+        "longitude": 121.416137
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BIAU",
+        "desa": "LEOK 1",
+        "kode_sub_sls": "7207011006200400",
+        "nama_sub_sls": "HUTAN 2",
+        "jumlah_prelist": "1",
+        "latitude": 1.2033513,
+        "longitude": 121.3941835
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BIAU",
+        "desa": "KUMALIGON",
+        "kode_sub_sls": "7207011007200200",
+        "nama_sub_sls": "HUTAN 1",
+        "jumlah_prelist": "1",
+        "latitude": 1.2483833,
+        "longitude": 121.4164633
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "KARAMAT",
+        "desa": "LAMAKAN",
+        "kode_sub_sls": "7207012001100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": 1.2555716,
+        "longitude": 121.3146736
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "MOMUNU",
+        "desa": "MOMUNU",
+        "kode_sub_sls": "7207020006100100",
+        "nama_sub_sls": "SAWAH",
+        "jumlah_prelist": "8",
+        "latitude": 1.095845,
+        "longitude": 121.349855
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "MOMUNU",
+        "desa": "LAMADONG 1",
+        "kode_sub_sls": "7207020016100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": 1.123128,
+        "longitude": 121.409458
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "TILOAN",
+        "desa": "KOKOBUKA",
+        "kode_sub_sls": "7207021003100100",
+        "nama_sub_sls": "SAWAH",
+        "jumlah_prelist": "1",
+        "latitude": 0.9842075,
+        "longitude": 121.2497936
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BOKAT",
+        "desa": "BOKAT",
+        "kode_sub_sls": "7207030016100100",
+        "nama_sub_sls": "KEBUN 1",
+        "jumlah_prelist": "4",
+        "latitude": 1.0837963,
+        "longitude": 121.5064524
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BOKAT",
+        "desa": "TIKOPO",
+        "kode_sub_sls": "7207030019100100",
+        "nama_sub_sls": "KEBUN 1",
+        "jumlah_prelist": "1",
+        "latitude": 1.031727,
+        "longitude": 121.536038
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BOKAT",
+        "desa": "TIKOPO",
+        "kode_sub_sls": "7207030019100200",
+        "nama_sub_sls": "KEBUN 2",
+        "jumlah_prelist": "1",
+        "latitude": 1.0349433,
+        "longitude": 121.5268251
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BOKAT",
+        "desa": "BUTUKAN",
+        "kode_sub_sls": "7207030021200200",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "2",
+        "latitude": 1.04712,
+        "longitude": 121.490705
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BOKAT",
+        "desa": "BUKAMOG",
+        "kode_sub_sls": "7207030023000900",
+        "nama_sub_sls": "RT 09 RW 03 DUSUN 03",
+        "jumlah_prelist": "47",
+        "latitude": 1.0619971,
+        "longitude": 121.561845
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BOKAT",
+        "desa": "LANGUDON",
+        "kode_sub_sls": "7207030024100100",
+        "nama_sub_sls": "KEBUN 1",
+        "jumlah_prelist": "2",
+        "latitude": 1.0359333,
+        "longitude": 121.5207683
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BUKAL",
+        "desa": "BUNGKUDU",
+        "kode_sub_sls": "7207031009100100",
+        "nama_sub_sls": "SAWAH",
+        "jumlah_prelist": "1",
+        "latitude": 1.095425,
+        "longitude": 121.460079
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BUKAL",
+        "desa": "YUGUT",
+        "kode_sub_sls": "7207031010100600",
+        "nama_sub_sls": "PERKEBUNAN/SAWIT WARGA",
+        "jumlah_prelist": "1",
+        "latitude": 1.010724,
+        "longitude": 121.4125
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BUKAL",
+        "desa": "MOOYONG",
+        "kode_sub_sls": "7207031011100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "2",
+        "latitude": 0.988092,
+        "longitude": 121.459236
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "BUNOBOGU",
+        "desa": "POKOBO",
+        "kode_sub_sls": "7207040015100200",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "5",
+        "latitude": 1.0416067,
+        "longitude": 121.582379
+    },
+    {
+        "kabupaten": "BUOL",
+        "kecamatan": "PALELEH",
+        "desa": "PALELEH",
+        "kode_sub_sls": "7207050006100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": 1.049944,
+        "longitude": 121.948346
+    },
+    {
+        "kabupaten": "PARIGI MOUTONG",
+        "kecamatan": "PARIGI TENGAH",
+        "desa": "PETAPA",
+        "kode_sub_sls": "7208024001200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "2",
+        "latitude": -0.8007191,
+        "longitude": 120.0936127
+    },
+    {
+        "kabupaten": "PARIGI MOUTONG",
+        "kecamatan": "MEPANGA",
+        "desa": "KOTARAYA",
+        "kode_sub_sls": "7208051003000700",
+        "nama_sub_sls": "DUSUN MUKTISARI 3",
+        "jumlah_prelist": "93",
+        "latitude": 0.5465473,
+        "longitude": 120.7331934
+    },
+    {
+        "kabupaten": "PARIGI MOUTONG",
+        "kecamatan": "MEPANGA",
+        "desa": "SUMBER AGUNG",
+        "kode_sub_sls": "7208051007000800",
+        "nama_sub_sls": "DUSUN 8",
+        "jumlah_prelist": "16",
+        "latitude": 0.5612736,
+        "longitude": 120.7440644
+    },
+    {
+        "kabupaten": "PARIGI MOUTONG",
+        "kecamatan": "MOUTONG",
+        "desa": "LABUAN",
+        "kode_sub_sls": "7208060029100100",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": 0.52795,
+        "longitude": 121.19692
+    },
+    {
+        "kabupaten": "TOJO UNA-UNA",
+        "kecamatan": "TOJO BARAT",
+        "desa": "MALEWA",
+        "kode_sub_sls": "7209010012200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -1.455253,
+        "longitude": 121.074298
+    },
+    {
+        "kabupaten": "TOJO UNA-UNA",
+        "kecamatan": "TOJO BARAT",
+        "desa": "MAWOMBA",
+        "kode_sub_sls": "7209010013100100",
+        "nama_sub_sls": "SAWAH",
+        "jumlah_prelist": "1",
+        "latitude": -1.445355,
+        "longitude": 121.0612792
+    },
+    {
+        "kabupaten": "TOJO UNA-UNA",
+        "kecamatan": "TOJO",
+        "desa": "TAYAWA",
+        "kode_sub_sls": "7209020015100100",
+        "nama_sub_sls": "WILAYAH PERSAWAHAN",
+        "jumlah_prelist": "2",
+        "latitude": -1.4492867,
+        "longitude": 121.094897
+    },
+    {
+        "kabupaten": "TOJO UNA-UNA",
+        "kecamatan": "AMPANA TETE",
+        "desa": "TETE B",
+        "kode_sub_sls": "7209040002100300",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": -0.745907,
+        "longitude": 121.764093
+    },
+    {
+        "kabupaten": "TOJO UNA-UNA",
+        "kecamatan": "AMPANA TETE",
+        "desa": "LONGGE",
+        "kode_sub_sls": "7209040012200200",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -0.969613799,
+        "longitude": 121.8542617
+    },
+    {
+        "kabupaten": "TOJO UNA-UNA",
+        "kecamatan": "TOGEAN",
+        "desa": "KATUPAT",
+        "kode_sub_sls": "7209070010200100",
+        "nama_sub_sls": "PULAU BOLILLANGA",
+        "jumlah_prelist": "1",
+        "latitude": -0.3124378,
+        "longitude": 121.9624066
+    },
+    {
+        "kabupaten": "SIGI",
+        "kecamatan": "LINDU",
+        "desa": "TOMADO",
+        "kode_sub_sls": "7210040003200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "2",
+        "latitude": -1.3426647,
+        "longitude": 120.0350375
+    },
+    {
+        "kabupaten": "SIGI",
+        "kecamatan": "DOLO SELATAN",
+        "desa": "WALATANA",
+        "kode_sub_sls": "7210080002100500",
+        "nama_sub_sls": "KEBUN",
+        "jumlah_prelist": "1",
+        "latitude": -1.2258383,
+        "longitude": 119.9207933
+    },
+    {
+        "kabupaten": "SIGI",
+        "kecamatan": "DOLO SELATAN",
+        "desa": "BULUBETE",
+        "kode_sub_sls": "7210080003100200",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -1.217905,
+        "longitude": 119.89207
+    },
+    {
+        "kabupaten": "SIGI",
+        "kecamatan": "SIGI BIROMARU",
+        "desa": "JONO OGE",
+        "kode_sub_sls": "7210120009300200",
+        "nama_sub_sls": "LAHAN TERBUKA",
+        "jumlah_prelist": "2",
+        "latitude": -0.9841502,
+        "longitude": 119.9203846
+    },
+    {
+        "kabupaten": "SIGI",
+        "kecamatan": "SIGI BIROMARU",
+        "desa": "POMBEWE",
+        "kode_sub_sls": "7210120010200500",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -0.986699,
+        "longitude": 119.948211
+    },
+    {
+        "kabupaten": "SIGI",
+        "kecamatan": "SIGI BIROMARU",
+        "desa": "NGATABARU",
+        "kode_sub_sls": "7210120015100300",
+        "nama_sub_sls": "HUTAN BELANTARA",
+        "jumlah_prelist": "2",
+        "latitude": -0.9228276,
+        "longitude": 119.937889
+    },
+    {
+        "kabupaten": "SIGI",
+        "kecamatan": "SIGI KOTA",
+        "desa": "OLOBOJU",
+        "kode_sub_sls": "7210121004100300",
+        "nama_sub_sls": "SAWAH",
+        "jumlah_prelist": "2",
+        "latitude": -1.0212767116348,
+        "longitude": 119.9453109
+    },
+    {
+        "kabupaten": "BANGGAI LAUT",
+        "kecamatan": "BANGGAI UTARA",
+        "desa": "PAISUMOSONI",
+        "kode_sub_sls": "7211030006100100",
+        "nama_sub_sls": "LAHAN PERKEBUNAN RAKYAT",
+        "jumlah_prelist": "1",
+        "latitude": -1.4970867,
+        "longitude": 123.5075917
+    },
+    {
+        "kabupaten": "BANGGAI LAUT",
+        "kecamatan": "BANGGAI",
+        "desa": "PASIR PUTIH",
+        "kode_sub_sls": "7211040010200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -1.630155,
+        "longitude": 123.55145
+    },
+    {
+        "kabupaten": "BANGGAI LAUT",
+        "kecamatan": "BOKAN KEPULAUAN",
+        "desa": "MBUANG-MBUANG",
+        "kode_sub_sls": "7211070013200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "6",
+        "latitude": -2.078061,
+        "longitude": 123.894042
+    },
+    {
+        "kabupaten": "MOROWALI UTARA",
+        "kecamatan": "PETASIA",
+        "desa": "TANAUGE",
+        "kode_sub_sls": "7212050006200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "4",
+        "latitude": -1.960084803,
+        "longitude": 121.4225403
+    },
+    {
+        "kabupaten": "MOROWALI UTARA",
+        "kecamatan": "SOYO JAYA",
+        "desa": "LEMBAH SUMARA",
+        "kode_sub_sls": "7212080005100200",
+        "nama_sub_sls": "SAWAH",
+        "jumlah_prelist": "1",
+        "latitude": -1.71824,
+        "longitude": 121.30886
+    },
+    {
+        "kabupaten": "MOROWALI UTARA",
+        "kecamatan": "SOYO JAYA",
+        "desa": "MALINO",
+        "kode_sub_sls": "7212080009100100",
+        "nama_sub_sls": "KEBUN SAWIT",
+        "jumlah_prelist": "1",
+        "latitude": -1.6274134,
+        "longitude": 121.2158121
+    },
+    {
+        "kabupaten": "PALU",
+        "kecamatan": "ULUJADI",
+        "desa": "WATUSAMPU",
+        "kode_sub_sls": "7271012006200100",
+        "nama_sub_sls": "HUTAN",
+        "jumlah_prelist": "1",
+        "latitude": -0.8223971,
+        "longitude": 119.7861767
+    }
+]
