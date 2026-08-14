@@ -292,22 +292,13 @@
                     <table class="ipas-table" id="table-subsls-open">
                         <thead>
                             <tr>
-                                <th style="width: 15%; cursor: pointer;" onclick="window.sortSubSls('kode_sub_sls')">Kode Sub-SLS <span id="sort-kode_sub_sls">↕</span></th>
-                                <th style="cursor: pointer;" onclick="window.sortSubSls('kabupaten')">Kabupaten <span id="sort-kabupaten">↕</span></th>
-                                <th style="cursor: pointer;" onclick="window.sortSubSls('kecamatan')">Kecamatan <span id="sort-kecamatan">↕</span></th>
-                                <th style="cursor: pointer;" onclick="window.sortSubSls('desa')">Desa <span id="sort-desa">↕</span></th>
-                                <th style="cursor: pointer;" onclick="window.sortSubSls('nama_sub_sls')">SLS <span id="sort-nama_sub_sls">↕</span></th>
-                                <th style="cursor: pointer;" onclick="window.sortSubSls('nama_petugas')">Nama Petugas <span id="sort-nama_petugas">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="window.sortSubSls('jumlah_prelist')">Jumlah Prelist <span id="sort-jumlah_prelist">↕</span></th>
-                            </tr>
-                            <tr class="column-filters">
-                                <th><input type="text" id="col-filter-kode_sub_sls" class="search-input" placeholder="Filter Kode..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
-                                <th><input type="text" id="col-filter-kabupaten" class="search-input" placeholder="Filter Kab..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
-                                <th><input type="text" id="col-filter-kecamatan" class="search-input" placeholder="Filter Kec..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
-                                <th><input type="text" id="col-filter-desa" class="search-input" placeholder="Filter Desa..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
-                                <th><input type="text" id="col-filter-nama_sub_sls" class="search-input" placeholder="Filter SLS..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
-                                <th><input type="text" id="col-filter-nama_petugas" class="search-input" placeholder="Filter Petugas..." style="width: 100%; padding: 4px; font-size: 0.8rem; font-weight: normal;" oninput="window.filterSubSlsData()"></th>
-                                <th></th>
+                                <th style="width: 15%; cursor: pointer;" onclick="window.toggleExcelFilter(event, 'kode_sub_sls')">Kode Sub-SLS <span>&#x25BC;</span></th>
+                                <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'kabupaten')">Kabupaten <span>&#x25BC;</span></th>
+                                <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'kecamatan')">Kecamatan <span>&#x25BC;</span></th>
+                                <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'desa')">Desa <span>&#x25BC;</span></th>
+                                <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'nama_sub_sls')">SLS <span>&#x25BC;</span></th>
+                                <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'nama_petugas')">Nama Petugas <span>&#x25BC;</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="window.toggleExcelFilter(event, 'jumlah_prelist')">Jumlah Prelist <span>&#x25BC;</span></th>
                             </tr>
                         </thead>
                         <tbody id="tbody-subsls-open">
