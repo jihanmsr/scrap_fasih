@@ -1,7 +1,13 @@
 import pandas as pd
 import json
+import sys
 
-df = pd.read_excel('/Users/jihanmaisaroh/scrap_fasih/SubSLS_Open.xlsx')
+file_path = sys.argv[1] if len(sys.argv) > 1 else '/Users/jihanmaisaroh/scrap_fasih/SubSLS_Open.xlsx'
+
+if file_path.endswith('.csv'):
+    df = pd.read_csv(file_path, sep=",")
+else:
+    df = pd.read_excel(file_path)
 
 # Convert NaN/float issues
 df = df.fillna('')
@@ -30,4 +36,4 @@ js_content = f"window.OPEN_SUBSLS_DATA = {json.dumps(data_list, ensure_ascii=Fal
 with open('/Users/jihanmaisaroh/scrap_fasih/open_subsls_data.js', 'w', encoding='utf-8') as f:
     f.write(js_content)
     
-print("Successfully updated open_subsls_data.js!")
+print(f"Successfully updated open_subsls_data.js with {len(data_list)} rows!")
