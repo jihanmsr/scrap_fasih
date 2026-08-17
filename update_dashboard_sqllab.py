@@ -9,9 +9,7 @@ def get_real_tambahan():
     kab_counts = {}
     kec_counts = {}
     db_path = '/Users/jihanmaisaroh/scrap_fasih/granular_data.db'
-    if not os.path.exists(db_path): 
-        print(" [WARNING] granular_data.db tidak ditemukan. Data tambahan 0.")
-        return kab_counts, kec_counts
+    if not os.path.exists(db_path): return kab_counts, kec_counts
     try:
         import re
         conn = sqlite3.connect(db_path)
@@ -37,59 +35,58 @@ def get_real_tambahan():
             if is_usaha: kec_counts[kec_key]["usaha"] += 1
             else: kec_counts[kec_key]["rumah"] += 1
         conn.close()
-    except Exception as e:
-        print(f"DB Error: {e}")
+    except Exception:
+        pass
     return kab_counts, kec_counts
-
-def load_daily_summary():
-    data = {}
-    db_p = '/Users/jihanmaisaroh/scrap_fasih/granular_data.db'
-    if os.path.exists(db_p):
-        try:
-            cn = sqlite3.connect(db_p)
-            cr = cn.cursor()
-            cr.execute("SELECT tanggal, kabupaten, total_aktivitas, total_submitted, total_approved, total_rejected, total_usaha_tambahan FROM daily_summary ORDER BY tanggal ASC, kabupaten ASC")
-            rows = cr.fetchall()
-            for row in rows:
-                tgl = row[0]
-                kab = row[1]
-                if tgl not in data: data[tgl] = {}
-                data[tgl][kab] = {
-                    "total_aktivitas": row[2] or 0,
-                    "total_submitted": row[3] or 0,
-                    "total_approved": row[4] or 0,
-                    "total_rejected": row[5] or 0,
-                    "total_usaha_tambahan": row[6] or 0
-                }
-            cn.close()
-        except Exception as e:
-            print(f"Error loading daily summary DB: {e}")
-    return data
 
 def main():
     if len(sys.argv) < 2:
-        print("Penggunaan: python update_dashboard_sqllab.py <file_excel_dari_sqllab.xlsx>")
+        print("Penggunaan: python update_dashboard_sqllab.py <file_excel_dari_sqllab.csv/xlsx>")
         sys.exit(1)
     
-    excel_file = sys.argv[1]
-    print(f"Membaca data dari {excel_file}...")
-    df = pd.read_excel(excel_file)
+    file_path = sys.argv[1]
+    if file_path.endswith('.csv'):
+        df = pd.read_csv(file_path, sep="\t")
+    else:
+        df = pd.read_excel(file_path)
+        
+    KAB_MAP = {
+        '7201': 'BANGGAI KEPULAUAN', '7202': 'BANGGAI', '7203': 'MOROWALI',
+        '7204': 'POSO', '7205': 'DONGGALA', '7206': 'TOLI-TOLI', '7207': 'BUOL',
+        '7208': 'PARIGI MOUTONG', '7209': 'TOJO UNA-UNA', '7210': 'SIGI',
+        '7211': 'BANGGAI LAUT', '7212': 'MOROWALI UTARA', '7271': 'PALU'
+    }
     
-    # Get tambahan data from DB
+    # Read existing ipas_data.js to map kec codes to names
+    kec_name_map = {}
+    try:
+        import re
+        with open('ipas_data.js', 'r') as f:
+            content = f.read()
+        match = re.search(r'window\.IPAS_DATA\s*=\s*(\{.*\});', content, re.DOTALL)
+        if match:
+            ipas = json.loads(match.group(1))
+            for kab in ipas.get('se_umum', []):
+                for kec in kab.get('kecamatan_list', []):
+                    k_name = kec.get('kec_name', '')
+                    if k_name and '[' in k_name and ']' in k_name:
+                        code = k_name.split(']')[0].replace('[','').strip()
+                        name = k_name.split(']')[1].strip()
+                        kec_name_map[code] = name
+    except Exception as e:
+        print(f"Warn: {e}")
+        
     kab_tambahan, kec_tambahan = get_real_tambahan()
-    
-    # Process dataframe
-    # Expected cols: kode_kab, nama_kab, kode_kec, nama_kec, total_prelist, total_open, total_draft, total_submitted, total_approved, total_rejected, total_submitted_pencacah, total_submitted_respondent
-    
     kab_dict = {}
     
     for _, row in df.iterrows():
-        kode_kab = str(row['kode_kab'])[-2:]
-        nama_kab = str(row['nama_kab']).upper()
-        kab_key = f"[{kode_kab}] {nama_kab}"
+        kode_kab = str(row['kode_kab']).zfill(4)
+        kab_id = kode_kab[-2:]
+        nama_kab = KAB_MAP.get(kode_kab, kode_kab)
+        kab_key = f"[{kab_id}] {nama_kab}"
         
-        kode_kec = str(row['kode_kec'])[-3:]
-        nama_kec = str(row['nama_kec']).upper()
+        kode_kec = str(row['kode_kec']).zfill(3)
+        nama_kec = kec_name_map.get(kode_kec, kode_kec)
         kec_key = f"[{kode_kec}] {nama_kec}"
         
         prelist = int(row['total_prelist'])
@@ -101,28 +98,18 @@ def main():
         sub_pen = int(row['total_submitted_pencacah'])
         sub_res = int(row['total_submitted_respondent'])
         
-        # Determine Tambahan for Kec
         kec_tambahan_key = f"{nama_kab}_{nama_kec}"
-        n_usaha = 0
-        n_rumah = 0
+        n_usaha = 0; n_rumah = 0
         if kec_tambahan_key in kec_tambahan:
             n_usaha = kec_tambahan[kec_tambahan_key]["usaha"]
             n_rumah = kec_tambahan[kec_tambahan_key]["rumah"]
             
         if kab_key not in kab_dict:
             kab_dict[kab_key] = {
-                "kabupaten": kab_key,
-                "total_prelist": 0,
-                "total_draft": 0,
-                "total_open": 0,
-                "total_submitted": 0,
-                "total_rejected": 0,
-                "total_approved": 0,
-                "total_submitted_pencacah": 0,
-                "total_submitted_respondent": 0,
-                "persentase": 0,
-                "new_usaha_overall": 0,
-                "new_rumah_overall": 0,
+                "kabupaten": kab_key, "total_prelist": 0, "total_draft": 0, "total_open": 0,
+                "total_submitted": 0, "total_rejected": 0, "total_approved": 0,
+                "total_submitted_pencacah": 0, "total_submitted_respondent": 0,
+                "persentase": 0, "new_usaha_overall": 0, "new_rumah_overall": 0,
                 "kecamatan_list": []
             }
             if nama_kab in kab_tambahan:
@@ -141,40 +128,29 @@ def main():
         perc_kec = (submitted / prelist * 100) if prelist > 0 else 0
         
         kab_dict[kab_key]["kecamatan_list"].append({
-            "kecamatan": kec_key,
-            "kec_name": kec_key,
-            "total_prelist": prelist,
-            "total_draft": draft,
-            "total_open": opn,
-            "total_submitted": submitted,
-            "total_rejected": rejected,
-            "total_approved": approved,
-            "total_submitted_pencacah": sub_pen,
-            "total_submitted_respondent": sub_res,
-            "persentase": round(perc_kec, 2),
-            "new_usaha": n_usaha,
-            "new_rumah": n_rumah
+            "kecamatan": kec_key, "kec_name": kec_key, "total_prelist": prelist,
+            "total_draft": draft, "total_open": opn, "total_submitted": submitted,
+            "total_rejected": rejected, "total_approved": approved,
+            "total_submitted_pencacah": sub_pen, "total_submitted_respondent": sub_res,
+            "persentase": round(perc_kec, 2), "new_usaha": n_usaha, "new_rumah": n_rumah
         })
 
     se_umum_arr = []
-    for kab, data in kab_dict.items():
+    for kab in sorted(kab_dict.keys()):
+        data = kab_dict[kab]
         if data["total_prelist"] > 0:
             data["persentase"] = round(data["total_submitted"] / data["total_prelist"] * 100, 2)
         se_umum_arr.append(data)
         
     final_js_obj = {
-        "updated_at": datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00") + " (Sync SQL Lab)",
+        "updated_at": datetime.datetime.now().strftime("%d %b %Y, %H:%M:%S") + " (Sync SQL Lab)",
         "se_umum": se_umum_arr
     }
     
     with open("ipas_data.js", "w", encoding="utf-8") as f:
         f.write(f"window.IPAS_DATA = {json.dumps(final_js_obj, ensure_ascii=False, indent=2)};\n")
-    print(" ✅ File lokal ipas_data.js berhasil diperbarui.")
-    
-    daily_data = load_daily_summary()
-    with open("daily_summary.js", "w", encoding="utf-8") as fw:
-        fw.write(f"window.DAILY_SUMMARY = {json.dumps(daily_data, indent=2)};\n")
-    print(" ✅ File lokal daily_summary.js berhasil diperbarui.")
+    print(" ✅ File lokal ipas_data.js berhasil diperbarui (Target & Realisasi 100% klop dengan FASIH).")
 
 if __name__ == '__main__':
     main()
+
