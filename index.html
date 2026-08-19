@@ -287,14 +287,14 @@
                 </div>
                 
                 <div class="search-row" style="display: flex; gap: 0.75rem; align-items: center; margin-top: 1rem; flex-wrap: wrap;">
-                    <select id="map-filter-kab" class="sort-select" onchange="window.updateMapKecFilter()" style="width: 200px; flex-shrink: 0;">
+                    <select id="map-filter-kab" class="sort-select" onchange="window.updateMapKecFilter()" style="width: 200px; flex-shrink: 0; padding-top: 0.85rem; padding-bottom: 0.85rem; height: auto;">
                         <option value="">Semua Kabupaten</option>
                     </select>
-                    <select id="map-filter-kec" class="sort-select" style="width: 200px; flex-shrink: 0;">
+                    <select id="map-filter-kec" class="sort-select" style="width: 200px; flex-shrink: 0; padding-top: 0.85rem; padding-bottom: 0.85rem; height: auto;">
                         <option value="">Semua Kecamatan</option>
                     </select>
                     <input type="text" id="map-search-input" class="search-input" placeholder="Cari Kode Sub SLS / Nama..." style="flex: 1; min-width: 0;" onkeyup="if(event.key === 'Enter') window.searchMap()" oninput="if(this.value.trim() === '' && document.getElementById('map-filter-kab').value === '') window.searchMap()">
-                    <button onclick="window.searchMap()" style="padding: 8px 16px; background-color: #3b82f6; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500;">
+                    <button onclick="window.searchMap()" style="padding: 8px 16px; background-color: #3b82f6; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500; height: 100%; min-height: 48px;">
                         Cari di Peta
                     </button>
                 </div>
