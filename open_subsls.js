@@ -111,9 +111,16 @@ const mapObserver = new IntersectionObserver((entries) => {
     });
 });
 
+window.lastSearchedLayer = null;
+
 window.searchMap = function() {
     const query = document.getElementById('map-search-input').value.toLowerCase().trim();
     if (!query || !slsMapLayer) return;
+
+    if (window.lastSearchedLayer) {
+        slsMapLayer.resetStyle(window.lastSearchedLayer);
+        window.lastSearchedLayer = null;
+    }
 
     let found = false;
     slsMapLayer.eachLayer(function(layer) {
@@ -132,6 +139,19 @@ window.searchMap = function() {
         
         if (match) {
             found = true;
+            window.lastSearchedLayer = layer;
+            
+            // Change style to bright yellow for search result
+            if (layer.setStyle) {
+                layer.setStyle({
+                    color: "#fde047", // yellow-400
+                    weight: 4,
+                    opacity: 1,
+                    fillColor: "#fef08a", // yellow-200
+                    fillOpacity: 0.9
+                });
+            }
+
             if (layer.getBounds) {
                 slsOpenMap.fitBounds(layer.getBounds(), { maxZoom: 15 });
             } else if (layer.getLatLng) {
