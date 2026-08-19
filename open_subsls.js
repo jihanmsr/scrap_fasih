@@ -80,7 +80,7 @@ function initSlsMap() {
                     if (highlightedData[featureId]) {
                         const csv = highlightedData[featureId];
                         popupContent += `<br><div style="padding: 6px; background: #fee2e2; border-radius: 4px; font-size: 0.9em; margin-top: 5px;">`;
-                        popupContent += `<b style="color:#dc2626;">🎯 DATA DARI CSV:</b><br>`;
+                        popupContent += `<b style="color:#dc2626;">🎯 SLS FULL OPEN:</b><br>`;
                         popupContent += `<b>Petugas:</b> ${csv.nama_petugas || '-'}<br>`;
                         popupContent += `<b>Nama Sub SLS (CSV):</b> ${csv.nama_sub_sls || csv.sls || '-'}<br>`;
                         popupContent += `<b>Jml Prelist:</b> ${csv.jumlah_prelist || 0}<br>`;
@@ -111,7 +111,7 @@ function initSlsMap() {
                 <strong style="display:block; margin-bottom:8px; font-size:13px; border-bottom:1px solid #e5e7eb; padding-bottom:4px;">Keterangan Peta</strong>
                 <div style="display:flex; align-items:center; margin-bottom:6px;">
                     <div style="width:16px; height:16px; background-color:rgba(239, 68, 68, 0.2); border: 2.5px solid #ef4444; margin-right:8px; border-radius:2px; flex-shrink:0;"></div>
-                    <span>Tertandai (Data CSV)</span>
+                    <span>SLS Full Open</span>
                 </div>
                 <div style="display:flex; align-items:center; margin-bottom:6px;">
                     <div style="width:16px; height:16px; background-color:rgba(96, 165, 250, 0.05); border: 1.5px solid #3b82f6; margin-right:8px; border-radius:2px; flex-shrink:0;"></div>
