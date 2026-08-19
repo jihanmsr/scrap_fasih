@@ -3,8 +3,8 @@ import json
 import re
 import glob
 
-print("Loading CSV data dari progres_17...")
-files = glob.glob('/Users/jihanmaisaroh/scrap_fasih/progres_17/*.csv')
+print("Loading CSV data dari sqllab_rekap_progress_petugas_20260819T*.csv...")
+files = glob.glob('/Users/jihanmaisaroh/scrap_fasih/sqllab_rekap_progress_petugas_20260819T*.csv')
 dfs = [pd.read_csv(f, dtype=str) for f in files]
 df = pd.concat(dfs, ignore_index=True)
 
