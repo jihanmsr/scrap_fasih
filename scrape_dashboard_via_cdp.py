@@ -664,8 +664,8 @@ async def run_download_and_update():
         # Date Calculations (WITA)
         local_tz = datetime.timezone(datetime.timedelta(hours=8))
         now = datetime.datetime.now(local_tz)
-        now_iso = "2026-08-11T23:59:00+08:00"
-        now_date_str = "2026-08-11"
+        now_iso = now.strftime("%Y-%m-%dT%H:%M:%S+08:00")
+        now_date_str = now.strftime("%Y-%m-%d")
         
         prev_updated_at = current_ipas.get("updated_at", "")
         prev_date_str = prev_updated_at[:10] if prev_updated_at else now_date_str
