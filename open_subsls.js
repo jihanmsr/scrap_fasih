@@ -50,19 +50,19 @@ function initSlsMap() {
                 
                 if (highlightedData[featureId]) {
                     return {
-                        color: "#dc2626", // Red for highlighted
-                        weight: 2.5,
+                        color: "#ef4444", // Bright Red outline
+                        weight: 3.5,      // Thicker outline
                         opacity: 1,
                         fillColor: "#ef4444",
-                        fillOpacity: 0.7
+                        fillOpacity: 0.15 // Highly transparent so satellite imagery is visible
                     };
                 } else {
                     return {
                         color: "#3b82f6", // Blue for default
-                        weight: 1,
-                        opacity: 0.6,
+                        weight: 1.5,
+                        opacity: 0.8,
                         fillColor: "#60a5fa",
-                        fillOpacity: 0.2
+                        fillOpacity: 0.05 // Very transparent
                     };
                 }
             },
@@ -93,6 +93,7 @@ function initSlsMap() {
             }
         }).addTo(slsOpenMap);
         slsOpenMap.fitBounds(slsMapLayer.getBounds());
+        populateMapFilters();
     } catch(err) {
         console.error("Error loading map data:", err);
     }
@@ -113,57 +114,112 @@ const mapObserver = new IntersectionObserver((entries) => {
 
 window.lastSearchedLayer = null;
 
+function populateMapFilters() {
+    if (!window.PETA_SLS) return;
+    const kabSet = new Set();
+    window.PETA_SLS.features.forEach(f => {
+        if (f.properties && f.properties.nmkab) kabSet.add(f.properties.nmkab);
+    });
+    const kabSelect = document.getElementById('map-filter-kab');
+    if (kabSelect) {
+        Array.from(kabSet).sort().forEach(kab => {
+            const opt = document.createElement('option');
+            opt.value = kab;
+            opt.textContent = kab;
+            kabSelect.appendChild(opt);
+        });
+    }
+}
+
+window.updateMapKecFilter = function() {
+    const kab = document.getElementById('map-filter-kab').value;
+    const kecSelect = document.getElementById('map-filter-kec');
+    kecSelect.innerHTML = '<option value="">Semua Kecamatan</option>';
+    if (!kab || !window.PETA_SLS) {
+        window.searchMap();
+        return;
+    }
+    
+    const kecSet = new Set();
+    window.PETA_SLS.features.forEach(f => {
+        if (f.properties && f.properties.nmkab === kab && f.properties.nmkec) {
+            kecSet.add(f.properties.nmkec);
+        }
+    });
+    
+    Array.from(kecSet).sort().forEach(kec => {
+        const opt = document.createElement('option');
+        opt.value = kec;
+        opt.textContent = kec;
+        kecSelect.appendChild(opt);
+    });
+    window.searchMap();
+};
+
 window.searchMap = function() {
     const query = document.getElementById('map-search-input').value.toLowerCase().trim();
+    const filterKab = document.getElementById('map-filter-kab').value;
+    const filterKec = document.getElementById('map-filter-kec').value;
     
     if (window.lastSearchedLayer && slsMapLayer) {
         slsMapLayer.resetStyle(window.lastSearchedLayer);
         window.lastSearchedLayer = null;
     }
 
-    if (!query || !slsMapLayer) return;
+    if (!slsMapLayer) return;
 
-    let found = false;
+    if (!query && !filterKab && !filterKec) {
+        slsOpenMap.fitBounds(slsMapLayer.getBounds());
+        return;
+    }
+
+    let foundLayers = [];
     slsMapLayer.eachLayer(function(layer) {
-        if (found) return; // Stop if already found
         const p = layer.feature.properties || {};
-        const featureId = "72" + (p.kdkab || "") + (p.kdkec || "") + (p.kddesa || "") + (p.kdsls || "") + (p.kdsubsls || "");
         
-        let match = false;
-        if (featureId.includes(query)) match = true;
-        for (let key in p) {
-            if (String(p[key]).toLowerCase().includes(query)) {
-                match = true;
-                break;
+        let matchKab = !filterKab || (p.nmkab === filterKab);
+        let matchKec = !filterKec || (p.nmkec === filterKec);
+        
+        let matchQuery = true;
+        if (query) {
+            const featureId = "72" + (p.kdkab || "") + (p.kdkec || "") + (p.kddesa || "") + (p.kdsls || "") + (p.kdsubsls || "");
+            matchQuery = false;
+            if (featureId.includes(query)) matchQuery = true;
+            if (!matchQuery) {
+                for (let key in p) {
+                    if (String(p[key]).toLowerCase().includes(query)) {
+                        matchQuery = true;
+                        break;
+                    }
+                }
             }
         }
         
-        if (match) {
-            found = true;
-            window.lastSearchedLayer = layer;
-            
-            // Change style to bright yellow for search result
-            if (layer.setStyle) {
-                layer.setStyle({
-                    color: "#fde047", // yellow-400
-                    weight: 4,
-                    opacity: 1,
-                    fillColor: "#fef08a", // yellow-200
-                    fillOpacity: 0.9
-                });
-            }
-
-            if (layer.getBounds) {
-                slsOpenMap.fitBounds(layer.getBounds(), { maxZoom: 15 });
-            } else if (layer.getLatLng) {
-                slsOpenMap.setView(layer.getLatLng(), 15);
-            }
-            layer.openPopup();
+        if (matchKab && matchKec && matchQuery) {
+            foundLayers.push(layer);
         }
     });
 
-    if (!found) {
-        alert("Pencarian tidak ditemukan di peta.");
+    if (foundLayers.length > 0) {
+        let group = L.featureGroup(foundLayers);
+        slsOpenMap.fitBounds(group.getBounds(), { maxZoom: 15 });
+        
+        if (foundLayers.length === 1 && query) { 
+            let layer = foundLayers[0];
+            window.lastSearchedLayer = layer;
+            if (layer.setStyle) {
+                layer.setStyle({
+                    color: "#fde047", 
+                    weight: 4,
+                    opacity: 1,
+                    fillColor: "#fef08a", 
+                    fillOpacity: 0.9
+                });
+            }
+            layer.openPopup();
+        }
+    } else {
+        if (query) alert("Pencarian tidak ditemukan di peta.");
     }
 };
 
