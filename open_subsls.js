@@ -94,6 +94,38 @@ function initSlsMap() {
         }).addTo(slsOpenMap);
         slsOpenMap.fitBounds(slsMapLayer.getBounds());
         populateMapFilters();
+
+        const legend = L.control({ position: "bottomright" });
+        legend.onAdd = function () {
+            const div = L.DomUtil.create("div", "info legend");
+            div.style.backgroundColor = "white";
+            div.style.padding = "10px 12px";
+            div.style.borderRadius = "8px";
+            div.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
+            div.style.fontFamily = "'Inter', sans-serif";
+            div.style.fontSize = "12px";
+            div.style.lineHeight = "1.5";
+            div.style.color = "#333";
+
+            div.innerHTML = `
+                <strong style="display:block; margin-bottom:8px; font-size:13px; border-bottom:1px solid #e5e7eb; padding-bottom:4px;">Keterangan Peta</strong>
+                <div style="display:flex; align-items:center; margin-bottom:6px;">
+                    <div style="width:16px; height:16px; background-color:rgba(239, 68, 68, 0.2); border: 2.5px solid #ef4444; margin-right:8px; border-radius:2px; flex-shrink:0;"></div>
+                    <span>Tertandai (Data CSV)</span>
+                </div>
+                <div style="display:flex; align-items:center; margin-bottom:6px;">
+                    <div style="width:16px; height:16px; background-color:rgba(96, 165, 250, 0.05); border: 1.5px solid #3b82f6; margin-right:8px; border-radius:2px; flex-shrink:0;"></div>
+                    <span>Sub SLS Lainnya</span>
+                </div>
+                <div style="display:flex; align-items:center;">
+                    <div style="width:16px; height:16px; background-color:rgba(254, 240, 138, 0.9); border: 3px solid #fde047; margin-right:8px; border-radius:2px; flex-shrink:0;"></div>
+                    <span>Hasil Pencarian</span>
+                </div>
+            `;
+            return div;
+        };
+        legend.addTo(slsOpenMap);
+        
     } catch(err) {
         console.error("Error loading map data:", err);
     }
