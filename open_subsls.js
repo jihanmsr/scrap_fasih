@@ -26,12 +26,12 @@ function initSlsMap() {
     slsOpenMap = L.map('sls-open-map', {
         center: [-1.4300, 121.4456],
         zoom: 6,
-        layers: [osm] // Default
+        layers: [satellite] // Default
     });
 
     L.control.layers({
-        "Peta Biasa (OSM)": osm,
-        "Peta Satelit (Esri)": satellite
+        "Peta Satelit (Esri)": satellite,
+        "Peta Biasa (OSM)": osm
     }).addTo(slsOpenMap);
 
     if (!window.PETA_SLS) {
@@ -115,12 +115,13 @@ window.lastSearchedLayer = null;
 
 window.searchMap = function() {
     const query = document.getElementById('map-search-input').value.toLowerCase().trim();
-    if (!query || !slsMapLayer) return;
-
-    if (window.lastSearchedLayer) {
+    
+    if (window.lastSearchedLayer && slsMapLayer) {
         slsMapLayer.resetStyle(window.lastSearchedLayer);
         window.lastSearchedLayer = null;
     }
+
+    if (!query || !slsMapLayer) return;
 
     let found = false;
     slsMapLayer.eachLayer(function(layer) {

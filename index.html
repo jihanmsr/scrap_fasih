@@ -287,7 +287,7 @@
                 </div>
                 
                 <div class="search-row" style="display: flex; gap: 0.75rem; align-items: center; margin-top: 1rem;">
-                    <input type="text" id="map-search-input" class="search-input" placeholder="Cari di Peta (Kode Sub SLS / Nama)..." style="flex: 1; min-width: 0;" onkeyup="if(event.key === 'Enter') window.searchMap()">
+                    <input type="text" id="map-search-input" class="search-input" placeholder="Cari di Peta (Kode Sub SLS / Nama)..." style="flex: 1; min-width: 0;" onkeyup="if(event.key === 'Enter') window.searchMap()" oninput="if(this.value.trim() === '') window.searchMap()">
                     <button onclick="window.searchMap()" style="padding: 8px 16px; background-color: #3b82f6; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500;">
                         Cari di Peta
                     </button>
