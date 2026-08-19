@@ -23,8 +23,7 @@ SELECT
 FROM tgr_fd68e454.base_table_assignment
 WHERE is_active = 1 
   AND level_1_full_code = '72'
-  
-  -- Filter khusus Sub-SLS yang FULL OPEN (Semua prelistnya masih OPEN)
+
   AND level_6_full_code IN (
       SELECT level_6_full_code
       FROM tgr_fd68e454.base_table_assignment
