@@ -7,8 +7,152 @@ let columnFilters = {};
 let currentFilterKey = null;
 let filterPopup = null;
 
+let slsOpenMap = null;
+let slsMapLayer = null;
+
+function initSlsMap() {
+    if (slsOpenMap) return;
+    const mapContainer = document.getElementById('sls-open-map');
+    if (!mapContainer) return;
+    
+    // Default view for Sulawesi Tengah
+    const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+    const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '&copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+    });
+
+    slsOpenMap = L.map('sls-open-map', {
+        center: [-1.4300, 121.4456],
+        zoom: 6,
+        layers: [osm] // Default
+    });
+
+    L.control.layers({
+        "Peta Biasa (OSM)": osm,
+        "Peta Satelit (Esri)": satellite
+    }).addTo(slsOpenMap);
+
+    if (!window.PETA_SLS) {
+        console.error("Data peta tidak ditemukan. Pastikan petasls.js sudah dimuat.");
+        return;
+    }
+
+    const geoData = window.PETA_SLS;
+    const highlightedData = window.HIGHLIGHTED_SUBSLS || {};
+
+    try {
+        slsMapLayer = L.geoJSON(geoData, {
+            style: function (feature) {
+                const p = feature.properties || {};
+                const featureId = "72" + (p.kdkab || "") + (p.kdkec || "") + (p.kddesa || "") + (p.kdsls || "") + (p.kdsubsls || "");
+                
+                if (highlightedData[featureId]) {
+                    return {
+                        color: "#dc2626", // Red for highlighted
+                        weight: 2.5,
+                        opacity: 1,
+                        fillColor: "#ef4444",
+                        fillOpacity: 0.7
+                    };
+                } else {
+                    return {
+                        color: "#3b82f6", // Blue for default
+                        weight: 1,
+                        opacity: 0.6,
+                        fillColor: "#60a5fa",
+                        fillOpacity: 0.2
+                    };
+                }
+            },
+            onEachFeature: function (feature, layer) {
+                if (feature.properties) {
+                    const p = feature.properties;
+                    const featureId = "72" + (p.kdkab || "") + (p.kdkec || "") + (p.kddesa || "") + (p.kdsls || "") + (p.kdsubsls || "");
+                    
+                    let popupContent = '<div style="max-height: 200px; overflow-y: auto;"><b>Detail SLS</b><br>';
+                    for (let key in feature.properties) {
+                        popupContent += `<b>${key}</b>: ${feature.properties[key]}<br>`;
+                    }
+                    popupContent += `<b>Kode Sub SLS Lengkap</b>: ${featureId}<br>`;
+                    
+                    if (highlightedData[featureId]) {
+                        const csv = highlightedData[featureId];
+                        popupContent += `<br><div style="padding: 6px; background: #fee2e2; border-radius: 4px; font-size: 0.9em; margin-top: 5px;">`;
+                        popupContent += `<b style="color:#dc2626;">🎯 DATA DARI CSV:</b><br>`;
+                        popupContent += `<b>Petugas:</b> ${csv.nama_petugas || '-'}<br>`;
+                        popupContent += `<b>Nama Sub SLS (CSV):</b> ${csv.nama_sub_sls || csv.sls || '-'}<br>`;
+                        popupContent += `<b>Jml Prelist:</b> ${csv.jumlah_prelist || 0}<br>`;
+                        popupContent += `</div>`;
+                    }
+                    
+                    popupContent += '</div>';
+                    layer.bindPopup(popupContent);
+                }
+            }
+        }).addTo(slsOpenMap);
+        slsOpenMap.fitBounds(slsMapLayer.getBounds());
+    } catch(err) {
+        console.error("Error loading map data:", err);
+    }
+}
+
+const mapObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            initSlsMap();
+            if (slsOpenMap) {
+                setTimeout(() => {
+                    slsOpenMap.invalidateSize();
+                }, 100);
+            }
+        }
+    });
+});
+
+window.searchMap = function() {
+    const query = document.getElementById('map-search-input').value.toLowerCase().trim();
+    if (!query || !slsMapLayer) return;
+
+    let found = false;
+    slsMapLayer.eachLayer(function(layer) {
+        if (found) return; // Stop if already found
+        const p = layer.feature.properties || {};
+        const featureId = "72" + (p.kdkab || "") + (p.kdkec || "") + (p.kddesa || "") + (p.kdsls || "") + (p.kdsubsls || "");
+        
+        let match = false;
+        if (featureId.includes(query)) match = true;
+        for (let key in p) {
+            if (String(p[key]).toLowerCase().includes(query)) {
+                match = true;
+                break;
+            }
+        }
+        
+        if (match) {
+            found = true;
+            if (layer.getBounds) {
+                slsOpenMap.fitBounds(layer.getBounds(), { maxZoom: 15 });
+            } else if (layer.getLatLng) {
+                slsOpenMap.setView(layer.getLatLng(), 15);
+            }
+            layer.openPopup();
+        }
+    });
+
+    if (!found) {
+        alert("Pencarian tidak ditemukan di peta.");
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     try {
+        const mapContainer = document.getElementById('sls-open-map');
+        if (mapContainer) {
+            mapObserver.observe(mapContainer);
+        }
+
         if (!window.OPEN_SUBSLS_DATA) {
             console.error("OPEN_SUBSLS_DATA is missing");
             return;
