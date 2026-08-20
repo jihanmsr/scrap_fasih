@@ -7994,7 +7994,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const pctSelesaiAll = realTotalAll > 0 ? ((realSelesaiAll / realTotalAll) * 100).toFixed(1) : 0;
             const pctBelumAll = realTotalAll > 0 ? ((realBelumAll / realTotalAll) * 100).toFixed(1) : 0;
 
-            let remainingDays = Math.ceil((new Date('2026-08-17T23:59:59') - new Date()) / (1000 * 60 * 60 * 24));
+            let remainingDays = Math.ceil((new Date('2026-08-31T23:59:59') - new Date()) / (1000 * 60 * 60 * 24));
             if (remainingDays < 1) remainingDays = 1;
             let targetHarian = 0;
             if (realTotalPetugasAll > 0) {
@@ -8017,7 +8017,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
 
             const uniquePetugas = new Set(data.map(d => d.email)).size;
-            let remainingDays = Math.ceil((new Date('2026-08-17T23:59:59') - new Date()) / (1000 * 60 * 60 * 24));
+            let remainingDays = Math.ceil((new Date('2026-08-31T23:59:59') - new Date()) / (1000 * 60 * 60 * 24));
             if (remainingDays < 1) remainingDays = 1;
             let targetHarian = 0;
             if (uniquePetugas > 0) {

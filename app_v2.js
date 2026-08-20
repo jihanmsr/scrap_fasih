@@ -5724,6 +5724,19 @@ document.addEventListener('DOMContentLoaded', () => {
             if (loggedUser) {
                 window.showAnomaliDataSection();
             }
+        } else if (tabId === 'data_hilang') {
+            if (mainHeader) mainHeader.textContent = 'Pemantauan Data Hilang';
+            if (mainSubheader) mainSubheader.textContent = 'Daftar data hilang dan tindak lanjut petugas di lapangan';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            // Activate button
+            const btn = document.getElementById('tab-btn-data_hilang');
+            if (btn) btn.classList.add('active');
+            // Check if user is already logged in
+            const loggedUser = sessionStorage.getItem('data_hilang_user');
+            if (loggedUser) {
+                window.showDataHilangDataSection();
+            }
         } else if (tabId === 'palu') {
             if (mainHeader) mainHeader.textContent = '🔴 Monitoring Harian Kota Palu';
             if (mainSubheader) mainSubheader.textContent = 'Pantau progres petugas Palu secara detail hingga 15 Juli 2026';
@@ -7807,6 +7820,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let realTotalAll = 0;
             let realSelesaiAll = 0;
             let realBelumAll = 0;
+            let realTotalPetugasAll = 0;
             
             for (const [email, pMapData] of Object.entries(window.PETUGAS_PROGRESS_MAP['Pencacah'])) {
                 let isPetugasInWilayah = false;
@@ -7833,26 +7847,53 @@ document.addEventListener('DOMContentLoaded', () => {
                     realTotalAll += pTotal;
                     realSelesaiAll += pSelesai;
                     realBelumAll += pBelum;
+                    
+                    if (pTotal > 0) realTotalPetugasAll++;
                 }
             }
             
             const pctSelesaiAll = realTotalAll > 0 ? ((realSelesaiAll / realTotalAll) * 100).toFixed(1) : 0;
             const pctBelumAll = realTotalAll > 0 ? ((realBelumAll / realTotalAll) * 100).toFixed(1) : 0;
             
+            let remainingDays = Math.ceil((new Date(2026, 7, 31, 23, 59, 59) - new Date()) / (1000 * 60 * 60 * 24));
+            if (remainingDays < 1) remainingDays = 1;
+            let targetHarian = 0;
+            if (realTotalPetugasAll > 0) {
+                targetHarian = (realBelumAll / realTotalPetugasAll) / remainingDays;
+            }
+            
             const totalEl = document.getElementById('petugas-stat-total');
             const selesaiEl = document.getElementById('petugas-stat-selesai');
             const belumEl = document.getElementById('petugas-stat-belum');
+            const targetHarianEl = document.getElementById('petugas-stat-target-harian');
             
             if (totalEl) totalEl.textContent = realTotalAll.toLocaleString('id-ID');
             if (selesaiEl) selesaiEl.innerHTML = `${realSelesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
             if (belumEl) belumEl.innerHTML = `${realBelumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+            if (targetHarianEl) targetHarianEl.innerHTML = `${targetHarian.toFixed(1).replace('.', ',')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">assignment/petugas/hari</span>`;
+            
+            if (typeof updateCountdownSE2026 === 'function') updateCountdownSE2026();
         } else if (Array.isArray(data) && data.length > 0) {
             // Fallback
             const pctSelesaiAll = totalAll > 0 ? ((selesaiAll / totalAll) * 100).toFixed(1) : 0;
             const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
+            
+            const uniquePetugas = new Set(data.map(d => d.email)).size;
+            let remainingDays = Math.ceil((new Date(2026, 7, 31, 23, 59, 59) - new Date()) / (1000 * 60 * 60 * 24));
+            if (remainingDays < 1) remainingDays = 1;
+            let targetHarian = 0;
+            if (uniquePetugas > 0) {
+                targetHarian = (belumAll / uniquePetugas) / remainingDays;
+            }
+
             document.getElementById('petugas-stat-total').textContent = totalAll.toLocaleString('id-ID');
             document.getElementById('petugas-stat-selesai').innerHTML = `${selesaiAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctSelesaiAll}%)</span>`;
             document.getElementById('petugas-stat-belum').innerHTML = `${belumAll.toLocaleString('id-ID')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">(${pctBelumAll}%)</span>`;
+
+            const targetHarianEl = document.getElementById('petugas-stat-target-harian');
+            if (targetHarianEl) targetHarianEl.innerHTML = `${targetHarian.toFixed(1).replace('.', ',')} <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">assignment/petugas/hari</span>`;
+
+            if (typeof updateCountdownSE2026 === 'function') updateCountdownSE2026();
         }
 
         // 2. TABEL PETUGAS: Gunakan murni data dari CSV FAST (window.PETUGAS_PROGRESS_MAP)
@@ -9765,6 +9806,1194 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // ========== END ANOMALI FEATURE ==========
 
+// ========== DATA HILANG FEATURE ==========
+
+    // State untuk data data_hilang (cache)
+    let dataHilangDataCache = [];
+
+    // Tampilkan section data (setelah login)
+    window.showDataHilangDataSection = function () {
+        const userJson = sessionStorage.getItem('data_hilang_user');
+        if (!userJson) return;
+        const user = JSON.parse(userJson);
+
+        const loginSec = document.getElementById('data_hilang-login-section');
+        const dataSec = document.getElementById('data_hilang-data-section');
+        const headerActions = document.getElementById('data_hilang-header-actions');
+        if (loginSec) loginSec.style.display = 'none';
+        if (dataSec) dataSec.style.display = 'block';
+        if (headerActions) headerActions.style.display = 'flex';
+
+        const nameEl = document.getElementById('data_hilang-user-name');
+        const kabEl = document.getElementById('data_hilang-user-kab');
+        if (nameEl) nameEl.textContent = user.nama || user.username;
+        if (kabEl) kabEl.textContent = user.kab_code ? `Kode Wilayah: ${user.kab_code}` : '';
+
+        window.loadDataHilangData();
+    };
+
+    // Load data data_hilang dari Supabase
+    async function loadDataHilangData() {
+        if (!supabaseClient) {
+            renderDataHilangTable([]);
+            return;
+        }
+        const loadingEl = document.getElementById('data_hilang-loading');
+        const tableCard = document.querySelector('#data_hilang-table')?.closest('.card');
+        if (loadingEl) loadingEl.style.display = 'block';
+        if (tableCard) tableCard.style.display = 'none';
+
+        try {
+            const { data, error } = await supabaseClient
+                .from('data_hilang_data')
+                .select('*')
+                .order('id', { ascending: true });
+
+            if (error) throw error;
+
+            dataHilangDataCache = data || [];
+            populateDataHilangKabDropdown(dataHilangDataCache);
+            populateDataHilangDateDropdown(dataHilangDataCache);
+            populateDataHilangJenisDropdown(dataHilangDataCache);
+            updateAnomalInfoBar();
+            renderDataHilangTable(dataHilangDataCache);
+        } catch (e) {
+            console.error('Gagal load data_hilang:', e);
+            dataHilangDataCache = [];
+            renderDataHilangTable([]);
+        } finally {
+            if (loadingEl) loadingEl.style.display = 'none';
+            if (tableCard) tableCard.style.display = 'block';
+        }
+    }
+
+    // Sort state
+    let dataHilangSortField = 'pct_biaya';
+    let dataHilangSortDir = 'desc'; // 'asc' | 'desc'
+    let dataHilangCurrentPage = 1;
+    const DATA_HILANG_PAGE_SIZE = 50;
+    let dataHilangFilteredCache = []; // current filtered+sorted dataset for pagination
+
+    // Buffer: perubahan belum disimpan, keyed by row.id
+    let dataHilangBuf = {};
+
+    window.setDataHilangBuf = function (id, field, value) {
+        if (!dataHilangBuf[id]) dataHilangBuf[id] = {};
+        dataHilangBuf[id][field] = value;
+        // Mark row as dirty
+        const row = document.getElementById('data_hilang-row-' + id);
+        if (row) row.style.outline = '2px solid rgba(249,115,22,0.5)';
+    };
+
+    // Format rupiah singkat
+    function fmtRp(val) {
+        if (!val) return '-';
+        if (val >= 1e9) return `Rp ${(val / 1e9).toFixed(1)}M`;
+        if (val >= 1e6) return `Rp ${(val / 1e6).toFixed(1)}jt`;
+        return `Rp ${val.toLocaleString('id-ID')}`;
+    }
+
+    // Populate kab dropdown
+    function populateDataHilangKabDropdown(data) {
+        const sel = document.getElementById('data_hilang-filter-kab');
+        if (!sel) return;
+        const kabs = [...new Set(data.map(r => r.kab_code).filter(Boolean))].sort();
+        sel.innerHTML = '<option value="">Semua Kab/Kota</option>' +
+            kabs.map(k => `<option value="${k}">${k}</option>`).join('');
+    }
+
+    // Populate date dropdown dynamically from created_at
+    function populateDataHilangDateDropdown(data) {
+        const sel = document.getElementById('data_hilang-filter-date');
+        if (!sel) return;
+        const dates = [...new Set(data.map(r => {
+            if (!r.created_at) return null;
+            return r.created_at.substring(0, 10);
+        }).filter(Boolean))].sort().reverse();
+        
+        const fmtDate = (dStr) => {
+            try {
+                const parts = dStr.split('-');
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+                return `${parts[2]} ${months[parseInt(parts[1])-1]} ${parts[0]}`;
+            } catch(e) {
+                return dStr;
+            }
+        };
+        
+        sel.innerHTML = '<option value="">Semua Tanggal</option>' +
+            dates.map(d => `<option value="${d}">${fmtDate(d)}</option>`).join('');
+    }
+
+    // Populate jenis dropdown dynamically from jenis_data_hilang
+    function populateDataHilangJenisDropdown(data) {
+        const sel = document.getElementById('data_hilang-filter-jenis');
+        if (!sel) return;
+        const jenisList = [...new Set(data.map(r => r.jenis_data_hilang).filter(Boolean))].sort();
+        sel.innerHTML = '<option value="">Semua Jenis</option>' +
+            jenisList.map(j => `<option value="${j}">${j.replace('Biaya Produksi ', '')}</option>`).join('');
+    }
+
+    // Info bar
+    function updateAnomalInfoBar() {
+        const el = document.getElementById('data_hilang-info-bar');
+        if (!el || !dataHilangDataCache.length) return;
+        const total = dataHilangDataCache.length;
+        const kabs = new Set(dataHilangDataCache.map(r => r.kab_code)).size;
+        const totalBiaya = dataHilangDataCache.reduce((s, r) => s + (r.biaya_produksi || 0), 0);
+        el.textContent = `${total} data_hilang · ${kabs} kab/kota · Total biaya produksi: ${fmtRp(totalBiaya)}`;
+    }
+
+    // Render tabel data_hilang (full rewrite)
+    function renderDataHilangTable(data) {
+        const tbody = document.getElementById('data_hilang-tbody');
+        const thead = document.getElementById('data_hilang-thead');
+        const emptyEl = document.getElementById('data_hilang-empty');
+        const countTotal = document.getElementById('data_hilang-count-total');
+        const countPending = document.getElementById('data_hilang-count-pending');
+        const countProcess = document.getElementById('data_hilang-count-process');
+        const countDone = document.getElementById('data_hilang-count-done');
+        const showingEl = document.getElementById('data_hilang-showing');
+        const jenisFilter = document.getElementById('data_hilang-filter-jenis');
+        const selectedJenis = jenisFilter ? jenisFilter.value : '';
+
+        if (!tbody || !thead) return;
+
+        // Summary always from full cache
+        const allData = dataHilangDataCache;
+        if (countTotal) countTotal.textContent = allData.length;
+        if (countPending) countPending.textContent = allData.filter(r => r.status_data_hilang == 1).length;
+        if (countProcess) countProcess.textContent = allData.filter(r => r.status_data_hilang == 2).length;
+        if (countDone) countDone.textContent = allData.filter(r => r.status_data_hilang == 3).length;
+
+        // Sort
+        const sorted = [...data].sort((a, b) => {
+            let av = a[dataHilangSortField] ?? '';
+            let bv = b[dataHilangSortField] ?? '';
+            if (dataHilangSortField === 'waktu_data_hilang') {
+                av = a.created_at || '';
+                bv = b.created_at || '';
+            }
+            if (dataHilangSortField === 'no') { av = a._rowIdx || 0; bv = b._rowIdx || 0; }
+            const cmp = typeof av === 'number' ? av - bv : String(av).localeCompare(String(bv), 'id');
+            return dataHilangSortDir === 'asc' ? cmp : -cmp;
+        });
+
+        // Store for pagination
+        dataHilangFilteredCache = sorted;
+
+        // Build dynamic thead based on selectedJenis
+        let dynamicColumnsHTML = '';
+        if (selectedJenis && selectedJenis.includes('Missing')) {
+            // A3
+            dynamicColumnsHTML = `
+                <th onclick="sortDataHilang('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 250px;">Catatan</th>`;
+        } else if (selectedJenis && selectedJenis.includes('Biaya Produksi')) {
+            // A5
+            dynamicColumnsHTML = `
+                <th onclick="sortDataHilang('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 150px;">Catatan</th>
+                <th onclick="sortDataHilang('pct_biaya')" style="padding: 0.7rem 0.8rem; text-align: center; cursor: pointer; user-select: none; white-space: nowrap; min-width: 90px;">% Biaya <span id="sort-icon-pct_biaya"></span></th>
+                <th onclick="sortDataHilang('biaya_produksi')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 110px;">Biaya Produksi <span id="sort-icon-biaya_produksi"></span></th>
+                <th onclick="sortDataHilang('total_pengeluaran')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pengeluaran <span id="sort-icon-total_pengeluaran"></span></th>`;
+        } else if (selectedJenis && selectedJenis.includes('Keuntungan Usaha')) {
+            // A6
+            dynamicColumnsHTML = `
+                <th onclick="sortDataHilang('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 200px;">Catatan</th>
+                <th onclick="sortDataHilang('total_pengeluaran')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pengeluaran <span id="sort-icon-total_pengeluaran"></span></th>`;
+        } else if (selectedJenis && selectedJenis.includes('Penyertaan Modal')) {
+            // A7
+            dynamicColumnsHTML = `
+                <th onclick="sortDataHilang('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 250px;">Catatan</th>`;
+        } else {
+            // Generic / Semua
+            dynamicColumnsHTML = `
+                <th onclick="sortDataHilang('nama_krt')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; min-width: 160px;">Nama Usaha <span id="sort-icon-nama_krt"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 180px;">Catatan</th>
+                <th onclick="sortDataHilang('pct_biaya')" style="padding: 0.7rem 0.8rem; text-align: center; cursor: pointer; user-select: none; white-space: nowrap; min-width: 90px;">% Biaya <span id="sort-icon-pct_biaya"></span></th>
+                <th onclick="sortDataHilang('biaya_produksi')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 110px;">Biaya Produksi <span id="sort-icon-biaya_produksi"></span></th>
+                <th onclick="sortDataHilang('total_pengeluaran')" style="padding: 0.7rem 0.8rem; text-align: right; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Total Pengeluaran <span id="sort-icon-total_pengeluaran"></span></th>`;
+        }
+
+        thead.innerHTML = `
+            <tr style="background: var(--card-bg); border-bottom: 2px solid var(--card-border);">
+                <th onclick="sortDataHilang('no')" style="padding: 0.7rem 0.8rem; text-align: center; width: 42px; cursor: pointer; user-select: none; white-space: nowrap;">No <span id="sort-icon-no"></span></th>
+                <th onclick="sortDataHilang('kab_code')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 120px;">Kab/Kota <span id="sort-icon-kab_code"></span></th>
+                <th onclick="sortDataHilang('jenis_data_hilang')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 140px;">Jenis Data Hilang <span id="sort-icon-jenis_data_hilang"></span></th>
+                <th onclick="sortDataHilang('waktu_data_hilang')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 120px;">Tanggal <span id="sort-icon-waktu_data_hilang"></span></th>
+                ${dynamicColumnsHTML}
+                <th onclick="sortDataHilang('nama_petugas')" style="padding: 0.7rem 0.8rem; text-align: left; cursor: pointer; user-select: none; white-space: nowrap; min-width: 130px;">Nama Petugas <span id="sort-icon-nama_petugas"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: left; min-width: 180px;">Tindak Lanjut</th>
+                <th onclick="sortDataHilang('status_data_hilang')" style="padding: 0.7rem 0.8rem; text-align: center; cursor: pointer; user-select: none; min-width: 110px;">Status <span id="sort-icon-status_data_hilang"></span></th>
+                <th style="padding: 0.7rem 0.8rem; text-align: center; min-width: 90px; color: var(--text-secondary); font-size: 0.75rem;">Simpan</th>
+            </tr>
+        `;
+
+        // Update sort icons
+        ['no', 'kab_code', 'jenis_data_hilang', 'waktu_data_hilang', 'nama_krt', 'pct_biaya', 'biaya_produksi', 'total_pengeluaran', 'status_data_hilang'].forEach(f => {
+            const el = document.getElementById('sort-icon-' + f);
+            if (el) el.textContent = f === dataHilangSortField ? (dataHilangSortDir === 'asc' ? ' ↑' : ' ↓') : '';
+        });
+
+        const total = sorted.length;
+        const totalAll = allData.length;
+        if (showingEl) showingEl.textContent = total < totalAll ? `Tampil ${total} dari ${totalAll}` : `${totalAll} data`;
+
+        if (sorted.length === 0) {
+            tbody.innerHTML = '';
+            if (emptyEl) emptyEl.style.display = 'block';
+            renderDataHilangPagination(0);
+            return;
+        }
+        if (emptyEl) emptyEl.style.display = 'none';
+
+        // Pagination slice
+        const totalPages = Math.ceil(sorted.length / DATA_HILANG_PAGE_SIZE);
+        if (dataHilangCurrentPage > totalPages) dataHilangCurrentPage = totalPages;
+        if (dataHilangCurrentPage < 1) dataHilangCurrentPage = 1;
+        const start = (dataHilangCurrentPage - 1) * DATA_HILANG_PAGE_SIZE;
+        const pageData = sorted.slice(start, start + DATA_HILANG_PAGE_SIZE);
+
+        const statusBadge = {
+            1: `<span style="display:inline-block;padding:0.2rem 0.6rem;background:rgba(239,68,68,0.1);color:#ef4444;border-radius:99px;font-size:0.75rem;font-weight:700;">Belum</span>`,
+            2: `<span style="display:inline-block;padding:0.2rem 0.6rem;background:rgba(245,158,11,0.1);color:#f59e0b;border-radius:99px;font-size:0.75rem;font-weight:700;">Diproses</span>`,
+            3: `<span style="display:inline-block;padding:0.2rem 0.6rem;background:rgba(34,197,94,0.1);color:#22c55e;border-radius:99px;font-size:0.75rem;font-weight:700;">Selesai</span>`,
+        };
+
+        const fmtDate = (dStr) => {
+            if (!dStr) return '-';
+            try {
+                const parts = dStr.substring(0, 10).split('-');
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+                return `${parts[2]} ${months[parseInt(parts[1])-1]} ${parts[0]}`;
+            } catch(e) {
+                return dStr;
+            }
+        };
+
+        tbody.innerHTML = pageData.map((row, idx) => {
+            const pct = row.pct_biaya || 0;
+            const pctColor = pct >= 100 ? '#ef4444' : pct >= 80 ? '#f97316' : '#f59e0b';
+            const pctBg = pct >= 100 ? 'rgba(239,68,68,0.1)' : pct >= 80 ? 'rgba(249,115,22,0.1)' : 'rgba(245,158,11,0.1)';
+            const jenisIcon = (row.jenis_data_hilang || '').includes('Melebihi') ? '⛔' :
+                (row.jenis_data_hilang || '').includes('Sama') ? '⚠️' :
+                (row.jenis_data_hilang || '').includes('Sangat') ? '🔴' : '🟡';
+            const namaUsaha = row.nama_krt || '<span style="color:var(--text-secondary);font-style:italic;">-</span>';
+            const globalIdx = start + idx + 1;
+            const savedInfo = row.updated_by ? `<div style="font-size:0.68rem;color:var(--text-secondary);margin-top:0.15rem;">✓ ${row.updated_by}</div>` : '';
+            
+            // Map email/username to real name
+            let rawPetugas = row.nama_petugas || '';
+            let namaPetugas = rawPetugas;
+            
+            // Hapus suffix role seperti ' (Pengawas)' atau ' (Pencacah)' untuk lookup
+            let cleanUsername = rawPetugas.replace(/\s*\([^)]*\)$/, '').trim();
+            
+            if (window.userMap) {
+                if (window.userMap[cleanUsername]) {
+                    namaPetugas = window.userMap[cleanUsername];
+                } else if (window.userMap[cleanUsername.toLowerCase()]) {
+                    namaPetugas = window.userMap[cleanUsername.toLowerCase()];
+                } else if (cleanUsername.includes('@') && window.userMap[cleanUsername.split('@')[0]]) {
+                    namaPetugas = window.userMap[cleanUsername.split('@')[0]];
+                }
+            }
+            
+            // Jika tidak ketemu di map dan string asli masih berupa email, tetap tampilkan email tapi bersihkan
+            if (namaPetugas === rawPetugas && !namaPetugas) {
+                namaPetugas = '';
+            }
+
+            let dynamicCells = '';
+            const cellNamaUsaha = `
+                <td style="padding:0.6rem 0.8rem;max-width:180px;">
+                    <div style="font-weight:600;font-size:0.82rem;line-height:1.3;">${namaUsaha}</div>
+                    ${row.sls_code ? `<div style="font-size:0.72rem;color:var(--text-secondary);margin-top:0.15rem;font-family:monospace;">${row.sls_code}</div>` : ''}
+                    ${savedInfo}
+                </td>
+            `;
+            const cellCatatan = `
+                <td style="padding:0.6rem 0.8rem;max-width:250px;">
+                    ${row.catatan ? `<div style="font-size:0.75rem;color:#d97706;line-height:1.4;font-weight:500;">💡 ${row.catatan}</div>` : '<span style="color:var(--text-secondary);font-size:0.78rem;font-style:italic;">-</span>'}
+                </td>
+            `;
+            const cellPct = `
+                <td style="padding:0.6rem 0.8rem;text-align:center;">
+                    ${pct > 0 ? `<span style="display:inline-block;padding:0.25rem 0.65rem;background:${pctBg};color:${pctColor};border-radius:99px;font-weight:800;font-size:0.82rem;white-space:nowrap;">${pct}%</span>` : '-'}
+                </td>
+            `;
+            const cellBiaya = `
+                <td style="padding:0.6rem 0.8rem;text-align:right;font-weight:600;font-size:0.82rem;white-space:nowrap;">${row.biaya_produksi ? fmtRp(row.biaya_produksi) : '-'}</td>
+            `;
+            const cellPengeluaran = `
+                <td style="padding:0.6rem 0.8rem;text-align:right;font-size:0.82rem;white-space:nowrap;color:var(--text-secondary);">${row.total_pengeluaran ? fmtRp(row.total_pengeluaran) : '-'}</td>
+            `;
+
+
+            if (selectedJenis && selectedJenis.includes('Missing')) {
+                dynamicCells = `${cellNamaUsaha}${cellCatatan}`;
+            } else if (selectedJenis && selectedJenis.includes('Biaya Produksi')) {
+                dynamicCells = `${cellNamaUsaha}${cellCatatan}${cellPct}${cellBiaya}${cellPengeluaran}`;
+            } else if (selectedJenis && selectedJenis.includes('Keuntungan Usaha')) {
+                dynamicCells = `${cellNamaUsaha}${cellCatatan}${cellPengeluaran}`;
+            } else if (selectedJenis && selectedJenis.includes('Penyertaan Modal')) {
+                dynamicCells = `${cellNamaUsaha}${cellCatatan}`;
+            } else {
+                dynamicCells = `${cellNamaUsaha}${cellCatatan}${cellPct}${cellBiaya}${cellPengeluaran}`;
+            }
+
+            return `<tr id="data_hilang-row-${row.id}" style="border-bottom:1px solid var(--card-border);">
+                <td style="padding:0.6rem 0.8rem;text-align:center;color:var(--text-secondary);font-size:0.78rem;">${globalIdx}</td>
+                <td style="padding:0.6rem 0.8rem;font-weight:600;font-size:0.82rem;white-space:nowrap;">${row.kab_code || '-'}</td>
+                <td style="padding:0.6rem 0.8rem;">
+                    <span style="font-size:0.78rem;">${jenisIcon} ${(row.jenis_data_hilang || '-').replace('Biaya Produksi ', '')}</span>
+                </td>
+                <td style="padding:0.6rem 0.8rem;white-space:nowrap;">${fmtDate(row.created_at)}</td>
+                ${dynamicCells}
+                <td style="padding:0.6rem 0.8rem;min-width:130px;">
+                    ${namaPetugas ? `<div style="font-size:0.8rem;font-weight:600;color:var(--text-primary);">${namaPetugas}</div><div style="font-size:0.7rem;color:var(--text-secondary);">${row.nama_petugas}</div>` : `<span style="color:var(--text-secondary);font-size:0.78rem;font-style:italic;">-</span>`}
+                </td>
+                <td style="padding:0.6rem 0.8rem;">
+                    <textarea rows="2"
+                        style="width:100%;min-width:160px;padding:0.3rem 0.5rem;border:1px solid var(--card-border);border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.8rem;resize:vertical;line-height:1.4;"
+                        onchange="window.setDataHilangBuf(${row.id},'tindak_lanjut',this.value)"
+                        placeholder="Isi tindak lanjut...">${row.tindak_lanjut || ''}</textarea>
+                </td>
+                <td style="padding:0.6rem 0.8rem;text-align:center;">
+                    <select onchange="window.setDataHilangBuf(${row.id},'status_data_hilang',parseInt(this.value))"
+                        style="padding:0.3rem 0.4rem;border:1px solid var(--card-border);border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.78rem;font-weight:600;cursor:pointer;">
+                        <option value="1" ${row.status_data_hilang == 1 ? 'selected' : ''}>Belum</option>
+                        <option value="2" ${row.status_data_hilang == 2 ? 'selected' : ''}>Diproses</option>
+                        <option value="3" ${row.status_data_hilang == 3 ? 'selected' : ''}>Selesai</option>
+                    </select>
+                </td>
+                <td style="padding:0.6rem 0.8rem;text-align:center;">
+                    <button onclick="window.saveDataHilangRow(${row.id})"
+                        id="save-btn-${row.id}"
+                        title="Simpan perubahan baris ini"
+                        style="display:inline-flex;align-items:center;gap:0.3rem;padding:0.35rem 0.65rem;background:var(--primary);color:white;border:none;border-radius:0.4rem;cursor:pointer;font-size:0.75rem;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;">
+                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        Simpan
+                    </button>
+                </td>
+            </tr>`;
+        }).join('');
+
+        renderDataHilangPagination(sorted.length);
+    }
+
+    function renderDataHilangPagination(totalItems) {
+        const infoEl = document.getElementById('data_hilang-pagination-info');
+        const btnsEl = document.getElementById('data_hilang-pagination-buttons');
+        const paginationEl = document.getElementById('data_hilang-pagination');
+        if (!infoEl || !btnsEl) return;
+
+        const totalPages = Math.ceil(totalItems / DATA_HILANG_PAGE_SIZE);
+        const start = totalItems === 0 ? 0 : (dataHilangCurrentPage - 1) * DATA_HILANG_PAGE_SIZE + 1;
+        const end = Math.min(dataHilangCurrentPage * DATA_HILANG_PAGE_SIZE, totalItems);
+        infoEl.textContent = `Menampilkan ${start}–${end} dari ${totalItems} data`;
+
+        if (paginationEl) paginationEl.style.display = totalItems === 0 ? 'none' : 'flex';
+
+        if (totalPages <= 1) { btnsEl.innerHTML = ''; return; }
+
+        const btnStyle = (active) => `padding:0.3rem 0.6rem;border-radius:0.35rem;border:1px solid var(--card-border);background:${active ? 'var(--primary)' : 'var(--card-bg)'};color:${active ? 'white' : 'var(--text-primary)'};font-size:0.78rem;font-weight:600;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;`;
+
+        let html = `<button style="${btnStyle(false)}" onclick="window.goDataHilangPage(${dataHilangCurrentPage - 1})" ${dataHilangCurrentPage === 1 ? 'disabled' : ''}>‹</button>`;
+
+        // Show limited page buttons
+        const pages = [];
+        for (let p = 1; p <= totalPages; p++) {
+            if (p === 1 || p === totalPages || (p >= dataHilangCurrentPage - 2 && p <= dataHilangCurrentPage + 2)) {
+                pages.push(p);
+            } else if (pages[pages.length - 1] !== '...') {
+                pages.push('...');
+            }
+        }
+        pages.forEach(p => {
+            if (p === '...') {
+                html += `<span style="padding:0.3rem 0.4rem;color:var(--text-secondary);">…</span>`;
+            } else {
+                html += `<button style="${btnStyle(p === dataHilangCurrentPage)}" onclick="window.goDataHilangPage(${p})">${p}</button>`;
+            }
+        });
+
+        html += `<button style="${btnStyle(false)}" onclick="window.goDataHilangPage(${dataHilangCurrentPage + 1})" ${dataHilangCurrentPage === totalPages ? 'disabled' : ''}>›</button>`;
+        btnsEl.innerHTML = html;
+    }
+
+    window.goDataHilangPage = function (page) {
+        const totalPages = Math.ceil(dataHilangFilteredCache.length / DATA_HILANG_PAGE_SIZE);
+        if (page < 1 || page > totalPages) return;
+        dataHilangCurrentPage = page;
+        renderDataHilangTable(dataHilangFilteredCache);
+        // Scroll to top of table
+        const tbl = document.getElementById('data_hilang-table');
+        if (tbl) tbl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    // Sort handler
+    window.sortDataHilang = function (field) {
+        if (dataHilangSortField === field) {
+            dataHilangSortDir = dataHilangSortDir === 'asc' ? 'desc' : 'asc';
+        } else {
+            dataHilangSortField = field;
+            dataHilangSortDir = field === 'pct_biaya' || field === 'biaya_produksi' || field === 'total_pengeluaran' ? 'desc' : 'asc';
+        }
+        dataHilangCurrentPage = 1; // reset ke halaman 1 saat sort berubah
+        window.filterDataHilangTable();
+    };
+
+    // Filter by status via card click
+    window.filterByStatus = function (statusVal) {
+        const sel = document.getElementById('data_hilang-filter-status');
+        if (sel) sel.value = statusVal;
+        window.filterDataHilangTable();
+    };
+
+    // Filter tabel data_hilang
+    function applyDataHilangFilter(data, searchVal, statusVal, kabVal, jenisVal, dateVal) {
+        const q = (searchVal || '').toLowerCase();
+        const s = statusVal || '';
+        const k = kabVal || '';
+        const j = jenisVal || '';
+        const d = dateVal || '';
+        return data.filter(row => {
+            const matchSearch = !q ||
+                (row.nama_krt || '').toLowerCase().includes(q) ||
+                (row.kab_code || '').toLowerCase().includes(q) ||
+                (row.jenis_data_hilang || '').toLowerCase().includes(q) ||
+                (row.sls_code || '').includes(q);
+            const matchStatus = !s || String(row.status_data_hilang) === s;
+            const matchKab = !k || (row.kab_code || '') === k;
+            const matchDate = !d || (row.created_at && row.created_at.substring(0, 10) === d);
+            const matchJenis = !j || (row.jenis_data_hilang || '') === j;
+            return matchSearch && matchStatus && matchKab && matchJenis && matchDate;
+        });
+    }
+
+    window.filterDataHilangTable = function () {
+        const searchVal = (document.getElementById('data_hilang-search') || {}).value || '';
+        const statusVal = (document.getElementById('data_hilang-filter-status') || {}).value || '';
+        const kabVal = (document.getElementById('data_hilang-filter-kab') || {}).value || '';
+        const jenisVal = (document.getElementById('data_hilang-filter-jenis') || {}).value || '';
+        const dateVal = (document.getElementById('data_hilang-filter-date') || {}).value || '';
+        const filtered = applyDataHilangFilter(dataHilangDataCache, searchVal, statusVal, kabVal, jenisVal, dateVal);
+        dataHilangCurrentPage = 1; // reset ke halaman 1 saat filter berubah
+        window.renderDataHilangTable(filtered);
+    };
+
+    // Save single row
+    window.saveDataHilangRow = async function (id) {
+        if (!supabaseClient) { alert('Supabase tidak tersedia.'); return; }
+        const changes = dataHilangBuf[id];
+        if (!changes || Object.keys(changes).length === 0) {
+            alert('Tidak ada perubahan untuk disimpan.');
+            return;
+        }
+        const btn = document.getElementById('save-btn-' + id);
+        const row = document.getElementById('data_hilang-row-' + id);
+        const logEl = document.getElementById('data_hilang-upload-log');
+
+        // Get current user info
+        let userInfo = {};
+        try { userInfo = JSON.parse(sessionStorage.getItem('data_hilang_user') || '{}'); } catch (e) { }
+        const updatedBy = userInfo.nama || userInfo.username || 'Unknown';
+        const updatedAt = new Date().toISOString();
+
+        if (btn) { btn.textContent = '...'; btn.disabled = true; }
+
+        try {
+            const payload = { ...changes, updated_by: updatedBy, updated_at: updatedAt };
+            const { error } = await supabaseClient
+                .from('data_hilang_data')
+                .update(payload)
+                .eq('id', id);
+
+            if (error) throw error;
+
+            // Clear buffer for this row
+            delete dataHilangBuf[id];
+
+            // Update local cache
+            const cacheIdx = dataHilangDataCache.findIndex(r => r.id === id);
+            if (cacheIdx !== -1) {
+                Object.assign(dataHilangDataCache[cacheIdx], payload);
+            }
+
+            // Visual feedback
+            if (row) {
+                row.style.outline = 'none';
+                row.style.background = 'rgba(34,197,94,0.06)';
+                setTimeout(() => { if (row) row.style.background = ''; }, 2000);
+            }
+            if (btn) {
+                btn.innerHTML = '<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Tersimpan';
+                btn.style.background = '#22c55e';
+                setTimeout(() => {
+                    if (btn) {
+                        btn.innerHTML = '<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Simpan';
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }
+                }, 2000);
+            }
+
+            // Audit log
+            if (logEl) {
+                const timeStr = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+                logEl.textContent = `✅ Disimpan oleh ${updatedBy}${userInfo.kab_code ? ' · Kab ' + userInfo.kab_code : ''} · ${timeStr}`;
+                logEl.style.display = 'block';
+                logEl.style.color = '#16a34a';
+                logEl.style.background = 'rgba(34,197,94,0.08)';
+                logEl.style.borderColor = 'rgba(34,197,94,0.25)';
+            }
+        } catch (e) {
+            console.error('Save data_hilang row error:', e);
+            if (btn) { btn.textContent = 'Gagal!'; btn.style.background = '#ef4444'; setTimeout(() => { if (btn) { btn.innerHTML = '<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Simpan'; btn.style.background = ''; btn.disabled = false; } }, 2000); }
+            if (logEl) {
+                logEl.textContent = `❌ Gagal menyimpan: ${e.message}`;
+                logEl.style.display = 'block';
+                logEl.style.color = '#ef4444';
+                logEl.style.background = 'rgba(239,68,68,0.08)';
+                logEl.style.borderColor = 'rgba(239,68,68,0.25)';
+            }
+        }
+    };
+
+    // Login data_hilang via Supabase RPC
+    window.loginDataHilang = async function () {
+        const usernameEl = document.getElementById('data_hilang-username');
+        const passwordEl = document.getElementById('data_hilang-password');
+        const errorEl = document.getElementById('data_hilang-login-error');
+        const loginBtn = document.querySelector('#data_hilang-login-section button');
+
+        const username = (usernameEl?.value || '').trim();
+        const password = (passwordEl?.value || '').trim();
+
+        if (!username || !password) {
+            if (errorEl) { errorEl.textContent = 'Username dan password wajib diisi!'; errorEl.style.display = 'block'; }
+            return;
+        }
+
+        if (loginBtn) { loginBtn.textContent = 'Memeriksa...'; loginBtn.disabled = true; }
+        if (errorEl) errorEl.style.display = 'none';
+
+        try {
+            if (!supabaseClient) {
+                // LOCAL FALLBACK
+                if (username === 'hespri' || username === 'admin') {
+                    sessionStorage.setItem('data_hilang_user', JSON.stringify({ username: username, nama: 'Pegawai BPS', kab_code: '' }));
+                    window.showDataHilangDataSection();
+                    return;
+                } else {
+                    throw new Error('Koneksi database tidak tersedia. (Gunakan username admin untuk mode lokal)');
+                }
+            }
+
+            const { data, error } = await supabaseClient
+                .rpc('check_login', { p_username: username, p_password: password });
+
+            if (error) throw error;
+
+            if (data) {
+                sessionStorage.setItem('data_hilang_user', JSON.stringify(data));
+                window.showDataHilangDataSection();
+            } else {
+                if (errorEl) { errorEl.textContent = 'Username atau password salah!'; errorEl.style.display = 'block'; }
+            }
+        } catch (e) {
+            console.error('Login error:', e);
+            if (errorEl) { errorEl.textContent = 'Terjadi kesalahan: ' + e.message; errorEl.style.display = 'block'; }
+        } finally {
+            if (loginBtn) { loginBtn.textContent = 'Masuk'; loginBtn.disabled = false; }
+        }
+    };
+
+    // Enter key support for login
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            const data_hilangSection = document.getElementById('data_hilang-login-section');
+            if (data_hilangSection && data_hilangSection.style.display !== 'none' &&
+                document.getElementById('tab-content-data_hilang') && document.getElementById('tab-content-data_hilang').style.display !== 'none') {
+                window.loginDataHilang();
+            }
+        }
+    });
+
+    // Logout data_hilang
+    window.logoutDataHilang = function () {
+        sessionStorage.removeItem('data_hilang_user');
+        const loginSec = document.getElementById('data_hilang-login-section');
+        const dataSec = document.getElementById('data_hilang-data-section');
+        const headerActions = document.getElementById('data_hilang-header-actions');
+        if (loginSec) { loginSec.style.display = 'block'; }
+        if (dataSec) dataSec.style.display = 'none';
+        if (headerActions) headerActions.style.display = 'none';
+        const usernameEl = document.getElementById('data_hilang-username');
+        const passwordEl = document.getElementById('data_hilang-password');
+        if (usernameEl) usernameEl.value = '';
+        if (passwordEl) passwordEl.value = '';
+        dataHilangDataCache = [];
+    };
+
+    // Download template tindak lanjut (CSV proper format)
+    window.downloadAnomalTemplate = function () {
+        const data = dataHilangDataCache;
+        if (!data || data.length === 0) {
+            alert('Data data_hilang belum dimuat. Silakan login terlebih dahulu.');
+            return;
+        }
+        const esc = v => `"${String(v || '').replace(/"/g, '""')}"`;
+        // Header: ID(A), Kab(B), Jenis(C), Nama Usaha(D), Nama Petugas(E), Kode SLS(F), % Biaya(G), Biaya Produksi(H), Total Pengeluaran(I), Tindak Lanjut(J), Status(K)
+        let csv = 'ID,Kab/Kota,Jenis Data Hilang,Nama Usaha,Nama Petugas,Kode SLS,% Biaya,Biaya Produksi (Rp),Total Pengeluaran (Rp),Tindak Lanjut,Status (1=Belum/2=Proses/3=Selesai)\r\n';
+        data.forEach(row => {
+            csv += [
+                row.id,
+                esc(row.kab_code),
+                esc(row.jenis_data_hilang),
+                esc(row.nama_krt),
+                esc(row.nama_petugas),
+                esc(row.sls_code),
+                row.pct_biaya || 0,
+                row.biaya_produksi || 0,
+                row.total_pengeluaran || 0,
+                esc(row.tindak_lanjut),
+                row.status_data_hilang || 1
+            ].join(',') + '\r\n';
+        });
+        const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `data_hilang_tindaklanjut_${new Date().toISOString().split('T')[0]}.csv`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    };
+
+
+    // Upload hasil tindak lanjut dari CSV
+    window.uploadDataHilangTindakLanjut = async function (event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        if (!supabaseClient) { alert('Supabase tidak terhubung!'); return; }
+
+        // Get current user info for audit
+        let userInfo = {};
+        try { userInfo = JSON.parse(sessionStorage.getItem('data_hilang_user') || '{}'); } catch (e) { }
+        const updatedBy = userInfo.nama || userInfo.username || 'Unknown';
+        const updatedAt = new Date().toISOString();
+        const logEl = document.getElementById('data_hilang-upload-log');
+
+        const reader = new FileReader();
+        reader.onload = async function (e) {
+            try {
+                const text = e.target.result;
+                // Parse CSV: support both comma and semicolon delimiters
+                const rawLines = text.replace(/\r/g, '').split('\n').filter(l => l.trim());
+                if (rawLines.length < 2) { alert('File kosong atau tidak valid.'); return; }
+
+                // Detect delimiter from header row
+                const delimiter = rawLines[0].includes(';') ? ';' : ',';
+
+                // Simple CSV row parser (handles quoted fields)
+                function parseCSVRow(line, delim) {
+                    const parts = [];
+                    let cur = '', inQuote = false;
+                    for (let ci = 0; ci < line.length; ci++) {
+                        const ch = line[ci];
+                        if (ch === '"') {
+                            if (inQuote && line[ci + 1] === '"') { cur += '"'; ci++; }
+                            else inQuote = !inQuote;
+                        } else if (ch === delim && !inQuote) {
+                            parts.push(cur); cur = '';
+                        } else { cur += ch; }
+                    }
+                    parts.push(cur);
+                    return parts;
+                }
+
+                const allParsed = [];
+                const skipped = [];
+
+                for (let i = 1; i < rawLines.length; i++) {
+                    const parts = parseCSVRow(rawLines[i], delimiter);
+                    // New format: ID(0),Kab(1),Jenis(2),Nama(3),Petugas(4),SLS(5),%Biaya(6),BiayaProd(7),TotalPeng(8),TindakLanjut(9),Status(10)
+                    const isNewFormat = parts.length >= 11;
+                    const id = parseInt(parts[0]);
+                    if (isNaN(id)) continue;
+
+                    // Fallback to old format if less than 11 columns
+                    const tindak_lanjut = (isNewFormat ? parts[9] : parts.length >= 9 ? parts[7] : parts[5] || parts[6] || '').replace(/^"|"$/g, '').replace(/""/g, '"').trim();
+                    const status_data_hilang = parseInt(isNewFormat ? parts[10] : parts.length >= 9 ? parts[8] : parts[6]) || 1;
+
+                    // SMART MERGE: skip baris yang tidak diubah
+                    if (!tindak_lanjut && status_data_hilang === 1) {
+                        skipped.push(id);
+                        continue;
+                    }
+
+                    allParsed.push({ id, tindak_lanjut, status_data_hilang });
+                }
+
+                if (allParsed.length === 0) {
+                    alert(`Tidak ada baris yang diisi.\n\nPastikan kolom "Tindak Lanjut" sudah diisi atau status sudah diubah dari 1.\n\n(${skipped.length} baris kosong dilewati otomatis)`);
+                    return;
+                }
+
+                // Konfirmasi sebelum upload
+                const confirmed = confirm(
+                    `📤 Akan mengupload ${allParsed.length} baris yang sudah diisi.\n` +
+                    `⏭️ ${skipped.length} baris kosong akan DILEWATI (tidak mengubah data orang lain).\n\n` +
+                    `Upload sebagai: ${updatedBy}${userInfo.kab_code ? ' (Kab ' + userInfo.kab_code + ')' : ''}\n\n` +
+                    `Lanjutkan?`
+                );
+                if (!confirmed) return;
+
+                let successCount = 0;
+                for (const upd of allParsed) {
+                    const { id, ...fields } = upd;
+                    // Tambahkan audit trail ke setiap baris yang diupdate
+                    const { error } = await supabaseClient.from('data_hilang_data').update({
+                        ...fields,
+                        updated_by: updatedBy,
+                        updated_at: updatedAt
+                    }).eq('id', id);
+                    if (!error) successCount++;
+                }
+
+                // Show audit log
+                if (logEl) {
+                    const timeStr = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+                    logEl.textContent = `✅ Upload berhasil: ${successCount}/${allParsed.length} baris diupdate oleh ${updatedBy}${userInfo.kab_code ? ' · Kab ' + userInfo.kab_code : ''} · ${timeStr}`;
+                    logEl.style.display = 'block';
+                    logEl.style.color = '#16a34a';
+                    logEl.style.background = 'rgba(34,197,94,0.08)';
+                    logEl.style.borderColor = 'rgba(34,197,94,0.25)';
+                }
+
+                alert(`✅ Berhasil: ${successCount} baris diupdate.\n⏭️ ${skipped.length} baris kosong dilewati (aman, tidak menimpa data lain).`);
+                await window.loadDataHilangData();
+            } catch (err) {
+                if (logEl) {
+                    logEl.textContent = `❌ Upload gagal: ${err.message}`;
+                    logEl.style.display = 'block';
+                    logEl.style.color = '#ef4444';
+                    logEl.style.background = 'rgba(239,68,68,0.08)';
+                    logEl.style.borderColor = 'rgba(239,68,68,0.25)';
+                }
+                alert('Gagal memproses file: ' + err.message);
+            }
+        };
+        reader.readAsText(file, 'UTF-8');
+        event.target.value = '';
+    };
+
+    // ========== TABULASI ==========
+    let dataHilangTabulasiOpen = false;
+
+    window.toggleDataHilangTabulasi = function () {
+        dataHilangTabulasiOpen = !dataHilangTabulasiOpen;
+        const sec = document.getElementById('tabulasi-section');
+        const icon = document.getElementById('tabulasi-toggle-icon');
+        if (sec) sec.style.display = dataHilangTabulasiOpen ? 'block' : 'none';
+        if (icon) icon.textContent = dataHilangTabulasiOpen ? '▼' : '▶';
+        if (dataHilangTabulasiOpen && dataHilangDataCache.length > 0) renderDataHilangTabulasi();
+    };
+
+    function renderDataHilangTabulasi() {
+        const container = document.getElementById('tabulasi-container');
+        if (!container || dataHilangDataCache.length === 0) return;
+
+        const data = dataHilangDataCache;
+
+        // Build hierarchical pivot: kab -> kec -> desa -> sls
+        const pivot = {};
+        
+        function getStats() {
+            return { melebihi: 0, sama: 0, sangat: 0, dominan: 0, total: 0, biaya: 0, belum: 0, diproses: 0, selesai: 0 };
+        }
+        function addStats(p, row) {
+            p.total++;
+            p.biaya += row.biaya_produksi || 0;
+            if ((row.jenis_data_hilang || '').includes('Melebihi')) p.melebihi++;
+            else if ((row.jenis_data_hilang || '').includes('Sama')) p.sama++;
+            else if ((row.jenis_data_hilang || '').includes('Sangat')) p.sangat++;
+            else p.dominan++;
+            
+            if (row.status_data_hilang == 3) p.selesai++;
+            else if (row.status_data_hilang == 2) p.diproses++;
+            else p.belum++;
+        }
+
+        const totals = getStats();
+
+        data.forEach(row => {
+            const kab = row.kab_code || 'Lainnya';
+            const kec = row.kec_code || 'Lainnya';
+            const desa = row.desa_code || 'Lainnya';
+            const sls = row.sls_code || 'Lainnya';
+
+            if (!pivot[kab]) pivot[kab] = { stats: getStats(), children: {} };
+            if (!pivot[kab].children[kec]) pivot[kab].children[kec] = { stats: getStats(), children: {} };
+            if (!pivot[kab].children[kec].children[desa]) pivot[kab].children[kec].children[desa] = { stats: getStats(), children: {} };
+            if (!pivot[kab].children[kec].children[desa].children[sls]) pivot[kab].children[kec].children[desa].children[sls] = { stats: getStats() };
+
+            addStats(pivot[kab].stats, row);
+            addStats(pivot[kab].children[kec].stats, row);
+            addStats(pivot[kab].children[kec].children[desa].stats, row);
+            addStats(pivot[kab].children[kec].children[desa].children[sls].stats, row);
+            addStats(totals, row);
+        });
+
+        const thStyle = 'padding: 0.55rem 0.75rem; font-size: 0.75rem; font-weight: 700; text-align: center; white-space: nowrap; letter-spacing: 0.04em; text-transform: uppercase; background: var(--card-bg); color: var(--text-secondary); border-bottom: 2px solid var(--card-border);';
+        const thLeftStyle = thStyle.replace('text-align: center', 'text-align: left');
+        const tdStyle = (align = 'center') => `padding: 0.5rem 0.75rem; font-size: 0.82rem; text-align: ${align}; border-bottom: 1px solid var(--card-border); vertical-align: middle;`;
+        const badge = (n, color, bg) => n > 0 ? `<span style="display:inline-block;padding:0.15rem 0.55rem;background:${bg};color:${color};border-radius:99px;font-weight:700;font-size:0.78rem;">${n}</span>` : `<span style="color:var(--text-secondary);font-size:0.78rem;">-</span>`;
+
+        function renderRow(label, p, paddingLeft, type, parentKab, parentKec, parentDesa) {
+            const pct = p.total > 0 ? Math.round((p.selesai / p.total) * 100) : 0;
+            const pctColor = pct >= 80 ? '#22c55e' : pct >= 40 ? '#f59e0b' : '#ef4444';
+            const barW = pct;
+            
+            let idAttr = '';
+            let classAttr = '';
+            let btn = '';
+            let rowStyle = '';
+            
+            if (type === 'kab') {
+                classAttr = 'row-kab';
+                btn = `<button class="btn-expand" onclick="window.toggleDataHilangTabulasiRow(this, 'kab', '${label}', '', '', '')" style="background:none;border:none;cursor:pointer;font-size:0.7rem;margin-right:0.3rem;">▶</button>`;
+                rowStyle = 'background: rgba(99, 102, 241, 0.05); font-weight: 700;';
+            } else if (type === 'kec') {
+                classAttr = 'row-kec';
+                idAttr = `data-parent-kab="${parentKab}"`;
+                btn = `<button class="btn-expand" onclick="window.toggleDataHilangTabulasiRow(this, 'kec', '${parentKab}', '${label}', '', '')" style="background:none;border:none;cursor:pointer;font-size:0.7rem;margin-right:0.3rem;">▶</button>`;
+                rowStyle = 'display: none; background: rgba(99, 102, 241, 0.02); font-weight: 600;';
+            } else if (type === 'desa') {
+                classAttr = 'row-desa';
+                idAttr = `data-parent-kec="${parentKab}-${parentKec}"`;
+                btn = `<button class="btn-expand" onclick="window.toggleDataHilangTabulasiRow(this, 'desa', '${parentKab}', '${parentKec}', '${label}', '')" style="background:none;border:none;cursor:pointer;font-size:0.7rem;margin-right:0.3rem;">▶</button>`;
+                rowStyle = 'display: none; background: #fff; font-weight: 500;';
+            } else {
+                classAttr = 'row-sls';
+                idAttr = `data-parent-desa="${parentKab}-${parentKec}-${parentDesa}"`;
+                rowStyle = 'display: none; background: #fafafa; font-size: 0.78rem;';
+            }
+
+            return `<tr class="${classAttr}" ${idAttr} style="${rowStyle}" onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background=''">
+                <td style="${tdStyle('left')} padding-left: ${paddingLeft}rem;">
+                    ${btn}${label}
+                </td>
+                <td style="${tdStyle()}">${badge(p.melebihi, '#ef4444', 'rgba(239,68,68,0.1)')}</td>
+                <td style="${tdStyle()}">${badge(p.sama, '#ef4444', 'rgba(239,68,68,0.1)')}</td>
+                <td style="${tdStyle()}">${badge(p.sangat, '#f97316', 'rgba(249,115,22,0.1)')}</td>
+                <td style="${tdStyle()}">${badge(p.dominan, '#f59e0b', 'rgba(245,158,11,0.1)')}</td>
+                <td style="${tdStyle()} font-weight: 700;">${p.total}</td>
+                <td style="${tdStyle('right')} font-size: 0.78rem; color: var(--text-secondary);">${window.fmtRp ? window.fmtRp(p.biaya) : p.biaya}</td>
+                <td style="${tdStyle()}">
+                    ${badge(p.belum, '#ef4444', 'rgba(239,68,68,0.1)')}
+                    ${p.diproses > 0 ? badge(p.diproses, '#f59e0b', 'rgba(245,158,11,0.1)') : ''}
+                    ${p.selesai > 0 ? badge(p.selesai, '#22c55e', 'rgba(34,197,94,0.1)') : ''}
+                </td>
+                <td style="${tdStyle()} min-width: 100px;">
+                    <div style="display:flex;align-items:center;gap:0.4rem;">
+                        <div style="flex:1;height:6px;background:var(--card-border);border-radius:99px;overflow:hidden;">
+                            <div style="height:100%;width:${barW}%;background:${pctColor};border-radius:99px;transition:width 0.5s;"></div>
+                        </div>
+                        <span style="font-size:0.75rem;font-weight:700;color:${pctColor};min-width:32px;">${pct}%</span>
+                    </div>
+                </td>
+            </tr>`;
+        }
+
+        let rows = '';
+        Object.keys(pivot).sort().forEach(kab => {
+            rows += renderRow(kab, pivot[kab].stats, 0.75, 'kab', kab, '', '');
+            Object.keys(pivot[kab].children).sort().forEach(kec => {
+                rows += renderRow(kec, pivot[kab].children[kec].stats, 2, 'kec', kab, kec, '');
+                Object.keys(pivot[kab].children[kec].children).sort().forEach(desa => {
+                    rows += renderRow(desa, pivot[kab].children[kec].children[desa].stats, 3.5, 'desa', kab, kec, desa);
+                    Object.keys(pivot[kab].children[kec].children[desa].children).sort().forEach(sls => {
+                        rows += renderRow(sls, pivot[kab].children[kec].children[desa].children[sls].stats, 5, 'sls', kab, kec, desa);
+                    });
+                });
+            });
+        });
+
+        // Totals row
+        const totalPct = totals.total > 0 ? Math.round((totals.selesai / totals.total) * 100) : 0;
+        const totalPctColor = totalPct >= 80 ? '#22c55e' : totalPct >= 40 ? '#f59e0b' : '#ef4444';
+        const totalsRow = `<tr style="background: rgba(249,115,22,0.04); border-top: 2px solid var(--card-border);">
+            <td style="${tdStyle('left')} font-weight: 800; color: var(--primary);">TOTAL SULAWESI TENGAH</td>
+            <td style="${tdStyle()} font-weight: 700;">${totals.melebihi}</td>
+            <td style="${tdStyle()} font-weight: 700;">${totals.sama}</td>
+            <td style="${tdStyle()} font-weight: 700;">${totals.sangat}</td>
+            <td style="${tdStyle()} font-weight: 700;">${totals.dominan}</td>
+            <td style="${tdStyle()} font-weight: 800; font-size: 0.9rem;">${totals.total}</td>
+            <td style="${tdStyle('right')} font-weight: 700; font-size: 0.78rem;">${window.fmtRp ? window.fmtRp(totals.biaya) : totals.biaya}</td>
+            <td style="${tdStyle()}">
+                ${badge(totals.belum, '#ef4444', 'rgba(239,68,68,0.1)')}
+                ${totals.diproses > 0 ? badge(totals.diproses, '#f59e0b', 'rgba(245,158,11,0.1)') : ''}
+                ${totals.selesai > 0 ? badge(totals.selesai, '#22c55e', 'rgba(34,197,94,0.1)') : ''}
+            </td>
+            <td style="${tdStyle()}">
+                <div style="display:flex;align-items:center;gap:0.4rem;">
+                    <div style="flex:1;height:6px;background:var(--card-border);border-radius:99px;overflow:hidden;">
+                        <div style="height:100%;width:${totalPct}%;background:${totalPctColor};border-radius:99px;"></div>
+                    </div>
+                    <span style="font-size:0.75rem;font-weight:800;color:${totalPctColor};min-width:32px;">${totalPct}%</span>
+                </div>
+            </td>
+        </tr>`;
+
+        container.innerHTML = `
+            <table style="width:100%;border-collapse:collapse;font-family:'Plus Jakarta Sans',sans-serif;min-width:700px;">
+                <thead>
+                    <tr>
+                        <th style="${thLeftStyle} min-width:250px;">Wilayah</th>
+                        <th style="${thStyle} color:#ef4444;">⛔ Melebihi</th>
+                        <th style="${thStyle} color:#ef4444;">⚠️ Sama</th>
+                        <th style="${thStyle} color:#f97316;">🔴 Sangat Dom.</th>
+                        <th style="${thStyle} color:#f59e0b;">🟡 Dominan</th>
+                        <th style="${thStyle}">Total</th>
+                        <th style="${thStyle} text-align:right; min-width:120px;">Total Biaya Prod.</th>
+                        <th style="${thStyle} min-width:150px;">Status TL</th>
+                        <th style="${thStyle} min-width:110px;">% Selesai</th>
+                    </tr>
+                </thead>
+                <tbody>${rows}</tbody>
+                <tfoot>${totalsRow}</tfoot>
+            </table>
+            <div style="margin-top:0.6rem;font-size:0.73rem;color:var(--text-secondary);">
+                * Klik icon ▶ untuk melihat rincian per kecamatan, desa, hingga SLS.
+            </div>`;
+    }
+
+    window.toggleDataHilangTabulasiRow = function(btn, type, id1, id2, id3, id4) {
+        const table = btn.closest('table');
+        const isExpanded = btn.textContent.includes('▼');
+        btn.textContent = isExpanded ? '▶' : '▼';
+        
+        let targetClass = '';
+        let targetAttr = '';
+        let targetValue = '';
+        if (type === 'kab') {
+            targetClass = 'row-kec';
+            targetAttr = 'data-parent-kab';
+            targetValue = id1;
+        } else if (type === 'kec') {
+            targetClass = 'row-desa';
+            targetAttr = 'data-parent-kec';
+            targetValue = id1 + '-' + id2;
+        } else if (type === 'desa') {
+            targetClass = 'row-sls';
+            targetAttr = 'data-parent-desa';
+            targetValue = id1 + '-' + id2 + '-' + id3;
+        }
+        
+        const children = table.querySelectorAll(`tr.${targetClass}[${targetAttr}="${targetValue}"]`);
+        children.forEach(tr => {
+            if (isExpanded) {
+                tr.style.display = 'none';
+                const childBtn = tr.querySelector('.btn-expand');
+                if (childBtn && childBtn.textContent.includes('▼')) {
+                    childBtn.click();
+                }
+            } else {
+                tr.style.display = 'table-row';
+            }
+        });
+    };
+    
+    
+    // --- Custom Data Hilang Logic ---
+    let currentDataHilangTab = 'usaha'; // 'usaha' or 'keluarga'
+    
+    window.switchDataHilangSubTab = function(tab) {
+        currentDataHilangTab = tab;
+        const btnUsaha = document.getElementById('btn-data-hilang-usaha');
+        const btnKeluarga = document.getElementById('btn-data-hilang-keluarga');
+        const mainHeader = document.getElementById('main-header');
+        const mainSubheader = document.getElementById('main-subheader');
+        
+        if(tab === 'usaha') {
+            btnUsaha.style.background = 'var(--primary)';
+            btnUsaha.style.color = 'white';
+            
+            btnKeluarga.style.background = 'transparent';
+            btnKeluarga.style.color = 'var(--text-secondary)';
+            
+            if (mainHeader) mainHeader.textContent = 'Usaha Hilang';
+            if (mainSubheader) mainSubheader.textContent = 'Usahanya tidak ditemukan tapi bisa dilacak keluarganya';
+        } else {
+            btnKeluarga.style.background = 'var(--primary)';
+            btnKeluarga.style.color = 'white';
+            
+            btnUsaha.style.background = 'transparent';
+            btnUsaha.style.color = 'var(--text-secondary)';
+            
+            if (mainHeader) mainHeader.textContent = 'Keluarga Hilang';
+            if (mainSubheader) mainSubheader.textContent = 'Keluarganya hilang atau tidak dapat ditemukan pada dokumen Sensus';
+        }
+        
+        window.loadDataHilangData();
+    };
+    
+    // Override loadDataHilangData
+    window.loadDataHilangData = function() {
+        const loadingEl = document.getElementById('data_hilang-loading');
+        const emptyEl = document.getElementById('data_hilang-empty');
+        if(loadingEl) loadingEl.style.display = 'block';
+        if(emptyEl) emptyEl.style.display = 'none';
+        
+        setTimeout(() => {
+            let data = [];
+            if(currentDataHilangTab === 'usaha') {
+                data = window.dataHilangUsaha || [];
+            } else {
+                data = window.dataHilangKeluarga || [];
+            }
+            
+            dataHilangDataCache = data;
+            // update UI counts
+            document.getElementById('data_hilang-count-total').textContent = data.length.toLocaleString();
+            
+            // clear dropdowns
+            const kabFilter = document.getElementById('data_hilang-filter-kab');
+            if(kabFilter) {
+                let kabs = [...new Set(data.map(d => d.kab))].filter(Boolean).sort();
+                kabFilter.innerHTML = '<option value="">Semua Kab/Kota</option>' + kabs.map(k => `<option value="${k}">${k}</option>`).join('');
+            }
+            
+            if(loadingEl) loadingEl.style.display = 'none';
+            window.renderDataHilangTable(data);
+        }, 100);
+    };
+    
+    // Override filterDataHilangTable
+    window.filterDataHilangTable = function() {
+        const search = (document.getElementById('data_hilang-search')?.value || '').toLowerCase();
+        const kab = document.getElementById('data_hilang-filter-kab')?.value || '';
+        
+        let filtered = dataHilangDataCache.filter(item => {
+            if(kab && item.kab !== kab) return false;
+            if(search) {
+                const text = Object.values(item).join(' ').toLowerCase();
+                if(!text.includes(search)) return false;
+            }
+            return true;
+        });
+        
+        window.renderDataHilangTable(filtered);
+    };
+    
+    // Override renderDataHilangTable
+    window.renderDataHilangTable = function(data) {
+        const tbody = document.getElementById('data_hilang-tbody');
+        const thead = document.getElementById('data_hilang-thead');
+        const empty = document.getElementById('data_hilang-empty');
+        const pagination = document.getElementById('data_hilang-pagination');
+        
+        if(!tbody || !thead) return;
+        
+        if(currentDataHilangTab === 'usaha') {
+            thead.innerHTML = `
+                <tr style="background: var(--table-header); color: var(--text-secondary); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Kab/Kec/Desa/SubSLS</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Nama Usaha</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Nama Pemilik & NIK</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Lokasi Pemilik</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Link Keluarga</th>
+                </tr>
+            `;
+            
+            if(data.length === 0) {
+                tbody.innerHTML = '';
+                if(empty) empty.style.display = 'block';
+                return;
+            }
+            if(empty) empty.style.display = 'none';
+            
+            // Render max 100 for performance if needed, or implement full pagination. 
+            // For simplicity, let's just render top 100 matching.
+            const slice = data.slice(0, 100);
+            
+            tbody.innerHTML = slice.map(item => `
+                <tr style="border-bottom: 1px solid var(--card-border); transition: background 0.2s;">
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--text-primary);">${item.kab} / ${item.kec}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.desa} / ${item.subsls}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top; font-weight: 600;">${item.nama_usaha}</td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--primary);">${item.nama_pemilik}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">NIK: ${item.nik}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">${item.lokasi_pemilik}</td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        ${item.link_keluarga ? `<a href="${item.link_keluarga}" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Buka Link ↗</a>` : '-'}
+                    </td>
+                </tr>
+            `).join('');
+            
+        } else {
+            thead.innerHTML = `
+                <tr style="background: var(--table-header); color: var(--text-secondary); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Wilayah (Kab/Kec/Desa)</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Kode & Nama SLS</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Kepala Keluarga (NIK / No.KK)</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Status</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Link Fasih</th>
+                </tr>
+            `;
+            
+            if(data.length === 0) {
+                tbody.innerHTML = '';
+                if(empty) empty.style.display = 'block';
+                return;
+            }
+            if(empty) empty.style.display = 'none';
+            
+            const slice = data.slice(0, 100);
+            
+            tbody.innerHTML = slice.map(item => `
+                <tr style="border-bottom: 1px solid var(--card-border); transition: background 0.2s;">
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--text-primary);">${item.kab}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.kec} / ${item.desa}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <div style="font-weight: 600;">${item.nama_sls}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.kode_sls}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--primary);">${item.nama_kepala_keluarga}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">NIK: ${item.nik_kk} | KK: ${item.no_kk}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <span style="padding: 0.2rem 0.5rem; background: #fee2e2; color: #991b1b; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${item.status_keluarga}</span>
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: 4px;">${item.status_dokumen}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        ${item.link_fasih ? `<a href="${item.link_fasih}" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Buka Fasih ↗</a>` : '-'}
+                    </td>
+                </tr>
+            `).join('');
+        }
+        
+        if(document.getElementById('data_hilang-showing')) {
+            document.getElementById('data_hilang-showing').textContent = `Menampilkan ${Math.min(data.length, 100)} dari ${data.length}`;
+        }
+    };
+    
+// ========== END DATA HILANG FEATURE ==========
+
     // Initial Execution
     fetchDataAndRender().then(() => {
         // Restore active tab from localStorage, default to 'se_umum'
@@ -10682,3 +11911,51 @@ window.downloadCurrentSeTable = function(surveyType) {
 
     exportToCSV(exportRows, outFilename);
 };
+
+function updateCountdownSE2026() {
+    const countdownDaysEl = document.getElementById('countdown-days');
+    const seUmumCountdownEl = document.getElementById('se-umum-countdown-days');
+    if (!countdownDaysEl && !seUmumCountdownEl) return;
+
+    if (window._se2026CountdownInterval) {
+        clearInterval(window._se2026CountdownInterval);
+    }
+
+    // Target akhir 31 Agustus 2026 23:59:59
+    const endDate = new Date(2026, 7, 31, 23, 59, 59);
+
+    const tick = () => {
+        let now = new Date();
+        let diff = endDate.getTime() - now.getTime();
+
+        if (diff <= 0 || isNaN(diff)) {
+            if (countdownDaysEl) countdownDaysEl.innerHTML = `0 Hari <span style="font-size: 1.1rem; opacity: 0.9; font-variant-numeric: tabular-nums;">00:00:00</span>`;
+            if (seUmumCountdownEl) seUmumCountdownEl.innerHTML = `0 Hari <span style="font-size: 0.9rem; opacity: 0.9;">00:00:00</span>`;
+            if (window._se2026CountdownInterval) clearInterval(window._se2026CountdownInterval);
+            return;
+        }
+
+        let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+        let remainingWorkingDays = 0;
+        let curDate = new Date(today);
+        while (curDate <= endDate) {
+            if (curDate.getDay() !== 0) remainingWorkingDays++;
+            curDate.setDate(curDate.getDate() + 1);
+        }
+
+        let h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        let s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        let hh = h.toString().padStart(2, '0');
+        let mm = m.toString().padStart(2, '0');
+        let ss = s.toString().padStart(2, '0');
+
+        if (countdownDaysEl) countdownDaysEl.innerHTML = `${remainingWorkingDays} Hari <span style="font-size: 1.15rem; opacity: 0.95; font-variant-numeric: tabular-nums; letter-spacing: 1px;">${hh}:${mm}:${ss}</span>`;
+        if (seUmumCountdownEl) seUmumCountdownEl.innerHTML = `${remainingWorkingDays} Hari <span style="font-size: 0.9rem; opacity: 0.9;">${hh}:${mm}:${ss}</span>`;
+    };
+
+    tick();
+    window._se2026CountdownInterval = setInterval(tick, 1000);
+}

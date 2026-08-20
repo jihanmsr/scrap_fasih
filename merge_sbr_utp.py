@@ -3,7 +3,13 @@ import glob
 import os
 from datetime import datetime
 
-csv_files = glob.glob('/Users/jihanmaisaroh/scrap_fasih/utpsbr keluarga/*.csv')
+import sys
+
+target_dir = '/Users/jihanmaisaroh/scrap_fasih/utpsbr keluarga'
+if len(sys.argv) > 1:
+    target_dir = sys.argv[1]
+
+csv_files = glob.glob(f'{target_dir}/*.csv')
 dfs = [pd.read_csv(f) for f in csv_files]
 df_combined = pd.concat(dfs, ignore_index=True)
 
