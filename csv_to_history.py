@@ -48,4 +48,4 @@ def process_csv_files(csv_pattern, date_str):
             ])
     print(f"Generated {csv_file}")
 
-process_csv_files('/Users/jihanmaisaroh/scrap_fasih/progres_20/sqllab_rekap_progress_petugas_20260820T*.csv', '2026-08-20')
+process_csv_files('/Users/jihanmaisaroh/scrap_fasih/progres_21/sqllab_rekap_progress_petugas_20260821T*.csv', '2026-08-21')
