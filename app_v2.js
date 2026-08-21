@@ -9827,7 +9827,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const nameEl = document.getElementById('data_hilang-user-name');
         const kabEl = document.getElementById('data_hilang-user-kab');
-        if (nameEl) nameEl.textContent = user.nama || user.username;
+        let displayName = user.nama || user.name || user.username || 'Pegawai BPS';
+        if (displayName === 'Pegawai BPS' && user.username) {
+            // uppercase first letter
+            displayName = user.username.charAt(0).toUpperCase() + user.username.slice(1);
+        }
+        if (nameEl) nameEl.textContent = displayName;
         if (kabEl) kabEl.textContent = user.kab_code ? `Kode Wilayah: ${user.kab_code}` : '';
 
         window.loadDataHilangData();
@@ -10387,7 +10392,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!supabaseClient) {
                 // LOCAL FALLBACK
                 if (username === 'hespri' || username === 'admin') {
-                    sessionStorage.setItem('data_hilang_user', JSON.stringify({ username: username, nama: 'Pegawai BPS', kab_code: '' }));
+                    sessionStorage.setItem('data_hilang_user', JSON.stringify({ username: username, nama: username.charAt(0).toUpperCase() + username.slice(1), kab_code: '' }));
                     window.showDataHilangDataSection();
                     return;
                 } else {
@@ -10840,7 +10845,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnUsaha.style.color = 'var(--text-secondary)';
             
             if (mainHeader) mainHeader.textContent = 'Keluarga Hilang';
-            if (mainSubheader) mainSubheader.textContent = 'Keluarganya hilang atau tidak dapat ditemukan pada dokumen Sensus';
+            if (mainSubheader) mainSubheader.textContent = 'KK tidak ditemukan dan tidak ada padanannya di mana pun';
         }
         
         window.loadDataHilangData();
