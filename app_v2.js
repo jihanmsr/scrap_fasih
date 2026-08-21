@@ -10910,6 +10910,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Nama Pemilik & NIK</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Lokasi Pemilik</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Link Keluarga</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Link Usaha</th>
                 </tr>
             `;
             
@@ -10938,6 +10939,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td style="padding: 1rem; vertical-align: top;">${item.lokasi_pemilik}</td>
                     <td style="padding: 1rem; vertical-align: top;">
                         ${item.link_keluarga ? `<a href="${item.link_keluarga}" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Buka Link ↗</a>` : '-'}
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        ${item.link_usaha ? `<a href="${item.link_usaha}" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Buka Link ↗</a>` : '-'}
                     </td>
                 </tr>
             `).join('');
