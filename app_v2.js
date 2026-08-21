@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    supabaseClient = null; // FORCE LOCAL ONLY
+    // supabaseClient = null; // FORCE LOCAL ONLY
 
     let companies = [];
     let sourceData = [];
