@@ -174,7 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     let supabaseClient;
-    if (typeof window.supabase !== 'undefined' && window.SUPABASE_URL && window.SUPABASE_KEY) {
+    // Bypassing real supabase due to connection issues, using MySQL mock
+    if (false && typeof window.supabase !== 'undefined' && window.SUPABASE_URL && window.SUPABASE_KEY) {
         supabaseClient = window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_KEY);
         window.supabaseClient = supabaseClient; // expose globally for download functions
         console.log("Initialized real Supabase client.");
