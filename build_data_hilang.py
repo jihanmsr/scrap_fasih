@@ -13,6 +13,12 @@ for file_path in csv_files:
     try:
         df = pd.read_csv(file_path)
         for _, row in df.iterrows():
+            raw_nik = str(row['nik']).split('.')[0] if pd.notna(row['nik']) else ""
+            if len(raw_nik) > 8:
+                masked_nik = raw_nik[:4] + "*" * (len(raw_nik) - 8) + raw_nik[-4:]
+            else:
+                masked_nik = raw_nik
+                
             item = {
                 "kab": str(row['kab']) if pd.notna(row['kab']) else "",
                 "kec": str(row['kec']) if pd.notna(row['kec']) else "",
@@ -20,7 +26,7 @@ for file_path in csv_files:
                 "subsls": str(row['subsls']).split('.')[0] if pd.notna(row['subsls']) else "",
                 "nama_usaha": str(row['nama_usaha']) if pd.notna(row['nama_usaha']) else "",
                 "nama_pemilik": str(row['nama_pemilik']) if pd.notna(row['nama_pemilik']) else "",
-                "nik": str(row['nik']).split('.')[0] if pd.notna(row['nik']) else "",
+                "nik": masked_nik,
                 "lokasi_pemilik": str(row['lokasi_pemilik']) if pd.notna(row['lokasi_pemilik']) else "",
                 "link_keluarga": str(row['link_keluarga_pemilik']) if 'link_keluarga_pemilik' in row and pd.notna(row['link_keluarga_pemilik']) else "",
                 "link_usaha": str(row['link_usaha']) if 'link_usaha' in row and pd.notna(row['link_usaha']) else ""
