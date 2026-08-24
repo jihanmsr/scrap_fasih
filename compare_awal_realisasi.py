@@ -45,11 +45,8 @@ for file in glob.glob('granular_assignments_se_umum_*.json'):
 df_sql = pd.DataFrame(sql_assignments).drop_duplicates()
 df_specific = pd.DataFrame(sql_specific_targets)
 
-# Menghitung weight (bobot) per petugas di suatu SLS untuk mencegah double counting
-if not df_sql.empty:
-    df_sql['weight'] = 1.0 / df_sql.groupby('sls_id')['email'].transform('count')
-else:
-    df_sql['weight'] = 1.0
+# Menghapus logika bobot agar target beban utuh 100% untuk masing-masing petugas
+df_sql['weight'] = 1.0
 
 print("4. Menggabungkan data level SLS...")
 # Merge awal dan real
