@@ -19,6 +19,7 @@ df_real['realisasi'] = df_real['total_utp'].fillna(0) + df_real['total_sbr'].fil
 print("3. Membaca pemetaan SLS ke Petugas dari granular_assignments_se_umum_*.json...")
 sql_assignments = []
 sql_specific_targets = []
+all_emails = set()
 for file in glob.glob('granular_assignments_se_umum_*.json'):
     with open(file) as f:
         d = json.load(f)
@@ -27,6 +28,15 @@ for file in glob.glob('granular_assignments_se_umum_*.json'):
     data = json.loads(gzip.decompress(base64.b64decode(d['compressed_data'])))
     petugas_list = data.get('petugas', [])
     
+    for p in petugas_list:
+        try:
+            email = p[0] if isinstance(p, list) else p
+            email = str(email).lower().strip()
+            if email != '-':
+                all_emails.add(email)
+        except:
+            pass
+            
     for t in data.get('targets', []):
         target_str = str(t[1])
         sls_id = target_str.split(' - ')[0].strip()
@@ -84,6 +94,11 @@ for col in metrics_cols:
     df_petugas_map[col] = df_petugas_map[col] * df_petugas_map['weight']
 
 df_petugas = df_petugas_map.groupby('email').agg({col: 'sum' for col in metrics_cols}).reset_index()
+
+# Tambahkan semua email PPL agar tidak ada yang hilang di dashboard
+if all_emails:
+    all_emails_df = pd.DataFrame([{'email': e} for e in all_emails])
+    df_petugas = pd.merge(all_emails_df, df_petugas, on='email', how='outer').fillna(0)
 
 # Tambahkan tugas spesifik yang bukan 16 digit
 if not df_specific.empty:
