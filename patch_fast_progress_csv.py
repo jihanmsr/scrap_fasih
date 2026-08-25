@@ -4,7 +4,7 @@ import re
 import glob
 
 print("Loading CSV data dari progres_22/sqllab_rekap_progress_petugas_20260822T*.csv...")
-files = glob.glob('/Users/jihanmaisaroh/scrap_fasih/progres_22/sqllab_rekap_progress_petugas_20260822T*.csv')
+files = glob.glob('/Users/jihanmaisaroh/scrap_fasih/update_25/progres petugas/sqllab_rekap_progress_petugas_20260825T*.csv')
 dfs = [pd.read_csv(f, dtype=str) for f in files]
 df = pd.concat(dfs, ignore_index=True)
 
