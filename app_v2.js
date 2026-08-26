@@ -10825,29 +10825,35 @@ document.addEventListener('DOMContentLoaded', () => {
         currentDataHilangTab = tab;
         const btnUsaha = document.getElementById('btn-data-hilang-usaha');
         const btnKeluarga = document.getElementById('btn-data-hilang-keluarga');
+        const btnNonaktif = document.getElementById('btn-data-hilang-nonaktif');
         const mainHeader = document.getElementById('main-header');
         const mainSubheader = document.getElementById('main-subheader');
         
-        if(tab === 'usaha') {
-            btnUsaha.style.background = 'var(--primary)';
-            btnUsaha.style.color = 'white';
-            
-            btnKeluarga.style.background = 'transparent';
-            btnKeluarga.style.color = 'var(--text-secondary)';
-            
-            if (mainHeader) mainHeader.textContent = 'Usaha Hilang';
-            if (mainSubheader) mainSubheader.textContent = 'Usahanya tidak ditemukan tapi bisa dilacak keluarganya';
-        } else {
-            btnKeluarga.style.background = 'var(--primary)';
-            btnKeluarga.style.color = 'white';
-            
-            btnUsaha.style.background = 'transparent';
-            btnUsaha.style.color = 'var(--text-secondary)';
-            
-            if (mainHeader) mainHeader.textContent = 'Keluarga Hilang';
-            if (mainSubheader) mainSubheader.textContent = 'KK tidak ditemukan dan tidak ada padanannya di mana pun';
+        [btnUsaha, btnKeluarga, btnNonaktif].forEach(b => {
+            if(b) {
+                b.style.background = 'transparent';
+                b.style.color = 'var(--text-secondary)';
+            }
+        });
+        
+        const activeBtn = tab === 'usaha' ? btnUsaha : (tab === 'keluarga' ? btnKeluarga : btnNonaktif);
+        if(activeBtn) {
+            activeBtn.style.background = 'var(--primary)';
+            activeBtn.style.color = 'white';
         }
         
+        if(tab === 'usaha') {
+            if (mainHeader) mainHeader.textContent = 'Usaha Hilang';
+            if (mainSubheader) mainSubheader.textContent = 'Usahanya tidak ditemukan tapi bisa dilacak keluarganya';
+        } else if (tab === 'keluarga') {
+            if (mainHeader) mainHeader.textContent = 'Keluarga Hilang';
+            if (mainSubheader) mainSubheader.textContent = 'KK tidak ditemukan dan tidak ada padanannya di mana pun';
+        } else {
+            if (mainHeader) mainHeader.textContent = 'Usaha Nonaktif';
+            if (mainSubheader) mainSubheader.textContent = 'Usaha nonaktif tapi keluarga ditemukan';
+        }
+        
+        window.dataHilangCurrentPage = 1;
         window.loadDataHilangData();
     };
     
@@ -10862,18 +10868,21 @@ document.addEventListener('DOMContentLoaded', () => {
             let data = [];
             if(currentDataHilangTab === 'usaha') {
                 data = window.dataHilangUsaha || [];
-            } else {
+            } else if (currentDataHilangTab === 'keluarga') {
                 data = window.dataHilangKeluarga || [];
+            } else {
+                data = window.dataUsahaNonaktif || [];
             }
             
             dataHilangDataCache = data;
+            window.currentDataHilangFiltered = data;
             // update UI counts
             document.getElementById('data_hilang-count-total').textContent = data.length.toLocaleString();
             
             // clear dropdowns
             const kabFilter = document.getElementById('data_hilang-filter-kab');
             if(kabFilter) {
-                let kabs = [...new Set(data.map(d => d.kab))].filter(Boolean).sort();
+                let kabs = [...new Set(data.map(d => d.kab || d.kabupaten))].filter(Boolean).sort();
                 kabFilter.innerHTML = '<option value="">Semua Kab/Kota</option>' + kabs.map(k => `<option value="${k}">${k}</option>`).join('');
             }
             
@@ -10888,7 +10897,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const kab = document.getElementById('data_hilang-filter-kab')?.value || '';
         
         let filtered = dataHilangDataCache.filter(item => {
-            if(kab && item.kab !== kab) return false;
+            let itemKab = item.kab || item.kabupaten;
+            if(kab && itemKab !== kab) return false;
             if(search) {
                 const text = Object.values(item).join(' ').toLowerCase();
                 if(!text.includes(search)) return false;
@@ -10896,6 +10906,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         });
         
+        window.currentDataHilangFiltered = filtered;
+        
+        if (document.getElementById('data_hilang-count-total')) {
+            document.getElementById('data_hilang-count-total').textContent = filtered.length.toLocaleString();
+        }
+        
+        window.dataHilangCurrentPage = 1;
         window.renderDataHilangTable(filtered);
     };
     
@@ -10927,9 +10944,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if(empty) empty.style.display = 'none';
             
-            // Render max 100 for performance if needed, or implement full pagination. 
-            // For simplicity, let's just render top 100 matching.
-            const slice = data.slice(0, 100);
+            const startIdx = (window.dataHilangCurrentPage - 1) * dataHilangItemsPerPage;
+            const endIdx = Math.min(startIdx + dataHilangItemsPerPage, data.length);
+            const slice = data.slice(startIdx, endIdx);
             
             tbody.innerHTML = slice.map(item => `
                 <tr style="border-bottom: 1px solid var(--card-border); transition: background 0.2s;">
@@ -10952,14 +10969,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 </tr>
             `).join('');
             
-        } else {
+        } else if (currentDataHilangTab === 'keluarga') {
             thead.innerHTML = `
                 <tr style="background: var(--table-header); color: var(--text-secondary); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">
-                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Wilayah (Kab/Kec/Desa)</th>
-                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Kode & Nama SLS</th>
-                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Kepala Keluarga (NIK / No.KK)</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Wilayah</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Kode/SLS</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Keluarga (NIK/KK)</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Status</th>
-                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Link Fasih</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">PPL</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">PML</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Pindah SLS</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Penelusuran</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Link</th>
                 </tr>
             `;
             
@@ -10970,36 +10991,238 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if(empty) empty.style.display = 'none';
             
-            const slice = data.slice(0, 100);
+            const startIdx = (window.dataHilangCurrentPage - 1) * dataHilangItemsPerPage;
+            const endIdx = Math.min(startIdx + dataHilangItemsPerPage, data.length);
+            const slice = data.slice(startIdx, endIdx);
+            
+            const maskStr = (str) => {
+                if (!str || str === '-' || String(str).toLowerCase() === 'nan') return '-';
+                str = String(str);
+                return str.length >= 10 ? str.substring(0, 4) + '*'.repeat(str.length - 8) + str.substring(str.length - 4) : str;
+            };
             
             tbody.innerHTML = slice.map(item => `
                 <tr style="border-bottom: 1px solid var(--card-border); transition: background 0.2s;">
                     <td style="padding: 1rem; vertical-align: top;">
-                        <div style="font-weight: 600; color: var(--text-primary);">${item.kab}</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.kec} / ${item.desa}</div>
+                        <div style="font-weight: 600; color: var(--text-primary); font-size: 0.8rem;">${item.kab || '-'}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.kec || '-'} / ${item.desa || '-'}</div>
                     </td>
                     <td style="padding: 1rem; vertical-align: top;">
-                        <div style="font-weight: 600;">${item.nama_sls}</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.kode_sls}</div>
+                        <div style="font-weight: 600; font-size: 0.8rem;">${item.nama_sls || '-'}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.kode_sls || '-'}</div>
                     </td>
                     <td style="padding: 1rem; vertical-align: top;">
-                        <div style="font-weight: 600; color: var(--primary);">${item.nama_kepala_keluarga}</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">NIK: ${item.nik_kk} | KK: ${item.no_kk}</div>
+                        <div style="font-weight: 600; color: var(--primary); font-size: 0.8rem;">${item.nama_kepala_keluarga || '-'}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">NIK_KK: ${maskStr(item.nik_kk) !== '-' ? maskStr(item.nik_kk) : maskStr(item.no_kk)}</div>
                     </td>
                     <td style="padding: 1rem; vertical-align: top;">
-                        <span style="padding: 0.2rem 0.5rem; background: #fee2e2; color: #991b1b; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${item.status_keluarga}</span>
-                        <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: 4px;">${item.status_dokumen}</div>
+                        <span style="padding: 0.2rem 0.5rem; background: #fee2e2; color: #991b1b; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${item.status_keluarga || '-'}</span>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top; max-width: 150px; overflow: hidden; text-overflow: ellipsis;">
+                        <span style="font-size: 0.75rem; color: var(--text-primary); font-weight: 500;" title="${item.ppl_master || item.Petugas || '-'}">${item.ppl_master || item.Petugas || '-'}</span>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top; max-width: 150px; overflow: hidden; text-overflow: ellipsis;">
+                        <span style="font-size: 0.75rem; color: var(--text-primary); font-weight: 500;" title="${item.pml_master || '-'}">${item.pml_master || '-'}</span>
                     </td>
                     <td style="padding: 1rem; vertical-align: top;">
-                        ${item.link_fasih ? `<a href="${item.link_fasih}" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Buka Fasih ↗</a>` : '-'}
+                        ${item.indikasi_pindah_sls === 'Ya' ? `<span style="padding: 0.2rem 0.5rem; background: #fef3c7; color: #b45309; border-radius: 4px; font-size: 0.7rem; font-weight: 600;">Ya</span>` : `<span style="font-size: 0.75rem; color: var(--text-secondary);">Tidak</span>`}
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top; max-width: 200px;">
+                        ${item.Info_Penulusuran && item.Info_Penulusuran !== 'nan' ? `<div style="font-size: 0.7rem; color: var(--text-secondary); font-style: italic; white-space: normal; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;" title="${item.Info_Penulusuran}">${item.Info_Penulusuran}</div>` : '-'}
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        ${item.link_fasih && item.link_fasih !== 'nan' ? `<a href="${item.link_fasih}" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Buka ↗</a>` : '-'}
+                    </td>
+                </tr>
+            `).join('');
+        } else if (currentDataHilangTab === 'nonaktif') {
+            thead.innerHTML = `
+                <tr style="background: var(--table-header); color: var(--text-secondary); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Wilayah</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Kode/SLS</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Nama Usaha</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Status Usaha</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Keluarga (KRT/KK)</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Status Keluarga</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Link</th>
+                </tr>
+            `;
+            
+            if(data.length === 0) {
+                tbody.innerHTML = '';
+                if(empty) empty.style.display = 'block';
+                return;
+            }
+            if(empty) empty.style.display = 'none';
+            
+            const startIdx = (window.dataHilangCurrentPage - 1) * dataHilangItemsPerPage;
+            const endIdx = Math.min(startIdx + dataHilangItemsPerPage, data.length);
+            const slice = data.slice(startIdx, endIdx);
+            
+            tbody.innerHTML = slice.map(item => `
+                <tr style="border-bottom: 1px solid var(--card-border); transition: background 0.2s;">
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--text-primary); font-size: 0.8rem;">${item.kabupaten || '-'}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.kecamatan || '-'} / ${item.desa_kel || '-'}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <div style="font-weight: 600; font-size: 0.8rem;">${item.sls || '-'}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.kode_sub_sls || '-'}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--primary); font-size: 0.8rem;">${item.nama_usaha || '-'}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <span style="padding: 0.2rem 0.5rem; background: #fee2e2; color: #991b1b; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${item.keberadaan_usaha || '-'}</span>
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: 4px;">${item.status_usaha || '-'}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--primary); font-size: 0.8rem;">KRT: ${item.nama_krt || '-'}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">KK: ${item.nama_kk || '-'}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        <span style="padding: 0.2rem 0.5rem; background: #dcfce7; color: #166534; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${item.keberadaan_keluarga || '-'}</span>
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: 4px;">${item.status_keluarga || '-'}</div>
+                    </td>
+                    <td style="padding: 1rem; vertical-align: top;">
+                        ${item.link_prelist_usaha && item.link_prelist_usaha !== 'nan' ? `<a href="${item.link_prelist_usaha}" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 0.8rem; display: block; margin-bottom: 4px;">Usaha ↗</a>` : ''}
+                        ${item.link_prelist_keluarga && item.link_prelist_keluarga !== 'nan' ? `<a href="${item.link_prelist_keluarga}" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.8rem; display: block;">Keluarga ↗</a>` : ''}
                     </td>
                 </tr>
             `).join('');
         }
         
-        if(document.getElementById('data_hilang-showing')) {
-            document.getElementById('data_hilang-showing').textContent = `Menampilkan ${Math.min(data.length, 100)} dari ${data.length}`;
+        const totalItems = data.length;
+        const maxPage = Math.ceil(totalItems / dataHilangItemsPerPage) || 1;
+        
+        const paginationInfo = document.getElementById('data_hilang-pagination-info');
+        if (paginationInfo) {
+            if (totalItems === 0) {
+                paginationInfo.innerText = `Menampilkan 0 - 0 dari 0 data`;
+            } else {
+                const startIdx = (window.dataHilangCurrentPage - 1) * dataHilangItemsPerPage;
+                const endIdx = Math.min(startIdx + dataHilangItemsPerPage, totalItems);
+                paginationInfo.innerText = `Menampilkan ${startIdx + 1} - ${endIdx} dari ${totalItems.toLocaleString()} data`;
+            }
         }
+        
+        renderDataHilangPaginationButtons(maxPage);
+    };
+
+    function renderDataHilangPaginationButtons(maxPage) {
+        const btnContainer = document.getElementById('data_hilang-pagination-buttons');
+        if (!btnContainer) return;
+        btnContainer.innerHTML = '';
+
+        const btnStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 600; border-radius: 0.5rem; border: 1px solid var(--card-border); background-color: var(--card-bg); color: var(--text); cursor: pointer; transition: all 0.2s;`;
+        const activeStyle = `padding: 0.4rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.5rem; border: 1px solid transparent; background-color: var(--primary); color: white; cursor: default;`;
+
+        if (window.dataHilangCurrentPage > 1) {
+            const prevBtn = document.createElement('button');
+            prevBtn.innerHTML = '&lt;';
+            prevBtn.style.cssText = btnStyle;
+            prevBtn.addEventListener('click', () => {
+                window.dataHilangCurrentPage--;
+                window.filterDataHilangTable();
+            });
+            btnContainer.appendChild(prevBtn);
+        }
+
+        let startPage = Math.max(1, window.dataHilangCurrentPage - 2);
+        let endPage = Math.min(maxPage, window.dataHilangCurrentPage + 2);
+
+        if (startPage > 1) {
+            const page1 = document.createElement('button');
+            page1.textContent = '1';
+            page1.style.cssText = btnStyle;
+            page1.addEventListener('click', () => {
+                window.dataHilangCurrentPage = 1;
+                window.filterDataHilangTable();
+            });
+            btnContainer.appendChild(page1);
+            if (startPage > 2) {
+                const dots = document.createElement('span');
+                dots.textContent = '...';
+                dots.style.padding = '0.4rem';
+                btnContainer.appendChild(dots);
+            }
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            const pageBtn = document.createElement('button');
+            pageBtn.textContent = i;
+            if (i === window.dataHilangCurrentPage) {
+                pageBtn.style.cssText = activeStyle;
+            } else {
+                pageBtn.style.cssText = btnStyle;
+                pageBtn.addEventListener('click', () => {
+                    window.dataHilangCurrentPage = i;
+                    window.filterDataHilangTable();
+                });
+            }
+            btnContainer.appendChild(pageBtn);
+        }
+
+        if (endPage < maxPage) {
+            if (endPage < maxPage - 1) {
+                const dots = document.createElement('span');
+                dots.textContent = '...';
+                dots.style.padding = '0.4rem';
+                btnContainer.appendChild(dots);
+            }
+            const lastPageBtn = document.createElement('button');
+            lastPageBtn.textContent = maxPage;
+            lastPageBtn.style.cssText = btnStyle;
+            lastPageBtn.addEventListener('click', () => {
+                window.dataHilangCurrentPage = maxPage;
+                window.filterDataHilangTable();
+            });
+            btnContainer.appendChild(lastPageBtn);
+        }
+
+        if (window.dataHilangCurrentPage < maxPage) {
+            const nextBtn = document.createElement('button');
+            nextBtn.innerHTML = '&gt;';
+            nextBtn.style.cssText = btnStyle;
+            nextBtn.addEventListener('click', () => {
+                window.dataHilangCurrentPage++;
+                window.filterDataHilangTable();
+            });
+            btnContainer.appendChild(nextBtn);
+        }
+    }
+    
+    window.downloadDataHilangCSV = function() {
+        const data = window.currentDataHilangFiltered || [];
+        if(data.length === 0) return alert('Tidak ada data untuk diunduh.');
+        
+        // Prepare CSV Data
+        let keys = Object.keys(data[0] || {});
+        
+        // Filter out NIK/KK columns completely
+        keys = keys.filter(k => !k.toLowerCase().includes('nik') && !k.toLowerCase().includes('kk'));
+        
+        // Write header
+        let csvContent = "data:text/csv;charset=utf-8," + keys.join(",") + "\\n";
+        
+        // Write rows
+        data.forEach(row => {
+            const rowArray = keys.map(k => {
+                let val = row[k];
+                if (val === null || val === undefined) val = '';
+                val = String(val).replace(/"/g, '""');
+                return \`"\${val}"\`;
+            });
+            csvContent += rowArray.join(",") + "\\n";
+        });
+        
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", \`data_hilang_\${currentDataHilangTab}_\${new Date().getTime()}.csv\`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
     
 // ========== END DATA HILANG FEATURE ==========
