@@ -1,17 +1,17 @@
 window.IPAS_DATA = {
-  "updated_at": "2026-08-25T17:29:41+08:00",
+  "updated_at": "2026-08-26T15:58:06+08:00",
   "se_umum": [
     {
       "kabupaten": "[01] BANGGAI KEPULAUAN",
-      "total_prelist": 58690,
-      "total_draft": 2279,
-      "total_open": 1124,
-      "total_submitted": 55287,
-      "total_rejected": 2527,
-      "total_approved": 41465,
-      "total_submitted_pencacah": 11235,
-      "total_submitted_respondent": 60,
-      "persentase": 94.2,
+      "total_prelist": 58944,
+      "total_draft": 2039,
+      "total_open": 984,
+      "total_submitted": 55921,
+      "total_rejected": 2394,
+      "total_approved": 42166,
+      "total_submitted_pencacah": 11302,
+      "total_submitted_respondent": 59,
+      "persentase": 94.87,
       "new_usaha_overall": 4088,
       "new_rumah_overall": 2259,
       "new_businesses": [],
@@ -47,578 +47,577 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[030] TOTIKUM",
           "kec_name": "[030] TOTIKUM",
-          "total_prelist": 5299,
-          "total_draft": 160,
-          "total_open": 49,
-          "total_submitted": 5090,
-          "total_rejected": 204,
-          "total_approved": 3807,
-          "total_submitted_pencacah": 1078,
+          "total_prelist": 5335,
+          "total_draft": 151,
+          "total_open": 30,
+          "total_submitted": 5154,
+          "total_rejected": 178,
+          "total_approved": 3888,
+          "total_submitted_pencacah": 1087,
           "total_submitted_respondent": 1,
-          "persentase": 96.06,
-          "today_completed": 134,
+          "persentase": 96.61,
+          "today_completed": 64,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 81,
+            "SUBMITTED BY PENCACAH": 9
+          },
+          "yesterday_completed": 134,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 5,
             "REJECTED BY PENGAWAS": 57,
             "SUBMITTED BY PENCACAH": 72
           },
-          "yesterday_completed": 44,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 44,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 22,
             "SUBMITTED BY PENCACAH": 26
           },
-          "two_days_ago_completed": 142,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 104,
-            "SUBMITTED BY PENCACAH": 51
-          },
           "breakdown": {
-            "total": 5299,
-            "APPROVED BY Pengawas": 3807,
-            "SUBMITTED BY Pencacah": 952,
-            "REJECTED BY Pengawas": 196,
-            "DRAFT": 160,
-            "EDITED BY Admin Kabupaten": 126,
-            "OPEN": 49,
-            "REVOKED BY Pengawas": 8,
+            "total": 5335,
+            "APPROVED BY Pengawas": 3888,
+            "SUBMITTED BY Pencacah": 948,
+            "REJECTED BY Pengawas": 171,
+            "DRAFT": 151,
+            "EDITED BY Admin Kabupaten": 139,
+            "OPEN": 30,
+            "REVOKED BY Pengawas": 7,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 2.53,
-          "delta_kemarin_persen": 0.83,
-          "delta_lusa_persen": 2.68,
+          "delta_persen": 1.2,
+          "delta_kemarin_persen": 2.51,
+          "delta_lusa_persen": 0.82,
           "new_usaha_overall": 341,
           "new_rumah_overall": 157
         },
         {
           "kecamatan": "[031] TOTIKUM SELATAN",
           "kec_name": "[031] TOTIKUM SELATAN",
-          "total_prelist": 3950,
-          "total_draft": 276,
-          "total_open": 94,
-          "total_submitted": 3580,
-          "total_rejected": 486,
-          "total_approved": 2448,
-          "total_submitted_pencacah": 646,
-          "total_submitted_respondent": 0,
-          "persentase": 90.63,
-          "today_completed": 79,
+          "total_prelist": 3956,
+          "total_draft": 240,
+          "total_open": 84,
+          "total_submitted": 3632,
+          "total_rejected": 477,
+          "total_approved": 2494,
+          "total_submitted_pencacah": 660,
+          "total_submitted_respondent": 1,
+          "persentase": 91.81,
+          "today_completed": 52,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 46,
+            "SUBMITTED BY PENCACAH": 14,
+            "SUBMITTED RESPONDENT": 1
+          },
+          "yesterday_completed": 79,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 79,
             "REJECTED BY PENGAWAS": 6
           },
-          "yesterday_completed": 29,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 29,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 54
           },
-          "two_days_ago_completed": 65,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 61,
-            "SUBMITTED BY PENCACAH": 22
-          },
           "breakdown": {
-            "total": 3950,
-            "APPROVED BY Pengawas": 2448,
-            "SUBMITTED BY Pencacah": 568,
-            "REJECTED BY Pengawas": 475,
-            "DRAFT": 276,
-            "OPEN": 94,
+            "total": 3956,
+            "APPROVED BY Pengawas": 2494,
+            "SUBMITTED BY Pencacah": 582,
+            "REJECTED BY Pengawas": 466,
+            "DRAFT": 240,
+            "OPEN": 84,
             "EDITED BY Admin Kabupaten": 78,
-            "REVOKED BY Pengawas": 11
+            "REVOKED BY Pengawas": 11,
+            "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 2.0,
-          "delta_kemarin_persen": 0.73,
-          "delta_lusa_persen": 1.65,
+          "delta_persen": 1.31,
+          "delta_kemarin_persen": 2.0,
+          "delta_lusa_persen": 0.73,
           "new_usaha_overall": 200,
           "new_rumah_overall": 113
         },
         {
           "kecamatan": "[040] TINANGKUNG",
           "kec_name": "[040] TINANGKUNG",
-          "total_prelist": 10271,
-          "total_draft": 456,
-          "total_open": 554,
-          "total_submitted": 9261,
+          "total_prelist": 10325,
+          "total_draft": 409,
+          "total_open": 517,
+          "total_submitted": 9399,
           "total_rejected": 344,
-          "total_approved": 6344,
-          "total_submitted_pencacah": 2560,
-          "total_submitted_respondent": 13,
-          "persentase": 90.17,
-          "today_completed": 133,
+          "total_approved": 6422,
+          "total_submitted_pencacah": 2621,
+          "total_submitted_respondent": 12,
+          "persentase": 91.03,
+          "today_completed": 138,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 78,
+            "SUBMITTED BY PENCACAH": 61
+          },
+          "yesterday_completed": 133,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 136,
             "REJECTED BY PENGAWAS": 8
           },
-          "yesterday_completed": 128,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 128,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 81,
             "SUBMITTED BY PENCACAH": 48
           },
-          "two_days_ago_completed": 112,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 96,
-            "SUBMITTED BY PENCACAH": 54
-          },
           "breakdown": {
-            "total": 10271,
-            "APPROVED BY Pengawas": 6344,
-            "SUBMITTED BY Pencacah": 2510,
-            "OPEN": 554,
-            "DRAFT": 456,
-            "REJECTED BY Pengawas": 284,
+            "total": 10325,
+            "APPROVED BY Pengawas": 6422,
+            "SUBMITTED BY Pencacah": 2571,
+            "OPEN": 517,
+            "DRAFT": 409,
+            "REJECTED BY Pengawas": 281,
             "EDITED BY Admin Kabupaten": 50,
             "REVOKED BY Pengawas": 37,
-            "REJECTED BY Admin Kabupaten": 23,
-            "SUBMITTED RESPONDENT": 13
+            "REJECTED BY Admin Kabupaten": 26,
+            "SUBMITTED RESPONDENT": 12
           },
-          "delta_persen": 1.29,
-          "delta_kemarin_persen": 1.25,
-          "delta_lusa_persen": 1.09,
+          "delta_persen": 1.34,
+          "delta_kemarin_persen": 1.29,
+          "delta_lusa_persen": 1.24,
           "new_usaha_overall": 1027,
           "new_rumah_overall": 474
         },
         {
           "kecamatan": "[041] TINANGKUNG SELATAN",
           "kec_name": "[041] TINANGKUNG SELATAN",
-          "total_prelist": 3692,
-          "total_draft": 563,
-          "total_open": 8,
-          "total_submitted": 3121,
-          "total_rejected": 421,
-          "total_approved": 1514,
-          "total_submitted_pencacah": 1185,
-          "total_submitted_respondent": 1,
-          "persentase": 84.53,
-          "today_completed": 46,
+          "total_prelist": 3709,
+          "total_draft": 533,
+          "total_open": 5,
+          "total_submitted": 3171,
+          "total_rejected": 407,
+          "total_approved": 1531,
+          "total_submitted_pencacah": 1233,
+          "total_submitted_respondent": 0,
+          "persentase": 85.49,
+          "today_completed": 50,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 17,
+            "SUBMITTED BY PENCACAH": 48
+          },
+          "yesterday_completed": 46,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 80,
             "REJECTED BY PENGAWAS": 41
           },
-          "yesterday_completed": 41,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 41,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 3,
             "REJECTED BY PENGAWAS": 128
           },
-          "two_days_ago_completed": 34,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 16,
-            "REJECTED BY PENGAWAS": 4,
-            "SUBMITTED BY PENCACAH": 14
-          },
           "breakdown": {
-            "total": 3692,
-            "APPROVED BY Pengawas": 1514,
-            "SUBMITTED BY Pencacah": 1179,
-            "DRAFT": 563,
-            "REJECTED BY Pengawas": 366,
-            "REVOKED BY Pengawas": 55,
-            "OPEN": 8,
+            "total": 3709,
+            "APPROVED BY Pengawas": 1531,
+            "SUBMITTED BY Pencacah": 1227,
+            "DRAFT": 533,
+            "REJECTED BY Pengawas": 353,
+            "REVOKED BY Pengawas": 54,
             "EDITED BY Admin Kabupaten": 6,
-            "SUBMITTED RESPONDENT": 1
+            "OPEN": 5
           },
-          "delta_persen": 1.25,
-          "delta_kemarin_persen": 1.11,
-          "delta_lusa_persen": 0.92,
+          "delta_persen": 1.35,
+          "delta_kemarin_persen": 1.24,
+          "delta_lusa_persen": 1.11,
           "new_usaha_overall": 249,
           "new_rumah_overall": 119
         },
         {
           "kecamatan": "[042] TINANGKUNG UTARA",
           "kec_name": "[042] TINANGKUNG UTARA",
-          "total_prelist": 4186,
-          "total_draft": 92,
-          "total_open": 34,
-          "total_submitted": 4060,
-          "total_rejected": 262,
-          "total_approved": 2508,
-          "total_submitted_pencacah": 1290,
+          "total_prelist": 4213,
+          "total_draft": 58,
+          "total_open": 24,
+          "total_submitted": 4131,
+          "total_rejected": 267,
+          "total_approved": 2536,
+          "total_submitted_pencacah": 1328,
           "total_submitted_respondent": 0,
-          "persentase": 96.99,
-          "today_completed": 127,
+          "persentase": 98.05,
+          "today_completed": 71,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 28,
+            "REJECTED BY PENGAWAS": 5,
+            "SUBMITTED BY PENCACAH": 38
+          },
+          "yesterday_completed": 127,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 126,
             "REJECTED BY PENGAWAS": 15
           },
-          "yesterday_completed": 53,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 53,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 42,
             "SUBMITTED BY PENCACAH": 24
           },
-          "two_days_ago_completed": 66,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 64,
-            "REJECTED BY PENGAWAS": 13
-          },
           "breakdown": {
-            "total": 4186,
-            "APPROVED BY Pengawas": 2508,
-            "SUBMITTED BY Pencacah": 1268,
-            "REJECTED BY Pengawas": 255,
-            "DRAFT": 92,
-            "OPEN": 34,
-            "EDITED BY Admin Kabupaten": 20,
+            "total": 4213,
+            "APPROVED BY Pengawas": 2536,
+            "SUBMITTED BY Pencacah": 1305,
+            "REJECTED BY Pengawas": 260,
+            "DRAFT": 58,
+            "OPEN": 24,
+            "EDITED BY Admin Kabupaten": 21,
             "REVOKED BY Pengawas": 7,
             "COMPLETED BY Admin Kabupaten": 2
           },
-          "delta_persen": 3.03,
-          "delta_kemarin_persen": 1.27,
-          "delta_lusa_persen": 1.58,
+          "delta_persen": 1.69,
+          "delta_kemarin_persen": 3.01,
+          "delta_lusa_persen": 1.26,
           "new_usaha_overall": 221,
           "new_rumah_overall": 101
         },
         {
           "kecamatan": "[050] LIANG",
           "kec_name": "[050] LIANG",
-          "total_prelist": 4609,
-          "total_draft": 1,
+          "total_prelist": 4613,
+          "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 4608,
-          "total_rejected": 229,
-          "total_approved": 3349,
-          "total_submitted_pencacah": 1030,
+          "total_submitted": 4613,
+          "total_rejected": 174,
+          "total_approved": 3400,
+          "total_submitted_pencacah": 1039,
           "total_submitted_respondent": 0,
-          "persentase": 99.98,
-          "today_completed": 57,
+          "persentase": 100.0,
+          "today_completed": 5,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 51,
+            "SUBMITTED BY PENCACAH": 9
+          },
+          "yesterday_completed": 57,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 146
           },
-          "yesterday_completed": 58,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 58,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 99,
             "REJECTED BY PENGAWAS": 15
           },
-          "two_days_ago_completed": 45,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 222
-          },
           "breakdown": {
-            "total": 4609,
-            "APPROVED BY Pengawas": 3349,
-            "SUBMITTED BY Pencacah": 994,
-            "REJECTED BY Pengawas": 225,
+            "total": 4613,
+            "APPROVED BY Pengawas": 3400,
+            "SUBMITTED BY Pencacah": 1003,
+            "REJECTED BY Pengawas": 171,
             "EDITED BY Admin Kabupaten": 36,
-            "REVOKED BY Pengawas": 3,
-            "DRAFT": 1,
+            "REVOKED BY Pengawas": 2,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.24,
-          "delta_kemarin_persen": 1.26,
-          "delta_lusa_persen": 0.98,
+          "delta_persen": 0.11,
+          "delta_kemarin_persen": 1.24,
+          "delta_lusa_persen": 1.26,
           "new_usaha_overall": 318,
           "new_rumah_overall": 225
         },
         {
           "kecamatan": "[051] PELING TENGAH",
           "kec_name": "[051] PELING TENGAH",
-          "total_prelist": 4566,
-          "total_draft": 9,
-          "total_open": 21,
-          "total_submitted": 4536,
-          "total_rejected": 199,
-          "total_approved": 4103,
-          "total_submitted_pencacah": 232,
+          "total_prelist": 4567,
+          "total_draft": 7,
+          "total_open": 18,
+          "total_submitted": 4542,
+          "total_rejected": 193,
+          "total_approved": 4106,
+          "total_submitted_pencacah": 241,
           "total_submitted_respondent": 2,
-          "persentase": 99.34,
-          "today_completed": 35,
+          "persentase": 99.45,
+          "today_completed": 6,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 3,
+            "SUBMITTED BY PENCACAH": 9
+          },
+          "yesterday_completed": 35,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 21,
             "SUBMITTED BY PENCACAH": 17
           },
-          "yesterday_completed": 30,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 30,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 61,
             "REJECTED BY PENGAWAS": 5
           },
-          "two_days_ago_completed": 36,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 182,
-            "REJECTED BY PENGAWAS": 25
-          },
           "breakdown": {
-            "total": 4566,
-            "APPROVED BY Pengawas": 4103,
-            "REJECTED BY Pengawas": 188,
-            "EDITED BY Admin Kabupaten": 118,
-            "SUBMITTED BY Pencacah": 114,
-            "OPEN": 21,
-            "REVOKED BY Pengawas": 11,
-            "DRAFT": 9,
+            "total": 4567,
+            "APPROVED BY Pengawas": 4106,
+            "REJECTED BY Pengawas": 179,
+            "SUBMITTED BY Pencacah": 124,
+            "EDITED BY Admin Kabupaten": 117,
+            "OPEN": 18,
+            "REVOKED BY Pengawas": 14,
+            "DRAFT": 7,
             "SUBMITTED RESPONDENT": 2
           },
-          "delta_persen": 0.77,
-          "delta_kemarin_persen": 0.66,
-          "delta_lusa_persen": 0.79,
+          "delta_persen": 0.13,
+          "delta_kemarin_persen": 0.77,
+          "delta_lusa_persen": 0.66,
           "new_usaha_overall": 237,
           "new_rumah_overall": 229
         },
         {
           "kecamatan": "[060] BULAGI",
           "kec_name": "[060] BULAGI",
-          "total_prelist": 4782,
-          "total_draft": 18,
-          "total_open": 1,
-          "total_submitted": 4763,
-          "total_rejected": 53,
-          "total_approved": 4291,
-          "total_submitted_pencacah": 419,
+          "total_prelist": 4790,
+          "total_draft": 19,
+          "total_open": 0,
+          "total_submitted": 4771,
+          "total_rejected": 30,
+          "total_approved": 4371,
+          "total_submitted_pencacah": 370,
           "total_submitted_respondent": 0,
           "persentase": 99.6,
-          "today_completed": 11,
+          "today_completed": 8,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 80
+          },
+          "yesterday_completed": 11,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 93,
             "REJECTED BY PENGAWAS": 23
           },
-          "yesterday_completed": 4,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 4,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 50
           },
-          "two_days_ago_completed": 51,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 168,
-            "REJECTED BY PENGAWAS": 11
-          },
           "breakdown": {
-            "total": 4782,
-            "APPROVED BY Pengawas": 4291,
-            "SUBMITTED BY Pencacah": 360,
+            "total": 4790,
+            "APPROVED BY Pengawas": 4371,
+            "SUBMITTED BY Pencacah": 311,
             "EDITED BY Admin Kabupaten": 59,
-            "REJECTED BY Pengawas": 46,
-            "DRAFT": 18,
-            "REVOKED BY Pengawas": 7,
-            "OPEN": 1
+            "REJECTED BY Pengawas": 23,
+            "DRAFT": 19,
+            "REVOKED BY Pengawas": 7
           },
-          "delta_persen": 0.23,
-          "delta_kemarin_persen": 0.08,
-          "delta_lusa_persen": 1.07,
+          "delta_persen": 0.17,
+          "delta_kemarin_persen": 0.23,
+          "delta_lusa_persen": 0.08,
           "new_usaha_overall": 288,
           "new_rumah_overall": 314
         },
         {
           "kecamatan": "[061] BULAGI SELATAN",
           "kec_name": "[061] BULAGI SELATAN",
-          "total_prelist": 4544,
-          "total_draft": 234,
-          "total_open": 119,
-          "total_submitted": 4191,
-          "total_rejected": 64,
-          "total_approved": 3720,
-          "total_submitted_pencacah": 407,
+          "total_prelist": 4571,
+          "total_draft": 210,
+          "total_open": 102,
+          "total_submitted": 4259,
+          "total_rejected": 56,
+          "total_approved": 3785,
+          "total_submitted_pencacah": 418,
           "total_submitted_respondent": 0,
-          "persentase": 92.23,
-          "today_completed": 119,
+          "persentase": 93.17,
+          "today_completed": 68,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 65,
+            "SUBMITTED BY PENCACAH": 11
+          },
+          "yesterday_completed": 119,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 74,
             "SUBMITTED BY PENCACAH": 48
           },
-          "yesterday_completed": 49,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 49,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 53
           },
-          "two_days_ago_completed": 55,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 120
-          },
           "breakdown": {
-            "total": 4544,
-            "APPROVED BY Pengawas": 3720,
-            "SUBMITTED BY Pencacah": 303,
-            "DRAFT": 234,
-            "OPEN": 119,
+            "total": 4571,
+            "APPROVED BY Pengawas": 3785,
+            "SUBMITTED BY Pencacah": 314,
+            "DRAFT": 210,
+            "OPEN": 102,
             "EDITED BY Admin Kabupaten": 85,
-            "REJECTED BY Pengawas": 42,
+            "REJECTED BY Pengawas": 33,
+            "REVOKED BY Pengawas": 21,
             "COMPLETED BY Admin Kabupaten": 19,
-            "REVOKED BY Pengawas": 19,
-            "REJECTED BY Admin Kabupaten": 3
+            "REJECTED BY Admin Kabupaten": 2
           },
-          "delta_persen": 2.62,
-          "delta_kemarin_persen": 1.08,
-          "delta_lusa_persen": 1.21,
+          "delta_persen": 1.49,
+          "delta_kemarin_persen": 2.6,
+          "delta_lusa_persen": 1.07,
           "new_usaha_overall": 312,
           "new_rumah_overall": 117
         },
         {
           "kecamatan": "[062] BULAGI UTARA",
           "kec_name": "[062] BULAGI UTARA",
-          "total_prelist": 4061,
-          "total_draft": 104,
-          "total_open": 49,
-          "total_submitted": 3908,
-          "total_rejected": 61,
-          "total_approved": 3405,
+          "total_prelist": 4093,
+          "total_draft": 83,
+          "total_open": 36,
+          "total_submitted": 3974,
+          "total_rejected": 56,
+          "total_approved": 3476,
           "total_submitted_pencacah": 440,
           "total_submitted_respondent": 2,
-          "persentase": 96.23,
-          "today_completed": 45,
+          "persentase": 97.09,
+          "today_completed": 66,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 71
+          },
+          "yesterday_completed": 45,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 58,
             "REJECTED BY PENGAWAS": 3
           },
-          "yesterday_completed": 29,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 29,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 59
           },
-          "two_days_ago_completed": 36,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 43,
-            "REJECTED BY PENGAWAS": 8
-          },
           "breakdown": {
-            "total": 4061,
-            "APPROVED BY Pengawas": 3405,
+            "total": 4093,
+            "APPROVED BY Pengawas": 3476,
             "SUBMITTED BY Pencacah": 315,
             "EDITED BY Admin Kabupaten": 124,
-            "DRAFT": 104,
-            "REJECTED BY Pengawas": 50,
-            "OPEN": 49,
-            "REVOKED BY Pengawas": 11,
+            "DRAFT": 83,
+            "REJECTED BY Pengawas": 49,
+            "OPEN": 36,
+            "REVOKED BY Pengawas": 7,
             "SUBMITTED RESPONDENT": 2,
             "COMPLETED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.11,
-          "delta_kemarin_persen": 0.71,
-          "delta_lusa_persen": 0.89,
+          "delta_persen": 1.61,
+          "delta_kemarin_persen": 1.1,
+          "delta_lusa_persen": 0.71,
           "new_usaha_overall": 217,
           "new_rumah_overall": 105
         },
         {
           "kecamatan": "[070] BUKO",
           "kec_name": "[070] BUKO",
-          "total_prelist": 4665,
-          "total_draft": 299,
-          "total_open": 88,
-          "total_submitted": 4278,
-          "total_rejected": 157,
-          "total_approved": 2644,
-          "total_submitted_pencacah": 1476,
+          "total_prelist": 4679,
+          "total_draft": 274,
+          "total_open": 85,
+          "total_submitted": 4320,
+          "total_rejected": 159,
+          "total_approved": 2763,
+          "total_submitted_pencacah": 1397,
           "total_submitted_respondent": 1,
-          "persentase": 91.7,
-          "today_completed": 90,
+          "persentase": 92.33,
+          "today_completed": 42,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 119,
+            "REJECTED BY PENGAWAS": 2
+          },
+          "yesterday_completed": 90,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 51,
             "SUBMITTED BY PENCACAH": 70
           },
-          "yesterday_completed": 63,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 63,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 53,
             "SUBMITTED BY PENCACAH": 13
           },
-          "two_days_ago_completed": 68,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 62,
-            "SUBMITTED BY PENCACAH": 12,
-            "SUBMITTED RESPONDENT": 1
-          },
           "breakdown": {
-            "total": 4665,
-            "APPROVED BY Pengawas": 2644,
-            "SUBMITTED BY Pencacah": 1455,
-            "DRAFT": 299,
-            "REJECTED BY Pengawas": 150,
-            "OPEN": 88,
+            "total": 4679,
+            "APPROVED BY Pengawas": 2763,
+            "SUBMITTED BY Pencacah": 1376,
+            "DRAFT": 274,
+            "REJECTED BY Pengawas": 153,
+            "OPEN": 85,
             "EDITED BY Admin Kabupaten": 14,
             "COMPLETED BY Admin Kabupaten": 7,
-            "REVOKED BY Pengawas": 6,
+            "REVOKED BY Pengawas": 5,
             "REJECTED BY Admin Kabupaten": 1,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 1.93,
-          "delta_kemarin_persen": 1.35,
-          "delta_lusa_persen": 1.46,
+          "delta_persen": 0.9,
+          "delta_kemarin_persen": 1.92,
+          "delta_lusa_persen": 1.35,
           "new_usaha_overall": 295,
           "new_rumah_overall": 158
         },
         {
           "kecamatan": "[071] BUKO SELATAN",
           "kec_name": "[071] BUKO SELATAN",
-          "total_prelist": 4025,
-          "total_draft": 67,
-          "total_open": 107,
-          "total_submitted": 3851,
-          "total_rejected": 47,
-          "total_approved": 3332,
-          "total_submitted_pencacah": 472,
+          "total_prelist": 4053,
+          "total_draft": 55,
+          "total_open": 83,
+          "total_submitted": 3915,
+          "total_rejected": 53,
+          "total_approved": 3394,
+          "total_submitted_pencacah": 468,
           "total_submitted_respondent": 0,
-          "persentase": 95.68,
-          "today_completed": 140,
+          "persentase": 96.6,
+          "today_completed": 64,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 62,
+            "REJECTED BY PENGAWAS": 6
+          },
+          "yesterday_completed": 140,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 109,
             "SUBMITTED BY PENCACAH": 38
           },
-          "yesterday_completed": 57,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 57,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 60,
             "REJECTED BY PENGAWAS": 16
           },
-          "two_days_ago_completed": 76,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 46,
-            "SUBMITTED BY PENCACAH": 35
-          },
           "breakdown": {
-            "total": 4025,
-            "APPROVED BY Pengawas": 3332,
-            "SUBMITTED BY Pencacah": 374,
-            "OPEN": 107,
-            "DRAFT": 67,
+            "total": 4053,
+            "APPROVED BY Pengawas": 3394,
+            "SUBMITTED BY Pencacah": 370,
+            "OPEN": 83,
             "COMPLETED BY Admin Kabupaten": 59,
+            "DRAFT": 55,
             "EDITED BY Admin Kabupaten": 39,
-            "REJECTED BY Pengawas": 32,
-            "REJECTED BY Admin Kabupaten": 9,
-            "REVOKED BY Pengawas": 6
+            "REJECTED BY Pengawas": 34,
+            "REVOKED BY Pengawas": 10,
+            "REJECTED BY Admin Kabupaten": 9
           },
-          "delta_persen": 3.48,
-          "delta_kemarin_persen": 1.42,
-          "delta_lusa_persen": 1.89,
+          "delta_persen": 1.58,
+          "delta_kemarin_persen": 3.45,
+          "delta_lusa_persen": 1.41,
           "new_usaha_overall": 254,
           "new_rumah_overall": 147
         }
       ],
       "breakdown": {
-        "total": 58690,
-        "APPROVED BY Pengawas": 41465,
-        "SUBMITTED BY Pencacah": 10392,
-        "REJECTED BY Pengawas": 2309,
-        "DRAFT": 2279,
-        "EDITED BY Admin Kabupaten": 755,
-        "OPEN": 1124,
-        "REVOKED BY Pengawas": 181,
-        "SUBMITTED RESPONDENT": 60,
-        "REJECTED BY Admin Kabupaten": 37,
+        "total": 58944,
+        "APPROVED BY Pengawas": 42166,
+        "SUBMITTED BY Pencacah": 10446,
+        "REJECTED BY Pengawas": 2173,
+        "DRAFT": 2039,
+        "EDITED BY Admin Kabupaten": 768,
+        "OPEN": 984,
+        "REVOKED BY Pengawas": 182,
+        "SUBMITTED RESPONDENT": 59,
+        "REJECTED BY Admin Kabupaten": 39,
         "COMPLETED BY Admin Kabupaten": 88
       },
-      "two_days_ago_completed": 785,
+      "two_days_ago_completed": 585,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1184
-      },
-      "yesterday_completed": 585,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 637,
         "REJECTED BY PENGAWAS": 93
+      },
+      "yesterday_completed": 1016,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 978,
+        "REJECTED BY PENGAWAS": 47
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 1016,
+      "today_completed": 634,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 978,
-        "REJECTED BY PENGAWAS": 47
+        "APPROVED BY PENGAWAS": 701,
+        "SUBMITTED BY PENCACAH": 67
       },
-      "delta_persen": 1.73,
-      "delta_kemarin_persen": 1.0,
-      "delta_lusa_persen": 1.34
+      "delta_persen": 1.08,
+      "delta_kemarin_persen": 1.72,
+      "delta_lusa_persen": 0.99
     },
     {
       "kabupaten": "[02] BANGGAI",
-      "total_prelist": 179350,
-      "total_draft": 7248,
-      "total_open": 10638,
-      "total_submitted": 161464,
-      "total_rejected": 11761,
-      "total_approved": 82933,
-      "total_submitted_pencacah": 66763,
-      "total_submitted_respondent": 7,
-      "persentase": 90.03,
+      "total_prelist": 179722,
+      "total_draft": 6880,
+      "total_open": 9577,
+      "total_submitted": 163265,
+      "total_rejected": 11841,
+      "total_approved": 84119,
+      "total_submitted_pencacah": 67297,
+      "total_submitted_respondent": 8,
+      "persentase": 90.84,
       "new_usaha_overall": 7492,
       "new_rumah_overall": 4810,
       "new_businesses": [],
@@ -655,343 +654,339 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[010] TOILI",
           "kec_name": "[010] TOILI",
-          "total_prelist": 10033,
-          "total_draft": 278,
-          "total_open": 774,
-          "total_submitted": 8981,
-          "total_rejected": 379,
-          "total_approved": 6467,
-          "total_submitted_pencacah": 2134,
-          "total_submitted_respondent": 1,
-          "persentase": 89.51,
-          "today_completed": 198,
+          "total_prelist": 10063,
+          "total_draft": 237,
+          "total_open": 719,
+          "total_submitted": 9107,
+          "total_rejected": 361,
+          "total_approved": 6510,
+          "total_submitted_pencacah": 2234,
+          "total_submitted_respondent": 2,
+          "persentase": 90.5,
+          "today_completed": 126,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 43,
+            "SUBMITTED BY PENCACAH": 100,
+            "SUBMITTED RESPONDENT": 1
+          },
+          "yesterday_completed": 198,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 127,
             "SUBMITTED BY PENCACAH": 71
           },
-          "yesterday_completed": 161,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 161,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 130,
             "REJECTED BY PENGAWAS": 24,
             "SUBMITTED BY PENCACAH": 7
           },
-          "two_days_ago_completed": 169,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 171
-          },
           "breakdown": {
-            "total": 10033,
-            "APPROVED BY Pengawas": 6467,
-            "SUBMITTED BY Pencacah": 2076,
-            "OPEN": 774,
-            "REJECTED BY Pengawas": 364,
-            "DRAFT": 278,
+            "total": 10063,
+            "APPROVED BY Pengawas": 6510,
+            "SUBMITTED BY Pencacah": 2176,
+            "OPEN": 719,
+            "REJECTED BY Pengawas": 349,
+            "DRAFT": 237,
             "EDITED BY Admin Kabupaten": 58,
-            "REVOKED BY Pengawas": 15,
-            "SUBMITTED RESPONDENT": 1
+            "REVOKED BY Pengawas": 12,
+            "SUBMITTED RESPONDENT": 2
           },
-          "delta_persen": 1.97,
-          "delta_kemarin_persen": 1.6,
-          "delta_lusa_persen": 1.68,
+          "delta_persen": 1.25,
+          "delta_kemarin_persen": 1.97,
+          "delta_lusa_persen": 1.6,
           "new_usaha_overall": 261,
           "new_rumah_overall": 221
         },
         {
           "kecamatan": "[011] TOILI BARAT",
           "kec_name": "[011] TOILI BARAT",
-          "total_prelist": 10418,
-          "total_draft": 88,
+          "total_prelist": 10426,
+          "total_draft": 69,
           "total_open": 0,
-          "total_submitted": 10330,
-          "total_rejected": 321,
+          "total_submitted": 10357,
+          "total_rejected": 296,
           "total_approved": 6753,
-          "total_submitted_pencacah": 3256,
+          "total_submitted_pencacah": 3308,
           "total_submitted_respondent": 0,
-          "persentase": 99.16,
+          "persentase": 99.34,
           "today_completed": 27,
           "today_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 48,
-            "SUBMITTED BY PENCACAH": 17
+            "SUBMITTED BY PENCACAH": 52
           },
           "yesterday_completed": 27,
           "yesterday_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 48,
+            "SUBMITTED BY PENCACAH": 17
+          },
+          "two_days_ago_completed": 27,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 84,
             "REJECTED BY PENGAWAS": 8
           },
-          "two_days_ago_completed": 28,
-          "two_days_ago_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 39
-          },
           "breakdown": {
-            "total": 10418,
+            "total": 10426,
             "APPROVED BY Pengawas": 6753,
-            "SUBMITTED BY Pencacah": 3207,
-            "REJECTED BY Pengawas": 300,
-            "DRAFT": 88,
+            "SUBMITTED BY Pencacah": 3259,
+            "REJECTED BY Pengawas": 275,
+            "DRAFT": 69,
             "EDITED BY Admin Kabupaten": 49,
             "REVOKED BY Pengawas": 21
           },
           "delta_persen": 0.26,
           "delta_kemarin_persen": 0.26,
-          "delta_lusa_persen": 0.27,
+          "delta_lusa_persen": 0.26,
           "new_usaha_overall": 564,
           "new_rumah_overall": 208
         },
         {
           "kecamatan": "[012] MOILONG",
           "kec_name": "[012] MOILONG",
-          "total_prelist": 8585,
-          "total_draft": 383,
-          "total_open": 626,
-          "total_submitted": 7576,
-          "total_rejected": 125,
-          "total_approved": 5519,
-          "total_submitted_pencacah": 1932,
+          "total_prelist": 8590,
+          "total_draft": 317,
+          "total_open": 578,
+          "total_submitted": 7695,
+          "total_rejected": 126,
+          "total_approved": 5616,
+          "total_submitted_pencacah": 1953,
           "total_submitted_respondent": 0,
-          "persentase": 88.25,
-          "today_completed": 181,
+          "persentase": 89.58,
+          "today_completed": 119,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 97,
+            "REJECTED BY PENGAWAS": 1,
+            "SUBMITTED BY PENCACAH": 21
+          },
+          "yesterday_completed": 181,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 95,
             "SUBMITTED BY PENCACAH": 108
           },
-          "yesterday_completed": 110,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 110,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 99,
             "REJECTED BY PENGAWAS": 13
           },
-          "two_days_ago_completed": 114,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 262
-          },
           "breakdown": {
-            "total": 8585,
-            "APPROVED BY Pengawas": 5519,
-            "SUBMITTED BY Pencacah": 1909,
-            "OPEN": 626,
-            "DRAFT": 383,
-            "REJECTED BY Pengawas": 120,
+            "total": 8590,
+            "APPROVED BY Pengawas": 5616,
+            "SUBMITTED BY Pencacah": 1930,
+            "OPEN": 578,
+            "DRAFT": 317,
+            "REJECTED BY Pengawas": 121,
             "EDITED BY Admin Kabupaten": 23,
             "REVOKED BY Pengawas": 5
           },
-          "delta_persen": 2.11,
-          "delta_kemarin_persen": 1.28,
-          "delta_lusa_persen": 1.33,
+          "delta_persen": 1.39,
+          "delta_kemarin_persen": 2.11,
+          "delta_lusa_persen": 1.28,
           "new_usaha_overall": 261,
           "new_rumah_overall": 196
         },
         {
           "kecamatan": "[013] TOILI JAYA",
           "kec_name": "[013] TOILI JAYA",
-          "total_prelist": 7150,
-          "total_draft": 152,
-          "total_open": 104,
-          "total_submitted": 6894,
-          "total_rejected": 110,
+          "total_prelist": 7160,
+          "total_draft": 147,
+          "total_open": 75,
+          "total_submitted": 6938,
+          "total_rejected": 103,
           "total_approved": 4575,
-          "total_submitted_pencacah": 2209,
+          "total_submitted_pencacah": 2260,
           "total_submitted_respondent": 0,
-          "persentase": 96.42,
-          "today_completed": 47,
+          "persentase": 96.9,
+          "today_completed": 44,
           "today_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 51
+          },
+          "yesterday_completed": 47,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 32,
             "SUBMITTED BY PENCACAH": 18
           },
-          "yesterday_completed": 36,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 36,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 24,
             "SUBMITTED BY PENCACAH": 14
           },
-          "two_days_ago_completed": 41,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 20,
-            "SUBMITTED BY PENCACAH": 21
-          },
           "breakdown": {
-            "total": 7150,
+            "total": 7160,
             "APPROVED BY Pengawas": 4575,
-            "SUBMITTED BY Pencacah": 2119,
-            "DRAFT": 152,
-            "OPEN": 104,
+            "SUBMITTED BY Pencacah": 2170,
+            "DRAFT": 147,
             "EDITED BY Admin Kabupaten": 90,
             "REVOKED BY Pengawas": 90,
-            "REJECTED BY Pengawas": 20
+            "OPEN": 75,
+            "REJECTED BY Pengawas": 13
           },
-          "delta_persen": 0.66,
-          "delta_kemarin_persen": 0.5,
-          "delta_lusa_persen": 0.57,
+          "delta_persen": 0.61,
+          "delta_kemarin_persen": 0.66,
+          "delta_lusa_persen": 0.5,
           "new_usaha_overall": 369,
           "new_rumah_overall": 132
         },
         {
           "kecamatan": "[020] BATUI",
           "kec_name": "[020] BATUI",
-          "total_prelist": 8039,
-          "total_draft": 1007,
-          "total_open": 886,
-          "total_submitted": 6146,
-          "total_rejected": 124,
-          "total_approved": 3715,
-          "total_submitted_pencacah": 2307,
+          "total_prelist": 8064,
+          "total_draft": 982,
+          "total_open": 778,
+          "total_submitted": 6304,
+          "total_rejected": 117,
+          "total_approved": 3892,
+          "total_submitted_pencacah": 2295,
           "total_submitted_respondent": 0,
-          "persentase": 76.45,
-          "today_completed": 318,
+          "persentase": 78.17,
+          "today_completed": 158,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 177
+          },
+          "yesterday_completed": 318,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 273,
             "SUBMITTED BY PENCACAH": 45
           },
-          "yesterday_completed": 94,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 94,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 52,
             "SUBMITTED BY PENCACAH": 48
           },
-          "two_days_ago_completed": 95,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 64,
-            "REJECTED BY PENGAWAS": 3,
-            "SUBMITTED BY PENCACAH": 28
-          },
           "breakdown": {
-            "total": 8039,
-            "APPROVED BY Pengawas": 3715,
-            "SUBMITTED BY Pencacah": 2281,
-            "DRAFT": 1007,
-            "OPEN": 886,
-            "REJECTED BY Pengawas": 108,
+            "total": 8064,
+            "APPROVED BY Pengawas": 3892,
+            "SUBMITTED BY Pencacah": 2269,
+            "DRAFT": 982,
+            "OPEN": 778,
+            "REJECTED BY Pengawas": 102,
             "EDITED BY Admin Kabupaten": 26,
-            "REVOKED BY Pengawas": 16
+            "REVOKED BY Pengawas": 15
           },
-          "delta_persen": 3.96,
-          "delta_kemarin_persen": 1.17,
-          "delta_lusa_persen": 1.18,
+          "delta_persen": 1.96,
+          "delta_kemarin_persen": 3.94,
+          "delta_lusa_persen": 1.17,
           "new_usaha_overall": 319,
           "new_rumah_overall": 120
         },
         {
           "kecamatan": "[021] BATUI SELATAN",
           "kec_name": "[021] BATUI SELATAN",
-          "total_prelist": 6610,
-          "total_draft": 61,
-          "total_open": 476,
-          "total_submitted": 6073,
-          "total_rejected": 277,
-          "total_approved": 2985,
-          "total_submitted_pencacah": 2811,
+          "total_prelist": 6618,
+          "total_draft": 48,
+          "total_open": 450,
+          "total_submitted": 6120,
+          "total_rejected": 274,
+          "total_approved": 3052,
+          "total_submitted_pencacah": 2794,
           "total_submitted_respondent": 0,
-          "persentase": 91.88,
-          "today_completed": 77,
+          "persentase": 92.48,
+          "today_completed": 47,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 67
+          },
+          "yesterday_completed": 77,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 5,
             "SUBMITTED BY PENCACAH": 82
           },
-          "yesterday_completed": 49,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 49,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 29,
             "REJECTED BY PENGAWAS": 16,
             "SUBMITTED BY PENCACAH": 4
           },
-          "two_days_ago_completed": 83,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 31,
-            "REJECTED BY PENGAWAS": 2,
-            "SUBMITTED BY PENCACAH": 50
-          },
           "breakdown": {
-            "total": 6610,
-            "APPROVED BY Pengawas": 2985,
-            "SUBMITTED BY Pencacah": 2794,
-            "OPEN": 476,
-            "REJECTED BY Pengawas": 271,
-            "DRAFT": 61,
+            "total": 6618,
+            "APPROVED BY Pengawas": 3052,
+            "SUBMITTED BY Pencacah": 2777,
+            "OPEN": 450,
+            "REJECTED BY Pengawas": 268,
+            "DRAFT": 48,
             "EDITED BY Admin Kabupaten": 17,
             "REVOKED BY Pengawas": 6
           },
-          "delta_persen": 1.16,
-          "delta_kemarin_persen": 0.74,
-          "delta_lusa_persen": 1.26,
+          "delta_persen": 0.71,
+          "delta_kemarin_persen": 1.16,
+          "delta_lusa_persen": 0.74,
           "new_usaha_overall": 220,
           "new_rumah_overall": 127
         },
         {
           "kecamatan": "[030] BUNTA",
           "kec_name": "[030] BUNTA",
-          "total_prelist": 9369,
-          "total_draft": 1363,
-          "total_open": 488,
-          "total_submitted": 7518,
+          "total_prelist": 9432,
+          "total_draft": 1476,
+          "total_open": 300,
+          "total_submitted": 7656,
           "total_rejected": 1131,
-          "total_approved": 2361,
-          "total_submitted_pencacah": 4026,
+          "total_approved": 2378,
+          "total_submitted_pencacah": 4147,
           "total_submitted_respondent": 0,
-          "persentase": 80.24,
-          "today_completed": 201,
+          "persentase": 81.17,
+          "today_completed": 138,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 17,
+            "SUBMITTED BY PENCACAH": 121
+          },
+          "yesterday_completed": 201,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 201
           },
-          "yesterday_completed": 124,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 124,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 135
           },
-          "two_days_ago_completed": 91,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 73,
-            "REJECTED BY PENGAWAS": 28
-          },
           "breakdown": {
-            "total": 9369,
-            "SUBMITTED BY Pencacah": 4016,
-            "APPROVED BY Pengawas": 2361,
-            "DRAFT": 1363,
-            "REJECTED BY Pengawas": 1130,
-            "OPEN": 488,
-            "EDITED BY Admin Kabupaten": 10,
-            "REVOKED BY Pengawas": 1
+            "total": 9432,
+            "SUBMITTED BY Pencacah": 4137,
+            "APPROVED BY Pengawas": 2378,
+            "DRAFT": 1476,
+            "REJECTED BY Pengawas": 1131,
+            "OPEN": 300,
+            "EDITED BY Admin Kabupaten": 10
           },
-          "delta_persen": 2.15,
-          "delta_kemarin_persen": 1.32,
-          "delta_lusa_persen": 0.97,
+          "delta_persen": 1.46,
+          "delta_kemarin_persen": 2.13,
+          "delta_lusa_persen": 1.31,
           "new_usaha_overall": 406,
           "new_rumah_overall": 172
         },
         {
           "kecamatan": "[031] NUHON",
           "kec_name": "[031] NUHON",
-          "total_prelist": 8125,
-          "total_draft": 263,
-          "total_open": 370,
-          "total_submitted": 7492,
-          "total_rejected": 1136,
+          "total_prelist": 8127,
+          "total_draft": 219,
+          "total_open": 321,
+          "total_submitted": 7587,
+          "total_rejected": 1135,
           "total_approved": 2258,
-          "total_submitted_pencacah": 4098,
+          "total_submitted_pencacah": 4194,
           "total_submitted_respondent": 0,
-          "persentase": 92.21,
-          "today_completed": 141,
+          "persentase": 93.36,
+          "today_completed": 95,
           "today_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 96
+          },
+          "yesterday_completed": 141,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 142
           },
-          "yesterday_completed": 132,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 132,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 10,
             "SUBMITTED BY PENCACAH": 122
           },
-          "two_days_ago_completed": 128,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 5,
-            "REJECTED BY PENGAWAS": 1,
-            "SUBMITTED BY PENCACAH": 122
-          },
           "breakdown": {
-            "total": 8125,
-            "SUBMITTED BY Pencacah": 4089,
+            "total": 8127,
+            "SUBMITTED BY Pencacah": 4185,
             "APPROVED BY Pengawas": 2258,
-            "REJECTED BY Pengawas": 1131,
-            "OPEN": 370,
-            "DRAFT": 263,
+            "REJECTED BY Pengawas": 1130,
+            "OPEN": 321,
+            "DRAFT": 219,
             "EDITED BY Admin Kabupaten": 9,
             "REVOKED BY Pengawas": 5
           },
-          "delta_persen": 1.74,
-          "delta_kemarin_persen": 1.62,
-          "delta_lusa_persen": 1.58,
+          "delta_persen": 1.17,
+          "delta_kemarin_persen": 1.73,
+          "delta_lusa_persen": 1.62,
           "new_usaha_overall": 166,
           "new_rumah_overall": 313
         },
@@ -999,42 +994,41 @@ window.IPAS_DATA = {
           "kecamatan": "[032] SIMPANG RAYA",
           "kec_name": "[032] SIMPANG RAYA",
           "total_prelist": 7334,
-          "total_draft": 53,
+          "total_draft": 51,
           "total_open": 7,
-          "total_submitted": 7274,
-          "total_rejected": 87,
+          "total_submitted": 7276,
+          "total_rejected": 86,
           "total_approved": 3596,
-          "total_submitted_pencacah": 3591,
+          "total_submitted_pencacah": 3594,
           "total_submitted_respondent": 0,
-          "persentase": 99.18,
-          "today_completed": 14,
+          "persentase": 99.21,
+          "today_completed": 2,
           "today_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 3
+          },
+          "yesterday_completed": 14,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 19,
             "REJECTED BY PENGAWAS": 1
           },
-          "yesterday_completed": 52,
-          "yesterday_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 55
-          },
-          "two_days_ago_completed": 78,
+          "two_days_ago_completed": 52,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 42,
-            "SUBMITTED BY PENCACAH": 36
+            "SUBMITTED BY PENCACAH": 55
           },
           "breakdown": {
             "total": 7334,
             "APPROVED BY Pengawas": 3596,
-            "SUBMITTED BY Pencacah": 3551,
-            "REJECTED BY Pengawas": 57,
-            "DRAFT": 53,
+            "SUBMITTED BY Pencacah": 3554,
+            "REJECTED BY Pengawas": 56,
+            "DRAFT": 51,
             "EDITED BY Admin Kabupaten": 40,
             "REVOKED BY Pengawas": 28,
             "OPEN": 7,
             "REJECTED BY Admin Kabupaten": 2
           },
-          "delta_persen": 0.19,
-          "delta_kemarin_persen": 0.71,
-          "delta_lusa_persen": 1.06,
+          "delta_persen": 0.03,
+          "delta_kemarin_persen": 0.19,
+          "delta_lusa_persen": 0.71,
           "new_usaha_overall": 322,
           "new_rumah_overall": 164
         },
@@ -1042,697 +1036,700 @@ window.IPAS_DATA = {
           "kecamatan": "[040] KINTOM",
           "kec_name": "[040] KINTOM",
           "total_prelist": 5304,
-          "total_draft": 113,
-          "total_open": 46,
-          "total_submitted": 5145,
-          "total_rejected": 148,
-          "total_approved": 2503,
-          "total_submitted_pencacah": 2494,
+          "total_draft": 91,
+          "total_open": 40,
+          "total_submitted": 5173,
+          "total_rejected": 141,
+          "total_approved": 2510,
+          "total_submitted_pencacah": 2522,
           "total_submitted_respondent": 0,
-          "persentase": 97.0,
-          "today_completed": 52,
+          "persentase": 97.53,
+          "today_completed": 28,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 7,
+            "SUBMITTED BY PENCACAH": 28
+          },
+          "yesterday_completed": 52,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 22,
             "SUBMITTED BY PENCACAH": 40
           },
-          "yesterday_completed": 68,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 68,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 21,
             "SUBMITTED BY PENCACAH": 52
           },
-          "two_days_ago_completed": 66,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 23,
-            "SUBMITTED BY PENCACAH": 46
-          },
           "breakdown": {
             "total": 5304,
-            "APPROVED BY Pengawas": 2503,
-            "SUBMITTED BY Pencacah": 2450,
-            "REJECTED BY Pengawas": 140,
-            "DRAFT": 113,
-            "OPEN": 46,
+            "APPROVED BY Pengawas": 2510,
+            "SUBMITTED BY Pencacah": 2478,
+            "REJECTED BY Pengawas": 133,
+            "DRAFT": 91,
             "EDITED BY Admin Kabupaten": 43,
+            "OPEN": 40,
             "REVOKED BY Pengawas": 8,
             "COMPLETED BY Admin Kabupaten": 1
           },
-          "delta_persen": 0.98,
-          "delta_kemarin_persen": 1.28,
-          "delta_lusa_persen": 1.24,
+          "delta_persen": 0.53,
+          "delta_kemarin_persen": 0.98,
+          "delta_lusa_persen": 1.28,
           "new_usaha_overall": 215,
           "new_rumah_overall": 178
         },
         {
           "kecamatan": "[050] LUWUK",
           "kec_name": "[050] LUWUK",
-          "total_prelist": 20124,
-          "total_draft": 898,
-          "total_open": 1845,
-          "total_submitted": 17381,
-          "total_rejected": 1331,
-          "total_approved": 6011,
-          "total_submitted_pencacah": 10035,
+          "total_prelist": 20132,
+          "total_draft": 840,
+          "total_open": 1697,
+          "total_submitted": 17595,
+          "total_rejected": 1314,
+          "total_approved": 6123,
+          "total_submitted_pencacah": 10154,
           "total_submitted_respondent": 4,
-          "persentase": 86.37,
-          "today_completed": 292,
+          "persentase": 87.4,
+          "today_completed": 214,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 112,
+            "SUBMITTED BY PENCACAH": 119
+          },
+          "yesterday_completed": 292,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 357
           },
-          "yesterday_completed": 118,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 118,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 300
           },
-          "two_days_ago_completed": 170,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 84,
-            "REJECTED BY PENGAWAS": 29,
-            "SUBMITTED BY PENCACAH": 57
-          },
           "breakdown": {
-            "total": 20124,
-            "SUBMITTED BY Pencacah": 10026,
-            "APPROVED BY Pengawas": 6011,
-            "OPEN": 1845,
-            "REJECTED BY Pengawas": 1299,
-            "DRAFT": 898,
-            "REVOKED BY Pengawas": 32,
+            "total": 20132,
+            "SUBMITTED BY Pencacah": 10145,
+            "APPROVED BY Pengawas": 6123,
+            "OPEN": 1697,
+            "REJECTED BY Pengawas": 1281,
+            "DRAFT": 840,
+            "REVOKED BY Pengawas": 33,
             "EDITED BY Admin Kabupaten": 9,
             "SUBMITTED RESPONDENT": 4
           },
-          "delta_persen": 1.45,
-          "delta_kemarin_persen": 0.59,
-          "delta_lusa_persen": 0.84,
+          "delta_persen": 1.06,
+          "delta_kemarin_persen": 1.45,
+          "delta_lusa_persen": 0.59,
           "new_usaha_overall": 863,
           "new_rumah_overall": 819
         },
         {
           "kecamatan": "[051] LUWUK TIMUR",
           "kec_name": "[051] LUWUK TIMUR",
-          "total_prelist": 5783,
-          "total_draft": 211,
-          "total_open": 128,
-          "total_submitted": 5444,
-          "total_rejected": 322,
-          "total_approved": 2385,
-          "total_submitted_pencacah": 2737,
+          "total_prelist": 5809,
+          "total_draft": 183,
+          "total_open": 103,
+          "total_submitted": 5523,
+          "total_rejected": 316,
+          "total_approved": 2434,
+          "total_submitted_pencacah": 2773,
           "total_submitted_respondent": 0,
-          "persentase": 94.14,
-          "today_completed": 28,
+          "persentase": 95.08,
+          "today_completed": 79,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 49,
+            "SUBMITTED BY PENCACAH": 36
+          },
+          "yesterday_completed": 28,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 45,
             "REJECTED BY PENGAWAS": 13
           },
-          "yesterday_completed": 84,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 84,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 90
           },
-          "two_days_ago_completed": 49,
-          "two_days_ago_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 74,
-            "SUBMITTED BY PENCACAH": 36
-          },
           "breakdown": {
-            "total": 5783,
-            "SUBMITTED BY Pencacah": 2729,
-            "APPROVED BY Pengawas": 2385,
-            "REJECTED BY Pengawas": 318,
-            "DRAFT": 211,
-            "OPEN": 128,
+            "total": 5809,
+            "SUBMITTED BY Pencacah": 2765,
+            "APPROVED BY Pengawas": 2434,
+            "REJECTED BY Pengawas": 312,
+            "DRAFT": 183,
+            "OPEN": 103,
             "EDITED BY Admin Kabupaten": 8,
             "REVOKED BY Pengawas": 4
           },
-          "delta_persen": 0.48,
-          "delta_kemarin_persen": 1.45,
-          "delta_lusa_persen": 0.85,
+          "delta_persen": 1.36,
+          "delta_kemarin_persen": 0.48,
+          "delta_lusa_persen": 1.45,
           "new_usaha_overall": 260,
           "new_rumah_overall": 155
         },
         {
           "kecamatan": "[052] LUWUK UTARA",
           "kec_name": "[052] LUWUK UTARA",
-          "total_prelist": 10473,
-          "total_draft": 331,
-          "total_open": 857,
-          "total_submitted": 9285,
-          "total_rejected": 499,
-          "total_approved": 3887,
-          "total_submitted_pencacah": 4899,
+          "total_prelist": 10484,
+          "total_draft": 309,
+          "total_open": 764,
+          "total_submitted": 9411,
+          "total_rejected": 501,
+          "total_approved": 3932,
+          "total_submitted_pencacah": 4978,
           "total_submitted_respondent": 0,
-          "persentase": 88.66,
-          "today_completed": 149,
+          "persentase": 89.77,
+          "today_completed": 126,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 45,
+            "REJECTED BY PENGAWAS": 2,
+            "SUBMITTED BY PENCACAH": 79
+          },
+          "yesterday_completed": 149,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 78,
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 70
           },
-          "yesterday_completed": 145,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 145,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 88,
             "REJECTED BY PENGAWAS": 23,
             "SUBMITTED BY PENCACAH": 34
           },
-          "two_days_ago_completed": 129,
-          "two_days_ago_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 134
-          },
           "breakdown": {
-            "total": 10473,
-            "SUBMITTED BY Pencacah": 4895,
-            "APPROVED BY Pengawas": 3887,
-            "OPEN": 857,
-            "REJECTED BY Pengawas": 496,
-            "DRAFT": 331,
+            "total": 10484,
+            "SUBMITTED BY Pencacah": 4974,
+            "APPROVED BY Pengawas": 3932,
+            "OPEN": 764,
+            "REJECTED BY Pengawas": 498,
+            "DRAFT": 309,
             "EDITED BY Admin Kabupaten": 3,
             "REVOKED BY Pengawas": 3,
             "COMPLETED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.42,
-          "delta_kemarin_persen": 1.38,
-          "delta_lusa_persen": 1.23,
+          "delta_persen": 1.2,
+          "delta_kemarin_persen": 1.42,
+          "delta_lusa_persen": 1.38,
           "new_usaha_overall": 543,
           "new_rumah_overall": 292
         },
         {
           "kecamatan": "[053] LUWUK SELATAN",
           "kec_name": "[053] LUWUK SELATAN",
-          "total_prelist": 15743,
-          "total_draft": 1007,
-          "total_open": 2038,
-          "total_submitted": 12698,
-          "total_rejected": 562,
-          "total_approved": 7044,
-          "total_submitted_pencacah": 5090,
+          "total_prelist": 15760,
+          "total_draft": 962,
+          "total_open": 1986,
+          "total_submitted": 12812,
+          "total_rejected": 571,
+          "total_approved": 7256,
+          "total_submitted_pencacah": 4983,
           "total_submitted_respondent": 2,
-          "persentase": 80.66,
-          "today_completed": 209,
+          "persentase": 81.29,
+          "today_completed": 114,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 212,
+            "REJECTED BY PENGAWAS": 9
+          },
+          "yesterday_completed": 209,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 392,
             "REJECTED BY PENGAWAS": 9
           },
-          "yesterday_completed": 176,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 176,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 222
           },
-          "two_days_ago_completed": 159,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 1,
-            "SUBMITTED BY PENCACAH": 162
-          },
           "breakdown": {
-            "total": 15743,
-            "APPROVED BY Pengawas": 7044,
-            "SUBMITTED BY Pencacah": 5042,
-            "OPEN": 2038,
-            "DRAFT": 1007,
-            "REJECTED BY Pengawas": 548,
+            "total": 15760,
+            "APPROVED BY Pengawas": 7256,
+            "SUBMITTED BY Pencacah": 4935,
+            "OPEN": 1986,
+            "DRAFT": 962,
+            "REJECTED BY Pengawas": 555,
             "EDITED BY Admin Kabupaten": 43,
-            "REVOKED BY Pengawas": 13,
+            "REVOKED BY Pengawas": 15,
             "COMPLETED BY Admin Kabupaten": 5,
             "SUBMITTED RESPONDENT": 2,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.33,
-          "delta_kemarin_persen": 1.12,
-          "delta_lusa_persen": 1.01,
+          "delta_persen": 0.72,
+          "delta_kemarin_persen": 1.33,
+          "delta_lusa_persen": 1.12,
           "new_usaha_overall": 667,
           "new_rumah_overall": 656
         },
         {
           "kecamatan": "[054] NAMBO",
           "kec_name": "[054] NAMBO",
-          "total_prelist": 5377,
+          "total_prelist": 5381,
           "total_draft": 9,
-          "total_open": 5,
-          "total_submitted": 5363,
-          "total_rejected": 401,
-          "total_approved": 1232,
-          "total_submitted_pencacah": 3730,
+          "total_open": 2,
+          "total_submitted": 5370,
+          "total_rejected": 387,
+          "total_approved": 1244,
+          "total_submitted_pencacah": 3739,
           "total_submitted_respondent": 0,
-          "persentase": 99.74,
-          "today_completed": 4,
+          "persentase": 99.8,
+          "today_completed": 7,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 12,
+            "SUBMITTED BY PENCACAH": 9
+          },
+          "yesterday_completed": 4,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 12,
             "REJECTED BY PENGAWAS": 8
           },
-          "yesterday_completed": 8,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 8,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 56
           },
-          "two_days_ago_completed": 3,
-          "two_days_ago_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 112
-          },
           "breakdown": {
-            "total": 5377,
-            "SUBMITTED BY Pencacah": 3684,
-            "APPROVED BY Pengawas": 1232,
-            "REJECTED BY Pengawas": 396,
+            "total": 5381,
+            "SUBMITTED BY Pencacah": 3693,
+            "APPROVED BY Pengawas": 1244,
+            "REJECTED BY Pengawas": 381,
             "EDITED BY Admin Kabupaten": 45,
             "DRAFT": 9,
-            "OPEN": 5,
             "REVOKED BY Pengawas": 5,
-            "COMPLETED BY Admin Kabupaten": 1
+            "OPEN": 2,
+            "COMPLETED BY Admin Kabupaten": 1,
+            "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 0.07,
-          "delta_kemarin_persen": 0.15,
-          "delta_lusa_persen": 0.06,
+          "delta_persen": 0.13,
+          "delta_kemarin_persen": 0.07,
+          "delta_lusa_persen": 0.15,
           "new_usaha_overall": 188,
           "new_rumah_overall": 66
         },
         {
           "kecamatan": "[060] PAGIMANA",
           "kec_name": "[060] PAGIMANA",
-          "total_prelist": 10650,
-          "total_draft": 413,
-          "total_open": 1703,
-          "total_submitted": 8534,
-          "total_rejected": 502,
-          "total_approved": 3664,
-          "total_submitted_pencacah": 4368,
+          "total_prelist": 10708,
+          "total_draft": 478,
+          "total_open": 1514,
+          "total_submitted": 8716,
+          "total_rejected": 501,
+          "total_approved": 3735,
+          "total_submitted_pencacah": 4480,
           "total_submitted_respondent": 0,
-          "persentase": 80.13,
-          "today_completed": 226,
+          "persentase": 81.4,
+          "today_completed": 182,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 71,
+            "SUBMITTED BY PENCACAH": 112
+          },
+          "yesterday_completed": 226,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 25,
             "SUBMITTED BY PENCACAH": 224
           },
-          "yesterday_completed": 189,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 189,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 44,
             "REJECTED BY PENGAWAS": 22,
             "SUBMITTED BY PENCACAH": 123
           },
-          "two_days_ago_completed": 155,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 52,
-            "REJECTED BY PENGAWAS": 44,
-            "SUBMITTED BY PENCACAH": 59
-          },
           "breakdown": {
-            "total": 10650,
-            "SUBMITTED BY Pencacah": 4340,
-            "APPROVED BY Pengawas": 3664,
-            "OPEN": 1703,
-            "REJECTED BY Pengawas": 475,
-            "DRAFT": 413,
-            "REVOKED BY Pengawas": 27,
+            "total": 10708,
+            "SUBMITTED BY Pencacah": 4452,
+            "APPROVED BY Pengawas": 3735,
+            "OPEN": 1514,
+            "DRAFT": 478,
+            "REJECTED BY Pengawas": 473,
+            "REVOKED BY Pengawas": 28,
             "EDITED BY Admin Kabupaten": 20,
             "COMPLETED BY Admin Kabupaten": 8
           },
-          "delta_persen": 2.12,
-          "delta_kemarin_persen": 1.77,
-          "delta_lusa_persen": 1.46,
+          "delta_persen": 1.7,
+          "delta_kemarin_persen": 2.11,
+          "delta_lusa_persen": 1.77,
           "new_usaha_overall": 363,
           "new_rumah_overall": 143
         },
         {
           "kecamatan": "[061] BUALEMO",
           "kec_name": "[061] BUALEMO",
-          "total_prelist": 8363,
-          "total_draft": 42,
+          "total_prelist": 8381,
+          "total_draft": 20,
           "total_open": 0,
-          "total_submitted": 8321,
-          "total_rejected": 236,
-          "total_approved": 7229,
-          "total_submitted_pencacah": 856,
+          "total_submitted": 8361,
+          "total_rejected": 227,
+          "total_approved": 7288,
+          "total_submitted_pencacah": 846,
           "total_submitted_respondent": 0,
-          "persentase": 99.5,
-          "today_completed": 53,
+          "persentase": 99.76,
+          "today_completed": 40,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 59
+          },
+          "yesterday_completed": 53,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 154
           },
-          "yesterday_completed": 35,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 35,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 11,
             "SUBMITTED BY PENCACAH": 29
           },
-          "two_days_ago_completed": 72,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 204
-          },
           "breakdown": {
-            "total": 8363,
-            "APPROVED BY Pengawas": 7229,
-            "SUBMITTED BY Pencacah": 849,
-            "REJECTED BY Pengawas": 225,
-            "DRAFT": 42,
-            "REVOKED BY Pengawas": 11,
+            "total": 8381,
+            "APPROVED BY Pengawas": 7288,
+            "SUBMITTED BY Pencacah": 839,
+            "REJECTED BY Pengawas": 215,
+            "DRAFT": 20,
+            "REVOKED BY Pengawas": 12,
             "EDITED BY Admin Kabupaten": 7
           },
-          "delta_persen": 0.63,
-          "delta_kemarin_persen": 0.42,
-          "delta_lusa_persen": 0.86,
+          "delta_persen": 0.48,
+          "delta_kemarin_persen": 0.63,
+          "delta_lusa_persen": 0.42,
           "new_usaha_overall": 428,
           "new_rumah_overall": 282
         },
         {
           "kecamatan": "[062] LOBU",
           "kec_name": "[062] LOBU",
-          "total_prelist": 1724,
-          "total_draft": 28,
-          "total_open": 138,
-          "total_submitted": 1558,
-          "total_rejected": 99,
-          "total_approved": 629,
-          "total_submitted_pencacah": 830,
+          "total_prelist": 1727,
+          "total_draft": 24,
+          "total_open": 128,
+          "total_submitted": 1575,
+          "total_rejected": 91,
+          "total_approved": 643,
+          "total_submitted_pencacah": 841,
           "total_submitted_respondent": 0,
-          "persentase": 90.37,
-          "today_completed": 41,
+          "persentase": 91.2,
+          "today_completed": 17,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 14,
+            "SUBMITTED BY PENCACAH": 11
+          },
+          "yesterday_completed": 41,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 16,
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 23
           },
-          "yesterday_completed": 2,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 2,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 24,
             "REJECTED BY PENGAWAS": 13
           },
-          "two_days_ago_completed": 14,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 12,
-            "SUBMITTED BY PENCACAH": 3
-          },
           "breakdown": {
-            "total": 1724,
-            "SUBMITTED BY Pencacah": 817,
-            "APPROVED BY Pengawas": 629,
-            "OPEN": 138,
-            "REJECTED BY Pengawas": 95,
-            "DRAFT": 28,
+            "total": 1727,
+            "SUBMITTED BY Pencacah": 828,
+            "APPROVED BY Pengawas": 643,
+            "OPEN": 128,
+            "REJECTED BY Pengawas": 87,
+            "DRAFT": 24,
             "EDITED BY Admin Kabupaten": 13,
             "REVOKED BY Pengawas": 4
           },
-          "delta_persen": 2.38,
-          "delta_kemarin_persen": 0.12,
-          "delta_lusa_persen": 0.81,
+          "delta_persen": 0.98,
+          "delta_kemarin_persen": 2.37,
+          "delta_lusa_persen": 0.12,
           "new_usaha_overall": 45,
           "new_rumah_overall": 15
         },
         {
           "kecamatan": "[070] LAMALA",
           "kec_name": "[070] LAMALA",
-          "total_prelist": 2938,
+          "total_prelist": 2975,
           "total_draft": 7,
-          "total_open": 30,
-          "total_submitted": 2901,
-          "total_rejected": 29,
-          "total_approved": 2067,
-          "total_submitted_pencacah": 805,
+          "total_open": 28,
+          "total_submitted": 2940,
+          "total_rejected": 28,
+          "total_approved": 2120,
+          "total_submitted_pencacah": 792,
           "total_submitted_respondent": 0,
-          "persentase": 98.74,
-          "today_completed": 51,
+          "persentase": 98.82,
+          "today_completed": 39,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 53
+          },
+          "yesterday_completed": 51,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 28,
             "SUBMITTED BY PENCACAH": 28
           },
-          "yesterday_completed": 29,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 29,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 32
           },
-          "two_days_ago_completed": 39,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 54,
-            "REJECTED BY PENGAWAS": 12
-          },
           "breakdown": {
-            "total": 2938,
-            "APPROVED BY Pengawas": 2067,
-            "SUBMITTED BY Pencacah": 774,
+            "total": 2975,
+            "APPROVED BY Pengawas": 2120,
+            "SUBMITTED BY Pencacah": 761,
             "EDITED BY Admin Kabupaten": 31,
-            "OPEN": 30,
-            "REJECTED BY Pengawas": 24,
+            "OPEN": 28,
+            "REJECTED BY Pengawas": 23,
             "DRAFT": 7,
             "REVOKED BY Pengawas": 5
           },
-          "delta_persen": 1.74,
-          "delta_kemarin_persen": 0.99,
-          "delta_lusa_persen": 1.33,
+          "delta_persen": 1.31,
+          "delta_kemarin_persen": 1.71,
+          "delta_lusa_persen": 0.97,
           "new_usaha_overall": 133,
           "new_rumah_overall": 67
         },
         {
           "kecamatan": "[071] MASAMA",
           "kec_name": "[071] MASAMA",
-          "total_prelist": 5936,
-          "total_draft": 502,
-          "total_open": 91,
-          "total_submitted": 5343,
-          "total_rejected": 1148,
-          "total_approved": 3091,
-          "total_submitted_pencacah": 1104,
+          "total_prelist": 5956,
+          "total_draft": 390,
+          "total_open": 72,
+          "total_submitted": 5494,
+          "total_rejected": 1330,
+          "total_approved": 3199,
+          "total_submitted_pencacah": 965,
           "total_submitted_respondent": 0,
-          "persentase": 90.01,
-          "today_completed": 201,
+          "persentase": 92.24,
+          "today_completed": 151,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 108,
+            "REJECTED BY PENGAWAS": 182
+          },
+          "yesterday_completed": 201,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 283,
             "REJECTED BY PENGAWAS": 85
           },
-          "yesterday_completed": 133,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 133,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 6,
             "REJECTED BY PENGAWAS": 75,
             "SUBMITTED BY PENCACAH": 52
           },
-          "two_days_ago_completed": 214,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 64,
-            "REJECTED BY PENGAWAS": 29,
-            "SUBMITTED BY PENCACAH": 121
-          },
           "breakdown": {
-            "total": 5936,
-            "APPROVED BY Pengawas": 3091,
-            "REJECTED BY Pengawas": 1143,
-            "SUBMITTED BY Pencacah": 1087,
-            "DRAFT": 502,
-            "OPEN": 91,
+            "total": 5956,
+            "APPROVED BY Pengawas": 3199,
+            "REJECTED BY Pengawas": 1325,
+            "SUBMITTED BY Pencacah": 948,
+            "DRAFT": 390,
+            "OPEN": 72,
             "EDITED BY Admin Kabupaten": 17,
             "REVOKED BY Pengawas": 5
           },
-          "delta_persen": 3.39,
-          "delta_kemarin_persen": 2.24,
-          "delta_lusa_persen": 3.61,
+          "delta_persen": 2.54,
+          "delta_kemarin_persen": 3.37,
+          "delta_lusa_persen": 2.23,
           "new_usaha_overall": 210,
           "new_rumah_overall": 117
         },
         {
           "kecamatan": "[072] MANTOH",
           "kec_name": "[072] MANTOH",
-          "total_prelist": 3221,
+          "total_prelist": 3233,
           "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 3221,
-          "total_rejected": 788,
-          "total_approved": 823,
-          "total_submitted_pencacah": 1610,
+          "total_submitted": 3233,
+          "total_rejected": 839,
+          "total_approved": 850,
+          "total_submitted_pencacah": 1544,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
-          "today_completed": 8,
+          "today_completed": 12,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 27,
+            "REJECTED BY PENGAWAS": 51
+          },
+          "yesterday_completed": 8,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 6,
             "SUBMITTED BY PENCACAH": 25
           },
-          "yesterday_completed": 10,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 10,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 50,
             "REJECTED BY PENGAWAS": 92
           },
-          "two_days_ago_completed": 1,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 25
-          },
           "breakdown": {
-            "total": 3221,
-            "SUBMITTED BY Pencacah": 1605,
-            "APPROVED BY Pengawas": 823,
-            "REJECTED BY Pengawas": 784,
+            "total": 3233,
+            "SUBMITTED BY Pencacah": 1539,
+            "APPROVED BY Pengawas": 850,
+            "REJECTED BY Pengawas": 836,
             "EDITED BY Admin Kabupaten": 4,
-            "REVOKED BY Pengawas": 4,
+            "REVOKED BY Pengawas": 3,
             "EDITED BY Pengawas": 1
           },
-          "delta_persen": 0.25,
-          "delta_kemarin_persen": 0.31,
-          "delta_lusa_persen": 0.03,
+          "delta_persen": 0.37,
+          "delta_kemarin_persen": 0.25,
+          "delta_lusa_persen": 0.31,
           "new_usaha_overall": 233,
           "new_rumah_overall": 88
         },
         {
           "kecamatan": "[080] BALANTAK",
           "kec_name": "[080] BALANTAK",
-          "total_prelist": 3337,
+          "total_prelist": 3338,
           "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 3337,
-          "total_rejected": 630,
-          "total_approved": 2444,
-          "total_submitted_pencacah": 263,
+          "total_submitted": 3338,
+          "total_rejected": 579,
+          "total_approved": 2447,
+          "total_submitted_pencacah": 312,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
           "today_completed": 1,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 3,
+            "SUBMITTED BY PENCACAH": 49
+          },
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 307
           },
-          "yesterday_completed": 4,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 4,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 53
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 10,
-            "SUBMITTED BY PENCACAH": 50
-          },
           "breakdown": {
-            "total": 3337,
-            "APPROVED BY Pengawas": 2444,
-            "REJECTED BY Pengawas": 603,
-            "SUBMITTED BY Pencacah": 245,
+            "total": 3338,
+            "APPROVED BY Pengawas": 2447,
+            "REJECTED BY Pengawas": 552,
+            "SUBMITTED BY Pencacah": 294,
             "REVOKED BY Pengawas": 27,
             "EDITED BY Admin Kabupaten": 17,
             "COMPLETED BY Admin Kabupaten": 1
           },
           "delta_persen": 0.03,
-          "delta_kemarin_persen": 0.12,
-          "delta_lusa_persen": 0.0,
+          "delta_kemarin_persen": 0.03,
+          "delta_lusa_persen": 0.12,
           "new_usaha_overall": 215,
           "new_rumah_overall": 92
         },
         {
           "kecamatan": "[081] BALANTAK SELATAN",
           "kec_name": "[081] BALANTAK SELATAN",
-          "total_prelist": 2466,
-          "total_draft": 37,
-          "total_open": 20,
-          "total_submitted": 2409,
-          "total_rejected": 1050,
-          "total_approved": 623,
-          "total_submitted_pencacah": 736,
+          "total_prelist": 2469,
+          "total_draft": 19,
+          "total_open": 9,
+          "total_submitted": 2441,
+          "total_rejected": 1058,
+          "total_approved": 628,
+          "total_submitted_pencacah": 755,
           "total_submitted_respondent": 0,
-          "persentase": 97.69,
-          "today_completed": 10,
+          "persentase": 98.87,
+          "today_completed": 32,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 5,
+            "REJECTED BY PENGAWAS": 8,
+            "SUBMITTED BY PENCACAH": 19
+          },
+          "yesterday_completed": 10,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1,
             "REJECTED BY PENGAWAS": 12
           },
-          "yesterday_completed": 47,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 47,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 11,
             "REJECTED BY PENGAWAS": 81
           },
-          "two_days_ago_completed": 4,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 8,
-            "REJECTED BY PENGAWAS": 42
-          },
           "breakdown": {
-            "total": 2466,
-            "REJECTED BY Pengawas": 1048,
-            "SUBMITTED BY Pencacah": 735,
-            "APPROVED BY Pengawas": 623,
-            "DRAFT": 37,
-            "OPEN": 20,
+            "total": 2469,
+            "REJECTED BY Pengawas": 1056,
+            "SUBMITTED BY Pencacah": 754,
+            "APPROVED BY Pengawas": 628,
+            "DRAFT": 19,
+            "OPEN": 9,
             "REVOKED BY Pengawas": 2,
             "EDITED BY Admin Kabupaten": 1
           },
-          "delta_persen": 0.41,
-          "delta_kemarin_persen": 1.91,
-          "delta_lusa_persen": 0.16,
+          "delta_persen": 1.3,
+          "delta_kemarin_persen": 0.41,
+          "delta_lusa_persen": 1.9,
           "new_usaha_overall": 95,
           "new_rumah_overall": 84
         },
         {
           "kecamatan": "[082] BALANTAK UTARA",
           "kec_name": "[082] BALANTAK UTARA",
-          "total_prelist": 2241,
+          "total_prelist": 2244,
           "total_draft": 0,
           "total_open": 1,
-          "total_submitted": 2240,
-          "total_rejected": 326,
-          "total_approved": 1072,
-          "total_submitted_pencacah": 842,
+          "total_submitted": 2243,
+          "total_rejected": 329,
+          "total_approved": 1080,
+          "total_submitted_pencacah": 834,
           "total_submitted_respondent": 0,
           "persentase": 99.96,
-          "today_completed": 11,
+          "today_completed": 3,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 8,
+            "REJECTED BY PENGAWAS": 3
+          },
+          "yesterday_completed": 11,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 34
           },
-          "yesterday_completed": 19,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 19,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 16,
             "SUBMITTED BY PENCACAH": 3
           },
-          "two_days_ago_completed": 25,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 24,
-            "SUBMITTED BY PENCACAH": 34
-          },
           "breakdown": {
-            "total": 2241,
-            "APPROVED BY Pengawas": 1072,
-            "SUBMITTED BY Pencacah": 836,
-            "REJECTED BY Pengawas": 325,
+            "total": 2244,
+            "APPROVED BY Pengawas": 1080,
+            "SUBMITTED BY Pencacah": 828,
+            "REJECTED BY Pengawas": 328,
             "EDITED BY Admin Kabupaten": 6,
             "OPEN": 1,
             "REVOKED BY Pengawas": 1
           },
-          "delta_persen": 0.49,
-          "delta_kemarin_persen": 0.85,
-          "delta_lusa_persen": 1.12,
+          "delta_persen": 0.13,
+          "delta_kemarin_persen": 0.49,
+          "delta_lusa_persen": 0.85,
           "new_usaha_overall": 146,
           "new_rumah_overall": 103
         }
       ],
       "breakdown": {
-        "total": 179350,
-        "APPROVED BY Pengawas": 82933,
-        "SUBMITTED BY Pencacah": 66156,
-        "OPEN": 10638,
-        "REJECTED BY Pengawas": 11420,
-        "DRAFT": 7248,
+        "total": 179722,
+        "APPROVED BY Pengawas": 84119,
+        "SUBMITTED BY Pencacah": 66690,
+        "OPEN": 9577,
+        "REJECTED BY Pengawas": 11500,
+        "DRAFT": 6880,
         "EDITED BY Admin Kabupaten": 589,
-        "REVOKED BY Pengawas": 338,
-        "SUBMITTED RESPONDENT": 7,
-        "REJECTED BY Admin Kabupaten": 3,
+        "REVOKED BY Pengawas": 337,
+        "SUBMITTED RESPONDENT": 8,
+        "REJECTED BY Admin Kabupaten": 4,
         "COMPLETED BY Admin Kabupaten": 17,
         "EDITED BY Pengawas": 1
       },
-      "two_days_ago_completed": 1927,
+      "two_days_ago_completed": 1852,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1164,
-        "REJECTED BY PENGAWAS": 10,
-        "SUBMITTED BY PENCACAH": 753
-      },
-      "yesterday_completed": 1852,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1301,
         "REJECTED BY PENGAWAS": 209,
         "SUBMITTED BY PENCACAH": 342
+      },
+      "yesterday_completed": 2540,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 2359,
+        "SUBMITTED BY PENCACAH": 349
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 2540,
+      "today_completed": 1801,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 2359,
-        "SUBMITTED BY PENCACAH": 349
+        "APPROVED BY PENGAWAS": 1186,
+        "REJECTED BY PENGAWAS": 80,
+        "SUBMITTED BY PENCACAH": 534,
+        "SUBMITTED RESPONDENT": 1
       },
-      "delta_persen": 1.42,
-      "delta_kemarin_persen": 1.03,
-      "delta_lusa_persen": 1.07
+      "delta_persen": 1.0,
+      "delta_kemarin_persen": 1.41,
+      "delta_lusa_persen": 1.03
     },
     {
       "kabupaten": "[03] MOROWALI",
-      "total_prelist": 76114,
-      "total_draft": 4181,
-      "total_open": 13418,
-      "total_submitted": 58515,
-      "total_rejected": 895,
-      "total_approved": 38418,
-      "total_submitted_pencacah": 19201,
+      "total_prelist": 76468,
+      "total_draft": 4161,
+      "total_open": 12926,
+      "total_submitted": 59381,
+      "total_rejected": 886,
+      "total_approved": 38630,
+      "total_submitted_pencacah": 19864,
       "total_submitted_respondent": 1,
-      "persentase": 76.88,
+      "persentase": 77.65,
       "new_usaha_overall": 4668,
       "new_rumah_overall": 3719,
       "new_businesses": [],
@@ -1744,31 +1741,30 @@ window.IPAS_DATA = {
           "total_draft": 64,
           "total_open": 0,
           "total_submitted": 2424,
-          "total_rejected": 7,
-          "total_approved": 2413,
-          "total_submitted_pencacah": 4,
+          "total_rejected": 5,
+          "total_approved": 2417,
+          "total_submitted_pencacah": 2,
           "total_submitted_respondent": 0,
           "persentase": 97.43,
           "today_completed": 0,
           "today_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 2
+            "APPROVED BY PENGAWAS": 4
           },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 1
+            "SUBMITTED BY PENCACAH": 2
           },
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 2,
-            "SUBMITTED BY PENCACAH": 1
+            "APPROVED BY PENGAWAS": 1
           },
           "breakdown": {
             "total": 2488,
-            "APPROVED BY Pengawas": 2413,
+            "APPROVED BY Pengawas": 2417,
             "DRAFT": 64,
-            "REVOKED BY Pengawas": 7,
-            "SUBMITTED BY Pencacah": 3,
-            "COMPLETED BY Admin Kabupaten": 1
+            "REVOKED BY Pengawas": 5,
+            "COMPLETED BY Admin Kabupaten": 1,
+            "SUBMITTED BY Pencacah": 1
           },
           "delta_persen": 0.0,
           "delta_kemarin_persen": 0.0,
@@ -1780,445 +1776,445 @@ window.IPAS_DATA = {
           "kecamatan": "[011] SOMBORI KEPULAUAN",
           "kec_name": "[011] SOMBORI KEPULAUAN",
           "total_prelist": 1536,
-          "total_draft": 53,
-          "total_open": 7,
-          "total_submitted": 1476,
-          "total_rejected": 0,
-          "total_approved": 1454,
-          "total_submitted_pencacah": 22,
+          "total_draft": 52,
+          "total_open": 5,
+          "total_submitted": 1479,
+          "total_rejected": 2,
+          "total_approved": 1459,
+          "total_submitted_pencacah": 18,
           "total_submitted_respondent": 0,
-          "persentase": 96.09,
-          "today_completed": 45,
+          "persentase": 96.29,
+          "today_completed": 3,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 5,
+            "REJECTED BY PENGAWAS": 2
+          },
+          "yesterday_completed": 45,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 70
           },
-          "yesterday_completed": 44,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 44,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 14,
             "SUBMITTED BY PENCACAH": 30
           },
-          "two_days_ago_completed": 1,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 9,
-            "SUBMITTED BY PENCACAH": 7
-          },
           "breakdown": {
             "total": 1536,
-            "APPROVED BY Pengawas": 1454,
-            "DRAFT": 53,
-            "SUBMITTED BY Pencacah": 12,
+            "APPROVED BY Pengawas": 1459,
+            "DRAFT": 52,
             "COMPLETED BY Admin Kabupaten": 9,
-            "OPEN": 7,
+            "SUBMITTED BY Pencacah": 8,
+            "OPEN": 5,
+            "REJECTED BY Pengawas": 2,
             "EDITED BY Admin Kabupaten": 1
           },
-          "delta_persen": 2.93,
-          "delta_kemarin_persen": 2.86,
-          "delta_lusa_persen": 0.07,
+          "delta_persen": 0.2,
+          "delta_kemarin_persen": 2.93,
+          "delta_lusa_persen": 2.86,
           "new_usaha_overall": 87,
           "new_rumah_overall": 4
         },
         {
           "kecamatan": "[020] BUNGKU SELATAN",
           "kec_name": "[020] BUNGKU SELATAN",
-          "total_prelist": 4909,
-          "total_draft": 39,
-          "total_open": 116,
-          "total_submitted": 4754,
-          "total_rejected": 72,
-          "total_approved": 3711,
-          "total_submitted_pencacah": 971,
+          "total_prelist": 4912,
+          "total_draft": 33,
+          "total_open": 112,
+          "total_submitted": 4767,
+          "total_rejected": 76,
+          "total_approved": 3707,
+          "total_submitted_pencacah": 984,
           "total_submitted_respondent": 0,
-          "persentase": 96.84,
-          "today_completed": 65,
+          "persentase": 97.05,
+          "today_completed": 13,
           "today_completed_breakdown": {
+            "REJECTED BY PENGAWAS": 4,
+            "SUBMITTED BY PENCACAH": 13
+          },
+          "yesterday_completed": 65,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 25,
             "SUBMITTED BY PENCACAH": 46
           },
-          "yesterday_completed": 38,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 38,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 82
           },
-          "two_days_ago_completed": 21,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 57,
-            "REJECTED BY PENGAWAS": 11
-          },
           "breakdown": {
-            "total": 4909,
-            "APPROVED BY Pengawas": 3711,
-            "SUBMITTED BY Pencacah": 908,
-            "OPEN": 116,
+            "total": 4912,
+            "APPROVED BY Pengawas": 3707,
+            "SUBMITTED BY Pencacah": 921,
+            "OPEN": 112,
             "COMPLETED BY Admin Kabupaten": 62,
-            "REVOKED BY Pengawas": 55,
-            "DRAFT": 39,
-            "REJECTED BY Pengawas": 17,
+            "REVOKED BY Pengawas": 60,
+            "DRAFT": 33,
+            "REJECTED BY Pengawas": 16,
             "EDITED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.32,
-          "delta_kemarin_persen": 0.77,
-          "delta_lusa_persen": 0.43,
+          "delta_persen": 0.26,
+          "delta_kemarin_persen": 1.32,
+          "delta_lusa_persen": 0.77,
           "new_usaha_overall": 274,
           "new_rumah_overall": 137
         },
         {
           "kecamatan": "[021] BAHODOPI",
           "kec_name": "[021] BAHODOPI",
-          "total_prelist": 23524,
-          "total_draft": 893,
-          "total_open": 3881,
-          "total_submitted": 18750,
-          "total_rejected": 132,
-          "total_approved": 12076,
-          "total_submitted_pencacah": 6542,
+          "total_prelist": 23738,
+          "total_draft": 956,
+          "total_open": 3772,
+          "total_submitted": 19010,
+          "total_rejected": 130,
+          "total_approved": 12080,
+          "total_submitted_pencacah": 6800,
           "total_submitted_respondent": 0,
-          "persentase": 79.71,
-          "today_completed": 372,
+          "persentase": 80.08,
+          "today_completed": 260,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 4,
+            "SUBMITTED BY PENCACAH": 258
+          },
+          "yesterday_completed": 372,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 524,
             "REJECTED BY PENGAWAS": 43
           },
-          "yesterday_completed": 261,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 261,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 588
           },
-          "two_days_ago_completed": 132,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 418,
-            "REJECTED BY PENGAWAS": 7
-          },
           "breakdown": {
-            "total": 23524,
-            "APPROVED BY Pengawas": 12076,
-            "SUBMITTED BY Pencacah": 6480,
-            "OPEN": 3881,
-            "DRAFT": 893,
-            "REJECTED BY Pengawas": 100,
+            "total": 23738,
+            "APPROVED BY Pengawas": 12080,
+            "SUBMITTED BY Pencacah": 6738,
+            "OPEN": 3772,
+            "DRAFT": 956,
+            "REJECTED BY Pengawas": 98,
             "COMPLETED BY Admin Kabupaten": 55,
             "REVOKED BY Pengawas": 32,
             "EDITED BY Admin Kabupaten": 7
           },
-          "delta_persen": 1.58,
-          "delta_kemarin_persen": 1.11,
-          "delta_lusa_persen": 0.56,
+          "delta_persen": 1.1,
+          "delta_kemarin_persen": 1.57,
+          "delta_lusa_persen": 1.1,
           "new_usaha_overall": 1716,
           "new_rumah_overall": 1724
         },
         {
           "kecamatan": "[022] BUNGKU PESISIR",
           "kec_name": "[022] BUNGKU PESISIR",
-          "total_prelist": 2380,
-          "total_draft": 168,
-          "total_open": 553,
-          "total_submitted": 1659,
+          "total_prelist": 2381,
+          "total_draft": 171,
+          "total_open": 533,
+          "total_submitted": 1677,
           "total_rejected": 6,
-          "total_approved": 912,
-          "total_submitted_pencacah": 740,
+          "total_approved": 935,
+          "total_submitted_pencacah": 735,
           "total_submitted_respondent": 1,
-          "persentase": 69.71,
-          "today_completed": 70,
+          "persentase": 70.43,
+          "today_completed": 18,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 23
+          },
+          "yesterday_completed": 70,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 61,
             "SUBMITTED BY PENCACAH": 12
           },
-          "yesterday_completed": 30,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 30,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 111,
             "SUBMITTED RESPONDENT": 1
           },
-          "two_days_ago_completed": 20,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 70
-          },
           "breakdown": {
-            "total": 2380,
-            "APPROVED BY Pengawas": 912,
-            "SUBMITTED BY Pencacah": 730,
-            "OPEN": 553,
-            "DRAFT": 168,
+            "total": 2381,
+            "APPROVED BY Pengawas": 935,
+            "SUBMITTED BY Pencacah": 725,
+            "OPEN": 533,
+            "DRAFT": 171,
             "EDITED BY Admin Kabupaten": 6,
             "REJECTED BY Pengawas": 5,
             "COMPLETED BY Admin Kabupaten": 4,
             "REJECTED BY Admin Kabupaten": 1,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 2.94,
-          "delta_kemarin_persen": 1.26,
-          "delta_lusa_persen": 0.84,
+          "delta_persen": 0.76,
+          "delta_kemarin_persen": 2.94,
+          "delta_lusa_persen": 1.26,
           "new_usaha_overall": 81,
           "new_rumah_overall": 106
         },
         {
           "kecamatan": "[030] BUNGKU TENGAH",
           "kec_name": "[030] BUNGKU TENGAH",
-          "total_prelist": 14456,
-          "total_draft": 797,
-          "total_open": 3202,
-          "total_submitted": 10457,
-          "total_rejected": 80,
-          "total_approved": 5008,
-          "total_submitted_pencacah": 5369,
+          "total_prelist": 14505,
+          "total_draft": 731,
+          "total_open": 3074,
+          "total_submitted": 10700,
+          "total_rejected": 93,
+          "total_approved": 5042,
+          "total_submitted_pencacah": 5565,
           "total_submitted_respondent": 0,
-          "persentase": 72.34,
-          "today_completed": 234,
+          "persentase": 73.77,
+          "today_completed": 243,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 34,
+            "REJECTED BY PENGAWAS": 13,
+            "SUBMITTED BY PENCACAH": 196
+          },
+          "yesterday_completed": 234,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 620
           },
-          "yesterday_completed": 265,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 265,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 28,
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 233
           },
-          "two_days_ago_completed": 189,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 4,
-            "SUBMITTED BY PENCACAH": 192
-          },
           "breakdown": {
-            "total": 14456,
-            "SUBMITTED BY Pencacah": 5328,
-            "APPROVED BY Pengawas": 5008,
-            "OPEN": 3202,
-            "DRAFT": 797,
-            "REJECTED BY Pengawas": 74,
+            "total": 14505,
+            "SUBMITTED BY Pencacah": 5524,
+            "APPROVED BY Pengawas": 5042,
+            "OPEN": 3074,
+            "DRAFT": 731,
+            "REJECTED BY Pengawas": 87,
             "COMPLETED BY Admin Kabupaten": 41,
             "REVOKED BY Pengawas": 5,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.62,
-          "delta_kemarin_persen": 1.83,
-          "delta_lusa_persen": 1.31,
+          "delta_persen": 1.68,
+          "delta_kemarin_persen": 1.61,
+          "delta_lusa_persen": 1.83,
           "new_usaha_overall": 853,
           "new_rumah_overall": 787
         },
         {
           "kecamatan": "[031] BUNGKU TIMUR",
           "kec_name": "[031] BUNGKU TIMUR",
-          "total_prelist": 5741,
-          "total_draft": 151,
-          "total_open": 837,
-          "total_submitted": 4753,
-          "total_rejected": 293,
-          "total_approved": 2454,
-          "total_submitted_pencacah": 2006,
+          "total_prelist": 5768,
+          "total_draft": 156,
+          "total_open": 795,
+          "total_submitted": 4817,
+          "total_rejected": 298,
+          "total_approved": 2560,
+          "total_submitted_pencacah": 1959,
           "total_submitted_respondent": 0,
-          "persentase": 82.79,
-          "today_completed": 153,
+          "persentase": 83.51,
+          "today_completed": 64,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 106,
+            "REJECTED BY PENGAWAS": 5
+          },
+          "yesterday_completed": 153,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 150
           },
-          "yesterday_completed": 58,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 58,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 58
           },
-          "two_days_ago_completed": 65,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 132,
-            "REJECTED BY PENGAWAS": 46
-          },
           "breakdown": {
-            "total": 5741,
-            "APPROVED BY Pengawas": 2454,
-            "SUBMITTED BY Pencacah": 1958,
-            "OPEN": 837,
+            "total": 5768,
+            "APPROVED BY Pengawas": 2560,
+            "SUBMITTED BY Pencacah": 1911,
+            "OPEN": 795,
             "REVOKED BY Pengawas": 178,
-            "DRAFT": 151,
-            "REJECTED BY Pengawas": 114,
+            "DRAFT": 156,
+            "REJECTED BY Pengawas": 119,
             "COMPLETED BY Admin Kabupaten": 40,
             "EDITED BY Admin Kabupaten": 8,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 2.67,
-          "delta_kemarin_persen": 1.01,
-          "delta_lusa_persen": 1.13,
+          "delta_persen": 1.11,
+          "delta_kemarin_persen": 2.65,
+          "delta_lusa_persen": 1.01,
           "new_usaha_overall": 395,
           "new_rumah_overall": 85
         },
         {
           "kecamatan": "[040] BUNGKU BARAT",
           "kec_name": "[040] BUNGKU BARAT",
-          "total_prelist": 6808,
-          "total_draft": 306,
-          "total_open": 1342,
-          "total_submitted": 5160,
-          "total_rejected": 24,
-          "total_approved": 3344,
-          "total_submitted_pencacah": 1792,
+          "total_prelist": 6828,
+          "total_draft": 286,
+          "total_open": 1254,
+          "total_submitted": 5288,
+          "total_rejected": 12,
+          "total_approved": 3365,
+          "total_submitted_pencacah": 1911,
           "total_submitted_respondent": 0,
-          "persentase": 75.79,
-          "today_completed": 67,
+          "persentase": 77.45,
+          "today_completed": 128,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 21,
+            "SUBMITTED BY PENCACAH": 119
+          },
+          "yesterday_completed": 67,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 38,
             "SUBMITTED BY PENCACAH": 31
           },
-          "yesterday_completed": 53,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 53,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 41,
             "SUBMITTED BY PENCACAH": 13
           },
-          "two_days_ago_completed": 90,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 44,
-            "REJECTED BY PENGAWAS": 1,
-            "SUBMITTED BY PENCACAH": 45
-          },
           "breakdown": {
-            "total": 6808,
-            "APPROVED BY Pengawas": 3344,
-            "SUBMITTED BY Pencacah": 1728,
-            "OPEN": 1342,
-            "DRAFT": 306,
+            "total": 6828,
+            "APPROVED BY Pengawas": 3365,
+            "SUBMITTED BY Pencacah": 1847,
+            "OPEN": 1254,
+            "DRAFT": 286,
             "COMPLETED BY Admin Kabupaten": 51,
-            "REJECTED BY Pengawas": 23,
             "EDITED BY Admin Kabupaten": 13,
+            "REJECTED BY Pengawas": 11,
             "REVOKED BY Pengawas": 1
           },
-          "delta_persen": 0.98,
-          "delta_kemarin_persen": 0.78,
-          "delta_lusa_persen": 1.32,
+          "delta_persen": 1.87,
+          "delta_kemarin_persen": 0.98,
+          "delta_lusa_persen": 0.78,
           "new_usaha_overall": 514,
           "new_rumah_overall": 293
         },
         {
           "kecamatan": "[041] BUMI RAYA",
           "kec_name": "[041] BUMI RAYA",
-          "total_prelist": 6083,
-          "total_draft": 448,
-          "total_open": 1620,
-          "total_submitted": 4015,
-          "total_rejected": 180,
-          "total_approved": 3340,
-          "total_submitted_pencacah": 495,
+          "total_prelist": 6095,
+          "total_draft": 427,
+          "total_open": 1571,
+          "total_submitted": 4097,
+          "total_rejected": 165,
+          "total_approved": 3334,
+          "total_submitted_pencacah": 598,
           "total_submitted_respondent": 0,
-          "persentase": 66.0,
-          "today_completed": 84,
+          "persentase": 67.22,
+          "today_completed": 82,
           "today_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 103
+          },
+          "yesterday_completed": 84,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 76,
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 6
           },
-          "yesterday_completed": 17,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 17,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 53
           },
-          "two_days_ago_completed": 24,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 40
-          },
           "breakdown": {
-            "total": 6083,
-            "APPROVED BY Pengawas": 3340,
-            "OPEN": 1620,
-            "SUBMITTED BY Pencacah": 459,
-            "DRAFT": 448,
-            "REJECTED BY Pengawas": 169,
+            "total": 6095,
+            "APPROVED BY Pengawas": 3334,
+            "OPEN": 1571,
+            "SUBMITTED BY Pencacah": 562,
+            "DRAFT": 427,
+            "REJECTED BY Pengawas": 163,
             "COMPLETED BY Admin Kabupaten": 35,
-            "REVOKED BY Pengawas": 10,
             "EDITED BY Admin Kabupaten": 1,
-            "REJECTED BY Admin Kabupaten": 1
+            "REJECTED BY Admin Kabupaten": 1,
+            "REVOKED BY Pengawas": 1
           },
-          "delta_persen": 1.38,
-          "delta_kemarin_persen": 0.28,
-          "delta_lusa_persen": 0.39,
+          "delta_persen": 1.35,
+          "delta_kemarin_persen": 1.38,
+          "delta_lusa_persen": 0.28,
           "new_usaha_overall": 428,
           "new_rumah_overall": 381
         },
         {
           "kecamatan": "[042] WITA PONDA",
           "kec_name": "[042] WITA PONDA",
-          "total_prelist": 8189,
-          "total_draft": 1262,
-          "total_open": 1860,
-          "total_submitted": 5067,
-          "total_rejected": 101,
-          "total_approved": 3706,
-          "total_submitted_pencacah": 1260,
+          "total_prelist": 8217,
+          "total_draft": 1285,
+          "total_open": 1810,
+          "total_submitted": 5122,
+          "total_rejected": 99,
+          "total_approved": 3731,
+          "total_submitted_pencacah": 1292,
           "total_submitted_respondent": 0,
-          "persentase": 61.88,
-          "today_completed": 97,
+          "persentase": 62.33,
+          "today_completed": 55,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 25,
+            "SUBMITTED BY PENCACAH": 32
+          },
+          "yesterday_completed": 97,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 22,
             "SUBMITTED BY PENCACAH": 75
           },
-          "yesterday_completed": 52,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 52,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 96,
             "REJECTED BY PENGAWAS": 3
           },
-          "two_days_ago_completed": 75,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 57,
-            "REJECTED BY PENGAWAS": 1,
-            "SUBMITTED BY PENCACAH": 17
-          },
           "breakdown": {
-            "total": 8189,
-            "APPROVED BY Pengawas": 3706,
-            "OPEN": 1860,
-            "DRAFT": 1262,
-            "SUBMITTED BY Pencacah": 1191,
-            "REJECTED BY Pengawas": 88,
+            "total": 8217,
+            "APPROVED BY Pengawas": 3731,
+            "OPEN": 1810,
+            "DRAFT": 1285,
+            "SUBMITTED BY Pencacah": 1223,
+            "REJECTED BY Pengawas": 86,
             "EDITED BY Admin Kabupaten": 62,
             "REVOKED BY Pengawas": 12,
             "COMPLETED BY Admin Kabupaten": 7,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.18,
-          "delta_kemarin_persen": 0.63,
-          "delta_lusa_persen": 0.92,
+          "delta_persen": 0.67,
+          "delta_kemarin_persen": 1.18,
+          "delta_lusa_persen": 0.63,
           "new_usaha_overall": 285,
           "new_rumah_overall": 182
         }
       ],
       "breakdown": {
-        "total": 76114,
-        "APPROVED BY Pengawas": 38418,
-        "DRAFT": 4181,
-        "REVOKED BY Pengawas": 300,
-        "SUBMITTED BY Pencacah": 18797,
+        "total": 76468,
+        "APPROVED BY Pengawas": 38630,
+        "DRAFT": 4161,
+        "REVOKED BY Pengawas": 294,
         "COMPLETED BY Admin Kabupaten": 305,
-        "OPEN": 13418,
+        "SUBMITTED BY Pencacah": 19460,
+        "OPEN": 12926,
+        "REJECTED BY Pengawas": 587,
         "EDITED BY Admin Kabupaten": 99,
-        "REJECTED BY Pengawas": 590,
         "REJECTED BY Admin Kabupaten": 5,
         "SUBMITTED RESPONDENT": 1
       },
-      "two_days_ago_completed": 617,
+      "two_days_ago_completed": 818,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 828,
-        "REJECTED BY PENGAWAS": 39
-      },
-      "yesterday_completed": 818,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1014,
         "SUBMITTED RESPONDENT": 1
+      },
+      "yesterday_completed": 1187,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 1439,
+        "REJECTED BY PENGAWAS": 25
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 1187,
+      "today_completed": 866,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1439,
-        "REJECTED BY PENGAWAS": 25
+        "APPROVED BY PENGAWAS": 212,
+        "SUBMITTED BY PENCACAH": 663
       },
-      "delta_persen": 1.56,
-      "delta_kemarin_persen": 1.07,
-      "delta_lusa_persen": 0.81
+      "delta_persen": 1.13,
+      "delta_kemarin_persen": 1.55,
+      "delta_lusa_persen": 1.07
     },
     {
       "kabupaten": "[04] POSO",
-      "total_prelist": 130334,
-      "total_draft": 3640,
-      "total_open": 4451,
-      "total_submitted": 122243,
-      "total_rejected": 6273,
-      "total_approved": 89516,
-      "total_submitted_pencacah": 26407,
-      "total_submitted_respondent": 47,
-      "persentase": 93.79,
+      "total_prelist": 130629,
+      "total_draft": 3208,
+      "total_open": 3981,
+      "total_submitted": 123440,
+      "total_rejected": 5905,
+      "total_approved": 91293,
+      "total_submitted_pencacah": 26196,
+      "total_submitted_respondent": 46,
+      "persentase": 94.5,
       "new_usaha_overall": 4082,
       "new_rumah_overall": 3332,
       "new_businesses": [],
@@ -2256,214 +2252,207 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[010] PAMONA SELATAN",
           "kec_name": "[010] PAMONA SELATAN",
-          "total_prelist": 11227,
-          "total_draft": 351,
-          "total_open": 34,
-          "total_submitted": 10842,
-          "total_rejected": 1685,
-          "total_approved": 8213,
-          "total_submitted_pencacah": 943,
+          "total_prelist": 11245,
+          "total_draft": 276,
+          "total_open": 1,
+          "total_submitted": 10968,
+          "total_rejected": 1483,
+          "total_approved": 8312,
+          "total_submitted_pencacah": 1172,
           "total_submitted_respondent": 1,
-          "persentase": 96.57,
-          "today_completed": 60,
+          "persentase": 97.54,
+          "today_completed": 126,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 99,
+            "SUBMITTED BY PENCACAH": 229
+          },
+          "yesterday_completed": 60,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 209,
             "SUBMITTED BY PENCACAH": 67
           },
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 1,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 129,
             "SUBMITTED BY PENCACAH": 8
           },
-          "two_days_ago_completed": 69,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 233,
-            "SUBMITTED BY PENCACAH": 39
-          },
           "breakdown": {
-            "total": 11227,
-            "APPROVED BY Pengawas": 8213,
-            "REJECTED BY Pengawas": 1660,
+            "total": 11245,
+            "APPROVED BY Pengawas": 8312,
+            "REJECTED BY Pengawas": 1458,
             "EDITED BY Admin Kabupaten": 588,
-            "SUBMITTED BY Pencacah": 353,
-            "DRAFT": 351,
-            "OPEN": 34,
+            "SUBMITTED BY Pencacah": 582,
+            "DRAFT": 276,
             "REVOKED BY Pengawas": 22,
             "REJECTED BY Admin Kabupaten": 3,
             "COMPLETED BY Admin Kabupaten": 2,
+            "OPEN": 1,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 0.53,
-          "delta_kemarin_persen": 0.01,
-          "delta_lusa_persen": 0.61,
+          "delta_persen": 1.12,
+          "delta_kemarin_persen": 0.53,
+          "delta_lusa_persen": 0.01,
           "new_usaha_overall": 340,
           "new_rumah_overall": 214
         },
         {
           "kecamatan": "[011] PAMONA BARAT",
           "kec_name": "[011] PAMONA BARAT",
-          "total_prelist": 4680,
-          "total_draft": 136,
-          "total_open": 23,
-          "total_submitted": 4521,
-          "total_rejected": 154,
-          "total_approved": 2357,
-          "total_submitted_pencacah": 2009,
+          "total_prelist": 4685,
+          "total_draft": 84,
+          "total_open": 15,
+          "total_submitted": 4586,
+          "total_rejected": 124,
+          "total_approved": 2398,
+          "total_submitted_pencacah": 2063,
           "total_submitted_respondent": 1,
-          "persentase": 96.6,
-          "today_completed": 77,
+          "persentase": 97.89,
+          "today_completed": 65,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 41,
+            "SUBMITTED BY PENCACAH": 54
+          },
+          "yesterday_completed": 77,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 38,
             "SUBMITTED BY PENCACAH": 56
           },
-          "yesterday_completed": 53,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 53,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 14,
             "SUBMITTED BY PENCACAH": 44
           },
-          "two_days_ago_completed": 40,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 4,
-            "REJECTED BY PENGAWAS": 2,
-            "SUBMITTED BY PENCACAH": 34
-          },
           "breakdown": {
-            "total": 4680,
-            "APPROVED BY Pengawas": 2357,
-            "SUBMITTED BY Pencacah": 1843,
+            "total": 4685,
+            "APPROVED BY Pengawas": 2398,
+            "SUBMITTED BY Pencacah": 1897,
             "EDITED BY Admin Kabupaten": 166,
-            "REJECTED BY Pengawas": 148,
-            "DRAFT": 136,
-            "OPEN": 23,
+            "REJECTED BY Pengawas": 118,
+            "DRAFT": 84,
+            "OPEN": 15,
             "REVOKED BY Pengawas": 6,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 1.65,
-          "delta_kemarin_persen": 1.13,
-          "delta_lusa_persen": 0.85,
+          "delta_persen": 1.39,
+          "delta_kemarin_persen": 1.64,
+          "delta_lusa_persen": 1.13,
           "new_usaha_overall": 134,
           "new_rumah_overall": 156
         },
         {
           "kecamatan": "[012] PAMONA TENGGARA",
           "kec_name": "[012] PAMONA TENGGARA",
-          "total_prelist": 3702,
-          "total_draft": 6,
-          "total_open": 31,
-          "total_submitted": 3665,
-          "total_rejected": 5,
-          "total_approved": 3260,
-          "total_submitted_pencacah": 399,
-          "total_submitted_respondent": 1,
-          "persentase": 99.0,
-          "today_completed": 63,
+          "total_prelist": 3732,
+          "total_draft": 0,
+          "total_open": 0,
+          "total_submitted": 3732,
+          "total_rejected": 0,
+          "total_approved": 3341,
+          "total_submitted_pencacah": 391,
+          "total_submitted_respondent": 0,
+          "persentase": 100.0,
+          "today_completed": 67,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 81
+          },
+          "yesterday_completed": 63,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 73
           },
-          "yesterday_completed": 38,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 38,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 30,
             "SUBMITTED BY PENCACAH": 9
           },
-          "two_days_ago_completed": 11,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 9,
-            "SUBMITTED BY PENCACAH": 2
-          },
           "breakdown": {
-            "total": 3702,
-            "APPROVED BY Pengawas": 3260,
+            "total": 3732,
+            "APPROVED BY Pengawas": 3341,
             "EDITED BY Admin Kabupaten": 380,
-            "OPEN": 31,
             "COMPLETED BY Admin Kabupaten": 10,
-            "SUBMITTED BY Pencacah": 9,
-            "DRAFT": 6,
-            "REJECTED BY Pengawas": 5,
-            "SUBMITTED RESPONDENT": 1
+            "SUBMITTED BY Pencacah": 1
           },
-          "delta_persen": 1.7,
-          "delta_kemarin_persen": 1.03,
-          "delta_lusa_persen": 0.3,
+          "delta_persen": 1.8,
+          "delta_kemarin_persen": 1.69,
+          "delta_lusa_persen": 1.02,
           "new_usaha_overall": 111,
           "new_rumah_overall": 58
         },
         {
           "kecamatan": "[020] LORE SELATAN",
           "kec_name": "[020] LORE SELATAN",
-          "total_prelist": 3063,
+          "total_prelist": 3069,
           "total_draft": 0,
-          "total_open": 1,
-          "total_submitted": 3062,
-          "total_rejected": 53,
-          "total_approved": 2752,
-          "total_submitted_pencacah": 257,
+          "total_open": 0,
+          "total_submitted": 3069,
+          "total_rejected": 51,
+          "total_approved": 2838,
+          "total_submitted_pencacah": 180,
           "total_submitted_respondent": 0,
-          "persentase": 99.97,
-          "today_completed": 11,
+          "persentase": 100.0,
+          "today_completed": 7,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 86
+          },
+          "yesterday_completed": 11,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 32
           },
-          "yesterday_completed": 13,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 13,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 14,
             "REJECTED BY PENGAWAS": 1
           },
-          "two_days_ago_completed": 20,
-          "two_days_ago_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 6,
-            "SUBMITTED BY PENCACAH": 14
-          },
           "breakdown": {
-            "total": 3063,
-            "APPROVED BY Pengawas": 2752,
-            "SUBMITTED BY Pencacah": 227,
+            "total": 3069,
+            "APPROVED BY Pengawas": 2838,
+            "SUBMITTED BY Pencacah": 150,
             "REVOKED BY Pengawas": 46,
             "EDITED BY Admin Kabupaten": 29,
-            "REJECTED BY Pengawas": 7,
-            "COMPLETED BY Admin Kabupaten": 1,
-            "OPEN": 1
+            "REJECTED BY Pengawas": 5,
+            "COMPLETED BY Admin Kabupaten": 1
           },
-          "delta_persen": 0.36,
-          "delta_kemarin_persen": 0.42,
-          "delta_lusa_persen": 0.65,
+          "delta_persen": 0.23,
+          "delta_kemarin_persen": 0.36,
+          "delta_lusa_persen": 0.42,
           "new_usaha_overall": 30,
           "new_rumah_overall": 14
         },
         {
           "kecamatan": "[021] LORE BARAT",
           "kec_name": "[021] LORE BARAT",
-          "total_prelist": 1354,
+          "total_prelist": 1360,
           "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 1354,
-          "total_rejected": 13,
-          "total_approved": 1293,
-          "total_submitted_pencacah": 48,
+          "total_submitted": 1360,
+          "total_rejected": 17,
+          "total_approved": 1285,
+          "total_submitted_pencacah": 58,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
-          "today_completed": 2,
+          "today_completed": 6,
           "today_completed_breakdown": {
+            "REJECTED BY PENGAWAS": 4,
+            "SUBMITTED BY PENCACAH": 10
+          },
+          "yesterday_completed": 2,
+          "yesterday_completed_breakdown": {
             "REJECTED BY PENGAWAS": 9,
             "SUBMITTED BY PENCACAH": 5
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 1
-          },
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 11
+            "APPROVED BY PENGAWAS": 1
           },
           "breakdown": {
-            "total": 1354,
-            "APPROVED BY Pengawas": 1293,
+            "total": 1360,
+            "APPROVED BY Pengawas": 1285,
             "EDITED BY Admin Kabupaten": 43,
-            "REVOKED BY Pengawas": 9,
-            "SUBMITTED BY Pencacah": 5,
-            "REJECTED BY Pengawas": 4
+            "SUBMITTED BY Pencacah": 15,
+            "REJECTED BY Pengawas": 13,
+            "REVOKED BY Pengawas": 4
           },
-          "delta_persen": 0.15,
-          "delta_kemarin_persen": 0.0,
+          "delta_persen": 0.44,
+          "delta_kemarin_persen": 0.15,
           "delta_lusa_persen": 0.0,
           "new_usaha_overall": 32,
           "new_rumah_overall": 22
@@ -2471,649 +2460,648 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[030] PAMONA PUSALEMBA",
           "kec_name": "[030] PAMONA PUSALEMBA",
-          "total_prelist": 11854,
-          "total_draft": 244,
-          "total_open": 153,
-          "total_submitted": 11457,
-          "total_rejected": 402,
-          "total_approved": 7844,
-          "total_submitted_pencacah": 3211,
+          "total_prelist": 11884,
+          "total_draft": 214,
+          "total_open": 123,
+          "total_submitted": 11547,
+          "total_rejected": 416,
+          "total_approved": 7943,
+          "total_submitted_pencacah": 3188,
           "total_submitted_respondent": 0,
-          "persentase": 96.65,
-          "today_completed": 100,
+          "persentase": 97.16,
+          "today_completed": 90,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 99,
+            "REJECTED BY PENGAWAS": 14
+          },
+          "yesterday_completed": 100,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 297
           },
-          "yesterday_completed": 74,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 74,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 379,
             "REJECTED BY PENGAWAS": 132
           },
-          "two_days_ago_completed": 55,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 204
-          },
           "breakdown": {
-            "total": 11854,
-            "APPROVED BY Pengawas": 7844,
-            "SUBMITTED BY Pencacah": 2951,
-            "REJECTED BY Pengawas": 364,
+            "total": 11884,
+            "APPROVED BY Pengawas": 7943,
+            "SUBMITTED BY Pencacah": 2928,
+            "REJECTED BY Pengawas": 378,
             "EDITED BY Admin Kabupaten": 260,
-            "DRAFT": 244,
-            "OPEN": 153,
+            "DRAFT": 214,
+            "OPEN": 123,
             "REVOKED BY Pengawas": 38
           },
-          "delta_persen": 0.84,
-          "delta_kemarin_persen": 0.62,
-          "delta_lusa_persen": 0.46,
+          "delta_persen": 0.76,
+          "delta_kemarin_persen": 0.84,
+          "delta_lusa_persen": 0.62,
           "new_usaha_overall": 414,
           "new_rumah_overall": 309
         },
         {
           "kecamatan": "[031] PAMONA TIMUR",
           "kec_name": "[031] PAMONA TIMUR",
-          "total_prelist": 6316,
-          "total_draft": 213,
-          "total_open": 229,
-          "total_submitted": 5874,
-          "total_rejected": 253,
-          "total_approved": 3956,
-          "total_submitted_pencacah": 1665,
+          "total_prelist": 6326,
+          "total_draft": 190,
+          "total_open": 211,
+          "total_submitted": 5925,
+          "total_rejected": 273,
+          "total_approved": 4116,
+          "total_submitted_pencacah": 1536,
           "total_submitted_respondent": 0,
-          "persentase": 93.0,
-          "today_completed": 30,
+          "persentase": 93.66,
+          "today_completed": 51,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 160,
+            "REJECTED BY PENGAWAS": 20
+          },
+          "yesterday_completed": 30,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 312
           },
-          "yesterday_completed": 29,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 29,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 205
           },
-          "two_days_ago_completed": 22,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 102,
-            "REJECTED BY PENGAWAS": 2
-          },
           "breakdown": {
-            "total": 6316,
-            "APPROVED BY Pengawas": 3956,
-            "SUBMITTED BY Pencacah": 1444,
-            "REJECTED BY Pengawas": 239,
-            "OPEN": 229,
+            "total": 6326,
+            "APPROVED BY Pengawas": 4116,
+            "SUBMITTED BY Pencacah": 1315,
+            "REJECTED BY Pengawas": 260,
             "EDITED BY Admin Kabupaten": 219,
-            "DRAFT": 213,
-            "REVOKED BY Pengawas": 14,
+            "OPEN": 211,
+            "DRAFT": 190,
+            "REVOKED BY Pengawas": 13,
             "COMPLETED BY Admin Kabupaten": 2
           },
-          "delta_persen": 0.47,
-          "delta_kemarin_persen": 0.46,
-          "delta_lusa_persen": 0.35,
+          "delta_persen": 0.81,
+          "delta_kemarin_persen": 0.47,
+          "delta_lusa_persen": 0.46,
           "new_usaha_overall": 217,
           "new_rumah_overall": 171
         },
         {
           "kecamatan": "[032] PAMONA UTARA",
           "kec_name": "[032] PAMONA UTARA",
-          "total_prelist": 7328,
-          "total_draft": 33,
-          "total_open": 289,
-          "total_submitted": 7006,
-          "total_rejected": 216,
-          "total_approved": 6279,
-          "total_submitted_pencacah": 510,
+          "total_prelist": 7336,
+          "total_draft": 19,
+          "total_open": 240,
+          "total_submitted": 7077,
+          "total_rejected": 185,
+          "total_approved": 6325,
+          "total_submitted_pencacah": 566,
           "total_submitted_respondent": 1,
-          "persentase": 95.61,
-          "today_completed": 61,
+          "persentase": 96.47,
+          "today_completed": 71,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 46,
+            "SUBMITTED BY PENCACAH": 56
+          },
+          "yesterday_completed": 61,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 284,
             "REJECTED BY PENGAWAS": 21
           },
-          "yesterday_completed": 29,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 29,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 226
           },
-          "two_days_ago_completed": 18,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 174,
-            "REJECTED BY PENGAWAS": 34
-          },
           "breakdown": {
-            "total": 7328,
-            "APPROVED BY Pengawas": 6279,
-            "OPEN": 289,
+            "total": 7336,
+            "APPROVED BY Pengawas": 6325,
+            "SUBMITTED BY Pencacah": 288,
             "EDITED BY Admin Kabupaten": 272,
-            "SUBMITTED BY Pencacah": 232,
-            "REJECTED BY Pengawas": 193,
-            "DRAFT": 33,
-            "REVOKED BY Pengawas": 23,
+            "OPEN": 240,
+            "REJECTED BY Pengawas": 166,
+            "DRAFT": 19,
+            "REVOKED BY Pengawas": 19,
             "COMPLETED BY Admin Kabupaten": 6,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 0.83,
-          "delta_kemarin_persen": 0.4,
-          "delta_lusa_persen": 0.25,
+          "delta_persen": 0.97,
+          "delta_kemarin_persen": 0.83,
+          "delta_lusa_persen": 0.4,
           "new_usaha_overall": 273,
           "new_rumah_overall": 176
         },
         {
           "kecamatan": "[040] LORE UTARA",
           "kec_name": "[040] LORE UTARA",
-          "total_prelist": 7307,
-          "total_draft": 7,
-          "total_open": 33,
-          "total_submitted": 7267,
-          "total_rejected": 38,
-          "total_approved": 6807,
+          "total_prelist": 7342,
+          "total_draft": 16,
+          "total_open": 32,
+          "total_submitted": 7294,
+          "total_rejected": 31,
+          "total_approved": 6841,
           "total_submitted_pencacah": 422,
           "total_submitted_respondent": 0,
-          "persentase": 99.45,
+          "persentase": 99.35,
           "today_completed": 27,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 34
+          },
+          "yesterday_completed": 27,
+          "yesterday_completed_breakdown": {
             "REJECTED BY PENGAWAS": 21,
             "SUBMITTED BY PENCACAH": 11
           },
-          "yesterday_completed": 84,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 84,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 89,
             "SUBMITTED BY PENCACAH": 13
           },
-          "two_days_ago_completed": 113,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 146
-          },
           "breakdown": {
-            "total": 7307,
-            "APPROVED BY Pengawas": 6807,
+            "total": 7342,
+            "APPROVED BY Pengawas": 6841,
             "SUBMITTED BY Pencacah": 276,
             "EDITED BY Admin Kabupaten": 146,
-            "OPEN": 33,
-            "REJECTED BY Pengawas": 24,
-            "REVOKED BY Pengawas": 14,
-            "DRAFT": 7
+            "OPEN": 32,
+            "REJECTED BY Pengawas": 17,
+            "DRAFT": 16,
+            "REVOKED BY Pengawas": 14
           },
           "delta_persen": 0.37,
-          "delta_kemarin_persen": 1.15,
-          "delta_lusa_persen": 1.55,
+          "delta_kemarin_persen": 0.37,
+          "delta_lusa_persen": 1.14,
           "new_usaha_overall": 296,
           "new_rumah_overall": 405
         },
         {
           "kecamatan": "[041] LORE TENGAH",
           "kec_name": "[041] LORE TENGAH",
-          "total_prelist": 2506,
-          "total_draft": 120,
-          "total_open": 7,
-          "total_submitted": 2379,
-          "total_rejected": 137,
-          "total_approved": 1931,
+          "total_prelist": 2508,
+          "total_draft": 113,
+          "total_open": 1,
+          "total_submitted": 2394,
+          "total_rejected": 97,
+          "total_approved": 1986,
           "total_submitted_pencacah": 310,
           "total_submitted_respondent": 1,
-          "persentase": 94.93,
-          "today_completed": 32,
+          "persentase": 95.45,
+          "today_completed": 15,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 55
+          },
+          "yesterday_completed": 32,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 108,
             "REJECTED BY PENGAWAS": 12
           },
-          "yesterday_completed": 38,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 38,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 72
           },
-          "two_days_ago_completed": 34,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 27,
-            "SUBMITTED BY PENCACAH": 14
-          },
           "breakdown": {
-            "total": 2506,
-            "APPROVED BY Pengawas": 1931,
+            "total": 2508,
+            "APPROVED BY Pengawas": 1986,
             "SUBMITTED BY Pencacah": 286,
-            "REJECTED BY Pengawas": 126,
-            "DRAFT": 120,
+            "DRAFT": 113,
+            "REJECTED BY Pengawas": 85,
             "EDITED BY Admin Kabupaten": 24,
-            "REVOKED BY Pengawas": 11,
-            "OPEN": 7,
+            "REVOKED BY Pengawas": 12,
+            "OPEN": 1,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 1.28,
-          "delta_kemarin_persen": 1.52,
-          "delta_lusa_persen": 1.36,
+          "delta_persen": 0.6,
+          "delta_kemarin_persen": 1.28,
+          "delta_lusa_persen": 1.52,
           "new_usaha_overall": 65,
           "new_rumah_overall": 23
         },
         {
           "kecamatan": "[042] LORE TIMUR",
           "kec_name": "[042] LORE TIMUR",
-          "total_prelist": 2853,
-          "total_draft": 15,
-          "total_open": 38,
-          "total_submitted": 2800,
-          "total_rejected": 54,
-          "total_approved": 1952,
-          "total_submitted_pencacah": 793,
+          "total_prelist": 2855,
+          "total_draft": 11,
+          "total_open": 20,
+          "total_submitted": 2824,
+          "total_rejected": 51,
+          "total_approved": 2101,
+          "total_submitted_pencacah": 671,
           "total_submitted_respondent": 1,
-          "persentase": 98.14,
-          "today_completed": 34,
+          "persentase": 98.91,
+          "today_completed": 24,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 149
+          },
+          "yesterday_completed": 34,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 107,
             "REJECTED BY PENGAWAS": 7
           },
-          "yesterday_completed": 23,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 23,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 123,
             "REJECTED BY PENGAWAS": 2
           },
-          "two_days_ago_completed": 20,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 95,
-            "REJECTED BY PENGAWAS": 4
-          },
           "breakdown": {
-            "total": 2853,
-            "APPROVED BY Pengawas": 1952,
-            "SUBMITTED BY Pencacah": 777,
-            "REJECTED BY Pengawas": 51,
-            "OPEN": 38,
+            "total": 2855,
+            "APPROVED BY Pengawas": 2101,
+            "SUBMITTED BY Pencacah": 655,
+            "REJECTED BY Pengawas": 48,
+            "OPEN": 20,
             "EDITED BY Admin Kabupaten": 16,
-            "DRAFT": 15,
+            "DRAFT": 11,
             "REVOKED BY Pengawas": 3,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 1.19,
-          "delta_kemarin_persen": 0.81,
-          "delta_lusa_persen": 0.7,
+          "delta_persen": 0.84,
+          "delta_kemarin_persen": 1.19,
+          "delta_lusa_persen": 0.81,
           "new_usaha_overall": 110,
           "new_rumah_overall": 58
         },
         {
           "kecamatan": "[043] LORE PEORE",
           "kec_name": "[043] LORE PEORE",
-          "total_prelist": 2004,
+          "total_prelist": 2022,
           "total_draft": 0,
-          "total_open": 18,
-          "total_submitted": 1986,
-          "total_rejected": 113,
-          "total_approved": 1601,
-          "total_submitted_pencacah": 272,
+          "total_open": 5,
+          "total_submitted": 2017,
+          "total_rejected": 139,
+          "total_approved": 1683,
+          "total_submitted_pencacah": 195,
           "total_submitted_respondent": 0,
-          "persentase": 99.1,
-          "today_completed": 11,
+          "persentase": 99.75,
+          "today_completed": 31,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 82,
+            "REJECTED BY PENGAWAS": 26
+          },
+          "yesterday_completed": 11,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 126,
             "REJECTED BY PENGAWAS": 8
           },
-          "yesterday_completed": 16,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 16,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 145,
             "REJECTED BY PENGAWAS": 12
           },
-          "two_days_ago_completed": 6,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 10,
-            "SUBMITTED BY PENCACAH": 8
-          },
           "breakdown": {
-            "total": 2004,
-            "APPROVED BY Pengawas": 1601,
-            "SUBMITTED BY Pencacah": 265,
-            "REJECTED BY Pengawas": 103,
-            "OPEN": 18,
+            "total": 2022,
+            "APPROVED BY Pengawas": 1683,
+            "SUBMITTED BY Pencacah": 188,
+            "REJECTED BY Pengawas": 129,
             "REVOKED BY Pengawas": 10,
-            "EDITED BY Admin Kabupaten": 7
+            "EDITED BY Admin Kabupaten": 7,
+            "OPEN": 5
           },
-          "delta_persen": 0.55,
-          "delta_kemarin_persen": 0.8,
-          "delta_lusa_persen": 0.3,
+          "delta_persen": 1.53,
+          "delta_kemarin_persen": 0.54,
+          "delta_lusa_persen": 0.79,
           "new_usaha_overall": 35,
           "new_rumah_overall": 52
         },
         {
           "kecamatan": "[050] POSO PESISIR",
           "kec_name": "[050] POSO PESISIR",
-          "total_prelist": 12666,
-          "total_draft": 722,
-          "total_open": 109,
-          "total_submitted": 11835,
-          "total_rejected": 889,
-          "total_approved": 6639,
-          "total_submitted_pencacah": 4306,
+          "total_prelist": 12693,
+          "total_draft": 648,
+          "total_open": 102,
+          "total_submitted": 11943,
+          "total_rejected": 869,
+          "total_approved": 6775,
+          "total_submitted_pencacah": 4298,
           "total_submitted_respondent": 1,
-          "persentase": 93.44,
-          "today_completed": 133,
+          "persentase": 94.09,
+          "today_completed": 108,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 136
+          },
+          "yesterday_completed": 133,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 109,
             "SUBMITTED BY PENCACAH": 38
           },
-          "yesterday_completed": 67,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 67,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 94,
             "REJECTED BY PENGAWAS": 52
           },
-          "two_days_ago_completed": 99,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 235,
-            "REJECTED BY PENGAWAS": 11
-          },
           "breakdown": {
-            "total": 12666,
-            "APPROVED BY Pengawas": 6639,
-            "SUBMITTED BY Pencacah": 4199,
-            "REJECTED BY Pengawas": 876,
-            "DRAFT": 722,
-            "OPEN": 109,
+            "total": 12693,
+            "APPROVED BY Pengawas": 6775,
+            "SUBMITTED BY Pencacah": 4191,
+            "REJECTED BY Pengawas": 856,
+            "DRAFT": 648,
             "EDITED BY Admin Kabupaten": 107,
+            "OPEN": 102,
             "REVOKED BY Pengawas": 13,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 1.05,
-          "delta_kemarin_persen": 0.53,
-          "delta_lusa_persen": 0.78,
+          "delta_persen": 0.85,
+          "delta_kemarin_persen": 1.05,
+          "delta_lusa_persen": 0.53,
           "new_usaha_overall": 358,
           "new_rumah_overall": 335
         },
         {
           "kecamatan": "[051] POSO PESISIR SELATAN",
           "kec_name": "[051] POSO PESISIR SELATAN",
-          "total_prelist": 4953,
-          "total_draft": 106,
-          "total_open": 116,
-          "total_submitted": 4731,
-          "total_rejected": 87,
-          "total_approved": 4358,
-          "total_submitted_pencacah": 286,
+          "total_prelist": 4959,
+          "total_draft": 99,
+          "total_open": 84,
+          "total_submitted": 4776,
+          "total_rejected": 78,
+          "total_approved": 4380,
+          "total_submitted_pencacah": 318,
           "total_submitted_respondent": 0,
-          "persentase": 95.52,
-          "today_completed": 60,
+          "persentase": 96.31,
+          "today_completed": 45,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 22,
+            "SUBMITTED BY PENCACAH": 32
+          },
+          "yesterday_completed": 60,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 34,
             "SUBMITTED BY PENCACAH": 38
           },
-          "yesterday_completed": 41,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 41,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 30,
             "REJECTED BY PENGAWAS": 12
           },
-          "two_days_ago_completed": 48,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 77,
-            "REJECTED BY PENGAWAS": 22
-          },
           "breakdown": {
-            "total": 4953,
-            "APPROVED BY Pengawas": 4358,
+            "total": 4959,
+            "APPROVED BY Pengawas": 4380,
             "EDITED BY Admin Kabupaten": 194,
-            "OPEN": 116,
-            "DRAFT": 106,
-            "SUBMITTED BY Pencacah": 92,
-            "REJECTED BY Pengawas": 70,
+            "SUBMITTED BY Pencacah": 124,
+            "DRAFT": 99,
+            "OPEN": 84,
+            "REJECTED BY Pengawas": 61,
             "REVOKED BY Pengawas": 17
           },
-          "delta_persen": 1.21,
-          "delta_kemarin_persen": 0.83,
-          "delta_lusa_persen": 0.97,
+          "delta_persen": 0.91,
+          "delta_kemarin_persen": 1.21,
+          "delta_lusa_persen": 0.83,
           "new_usaha_overall": 134,
           "new_rumah_overall": 122
         },
         {
           "kecamatan": "[052] POSO PESISIR UTARA",
           "kec_name": "[052] POSO PESISIR UTARA",
-          "total_prelist": 8116,
-          "total_draft": 264,
-          "total_open": 133,
-          "total_submitted": 7719,
-          "total_rejected": 157,
-          "total_approved": 5934,
-          "total_submitted_pencacah": 1628,
+          "total_prelist": 8132,
+          "total_draft": 212,
+          "total_open": 111,
+          "total_submitted": 7809,
+          "total_rejected": 130,
+          "total_approved": 6197,
+          "total_submitted_pencacah": 1482,
           "total_submitted_respondent": 0,
-          "persentase": 95.11,
-          "today_completed": 114,
+          "persentase": 96.03,
+          "today_completed": 90,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 263
+          },
+          "yesterday_completed": 114,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 250,
             "REJECTED BY PENGAWAS": 65
           },
-          "yesterday_completed": 108,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 108,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 135
           },
-          "two_days_ago_completed": 79,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 151
-          },
           "breakdown": {
-            "total": 8116,
-            "APPROVED BY Pengawas": 5934,
-            "SUBMITTED BY Pencacah": 1351,
-            "EDITED BY Admin Kabupaten": 277,
-            "DRAFT": 264,
-            "REJECTED BY Pengawas": 150,
-            "OPEN": 133,
-            "REVOKED BY Pengawas": 7
+            "total": 8132,
+            "APPROVED BY Pengawas": 6197,
+            "SUBMITTED BY Pencacah": 1206,
+            "EDITED BY Admin Kabupaten": 276,
+            "DRAFT": 212,
+            "REJECTED BY Pengawas": 124,
+            "OPEN": 111,
+            "REVOKED BY Pengawas": 6
           },
-          "delta_persen": 1.4,
-          "delta_kemarin_persen": 1.33,
-          "delta_lusa_persen": 0.97,
+          "delta_persen": 1.11,
+          "delta_kemarin_persen": 1.4,
+          "delta_lusa_persen": 1.33,
           "new_usaha_overall": 254,
           "new_rumah_overall": 142
         },
         {
           "kecamatan": "[060] LAGE",
           "kec_name": "[060] LAGE",
-          "total_prelist": 10546,
-          "total_draft": 253,
-          "total_open": 442,
-          "total_submitted": 9851,
-          "total_rejected": 1011,
-          "total_approved": 6073,
-          "total_submitted_pencacah": 2766,
+          "total_prelist": 10563,
+          "total_draft": 260,
+          "total_open": 363,
+          "total_submitted": 9940,
+          "total_rejected": 934,
+          "total_approved": 6149,
+          "total_submitted_pencacah": 2856,
           "total_submitted_respondent": 1,
-          "persentase": 93.41,
-          "today_completed": 185,
+          "persentase": 94.1,
+          "today_completed": 89,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 76,
+            "SUBMITTED BY PENCACAH": 90
+          },
+          "yesterday_completed": 185,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 102,
             "SUBMITTED BY PENCACAH": 150
           },
-          "yesterday_completed": 86,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 86,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 348,
             "REJECTED BY PENGAWAS": 9
           },
-          "two_days_ago_completed": 84,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 177,
-            "REJECTED BY PENGAWAS": 33
-          },
           "breakdown": {
-            "total": 10546,
-            "APPROVED BY Pengawas": 6073,
-            "SUBMITTED BY Pencacah": 2529,
-            "REJECTED BY Pengawas": 995,
-            "OPEN": 442,
-            "DRAFT": 253,
+            "total": 10563,
+            "APPROVED BY Pengawas": 6149,
+            "SUBMITTED BY Pencacah": 2619,
+            "REJECTED BY Pengawas": 919,
+            "OPEN": 363,
+            "DRAFT": 260,
             "EDITED BY Admin Kabupaten": 237,
-            "REVOKED BY Pengawas": 16,
+            "REVOKED BY Pengawas": 15,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 1.75,
-          "delta_kemarin_persen": 0.82,
-          "delta_lusa_persen": 0.8,
+          "delta_persen": 0.84,
+          "delta_kemarin_persen": 1.75,
+          "delta_lusa_persen": 0.81,
           "new_usaha_overall": 259,
           "new_rumah_overall": 281
         },
         {
           "kecamatan": "[070] POSO KOTA",
           "kec_name": "[070] POSO KOTA",
-          "total_prelist": 13154,
-          "total_draft": 376,
-          "total_open": 1399,
-          "total_submitted": 11379,
-          "total_rejected": 442,
-          "total_approved": 8292,
-          "total_submitted_pencacah": 2644,
+          "total_prelist": 13175,
+          "total_draft": 385,
+          "total_open": 1350,
+          "total_submitted": 11440,
+          "total_rejected": 483,
+          "total_approved": 8560,
+          "total_submitted_pencacah": 2396,
           "total_submitted_respondent": 1,
-          "persentase": 86.51,
-          "today_completed": 92,
+          "persentase": 86.83,
+          "today_completed": 61,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 268,
+            "REJECTED BY PENGAWAS": 41
+          },
+          "yesterday_completed": 92,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 123,
             "SUBMITTED BY PENCACAH": 9
           },
-          "yesterday_completed": 54,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 54,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 211
           },
-          "two_days_ago_completed": 51,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 45,
-            "SUBMITTED BY PENCACAH": 51
-          },
           "breakdown": {
-            "total": 13154,
-            "APPROVED BY Pengawas": 8292,
-            "SUBMITTED BY Pencacah": 2564,
-            "OPEN": 1399,
-            "REJECTED BY Pengawas": 425,
-            "DRAFT": 376,
+            "total": 13175,
+            "APPROVED BY Pengawas": 8560,
+            "SUBMITTED BY Pencacah": 2316,
+            "OPEN": 1350,
+            "REJECTED BY Pengawas": 467,
+            "DRAFT": 385,
             "EDITED BY Admin Kabupaten": 76,
-            "REVOKED BY Pengawas": 17,
+            "REVOKED BY Pengawas": 16,
             "COMPLETED BY Admin Kabupaten": 4,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 0.7,
-          "delta_kemarin_persen": 0.41,
-          "delta_lusa_persen": 0.39,
+          "delta_persen": 0.46,
+          "delta_kemarin_persen": 0.7,
+          "delta_lusa_persen": 0.41,
           "new_usaha_overall": 400,
           "new_rumah_overall": 270
         },
         {
           "kecamatan": "[071] POSO KOTA UTARA",
           "kec_name": "[071] POSO KOTA UTARA",
-          "total_prelist": 8788,
-          "total_draft": 212,
-          "total_open": 903,
-          "total_submitted": 7673,
-          "total_rejected": 291,
-          "total_approved": 5893,
-          "total_submitted_pencacah": 1485,
+          "total_prelist": 8813,
+          "total_draft": 186,
+          "total_open": 851,
+          "total_submitted": 7776,
+          "total_rejected": 299,
+          "total_approved": 5971,
+          "total_submitted_pencacah": 1502,
           "total_submitted_respondent": 4,
-          "persentase": 87.31,
-          "today_completed": 111,
+          "persentase": 88.23,
+          "today_completed": 103,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 78,
+            "REJECTED BY PENGAWAS": 8,
+            "SUBMITTED BY PENCACAH": 17
+          },
+          "yesterday_completed": 111,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 65,
             "SUBMITTED BY PENCACAH": 48
           },
-          "yesterday_completed": 63,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 63,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 66
           },
-          "two_days_ago_completed": 71,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 173
-          },
           "breakdown": {
-            "total": 8788,
-            "APPROVED BY Pengawas": 5893,
-            "SUBMITTED BY Pencacah": 1415,
-            "OPEN": 903,
-            "REJECTED BY Pengawas": 284,
-            "DRAFT": 212,
+            "total": 8813,
+            "APPROVED BY Pengawas": 5971,
+            "SUBMITTED BY Pencacah": 1432,
+            "OPEN": 851,
+            "REJECTED BY Pengawas": 292,
+            "DRAFT": 186,
             "EDITED BY Admin Kabupaten": 70,
             "REVOKED BY Pengawas": 7,
             "SUBMITTED RESPONDENT": 4
           },
-          "delta_persen": 1.26,
-          "delta_kemarin_persen": 0.72,
-          "delta_lusa_persen": 0.81,
+          "delta_persen": 1.17,
+          "delta_kemarin_persen": 1.26,
+          "delta_lusa_persen": 0.71,
           "new_usaha_overall": 312,
           "new_rumah_overall": 218
         },
         {
           "kecamatan": "[072] POSO KOTA SELATAN",
           "kec_name": "[072] POSO KOTA SELATAN",
-          "total_prelist": 7758,
-          "total_draft": 514,
-          "total_open": 436,
-          "total_submitted": 6808,
-          "total_rejected": 273,
-          "total_approved": 4082,
-          "total_submitted_pencacah": 2453,
+          "total_prelist": 7771,
+          "total_draft": 427,
+          "total_open": 415,
+          "total_submitted": 6929,
+          "total_rejected": 245,
+          "total_approved": 4092,
+          "total_submitted_pencacah": 2592,
           "total_submitted_respondent": 0,
-          "persentase": 87.75,
-          "today_completed": 129,
+          "persentase": 89.16,
+          "today_completed": 121,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 10,
+            "SUBMITTED BY PENCACAH": 139
+          },
+          "yesterday_completed": 129,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 150,
             "REJECTED BY PENGAWAS": 19
           },
-          "yesterday_completed": 40,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 40,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 31,
             "SUBMITTED BY PENCACAH": 9
           },
-          "two_days_ago_completed": 68,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 22,
-            "REJECTED BY PENGAWAS": 19,
-            "SUBMITTED BY PENCACAH": 27
-          },
           "breakdown": {
-            "total": 7758,
-            "APPROVED BY Pengawas": 4082,
-            "SUBMITTED BY Pencacah": 2438,
-            "DRAFT": 514,
-            "OPEN": 436,
-            "REJECTED BY Pengawas": 265,
+            "total": 7771,
+            "APPROVED BY Pengawas": 4092,
+            "SUBMITTED BY Pencacah": 2577,
+            "DRAFT": 427,
+            "OPEN": 415,
+            "REJECTED BY Pengawas": 237,
             "EDITED BY Admin Kabupaten": 15,
             "REVOKED BY Pengawas": 8
           },
-          "delta_persen": 1.66,
-          "delta_kemarin_persen": 0.52,
-          "delta_lusa_persen": 0.88,
+          "delta_persen": 1.56,
+          "delta_kemarin_persen": 1.66,
+          "delta_lusa_persen": 0.51,
           "new_usaha_overall": 207,
           "new_rumah_overall": 306
         }
       ],
       "breakdown": {
-        "total": 130334,
-        "APPROVED BY Pengawas": 89516,
-        "REJECTED BY Pengawas": 5989,
-        "EDITED BY Admin Kabupaten": 3126,
-        "SUBMITTED BY Pencacah": 23256,
-        "DRAFT": 3640,
-        "OPEN": 4451,
-        "REVOKED BY Pengawas": 281,
+        "total": 130629,
+        "APPROVED BY Pengawas": 91293,
+        "REJECTED BY Pengawas": 5633,
+        "EDITED BY Admin Kabupaten": 3125,
+        "SUBMITTED BY Pencacah": 23046,
+        "DRAFT": 3208,
+        "REVOKED BY Pengawas": 269,
         "REJECTED BY Admin Kabupaten": 3,
         "COMPLETED BY Admin Kabupaten": 25,
-        "SUBMITTED RESPONDENT": 47
+        "OPEN": 3981,
+        "SUBMITTED RESPONDENT": 46
       },
-      "two_days_ago_completed": 908,
+      "two_days_ago_completed": 857,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1895
-      },
-      "yesterday_completed": 857,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 2342
+      },
+      "yesterday_completed": 1332,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 2402
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 1332,
+      "today_completed": 1197,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 2402
+        "APPROVED BY PENGAWAS": 1777
       },
-      "delta_persen": 1.02,
-      "delta_kemarin_persen": 0.66,
-      "delta_lusa_persen": 0.7
+      "delta_persen": 0.92,
+      "delta_kemarin_persen": 1.02,
+      "delta_lusa_persen": 0.66
     },
     {
       "kabupaten": "[05] DONGGALA",
-      "total_prelist": 143121,
-      "total_draft": 2201,
-      "total_open": 5470,
-      "total_submitted": 135450,
-      "total_rejected": 2382,
-      "total_approved": 113495,
-      "total_submitted_pencacah": 19568,
+      "total_prelist": 143446,
+      "total_draft": 2065,
+      "total_open": 4853,
+      "total_submitted": 136528,
+      "total_rejected": 2369,
+      "total_approved": 114972,
+      "total_submitted_pencacah": 19182,
       "total_submitted_respondent": 5,
-      "persentase": 94.64,
+      "persentase": 95.18,
       "new_usaha_overall": 6308,
       "new_rumah_overall": 4744,
       "new_businesses": [],
@@ -3121,44 +3109,45 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[041] RIO PAKAVA",
           "kec_name": "[041] RIO PAKAVA",
-          "total_prelist": 11023,
-          "total_draft": 433,
-          "total_open": 568,
-          "total_submitted": 10022,
-          "total_rejected": 131,
-          "total_approved": 9593,
-          "total_submitted_pencacah": 298,
+          "total_prelist": 11081,
+          "total_draft": 430,
+          "total_open": 536,
+          "total_submitted": 10115,
+          "total_rejected": 126,
+          "total_approved": 9652,
+          "total_submitted_pencacah": 337,
           "total_submitted_respondent": 0,
-          "persentase": 90.92,
-          "today_completed": 176,
+          "persentase": 91.28,
+          "today_completed": 93,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 59,
+            "SUBMITTED BY PENCACAH": 39
+          },
+          "yesterday_completed": 176,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 195
           },
-          "yesterday_completed": 101,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 101,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 71,
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 26
           },
-          "two_days_ago_completed": 158,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 168
-          },
           "breakdown": {
-            "total": 11023,
-            "APPROVED BY Pengawas": 9593,
-            "OPEN": 568,
-            "DRAFT": 433,
-            "COMPLETED BY Admin Kabupaten": 145,
-            "SUBMITTED BY Pencacah": 140,
-            "REJECTED BY Pengawas": 73,
-            "REVOKED BY Pengawas": 57,
+            "total": 11081,
+            "APPROVED BY Pengawas": 9652,
+            "OPEN": 536,
+            "DRAFT": 430,
+            "SUBMITTED BY Pencacah": 177,
+            "COMPLETED BY Admin Kabupaten": 147,
+            "REJECTED BY Pengawas": 69,
+            "REVOKED BY Pengawas": 54,
             "EDITED BY Admin Kabupaten": 13,
-            "REJECTED BY Admin Kabupaten": 1
+            "REJECTED BY Admin Kabupaten": 3
           },
-          "delta_persen": 1.6,
-          "delta_kemarin_persen": 0.92,
-          "delta_lusa_persen": 1.43,
+          "delta_persen": 0.84,
+          "delta_kemarin_persen": 1.59,
+          "delta_lusa_persen": 0.91,
           "new_usaha_overall": 529,
           "new_rumah_overall": 406
         },
@@ -3170,338 +3159,339 @@ window.IPAS_DATA = {
           "total_open": 0,
           "total_submitted": 1982,
           "total_rejected": 12,
-          "total_approved": 1947,
-          "total_submitted_pencacah": 23,
+          "total_approved": 1948,
+          "total_submitted_pencacah": 22,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
-          "today_completed": 10,
+          "today_completed": 0,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 1
+          },
+          "yesterday_completed": 10,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 8,
             "SUBMITTED BY PENCACAH": 2
           },
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 12
-          },
-          "two_days_ago_completed": 6,
+          "two_days_ago_completed": 1,
           "two_days_ago_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 10
+            "APPROVED BY PENGAWAS": 12
           },
           "breakdown": {
             "total": 1982,
-            "APPROVED BY Pengawas": 1947,
+            "APPROVED BY Pengawas": 1948,
             "EDITED BY Admin Kabupaten": 21,
             "REVOKED BY Pengawas": 12,
-            "SUBMITTED BY Pencacah": 2
+            "SUBMITTED BY Pencacah": 1
           },
-          "delta_persen": 0.5,
-          "delta_kemarin_persen": 0.05,
-          "delta_lusa_persen": 0.3,
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.5,
+          "delta_lusa_persen": 0.05,
           "new_usaha_overall": 112,
           "new_rumah_overall": 32
         },
         {
           "kecamatan": "[080] BANAWA",
           "kec_name": "[080] BANAWA",
-          "total_prelist": 19367,
-          "total_draft": 295,
-          "total_open": 1211,
-          "total_submitted": 17861,
-          "total_rejected": 215,
-          "total_approved": 17007,
-          "total_submitted_pencacah": 634,
+          "total_prelist": 19413,
+          "total_draft": 265,
+          "total_open": 964,
+          "total_submitted": 18184,
+          "total_rejected": 223,
+          "total_approved": 17130,
+          "total_submitted_pencacah": 826,
           "total_submitted_respondent": 5,
-          "persentase": 92.22,
-          "today_completed": 243,
+          "persentase": 93.67,
+          "today_completed": 323,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 123,
+            "REJECTED BY PENGAWAS": 8,
+            "SUBMITTED BY PENCACAH": 192
+          },
+          "yesterday_completed": 243,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 393,
             "REJECTED BY PENGAWAS": 118
           },
-          "yesterday_completed": 542,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 542,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 161,
             "REJECTED BY PENGAWAS": 26,
             "SUBMITTED BY PENCACAH": 355
           },
-          "two_days_ago_completed": 195,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 240
-          },
           "breakdown": {
-            "total": 19367,
-            "APPROVED BY Pengawas": 17007,
-            "OPEN": 1211,
-            "SUBMITTED BY Pencacah": 372,
-            "DRAFT": 295,
+            "total": 19413,
+            "APPROVED BY Pengawas": 17130,
+            "OPEN": 964,
+            "SUBMITTED BY Pencacah": 564,
+            "DRAFT": 265,
             "COMPLETED BY Admin Kabupaten": 245,
-            "REJECTED BY Pengawas": 204,
+            "REJECTED BY Pengawas": 212,
             "EDITED BY Admin Kabupaten": 17,
             "REVOKED BY Pengawas": 10,
             "SUBMITTED RESPONDENT": 5,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.25,
-          "delta_kemarin_persen": 2.8,
-          "delta_lusa_persen": 1.01,
+          "delta_persen": 1.66,
+          "delta_kemarin_persen": 1.25,
+          "delta_lusa_persen": 2.79,
           "new_usaha_overall": 746,
           "new_rumah_overall": 605
         },
         {
           "kecamatan": "[081] BANAWA SELATAN",
           "kec_name": "[081] BANAWA SELATAN",
-          "total_prelist": 12658,
-          "total_draft": 20,
-          "total_open": 2,
-          "total_submitted": 12636,
-          "total_rejected": 110,
-          "total_approved": 10844,
-          "total_submitted_pencacah": 1682,
+          "total_prelist": 12708,
+          "total_draft": 4,
+          "total_open": 1,
+          "total_submitted": 12703,
+          "total_rejected": 107,
+          "total_approved": 10864,
+          "total_submitted_pencacah": 1732,
           "total_submitted_respondent": 0,
-          "persentase": 99.83,
-          "today_completed": 75,
+          "persentase": 99.96,
+          "today_completed": 67,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 20,
+            "SUBMITTED BY PENCACAH": 50
+          },
+          "yesterday_completed": 75,
+          "yesterday_completed_breakdown": {
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 95
           },
-          "yesterday_completed": 40,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 40,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 50
           },
-          "two_days_ago_completed": 95,
-          "two_days_ago_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 7,
-            "SUBMITTED BY PENCACAH": 99
-          },
           "breakdown": {
-            "total": 12658,
-            "APPROVED BY Pengawas": 10844,
-            "SUBMITTED BY Pencacah": 1126,
-            "COMPLETED BY Admin Kabupaten": 473,
+            "total": 12708,
+            "APPROVED BY Pengawas": 10864,
+            "SUBMITTED BY Pencacah": 1177,
+            "COMPLETED BY Admin Kabupaten": 472,
             "EDITED BY Admin Kabupaten": 83,
-            "REJECTED BY Pengawas": 69,
+            "REJECTED BY Pengawas": 65,
             "REVOKED BY Pengawas": 39,
-            "DRAFT": 20,
-            "OPEN": 2,
-            "REJECTED BY Admin Kabupaten": 2
+            "DRAFT": 4,
+            "REJECTED BY Admin Kabupaten": 3,
+            "OPEN": 1
           },
-          "delta_persen": 0.59,
-          "delta_kemarin_persen": 0.32,
-          "delta_lusa_persen": 0.75,
+          "delta_persen": 0.53,
+          "delta_kemarin_persen": 0.59,
+          "delta_lusa_persen": 0.31,
           "new_usaha_overall": 643,
           "new_rumah_overall": 430
         },
         {
           "kecamatan": "[082] BANAWA TENGAH",
           "kec_name": "[082] BANAWA TENGAH",
-          "total_prelist": 5180,
-          "total_draft": 252,
-          "total_open": 184,
-          "total_submitted": 4744,
-          "total_rejected": 17,
-          "total_approved": 4474,
-          "total_submitted_pencacah": 253,
+          "total_prelist": 5188,
+          "total_draft": 238,
+          "total_open": 142,
+          "total_submitted": 4808,
+          "total_rejected": 45,
+          "total_approved": 4496,
+          "total_submitted_pencacah": 267,
           "total_submitted_respondent": 0,
-          "persentase": 91.58,
-          "today_completed": 120,
+          "persentase": 92.68,
+          "today_completed": 64,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 22,
+            "REJECTED BY PENGAWAS": 28,
+            "SUBMITTED BY PENCACAH": 14
+          },
+          "yesterday_completed": 120,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 97,
             "SUBMITTED BY PENCACAH": 24
           },
-          "yesterday_completed": 39,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 39,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 76
           },
-          "two_days_ago_completed": 58,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 101,
-            "REJECTED BY PENGAWAS": 4
-          },
           "breakdown": {
-            "total": 5180,
-            "APPROVED BY Pengawas": 4474,
-            "DRAFT": 252,
-            "OPEN": 184,
-            "SUBMITTED BY Pencacah": 137,
+            "total": 5188,
+            "APPROVED BY Pengawas": 4496,
+            "DRAFT": 238,
+            "SUBMITTED BY Pencacah": 151,
+            "OPEN": 142,
             "COMPLETED BY Admin Kabupaten": 113,
-            "REJECTED BY Pengawas": 11,
+            "REJECTED BY Pengawas": 39,
             "REVOKED BY Pengawas": 6,
             "EDITED BY Admin Kabupaten": 3
           },
-          "delta_persen": 2.32,
-          "delta_kemarin_persen": 0.75,
-          "delta_lusa_persen": 1.12,
+          "delta_persen": 1.23,
+          "delta_kemarin_persen": 2.31,
+          "delta_lusa_persen": 0.75,
           "new_usaha_overall": 265,
           "new_rumah_overall": 97
         },
         {
           "kecamatan": "[090] LABUAN",
           "kec_name": "[090] LABUAN",
-          "total_prelist": 7397,
-          "total_draft": 30,
-          "total_open": 640,
-          "total_submitted": 6727,
-          "total_rejected": 92,
-          "total_approved": 4969,
-          "total_submitted_pencacah": 1666,
+          "total_prelist": 7410,
+          "total_draft": 26,
+          "total_open": 616,
+          "total_submitted": 6768,
+          "total_rejected": 95,
+          "total_approved": 5335,
+          "total_submitted_pencacah": 1338,
           "total_submitted_respondent": 0,
-          "persentase": 90.94,
-          "today_completed": 92,
+          "persentase": 91.34,
+          "today_completed": 41,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 366,
+            "REJECTED BY PENGAWAS": 3
+          },
+          "yesterday_completed": 92,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 217,
             "REJECTED BY PENGAWAS": 22
           },
-          "yesterday_completed": 97,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 97,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 92,
             "SUBMITTED BY PENCACAH": 9
           },
-          "two_days_ago_completed": 65,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 83
-          },
           "breakdown": {
-            "total": 7397,
-            "APPROVED BY Pengawas": 4969,
-            "SUBMITTED BY Pencacah": 1600,
-            "OPEN": 640,
-            "REJECTED BY Pengawas": 82,
+            "total": 7410,
+            "APPROVED BY Pengawas": 5335,
+            "SUBMITTED BY Pencacah": 1272,
+            "OPEN": 616,
+            "REJECTED BY Pengawas": 83,
             "EDITED BY Admin Kabupaten": 49,
-            "DRAFT": 30,
+            "DRAFT": 26,
             "COMPLETED BY Admin Kabupaten": 17,
-            "REVOKED BY Pengawas": 10
+            "REVOKED BY Pengawas": 12
           },
-          "delta_persen": 1.24,
-          "delta_kemarin_persen": 1.31,
-          "delta_lusa_persen": 0.88,
+          "delta_persen": 0.55,
+          "delta_kemarin_persen": 1.24,
+          "delta_lusa_persen": 1.31,
           "new_usaha_overall": 251,
           "new_rumah_overall": 338
         },
         {
           "kecamatan": "[091] TANANTOVEA",
           "kec_name": "[091] TANANTOVEA",
-          "total_prelist": 7870,
-          "total_draft": 144,
-          "total_open": 184,
-          "total_submitted": 7542,
-          "total_rejected": 15,
-          "total_approved": 7081,
-          "total_submitted_pencacah": 446,
+          "total_prelist": 7872,
+          "total_draft": 147,
+          "total_open": 147,
+          "total_submitted": 7578,
+          "total_rejected": 21,
+          "total_approved": 7190,
+          "total_submitted_pencacah": 367,
           "total_submitted_respondent": 0,
-          "persentase": 95.83,
-          "today_completed": 99,
+          "persentase": 96.27,
+          "today_completed": 36,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 109,
+            "REJECTED BY PENGAWAS": 6
+          },
+          "yesterday_completed": 99,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 41,
             "SUBMITTED BY PENCACAH": 66
           },
-          "yesterday_completed": 52,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 52,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 141,
             "REJECTED BY PENGAWAS": 2
           },
-          "two_days_ago_completed": 88,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 18,
-            "SUBMITTED BY PENCACAH": 102
-          },
           "breakdown": {
-            "total": 7870,
-            "APPROVED BY Pengawas": 7081,
+            "total": 7872,
+            "APPROVED BY Pengawas": 7190,
             "EDITED BY Admin Kabupaten": 285,
-            "OPEN": 184,
-            "SUBMITTED BY Pencacah": 161,
-            "DRAFT": 144,
-            "REJECTED BY Pengawas": 14,
+            "DRAFT": 147,
+            "OPEN": 147,
+            "SUBMITTED BY Pencacah": 82,
+            "REJECTED BY Pengawas": 20,
             "REVOKED BY Pengawas": 1
           },
-          "delta_persen": 1.26,
-          "delta_kemarin_persen": 0.66,
-          "delta_lusa_persen": 1.12,
+          "delta_persen": 0.46,
+          "delta_kemarin_persen": 1.26,
+          "delta_lusa_persen": 0.66,
           "new_usaha_overall": 337,
           "new_rumah_overall": 244
         },
         {
           "kecamatan": "[100] SINDUE",
           "kec_name": "[100] SINDUE",
-          "total_prelist": 11004,
-          "total_draft": 152,
-          "total_open": 232,
-          "total_submitted": 10620,
-          "total_rejected": 237,
-          "total_approved": 7320,
-          "total_submitted_pencacah": 3063,
+          "total_prelist": 11034,
+          "total_draft": 131,
+          "total_open": 208,
+          "total_submitted": 10695,
+          "total_rejected": 251,
+          "total_approved": 7599,
+          "total_submitted_pencacah": 2845,
           "total_submitted_respondent": 0,
-          "persentase": 96.51,
-          "today_completed": 134,
+          "persentase": 96.93,
+          "today_completed": 75,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 279,
+            "REJECTED BY PENGAWAS": 14
+          },
+          "yesterday_completed": 134,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 366,
             "REJECTED BY PENGAWAS": 47
           },
-          "yesterday_completed": 148,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 148,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 29,
             "SUBMITTED BY PENCACAH": 122
           },
-          "two_days_ago_completed": 133,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 160,
-            "REJECTED BY PENGAWAS": 17
-          },
           "breakdown": {
-            "total": 11004,
-            "APPROVED BY Pengawas": 7320,
-            "SUBMITTED BY Pencacah": 2989,
-            "OPEN": 232,
-            "REJECTED BY Pengawas": 204,
-            "DRAFT": 152,
+            "total": 11034,
+            "APPROVED BY Pengawas": 7599,
+            "SUBMITTED BY Pencacah": 2771,
+            "REJECTED BY Pengawas": 219,
+            "OPEN": 208,
+            "DRAFT": 131,
             "COMPLETED BY Admin Kabupaten": 38,
             "EDITED BY Admin Kabupaten": 36,
-            "REVOKED BY Pengawas": 28,
+            "REVOKED BY Pengawas": 27,
             "REJECTED BY Admin Kabupaten": 5
           },
-          "delta_persen": 1.22,
-          "delta_kemarin_persen": 1.34,
-          "delta_lusa_persen": 1.21,
+          "delta_persen": 0.68,
+          "delta_kemarin_persen": 1.21,
+          "delta_lusa_persen": 1.34,
           "new_usaha_overall": 453,
           "new_rumah_overall": 291
         },
         {
           "kecamatan": "[101] SINDUE TOMBUSABORA",
           "kec_name": "[101] SINDUE TOMBUSABORA",
-          "total_prelist": 6428,
+          "total_prelist": 6441,
           "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 6428,
-          "total_rejected": 9,
-          "total_approved": 6302,
-          "total_submitted_pencacah": 117,
+          "total_submitted": 6441,
+          "total_rejected": 2,
+          "total_approved": 6324,
+          "total_submitted_pencacah": 115,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
-          "today_completed": 95,
+          "today_completed": 13,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 22
+          },
+          "yesterday_completed": 95,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 110
           },
-          "yesterday_completed": 78,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 78,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 76,
             "SUBMITTED BY PENCACAH": 3
           },
-          "two_days_ago_completed": 121,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 131,
-            "REJECTED BY PENGAWAS": 1
-          },
           "breakdown": {
-            "total": 6428,
-            "APPROVED BY Pengawas": 6302,
+            "total": 6441,
+            "APPROVED BY Pengawas": 6324,
             "COMPLETED BY Admin Kabupaten": 66,
             "EDITED BY Admin Kabupaten": 49,
-            "REJECTED BY Pengawas": 8,
-            "SUBMITTED BY Pencacah": 2,
-            "REVOKED BY Pengawas": 1
+            "REVOKED BY Pengawas": 2
           },
-          "delta_persen": 1.48,
-          "delta_kemarin_persen": 1.21,
-          "delta_lusa_persen": 1.88,
+          "delta_persen": 0.2,
+          "delta_kemarin_persen": 1.47,
+          "delta_lusa_persen": 1.21,
           "new_usaha_overall": 305,
           "new_rumah_overall": 276
         },
@@ -3512,164 +3502,158 @@ window.IPAS_DATA = {
           "total_draft": 0,
           "total_open": 0,
           "total_submitted": 4745,
-          "total_rejected": 5,
+          "total_rejected": 4,
           "total_approved": 4585,
-          "total_submitted_pencacah": 155,
+          "total_submitted_pencacah": 156,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
-          "today_completed": 1,
+          "today_completed": 0,
           "today_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 1
+          },
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 7
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 2
-          },
-          "two_days_ago_completed": 2,
+          "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 3,
-            "SUBMITTED BY PENCACAH": 1
+            "SUBMITTED BY PENCACAH": 2
           },
           "breakdown": {
             "total": 4745,
             "APPROVED BY Pengawas": 4585,
             "EDITED BY Admin Kabupaten": 92,
-            "COMPLETED BY Admin Kabupaten": 63,
-            "REVOKED BY Pengawas": 4,
-            "REJECTED BY Pengawas": 1
+            "COMPLETED BY Admin Kabupaten": 64,
+            "REVOKED BY Pengawas": 4
           },
-          "delta_persen": 0.02,
-          "delta_kemarin_persen": 0.0,
-          "delta_lusa_persen": 0.04,
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.02,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 241,
           "new_rumah_overall": 197
         },
         {
           "kecamatan": "[120] SIRENJA",
           "kec_name": "[120] SIRENJA",
-          "total_prelist": 9676,
+          "total_prelist": 9698,
           "total_draft": 85,
-          "total_open": 253,
-          "total_submitted": 9338,
-          "total_rejected": 265,
-          "total_approved": 7427,
-          "total_submitted_pencacah": 1646,
+          "total_open": 228,
+          "total_submitted": 9385,
+          "total_rejected": 254,
+          "total_approved": 7660,
+          "total_submitted_pencacah": 1471,
           "total_submitted_respondent": 0,
-          "persentase": 96.51,
-          "today_completed": 105,
+          "persentase": 96.77,
+          "today_completed": 47,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 233
+          },
+          "yesterday_completed": 105,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 140,
             "SUBMITTED BY PENCACAH": 4
           },
-          "yesterday_completed": 71,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 71,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 113,
             "REJECTED BY PENGAWAS": 2
           },
-          "two_days_ago_completed": 44,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 87
-          },
           "breakdown": {
-            "total": 9676,
-            "APPROVED BY Pengawas": 7427,
-            "SUBMITTED BY Pencacah": 1511,
-            "OPEN": 253,
-            "REJECTED BY Pengawas": 248,
+            "total": 9698,
+            "APPROVED BY Pengawas": 7660,
+            "SUBMITTED BY Pencacah": 1336,
+            "REJECTED BY Pengawas": 238,
+            "OPEN": 228,
             "COMPLETED BY Admin Kabupaten": 131,
             "DRAFT": 85,
             "REVOKED BY Pengawas": 10,
-            "REJECTED BY Admin Kabupaten": 7,
+            "REJECTED BY Admin Kabupaten": 6,
             "EDITED BY Admin Kabupaten": 4
           },
-          "delta_persen": 1.09,
-          "delta_kemarin_persen": 0.73,
-          "delta_lusa_persen": 0.45,
+          "delta_persen": 0.48,
+          "delta_kemarin_persen": 1.08,
+          "delta_lusa_persen": 0.73,
           "new_usaha_overall": 378,
           "new_rumah_overall": 463
         },
         {
           "kecamatan": "[130] BALAESANG",
           "kec_name": "[130] BALAESANG",
-          "total_prelist": 10411,
-          "total_draft": 7,
-          "total_open": 6,
-          "total_submitted": 10398,
-          "total_rejected": 108,
-          "total_approved": 9569,
-          "total_submitted_pencacah": 721,
+          "total_prelist": 10416,
+          "total_draft": 0,
+          "total_open": 0,
+          "total_submitted": 10416,
+          "total_rejected": 106,
+          "total_approved": 9684,
+          "total_submitted_pencacah": 626,
           "total_submitted_respondent": 0,
-          "persentase": 99.88,
-          "today_completed": 188,
+          "persentase": 100.0,
+          "today_completed": 18,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 115
+          },
+          "yesterday_completed": 188,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 206,
             "REJECTED BY PENGAWAS": 4
           },
-          "yesterday_completed": 169,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 169,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 127,
             "SUBMITTED BY PENCACAH": 49
           },
-          "two_days_ago_completed": 164,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 164,
-            "SUBMITTED BY PENCACAH": 23
-          },
           "breakdown": {
-            "total": 10411,
-            "APPROVED BY Pengawas": 9569,
-            "SUBMITTED BY Pencacah": 443,
+            "total": 10416,
+            "APPROVED BY Pengawas": 9684,
+            "SUBMITTED BY Pencacah": 348,
             "COMPLETED BY Admin Kabupaten": 169,
             "EDITED BY Admin Kabupaten": 109,
-            "REJECTED BY Pengawas": 69,
-            "REVOKED BY Pengawas": 39,
-            "DRAFT": 7,
-            "OPEN": 6
+            "REJECTED BY Pengawas": 67,
+            "REVOKED BY Pengawas": 39
           },
-          "delta_persen": 1.81,
-          "delta_kemarin_persen": 1.62,
-          "delta_lusa_persen": 1.58,
+          "delta_persen": 0.17,
+          "delta_kemarin_persen": 1.8,
+          "delta_lusa_persen": 1.62,
           "new_usaha_overall": 470,
           "new_rumah_overall": 376
         },
         {
           "kecamatan": "[131] BALAESANG TANJUNG",
           "kec_name": "[131] BALAESANG TANJUNG",
-          "total_prelist": 5276,
-          "total_draft": 6,
+          "total_prelist": 5280,
+          "total_draft": 3,
           "total_open": 0,
-          "total_submitted": 5270,
-          "total_rejected": 163,
-          "total_approved": 5011,
-          "total_submitted_pencacah": 96,
+          "total_submitted": 5277,
+          "total_rejected": 104,
+          "total_approved": 5092,
+          "total_submitted_pencacah": 81,
           "total_submitted_respondent": 0,
-          "persentase": 99.89,
-          "today_completed": 1,
+          "persentase": 99.94,
+          "today_completed": 7,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 81
+          },
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 13,
             "SUBMITTED BY PENCACAH": 27
           },
-          "yesterday_completed": 3,
-          "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 31
-          },
           "two_days_ago_completed": 3,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 13,
-            "SUBMITTED BY PENCACAH": 13
+            "APPROVED BY PENGAWAS": 31
           },
           "breakdown": {
-            "total": 5276,
-            "APPROVED BY Pengawas": 5011,
-            "REJECTED BY Pengawas": 131,
+            "total": 5280,
+            "APPROVED BY Pengawas": 5092,
+            "REJECTED BY Pengawas": 65,
             "COMPLETED BY Admin Kabupaten": 57,
-            "REVOKED BY Pengawas": 32,
-            "SUBMITTED BY Pencacah": 28,
+            "REVOKED BY Pengawas": 39,
+            "SUBMITTED BY Pencacah": 13,
             "EDITED BY Admin Kabupaten": 11,
-            "DRAFT": 6
+            "DRAFT": 3
           },
-          "delta_persen": 0.02,
-          "delta_kemarin_persen": 0.06,
+          "delta_persen": 0.13,
+          "delta_kemarin_persen": 0.02,
           "delta_lusa_persen": 0.06,
           "new_usaha_overall": 208,
           "new_rumah_overall": 221
@@ -3677,91 +3661,92 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[140] DAMPELAS",
           "kec_name": "[140] DAMPELAS",
-          "total_prelist": 13908,
-          "total_draft": 472,
-          "total_open": 1622,
-          "total_submitted": 11814,
-          "total_rejected": 81,
-          "total_approved": 9397,
-          "total_submitted_pencacah": 2336,
+          "total_prelist": 13959,
+          "total_draft": 454,
+          "total_open": 1492,
+          "total_submitted": 12013,
+          "total_rejected": 92,
+          "total_approved": 9419,
+          "total_submitted_pencacah": 2502,
           "total_submitted_respondent": 0,
-          "persentase": 84.94,
-          "today_completed": 288,
+          "persentase": 86.06,
+          "today_completed": 199,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 22,
+            "REJECTED BY PENGAWAS": 11,
+            "SUBMITTED BY PENCACAH": 166
+          },
+          "yesterday_completed": 288,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 220,
             "SUBMITTED BY PENCACAH": 70
           },
-          "yesterday_completed": 185,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 185,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 199
           },
-          "two_days_ago_completed": 164,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 117,
-            "SUBMITTED BY PENCACAH": 49
-          },
           "breakdown": {
-            "total": 13908,
-            "APPROVED BY Pengawas": 9397,
-            "SUBMITTED BY Pencacah": 2240,
-            "OPEN": 1622,
-            "DRAFT": 472,
-            "REJECTED BY Pengawas": 66,
+            "total": 13959,
+            "APPROVED BY Pengawas": 9419,
+            "SUBMITTED BY Pencacah": 2406,
+            "OPEN": 1492,
+            "DRAFT": 454,
+            "REJECTED BY Pengawas": 74,
             "EDITED BY Admin Kabupaten": 53,
             "COMPLETED BY Admin Kabupaten": 43,
-            "REVOKED BY Pengawas": 11,
+            "REVOKED BY Pengawas": 14,
             "REJECTED BY Admin Kabupaten": 4
           },
-          "delta_persen": 2.07,
-          "delta_kemarin_persen": 1.33,
-          "delta_lusa_persen": 1.18,
+          "delta_persen": 1.43,
+          "delta_kemarin_persen": 2.06,
+          "delta_lusa_persen": 1.33,
           "new_usaha_overall": 786,
           "new_rumah_overall": 390
         },
         {
           "kecamatan": "[160] SOJOL",
           "kec_name": "[160] SOJOL",
-          "total_prelist": 11746,
-          "total_draft": 304,
-          "total_open": 568,
-          "total_submitted": 10874,
-          "total_rejected": 891,
-          "total_approved": 3656,
-          "total_submitted_pencacah": 6327,
+          "total_prelist": 11769,
+          "total_draft": 282,
+          "total_open": 519,
+          "total_submitted": 10968,
+          "total_rejected": 902,
+          "total_approved": 3671,
+          "total_submitted_pencacah": 6395,
           "total_submitted_respondent": 0,
-          "persentase": 92.58,
-          "today_completed": 121,
+          "persentase": 93.19,
+          "today_completed": 94,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 15,
+            "REJECTED BY PENGAWAS": 11,
+            "SUBMITTED BY PENCACAH": 68
+          },
+          "yesterday_completed": 121,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 22,
             "REJECTED BY PENGAWAS": 104
           },
-          "yesterday_completed": 101,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 101,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 37,
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 62
           },
-          "two_days_ago_completed": 128,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 33,
-            "REJECTED BY PENGAWAS": 31,
-            "SUBMITTED BY PENCACAH": 64
-          },
           "breakdown": {
-            "total": 11746,
-            "SUBMITTED BY Pencacah": 6280,
-            "APPROVED BY Pengawas": 3656,
-            "REJECTED BY Pengawas": 851,
-            "OPEN": 568,
-            "DRAFT": 304,
+            "total": 11769,
+            "SUBMITTED BY Pencacah": 6348,
+            "APPROVED BY Pengawas": 3671,
+            "REJECTED BY Pengawas": 862,
+            "OPEN": 519,
+            "DRAFT": 282,
             "COMPLETED BY Admin Kabupaten": 45,
             "REJECTED BY Admin Kabupaten": 24,
             "REVOKED BY Pengawas": 16,
             "EDITED BY Admin Kabupaten": 2
           },
-          "delta_persen": 1.03,
-          "delta_kemarin_persen": 0.86,
-          "delta_lusa_persen": 1.09,
+          "delta_persen": 0.8,
+          "delta_kemarin_persen": 1.03,
+          "delta_lusa_persen": 0.86,
           "new_usaha_overall": 455,
           "new_rumah_overall": 264
         },
@@ -3769,92 +3754,90 @@ window.IPAS_DATA = {
           "kecamatan": "[161] SOJOL UTARA",
           "kec_name": "[161] SOJOL UTARA",
           "total_prelist": 4450,
-          "total_draft": 1,
+          "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 4449,
-          "total_rejected": 31,
-          "total_approved": 4313,
-          "total_submitted_pencacah": 105,
+          "total_submitted": 4450,
+          "total_rejected": 25,
+          "total_approved": 4323,
+          "total_submitted_pencacah": 102,
           "total_submitted_respondent": 0,
-          "persentase": 99.98,
-          "today_completed": 6,
+          "persentase": 100.0,
+          "today_completed": 1,
           "today_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 10
+            "APPROVED BY PENGAWAS": 10
           },
           "yesterday_completed": 6,
           "yesterday_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 10
+          },
+          "two_days_ago_completed": 6,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 113,
             "REJECTED BY PENGAWAS": 5
           },
-          "two_days_ago_completed": 12,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 153
-          },
           "breakdown": {
             "total": 4450,
-            "APPROVED BY Pengawas": 4313,
-            "EDITED BY Admin Kabupaten": 80,
-            "SUBMITTED BY Pencacah": 25,
-            "REJECTED BY Pengawas": 20,
-            "REVOKED BY Pengawas": 11,
-            "DRAFT": 1
+            "APPROVED BY Pengawas": 4323,
+            "EDITED BY Admin Kabupaten": 79,
+            "SUBMITTED BY Pencacah": 23,
+            "REJECTED BY Pengawas": 13,
+            "REVOKED BY Pengawas": 12
           },
-          "delta_persen": 0.13,
+          "delta_persen": 0.02,
           "delta_kemarin_persen": 0.13,
-          "delta_lusa_persen": 0.27,
+          "delta_lusa_persen": 0.13,
           "new_usaha_overall": 129,
           "new_rumah_overall": 114
         }
       ],
       "breakdown": {
-        "total": 143121,
-        "APPROVED BY Pengawas": 113495,
-        "OPEN": 5470,
-        "DRAFT": 2201,
-        "COMPLETED BY Admin Kabupaten": 1605,
-        "SUBMITTED BY Pencacah": 17056,
-        "REJECTED BY Pengawas": 2051,
-        "REVOKED BY Pengawas": 287,
-        "EDITED BY Admin Kabupaten": 907,
-        "REJECTED BY Admin Kabupaten": 44,
+        "total": 143446,
+        "APPROVED BY Pengawas": 114972,
+        "OPEN": 4853,
+        "DRAFT": 2065,
+        "SUBMITTED BY Pencacah": 16669,
+        "COMPLETED BY Admin Kabupaten": 1607,
+        "REJECTED BY Pengawas": 2026,
+        "REVOKED BY Pengawas": 297,
+        "EDITED BY Admin Kabupaten": 906,
+        "REJECTED BY Admin Kabupaten": 46,
         "SUBMITTED RESPONDENT": 5
       },
-      "two_days_ago_completed": 1436,
+      "two_days_ago_completed": 1633,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1455,
-        "SUBMITTED BY PENCACAH": 56
-      },
-      "yesterday_completed": 1633,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1267,
         "REJECTED BY PENGAWAS": 6,
         "SUBMITTED BY PENCACAH": 360
+      },
+      "yesterday_completed": 1754,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 2012,
+        "REJECTED BY PENGAWAS": 199
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 1754,
+      "today_completed": 1078,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 2012,
-        "REJECTED BY PENGAWAS": 199
+        "APPROVED BY PENGAWAS": 1477
       },
-      "delta_persen": 1.23,
-      "delta_kemarin_persen": 1.14,
-      "delta_lusa_persen": 1.0
+      "delta_persen": 0.75,
+      "delta_kemarin_persen": 1.22,
+      "delta_lusa_persen": 1.14
     },
     {
       "kabupaten": "[06] TOLI-TOLI",
-      "total_prelist": 107923,
-      "total_draft": 2443,
-      "total_open": 6099,
-      "total_submitted": 99381,
-      "total_rejected": 1378,
-      "total_approved": 82615,
-      "total_submitted_pencacah": 15388,
+      "total_prelist": 108349,
+      "total_draft": 2182,
+      "total_open": 5335,
+      "total_submitted": 100832,
+      "total_rejected": 1363,
+      "total_approved": 84358,
+      "total_submitted_pencacah": 15111,
       "total_submitted_respondent": 0,
-      "persentase": 92.09,
+      "persentase": 93.06,
       "new_usaha_overall": 7220,
       "new_rumah_overall": 4995,
       "new_businesses": [],
@@ -3891,128 +3874,128 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[010] DAMPAL SELATAN",
           "kec_name": "[010] DAMPAL SELATAN",
-          "total_prelist": 10322,
-          "total_draft": 42,
-          "total_open": 479,
-          "total_submitted": 9801,
-          "total_rejected": 282,
-          "total_approved": 6640,
-          "total_submitted_pencacah": 2879,
+          "total_prelist": 10370,
+          "total_draft": 16,
+          "total_open": 349,
+          "total_submitted": 10005,
+          "total_rejected": 257,
+          "total_approved": 6763,
+          "total_submitted_pencacah": 2985,
           "total_submitted_respondent": 0,
-          "persentase": 94.95,
-          "today_completed": 156,
+          "persentase": 96.48,
+          "today_completed": 204,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 123,
+            "SUBMITTED BY PENCACAH": 106
+          },
+          "yesterday_completed": 156,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 157,
             "REJECTED BY PENGAWAS": 18
           },
-          "yesterday_completed": 138,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 138,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 75,
             "SUBMITTED BY PENCACAH": 68
           },
-          "two_days_ago_completed": 149,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 121,
-            "SUBMITTED BY PENCACAH": 38
-          },
           "breakdown": {
-            "total": 10322,
-            "APPROVED BY Pengawas": 6640,
-            "SUBMITTED BY Pencacah": 2782,
-            "OPEN": 479,
-            "REJECTED BY Pengawas": 224,
+            "total": 10370,
+            "APPROVED BY Pengawas": 6763,
+            "SUBMITTED BY Pencacah": 2888,
+            "OPEN": 349,
+            "REJECTED BY Pengawas": 200,
             "EDITED BY Admin Kabupaten": 97,
-            "REVOKED BY Pengawas": 50,
-            "DRAFT": 42,
+            "REVOKED BY Pengawas": 49,
+            "DRAFT": 16,
             "REJECTED BY Admin Kabupaten": 8
           },
-          "delta_persen": 1.51,
-          "delta_kemarin_persen": 1.34,
-          "delta_lusa_persen": 1.44,
+          "delta_persen": 1.97,
+          "delta_kemarin_persen": 1.5,
+          "delta_lusa_persen": 1.33,
           "new_usaha_overall": 634,
           "new_rumah_overall": 439
         },
         {
           "kecamatan": "[020] DAMPAL UTARA",
           "kec_name": "[020] DAMPAL UTARA",
-          "total_prelist": 6454,
+          "total_prelist": 6463,
           "total_draft": 25,
-          "total_open": 267,
-          "total_submitted": 6162,
-          "total_rejected": 61,
-          "total_approved": 5425,
-          "total_submitted_pencacah": 676,
+          "total_open": 249,
+          "total_submitted": 6189,
+          "total_rejected": 81,
+          "total_approved": 5512,
+          "total_submitted_pencacah": 596,
           "total_submitted_respondent": 0,
-          "persentase": 95.48,
+          "persentase": 95.76,
           "today_completed": 27,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 87,
+            "REJECTED BY PENGAWAS": 20
+          },
+          "yesterday_completed": 27,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 124
           },
-          "yesterday_completed": 63,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 63,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 72
           },
-          "two_days_ago_completed": 52,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 198,
-            "REJECTED BY PENGAWAS": 10
-          },
           "breakdown": {
-            "total": 6454,
-            "APPROVED BY Pengawas": 5425,
-            "SUBMITTED BY Pencacah": 541,
-            "OPEN": 267,
+            "total": 6463,
+            "APPROVED BY Pengawas": 5512,
+            "SUBMITTED BY Pencacah": 461,
+            "OPEN": 249,
             "EDITED BY Admin Kabupaten": 135,
-            "REJECTED BY Pengawas": 56,
+            "REJECTED BY Pengawas": 76,
             "DRAFT": 25,
             "REVOKED BY Pengawas": 3,
             "REJECTED BY Admin Kabupaten": 2
           },
           "delta_persen": 0.42,
-          "delta_kemarin_persen": 0.98,
-          "delta_lusa_persen": 0.81,
+          "delta_kemarin_persen": 0.42,
+          "delta_lusa_persen": 0.97,
           "new_usaha_overall": 341,
           "new_rumah_overall": 363
         },
         {
           "kecamatan": "[030] DONDO",
           "kec_name": "[030] DONDO",
-          "total_prelist": 10810,
-          "total_draft": 33,
-          "total_open": 151,
-          "total_submitted": 10626,
-          "total_rejected": 126,
-          "total_approved": 10229,
-          "total_submitted_pencacah": 271,
+          "total_prelist": 10819,
+          "total_draft": 30,
+          "total_open": 102,
+          "total_submitted": 10687,
+          "total_rejected": 98,
+          "total_approved": 10374,
+          "total_submitted_pencacah": 215,
           "total_submitted_respondent": 0,
-          "persentase": 98.3,
-          "today_completed": 108,
+          "persentase": 98.78,
+          "today_completed": 61,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 145
+          },
+          "yesterday_completed": 108,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 257,
             "REJECTED BY PENGAWAS": 24
           },
-          "yesterday_completed": 45,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 45,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 221
           },
-          "two_days_ago_completed": 51,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 96
-          },
           "breakdown": {
-            "total": 10810,
-            "APPROVED BY Pengawas": 10229,
-            "EDITED BY Admin Kabupaten": 163,
-            "OPEN": 151,
-            "SUBMITTED BY Pencacah": 108,
-            "REJECTED BY Pengawas": 93,
-            "DRAFT": 33,
-            "REVOKED BY Pengawas": 32,
+            "total": 10819,
+            "APPROVED BY Pengawas": 10374,
+            "EDITED BY Admin Kabupaten": 160,
+            "OPEN": 102,
+            "REJECTED BY Pengawas": 89,
+            "SUBMITTED BY Pencacah": 55,
+            "DRAFT": 30,
+            "REVOKED BY Pengawas": 8,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.0,
-          "delta_kemarin_persen": 0.42,
-          "delta_lusa_persen": 0.47,
+          "delta_persen": 0.56,
+          "delta_kemarin_persen": 1.0,
+          "delta_lusa_persen": 0.42,
           "new_usaha_overall": 590,
           "new_rumah_overall": 487
         },
@@ -4030,334 +4013,334 @@ window.IPAS_DATA = {
           "persentase": 100.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 4,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 4,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 10
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6220,
             "APPROVED BY Pengawas": 6123,
             "EDITED BY Admin Kabupaten": 97
           },
           "delta_persen": 0.0,
-          "delta_kemarin_persen": 0.06,
-          "delta_lusa_persen": 0.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.06,
           "new_usaha_overall": 399,
           "new_rumah_overall": 419
         },
         {
           "kecamatan": "[032] BASIDONDO",
           "kec_name": "[032] BASIDONDO",
-          "total_prelist": 4939,
-          "total_draft": 129,
-          "total_open": 150,
-          "total_submitted": 4660,
-          "total_rejected": 7,
-          "total_approved": 4289,
-          "total_submitted_pencacah": 364,
+          "total_prelist": 4969,
+          "total_draft": 116,
+          "total_open": 96,
+          "total_submitted": 4757,
+          "total_rejected": 10,
+          "total_approved": 4455,
+          "total_submitted_pencacah": 292,
           "total_submitted_respondent": 0,
-          "persentase": 94.35,
-          "today_completed": 120,
+          "persentase": 95.73,
+          "today_completed": 97,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 166,
+            "REJECTED BY PENGAWAS": 3
+          },
+          "yesterday_completed": 120,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 44,
             "SUBMITTED BY PENCACAH": 79
           },
-          "yesterday_completed": 50,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 50,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 31,
             "SUBMITTED BY PENCACAH": 22
           },
-          "two_days_ago_completed": 48,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 68
-          },
           "breakdown": {
-            "total": 4939,
-            "APPROVED BY Pengawas": 4289,
-            "EDITED BY Admin Kabupaten": 257,
-            "OPEN": 150,
-            "DRAFT": 129,
-            "SUBMITTED BY Pencacah": 107,
-            "REJECTED BY Pengawas": 7
+            "total": 4969,
+            "APPROVED BY Pengawas": 4455,
+            "EDITED BY Admin Kabupaten": 255,
+            "DRAFT": 116,
+            "OPEN": 96,
+            "SUBMITTED BY Pencacah": 37,
+            "REJECTED BY Pengawas": 10
           },
-          "delta_persen": 2.43,
-          "delta_kemarin_persen": 1.01,
-          "delta_lusa_persen": 0.97,
+          "delta_persen": 1.95,
+          "delta_kemarin_persen": 2.41,
+          "delta_lusa_persen": 1.01,
           "new_usaha_overall": 359,
           "new_rumah_overall": 180
         },
         {
           "kecamatan": "[040] BAOLAN",
           "kec_name": "[040] BAOLAN",
-          "total_prelist": 32484,
-          "total_draft": 1411,
-          "total_open": 3201,
-          "total_submitted": 27872,
-          "total_rejected": 497,
-          "total_approved": 20366,
-          "total_submitted_pencacah": 7009,
+          "total_prelist": 32664,
+          "total_draft": 1240,
+          "total_open": 2919,
+          "total_submitted": 28505,
+          "total_rejected": 450,
+          "total_approved": 20875,
+          "total_submitted_pencacah": 7180,
           "total_submitted_respondent": 0,
-          "persentase": 85.8,
-          "today_completed": 734,
+          "persentase": 87.27,
+          "today_completed": 633,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 509,
+            "SUBMITTED BY PENCACAH": 171
+          },
+          "yesterday_completed": 734,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 454,
             "SUBMITTED BY PENCACAH": 318
           },
-          "yesterday_completed": 539,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 539,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 508,
             "SUBMITTED BY PENCACAH": 52
           },
-          "two_days_ago_completed": 371,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 292,
-            "SUBMITTED BY PENCACAH": 87
-          },
           "breakdown": {
-            "total": 32485,
-            "APPROVED BY Pengawas": 20366,
-            "SUBMITTED BY Pencacah": 6377,
-            "OPEN": 3201,
-            "DRAFT": 1411,
+            "total": 32665,
+            "APPROVED BY Pengawas": 20875,
+            "SUBMITTED BY Pencacah": 6548,
+            "OPEN": 2919,
+            "DRAFT": 1240,
             "EDITED BY Admin Kabupaten": 629,
-            "REJECTED BY Pengawas": 453,
-            "REVOKED BY Pengawas": 41,
+            "REJECTED BY Pengawas": 408,
+            "REVOKED BY Pengawas": 39,
             "REJECTED BY Admin Kabupaten": 3,
             "COMPLETED BY Admin Kabupaten": 2,
             "EDITED BY Pengawas": 1
           },
-          "delta_persen": 2.26,
-          "delta_kemarin_persen": 1.66,
-          "delta_lusa_persen": 1.14,
+          "delta_persen": 1.94,
+          "delta_kemarin_persen": 2.25,
+          "delta_lusa_persen": 1.65,
           "new_usaha_overall": 2260,
           "new_rumah_overall": 1595
         },
         {
           "kecamatan": "[041] LAMPASIO",
           "kec_name": "[041] LAMPASIO",
-          "total_prelist": 5669,
-          "total_draft": 95,
-          "total_open": 699,
-          "total_submitted": 4875,
-          "total_rejected": 127,
-          "total_approved": 3839,
-          "total_submitted_pencacah": 909,
+          "total_prelist": 5698,
+          "total_draft": 94,
+          "total_open": 640,
+          "total_submitted": 4964,
+          "total_rejected": 173,
+          "total_approved": 3954,
+          "total_submitted_pencacah": 837,
           "total_submitted_respondent": 0,
-          "persentase": 85.99,
-          "today_completed": 142,
+          "persentase": 87.12,
+          "today_completed": 89,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 115,
+            "REJECTED BY PENGAWAS": 46
+          },
+          "yesterday_completed": 142,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 84,
             "SUBMITTED BY PENCACAH": 82
           },
-          "yesterday_completed": 102,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 102,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 20,
             "SUBMITTED BY PENCACAH": 86
           },
-          "two_days_ago_completed": 55,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 42,
-            "REJECTED BY PENGAWAS": 3,
-            "SUBMITTED BY PENCACAH": 10
-          },
           "breakdown": {
-            "total": 5669,
-            "APPROVED BY Pengawas": 3839,
-            "SUBMITTED BY Pencacah": 795,
-            "OPEN": 699,
-            "REJECTED BY Pengawas": 117,
+            "total": 5698,
+            "APPROVED BY Pengawas": 3954,
+            "SUBMITTED BY Pencacah": 723,
+            "OPEN": 640,
+            "REJECTED BY Pengawas": 166,
             "EDITED BY Admin Kabupaten": 114,
-            "DRAFT": 95,
-            "REVOKED BY Pengawas": 9,
+            "DRAFT": 94,
+            "REVOKED BY Pengawas": 6,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 2.5,
-          "delta_kemarin_persen": 1.8,
-          "delta_lusa_persen": 0.97,
+          "delta_persen": 1.56,
+          "delta_kemarin_persen": 2.49,
+          "delta_lusa_persen": 1.79,
           "new_usaha_overall": 388,
           "new_rumah_overall": 155
         },
         {
           "kecamatan": "[050] GALANG",
           "kec_name": "[050] GALANG",
-          "total_prelist": 17243,
-          "total_draft": 399,
-          "total_open": 162,
-          "total_submitted": 16682,
-          "total_rejected": 120,
-          "total_approved": 14850,
-          "total_submitted_pencacah": 1712,
+          "total_prelist": 17272,
+          "total_draft": 351,
+          "total_open": 94,
+          "total_submitted": 16827,
+          "total_rejected": 123,
+          "total_approved": 15292,
+          "total_submitted_pencacah": 1412,
           "total_submitted_respondent": 0,
-          "persentase": 96.75,
-          "today_completed": 304,
+          "persentase": 97.42,
+          "today_completed": 145,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 442,
+            "REJECTED BY PENGAWAS": 3
+          },
+          "yesterday_completed": 304,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 203,
             "SUBMITTED BY PENCACAH": 124
           },
-          "yesterday_completed": 220,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 220,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 159,
             "REJECTED BY PENGAWAS": 5,
             "SUBMITTED BY PENCACAH": 56
           },
-          "two_days_ago_completed": 240,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 284
-          },
           "breakdown": {
-            "total": 17243,
-            "APPROVED BY Pengawas": 14850,
-            "SUBMITTED BY Pencacah": 1547,
-            "DRAFT": 399,
+            "total": 17272,
+            "APPROVED BY Pengawas": 15292,
+            "SUBMITTED BY Pencacah": 1247,
+            "DRAFT": 351,
             "EDITED BY Admin Kabupaten": 165,
-            "OPEN": 162,
-            "REVOKED BY Pengawas": 60,
-            "REJECTED BY Pengawas": 59,
+            "OPEN": 94,
+            "REVOKED BY Pengawas": 62,
+            "REJECTED BY Pengawas": 60,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.76,
-          "delta_kemarin_persen": 1.28,
-          "delta_lusa_persen": 1.39,
+          "delta_persen": 0.84,
+          "delta_kemarin_persen": 1.76,
+          "delta_lusa_persen": 1.27,
           "new_usaha_overall": 1289,
           "new_rumah_overall": 761
         },
         {
           "kecamatan": "[060] TOLITOLI UTARA",
           "kec_name": "[060] TOLITOLI UTARA",
-          "total_prelist": 9173,
-          "total_draft": 28,
-          "total_open": 901,
-          "total_submitted": 8244,
-          "total_rejected": 67,
-          "total_approved": 7117,
-          "total_submitted_pencacah": 1060,
+          "total_prelist": 9236,
+          "total_draft": 21,
+          "total_open": 840,
+          "total_submitted": 8375,
+          "total_rejected": 71,
+          "total_approved": 7199,
+          "total_submitted_pencacah": 1105,
           "total_submitted_respondent": 0,
-          "persentase": 89.87,
-          "today_completed": 151,
+          "persentase": 90.68,
+          "today_completed": 131,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 82,
+            "REJECTED BY PENGAWAS": 4,
+            "SUBMITTED BY PENCACAH": 45
+          },
+          "yesterday_completed": 151,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 364
           },
-          "yesterday_completed": 67,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 67,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 96
           },
-          "two_days_ago_completed": 111,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 40,
-            "REJECTED BY PENGAWAS": 8,
-            "SUBMITTED BY PENCACAH": 63
-          },
           "breakdown": {
-            "total": 9173,
-            "APPROVED BY Pengawas": 7117,
-            "SUBMITTED BY Pencacah": 937,
-            "OPEN": 901,
+            "total": 9236,
+            "APPROVED BY Pengawas": 7199,
+            "SUBMITTED BY Pencacah": 982,
+            "OPEN": 840,
             "EDITED BY Admin Kabupaten": 123,
-            "REJECTED BY Pengawas": 59,
-            "DRAFT": 28,
-            "REVOKED BY Pengawas": 5,
+            "REJECTED BY Pengawas": 60,
+            "DRAFT": 21,
+            "REVOKED BY Pengawas": 8,
             "REJECTED BY Admin Kabupaten": 3
           },
-          "delta_persen": 1.65,
-          "delta_kemarin_persen": 0.73,
-          "delta_lusa_persen": 1.21,
+          "delta_persen": 1.42,
+          "delta_kemarin_persen": 1.63,
+          "delta_lusa_persen": 0.73,
           "new_usaha_overall": 616,
           "new_rumah_overall": 409
         },
         {
           "kecamatan": "[061] DAKO PEMEAN",
           "kec_name": "[061] DAKO PEMEAN",
-          "total_prelist": 4603,
-          "total_draft": 277,
-          "total_open": 87,
-          "total_submitted": 4239,
-          "total_rejected": 91,
-          "total_approved": 3737,
-          "total_submitted_pencacah": 411,
+          "total_prelist": 4632,
+          "total_draft": 285,
+          "total_open": 44,
+          "total_submitted": 4303,
+          "total_rejected": 100,
+          "total_approved": 3811,
+          "total_submitted_pencacah": 392,
           "total_submitted_respondent": 0,
-          "persentase": 92.09,
-          "today_completed": 126,
+          "persentase": 92.9,
+          "today_completed": 64,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 74,
+            "REJECTED BY PENGAWAS": 9
+          },
+          "yesterday_completed": 126,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 145,
             "REJECTED BY PENGAWAS": 13
           },
-          "yesterday_completed": 108,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 108,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 68,
             "SUBMITTED BY PENCACAH": 46
           },
-          "two_days_ago_completed": 129,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 61,
-            "SUBMITTED BY PENCACAH": 68
-          },
           "breakdown": {
-            "total": 4603,
-            "APPROVED BY Pengawas": 3737,
-            "DRAFT": 277,
-            "SUBMITTED BY Pencacah": 212,
-            "EDITED BY Admin Kabupaten": 199,
-            "OPEN": 87,
-            "REJECTED BY Pengawas": 85,
-            "REVOKED BY Pengawas": 6
+            "total": 4632,
+            "APPROVED BY Pengawas": 3811,
+            "DRAFT": 285,
+            "EDITED BY Admin Kabupaten": 203,
+            "SUBMITTED BY Pencacah": 189,
+            "REJECTED BY Pengawas": 92,
+            "OPEN": 44,
+            "REVOKED BY Pengawas": 8
           },
-          "delta_persen": 2.74,
-          "delta_kemarin_persen": 2.35,
-          "delta_lusa_persen": 2.8,
+          "delta_persen": 1.38,
+          "delta_kemarin_persen": 2.72,
+          "delta_lusa_persen": 2.33,
           "new_usaha_overall": 344,
           "new_rumah_overall": 187
         }
       ],
       "breakdown": {
-        "total": 107924,
-        "APPROVED BY Pengawas": 82615,
-        "SUBMITTED BY Pencacah": 13406,
-        "OPEN": 6099,
-        "REJECTED BY Pengawas": 1153,
-        "EDITED BY Admin Kabupaten": 1979,
-        "REVOKED BY Pengawas": 206,
-        "DRAFT": 2443,
+        "total": 108350,
+        "APPROVED BY Pengawas": 84358,
+        "SUBMITTED BY Pencacah": 13130,
+        "OPEN": 5335,
+        "REJECTED BY Pengawas": 1161,
+        "EDITED BY Admin Kabupaten": 1978,
+        "REVOKED BY Pengawas": 183,
+        "DRAFT": 2182,
         "REJECTED BY Admin Kabupaten": 19,
         "COMPLETED BY Admin Kabupaten": 2,
         "EDITED BY Pengawas": 1
       },
-      "two_days_ago_completed": 1206,
+      "two_days_ago_completed": 1336,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1202,
-        "SUBMITTED BY PENCACAH": 73
-      },
-      "yesterday_completed": 1336,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1260,
         "SUBMITTED BY PENCACAH": 139
+      },
+      "yesterday_completed": 1868,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 1832,
+        "SUBMITTED BY PENCACAH": 87
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 1868,
+      "today_completed": 1451,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1832,
-        "SUBMITTED BY PENCACAH": 87
+        "APPROVED BY PENGAWAS": 1743
       },
-      "delta_persen": 1.73,
-      "delta_kemarin_persen": 1.24,
-      "delta_lusa_persen": 1.12
+      "delta_persen": 1.34,
+      "delta_kemarin_persen": 1.72,
+      "delta_lusa_persen": 1.23
     },
     {
       "kabupaten": "[07] BUOL",
-      "total_prelist": 74208,
-      "total_draft": 4092,
-      "total_open": 357,
-      "total_submitted": 69759,
-      "total_rejected": 2249,
-      "total_approved": 57174,
-      "total_submitted_pencacah": 10281,
+      "total_prelist": 74431,
+      "total_draft": 3533,
+      "total_open": 235,
+      "total_submitted": 70663,
+      "total_rejected": 2168,
+      "total_approved": 58344,
+      "total_submitted_pencacah": 10096,
       "total_submitted_respondent": 55,
-      "persentase": 94.0,
+      "persentase": 94.94,
       "new_usaha_overall": 5264,
       "new_rumah_overall": 1909,
       "new_businesses": [],
@@ -4395,539 +4378,538 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[010] LAKEA",
           "kec_name": "[010] LAKEA",
-          "total_prelist": 5561,
-          "total_draft": 218,
+          "total_prelist": 5564,
+          "total_draft": 143,
           "total_open": 0,
-          "total_submitted": 5343,
-          "total_rejected": 352,
-          "total_approved": 4668,
-          "total_submitted_pencacah": 322,
+          "total_submitted": 5421,
+          "total_rejected": 281,
+          "total_approved": 4734,
+          "total_submitted_pencacah": 405,
           "total_submitted_respondent": 1,
-          "persentase": 96.08,
-          "today_completed": 86,
+          "persentase": 97.43,
+          "today_completed": 78,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 66,
+            "SUBMITTED BY PENCACAH": 83
+          },
+          "yesterday_completed": 86,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 126,
             "SUBMITTED BY PENCACAH": 13
           },
-          "yesterday_completed": 26,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 26,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 88
           },
-          "two_days_ago_completed": 60,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 81
-          },
           "breakdown": {
-            "total": 5561,
-            "APPROVED BY Pengawas": 4668,
-            "REJECTED BY Pengawas": 338,
-            "SUBMITTED BY Pencacah": 315,
-            "DRAFT": 218,
-            "REVOKED BY Pengawas": 14,
+            "total": 5564,
+            "APPROVED BY Pengawas": 4734,
+            "SUBMITTED BY Pencacah": 398,
+            "REJECTED BY Pengawas": 266,
+            "DRAFT": 143,
+            "REVOKED BY Pengawas": 15,
             "COMPLETED BY Admin Kabupaten": 4,
             "EDITED BY Admin Kabupaten": 3,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 1.55,
-          "delta_kemarin_persen": 0.47,
-          "delta_lusa_persen": 1.08,
+          "delta_persen": 1.4,
+          "delta_kemarin_persen": 1.55,
+          "delta_lusa_persen": 0.47,
           "new_usaha_overall": 419,
           "new_rumah_overall": 248
         },
         {
           "kecamatan": "[011] BIAU",
           "kec_name": "[011] BIAU",
-          "total_prelist": 16806,
-          "total_draft": 701,
-          "total_open": 58,
-          "total_submitted": 16047,
-          "total_rejected": 920,
-          "total_approved": 11860,
-          "total_submitted_pencacah": 3252,
+          "total_prelist": 16839,
+          "total_draft": 599,
+          "total_open": 46,
+          "total_submitted": 16194,
+          "total_rejected": 769,
+          "total_approved": 12313,
+          "total_submitted_pencacah": 3097,
           "total_submitted_respondent": 15,
-          "persentase": 95.48,
-          "today_completed": 195,
+          "persentase": 96.17,
+          "today_completed": 147,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 453
+          },
+          "yesterday_completed": 195,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 353,
             "REJECTED BY PENGAWAS": 28
           },
-          "yesterday_completed": 96,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 96,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 307,
             "SUBMITTED RESPONDENT": 1
           },
-          "two_days_ago_completed": 186,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 11,
-            "REJECTED BY PENGAWAS": 72,
-            "SUBMITTED BY PENCACAH": 103
-          },
           "breakdown": {
-            "total": 16806,
-            "APPROVED BY Pengawas": 11860,
-            "SUBMITTED BY Pencacah": 3110,
-            "REJECTED BY Pengawas": 886,
-            "DRAFT": 701,
+            "total": 16839,
+            "APPROVED BY Pengawas": 12313,
+            "SUBMITTED BY Pencacah": 2955,
+            "REJECTED BY Pengawas": 735,
+            "DRAFT": 599,
             "EDITED BY Admin Kabupaten": 142,
-            "OPEN": 58,
+            "OPEN": 46,
             "REVOKED BY Pengawas": 25,
             "SUBMITTED RESPONDENT": 15,
             "REJECTED BY Admin Kabupaten": 9
           },
-          "delta_persen": 1.16,
-          "delta_kemarin_persen": 0.57,
-          "delta_lusa_persen": 1.11,
+          "delta_persen": 0.87,
+          "delta_kemarin_persen": 1.16,
+          "delta_lusa_persen": 0.57,
           "new_usaha_overall": 1290,
           "new_rumah_overall": 448
         },
         {
           "kecamatan": "[012] KARAMAT",
           "kec_name": "[012] KARAMAT",
-          "total_prelist": 4405,
-          "total_draft": 144,
+          "total_prelist": 4408,
+          "total_draft": 110,
           "total_open": 0,
-          "total_submitted": 4261,
-          "total_rejected": 163,
-          "total_approved": 3664,
-          "total_submitted_pencacah": 432,
+          "total_submitted": 4298,
+          "total_rejected": 141,
+          "total_approved": 3708,
+          "total_submitted_pencacah": 447,
           "total_submitted_respondent": 2,
-          "persentase": 96.73,
-          "today_completed": 44,
+          "persentase": 97.5,
+          "today_completed": 37,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 44,
+            "SUBMITTED BY PENCACAH": 15
+          },
+          "yesterday_completed": 44,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 40,
             "REJECTED BY PENGAWAS": 16
           },
-          "yesterday_completed": 52,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 52,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 29,
             "SUBMITTED BY PENCACAH": 27
           },
-          "two_days_ago_completed": 22,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 21,
-            "SUBMITTED BY PENCACAH": 3
-          },
           "breakdown": {
-            "total": 4405,
-            "APPROVED BY Pengawas": 3664,
-            "SUBMITTED BY Pencacah": 385,
-            "DRAFT": 144,
-            "REJECTED BY Pengawas": 135,
+            "total": 4408,
+            "APPROVED BY Pengawas": 3708,
+            "SUBMITTED BY Pencacah": 400,
+            "REJECTED BY Pengawas": 128,
+            "DRAFT": 110,
             "EDITED BY Admin Kabupaten": 42,
-            "REVOKED BY Pengawas": 19,
             "REJECTED BY Admin Kabupaten": 9,
             "COMPLETED BY Admin Kabupaten": 5,
+            "REVOKED BY Pengawas": 4,
             "SUBMITTED RESPONDENT": 2
           },
-          "delta_persen": 1.0,
-          "delta_kemarin_persen": 1.18,
-          "delta_lusa_persen": 0.5,
+          "delta_persen": 0.84,
+          "delta_kemarin_persen": 1.0,
+          "delta_lusa_persen": 1.18,
           "new_usaha_overall": 241,
           "new_rumah_overall": 90
         },
         {
           "kecamatan": "[020] MOMUNU",
           "kec_name": "[020] MOMUNU",
-          "total_prelist": 8075,
-          "total_draft": 273,
-          "total_open": 21,
-          "total_submitted": 7781,
-          "total_rejected": 186,
-          "total_approved": 6651,
-          "total_submitted_pencacah": 943,
+          "total_prelist": 8097,
+          "total_draft": 189,
+          "total_open": 14,
+          "total_submitted": 7894,
+          "total_rejected": 371,
+          "total_approved": 6667,
+          "total_submitted_pencacah": 855,
           "total_submitted_respondent": 1,
-          "persentase": 96.36,
-          "today_completed": 139,
+          "persentase": 97.49,
+          "today_completed": 113,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 16,
+            "REJECTED BY PENGAWAS": 185
+          },
+          "yesterday_completed": 139,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 193,
             "SUBMITTED BY PENCACAH": 14
           },
-          "yesterday_completed": 87,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 87,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 114
           },
-          "two_days_ago_completed": 141,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 141,
-            "REJECTED BY PENGAWAS": 32
-          },
           "breakdown": {
-            "total": 8075,
-            "APPROVED BY Pengawas": 6651,
-            "SUBMITTED BY Pencacah": 916,
-            "DRAFT": 273,
-            "REJECTED BY Pengawas": 172,
+            "total": 8097,
+            "APPROVED BY Pengawas": 6667,
+            "SUBMITTED BY Pencacah": 828,
+            "REJECTED BY Pengawas": 358,
+            "DRAFT": 189,
             "EDITED BY Admin Kabupaten": 24,
-            "OPEN": 21,
-            "REVOKED BY Pengawas": 12,
+            "OPEN": 14,
+            "REVOKED BY Pengawas": 11,
             "COMPLETED BY Admin Kabupaten": 3,
             "REJECTED BY Admin Kabupaten": 2,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 1.72,
-          "delta_kemarin_persen": 1.08,
-          "delta_lusa_persen": 1.75,
+          "delta_persen": 1.4,
+          "delta_kemarin_persen": 1.72,
+          "delta_lusa_persen": 1.07,
           "new_usaha_overall": 457,
           "new_rumah_overall": 243
         },
         {
           "kecamatan": "[021] TILOAN",
           "kec_name": "[021] TILOAN",
-          "total_prelist": 4350,
-          "total_draft": 123,
-          "total_open": 52,
-          "total_submitted": 4175,
-          "total_rejected": 30,
-          "total_approved": 3008,
-          "total_submitted_pencacah": 1136,
+          "total_prelist": 4353,
+          "total_draft": 104,
+          "total_open": 39,
+          "total_submitted": 4210,
+          "total_rejected": 27,
+          "total_approved": 3017,
+          "total_submitted_pencacah": 1165,
           "total_submitted_respondent": 1,
-          "persentase": 95.98,
-          "today_completed": 93,
+          "persentase": 96.71,
+          "today_completed": 35,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 9,
+            "SUBMITTED BY PENCACAH": 29
+          },
+          "yesterday_completed": 93,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 22,
             "SUBMITTED BY PENCACAH": 71
           },
-          "yesterday_completed": 23,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 23,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 95,
             "REJECTED BY PENGAWAS": 3
           },
-          "two_days_ago_completed": 27,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 53
-          },
           "breakdown": {
-            "total": 4350,
-            "APPROVED BY Pengawas": 3008,
-            "SUBMITTED BY Pencacah": 1062,
-            "DRAFT": 123,
+            "total": 4353,
+            "APPROVED BY Pengawas": 3017,
+            "SUBMITTED BY Pencacah": 1091,
+            "DRAFT": 104,
             "EDITED BY Admin Kabupaten": 74,
-            "OPEN": 52,
-            "REJECTED BY Pengawas": 28,
+            "OPEN": 39,
+            "REJECTED BY Pengawas": 25,
             "REVOKED BY Pengawas": 2,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 2.14,
-          "delta_kemarin_persen": 0.53,
-          "delta_lusa_persen": 0.62,
+          "delta_persen": 0.8,
+          "delta_kemarin_persen": 2.14,
+          "delta_lusa_persen": 0.53,
           "new_usaha_overall": 322,
           "new_rumah_overall": 153
         },
         {
           "kecamatan": "[030] BOKAT",
           "kec_name": "[030] BOKAT",
-          "total_prelist": 8418,
-          "total_draft": 715,
-          "total_open": 41,
-          "total_submitted": 7662,
+          "total_prelist": 8422,
+          "total_draft": 599,
+          "total_open": 17,
+          "total_submitted": 7806,
           "total_rejected": 156,
-          "total_approved": 6351,
-          "total_submitted_pencacah": 1151,
+          "total_approved": 6489,
+          "total_submitted_pencacah": 1157,
           "total_submitted_respondent": 4,
-          "persentase": 91.02,
-          "today_completed": 208,
+          "persentase": 92.69,
+          "today_completed": 144,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 138,
+            "SUBMITTED BY PENCACAH": 6
+          },
+          "yesterday_completed": 208,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 38,
             "SUBMITTED BY PENCACAH": 178
           },
-          "yesterday_completed": 129,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 129,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 40,
             "SUBMITTED BY PENCACAH": 96
           },
-          "two_days_ago_completed": 156,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 78,
-            "SUBMITTED BY PENCACAH": 87
-          },
           "breakdown": {
-            "total": 8418,
-            "APPROVED BY Pengawas": 6351,
-            "SUBMITTED BY Pencacah": 966,
-            "DRAFT": 715,
+            "total": 8422,
+            "APPROVED BY Pengawas": 6489,
+            "SUBMITTED BY Pencacah": 972,
+            "DRAFT": 599,
             "EDITED BY Admin Kabupaten": 164,
-            "REJECTED BY Pengawas": 131,
-            "OPEN": 41,
+            "REJECTED BY Pengawas": 135,
             "COMPLETED BY Admin Kabupaten": 21,
-            "REJECTED BY Admin Kabupaten": 13,
-            "REVOKED BY Pengawas": 12,
+            "OPEN": 17,
+            "REVOKED BY Pengawas": 11,
+            "REJECTED BY Admin Kabupaten": 10,
             "SUBMITTED RESPONDENT": 4
           },
-          "delta_persen": 2.47,
-          "delta_kemarin_persen": 1.53,
-          "delta_lusa_persen": 1.85,
+          "delta_persen": 1.71,
+          "delta_kemarin_persen": 2.47,
+          "delta_lusa_persen": 1.53,
           "new_usaha_overall": 533,
           "new_rumah_overall": 224
         },
         {
           "kecamatan": "[031] BUKAL",
           "kec_name": "[031] BUKAL",
-          "total_prelist": 6902,
-          "total_draft": 239,
-          "total_open": 63,
-          "total_submitted": 6600,
-          "total_rejected": 111,
-          "total_approved": 5784,
-          "total_submitted_pencacah": 703,
+          "total_prelist": 6947,
+          "total_draft": 223,
+          "total_open": 42,
+          "total_submitted": 6682,
+          "total_rejected": 103,
+          "total_approved": 5900,
+          "total_submitted_pencacah": 677,
           "total_submitted_respondent": 2,
-          "persentase": 95.62,
-          "today_completed": 126,
+          "persentase": 96.19,
+          "today_completed": 82,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 116
+          },
+          "yesterday_completed": 126,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 138,
             "SUBMITTED BY PENCACAH": 8
           },
-          "yesterday_completed": 55,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 55,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 117
           },
-          "two_days_ago_completed": 68,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 151
-          },
           "breakdown": {
-            "total": 6902,
-            "APPROVED BY Pengawas": 5784,
-            "SUBMITTED BY Pencacah": 567,
-            "DRAFT": 239,
-            "REJECTED BY Pengawas": 95,
-            "EDITED BY Admin Kabupaten": 88,
-            "OPEN": 63,
+            "total": 6947,
+            "APPROVED BY Pengawas": 5900,
+            "SUBMITTED BY Pencacah": 540,
+            "DRAFT": 223,
+            "EDITED BY Admin Kabupaten": 89,
+            "REJECTED BY Pengawas": 87,
             "COMPLETED BY Admin Kabupaten": 48,
+            "OPEN": 42,
             "REVOKED BY Pengawas": 13,
             "REJECTED BY Admin Kabupaten": 3,
             "SUBMITTED RESPONDENT": 2
           },
-          "delta_persen": 1.83,
-          "delta_kemarin_persen": 0.8,
-          "delta_lusa_persen": 0.99,
+          "delta_persen": 1.18,
+          "delta_kemarin_persen": 1.81,
+          "delta_lusa_persen": 0.79,
           "new_usaha_overall": 446,
           "new_rumah_overall": 96
         },
         {
           "kecamatan": "[040] BUNOBOGU",
           "kec_name": "[040] BUNOBOGU",
-          "total_prelist": 4750,
-          "total_draft": 281,
-          "total_open": 24,
-          "total_submitted": 4445,
-          "total_rejected": 45,
-          "total_approved": 3506,
-          "total_submitted_pencacah": 894,
+          "total_prelist": 4766,
+          "total_draft": 215,
+          "total_open": 20,
+          "total_submitted": 4531,
+          "total_rejected": 54,
+          "total_approved": 3658,
+          "total_submitted_pencacah": 819,
           "total_submitted_respondent": 0,
-          "persentase": 93.58,
-          "today_completed": 73,
+          "persentase": 95.07,
+          "today_completed": 86,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 152,
+            "REJECTED BY PENGAWAS": 9
+          },
+          "yesterday_completed": 73,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 45,
             "SUBMITTED BY PENCACAH": 39
           },
-          "yesterday_completed": 59,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 59,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 6,
             "SUBMITTED BY PENCACAH": 55
           },
-          "two_days_ago_completed": 63,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 100
-          },
           "breakdown": {
-            "total": 4750,
-            "APPROVED BY Pengawas": 3506,
-            "SUBMITTED BY Pencacah": 828,
-            "DRAFT": 281,
+            "total": 4766,
+            "APPROVED BY Pengawas": 3658,
+            "SUBMITTED BY Pencacah": 753,
+            "DRAFT": 215,
             "EDITED BY Admin Kabupaten": 66,
-            "REJECTED BY Pengawas": 39,
-            "OPEN": 24,
+            "REJECTED BY Pengawas": 48,
+            "OPEN": 20,
             "REJECTED BY Admin Kabupaten": 3,
             "REVOKED BY Pengawas": 3
           },
-          "delta_persen": 1.54,
-          "delta_kemarin_persen": 1.24,
-          "delta_lusa_persen": 1.33,
+          "delta_persen": 1.8,
+          "delta_kemarin_persen": 1.53,
+          "delta_lusa_persen": 1.24,
           "new_usaha_overall": 359,
           "new_rumah_overall": 102
         },
         {
           "kecamatan": "[041] GADUNG",
           "kec_name": "[041] GADUNG",
-          "total_prelist": 5781,
-          "total_draft": 147,
-          "total_open": 14,
-          "total_submitted": 5620,
-          "total_rejected": 154,
-          "total_approved": 4717,
-          "total_submitted_pencacah": 748,
+          "total_prelist": 5812,
+          "total_draft": 142,
+          "total_open": 9,
+          "total_submitted": 5661,
+          "total_rejected": 179,
+          "total_approved": 4719,
+          "total_submitted_pencacah": 762,
           "total_submitted_respondent": 1,
-          "persentase": 97.22,
-          "today_completed": 35,
+          "persentase": 97.4,
+          "today_completed": 41,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 2,
+            "REJECTED BY PENGAWAS": 25,
+            "SUBMITTED BY PENCACAH": 14
+          },
+          "yesterday_completed": 35,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 158
           },
-          "yesterday_completed": 13,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 13,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 8,
             "SUBMITTED BY PENCACAH": 6
           },
-          "two_days_ago_completed": 51,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 73,
-            "SUBMITTED BY PENCACAH": 14
-          },
           "breakdown": {
-            "total": 5781,
-            "APPROVED BY Pengawas": 4717,
-            "SUBMITTED BY Pencacah": 724,
-            "DRAFT": 147,
-            "REJECTED BY Pengawas": 136,
+            "total": 5812,
+            "APPROVED BY Pengawas": 4719,
+            "SUBMITTED BY Pencacah": 738,
+            "REJECTED BY Pengawas": 161,
+            "DRAFT": 142,
             "EDITED BY Admin Kabupaten": 24,
             "REVOKED BY Pengawas": 18,
-            "OPEN": 14,
+            "OPEN": 9,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 0.61,
-          "delta_kemarin_persen": 0.22,
-          "delta_lusa_persen": 0.88,
+          "delta_persen": 0.71,
+          "delta_kemarin_persen": 0.6,
+          "delta_lusa_persen": 0.22,
           "new_usaha_overall": 552,
           "new_rumah_overall": 77
         },
         {
           "kecamatan": "[050] PALELEH",
           "kec_name": "[050] PALELEH",
-          "total_prelist": 6159,
-          "total_draft": 855,
-          "total_open": 45,
-          "total_submitted": 5259,
-          "total_rejected": 70,
-          "total_approved": 4767,
-          "total_submitted_pencacah": 421,
+          "total_prelist": 6221,
+          "total_draft": 852,
+          "total_open": 9,
+          "total_submitted": 5360,
+          "total_rejected": 40,
+          "total_approved": 4866,
+          "total_submitted_pencacah": 453,
           "total_submitted_respondent": 1,
-          "persentase": 85.39,
-          "today_completed": 110,
+          "persentase": 86.16,
+          "today_completed": 101,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 99,
+            "SUBMITTED BY PENCACAH": 32
+          },
+          "yesterday_completed": 110,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 94,
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 13
           },
-          "yesterday_completed": 65,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 65,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 8,
             "SUBMITTED BY PENCACAH": 57
           },
-          "two_days_ago_completed": 43,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 16,
-            "SUBMITTED BY PENCACAH": 36
-          },
           "breakdown": {
-            "total": 6159,
-            "APPROVED BY Pengawas": 4767,
-            "DRAFT": 855,
-            "SUBMITTED BY Pencacah": 420,
-            "REJECTED BY Pengawas": 49,
-            "OPEN": 45,
-            "REVOKED BY Pengawas": 16,
-            "REJECTED BY Admin Kabupaten": 5,
+            "total": 6221,
+            "APPROVED BY Pengawas": 4866,
+            "DRAFT": 852,
+            "SUBMITTED BY Pencacah": 452,
+            "REJECTED BY Pengawas": 23,
+            "REVOKED BY Pengawas": 17,
+            "OPEN": 9,
             "EDITED BY Admin Kabupaten": 1,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 1.79,
-          "delta_kemarin_persen": 1.06,
-          "delta_lusa_persen": 0.7,
+          "delta_persen": 1.62,
+          "delta_kemarin_persen": 1.77,
+          "delta_lusa_persen": 1.04,
           "new_usaha_overall": 399,
           "new_rumah_overall": 126
         },
         {
           "kecamatan": "[051] PALELEH BARAT",
           "kec_name": "[051] PALELEH BARAT",
-          "total_prelist": 2869,
-          "total_draft": 329,
+          "total_prelist": 2870,
+          "total_draft": 290,
           "total_open": 0,
-          "total_submitted": 2540,
-          "total_rejected": 62,
-          "total_approved": 2198,
-          "total_submitted_pencacah": 279,
+          "total_submitted": 2580,
+          "total_rejected": 47,
+          "total_approved": 2273,
+          "total_submitted_pencacah": 259,
           "total_submitted_respondent": 1,
-          "persentase": 88.53,
-          "today_completed": 65,
+          "persentase": 89.9,
+          "today_completed": 40,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 75
+          },
+          "yesterday_completed": 65,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 29,
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 32
           },
-          "yesterday_completed": 30,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 30,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 31,
             "REJECTED BY PENGAWAS": 1
           },
-          "two_days_ago_completed": 25,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 42
-          },
           "breakdown": {
-            "total": 2869,
-            "APPROVED BY Pengawas": 2198,
-            "DRAFT": 329,
-            "SUBMITTED BY Pencacah": 279,
-            "REJECTED BY Pengawas": 33,
-            "REJECTED BY Admin Kabupaten": 17,
-            "REVOKED BY Pengawas": 12,
+            "total": 2870,
+            "APPROVED BY Pengawas": 2273,
+            "DRAFT": 290,
+            "SUBMITTED BY Pencacah": 259,
+            "REJECTED BY Pengawas": 28,
+            "REVOKED BY Pengawas": 14,
+            "REJECTED BY Admin Kabupaten": 5,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 2.27,
-          "delta_kemarin_persen": 1.05,
-          "delta_lusa_persen": 0.87,
+          "delta_persen": 1.39,
+          "delta_kemarin_persen": 2.26,
+          "delta_lusa_persen": 1.05,
           "new_usaha_overall": 204,
           "new_rumah_overall": 102
         }
       ],
       "breakdown": {
-        "total": 74208,
-        "APPROVED BY Pengawas": 57174,
-        "REJECTED BY Pengawas": 2042,
-        "SUBMITTED BY Pencacah": 9572,
-        "DRAFT": 4092,
-        "REVOKED BY Pengawas": 146,
+        "total": 74431,
+        "APPROVED BY Pengawas": 58344,
+        "SUBMITTED BY Pencacah": 9386,
+        "REJECTED BY Pengawas": 1994,
+        "DRAFT": 3533,
+        "REVOKED BY Pengawas": 133,
         "COMPLETED BY Admin Kabupaten": 81,
-        "EDITED BY Admin Kabupaten": 628,
+        "EDITED BY Admin Kabupaten": 629,
         "SUBMITTED RESPONDENT": 55,
-        "OPEN": 357,
-        "REJECTED BY Admin Kabupaten": 61
+        "OPEN": 235,
+        "REJECTED BY Admin Kabupaten": 41
       },
-      "two_days_ago_completed": 842,
+      "two_days_ago_completed": 635,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 767,
-        "REJECTED BY PENGAWAS": 18,
-        "SUBMITTED BY PENCACAH": 57
-      },
-      "yesterday_completed": 635,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 843,
         "SUBMITTED RESPONDENT": 1
+      },
+      "yesterday_completed": 1174,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 1236,
+        "SUBMITTED BY PENCACAH": 103
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 1174,
+      "today_completed": 904,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1236,
-        "SUBMITTED BY PENCACAH": 103
+        "APPROVED BY PENGAWAS": 1170
       },
-      "delta_persen": 1.58,
-      "delta_kemarin_persen": 0.86,
-      "delta_lusa_persen": 1.13
+      "delta_persen": 1.21,
+      "delta_kemarin_persen": 1.58,
+      "delta_lusa_persen": 0.85
     },
     {
       "kabupaten": "[08] PARIGI MOUTONG",
-      "total_prelist": 211109,
-      "total_draft": 2731,
-      "total_open": 2757,
-      "total_submitted": 205621,
-      "total_rejected": 5102,
-      "total_approved": 151074,
-      "total_submitted_pencacah": 49440,
+      "total_prelist": 211410,
+      "total_draft": 2182,
+      "total_open": 2132,
+      "total_submitted": 207096,
+      "total_rejected": 4908,
+      "total_approved": 153449,
+      "total_submitted_pencacah": 48734,
       "total_submitted_respondent": 5,
-      "persentase": 97.4,
+      "persentase": 97.96,
       "new_usaha_overall": 10498,
       "new_rumah_overall": 6311,
       "new_businesses": [],
@@ -4935,83 +4917,81 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[010] SAUSU",
           "kec_name": "[010] SAUSU",
-          "total_prelist": 9876,
-          "total_draft": 40,
-          "total_open": 28,
-          "total_submitted": 9808,
-          "total_rejected": 87,
-          "total_approved": 5516,
-          "total_submitted_pencacah": 4205,
+          "total_prelist": 9873,
+          "total_draft": 14,
+          "total_open": 0,
+          "total_submitted": 9859,
+          "total_rejected": 92,
+          "total_approved": 5812,
+          "total_submitted_pencacah": 3955,
           "total_submitted_respondent": 0,
-          "persentase": 99.31,
-          "today_completed": 80,
+          "persentase": 99.86,
+          "today_completed": 51,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 296,
+            "REJECTED BY PENGAWAS": 5
+          },
+          "yesterday_completed": 80,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 238
           },
-          "yesterday_completed": 143,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 143,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 132,
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 9
           },
-          "two_days_ago_completed": 112,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 347
-          },
           "breakdown": {
-            "total": 9876,
-            "APPROVED BY Pengawas": 5516,
-            "SUBMITTED BY Pencacah": 4054,
+            "total": 9873,
+            "APPROVED BY Pengawas": 5812,
+            "SUBMITTED BY Pencacah": 3804,
             "COMPLETED BY Admin Kabupaten": 148,
-            "REJECTED BY Pengawas": 82,
-            "DRAFT": 40,
-            "OPEN": 28,
+            "REJECTED BY Pengawas": 87,
+            "DRAFT": 14,
             "REVOKED BY Pengawas": 5,
             "EDITED BY Admin Kabupaten": 3
           },
-          "delta_persen": 0.81,
-          "delta_kemarin_persen": 1.45,
-          "delta_lusa_persen": 1.13,
+          "delta_persen": 0.52,
+          "delta_kemarin_persen": 0.81,
+          "delta_lusa_persen": 1.45,
           "new_usaha_overall": 633,
           "new_rumah_overall": 272
         },
         {
           "kecamatan": "[011] TORUE",
           "kec_name": "[011] TORUE",
-          "total_prelist": 10740,
-          "total_draft": 23,
+          "total_prelist": 10742,
+          "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 10717,
-          "total_rejected": 227,
-          "total_approved": 6952,
-          "total_submitted_pencacah": 3538,
+          "total_submitted": 10742,
+          "total_rejected": 223,
+          "total_approved": 7237,
+          "total_submitted_pencacah": 3282,
           "total_submitted_respondent": 0,
-          "persentase": 99.79,
-          "today_completed": 10,
+          "persentase": 100.0,
+          "today_completed": 25,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 285
+          },
+          "yesterday_completed": 10,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 634
           },
-          "yesterday_completed": 5,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 5,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 34
           },
-          "two_days_ago_completed": 7,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 177,
-            "REJECTED BY PENGAWAS": 5
-          },
           "breakdown": {
-            "total": 10740,
-            "APPROVED BY Pengawas": 6952,
-            "SUBMITTED BY Pencacah": 3368,
-            "REJECTED BY Pengawas": 208,
-            "COMPLETED BY Admin Kabupaten": 170,
-            "DRAFT": 23,
-            "REVOKED BY Pengawas": 19
+            "total": 10742,
+            "APPROVED BY Pengawas": 7237,
+            "SUBMITTED BY Pencacah": 3100,
+            "REJECTED BY Pengawas": 203,
+            "COMPLETED BY Admin Kabupaten": 182,
+            "REVOKED BY Pengawas": 20
           },
-          "delta_persen": 0.09,
-          "delta_kemarin_persen": 0.05,
-          "delta_lusa_persen": 0.07,
+          "delta_persen": 0.23,
+          "delta_kemarin_persen": 0.09,
+          "delta_lusa_persen": 0.05,
           "new_usaha_overall": 718,
           "new_rumah_overall": 285
         },
@@ -5022,32 +5002,31 @@ window.IPAS_DATA = {
           "total_draft": 0,
           "total_open": 0,
           "total_submitted": 7801,
-          "total_rejected": 141,
-          "total_approved": 3544,
-          "total_submitted_pencacah": 4116,
+          "total_rejected": 118,
+          "total_approved": 3623,
+          "total_submitted_pencacah": 4060,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
           "today_completed": 0,
           "today_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 284
+            "APPROVED BY PENGAWAS": 79
           },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 150,
-            "REJECTED BY PENGAWAS": 12
+            "APPROVED BY PENGAWAS": 284
           },
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 334,
-            "REJECTED BY PENGAWAS": 29
+            "APPROVED BY PENGAWAS": 150,
+            "REJECTED BY PENGAWAS": 12
           },
           "breakdown": {
             "total": 7801,
-            "SUBMITTED BY Pencacah": 3962,
-            "APPROVED BY Pengawas": 3544,
+            "SUBMITTED BY Pencacah": 3906,
+            "APPROVED BY Pengawas": 3623,
             "COMPLETED BY Admin Kabupaten": 152,
-            "REJECTED BY Pengawas": 132,
-            "REVOKED BY Pengawas": 9,
+            "REJECTED BY Pengawas": 111,
+            "REVOKED BY Pengawas": 7,
             "EDITED BY Admin Kabupaten": 2
           },
           "delta_persen": 0.0,
@@ -5059,134 +5038,133 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[020] PARIGI",
           "kec_name": "[020] PARIGI",
-          "total_prelist": 15840,
-          "total_draft": 488,
-          "total_open": 1727,
-          "total_submitted": 13625,
-          "total_rejected": 1143,
-          "total_approved": 6138,
-          "total_submitted_pencacah": 6340,
+          "total_prelist": 15884,
+          "total_draft": 463,
+          "total_open": 1479,
+          "total_submitted": 13942,
+          "total_rejected": 1140,
+          "total_approved": 6290,
+          "total_submitted_pencacah": 6508,
           "total_submitted_respondent": 4,
-          "persentase": 86.02,
-          "today_completed": 311,
+          "persentase": 87.77,
+          "today_completed": 317,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 152,
+            "SUBMITTED BY PENCACAH": 168
+          },
+          "yesterday_completed": 311,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 176,
             "REJECTED BY PENGAWAS": 19,
             "SUBMITTED BY PENCACAH": 116
           },
-          "yesterday_completed": 174,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 174,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 113,
             "REJECTED BY PENGAWAS": 18,
             "SUBMITTED BY PENCACAH": 43
           },
-          "two_days_ago_completed": 283,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 190,
-            "REJECTED BY PENGAWAS": 33,
-            "SUBMITTED BY PENCACAH": 60
-          },
           "breakdown": {
-            "total": 15840,
-            "SUBMITTED BY Pencacah": 6300,
-            "APPROVED BY Pengawas": 6138,
-            "OPEN": 1727,
-            "REJECTED BY Pengawas": 1086,
-            "DRAFT": 488,
-            "REVOKED BY Pengawas": 57,
+            "total": 15884,
+            "SUBMITTED BY Pencacah": 6468,
+            "APPROVED BY Pengawas": 6290,
+            "OPEN": 1479,
+            "REJECTED BY Pengawas": 1082,
+            "DRAFT": 463,
+            "REVOKED BY Pengawas": 58,
             "COMPLETED BY Admin Kabupaten": 36,
             "SUBMITTED RESPONDENT": 4,
             "EDITED BY Admin Kabupaten": 3,
             "EDITED BY Pengawas": 1
           },
-          "delta_persen": 1.96,
-          "delta_kemarin_persen": 1.1,
-          "delta_lusa_persen": 1.79,
+          "delta_persen": 2.0,
+          "delta_kemarin_persen": 1.96,
+          "delta_lusa_persen": 1.1,
           "new_usaha_overall": 692,
           "new_rumah_overall": 524
         },
         {
           "kecamatan": "[021] PARIGI SELATAN",
           "kec_name": "[021] PARIGI SELATAN",
-          "total_prelist": 10856,
-          "total_draft": 349,
-          "total_open": 286,
-          "total_submitted": 10221,
-          "total_rejected": 530,
-          "total_approved": 7106,
-          "total_submitted_pencacah": 2584,
+          "total_prelist": 10862,
+          "total_draft": 160,
+          "total_open": 186,
+          "total_submitted": 10516,
+          "total_rejected": 516,
+          "total_approved": 7188,
+          "total_submitted_pencacah": 2811,
           "total_submitted_respondent": 1,
-          "persentase": 94.15,
-          "today_completed": 225,
+          "persentase": 96.81,
+          "today_completed": 295,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 82,
+            "SUBMITTED BY PENCACAH": 227
+          },
+          "yesterday_completed": 225,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 231,
             "SUBMITTED BY PENCACAH": 70
           },
-          "yesterday_completed": 187,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 187,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 51,
             "SUBMITTED BY PENCACAH": 156
           },
-          "two_days_ago_completed": 290,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 449,
-            "REJECTED BY PENGAWAS": 2
-          },
           "breakdown": {
-            "total": 10856,
-            "APPROVED BY Pengawas": 7106,
-            "SUBMITTED BY Pencacah": 2402,
-            "REJECTED BY Pengawas": 517,
-            "DRAFT": 349,
-            "OPEN": 286,
+            "total": 10862,
+            "APPROVED BY Pengawas": 7188,
+            "SUBMITTED BY Pencacah": 2629,
+            "REJECTED BY Pengawas": 501,
+            "OPEN": 186,
             "COMPLETED BY Admin Kabupaten": 182,
-            "REVOKED BY Pengawas": 13,
+            "DRAFT": 160,
+            "REVOKED BY Pengawas": 15,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 2.07,
-          "delta_kemarin_persen": 1.72,
-          "delta_lusa_persen": 2.67,
+          "delta_persen": 2.72,
+          "delta_kemarin_persen": 2.07,
+          "delta_lusa_persen": 1.72,
           "new_usaha_overall": 375,
           "new_rumah_overall": 394
         },
         {
           "kecamatan": "[022] PARIGI BARAT",
           "kec_name": "[022] PARIGI BARAT",
-          "total_prelist": 3396,
-          "total_draft": 3,
-          "total_open": 1,
-          "total_submitted": 3392,
-          "total_rejected": 11,
-          "total_approved": 1963,
-          "total_submitted_pencacah": 1418,
+          "total_prelist": 3394,
+          "total_draft": 0,
+          "total_open": 0,
+          "total_submitted": 3394,
+          "total_rejected": 25,
+          "total_approved": 2050,
+          "total_submitted_pencacah": 1319,
           "total_submitted_respondent": 0,
-          "persentase": 99.88,
-          "today_completed": 6,
+          "persentase": 100.0,
+          "today_completed": 2,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 87,
+            "REJECTED BY PENGAWAS": 14
+          },
+          "yesterday_completed": 6,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 39,
             "REJECTED BY PENGAWAS": 4
           },
-          "yesterday_completed": 13,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 13,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 36
           },
-          "two_days_ago_completed": 2,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 116
-          },
           "breakdown": {
-            "total": 3396,
-            "APPROVED BY Pengawas": 1963,
-            "SUBMITTED BY Pencacah": 1335,
+            "total": 3394,
+            "APPROVED BY Pengawas": 2050,
+            "SUBMITTED BY Pencacah": 1236,
             "COMPLETED BY Admin Kabupaten": 79,
-            "REJECTED BY Pengawas": 11,
+            "REJECTED BY Pengawas": 24,
             "EDITED BY Admin Kabupaten": 4,
-            "DRAFT": 3,
-            "OPEN": 1
+            "REVOKED BY Pengawas": 1
           },
-          "delta_persen": 0.18,
-          "delta_kemarin_persen": 0.38,
-          "delta_lusa_persen": 0.06,
+          "delta_persen": 0.06,
+          "delta_kemarin_persen": 0.18,
+          "delta_lusa_persen": 0.38,
           "new_usaha_overall": 164,
           "new_rumah_overall": 49
         },
@@ -5198,28 +5176,30 @@ window.IPAS_DATA = {
           "total_open": 0,
           "total_submitted": 2667,
           "total_rejected": 0,
-          "total_approved": 2486,
-          "total_submitted_pencacah": 181,
+          "total_approved": 2472,
+          "total_submitted_pencacah": 195,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
-          "today_completed": 1,
+          "today_completed": 0,
           "today_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 14
+          },
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 2
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2668,
-            "APPROVED BY Pengawas": 2486,
-            "COMPLETED BY Admin Kabupaten": 181,
+            "APPROVED BY Pengawas": 2472,
+            "COMPLETED BY Admin Kabupaten": 195,
             "REVOKED BY Admin Kabupaten": 1
           },
-          "delta_persen": 0.04,
-          "delta_kemarin_persen": 0.0,
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.04,
           "delta_lusa_persen": 0.0,
           "new_usaha_overall": 127,
           "new_rumah_overall": 30
@@ -5227,39 +5207,38 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[024] PARIGI TENGAH",
           "kec_name": "[024] PARIGI TENGAH",
-          "total_prelist": 4101,
-          "total_draft": 3,
+          "total_prelist": 4106,
+          "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 4098,
-          "total_rejected": 40,
-          "total_approved": 3332,
-          "total_submitted_pencacah": 726,
+          "total_submitted": 4106,
+          "total_rejected": 65,
+          "total_approved": 3318,
+          "total_submitted_pencacah": 723,
           "total_submitted_respondent": 0,
-          "persentase": 99.93,
-          "today_completed": 6,
+          "persentase": 100.0,
+          "today_completed": 8,
           "today_completed_breakdown": {
+            "REJECTED BY PENGAWAS": 25
+          },
+          "yesterday_completed": 6,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 40,
             "REJECTED BY PENGAWAS": 7
           },
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 46
-          },
           "two_days_ago_completed": 1,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 19
+            "APPROVED BY PENGAWAS": 46
           },
           "breakdown": {
-            "total": 4101,
-            "APPROVED BY Pengawas": 3332,
-            "SUBMITTED BY Pencacah": 617,
+            "total": 4106,
+            "APPROVED BY Pengawas": 3318,
+            "SUBMITTED BY Pencacah": 614,
             "COMPLETED BY Admin Kabupaten": 109,
-            "REJECTED BY Pengawas": 32,
-            "REVOKED BY Pengawas": 8,
-            "DRAFT": 3
+            "REJECTED BY Pengawas": 40,
+            "REVOKED BY Pengawas": 25
           },
-          "delta_persen": 0.15,
-          "delta_kemarin_persen": 0.02,
+          "delta_persen": 0.19,
+          "delta_kemarin_persen": 0.15,
           "delta_lusa_persen": 0.02,
           "new_usaha_overall": 183,
           "new_rumah_overall": 115
@@ -5267,82 +5246,83 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[030] AMPIBABO",
           "kec_name": "[030] AMPIBABO",
-          "total_prelist": 10801,
-          "total_draft": 0,
+          "total_prelist": 10811,
+          "total_draft": 7,
           "total_open": 0,
-          "total_submitted": 10801,
-          "total_rejected": 10,
-          "total_approved": 10464,
-          "total_submitted_pencacah": 327,
+          "total_submitted": 10804,
+          "total_rejected": 4,
+          "total_approved": 10455,
+          "total_submitted_pencacah": 345,
           "total_submitted_respondent": 0,
-          "persentase": 100.0,
-          "today_completed": 23,
+          "persentase": 99.94,
+          "today_completed": 3,
           "today_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 15,
-            "REJECTED BY PENGAWAS": 8
+            "SUBMITTED BY PENCACAH": 18
           },
           "yesterday_completed": 23,
           "yesterday_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 15,
+            "REJECTED BY PENGAWAS": 8
+          },
+          "two_days_ago_completed": 23,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 26,
             "SUBMITTED BY PENCACAH": 5
           },
-          "two_days_ago_completed": 6,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 6,
-            "REJECTED BY PENGAWAS": 9
-          },
           "breakdown": {
-            "total": 10801,
-            "APPROVED BY Pengawas": 10464,
+            "total": 10811,
+            "APPROVED BY Pengawas": 10455,
             "COMPLETED BY Admin Kabupaten": 313,
-            "REVOKED BY Pengawas": 10,
+            "SUBMITTED BY Pencacah": 25,
+            "DRAFT": 7,
             "EDITED BY Admin Kabupaten": 7,
-            "SUBMITTED BY Pencacah": 7
+            "REJECTED BY Pengawas": 2,
+            "REVOKED BY Pengawas": 2
           },
-          "delta_persen": 0.21,
+          "delta_persen": 0.03,
           "delta_kemarin_persen": 0.21,
-          "delta_lusa_persen": 0.06,
+          "delta_lusa_persen": 0.21,
           "new_usaha_overall": 525,
           "new_rumah_overall": 384
         },
         {
           "kecamatan": "[031] KASIMBAR",
           "kec_name": "[031] KASIMBAR",
-          "total_prelist": 10933,
-          "total_draft": 43,
+          "total_prelist": 10938,
+          "total_draft": 28,
           "total_open": 2,
-          "total_submitted": 10888,
-          "total_rejected": 271,
-          "total_approved": 7908,
-          "total_submitted_pencacah": 2709,
+          "total_submitted": 10908,
+          "total_rejected": 241,
+          "total_approved": 8037,
+          "total_submitted_pencacah": 2630,
           "total_submitted_respondent": 0,
-          "persentase": 99.59,
-          "today_completed": 62,
+          "persentase": 99.73,
+          "today_completed": 20,
           "today_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 164
-          },
-          "yesterday_completed": 39,
-          "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 102
-          },
-          "two_days_ago_completed": 43,
-          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 129
           },
+          "yesterday_completed": 62,
+          "yesterday_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 164
+          },
+          "two_days_ago_completed": 39,
+          "two_days_ago_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 102
+          },
           "breakdown": {
-            "total": 10933,
-            "APPROVED BY Pengawas": 7908,
-            "SUBMITTED BY Pencacah": 2564,
-            "REJECTED BY Pengawas": 239,
+            "total": 10938,
+            "APPROVED BY Pengawas": 8037,
+            "SUBMITTED BY Pencacah": 2485,
+            "REJECTED BY Pengawas": 200,
             "COMPLETED BY Admin Kabupaten": 144,
-            "DRAFT": 43,
-            "REVOKED BY Pengawas": 32,
+            "REVOKED BY Pengawas": 41,
+            "DRAFT": 28,
             "OPEN": 2,
             "EDITED BY Admin Kabupaten": 1
           },
-          "delta_persen": 0.57,
-          "delta_kemarin_persen": 0.36,
-          "delta_lusa_persen": 0.39,
+          "delta_persen": 0.18,
+          "delta_kemarin_persen": 0.57,
+          "delta_lusa_persen": 0.36,
           "new_usaha_overall": 469,
           "new_rumah_overall": 359
         },
@@ -5358,19 +5338,16 @@ window.IPAS_DATA = {
           "total_submitted_pencacah": 134,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
-          "today_completed": 1,
-          "today_completed_breakdown": {
+          "today_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 2
           },
-          "yesterday_completed": 12,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 12,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 8,
             "SUBMITTED BY PENCACAH": 4
-          },
-          "two_days_ago_completed": 30,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 17,
-            "SUBMITTED BY PENCACAH": 15
           },
           "breakdown": {
             "total": 7770,
@@ -5380,9 +5357,9 @@ window.IPAS_DATA = {
             "REVOKED BY Pengawas": 10,
             "EDITED BY Admin Kabupaten": 2
           },
-          "delta_persen": 0.01,
-          "delta_kemarin_persen": 0.15,
-          "delta_lusa_persen": 0.39,
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.01,
+          "delta_lusa_persen": 0.15,
           "new_usaha_overall": 337,
           "new_rumah_overall": 354
         },
@@ -5390,32 +5367,33 @@ window.IPAS_DATA = {
           "kecamatan": "[033] SINIU",
           "kec_name": "[033] SINIU",
           "total_prelist": 4974,
-          "total_draft": 0,
+          "total_draft": 19,
           "total_open": 0,
-          "total_submitted": 4974,
-          "total_rejected": 596,
-          "total_approved": 3128,
-          "total_submitted_pencacah": 1250,
+          "total_submitted": 4955,
+          "total_rejected": 545,
+          "total_approved": 3212,
+          "total_submitted_pencacah": 1198,
           "total_submitted_respondent": 0,
-          "persentase": 100.0,
+          "persentase": 99.62,
           "today_completed": 0,
           "today_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 68
+            "APPROVED BY PENGAWAS": 84
           },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 198
+            "APPROVED BY PENGAWAS": 68
           },
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 38
+            "APPROVED BY PENGAWAS": 198
           },
           "breakdown": {
             "total": 4974,
-            "APPROVED BY Pengawas": 3128,
-            "SUBMITTED BY Pencacah": 1185,
-            "REJECTED BY Pengawas": 593,
+            "APPROVED BY Pengawas": 3212,
+            "SUBMITTED BY Pencacah": 1133,
+            "REJECTED BY Pengawas": 542,
             "COMPLETED BY Admin Kabupaten": 62,
+            "DRAFT": 19,
             "EDITED BY Admin Kabupaten": 3,
             "REVOKED BY Pengawas": 3
           },
@@ -5428,373 +5406,375 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[040] TINOMBO",
           "kec_name": "[040] TINOMBO",
-          "total_prelist": 9632,
-          "total_draft": 59,
+          "total_prelist": 9647,
+          "total_draft": 35,
           "total_open": 0,
-          "total_submitted": 9573,
-          "total_rejected": 17,
-          "total_approved": 9282,
-          "total_submitted_pencacah": 274,
+          "total_submitted": 9612,
+          "total_rejected": 5,
+          "total_approved": 9363,
+          "total_submitted_pencacah": 244,
           "total_submitted_respondent": 0,
-          "persentase": 99.39,
-          "today_completed": 65,
+          "persentase": 99.64,
+          "today_completed": 39,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 81
+          },
+          "yesterday_completed": 65,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 172
           },
-          "yesterday_completed": 109,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 109,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 137
           },
-          "two_days_ago_completed": 175,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 203
-          },
           "breakdown": {
-            "total": 9632,
-            "APPROVED BY Pengawas": 9282,
+            "total": 9647,
+            "APPROVED BY Pengawas": 9363,
             "EDITED BY Admin Kabupaten": 137,
-            "SUBMITTED BY Pencacah": 75,
             "COMPLETED BY Admin Kabupaten": 62,
-            "DRAFT": 59,
-            "REJECTED BY Pengawas": 17
+            "SUBMITTED BY Pencacah": 45,
+            "DRAFT": 35,
+            "REJECTED BY Pengawas": 5
           },
-          "delta_persen": 0.67,
-          "delta_kemarin_persen": 1.13,
-          "delta_lusa_persen": 1.82,
+          "delta_persen": 0.4,
+          "delta_kemarin_persen": 0.67,
+          "delta_lusa_persen": 1.13,
           "new_usaha_overall": 600,
           "new_rumah_overall": 282
         },
         {
           "kecamatan": "[041] TINOMBO SELATAN",
           "kec_name": "[041] TINOMBO SELATAN",
-          "total_prelist": 14043,
-          "total_draft": 37,
-          "total_open": 9,
-          "total_submitted": 13997,
-          "total_rejected": 295,
-          "total_approved": 9770,
-          "total_submitted_pencacah": 3932,
+          "total_prelist": 14064,
+          "total_draft": 16,
+          "total_open": 4,
+          "total_submitted": 14044,
+          "total_rejected": 152,
+          "total_approved": 9926,
+          "total_submitted_pencacah": 3966,
           "total_submitted_respondent": 0,
-          "persentase": 99.67,
-          "today_completed": 14,
+          "persentase": 99.86,
+          "today_completed": 47,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 156,
+            "SUBMITTED BY PENCACAH": 34
+          },
+          "yesterday_completed": 14,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 433
           },
-          "yesterday_completed": 34,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 34,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 353,
             "REJECTED BY PENGAWAS": 314
           },
-          "two_days_ago_completed": 63,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 191,
-            "REJECTED BY PENGAWAS": 21
-          },
           "breakdown": {
-            "total": 14043,
-            "APPROVED BY Pengawas": 9770,
-            "SUBMITTED BY Pencacah": 3708,
-            "REJECTED BY Pengawas": 280,
-            "EDITED BY Admin Kabupaten": 156,
+            "total": 14064,
+            "APPROVED BY Pengawas": 9926,
+            "SUBMITTED BY Pencacah": 3749,
+            "EDITED BY Admin Kabupaten": 149,
+            "REJECTED BY Pengawas": 137,
             "COMPLETED BY Admin Kabupaten": 67,
-            "DRAFT": 37,
+            "DRAFT": 16,
             "REVOKED BY Pengawas": 15,
-            "OPEN": 9,
+            "OPEN": 4,
             "EDITED BY Pengawas": 1
           },
-          "delta_persen": 0.1,
-          "delta_kemarin_persen": 0.24,
-          "delta_lusa_persen": 0.45,
+          "delta_persen": 0.33,
+          "delta_kemarin_persen": 0.1,
+          "delta_lusa_persen": 0.24,
           "new_usaha_overall": 908,
           "new_rumah_overall": 482
         },
         {
           "kecamatan": "[042] SIDOAN",
           "kec_name": "[042] SIDOAN",
-          "total_prelist": 6582,
-          "total_draft": 322,
-          "total_open": 18,
-          "total_submitted": 6242,
-          "total_rejected": 39,
-          "total_approved": 4901,
-          "total_submitted_pencacah": 1302,
+          "total_prelist": 6589,
+          "total_draft": 249,
+          "total_open": 5,
+          "total_submitted": 6335,
+          "total_rejected": 36,
+          "total_approved": 5013,
+          "total_submitted_pencacah": 1286,
           "total_submitted_respondent": 0,
-          "persentase": 94.83,
-          "today_completed": 101,
+          "persentase": 96.15,
+          "today_completed": 93,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 112
+          },
+          "yesterday_completed": 101,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 176,
             "REJECTED BY PENGAWAS": 5
           },
-          "yesterday_completed": 79,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 79,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 90
           },
-          "two_days_ago_completed": 92,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 74,
-            "REJECTED BY PENGAWAS": 6,
-            "SUBMITTED BY PENCACAH": 12
-          },
           "breakdown": {
-            "total": 6583,
-            "APPROVED BY Pengawas": 4901,
-            "SUBMITTED BY Pencacah": 1118,
-            "DRAFT": 322,
+            "total": 6590,
+            "APPROVED BY Pengawas": 5013,
+            "SUBMITTED BY Pencacah": 1102,
+            "DRAFT": 249,
             "COMPLETED BY Admin Kabupaten": 183,
-            "REJECTED BY Pengawas": 21,
-            "OPEN": 18,
+            "REJECTED BY Pengawas": 18,
             "REVOKED BY Pengawas": 18,
+            "OPEN": 5,
             "EDITED BY Admin Kabupaten": 1,
             "REVOKED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.53,
-          "delta_kemarin_persen": 1.2,
-          "delta_lusa_persen": 1.4,
+          "delta_persen": 1.41,
+          "delta_kemarin_persen": 1.53,
+          "delta_lusa_persen": 1.2,
           "new_usaha_overall": 327,
           "new_rumah_overall": 197
         },
         {
           "kecamatan": "[050] TOMINI",
           "kec_name": "[050] TOMINI",
-          "total_prelist": 8187,
+          "total_prelist": 8195,
           "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 8187,
+          "total_submitted": 8195,
           "total_rejected": 0,
-          "total_approved": 7876,
+          "total_approved": 7884,
           "total_submitted_pencacah": 311,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
-          "today_completed": 44,
+          "today_completed": 8,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 8
+          },
+          "yesterday_completed": 44,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 296
           },
-          "yesterday_completed": 105,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 105,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 196
           },
-          "two_days_ago_completed": 101,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 168
-          },
           "breakdown": {
-            "total": 8187,
-            "APPROVED BY Pengawas": 7876,
+            "total": 8195,
+            "APPROVED BY Pengawas": 7884,
             "COMPLETED BY Admin Kabupaten": 310,
             "EDITED BY Admin Kabupaten": 1
           },
-          "delta_persen": 0.54,
-          "delta_kemarin_persen": 1.28,
-          "delta_lusa_persen": 1.23,
+          "delta_persen": 0.1,
+          "delta_kemarin_persen": 0.54,
+          "delta_lusa_persen": 1.28,
           "new_usaha_overall": 365,
           "new_rumah_overall": 173
         },
         {
           "kecamatan": "[051] MEPANGA",
           "kec_name": "[051] MEPANGA",
-          "total_prelist": 15587,
-          "total_draft": 487,
-          "total_open": 362,
-          "total_submitted": 14738,
-          "total_rejected": 528,
-          "total_approved": 10576,
-          "total_submitted_pencacah": 3634,
+          "total_prelist": 15625,
+          "total_draft": 431,
+          "total_open": 196,
+          "total_submitted": 14998,
+          "total_rejected": 598,
+          "total_approved": 10750,
+          "total_submitted_pencacah": 3650,
           "total_submitted_respondent": 0,
-          "persentase": 94.55,
-          "today_completed": 253,
+          "persentase": 95.99,
+          "today_completed": 260,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 174,
+            "REJECTED BY PENGAWAS": 70,
+            "SUBMITTED BY PENCACAH": 16
+          },
+          "yesterday_completed": 253,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 392
           },
-          "yesterday_completed": 245,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 245,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 208,
             "SUBMITTED BY PENCACAH": 57
           },
-          "two_days_ago_completed": 229,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 361
-          },
           "breakdown": {
-            "total": 15587,
-            "APPROVED BY Pengawas": 10576,
-            "SUBMITTED BY Pencacah": 3540,
-            "REJECTED BY Pengawas": 511,
-            "DRAFT": 487,
-            "OPEN": 362,
+            "total": 15625,
+            "APPROVED BY Pengawas": 10750,
+            "SUBMITTED BY Pencacah": 3556,
+            "REJECTED BY Pengawas": 579,
+            "DRAFT": 431,
+            "OPEN": 196,
             "COMPLETED BY Admin Kabupaten": 92,
-            "REVOKED BY Pengawas": 17,
+            "REVOKED BY Pengawas": 19,
             "EDITED BY Admin Kabupaten": 2
           },
-          "delta_persen": 1.62,
-          "delta_kemarin_persen": 1.57,
-          "delta_lusa_persen": 1.47,
+          "delta_persen": 1.66,
+          "delta_kemarin_persen": 1.62,
+          "delta_lusa_persen": 1.57,
           "new_usaha_overall": 732,
           "new_rumah_overall": 457
         },
         {
           "kecamatan": "[052] PALASA",
           "kec_name": "[052] PALASA",
-          "total_prelist": 11604,
+          "total_prelist": 11636,
           "total_draft": 0,
-          "total_open": 42,
-          "total_submitted": 11562,
-          "total_rejected": 157,
-          "total_approved": 11076,
-          "total_submitted_pencacah": 329,
+          "total_open": 12,
+          "total_submitted": 11624,
+          "total_rejected": 115,
+          "total_approved": 11171,
+          "total_submitted_pencacah": 338,
           "total_submitted_respondent": 0,
-          "persentase": 99.64,
-          "today_completed": 81,
+          "persentase": 99.9,
+          "today_completed": 62,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 95,
+            "SUBMITTED BY PENCACAH": 9
+          },
+          "yesterday_completed": 81,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 161
           },
-          "yesterday_completed": 35,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 35,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 54
           },
-          "two_days_ago_completed": 33,
-          "two_days_ago_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 36
-          },
           "breakdown": {
-            "total": 11604,
-            "APPROVED BY Pengawas": 11076,
-            "COMPLETED BY Admin Kabupaten": 249,
-            "REJECTED BY Pengawas": 121,
-            "SUBMITTED BY Pencacah": 73,
-            "OPEN": 42,
+            "total": 11636,
+            "APPROVED BY Pengawas": 11171,
+            "COMPLETED BY Admin Kabupaten": 281,
+            "REJECTED BY Pengawas": 79,
+            "SUBMITTED BY Pencacah": 50,
             "REVOKED BY Pengawas": 35,
+            "OPEN": 12,
             "EDITED BY Admin Kabupaten": 7,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 0.7,
-          "delta_kemarin_persen": 0.3,
-          "delta_lusa_persen": 0.28,
+          "delta_persen": 0.53,
+          "delta_kemarin_persen": 0.7,
+          "delta_lusa_persen": 0.3,
           "new_usaha_overall": 630,
           "new_rumah_overall": 317
         },
         {
           "kecamatan": "[060] MOUTONG",
           "kec_name": "[060] MOUTONG",
-          "total_prelist": 10185,
-          "total_draft": 174,
+          "total_prelist": 10287,
+          "total_draft": 125,
           "total_open": 2,
-          "total_submitted": 10009,
-          "total_rejected": 251,
-          "total_approved": 6433,
-          "total_submitted_pencacah": 3325,
+          "total_submitted": 10160,
+          "total_rejected": 245,
+          "total_approved": 6488,
+          "total_submitted_pencacah": 3427,
           "total_submitted_respondent": 0,
-          "persentase": 98.27,
-          "today_completed": 178,
+          "persentase": 98.77,
+          "today_completed": 151,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 55,
+            "SUBMITTED BY PENCACAH": 102
+          },
+          "yesterday_completed": 178,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 268
           },
-          "yesterday_completed": 61,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 61,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 92,
             "SUBMITTED BY PENCACAH": 3
           },
-          "two_days_ago_completed": 104,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 241
-          },
           "breakdown": {
-            "total": 10185,
-            "APPROVED BY Pengawas": 6433,
-            "SUBMITTED BY Pencacah": 3257,
-            "REJECTED BY Pengawas": 228,
-            "DRAFT": 174,
+            "total": 10287,
+            "APPROVED BY Pengawas": 6488,
+            "SUBMITTED BY Pencacah": 3359,
+            "REJECTED BY Pengawas": 225,
+            "DRAFT": 125,
             "COMPLETED BY Admin Kabupaten": 67,
-            "REVOKED BY Pengawas": 23,
+            "REVOKED BY Pengawas": 20,
             "OPEN": 2,
             "EDITED BY Pengawas": 1
           },
-          "delta_persen": 1.75,
-          "delta_kemarin_persen": 0.6,
-          "delta_lusa_persen": 1.02,
+          "delta_persen": 1.47,
+          "delta_kemarin_persen": 1.73,
+          "delta_lusa_persen": 0.59,
           "new_usaha_overall": 340,
           "new_rumah_overall": 156
         },
         {
           "kecamatan": "[061] BOLANO LAMBUNU",
           "kec_name": "[061] BOLANO LAMBUNU",
-          "total_prelist": 10702,
-          "total_draft": 4,
+          "total_prelist": 10712,
+          "total_draft": 1,
           "total_open": 0,
-          "total_submitted": 10698,
-          "total_rejected": 43,
-          "total_approved": 8043,
-          "total_submitted_pencacah": 2612,
+          "total_submitted": 10711,
+          "total_rejected": 93,
+          "total_approved": 8201,
+          "total_submitted_pencacah": 2417,
           "total_submitted_respondent": 0,
-          "persentase": 99.96,
-          "today_completed": 94,
+          "persentase": 99.99,
+          "today_completed": 13,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 158,
+            "REJECTED BY PENGAWAS": 50
+          },
+          "yesterday_completed": 94,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 304
           },
-          "yesterday_completed": 29,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 29,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 100,
             "REJECTED BY PENGAWAS": 10
           },
-          "two_days_ago_completed": 36,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 282
-          },
           "breakdown": {
-            "total": 10702,
-            "APPROVED BY Pengawas": 8043,
-            "SUBMITTED BY Pencacah": 2142,
+            "total": 10712,
+            "APPROVED BY Pengawas": 8201,
+            "SUBMITTED BY Pencacah": 1947,
             "COMPLETED BY Admin Kabupaten": 465,
-            "REJECTED BY Pengawas": 33,
-            "REVOKED BY Pengawas": 10,
+            "REJECTED BY Pengawas": 82,
+            "REVOKED BY Pengawas": 11,
             "EDITED BY Admin Kabupaten": 5,
-            "DRAFT": 4
+            "DRAFT": 1
           },
-          "delta_persen": 0.88,
-          "delta_kemarin_persen": 0.27,
-          "delta_lusa_persen": 0.34,
+          "delta_persen": 0.12,
+          "delta_kemarin_persen": 0.88,
+          "delta_lusa_persen": 0.27,
           "new_usaha_overall": 609,
           "new_rumah_overall": 414
         },
         {
           "kecamatan": "[062] TAOPA",
           "kec_name": "[062] TAOPA",
-          "total_prelist": 7134,
-          "total_draft": 676,
-          "total_open": 280,
-          "total_submitted": 6178,
-          "total_rejected": 576,
-          "total_approved": 3318,
-          "total_submitted_pencacah": 2284,
+          "total_prelist": 7135,
+          "total_draft": 623,
+          "total_open": 246,
+          "total_submitted": 6266,
+          "total_rejected": 558,
+          "total_approved": 3439,
+          "total_submitted_pencacah": 2269,
           "total_submitted_respondent": 0,
-          "persentase": 86.6,
-          "today_completed": 215,
+          "persentase": 87.82,
+          "today_completed": 88,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 121
+          },
+          "yesterday_completed": 215,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 145,
             "SUBMITTED BY PENCACAH": 145
           },
-          "yesterday_completed": 149,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 149,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 113,
             "SUBMITTED BY PENCACAH": 51
           },
-          "two_days_ago_completed": 132,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 37,
-            "SUBMITTED BY PENCACAH": 147
-          },
           "breakdown": {
-            "total": 7134,
-            "APPROVED BY Pengawas": 3318,
-            "SUBMITTED BY Pencacah": 2212,
-            "DRAFT": 676,
-            "REJECTED BY Pengawas": 567,
-            "OPEN": 280,
+            "total": 7135,
+            "APPROVED BY Pengawas": 3439,
+            "SUBMITTED BY Pencacah": 2197,
+            "DRAFT": 623,
+            "REJECTED BY Pengawas": 549,
+            "OPEN": 246,
             "COMPLETED BY Admin Kabupaten": 72,
             "REVOKED BY Pengawas": 9
           },
-          "delta_persen": 3.01,
-          "delta_kemarin_persen": 2.09,
-          "delta_lusa_persen": 1.85,
+          "delta_persen": 1.23,
+          "delta_kemarin_persen": 3.01,
+          "delta_lusa_persen": 2.09,
           "new_usaha_overall": 174,
           "new_rumah_overall": 115
         },
@@ -5802,40 +5782,40 @@ window.IPAS_DATA = {
           "kecamatan": "[063] BOLANO",
           "kec_name": "[063] BOLANO",
           "total_prelist": 8129,
-          "total_draft": 23,
+          "total_draft": 11,
           "total_open": 0,
-          "total_submitted": 8106,
+          "total_submitted": 8118,
           "total_rejected": 109,
-          "total_approved": 4498,
-          "total_submitted_pencacah": 3499,
+          "total_approved": 4710,
+          "total_submitted_pencacah": 3299,
           "total_submitted_respondent": 0,
-          "persentase": 99.72,
-          "today_completed": 39,
+          "persentase": 99.86,
+          "today_completed": 12,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 212
+          },
+          "yesterday_completed": 39,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 405
           },
-          "yesterday_completed": 7,
-          "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 185
-          },
-          "two_days_ago_completed": 31,
+          "two_days_ago_completed": 7,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 146
+            "APPROVED BY PENGAWAS": 185
           },
           "breakdown": {
             "total": 8129,
-            "APPROVED BY Pengawas": 4498,
-            "SUBMITTED BY Pencacah": 3439,
+            "APPROVED BY Pengawas": 4710,
+            "SUBMITTED BY Pencacah": 3239,
             "REJECTED BY Pengawas": 100,
             "COMPLETED BY Admin Kabupaten": 54,
-            "DRAFT": 23,
+            "DRAFT": 11,
             "REVOKED BY Pengawas": 9,
             "EDITED BY Admin Kabupaten": 5,
             "EDITED BY Pengawas": 1
           },
-          "delta_persen": 0.48,
-          "delta_kemarin_persen": 0.09,
-          "delta_lusa_persen": 0.38,
+          "delta_persen": 0.15,
+          "delta_kemarin_persen": 0.48,
+          "delta_lusa_persen": 0.09,
           "new_usaha_overall": 504,
           "new_rumah_overall": 228
         },
@@ -5846,86 +5826,86 @@ window.IPAS_DATA = {
           "total_draft": 0,
           "total_open": 0,
           "total_submitted": 9569,
-          "total_rejected": 21,
-          "total_approved": 9138,
-          "total_submitted_pencacah": 410,
+          "total_rejected": 18,
+          "total_approved": 9184,
+          "total_submitted_pencacah": 367,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
           "today_completed": 0,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 46
+          },
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 75
           },
-          "yesterday_completed": 3,
-          "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 98
-          },
-          "two_days_ago_completed": 23,
+          "two_days_ago_completed": 3,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 160
+            "APPROVED BY PENGAWAS": 98
           },
           "breakdown": {
             "total": 9569,
-            "APPROVED BY Pengawas": 9138,
+            "APPROVED BY Pengawas": 9184,
             "COMPLETED BY Admin Kabupaten": 361,
-            "SUBMITTED BY Pencacah": 49,
-            "REVOKED BY Pengawas": 13,
-            "REJECTED BY Pengawas": 8
+            "REVOKED BY Pengawas": 12,
+            "REJECTED BY Pengawas": 6,
+            "SUBMITTED BY Pencacah": 6
           },
           "delta_persen": 0.0,
-          "delta_kemarin_persen": 0.03,
-          "delta_lusa_persen": 0.24,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.03,
           "new_usaha_overall": 526,
           "new_rumah_overall": 388
         }
       ],
       "breakdown": {
-        "total": 211111,
-        "APPROVED BY Pengawas": 151074,
-        "SUBMITTED BY Pencacah": 45444,
-        "COMPLETED BY Admin Kabupaten": 3653,
-        "REJECTED BY Pengawas": 4786,
-        "DRAFT": 2731,
-        "OPEN": 2757,
-        "REVOKED BY Pengawas": 315,
-        "EDITED BY Admin Kabupaten": 339,
+        "total": 211412,
+        "APPROVED BY Pengawas": 153449,
+        "SUBMITTED BY Pencacah": 44687,
+        "COMPLETED BY Admin Kabupaten": 3711,
+        "REJECTED BY Pengawas": 4572,
+        "DRAFT": 2182,
+        "REVOKED BY Pengawas": 335,
+        "EDITED BY Admin Kabupaten": 332,
+        "OPEN": 2132,
         "SUBMITTED RESPONDENT": 5,
         "EDITED BY Pengawas": 4,
         "REVOKED BY Admin Kabupaten": 2,
         "REJECTED BY Admin Kabupaten": 1
       },
-      "two_days_ago_completed": 1793,
+      "two_days_ago_completed": 1453,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 3682
-      },
-      "yesterday_completed": 1453,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 2520,
         "REJECTED BY PENGAWAS": 20
+      },
+      "yesterday_completed": 1809,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 4719
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 1809,
+      "today_completed": 1475,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 4719
+        "APPROVED BY PENGAWAS": 2375
       },
-      "delta_persen": 0.86,
-      "delta_kemarin_persen": 0.69,
-      "delta_lusa_persen": 0.85
+      "delta_persen": 0.7,
+      "delta_kemarin_persen": 0.86,
+      "delta_lusa_persen": 0.69
     },
     {
       "kabupaten": "[09] TOJO UNA-UNA",
-      "total_prelist": 74707,
-      "total_draft": 2464,
-      "total_open": 2661,
-      "total_submitted": 69582,
-      "total_rejected": 5742,
-      "total_approved": 48658,
-      "total_submitted_pencacah": 15154,
-      "total_submitted_respondent": 28,
-      "persentase": 93.14,
+      "total_prelist": 74972,
+      "total_draft": 2317,
+      "total_open": 2290,
+      "total_submitted": 70365,
+      "total_rejected": 5879,
+      "total_approved": 49296,
+      "total_submitted_pencacah": 15161,
+      "total_submitted_respondent": 29,
+      "persentase": 93.86,
       "new_usaha_overall": 4216,
       "new_rumah_overall": 2447,
       "new_businesses": [],
@@ -5942,470 +5922,474 @@ window.IPAS_DATA = {
           "total_submitted_pencacah": 0,
           "total_submitted_respondent": 25,
           "persentase": 37.31,
-          "today_completed": 1,
-          "today_completed_breakdown": {
-            "SUBMITTED RESPONDENT": 1
-          },
+          "today_completed": 0,
+          "today_completed_breakdown": {},
           "yesterday_completed": 1,
           "yesterday_completed_breakdown": {
             "SUBMITTED RESPONDENT": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
+          "two_days_ago_completed": 1,
+          "two_days_ago_completed_breakdown": {
+            "SUBMITTED RESPONDENT": 1
+          },
           "breakdown": {
             "total": 67,
             "DRAFT": 32,
             "SUBMITTED RESPONDENT": 25,
             "OPEN": 10
           },
-          "delta_persen": 1.49,
+          "delta_persen": 0.0,
           "delta_kemarin_persen": 1.49,
-          "delta_lusa_persen": 0.0,
+          "delta_lusa_persen": 1.49,
           "new_usaha_overall": 0,
           "new_rumah_overall": 0
         },
         {
           "kecamatan": "[010] TOJO BARAT",
           "kec_name": "[010] TOJO BARAT",
-          "total_prelist": 6274,
-          "total_draft": 575,
-          "total_open": 264,
-          "total_submitted": 5435,
-          "total_rejected": 577,
-          "total_approved": 3011,
-          "total_submitted_pencacah": 1847,
+          "total_prelist": 6287,
+          "total_draft": 564,
+          "total_open": 224,
+          "total_submitted": 5499,
+          "total_rejected": 576,
+          "total_approved": 3014,
+          "total_submitted_pencacah": 1909,
           "total_submitted_respondent": 0,
-          "persentase": 86.63,
-          "today_completed": 49,
+          "persentase": 87.47,
+          "today_completed": 64,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 3,
+            "SUBMITTED BY PENCACAH": 62
+          },
+          "yesterday_completed": 49,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 54,
             "SUBMITTED BY PENCACAH": 26
           },
-          "yesterday_completed": 58,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 58,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 69,
             "REJECTED BY PENGAWAS": 4
           },
-          "two_days_ago_completed": 57,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 119
-          },
           "breakdown": {
-            "total": 6274,
-            "APPROVED BY Pengawas": 3011,
-            "SUBMITTED BY Pencacah": 1680,
-            "DRAFT": 575,
-            "REJECTED BY Pengawas": 567,
-            "OPEN": 264,
+            "total": 6287,
+            "APPROVED BY Pengawas": 3014,
+            "SUBMITTED BY Pencacah": 1742,
+            "REJECTED BY Pengawas": 566,
+            "DRAFT": 564,
+            "OPEN": 224,
             "COMPLETED BY Admin Kabupaten": 158,
             "EDITED BY Admin Kabupaten": 9,
             "REVOKED BY Pengawas": 7,
             "REJECTED BY Admin Kabupaten": 3
           },
-          "delta_persen": 0.78,
-          "delta_kemarin_persen": 0.92,
-          "delta_lusa_persen": 0.91,
+          "delta_persen": 1.02,
+          "delta_kemarin_persen": 0.78,
+          "delta_lusa_persen": 0.92,
           "new_usaha_overall": 387,
           "new_rumah_overall": 208
         },
         {
           "kecamatan": "[020] TOJO",
           "kec_name": "[020] TOJO",
-          "total_prelist": 6319,
-          "total_draft": 55,
-          "total_open": 109,
-          "total_submitted": 6155,
-          "total_rejected": 103,
-          "total_approved": 5014,
-          "total_submitted_pencacah": 1038,
+          "total_prelist": 6341,
+          "total_draft": 49,
+          "total_open": 75,
+          "total_submitted": 6217,
+          "total_rejected": 90,
+          "total_approved": 5077,
+          "total_submitted_pencacah": 1050,
           "total_submitted_respondent": 0,
-          "persentase": 97.4,
-          "today_completed": 96,
+          "persentase": 98.04,
+          "today_completed": 62,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 63,
+            "SUBMITTED BY PENCACAH": 12
+          },
+          "yesterday_completed": 96,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 11,
             "SUBMITTED BY PENCACAH": 96
           },
-          "yesterday_completed": 31,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 31,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 61
           },
-          "two_days_ago_completed": 33,
-          "two_days_ago_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 26,
-            "SUBMITTED BY PENCACAH": 16
-          },
           "breakdown": {
-            "total": 6320,
-            "APPROVED BY Pengawas": 5014,
-            "SUBMITTED BY Pencacah": 782,
+            "total": 6342,
+            "APPROVED BY Pengawas": 5077,
+            "SUBMITTED BY Pencacah": 794,
             "COMPLETED BY Admin Kabupaten": 237,
-            "OPEN": 109,
-            "REJECTED BY Pengawas": 85,
-            "DRAFT": 55,
+            "REJECTED BY Pengawas": 78,
+            "OPEN": 75,
+            "DRAFT": 49,
             "EDITED BY Admin Kabupaten": 19,
-            "REJECTED BY Admin Kabupaten": 14,
+            "REJECTED BY Admin Kabupaten": 8,
             "REVOKED BY Pengawas": 4,
             "REVOKED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.52,
-          "delta_kemarin_persen": 0.49,
-          "delta_lusa_persen": 0.52,
+          "delta_persen": 0.98,
+          "delta_kemarin_persen": 1.51,
+          "delta_lusa_persen": 0.49,
           "new_usaha_overall": 407,
           "new_rumah_overall": 215
         },
         {
           "kecamatan": "[030] ULUBONGKA",
           "kec_name": "[030] ULUBONGKA",
-          "total_prelist": 8784,
-          "total_draft": 23,
+          "total_prelist": 8805,
+          "total_draft": 10,
           "total_open": 0,
-          "total_submitted": 8761,
-          "total_rejected": 189,
-          "total_approved": 7494,
-          "total_submitted_pencacah": 1077,
+          "total_submitted": 8795,
+          "total_rejected": 194,
+          "total_approved": 7512,
+          "total_submitted_pencacah": 1088,
           "total_submitted_respondent": 1,
-          "persentase": 99.74,
-          "today_completed": 75,
+          "persentase": 99.89,
+          "today_completed": 34,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 18,
+            "REJECTED BY PENGAWAS": 5,
+            "SUBMITTED BY PENCACAH": 11
+          },
+          "yesterday_completed": 75,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 192
           },
-          "yesterday_completed": 59,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 59,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 257
           },
-          "two_days_ago_completed": 50,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 282,
-            "REJECTED BY PENGAWAS": 16
-          },
           "breakdown": {
-            "total": 8784,
-            "APPROVED BY Pengawas": 7494,
-            "SUBMITTED BY Pencacah": 814,
-            "COMPLETED BY Admin Kabupaten": 209,
-            "REJECTED BY Pengawas": 128,
-            "EDITED BY Admin Kabupaten": 54,
-            "REVOKED BY Pengawas": 35,
+            "total": 8806,
+            "APPROVED BY Pengawas": 7512,
+            "SUBMITTED BY Pencacah": 834,
+            "COMPLETED BY Admin Kabupaten": 203,
+            "REJECTED BY Pengawas": 126,
+            "EDITED BY Admin Kabupaten": 51,
+            "REVOKED BY Pengawas": 42,
             "REJECTED BY Admin Kabupaten": 26,
-            "DRAFT": 23,
+            "DRAFT": 10,
+            "REVOKED BY Admin Kabupaten": 1,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 0.85,
-          "delta_kemarin_persen": 0.67,
-          "delta_lusa_persen": 0.57,
+          "delta_persen": 0.39,
+          "delta_kemarin_persen": 0.85,
+          "delta_lusa_persen": 0.67,
           "new_usaha_overall": 629,
           "new_rumah_overall": 255
         },
         {
           "kecamatan": "[040] AMPANA TETE",
           "kec_name": "[040] AMPANA TETE",
-          "total_prelist": 12988,
-          "total_draft": 54,
-          "total_open": 693,
-          "total_submitted": 12241,
-          "total_rejected": 619,
-          "total_approved": 10168,
-          "total_submitted_pencacah": 1454,
+          "total_prelist": 13072,
+          "total_draft": 51,
+          "total_open": 598,
+          "total_submitted": 12423,
+          "total_rejected": 624,
+          "total_approved": 10360,
+          "total_submitted_pencacah": 1439,
           "total_submitted_respondent": 0,
-          "persentase": 94.25,
-          "today_completed": 179,
+          "persentase": 95.04,
+          "today_completed": 182,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 192,
+            "REJECTED BY PENGAWAS": 5
+          },
+          "yesterday_completed": 179,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 90,
             "REJECTED BY PENGAWAS": 9,
             "SUBMITTED BY PENCACAH": 80
           },
-          "yesterday_completed": 155,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 155,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 89,
             "REJECTED BY PENGAWAS": 35,
             "SUBMITTED BY PENCACAH": 31
           },
-          "two_days_ago_completed": 158,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 146,
-            "SUBMITTED BY PENCACAH": 16
-          },
           "breakdown": {
-            "total": 12989,
-            "APPROVED BY Pengawas": 10168,
+            "total": 13074,
+            "APPROVED BY Pengawas": 10360,
             "COMPLETED BY Admin Kabupaten": 711,
-            "OPEN": 693,
-            "SUBMITTED BY Pencacah": 680,
-            "REJECTED BY Pengawas": 512,
-            "REVOKED BY Pengawas": 88,
+            "SUBMITTED BY Pencacah": 665,
+            "OPEN": 598,
+            "REJECTED BY Pengawas": 501,
+            "REVOKED BY Pengawas": 104,
             "EDITED BY Admin Kabupaten": 63,
-            "DRAFT": 54,
+            "DRAFT": 51,
             "REJECTED BY Admin Kabupaten": 19,
             "REVOKED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.38,
-          "delta_kemarin_persen": 1.19,
-          "delta_lusa_persen": 1.22,
+          "delta_persen": 1.39,
+          "delta_kemarin_persen": 1.37,
+          "delta_lusa_persen": 1.19,
           "new_usaha_overall": 692,
           "new_rumah_overall": 206
         },
         {
           "kecamatan": "[050] AMPANA KOTA",
           "kec_name": "[050] AMPANA KOTA",
-          "total_prelist": 10780,
-          "total_draft": 347,
-          "total_open": 337,
-          "total_submitted": 10096,
-          "total_rejected": 1255,
-          "total_approved": 6236,
-          "total_submitted_pencacah": 2605,
+          "total_prelist": 10822,
+          "total_draft": 315,
+          "total_open": 284,
+          "total_submitted": 10223,
+          "total_rejected": 1254,
+          "total_approved": 6295,
+          "total_submitted_pencacah": 2674,
           "total_submitted_respondent": 0,
-          "persentase": 93.65,
-          "today_completed": 239,
+          "persentase": 94.46,
+          "today_completed": 127,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 59,
+            "SUBMITTED BY PENCACAH": 69
+          },
+          "yesterday_completed": 239,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 211,
             "SUBMITTED BY PENCACAH": 41
           },
-          "yesterday_completed": 138,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 138,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 31,
             "SUBMITTED BY PENCACAH": 130
           },
-          "two_days_ago_completed": 154,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 231
-          },
           "breakdown": {
-            "total": 10782,
-            "APPROVED BY Pengawas": 6236,
-            "SUBMITTED BY Pencacah": 2499,
-            "REJECTED BY Pengawas": 1242,
-            "DRAFT": 347,
-            "OPEN": 337,
+            "total": 10824,
+            "APPROVED BY Pengawas": 6295,
+            "SUBMITTED BY Pencacah": 2569,
+            "REJECTED BY Pengawas": 1245,
+            "DRAFT": 315,
+            "OPEN": 284,
             "COMPLETED BY Admin Kabupaten": 99,
-            "REVOKED BY Pengawas": 8,
-            "EDITED BY Admin Kabupaten": 7,
-            "REJECTED BY Admin Kabupaten": 5,
+            "EDITED BY Admin Kabupaten": 6,
+            "REVOKED BY Pengawas": 5,
+            "REJECTED BY Admin Kabupaten": 4,
             "REVOKED BY Admin Kabupaten": 1
           },
-          "delta_persen": 2.22,
-          "delta_kemarin_persen": 1.28,
-          "delta_lusa_persen": 1.43,
+          "delta_persen": 1.17,
+          "delta_kemarin_persen": 2.21,
+          "delta_lusa_persen": 1.28,
           "new_usaha_overall": 591,
           "new_rumah_overall": 402
         },
         {
           "kecamatan": "[051] RATOLINDO",
           "kec_name": "[051] RATOLINDO",
-          "total_prelist": 13807,
-          "total_draft": 137,
-          "total_open": 822,
-          "total_submitted": 12848,
-          "total_rejected": 1637,
-          "total_approved": 9161,
-          "total_submitted_pencacah": 2048,
-          "total_submitted_respondent": 2,
-          "persentase": 93.05,
-          "today_completed": 245,
+          "total_prelist": 13861,
+          "total_draft": 118,
+          "total_open": 689,
+          "total_submitted": 13054,
+          "total_rejected": 1587,
+          "total_approved": 9364,
+          "total_submitted_pencacah": 2100,
+          "total_submitted_respondent": 3,
+          "persentase": 94.18,
+          "today_completed": 206,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 203,
+            "SUBMITTED BY PENCACAH": 52,
+            "SUBMITTED RESPONDENT": 1
+          },
+          "yesterday_completed": 245,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 129,
             "SUBMITTED BY PENCACAH": 135
           },
-          "yesterday_completed": 128,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 128,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 44,
             "SUBMITTED BY PENCACAH": 101
           },
-          "two_days_ago_completed": 167,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 272
-          },
           "breakdown": {
-            "total": 13807,
-            "APPROVED BY Pengawas": 9161,
-            "SUBMITTED BY Pencacah": 1929,
-            "REJECTED BY Pengawas": 1616,
-            "OPEN": 822,
-            "DRAFT": 137,
-            "COMPLETED BY Admin Kabupaten": 107,
+            "total": 13861,
+            "APPROVED BY Pengawas": 9364,
+            "SUBMITTED BY Pencacah": 1984,
+            "REJECTED BY Pengawas": 1563,
+            "OPEN": 689,
+            "DRAFT": 118,
+            "COMPLETED BY Admin Kabupaten": 104,
+            "REJECTED BY Admin Kabupaten": 14,
             "EDITED BY Admin Kabupaten": 12,
-            "REJECTED BY Admin Kabupaten": 12,
-            "REVOKED BY Pengawas": 9,
-            "SUBMITTED RESPONDENT": 2
+            "REVOKED BY Pengawas": 10,
+            "SUBMITTED RESPONDENT": 3
           },
-          "delta_persen": 1.77,
-          "delta_kemarin_persen": 0.93,
-          "delta_lusa_persen": 1.21,
+          "delta_persen": 1.49,
+          "delta_kemarin_persen": 1.77,
+          "delta_lusa_persen": 0.92,
           "new_usaha_overall": 647,
           "new_rumah_overall": 664
         },
         {
           "kecamatan": "[060] UNA - UNA",
           "kec_name": "[060] UNA - UNA",
-          "total_prelist": 3451,
-          "total_draft": 583,
-          "total_open": 280,
-          "total_submitted": 2588,
-          "total_rejected": 457,
-          "total_approved": 1123,
-          "total_submitted_pencacah": 1008,
+          "total_prelist": 3461,
+          "total_draft": 576,
+          "total_open": 273,
+          "total_submitted": 2612,
+          "total_rejected": 464,
+          "total_approved": 1144,
+          "total_submitted_pencacah": 1004,
           "total_submitted_respondent": 0,
-          "persentase": 74.99,
-          "today_completed": 20,
+          "persentase": 75.47,
+          "today_completed": 24,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 21,
+            "REJECTED BY PENGAWAS": 7
+          },
+          "yesterday_completed": 20,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 2,
             "REJECTED BY PENGAWAS": 18
           },
-          "yesterday_completed": 19,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 19,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 6,
             "REJECTED BY PENGAWAS": 16
           },
-          "two_days_ago_completed": 13,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 2,
-            "SUBMITTED BY PENCACAH": 30
-          },
           "breakdown": {
-            "total": 3451,
-            "APPROVED BY Pengawas": 1123,
-            "SUBMITTED BY Pencacah": 979,
-            "DRAFT": 583,
-            "REJECTED BY Pengawas": 440,
-            "OPEN": 280,
+            "total": 3461,
+            "APPROVED BY Pengawas": 1144,
+            "SUBMITTED BY Pencacah": 975,
+            "DRAFT": 576,
+            "REJECTED BY Pengawas": 448,
+            "OPEN": 273,
             "COMPLETED BY Admin Kabupaten": 29,
             "REVOKED BY Pengawas": 14,
-            "REJECTED BY Admin Kabupaten": 3
+            "REJECTED BY Admin Kabupaten": 2
           },
-          "delta_persen": 0.58,
-          "delta_kemarin_persen": 0.55,
-          "delta_lusa_persen": 0.38,
+          "delta_persen": 0.69,
+          "delta_kemarin_persen": 0.58,
+          "delta_lusa_persen": 0.55,
           "new_usaha_overall": 216,
           "new_rumah_overall": 165
         },
         {
           "kecamatan": "[061] BATUDAKA",
           "kec_name": "[061] BATUDAKA",
-          "total_prelist": 2228,
+          "total_prelist": 2233,
           "total_draft": 0,
           "total_open": 23,
-          "total_submitted": 2205,
-          "total_rejected": 172,
+          "total_submitted": 2210,
+          "total_rejected": 164,
           "total_approved": 1228,
-          "total_submitted_pencacah": 805,
+          "total_submitted_pencacah": 818,
           "total_submitted_respondent": 0,
           "persentase": 98.97,
           "today_completed": 5,
           "today_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 13
+          },
+          "yesterday_completed": 5,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 15
           },
-          "yesterday_completed": 14,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 14,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 17
           },
-          "two_days_ago_completed": 5,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 32,
-            "REJECTED BY PENGAWAS": 10
-          },
           "breakdown": {
-            "total": 2228,
+            "total": 2233,
             "APPROVED BY Pengawas": 1228,
-            "SUBMITTED BY Pencacah": 802,
-            "REJECTED BY Pengawas": 172,
+            "SUBMITTED BY Pencacah": 815,
+            "REJECTED BY Pengawas": 164,
             "OPEN": 23,
             "COMPLETED BY Admin Kabupaten": 3
           },
           "delta_persen": 0.22,
-          "delta_kemarin_persen": 0.63,
-          "delta_lusa_persen": 0.22,
+          "delta_kemarin_persen": 0.22,
+          "delta_lusa_persen": 0.63,
           "new_usaha_overall": 117,
           "new_rumah_overall": 53
         },
         {
           "kecamatan": "[070] TOGEAN",
           "kec_name": "[070] TOGEAN",
-          "total_prelist": 4069,
-          "total_draft": 211,
-          "total_open": 122,
-          "total_submitted": 3736,
-          "total_rejected": 293,
-          "total_approved": 2496,
-          "total_submitted_pencacah": 947,
+          "total_prelist": 4074,
+          "total_draft": 184,
+          "total_open": 114,
+          "total_submitted": 3776,
+          "total_rejected": 463,
+          "total_approved": 2501,
+          "total_submitted_pencacah": 812,
           "total_submitted_respondent": 0,
-          "persentase": 91.82,
-          "today_completed": 131,
+          "persentase": 92.69,
+          "today_completed": 40,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 5,
+            "REJECTED BY PENGAWAS": 170
+          },
+          "yesterday_completed": 131,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 79,
             "SUBMITTED BY PENCACAH": 64
           },
-          "yesterday_completed": 60,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 60,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 20,
             "SUBMITTED BY PENCACAH": 40
           },
-          "two_days_ago_completed": 146,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 82,
-            "REJECTED BY PENGAWAS": 78
-          },
           "breakdown": {
-            "total": 4069,
-            "APPROVED BY Pengawas": 2496,
-            "SUBMITTED BY Pencacah": 875,
-            "REJECTED BY Pengawas": 289,
-            "DRAFT": 211,
-            "OPEN": 122,
+            "total": 4074,
+            "APPROVED BY Pengawas": 2501,
+            "SUBMITTED BY Pencacah": 740,
+            "REJECTED BY Pengawas": 459,
+            "DRAFT": 184,
+            "OPEN": 114,
             "COMPLETED BY Admin Kabupaten": 59,
             "EDITED BY Admin Kabupaten": 13,
             "REJECTED BY Admin Kabupaten": 3,
             "REVOKED BY Pengawas": 1
           },
-          "delta_persen": 3.22,
-          "delta_kemarin_persen": 1.47,
-          "delta_lusa_persen": 3.59,
+          "delta_persen": 0.98,
+          "delta_kemarin_persen": 3.22,
+          "delta_lusa_persen": 1.47,
           "new_usaha_overall": 255,
           "new_rumah_overall": 74
         },
         {
           "kecamatan": "[080] WALEA KEPULAUAN",
           "kec_name": "[080] WALEA KEPULAUAN",
-          "total_prelist": 2060,
-          "total_draft": 242,
-          "total_open": 1,
-          "total_submitted": 1817,
-          "total_rejected": 83,
-          "total_approved": 1125,
-          "total_submitted_pencacah": 609,
+          "total_prelist": 2061,
+          "total_draft": 227,
+          "total_open": 0,
+          "total_submitted": 1834,
+          "total_rejected": 91,
+          "total_approved": 1182,
+          "total_submitted_pencacah": 561,
           "total_submitted_respondent": 0,
-          "persentase": 88.2,
-          "today_completed": 28,
+          "persentase": 88.99,
+          "today_completed": 17,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 57,
+            "REJECTED BY PENGAWAS": 8
+          },
+          "yesterday_completed": 28,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 29,
             "REJECTED BY PENGAWAS": 3
           },
-          "yesterday_completed": 26,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 26,
+          "two_days_ago_completed_breakdown": {
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 24
           },
-          "two_days_ago_completed": 43,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 13,
-            "SUBMITTED BY PENCACAH": 37
-          },
           "breakdown": {
-            "total": 2061,
-            "APPROVED BY Pengawas": 1125,
-            "SUBMITTED BY Pencacah": 562,
-            "DRAFT": 242,
-            "REJECTED BY Pengawas": 72,
+            "total": 2062,
+            "APPROVED BY Pengawas": 1182,
+            "SUBMITTED BY Pencacah": 514,
+            "DRAFT": 227,
+            "REJECTED BY Pengawas": 80,
             "COMPLETED BY Admin Kabupaten": 43,
             "REJECTED BY Admin Kabupaten": 9,
             "EDITED BY Admin Kabupaten": 4,
             "REVOKED BY Pengawas": 2,
-            "OPEN": 1,
             "REVOKED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.36,
-          "delta_kemarin_persen": 1.26,
-          "delta_lusa_persen": 2.09,
+          "delta_persen": 0.82,
+          "delta_kemarin_persen": 1.36,
+          "delta_lusa_persen": 1.26,
           "new_usaha_overall": 138,
           "new_rumah_overall": 84
         },
@@ -6413,115 +6397,116 @@ window.IPAS_DATA = {
           "kecamatan": "[081] WALEA BESAR",
           "kec_name": "[081] WALEA BESAR",
           "total_prelist": 1700,
-          "total_draft": 22,
+          "total_draft": 17,
           "total_open": 0,
-          "total_submitted": 1678,
-          "total_rejected": 64,
-          "total_approved": 614,
-          "total_submitted_pencacah": 1000,
+          "total_submitted": 1683,
+          "total_rejected": 66,
+          "total_approved": 636,
+          "total_submitted_pencacah": 981,
           "total_submitted_respondent": 0,
-          "persentase": 98.71,
-          "today_completed": 3,
+          "persentase": 99.0,
+          "today_completed": 5,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 22,
+            "REJECTED BY PENGAWAS": 2
+          },
+          "yesterday_completed": 3,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 45,
             "REJECTED BY PENGAWAS": 1
           },
-          "yesterday_completed": 4,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 4,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 3
           },
-          "two_days_ago_completed": 6,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 1,
-            "SUBMITTED BY PENCACAH": 8
-          },
           "breakdown": {
             "total": 1700,
-            "SUBMITTED BY Pencacah": 878,
-            "APPROVED BY Pengawas": 614,
+            "SUBMITTED BY Pencacah": 859,
+            "APPROVED BY Pengawas": 636,
             "COMPLETED BY Admin Kabupaten": 115,
-            "REJECTED BY Pengawas": 61,
-            "DRAFT": 22,
+            "REJECTED BY Pengawas": 62,
+            "DRAFT": 17,
             "EDITED BY Admin Kabupaten": 7,
             "REJECTED BY Admin Kabupaten": 2,
-            "REVOKED BY Pengawas": 1
+            "REVOKED BY Pengawas": 2
           },
-          "delta_persen": 0.18,
-          "delta_kemarin_persen": 0.24,
-          "delta_lusa_persen": 0.35,
+          "delta_persen": 0.29,
+          "delta_kemarin_persen": 0.18,
+          "delta_lusa_persen": 0.24,
           "new_usaha_overall": 88,
           "new_rumah_overall": 33
         },
         {
           "kecamatan": "[082] TALATAKO",
           "kec_name": "[082] TALATAKO",
-          "total_prelist": 2180,
-          "total_draft": 183,
+          "total_prelist": 2188,
+          "total_draft": 174,
           "total_open": 0,
-          "total_submitted": 1997,
-          "total_rejected": 293,
-          "total_approved": 988,
-          "total_submitted_pencacah": 716,
+          "total_submitted": 2014,
+          "total_rejected": 306,
+          "total_approved": 983,
+          "total_submitted_pencacah": 725,
           "total_submitted_respondent": 0,
-          "persentase": 91.61,
-          "today_completed": 39,
+          "persentase": 92.05,
+          "today_completed": 17,
           "today_completed_breakdown": {
+            "REJECTED BY PENGAWAS": 13,
+            "SUBMITTED BY PENCACAH": 9
+          },
+          "yesterday_completed": 39,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 6,
             "REJECTED BY PENGAWAS": 5,
             "SUBMITTED BY PENCACAH": 28
           },
-          "yesterday_completed": 6,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 6,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 10
           },
-          "two_days_ago_completed": 21,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 5,
-            "SUBMITTED BY PENCACAH": 38
-          },
           "breakdown": {
-            "total": 2180,
-            "APPROVED BY Pengawas": 988,
-            "SUBMITTED BY Pencacah": 698,
-            "REJECTED BY Pengawas": 289,
-            "DRAFT": 183,
+            "total": 2188,
+            "APPROVED BY Pengawas": 983,
+            "SUBMITTED BY Pencacah": 707,
+            "REJECTED BY Pengawas": 300,
+            "DRAFT": 174,
             "COMPLETED BY Admin Kabupaten": 14,
+            "REVOKED BY Pengawas": 5,
             "EDITED BY Admin Kabupaten": 4,
-            "REVOKED BY Pengawas": 3,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.79,
-          "delta_kemarin_persen": 0.28,
-          "delta_lusa_persen": 0.96,
+          "delta_persen": 0.78,
+          "delta_kemarin_persen": 1.78,
+          "delta_lusa_persen": 0.27,
           "new_usaha_overall": 49,
           "new_rumah_overall": 88
         }
       ],
       "breakdown": {
-        "total": 74712,
-        "APPROVED BY Pengawas": 48658,
-        "SUBMITTED BY Pencacah": 13178,
-        "DRAFT": 2464,
-        "REJECTED BY Pengawas": 5473,
-        "OPEN": 2661,
-        "COMPLETED BY Admin Kabupaten": 1784,
-        "EDITED BY Admin Kabupaten": 192,
-        "REVOKED BY Pengawas": 172,
-        "REJECTED BY Admin Kabupaten": 97,
-        "REVOKED BY Admin Kabupaten": 4,
-        "SUBMITTED RESPONDENT": 28
+        "total": 74979,
+        "APPROVED BY Pengawas": 49296,
+        "SUBMITTED BY Pencacah": 13198,
+        "REJECTED BY Pengawas": 5592,
+        "DRAFT": 2317,
+        "OPEN": 2290,
+        "COMPLETED BY Admin Kabupaten": 1775,
+        "EDITED BY Admin Kabupaten": 188,
+        "REVOKED BY Pengawas": 196,
+        "REJECTED BY Admin Kabupaten": 91,
+        "REVOKED BY Admin Kabupaten": 5,
+        "SUBMITTED RESPONDENT": 29
       },
-      "two_days_ago_completed": 853,
+      "two_days_ago_completed": 699,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1176,
-        "REJECTED BY PENGAWAS": 40
-      },
-      "yesterday_completed": 699,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 517,
         "SUBMITTED BY PENCACAH": 222,
+        "SUBMITTED RESPONDENT": 1
+      },
+      "yesterday_completed": 1110,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 848,
+        "SUBMITTED BY PENCACAH": 336,
         "SUBMITTED RESPONDENT": 1
       },
       "new_usaha_yesterday": 0,
@@ -6529,27 +6514,28 @@ window.IPAS_DATA = {
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 1110,
+      "today_completed": 783,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 848,
-        "SUBMITTED BY PENCACAH": 336,
+        "APPROVED BY PENGAWAS": 638,
+        "REJECTED BY PENGAWAS": 137,
+        "SUBMITTED BY PENCACAH": 7,
         "SUBMITTED RESPONDENT": 1
       },
-      "delta_persen": 1.49,
-      "delta_kemarin_persen": 0.94,
-      "delta_lusa_persen": 1.14
+      "delta_persen": 1.04,
+      "delta_kemarin_persen": 1.48,
+      "delta_lusa_persen": 0.93
     },
     {
       "kabupaten": "[10] SIGI",
-      "total_prelist": 130736,
-      "total_draft": 1769,
-      "total_open": 2931,
-      "total_submitted": 126036,
-      "total_rejected": 3376,
-      "total_approved": 105906,
-      "total_submitted_pencacah": 16747,
+      "total_prelist": 130972,
+      "total_draft": 1567,
+      "total_open": 2395,
+      "total_submitted": 127010,
+      "total_rejected": 3219,
+      "total_approved": 108357,
+      "total_submitted_pencacah": 15427,
       "total_submitted_respondent": 7,
-      "persentase": 96.4,
+      "persentase": 96.97,
       "new_usaha_overall": 5432,
       "new_rumah_overall": 3264,
       "new_businesses": [],
@@ -6557,80 +6543,75 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[010] PIPIKORO",
           "kec_name": "[010] PIPIKORO",
-          "total_prelist": 3763,
+          "total_prelist": 3772,
           "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 3763,
-          "total_rejected": 80,
-          "total_approved": 3379,
-          "total_submitted_pencacah": 304,
+          "total_submitted": 3772,
+          "total_rejected": 30,
+          "total_approved": 3490,
+          "total_submitted_pencacah": 252,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
-          "today_completed": 4,
+          "today_completed": 9,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 111
+          },
+          "yesterday_completed": 4,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 86
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 113,
             "REJECTED BY PENGAWAS": 46
           },
-          "two_days_ago_completed": 8,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 33,
-            "REJECTED BY PENGAWAS": 22
-          },
           "breakdown": {
-            "total": 3763,
-            "APPROVED BY Pengawas": 3379,
-            "SUBMITTED BY Pencacah": 163,
-            "COMPLETED BY Admin Kabupaten": 141,
-            "REJECTED BY Pengawas": 68,
-            "REVOKED BY Pengawas": 12
+            "total": 3772,
+            "APPROVED BY Pengawas": 3490,
+            "COMPLETED BY Admin Kabupaten": 146,
+            "SUBMITTED BY Pencacah": 106,
+            "REJECTED BY Pengawas": 30
           },
-          "delta_persen": 0.11,
-          "delta_kemarin_persen": 0.0,
-          "delta_lusa_persen": 0.21,
+          "delta_persen": 0.24,
+          "delta_kemarin_persen": 0.11,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 135,
           "new_rumah_overall": 32
         },
         {
           "kecamatan": "[020] KULAWI SELATAN",
           "kec_name": "[020] KULAWI SELATAN",
-          "total_prelist": 4059,
-          "total_draft": 12,
-          "total_open": 1,
-          "total_submitted": 4046,
-          "total_rejected": 9,
-          "total_approved": 2714,
-          "total_submitted_pencacah": 1323,
+          "total_prelist": 4062,
+          "total_draft": 4,
+          "total_open": 0,
+          "total_submitted": 4058,
+          "total_rejected": 4,
+          "total_approved": 2870,
+          "total_submitted_pencacah": 1184,
           "total_submitted_respondent": 0,
-          "persentase": 99.68,
-          "today_completed": 18,
+          "persentase": 99.9,
+          "today_completed": 12,
           "today_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 105
+            "APPROVED BY PENGAWAS": 156
           },
-          "yesterday_completed": 17,
+          "yesterday_completed": 18,
           "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 32
+            "APPROVED BY PENGAWAS": 105
           },
           "two_days_ago_completed": 17,
           "two_days_ago_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 3,
-            "SUBMITTED BY PENCACAH": 17
+            "APPROVED BY PENGAWAS": 32
           },
           "breakdown": {
-            "total": 4059,
-            "APPROVED BY Pengawas": 2714,
-            "SUBMITTED BY Pencacah": 1297,
-            "COMPLETED BY Admin Kabupaten": 26,
-            "DRAFT": 12,
-            "REVOKED BY Pengawas": 7,
-            "REJECTED BY Pengawas": 2,
-            "OPEN": 1
+            "total": 4062,
+            "APPROVED BY Pengawas": 2870,
+            "SUBMITTED BY Pencacah": 1154,
+            "COMPLETED BY Admin Kabupaten": 30,
+            "DRAFT": 4,
+            "REJECTED BY Pengawas": 4
           },
-          "delta_persen": 0.44,
-          "delta_kemarin_persen": 0.42,
+          "delta_persen": 0.3,
+          "delta_kemarin_persen": 0.44,
           "delta_lusa_persen": 0.42,
           "new_usaha_overall": 180,
           "new_rumah_overall": 54
@@ -6638,80 +6619,81 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[030] KULAWI",
           "kec_name": "[030] KULAWI",
-          "total_prelist": 7084,
-          "total_draft": 183,
+          "total_prelist": 7090,
+          "total_draft": 106,
           "total_open": 0,
-          "total_submitted": 6901,
-          "total_rejected": 69,
-          "total_approved": 5805,
-          "total_submitted_pencacah": 1027,
+          "total_submitted": 6984,
+          "total_rejected": 55,
+          "total_approved": 5896,
+          "total_submitted_pencacah": 1033,
           "total_submitted_respondent": 0,
-          "persentase": 97.42,
-          "today_completed": 71,
+          "persentase": 98.5,
+          "today_completed": 83,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 91,
+            "SUBMITTED BY PENCACAH": 6
+          },
+          "yesterday_completed": 71,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 177
           },
-          "yesterday_completed": 100,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 100,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 41,
             "SUBMITTED BY PENCACAH": 59
           },
-          "two_days_ago_completed": 74,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 165
-          },
           "breakdown": {
-            "total": 7084,
-            "APPROVED BY Pengawas": 5805,
-            "SUBMITTED BY Pencacah": 721,
-            "EDITED BY Admin Kabupaten": 302,
-            "DRAFT": 183,
-            "REJECTED BY Pengawas": 48,
+            "total": 7090,
+            "APPROVED BY Pengawas": 5896,
+            "SUBMITTED BY Pencacah": 726,
+            "EDITED BY Admin Kabupaten": 303,
+            "DRAFT": 106,
+            "REJECTED BY Pengawas": 34,
             "REVOKED BY Pengawas": 21,
             "COMPLETED BY Admin Kabupaten": 4
           },
-          "delta_persen": 1.0,
-          "delta_kemarin_persen": 1.41,
-          "delta_lusa_persen": 1.04,
+          "delta_persen": 1.17,
+          "delta_kemarin_persen": 1.0,
+          "delta_lusa_persen": 1.41,
           "new_usaha_overall": 197,
           "new_rumah_overall": 104
         },
         {
           "kecamatan": "[040] LINDU",
           "kec_name": "[040] LINDU",
-          "total_prelist": 2313,
+          "total_prelist": 2314,
           "total_draft": 0,
-          "total_open": 16,
-          "total_submitted": 2297,
+          "total_open": 2,
+          "total_submitted": 2312,
           "total_rejected": 7,
-          "total_approved": 2142,
-          "total_submitted_pencacah": 148,
+          "total_approved": 2176,
+          "total_submitted_pencacah": 129,
           "total_submitted_respondent": 0,
-          "persentase": 99.31,
-          "today_completed": 0,
+          "persentase": 99.91,
+          "today_completed": 15,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 34
+          },
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 74
           },
-          "yesterday_completed": 15,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 15,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 16
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 1
-          },
           "breakdown": {
-            "total": 2313,
-            "APPROVED BY Pengawas": 2142,
-            "SUBMITTED BY Pencacah": 133,
-            "OPEN": 16,
+            "total": 2314,
+            "APPROVED BY Pengawas": 2176,
+            "SUBMITTED BY Pencacah": 114,
             "EDITED BY Admin Kabupaten": 15,
             "REVOKED BY Pengawas": 5,
+            "OPEN": 2,
             "REJECTED BY Pengawas": 2
           },
-          "delta_persen": 0.0,
-          "delta_kemarin_persen": 0.65,
-          "delta_lusa_persen": 0.0,
+          "delta_persen": 0.65,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.65,
           "new_usaha_overall": 112,
           "new_rumah_overall": 12
         },
@@ -6723,195 +6705,194 @@ window.IPAS_DATA = {
           "total_open": 0,
           "total_submitted": 2816,
           "total_rejected": 6,
-          "total_approved": 2699,
-          "total_submitted_pencacah": 111,
+          "total_approved": 2704,
+          "total_submitted_pencacah": 106,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
-          "today_completed": 3,
+          "today_completed": 0,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 5
+          },
+          "yesterday_completed": 3,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 9
           },
-          "yesterday_completed": 2,
-          "yesterday_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 6
-          },
-          "two_days_ago_completed": 1,
+          "two_days_ago_completed": 2,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 8
+            "SUBMITTED BY PENCACAH": 6
           },
           "breakdown": {
             "total": 2816,
-            "APPROVED BY Pengawas": 2699,
+            "APPROVED BY Pengawas": 2704,
             "EDITED BY Admin Kabupaten": 106,
-            "SUBMITTED BY Pencacah": 5,
             "REVOKED BY Pengawas": 4,
             "REJECTED BY Pengawas": 2
           },
-          "delta_persen": 0.11,
-          "delta_kemarin_persen": 0.07,
-          "delta_lusa_persen": 0.04,
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.11,
+          "delta_lusa_persen": 0.07,
           "new_usaha_overall": 106,
           "new_rumah_overall": 59
         },
         {
           "kecamatan": "[060] PALOLO",
           "kec_name": "[060] PALOLO",
-          "total_prelist": 13530,
-          "total_draft": 372,
-          "total_open": 112,
-          "total_submitted": 13046,
-          "total_rejected": 1295,
-          "total_approved": 8525,
-          "total_submitted_pencacah": 3224,
+          "total_prelist": 13557,
+          "total_draft": 396,
+          "total_open": 83,
+          "total_submitted": 13078,
+          "total_rejected": 1248,
+          "total_approved": 8832,
+          "total_submitted_pencacah": 2996,
           "total_submitted_respondent": 2,
-          "persentase": 96.42,
-          "today_completed": 0,
+          "persentase": 96.47,
+          "today_completed": 32,
           "today_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 623
+            "APPROVED BY PENGAWAS": 307
           },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 623
+          },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 182
           },
-          "two_days_ago_completed": 32,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 160,
-            "REJECTED BY PENGAWAS": 265
-          },
           "breakdown": {
-            "total": 13530,
-            "APPROVED BY Pengawas": 8525,
-            "SUBMITTED BY Pencacah": 3137,
-            "REJECTED BY Pengawas": 1283,
-            "DRAFT": 372,
-            "OPEN": 112,
-            "EDITED BY Admin Kabupaten": 87,
+            "total": 13557,
+            "APPROVED BY Pengawas": 8832,
+            "SUBMITTED BY Pencacah": 2908,
+            "REJECTED BY Pengawas": 1236,
+            "DRAFT": 396,
+            "EDITED BY Admin Kabupaten": 88,
+            "OPEN": 83,
             "REVOKED BY Pengawas": 12,
             "SUBMITTED RESPONDENT": 2
           },
-          "delta_persen": 0.0,
+          "delta_persen": 0.24,
           "delta_kemarin_persen": 0.0,
-          "delta_lusa_persen": 0.24,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 468,
           "new_rumah_overall": 281
         },
         {
           "kecamatan": "[070] GUMBASA",
           "kec_name": "[070] GUMBASA",
-          "total_prelist": 6761,
+          "total_prelist": 6767,
           "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 6761,
-          "total_rejected": 242,
-          "total_approved": 5058,
-          "total_submitted_pencacah": 1461,
+          "total_submitted": 6767,
+          "total_rejected": 197,
+          "total_approved": 5108,
+          "total_submitted_pencacah": 1462,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
-          "today_completed": 8,
+          "today_completed": 6,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 50,
+            "SUBMITTED BY PENCACAH": 1
+          },
+          "yesterday_completed": 8,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 187
           },
-          "yesterday_completed": 4,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 4,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 45,
             "REJECTED BY PENGAWAS": 1
           },
-          "two_days_ago_completed": 42,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 181
-          },
           "breakdown": {
-            "total": 6761,
-            "APPROVED BY Pengawas": 5058,
-            "SUBMITTED BY Pencacah": 1440,
-            "REJECTED BY Pengawas": 237,
+            "total": 6767,
+            "APPROVED BY Pengawas": 5108,
+            "SUBMITTED BY Pencacah": 1441,
+            "REJECTED BY Pengawas": 190,
             "EDITED BY Admin Kabupaten": 21,
-            "REVOKED BY Pengawas": 5
+            "REVOKED BY Pengawas": 7
           },
-          "delta_persen": 0.12,
-          "delta_kemarin_persen": 0.06,
-          "delta_lusa_persen": 0.62,
+          "delta_persen": 0.09,
+          "delta_kemarin_persen": 0.12,
+          "delta_lusa_persen": 0.06,
           "new_usaha_overall": 211,
           "new_rumah_overall": 162
         },
         {
           "kecamatan": "[080] DOLO SELATAN",
           "kec_name": "[080] DOLO SELATAN",
-          "total_prelist": 8965,
-          "total_draft": 73,
-          "total_open": 232,
-          "total_submitted": 8660,
-          "total_rejected": 52,
-          "total_approved": 8390,
-          "total_submitted_pencacah": 218,
+          "total_prelist": 8979,
+          "total_draft": 63,
+          "total_open": 206,
+          "total_submitted": 8710,
+          "total_rejected": 50,
+          "total_approved": 8484,
+          "total_submitted_pencacah": 176,
           "total_submitted_respondent": 0,
-          "persentase": 96.6,
-          "today_completed": 85,
+          "persentase": 97.0,
+          "today_completed": 50,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 94
+          },
+          "yesterday_completed": 85,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 304,
             "REJECTED BY PENGAWAS": 11
           },
-          "yesterday_completed": 56,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 56,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 245
           },
-          "two_days_ago_completed": 87,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 238
-          },
           "breakdown": {
-            "total": 8965,
-            "APPROVED BY Pengawas": 8390,
-            "OPEN": 232,
-            "SUBMITTED BY Pencacah": 119,
+            "total": 8979,
+            "APPROVED BY Pengawas": 8484,
+            "OPEN": 206,
             "EDITED BY Admin Kabupaten": 98,
-            "DRAFT": 73,
-            "REJECTED BY Pengawas": 49,
+            "SUBMITTED BY Pencacah": 77,
+            "DRAFT": 63,
+            "REJECTED BY Pengawas": 47,
             "REVOKED BY Pengawas": 3,
             "COMPLETED BY Admin Kabupaten": 1
           },
-          "delta_persen": 0.95,
-          "delta_kemarin_persen": 0.62,
-          "delta_lusa_persen": 0.97,
+          "delta_persen": 0.56,
+          "delta_kemarin_persen": 0.95,
+          "delta_lusa_persen": 0.62,
           "new_usaha_overall": 373,
           "new_rumah_overall": 258
         },
         {
           "kecamatan": "[090] DOLO BARAT",
           "kec_name": "[090] DOLO BARAT",
-          "total_prelist": 8780,
-          "total_draft": 2,
+          "total_prelist": 8796,
+          "total_draft": 5,
           "total_open": 0,
-          "total_submitted": 8778,
-          "total_rejected": 167,
-          "total_approved": 7920,
-          "total_submitted_pencacah": 691,
+          "total_submitted": 8791,
+          "total_rejected": 180,
+          "total_approved": 8108,
+          "total_submitted_pencacah": 503,
           "total_submitted_respondent": 0,
-          "persentase": 99.98,
-          "today_completed": 17,
+          "persentase": 99.94,
+          "today_completed": 13,
           "today_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 381
+            "APPROVED BY PENGAWAS": 188,
+            "REJECTED BY PENGAWAS": 13
           },
-          "yesterday_completed": 7,
+          "yesterday_completed": 17,
           "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 145
+            "APPROVED BY PENGAWAS": 381
           },
           "two_days_ago_completed": 7,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 179,
-            "REJECTED BY PENGAWAS": 50
+            "APPROVED BY PENGAWAS": 145
           },
           "breakdown": {
-            "total": 8780,
-            "APPROVED BY Pengawas": 7920,
-            "SUBMITTED BY Pencacah": 441,
+            "total": 8796,
+            "APPROVED BY Pengawas": 8108,
+            "SUBMITTED BY Pencacah": 253,
             "EDITED BY Admin Kabupaten": 250,
-            "REJECTED BY Pengawas": 153,
-            "REVOKED BY Pengawas": 14,
-            "DRAFT": 2
+            "REJECTED BY Pengawas": 156,
+            "REVOKED BY Pengawas": 24,
+            "DRAFT": 5
           },
-          "delta_persen": 0.19,
-          "delta_kemarin_persen": 0.08,
+          "delta_persen": 0.15,
+          "delta_kemarin_persen": 0.19,
           "delta_lusa_persen": 0.08,
           "new_usaha_overall": 432,
           "new_rumah_overall": 291
@@ -6919,216 +6900,216 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[100] TANAMBULAVA",
           "kec_name": "[100] TANAMBULAVA",
-          "total_prelist": 5229,
+          "total_prelist": 5244,
           "total_draft": 36,
-          "total_open": 189,
-          "total_submitted": 5004,
-          "total_rejected": 99,
-          "total_approved": 4683,
-          "total_submitted_pencacah": 222,
+          "total_open": 147,
+          "total_submitted": 5061,
+          "total_rejected": 98,
+          "total_approved": 4743,
+          "total_submitted_pencacah": 220,
           "total_submitted_respondent": 0,
-          "persentase": 95.7,
-          "today_completed": 69,
+          "persentase": 96.51,
+          "today_completed": 57,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 60
+          },
+          "yesterday_completed": 69,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 180,
             "REJECTED BY PENGAWAS": 5
           },
-          "yesterday_completed": 23,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 23,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 45
           },
-          "two_days_ago_completed": 77,
-          "two_days_ago_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 90
-          },
           "breakdown": {
-            "total": 5229,
-            "APPROVED BY Pengawas": 4683,
-            "OPEN": 189,
-            "SUBMITTED BY Pencacah": 113,
+            "total": 5244,
+            "APPROVED BY Pengawas": 4743,
+            "OPEN": 147,
+            "SUBMITTED BY Pencacah": 111,
             "EDITED BY Admin Kabupaten": 109,
             "REJECTED BY Pengawas": 64,
             "DRAFT": 36,
             "REJECTED BY Admin Kabupaten": 30,
-            "REVOKED BY Pengawas": 5
+            "REVOKED BY Pengawas": 4
           },
-          "delta_persen": 1.32,
-          "delta_kemarin_persen": 0.44,
-          "delta_lusa_persen": 1.47,
+          "delta_persen": 1.09,
+          "delta_kemarin_persen": 1.32,
+          "delta_lusa_persen": 0.44,
           "new_usaha_overall": 193,
           "new_rumah_overall": 100
         },
         {
           "kecamatan": "[110] DOLO",
           "kec_name": "[110] DOLO",
-          "total_prelist": 11185,
-          "total_draft": 239,
-          "total_open": 129,
-          "total_submitted": 10817,
-          "total_rejected": 560,
-          "total_approved": 7125,
-          "total_submitted_pencacah": 3131,
+          "total_prelist": 11203,
+          "total_draft": 241,
+          "total_open": 76,
+          "total_submitted": 10886,
+          "total_rejected": 537,
+          "total_approved": 7325,
+          "total_submitted_pencacah": 3023,
           "total_submitted_respondent": 1,
-          "persentase": 96.71,
-          "today_completed": 108,
+          "persentase": 97.17,
+          "today_completed": 69,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 200
+          },
+          "yesterday_completed": 108,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 193
           },
-          "yesterday_completed": 54,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 54,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 71,
             "REJECTED BY PENGAWAS": 12
           },
-          "two_days_ago_completed": 43,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 165
-          },
           "breakdown": {
-            "total": 11185,
-            "APPROVED BY Pengawas": 7125,
-            "SUBMITTED BY Pencacah": 3078,
-            "REJECTED BY Pengawas": 556,
-            "DRAFT": 239,
-            "OPEN": 129,
+            "total": 11203,
+            "APPROVED BY Pengawas": 7325,
+            "SUBMITTED BY Pencacah": 2970,
+            "REJECTED BY Pengawas": 535,
+            "DRAFT": 241,
+            "OPEN": 76,
             "EDITED BY Admin Kabupaten": 53,
-            "REVOKED BY Pengawas": 4,
+            "REVOKED BY Pengawas": 2,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 0.97,
-          "delta_kemarin_persen": 0.48,
-          "delta_lusa_persen": 0.38,
+          "delta_persen": 0.62,
+          "delta_kemarin_persen": 0.96,
+          "delta_lusa_persen": 0.48,
           "new_usaha_overall": 372,
           "new_rumah_overall": 266
         },
         {
           "kecamatan": "[120] SIGI BIROMARU",
           "kec_name": "[120] SIGI BIROMARU",
-          "total_prelist": 24064,
-          "total_draft": 344,
-          "total_open": 1363,
-          "total_submitted": 22357,
-          "total_rejected": 224,
-          "total_approved": 19804,
-          "total_submitted_pencacah": 2327,
+          "total_prelist": 24129,
+          "total_draft": 317,
+          "total_open": 1183,
+          "total_submitted": 22629,
+          "total_rejected": 204,
+          "total_approved": 20502,
+          "total_submitted_pencacah": 1921,
           "total_submitted_respondent": 2,
-          "persentase": 92.91,
-          "today_completed": 416,
+          "persentase": 93.78,
+          "today_completed": 272,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 698
+          },
+          "yesterday_completed": 416,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 315,
             "SUBMITTED BY PENCACAH": 131
           },
-          "yesterday_completed": 222,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 222,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 346
           },
-          "two_days_ago_completed": 173,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 263
-          },
           "breakdown": {
-            "total": 24064,
-            "APPROVED BY Pengawas": 19804,
-            "SUBMITTED BY Pencacah": 1960,
-            "OPEN": 1363,
-            "DRAFT": 344,
+            "total": 24129,
+            "APPROVED BY Pengawas": 20502,
+            "SUBMITTED BY Pencacah": 1554,
+            "OPEN": 1183,
+            "DRAFT": 317,
             "EDITED BY Admin Kabupaten": 206,
-            "REJECTED BY Pengawas": 186,
+            "REJECTED BY Pengawas": 168,
             "COMPLETED BY Admin Kabupaten": 161,
-            "REVOKED BY Pengawas": 38,
+            "REVOKED BY Pengawas": 36,
             "SUBMITTED RESPONDENT": 2
           },
-          "delta_persen": 1.73,
-          "delta_kemarin_persen": 0.92,
-          "delta_lusa_persen": 0.72,
+          "delta_persen": 1.13,
+          "delta_kemarin_persen": 1.72,
+          "delta_lusa_persen": 0.92,
           "new_usaha_overall": 1298,
           "new_rumah_overall": 560
         },
         {
           "kecamatan": "[121] SIGI KOTA",
           "kec_name": "[121] SIGI KOTA",
-          "total_prelist": 8868,
-          "total_draft": 212,
-          "total_open": 405,
-          "total_submitted": 8251,
+          "total_prelist": 8889,
+          "total_draft": 201,
+          "total_open": 360,
+          "total_submitted": 8328,
           "total_rejected": 15,
-          "total_approved": 7869,
-          "total_submitted_pencacah": 367,
+          "total_approved": 7901,
+          "total_submitted_pencacah": 412,
           "total_submitted_respondent": 0,
-          "persentase": 93.04,
-          "today_completed": 104,
+          "persentase": 93.69,
+          "today_completed": 77,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 32,
+            "SUBMITTED BY PENCACAH": 45
+          },
+          "yesterday_completed": 104,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 132
           },
-          "yesterday_completed": 114,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 114,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 33,
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 80
           },
-          "two_days_ago_completed": 84,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 97
-          },
           "breakdown": {
-            "total": 8868,
-            "APPROVED BY Pengawas": 7869,
-            "OPEN": 405,
-            "DRAFT": 212,
-            "EDITED BY Admin Kabupaten": 211,
-            "SUBMITTED BY Pencacah": 139,
+            "total": 8889,
+            "APPROVED BY Pengawas": 7901,
+            "OPEN": 360,
+            "EDITED BY Admin Kabupaten": 212,
+            "DRAFT": 201,
+            "SUBMITTED BY Pencacah": 183,
             "COMPLETED BY Admin Kabupaten": 17,
             "REVOKED BY Pengawas": 10,
             "REJECTED BY Pengawas": 5
           },
-          "delta_persen": 1.17,
-          "delta_kemarin_persen": 1.29,
-          "delta_lusa_persen": 0.95,
+          "delta_persen": 0.87,
+          "delta_kemarin_persen": 1.17,
+          "delta_lusa_persen": 1.28,
           "new_usaha_overall": 397,
           "new_rumah_overall": 316
         },
         {
           "kecamatan": "[130] MARAWOLA",
           "kec_name": "[130] MARAWOLA",
-          "total_prelist": 15613,
-          "total_draft": 218,
-          "total_open": 479,
-          "total_submitted": 14916,
-          "total_rejected": 381,
-          "total_approved": 12992,
-          "total_submitted_pencacah": 1541,
+          "total_prelist": 15647,
+          "total_draft": 187,
+          "total_open": 337,
+          "total_submitted": 15123,
+          "total_rejected": 396,
+          "total_approved": 13223,
+          "total_submitted_pencacah": 1502,
           "total_submitted_respondent": 2,
-          "persentase": 95.54,
-          "today_completed": 237,
+          "persentase": 96.65,
+          "today_completed": 207,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 231,
+            "REJECTED BY PENGAWAS": 15
+          },
+          "yesterday_completed": 237,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 270
           },
-          "yesterday_completed": 330,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 330,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 116,
             "SUBMITTED BY PENCACAH": 243
           },
-          "two_days_ago_completed": 350,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 224,
-            "REJECTED BY PENGAWAS": 15,
-            "SUBMITTED BY PENCACAH": 111
-          },
           "breakdown": {
-            "total": 15613,
-            "APPROVED BY Pengawas": 12992,
-            "SUBMITTED BY Pencacah": 1338,
-            "OPEN": 479,
-            "REJECTED BY Pengawas": 311,
-            "DRAFT": 218,
+            "total": 15647,
+            "APPROVED BY Pengawas": 13223,
+            "SUBMITTED BY Pencacah": 1299,
+            "OPEN": 337,
+            "REJECTED BY Pengawas": 326,
             "EDITED BY Admin Kabupaten": 202,
+            "DRAFT": 187,
             "REVOKED BY Pengawas": 69,
             "SUBMITTED RESPONDENT": 2,
             "COMPLETED BY Admin Kabupaten": 1,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.52,
-          "delta_kemarin_persen": 2.11,
-          "delta_lusa_persen": 2.24,
+          "delta_persen": 1.32,
+          "delta_kemarin_persen": 1.51,
+          "delta_lusa_persen": 2.11,
           "new_usaha_overall": 655,
           "new_rumah_overall": 615
         },
@@ -7140,128 +7121,126 @@ window.IPAS_DATA = {
           "total_open": 1,
           "total_submitted": 2747,
           "total_rejected": 2,
-          "total_approved": 2680,
-          "total_submitted_pencacah": 65,
+          "total_approved": 2681,
+          "total_submitted_pencacah": 64,
           "total_submitted_respondent": 0,
           "persentase": 99.89,
-          "today_completed": 2,
+          "today_completed": 0,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 1
+          },
+          "yesterday_completed": 2,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 1
-          },
-          "two_days_ago_completed": 1,
+          "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 6
+            "APPROVED BY PENGAWAS": 1
           },
           "breakdown": {
             "total": 2750,
-            "APPROVED BY Pengawas": 2680,
+            "APPROVED BY Pengawas": 2681,
             "EDITED BY Admin Kabupaten": 63,
             "DRAFT": 2,
             "REVOKED BY Pengawas": 2,
             "COMPLETED BY Admin Kabupaten": 1,
-            "OPEN": 1,
-            "SUBMITTED BY Pencacah": 1
+            "OPEN": 1
           },
-          "delta_persen": 0.07,
-          "delta_kemarin_persen": 0.0,
-          "delta_lusa_persen": 0.04,
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 0.07,
+          "delta_lusa_persen": 0.0,
           "new_usaha_overall": 144,
           "new_rumah_overall": 36
         },
         {
           "kecamatan": "[150] KINOVARO",
           "kec_name": "[150] KINOVARO",
-          "total_prelist": 4956,
-          "total_draft": 76,
-          "total_open": 4,
-          "total_submitted": 4876,
-          "total_rejected": 168,
-          "total_approved": 4121,
-          "total_submitted_pencacah": 587,
+          "total_prelist": 4957,
+          "total_draft": 9,
+          "total_open": 0,
+          "total_submitted": 4948,
+          "total_rejected": 190,
+          "total_approved": 4314,
+          "total_submitted_pencacah": 444,
           "total_submitted_respondent": 0,
-          "persentase": 98.39,
-          "today_completed": 98,
+          "persentase": 99.82,
+          "today_completed": 72,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 193,
+            "REJECTED BY PENGAWAS": 22
+          },
+          "yesterday_completed": 98,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 273,
             "REJECTED BY PENGAWAS": 4
           },
-          "yesterday_completed": 37,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 37,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 191
           },
-          "two_days_ago_completed": 47,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 96
-          },
           "breakdown": {
-            "total": 4956,
-            "APPROVED BY Pengawas": 4121,
-            "SUBMITTED BY Pencacah": 510,
-            "REJECTED BY Pengawas": 166,
-            "DRAFT": 76,
+            "total": 4957,
+            "APPROVED BY Pengawas": 4314,
+            "SUBMITTED BY Pencacah": 367,
+            "REJECTED BY Pengawas": 188,
             "EDITED BY Admin Kabupaten": 71,
+            "DRAFT": 9,
             "COMPLETED BY Admin Kabupaten": 6,
-            "OPEN": 4,
             "REVOKED BY Pengawas": 2
           },
-          "delta_persen": 1.98,
-          "delta_kemarin_persen": 0.75,
-          "delta_lusa_persen": 0.95,
+          "delta_persen": 1.45,
+          "delta_kemarin_persen": 1.98,
+          "delta_lusa_persen": 0.75,
           "new_usaha_overall": 144,
           "new_rumah_overall": 118
         }
       ],
       "breakdown": {
-        "total": 130736,
-        "APPROVED BY Pengawas": 105906,
-        "SUBMITTED BY Pencacah": 14595,
-        "COMPLETED BY Admin Kabupaten": 358,
-        "REJECTED BY Pengawas": 3132,
-        "REVOKED BY Pengawas": 213,
-        "DRAFT": 1769,
-        "OPEN": 2931,
-        "EDITED BY Admin Kabupaten": 1794,
+        "total": 130972,
+        "APPROVED BY Pengawas": 108357,
+        "COMPLETED BY Admin Kabupaten": 367,
+        "SUBMITTED BY Pencacah": 13263,
+        "REJECTED BY Pengawas": 2987,
+        "DRAFT": 1567,
+        "EDITED BY Admin Kabupaten": 1797,
+        "REVOKED BY Pengawas": 201,
+        "OPEN": 2395,
         "SUBMITTED RESPONDENT": 7,
         "REJECTED BY Admin Kabupaten": 31
       },
-      "two_days_ago_completed": 1043,
+      "two_days_ago_completed": 954,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1811,
-        "REJECTED BY PENGAWAS": 125
-      },
-      "yesterday_completed": 954,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1606
+      },
+      "yesterday_completed": 1223,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 3312
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 1223,
+      "today_completed": 974,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 3312
+        "APPROVED BY PENGAWAS": 2451
       },
-      "delta_persen": 0.94,
-      "delta_kemarin_persen": 0.73,
-      "delta_lusa_persen": 0.8
+      "delta_persen": 0.74,
+      "delta_kemarin_persen": 0.93,
+      "delta_lusa_persen": 0.73
     },
     {
       "kabupaten": "[11] BANGGAI LAUT",
-      "total_prelist": 34184,
-      "total_draft": 1964,
-      "total_open": 357,
-      "total_submitted": 31863,
-      "total_rejected": 293,
-      "total_approved": 28804,
-      "total_submitted_pencacah": 2742,
+      "total_prelist": 34244,
+      "total_draft": 1857,
+      "total_open": 332,
+      "total_submitted": 32055,
+      "total_rejected": 354,
+      "total_approved": 29006,
+      "total_submitted_pencacah": 2671,
       "total_submitted_respondent": 24,
-      "persentase": 93.21,
+      "persentase": 93.61,
       "new_usaha_overall": 1376,
       "new_rumah_overall": 1206,
       "new_businesses": [],
@@ -7299,44 +7278,44 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[010] BANGKURUNG",
           "kec_name": "[010] BANGKURUNG",
-          "total_prelist": 3987,
-          "total_draft": 172,
-          "total_open": 49,
-          "total_submitted": 3766,
-          "total_rejected": 90,
-          "total_approved": 3305,
-          "total_submitted_pencacah": 371,
+          "total_prelist": 3988,
+          "total_draft": 160,
+          "total_open": 48,
+          "total_submitted": 3780,
+          "total_rejected": 91,
+          "total_approved": 3335,
+          "total_submitted_pencacah": 354,
           "total_submitted_respondent": 0,
-          "persentase": 94.46,
-          "today_completed": 23,
+          "persentase": 94.78,
+          "today_completed": 14,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 30,
+            "REJECTED BY PENGAWAS": 1
+          },
+          "yesterday_completed": 23,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 45
           },
-          "yesterday_completed": 17,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 17,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 44
           },
-          "two_days_ago_completed": 60,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 30,
-            "SUBMITTED BY PENCACAH": 33
-          },
           "breakdown": {
-            "total": 3988,
-            "APPROVED BY Pengawas": 3305,
-            "COMPLETED BY Admin Kabupaten": 208,
-            "DRAFT": 172,
-            "SUBMITTED BY Pencacah": 156,
+            "total": 3989,
+            "APPROVED BY Pengawas": 3335,
+            "COMPLETED BY Admin Kabupaten": 210,
+            "DRAFT": 160,
+            "SUBMITTED BY Pencacah": 137,
             "REJECTED BY Pengawas": 87,
-            "OPEN": 49,
+            "OPEN": 48,
             "EDITED BY Admin Kabupaten": 7,
-            "REJECTED BY Admin Kabupaten": 2,
+            "REJECTED BY Admin Kabupaten": 3,
             "REVOKED BY Admin Kabupaten": 1,
             "REVOKED BY Pengawas": 1
           },
-          "delta_persen": 0.58,
-          "delta_kemarin_persen": 0.43,
-          "delta_lusa_persen": 1.5,
+          "delta_persen": 0.35,
+          "delta_kemarin_persen": 0.58,
+          "delta_lusa_persen": 0.43,
           "new_usaha_overall": 232,
           "new_rumah_overall": 89
         },
@@ -7344,42 +7323,42 @@ window.IPAS_DATA = {
           "kecamatan": "[020] LABOBO",
           "kec_name": "[020] LABOBO",
           "total_prelist": 2540,
-          "total_draft": 254,
-          "total_open": 10,
-          "total_submitted": 2276,
+          "total_draft": 240,
+          "total_open": 9,
+          "total_submitted": 2291,
           "total_rejected": 11,
-          "total_approved": 2095,
-          "total_submitted_pencacah": 170,
+          "total_approved": 2099,
+          "total_submitted_pencacah": 181,
           "total_submitted_respondent": 0,
-          "persentase": 89.61,
-          "today_completed": 22,
+          "persentase": 90.2,
+          "today_completed": 15,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 4,
+            "SUBMITTED BY PENCACAH": 11
+          },
+          "yesterday_completed": 22,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 54,
             "REJECTED BY PENGAWAS": 1
           },
-          "yesterday_completed": 23,
-          "yesterday_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 24
-          },
-          "two_days_ago_completed": 42,
+          "two_days_ago_completed": 23,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 51,
-            "REJECTED BY PENGAWAS": 1
+            "SUBMITTED BY PENCACAH": 24
           },
           "breakdown": {
             "total": 2540,
-            "APPROVED BY Pengawas": 2095,
-            "DRAFT": 254,
+            "APPROVED BY Pengawas": 2099,
+            "DRAFT": 240,
             "COMPLETED BY Admin Kabupaten": 122,
-            "SUBMITTED BY Pencacah": 29,
+            "SUBMITTED BY Pencacah": 40,
             "EDITED BY Admin Kabupaten": 19,
-            "OPEN": 10,
             "REJECTED BY Pengawas": 10,
+            "OPEN": 9,
             "REVOKED BY Pengawas": 1
           },
-          "delta_persen": 0.87,
-          "delta_kemarin_persen": 0.91,
-          "delta_lusa_persen": 1.65,
+          "delta_persen": 0.59,
+          "delta_kemarin_persen": 0.87,
+          "delta_lusa_persen": 0.91,
           "new_usaha_overall": 130,
           "new_rumah_overall": 48
         },
@@ -7387,125 +7366,128 @@ window.IPAS_DATA = {
           "kecamatan": "[030] BANGGAI UTARA",
           "kec_name": "[030] BANGGAI UTARA",
           "total_prelist": 3287,
-          "total_draft": 196,
+          "total_draft": 194,
           "total_open": 0,
-          "total_submitted": 3091,
-          "total_rejected": 18,
-          "total_approved": 2177,
-          "total_submitted_pencacah": 896,
+          "total_submitted": 3093,
+          "total_rejected": 20,
+          "total_approved": 2184,
+          "total_submitted_pencacah": 889,
           "total_submitted_respondent": 0,
-          "persentase": 94.04,
-          "today_completed": 10,
+          "persentase": 94.1,
+          "today_completed": 2,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 7,
+            "REJECTED BY PENGAWAS": 2
+          },
+          "yesterday_completed": 10,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 22,
             "SUBMITTED BY PENCACAH": 1
           },
-          "yesterday_completed": 2,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 2,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 19,
             "REJECTED BY PENGAWAS": 5
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 9,
-            "REJECTED BY PENGAWAS": 2
-          },
           "breakdown": {
             "total": 3287,
-            "APPROVED BY Pengawas": 2177,
-            "SUBMITTED BY Pencacah": 693,
+            "APPROVED BY Pengawas": 2184,
+            "SUBMITTED BY Pencacah": 686,
             "COMPLETED BY Admin Kabupaten": 203,
-            "DRAFT": 196,
-            "REJECTED BY Pengawas": 10,
+            "DRAFT": 194,
+            "REJECTED BY Pengawas": 12,
             "REVOKED BY Pengawas": 8
           },
-          "delta_persen": 0.3,
-          "delta_kemarin_persen": 0.06,
-          "delta_lusa_persen": 0.0,
+          "delta_persen": 0.06,
+          "delta_kemarin_persen": 0.3,
+          "delta_lusa_persen": 0.06,
           "new_usaha_overall": 171,
           "new_rumah_overall": 83
         },
         {
           "kecamatan": "[040] BANGGAI",
           "kec_name": "[040] BANGGAI",
-          "total_prelist": 12559,
-          "total_draft": 741,
+          "total_prelist": 12576,
+          "total_draft": 707,
           "total_open": 7,
-          "total_submitted": 11811,
-          "total_rejected": 48,
-          "total_approved": 11223,
-          "total_submitted_pencacah": 519,
+          "total_submitted": 11862,
+          "total_rejected": 119,
+          "total_approved": 11224,
+          "total_submitted_pencacah": 498,
           "total_submitted_respondent": 21,
-          "persentase": 94.04,
-          "today_completed": 66,
+          "persentase": 94.32,
+          "today_completed": 51,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 1,
+            "REJECTED BY PENGAWAS": 71
+          },
+          "yesterday_completed": 66,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 72,
             "REJECTED BY PENGAWAS": 11
           },
-          "yesterday_completed": 44,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 44,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 46,
             "SUBMITTED BY PENCACAH": 9
           },
-          "two_days_ago_completed": 46,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 75
-          },
           "breakdown": {
-            "total": 12559,
-            "APPROVED BY Pengawas": 11223,
-            "DRAFT": 741,
-            "SUBMITTED BY Pencacah": 389,
+            "total": 12576,
+            "APPROVED BY Pengawas": 11224,
+            "DRAFT": 707,
+            "SUBMITTED BY Pencacah": 368,
             "EDITED BY Admin Kabupaten": 125,
-            "REJECTED BY Pengawas": 36,
+            "REJECTED BY Pengawas": 109,
             "SUBMITTED RESPONDENT": 21,
-            "REVOKED BY Pengawas": 12,
+            "REVOKED BY Pengawas": 10,
             "OPEN": 7,
             "COMPLETED BY Admin Kabupaten": 4,
             "EDITED BY Pengawas": 1
           },
-          "delta_persen": 0.53,
-          "delta_kemarin_persen": 0.35,
-          "delta_lusa_persen": 0.37,
+          "delta_persen": 0.41,
+          "delta_kemarin_persen": 0.52,
+          "delta_lusa_persen": 0.35,
           "new_usaha_overall": 370,
           "new_rumah_overall": 549
         },
         {
           "kecamatan": "[050] BANGGAI TENGAH",
           "kec_name": "[050] BANGGAI TENGAH",
-          "total_prelist": 3947,
+          "total_prelist": 3970,
           "total_draft": 0,
           "total_open": 1,
-          "total_submitted": 3946,
-          "total_rejected": 2,
-          "total_approved": 3726,
-          "total_submitted_pencacah": 218,
+          "total_submitted": 3969,
+          "total_rejected": 4,
+          "total_approved": 3742,
+          "total_submitted_pencacah": 223,
           "total_submitted_respondent": 0,
           "persentase": 99.97,
-          "today_completed": 26,
+          "today_completed": 23,
           "today_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 42
+            "APPROVED BY PENGAWAS": 16,
+            "REJECTED BY PENGAWAS": 2,
+            "SUBMITTED BY PENCACAH": 5
           },
-          "yesterday_completed": 14,
+          "yesterday_completed": 26,
           "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 14,
-            "SUBMITTED BY PENCACAH": 1
+            "APPROVED BY PENGAWAS": 42
           },
           "two_days_ago_completed": 14,
           "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 46
+            "APPROVED BY PENGAWAS": 14,
+            "SUBMITTED BY PENCACAH": 1
           },
           "breakdown": {
-            "total": 3947,
-            "APPROVED BY Pengawas": 3726,
+            "total": 3970,
+            "APPROVED BY Pengawas": 3742,
             "COMPLETED BY Admin Kabupaten": 196,
-            "EDITED BY Admin Kabupaten": 20,
-            "REJECTED BY Pengawas": 2,
-            "SUBMITTED BY Pencacah": 2,
+            "EDITED BY Admin Kabupaten": 16,
+            "SUBMITTED BY Pencacah": 11,
+            "REJECTED BY Pengawas": 4,
             "OPEN": 1
           },
-          "delta_persen": 0.66,
-          "delta_kemarin_persen": 0.35,
+          "delta_persen": 0.58,
+          "delta_kemarin_persen": 0.65,
           "delta_lusa_persen": 0.35,
           "new_usaha_overall": 142,
           "new_rumah_overall": 168
@@ -7513,140 +7495,141 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[060] BANGGAI SELATAN",
           "kec_name": "[060] BANGGAI SELATAN",
-          "total_prelist": 2643,
-          "total_draft": 234,
+          "total_prelist": 2646,
+          "total_draft": 220,
           "total_open": 1,
-          "total_submitted": 2408,
+          "total_submitted": 2425,
           "total_rejected": 30,
-          "total_approved": 2100,
-          "total_submitted_pencacah": 278,
+          "total_approved": 2166,
+          "total_submitted_pencacah": 229,
           "total_submitted_respondent": 0,
-          "persentase": 91.11,
-          "today_completed": 40,
+          "persentase": 91.65,
+          "today_completed": 17,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 66
+          },
+          "yesterday_completed": 40,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 45,
             "SUBMITTED BY PENCACAH": 8
           },
-          "yesterday_completed": 7,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 7,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 14,
             "SUBMITTED BY PENCACAH": 20
           },
-          "two_days_ago_completed": 34,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 45,
-            "SUBMITTED BY PENCACAH": 22
-          },
           "breakdown": {
-            "total": 2643,
-            "APPROVED BY Pengawas": 2100,
-            "DRAFT": 234,
-            "SUBMITTED BY Pencacah": 169,
-            "COMPLETED BY Admin Kabupaten": 104,
+            "total": 2646,
+            "APPROVED BY Pengawas": 2166,
+            "DRAFT": 220,
+            "SUBMITTED BY Pencacah": 115,
+            "COMPLETED BY Admin Kabupaten": 109,
             "REJECTED BY Pengawas": 21,
             "REVOKED BY Pengawas": 9,
             "EDITED BY Admin Kabupaten": 5,
             "OPEN": 1
           },
-          "delta_persen": 1.51,
-          "delta_kemarin_persen": 0.26,
-          "delta_lusa_persen": 1.29,
+          "delta_persen": 0.64,
+          "delta_kemarin_persen": 1.51,
+          "delta_lusa_persen": 0.26,
           "new_usaha_overall": 68,
           "new_rumah_overall": 106
         },
         {
           "kecamatan": "[070] BOKAN KEPULAUAN",
           "kec_name": "[070] BOKAN KEPULAUAN",
-          "total_prelist": 5216,
-          "total_draft": 366,
-          "total_open": 288,
-          "total_submitted": 4562,
-          "total_rejected": 94,
-          "total_approved": 4178,
-          "total_submitted_pencacah": 290,
+          "total_prelist": 5232,
+          "total_draft": 335,
+          "total_open": 265,
+          "total_submitted": 4632,
+          "total_rejected": 79,
+          "total_approved": 4256,
+          "total_submitted_pencacah": 297,
           "total_submitted_respondent": 0,
-          "persentase": 87.46,
-          "today_completed": 139,
+          "persentase": 88.53,
+          "today_completed": 70,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 78,
+            "SUBMITTED BY PENCACAH": 7
+          },
+          "yesterday_completed": 139,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 94,
             "REJECTED BY PENGAWAS": 4,
             "SUBMITTED BY PENCACAH": 41
           },
-          "yesterday_completed": 46,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 46,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 86,
             "REJECTED BY PENGAWAS": 2
           },
-          "two_days_ago_completed": 96,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 177
-          },
           "breakdown": {
-            "total": 5216,
-            "APPROVED BY Pengawas": 4178,
-            "DRAFT": 366,
-            "OPEN": 288,
+            "total": 5232,
+            "APPROVED BY Pengawas": 4256,
+            "DRAFT": 335,
+            "OPEN": 265,
             "COMPLETED BY Admin Kabupaten": 164,
-            "REJECTED BY Pengawas": 83,
+            "SUBMITTED BY Pencacah": 69,
+            "REJECTED BY Pengawas": 68,
             "EDITED BY Admin Kabupaten": 64,
-            "SUBMITTED BY Pencacah": 62,
             "REJECTED BY Admin Kabupaten": 6,
             "REVOKED BY Pengawas": 5
           },
-          "delta_persen": 2.66,
-          "delta_kemarin_persen": 0.88,
-          "delta_lusa_persen": 1.84,
+          "delta_persen": 1.34,
+          "delta_kemarin_persen": 2.66,
+          "delta_lusa_persen": 0.88,
           "new_usaha_overall": 261,
           "new_rumah_overall": 163
         }
       ],
       "breakdown": {
-        "total": 34185,
-        "APPROVED BY Pengawas": 28804,
-        "COMPLETED BY Admin Kabupaten": 1001,
-        "DRAFT": 1964,
-        "SUBMITTED BY Pencacah": 1500,
-        "REJECTED BY Pengawas": 249,
-        "OPEN": 357,
-        "EDITED BY Admin Kabupaten": 240,
-        "REJECTED BY Admin Kabupaten": 8,
+        "total": 34245,
+        "APPROVED BY Pengawas": 29006,
+        "COMPLETED BY Admin Kabupaten": 1008,
+        "DRAFT": 1857,
+        "SUBMITTED BY Pencacah": 1426,
+        "REJECTED BY Pengawas": 311,
+        "OPEN": 332,
+        "EDITED BY Admin Kabupaten": 236,
+        "REJECTED BY Admin Kabupaten": 9,
         "REVOKED BY Admin Kabupaten": 1,
-        "REVOKED BY Pengawas": 36,
+        "REVOKED BY Pengawas": 34,
         "SUBMITTED RESPONDENT": 24,
         "EDITED BY Pengawas": 1
       },
-      "two_days_ago_completed": 292,
+      "two_days_ago_completed": 153,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 433
-      },
-      "yesterday_completed": 153,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 222
+      },
+      "yesterday_completed": 326,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 374
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 326,
+      "today_completed": 192,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 374
+        "APPROVED BY PENGAWAS": 202,
+        "REJECTED BY PENGAWAS": 61
       },
-      "delta_persen": 0.95,
-      "delta_kemarin_persen": 0.45,
-      "delta_lusa_persen": 0.85
+      "delta_persen": 0.56,
+      "delta_kemarin_persen": 0.95,
+      "delta_lusa_persen": 0.45
     },
     {
       "kabupaten": "[12] MOROWALI UTARA",
-      "total_prelist": 52768,
-      "total_draft": 1207,
-      "total_open": 4357,
-      "total_submitted": 47204,
-      "total_rejected": 1881,
-      "total_approved": 36786,
+      "total_prelist": 52978,
+      "total_draft": 1177,
+      "total_open": 3879,
+      "total_submitted": 47922,
+      "total_rejected": 1788,
+      "total_approved": 37597,
       "total_submitted_pencacah": 8536,
       "total_submitted_respondent": 1,
-      "persentase": 89.46,
+      "persentase": 90.46,
       "new_usaha_overall": 2288,
       "new_rumah_overall": 988,
       "new_businesses": [],
@@ -7682,489 +7665,486 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[010] MORI ATAS",
           "kec_name": "[010] MORI ATAS",
-          "total_prelist": 4943,
-          "total_draft": 12,
-          "total_open": 337,
-          "total_submitted": 4594,
-          "total_rejected": 202,
-          "total_approved": 3140,
-          "total_submitted_pencacah": 1252,
+          "total_prelist": 4948,
+          "total_draft": 18,
+          "total_open": 288,
+          "total_submitted": 4642,
+          "total_rejected": 199,
+          "total_approved": 3155,
+          "total_submitted_pencacah": 1288,
           "total_submitted_respondent": 0,
-          "persentase": 92.94,
-          "today_completed": 100,
+          "persentase": 93.82,
+          "today_completed": 48,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 15,
+            "SUBMITTED BY PENCACAH": 36
+          },
+          "yesterday_completed": 100,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 66,
             "SUBMITTED BY PENCACAH": 37
           },
-          "yesterday_completed": 41,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 41,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 70,
             "REJECTED BY PENGAWAS": 17
           },
-          "two_days_ago_completed": 52,
-          "two_days_ago_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 14,
-            "SUBMITTED BY PENCACAH": 44
-          },
           "breakdown": {
-            "total": 4943,
-            "APPROVED BY Pengawas": 3140,
-            "SUBMITTED BY Pencacah": 1141,
-            "OPEN": 337,
-            "REJECTED BY Pengawas": 179,
+            "total": 4948,
+            "APPROVED BY Pengawas": 3155,
+            "SUBMITTED BY Pencacah": 1177,
+            "OPEN": 288,
+            "REJECTED BY Pengawas": 176,
             "EDITED BY Admin Kabupaten": 72,
             "COMPLETED BY Admin Kabupaten": 39,
             "REVOKED BY Pengawas": 23,
-            "DRAFT": 12
+            "DRAFT": 18
           },
-          "delta_persen": 2.02,
-          "delta_kemarin_persen": 0.83,
-          "delta_lusa_persen": 1.05,
+          "delta_persen": 0.97,
+          "delta_kemarin_persen": 2.02,
+          "delta_lusa_persen": 0.83,
           "new_usaha_overall": 84,
           "new_rumah_overall": 56
         },
         {
           "kecamatan": "[020] LEMBO",
           "kec_name": "[020] LEMBO",
-          "total_prelist": 6418,
-          "total_draft": 139,
-          "total_open": 678,
-          "total_submitted": 5601,
-          "total_rejected": 47,
-          "total_approved": 4797,
+          "total_prelist": 6437,
+          "total_draft": 135,
+          "total_open": 647,
+          "total_submitted": 5655,
+          "total_rejected": 52,
+          "total_approved": 4846,
           "total_submitted_pencacah": 757,
           "total_submitted_respondent": 0,
-          "persentase": 87.27,
-          "today_completed": 74,
+          "persentase": 87.85,
+          "today_completed": 54,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 49,
+            "REJECTED BY PENGAWAS": 5
+          },
+          "yesterday_completed": 74,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 67,
             "SUBMITTED BY PENCACAH": 11
           },
-          "yesterday_completed": 97,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 97,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 10,
             "SUBMITTED BY PENCACAH": 92
           },
-          "two_days_ago_completed": 37,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 29,
-            "SUBMITTED BY PENCACAH": 10
-          },
           "breakdown": {
-            "total": 6418,
-            "APPROVED BY Pengawas": 4797,
+            "total": 6437,
+            "APPROVED BY Pengawas": 4846,
             "SUBMITTED BY Pencacah": 686,
-            "OPEN": 678,
-            "DRAFT": 139,
+            "OPEN": 647,
+            "DRAFT": 135,
             "COMPLETED BY Admin Kabupaten": 55,
-            "REJECTED BY Pengawas": 39,
+            "REJECTED BY Pengawas": 44,
             "EDITED BY Admin Kabupaten": 16,
             "REVOKED BY Pengawas": 8
           },
-          "delta_persen": 1.15,
-          "delta_kemarin_persen": 1.51,
-          "delta_lusa_persen": 0.58,
+          "delta_persen": 0.84,
+          "delta_kemarin_persen": 1.15,
+          "delta_lusa_persen": 1.51,
           "new_usaha_overall": 285,
           "new_rumah_overall": 92
         },
         {
           "kecamatan": "[030] LEMBO RAYA",
           "kec_name": "[030] LEMBO RAYA",
-          "total_prelist": 3583,
-          "total_draft": 75,
-          "total_open": 123,
-          "total_submitted": 3385,
-          "total_rejected": 22,
-          "total_approved": 3274,
-          "total_submitted_pencacah": 89,
+          "total_prelist": 3624,
+          "total_draft": 63,
+          "total_open": 100,
+          "total_submitted": 3461,
+          "total_rejected": 21,
+          "total_approved": 3364,
+          "total_submitted_pencacah": 76,
           "total_submitted_respondent": 0,
-          "persentase": 94.47,
-          "today_completed": 80,
+          "persentase": 95.5,
+          "today_completed": 76,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 90
+          },
+          "yesterday_completed": 80,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 49,
             "SUBMITTED BY PENCACAH": 31
           },
-          "yesterday_completed": 44,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 44,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 48,
             "SUBMITTED BY PENCACAH": 2
           },
-          "two_days_ago_completed": 30,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 29,
-            "SUBMITTED BY PENCACAH": 2
-          },
           "breakdown": {
-            "total": 3583,
-            "APPROVED BY Pengawas": 3274,
-            "OPEN": 123,
-            "DRAFT": 75,
+            "total": 3624,
+            "APPROVED BY Pengawas": 3364,
+            "OPEN": 100,
+            "DRAFT": 63,
             "EDITED BY Admin Kabupaten": 42,
-            "SUBMITTED BY Pencacah": 41,
-            "REJECTED BY Pengawas": 11,
-            "REVOKED BY Pengawas": 11,
+            "SUBMITTED BY Pencacah": 28,
+            "REVOKED BY Pengawas": 12,
+            "REJECTED BY Pengawas": 9,
             "COMPLETED BY Admin Kabupaten": 6
           },
-          "delta_persen": 2.23,
-          "delta_kemarin_persen": 1.23,
-          "delta_lusa_persen": 0.84,
+          "delta_persen": 2.1,
+          "delta_kemarin_persen": 2.21,
+          "delta_lusa_persen": 1.21,
           "new_usaha_overall": 249,
           "new_rumah_overall": 51
         },
         {
           "kecamatan": "[040] PETASIA TIMUR",
           "kec_name": "[040] PETASIA TIMUR",
-          "total_prelist": 8672,
-          "total_draft": 339,
-          "total_open": 1093,
-          "total_submitted": 7240,
-          "total_rejected": 147,
-          "total_approved": 4943,
-          "total_submitted_pencacah": 2149,
+          "total_prelist": 8708,
+          "total_draft": 342,
+          "total_open": 1057,
+          "total_submitted": 7309,
+          "total_rejected": 114,
+          "total_approved": 4947,
+          "total_submitted_pencacah": 2247,
           "total_submitted_respondent": 1,
-          "persentase": 83.49,
-          "today_completed": 65,
+          "persentase": 83.93,
+          "today_completed": 69,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 4,
+            "SUBMITTED BY PENCACAH": 98
+          },
+          "yesterday_completed": 65,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 110,
             "REJECTED BY PENGAWAS": 2
           },
-          "yesterday_completed": 80,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 80,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 215
           },
-          "two_days_ago_completed": 50,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 5,
-            "SUBMITTED BY PENCACAH": 47
-          },
           "breakdown": {
-            "total": 8673,
-            "APPROVED BY Pengawas": 4943,
-            "SUBMITTED BY Pencacah": 1992,
-            "OPEN": 1093,
-            "DRAFT": 339,
+            "total": 8709,
+            "APPROVED BY Pengawas": 4947,
+            "SUBMITTED BY Pencacah": 2090,
+            "OPEN": 1057,
+            "DRAFT": 342,
             "COMPLETED BY Admin Kabupaten": 146,
-            "REJECTED BY Pengawas": 139,
+            "REJECTED BY Pengawas": 106,
             "EDITED BY Admin Kabupaten": 11,
             "REVOKED BY Pengawas": 8,
             "REVOKED BY Admin Kabupaten": 1,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 0.75,
-          "delta_kemarin_persen": 0.92,
-          "delta_lusa_persen": 0.58,
+          "delta_persen": 0.79,
+          "delta_kemarin_persen": 0.75,
+          "delta_lusa_persen": 0.92,
           "new_usaha_overall": 430,
           "new_rumah_overall": 207
         },
         {
           "kecamatan": "[050] PETASIA",
           "kec_name": "[050] PETASIA",
-          "total_prelist": 8887,
-          "total_draft": 366,
-          "total_open": 744,
-          "total_submitted": 7777,
-          "total_rejected": 258,
-          "total_approved": 5417,
-          "total_submitted_pencacah": 2102,
+          "total_prelist": 8917,
+          "total_draft": 345,
+          "total_open": 637,
+          "total_submitted": 7935,
+          "total_rejected": 257,
+          "total_approved": 5691,
+          "total_submitted_pencacah": 1987,
           "total_submitted_respondent": 0,
-          "persentase": 87.51,
-          "today_completed": 331,
+          "persentase": 88.99,
+          "today_completed": 158,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 274
+          },
+          "yesterday_completed": 331,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 459,
             "REJECTED BY PENGAWAS": 148
           },
-          "yesterday_completed": 163,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 163,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 513,
             "REJECTED BY PENGAWAS": 29
           },
-          "two_days_ago_completed": 297,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 121,
-            "SUBMITTED BY PENCACAH": 178
-          },
           "breakdown": {
-            "total": 8887,
-            "APPROVED BY Pengawas": 5417,
-            "SUBMITTED BY Pencacah": 2091,
-            "OPEN": 744,
-            "DRAFT": 366,
-            "REVOKED BY Pengawas": 201,
-            "REJECTED BY Pengawas": 57,
+            "total": 8917,
+            "APPROVED BY Pengawas": 5691,
+            "SUBMITTED BY Pencacah": 1976,
+            "OPEN": 637,
+            "DRAFT": 345,
+            "REVOKED BY Pengawas": 199,
+            "REJECTED BY Pengawas": 58,
             "COMPLETED BY Admin Kabupaten": 10,
             "EDITED BY Admin Kabupaten": 1
           },
-          "delta_persen": 3.72,
-          "delta_kemarin_persen": 1.83,
-          "delta_lusa_persen": 3.34,
+          "delta_persen": 1.77,
+          "delta_kemarin_persen": 3.71,
+          "delta_lusa_persen": 1.83,
           "new_usaha_overall": 414,
           "new_rumah_overall": 188
         },
         {
           "kecamatan": "[060] PETASIA BARAT",
           "kec_name": "[060] PETASIA BARAT",
-          "total_prelist": 3121,
-          "total_draft": 66,
-          "total_open": 294,
-          "total_submitted": 2761,
-          "total_rejected": 37,
-          "total_approved": 2584,
-          "total_submitted_pencacah": 140,
+          "total_prelist": 3138,
+          "total_draft": 56,
+          "total_open": 253,
+          "total_submitted": 2829,
+          "total_rejected": 39,
+          "total_approved": 2739,
+          "total_submitted_pencacah": 51,
           "total_submitted_respondent": 0,
-          "persentase": 88.47,
-          "today_completed": 94,
+          "persentase": 90.15,
+          "today_completed": 68,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 155,
+            "REJECTED BY PENGAWAS": 2
+          },
+          "yesterday_completed": 94,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 39,
             "REJECTED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 54
           },
-          "yesterday_completed": 34,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 34,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 29,
             "SUBMITTED BY PENCACAH": 11
           },
-          "two_days_ago_completed": 45,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 171,
-            "REJECTED BY PENGAWAS": 7
-          },
           "breakdown": {
-            "total": 3121,
-            "APPROVED BY Pengawas": 2584,
-            "OPEN": 294,
-            "SUBMITTED BY Pencacah": 92,
-            "DRAFT": 66,
+            "total": 3138,
+            "APPROVED BY Pengawas": 2739,
+            "OPEN": 253,
+            "DRAFT": 56,
             "COMPLETED BY Admin Kabupaten": 45,
             "REVOKED BY Pengawas": 23,
-            "REJECTED BY Pengawas": 14,
-            "EDITED BY Admin Kabupaten": 3
+            "REJECTED BY Pengawas": 16,
+            "EDITED BY Admin Kabupaten": 3,
+            "SUBMITTED BY Pencacah": 3
           },
-          "delta_persen": 3.01,
-          "delta_kemarin_persen": 1.09,
-          "delta_lusa_persen": 1.44,
+          "delta_persen": 2.17,
+          "delta_kemarin_persen": 3.0,
+          "delta_lusa_persen": 1.08,
           "new_usaha_overall": 120,
           "new_rumah_overall": 57
         },
         {
           "kecamatan": "[070] MORI UTARA",
           "kec_name": "[070] MORI UTARA",
-          "total_prelist": 4264,
-          "total_draft": 178,
+          "total_prelist": 4291,
+          "total_draft": 187,
           "total_open": 17,
-          "total_submitted": 4069,
-          "total_rejected": 55,
-          "total_approved": 3078,
-          "total_submitted_pencacah": 936,
+          "total_submitted": 4087,
+          "total_rejected": 37,
+          "total_approved": 3079,
+          "total_submitted_pencacah": 971,
           "total_submitted_respondent": 0,
-          "persentase": 95.43,
-          "today_completed": 109,
+          "persentase": 95.25,
+          "today_completed": 18,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 1,
+            "SUBMITTED BY PENCACAH": 35
+          },
+          "yesterday_completed": 109,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 60,
             "SUBMITTED BY PENCACAH": 81
           },
-          "yesterday_completed": 29,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 29,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 297
           },
-          "two_days_ago_completed": 36,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 380,
-            "REJECTED BY PENGAWAS": 12
-          },
           "breakdown": {
-            "total": 4264,
-            "APPROVED BY Pengawas": 3078,
-            "SUBMITTED BY Pencacah": 931,
-            "DRAFT": 178,
-            "REJECTED BY Pengawas": 42,
+            "total": 4291,
+            "APPROVED BY Pengawas": 3079,
+            "SUBMITTED BY Pencacah": 966,
+            "DRAFT": 187,
+            "REJECTED BY Pengawas": 24,
             "OPEN": 17,
             "REVOKED BY Pengawas": 13,
             "COMPLETED BY Admin Kabupaten": 5
           },
-          "delta_persen": 2.56,
-          "delta_kemarin_persen": 0.68,
-          "delta_lusa_persen": 0.84,
+          "delta_persen": 0.42,
+          "delta_kemarin_persen": 2.54,
+          "delta_lusa_persen": 0.68,
           "new_usaha_overall": 92,
           "new_rumah_overall": 124
         },
         {
           "kecamatan": "[080] SOYO JAYA",
           "kec_name": "[080] SOYO JAYA",
-          "total_prelist": 3819,
-          "total_draft": 28,
-          "total_open": 213,
-          "total_submitted": 3578,
-          "total_rejected": 62,
-          "total_approved": 3263,
-          "total_submitted_pencacah": 253,
+          "total_prelist": 3828,
+          "total_draft": 26,
+          "total_open": 171,
+          "total_submitted": 3631,
+          "total_rejected": 54,
+          "total_approved": 3394,
+          "total_submitted_pencacah": 183,
           "total_submitted_respondent": 0,
-          "persentase": 93.69,
-          "today_completed": 58,
+          "persentase": 94.85,
+          "today_completed": 53,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 131
+          },
+          "yesterday_completed": 58,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 55,
             "SUBMITTED BY PENCACAH": 28
           },
-          "yesterday_completed": 60,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 60,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 48,
             "SUBMITTED BY PENCACAH": 26
           },
-          "two_days_ago_completed": 32,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 191
-          },
           "breakdown": {
-            "total": 3819,
-            "APPROVED BY Pengawas": 3263,
-            "SUBMITTED BY Pencacah": 224,
-            "OPEN": 213,
-            "REJECTED BY Pengawas": 54,
-            "DRAFT": 28,
+            "total": 3828,
+            "APPROVED BY Pengawas": 3394,
+            "OPEN": 171,
+            "SUBMITTED BY Pencacah": 154,
+            "REJECTED BY Pengawas": 46,
+            "DRAFT": 26,
             "COMPLETED BY Admin Kabupaten": 20,
             "EDITED BY Admin Kabupaten": 9,
             "REVOKED BY Pengawas": 8
           },
-          "delta_persen": 1.52,
-          "delta_kemarin_persen": 1.57,
-          "delta_lusa_persen": 0.84,
+          "delta_persen": 1.38,
+          "delta_kemarin_persen": 1.52,
+          "delta_lusa_persen": 1.57,
           "new_usaha_overall": 185,
           "new_rumah_overall": 122
         },
         {
           "kecamatan": "[090] BUNGKU UTARA",
           "kec_name": "[090] BUNGKU UTARA",
-          "total_prelist": 5327,
-          "total_draft": 3,
-          "total_open": 582,
-          "total_submitted": 4742,
-          "total_rejected": 347,
-          "total_approved": 4256,
-          "total_submitted_pencacah": 139,
+          "total_prelist": 5336,
+          "total_draft": 1,
+          "total_open": 502,
+          "total_submitted": 4833,
+          "total_rejected": 339,
+          "total_approved": 4351,
+          "total_submitted_pencacah": 143,
           "total_submitted_respondent": 0,
-          "persentase": 89.02,
-          "today_completed": 100,
+          "persentase": 90.57,
+          "today_completed": 91,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 95,
+            "SUBMITTED BY PENCACAH": 4
+          },
+          "yesterday_completed": 100,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 45,
             "REJECTED BY PENGAWAS": 13,
             "SUBMITTED BY PENCACAH": 42
           },
-          "yesterday_completed": 64,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 64,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 56,
             "SUBMITTED BY PENCACAH": 12
           },
-          "two_days_ago_completed": 34,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 88
-          },
           "breakdown": {
-            "total": 5327,
-            "APPROVED BY Pengawas": 4256,
-            "OPEN": 582,
-            "REJECTED BY Pengawas": 307,
-            "SUBMITTED BY Pencacah": 132,
+            "total": 5336,
+            "APPROVED BY Pengawas": 4351,
+            "OPEN": 502,
+            "REJECTED BY Pengawas": 299,
+            "SUBMITTED BY Pencacah": 136,
             "REVOKED BY Pengawas": 40,
             "COMPLETED BY Admin Kabupaten": 5,
-            "DRAFT": 3,
-            "EDITED BY Admin Kabupaten": 2
+            "EDITED BY Admin Kabupaten": 2,
+            "DRAFT": 1
           },
-          "delta_persen": 1.88,
-          "delta_kemarin_persen": 1.2,
-          "delta_lusa_persen": 0.64,
+          "delta_persen": 1.71,
+          "delta_kemarin_persen": 1.87,
+          "delta_lusa_persen": 1.2,
           "new_usaha_overall": 237,
           "new_rumah_overall": 72
         },
         {
           "kecamatan": "[100] MAMOSALATO",
           "kec_name": "[100] MAMOSALATO",
-          "total_prelist": 3733,
-          "total_draft": 1,
-          "total_open": 275,
-          "total_submitted": 3457,
-          "total_rejected": 704,
-          "total_approved": 2034,
-          "total_submitted_pencacah": 719,
+          "total_prelist": 3750,
+          "total_draft": 4,
+          "total_open": 206,
+          "total_submitted": 3540,
+          "total_rejected": 676,
+          "total_approved": 2031,
+          "total_submitted_pencacah": 833,
           "total_submitted_respondent": 0,
-          "persentase": 92.61,
-          "today_completed": 26,
+          "persentase": 94.4,
+          "today_completed": 83,
           "today_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 114
+          },
+          "yesterday_completed": 26,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 50
           },
-          "yesterday_completed": 33,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 33,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 63,
             "REJECTED BY PENGAWAS": 4
           },
-          "two_days_ago_completed": 10,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 79,
-            "REJECTED BY PENGAWAS": 30
-          },
           "breakdown": {
-            "total": 3733,
-            "APPROVED BY Pengawas": 2034,
-            "SUBMITTED BY Pencacah": 714,
-            "REJECTED BY Pengawas": 680,
-            "OPEN": 275,
-            "REVOKED BY Pengawas": 24,
+            "total": 3750,
+            "APPROVED BY Pengawas": 2031,
+            "SUBMITTED BY Pencacah": 828,
+            "REJECTED BY Pengawas": 653,
+            "OPEN": 206,
+            "REVOKED BY Pengawas": 23,
             "COMPLETED BY Admin Kabupaten": 5,
-            "DRAFT": 1
+            "DRAFT": 4
           },
-          "delta_persen": 0.7,
-          "delta_kemarin_persen": 0.88,
-          "delta_lusa_persen": 0.27,
+          "delta_persen": 2.21,
+          "delta_kemarin_persen": 0.69,
+          "delta_lusa_persen": 0.88,
           "new_usaha_overall": 191,
           "new_rumah_overall": 19
         }
       ],
       "breakdown": {
-        "total": 52769,
-        "APPROVED BY Pengawas": 36786,
+        "total": 52979,
+        "APPROVED BY Pengawas": 37597,
         "SUBMITTED BY Pencacah": 8044,
-        "OPEN": 4357,
-        "REJECTED BY Pengawas": 1522,
+        "OPEN": 3879,
+        "REJECTED BY Pengawas": 1431,
         "EDITED BY Admin Kabupaten": 156,
         "COMPLETED BY Admin Kabupaten": 336,
-        "REVOKED BY Pengawas": 359,
-        "DRAFT": 1207,
+        "REVOKED BY Pengawas": 357,
+        "DRAFT": 1177,
         "REVOKED BY Admin Kabupaten": 1,
         "SUBMITTED RESPONDENT": 1
       },
-      "two_days_ago_completed": 623,
+      "two_days_ago_completed": 645,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1087,
-        "REJECTED BY PENGAWAS": 46
-      },
-      "yesterday_completed": 645,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1349,
         "REJECTED BY PENGAWAS": 6
+      },
+      "yesterday_completed": 1037,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 1000,
+        "REJECTED BY PENGAWAS": 97
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 1037,
+      "today_completed": 718,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1000,
-        "REJECTED BY PENGAWAS": 97
+        "APPROVED BY PENGAWAS": 811
       },
-      "delta_persen": 1.97,
-      "delta_kemarin_persen": 1.22,
-      "delta_lusa_persen": 1.18
+      "delta_persen": 1.36,
+      "delta_kemarin_persen": 1.96,
+      "delta_lusa_persen": 1.22
     },
     {
       "kabupaten": "[71] PALU",
-      "total_prelist": 223154,
-      "total_draft": 16231,
-      "total_open": 50614,
-      "total_submitted": 156309,
-      "total_rejected": 3720,
-      "total_approved": 103348,
-      "total_submitted_pencacah": 49107,
+      "total_prelist": 224125,
+      "total_draft": 15608,
+      "total_open": 48698,
+      "total_submitted": 159819,
+      "total_rejected": 3667,
+      "total_approved": 105017,
+      "total_submitted_pencacah": 51001,
       "total_submitted_respondent": 134,
-      "persentase": 70.05,
+      "persentase": 71.31,
       "new_usaha_overall": 7337,
       "new_rumah_overall": 7160,
       "new_businesses": [],
@@ -8202,414 +8182,421 @@ window.IPAS_DATA = {
         {
           "kecamatan": "[010] PALU BARAT",
           "kec_name": "[010] PALU BARAT",
-          "total_prelist": 25996,
-          "total_draft": 1416,
-          "total_open": 4075,
-          "total_submitted": 20505,
-          "total_rejected": 282,
-          "total_approved": 9196,
-          "total_submitted_pencacah": 11019,
+          "total_prelist": 26099,
+          "total_draft": 1393,
+          "total_open": 3881,
+          "total_submitted": 20825,
+          "total_rejected": 305,
+          "total_approved": 9276,
+          "total_submitted_pencacah": 11236,
           "total_submitted_respondent": 8,
-          "persentase": 78.88,
-          "today_completed": 611,
+          "persentase": 79.79,
+          "today_completed": 320,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 80,
+            "REJECTED BY PENGAWAS": 23,
+            "SUBMITTED BY PENCACAH": 217
+          },
+          "yesterday_completed": 611,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 58,
             "SUBMITTED BY PENCACAH": 568,
             "SUBMITTED RESPONDENT": 1
           },
-          "yesterday_completed": 380,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 380,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 3,
             "REJECTED BY PENGAWAS": 7,
             "SUBMITTED BY PENCACAH": 370
           },
-          "two_days_ago_completed": 331,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 101,
-            "REJECTED BY PENGAWAS": 2,
-            "SUBMITTED BY PENCACAH": 228
-          },
           "breakdown": {
-            "total": 25997,
-            "SUBMITTED BY Pencacah": 10766,
-            "APPROVED BY Pengawas": 9196,
-            "OPEN": 4075,
-            "DRAFT": 1416,
-            "REJECTED BY Pengawas": 240,
-            "COMPLETED BY Admin Kabupaten": 159,
+            "total": 26100,
+            "SUBMITTED BY Pencacah": 10982,
+            "APPROVED BY Pengawas": 9276,
+            "OPEN": 3881,
+            "DRAFT": 1393,
+            "REJECTED BY Pengawas": 263,
+            "COMPLETED BY Admin Kabupaten": 160,
             "EDITED BY Admin Kabupaten": 94,
             "REVOKED BY Pengawas": 38,
             "SUBMITTED RESPONDENT": 8,
             "REJECTED BY Admin Kabupaten": 4
           },
-          "delta_persen": 2.35,
-          "delta_kemarin_persen": 1.46,
-          "delta_lusa_persen": 1.27,
+          "delta_persen": 1.23,
+          "delta_kemarin_persen": 2.34,
+          "delta_lusa_persen": 1.46,
           "new_usaha_overall": 1030,
           "new_rumah_overall": 831
         },
         {
           "kecamatan": "[011] TATANGA",
           "kec_name": "[011] TATANGA",
-          "total_prelist": 30477,
-          "total_draft": 1489,
-          "total_open": 4826,
-          "total_submitted": 24162,
-          "total_rejected": 509,
-          "total_approved": 14002,
-          "total_submitted_pencacah": 9645,
+          "total_prelist": 30613,
+          "total_draft": 1426,
+          "total_open": 4488,
+          "total_submitted": 24699,
+          "total_rejected": 559,
+          "total_approved": 14293,
+          "total_submitted_pencacah": 9841,
           "total_submitted_respondent": 6,
-          "persentase": 79.28,
-          "today_completed": 863,
+          "persentase": 80.68,
+          "today_completed": 537,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 291,
+            "REJECTED BY PENGAWAS": 50,
+            "SUBMITTED BY PENCACAH": 196
+          },
+          "yesterday_completed": 863,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 443,
             "SUBMITTED BY PENCACAH": 438
           },
-          "yesterday_completed": 361,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 361,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 319,
             "REJECTED BY PENGAWAS": 9,
             "SUBMITTED BY PENCACAH": 33
           },
-          "two_days_ago_completed": 292,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 254,
-            "SUBMITTED BY PENCACAH": 91
-          },
           "breakdown": {
-            "total": 30477,
-            "APPROVED BY Pengawas": 14002,
-            "SUBMITTED BY Pencacah": 9158,
-            "OPEN": 4826,
-            "DRAFT": 1489,
-            "REJECTED BY Pengawas": 470,
-            "COMPLETED BY Admin Kabupaten": 259,
-            "EDITED BY Admin Kabupaten": 228,
+            "total": 30613,
+            "APPROVED BY Pengawas": 14293,
+            "SUBMITTED BY Pencacah": 9353,
+            "OPEN": 4488,
+            "DRAFT": 1426,
+            "REJECTED BY Pengawas": 520,
+            "COMPLETED BY Admin Kabupaten": 261,
+            "EDITED BY Admin Kabupaten": 227,
             "REVOKED BY Pengawas": 38,
             "SUBMITTED RESPONDENT": 6,
             "REJECTED BY Admin Kabupaten": 1
           },
-          "delta_persen": 2.83,
-          "delta_kemarin_persen": 1.18,
-          "delta_lusa_persen": 0.96,
+          "delta_persen": 1.75,
+          "delta_kemarin_persen": 2.82,
+          "delta_lusa_persen": 1.18,
           "new_usaha_overall": 792,
           "new_rumah_overall": 1031
         },
         {
           "kecamatan": "[012] ULUJADI",
           "kec_name": "[012] ULUJADI",
-          "total_prelist": 19283,
-          "total_draft": 1297,
-          "total_open": 4050,
-          "total_submitted": 13936,
-          "total_rejected": 178,
-          "total_approved": 11037,
-          "total_submitted_pencacah": 2717,
+          "total_prelist": 19313,
+          "total_draft": 1182,
+          "total_open": 3782,
+          "total_submitted": 14349,
+          "total_rejected": 163,
+          "total_approved": 11229,
+          "total_submitted_pencacah": 2953,
           "total_submitted_respondent": 4,
-          "persentase": 72.27,
-          "today_completed": 291,
+          "persentase": 74.3,
+          "today_completed": 413,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 192,
+            "SUBMITTED BY PENCACAH": 236
+          },
+          "yesterday_completed": 291,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 410,
             "REJECTED BY PENGAWAS": 3
           },
-          "yesterday_completed": 199,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 199,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 152,
             "SUBMITTED BY PENCACAH": 56
           },
-          "two_days_ago_completed": 208,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 180,
-            "SUBMITTED BY PENCACAH": 105
-          },
           "breakdown": {
-            "total": 19284,
-            "APPROVED BY Pengawas": 11037,
-            "OPEN": 4050,
-            "SUBMITTED BY Pencacah": 2025,
-            "DRAFT": 1297,
-            "COMPLETED BY Admin Kabupaten": 537,
+            "total": 19315,
+            "APPROVED BY Pengawas": 11229,
+            "OPEN": 3782,
+            "SUBMITTED BY Pencacah": 2258,
+            "DRAFT": 1182,
+            "COMPLETED BY Admin Kabupaten": 540,
             "EDITED BY Admin Kabupaten": 155,
-            "REJECTED BY Pengawas": 145,
+            "REJECTED BY Pengawas": 130,
             "REVOKED BY Pengawas": 33,
             "SUBMITTED RESPONDENT": 4,
-            "REVOKED BY Admin Kabupaten": 1
+            "REVOKED BY Admin Kabupaten": 2
           },
-          "delta_persen": 1.51,
-          "delta_kemarin_persen": 1.03,
-          "delta_lusa_persen": 1.08,
+          "delta_persen": 2.14,
+          "delta_kemarin_persen": 1.51,
+          "delta_lusa_persen": 1.03,
           "new_usaha_overall": 693,
           "new_rumah_overall": 955
         },
         {
           "kecamatan": "[020] PALU SELATAN",
           "kec_name": "[020] PALU SELATAN",
-          "total_prelist": 42258,
-          "total_draft": 4041,
-          "total_open": 12411,
-          "total_submitted": 25806,
-          "total_rejected": 1043,
-          "total_approved": 20041,
-          "total_submitted_pencacah": 4714,
+          "total_prelist": 42463,
+          "total_draft": 3975,
+          "total_open": 12206,
+          "total_submitted": 26282,
+          "total_rejected": 1003,
+          "total_approved": 20463,
+          "total_submitted_pencacah": 4808,
           "total_submitted_respondent": 8,
-          "persentase": 61.07,
-          "today_completed": 657,
+          "persentase": 61.89,
+          "today_completed": 476,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 422,
+            "SUBMITTED BY PENCACAH": 94
+          },
+          "yesterday_completed": 657,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 321,
             "SUBMITTED BY PENCACAH": 344
           },
-          "yesterday_completed": 343,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 343,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 182,
             "REJECTED BY PENGAWAS": 3,
             "SUBMITTED BY PENCACAH": 158
           },
-          "two_days_ago_completed": 443,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 246,
-            "SUBMITTED BY PENCACAH": 210
-          },
           "breakdown": {
-            "total": 42259,
-            "APPROVED BY Pengawas": 20041,
-            "OPEN": 12411,
-            "DRAFT": 4041,
-            "SUBMITTED BY Pencacah": 3898,
-            "REJECTED BY Pengawas": 984,
-            "COMPLETED BY Admin Kabupaten": 434,
-            "EDITED BY Admin Kabupaten": 381,
-            "REVOKED BY Pengawas": 59,
+            "total": 42464,
+            "APPROVED BY Pengawas": 20463,
+            "OPEN": 12206,
+            "SUBMITTED BY Pencacah": 3984,
+            "DRAFT": 3975,
+            "REJECTED BY Pengawas": 939,
+            "COMPLETED BY Admin Kabupaten": 444,
+            "EDITED BY Admin Kabupaten": 379,
+            "REVOKED BY Pengawas": 64,
             "SUBMITTED RESPONDENT": 8,
             "EDITED BY Pengawas": 1
           },
-          "delta_persen": 1.55,
-          "delta_kemarin_persen": 0.81,
-          "delta_lusa_persen": 1.05,
+          "delta_persen": 1.12,
+          "delta_kemarin_persen": 1.55,
+          "delta_lusa_persen": 0.81,
           "new_usaha_overall": 1731,
           "new_rumah_overall": 986
         },
         {
           "kecamatan": "[030] PALU TIMUR",
           "kec_name": "[030] PALU TIMUR",
-          "total_prelist": 25795,
-          "total_draft": 1956,
-          "total_open": 5362,
-          "total_submitted": 18477,
-          "total_rejected": 787,
-          "total_approved": 12398,
-          "total_submitted_pencacah": 5280,
-          "total_submitted_respondent": 12,
-          "persentase": 71.63,
-          "today_completed": 562,
+          "total_prelist": 25855,
+          "total_draft": 1803,
+          "total_open": 5065,
+          "total_submitted": 18987,
+          "total_rejected": 751,
+          "total_approved": 12615,
+          "total_submitted_pencacah": 5608,
+          "total_submitted_respondent": 13,
+          "persentase": 73.44,
+          "today_completed": 510,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 217,
+            "SUBMITTED BY PENCACAH": 328,
+            "SUBMITTED RESPONDENT": 1
+          },
+          "yesterday_completed": 562,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 130,
             "SUBMITTED BY PENCACAH": 473
           },
-          "yesterday_completed": 250,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 250,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 98,
             "SUBMITTED BY PENCACAH": 152,
             "SUBMITTED RESPONDENT": 1
           },
-          "two_days_ago_completed": 244,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 278
-          },
           "breakdown": {
-            "total": 25800,
-            "APPROVED BY Pengawas": 12398,
-            "OPEN": 5362,
-            "SUBMITTED BY Pencacah": 4775,
-            "DRAFT": 1956,
-            "REJECTED BY Pengawas": 696,
-            "COMPLETED BY Admin Kabupaten": 364,
-            "EDITED BY Admin Kabupaten": 141,
+            "total": 25860,
+            "APPROVED BY Pengawas": 12615,
+            "SUBMITTED BY Pencacah": 5087,
+            "OPEN": 5065,
+            "DRAFT": 1803,
+            "REJECTED BY Pengawas": 660,
+            "COMPLETED BY Admin Kabupaten": 381,
+            "EDITED BY Admin Kabupaten": 140,
             "REVOKED BY Pengawas": 91,
-            "SUBMITTED RESPONDENT": 12,
+            "SUBMITTED RESPONDENT": 13,
             "REVOKED BY Admin Kabupaten": 5
           },
-          "delta_persen": 2.18,
-          "delta_kemarin_persen": 0.97,
-          "delta_lusa_persen": 0.95,
+          "delta_persen": 1.97,
+          "delta_kemarin_persen": 2.17,
+          "delta_lusa_persen": 0.97,
           "new_usaha_overall": 567,
           "new_rumah_overall": 894
         },
         {
           "kecamatan": "[031] MANTIKULORE",
           "kec_name": "[031] MANTIKULORE",
-          "total_prelist": 54320,
-          "total_draft": 4258,
-          "total_open": 15616,
-          "total_submitted": 34446,
-          "total_rejected": 670,
-          "total_approved": 23953,
-          "total_submitted_pencacah": 9813,
+          "total_prelist": 54585,
+          "total_draft": 4095,
+          "total_open": 15150,
+          "total_submitted": 35340,
+          "total_rejected": 662,
+          "total_approved": 24079,
+          "total_submitted_pencacah": 10589,
           "total_submitted_respondent": 10,
-          "persentase": 63.41,
-          "today_completed": 1142,
+          "persentase": 64.74,
+          "today_completed": 894,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 126,
+            "SUBMITTED BY PENCACAH": 776
+          },
+          "yesterday_completed": 1142,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 480,
             "SUBMITTED BY PENCACAH": 682,
             "SUBMITTED RESPONDENT": 1
           },
-          "yesterday_completed": 477,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 477,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 254,
             "SUBMITTED BY PENCACAH": 225
           },
-          "two_days_ago_completed": 598,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 284,
-            "SUBMITTED BY PENCACAH": 348
-          },
           "breakdown": {
-            "total": 54320,
-            "APPROVED BY Pengawas": 23953,
-            "OPEN": 15616,
-            "SUBMITTED BY Pencacah": 8794,
-            "DRAFT": 4258,
-            "COMPLETED BY Admin Kabupaten": 639,
-            "REJECTED BY Pengawas": 601,
-            "EDITED BY Admin Kabupaten": 380,
-            "REVOKED BY Pengawas": 69,
+            "total": 54585,
+            "APPROVED BY Pengawas": 24079,
+            "OPEN": 15150,
+            "SUBMITTED BY Pencacah": 9556,
+            "DRAFT": 4095,
+            "COMPLETED BY Admin Kabupaten": 656,
+            "REJECTED BY Pengawas": 592,
+            "EDITED BY Admin Kabupaten": 377,
+            "REVOKED BY Pengawas": 70,
             "SUBMITTED RESPONDENT": 10
           },
-          "delta_persen": 2.1,
-          "delta_kemarin_persen": 0.88,
-          "delta_lusa_persen": 1.1,
+          "delta_persen": 1.64,
+          "delta_kemarin_persen": 2.09,
+          "delta_lusa_persen": 0.87,
           "new_usaha_overall": 1870,
           "new_rumah_overall": 1803
         },
         {
           "kecamatan": "[040] PALU UTARA",
           "kec_name": "[040] PALU UTARA",
-          "total_prelist": 13276,
-          "total_draft": 999,
-          "total_open": 2382,
-          "total_submitted": 9895,
-          "total_rejected": 114,
-          "total_approved": 7169,
-          "total_submitted_pencacah": 2607,
-          "total_submitted_respondent": 5,
-          "persentase": 74.53,
-          "today_completed": 228,
+          "total_prelist": 13424,
+          "total_draft": 996,
+          "total_open": 2289,
+          "total_submitted": 10139,
+          "total_rejected": 76,
+          "total_approved": 7439,
+          "total_submitted_pencacah": 2620,
+          "total_submitted_respondent": 4,
+          "persentase": 75.53,
+          "today_completed": 244,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 270,
+            "SUBMITTED BY PENCACAH": 13
+          },
+          "yesterday_completed": 228,
+          "yesterday_completed_breakdown": {
             "APPROVED BY PENGAWAS": 264
           },
-          "yesterday_completed": 144,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 144,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 140,
             "REJECTED BY PENGAWAS": 2,
             "SUBMITTED BY PENCACAH": 2
           },
-          "two_days_ago_completed": 244,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 319
-          },
           "breakdown": {
-            "total": 13276,
-            "APPROVED BY Pengawas": 7169,
-            "OPEN": 2382,
-            "SUBMITTED BY Pencacah": 2077,
-            "DRAFT": 999,
-            "COMPLETED BY Admin Kabupaten": 398,
-            "EDITED BY Admin Kabupaten": 132,
-            "REJECTED BY Pengawas": 93,
-            "REVOKED BY Pengawas": 21,
-            "SUBMITTED RESPONDENT": 5
+            "total": 13425,
+            "APPROVED BY Pengawas": 7439,
+            "OPEN": 2289,
+            "SUBMITTED BY Pencacah": 2074,
+            "DRAFT": 996,
+            "COMPLETED BY Admin Kabupaten": 415,
+            "EDITED BY Admin Kabupaten": 131,
+            "REJECTED BY Pengawas": 56,
+            "REVOKED BY Pengawas": 20,
+            "SUBMITTED RESPONDENT": 4,
+            "REVOKED BY Admin Kabupaten": 1
           },
-          "delta_persen": 1.72,
-          "delta_kemarin_persen": 1.08,
-          "delta_lusa_persen": 1.84,
+          "delta_persen": 1.82,
+          "delta_kemarin_persen": 1.7,
+          "delta_lusa_persen": 1.07,
           "new_usaha_overall": 339,
           "new_rumah_overall": 399
         },
         {
           "kecamatan": "[041] TAWAELI",
           "kec_name": "[041] TAWAELI",
-          "total_prelist": 11630,
-          "total_draft": 750,
-          "total_open": 1876,
-          "total_submitted": 9004,
-          "total_rejected": 137,
-          "total_approved": 5552,
-          "total_submitted_pencacah": 3312,
+          "total_prelist": 11654,
+          "total_draft": 713,
+          "total_open": 1821,
+          "total_submitted": 9120,
+          "total_rejected": 148,
+          "total_approved": 5623,
+          "total_submitted_pencacah": 3346,
           "total_submitted_respondent": 3,
-          "persentase": 77.42,
-          "today_completed": 170,
+          "persentase": 78.26,
+          "today_completed": 116,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 71,
+            "REJECTED BY PENGAWAS": 11,
+            "SUBMITTED BY PENCACAH": 34
+          },
+          "yesterday_completed": 170,
+          "yesterday_completed_breakdown": {
             "REJECTED BY PENGAWAS": 6,
             "SUBMITTED BY PENCACAH": 172
           },
-          "yesterday_completed": 80,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 80,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 96,
             "REJECTED BY PENGAWAS": 9
           },
-          "two_days_ago_completed": 72,
-          "two_days_ago_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 138
-          },
           "breakdown": {
-            "total": 11630,
-            "APPROVED BY Pengawas": 5552,
-            "SUBMITTED BY Pencacah": 2926,
-            "OPEN": 1876,
-            "DRAFT": 750,
-            "COMPLETED BY Admin Kabupaten": 276,
-            "REJECTED BY Pengawas": 127,
+            "total": 11654,
+            "APPROVED BY Pengawas": 5623,
+            "SUBMITTED BY Pencacah": 2955,
+            "OPEN": 1821,
+            "DRAFT": 713,
+            "COMPLETED BY Admin Kabupaten": 281,
+            "REJECTED BY Pengawas": 138,
             "EDITED BY Admin Kabupaten": 110,
             "REVOKED BY Pengawas": 10,
             "SUBMITTED RESPONDENT": 3
           },
-          "delta_persen": 1.46,
-          "delta_kemarin_persen": 0.69,
-          "delta_lusa_persen": 0.62,
+          "delta_persen": 1.0,
+          "delta_kemarin_persen": 1.46,
+          "delta_lusa_persen": 0.69,
           "new_usaha_overall": 303,
           "new_rumah_overall": 261
         }
       ],
       "breakdown": {
-        "total": 223162,
-        "SUBMITTED BY Pencacah": 44419,
-        "APPROVED BY Pengawas": 103348,
-        "OPEN": 50614,
-        "DRAFT": 16231,
-        "REJECTED BY Pengawas": 3356,
-        "COMPLETED BY Admin Kabupaten": 3066,
-        "EDITED BY Admin Kabupaten": 1621,
-        "REVOKED BY Pengawas": 359,
+        "total": 224135,
+        "SUBMITTED BY Pencacah": 46249,
+        "APPROVED BY Pengawas": 105017,
+        "OPEN": 48698,
+        "DRAFT": 15608,
+        "REJECTED BY Pengawas": 3298,
+        "COMPLETED BY Admin Kabupaten": 3138,
+        "EDITED BY Admin Kabupaten": 1613,
+        "REVOKED BY Pengawas": 364,
         "SUBMITTED RESPONDENT": 134,
         "REJECTED BY Admin Kabupaten": 5,
-        "REVOKED BY Admin Kabupaten": 6,
+        "REVOKED BY Admin Kabupaten": 8,
         "EDITED BY Pengawas": 1
       },
-      "two_days_ago_completed": 2432,
+      "two_days_ago_completed": 2234,
       "two_days_ago_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 1800,
-        "SUBMITTED BY PENCACAH": 847
-      },
-      "yesterday_completed": 2234,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1244,
         "REJECTED BY PENGAWAS": 18,
         "SUBMITTED BY PENCACAH": 971,
         "SUBMITTED RESPONDENT": 1
+      },
+      "yesterday_completed": 4524,
+      "yesterday_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 2098,
+        "SUBMITTED BY PENCACAH": 2520,
+        "SUBMITTED RESPONDENT": 2
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 4524,
+      "today_completed": 3510,
       "today_completed_breakdown": {
-        "APPROVED BY PENGAWAS": 2098,
-        "SUBMITTED BY PENCACAH": 2520,
-        "SUBMITTED RESPONDENT": 2
+        "APPROVED BY PENGAWAS": 1669,
+        "SUBMITTED BY PENCACAH": 1894
       },
-      "delta_persen": 2.03,
-      "delta_kemarin_persen": 1.0,
-      "delta_lusa_persen": 1.09
+      "delta_persen": 1.57,
+      "delta_kemarin_persen": 2.02,
+      "delta_lusa_persen": 1.0
     }
   ],
   "se_ub": [
@@ -8935,14 +8922,14 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[02] BANGGAI",
       "total_prelist": 173,
-      "total_draft": 11,
+      "total_draft": 8,
       "total_open": 0,
-      "total_submitted": 162,
-      "total_rejected": 4,
+      "total_submitted": 165,
+      "total_rejected": 3,
       "total_approved": 0,
-      "total_submitted_pencacah": 155,
+      "total_submitted_pencacah": 159,
       "total_submitted_respondent": 3,
-      "persentase": 93.64,
+      "persentase": 95.38,
       "new_usaha_overall": 0,
       "new_rumah_overall": 0,
       "new_businesses": [],
@@ -9039,15 +9026,15 @@ window.IPAS_DATA = {
           "total_submitted_respondent": 0,
           "persentase": 100.0,
           "today_completed": 0,
-          "today_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 1
-          },
+          "today_completed_breakdown": {},
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 1
+            "SUBMITTED BY PENCACAH": 1
           },
           "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {
+            "REJECTED BY PENGAWAS": 1
+          },
           "breakdown": {
             "total": 4,
             "SUBMITTED BY Pencacah": 3,
@@ -9220,31 +9207,33 @@ window.IPAS_DATA = {
           "kecamatan": "[050] LUWUK",
           "kec_name": "[050] LUWUK",
           "total_prelist": 53,
-          "total_draft": 3,
+          "total_draft": 2,
           "total_open": 0,
-          "total_submitted": 50,
+          "total_submitted": 51,
           "total_rejected": 2,
           "total_approved": 0,
-          "total_submitted_pencacah": 48,
+          "total_submitted_pencacah": 49,
           "total_submitted_respondent": 0,
-          "persentase": 94.34,
-          "today_completed": 0,
+          "persentase": 96.23,
+          "today_completed": 1,
           "today_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 1
+            "SUBMITTED BY PENCACAH": 1
           },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {
             "REJECTED BY PENGAWAS": 1
           },
           "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {
+            "REJECTED BY PENGAWAS": 1
+          },
           "breakdown": {
             "total": 53,
-            "SUBMITTED BY Pencacah": 48,
-            "DRAFT": 3,
+            "SUBMITTED BY Pencacah": 49,
+            "DRAFT": 2,
             "REJECTED BY Pengawas": 2
           },
-          "delta_persen": 0.0,
+          "delta_persen": 1.89,
           "delta_kemarin_persen": 0.0,
           "delta_lusa_persen": 0.0
         },
@@ -9308,28 +9297,30 @@ window.IPAS_DATA = {
           "total_draft": 2,
           "total_open": 0,
           "total_submitted": 29,
-          "total_rejected": 2,
+          "total_rejected": 1,
           "total_approved": 0,
-          "total_submitted_pencacah": 27,
+          "total_submitted_pencacah": 28,
           "total_submitted_respondent": 0,
           "persentase": 93.55,
           "today_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
+          "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 1,
+          "two_days_ago_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 1
+          },
           "breakdown": {
             "total": 31,
-            "SUBMITTED BY Pencacah": 27,
+            "SUBMITTED BY Pencacah": 28,
             "DRAFT": 2,
-            "REJECTED BY Pengawas": 2
+            "REJECTED BY Pengawas": 1
           },
           "delta_persen": 0.0,
-          "delta_kemarin_persen": 3.23,
-          "delta_lusa_persen": 0.0
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 3.23
         },
         {
           "kecamatan": "[054] NAMBO",
@@ -9388,30 +9379,31 @@ window.IPAS_DATA = {
           "kecamatan": "[061] BUALEMO",
           "kec_name": "[061] BUALEMO",
           "total_prelist": 5,
-          "total_draft": 1,
+          "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 4,
+          "total_submitted": 5,
           "total_rejected": 0,
           "total_approved": 0,
-          "total_submitted_pencacah": 4,
+          "total_submitted_pencacah": 5,
           "total_submitted_respondent": 0,
-          "persentase": 80.0,
-          "today_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
+          "persentase": 100.0,
+          "today_completed": 1,
+          "today_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 1,
+          "two_days_ago_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 1
+          },
           "breakdown": {
             "total": 5,
-            "SUBMITTED BY Pencacah": 4,
-            "DRAFT": 1
+            "SUBMITTED BY Pencacah": 5
           },
-          "delta_persen": 0.0,
-          "delta_kemarin_persen": 20.0,
-          "delta_lusa_persen": 0.0
+          "delta_persen": 20.0,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 20.0
         },
         {
           "kecamatan": "[062] LOBU",
@@ -9463,27 +9455,28 @@ window.IPAS_DATA = {
           "kecamatan": "[071] MASAMA",
           "kec_name": "[071] MASAMA",
           "total_prelist": 3,
-          "total_draft": 1,
+          "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 2,
+          "total_submitted": 3,
           "total_rejected": 0,
           "total_approved": 0,
-          "total_submitted_pencacah": 1,
+          "total_submitted_pencacah": 2,
           "total_submitted_respondent": 1,
-          "persentase": 66.67,
-          "today_completed": 0,
-          "today_completed_breakdown": {},
+          "persentase": 100.0,
+          "today_completed": 1,
+          "today_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 1
+          },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3,
-            "DRAFT": 1,
-            "SUBMITTED BY Pencacah": 1,
+            "SUBMITTED BY Pencacah": 2,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 0.0,
+          "delta_persen": 33.33,
           "delta_kemarin_persen": 0.0,
           "delta_lusa_persen": 0.0
         },
@@ -9527,19 +9520,19 @@ window.IPAS_DATA = {
           "persentase": 100.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 1,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3,
             "SUBMITTED BY Pencacah": 3
           },
           "delta_persen": 0.0,
-          "delta_kemarin_persen": 33.33,
-          "delta_lusa_persen": 0.0
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 33.33
         },
         {
           "kecamatan": "[081] BALANTAK SELATAN",
@@ -9596,41 +9589,43 @@ window.IPAS_DATA = {
       ],
       "breakdown": {
         "total": 173,
-        "SUBMITTED BY Pencacah": 154,
-        "DRAFT": 11,
+        "SUBMITTED BY Pencacah": 158,
+        "DRAFT": 8,
         "EDITED BY Admin Kabupaten": 1,
-        "REJECTED BY Pengawas": 4,
+        "REJECTED BY Pengawas": 3,
         "SUBMITTED RESPONDENT": 3
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
-      "yesterday_completed": 3,
-      "yesterday_completed_breakdown": {
+      "two_days_ago_completed": 3,
+      "two_days_ago_completed_breakdown": {
         "REJECTED BY PENGAWAS": 2,
         "SUBMITTED BY PENCACAH": 1
       },
+      "yesterday_completed": 0,
+      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 0,
-      "today_completed_breakdown": {},
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 1.73,
-      "delta_lusa_persen": 0.0
+      "today_completed": 3,
+      "today_completed_breakdown": {
+        "SUBMITTED BY PENCACAH": 4
+      },
+      "delta_persen": 1.73,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 1.73
     },
     {
       "kabupaten": "[03] MOROWALI",
       "total_prelist": 183,
-      "total_draft": 48,
+      "total_draft": 47,
       "total_open": 40,
-      "total_submitted": 95,
-      "total_rejected": 24,
-      "total_approved": 43,
+      "total_submitted": 96,
+      "total_rejected": 25,
+      "total_approved": 42,
       "total_submitted_pencacah": 15,
-      "total_submitted_respondent": 13,
-      "persentase": 51.91,
+      "total_submitted_respondent": 14,
+      "persentase": 52.46,
       "new_usaha_overall": 0,
       "new_rumah_overall": 0,
       "new_businesses": [],
@@ -9740,30 +9735,32 @@ window.IPAS_DATA = {
           "kecamatan": "[021] BAHODOPI",
           "kec_name": "[021] BAHODOPI",
           "total_prelist": 98,
-          "total_draft": 35,
+          "total_draft": 34,
           "total_open": 17,
-          "total_submitted": 46,
+          "total_submitted": 47,
           "total_rejected": 21,
           "total_approved": 13,
           "total_submitted_pencacah": 3,
-          "total_submitted_respondent": 9,
-          "persentase": 46.94,
-          "today_completed": 0,
-          "today_completed_breakdown": {},
+          "total_submitted_respondent": 10,
+          "persentase": 47.96,
+          "today_completed": 1,
+          "today_completed_breakdown": {
+            "SUBMITTED RESPONDENT": 1
+          },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 98,
-            "DRAFT": 35,
+            "DRAFT": 34,
             "REJECTED BY Pengawas": 21,
             "OPEN": 17,
             "APPROVED BY Pengawas": 13,
-            "SUBMITTED RESPONDENT": 9,
+            "SUBMITTED RESPONDENT": 10,
             "SUBMITTED BY Pencacah": 3
           },
-          "delta_persen": 0.0,
+          "delta_persen": 1.02,
           "delta_kemarin_persen": 0.0,
           "delta_lusa_persen": 0.0
         },
@@ -9832,23 +9829,25 @@ window.IPAS_DATA = {
           "total_draft": 2,
           "total_open": 0,
           "total_submitted": 6,
-          "total_rejected": 1,
-          "total_approved": 3,
+          "total_rejected": 2,
+          "total_approved": 2,
           "total_submitted_pencacah": 2,
           "total_submitted_respondent": 0,
           "persentase": 75.0,
           "today_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "REJECTED BY PENGAWAS": 1
+          },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8,
-            "APPROVED BY Pengawas": 3,
+            "APPROVED BY Pengawas": 2,
             "DRAFT": 2,
-            "SUBMITTED BY Pencacah": 2,
-            "REJECTED BY Pengawas": 1
+            "REJECTED BY Pengawas": 2,
+            "SUBMITTED BY Pencacah": 2
           },
           "delta_persen": 0.0,
           "delta_kemarin_persen": 0.0,
@@ -9868,12 +9867,12 @@ window.IPAS_DATA = {
           "persentase": 52.94,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 1,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 17,
             "APPROVED BY Pengawas": 7,
@@ -9883,8 +9882,8 @@ window.IPAS_DATA = {
             "SUBMITTED RESPONDENT": 1
           },
           "delta_persen": 0.0,
-          "delta_kemarin_persen": 5.88,
-          "delta_lusa_persen": 0.0
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 5.88
         },
         {
           "kecamatan": "[041] BUMI RAYA",
@@ -9945,40 +9944,43 @@ window.IPAS_DATA = {
       "breakdown": {
         "total": 183,
         "OPEN": 40,
-        "DRAFT": 48,
-        "REJECTED BY Pengawas": 24,
-        "APPROVED BY Pengawas": 43,
-        "SUBMITTED RESPONDENT": 13,
+        "DRAFT": 47,
+        "REJECTED BY Pengawas": 25,
+        "APPROVED BY Pengawas": 42,
+        "SUBMITTED RESPONDENT": 14,
         "SUBMITTED BY Pencacah": 15
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
-      "yesterday_completed": 1,
-      "yesterday_completed_breakdown": {
+      "two_days_ago_completed": 1,
+      "two_days_ago_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 1
       },
+      "yesterday_completed": 0,
+      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 0,
-      "today_completed_breakdown": {},
-      "delta_persen": 0.0,
-      "delta_kemarin_persen": 0.55,
-      "delta_lusa_persen": 0.0
+      "today_completed": 1,
+      "today_completed_breakdown": {
+        "REJECTED BY PENGAWAS": 1,
+        "SUBMITTED RESPONDENT": 1
+      },
+      "delta_persen": 0.55,
+      "delta_kemarin_persen": 0.0,
+      "delta_lusa_persen": 0.55
     },
     {
       "kabupaten": "[04] POSO",
       "total_prelist": 92,
-      "total_draft": 4,
+      "total_draft": 5,
       "total_open": 4,
-      "total_submitted": 84,
+      "total_submitted": 83,
       "total_rejected": 2,
       "total_approved": 15,
-      "total_submitted_pencacah": 64,
+      "total_submitted_pencacah": 63,
       "total_submitted_respondent": 3,
-      "persentase": 91.3,
+      "persentase": 90.22,
       "new_usaha_overall": 0,
       "new_rumah_overall": 0,
       "new_businesses": [],
@@ -10392,14 +10394,14 @@ window.IPAS_DATA = {
           "kecamatan": "[070] POSO KOTA",
           "kec_name": "[070] POSO KOTA",
           "total_prelist": 34,
-          "total_draft": 3,
+          "total_draft": 4,
           "total_open": 2,
-          "total_submitted": 29,
+          "total_submitted": 28,
           "total_rejected": 0,
           "total_approved": 0,
-          "total_submitted_pencacah": 28,
+          "total_submitted_pencacah": 27,
           "total_submitted_respondent": 1,
-          "persentase": 85.29,
+          "persentase": 82.35,
           "today_completed": 0,
           "today_completed_breakdown": {},
           "yesterday_completed": 0,
@@ -10408,8 +10410,8 @@ window.IPAS_DATA = {
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 34,
-            "SUBMITTED BY Pencacah": 28,
-            "DRAFT": 3,
+            "SUBMITTED BY Pencacah": 27,
+            "DRAFT": 4,
             "OPEN": 2,
             "SUBMITTED RESPONDENT": 1
           },
@@ -10475,10 +10477,10 @@ window.IPAS_DATA = {
         "total": 92,
         "APPROVED BY Pengawas": 15,
         "REJECTED BY Pengawas": 2,
-        "DRAFT": 4,
+        "DRAFT": 5,
         "OPEN": 4,
         "SUBMITTED RESPONDENT": 3,
-        "SUBMITTED BY Pencacah": 64
+        "SUBMITTED BY Pencacah": 63
       },
       "two_days_ago_completed": 0,
       "two_days_ago_completed_breakdown": {},
@@ -10624,11 +10626,11 @@ window.IPAS_DATA = {
           "total_submitted_respondent": 0,
           "persentase": 100.0,
           "today_completed": 0,
-          "today_completed_breakdown": {
+          "today_completed_breakdown": {},
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
@@ -10961,16 +10963,16 @@ window.IPAS_DATA = {
       "two_days_ago_completed": 0,
       "two_days_ago_completed_breakdown": {},
       "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
+      "yesterday_completed_breakdown": {
+        "SUBMITTED BY PENCACAH": 1
+      },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
       "today_completed": 0,
-      "today_completed_breakdown": {
-        "SUBMITTED BY PENCACAH": 1
-      },
+      "today_completed_breakdown": {},
       "delta_persen": 0.0,
       "delta_kemarin_persen": 0.0,
       "delta_lusa_persen": 0.0
@@ -10978,14 +10980,14 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[06] TOLI-TOLI",
       "total_prelist": 58,
-      "total_draft": 12,
+      "total_draft": 11,
       "total_open": 5,
-      "total_submitted": 41,
-      "total_rejected": 1,
-      "total_approved": 8,
-      "total_submitted_pencacah": 18,
+      "total_submitted": 42,
+      "total_rejected": 3,
+      "total_approved": 24,
+      "total_submitted_pencacah": 1,
       "total_submitted_respondent": 14,
-      "persentase": 70.69,
+      "persentase": 72.41,
       "new_usaha_overall": 0,
       "new_rumah_overall": 0,
       "new_businesses": [],
@@ -10998,21 +11000,22 @@ window.IPAS_DATA = {
           "total_open": 0,
           "total_submitted": 5,
           "total_rejected": 1,
-          "total_approved": 3,
-          "total_submitted_pencacah": 1,
+          "total_approved": 4,
+          "total_submitted_pencacah": 0,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
           "today_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 1
+          },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5,
-            "APPROVED BY Pengawas": 3,
-            "REJECTED BY Pengawas": 1,
-            "SUBMITTED BY Pencacah": 1
+            "APPROVED BY Pengawas": 4,
+            "REJECTED BY Pengawas": 1
           },
           "delta_persen": 0.0,
           "delta_kemarin_persen": 0.0,
@@ -11053,19 +11056,21 @@ window.IPAS_DATA = {
           "total_open": 0,
           "total_submitted": 1,
           "total_rejected": 0,
-          "total_approved": 0,
-          "total_submitted_pencacah": 1,
+          "total_approved": 1,
+          "total_submitted_pencacah": 0,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
           "today_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 1
+          },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1,
-            "SUBMITTED BY Pencacah": 1
+            "APPROVED BY Pengawas": 1
           },
           "delta_persen": 0.0,
           "delta_kemarin_persen": 0.0,
@@ -11079,19 +11084,21 @@ window.IPAS_DATA = {
           "total_open": 0,
           "total_submitted": 1,
           "total_rejected": 0,
-          "total_approved": 0,
-          "total_submitted_pencacah": 1,
+          "total_approved": 1,
+          "total_submitted_pencacah": 0,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
           "today_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 1
+          },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1,
-            "SUBMITTED BY Pencacah": 1
+            "APPROVED BY Pengawas": 1
           },
           "delta_persen": 0.0,
           "delta_kemarin_persen": 0.0,
@@ -11124,33 +11131,36 @@ window.IPAS_DATA = {
           "kecamatan": "[040] BAOLAN",
           "kec_name": "[040] BAOLAN",
           "total_prelist": 38,
-          "total_draft": 10,
+          "total_draft": 9,
           "total_open": 5,
-          "total_submitted": 23,
-          "total_rejected": 0,
-          "total_approved": 3,
-          "total_submitted_pencacah": 9,
+          "total_submitted": 24,
+          "total_rejected": 1,
+          "total_approved": 11,
+          "total_submitted_pencacah": 1,
           "total_submitted_respondent": 11,
-          "persentase": 60.53,
+          "persentase": 63.16,
           "today_completed": 1,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 8,
+            "REJECTED BY PENGAWAS": 1
+          },
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 38,
+            "APPROVED BY Pengawas": 11,
             "SUBMITTED RESPONDENT": 11,
-            "DRAFT": 10,
-            "SUBMITTED BY Pencacah": 8,
+            "DRAFT": 9,
             "OPEN": 5,
-            "APPROVED BY Pengawas": 3,
-            "EDITED BY Admin Kabupaten": 1
+            "EDITED BY Admin Kabupaten": 1,
+            "REJECTED BY Pengawas": 1
           },
           "delta_persen": 2.63,
-          "delta_kemarin_persen": 0.0,
+          "delta_kemarin_persen": 2.63,
           "delta_lusa_persen": 0.0
         },
         {
@@ -11161,19 +11171,21 @@ window.IPAS_DATA = {
           "total_open": 0,
           "total_submitted": 2,
           "total_rejected": 0,
-          "total_approved": 0,
-          "total_submitted_pencacah": 2,
+          "total_approved": 2,
+          "total_submitted_pencacah": 0,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
           "today_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 2
+          },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2,
-            "SUBMITTED BY Pencacah": 2
+            "APPROVED BY Pengawas": 2
           },
           "delta_persen": 0.0,
           "delta_kemarin_persen": 0.0,
@@ -11186,27 +11198,31 @@ window.IPAS_DATA = {
           "total_draft": 1,
           "total_open": 0,
           "total_submitted": 5,
-          "total_rejected": 0,
-          "total_approved": 0,
-          "total_submitted_pencacah": 2,
+          "total_rejected": 1,
+          "total_approved": 1,
+          "total_submitted_pencacah": 0,
           "total_submitted_respondent": 3,
           "persentase": 83.33,
-          "today_completed": 1,
+          "today_completed": 0,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 1,
+            "REJECTED BY PENGAWAS": 1
+          },
+          "yesterday_completed": 1,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 6,
             "SUBMITTED RESPONDENT": 3,
-            "SUBMITTED BY Pencacah": 2,
-            "DRAFT": 1
+            "APPROVED BY Pengawas": 1,
+            "DRAFT": 1,
+            "REJECTED BY Pengawas": 1
           },
-          "delta_persen": 16.67,
-          "delta_kemarin_persen": 0.0,
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 16.67,
           "delta_lusa_persen": 0.0
         },
         {
@@ -11243,19 +11259,21 @@ window.IPAS_DATA = {
           "total_open": 0,
           "total_submitted": 2,
           "total_rejected": 0,
-          "total_approved": 0,
-          "total_submitted_pencacah": 2,
+          "total_approved": 2,
+          "total_submitted_pencacah": 0,
           "total_submitted_respondent": 0,
           "persentase": 100.0,
           "today_completed": 0,
-          "today_completed_breakdown": {},
+          "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 2
+          },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2,
-            "SUBMITTED BY Pencacah": 2
+            "APPROVED BY Pengawas": 2
           },
           "delta_persen": 0.0,
           "delta_kemarin_persen": 0.0,
@@ -11264,29 +11282,31 @@ window.IPAS_DATA = {
       ],
       "breakdown": {
         "total": 58,
-        "APPROVED BY Pengawas": 8,
-        "REJECTED BY Pengawas": 1,
-        "SUBMITTED BY Pencacah": 17,
-        "DRAFT": 12,
+        "APPROVED BY Pengawas": 24,
+        "REJECTED BY Pengawas": 3,
+        "DRAFT": 11,
         "SUBMITTED RESPONDENT": 14,
         "OPEN": 5,
         "EDITED BY Admin Kabupaten": 1
       },
       "two_days_ago_completed": 0,
       "two_days_ago_completed_breakdown": {},
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
+      "yesterday_completed": 2,
+      "yesterday_completed_breakdown": {
+        "SUBMITTED BY PENCACAH": 2
+      },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 2,
+      "today_completed": 1,
       "today_completed_breakdown": {
-        "SUBMITTED BY PENCACAH": 2
+        "APPROVED BY PENGAWAS": 16,
+        "REJECTED BY PENGAWAS": 2
       },
-      "delta_persen": 3.45,
-      "delta_kemarin_persen": 0.0,
+      "delta_persen": 1.72,
+      "delta_kemarin_persen": 3.45,
       "delta_lusa_persen": 0.0
     },
     {
@@ -11535,11 +11555,11 @@ window.IPAS_DATA = {
           "total_submitted_respondent": 0,
           "persentase": 100.0,
           "today_completed": 0,
-          "today_completed_breakdown": {
+          "today_completed_breakdown": {},
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
@@ -11589,16 +11609,16 @@ window.IPAS_DATA = {
       "two_days_ago_completed": 0,
       "two_days_ago_completed_breakdown": {},
       "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {},
+      "yesterday_completed_breakdown": {
+        "SUBMITTED BY PENCACAH": 1
+      },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
       "today_completed": 0,
-      "today_completed_breakdown": {
-        "SUBMITTED BY PENCACAH": 1
-      },
+      "today_completed_breakdown": {},
       "delta_persen": 0.0,
       "delta_kemarin_persen": 0.0,
       "delta_lusa_persen": 0.0
@@ -11606,14 +11626,14 @@ window.IPAS_DATA = {
     {
       "kabupaten": "[08] PARIGI MOUTONG",
       "total_prelist": 65,
-      "total_draft": 16,
+      "total_draft": 14,
       "total_open": 0,
-      "total_submitted": 49,
+      "total_submitted": 51,
       "total_rejected": 1,
-      "total_approved": 46,
+      "total_approved": 48,
       "total_submitted_pencacah": 2,
       "total_submitted_respondent": 0,
-      "persentase": 75.38,
+      "persentase": 78.46,
       "new_usaha_overall": 0,
       "new_rumah_overall": 0,
       "new_businesses": [],
@@ -11725,26 +11745,28 @@ window.IPAS_DATA = {
           "kecamatan": "[020] PARIGI",
           "kec_name": "[020] PARIGI",
           "total_prelist": 15,
-          "total_draft": 6,
+          "total_draft": 5,
           "total_open": 0,
-          "total_submitted": 9,
+          "total_submitted": 10,
           "total_rejected": 0,
-          "total_approved": 9,
+          "total_approved": 10,
           "total_submitted_pencacah": 0,
           "total_submitted_respondent": 0,
-          "persentase": 60.0,
-          "today_completed": 0,
-          "today_completed_breakdown": {},
+          "persentase": 66.67,
+          "today_completed": 1,
+          "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 1
+          },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 15,
-            "APPROVED BY Pengawas": 9,
-            "DRAFT": 6
+            "APPROVED BY Pengawas": 10,
+            "DRAFT": 5
           },
-          "delta_persen": 0.0,
+          "delta_persen": 6.67,
           "delta_kemarin_persen": 0.0,
           "delta_lusa_persen": 0.0
         },
@@ -11828,26 +11850,27 @@ window.IPAS_DATA = {
           "kecamatan": "[024] PARIGI TENGAH",
           "kec_name": "[024] PARIGI TENGAH",
           "total_prelist": 2,
-          "total_draft": 1,
+          "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 1,
+          "total_submitted": 2,
           "total_rejected": 0,
-          "total_approved": 1,
+          "total_approved": 2,
           "total_submitted_pencacah": 0,
           "total_submitted_respondent": 0,
-          "persentase": 50.0,
-          "today_completed": 0,
-          "today_completed_breakdown": {},
+          "persentase": 100.0,
+          "today_completed": 1,
+          "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 1
+          },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 2,
-            "APPROVED BY Pengawas": 1,
-            "DRAFT": 1
+            "APPROVED BY Pengawas": 2
           },
-          "delta_persen": 0.0,
+          "delta_persen": 50.0,
           "delta_kemarin_persen": 0.0,
           "delta_lusa_persen": 0.0
         },
@@ -11969,11 +11992,11 @@ window.IPAS_DATA = {
           "today_completed": 0,
           "today_completed_breakdown": {},
           "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5,
             "APPROVED BY Pengawas": 4,
@@ -12238,25 +12261,27 @@ window.IPAS_DATA = {
       ],
       "breakdown": {
         "total": 65,
-        "APPROVED BY Pengawas": 46,
-        "DRAFT": 16,
+        "APPROVED BY Pengawas": 48,
+        "DRAFT": 14,
         "REJECTED BY Pengawas": 1,
         "COMPLETED BY Admin Kabupaten": 2
       },
       "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {
+      "two_days_ago_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1
       },
+      "yesterday_completed": 0,
+      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 0,
-      "today_completed_breakdown": {},
-      "delta_persen": 0.0,
+      "today_completed": 2,
+      "today_completed_breakdown": {
+        "APPROVED BY PENGAWAS": 2
+      },
+      "delta_persen": 3.08,
       "delta_kemarin_persen": 0.0,
       "delta_lusa_persen": 0.0
     },
@@ -12419,11 +12444,11 @@ window.IPAS_DATA = {
           "today_completed": 0,
           "today_completed_breakdown": {},
           "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 8,
             "SUBMITTED BY Pencacah": 3,
@@ -12583,11 +12608,11 @@ window.IPAS_DATA = {
         "EDITED BY Admin Kabupaten": 1
       },
       "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {
+      "two_days_ago_completed_breakdown": {
         "APPROVED BY PENGAWAS": 1
       },
+      "yesterday_completed": 0,
+      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -12894,11 +12919,11 @@ window.IPAS_DATA = {
           "today_completed": 0,
           "today_completed_breakdown": {},
           "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 12,
             "APPROVED BY Pengawas": 10,
@@ -12923,11 +12948,11 @@ window.IPAS_DATA = {
           "today_completed": 0,
           "today_completed_breakdown": {},
           "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1,
             "EDITED BY Admin Kabupaten": 1
@@ -13015,11 +13040,11 @@ window.IPAS_DATA = {
         "EDITED BY Admin Kabupaten": 3
       },
       "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
-      "yesterday_completed": 0,
-      "yesterday_completed_breakdown": {
+      "two_days_ago_completed_breakdown": {
         "SUBMITTED BY PENCACAH": 2
       },
+      "yesterday_completed": 0,
+      "yesterday_completed_breakdown": {},
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
@@ -13234,13 +13259,13 @@ window.IPAS_DATA = {
       "kabupaten": "[12] MOROWALI UTARA",
       "total_prelist": 178,
       "total_draft": 12,
-      "total_open": 18,
-      "total_submitted": 148,
+      "total_open": 17,
+      "total_submitted": 149,
       "total_rejected": 4,
       "total_approved": 65,
-      "total_submitted_pencacah": 72,
+      "total_submitted_pencacah": 73,
       "total_submitted_respondent": 7,
-      "persentase": 83.15,
+      "persentase": 83.71,
       "new_usaha_overall": 0,
       "new_rumah_overall": 0,
       "new_businesses": [],
@@ -13259,48 +13284,50 @@ window.IPAS_DATA = {
           "persentase": 100.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 1,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 1,
             "APPROVED BY Pengawas": 1
           },
           "delta_persen": 0.0,
-          "delta_kemarin_persen": 100.0,
-          "delta_lusa_persen": 0.0
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 100.0
         },
         {
           "kecamatan": "[010] MORI ATAS",
           "kec_name": "[010] MORI ATAS",
           "total_prelist": 14,
-          "total_draft": 1,
+          "total_draft": 0,
           "total_open": 0,
-          "total_submitted": 13,
+          "total_submitted": 14,
           "total_rejected": 0,
           "total_approved": 13,
-          "total_submitted_pencacah": 0,
+          "total_submitted_pencacah": 1,
           "total_submitted_respondent": 0,
-          "persentase": 92.86,
-          "today_completed": 0,
-          "today_completed_breakdown": {},
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
+          "persentase": 100.0,
+          "today_completed": 1,
+          "today_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 1
+          },
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 1,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 14,
             "APPROVED BY Pengawas": 13,
-            "DRAFT": 1
+            "SUBMITTED BY Pencacah": 1
           },
-          "delta_persen": 0.0,
-          "delta_kemarin_persen": 7.14,
-          "delta_lusa_persen": 0.0
+          "delta_persen": 7.14,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 7.14
         },
         {
           "kecamatan": "[020] LEMBO",
@@ -13316,12 +13343,12 @@ window.IPAS_DATA = {
           "persentase": 70.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 2,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 2,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 6
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 20,
             "APPROVED BY Pengawas": 7,
@@ -13329,8 +13356,8 @@ window.IPAS_DATA = {
             "DRAFT": 6
           },
           "delta_persen": 0.0,
-          "delta_kemarin_persen": 10.0,
-          "delta_lusa_persen": 0.0
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 10.0
         },
         {
           "kecamatan": "[030] LEMBO RAYA",
@@ -13346,13 +13373,13 @@ window.IPAS_DATA = {
           "persentase": 60.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 2,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 2,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1,
             "SUBMITTED BY PENCACAH": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 5,
             "APPROVED BY Pengawas": 2,
@@ -13360,15 +13387,15 @@ window.IPAS_DATA = {
             "SUBMITTED BY Pencacah": 1
           },
           "delta_persen": 0.0,
-          "delta_kemarin_persen": 40.0,
-          "delta_lusa_persen": 0.0
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 40.0
         },
         {
           "kecamatan": "[040] PETASIA TIMUR",
           "kec_name": "[040] PETASIA TIMUR",
           "total_prelist": 47,
-          "total_draft": 3,
-          "total_open": 9,
+          "total_draft": 4,
+          "total_open": 8,
           "total_submitted": 35,
           "total_rejected": 0,
           "total_approved": 21,
@@ -13378,20 +13405,18 @@ window.IPAS_DATA = {
           "today_completed": 0,
           "today_completed_breakdown": {},
           "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
-            "APPROVED BY PENGAWAS": 4
-          },
+          "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 1
+            "APPROVED BY PENGAWAS": 4
           },
           "breakdown": {
             "total": 47,
             "APPROVED BY Pengawas": 21,
-            "OPEN": 9,
+            "OPEN": 8,
             "SUBMITTED BY Pencacah": 8,
             "SUBMITTED RESPONDENT": 6,
-            "DRAFT": 3
+            "DRAFT": 4
           },
           "delta_persen": 0.0,
           "delta_kemarin_persen": 0.0,
@@ -13409,17 +13434,15 @@ window.IPAS_DATA = {
           "total_submitted_pencacah": 37,
           "total_submitted_respondent": 1,
           "persentase": 89.06,
-          "today_completed": 2,
-          "today_completed_breakdown": {
+          "today_completed": 0,
+          "today_completed_breakdown": {},
+          "yesterday_completed": 2,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 2
           },
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 1
-          },
-          "two_days_ago_completed": 3,
+          "two_days_ago_completed": 1,
           "two_days_ago_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 3
+            "REJECTED BY PENGAWAS": 1
           },
           "breakdown": {
             "total": 64,
@@ -13430,9 +13453,9 @@ window.IPAS_DATA = {
             "COMPLETED BY Admin Kabupaten": 1,
             "SUBMITTED RESPONDENT": 1
           },
-          "delta_persen": 3.12,
-          "delta_kemarin_persen": 1.56,
-          "delta_lusa_persen": 4.69
+          "delta_persen": 0.0,
+          "delta_kemarin_persen": 3.12,
+          "delta_lusa_persen": 1.56
         },
         {
           "kecamatan": "[060] PETASIA BARAT",
@@ -13449,11 +13472,11 @@ window.IPAS_DATA = {
           "today_completed": 0,
           "today_completed_breakdown": {},
           "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3,
             "APPROVED BY Pengawas": 2,
@@ -13477,20 +13500,20 @@ window.IPAS_DATA = {
           "persentase": 100.0,
           "today_completed": 0,
           "today_completed_breakdown": {},
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 1,
+          "two_days_ago_completed_breakdown": {
             "APPROVED BY PENGAWAS": 2
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 3,
             "APPROVED BY Pengawas": 2,
             "SUBMITTED BY Pencacah": 1
           },
           "delta_persen": 0.0,
-          "delta_kemarin_persen": 33.33,
-          "delta_lusa_persen": 0.0
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 33.33
         },
         {
           "kecamatan": "[080] SOYO JAYA",
@@ -13508,10 +13531,8 @@ window.IPAS_DATA = {
           "today_completed_breakdown": {},
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {},
-          "two_days_ago_completed": 6,
-          "two_days_ago_completed_breakdown": {
-            "SUBMITTED BY PENCACAH": 6
-          },
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 10,
             "SUBMITTED BY Pencacah": 8,
@@ -13519,7 +13540,7 @@ window.IPAS_DATA = {
           },
           "delta_persen": 0.0,
           "delta_kemarin_persen": 0.0,
-          "delta_lusa_persen": 60.0
+          "delta_lusa_persen": 0.0
         },
         {
           "kecamatan": "[090] BUNGKU UTARA",
@@ -13579,46 +13600,46 @@ window.IPAS_DATA = {
       "breakdown": {
         "total": 178,
         "APPROVED BY Pengawas": 65,
+        "SUBMITTED BY Pencacah": 72,
         "DRAFT": 12,
-        "SUBMITTED BY Pencacah": 71,
-        "OPEN": 18,
+        "OPEN": 17,
         "SUBMITTED RESPONDENT": 7,
         "REJECTED BY Pengawas": 4,
         "COMPLETED BY Admin Kabupaten": 1
       },
-      "two_days_ago_completed": 9,
+      "two_days_ago_completed": 8,
       "two_days_ago_completed_breakdown": {
-        "SUBMITTED BY PENCACAH": 10
-      },
-      "yesterday_completed": 8,
-      "yesterday_completed_breakdown": {
         "APPROVED BY PENGAWAS": 16,
         "REJECTED BY PENGAWAS": 1
+      },
+      "yesterday_completed": 2,
+      "yesterday_completed_breakdown": {
+        "SUBMITTED BY PENCACAH": 2
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 2,
+      "today_completed": 1,
       "today_completed_breakdown": {
-        "SUBMITTED BY PENCACAH": 2
+        "SUBMITTED BY PENCACAH": 1
       },
-      "delta_persen": 1.12,
-      "delta_kemarin_persen": 4.49,
-      "delta_lusa_persen": 5.06
+      "delta_persen": 0.56,
+      "delta_kemarin_persen": 1.12,
+      "delta_lusa_persen": 4.49
     },
     {
       "kabupaten": "[71] PALU",
       "total_prelist": 419,
-      "total_draft": 16,
-      "total_open": 47,
-      "total_submitted": 356,
-      "total_rejected": 13,
-      "total_approved": 313,
-      "total_submitted_pencacah": 5,
-      "total_submitted_respondent": 25,
-      "persentase": 84.96,
+      "total_draft": 15,
+      "total_open": 44,
+      "total_submitted": 360,
+      "total_rejected": 8,
+      "total_approved": 297,
+      "total_submitted_pencacah": 29,
+      "total_submitted_respondent": 26,
+      "persentase": 85.92,
       "new_usaha_overall": 0,
       "new_rumah_overall": 0,
       "new_businesses": [],
@@ -13630,24 +13651,26 @@ window.IPAS_DATA = {
           "total_draft": 0,
           "total_open": 4,
           "total_submitted": 50,
-          "total_rejected": 1,
-          "total_approved": 48,
-          "total_submitted_pencacah": 0,
+          "total_rejected": 0,
+          "total_approved": 30,
+          "total_submitted_pencacah": 19,
           "total_submitted_respondent": 1,
           "persentase": 92.59,
           "today_completed": 0,
           "today_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 1
+            "SUBMITTED BY PENCACAH": 19
           },
           "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
+          "yesterday_completed_breakdown": {
+            "REJECTED BY PENGAWAS": 1
+          },
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 54,
-            "APPROVED BY Pengawas": 48,
+            "APPROVED BY Pengawas": 30,
+            "EDITED BY Admin Kabupaten": 19,
             "OPEN": 4,
-            "REJECTED BY Pengawas": 1,
             "SUBMITTED RESPONDENT": 1
           },
           "delta_persen": 0.0,
@@ -13745,32 +13768,36 @@ window.IPAS_DATA = {
           "kecamatan": "[020] PALU SELATAN",
           "kec_name": "[020] PALU SELATAN",
           "total_prelist": 69,
-          "total_draft": 3,
+          "total_draft": 2,
           "total_open": 7,
-          "total_submitted": 59,
-          "total_rejected": 3,
-          "total_approved": 54,
-          "total_submitted_pencacah": 2,
+          "total_submitted": 60,
+          "total_rejected": 1,
+          "total_approved": 56,
+          "total_submitted_pencacah": 3,
           "total_submitted_respondent": 0,
-          "persentase": 85.51,
-          "today_completed": 2,
+          "persentase": 86.96,
+          "today_completed": 1,
           "today_completed_breakdown": {
+            "APPROVED BY PENGAWAS": 2,
+            "SUBMITTED BY PENCACAH": 1
+          },
+          "yesterday_completed": 2,
+          "yesterday_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 2
           },
-          "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {},
           "two_days_ago_completed": 0,
           "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 69,
-            "APPROVED BY Pengawas": 54,
+            "APPROVED BY Pengawas": 56,
             "OPEN": 7,
-            "DRAFT": 3,
-            "REJECTED BY Pengawas": 3,
-            "SUBMITTED BY Pencacah": 2
+            "DRAFT": 2,
+            "SUBMITTED BY Pencacah": 2,
+            "EDITED BY Admin Kabupaten": 1,
+            "REJECTED BY Pengawas": 1
           },
-          "delta_persen": 2.9,
-          "delta_kemarin_persen": 0.0,
+          "delta_persen": 1.45,
+          "delta_kemarin_persen": 2.9,
           "delta_lusa_persen": 0.0
         },
         {
@@ -13778,67 +13805,73 @@ window.IPAS_DATA = {
           "kec_name": "[030] PALU TIMUR",
           "total_prelist": 126,
           "total_draft": 8,
-          "total_open": 20,
-          "total_submitted": 98,
-          "total_rejected": 3,
+          "total_open": 18,
+          "total_submitted": 100,
+          "total_rejected": 2,
           "total_approved": 88,
-          "total_submitted_pencacah": 3,
-          "total_submitted_respondent": 4,
-          "persentase": 77.78,
-          "today_completed": 0,
+          "total_submitted_pencacah": 5,
+          "total_submitted_respondent": 5,
+          "persentase": 79.37,
+          "today_completed": 2,
           "today_completed_breakdown": {
+            "SUBMITTED BY PENCACAH": 2,
+            "SUBMITTED RESPONDENT": 1
+          },
+          "yesterday_completed": 0,
+          "yesterday_completed_breakdown": {
             "REJECTED BY PENGAWAS": 3
           },
-          "yesterday_completed": 1,
-          "yesterday_completed_breakdown": {
+          "two_days_ago_completed": 1,
+          "two_days_ago_completed_breakdown": {
             "SUBMITTED BY PENCACAH": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 126,
             "APPROVED BY Pengawas": 88,
-            "OPEN": 20,
+            "OPEN": 18,
             "DRAFT": 8,
-            "SUBMITTED RESPONDENT": 4,
-            "REJECTED BY Pengawas": 3,
-            "SUBMITTED BY Pencacah": 3
+            "SUBMITTED BY Pencacah": 5,
+            "SUBMITTED RESPONDENT": 5,
+            "REJECTED BY Pengawas": 2
           },
-          "delta_persen": 0.0,
-          "delta_kemarin_persen": 0.79,
-          "delta_lusa_persen": 0.0
+          "delta_persen": 1.59,
+          "delta_kemarin_persen": 0.0,
+          "delta_lusa_persen": 0.79
         },
         {
           "kecamatan": "[031] MANTIKULORE",
           "kec_name": "[031] MANTIKULORE",
           "total_prelist": 57,
           "total_draft": 1,
-          "total_open": 6,
-          "total_submitted": 50,
-          "total_rejected": 3,
+          "total_open": 5,
+          "total_submitted": 51,
+          "total_rejected": 2,
           "total_approved": 37,
-          "total_submitted_pencacah": 0,
+          "total_submitted_pencacah": 2,
           "total_submitted_respondent": 10,
-          "persentase": 87.72,
-          "today_completed": 0,
+          "persentase": 89.47,
+          "today_completed": 1,
           "today_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 2
+            "SUBMITTED BY PENCACAH": 2
           },
           "yesterday_completed": 0,
           "yesterday_completed_breakdown": {
-            "REJECTED BY PENGAWAS": 1
+            "REJECTED BY PENGAWAS": 2
           },
           "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
+          "two_days_ago_completed_breakdown": {
+            "REJECTED BY PENGAWAS": 1
+          },
           "breakdown": {
             "total": 57,
             "APPROVED BY Pengawas": 37,
             "SUBMITTED RESPONDENT": 10,
-            "OPEN": 6,
-            "REJECTED BY Pengawas": 3,
+            "OPEN": 5,
+            "REJECTED BY Pengawas": 2,
+            "SUBMITTED BY Pencacah": 2,
             "DRAFT": 1
           },
-          "delta_persen": 0.0,
+          "delta_persen": 1.75,
           "delta_kemarin_persen": 0.0,
           "delta_lusa_persen": 0.0
         },
@@ -13885,11 +13918,11 @@ window.IPAS_DATA = {
           "today_completed": 0,
           "today_completed_breakdown": {},
           "yesterday_completed": 0,
-          "yesterday_completed_breakdown": {
+          "yesterday_completed_breakdown": {},
+          "two_days_ago_completed": 0,
+          "two_days_ago_completed_breakdown": {
             "REJECTED BY PENGAWAS": 1
           },
-          "two_days_ago_completed": 0,
-          "two_days_ago_completed_breakdown": {},
           "breakdown": {
             "total": 21,
             "APPROVED BY Pengawas": 14,
@@ -13904,34 +13937,38 @@ window.IPAS_DATA = {
       ],
       "breakdown": {
         "total": 419,
-        "APPROVED BY Pengawas": 313,
-        "OPEN": 47,
-        "DRAFT": 16,
-        "REJECTED BY Pengawas": 12,
+        "APPROVED BY Pengawas": 297,
+        "OPEN": 44,
+        "DRAFT": 15,
+        "REJECTED BY Pengawas": 7,
         "REVOKED BY Pengawas": 1,
-        "SUBMITTED RESPONDENT": 25,
-        "SUBMITTED BY Pencacah": 5
+        "SUBMITTED RESPONDENT": 26,
+        "SUBMITTED BY Pencacah": 9,
+        "EDITED BY Admin Kabupaten": 20
       },
-      "two_days_ago_completed": 0,
-      "two_days_ago_completed_breakdown": {},
-      "yesterday_completed": 1,
-      "yesterday_completed_breakdown": {
+      "two_days_ago_completed": 1,
+      "two_days_ago_completed_breakdown": {
         "REJECTED BY PENGAWAS": 2,
         "SUBMITTED BY PENCACAH": 1
+      },
+      "yesterday_completed": 2,
+      "yesterday_completed_breakdown": {
+        "REJECTED BY PENGAWAS": 6,
+        "SUBMITTED BY PENCACAH": 2
       },
       "new_usaha_yesterday": 0,
       "new_rumah_yesterday": 0,
       "two_days_ago_is_estimate": false,
       "new_usaha_today": 0,
       "new_rumah_today": 0,
-      "today_completed": 2,
+      "today_completed": 4,
       "today_completed_breakdown": {
-        "REJECTED BY PENGAWAS": 6,
-        "SUBMITTED BY PENCACAH": 2
+        "SUBMITTED BY PENCACAH": 24,
+        "SUBMITTED RESPONDENT": 1
       },
-      "delta_persen": 0.48,
-      "delta_kemarin_persen": 0.24,
-      "delta_lusa_persen": 0.0
+      "delta_persen": 0.95,
+      "delta_kemarin_persen": 0.48,
+      "delta_lusa_persen": 0.24
     }
   ],
   "se_umum_sls_status": {
@@ -33192,7 +33229,7 @@ window.IPAS_DATA = {
       "nontarget": {}
     }
   },
-  "se_umum_prov_total": 1496398,
+  "se_umum_prov_total": 1500690,
   "se_ub_prov_total": 1292,
   "se_umum_prov_new_total": 70269,
   "se_ub_prov_new_total": 0,
