@@ -5746,6 +5746,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof window.initPaluMonitoring === 'function') {
                 window.initPaluMonitoring();
             }
+        } else if (tabId === 'open_subsls') {
+            if (mainHeader) mainHeader.textContent = 'Pemantauan SLS Status Full Open';
+            if (mainSubheader) mainSubheader.textContent = 'Daftar wilayah terkecil (Sub SLS) yang seluruh respon-nya masih berstatus OPEN atau belum disentuh sama sekali oleh petugas.';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            if (typeof window.initOpenSubSls === 'function') {
+                window.initOpenSubSls();
+            }
         } else {
             if (mainHeader) mainHeader.textContent = 'Pemantauan Email Usaha Besar';
             if (mainSubheader) mainSubheader.textContent = 'Daftar pemantauan status pengiriman email kuesioner kepada responden Usaha Besar (UB)';
@@ -10944,8 +10952,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if(empty) empty.style.display = 'none';
             
-            const startIdx = (window.dataHilangCurrentPage - 1) * dataHilangItemsPerPage;
-            const endIdx = Math.min(startIdx + dataHilangItemsPerPage, data.length);
+            const startIdx = (window.dataHilangCurrentPage - 1) * DATA_HILANG_PAGE_SIZE;
+            const endIdx = Math.min(startIdx + DATA_HILANG_PAGE_SIZE, data.length);
             const slice = data.slice(startIdx, endIdx);
             
             tbody.innerHTML = slice.map(item => `
@@ -10991,8 +10999,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if(empty) empty.style.display = 'none';
             
-            const startIdx = (window.dataHilangCurrentPage - 1) * dataHilangItemsPerPage;
-            const endIdx = Math.min(startIdx + dataHilangItemsPerPage, data.length);
+            const startIdx = (window.dataHilangCurrentPage - 1) * DATA_HILANG_PAGE_SIZE;
+            const endIdx = Math.min(startIdx + DATA_HILANG_PAGE_SIZE, data.length);
             const slice = data.slice(startIdx, endIdx);
             
             const maskStr = (str) => {
@@ -11055,8 +11063,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if(empty) empty.style.display = 'none';
             
-            const startIdx = (window.dataHilangCurrentPage - 1) * dataHilangItemsPerPage;
-            const endIdx = Math.min(startIdx + dataHilangItemsPerPage, data.length);
+            const startIdx = (window.dataHilangCurrentPage - 1) * DATA_HILANG_PAGE_SIZE;
+            const endIdx = Math.min(startIdx + DATA_HILANG_PAGE_SIZE, data.length);
             const slice = data.slice(startIdx, endIdx);
             
             tbody.innerHTML = slice.map(item => `
@@ -11093,15 +11101,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         const totalItems = data.length;
-        const maxPage = Math.ceil(totalItems / dataHilangItemsPerPage) || 1;
+        const maxPage = Math.ceil(totalItems / DATA_HILANG_PAGE_SIZE) || 1;
         
         const paginationInfo = document.getElementById('data_hilang-pagination-info');
         if (paginationInfo) {
             if (totalItems === 0) {
                 paginationInfo.innerText = `Menampilkan 0 - 0 dari 0 data`;
             } else {
-                const startIdx = (window.dataHilangCurrentPage - 1) * dataHilangItemsPerPage;
-                const endIdx = Math.min(startIdx + dataHilangItemsPerPage, totalItems);
+                const startIdx = (window.dataHilangCurrentPage - 1) * DATA_HILANG_PAGE_SIZE;
+                const endIdx = Math.min(startIdx + DATA_HILANG_PAGE_SIZE, totalItems);
                 paginationInfo.innerText = `Menampilkan ${startIdx + 1} - ${endIdx} dari ${totalItems.toLocaleString()} data`;
             }
         }
@@ -11211,7 +11219,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let val = row[k];
                 if (val === null || val === undefined) val = '';
                 val = String(val).replace(/"/g, '""');
-                return \`"\${val}"\`;
+                return `"${val}"`;
             });
             csvContent += rowArray.join(",") + "\\n";
         });
@@ -11219,7 +11227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const encodedUri = encodeURI(csvContent);
         const link = document.createElement("a");
         link.setAttribute("href", encodedUri);
-        link.setAttribute("download", \`data_hilang_\${currentDataHilangTab}_\${new Date().getTime()}.csv\`);
+        link.setAttribute("download", `data_hilang_${currentDataHilangTab}_${new Date().getTime()}.csv`);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
