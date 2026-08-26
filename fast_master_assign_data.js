@@ -5,7 +5,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7202",
@@ -13,7 +13,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7203",
@@ -21,7 +21,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7204",
@@ -29,7 +29,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7205",
@@ -37,7 +37,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7206",
@@ -45,7 +45,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7207",
@@ -53,7 +53,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7208",
@@ -61,7 +61,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7209",
@@ -69,7 +69,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7210",
@@ -77,7 +77,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7211",
@@ -85,7 +85,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7212",
@@ -93,7 +93,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7271",
@@ -101,7 +101,7 @@ window.ASSIGN_DATA_UMUM = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "username": "alfiandialfiandi99@gmail.com",
@@ -88978,7 +88978,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7202",
@@ -88986,7 +88986,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7203",
@@ -88994,7 +88994,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7204",
@@ -89002,7 +89002,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7205",
@@ -89010,7 +89010,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7206",
@@ -89018,7 +89018,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7207",
@@ -89026,7 +89026,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7208",
@@ -89034,7 +89034,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7209",
@@ -89042,7 +89042,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7210",
@@ -89050,7 +89050,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7211",
@@ -89058,7 +89058,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7212",
@@ -89066,7 +89066,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     },
     {
         "kode_kab": "7271",
@@ -89074,7 +89074,7 @@ window.ASSIGN_DATA_UB = [
         "total": 0,
         "assigned": 0,
         "have_not_assigned": 0,
-        "timestamp": "2026-08-24T13:30:00.000000"
+        "timestamp": "2026-08-10T14:06:00.000000"
     }
 ];
 
