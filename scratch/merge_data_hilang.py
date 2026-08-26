@@ -22,6 +22,16 @@ for f in csv_files:
         }, inplace=True)
         # Convert NaN to None so it becomes null in JSON
         df = df.where(pd.notnull(df), None)
+        
+        # Override indikasi_pindah_sls based on Info_Penulusuran
+        for idx, row in df.iterrows():
+            if row.get('indikasi_pindah_sls') == 'Tidak' and row.get('Info_Penulusuran'):
+                info = str(row['Info_Penulusuran']).lower()
+                if info and info not in ['-', 'nan', "'-"]:
+                    # If it contains any of these keywords, assume they moved
+                    if any(kw in info for kw in ['warga dusun', 'pindah', 'dusun', 'rt', 'rw', 'beda sls', 'desa']):
+                        df.at[idx, 'indikasi_pindah_sls'] = 'Ya'
+        
         all_data.extend(df.to_dict(orient='records'))
     except Exception as e:
         print(f"Error reading {f}: {e}")
