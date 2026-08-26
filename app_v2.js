@@ -10834,17 +10834,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const btnUsaha = document.getElementById('btn-data-hilang-usaha');
         const btnKeluarga = document.getElementById('btn-data-hilang-keluarga');
         const btnNonaktif = document.getElementById('btn-data-hilang-nonaktif');
+        const btnDesil = document.getElementById('btn-data-hilang-desil');
         const mainHeader = document.getElementById('main-header');
         const mainSubheader = document.getElementById('main-subheader');
         
-        [btnUsaha, btnKeluarga, btnNonaktif].forEach(b => {
+        [btnUsaha, btnKeluarga, btnNonaktif, btnDesil].forEach(b => {
             if(b) {
                 b.style.background = 'transparent';
                 b.style.color = 'var(--text-secondary)';
             }
         });
         
-        const activeBtn = tab === 'usaha' ? btnUsaha : (tab === 'keluarga' ? btnKeluarga : btnNonaktif);
+        const activeBtn = tab === 'usaha' ? btnUsaha : (tab === 'keluarga' ? btnKeluarga : (tab === 'nonaktif' ? btnNonaktif : btnDesil));
         if(activeBtn) {
             activeBtn.style.background = 'var(--primary)';
             activeBtn.style.color = 'white';
@@ -10856,10 +10857,19 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (tab === 'keluarga') {
             if (mainHeader) mainHeader.textContent = 'Keluarga Hilang';
             if (mainSubheader) mainSubheader.textContent = 'KK tidak ditemukan dan tidak ada padanannya di mana pun';
-        } else {
+        } else if (tab === 'nonaktif') {
             if (mainHeader) mainHeader.textContent = 'Usaha Nonaktif';
-            if (mainSubheader) mainSubheader.textContent = 'Usaha nonaktif tapi keluarga ditemukan';
+            if (mainSubheader) mainSubheader.textContent = 'Usahanya sudah tutup/berhenti beroperasi di lokasi';
+        } else {
+            if (mainHeader) mainHeader.textContent = 'Keluarga Desil 1-5 (Belum Terdata)';
+            if (mainSubheader) mainSubheader.textContent = 'Keluarga Desil 1-5 yang belum terdata di sistem';
         }
+        
+        // Show/Hide filter Pindah and Penelusuran (only for keluarga)
+        const filterPindah = document.getElementById('data_hilang-filter-pindah');
+        const filterPenelusuran = document.getElementById('data_hilang-filter-penelusuran');
+        if (filterPindah) filterPindah.style.display = (tab === 'keluarga') ? 'inline-block' : 'none';
+        if (filterPenelusuran) filterPenelusuran.style.display = (tab === 'keluarga' || tab === 'desil') ? 'inline-block' : 'none';
         
         window.dataHilangCurrentPage = 1;
         window.loadDataHilangData();
@@ -10878,8 +10888,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 data = window.dataHilangUsaha || [];
             } else if (currentDataHilangTab === 'keluarga') {
                 data = window.dataHilangKeluarga || [];
-            } else {
+            } else if (currentDataHilangTab === 'nonaktif') {
                 data = window.dataUsahaNonaktif || [];
+            } else {
+                data = window.dataHilangDesil || [];
             }
             
             dataHilangDataCache = data;
@@ -10903,10 +10915,27 @@ document.addEventListener('DOMContentLoaded', () => {
     window.filterDataHilangTable = function() {
         const search = (document.getElementById('data_hilang-search')?.value || '').toLowerCase();
         const kab = document.getElementById('data_hilang-filter-kab')?.value || '';
+        const pindah = document.getElementById('data_hilang-filter-pindah')?.value || '';
+        const penelusuran = document.getElementById('data_hilang-filter-penelusuran')?.value || '';
         
         let filtered = dataHilangDataCache.filter(item => {
             let itemKab = item.kab || item.kabupaten;
             if(kab && itemKab !== kab) return false;
+            
+            if (pindah) {
+                if (item.indikasi_pindah_sls !== pindah) return false;
+            }
+            
+            if (penelusuran) {
+                 const info = (item.Info_Penulusuran || '').trim();
+                 const isEmpty = !info || info === '-' || info === "'-" || info.toLowerCase() === 'nan';
+                 if (penelusuran === 'ada') {
+                     if (isEmpty) return false;
+                 } else if (penelusuran === 'tidak') {
+                     if (!isEmpty) return false;
+                 }
+            }
+            
             if(search) {
                 const text = Object.values(item).join(' ').toLowerCase();
                 if(!text.includes(search)) return false;
@@ -10933,6 +10962,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if(!tbody || !thead) return;
         
+        const startIdx = (window.dataHilangCurrentPage - 1) * DATA_HILANG_PAGE_SIZE;
+        const endIdx = Math.min(startIdx + DATA_HILANG_PAGE_SIZE, data.length);
+        const paginated = data.slice(startIdx, endIdx);
+
+        if(data.length === 0) {
+            tbody.innerHTML = '';
+            if(empty) empty.style.display = 'block';
+            return;
+        }
+        if(empty) empty.style.display = 'none';
+
         if(currentDataHilangTab === 'usaha') {
             thead.innerHTML = `
                 <tr style="background: var(--table-header); color: var(--text-secondary); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">
@@ -10945,18 +10985,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </tr>
             `;
             
-            if(data.length === 0) {
-                tbody.innerHTML = '';
-                if(empty) empty.style.display = 'block';
-                return;
-            }
-            if(empty) empty.style.display = 'none';
-            
-            const startIdx = (window.dataHilangCurrentPage - 1) * DATA_HILANG_PAGE_SIZE;
-            const endIdx = Math.min(startIdx + DATA_HILANG_PAGE_SIZE, data.length);
-            const slice = data.slice(startIdx, endIdx);
-            
-            tbody.innerHTML = slice.map(item => `
+            tbody.innerHTML = paginated.map(item => `
                 <tr style="border-bottom: 1px solid var(--card-border); transition: background 0.2s;">
                     <td style="padding: 1rem; vertical-align: top;">
                         <div style="font-weight: 600; color: var(--text-primary);">${item.kab} / ${item.kec}</div>
@@ -10992,24 +11021,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 </tr>
             `;
             
-            if(data.length === 0) {
-                tbody.innerHTML = '';
-                if(empty) empty.style.display = 'block';
-                return;
-            }
-            if(empty) empty.style.display = 'none';
-            
-            const startIdx = (window.dataHilangCurrentPage - 1) * DATA_HILANG_PAGE_SIZE;
-            const endIdx = Math.min(startIdx + DATA_HILANG_PAGE_SIZE, data.length);
-            const slice = data.slice(startIdx, endIdx);
-            
             const maskStr = (str) => {
                 if (!str || str === '-' || String(str).toLowerCase() === 'nan') return '-';
                 str = String(str);
                 return str.length >= 10 ? str.substring(0, 4) + '*'.repeat(str.length - 8) + str.substring(str.length - 4) : str;
             };
             
-            tbody.innerHTML = slice.map(item => `
+            tbody.innerHTML = paginated.map(item => `
                 <tr style="border-bottom: 1px solid var(--card-border); transition: background 0.2s;">
                     <td style="padding: 1rem; vertical-align: top;">
                         <div style="font-weight: 600; color: var(--text-primary); font-size: 0.8rem;">${item.kab || '-'}</div>
@@ -11055,46 +11073,87 @@ document.addEventListener('DOMContentLoaded', () => {
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Link</th>
                 </tr>
             `;
-            
-            if(data.length === 0) {
-                tbody.innerHTML = '';
-                if(empty) empty.style.display = 'block';
-                return;
-            }
-            if(empty) empty.style.display = 'none';
-            
-            const startIdx = (window.dataHilangCurrentPage - 1) * DATA_HILANG_PAGE_SIZE;
-            const endIdx = Math.min(startIdx + DATA_HILANG_PAGE_SIZE, data.length);
-            const slice = data.slice(startIdx, endIdx);
-            
-            tbody.innerHTML = slice.map(item => `
-                <tr style="border-bottom: 1px solid var(--card-border); transition: background 0.2s;">
-                    <td style="padding: 1rem; vertical-align: top;">
-                        <div style="font-weight: 600; color: var(--text-primary); font-size: 0.8rem;">${item.kabupaten || '-'}</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.kecamatan || '-'} / ${item.desa_kel || '-'}</div>
+            tbody.innerHTML = paginated.map(item => `
+                <tr style="transition: background 0.2s;" onmouseover="this.style.background='var(--table-hover)'" onmouseout="this.style.background='transparent'">
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--text-primary); font-size: 0.85rem;">${item.kab || item.kabupaten}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.kec || item.kecamatan}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.desa}</div>
                     </td>
-                    <td style="padding: 1rem; vertical-align: top;">
-                        <div style="font-weight: 600; font-size: 0.8rem;">${item.sls || '-'}</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.kode_sub_sls || '-'}</div>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--text-primary); font-size: 0.85rem;">${item.nama_sls || '-'}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.subsls || '-'}</div>
                     </td>
-                    <td style="padding: 1rem; vertical-align: top;">
-                        <div style="font-weight: 600; color: var(--primary); font-size: 0.8rem;">${item.nama_usaha || '-'}</div>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <div style="font-weight: 600; color: #ea580c; font-size: 0.85rem;">${item.nama_usaha || '-'}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">Pemilik: ${item.nama_pemilik || '-'}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">NIK: ${item.nik || '-'}</div>
                     </td>
-                    <td style="padding: 1rem; vertical-align: top;">
-                        <span style="padding: 0.2rem 0.5rem; background: #fee2e2; color: #991b1b; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${item.keberadaan_usaha || '-'}</span>
-                        <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: 4px;">${item.status_usaha || '-'}</div>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <span style="display: inline-block; padding: 0.25rem 0.5rem; background: #fee2e2; color: #b91c1c; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">
+                            ${item.status_usaha || 'Tutup/Tidak Ditemukan'}
+                        </span>
                     </td>
-                    <td style="padding: 1rem; vertical-align: top;">
-                        <div style="font-weight: 600; color: var(--primary); font-size: 0.8rem;">KRT: ${item.nama_krt || '-'}</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">KK: ${item.nama_kk || '-'}</div>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <div style="font-weight: 600; color: #ea580c; font-size: 0.85rem;">KRT: ${item.nama_krt || '-'}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">KK: ${item.no_kk || '-'}</div>
                     </td>
-                    <td style="padding: 1rem; vertical-align: top;">
-                        <span style="padding: 0.2rem 0.5rem; background: #dcfce7; color: #166534; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${item.keberadaan_keluarga || '-'}</span>
-                        <div style="font-size: 0.7rem; color: var(--text-secondary); margin-top: 4px;">${item.status_keluarga || '-'}</div>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <span style="display: inline-block; padding: 0.25rem 0.5rem; background: #dcfce7; color: #15803d; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">
+                            ${item.status_keluarga || '1. Ditemukan'}
+                        </span>
                     </td>
-                    <td style="padding: 1rem; vertical-align: top;">
-                        ${item.link_prelist_usaha && item.link_prelist_usaha !== 'nan' ? `<a href="${item.link_prelist_usaha}" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 0.8rem; display: block; margin-bottom: 4px;">Usaha ↗</a>` : ''}
-                        ${item.link_prelist_keluarga && item.link_prelist_keluarga !== 'nan' ? `<a href="${item.link_prelist_keluarga}" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.8rem; display: block;">Keluarga ↗</a>` : ''}
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        ${item.link_usaha && item.link_usaha !== 'nan' ? `<a href="${item.link_usaha}" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Usaha ↗</a><br>` : ''}
+                        ${item.link_keluarga && item.link_keluarga !== 'nan' ? `<a href="${item.link_keluarga}" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Keluarga ↗</a>` : ''}
+                        ${(!item.link_usaha || item.link_usaha === 'nan') && (!item.link_keluarga || item.link_keluarga === 'nan') ? '-' : ''}
+                    </td>
+                </tr>
+            `).join('');
+        } else {
+            // tab === 'desil'
+            thead.innerHTML = `
+                <tr style="background: var(--table-header); color: var(--text-secondary); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Wilayah</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Kode/SLS</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Keluarga (KRT/KK)</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Kategori Desil</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Status Keluarga / Dokumen</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Info Penelusuran</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Petugas / Link</th>
+                </tr>
+            `;
+            tbody.innerHTML = paginated.map(item => `
+                <tr style="transition: background 0.2s;" onmouseover="this.style.background='var(--table-hover)'" onmouseout="this.style.background='transparent'">
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--text-primary); font-size: 0.85rem;">${item.kab || item.kabupaten}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.kec || item.kecamatan}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.desa}</div>
+                    </td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--text-primary); font-size: 0.85rem;">${item.nama_sls || '-'}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.kode_sls || '-'}</div>
+                    </td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <div style="font-weight: 600; color: #ea580c; font-size: 0.85rem;">${item.nama_kepala_keluarga || '-'}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">KK: ${item.no_kk || '-'}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">NIK KK: ${item.nik_kk !== 'nan' && item.nik_kk !== '-' ? item.nik_kk : '-'}</div>
+                    </td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <span style="display: inline-block; padding: 0.25rem 0.5rem; background: #e0e7ff; color: #4338ca; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">
+                            ${item.kategori_desil || '-'}
+                        </span>
+                    </td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <div style="margin-bottom: 0.3rem;"><span style="display: inline-block; padding: 0.25rem 0.5rem; background: #fee2e2; color: #b91c1c; border-radius: 0.25rem; font-size: 0.7rem; font-weight: 600;">${item.status_keluarga || '-'}</span></div>
+                        <div><span style="display: inline-block; padding: 0.25rem 0.5rem; background: #f1f5f9; color: #475569; border-radius: 0.25rem; font-size: 0.7rem; font-weight: 600;">${item.status_dokumen || '-'}</span></div>
+                    </td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top; max-width: 250px;">
+                        <div style="color: var(--text-primary); font-size: 0.8rem; word-wrap: break-word;">${item.Info_Penulusuran && item.Info_Penulusuran !== 'nan' && item.Info_Penulusuran !== "'-" && item.Info_Penulusuran !== '-' ? item.Info_Penulusuran : '<em style="color: var(--text-secondary)">Tidak ada catatan</em>'}</div>
+                    </td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
+                        <div style="font-weight: 600; color: var(--text-primary); font-size: 0.8rem; margin-bottom: 0.3rem;">${item.Petugas || '-'}</div>
+                        ${item.link_fasih && item.link_fasih !== 'nan' ? `<a href="${item.link_fasih}" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Buka Fasih ↗</a>` : '-'}
                     </td>
                 </tr>
             `).join('');

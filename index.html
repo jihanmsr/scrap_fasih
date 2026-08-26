@@ -2584,6 +2584,7 @@
                         <button id="btn-data-hilang-usaha" onclick="window.switchDataHilangSubTab('usaha')" style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: var(--primary); color: white; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Usaha Hilang</button>
                         <button id="btn-data-hilang-keluarga" onclick="window.switchDataHilangSubTab('keluarga')" style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: transparent; color: var(--text-secondary); font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Keluarga Hilang</button>
                         <button id="btn-data-hilang-nonaktif" onclick="window.switchDataHilangSubTab('nonaktif')" style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: transparent; color: var(--text-secondary); font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Usaha Nonaktif</button>
+                        <button id="btn-data-hilang-desil" onclick="window.switchDataHilangSubTab('desil')" style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: transparent; color: var(--text-secondary); font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Keluarga Desil 1-5</button>
                     </div>
 
                     <!-- Statistics & Filter bar -->
@@ -2604,6 +2605,18 @@
                             <div style="width: 1px; height: 20px; background: var(--card-border);"></div>
                             <select id="data_hilang-filter-kab" onchange="window.filterDataHilangTable()" style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer; font-weight: 600;">
                                 <option value="">Semua Kab/Kota</option>
+                            </select>
+                            <div id="data_hilang-sep-1" style="width: 1px; height: 20px; background: var(--card-border); display: none;"></div>
+                            <select id="data_hilang-filter-pindah" onchange="window.filterDataHilangTable()" style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer; font-weight: 600; display: none;">
+                                <option value="">Semua Status Pindah</option>
+                                <option value="Ya">Indikasi Pindah SLS</option>
+                                <option value="Tidak">Tidak Pindah</option>
+                            </select>
+                            <div id="data_hilang-sep-2" style="width: 1px; height: 20px; background: var(--card-border); display: none;"></div>
+                            <select id="data_hilang-filter-penelusuran" onchange="window.filterDataHilangTable()" style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer; font-weight: 600; display: none;">
+                                <option value="">Semua Penelusuran</option>
+                                <option value="ada">Ada Catatan Penelusuran</option>
+                                <option value="tidak">Tidak Ada Catatan</option>
                             </select>
                             <div style="width: 1px; height: 20px; background: var(--card-border);"></div>
                             <button onclick="window.downloadDataHilangCSV()" style="padding: 0.3rem 0.75rem; border: none; border-radius: 0.4rem; background: #10b981; color: white; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: background 0.2s;" title="Download Data Filtered">
@@ -3108,6 +3121,7 @@
     <script src="data_hilang_usaha.js"></script>
     <script src="data_hilang_keluarga.js"></script>
     <script src="data_usaha_nonaktif.js"></script>
+    <script src="data_desil.js"></script>
     <script src="app_v2.js" defer></script>
 
     <script>
