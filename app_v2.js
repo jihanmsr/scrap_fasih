@@ -11270,7 +11270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         keys = keys.filter(k => !k.toLowerCase().includes('nik') && !k.toLowerCase().includes('kk'));
         
         // Write header
-        let csvContent = "data:text/csv;charset=utf-8," + keys.join(",") + "\\n";
+        let csvContent = "\\uFEFF" + keys.join(",") + "\\n";
         
         // Write rows
         data.forEach(row => {
@@ -11283,13 +11283,15 @@ document.addEventListener('DOMContentLoaded', () => {
             csvContent += rowArray.join(",") + "\\n";
         });
         
-        const encodedUri = encodeURI(csvContent);
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
-        link.setAttribute("href", encodedUri);
+        link.setAttribute("href", url);
         link.setAttribute("download", `data_hilang_${currentDataHilangTab}_${new Date().getTime()}.csv`);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        URL.revokeObjectURL(url);
     };
     
 // ========== END DATA HILANG FEATURE ==========
