@@ -11078,11 +11078,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
                         <div style="font-weight: 600; color: var(--text-primary); font-size: 0.85rem;">${item.kab || item.kabupaten}</div>
                         <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.kec || item.kecamatan}</div>
-                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.desa}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.desa || item.desa_kel}</div>
                     </td>
                     <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
-                        <div style="font-weight: 600; color: var(--text-primary); font-size: 0.85rem;">${item.nama_sls || '-'}</div>
-                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.subsls || '-'}</div>
+                        <div style="font-weight: 600; color: var(--text-primary); font-size: 0.85rem;">${item.nama_sls || item.sls || '-'}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.subsls || item.sub_sls || '-'}</div>
                     </td>
                     <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
                         <div style="font-weight: 600; color: #ea580c; font-size: 0.85rem;">${item.nama_usaha || '-'}</div>
