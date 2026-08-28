@@ -5747,8 +5747,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.initPaluMonitoring();
             }
         } else if (tabId === 'open_subsls') {
-            if (mainHeader) mainHeader.textContent = 'Pemantauan SLS Status Full Open';
-            if (mainSubheader) mainSubheader.textContent = 'Daftar wilayah terkecil (Sub SLS) yang seluruh respon-nya masih berstatus OPEN atau belum disentuh sama sekali oleh petugas.';
+            if (mainHeader) mainHeader.textContent = 'Pemantauan SLS Status Full Open & Penyisiran Bangunan';
+            if (mainSubheader) mainSubheader.textContent = 'Pemantauan Sub SLS Full Open dan Penyisiran Bangunan Usaha berdasarkan prioritas';
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
             if (typeof window.initOpenSubSls === 'function') {
