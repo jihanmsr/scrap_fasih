@@ -1,4 +1,4 @@
-// Data SubSLS Belum Dikunjungi - Update 28 Aug 2026, 13:45 WIB
+// Data SubSLS Belum Dikunjungi - Update 28 Aug 2026, 13:59 WIB
 window.NEW_BUSINESSES_DATA = [
   {
     "kab_code": "7201",

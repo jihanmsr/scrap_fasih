@@ -12,37 +12,27 @@ let slsMapLayer = null;
 
 function initSlsMap() {
     if (slsOpenMap) return;
-    const mapContainer = document.getElementById('sls-open-map');
+    const mapContainer = document.getElementById("sls-open-map");
     if (!mapContainer) return;
-    
-    // Default view for Sulawesi Tengah
-    const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    });
-    const satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: '&copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-    });
-
-    slsOpenMap = L.map('sls-open-map', {
-        center: [-1.4300, 121.4456],
-        zoom: 6,
-        layers: [satellite] // Default
-    });
-
-    L.control.layers({
-        "Peta Satelit (Esri)": satellite,
-        "Peta Biasa (OSM)": osm
-    }).addTo(slsOpenMap);
-
-    if (!window.PETA_SLS) {
-        console.error("Data peta tidak ditemukan. Pastikan petasls.js sudah dimuat.");
-        return;
-    }
-
-    const geoData = window.PETA_SLS;
-    const highlightedData = window.HIGHLIGHTED_SUBSLS || {};
 
     try {
+        window._osmTile = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap'
+        });
+        window._esriTile = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '&copy; Esri World Imagery'
+        });
+
+        slsOpenMap = L.map('sls-open-map', {
+            center: [-1.4300, 121.4456],
+            zoom: 6,
+            layers: [window._esriTile],
+            zoomControl: true
+        });
+
+        const geoData = window.PETA_SLS;
+        const highlightedData = window.HIGHLIGHTED_SUBSLS || {};
+
         slsMapLayer = L.geoJSON(geoData, {
             style: function (feature) {
                 const p = feature.properties || {};
@@ -50,19 +40,19 @@ function initSlsMap() {
                 
                 if (highlightedData[featureId]) {
                     return {
-                        color: "#ef4444", // Bright Red outline
-                        weight: 3.5,      // Thicker outline
+                        color: "#ff6b00",
+                        weight: 3.5,
                         opacity: 1,
-                        fillColor: "#ef4444",
-                        fillOpacity: 0.15 // Highly transparent so satellite imagery is visible
+                        fillColor: "#ff6b00",
+                        fillOpacity: 0.12
                     };
                 } else {
                     return {
-                        color: "#3b82f6", // Blue for default
+                        color: "#3b82f6",
                         weight: 1.5,
                         opacity: 0.8,
                         fillColor: "#60a5fa",
-                        fillOpacity: 0.05 // Very transparent
+                        fillOpacity: 0.05
                     };
                 }
             },
@@ -71,7 +61,27 @@ function initSlsMap() {
                     const p = feature.properties;
                     const featureId = "72" + (p.kdkab || "") + (p.kdkec || "") + (p.kddesa || "") + (p.kdsls || "") + (p.kdsubsls || "");
                     
-                    let popupContent = '<div style="max-height: 200px; overflow-y: auto;"><b>Detail SLS</b><br>';
+                    const slsLabel = p.nmsls || p.sls || ("SLS " + (p.kdsls || ""));
+                    const subCode = p.kdsubsls ? `(${p.kdsubsls})` : '';
+                    const labelHtml = `<div style="color: #ff5500; font-weight: 800; font-size: 11px; text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px 0 #fff, -1px -1px 0 #fff; white-space: nowrap; text-align: center; pointer-events: none;">${slsLabel} ${subCode}</div>`;
+                    
+                    try {
+                        const bounds = layer.getBounds ? layer.getBounds() : null;
+                        if (bounds) {
+                            const center = bounds.getCenter();
+                            L.marker(center, {
+                                icon: L.divIcon({
+                                    className: 'sls-map-label',
+                                    html: labelHtml,
+                                    iconSize: [120, 20],
+                                    iconAnchor: [60, 10]
+                                }),
+                                interactive: false
+                            }).addTo(slsOpenMap);
+                        }
+                    } catch(e) {}
+
+                    let popupContent = '<div style="max-height: 220px; overflow-y: auto; font-family: sans-serif;"><b>Detail SLS</b><br>';
                     for (let key in feature.properties) {
                         popupContent += `<b>${key}</b>: ${feature.properties[key]}<br>`;
                     }
@@ -79,10 +89,10 @@ function initSlsMap() {
                     
                     if (highlightedData[featureId]) {
                         const csv = highlightedData[featureId];
-                        popupContent += `<br><div style="padding: 6px; background: #fee2e2; border-radius: 4px; font-size: 0.9em; margin-top: 5px;">`;
-                        popupContent += `<b style="color:#dc2626;">🎯 SLS FULL OPEN:</b><br>`;
+                        popupContent += `<br><div style="padding: 8px; background: #fff7ed; border: 1px solid #ffedd5; border-radius: 6px; font-size: 0.9em; margin-top: 5px;">`;
+                        popupContent += `<b style="color:#ea580c;">🎯 SLS FULL OPEN:</b><br>`;
                         popupContent += `<b>Petugas:</b> ${csv.nama_petugas || '-'}<br>`;
-                        popupContent += `<b>Nama Sub SLS (CSV):</b> ${csv.nama_sub_sls || csv.sls || '-'}<br>`;
+                        popupContent += `<b>Nama Sub SLS:</b> ${csv.nama_sub_sls || csv.sls || '-'}<br>`;
                         popupContent += `<b>Jml Prelist:</b> ${csv.jumlah_prelist || 0}<br>`;
                         popupContent += `</div>`;
                     }
@@ -92,59 +102,16 @@ function initSlsMap() {
                 }
             }
         }).addTo(slsOpenMap);
+
         slsOpenMap.fitBounds(slsMapLayer.getBounds());
         populateMapFilters();
-
-        const legend = L.control({ position: "bottomright" });
-        legend.onAdd = function () {
-            const div = L.DomUtil.create("div", "info legend");
-            div.style.backgroundColor = "white";
-            div.style.padding = "10px 12px";
-            div.style.borderRadius = "8px";
-            div.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
-            div.style.fontFamily = "'Inter', sans-serif";
-            div.style.fontSize = "12px";
-            div.style.lineHeight = "1.5";
-            div.style.color = "#333";
-
-            div.innerHTML = `
-                <strong style="display:block; margin-bottom:8px; font-size:13px; border-bottom:1px solid #e5e7eb; padding-bottom:4px;">Keterangan Peta</strong>
-                <div style="display:flex; align-items:center; margin-bottom:6px;">
-                    <div style="width:16px; height:16px; background-color:rgba(239, 68, 68, 0.2); border: 2.5px solid #ef4444; margin-right:8px; border-radius:2px; flex-shrink:0;"></div>
-                    <span>SLS Full Open</span>
-                </div>
-                <div style="display:flex; align-items:center; margin-bottom:6px;">
-                    <div style="width:16px; height:16px; background-color:rgba(96, 165, 250, 0.05); border: 1.5px solid #3b82f6; margin-right:8px; border-radius:2px; flex-shrink:0;"></div>
-                    <span>Sub SLS Lainnya</span>
-                </div>
-                <div style="display:flex; align-items:center;">
-                    <div style="width:16px; height:16px; background-color:rgba(254, 240, 138, 0.9); border: 3px solid #fde047; margin-right:8px; border-radius:2px; flex-shrink:0;"></div>
-                    <span>Hasil Pencarian</span>
-                </div>
-            `;
-            return div;
-        };
-        legend.addTo(slsOpenMap);
+        populateDrawerFilters();
         
     } catch(err) {
         console.error("Error loading map data:", err);
     }
+
 }
-
-const mapObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            initSlsMap();
-            if (slsOpenMap) {
-                setTimeout(() => {
-                    slsOpenMap.invalidateSize();
-                }, 100);
-            }
-        }
-    });
-});
-
-window.lastSearchedLayer = null;
 
 function populateMapFilters() {
     if (!window.PETA_SLS) return;
@@ -254,6 +221,20 @@ window.searchMap = function() {
         if (query) alert("Pencarian tidak ditemukan di peta.");
     }
 };
+
+
+const mapObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            if (typeof initSlsMap === 'function') initSlsMap();
+            if (slsOpenMap) {
+                setTimeout(() => {
+                    slsOpenMap.invalidateSize();
+                }, 100);
+            }
+        }
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     try {
@@ -607,5 +588,181 @@ window.toggleSelesai = function(kodeSubSls, isChecked, checkboxEl) {
                 if(idx < 5) td.style.textDecoration = 'none';
             });
         }
+    }
+};
+
+
+// ── Map Floating Pill Overlay Handlers ─────────────────────────────────────
+window.toggleWilayahDrawer = function() {
+    const drawer = document.getElementById("map-wilayah-drawer");
+    if (!drawer) return;
+    const isVisible = drawer.style.display !== "none";
+    drawer.style.display = isVisible ? "none" : "block";
+    document.getElementById("map-keberadaan-popup").style.display = "none";
+    document.getElementById("map-basemap-popup").style.display = "none";
+};
+
+window.toggleKeberadaanPopup = function() {
+    const popup = document.getElementById("map-keberadaan-popup");
+    if (!popup) return;
+    const isVisible = popup.style.display !== "none";
+    popup.style.display = isVisible ? "none" : "block";
+    document.getElementById("map-wilayah-drawer").style.display = "none";
+    document.getElementById("map-basemap-popup").style.display = "none";
+};
+
+window.toggleBaseMapPopup = function() {
+    const popup = document.getElementById("map-basemap-popup");
+    if (!popup) return;
+    const isVisible = popup.style.display !== "none";
+    popup.style.display = isVisible ? "none" : "block";
+    document.getElementById("map-wilayah-drawer").style.display = "none";
+    document.getElementById("map-keberadaan-popup").style.display = "none";
+};
+
+window.setBaseMapTile = function(type) {
+    if (!slsOpenMap) return;
+    if (type === 'satellite') {
+        if (window._osmTile) slsOpenMap.removeLayer(window._osmTile);
+        if (window._esriTile) slsOpenMap.addLayer(window._esriTile);
+    } else {
+        if (window._esriTile) slsOpenMap.removeLayer(window._esriTile);
+        if (window._osmTile) slsOpenMap.addLayer(window._osmTile);
+    }
+    document.getElementById("map-basemap-popup").style.display = "none";
+};
+
+window.filterKeberadaan = function(type) {
+    document.querySelectorAll(".btn-keb-filter").forEach(btn => {
+        if (btn.getAttribute("data-keb") === type) {
+            btn.style.background = "#4f46e5";
+            btn.style.color = "#ffffff";
+            btn.style.border = "none";
+        } else {
+            btn.style.background = "#f8fafc";
+            btn.style.color = "#334155";
+            btn.style.border = "1px solid #e2e8f0";
+        }
+    });
+    document.getElementById("map-keberadaan-popup").style.display = "none";
+};
+
+window.onSqlLabClick = function() {
+    alert("SQL Lab Data: Menampilkan data usaha terhubung database SQL Lab.");
+};
+
+function populateDrawerFilters() {
+    if (!window.PETA_SLS) return;
+    const kabSet = new Set();
+    window.PETA_SLS.features.forEach(f => {
+        if (f.properties && f.properties.nmkab) kabSet.add(f.properties.nmkab);
+    });
+    const kabSel = document.getElementById("drawer-map-filter-kab");
+    if (kabSel && kabSel.options.length === 1) {
+        Array.from(kabSet).sort().forEach(kab => {
+            const opt = document.createElement("option");
+            opt.value = kab;
+            opt.textContent = kab;
+            kabSel.appendChild(opt);
+        });
+    }
+}
+
+window.onDrawerKabChange = function() {
+    const kab = document.getElementById("drawer-map-filter-kab").value;
+    const kecSel = document.getElementById("drawer-map-filter-kec");
+    const desaSel = document.getElementById("drawer-map-filter-desa");
+    const slsSel = document.getElementById("drawer-map-filter-sls");
+    
+    kecSel.innerHTML = "<option value=''>Semua Kecamatan</option>";
+    desaSel.innerHTML = "<option value=''>Semua Desa</option>";
+    slsSel.innerHTML = "<option value=''>--- Pilih SLS ---</option>";
+    
+    if (!kab || !window.PETA_SLS) return;
+    
+    const kecSet = new Set();
+    window.PETA_SLS.features.forEach(f => {
+        if (f.properties && f.properties.nmkab === kab && f.properties.nmkec) kecSet.add(f.properties.nmkec);
+    });
+    Array.from(kecSet).sort().forEach(k => {
+        const opt = document.createElement("option");
+        opt.value = k;
+        opt.textContent = k;
+        kecSel.appendChild(opt);
+    });
+    
+    const mainKab = document.getElementById("map-filter-kab");
+    if (mainKab) { mainKab.value = kab; window.updateMapKecFilter(); }
+};
+
+window.onDrawerKecChange = function() {
+    const kab = document.getElementById("drawer-map-filter-kab").value;
+    const kec = document.getElementById("drawer-map-filter-kec").value;
+    const desaSel = document.getElementById("drawer-map-filter-desa");
+    const slsSel = document.getElementById("drawer-map-filter-sls");
+    
+    desaSel.innerHTML = "<option value=''>Semua Desa</option>";
+    slsSel.innerHTML = "<option value=''>--- Pilih SLS ---</option>";
+    
+    if (!kec || !window.PETA_SLS) return;
+    
+    const desaSet = new Set();
+    window.PETA_SLS.features.forEach(f => {
+        if (f.properties && f.properties.nmkab === kab && f.properties.nmkec === kec && f.properties.nmdesa) desaSet.add(f.properties.nmdesa);
+    });
+    Array.from(desaSet).sort().forEach(d => {
+        const opt = document.createElement("option");
+        opt.value = d;
+        opt.textContent = d;
+        desaSel.appendChild(opt);
+    });
+    
+    const mainKec = document.getElementById("map-filter-kec");
+    if (mainKec) { mainKec.value = kec; window.searchMap(); }
+};
+
+window.onDrawerDesaChange = function() {
+    const kab = document.getElementById("drawer-map-filter-kab").value;
+    const kec = document.getElementById("drawer-map-filter-kec").value;
+    const desa = document.getElementById("drawer-map-filter-desa").value;
+    const slsSel = document.getElementById("drawer-map-filter-sls");
+    
+    slsSel.innerHTML = "<option value=''>--- Pilih SLS ---</option>";
+    if (!desa || !window.PETA_SLS) return;
+    
+    const slsSet = new Set();
+    window.PETA_SLS.features.forEach(f => {
+        if (f.properties && f.properties.nmkab === kab && f.properties.nmkec === kec && f.properties.nmdesa === desa) {
+            slsSet.add(f.properties.nmsls || f.properties.sls || f.properties.kdsls);
+        }
+    });
+    Array.from(slsSet).sort().forEach(s => {
+        const opt = document.createElement("option");
+        opt.value = s;
+        opt.textContent = s;
+        slsSel.appendChild(opt);
+    });
+};
+
+window.onDrawerSlsChange = function() {
+    const sls = document.getElementById("drawer-map-filter-sls").value;
+    if (sls) {
+        const input = document.getElementById("map-search-input");
+        if (input) { input.value = sls; window.searchMap(); }
+    }
+};
+
+window.setCustomCoord = function() {
+    alert("Klik di mana saja pada peta untuk menyetel koordinat kustom.");
+};
+
+window.applyCustomCoord = function() {
+    const lat = parseFloat(document.getElementById("map-lat-input").value);
+    const lng = parseFloat(document.getElementById("map-lng-input").value);
+    if (!isNaN(lat) && !isNaN(lng) && slsOpenMap) {
+        slsOpenMap.setView([lat, lng], 15);
+        L.marker([lat, lng]).addTo(slsOpenMap).bindPopup("<b>Koordinat Kustom</b><br>" + lat + ", " + lng).openPopup();
+    } else {
+        alert("Masukkan koordinat Latitude dan Longitude yang valid.");
     }
 };

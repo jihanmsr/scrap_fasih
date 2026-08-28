@@ -4,6 +4,19 @@ with open('open_subsls.js', 'r', encoding='utf-8') as f:
     js = f.read()
 
 new_leaflet_code = '''
+const mapObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            if (typeof initSlsMap === "function") initSlsMap();
+            if (slsOpenMap) {
+                setTimeout(() => {
+                    slsOpenMap.invalidateSize();
+                }, 100);
+            }
+        }
+    });
+});
+
     try {
         window._osmTile = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap'
