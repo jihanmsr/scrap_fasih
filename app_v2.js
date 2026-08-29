@@ -8278,11 +8278,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                     if (dVal === undefined) {
-                        deltaHtml += `<td style="text-align: center; color: var(--text-secondary);">—</td>`;
+                        deltaHtml += `<td style="text-align: center; min-width: 90px; color: var(--text-secondary);">—</td>`;
                     } else {
                         const dColor = dVal > 0 ? '#16a34a' : (dVal === 0 ? '#d97706' : '#dc2626');
                         const isLatest = (d === allDates[allDates.length - 1]);
-                        deltaHtml += `<td style="text-align: center; background: ${isLatest ? 'rgba(99,102,241,0.06)' : 'transparent'};">
+                        deltaHtml += `<td style="text-align: center; min-width: 90px; background: ${isLatest ? 'rgba(99,102,241,0.06)' : 'transparent'};">
                             <div style="font-weight: 700; color: ${dColor}; font-size: 1.05em;">
                                 ${dVal > 0 ? '+' : ''}${dVal.toLocaleString('id-ID')}
                                 <span style="font-size: 0.75em; opacity: 0.85; margin-left: 2px;">(${dPct > 0 ? '+' : ''}${dPct.toFixed(1).replace('.', ',')}%)</span>
@@ -8297,34 +8297,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
             html += `
                 <tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s; cursor: pointer;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'" onclick="window.showPetugasSLSDetail('${p.email}', '${p.role}', '${p.name.replace(/'/g, "\\'")}')">
-                    <td style="text-align: center; font-weight: 600; color: var(--text-secondary);">${idxReal + 1}</td>
-                    <td style="font-weight: 600; color: var(--text-primary);">
+                    <td style="text-align: center; font-weight: 600; color: var(--text-secondary); width: 50px; min-width: 50px;">${idxReal + 1}</td>
+                    <td style="font-weight: 600; color: var(--text-primary); min-width: 180px;">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            <div style="width: 24px; height: 24px; border-radius: 50%; background: rgba(249, 115, 22, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700;">
+                            <div style="width: 24px; height: 24px; border-radius: 50%; background: rgba(249, 115, 22, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; flex-shrink: 0;">
                                 ${p.name.substring(0, 2).toUpperCase()}
                             </div>
-                            <div style="display: flex; flex-direction: column; gap: 2px;">
-                                <div style="display: flex; align-items: center; gap: 6px;">
-                                    ${p.name} ${roleBadge}
-                                </div>
+                            <div style="display: flex; align-items: center; gap: 6px;">
+                                ${p.name} ${roleBadge}
                             </div>
                         </div>
                     </td>
-                    <td style="font-size: 0.85rem; font-family: monospace; color: var(--text-secondary);">
+                    <td style="font-size: 0.85rem; font-family: monospace; color: var(--text-secondary); min-width: 160px;">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            ${p.email}
+                            <span>${p.email}</span>
                             ${waHtml}
                         </div>
                     </td>
-                    <td style="text-align: center; font-family: monospace; font-weight: 700;">${p.total.toLocaleString('id-ID')}</td>
-                    <td style="text-align: center; font-family: monospace; color: #ef4444;">
+                    <td style="text-align: center; font-family: monospace; font-weight: 700; min-width: 90px;">${p.total.toLocaleString('id-ID')}</td>
+                    <td style="text-align: center; font-family: monospace; color: #ef4444; min-width: 90px;">
                         <div style="font-size: 1.05em; font-weight: 700;">${p.belum.toLocaleString('id-ID')}</div>
                         <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px; display: flex; flex-direction: column; gap: 2px;">
                             ${p.open > 0 ? `<span style="color:#64748b">Open: ${p.open}</span>` : ''}
                             ${p.draft > 0 ? `<span style="color:#f59e0b">Draft: ${p.draft}</span>` : ''}
                         </div>
                     </td>
-                    <td style="text-align: center; font-family: monospace; color: var(--color-delivered);">
+                    <td style="text-align: center; font-family: monospace; color: var(--color-delivered); min-width: 95px;">
                         <div style="font-size: 1.05em; font-weight: 700;">${p.selesai.toLocaleString('id-ID')}</div>
                         <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px; display: flex; flex-direction: column; gap: 2px;">
                             ${p.submitted_pencacah > 0 ? `<span style="color:#3b82f6">Submit PPL: ${p.submitted_pencacah}</span>` : ''}
@@ -8338,7 +8336,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </td>
                     ${deltaHtml}
-                    <td style="text-align: center;">${badgeHtml}</td>
+                    <td style="text-align: center; min-width: 100px;">${badgeHtml}</td>
                 </tr>
             `;
         });
@@ -8366,20 +8364,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     const dObj = new Date(d + 'T00:00:00');
                     const label = dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' });
                     const sublabel = isLatest ? '<br><span style="font-size:0.6rem;font-weight:700;color:var(--primary);">HARI INI</span>' : '<br><span style="font-size:0.6rem;font-weight:400;opacity:0.7;">delta</span>';
-                    thHistory += `<th style="text-align: center; width: 75px; cursor: pointer; ${isLatest ? 'background:rgba(99,102,241,0.12);border-bottom:2px solid var(--primary);' : ''}" onclick="window.sortPetugasSummary('history_${d}')">${label}${sublabel} <span class="sort-icon"></span></th>`;
+                    thHistory += `<th style="text-align: center; min-width: 90px; cursor: pointer; ${isLatest ? 'background:rgba(99,102,241,0.12);border-bottom:2px solid var(--primary);' : ''}" onclick="window.sortPetugasSummary('history_${d}')">${label}${sublabel} <span class="sort-icon"></span></th>`;
                 });
             }
             
             thead.innerHTML = `
                 <tr>
-                    <th style="width: 60px; text-align: center;">No</th>
-                    <th style="text-align: left; cursor: pointer;" onclick="window.sortPetugasSummary('name')">Nama Petugas <span class="sort-icon"></span></th>
-                    <th style="text-align: left; cursor: pointer;" onclick="window.sortPetugasSummary('email')">Email / Username <span class="sort-icon"></span></th>
-                    <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('total')">Total Target <span class="sort-icon"></span></th>
-                    <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('belum')">Belum Selesai <span class="sort-icon"></span></th>
-                    <th style="text-align: center; cursor: pointer;" onclick="window.sortPetugasSummary('selesai')">Selesai <span class="sort-icon"></span></th>
+                    <th style="width: 50px; min-width: 50px; text-align: center;">No</th>
+                    <th style="text-align: left; min-width: 180px; cursor: pointer;" onclick="window.sortPetugasSummary('name')">Nama Petugas <span class="sort-icon"></span></th>
+                    <th style="text-align: left; min-width: 160px; cursor: pointer;" onclick="window.sortPetugasSummary('email')">Email / Username <span class="sort-icon"></span></th>
+                    <th style="text-align: center; min-width: 90px; cursor: pointer;" onclick="window.sortPetugasSummary('total')">Total Target <span class="sort-icon"></span></th>
+                    <th style="text-align: center; min-width: 90px; cursor: pointer;" onclick="window.sortPetugasSummary('belum')">Belum Selesai <span class="sort-icon"></span></th>
+                    <th style="text-align: center; min-width: 95px; cursor: pointer;" onclick="window.sortPetugasSummary('selesai')">Selesai <span class="sort-icon"></span></th>
                     ${thHistory}
-                    <th style="text-align: center; width: 120px; cursor: pointer;" onclick="window.sortPetugasSummary('pct')">% Capaian <span class="sort-icon"></span></th>
+                    <th style="text-align: center; width: 100px; min-width: 100px; cursor: pointer;" onclick="window.sortPetugasSummary('pct')">% Capaian <span class="sort-icon"></span></th>
                 </tr>
             `;
         }

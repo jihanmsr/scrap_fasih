@@ -21,12 +21,12 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="daily_submission_stats.js?v=1787991275_v2"></script>
     <script src="daily_summary.js?v=1787991275_v2"></script>
-    <script src="open_subsls_data.js"></script>
-    <script src="petasls.js"></script>
-    <script src="highlighted_subsls.js"></script>
-    <script src="open_subsls.js"></script>
-    <script src="belum_diassign_data.js"></script>
-    <script src="belum_diassign.js"></script>
+    <script src="open_subsls_data.js?v=1787991275_v3"></script>
+    <script src="petasls.js?v=1787991275_v3"></script>
+    <script src="highlighted_subsls.js?v=1787991275_v3"></script>
+    <script src="open_subsls.js?v=1787991275_v3"></script>
+    <script src="belum_diassign_data.js?v=1787991275_v3"></script>
+    <script src="belum_diassign.js?v=1787991275_v3"></script>
 
     <link rel="stylesheet" href="style.css?v=1787991275_v2">
     <style>
@@ -942,85 +942,85 @@
                         Rekapitulasi Capaian per Petugas
                     </h3>
 
-                    <div class="d-flex gap-2 mb-3">
-                        <button class="btn-tab active" id="tab-pencacah" onclick="window.setPetugasTab('Pencacah')"
-                            style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.8rem;">Pencacah</button>
-                        <button class="btn-tab" id="tab-pengawas" onclick="window.setPetugasTab('Pengawas')"
-                            style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.8rem;">Pengawas</button>
-                    </div>
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
-                        <p id="petugas-summary-desc"
-                            style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0; font-weight: 500;">
-                            Data agregat progres masing-masing petugas (berdasarkan wilayah terpilih di filter atas).
-                        </p>
-                        <div class="search-wrapper"
-                            style="max-width: 250px; width: 100%; margin: 0; position: relative;">
-                            <svg class="search-icon" fill="none" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"
-                                style="width: 16px; height: 16px;">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
-                            </svg>
-                            <input class="search-input" id="petugas-summary-search-input"
-                                onkeyup="if(window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered)"
-                                placeholder="Cari nama petugas..." type="text"
-                                style="height: 38px; padding-left: 2.5rem; font-size: 0.85rem;" />
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                            <div class="d-flex gap-2">
+                                <button class="btn-tab active" id="tab-pencacah" onclick="window.setPetugasTab('Pencacah')"
+                                    style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.82rem; font-weight: 700;">Pencacah</button>
+                                <button class="btn-tab" id="tab-pengawas" onclick="window.setPetugasTab('Pengawas')"
+                                    style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.82rem; font-weight: 700;">Pengawas</button>
+                            </div>
+                            <span id="petugas-summary-desc"
+                                style="color: var(--text-secondary); font-size: 0.82rem; font-weight: 500;">
+                                Data agregat progres petugas berdasarkan wilayah terpilih
+                            </span>
                         </div>
-                        <select id="select-history-range" onchange="window.setPetugasHistoryRange(this.value)"
-                            style="height: 38px; padding: 0.4rem 0.75rem; border-radius: 0.6rem; border: 1px solid var(--border-light); background: var(--input-bg); color: var(--text-primary); font-size: 0.82rem; font-weight: 600; font-family: 'Outfit', sans-serif; cursor: pointer;">
-                            <option value="7" selected>7 Hari Terakhir</option>
-                            <option value="14">14 Hari Terakhir</option>
-                            <option value="30">30 Hari Terakhir</option>
-                            <option value="all">Semua Tanggal</option>
-                        </select>
-                        <button id="btn-toggle-history-petugas" onclick="window.togglePetugasHistory()"
-                            style="display: flex; align-items: center; gap: 0.5rem; background: rgba(99,102,241,0.1); color: var(--text-secondary); border: 1px solid var(--border-light); border-radius: 0.6rem; padding: 0.5rem 1rem; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s; white-space: nowrap;">
-                            Sembunyikan History
-                        </button>
-                        <button id="btn-download-excel-petugas" onclick="window.downloadPetugasSummaryExcel()"
-                            style="display: flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; border-radius: 0.6rem; padding: 0.5rem 1rem; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(34,197,94,0.3); transition: all 0.2s; white-space: nowrap;">
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                                <polyline points="7 10 12 15 17 10" />
-                                <line x1="12" y1="15" x2="12" y2="3" />
-                            </svg>
-                            Download Excel
-                        </button>
-                        <button id="btn-download-excel-desa" onclick="window.downloadDesaSummaryExcel()"
-                            style="display: none; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; border-radius: 0.6rem; padding: 0.5rem 1rem; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(34,197,94,0.3); transition: all 0.2s; white-space: nowrap;">
-                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
-                            Download Excel Desa
-                        </button>
+
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                            <div class="search-wrapper" style="width: 210px; margin: 0; position: relative;">
+                                <svg class="search-icon" fill="none" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"
+                                    style="width: 15px; height: 15px;">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                                </svg>
+                                <input class="search-input" id="petugas-summary-search-input"
+                                    onkeyup="if(window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered)"
+                                    placeholder="Cari nama petugas..." type="text"
+                                    style="height: 36px; padding-left: 2.2rem; font-size: 0.82rem;" />
+                            </div>
+                            <select id="select-history-range" onchange="window.setPetugasHistoryRange(this.value)"
+                                style="height: 36px; padding: 0.35rem 0.65rem; border-radius: 0.6rem; border: 1px solid var(--border-light); background: var(--input-bg); color: var(--text-primary); font-size: 0.8rem; font-weight: 600; font-family: 'Outfit', sans-serif; cursor: pointer;">
+                                <option value="7" selected>7 Hari Terakhir</option>
+                                <option value="14">14 Hari Terakhir</option>
+                                <option value="30">30 Hari Terakhir</option>
+                                <option value="all">Semua Tanggal</option>
+                            </select>
+                            <button id="btn-toggle-history-petugas" onclick="window.togglePetugasHistory()"
+                                style="display: flex; align-items: center; gap: 0.4rem; background: rgba(99,102,241,0.1); color: var(--text-secondary); border: 1px solid var(--border-light); border-radius: 0.6rem; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s; white-space: nowrap; height: 36px;">
+                                Sembunyikan History
+                            </button>
+                            <button id="btn-download-excel-petugas" onclick="window.downloadPetugasSummaryExcel()"
+                                style="display: flex; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; border-radius: 0.6rem; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(34,197,94,0.3); transition: all 0.2s; white-space: nowrap; height: 36px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="7 10 12 15 17 10" />
+                                    <line x1="12" y1="15" x2="12" y2="3" />
+                                </svg>
+                                Download Excel
+                            </button>
+                            <button id="btn-download-excel-desa" onclick="window.downloadDesaSummaryExcel()"
+                                style="display: none; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; border-radius: 0.6rem; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(34,197,94,0.3); transition: all 0.2s; white-space: nowrap; height: 36px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Download Excel Desa
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Petugas Table Container -->
                     <div id="petugas-summary-table-container" class="ipas-table-wrapper"
-                        style="max-height: 400px; overflow-y: auto;">
-                        <table class="ipas-table">
+                        style="max-height: 480px; overflow: auto; width: 100%;">
+                        <table class="ipas-table" style="min-width: 900px; width: 100%;">
                             <thead id="petugas-summary-table-head">
                                 <tr>
-                                    <th style="width: 60px; text-align: center;">No</th>
-                                    <th style="text-align: left; cursor: pointer;"
+                                    <th style="width: 50px; min-width: 50px; text-align: center;">No</th>
+                                    <th style="text-align: left; min-width: 180px; cursor: pointer;"
                                         onclick="window.sortPetugasSummary('name')">Nama Petugas <span
                                             class="sort-icon"></span></th>
-                                    <th style="text-align: left; cursor: pointer;"
+                                    <th style="text-align: left; min-width: 160px; cursor: pointer;"
                                         onclick="window.sortPetugasSummary('email')">Email / Username <span
                                             class="sort-icon"></span></th>
-                                    <th style="text-align: center; cursor: pointer;"
+                                    <th style="text-align: center; min-width: 90px; cursor: pointer;"
                                         onclick="window.sortPetugasSummary('total')">Total Target <span
                                             class="sort-icon"></span></th>
-                                    <th style="text-align: center; cursor: pointer;"
+                                    <th style="text-align: center; min-width: 90px; cursor: pointer;"
                                         onclick="window.sortPetugasSummary('belum')">Belum Selesai <span
                                             class="sort-icon"></span></th>
-                                    <th style="text-align: center; cursor: pointer;"
+                                    <th style="text-align: center; min-width: 95px; cursor: pointer;"
                                         onclick="window.sortPetugasSummary('selesai')">Selesai <span
                                             class="sort-icon"></span></th>
-                                    <th style="text-align: center; cursor: pointer;"
-                                        onclick="window.sortPetugasSummary('target_harian')">Target Harian <span
-                                            class="sort-icon"></span></th>
-                                    <th style="text-align: center; width: 120px; cursor: pointer;"
+                                    <th style="text-align: center; width: 100px; min-width: 100px; cursor: pointer;"
                                         onclick="window.sortPetugasSummary('pct')">% Capaian <span
                                             class="sort-icon"></span></th>
                                 </tr>

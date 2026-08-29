@@ -25,7 +25,7 @@ function initSlsMap() {
 
         slsOpenMap = L.map('sls-open-map', {
             center: [-1.4300, 121.4456],
-            zoom: 6,
+            zoom: 7,
             layers: [window._esriTile],
             zoomControl: true
         });
@@ -33,96 +33,93 @@ function initSlsMap() {
         const geoData = window.PETA_SLS;
         const highlightedData = window.HIGHLIGHTED_SUBSLS || {};
 
+        // Only render the Open SLS polygons to avoid rendering 15,000+ duplicate/striped borders
         slsMapLayer = L.geoJSON(geoData, {
-            style: function (feature) {
+            filter: function (feature) {
                 const p = feature.properties || {};
                 const featureId = "72" + (p.kdkab || "") + (p.kdkec || "") + (p.kddesa || "") + (p.kdsls || "") + (p.kdsubsls || "");
-                
-                if (highlightedData[featureId]) {
-                    return {
-                        color: "#ff6b00",
-                        weight: 3.5,
-                        opacity: 1,
-                        fillColor: "#ff6b00",
-                        fillOpacity: 0.12
-                    };
-                } else {
-                    return {
-                        color: "#3b82f6",
-                        weight: 1.5,
-                        opacity: 0.8,
-                        fillColor: "#60a5fa",
-                        fillOpacity: 0.05
-                    };
-                }
+                return Boolean(highlightedData[featureId]);
+            },
+            style: function (feature) {
+                return {
+                    color: "#ea580c",
+                    weight: 3.5,
+                    opacity: 1,
+                    fillColor: "#f97316",
+                    fillOpacity: 0.35
+                };
             },
             onEachFeature: function (feature, layer) {
                 if (feature.properties) {
                     const p = feature.properties;
                     const featureId = "72" + (p.kdkab || "") + (p.kdkec || "") + (p.kddesa || "") + (p.kdsls || "") + (p.kdsubsls || "");
+                    const csv = highlightedData[featureId] || {};
                     
-                    let popupContent = '<div style="max-height: 220px; overflow-y: auto; font-family: sans-serif;"><b>Detail SLS</b><br>';
-                    for (let key in feature.properties) {
-                        popupContent += `<b>${key}</b>: ${feature.properties[key]}<br>`;
-                    }
-                    popupContent += `<b>Kode Sub SLS Lengkap</b>: ${featureId}<br>`;
-                    
-                    if (highlightedData[featureId]) {
-                        const csv = highlightedData[featureId];
-                        popupContent += `<br><div style="padding: 8px; background: #fff7ed; border: 1px solid #ffedd5; border-radius: 6px; font-size: 0.9em; margin-top: 5px;">`;
-                        popupContent += `<b style="color:#ea580c;">🎯 SLS FULL OPEN:</b><br>`;
-                        popupContent += `<b>Petugas:</b> ${csv.nama_petugas || '-'}<br>`;
-                        popupContent += `<b>Nama Sub SLS:</b> ${csv.nama_sub_sls || csv.sls || '-'}<br>`;
-                        popupContent += `<b>Jml Prelist:</b> ${csv.jumlah_prelist || 0}<br>`;
-                        popupContent += `</div>`;
-                    }
-                    
-                    popupContent += '</div>';
+                    let popupContent = `
+                        <div style="font-family: 'Outfit', sans-serif; padding: 4px; min-width: 180px;">
+                            <div style="font-weight: 800; font-size: 0.95rem; color: #ea580c; margin-bottom: 6px;">🎯 SLS FULL OPEN</div>
+                            <div style="font-size: 0.85rem; line-height: 1.45; color: #1e293b;">
+                                <b>Kabupaten:</b> ${csv.kabupaten || p.nmkab || '-'}<br>
+                                <b>Kecamatan:</b> ${csv.kecamatan || p.nmkec || '-'}<br>
+                                <b>Desa:</b> ${csv.desa || p.nmdesa || '-'}<br>
+                                <b>SLS:</b> ${csv.nama_sub_sls || csv.sls || p.nmsls || '-'}<br>
+                                <b>Kode:</b> <code style="background:#f1f5f9;padding:1px 4px;border-radius:3px;font-size:0.8rem;">${featureId}</code><br>
+                                <b>Petugas:</b> ${csv.nama_petugas || '<span style="color:#ef4444;font-weight:700;">(Belum Diassign)</span>'}<br>
+                                <b>Jml Prelist:</b> <span style="font-weight:700;color:#ea580c;">${csv.jumlah_prelist || 0}</span>
+                            </div>
+                        </div>
+                    `;
                     layer.bindPopup(popupContent);
                 }
             }
         }).addTo(slsOpenMap);
 
-        slsOpenMap.fitBounds(slsMapLayer.getBounds());
+        if (slsMapLayer.getLayers().length > 0) {
+            slsOpenMap.fitBounds(slsMapLayer.getBounds(), { padding: [40, 40], maxZoom: 13 });
+        }
+
         populateMapFilters();
         populateDrawerFilters();
         
     } catch(err) {
         console.error("Error loading map data:", err);
     }
-
 }
 
 function populateMapFilters() {
-    if (!window.PETA_SLS) return;
-    const kabSet = new Set();
-    window.PETA_SLS.features.forEach(f => {
-        if (f.properties && f.properties.nmkab) kabSet.add(f.properties.nmkab);
-    });
     const kabSelect = document.getElementById('map-filter-kab');
-    if (kabSelect) {
-        Array.from(kabSet).sort().forEach(kab => {
-            const opt = document.createElement('option');
-            opt.value = kab;
-            opt.textContent = kab;
-            kabSelect.appendChild(opt);
-        });
-    }
+    if (!kabSelect) return;
+    kabSelect.innerHTML = '<option value="">Semua Kabupaten</option>';
+
+    if (!window.OPEN_SUBSLS_DATA) return;
+    const kabSet = new Set();
+    window.OPEN_SUBSLS_DATA.forEach(d => {
+        if (d.kabupaten && d.kabupaten.trim()) kabSet.add(d.kabupaten.trim());
+    });
+
+    Array.from(kabSet).sort().forEach(kab => {
+        const opt = document.createElement('option');
+        opt.value = kab;
+        opt.textContent = kab;
+        kabSelect.appendChild(opt);
+    });
 }
 
 window.updateMapKecFilter = function() {
     const kab = document.getElementById('map-filter-kab').value;
     const kecSelect = document.getElementById('map-filter-kec');
+    if (!kecSelect) return;
     kecSelect.innerHTML = '<option value="">Semua Kecamatan</option>';
-    if (!kab || !window.PETA_SLS) {
+    
+    if (!window.OPEN_SUBSLS_DATA) {
         window.searchMap();
         return;
     }
     
     const kecSet = new Set();
-    window.PETA_SLS.features.forEach(f => {
-        if (f.properties && f.properties.nmkab === kab && f.properties.nmkec) {
-            kecSet.add(f.properties.nmkec);
+    window.OPEN_SUBSLS_DATA.forEach(d => {
+        if ((!kab || d.kabupaten === kab) && d.kecamatan && d.kecamatan.trim()) {
+            kecSet.add(d.kecamatan.trim());
         }
     });
     
@@ -148,29 +145,39 @@ window.searchMap = function() {
     if (!slsMapLayer) return;
 
     if (!query && !filterKab && !filterKec) {
-        slsOpenMap.fitBounds(slsMapLayer.getBounds());
+        if (slsMapLayer.getLayers().length > 0) {
+            slsOpenMap.fitBounds(slsMapLayer.getBounds(), { padding: [40, 40], maxZoom: 13 });
+        }
         return;
     }
 
     let foundLayers = [];
+    const highlightedData = window.HIGHLIGHTED_SUBSLS || {};
+
     slsMapLayer.eachLayer(function(layer) {
         const p = layer.feature.properties || {};
+        const featureId = "72" + (p.kdkab || "") + (p.kdkec || "") + (p.kddesa || "") + (p.kdsls || "") + (p.kdsubsls || "");
+        const info = highlightedData[featureId] || {};
         
-        let matchKab = !filterKab || (p.nmkab === filterKab);
-        let matchKec = !filterKec || (p.nmkec === filterKec);
+        const kabVal = (info.kabupaten || p.nmkab || '');
+        const kecVal = (info.kecamatan || p.nmkec || '');
+
+        let matchKab = !filterKab || (kabVal === filterKab);
+        let matchKec = !filterKec || (kecVal === filterKec);
         
         let matchQuery = true;
         if (query) {
-            const featureId = "72" + (p.kdkab || "") + (p.kdkec || "") + (p.kddesa || "") + (p.kdsls || "") + (p.kdsubsls || "");
             matchQuery = false;
             if (featureId.includes(query)) matchQuery = true;
             if (!matchQuery) {
-                for (let key in p) {
-                    if (String(p[key]).toLowerCase().includes(query)) {
-                        matchQuery = true;
-                        break;
-                    }
-                }
+                const combined = [
+                    kabVal,
+                    kecVal,
+                    info.desa || p.nmdesa || '',
+                    info.nama_sub_sls || info.sls || p.nmsls || '',
+                    info.nama_petugas || ''
+                ].join(' ').toLowerCase();
+                if (combined.includes(query)) matchQuery = true;
             }
         }
         
@@ -181,27 +188,26 @@ window.searchMap = function() {
 
     if (foundLayers.length > 0) {
         let group = L.featureGroup(foundLayers);
-        slsOpenMap.fitBounds(group.getBounds(), { maxZoom: 15 });
+        slsOpenMap.fitBounds(group.getBounds(), { maxZoom: 15, padding: [50, 50] });
         
-        if (foundLayers.length === 1 && query) { 
+        if (foundLayers.length === 1) { 
             let layer = foundLayers[0];
             window.lastSearchedLayer = layer;
             if (layer.setStyle) {
                 layer.setStyle({
-                    color: "#fde047", 
-                    weight: 4,
+                    color: "#f59e0b", 
+                    weight: 5,
                     opacity: 1,
-                    fillColor: "#fef08a", 
-                    fillOpacity: 0.9
+                    fillColor: "#fbbf24", 
+                    fillOpacity: 0.7
                 });
             }
             layer.openPopup();
         }
     } else {
-        if (query) alert("Pencarian tidak ditemukan di peta.");
+        if (query) alert("Pencarian tidak ditemukan di antara SLS Full Open.");
     }
 };
-
 
 const mapObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -251,13 +257,13 @@ document.addEventListener('DOMContentLoaded', () => {
         window.filterSubSlsData();
     } catch(err) {
         console.error("Error in DOMContentLoaded:", err);
-        alert("JS Error: " + err.message);
     }
 });
 
 function initFilters() {
     const kabFilter = document.getElementById('subsls-filter-kab');
     if (!kabFilter) return;
+    kabFilter.innerHTML = '<option value="">Semua Kabupaten</option>';
     const kabupatens = [...new Set(window.OPEN_SUBSLS_DATA.map(d => d.kabupaten))].filter(Boolean).sort();
     kabupatens.forEach(kab => {
         const option = document.createElement('option');
@@ -448,7 +454,7 @@ function renderTable() {
     const paginatedData = filteredData.slice(start, end);
 
     if (paginatedData.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 2rem;">Tidak ada data ditemukan</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding: 2rem; color: var(--text-secondary);">Tidak ada data SLS Open ditemukan</td></tr>';
         if(pagination) pagination.innerHTML = '';
         return;
     }
@@ -519,8 +525,6 @@ function renderTable() {
     }
 }
 
-
-
 window.downloadSubSlsExcel = function() {
     if (!filteredData || filteredData.length === 0) {
         alert('Tidak ada data untuk diunduh.');
@@ -552,7 +556,6 @@ window.toggleSelesai = function(kodeSubSls, isChecked, checkboxEl) {
     }
     localStorage.setItem('marked_subsls_open', JSON.stringify(marked));
     
-    // Style the row immediately without full re-render to avoid losing focus
     const tr = checkboxEl.closest('tr');
     if (tr) {
         if (isChecked) {
@@ -571,24 +574,14 @@ window.toggleSelesai = function(kodeSubSls, isChecked, checkboxEl) {
     }
 };
 
-
 // ── Map Floating Pill Overlay Handlers ─────────────────────────────────────
 window.toggleWilayahDrawer = function() {
     const drawer = document.getElementById("map-wilayah-drawer");
     if (!drawer) return;
     const isVisible = drawer.style.display !== "none";
     drawer.style.display = isVisible ? "none" : "block";
-    document.getElementById("map-keberadaan-popup").style.display = "none";
-    document.getElementById("map-basemap-popup").style.display = "none";
-};
-
-window.toggleKeberadaanPopup = function() {
-    const popup = document.getElementById("map-keberadaan-popup");
-    if (!popup) return;
-    const isVisible = popup.style.display !== "none";
-    popup.style.display = isVisible ? "none" : "block";
-    document.getElementById("map-wilayah-drawer").style.display = "none";
-    document.getElementById("map-basemap-popup").style.display = "none";
+    const pop = document.getElementById("map-basemap-popup");
+    if (pop) pop.style.display = "none";
 };
 
 window.toggleBaseMapPopup = function() {
@@ -596,8 +589,8 @@ window.toggleBaseMapPopup = function() {
     if (!popup) return;
     const isVisible = popup.style.display !== "none";
     popup.style.display = isVisible ? "none" : "block";
-    document.getElementById("map-wilayah-drawer").style.display = "none";
-    document.getElementById("map-keberadaan-popup").style.display = "none";
+    const drw = document.getElementById("map-wilayah-drawer");
+    if (drw) drw.style.display = "none";
 };
 
 window.setBaseMapTile = function(type) {
@@ -612,40 +605,23 @@ window.setBaseMapTile = function(type) {
     document.getElementById("map-basemap-popup").style.display = "none";
 };
 
-window.filterKeberadaan = function(type) {
-    document.querySelectorAll(".btn-keb-filter").forEach(btn => {
-        if (btn.getAttribute("data-keb") === type) {
-            btn.style.background = "#4f46e5";
-            btn.style.color = "#ffffff";
-            btn.style.border = "none";
-        } else {
-            btn.style.background = "#f8fafc";
-            btn.style.color = "#334155";
-            btn.style.border = "1px solid #e2e8f0";
-        }
-    });
-    document.getElementById("map-keberadaan-popup").style.display = "none";
-};
-
-window.onSqlLabClick = function() {
-    alert("SQL Lab Data: Menampilkan data usaha terhubung database SQL Lab.");
-};
-
 function populateDrawerFilters() {
-    if (!window.PETA_SLS) return;
-    const kabSet = new Set();
-    window.PETA_SLS.features.forEach(f => {
-        if (f.properties && f.properties.nmkab) kabSet.add(f.properties.nmkab);
-    });
     const kabSel = document.getElementById("drawer-map-filter-kab");
-    if (kabSel && kabSel.options.length === 1) {
-        Array.from(kabSet).sort().forEach(kab => {
-            const opt = document.createElement("option");
-            opt.value = kab;
-            opt.textContent = kab;
-            kabSel.appendChild(opt);
-        });
-    }
+    if (!kabSel) return;
+    kabSel.innerHTML = "<option value=''>Semua Kabupaten</option>";
+
+    if (!window.OPEN_SUBSLS_DATA) return;
+    const kabSet = new Set();
+    window.OPEN_SUBSLS_DATA.forEach(d => {
+        if (d.kabupaten && d.kabupaten.trim()) kabSet.add(d.kabupaten.trim());
+    });
+
+    Array.from(kabSet).sort().forEach(kab => {
+        const opt = document.createElement("option");
+        opt.value = kab;
+        opt.textContent = kab;
+        kabSel.appendChild(opt);
+    });
 }
 
 window.onDrawerKabChange = function() {
@@ -658,11 +634,13 @@ window.onDrawerKabChange = function() {
     desaSel.innerHTML = "<option value=''>Semua Desa</option>";
     slsSel.innerHTML = "<option value=''>--- Pilih SLS ---</option>";
     
-    if (!kab || !window.PETA_SLS) return;
+    if (!window.OPEN_SUBSLS_DATA) return;
     
     const kecSet = new Set();
-    window.PETA_SLS.features.forEach(f => {
-        if (f.properties && f.properties.nmkab === kab && f.properties.nmkec) kecSet.add(f.properties.nmkec);
+    window.OPEN_SUBSLS_DATA.forEach(d => {
+        if ((!kab || d.kabupaten === kab) && d.kecamatan && d.kecamatan.trim()) {
+            kecSet.add(d.kecamatan.trim());
+        }
     });
     Array.from(kecSet).sort().forEach(k => {
         const opt = document.createElement("option");
@@ -684,11 +662,13 @@ window.onDrawerKecChange = function() {
     desaSel.innerHTML = "<option value=''>Semua Desa</option>";
     slsSel.innerHTML = "<option value=''>--- Pilih SLS ---</option>";
     
-    if (!kec || !window.PETA_SLS) return;
+    if (!window.OPEN_SUBSLS_DATA) return;
     
     const desaSet = new Set();
-    window.PETA_SLS.features.forEach(f => {
-        if (f.properties && f.properties.nmkab === kab && f.properties.nmkec === kec && f.properties.nmdesa) desaSet.add(f.properties.nmdesa);
+    window.OPEN_SUBSLS_DATA.forEach(d => {
+        if ((!kab || d.kabupaten === kab) && (!kec || d.kecamatan === kec) && d.desa && d.desa.trim()) {
+            desaSet.add(d.desa.trim());
+        }
     });
     Array.from(desaSet).sort().forEach(d => {
         const opt = document.createElement("option");
@@ -708,12 +688,13 @@ window.onDrawerDesaChange = function() {
     const slsSel = document.getElementById("drawer-map-filter-sls");
     
     slsSel.innerHTML = "<option value=''>--- Pilih SLS ---</option>";
-    if (!desa || !window.PETA_SLS) return;
+    if (!window.OPEN_SUBSLS_DATA) return;
     
     const slsSet = new Set();
-    window.PETA_SLS.features.forEach(f => {
-        if (f.properties && f.properties.nmkab === kab && f.properties.nmkec === kec && f.properties.nmdesa === desa) {
-            slsSet.add(f.properties.nmsls || f.properties.sls || f.properties.kdsls);
+    window.OPEN_SUBSLS_DATA.forEach(d => {
+        if ((!kab || d.kabupaten === kab) && (!kec || d.kecamatan === kec) && (!desa || d.desa === desa)) {
+            const sName = d.sls || d.nama_sub_sls || d.kode_sub_sls;
+            if (sName) slsSet.add(sName);
         }
     });
     Array.from(slsSet).sort().forEach(s => {

@@ -1003,6 +1003,17 @@ header {
     border-bottom: none;
 }
 
+#petugas-summary-table-container .ipas-table th:first-child,
+#petugas-summary-table-container .ipas-table td:first-child {
+    position: static !important;
+    box-shadow: none !important;
+}
+
+#petugas-summary-table-container .ipas-table th:first-child::after,
+#petugas-summary-table-container .ipas-table td:first-child::after {
+    display: none !important;
+}
+
 @keyframes pulse {
     0% {
         opacity: 0.6;
