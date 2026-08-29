@@ -5754,6 +5754,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof window.initOpenSubSls === 'function') {
                 window.initOpenSubSls();
             }
+        } else if (tabId === 'belum_diassign') {
+            if (mainHeader) mainHeader.textContent = 'Pemantauan Data Belum Diassign';
+            if (mainSubheader) mainSubheader.textContent = 'Daftar rincian penugasan/usaha yang belum diassign ke petugas sensus.';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            if (typeof window.initBelumDiassign === 'function') {
+                window.initBelumDiassign();
+            }
         } else {
             if (mainHeader) mainHeader.textContent = 'Pemantauan Email Usaha Besar';
             if (mainSubheader) mainSubheader.textContent = 'Daftar pemantauan status pengiriman email kuesioner kepada responden Usaha Besar (UB)';

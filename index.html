@@ -25,6 +25,8 @@
     <script src="petasls.js"></script>
     <script src="highlighted_subsls.js"></script>
     <script src="open_subsls.js"></script>
+    <script src="belum_diassign_data.js"></script>
+    <script src="belum_diassign.js"></script>
 
     <link rel="stylesheet" href="style.css?v=1787896792_v2">
     <style>
@@ -172,6 +174,13 @@
                         <line x1="12" y1="16" x2="12.01" y2="16"></line>
                     </svg>
                     SLS Open
+                </button>
+                <button class="btn-tab" id="tab-btn-belum_diassign" onclick="switchTab('belum_diassign')">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <path d="M12 5v14m7-7H5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    Belum Diassign
                 </button>
 
                 <button class="btn-tab" id="tab-btn-email" onclick="switchTab('email')">
@@ -567,6 +576,110 @@
                 </div>
             </div>
         </div>
+                </div>
+            </div>
+
+            <!-- TAB CONTENT: BELUM DIASSIGN -->
+            <div class="tab-content" id="tab-content-belum_diassign" style="display: none; padding: 1.5rem;">
+                <div class="stats-section">
+                    <h3 class="section-title-stats">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.5rem;" viewbox="0 0 24 24" width="16">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        Pemantauan Data Belum Diassign ke Petugas
+                    </h3>
+                    <div class="compact-stats" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); justify-content: flex-start;">
+                        <div class="stat-card-compact" style="--stat-color: var(--primary);">
+                            <div class="stat-label">Total Belum Diassign</div>
+                            <div class="stat-value" id="stat-belum-total">0</div>
+                        </div>
+                        <div class="stat-card-compact" style="--stat-color: #2563eb;">
+                            <div class="stat-label">Status SUBMITTED</div>
+                            <div class="stat-value" id="stat-belum-submitted">0</div>
+                        </div>
+                        <div class="stat-card-compact" style="--stat-color: #f59e0b;">
+                            <div class="stat-label">Status DRAFT</div>
+                            <div class="stat-value" id="stat-belum-draft">0</div>
+                        </div>
+                        <div class="stat-card-compact" style="--stat-color: #10b981;">
+                            <div class="stat-label">Status APPROVED</div>
+                            <div class="stat-value" id="stat-belum-approved">0</div>
+                        </div>
+                        <div class="stat-card-compact" style="--stat-color: #8b5cf6;">
+                            <div class="stat-label">Kabupaten Terkait</div>
+                            <div class="stat-value" id="stat-belum-kab">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-panel" style="margin-top: 1.25rem;">
+                    <div class="search-row" style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                        <input type="text" id="belum-search-input" class="search-input" placeholder="Cari ID Sub-SLS / Nama Usaha / Alamat / Catatan..." style="flex: 1; min-width: 240px;">
+                        
+                        <select class="sort-select" id="belum-filter-kab" style="width: auto; min-width: 170px; max-width: 220px; flex-shrink: 0;">
+                            <option value="">Semua Kabupaten/Kota</option>
+                        </select>
+
+                        <select class="sort-select" id="belum-filter-status" style="width: auto; min-width: 150px; max-width: 190px; flex-shrink: 0;">
+                            <option value="">Semua Status</option>
+                        </select>
+
+                        <select class="sort-select" id="belum-filter-mode" style="width: auto; min-width: 110px; max-width: 140px; flex-shrink: 0;">
+                            <option value="">Semua Mode</option>
+                            <option value="[CAPI]">CAPI</option>
+                            <option value="[CAWI]">CAWI</option>
+                        </select>
+
+                        <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--text-secondary);">
+                            <span>Tampilkan:</span>
+                            <select id="belum-page-size" class="sort-select" style="padding: 0.4rem 0.6rem; min-width: 70px;">
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="500">500</option>
+                            </select>
+                        </div>
+
+                        <button onclick="window.downloadBelumExcel()" style="padding: 8px 16px; background-color: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; display: flex; align-items: center; gap: 8px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Export Excel
+                        </button>
+                    </div>
+                </div>
+
+                <div class="ipas-table-wrapper" style="margin-top: 1.25rem; max-height: 620px; overflow-y: auto; border: 1px solid var(--card-border); border-radius: 0.75rem; background: var(--card-bg);">
+                    <table class="ipas-table" id="table-belum-diassign" style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="position: sticky; top: 0; z-index: 2; background: var(--bg-body);">
+                                <th style="width: 40px; text-align: center;">No</th>
+                                <th style="width: 150px; cursor: pointer;" onclick="window.sortBelumTable('idsubsls')">ID Sub SLS &#x25B2;&#x25BC;</th>
+                                <th style="width: 170px; cursor: pointer;" onclick="window.sortBelumTable('kab_name')">Kabupaten/Kota &#x25B2;&#x25BC;</th>
+                                <th style="cursor: pointer;" onclick="window.sortBelumTable('data1')">Nama Usaha / Data 1 &#x25B2;&#x25BC;</th>
+                                <th style="width: 140px; cursor: pointer;" onclick="window.sortBelumTable('status')">Status &#x25B2;&#x25BC;</th>
+                                <th style="width: 70px; text-align: center; cursor: pointer;" onclick="window.sortBelumTable('mode')">Mode &#x25B2;&#x25BC;</th>
+                                <th style="width: 180px;">Alamat / Catatan</th>
+                                <th style="width: 140px;">Koordinat</th>
+                                <th style="width: 110px; text-align: center;">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-belum-diassign">
+                            <!-- Populated dynamically by belum_diassign.js -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination footer -->
+                <div id="belum-pagination" style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1rem;border:1px solid var(--card-border);border-top:none;border-radius:0 0 0.75rem 0.75rem;background:var(--bg-body);gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+                    <span id="belum-page-info" style="font-size:0.82rem;color:var(--text-secondary);font-weight:500;">Memuat data...</span>
+                    <div style="display:flex;gap:0.35rem;align-items:center;">
+                        <button id="belum-btn-prev" onclick="window.changeBelumPage(-1)"
+                            style="padding:0.35rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;font-weight:600;">&#8592; Prev</button>
+                        <div id="belum-page-nums" style="display:flex;gap:0.25rem;"></div>
+                        <button id="belum-btn-next" onclick="window.changeBelumPage(1)"
+                            style="padding:0.35rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;font-weight:600;">Next &#8594;</button>
+                    </div>
                 </div>
             </div>
 

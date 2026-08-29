@@ -5808,6 +5808,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (mainSubheader) mainSubheader.textContent = 'Daftar SLS yang masih berstatus OPEN dan pemantauan kelengkapan petugas.';
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+        } else if (tabId === 'belum_diassign') {
+            if (mainHeader) mainHeader.textContent = 'Pemantauan Data Belum Diassign';
+            if (mainSubheader) mainSubheader.textContent = 'Daftar rincian penugasan/usaha yang belum diassign ke petugas sensus.';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            if (typeof window.initBelumDiassign === 'function') {
+                window.initBelumDiassign();
+            }
         } else if (tabId === 'palu') {
             if (mainHeader) mainHeader.textContent = '🔴 Monitoring Harian Kota Palu';
             if (mainSubheader) mainSubheader.textContent = 'Pantau progres petugas Palu secara detail hingga 15 Juli 2026';
