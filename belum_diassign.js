@@ -202,15 +202,15 @@
         tbody.innerHTML = pageData.map((row, idx) => {
             const rowNum = startIndex + idx + 1;
             
-            // Status badge styling
-            let statusBadge = `<span class="badge" style="background:#e2e8f0; color:#475569; font-weight:600;">${row.status || '-'}</span>`;
+            // Status badge styling (clean text pill, no emoji)
+            let statusBadge = `<span class="badge" style="background:#e2e8f0; color:#475569; font-weight:600; padding:3px 8px; border-radius:4px; font-size:0.75rem;">${row.status || '-'}</span>`;
             const st = (row.status || '').toUpperCase();
             if (st.includes('SUBMITTED')) {
-                statusBadge = `<span class="badge" style="background:#dbeafe; color:#1e40af; font-weight:700; border: 1px solid #bfdbfe;">📤 SUBMITTED</span>`;
+                statusBadge = `<span class="badge" style="background:#dbeafe; color:#1e40af; font-weight:700; border: 1px solid #bfdbfe; padding:3px 8px; border-radius:4px; font-size:0.75rem;">SUBMITTED</span>`;
             } else if (st.includes('DRAFT')) {
-                statusBadge = `<span class="badge" style="background:#fef3c7; color:#92400e; font-weight:700; border: 1px solid #fde68a;">📝 DRAFT</span>`;
+                statusBadge = `<span class="badge" style="background:#fef3c7; color:#92400e; font-weight:700; border: 1px solid #fde68a; padding:3px 8px; border-radius:4px; font-size:0.75rem;">DRAFT</span>`;
             } else if (st.includes('APPROVED')) {
-                statusBadge = `<span class="badge" style="background:#dcfce7; color:#166534; font-weight:700; border: 1px solid #bbf7d0;">✅ APPROVED</span>`;
+                statusBadge = `<span class="badge" style="background:#dcfce7; color:#166534; font-weight:700; border: 1px solid #bbf7d0; padding:3px 8px; border-radius:4px; font-size:0.75rem;">APPROVED</span>`;
             }
 
             // Mode badge
@@ -226,8 +226,7 @@
             if (row.lat && row.lng) {
                 const mapsUrl = `https://www.google.com/maps?q=${row.lat},${row.lng}`;
                 coordDisplay = `
-                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:4px; color:#2563eb; font-size:0.8rem; text-decoration:none; font-weight:600;" title="Buka di Google Maps">
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" style="color:#2563eb; font-size:0.8rem; text-decoration:none; font-weight:600; font-family:monospace;" title="Buka di Google Maps">
                         ${Number(row.lat).toFixed(5)}, ${Number(row.lng).toFixed(5)}
                     </a>
                 `;
@@ -237,8 +236,7 @@
             let actionBtn = `<span style="color:#94a3b8; font-size:0.8rem;">-</span>`;
             if (row.link_assignment) {
                 actionBtn = `
-                    <a href="${row.link_assignment}" target="_blank" rel="noopener noreferrer" class="btn-action-sm" style="display:inline-flex; align-items:center; gap:5px; padding:4px 10px; background:#4f46e5; color:#ffffff; border-radius:6px; font-size:0.75rem; font-weight:600; text-decoration:none; box-shadow:0 1px 2px rgba(79,70,229,0.2); transition:background 0.15s;" onmouseover="this.style.background='#4338ca'" onmouseout="this.style.background='#4f46e5'">
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <a href="${row.link_assignment}" target="_blank" rel="noopener noreferrer" class="btn-action-sm" style="display:inline-block; padding:4px 10px; background:#4f46e5; color:#ffffff; border-radius:6px; font-size:0.75rem; font-weight:600; text-decoration:none; transition:background 0.15s;" onmouseover="this.style.background='#4338ca'" onmouseout="this.style.background='#4f46e5'">
                         Buka Fasih
                     </a>
                 `;
