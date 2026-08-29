@@ -10888,7 +10888,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Populate kab select if needed
         if (kabSelect && kabSelect.options.length <= 1) {
             const currentVal = kabSelect.value;
-            let optionsHtml = '<option value="">Semua Kab/Kota (39 Kolom)</option>';
+            let optionsHtml = '<option value="">Semua Kab/Kota</option>';
             matrix.kabs.forEach(kab => {
                 optionsHtml += `<option value="${kab}">${kab}</option>`;
             });
