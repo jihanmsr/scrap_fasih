@@ -61,26 +61,6 @@ function initSlsMap() {
                     const p = feature.properties;
                     const featureId = "72" + (p.kdkab || "") + (p.kdkec || "") + (p.kddesa || "") + (p.kdsls || "") + (p.kdsubsls || "");
                     
-                    const slsLabel = p.nmsls || p.sls || ("SLS " + (p.kdsls || ""));
-                    const subCode = p.kdsubsls ? `(${p.kdsubsls})` : '';
-                    const labelHtml = `<div style="color: #ff5500; font-weight: 800; font-size: 11px; text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px 0 #fff, -1px -1px 0 #fff; white-space: nowrap; text-align: center; pointer-events: none;">${slsLabel} ${subCode}</div>`;
-                    
-                    try {
-                        const bounds = layer.getBounds ? layer.getBounds() : null;
-                        if (bounds) {
-                            const center = bounds.getCenter();
-                            L.marker(center, {
-                                icon: L.divIcon({
-                                    className: 'sls-map-label',
-                                    html: labelHtml,
-                                    iconSize: [120, 20],
-                                    iconAnchor: [60, 10]
-                                }),
-                                interactive: false
-                            }).addTo(slsOpenMap);
-                        }
-                    } catch(e) {}
-
                     let popupContent = '<div style="max-height: 220px; overflow-y: auto; font-family: sans-serif;"><b>Detail SLS</b><br>';
                     for (let key in feature.properties) {
                         popupContent += `<b>${key}</b>: ${feature.properties[key]}<br>`;
