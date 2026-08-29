@@ -17,8 +17,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js?v=1787991275_v2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js?v=1787991275_v2"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="daily_submission_stats.js?v=1787991275_v2"></script>
     <script src="daily_summary.js?v=1787991275_v2"></script>
     <script src="open_subsls_data.js?v=1787991275_v5"></script>
@@ -161,7 +163,8 @@
                     title="Pemantauan data hilang dan tindak lanjut">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                     Data Hilang
                 </button>
@@ -175,7 +178,7 @@
                     </svg>
                     SLS Open
                 </button>
-                <button class="btn-tab" id="tab-btn-belum_diassign" onclick="switchTab('belum_diassign')">
+                <button class="btn-tab" id="tab-btn-belum_diassign" onclick="switchTab('belum_diassign')" style="display: none;">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
                         <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path>
@@ -286,10 +289,12 @@
             <div class="tab-content" id="tab-content-open_subsls" style="display: none; padding: 1.5rem;">
                 <!-- SUB TAB NAVIGATION -->
                 <div class="sub-tabs-container" style="margin-bottom: 1.25rem;">
-                    <button class="btn-sub-tab active" id="open_subsls-sub-btn-fullopen" onclick="window.switchOpenSubslsSubTab('fullopen')">
+                    <button class="btn-sub-tab active" id="open_subsls-sub-btn-fullopen"
+                        onclick="window.switchOpenSubslsSubTab('fullopen')">
                         SLS Full Open
                     </button>
-                    <button class="btn-sub-tab" id="open_subsls-sub-btn-penyisiran" onclick="window.switchOpenSubslsSubTab('penyisiran')">
+                    <button class="btn-sub-tab" id="open_subsls-sub-btn-penyisiran"
+                        onclick="window.switchOpenSubslsSubTab('penyisiran')">
                         Penyisiran Bangunan Usaha
                     </button>
                 </div>
@@ -297,280 +302,430 @@
                 <!-- SUB TAB 1: FULL OPEN -->
                 <div id="open_subsls-sub-fullopen">
 
-                <div class="stats-section">
-                    <h3 class="section-title-stats">
-                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.5rem;" viewbox="0 0 24 24" width="16">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="8" x2="12" y2="12"></line>
-                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                        Pemantauan SLS Status FULL OPEN (Belum Dikerjakan)
-                    </h3>
-                    <div class="compact-stats" style="grid-template-columns: repeat(auto-fit, minmax(200px, 250px)); justify-content: flex-start;">
-                        <div class="stat-card-compact" style="--stat-color: var(--primary);">
-                            <div class="stat-label">Total Sub SLS FULL OPEN</div>
-                            <div class="stat-value" id="stat-subsls-total">0</div>
-                        </div>
-                        <div class="stat-card-compact" style="--stat-color: #f59e0b;">
-                            <div class="stat-label">Total Prelist</div>
-                            <div class="stat-value" id="stat-subsls-prelist">0</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="search-row" style="display: flex; gap: 0.75rem; align-items: center; margin-top: 1rem; flex-wrap: wrap;">
-                    <select id="map-filter-kab" class="sort-select" onchange="window.updateMapKecFilter()" style="width: 200px; flex-shrink: 0; padding-top: 0.85rem; padding-bottom: 0.85rem; height: auto;">
-                        <option value="">Semua Kabupaten</option>
-                    </select>
-                    <select id="map-filter-kec" class="sort-select" style="width: 200px; flex-shrink: 0; padding-top: 0.85rem; padding-bottom: 0.85rem; height: auto;">
-                        <option value="">Semua Kecamatan</option>
-                    </select>
-                    <input type="text" id="map-search-input" class="search-input" placeholder="Cari Kode Sub SLS / Nama..." style="flex: 1; min-width: 0;" onkeyup="if(event.key === 'Enter') window.searchMap()" oninput="if(this.value.trim() === '' && document.getElementById('map-filter-kab').value === '') window.searchMap()">
-                    <button onclick="window.searchMap()" style="padding: 8px 16px; background-color: #3b82f6; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500; height: 100%; min-height: 48px;">
-                        Cari di Peta
-                    </button>
-                </div>
-                
-                <div style="position: relative; margin-top: 1rem; margin-bottom: 1rem;">
-                    <div id="sls-open-map" style="height: 540px; width: 100%; border-radius: 16px; z-index: 1;"></div>
-                    
-                    <!-- Wilayah Left Drawer Overlay -->
-                    <div id="map-wilayah-drawer" style="position: absolute; top: 15px; left: 15px; z-index: 1001; background: #ffffff; border-radius: 1.25rem; padding: 1.25rem; box-shadow: 0 20px 40px rgba(0,0,0,0.2); border: 1px solid #e2e8f0; width: 300px; font-family: 'Plus Jakarta Sans', sans-serif; display: none; max-height: calc(100% - 90px); overflow-y: auto;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
-                            <span style="font-size:0.78rem; font-weight:800; color:#ea580c; letter-spacing:0.05em; display:flex; align-items:center;">LOKASI &amp; WILAYAH</span>
-                            <button onclick="window.toggleWilayahDrawer()" style="background:none; border:none; font-size:1.1rem; color:#94a3b8; cursor:pointer;">&times;</button>
-                        </div>
-                        
-                        <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
-                            <div style="flex:1;">
-                                <label style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">LATITUDE</label>
-                                <input type="text" id="map-lat-input" placeholder="-0.91194" style="width:100%; padding:0.4rem 0.5rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem;">
+                    <div class="stats-section">
+                        <h3 class="section-title-stats">
+                            <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.5rem;"
+                                viewbox="0 0 24 24" width="16">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            Pemantauan SLS Status FULL OPEN (Belum Dikerjakan)
+                        </h3>
+                        <div class="compact-stats"
+                            style="grid-template-columns: repeat(auto-fit, minmax(200px, 250px)); justify-content: flex-start;">
+                            <div class="stat-card-compact" style="--stat-color: var(--primary);">
+                                <div class="stat-label">Total Sub SLS FULL OPEN</div>
+                                <div class="stat-value" id="stat-subsls-total">0</div>
                             </div>
-                            <div style="flex:1;">
-                                <label style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">LONGITUDE</label>
-                                <input type="text" id="map-lng-input" placeholder="119.8909" style="width:100%; padding:0.4rem 0.5rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem;">
-                            </div>
-                        </div>
-                        
-                        <button onclick="window.setCustomCoord()" style="width:100%; margin-bottom:0.6rem; padding:0.4rem; border:1px dashed #cbd5e1; border-radius:0.5rem; background:#f8fafc; color:#475569; font-size:0.75rem; font-weight:600; cursor:pointer;">+ Custom Coordinate</button>
-                        <button onclick="window.applyCustomCoord()" style="width:100%; margin-bottom:1rem; padding:0.5rem; border:none; border-radius:0.6rem; background:linear-gradient(135deg, #ea580c, #f97316); color:#fff; font-size:0.8rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center;">Set Koordinat</button>
-                        
-                        <div style="display:flex; flex-direction:column; gap:0.6rem;">
-                            <div>
-                                <label style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">KABUPATEN</label>
-                                <select id="drawer-map-filter-kab" onchange="window.onDrawerKabChange()" style="width:100%; padding:0.45rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem; background:#fff;">
-                                    <option value="">Semua Kabupaten</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">KECAMATAN</label>
-                                <select id="drawer-map-filter-kec" onchange="window.onDrawerKecChange()" style="width:100%; padding:0.45rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem; background:#fff;">
-                                    <option value="">Semua Kecamatan</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">DESA / KELURAHAN</label>
-                                <select id="drawer-map-filter-desa" onchange="window.onDrawerDesaChange()" style="width:100%; padding:0.45rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem; background:#fff;">
-                                    <option value="">Semua Desa</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">SLS</label>
-                                <select id="drawer-map-filter-sls" onchange="window.onDrawerSlsChange()" style="width:100%; padding:0.45rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem; background:#fff;">
-                                    <option value="">--- Pilih SLS ---</option>
-                                </select>
+                            <div class="stat-card-compact" style="--stat-color: #f59e0b;">
+                                <div class="stat-label">Total Prelist</div>
+                                <div class="stat-value" id="stat-subsls-prelist">0</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Keberadaan Filter Popup Overlay -->
-                    <div id="map-keberadaan-popup" style="position: absolute; bottom: 75px; left: 50%; transform: translateX(-50%); z-index: 1001; background: #ffffff; border-radius: 1.25rem; padding: 1rem 1.1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.25); border: 1px solid #e2e8f0; width: 280px; font-family: 'Plus Jakarta Sans', sans-serif; display: none;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.85rem;">
-                            <span style="font-size:0.75rem; font-weight:800; color:#4f46e5; letter-spacing:0.05em; display:flex; align-items:center;">KEBERADAAN USAHA</span>
-                            <button onclick="window.toggleKeberadaanPopup()" style="background:none; border:none; font-size:1.1rem; color:#94a3b8; cursor:pointer;">&times;</button>
-                        </div>
-                        
-                        <div style="display:flex; flex-direction:column; gap:0.4rem;">
-                            <button class="btn-keb-filter active" data-keb="" onclick="window.filterKeberadaan('')" style="width:100%; padding:0.45rem; border-radius:0.6rem; border:none; background:#4f46e5; color:#fff; font-size:0.78rem; font-weight:700; cursor:pointer;">Semua</button>
-                            <button class="btn-keb-filter" data-keb="tidak_ditemukan" onclick="window.filterKeberadaan('tidak_ditemukan')" style="width:100%; padding:0.45rem; border-radius:0.6rem; border:1px solid #e2e8f0; background:#f8fafc; color:#334155; font-size:0.78rem; font-weight:600; cursor:pointer;">Tidak Ditemukan</button>
-                            <div style="display:flex; gap:0.4rem;">
-                                <button class="btn-keb-filter" data-keb="ditemukan" onclick="window.filterKeberadaan('ditemukan')" style="flex:1; padding:0.45rem; border-radius:0.6rem; border:1px solid #e2e8f0; background:#f8fafc; color:#334155; font-size:0.78rem; font-weight:600; cursor:pointer;">Ditemukan</button>
-                                <button class="btn-keb-filter" data-keb="baru" onclick="window.filterKeberadaan('baru')" style="flex:1; padding:0.45rem; border-radius:0.6rem; border:1px solid #e2e8f0; background:#f8fafc; color:#334155; font-size:0.78rem; font-weight:600; cursor:pointer;">Baru</button>
-                            </div>
-                            <div style="display:flex; gap:0.4rem;">
-                                <button class="btn-keb-filter" data-keb="tutup" onclick="window.filterKeberadaan('tutup')" style="flex:1; padding:0.45rem; border-radius:0.6rem; border:1px solid #e2e8f0; background:#f8fafc; color:#334155; font-size:0.78rem; font-weight:600; cursor:pointer;">Tutup</button>
-                                <button class="btn-keb-filter" data-keb="ganda" onclick="window.filterKeberadaan('ganda')" style="flex:1; padding:0.45rem; border-radius:0.6rem; border:1px solid #e2e8f0; background:#f8fafc; color:#334155; font-size:0.78rem; font-weight:600; cursor:pointer;">Ganda</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Base Map Popup Overlay -->
-                    <div id="map-basemap-popup" style="position: absolute; bottom: 75px; right: 20px; z-index: 1001; background: #ffffff; border-radius: 1rem; padding: 0.75rem; box-shadow: 0 15px 30px rgba(0,0,0,0.2); border: 1px solid #e2e8f0; font-family: 'Plus Jakarta Sans', sans-serif; display: none; width: 170px;">
-                        <div style="font-size:0.7rem; font-weight:800; color:#64748b; margin-bottom:0.5rem; text-transform:uppercase;">BASE MAP</div>
-                        <button onclick="window.setBaseMapTile('satellite')" style="width:100%; padding:0.4rem 0.6rem; margin-bottom:0.3rem; border-radius:0.5rem; border:none; background:#f1f5f9; color:#1e293b; font-size:0.75rem; font-weight:600; cursor:pointer; text-align:left;">Satelit (Esri)</button>
-                        <button onclick="window.setBaseMapTile('osm')" style="width:100%; padding:0.4rem 0.6rem; border-radius:0.5rem; border:none; background:#f1f5f9; color:#1e293b; font-size:0.75rem; font-weight:600; cursor:pointer; text-align:left;">Peta Biasa (OSM)</button>
-                    </div>
-
-                    <!-- Bottom Floating Pill Toolbar -->
-                    <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; display: flex; gap: 8px; align-items: center; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 6px 10px; border-radius: 99px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 25px rgba(0,0,0,0.3); font-family: 'Plus Jakarta Sans', sans-serif;">
-                        <button onclick="window.toggleWilayahDrawer()" style="background: #ffffff; color: #1e293b; padding: 7px 16px; border-radius: 99px; font-size: 12px; font-weight: 700; cursor: pointer; border: none; display: flex; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: transform 0.15s;">
-                            Wilayah
-                        </button>
-                        <button onclick="window.toggleBaseMapPopup()" style="background: #ffffff; color: #1e293b; padding: 7px 16px; border-radius: 99px; font-size: 12px; font-weight: 700; cursor: pointer; border: none; display: flex; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                            Base Map
-                        </button>
-                    </div>
-                </div>
-
-                <div class="filter-panel" style="margin-top: 1rem;">
-                    <div class="search-row" style="display: flex; gap: 0.75rem; align-items: center;">
-                        <input type="text" id="subsls-search-input" class="search-input" placeholder="Cari Kode / Nama Wilayah / Nama Petugas..." style="flex: 1; min-width: 0;">
-                        <select class="sort-select" id="subsls-filter-kab" onchange="window.filterSubSlsData()" style="width: auto; min-width: 150px; max-width: 220px; flex-shrink: 0; padding-right: 2rem;">
+                    <div class="search-row"
+                        style="display: flex; gap: 0.75rem; align-items: center; margin-top: 1rem; flex-wrap: wrap;">
+                        <select id="map-filter-kab" class="sort-select" onchange="window.updateMapKecFilter()"
+                            style="width: 200px; flex-shrink: 0; padding-top: 0.85rem; padding-bottom: 0.85rem; height: auto;">
                             <option value="">Semua Kabupaten</option>
                         </select>
-                        <button onclick="window.downloadSubSlsExcel()" style="padding: 8px 16px; background-color: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500; display: flex; align-items: center; gap: 8px; flex-shrink: 0;">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                            Download Excel
+                        <select id="map-filter-kec" class="sort-select"
+                            style="width: 200px; flex-shrink: 0; padding-top: 0.85rem; padding-bottom: 0.85rem; height: auto;">
+                            <option value="">Semua Kecamatan</option>
+                        </select>
+                        <input type="text" id="map-search-input" class="search-input"
+                            placeholder="Cari Kode Sub SLS / Nama..." style="flex: 1; min-width: 0;"
+                            onkeyup="if(event.key === 'Enter') window.searchMap()"
+                            oninput="if(this.value.trim() === '' && document.getElementById('map-filter-kab').value === '') window.searchMap()">
+                        <button onclick="window.searchMap()"
+                            style="padding: 8px 16px; background-color: #3b82f6; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500; height: 100%; min-height: 48px;">
+                            Cari di Peta
                         </button>
                     </div>
-                </div>
 
-                <div class="ipas-table-wrapper" style="margin-top: 1rem; max-height: 500px; overflow-y: auto;">
-                    <table class="ipas-table" id="table-subsls-open">
-                        <thead>
-                            <tr>
-                                <th style="width: 15%; cursor: pointer;" onclick="window.toggleExcelFilter(event, 'kode_sub_sls')">Kode Sub-SLS <span>&#x25BC;</span></th>
-                                <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'kabupaten')">Kabupaten <span>&#x25BC;</span></th>
-                                <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'kecamatan')">Kecamatan <span>&#x25BC;</span></th>
-                                <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'desa')">Desa <span>&#x25BC;</span></th>
-                                <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'nama_sub_sls')">SLS <span>&#x25BC;</span></th>
-                                <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'nama_petugas')">Nama Petugas <span>&#x25BC;</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="window.toggleExcelFilter(event, 'jumlah_prelist')">Jumlah Prelist <span>&#x25BC;</span></th>
-                                <th style="text-align: center;">Tandai Selesai</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbody-subsls-open">
-                            <!-- Data will be populated here -->
-                        </tbody>
-                    </table>
-                </div>
-                <div class="pagination" id="pagination-subsls-open" style="margin-top: 1rem;">
-                    <!-- Pagination controls -->
-                </div>
+                    <div style="position: relative; margin-top: 1rem; margin-bottom: 1rem;">
+                        <div id="sls-open-map" style="height: 540px; width: 100%; border-radius: 16px; z-index: 1;">
+                        </div>
+
+                        <!-- Wilayah Left Drawer Overlay -->
+                        <div id="map-wilayah-drawer"
+                            style="position: absolute; top: 15px; left: 15px; z-index: 1001; background: #ffffff; border-radius: 1.25rem; padding: 1.25rem; box-shadow: 0 20px 40px rgba(0,0,0,0.2); border: 1px solid #e2e8f0; width: 300px; font-family: 'Plus Jakarta Sans', sans-serif; display: none; max-height: calc(100% - 90px); overflow-y: auto;">
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+                                <span
+                                    style="font-size:0.78rem; font-weight:800; color:#ea580c; letter-spacing:0.05em; display:flex; align-items:center;">LOKASI
+                                    &amp; WILAYAH</span>
+                                <button onclick="window.toggleWilayahDrawer()"
+                                    style="background:none; border:none; font-size:1.1rem; color:#94a3b8; cursor:pointer;">&times;</button>
+                            </div>
+
+                            <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+                                <div style="flex:1;">
+                                    <label
+                                        style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">LATITUDE</label>
+                                    <input type="text" id="map-lat-input" placeholder="-0.91194"
+                                        style="width:100%; padding:0.4rem 0.5rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem;">
+                                </div>
+                                <div style="flex:1;">
+                                    <label
+                                        style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">LONGITUDE</label>
+                                    <input type="text" id="map-lng-input" placeholder="119.8909"
+                                        style="width:100%; padding:0.4rem 0.5rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem;">
+                                </div>
+                            </div>
+
+                            <button onclick="window.setCustomCoord()"
+                                style="width:100%; margin-bottom:0.6rem; padding:0.4rem; border:1px dashed #cbd5e1; border-radius:0.5rem; background:#f8fafc; color:#475569; font-size:0.75rem; font-weight:600; cursor:pointer;">+
+                                Custom Coordinate</button>
+                            <button onclick="window.applyCustomCoord()"
+                                style="width:100%; margin-bottom:1rem; padding:0.5rem; border:none; border-radius:0.6rem; background:linear-gradient(135deg, #ea580c, #f97316); color:#fff; font-size:0.8rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center;">Set
+                                Koordinat</button>
+
+                            <div style="display:flex; flex-direction:column; gap:0.6rem;">
+                                <div>
+                                    <label
+                                        style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">KABUPATEN</label>
+                                    <select id="drawer-map-filter-kab" onchange="window.onDrawerKabChange()"
+                                        style="width:100%; padding:0.45rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem; background:#fff;">
+                                        <option value="">Semua Kabupaten</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label
+                                        style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">KECAMATAN</label>
+                                    <select id="drawer-map-filter-kec" onchange="window.onDrawerKecChange()"
+                                        style="width:100%; padding:0.45rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem; background:#fff;">
+                                        <option value="">Semua Kecamatan</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label
+                                        style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">DESA
+                                        / KELURAHAN</label>
+                                    <select id="drawer-map-filter-desa" onchange="window.onDrawerDesaChange()"
+                                        style="width:100%; padding:0.45rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem; background:#fff;">
+                                        <option value="">Semua Desa</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label
+                                        style="font-size:0.65rem; font-weight:700; color:#64748b; text-transform:uppercase;">SLS</label>
+                                    <select id="drawer-map-filter-sls" onchange="window.onDrawerSlsChange()"
+                                        style="width:100%; padding:0.45rem; border:1px solid #cbd5e1; border-radius:0.5rem; font-size:0.8rem; background:#fff;">
+                                        <option value="">--- Pilih SLS ---</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Keberadaan Filter Popup Overlay -->
+                        <div id="map-keberadaan-popup"
+                            style="position: absolute; bottom: 75px; left: 50%; transform: translateX(-50%); z-index: 1001; background: #ffffff; border-radius: 1.25rem; padding: 1rem 1.1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.25); border: 1px solid #e2e8f0; width: 280px; font-family: 'Plus Jakarta Sans', sans-serif; display: none;">
+                            <div
+                                style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.85rem;">
+                                <span
+                                    style="font-size:0.75rem; font-weight:800; color:#4f46e5; letter-spacing:0.05em; display:flex; align-items:center;">KEBERADAAN
+                                    USAHA</span>
+                                <button onclick="window.toggleKeberadaanPopup()"
+                                    style="background:none; border:none; font-size:1.1rem; color:#94a3b8; cursor:pointer;">&times;</button>
+                            </div>
+
+                            <div style="display:flex; flex-direction:column; gap:0.4rem;">
+                                <button class="btn-keb-filter active" data-keb="" onclick="window.filterKeberadaan('')"
+                                    style="width:100%; padding:0.45rem; border-radius:0.6rem; border:none; background:#4f46e5; color:#fff; font-size:0.78rem; font-weight:700; cursor:pointer;">Semua</button>
+                                <button class="btn-keb-filter" data-keb="tidak_ditemukan"
+                                    onclick="window.filterKeberadaan('tidak_ditemukan')"
+                                    style="width:100%; padding:0.45rem; border-radius:0.6rem; border:1px solid #e2e8f0; background:#f8fafc; color:#334155; font-size:0.78rem; font-weight:600; cursor:pointer;">Tidak
+                                    Ditemukan</button>
+                                <div style="display:flex; gap:0.4rem;">
+                                    <button class="btn-keb-filter" data-keb="ditemukan"
+                                        onclick="window.filterKeberadaan('ditemukan')"
+                                        style="flex:1; padding:0.45rem; border-radius:0.6rem; border:1px solid #e2e8f0; background:#f8fafc; color:#334155; font-size:0.78rem; font-weight:600; cursor:pointer;">Ditemukan</button>
+                                    <button class="btn-keb-filter" data-keb="baru"
+                                        onclick="window.filterKeberadaan('baru')"
+                                        style="flex:1; padding:0.45rem; border-radius:0.6rem; border:1px solid #e2e8f0; background:#f8fafc; color:#334155; font-size:0.78rem; font-weight:600; cursor:pointer;">Baru</button>
+                                </div>
+                                <div style="display:flex; gap:0.4rem;">
+                                    <button class="btn-keb-filter" data-keb="tutup"
+                                        onclick="window.filterKeberadaan('tutup')"
+                                        style="flex:1; padding:0.45rem; border-radius:0.6rem; border:1px solid #e2e8f0; background:#f8fafc; color:#334155; font-size:0.78rem; font-weight:600; cursor:pointer;">Tutup</button>
+                                    <button class="btn-keb-filter" data-keb="ganda"
+                                        onclick="window.filterKeberadaan('ganda')"
+                                        style="flex:1; padding:0.45rem; border-radius:0.6rem; border:1px solid #e2e8f0; background:#f8fafc; color:#334155; font-size:0.78rem; font-weight:600; cursor:pointer;">Ganda</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Base Map Popup Overlay -->
+                        <div id="map-basemap-popup"
+                            style="position: absolute; bottom: 75px; right: 20px; z-index: 1001; background: #ffffff; border-radius: 1rem; padding: 0.75rem; box-shadow: 0 15px 30px rgba(0,0,0,0.2); border: 1px solid #e2e8f0; font-family: 'Plus Jakarta Sans', sans-serif; display: none; width: 170px;">
+                            <div
+                                style="font-size:0.7rem; font-weight:800; color:#64748b; margin-bottom:0.5rem; text-transform:uppercase;">
+                                BASE MAP</div>
+                            <button onclick="window.setBaseMapTile('satellite')"
+                                style="width:100%; padding:0.4rem 0.6rem; margin-bottom:0.3rem; border-radius:0.5rem; border:none; background:#f1f5f9; color:#1e293b; font-size:0.75rem; font-weight:600; cursor:pointer; text-align:left;">Satelit
+                                (Esri)</button>
+                            <button onclick="window.setBaseMapTile('osm')"
+                                style="width:100%; padding:0.4rem 0.6rem; border-radius:0.5rem; border:none; background:#f1f5f9; color:#1e293b; font-size:0.75rem; font-weight:600; cursor:pointer; text-align:left;">Peta
+                                Biasa (OSM)</button>
+                        </div>
+
+                        <!-- Bottom Floating Pill Toolbar -->
+                        <div
+                            style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; display: flex; gap: 8px; align-items: center; background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 6px 10px; border-radius: 99px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 10px 25px rgba(0,0,0,0.3); font-family: 'Plus Jakarta Sans', sans-serif;">
+                            <button onclick="window.toggleWilayahDrawer()"
+                                style="background: #ffffff; color: #1e293b; padding: 7px 16px; border-radius: 99px; font-size: 12px; font-weight: 700; cursor: pointer; border: none; display: flex; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: transform 0.15s;">
+                                Wilayah
+                            </button>
+                            <button onclick="window.toggleBaseMapPopup()"
+                                style="background: #ffffff; color: #1e293b; padding: 7px 16px; border-radius: 99px; font-size: 12px; font-weight: 700; cursor: pointer; border: none; display: flex; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                                Base Map
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="filter-panel" style="margin-top: 1rem;">
+                        <div class="search-row" style="display: flex; gap: 0.75rem; align-items: center;">
+                            <input type="text" id="subsls-search-input" class="search-input"
+                                placeholder="Cari Kode / Nama Wilayah / Nama Petugas..." style="flex: 1; min-width: 0;">
+                            <select class="sort-select" id="subsls-filter-kab" onchange="window.filterSubSlsData()"
+                                style="width: auto; min-width: 150px; max-width: 220px; flex-shrink: 0; padding-right: 2rem;">
+                                <option value="">Semua Kabupaten</option>
+                            </select>
+                            <button onclick="window.downloadSubSlsExcel()"
+                                style="padding: 8px 16px; background-color: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500; display: flex; align-items: center; gap: 8px; flex-shrink: 0;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Download Excel
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ipas-table-wrapper" style="margin-top: 1rem; max-height: 500px; overflow-y: auto;">
+                        <table class="ipas-table" id="table-subsls-open">
+                            <thead>
+                                <tr>
+                                    <th style="width: 15%; cursor: pointer;"
+                                        onclick="window.toggleExcelFilter(event, 'kode_sub_sls')">Kode Sub-SLS
+                                        <span>&#x25BC;</span></th>
+                                    <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'kabupaten')">
+                                        Kabupaten <span>&#x25BC;</span></th>
+                                    <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'kecamatan')">
+                                        Kecamatan <span>&#x25BC;</span></th>
+                                    <th style="cursor: pointer;" onclick="window.toggleExcelFilter(event, 'desa')">Desa
+                                        <span>&#x25BC;</span></th>
+                                    <th style="cursor: pointer;"
+                                        onclick="window.toggleExcelFilter(event, 'nama_sub_sls')">SLS
+                                        <span>&#x25BC;</span></th>
+                                    <th style="cursor: pointer;"
+                                        onclick="window.toggleExcelFilter(event, 'nama_petugas')">Nama Petugas
+                                        <span>&#x25BC;</span></th>
+                                    <th style="text-align: right; cursor: pointer;"
+                                        onclick="window.toggleExcelFilter(event, 'jumlah_prelist')">Jumlah Prelist
+                                        <span>&#x25BC;</span></th>
+                                    <th style="text-align: center;">Tandai Selesai</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-subsls-open">
+                                <!-- Data will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination" id="pagination-subsls-open" style="margin-top: 1rem;">
+                        <!-- Pagination controls -->
+                    </div>
                 </div>
 
                 <!-- SUB TAB 2: PENYISIRAN BANGUNAN -->
                 <div id="open_subsls-sub-penyisiran" style="display: none;">
-        <!-- Summary Cards -->
-        <div id="penyisiran-summary-cards" style="display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-bottom:1.5rem;">
-            <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                <div style="font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">Total SubSLS</div>
-                <div id="pny-total-subsls" style="font-size:1.6rem;font-weight:800;color:var(--text-primary);font-family:'Outfit',sans-serif;">-</div>
-            </div>
-            <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                <div style="font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">Total Usaha</div>
-                <div id="pny-total-usaha" style="font-size:1.6rem;font-weight:800;color:var(--text-primary);font-family:'Outfit',sans-serif;">-</div>
-            </div>
-            <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                <div style="font-size:0.72rem;font-weight:700;color:#ef4444;text-transform:uppercase;letter-spacing:0.05em;">Tidak Ditemukan</div>
-                <div id="pny-total-tdk" style="font-size:1.6rem;font-weight:800;color:#ef4444;font-family:'Outfit',sans-serif;">-</div>
-                <div id="pny-pct-tdk" style="font-size:0.8rem;color:var(--text-secondary);font-weight:600;">-</div>
-            </div>
-            <div style="background:rgba(239,68,68,0.06);border:1.5px solid #ef4444;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                <div style="font-size:0.72rem;font-weight:700;color:#ef4444;text-transform:uppercase;letter-spacing:0.05em;">&#9888; Prioritas 1</div>
-                <div id="pny-p1" style="font-size:1.6rem;font-weight:800;color:#ef4444;font-family:'Outfit',sans-serif;">-</div>
-                <div style="font-size:0.75rem;color:var(--text-secondary);">Sisir Segera</div>
-            </div>
-            <div style="background:rgba(245,158,11,0.06);border:1.5px solid #f59e0b;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                <div style="font-size:0.72rem;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:0.05em;">&#9888; Prioritas 2</div>
-                <div id="pny-p2" style="font-size:1.6rem;font-weight:800;color:#d97706;font-family:'Outfit',sans-serif;">-</div>
-                <div style="font-size:0.75rem;color:var(--text-secondary);">Perlu Cek</div>
-            </div>
-            <div style="background:rgba(34,197,94,0.06);border:1.5px solid #22c55e;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                <div style="font-size:0.72rem;font-weight:700;color:#16a34a;text-transform:uppercase;letter-spacing:0.05em;">Prioritas 3</div>
-                <div id="pny-p3" style="font-size:1.6rem;font-weight:800;color:#16a34a;font-family:'Outfit',sans-serif;">-</div>
-                <div style="font-size:0.75rem;color:var(--text-secondary);">Wajar</div>
-            </div>
-        </div>
+                    <!-- Summary Cards -->
+                    <div id="penyisiran-summary-cards"
+                        style="display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-bottom:1.5rem;">
+                        <div
+                            style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">
+                                Total SubSLS</div>
+                            <div id="pny-total-subsls"
+                                style="font-size:1.6rem;font-weight:800;color:var(--text-primary);font-family:'Outfit',sans-serif;">
+                                -</div>
+                        </div>
+                        <div
+                            style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">
+                                Total Usaha</div>
+                            <div id="pny-total-usaha"
+                                style="font-size:1.6rem;font-weight:800;color:var(--text-primary);font-family:'Outfit',sans-serif;">
+                                -</div>
+                        </div>
+                        <div
+                            style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:#ef4444;text-transform:uppercase;letter-spacing:0.05em;">
+                                Tidak Ditemukan</div>
+                            <div id="pny-total-tdk"
+                                style="font-size:1.6rem;font-weight:800;color:#ef4444;font-family:'Outfit',sans-serif;">
+                                -</div>
+                            <div id="pny-pct-tdk" style="font-size:0.8rem;color:var(--text-secondary);font-weight:600;">
+                                -</div>
+                        </div>
+                        <div
+                            style="background:rgba(239,68,68,0.06);border:1.5px solid #ef4444;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:#ef4444;text-transform:uppercase;letter-spacing:0.05em;">
+                                &#9888; Prioritas 1</div>
+                            <div id="pny-p1"
+                                style="font-size:1.6rem;font-weight:800;color:#ef4444;font-family:'Outfit',sans-serif;">
+                                -</div>
+                            <div style="font-size:0.75rem;color:var(--text-secondary);">Sisir Segera</div>
+                        </div>
+                        <div
+                            style="background:rgba(245,158,11,0.06);border:1.5px solid #f59e0b;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:0.05em;">
+                                &#9888; Prioritas 2</div>
+                            <div id="pny-p2"
+                                style="font-size:1.6rem;font-weight:800;color:#d97706;font-family:'Outfit',sans-serif;">
+                                -</div>
+                            <div style="font-size:0.75rem;color:var(--text-secondary);">Perlu Cek</div>
+                        </div>
+                        <div
+                            style="background:rgba(34,197,94,0.06);border:1.5px solid #22c55e;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:#16a34a;text-transform:uppercase;letter-spacing:0.05em;">
+                                Prioritas 3</div>
+                            <div id="pny-p3"
+                                style="font-size:1.6rem;font-weight:800;color:#16a34a;font-family:'Outfit',sans-serif;">
+                                -</div>
+                            <div style="font-size:0.75rem;color:var(--text-secondary);">Wajar</div>
+                        </div>
+                    </div>
 
-        <!-- Filter Bar -->
-        <div style="display:flex;gap:0.5rem;margin-bottom:0.85rem;flex-wrap:wrap;align-items:center;background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.75rem;padding:0.5rem 0.75rem;box-shadow:var(--shadow-sm);">
-            <svg width="14" height="14" fill="none" stroke="var(--text-secondary)" stroke-width="2.5" viewBox="0 0 24 24" style="flex-shrink:0;">
-                <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
-            </svg>
-            <input type="text" id="pny-search" placeholder="Cari kab / kec / desa / SLS..."
-                oninput="window.renderPenyisiran()"
-                style="flex:1;min-width:160px;padding:0.3rem 0.4rem;border:none;background:transparent;color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.85rem;outline:none;">
-            <div style="width:1px;height:20px;background:var(--card-border);"></div>
-            <select id="pny-filter-kab" onchange="window.renderPenyisiran()"
-                style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
-                <option value="">Semua Kab/Kota</option>
-            </select>
-            <div style="width:1px;height:20px;background:var(--card-border);"></div>
-            <select id="pny-filter-kategori" onchange="window.renderPenyisiran()"
-                style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
-                <option value="">Semua Kategori</option>
-                <option value="PRIORITAS 1 - SISIR SEGERA">&#128308; Prioritas 1 - Sisir Segera</option>
-                <option value="PRIORITAS 2 - PERLU CEK">&#128993; Prioritas 2 - Perlu Cek</option>
-                <option value="PRIORITAS 3 - WAJAR">&#128994; Prioritas 3 - Wajar</option>
-            </select>
-            <div style="width:1px;height:20px;background:var(--card-border);"></div>
-            <select id="pny-sort-by" onchange="window.renderPenyisiran()"
-                style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
-                <option value="skor_perhatian">Urutkan: Skor Perhatian</option>
-                <option value="tidak_ditemukan">Urutkan: Tdk Ditemukan</option>
-                <option value="total_usaha">Urutkan: Total Usaha</option>
-                <option value="pct_tdk_ditemukan">Urutkan: % Tdk Ditemukan</option>
-                <option value="pct_selesai">Urutkan: % Selesai</option>
-            </select>
-            <button id="pny-sort-dir" onclick="window.togglePenyisiranSort()"
-                style="padding:0.3rem 0.6rem;border:1px solid var(--card-border);border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-size:0.8rem;cursor:pointer;">&#8595; DESC</button>
-            <div style="width:1px;height:20px;background:var(--card-border);"></div>
-            <span id="pny-count" style="font-size:0.8rem;color:var(--text-secondary);white-space:nowrap;">-</span>
-            <button onclick="window.downloadPenyisiranCSV()" title="Download CSV"
-                style="margin-left:auto;padding:0.3rem 0.7rem;border-radius:0.5rem;border:1px solid var(--card-border);background:var(--input-bg);color:var(--text-secondary);font-size:0.78rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;">
-                &#8615; CSV
-            </button>
-        </div>
+                    <!-- Filter Bar -->
+                    <div
+                        style="display:flex;gap:0.5rem;margin-bottom:0.85rem;flex-wrap:wrap;align-items:center;background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.75rem;padding:0.5rem 0.75rem;box-shadow:var(--shadow-sm);">
+                        <svg width="14" height="14" fill="none" stroke="var(--text-secondary)" stroke-width="2.5"
+                            viewBox="0 0 24 24" style="flex-shrink:0;">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                        </svg>
+                        <input type="text" id="pny-search" placeholder="Cari kab / kec / desa / SLS..."
+                            oninput="window.renderPenyisiran()"
+                            style="flex:1;min-width:160px;padding:0.3rem 0.4rem;border:none;background:transparent;color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.85rem;outline:none;">
+                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
+                        <select id="pny-filter-kab" onchange="window.renderPenyisiran()"
+                            style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
+                            <option value="">Semua Kab/Kota</option>
+                        </select>
+                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
+                        <select id="pny-filter-kategori" onchange="window.renderPenyisiran()"
+                            style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
+                            <option value="">Semua Kategori</option>
+                            <option value="PRIORITAS 1 - SISIR SEGERA">&#128308; Prioritas 1 - Sisir Segera</option>
+                            <option value="PRIORITAS 2 - PERLU CEK">&#128993; Prioritas 2 - Perlu Cek</option>
+                            <option value="PRIORITAS 3 - WAJAR">&#128994; Prioritas 3 - Wajar</option>
+                        </select>
+                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
+                        <select id="pny-sort-by" onchange="window.renderPenyisiran()"
+                            style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
+                            <option value="skor_perhatian">Urutkan: Skor Perhatian</option>
+                            <option value="tidak_ditemukan">Urutkan: Tdk Ditemukan</option>
+                            <option value="total_usaha">Urutkan: Total Usaha</option>
+                            <option value="pct_tdk_ditemukan">Urutkan: % Tdk Ditemukan</option>
+                            <option value="pct_selesai">Urutkan: % Selesai</option>
+                        </select>
+                        <button id="pny-sort-dir" onclick="window.togglePenyisiranSort()"
+                            style="padding:0.3rem 0.6rem;border:1px solid var(--card-border);border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-size:0.8rem;cursor:pointer;">&#8595;
+                            DESC</button>
+                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
+                        <span id="pny-count"
+                            style="font-size:0.8rem;color:var(--text-secondary);white-space:nowrap;">-</span>
+                        <button onclick="window.downloadPenyisiranCSV()" title="Download CSV"
+                            style="margin-left:auto;padding:0.3rem 0.7rem;border-radius:0.5rem;border:1px solid var(--card-border);background:var(--input-bg);color:var(--text-secondary);font-size:0.78rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;">
+                            &#8615; CSV
+                        </button>
+                    </div>
 
-        <!-- Table -->
-        <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;overflow:hidden;box-shadow:var(--shadow-sm);">
-            <div style="overflow-x:auto;">
-                <table id="penyisiran-table" style="width:100%;border-collapse:collapse;font-size:0.82rem;">
-                    <thead>
-                        <tr style="background:var(--bg-body);">
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">#</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">Kabupaten</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">Kecamatan</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">Desa/Kel</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">SLS / SubSLS</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">Total</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">Ditemukan</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:#ef4444;text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">Tdk Ditemukan</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">Tutup</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">Belum Terdata</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">% Selesai</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:center;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">Skor</th>
-                            <th style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:center;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">Kategori</th>
-                        </tr>
-                    </thead>
-                    <tbody id="penyisiran-tbody">
-                        <tr><td colspan="13" style="text-align:center;padding:2rem;color:var(--text-secondary);">Memuat data...</td></tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Pagination -->
-            <div id="pny-pagination" style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;border-top:1px solid var(--card-border);background:var(--bg-body);gap:0.5rem;flex-wrap:wrap;">
-                <span id="pny-page-info" style="font-size:0.8rem;color:var(--text-secondary);"></span>
-                <div style="display:flex;gap:0.35rem;">
-                    <button id="pny-btn-prev" onclick="window.changePnyPage(-1)"
-                        style="padding:0.3rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;">&#8592; Prev</button>
-                    <div id="pny-page-nums" style="display:flex;gap:0.25rem;"></div>
-                    <button id="pny-btn-next" onclick="window.changePnyPage(1)"
-                        style="padding:0.3rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;">Next &#8594;</button>
-                </div>
-            </div>
-        </div>
+                    <!-- Table -->
+                    <div
+                        style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;overflow:hidden;box-shadow:var(--shadow-sm);">
+                        <div style="overflow-x:auto;">
+                            <table id="penyisiran-table" style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+                                <thead>
+                                    <tr style="background:var(--bg-body);">
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            #</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Kabupaten</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Kecamatan</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Desa/Kel</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            SLS / SubSLS</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Total</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Ditemukan</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:#ef4444;text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Tdk Ditemukan</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Tutup</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Belum Terdata</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            % Selesai</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:center;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Skor</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:center;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Kategori</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="penyisiran-tbody">
+                                    <tr>
+                                        <td colspan="13"
+                                            style="text-align:center;padding:2rem;color:var(--text-secondary);">Memuat
+                                            data...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Pagination -->
+                        <div id="pny-pagination"
+                            style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;border-top:1px solid var(--card-border);background:var(--bg-body);gap:0.5rem;flex-wrap:wrap;">
+                            <span id="pny-page-info" style="font-size:0.8rem;color:var(--text-secondary);"></span>
+                            <div style="display:flex;gap:0.35rem;">
+                                <button id="pny-btn-prev" onclick="window.changePnyPage(-1)"
+                                    style="padding:0.3rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;">&#8592;
+                                    Prev</button>
+                                <div id="pny-page-nums" style="display:flex;gap:0.25rem;"></div>
+                                <button id="pny-btn-next" onclick="window.changePnyPage(1)"
+                                    style="padding:0.3rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;">Next
+                                    &#8594;</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -578,14 +733,17 @@
             <div class="tab-content" id="tab-content-belum_diassign" style="display: none; padding: 1.5rem;">
                 <div class="stats-section">
                     <h3 class="section-title-stats">
-                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.5rem;" viewbox="0 0 24 24" width="16">
+                        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5" style="margin-right: 0.5rem;" viewbox="0 0 24 24"
+                            width="16">
                             <circle cx="12" cy="12" r="10"></circle>
                             <line x1="12" y1="8" x2="12" y2="12"></line>
                             <line x1="12" y1="16" x2="12.01" y2="16"></line>
                         </svg>
                         Pemantauan Data Belum Diassign ke Petugas
                     </h3>
-                    <div class="compact-stats" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); justify-content: flex-start;">
+                    <div class="compact-stats"
+                        style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); justify-content: flex-start;">
                         <div class="stat-card-compact" style="--stat-color: var(--primary);">
                             <div class="stat-label">Total Belum Diassign</div>
                             <div class="stat-value" id="stat-belum-total">0</div>
@@ -611,25 +769,32 @@
 
                 <div class="filter-panel" style="margin-top: 1.25rem;">
                     <div class="search-row" style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
-                        <input type="text" id="belum-search-input" class="search-input" placeholder="Cari ID Sub-SLS / Nama Usaha / Alamat / Catatan..." style="flex: 1; min-width: 240px;">
-                        
-                        <select class="sort-select" id="belum-filter-kab" style="width: auto; min-width: 170px; max-width: 220px; flex-shrink: 0;">
+                        <input type="text" id="belum-search-input" class="search-input"
+                            placeholder="Cari ID Sub-SLS / Nama Usaha / Alamat / Catatan..."
+                            style="flex: 1; min-width: 240px;">
+
+                        <select class="sort-select" id="belum-filter-kab"
+                            style="width: auto; min-width: 170px; max-width: 220px; flex-shrink: 0;">
                             <option value="">Semua Kabupaten/Kota</option>
                         </select>
 
-                        <select class="sort-select" id="belum-filter-status" style="width: auto; min-width: 150px; max-width: 190px; flex-shrink: 0;">
+                        <select class="sort-select" id="belum-filter-status"
+                            style="width: auto; min-width: 150px; max-width: 190px; flex-shrink: 0;">
                             <option value="">Semua Status</option>
                         </select>
 
-                        <select class="sort-select" id="belum-filter-mode" style="width: auto; min-width: 110px; max-width: 140px; flex-shrink: 0;">
+                        <select class="sort-select" id="belum-filter-mode"
+                            style="width: auto; min-width: 110px; max-width: 140px; flex-shrink: 0;">
                             <option value="">Semua Mode</option>
                             <option value="[CAPI]">CAPI</option>
                             <option value="[CAWI]">CAWI</option>
                         </select>
 
-                        <div style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        <div
+                            style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--text-secondary);">
                             <span>Tampilkan:</span>
-                            <select id="belum-page-size" class="sort-select" style="padding: 0.4rem 0.6rem; min-width: 70px;">
+                            <select id="belum-page-size" class="sort-select"
+                                style="padding: 0.4rem 0.6rem; min-width: 70px;">
                                 <option value="25">25</option>
                                 <option value="50">50</option>
                                 <option value="100">100</option>
@@ -637,23 +802,35 @@
                             </select>
                         </div>
 
-                        <button onclick="window.downloadBelumExcel()" style="padding: 8px 16px; background-color: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; display: flex; align-items: center; gap: 8px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        <button onclick="window.downloadBelumExcel()"
+                            style="padding: 8px 16px; background-color: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; display: flex; align-items: center; gap: 8px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
                             Export Excel
                         </button>
                     </div>
                 </div>
 
-                <div class="ipas-table-wrapper" style="margin-top: 1.25rem; max-height: 620px; overflow-y: auto; border: 1px solid var(--card-border); border-radius: 0.75rem; background: var(--card-bg);">
+                <div class="ipas-table-wrapper"
+                    style="margin-top: 1.25rem; max-height: 620px; overflow-y: auto; border: 1px solid var(--card-border); border-radius: 0.75rem; background: var(--card-bg);">
                     <table class="ipas-table" id="table-belum-diassign" style="width: 100%; border-collapse: collapse;">
                         <thead>
                             <tr style="position: sticky; top: 0; z-index: 2; background: var(--bg-body);">
                                 <th style="width: 40px; text-align: center;">No</th>
-                                <th style="width: 150px; cursor: pointer;" onclick="window.sortBelumTable('idsubsls')">ID Sub SLS &#x25B2;&#x25BC;</th>
-                                <th style="width: 170px; cursor: pointer;" onclick="window.sortBelumTable('kab_name')">Kabupaten/Kota &#x25B2;&#x25BC;</th>
-                                <th style="cursor: pointer;" onclick="window.sortBelumTable('data1')">Nama Usaha / Data 1 &#x25B2;&#x25BC;</th>
-                                <th style="width: 140px; cursor: pointer;" onclick="window.sortBelumTable('status')">Status &#x25B2;&#x25BC;</th>
-                                <th style="width: 70px; text-align: center; cursor: pointer;" onclick="window.sortBelumTable('mode')">Mode &#x25B2;&#x25BC;</th>
+                                <th style="width: 150px; cursor: pointer;" onclick="window.sortBelumTable('idsubsls')">
+                                    ID Sub SLS &#x25B2;&#x25BC;</th>
+                                <th style="width: 170px; cursor: pointer;" onclick="window.sortBelumTable('kab_name')">
+                                    Kabupaten/Kota &#x25B2;&#x25BC;</th>
+                                <th style="cursor: pointer;" onclick="window.sortBelumTable('data1')">Nama Usaha / Data
+                                    1 &#x25B2;&#x25BC;</th>
+                                <th style="width: 140px; cursor: pointer;" onclick="window.sortBelumTable('status')">
+                                    Status &#x25B2;&#x25BC;</th>
+                                <th style="width: 70px; text-align: center; cursor: pointer;"
+                                    onclick="window.sortBelumTable('mode')">Mode &#x25B2;&#x25BC;</th>
                                 <th style="width: 180px;">Alamat / Catatan</th>
                                 <th style="width: 140px;">Koordinat</th>
                                 <th style="width: 110px; text-align: center;">Aksi</th>
@@ -666,14 +843,18 @@
                 </div>
 
                 <!-- Pagination footer -->
-                <div id="belum-pagination" style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1rem;border:1px solid var(--card-border);border-top:none;border-radius:0 0 0.75rem 0.75rem;background:var(--bg-body);gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">
-                    <span id="belum-page-info" style="font-size:0.82rem;color:var(--text-secondary);font-weight:500;">Memuat data...</span>
+                <div id="belum-pagination"
+                    style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1rem;border:1px solid var(--card-border);border-top:none;border-radius:0 0 0.75rem 0.75rem;background:var(--bg-body);gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+                    <span id="belum-page-info"
+                        style="font-size:0.82rem;color:var(--text-secondary);font-weight:500;">Memuat data...</span>
                     <div style="display:flex;gap:0.35rem;align-items:center;">
                         <button id="belum-btn-prev" onclick="window.changeBelumPage(-1)"
-                            style="padding:0.35rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;font-weight:600;">&#8592; Prev</button>
+                            style="padding:0.35rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;font-weight:600;">&#8592;
+                            Prev</button>
                         <div id="belum-page-nums" style="display:flex;gap:0.25rem;"></div>
                         <button id="belum-btn-next" onclick="window.changeBelumPage(1)"
-                            style="padding:0.35rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;font-weight:600;">Next &#8594;</button>
+                            style="padding:0.35rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;font-weight:600;">Next
+                            &#8594;</button>
                     </div>
                 </div>
             </div>
@@ -800,7 +981,9 @@
                         <div class="table-toolbar">
                             <div class="table-note">Mode tabel memudahkan seleksi dan pemantauan status email UB secara
                                 keseluruhan.</div>
-                            <button class="btn-action" onclick="window.downloadEmailTable()" style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 0.5rem;">Download Tabel (CSV)</button>
+                            <button class="btn-action" onclick="window.downloadEmailTable()"
+                                style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 0.5rem;">Download Tabel
+                                (CSV)</button>
                         </div>
                         <div class="table-scroll">
                             <table class="company-table">
@@ -942,10 +1125,12 @@
                         Rekapitulasi Capaian per Petugas
                     </h3>
 
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
                         <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
                             <div class="d-flex gap-2">
-                                <button class="btn-tab active" id="tab-pencacah" onclick="window.setPetugasTab('Pencacah')"
+                                <button class="btn-tab active" id="tab-pencacah"
+                                    onclick="window.setPetugasTab('Pencacah')"
                                     style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.82rem; font-weight: 700;">Pencacah</button>
                                 <button class="btn-tab" id="tab-pengawas" onclick="window.setPetugasTab('Pengawas')"
                                     style="margin-bottom: 0; padding: 0.4rem 0.85rem; font-size: 0.82rem; font-weight: 700;">Pengawas</button>
@@ -992,7 +1177,12 @@
                             </button>
                             <button id="btn-download-excel-desa" onclick="window.downloadDesaSummaryExcel()"
                                 style="display: none; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; border-radius: 0.6rem; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(34,197,94,0.3); transition: all 0.2s; white-space: nowrap; height: 36px;">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="7 10 12 15 17 10" />
+                                    <line x1="12" y1="15" x2="12" y2="3" />
+                                </svg>
                                 Download Excel Desa
                             </button>
                         </div>
@@ -2862,7 +3052,7 @@
                 </div>
             </div>
 
-<div class="tab-content" id="tab-content-data_hilang" style="display: none;">
+            <div class="tab-content" id="tab-content-data_hilang" style="display: none;">
                 <div class="header">
                     <div></div>
                     <!-- header actions hidden, moved inline below -->
@@ -2908,54 +3098,84 @@
 
                 <div id="data_hilang-data-section" style="display: none;">
                     <!-- Top Bar -->
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; gap: 0.75rem; flex-wrap: wrap;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; gap: 0.75rem; flex-wrap: wrap;">
                         <div>
-                            <div style="font-weight: 700; color: var(--text-primary); font-size: 1.05rem;">Halo, <span id="data_hilang-user-name" style="color: var(--primary);"></span> <span id="data_hilang-user-kab" style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 400;"></span></div>
+                            <div style="font-weight: 700; color: var(--text-primary); font-size: 1.05rem;">Halo, <span
+                                    id="data_hilang-user-name" style="color: var(--primary);"></span> <span
+                                    id="data_hilang-user-kab"
+                                    style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 400;"></span>
+                            </div>
                         </div>
                         <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-                            <button onclick="logoutDataHilang()" style="padding: 0.5rem 1.2rem; background: #f1f5f9; color: #475569; border: none; border-radius: 0.5rem; cursor: pointer; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem;">Logout</button>
+                            <button onclick="logoutDataHilang()"
+                                style="padding: 0.5rem 1.2rem; background: #f1f5f9; color: #475569; border: none; border-radius: 0.5rem; cursor: pointer; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem;">Logout</button>
                         </div>
                     </div>
 
                     <!-- Toggle Usaha vs Keluarga -->
-                    <div id="data_hilang-tab-switcher" style="display: flex; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem;">
-                        <button id="btn-data-hilang-usaha" onclick="window.switchDataHilangSubTab('usaha')" style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: var(--primary); color: white; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Usaha Hilang</button>
-                        <button id="btn-data-hilang-keluarga" onclick="window.switchDataHilangSubTab('keluarga')" style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: transparent; color: var(--text-secondary); font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Keluarga Hilang</button>
-                        <button id="btn-data-hilang-nonaktif" onclick="window.switchDataHilangSubTab('nonaktif')" style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: transparent; color: var(--text-secondary); font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Usaha Nonaktif</button>
-                        <button id="btn-data-hilang-desil" onclick="window.switchDataHilangSubTab('desil')" style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: transparent; color: var(--text-secondary); font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Keluarga Desil 1-5</button>
+                    <div id="data_hilang-tab-switcher"
+                        style="display: flex; gap: 0.5rem; margin-bottom: 1rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.5rem;">
+                        <button id="btn-data-hilang-usaha" onclick="window.switchDataHilangSubTab('usaha')"
+                            style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: var(--primary); color: white; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Usaha
+                            Hilang</button>
+                        <button id="btn-data-hilang-keluarga" onclick="window.switchDataHilangSubTab('keluarga')"
+                            style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: transparent; color: var(--text-secondary); font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Keluarga
+                            Hilang</button>
+                        <button id="btn-data-hilang-nonaktif" onclick="window.switchDataHilangSubTab('nonaktif')"
+                            style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: transparent; color: var(--text-secondary); font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Usaha
+                            Nonaktif</button>
+                        <button id="btn-data-hilang-desil" onclick="window.switchDataHilangSubTab('desil')"
+                            style="padding: 0.6rem 1.5rem; border-radius: 0.5rem; border: none; background: transparent; color: var(--text-secondary); font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Plus Jakarta Sans', sans-serif;">Keluarga
+                            Desil 1-5</button>
                     </div>
 
-                    <!-- Matriks Distribusi Desil 1-5 (39 Kolom) -->
+                    <!-- Matriks Distribusi Desil 1-5 -->
                     <div id="data_hilang-desil-matrix-wrapper" style="display: none; margin-bottom: 1.5rem;">
-                        <div class="card" style="padding: 1.25rem; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; box-shadow: var(--shadow-sm);">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
+                        <div class="card"
+                            style="padding: 1.25rem; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; box-shadow: var(--shadow-sm);">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
                                 <div>
-                                    <h4 style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
+                                    <h4
+                                        style="margin: 0; font-size: 0.95rem; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
                                         Distribusi Keluarga Desil 1-5 per Kabupaten/Kota
                                     </h4>
                                     <p style="margin: 0.25rem 0 0 0; font-size: 0.78rem; color: var(--text-secondary);">
-                                        Jumlah keluarga belum terdata menurut klasifikasi desil Pusat (Nasional), Provinsi, dan Kab/Kota
+                                        Jumlah keluarga belum terdata menurut klasifikasi desil Pusat (Nasional),
+                                        Provinsi, dan Kab/Kota
                                     </p>
                                 </div>
                                 <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-                                    <select id="desil-matrix-filter-kab" onchange="window.renderDesilMatrix()" style="padding: 0.45rem 0.75rem; border-radius: 0.6rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 600; cursor: pointer; outline: none;">
+                                    <select id="desil-matrix-filter-kab" onchange="window.renderDesilMatrix()"
+                                        style="padding: 0.45rem 0.75rem; border-radius: 0.6rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 600; cursor: pointer; outline: none;">
                                         <option value="">Semua Kab/Kota</option>
                                     </select>
-                                    <select id="desil-matrix-filter-cat" onchange="window.renderDesilMatrix()" style="padding: 0.45rem 0.75rem; border-radius: 0.6rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 600; cursor: pointer; outline: none;">
+                                    <select id="desil-matrix-filter-cat" onchange="window.renderDesilMatrix()"
+                                        style="padding: 0.45rem 0.75rem; border-radius: 0.6rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 600; cursor: pointer; outline: none;">
                                         <option value="all">Semua Kategori (Pusat, Prov, Kab/Kot)</option>
                                         <option value="nasional">Hanya Pusat (Nasional)</option>
                                         <option value="provinsi">Hanya Provinsi</option>
                                         <option value="kabkot">Hanya Kab/Kota</option>
                                     </select>
-                                    <button onclick="window.downloadDesilMatrixExcel()" style="padding: 0.45rem 1rem; border-radius: 0.6rem; border: none; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; font-size: 0.8rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; box-shadow: 0 2px 8px rgba(34,197,94,0.3); font-family: 'Outfit', sans-serif;">
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                    <button onclick="window.downloadDesilMatrixExcel()"
+                                        style="padding: 0.45rem 1rem; border-radius: 0.6rem; border: none; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; font-size: 0.8rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; box-shadow: 0 2px 8px rgba(34,197,94,0.3); font-family: 'Outfit', sans-serif;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                            <polyline points="7 10 12 15 17 10" />
+                                            <line x1="12" y1="15" x2="12" y2="3" />
+                                        </svg>
                                         Download Excel
                                     </button>
                                 </div>
                             </div>
-                            
-                            <div class="ipas-table-wrapper" style="max-height: 420px; overflow: auto; width: 100%; border: 1px solid var(--card-border); border-radius: 0.75rem;">
-                                <table class="ipas-table" id="table-desil-matrix" style="width: 100%; min-width: 1900px; font-size: 0.8rem; border-collapse: collapse;">
+
+                            <div class="ipas-table-wrapper"
+                                style="max-height: 420px; overflow: auto; width: 100%; border: 1px solid var(--card-border); border-radius: 0.75rem;">
+                                <table class="ipas-table" id="table-desil-matrix"
+                                    style="width: 100%; min-width: 1900px; font-size: 0.8rem; border-collapse: collapse;">
                                     <thead id="thead-desil-matrix">
                                     </thead>
                                     <tbody id="tbody-desil-matrix">
@@ -2966,39 +3186,58 @@
                     </div>
 
                     <!-- Statistics & Filter bar -->
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
                         <div style="display: flex; align-items: center; gap: 0.75rem;">
-                            <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 0.5rem 1rem; display: flex; align-items: center; gap: 0.75rem;">
-                                <div style="font-size: 0.7rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;">Total Data:</div>
-                                <div style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); font-family: 'Outfit', sans-serif; line-height: 1;" id="data_hilang-count-total">-</div>
+                            <div
+                                style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 0.5rem 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                                <div
+                                    style="font-size: 0.7rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;">
+                                    Total Data:</div>
+                                <div style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); font-family: 'Outfit', sans-serif; line-height: 1;"
+                                    id="data_hilang-count-total">-</div>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 0.5rem 0.75rem; box-shadow: var(--shadow-sm);">
-                            <svg width="14" height="14" fill="none" stroke="var(--text-secondary)" stroke-width="2.5" viewBox="0 0 24 24" style="flex-shrink:0;">
+                        <div
+                            style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 0.5rem 0.75rem; box-shadow: var(--shadow-sm);">
+                            <svg width="14" height="14" fill="none" stroke="var(--text-secondary)" stroke-width="2.5"
+                                viewBox="0 0 24 24" style="flex-shrink:0;">
                                 <circle cx="11" cy="11" r="8" />
                                 <path d="M21 21l-4.35-4.35" />
                             </svg>
-                            <input type="text" id="data_hilang-search" placeholder="Cari nama / NIK / wilayah..." oninput="window.filterDataHilangTable()" style="flex: 1; min-width: 180px; padding: 0.3rem 0.4rem; border: none; background: transparent; color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none;">
+                            <input type="text" id="data_hilang-search" placeholder="Cari nama / NIK / wilayah..."
+                                oninput="window.filterDataHilangTable()"
+                                style="flex: 1; min-width: 180px; padding: 0.3rem 0.4rem; border: none; background: transparent; color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none;">
                             <div style="width: 1px; height: 20px; background: var(--card-border);"></div>
-                            <select id="data_hilang-filter-kab" onchange="window.filterDataHilangTable()" style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer; font-weight: 600;">
+                            <select id="data_hilang-filter-kab" onchange="window.filterDataHilangTable()"
+                                style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer; font-weight: 600;">
                                 <option value="">Semua Kab/Kota</option>
                             </select>
-                            <div id="data_hilang-sep-1" style="width: 1px; height: 20px; background: var(--card-border); display: none;"></div>
-                            <select id="data_hilang-filter-pindah" onchange="window.filterDataHilangTable()" style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer; font-weight: 600; display: none;">
+                            <div id="data_hilang-sep-1"
+                                style="width: 1px; height: 20px; background: var(--card-border); display: none;"></div>
+                            <select id="data_hilang-filter-pindah" onchange="window.filterDataHilangTable()"
+                                style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer; font-weight: 600; display: none;">
                                 <option value="">Semua Status Pindah</option>
                                 <option value="Ya">Indikasi Pindah SLS</option>
                                 <option value="Tidak">Tidak Pindah</option>
                             </select>
-                            <div id="data_hilang-sep-2" style="width: 1px; height: 20px; background: var(--card-border); display: none;"></div>
-                            <select id="data_hilang-filter-penelusuran" onchange="window.filterDataHilangTable()" style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer; font-weight: 600; display: none;">
+                            <div id="data_hilang-sep-2"
+                                style="width: 1px; height: 20px; background: var(--card-border); display: none;"></div>
+                            <select id="data_hilang-filter-penelusuran" onchange="window.filterDataHilangTable()"
+                                style="padding: 0.3rem 0.5rem; border: none; border-radius: 0.4rem; background: var(--input-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; outline: none; cursor: pointer; font-weight: 600; display: none;">
                                 <option value="">Semua Penelusuran</option>
                                 <option value="ada">Ada Catatan Penelusuran</option>
                                 <option value="tidak">Tidak Ada Catatan</option>
                             </select>
                             <div style="width: 1px; height: 20px; background: var(--card-border);"></div>
-                            <button onclick="window.downloadDataHilangCSV()" style="padding: 0.3rem 0.75rem; border: none; border-radius: 0.4rem; background: #10b981; color: white; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: background 0.2s;" title="Download Data Filtered">
-                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                            <button onclick="window.downloadDataHilangCSV()"
+                                style="padding: 0.3rem 0.75rem; border: none; border-radius: 0.4rem; background: #10b981; color: white; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: background 0.2s;"
+                                title="Download Data Filtered">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                                </svg>
                                 CSV
                             </button>
                         </div>
@@ -3029,7 +3268,8 @@
                             style="font-size: 0.78rem; color: var(--text-secondary);">Menampilkan
                             0 - 0 dari 0
                             data</span>
-                        <div id="data_hilang-pagination-buttons" style="display: flex; gap: 0.35rem; align-items: center;">
+                        <div id="data_hilang-pagination-buttons"
+                            style="display: flex; gap: 0.35rem; align-items: center;">
                         </div>
                     </div>
                     <div id="data_hilang-empty"
@@ -3070,23 +3310,35 @@
                     style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center;">
                     <input type="text" id="rekon-filter-search" placeholder="Cari nama/email/SLS..."
                         class="search-input" style="flex: 1; min-width: 150px;" oninput="renderRekon()">
-                    <select id="rekon-filter-kab" class="sort-select" onchange="updateKec(); renderRekon()" style="flex: 1; min-width: 130px; padding-right: 2rem;">
+                    <select id="rekon-filter-kab" class="sort-select" onchange="updateKec(); renderRekon()"
+                        style="flex: 1; min-width: 130px; padding-right: 2rem;">
                         <option value="">Semua Kab</option>
                     </select>
-                    <select id="rekon-filter-kec" class="sort-select" onchange="updateDesa(); renderRekon()" style="flex: 1; min-width: 130px; padding-right: 2rem;">
+                    <select id="rekon-filter-kec" class="sort-select" onchange="updateDesa(); renderRekon()"
+                        style="flex: 1; min-width: 130px; padding-right: 2rem;">
                         <option value="">Semua Kec</option>
                     </select>
-                    <select id="rekon-filter-desa" class="sort-select" onchange="updateSls(); renderRekon()" style="flex: 1; min-width: 130px; padding-right: 2rem;">
+                    <select id="rekon-filter-desa" class="sort-select" onchange="updateSls(); renderRekon()"
+                        style="flex: 1; min-width: 130px; padding-right: 2rem;">
                         <option value="">Semua Desa</option>
                     </select>
-                    <select id="rekon-filter-sls" class="sort-select" onchange="renderRekon()" style="flex: 1; min-width: 130px; padding-right: 2rem;">
+                    <select id="rekon-filter-sls" class="sort-select" onchange="renderRekon()"
+                        style="flex: 1; min-width: 130px; padding-right: 2rem;">
                         <option value="">Semua SLS</option>
                     </select>
-                    <select id="rekon-filter-petugas" class="sort-select" onchange="renderRekon()" style="display: none;">
+                    <select id="rekon-filter-petugas" class="sort-select" onchange="renderRekon()"
+                        style="display: none;">
                         <option value="">Semua Petugas</option>
                     </select>
-                    <button class="btn-action" onclick="window.downloadRekonData()" style="padding: 0.6rem 1rem; font-size: 0.85rem; border-radius: 0.5rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; font-family: 'Outfit', sans-serif; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(34,197,94,0.3);">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.35rem; vertical-align: middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                    <button class="btn-action" onclick="window.downloadRekonData()"
+                        style="padding: 0.6rem 1rem; font-size: 0.85rem; border-radius: 0.5rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; font-family: 'Outfit', sans-serif; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(34,197,94,0.3);">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-right: 0.35rem; vertical-align: middle;">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
                         Download Tabel
                     </button>
                 </div>
@@ -3140,7 +3392,8 @@
                 </div>
 
                 <!-- TABEL KABKOT -->
-                <div id="rekon-sub-kabkot" class="ipas-table-wrapper" style="display: none; max-height: 600px; overflow-y: auto;">
+                <div id="rekon-sub-kabkot" class="ipas-table-wrapper"
+                    style="display: none; max-height: 600px; overflow-y: auto;">
                     <table class="ipas-table">
                         <thead>
                             <tr>
@@ -3157,20 +3410,32 @@
                             </tr>
                             <tr>
                                 <!-- UTP -->
-                                <th class="sortable" onclick="sortRekon('kabkot', 'muatan_utp')" style="text-align:right;">Muatan</th>
-                                <th class="sortable" onclick="sortRekon('kabkot', 'realisasi_utp')" style="text-align:right;">Realisasi</th>
-                                <th class="sortable" onclick="sortRekon('kabkot', 'diff_utp')" style="text-align:right;">Selisih</th>
-                                <th class="sortable" onclick="sortRekon('kabkot', 'pct_utp')" style="text-align:right;">% Capaian</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'muatan_utp')"
+                                    style="text-align:right;">Muatan</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'realisasi_utp')"
+                                    style="text-align:right;">Realisasi</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'diff_utp')"
+                                    style="text-align:right;">Selisih</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'pct_utp')" style="text-align:right;">
+                                    % Capaian</th>
                                 <!-- SBR -->
-                                <th class="sortable" onclick="sortRekon('kabkot', 'muatan_sbr')" style="text-align:right;">Muatan</th>
-                                <th class="sortable" onclick="sortRekon('kabkot', 'realisasi_sbr')" style="text-align:right;">Realisasi</th>
-                                <th class="sortable" onclick="sortRekon('kabkot', 'diff_sbr')" style="text-align:right;">Selisih</th>
-                                <th class="sortable" onclick="sortRekon('kabkot', 'pct_sbr')" style="text-align:right;">% Capaian</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'muatan_sbr')"
+                                    style="text-align:right;">Muatan</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'realisasi_sbr')"
+                                    style="text-align:right;">Realisasi</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'diff_sbr')"
+                                    style="text-align:right;">Selisih</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'pct_sbr')" style="text-align:right;">
+                                    % Capaian</th>
                                 <!-- KELUARGA -->
-                                <th class="sortable" onclick="sortRekon('kabkot', 'muatan_keluarga')" style="text-align:right;">Muatan</th>
-                                <th class="sortable" onclick="sortRekon('kabkot', 'realisasi_keluarga')" style="text-align:right;">Realisasi</th>
-                                <th class="sortable" onclick="sortRekon('kabkot', 'diff_keluarga')" style="text-align:right;">Selisih</th>
-                                <th class="sortable" onclick="sortRekon('kabkot', 'pct_keluarga')" style="text-align:right;">% Capaian</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'muatan_keluarga')"
+                                    style="text-align:right;">Muatan</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'realisasi_keluarga')"
+                                    style="text-align:right;">Realisasi</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'diff_keluarga')"
+                                    style="text-align:right;">Selisih</th>
+                                <th class="sortable" onclick="sortRekon('kabkot', 'pct_keluarga')"
+                                    style="text-align:right;">% Capaian</th>
                             </tr>
                         </thead>
                         <tbody id="rekon-table-kabkot"></tbody>
