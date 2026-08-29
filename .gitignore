@@ -32,7 +32,9 @@ granular_data.db
 
 # Ignored profiles and data files
 playwright_profile_*/
+chrome_user_data/
+scratch/
 *.csv
 *.xlsx
-~.xlsx
+~*.xlsx
 
