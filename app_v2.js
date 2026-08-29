@@ -10866,8 +10866,137 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     // --- Custom Data Hilang Logic ---
-    let currentDataHilangTab = 'usaha'; // 'usaha' or 'keluarga'
+    let currentDataHilangTab = 'usaha'; // 'usaha', 'keluarga', 'nonaktif', or 'desil'
     
+    window.renderDesilMatrix = function() {
+        const wrapper = document.getElementById('data_hilang-desil-matrix-wrapper');
+        if (!wrapper) return;
+        
+        if (currentDataHilangTab !== 'desil' || !window.dataDesilMatrix) {
+            wrapper.style.display = 'none';
+            return;
+        }
+        wrapper.style.display = 'block';
+
+        const matrix = window.dataDesilMatrix;
+        const thead = document.getElementById('thead-desil-matrix');
+        const tbody = document.getElementById('tbody-desil-matrix');
+        if (!thead || !tbody) return;
+
+        // Build Header 1 (Kabupaten names with colspan=3)
+        let thTop = `<tr><th rowspan="2" style="position:sticky; left:0; z-index:15; background:var(--table-header-bg); min-width:90px; text-align:center; vertical-align:middle; border-right:2px solid var(--card-border); font-weight:800; font-size:0.75rem;">KATEGORI</th>`;
+        
+        matrix.kabs.forEach(kab => {
+            const shortName = kab.replace(/^\[\d+\]\s*/, '');
+            thTop += `<th colspan="3" style="text-align:center; font-weight:700; border-left:1px solid var(--card-border); border-right:1px solid var(--card-border); background:var(--table-header-bg); font-size:0.72rem; padding:0.5rem 0.3rem; white-space:nowrap;">${shortName}</th>`;
+        });
+
+        thTop += `<th colspan="3" style="text-align:center; font-weight:800; border-left:2px solid var(--primary); background:rgba(249,115,22,0.12); color:var(--primary); font-size:0.75rem; padding:0.5rem 0.4rem; white-space:nowrap;">TOTAL SULTENG</th></tr>`;
+
+        // Build Header 2 (Pusat, Prov, Kab/Kot)
+        let thBot = `<tr>`;
+        matrix.kabs.forEach(kab => {
+            thBot += `
+                <th style="text-align:center; font-size:0.68rem; font-weight:600; min-width:55px; border-left:1px solid var(--card-border); padding:0.35rem 0.2rem; background:rgba(59,130,246,0.06); color:#2563eb;">Pusat</th>
+                <th style="text-align:center; font-size:0.68rem; font-weight:600; min-width:55px; padding:0.35rem 0.2rem; background:rgba(168,85,247,0.06); color:#9333ea;">Prov</th>
+                <th style="text-align:center; font-size:0.68rem; font-weight:600; min-width:55px; border-right:1px solid var(--card-border); padding:0.35rem 0.2rem; background:rgba(16,185,129,0.06); color:#059669;">Kab/Kot</th>
+            `;
+        });
+        // Total Sulteng subheaders
+        thBot += `
+            <th style="text-align:center; font-size:0.68rem; font-weight:700; min-width:65px; border-left:2px solid var(--primary); padding:0.35rem 0.2rem; background:rgba(249,115,22,0.1); color:var(--primary);">Pusat</th>
+            <th style="text-align:center; font-size:0.68rem; font-weight:700; min-width:65px; padding:0.35rem 0.2rem; background:rgba(249,115,22,0.1); color:var(--primary);">Prov</th>
+            <th style="text-align:center; font-size:0.68rem; font-weight:700; min-width:65px; padding:0.35rem 0.2rem; background:rgba(249,115,22,0.1); color:var(--primary);">Kab/Kot</th>
+        </tr>`;
+
+        thead.innerHTML = thTop + thBot;
+
+        // Build Body Rows
+        let rowsHtml = '';
+        const rowKeys = ['Desil 1', 'Desil 2', 'Desil 3', 'Desil 4', 'Desil 5', 'TOTAL'];
+        rowKeys.forEach(rKey => {
+            const isTotal = (rKey === 'TOTAL');
+            const rowData = matrix.rows[rKey] || {};
+            
+            let trStyle = isTotal 
+                ? 'background: rgba(249,115,22,0.08); font-weight: 800; border-top: 2px solid var(--primary);' 
+                : 'border-bottom: 1px solid var(--card-border);';
+            
+            let labelStyle = isTotal ? 'color: var(--primary); font-weight: 800;' : 'font-weight: 700;';
+            
+            rowsHtml += `<tr style="${trStyle}">
+                <td style="position:sticky; left:0; z-index:10; background:${isTotal ? 'var(--card-bg)' : 'var(--table-sticky-bg)'}; border-right:2px solid var(--card-border); text-align:center; ${labelStyle}">${rKey}</td>`;
+            
+            matrix.kabs.forEach(kab => {
+                const kData = rowData[kab] || { nasional: 0, provinsi: 0, kabkot: 0 };
+                rowsHtml += `
+                    <td style="text-align:right; font-family:monospace; border-left:1px solid var(--card-border); font-size:0.8rem; padding:0.45rem 0.35rem;">${kData.nasional > 0 ? kData.nasional.toLocaleString('id-ID') : '<span style="color:var(--text-secondary);opacity:0.35;">0</span>'}</td>
+                    <td style="text-align:right; font-family:monospace; font-size:0.8rem; padding:0.45rem 0.35rem;">${kData.provinsi > 0 ? kData.provinsi.toLocaleString('id-ID') : '<span style="color:var(--text-secondary);opacity:0.35;">0</span>'}</td>
+                    <td style="text-align:right; font-family:monospace; border-right:1px solid var(--card-border); font-size:0.8rem; padding:0.45rem 0.35rem;">${kData.kabkot > 0 ? kData.kabkot.toLocaleString('id-ID') : '<span style="color:var(--text-secondary);opacity:0.35;">0</span>'}</td>
+                `;
+            });
+
+            const totalSulteng = rowData['TOTAL SULTENG'] || { nasional: 0, provinsi: 0, kabkot: 0 };
+            rowsHtml += `
+                <td style="text-align:right; font-family:monospace; font-weight:800; border-left:2px solid var(--primary); color:var(--primary); font-size:0.82rem; padding:0.45rem 0.35rem;">${totalSulteng.nasional.toLocaleString('id-ID')}</td>
+                <td style="text-align:right; font-family:monospace; font-weight:800; color:var(--primary); font-size:0.82rem; padding:0.45rem 0.35rem;">${totalSulteng.provinsi.toLocaleString('id-ID')}</td>
+                <td style="text-align:right; font-family:monospace; font-weight:800; color:var(--primary); font-size:0.82rem; padding:0.45rem 0.35rem;">${totalSulteng.kabkot.toLocaleString('id-ID')}</td>
+            </tr>`;
+        });
+
+        tbody.innerHTML = rowsHtml;
+    };
+
+    window.downloadDesilMatrixExcel = function() {
+        if (!window.dataDesilMatrix) {
+            alert('Data matriks desil belum tersedia.');
+            return;
+        }
+        const matrix = window.dataDesilMatrix;
+        const rowKeys = ['Desil 1', 'Desil 2', 'Desil 3', 'Desil 4', 'Desil 5', 'TOTAL'];
+        
+        const header1 = ['Kategori / Desil'];
+        const header2 = [''];
+        
+        matrix.kabs.forEach(kab => {
+            const shortName = kab.replace(/^\[\d+\]\s*/, '');
+            header1.push(shortName, '', '');
+            header2.push('Pusat (Nasional)', 'Provinsi', 'Kab/Kota');
+        });
+        header1.push('TOTAL SULTENG', '', '');
+        header2.push('Pusat (Nasional)', 'Provinsi', 'Kab/Kota');
+        
+        const rows = [header1, header2];
+        
+        rowKeys.forEach(rKey => {
+            const row = [rKey];
+            const rowData = matrix.rows[rKey] || {};
+            matrix.kabs.forEach(kab => {
+                const kData = rowData[kab] || { nasional: 0, provinsi: 0, kabkot: 0 };
+                row.push(kData.nasional, kData.provinsi, kData.kabkot);
+            });
+            const tSulteng = rowData['TOTAL SULTENG'] || { nasional: 0, provinsi: 0, kabkot: 0 };
+            row.push(tSulteng.nasional, tSulteng.provinsi, tSulteng.kabkot);
+            rows.push(row);
+        });
+        
+        const ws = XLSX.utils.aoa_to_sheet(rows);
+        
+        ws['!merges'] = [
+            { s: { r: 0, c: 0 }, e: { r: 1, c: 0 } }
+        ];
+        let colIdx = 1;
+        matrix.kabs.forEach(() => {
+            ws['!merges'].push({ s: { r: 0, c: colIdx }, e: { r: 0, c: colIdx + 2 } });
+            colIdx += 3;
+        });
+        ws['!merges'].push({ s: { r: 0, c: colIdx }, e: { r: 0, c: colIdx + 2 } });
+        
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "Distribusi_Desil_1-5");
+        XLSX.writeFile(wb, "Distribusi_Keluarga_Desil_1-5_Sulteng.xlsx");
+    };
+
     window.switchDataHilangSubTab = function(tab) {
         currentDataHilangTab = tab;
         const btnUsaha = document.getElementById('btn-data-hilang-usaha');
@@ -10911,6 +11040,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (filterPenelusuran) filterPenelusuran.style.display = (tab === 'keluarga' || tab === 'desil') ? 'inline-block' : 'none';
         
         window.dataHilangCurrentPage = 1;
+        window.renderDesilMatrix();
         window.loadDataHilangData();
     };
     
@@ -10946,6 +11076,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             if(loadingEl) loadingEl.style.display = 'none';
+            window.renderDesilMatrix();
             window.renderDataHilangTable(data);
         }, 100);
     };
