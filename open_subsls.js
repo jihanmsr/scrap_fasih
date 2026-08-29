@@ -57,7 +57,7 @@ function initSlsMap() {
                     
                     let popupContent = `
                         <div style="font-family: 'Outfit', sans-serif; padding: 4px; min-width: 180px;">
-                            <div style="font-weight: 800; font-size: 0.95rem; color: #ea580c; margin-bottom: 6px;">🎯 SLS FULL OPEN</div>
+                            <div style="font-weight: 800; font-size: 0.95rem; color: #ea580c; margin-bottom: 6px;">SLS FULL OPEN</div>
                             <div style="font-size: 0.85rem; line-height: 1.45; color: #1e293b;">
                                 <b>Kabupaten:</b> ${csv.kabupaten || p.nmkab || '-'}<br>
                                 <b>Kecamatan:</b> ${csv.kecamatan || p.nmkec || '-'}<br>
