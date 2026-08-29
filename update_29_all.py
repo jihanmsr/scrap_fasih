@@ -418,9 +418,10 @@ def update_sls_open(df_prog=None):
         sls_code = int(sls_14)
         sub_sls_code = int(sls_16)
 
-        kab_name = m_info.get('nmkab', row.get('kabupaten', ''))
-        kec_name = m_info.get('nmkec', row.get('kecamatan', ''))
-        desa_name = m_info.get('nmdesa', row.get('desa', ''))
+        kab_str = str(sls_14[:4])
+        kab_name = m_info.get('nmkab') or (str(row.get('kabupaten', '')) if str(row.get('kabupaten', '')) not in ('', 'nan') else '') or KAB_MAP.get(kab_str, '')
+        kec_name = m_info.get('nmkec') or (str(row.get('kecamatan', '')) if str(row.get('kecamatan', '')) not in ('', 'nan') else '') or '-'
+        desa_name = m_info.get('nmdesa') or (str(row.get('desa', '')) if str(row.get('desa', '')) not in ('', 'nan') else '') or '-'
         sls_name = m_info.get('nmsls', '-')
         subsls_name = m_info.get('nmsls', '-')
 

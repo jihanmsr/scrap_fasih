@@ -7653,13 +7653,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    window.petugasHistoryRange = '7';
+    window.setPetugasHistoryRange = function (range) {
+        window.petugasHistoryRange = range;
+        if (window.renderPetugasSummaryTable) {
+            window.renderPetugasSummaryTable(window.lastBaseFiltered || window.GRANULAR_ASSIGNMENTS_DATA || null);
+        }
+    };
+
     window._showPetugasHistory = true;
     window.togglePetugasHistory = function () {
         window._showPetugasHistory = !window._showPetugasHistory;
         const btn = document.getElementById('btn-toggle-history-petugas');
+        const selectRange = document.getElementById('select-history-range');
         if (btn) {
             btn.innerHTML = window._showPetugasHistory ? 'Sembunyikan History' : 'Tampilkan History';
             btn.style.background = window._showPetugasHistory ? 'rgba(99,102,241,0.1)' : 'transparent';
+        }
+        if (selectRange) {
+            selectRange.style.display = window._showPetugasHistory ? 'inline-block' : 'none';
         }
         if (window.renderPetugasSummaryTable) {
             window.renderPetugasSummaryTable(window.GRANULAR_ASSIGNMENTS_DATA || null);
@@ -8331,16 +8343,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let deltaHtml = "";
             if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
-                const allDates = Object.keys(window.PETUGAS_HISTORY_MAP).sort();
-                allDates.forEach((d, dIdx) => {
-                    if (d === "2026-07-09") return; // Hide July 9th
+                let allDates = Object.keys(window.PETUGAS_HISTORY_MAP).sort().filter(d => d !== "2026-07-09");
+                let rangeVal = window.petugasHistoryRange || '7';
+                let activeDates = allDates;
+                if (rangeVal === '7') {
+                    activeDates = allDates.slice(-7);
+                } else if (rangeVal === '14') {
+                    activeDates = allDates.slice(-14);
+                } else if (rangeVal === '30') {
+                    activeDates = allDates.slice(-30);
+                }
+                const displayDates = [...activeDates].reverse();
 
+                displayDates.forEach((d) => {
                     let dVal = undefined;
                     let dPct = undefined;
                     let dHtmlDetails = "";
 
                     if (window.PETUGAS_HISTORY_MAP[d] && window.PETUGAS_HISTORY_MAP[d][p.role] && window.PETUGAS_HISTORY_MAP[d][p.role][p.email]) {
                         const hSnap = window.PETUGAS_HISTORY_MAP[d][p.role][p.email];
+                        const dIdx = allDates.indexOf(d);
 
                         if (dIdx > 0) {
                             const prevDate = allDates[dIdx - 1];
@@ -8401,7 +8423,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         deltaHtml += `<td style="text-align: center; color: var(--text-secondary);">—</td>`;
                     } else {
                         const dColor = dVal > 0 ? '#16a34a' : (dVal === 0 ? '#d97706' : '#dc2626');
-                        deltaHtml += `<td style="text-align: center; background: ${dIdx === allDates.length - 1 ? 'rgba(99,102,241,0.04)' : 'transparent'};">
+                        const isLatest = (d === allDates[allDates.length - 1]);
+                        deltaHtml += `<td style="text-align: center; background: ${isLatest ? 'rgba(99,102,241,0.06)' : 'transparent'};">
                             <div style="font-weight: 700; color: ${dColor}; font-size: 1.05em;">
                                 ${dVal > 0 ? '+' : ''}${dVal.toLocaleString('id-ID')}
                                 <span style="font-size: 0.75em; opacity: 0.85; margin-left: 2px;">(${dPct > 0 ? '+' : ''}${dPct.toFixed(1).replace('.', ',')}%)</span>
@@ -8472,14 +8495,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (thead) {
             let thHistory = "";
             if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
-                const dates = Object.keys(window.PETUGAS_HISTORY_MAP).sort();
-                dates.forEach((d, idx) => {
-                    if (d === "2026-07-09") return; // Hide July 9th
-                    const isLast = idx === dates.length - 1;
+                let allDates = Object.keys(window.PETUGAS_HISTORY_MAP).sort().filter(d => d !== "2026-07-09");
+                let rangeVal = window.petugasHistoryRange || '7';
+                let activeDates = allDates;
+                if (rangeVal === '7') {
+                    activeDates = allDates.slice(-7);
+                } else if (rangeVal === '14') {
+                    activeDates = allDates.slice(-14);
+                } else if (rangeVal === '30') {
+                    activeDates = allDates.slice(-30);
+                }
+                const displayDates = [...activeDates].reverse();
+
+                displayDates.forEach((d) => {
+                    const isLatest = (d === allDates[allDates.length - 1]);
                     const dObj = new Date(d + 'T00:00:00');
                     const label = dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' });
-                    const sublabel = isLast ? '<br><span style="font-size:0.6rem;font-weight:400;opacity:0.8;">terakhir</span>' : '<br><span style="font-size:0.6rem;font-weight:400;opacity:0.7;">delta</span>';
-                    thHistory += `<th style="text-align: center; width: 75px; cursor: pointer; ${isLast ? 'background:rgba(99,102,241,0.1);' : ''}" onclick="window.sortPetugasSummary('history_${d}')">${label}${sublabel} <span class="sort-icon"></span></th>`;
+                    const sublabel = isLatest ? '<br><span style="font-size:0.6rem;font-weight:700;color:var(--primary);">HARI INI</span>' : '<br><span style="font-size:0.6rem;font-weight:400;opacity:0.7;">delta</span>';
+                    thHistory += `<th style="text-align: center; width: 75px; cursor: pointer; ${isLatest ? 'background:rgba(99,102,241,0.12);border-bottom:2px solid var(--primary);' : ''}" onclick="window.sortPetugasSummary('history_${d}')">${label}${sublabel} <span class="sort-icon"></span></th>`;
                 });
             }
 
