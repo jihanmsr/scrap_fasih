@@ -426,32 +426,40 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-window.downloadRekonData = function () {
-    const isSls = document.getElementById('rekon-sub-sls').style.display !== 'none';
-    const isKab = document.getElementById('rekon-sub-kabkot').style.display !== 'none';
+window.downloadRekonData = function (format = 'xlsx') {
+    const isSls = document.getElementById('rekon-sub-sls') && document.getElementById('rekon-sub-sls').style.display !== 'none';
+    const isKab = document.getElementById('rekon-sub-kabkot') && document.getElementById('rekon-sub-kabkot').style.display !== 'none';
     const tableSelector = isSls ? '#rekon-sub-sls table' : (isKab ? '#rekon-sub-kabkot table' : '#rekon-sub-petugas table');
     const table = document.querySelector(tableSelector);
     if (!table) {
         alert("Tabel tidak ditemukan!");
         return;
     }
-    let csv = [];
-    let rows = table.querySelectorAll('tr');
-    for (let i = 0; i < rows.length; i++) {
-        let row = [], cols = rows[i].querySelectorAll('td, th');
-        for (let j = 0; j < cols.length; j++) {
-            let data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, ' ').replace(/"/g, '""');
-            row.push('"' + data + '"');
+    const typeName = isSls ? 'sls' : (isKab ? 'kabkot' : 'petugas');
+    const dateStr = new Date().toISOString().slice(0, 10);
+
+    if (format === 'xlsx' || format === 'excel') {
+        const wb = XLSX.utils.table_to_book(table, { sheet: `Rekon_${typeName}` });
+        XLSX.writeFile(wb, `Tabel_Rekon_${typeName}_${dateStr}.xlsx`);
+    } else {
+        let csv = [];
+        let rows = table.querySelectorAll('tr');
+        for (let i = 0; i < rows.length; i++) {
+            let row = [], cols = rows[i].querySelectorAll('td, th');
+            for (let j = 0; j < cols.length; j++) {
+                let data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, ' ').replace(/"/g, '""');
+                row.push('"' + data + '"');
+            }
+            csv.push(row.join(','));
         }
-        csv.push(row.join(','));
+        let blob = new Blob(['\uFEFF' + csv.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
+        let link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = `Tabel_Rekon_${typeName}_${dateStr}.csv`;
+        link.style.display = "none";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(link.href);
     }
-    let blob = new Blob([csv.join('\n')], { type: 'text/csv;charset=utf-8;' });
-    let link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    let typeName = isSls ? 'sls' : (isKab ? 'kabkot' : 'petugas');
-    link.download = `tabel_rekon_${typeName}.csv`;
-    link.style.display = "none";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
 };

@@ -215,22 +215,60 @@
         window.renderPenyisiran();
     };
 
-    // ── Download CSV ─────────────────────────────────────────────────────────
+    // ── Download Excel (.xlsx) ──────────────────────────────────────────────
+    window.downloadPenyisiranExcel = function () {
+        if (!pnyFiltered.length) return alert('Tidak ada data penyisiran untuk diunduh.');
+        const exportData = pnyFiltered.map(d => ({
+            'Kabupaten': d.kabupaten || '-',
+            'Kecamatan': d.kecamatan || '-',
+            'Desa / Kelurahan': d.desa_kel || '-',
+            'SLS': d.sls || '-',
+            'Sub SLS': d.sub_sls || '-',
+            'ID Sub SLS': d.id_sub_sls ? String(d.id_sub_sls) : '-',
+            'Total Usaha': d.total_usaha || 0,
+            'Prelist': d.prelist || 0,
+            'Tambahan': d.tambahan || 0,
+            'Ditemukan': d.ditemukan || 0,
+            'Baru': d.baru || 0,
+            'Tidak Ditemukan': d.tidak_ditemukan || 0,
+            'Tutup': d.tutup || 0,
+            'Belum Terdata': d.belum_terdata || 0,
+            '% Tdk Ditemukan': d.pct_tdk_ditemukan || 0,
+            '% Selesai': d.pct_selesai || 0,
+            '% Belum Terdata': d.pct_belum_terdata || 0,
+            'Skor Perhatian': d.skor_perhatian || 0,
+            'Kategori Sisir': d.kategori_sisir || '-'
+        }));
+
+        const ws = XLSX.utils.json_to_sheet(exportData);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "Penyisiran_Bangunan");
+        XLSX.writeFile(wb, `Penyisiran_Bangunan_Usaha_${new Date().toISOString().slice(0,10)}.xlsx`);
+    };
+
+    // ── Download CSV (.csv) ──────────────────────────────────────────────────
     window.downloadPenyisiranCSV = function () {
-        if (!pnyFiltered.length) return;
-        const headers = ['kabupaten','kecamatan','desa_kel','sls','sub_sls','id_sub_sls','total_usaha','prelist','tambahan','ditemukan','baru','tidak_ditemukan','tutup','belum_terdata','pct_tdk_ditemukan','pct_selesai','pct_belum_terdata','skor_perhatian','kategori_sisir'];
-        const rows = [headers.join(',')];
+        if (!pnyFiltered.length) return alert('Tidak ada data penyisiran untuk diunduh.');
+        const headers = ['Kabupaten','Kecamatan','Desa / Kelurahan','SLS','Sub SLS','ID Sub SLS','Total Usaha','Prelist','Tambahan','Ditemukan','Baru','Tidak Ditemukan','Tutup','Belum Terdata','% Tdk Ditemukan','% Selesai','% Belum Terdata','Skor Perhatian','Kategori Sisir'];
+        const keys = ['kabupaten','kecamatan','desa_kel','sls','sub_sls','id_sub_sls','total_usaha','prelist','tambahan','ditemukan','baru','tidak_ditemukan','tutup','belum_terdata','pct_tdk_ditemukan','pct_selesai','pct_belum_terdata','skor_perhatian','kategori_sisir'];
+        
+        let csvContent = '\uFEFF' + headers.map(h => `"${h.replace(/"/g, '""')}"`).join(',') + '\r\n';
         pnyFiltered.forEach(d => {
-            rows.push(headers.map(h => {
-                const v = d[h] ?? '';
-                return String(v).includes(',') ? `"${v}"` : v;
-            }).join(','));
+            const rowValues = keys.map(k => {
+                let v = d[k];
+                if (v === null || v === undefined) v = '';
+                v = String(v).replace(/(\r\n|\n|\r)/g, ' ').replace(/"/g, '""');
+                return `"${v}"`;
+            });
+            csvContent += rowValues.join(',') + '\r\n';
         });
-        const blob = new Blob([rows.join('\n')], { type: 'text/csv;charset=utf-8;' });
+
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = `penyisiran_bangunan_${new Date().toISOString().slice(0,10)}.csv`;
+        a.download = `Penyisiran_Bangunan_Usaha_${new Date().toISOString().slice(0,10)}.csv`;
         a.click();
+        URL.revokeObjectURL(a.href);
     };
 
 

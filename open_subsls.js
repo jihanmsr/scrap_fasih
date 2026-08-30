@@ -532,7 +532,7 @@ window.downloadSubSlsExcel = function() {
     }
 
     const exportData = filteredData.map(item => ({
-        'Kode Sub-SLS': item.kode_sub_sls || '',
+        'Kode Sub-SLS': item.kode_sub_sls ? String(item.kode_sub_sls) : '',
         'Kabupaten': item.kabupaten || '',
         'Kecamatan': item.kecamatan || '',
         'Desa': item.desa || '',
@@ -545,6 +545,42 @@ window.downloadSubSlsExcel = function() {
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "SLS_Open");
     XLSX.writeFile(wb, "Data_SLS_Open.xlsx");
+};
+
+window.downloadSubSlsCSV = function() {
+    if (!filteredData || filteredData.length === 0) {
+        alert('Tidak ada data untuk diunduh.');
+        return;
+    }
+
+    const headers = ['Kode Sub-SLS', 'Kabupaten', 'Kecamatan', 'Desa', 'SLS', 'Nama Petugas', 'Jumlah Prelist'];
+    let csvContent = '\uFEFF' + headers.map(h => `"${h.replace(/"/g, '""')}"`).join(',') + '\r\n';
+
+    filteredData.forEach(item => {
+        const rowValues = [
+            item.kode_sub_sls ? String(item.kode_sub_sls) : '',
+            item.kabupaten || '',
+            item.kecamatan || '',
+            item.desa || '',
+            item.sls || item.nama_sub_sls || '',
+            item.nama_petugas || 'BELUM DIASSIGN',
+            parseInt(item.jumlah_prelist) || 0
+        ].map(v => {
+            let s = String(v).replace(/(\r\n|\n|\r)/g, ' ').replace(/"/g, '""');
+            return `"${s}"`;
+        });
+        csvContent += rowValues.join(',') + '\r\n';
+    });
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", `Data_SLS_Open_${new Date().toISOString().slice(0,10)}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
 };
 
 window.toggleSelesai = function(kodeSubSls, isChecked, checkboxEl) {

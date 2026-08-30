@@ -496,14 +496,24 @@
                                 <option value="">Semua Kabupaten</option>
                             </select>
                             <button onclick="window.downloadSubSlsExcel()"
-                                style="padding: 8px 16px; background-color: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500; display: flex; align-items: center; gap: 8px; flex-shrink: 0;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                style="padding: 8px 14px; background-color: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; display: flex; align-items: center; gap: 6px; flex-shrink: 0;">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                                     <polyline points="7 10 12 15 17 10"></polyline>
                                     <line x1="12" y1="15" x2="12" y2="3"></line>
                                 </svg>
-                                Download Excel
+                                Excel (.xlsx)
+                            </button>
+                            <button onclick="window.downloadSubSlsCSV()"
+                                style="padding: 8px 14px; background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-primary); border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; display: flex; align-items: center; gap: 6px; flex-shrink: 0;">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                CSV
                             </button>
                         </div>
                     </div>
@@ -648,10 +658,18 @@
                         <div style="width:1px;height:20px;background:var(--card-border);"></div>
                         <span id="pny-count"
                             style="font-size:0.8rem;color:var(--text-secondary);white-space:nowrap;">-</span>
-                        <button onclick="window.downloadPenyisiranCSV()" title="Download CSV"
-                            style="margin-left:auto;padding:0.3rem 0.7rem;border-radius:0.5rem;border:1px solid var(--card-border);background:var(--input-bg);color:var(--text-secondary);font-size:0.78rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;">
-                            &#8615; CSV
-                        </button>
+                        <div style="margin-left:auto; display:flex; gap:0.4rem; align-items:center;">
+                            <button onclick="window.downloadPenyisiranExcel()" title="Download Excel (.xlsx)"
+                                style="padding:0.35rem 0.75rem;border-radius:0.5rem;border:none;background:linear-gradient(135deg,#10b981,#059669);color:white;font-size:0.78rem;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:0.35rem;box-shadow:0 2px 6px rgba(16,185,129,0.25);">
+                                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                                Excel (.xlsx)
+                            </button>
+                            <button onclick="window.downloadPenyisiranCSV()" title="Download CSV"
+                                style="padding:0.35rem 0.7rem;border-radius:0.5rem;border:1px solid var(--card-border);background:var(--input-bg);color:var(--text-primary);font-size:0.78rem;font-weight:600;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:0.35rem;">
+                                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                                CSV
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Table -->
@@ -981,9 +999,17 @@
                         <div class="table-toolbar">
                             <div class="table-note">Mode tabel memudahkan seleksi dan pemantauan status email UB secara
                                 keseluruhan.</div>
-                            <button class="btn-action" onclick="window.downloadEmailTable()"
-                                style="padding: 0.5rem 1rem; font-size: 0.8rem; border-radius: 0.5rem;">Download Tabel
-                                (CSV)</button>
+                            <div style="display: flex; gap: 0.4rem; align-items: center;">
+                                <button class="btn-action" onclick="window.downloadEmailTable('xlsx')"
+                                    style="padding: 0.4rem 0.8rem; font-size: 0.8rem; border-radius: 0.5rem; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                    Excel (.xlsx)
+                                </button>
+                                <button class="btn-action" onclick="window.downloadEmailTable('csv')"
+                                    style="padding: 0.4rem 0.8rem; font-size: 0.8rem; border-radius: 0.5rem;">
+                                    CSV
+                                </button>
+                            </div>
                         </div>
                         <div class="table-scroll">
                             <table class="company-table">
@@ -1166,14 +1192,24 @@
                                 Sembunyikan History
                             </button>
                             <button id="btn-download-excel-petugas" onclick="window.downloadPetugasSummaryExcel()"
-                                style="display: flex; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; border-radius: 0.6rem; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(34,197,94,0.3); transition: all 0.2s; white-space: nowrap; height: 36px;">
+                                style="display: flex; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; border-radius: 0.6rem; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(16,185,129,0.3); transition: all 0.2s; white-space: nowrap; height: 36px;">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                                     <polyline points="7 10 12 15 17 10" />
                                     <line x1="12" y1="15" x2="12" y2="3" />
                                 </svg>
-                                Download Excel
+                                Excel (.xlsx)
+                            </button>
+                            <button id="btn-download-csv-petugas" onclick="window.downloadPetugasSummaryCSV()"
+                                style="display: flex; align-items: center; gap: 0.4rem; background: var(--card-bg); border: 1px solid var(--border-light); color: var(--text-primary); border-radius: 0.6rem; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s; white-space: nowrap; height: 36px;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="7 10 12 15 17 10" />
+                                    <line x1="12" y1="15" x2="12" y2="3" />
+                                </svg>
+                                CSV
                             </button>
                             <button id="btn-download-excel-desa" onclick="window.downloadDesaSummaryExcel()"
                                 style="display: none; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; border-radius: 0.6rem; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(34,197,94,0.3); transition: all 0.2s; white-space: nowrap; height: 36px;">
@@ -1320,10 +1356,20 @@
                                     <option value="50" selected>50 baris</option>
                                     <option value="100">100 baris</option>
                                 </select>
+                                <button class="btn-action" id="btn-download-granular-assign-excel"
+                                    onclick="window.downloadGranularAssignExcel()"
+                                    style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; font-weight: 700; box-shadow: 0 2px 8px rgba(16,185,129,0.3);">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                        <polyline points="7 10 12 15 17 10" />
+                                        <line x1="12" y1="15" x2="12" y2="3" />
+                                    </svg>
+                                    Excel (.xlsx)
+                                </button>
                                 <button class="btn-action" id="btn-download-granular-assign"
                                     onclick="window.downloadGranularAssignCSV()"
                                     style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
-                                    Unduh CSV
+                                    CSV
                                 </button>
                                 <button class="btn-action" onclick="window.openRekapBelumModal()"
                                     style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem; background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3);">
@@ -1703,15 +1749,25 @@
                                         placeholder="Cari kab/kec/petugas..." type="text" style="height: 38px;" />
                                 </div>
 
-                                <button id="btn-download-se_umum" onclick="window.downloadCurrentSeTable('se_umum')"
-                                    style="display: flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; border-radius: 0.6rem; padding: 0.5rem 1rem; height: 38px; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(34,197,94,0.3); transition: all 0.2s; white-space: nowrap;">
+                                <button id="btn-download-se_umum" onclick="window.downloadCurrentSeTable('se_umum', 'xlsx')"
+                                    style="display: flex; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; border-radius: 0.6rem; padding: 0.5rem 0.85rem; height: 38px; font-size: 0.82rem; font-weight: 700; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(16,185,129,0.3); transition: all 0.2s; white-space: nowrap;">
                                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                                         <polyline points="7 10 12 15 17 10" />
                                         <line x1="12" y1="15" x2="12" y2="3" />
                                     </svg>
-                                    Download Excel
+                                    Excel (.xlsx)
+                                </button>
+                                <button id="btn-download-se_umum-csv" onclick="window.downloadCurrentSeTable('se_umum', 'csv')"
+                                    style="display: flex; align-items: center; gap: 0.4rem; background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-primary); border-radius: 0.6rem; padding: 0.5rem 0.85rem; height: 38px; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s; white-space: nowrap;">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                        <polyline points="7 10 12 15 17 10" />
+                                        <line x1="12" y1="15" x2="12" y2="3" />
+                                    </svg>
+                                    CSV
                                 </button>
                             </div>
                         </div>
@@ -2018,15 +2074,25 @@
                                         placeholder="Cari kab/kec/petugas..." type="text" style="height: 38px;" />
                                 </div>
 
-                                <button id="btn-download-se_ub" onclick="window.downloadCurrentSeTable('se_ub')"
-                                    style="display: flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; border-radius: 0.6rem; padding: 0.5rem 1rem; height: 38px; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(34,197,94,0.3); transition: all 0.2s; white-space: nowrap;">
+                                <button id="btn-download-se_ub" onclick="window.downloadCurrentSeTable('se_ub', 'xlsx')"
+                                    style="display: flex; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; border-radius: 0.6rem; padding: 0.5rem 0.85rem; height: 38px; font-size: 0.82rem; font-weight: 700; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(16,185,129,0.3); transition: all 0.2s; white-space: nowrap;">
                                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                                         <polyline points="7 10 12 15 17 10" />
                                         <line x1="12" y1="15" x2="12" y2="3" />
                                     </svg>
-                                    Download Excel
+                                    Excel (.xlsx)
+                                </button>
+                                <button id="btn-download-se_ub-csv" onclick="window.downloadCurrentSeTable('se_ub', 'csv')"
+                                    style="display: flex; align-items: center; gap: 0.4rem; background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-primary); border-radius: 0.6rem; padding: 0.5rem 0.85rem; height: 38px; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s; white-space: nowrap;">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                        <polyline points="7 10 12 15 17 10" />
+                                        <line x1="12" y1="15" x2="12" y2="3" />
+                                    </svg>
+                                    CSV
                                 </button>
                             </div>
                         </div>
@@ -2245,9 +2311,18 @@
                                         <option value="50">50 baris</option>
                                         <option value="100">100 baris</option>
                                     </select>
+                                    <button class="btn-action" id="btn-download-sls-excel" onclick="window.downloadSlsExcel()"
+                                        style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; font-weight: 700; box-shadow: 0 2px 8px rgba(16,185,129,0.3);">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                            <polyline points="7 10 12 15 17 10" />
+                                            <line x1="12" y1="15" x2="12" y2="3" />
+                                        </svg>
+                                        Excel (.xlsx)
+                                    </button>
                                     <button class="btn-action" id="btn-download-sls" onclick="window.downloadSlsCSV()"
                                         style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
-                                        Unduh CSV
+                                        CSV
                                     </button>
                                 </div>
                                 <div class="search-wrapper"
@@ -2314,10 +2389,16 @@
                     <div
                         style="display: flex; justify-content: flex-end; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
 
+                        <button class="btn-action" id="btn-download-kab-summary-excel"
+                            onclick="window.downloadKabSummaryExcel()"
+                            style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 0.5rem; height: auto; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; font-weight: 700; display: inline-flex; align-items: center; gap: 0.3rem;">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Excel (.xlsx)
+                        </button>
                         <button class="btn-action" id="btn-download-kab-summary"
                             onclick="window.downloadKabSummaryCSV()"
                             style="padding: 0.4rem 0.8rem; font-size: 0.75rem; border-radius: 0.5rem; height: auto;">
-                            Unduh CSV
+                            CSV
                         </button>
                     </div>
                     <div
@@ -2482,10 +2563,20 @@
                                     <option value="50" selected>50 baris</option>
                                     <option value="100">100 baris</option>
                                 </select>
+                                <button class="btn-action" id="btn-download-petugas-excel"
+                                    onclick="window.downloadPetugasExcel()"
+                                    style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; font-weight: 700; box-shadow: 0 2px 8px rgba(16,185,129,0.3);">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                        <polyline points="7 10 12 15 17 10" />
+                                        <line x1="12" y1="15" x2="12" y2="3" />
+                                    </svg>
+                                    Excel (.xlsx)
+                                </button>
                                 <button class="btn-action" id="btn-download-petugas"
                                     onclick="window.downloadPetugasCSV()"
                                     style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
-                                    Unduh CSV
+                                    CSV
                                 </button>
                             </div>
                             <div class="search-wrapper"
@@ -2588,9 +2679,19 @@
                                         <option value="50">50 baris</option>
                                         <option value="100">100 baris</option>
                                     </select>
+                                    <button class="btn-action" id="btn-download-sync-excel" onclick="window.downloadSyncExcel()"
+                                        style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; font-weight: 700; box-shadow: 0 2px 8px rgba(16,185,129,0.3);">
+                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                            <polyline points="7 10 12 15 17 10" />
+                                            <line x1="12" y1="15" x2="12" y2="3" />
+                                        </svg>
+                                        Excel (.xlsx)
+                                    </button>
                                     <button class="btn-action" id="btn-download-sync" onclick="window.downloadSyncCSV()"
-                                        style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">Unduh
-                                        CSV</button>
+                                        style="padding: 0.75rem 1rem; font-size: 0.9rem; border-radius: 0.75rem; height: 46px; display: inline-flex; align-items: center; gap: 0.35rem;">
+                                        CSV
+                                    </button>
                                 </div>
                                 <div class="search-wrapper"
                                     style="width: 280px; position: relative; flex-shrink: 1; min-width: 200px;">
@@ -3159,7 +3260,7 @@
                                         <option value="kabkot">Hanya Kab/Kota</option>
                                     </select>
                                     <button onclick="window.downloadDesilMatrixExcel()"
-                                        style="padding: 0.45rem 1rem; border-radius: 0.6rem; border: none; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; font-size: 0.8rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; box-shadow: 0 2px 8px rgba(34,197,94,0.3); font-family: 'Outfit', sans-serif;">
+                                        style="padding: 0.45rem 0.85rem; border-radius: 0.6rem; border: none; background: linear-gradient(135deg, #10b981, #059669); color: white; font-size: 0.8rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; box-shadow: 0 2px 8px rgba(16,185,129,0.3); font-family: 'Outfit', sans-serif;">
                                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
                                             stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
                                             stroke-linejoin="round">
@@ -3167,7 +3268,18 @@
                                             <polyline points="7 10 12 15 17 10" />
                                             <line x1="12" y1="15" x2="12" y2="3" />
                                         </svg>
-                                        Download Excel
+                                        Excel (.xlsx)
+                                    </button>
+                                    <button onclick="window.downloadDesilMatrixCSV()"
+                                        style="padding: 0.45rem 0.85rem; border-radius: 0.6rem; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.8rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; font-family: 'Outfit', sans-serif;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                            <polyline points="7 10 12 15 17 10" />
+                                            <line x1="12" y1="15" x2="12" y2="3" />
+                                        </svg>
+                                        CSV
                                     </button>
                                 </div>
                             </div>
@@ -3231,9 +3343,18 @@
                                 <option value="tidak">Tidak Ada Catatan</option>
                             </select>
                             <div style="width: 1px; height: 20px; background: var(--card-border);"></div>
+                            <button onclick="window.downloadDataHilangExcel()"
+                                style="padding: 0.35rem 0.75rem; border: none; border-radius: 0.4rem; background: linear-gradient(135deg, #10b981, #059669); color: white; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; transition: all 0.2s; box-shadow: 0 2px 6px rgba(16,185,129,0.25);"
+                                title="Download Data Filtered (Excel .xlsx)">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                                </svg>
+                                Excel (.xlsx)
+                            </button>
                             <button onclick="window.downloadDataHilangCSV()"
-                                style="padding: 0.3rem 0.75rem; border: none; border-radius: 0.4rem; background: #10b981; color: white; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: background 0.2s;"
-                                title="Download Data Filtered">
+                                style="padding: 0.35rem 0.75rem; border: 1px solid var(--card-border); border-radius: 0.4rem; background: var(--card-bg); color: var(--text-primary); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; transition: all 0.2s;"
+                                title="Download Data Filtered (CSV)">
                                 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
                                     stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
                                     <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
@@ -3330,16 +3451,25 @@
                         style="display: none;">
                         <option value="">Semua Petugas</option>
                     </select>
-                    <button class="btn-action" onclick="window.downloadRekonData()"
-                        style="padding: 0.6rem 1rem; font-size: 0.85rem; border-radius: 0.5rem; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; border: none; font-family: 'Outfit', sans-serif; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(34,197,94,0.3);">
+                    <button class="btn-action" onclick="window.downloadRekonData('xlsx')"
+                        style="padding: 0.6rem 0.9rem; font-size: 0.85rem; border-radius: 0.5rem; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; font-family: 'Outfit', sans-serif; font-weight: 700; cursor: pointer; box-shadow: 0 2px 8px rgba(16,185,129,0.3); display: flex; align-items: center; gap: 0.35rem;">
                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                            style="margin-right: 0.35rem; vertical-align: middle;">
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                             <polyline points="7 10 12 15 17 10" />
                             <line x1="12" y1="15" x2="12" y2="3" />
                         </svg>
-                        Download Tabel
+                        Excel (.xlsx)
+                    </button>
+                    <button class="btn-action" onclick="window.downloadRekonData('csv')"
+                        style="padding: 0.6rem 0.9rem; font-size: 0.85rem; border-radius: 0.5rem; background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-primary); font-family: 'Outfit', sans-serif; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.35rem;">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        CSV
                     </button>
                 </div>
 
