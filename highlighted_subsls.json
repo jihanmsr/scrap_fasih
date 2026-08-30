@@ -1,18 +1,4 @@
 {
-  "7203021007000305": {
-    "kode_kab": "7203",
-    "kabupaten": "MOROWALI",
-    "kode_kecamatan": "7203021",
-    "kecamatan": "BAHODOPI",
-    "kode_desa": "7203021007",
-    "desa": "BAHOMAKMUR",
-    "kode_sls": "72030210070003",
-    "sls": "RT 3 DUSUN 1",
-    "kode_sub_sls": "7203021007000305",
-    "nama_sub_sls": "RT 3 DUSUN 1",
-    "nama_petugas": "ivana280581@gmail.com",
-    "jumlah_prelist": "2"
-  },
   "7203022004200100": {
     "kode_kab": "7203",
     "kabupaten": "MOROWALI",
@@ -39,34 +25,6 @@
     "kode_sub_sls": "7204031001200100",
     "nama_sub_sls": "HUTAN",
     "nama_petugas": "hersintawesi06@gmail.com",
-    "jumlah_prelist": "1"
-  },
-  "7204031009200100": {
-    "kode_kab": "7204",
-    "kabupaten": "POSO",
-    "kode_kecamatan": "7204031",
-    "kecamatan": "PAMONA TIMUR",
-    "kode_desa": "7204031009",
-    "desa": "OMPO DIDIRI",
-    "kode_sls": "72040310092001",
-    "sls": "HUTAN",
-    "kode_sub_sls": "7204031009200100",
-    "nama_sub_sls": "HUTAN",
-    "nama_petugas": "r.r.paniki@gmail.com",
-    "jumlah_prelist": "1"
-  },
-  "7209040002100300": {
-    "kode_kab": "7209",
-    "kabupaten": "TOJO UNA-UNA",
-    "kode_kecamatan": "7209040",
-    "kecamatan": "AMPANA TETE",
-    "kode_desa": "7209040002",
-    "desa": "TETE B",
-    "kode_sls": "72090400021003",
-    "sls": "KEBUN",
-    "kode_sub_sls": "7209040002100300",
-    "nama_sub_sls": "KEBUN",
-    "nama_petugas": "nurlaelasattu23@gmail.com",
     "jumlah_prelist": "1"
   },
   "7212000000000000": {
