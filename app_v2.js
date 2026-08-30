@@ -11587,33 +11587,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 <tr style="background: var(--table-header); color: var(--text-secondary); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Kab/Kec/Desa/SubSLS</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Nama Usaha</th>
-                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Nama Pemilik & NIK</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Nama Pemilik</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">NIK Pemilik</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Lokasi Pemilik</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Link Keluarga</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Link Usaha</th>
                 </tr>
             `;
             
-            tbody.innerHTML = paginated.map(item => `
+            tbody.innerHTML = paginated.map(item => {
+                const parsed = parseNamaUsahaDanPemilik(item.nama_usaha, item.nama_pemilik);
+                return `
                 <tr style="border-bottom: 1px solid var(--card-border); transition: background 0.2s;">
                     <td style="padding: 1rem; vertical-align: top;">
-                        <div style="font-weight: 600; color: var(--text-primary);">${item.kab} / ${item.kec}</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.desa} / ${item.subsls}</div>
+                        <div style="font-weight: 600; color: var(--text-primary);">${item.kab || item.kabupaten || '-'} / ${item.kec || item.kecamatan || '-'}</div>
+                        <div style="font-size: 0.75rem; color: var(--text-secondary);">${item.desa || item.desa_kel || '-'} / ${item.subsls || item.kode_sls || '-'}</div>
                     </td>
-                    <td style="padding: 1rem; vertical-align: top; font-weight: 600;">${item.nama_usaha}</td>
+                    <td style="padding: 1rem; vertical-align: top; font-weight: 600; color: var(--text-primary);">${parsed.namaUsaha}</td>
+                    <td style="padding: 1rem; vertical-align: top; font-weight: 600; color: var(--primary);">${parsed.namaPemilik}</td>
+                    <td style="padding: 1rem; vertical-align: top; font-size: 0.85rem; color: var(--text-secondary); font-family: monospace;">${item.nik || item.nik_kk || '-'}</td>
+                    <td style="padding: 1rem; vertical-align: top;">${item.lokasi_pemilik || '-'}</td>
                     <td style="padding: 1rem; vertical-align: top;">
-                        <div style="font-weight: 600; color: var(--primary);">${item.nama_pemilik}</div>
-                        <div style="font-size: 0.75rem; color: var(--text-secondary);">NIK: ${item.nik}</div>
-                    </td>
-                    <td style="padding: 1rem; vertical-align: top;">${item.lokasi_pemilik}</td>
-                    <td style="padding: 1rem; vertical-align: top;">
-                        ${item.link_keluarga ? `<a href="${item.link_keluarga}" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Buka Link ↗</a>` : '-'}
+                        ${item.link_keluarga && item.link_keluarga !== 'nan' ? `<a href="${item.link_keluarga}" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Buka Link ↗</a>` : '-'}
                     </td>
                     <td style="padding: 1rem; vertical-align: top;">
-                        ${item.link_usaha ? `<a href="${item.link_usaha}" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Buka Link ↗</a>` : '-'}
+                        ${item.link_usaha && item.link_usaha !== 'nan' ? `<a href="${item.link_usaha}" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Buka Link ↗</a>` : '-'}
                     </td>
                 </tr>
-            `).join('');
+            `}).join('');
             
         } else if (currentDataHilangTab === 'keluarga') {
             thead.innerHTML = `
@@ -11676,13 +11677,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Wilayah</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Kode/SLS</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Nama Usaha</th>
+                    <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Nama Pemilik</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Status Usaha</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Keluarga (KRT/KK)</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Status Keluarga</th>
                     <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--card-border);">Link</th>
                 </tr>
             `;
-            tbody.innerHTML = paginated.map(item => `
+            tbody.innerHTML = paginated.map(item => {
+                const parsed = parseNamaUsahaDanPemilik(item.nama_usaha, item.nama_pemilik);
+                return `
                 <tr style="transition: background 0.2s;" onmouseover="this.style.background='var(--table-hover)'" onmouseout="this.style.background='transparent'">
                     <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
                         <div style="font-weight: 600; color: var(--text-primary); font-size: 0.85rem;">${item.kab || item.kabupaten}</div>
@@ -11691,20 +11695,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     </td>
                     <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
                         <div style="font-weight: 600; color: var(--text-primary); font-size: 0.85rem;">${item.nama_sls || item.sls || '-'}</div>
-                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.subsls || item.sub_sls || '-'}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${item.kode_sub_sls || item.subsls || item.sub_sls || '-'}</div>
+                    </td>
+                    <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top; font-weight: 600; color: var(--text-primary);">
+                        ${parsed.namaUsaha}
                     </td>
                     <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
-                        <div style="font-weight: 600; color: #ea580c; font-size: 0.85rem;">${item.nama_usaha || '-'}</div>
-                        <div style="color: var(--text-secondary); font-size: 0.75rem;">Pemilik: ${item.nama_pemilik || '-'}</div>
+                        <div style="font-weight: 600; color: var(--primary); font-size: 0.85rem;">${parsed.namaPemilik}</div>
                         <div style="color: var(--text-secondary); font-size: 0.75rem;">NIK: ${item.nik || '-'}</div>
                     </td>
                     <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
                         <span style="display: inline-block; padding: 0.25rem 0.5rem; background: #fee2e2; color: #b91c1c; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">
-                            ${item.status_usaha || 'Tutup/Tidak Ditemukan'}
+                            ${item.keberadaan_usaha || item.status_usaha || 'Tutup/Tidak Ditemukan'}
                         </span>
                     </td>
                     <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
-                        <div style="font-weight: 600; color: #ea580c; font-size: 0.85rem;">KRT: ${item.nama_krt || '-'}</div>
+                        <div style="font-weight: 600; color: #ea580c; font-size: 0.85rem;">KRT: ${item.nama_krt || item.nama_kk || '-'}</div>
                         <div style="color: var(--text-secondary); font-size: 0.75rem;">KK: ${item.no_kk || '-'}</div>
                     </td>
                     <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
@@ -11713,12 +11719,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         </span>
                     </td>
                     <td style="padding: 1rem; border-bottom: 1px solid var(--card-border); vertical-align: top;">
-                        ${item.link_usaha && item.link_usaha !== 'nan' ? `<a href="${item.link_usaha}" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Usaha ↗</a><br>` : ''}
-                        ${item.link_keluarga && item.link_keluarga !== 'nan' ? `<a href="${item.link_keluarga}" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Keluarga ↗</a>` : ''}
-                        ${(!item.link_usaha || item.link_usaha === 'nan') && (!item.link_keluarga || item.link_keluarga === 'nan') ? '-' : ''}
+                        ${(item.link_prelist_usaha || item.link_usaha) && (item.link_prelist_usaha !== 'nan' && item.link_usaha !== 'nan') ? `<a href="${item.link_prelist_usaha || item.link_usaha}" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Usaha ↗</a><br>` : ''}
+                        ${(item.link_prelist_keluarga || item.link_keluarga) && (item.link_prelist_keluarga !== 'nan' && item.link_keluarga !== 'nan') ? `<a href="${item.link_prelist_keluarga || item.link_keluarga}" target="_blank" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.8rem;">Keluarga ↗</a>` : ''}
+                        ${(!item.link_usaha && !item.link_prelist_usaha) && (!item.link_keluarga && !item.link_prelist_keluarga) ? '-' : ''}
                     </td>
                 </tr>
-            `).join('');
+            `}).join('');
         } else {
             // tab === 'desil'
             thead.innerHTML = `
@@ -11868,6 +11874,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    // Helper to parse Nama Usaha and separate owner name
+    function parseNamaUsahaDanPemilik(namaUsahaRaw, fallbackPemilik = '') {
+        let namaUsaha = String(namaUsahaRaw || '').trim();
+        let namaPemilik = String(fallbackPemilik || '').trim();
+        if (namaPemilik === '-' || namaPemilik.toLowerCase() === 'nan') namaPemilik = '';
+
+        // Check for angle brackets <...>
+        const matchAngle = namaUsaha.match(/<([^>]+)>/);
+        if (matchAngle) {
+            if (!namaPemilik) {
+                namaPemilik = matchAngle[1].trim();
+            }
+            namaUsaha = namaUsaha.replace(/<[^>]+>/g, '').trim();
+        } else {
+            // Check for parenthesis at the end, e.g. "PEMBELI HASIL PERTANIAN (RAMLAN)"
+            const matchParen = namaUsaha.match(/\(([^)]+)\)$/);
+            if (matchParen) {
+                if (!namaPemilik) {
+                    namaPemilik = matchParen[1].trim();
+                }
+                namaUsaha = namaUsaha.replace(/\(([^)]+)\)$/, '').trim();
+            }
+        }
+
+        return {
+            namaUsaha: namaUsaha || '-',
+            namaPemilik: namaPemilik || '-'
+        };
+    }
+
     // Format field helper for clean export
     function formatDataHilangRecord(item, tab) {
         const out = {};
@@ -11875,32 +11911,39 @@ document.addEventListener('DOMContentLoaded', () => {
         out['Kabupaten'] = item.kab || item.kabupaten || '-';
         out['Kecamatan'] = item.kec || item.kecamatan || '-';
         out['Desa / Kelurahan'] = item.desa || item.desa_kel || '-';
-        out['Kode SLS'] = item.kode_sls !== undefined && item.kode_sls !== null ? String(item.kode_sls) : '-';
-        out['Nama SLS'] = item.nama_sls || item.sls || '-';
         
         if (tab === 'usaha') {
-            out['ID SBR'] = item.idsbr ? String(item.idsbr) : '-';
-            out['Nama Usaha'] = item.nama_usaha || '-';
-            out['Nama Komersial'] = item.nama_komersial || '-';
-            out['Nama Pengusaha'] = item.nama_pengusaha || '-';
-            out['Alamat'] = item.alamat || '-';
-            out['Status Keluarga'] = item.status_keluarga || '-';
-            out['Status Dokumen'] = item.status_dokumen || '-';
-            out['Status Keberadaan'] = item.status_keberadaan || '-';
-            out['Kegiatan Utama'] = item.kegiatan_utama || '-';
-            out['KBLI'] = item.kbli ? String(item.kbli) : '-';
-            out['Catatan Penelusuran'] = item.Info_Penulusuran || item.catatan || '-';
-            out['Petugas'] = item.Petugas || item.petugas || '-';
-            out['Link Fasih'] = item.link_fasih || '-';
+            const parsed = parseNamaUsahaDanPemilik(item.nama_usaha, item.nama_pemilik || item.nama_pengusaha);
+            out['Kode SLS / Sub SLS'] = item.subsls !== undefined && item.subsls !== null ? String(item.subsls) : (item.kode_sls !== undefined && item.kode_sls !== null ? String(item.kode_sls) : '-');
+            out['Nama Usaha'] = parsed.namaUsaha;
+            out['Nama Pemilik'] = parsed.namaPemilik;
+            out['NIK Pemilik'] = item.nik ? String(item.nik) : (item.nik_kk ? String(item.nik_kk) : '-');
+            out['Lokasi Pemilik'] = item.lokasi_pemilik || '-';
+            if (item.status_usaha) out['Status Usaha'] = item.status_usaha;
+            if (item.status_keberadaan) out['Status Keberadaan'] = item.status_keberadaan;
+            if (item.status_dokumen) out['Status Dokumen'] = item.status_dokumen;
+            if (item.Info_Penulusuran || item.catatan) out['Catatan Penelusuran'] = item.Info_Penulusuran || item.catatan;
+            if (item.Petugas || item.petugas) out['Petugas'] = item.Petugas || item.petugas;
+            out['Link Usaha'] = item.link_usaha || item.link_fasih || '-';
+            out['Link Keluarga'] = item.link_keluarga || '-';
         } else if (tab === 'nonaktif') {
+            const parsed = parseNamaUsahaDanPemilik(item.nama_usaha, item.nama_pemilik || item.nama_krt || item.nama_kk);
+            out['Kode Sub SLS'] = item.kode_sub_sls !== undefined && item.kode_sub_sls !== null ? String(item.kode_sub_sls) : (item.subsls ? String(item.subsls) : '-');
+            out['Nama SLS'] = item.nama_sls || item.sls || item.sub_sls || '-';
             out['ID SBR'] = item.idsbr ? String(item.idsbr) : '-';
-            out['Nama Usaha'] = item.nama_usaha || '-';
-            out['Alamat'] = item.alamat || '-';
-            out['Status Keberadaan'] = item.status_keberadaan || '-';
+            out['Nama Usaha'] = parsed.namaUsaha;
+            out['Nama Pemilik'] = parsed.namaPemilik;
+            out['Keberadaan Usaha'] = item.keberadaan_usaha || item.status_keberadaan || '-';
+            out['Status Usaha'] = item.status_usaha || '-';
+            out['Nama KRT / KK'] = item.nama_krt || item.nama_kk || '-';
+            out['Status Keluarga'] = item.status_keluarga || '-';
             out['Catatan'] = item.catatan || item.Info_Penulusuran || '-';
-            out['Petugas'] = item.petugas || item.Petugas || '-';
-            out['Link Fasih'] = item.link_fasih || '-';
+            out['Status Lokasi'] = item.status_lokasi || '-';
+            out['Link Prelist Usaha'] = item.link_prelist_usaha || item.link_usaha || '-';
+            out['Link Prelist Keluarga'] = item.link_prelist_keluarga || item.link_keluarga || '-';
         } else if (tab === 'desil') {
+            out['Kode SLS'] = item.kode_sls !== undefined && item.kode_sls !== null ? String(item.kode_sls) : '-';
+            out['Nama SLS'] = item.nama_sls || item.sls || '-';
             out['No KK'] = item.no_kk ? String(item.no_kk) : '-';
             out['NIK KK'] = item.nik_kk ? String(item.nik_kk) : '-';
             out['Nama Kepala Keluarga'] = item.nama_kepala_keluarga || '-';
@@ -11912,6 +11955,8 @@ document.addEventListener('DOMContentLoaded', () => {
             out['Link Fasih'] = item.link_fasih || '-';
         } else {
             // tab === 'keluarga'
+            out['Kode SLS'] = item.kode_sls !== undefined && item.kode_sls !== null ? String(item.kode_sls) : '-';
+            out['Nama SLS'] = item.nama_sls || item.sls || '-';
             out['No KK'] = item.no_kk ? String(item.no_kk) : '-';
             out['NIK KK'] = item.nik_kk ? String(item.nik_kk) : '-';
             out['Nama Kepala Keluarga'] = item.nama_kepala_keluarga || '-';
