@@ -27,8 +27,8 @@
     <script src="petasls.js?v=1787991275_v5"></script>
     <script src="highlighted_subsls.js?v=1787991275_v5"></script>
     <script src="open_subsls.js?v=1787991275_v5"></script>
-    <script src="belum_diassign_data.js?v=1787991275_v5"></script>
-    <script src="belum_diassign.js?v=1787991275_v5"></script>
+    <script src="belum_diassign_data.js?v=1787991275_v6"></script>
+    <script src="belum_diassign.js?v=1787991275_v6"></script>
 
     <link rel="stylesheet" href="style.css?v=1787991275_v2">
     <style>
@@ -178,7 +178,7 @@
                     </svg>
                     SLS Open
                 </button>
-                <button class="btn-tab" id="tab-btn-belum_diassign" onclick="switchTab('belum_diassign')" style="display: none;">
+                <button class="btn-tab" id="tab-btn-belum_diassign" onclick="switchTab('belum_diassign')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
                         <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path>
@@ -821,14 +821,18 @@
                         </div>
 
                         <button onclick="window.downloadBelumExcel()"
-                            style="padding: 8px 16px; background-color: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; display: flex; align-items: center; gap: 8px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            style="padding: 8px 14px; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; display: flex; align-items: center; gap: 6px; flex-shrink: 0; box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                                 <polyline points="7 10 12 15 17 10"></polyline>
                                 <line x1="12" y1="15" x2="12" y2="3"></line>
                             </svg>
-                            Export Excel
+                            Excel (.xlsx)
+                        </button>
+                        <button onclick="window.downloadBelumCSV()" class="btn-action"
+                            style="padding: 8px 14px; border-radius: 6px; font-weight: 600; display: flex; align-items: center; gap: 6px; font-size: 0.85rem; height: auto;">
+                            CSV
                         </button>
                     </div>
                 </div>

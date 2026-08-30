@@ -328,26 +328,71 @@
 
         const dataToExport = filteredData.map((d, idx) => ({
             'No': idx + 1,
-            'ID Sub SLS': d.idsubsls,
-            'Kabupaten/Kota': d.kab_name,
-            'Nama Usaha / Prelist': d.data1,
-            'Code Identity': d.code_identity,
-            'Status Assignment': d.status,
-            'Mode': d.mode,
-            'Alamat': d.alamat,
-            'Latitude': d.lat || '',
-            'Longitude': d.lng || '',
-            'Catatan': d.catatan,
-            'Link Assignment': d.link_assignment
+            'ID Sub SLS': String(d.idsubsls || '-'),
+            'Kabupaten/Kota': d.kab_name || '-',
+            'Nama Usaha / Prelist': d.data1 || '-',
+            'Code Identity': d.code_identity || '-',
+            'Status Assignment': d.status || '-',
+            'Mode': d.mode || '-',
+            'Alamat': d.alamat || '-',
+            'Latitude': d.lat !== null && d.lat !== undefined ? d.lat : '',
+            'Longitude': d.lng !== null && d.lng !== undefined ? d.lng : '',
+            'Catatan': d.catatan || '-',
+            'Link Assignment': d.link_assignment || '-'
         }));
 
         const ws = XLSX.utils.json_to_sheet(dataToExport);
+        const headers = Object.keys(dataToExport[0] || {});
+        ws['!cols'] = headers.map(k => ({ wch: Math.max(k.length + 4, 15) }));
+
         const wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Belum Diassign");
+        XLSX.utils.book_append_sheet(wb, ws, "Belum_Diassign");
 
         const now = new Date();
         const dateStr = now.toISOString().slice(0, 10);
         XLSX.writeFile(wb, `Data_Belum_Diassign_${dateStr}.xlsx`);
+    };
+
+    window.downloadBelumCSV = function () {
+        if (!filteredData || filteredData.length === 0) {
+            alert('Tidak ada data untuk diunduh.');
+            return;
+        }
+
+        const headers = [
+            'No', 'ID Sub SLS', 'Kabupaten/Kota', 'Nama Usaha / Prelist',
+            'Code Identity', 'Status Assignment', 'Mode', 'Alamat',
+            'Latitude', 'Longitude', 'Catatan', 'Link Assignment'
+        ];
+
+        let csvContent = '\uFEFF' + headers.map(h => `"${h.replace(/"/g, '""')}"`).join(',') + '\r\n';
+        filteredData.forEach((d, idx) => {
+            const row = [
+                idx + 1,
+                d.idsubsls || '',
+                d.kab_name || '',
+                d.data1 || '',
+                d.code_identity || '',
+                d.status || '',
+                d.mode || '',
+                d.alamat || '',
+                d.lat !== null && d.lat !== undefined ? d.lat : '',
+                d.lng !== null && d.lng !== undefined ? d.lng : '',
+                d.catatan || '',
+                d.link_assignment || ''
+            ];
+            csvContent += row.map(val => `"${String(val == null ? '' : val).replace(/(\r\n|\n|\r)/g, ' ').replace(/"/g, '""')}"`).join(',') + '\r\n';
+        });
+
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        const dateStr = new Date().toISOString().slice(0, 10);
+        link.download = `Data_Belum_Diassign_${dateStr}.csv`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(link.href);
     };
 
     // Auto-init if DOM is already ready
