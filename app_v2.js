@@ -8171,9 +8171,19 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Selalu gunakan pSelesaiReal agar tidak pernah minus atau over-inflated
                         const pSelesai = pSelesaiReal;
 
+                        let slsList = [];
+                        if (window.PETUGAS_REGION_MAP && window.PETUGAS_REGION_MAP[email.toLowerCase()]) {
+                            const rawRegs = window.PETUGAS_REGION_MAP[email.toLowerCase()];
+                            slsList = Array.from(new Set(rawRegs.map(r => r ? r.toString().substring(0, 14) : '').filter(r => r && r.length === 14))).sort();
+                        } else if (pMapData.sls_details) {
+                            slsList = Object.keys(pMapData.sls_details).map(r => r.substring(0, 14)).filter(r => r && r.length === 14);
+                            slsList = Array.from(new Set(slsList)).sort();
+                        }
+
                         arr.push({
                             name: displayName,
                             email: email,
+                            sls_list: slsList,
                             total: pTotal,
                             selesai: pSelesai,
                             belum: pBelum,
@@ -8202,7 +8212,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const searchInput = document.getElementById('petugas-summary-search-input');
         if (searchInput && searchInput.value.trim()) {
             const term = searchInput.value.toLowerCase().trim();
-            arr = arr.filter(p => p.name.toLowerCase().includes(term) || (p.email && p.email.toLowerCase().includes(term)));
+            arr = arr.filter(p => p.name.toLowerCase().includes(term) || 
+                                  (p.email && p.email.toLowerCase().includes(term)) ||
+                                  (p.sls_list && p.sls_list.some(s => s.toLowerCase().includes(term))));
         }
 
         arr.sort((a, b) => {
@@ -8465,13 +8477,15 @@ document.addEventListener('DOMContentLoaded', () => {
             html += `
                 <tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s; cursor: pointer;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'" onclick="window.showPetugasSLSDetail('${p.email}', '${p.role}', '${p.name.replace(/'/g, "\\'")}')">
                     <td style="text-align: center; font-weight: 600; color: var(--text-secondary); width: 50px; min-width: 50px;">${idxReal + 1}</td>
-                    <td style="font-weight: 600; color: var(--text-primary); min-width: 180px;">
+                    <td style="font-weight: 600; color: var(--text-primary); min-width: 200px;">
                         <div style="display: flex; align-items: center; gap: 0.5rem;">
                             <div style="width: 24px; height: 24px; border-radius: 50%; background: rgba(249, 115, 22, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; flex-shrink: 0;">
                                 ${p.name.substring(0, 2).toUpperCase()}
                             </div>
-                            <div style="display: flex; align-items: center; gap: 6px;">
-                                ${p.name} ${roleBadge}
+                            <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                                <span>${p.name}</span>
+                                ${roleBadge}
+                                ${slsBadgeHtml}
                             </div>
                         </div>
                     </td>
@@ -8538,7 +8552,7 @@ document.addEventListener('DOMContentLoaded', () => {
             thead.innerHTML = `
                 <tr>
                     <th style="width: 50px; min-width: 50px; text-align: center;">No</th>
-                    <th style="text-align: left; min-width: 180px; cursor: pointer;" onclick="window.sortPetugasSummary('name')">Nama Petugas <span class="sort-icon"></span></th>
+                    <th style="text-align: left; min-width: 200px; cursor: pointer;" onclick="window.sortPetugasSummary('name')">Nama Petugas <span class="sort-icon"></span></th>
                     <th style="text-align: left; min-width: 160px; cursor: pointer;" onclick="window.sortPetugasSummary('email')">Email / Username <span class="sort-icon"></span></th>
                     <th style="text-align: center; min-width: 90px; cursor: pointer;" onclick="window.sortPetugasSummary('total')">Total Target <span class="sort-icon"></span></th>
                     <th style="text-align: center; min-width: 90px; cursor: pointer;" onclick="window.sortPetugasSummary('belum')">Belum Selesai <span class="sort-icon"></span></th>
@@ -8632,21 +8646,14 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'flex';
     };
 
-    window.downloadPetugasSummaryExcel = function () {
-        const kabFilter = document.getElementById('petugas-kab-filter');
-        const selectedKab = kabFilter ? kabFilter.value : 'ALL';
-        
-        if (selectedKab === 'ALL') {
-            const dateInput = prompt("Data raw (CSV) tersedia mulai tanggal 11. Masukkan tanggal yang ingin didownload (Format YYYY-MM-DD):", "2026-07-11");
-            if (dateInput) {
-                const url = `fast_petugas_all_${dateInput}.csv`;
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = url;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-            }
+    window.closePetugasSLSModal = function() {
+        const modal = document.getElementById('petugas-sls-modal');
+        if (modal) modal.style.display = 'none';
+    };
+
+    window.exportPetugasSummaryExcel = function () {
+        if (typeof XLSX === 'undefined') {
+            alert("Library SheetJS (XLSX) belum dimuat.");
             return;
         }
 
@@ -8655,7 +8662,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        const headers = ["Nama Petugas", "Email / Username", "Role", "Total Target", "Belum Selesai (Total)", "Open", "Draft", "Selesai (Total)", "Submit PPL", "Submit Respondent", "Approved", "Completed Admin", "Rejected", "Revoked", "Edited PML", "Edited Admin"];
+        const headers = ["Nama Petugas", "Email / Username", "ID SLS", "Role", "Total Target", "Belum Selesai (Total)", "Open", "Draft", "Selesai (Total)", "Submit PPL", "Submit Respondent", "Approved", "Completed Admin", "Rejected", "Revoked", "Edited PML", "Edited Admin"];
         
         let dates = [];
         if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
@@ -8670,7 +8677,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const rows = window.lastPetugasSummaryArr.map(p => {
             const row = [
-                p.name, p.email, p.role, p.total, p.belum, 
+                p.name, p.email, (p.sls_list || []).join('; '), p.role, p.total, p.belum, 
                 p.open || 0, p.draft || 0, 
                 p.selesai, 
                 p.submitted_pencacah || 0, p.submitted_respondent || 0, p.approved || 0, p.completed_admin || 0,
@@ -8735,7 +8742,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        const headers = ["Nama Petugas", "Email / Username", "Role", "Total Target", "Belum Selesai (Total)", "Open", "Draft", "Selesai (Total)", "Submit PPL", "Submit Respondent", "Approved", "Completed Admin", "Rejected", "Revoked", "Edited PML", "Edited Admin"];
+        const headers = ["Nama Petugas", "Email / Username", "ID SLS", "Role", "Total Target", "Belum Selesai (Total)", "Open", "Draft", "Selesai (Total)", "Submit PPL", "Submit Respondent", "Approved", "Completed Admin", "Rejected", "Revoked", "Edited PML", "Edited Admin"];
         
         let dates = [];
         if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
@@ -8750,7 +8757,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const rows = window.lastPetugasSummaryArr.map(p => {
             const row = [
-                p.name, p.email, p.role, p.total, p.belum, 
+                p.name, p.email, (p.sls_list || []).join('; '), p.role, p.total, p.belum, 
                 p.open || 0, p.draft || 0, 
                 p.selesai, 
                 p.submitted_pencacah || 0, p.submitted_respondent || 0, p.approved || 0, p.completed_admin || 0,
