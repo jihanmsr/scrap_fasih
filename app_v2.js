@@ -7524,6 +7524,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const slsSelect = document.getElementById('assign-sls-sls-filter');
         const statusSelect = document.getElementById('assign-sls-status-filter');
 
+        // Immediately update Petugas table & summary cards without waiting for Supabase
+        if (window.renderPetugasSummaryTable) {
+            window.renderPetugasSummaryTable();
+        }
+
         if (changedLevel === 'kab') {
             const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
             const surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value : (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
@@ -8095,11 +8100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. TABEL PETUGAS: Gunakan murni data dari CSV FAST (window.PETUGAS_PROGRESS_MAP)
         const tbody = document.getElementById('petugas-summary-table-body');
         if (!tbody) return;
-
-        if (kabFilterDashboard === 'all') {
-            tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2.5rem 1rem; color: var(--text-secondary);"><div style="font-size:1.5rem;margin-bottom:0.5rem;">📋</div><div style="font-weight:600;margin-bottom:0.35rem;color:var(--text);">Pilih Kabupaten/Kota terlebih dahulu</div><div style="font-size:0.82rem;">Gunakan dropdown filter di atas untuk memuat data rekap petugas per kabupaten.</div></td></tr>';
-            return;
-        }
 
         let arr = [];
         if (!window.currentPetugasTab) window.currentPetugasTab = 'Pencacah'; // Default
