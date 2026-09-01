@@ -1,1 +1,30 @@
-{}
+{
+  "7204070006000000": {
+    "kode_kab": "7204",
+    "kabupaten": "POSO",
+    "kode_kecamatan": "7204070",
+    "kecamatan": "POSO KOTA",
+    "kode_desa": "7204070006",
+    "desa": "GEBANG REJO",
+    "kode_sls": "72040700060000",
+    "sls": "-",
+    "kode_sub_sls": "7204070006000000",
+    "nama_sub_sls": "-",
+    "nama_petugas": "",
+    "jumlah_prelist": "1"
+  },
+  "7271040002000000": {
+    "kode_kab": "7271",
+    "kabupaten": "PALU",
+    "kode_kecamatan": "7271040",
+    "kecamatan": "PALU UTARA",
+    "kode_desa": "7271040002",
+    "desa": "TAIPA",
+    "kode_sls": "72710400020000",
+    "sls": "-",
+    "kode_sub_sls": "7271040002000000",
+    "nama_sub_sls": "-",
+    "nama_petugas": "",
+    "jumlah_prelist": "1"
+  }
+}
