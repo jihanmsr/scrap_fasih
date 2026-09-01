@@ -19,8 +19,7 @@ async function loadRekonData() {
             
             rekonSlsData.forEach(d => {
                 if (typeof d.nmkab === 'string') {
-                    // Do not strip the kabkot code so it sorts properly by code
-                    // d.nmkab = d.nmkab.replace(/^\[\d+\]\s*/, '');
+                    d.nmkab = d.nmkab.replace(/^\[\d+\]\s*/, '');
                 }
             });
             
