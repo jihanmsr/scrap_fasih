@@ -7616,8 +7616,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
-        window.updateGranularStatusFilterOptions();
-        window.renderGranularAssignmentsTable(true);
+        if (window.renderRekapStatusTable) window.renderRekapStatusTable(true);
     };
 
     window.petugasSortField = window.petugasSortField || 'pct';
@@ -8847,361 +8846,480 @@ document.addEventListener('DOMContentLoaded', () => {
         URL.revokeObjectURL(a.href);
     };
 
-    window.renderGranularAssignmentsTable = function (resetPage = true) {
-        const tbody = document.getElementById('assign-sls-table-body');
-        if (!tbody) return;
+    // =========================================================================
+    // HIERARCHICAL REKAPITULASI STATUS WILAYAH (Kab -> Kec -> Desa -> SLS)
+    // =========================================================================
+    window.rekapStatusCurrentLevel = 'kab'; // 'kab' | 'kec' | 'desa' | 'sls'
+    window.rekapStatusCurrentPage = 1;
+    window.rekapStatusPerPage = 25;
+    window.rekapStatusSearchVal = '';
+    window.rekapStatusSortField = 'pct';
+    window.rekapStatusSortAsc = false;
+    window.lastRekapStatusList = [];
 
-        if (!window.GRANULAR_ASSIGNMENTS_DATA) {
-            tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Rincian data target assignment belum dimuat. Silakan ubah filter Kabupaten/Kota.</td></tr>`;
+    window.setRekapStatusLevel = function (level) {
+        window.rekapStatusCurrentLevel = level;
+        ['kab', 'kec', 'desa', 'sls'].forEach(l => {
+            const btn = document.getElementById(`rekap-level-btn-${l}`);
+            if (btn) {
+                if (l === level) btn.classList.add('active');
+                else btn.classList.remove('active');
+            }
+        });
+        window.renderRekapStatusTable(true);
+    };
+
+    window.changeRekapStatusLimit = function (val) {
+        window.rekapStatusPerPage = (val === 'all') ? 999999 : parseInt(val, 10);
+        window.renderRekapStatusTable(true);
+    };
+
+    window.handleRekapStatusSearch = function (val) {
+        window.rekapStatusSearchVal = (val || '').toLowerCase().trim();
+        window.renderRekapStatusTable(true);
+    };
+
+    window.sortRekapStatus = function (field) {
+        if (window.rekapStatusSortField === field) {
+            window.rekapStatusSortAsc = !window.rekapStatusSortAsc;
+        } else {
+            window.rekapStatusSortField = field;
+            window.rekapStatusSortAsc = (field === 'name' || field === 'code');
+        }
+        window.renderRekapStatusTable(false);
+    };
+
+    window.navigateRekapBreadcrumb = function (target) {
+        const kabSelect = document.getElementById('assign-sls-kab-filter');
+        const kecSelect = document.getElementById('assign-sls-kec-filter');
+        const desaSelect = document.getElementById('assign-sls-desa-filter');
+        const slsSelect = document.getElementById('assign-sls-sls-filter');
+
+        if (target === 'prov') {
+            if (kabSelect) kabSelect.value = 'all';
+            if (kecSelect) { kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>'; kecSelect.disabled = true; }
+            if (desaSelect) { desaSelect.innerHTML = '<option value="all">Semua Desa</option>'; desaSelect.disabled = true; }
+            if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
+            window.setRekapStatusLevel('kab');
+            if (window.updateGranularFilters) window.updateGranularFilters();
+        } else if (target === 'kab') {
+            if (kecSelect) kecSelect.value = 'all';
+            if (desaSelect) { desaSelect.innerHTML = '<option value="all">Semua Desa</option>'; desaSelect.disabled = true; }
+            if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
+            window.setRekapStatusLevel('kec');
+            if (window.updateGranularFilters) window.updateGranularFilters();
+        } else if (target === 'kec') {
+            if (desaSelect) desaSelect.value = 'all';
+            if (slsSelect) { slsSelect.innerHTML = '<option value="all">Semua SLS</option>'; slsSelect.disabled = true; }
+            window.setRekapStatusLevel('desa');
+            if (window.updateGranularFilters) window.updateGranularFilters();
+        }
+    };
+
+    window.drillDownRekap = function (level, code) {
+        if (level === 'kab') {
+            const kabSelect = document.getElementById('assign-sls-kab-filter');
+            if (kabSelect) {
+                for (let opt of kabSelect.options) {
+                    if (opt.value.includes(code.substring(2)) || opt.value.includes(code)) {
+                        kabSelect.value = opt.value;
+                        break;
+                    }
+                }
+            }
+            window.setRekapStatusLevel('kec');
+            if (window.updateGranularFilters) window.updateGranularFilters();
+        } else if (level === 'kec') {
+            const kecSelect = document.getElementById('assign-sls-kec-filter');
+            if (kecSelect) {
+                for (let opt of kecSelect.options) {
+                    if (opt.value.includes(code.substring(4)) || opt.value.includes(code)) {
+                        kecSelect.value = opt.value;
+                        break;
+                    }
+                }
+            }
+            window.setRekapStatusLevel('desa');
+            if (window.updateGranularFilters) window.updateGranularFilters();
+        } else if (level === 'desa') {
+            const desaSelect = document.getElementById('assign-sls-desa-filter');
+            if (desaSelect) {
+                for (let opt of desaSelect.options) {
+                    if (opt.value.includes(code.substring(7)) || opt.value.includes(code)) {
+                        desaSelect.value = opt.value;
+                        break;
+                    }
+                }
+            }
+            window.setRekapStatusLevel('sls');
+            if (window.updateGranularFilters) window.updateGranularFilters();
+        }
+    };
+
+    window.renderRekapStatusTable = function (resetPage = false) {
+        const tbody = document.getElementById('rekap-status-table-body');
+        const thead = document.getElementById('rekap-status-table-head');
+        if (!tbody || !thead) return;
+
+        if (!window.REKAP_STATUS_DATA) {
+            tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Memuat data rekap status...</td></tr>`;
             return;
         }
 
-        if (resetPage) {
-            window.granularCurrentPage = 1;
-        }
+        if (resetPage) window.rekapStatusCurrentPage = 1;
 
         const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
-        const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
         const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
         const desaVal = document.getElementById('assign-sls-desa-filter')?.value || 'all';
-        const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
-        const statusVal = document.getElementById('assign-sls-status-filter')?.value || 'all';
-        const searchVal = document.getElementById('assign-sls-search-input')?.value.toLowerCase().trim() || '';
 
-        const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
-        const surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value : (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
-
-        let baseFiltered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
-            if (r.survey_type !== surveyTypeFilter) return false;
-            if (kabVal !== 'all' && (r.kab_name || '').toUpperCase() !== cleanKabVal) return false;
-            if (kecVal !== 'all' && r.kec_name !== kecVal) return false;
-            if (desaVal !== 'all' && r.desa_name !== desaVal) return false;
-            if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
-            return true;
-        });
-
-        if (window.renderPetugasSummaryTable) {
-            window.lastBaseFiltered = baseFiltered;
-            window.renderPetugasSummaryTable(baseFiltered);
+        // Extract raw codes
+        let activeKabCode = '';
+        if (kabVal !== 'all') {
+            const m = kabVal.match(/\[(\d+)\]/);
+            if (m) activeKabCode = '72' + m[1].padStart(2, '0');
         }
 
-        let filtered = baseFiltered.filter(r => {
-            if (statusVal !== 'all' && r.status !== statusVal) return false;
+        let activeKecCode = '';
+        if (kecVal !== 'all') {
+            const m = kecVal.match(/\[(\d+)\]/);
+            if (m && activeKabCode) activeKecCode = activeKabCode + m[1].padStart(3, '0');
+        }
 
-            if (searchVal) {
-                const matchText = (
-                    (r.data1 || '') + ' ' +
-                    (r.petugas_username || '') + ' ' +
-                    (r.petugas_fullname || '') + ' ' +
-                    (r.pengawas_username || '') + ' ' +
-                    (r.pengawas_fullname || '') + ' ' +
-                    (r.sls_name || '') + ' ' +
-                    (r.sls_code || '') + ' ' +
-                    (r.status || '')
-                ).toLowerCase();
-                if (!matchText.includes(searchVal)) return false;
+        let activeDesaCode = '';
+        if (desaVal !== 'all') {
+            const m = desaVal.match(/\[(\d+)\]/);
+            if (m && activeKecCode) activeDesaCode = activeKecCode + m[1].padStart(3, '0');
+        }
+
+        // Auto determine level if not explicitly clicked
+        let level = window.rekapStatusCurrentLevel || 'kab';
+
+        // Update Breadcrumb
+        const breadcrumbEl = document.getElementById('rekap-status-breadcrumb');
+        if (breadcrumbEl) {
+            let bHtml = `<span style="cursor: pointer; color: var(--primary);" onclick="window.navigateRekapBreadcrumb('prov')">📍 Prov. Sulawesi Tengah</span>`;
+            if (activeKabCode) {
+                const kabObj = (window.REKAP_STATUS_DATA.kab || []).find(k => k.code === activeKabCode);
+                const kabName = kabObj ? kabObj.name : activeKabCode;
+                bHtml += ` <span style="opacity:0.5;">&gt;</span> <span style="cursor: pointer; color: var(--primary);" onclick="window.navigateRekapBreadcrumb('kab')">${kabName}</span>`;
             }
-            return true;
-        });
+            if (activeKecCode) {
+                const kecList = window.REKAP_STATUS_DATA.kec_by_kab?.[activeKabCode] || [];
+                const kecObj = kecList.find(k => k.code === activeKecCode);
+                const kecName = kecObj ? kecObj.name : activeKecCode;
+                bHtml += ` <span style="opacity:0.5;">&gt;</span> <span style="cursor: pointer; color: var(--primary);" onclick="window.navigateRekapBreadcrumb('kec')">${kecName}</span>`;
+            }
+            if (activeDesaCode) {
+                const desaList = window.REKAP_STATUS_DATA.desa_by_kec?.[activeKecCode] || [];
+                const desaObj = desaList.find(d => d.code === activeDesaCode);
+                const desaName = desaObj ? desaObj.name : activeDesaCode;
+                bHtml += ` <span style="opacity:0.5;">&gt;</span> <span style="color: var(--text-primary); font-weight: 700;">${desaName}</span>`;
+            }
+            breadcrumbEl.innerHTML = bHtml;
+        }
 
-        if (window.granularSortField === 'date_modified') {
-            filtered.sort((a, b) => {
-                const diff = (a.dateModifiedEpoch || 0) - (b.dateModifiedEpoch || 0);
-                return window.granularSortAsc ? diff : -diff;
-            });
-        } else {
-            filtered.sort((a, b) => {
-                let valA = '', valB = '';
-                switch (window.granularSortField) {
-                    case 'kab': valA = a.kab_name || ''; valB = b.kab_name || ''; break;
-                    case 'kec': valA = a.kec_name || ''; valB = b.kec_name || ''; break;
-                    case 'desa': valA = a.desa_name || ''; valB = b.desa_name || ''; break;
-                    case 'sls': valA = a.sls_name || ''; valB = b.sls_name || ''; break;
-                    case 'petugas': valA = a.petugas_fullname || ''; valB = b.petugas_fullname || ''; break;
-                    case 'pengawas': valA = a.pengawas_fullname || ''; valB = b.pengawas_fullname || ''; break;
-                    case 'target_code': valA = a.codeIdentity || ''; valB = b.codeIdentity || ''; break;
-                    case 'target_name': valA = a.data1 || ''; valB = b.data1 || ''; break;
-                    case 'status': valA = a.status || ''; valB = b.status || ''; break;
-                }
+        // Gather dataset based on level and filters
+        let list = [];
+        if (level === 'kab') {
+            list = window.REKAP_STATUS_DATA.kab || [];
+        } else if (level === 'kec') {
+            if (activeKabCode && window.REKAP_STATUS_DATA.kec_by_kab?.[activeKabCode]) {
+                list = window.REKAP_STATUS_DATA.kec_by_kab[activeKabCode];
+            } else {
+                list = Object.values(window.REKAP_STATUS_DATA.kec_by_kab || {}).flat();
+            }
+        } else if (level === 'desa') {
+            if (activeKecCode && window.REKAP_STATUS_DATA.desa_by_kec?.[activeKecCode]) {
+                list = window.REKAP_STATUS_DATA.desa_by_kec[activeKecCode];
+            } else if (activeKabCode) {
+                const kecs = window.REKAP_STATUS_DATA.kec_by_kab?.[activeKabCode] || [];
+                list = kecs.flatMap(kc => window.REKAP_STATUS_DATA.desa_by_kec?.[kc.code] || []);
+            } else {
+                list = Object.values(window.REKAP_STATUS_DATA.desa_by_kec || {}).flat();
+            }
+        } else if (level === 'sls') {
+            if (activeDesaCode && window.REKAP_STATUS_DATA.sls_by_desa?.[activeDesaCode]) {
+                list = window.REKAP_STATUS_DATA.sls_by_desa[activeDesaCode];
+            } else if (activeKecCode) {
+                const desas = window.REKAP_STATUS_DATA.desa_by_kec?.[activeKecCode] || [];
+                list = desas.flatMap(d => window.REKAP_STATUS_DATA.sls_by_desa?.[d.code] || []);
+            } else if (activeKabCode) {
+                const kecs = window.REKAP_STATUS_DATA.kec_by_kab?.[activeKabCode] || [];
+                const desas = kecs.flatMap(kc => window.REKAP_STATUS_DATA.desa_by_kec?.[kc.code] || []);
+                list = desas.flatMap(d => window.REKAP_STATUS_DATA.sls_by_desa?.[d.code] || []);
+            } else {
+                list = Object.values(window.REKAP_STATUS_DATA.sls_by_desa || {}).flat();
+            }
+        }
 
-                let compare = valA.localeCompare(valB, 'id', { sensitivity: 'base' });
-                return window.granularSortAsc ? compare : -compare;
+        // Apply Search
+        if (window.rekapStatusSearchVal) {
+            const q = window.rekapStatusSearchVal;
+            list = list.filter(item => {
+                const txt = (
+                    (item.name || item.nmsls || '') + ' ' +
+                    (item.code || item.id || '') + ' ' +
+                    (item.nmkab || '') + ' ' +
+                    (item.nmkec || '') + ' ' +
+                    (item.nmdesa || '') + ' ' +
+                    (item.pencacah || '') + ' ' +
+                    (item.pengawas || '')
+                ).toLowerCase();
+                return txt.includes(q);
             });
         }
 
-        const totalItems = filtered.length;
-        const totalPages = Math.ceil(totalItems / window.granularPageLimit);
+        // Apply Sorting
+        const sortField = window.rekapStatusSortField || 'pct';
+        const isAsc = window.rekapStatusSortAsc;
+        list.sort((a, b) => {
+            let vA = a[sortField];
+            let vB = b[sortField];
+            if (sortField === 'name') {
+                vA = (a.name || a.nmsls || '');
+                vB = (b.name || b.nmsls || '');
+                return isAsc ? vA.localeCompare(vB) : vB.localeCompare(vA);
+            }
+            if (typeof vA === 'string') {
+                return isAsc ? vA.localeCompare(vB) : vB.localeCompare(vA);
+            }
+            vA = Number(vA || 0);
+            vB = Number(vB || 0);
+            return isAsc ? vA - vB : vB - vA;
+        });
 
-        const startIndex = (window.granularCurrentPage - 1) * window.granularPageLimit;
-        const endIndex = Math.min(startIndex + window.granularPageLimit, totalItems);
-        const paginated = filtered.slice(startIndex, endIndex);
+        window.lastRekapStatusList = list;
+
+        // Render Table Head
+        let sortIcon = (f) => (window.rekapStatusSortField === f ? (window.rekapStatusSortAsc ? ' ▲' : ' ▼') : ' ↕');
+        let headHtml = `
+            <tr>
+                <th style="width: 50px; text-align: center;">No</th>
+                <th style="text-align: left; cursor: pointer; min-width: 180px;" onclick="window.sortRekapStatus('name')">${level === 'sls' ? 'SLS / SubSLS' : 'Wilayah'} <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('name')}</span></th>
+                ${level === 'sls' ? '<th style="text-align: left; min-width: 180px;">Petugas (PPL / PML)</th>' : '<th style="text-align: center; width: 90px;">Cakupan</th>'}
+                <th style="text-align: center; cursor: pointer; min-width: 90px;" onclick="window.sortRekapStatus('total')">Total Target <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('total')}</span></th>
+                <th style="text-align: center; cursor: pointer; min-width: 80px; color: #ef4444;" onclick="window.sortRekapStatus('open')">Open <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('open')}</span></th>
+                <th style="text-align: center; cursor: pointer; min-width: 80px; color: #f59e0b;" onclick="window.sortRekapStatus('draft')">Draft <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('draft')}</span></th>
+                <th style="text-align: center; cursor: pointer; min-width: 90px; color: #3b82f6;" onclick="window.sortRekapStatus('submitted_pencacah')">Submit PPL <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('submitted_pencacah')}</span></th>
+                <th style="text-align: center; cursor: pointer; min-width: 90px; color: #10b981;" onclick="window.sortRekapStatus('approved')">Approved <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('approved')}</span></th>
+                <th style="text-align: center; cursor: pointer; min-width: 90px; color: #8b5cf6;" onclick="window.sortRekapStatus('completed_admin')">Completed <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('completed_admin')}</span></th>
+                <th style="text-align: center; cursor: pointer; min-width: 90px;" onclick="window.sortRekapStatus('selesai')">Total Selesai <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('selesai')}</span></th>
+                <th style="text-align: center; cursor: pointer; width: 120px;" onclick="window.sortRekapStatus('pct')">% Capaian <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('pct')}</span></th>
+            </tr>
+        `;
+        thead.innerHTML = headHtml;
+
+        // Pagination
+        const totalItems = list.length;
+        const perPage = window.rekapStatusPerPage;
+        const totalPages = Math.ceil(totalItems / perPage) || 1;
+        if (window.rekapStatusCurrentPage > totalPages) window.rekapStatusCurrentPage = totalPages;
+        if (window.rekapStatusCurrentPage < 1) window.rekapStatusCurrentPage = 1;
+
+        const startIdx = (window.rekapStatusCurrentPage - 1) * perPage;
+        const endIdx = Math.min(startIdx + perPage, totalItems);
+        const paginated = list.slice(startIdx, endIdx);
 
         if (paginated.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; padding: 3rem; color: var(--text-secondary);">Tidak ada data assignment yang cocok dengan kriteria filter.</td></tr>`;
-            const pagInfo = document.getElementById('assign-sls-pagination-info');
-            if (pagInfo) pagInfo.innerText = 'Menampilkan 0 - 0 dari 0 Target';
-            const pagBtns = document.getElementById('assign-sls-pagination-buttons');
+            tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; padding: 2.5rem; color: var(--text-secondary);">Tidak ada data wilayah yang cocok dengan pencarian / filter.</td></tr>`;
+            const pagInfo = document.getElementById('rekap-status-pagination-info');
+            if (pagInfo) pagInfo.textContent = 'Menampilkan 0 dari 0 Wilayah';
+            const pagBtns = document.getElementById('rekap-status-pagination-buttons');
             if (pagBtns) pagBtns.innerHTML = '';
             return;
         }
 
-        let html = '';
-        paginated.forEach((r, idx) => {
-            const no = startIndex + idx + 1;
-            const statusUpper = (r.status || '').toUpperCase();
-            let statusBadgeClass = 'table-badge-open';
-            if (statusUpper.includes('APPROVED')) {
-                statusBadgeClass = 'table-badge-approved';
-            } else if (statusUpper.includes('REJECTED')) {
-                statusBadgeClass = 'table-badge-rejected';
-            } else if (statusUpper.includes('SUBMITTED')) {
-                statusBadgeClass = 'table-badge-submitted';
-            } else if (statusUpper.includes('REVOKED')) {
-                statusBadgeClass = 'table-badge-revoked';
-                statusDisplayText = 'Ditarik';
-            } else if (statusUpper === 'DRAFT') {
-                statusBadgeClass = 'table-badge-submitted';
-            }
+        let bodyHtml = '';
+        paginated.forEach((item, idx) => {
+            const no = startIdx + idx + 1;
+            const pct = (item.pct || 0).toFixed(1);
+            let pctColor = pct >= 95 ? '#10b981' : (pct >= 80 ? '#3b82f6' : (pct >= 50 ? '#f59e0b' : '#ef4444'));
 
-            const isCompleted = statusUpper !== 'OPEN' && statusUpper !== 'DRAFT';
-            const petugasLabel = r.petugas_fullname && r.petugas_fullname !== '-' ?
-                `${r.petugas_fullname} <span style="font-size:0.75rem; color:var(--text-secondary); display:block; font-family:monospace;">@${r.petugas_username}</span>` :
-                (isCompleted ? '<span style="color:var(--text-secondary); font-weight:700;">CAWI / Mandiri (Tanpa Petugas)</span>' : '<span style="color:var(--text-muted); font-style:italic;">Belum Ditugaskan</span>');
+            let wilayahCell = '';
+            let cakupanCell = '';
 
-            const pengawasLabel = r.pengawas_fullname && r.pengawas_fullname !== '-' ?
-                `${r.pengawas_fullname} <span style="font-size:0.75rem; color:var(--text-secondary); display:block; font-family:monospace;">@${r.pengawas_username}</span>` :
-                '<span style="color:var(--text-muted); font-style:italic;">-</span>';
-
-            let formattedDate = '-';
-            if (r.dateModifiedEpoch && r.dateModifiedEpoch > 0) {
-                try {
-                    const dt = new Date(r.dateModifiedEpoch * 1000);
-                    const pad = (n) => String(n).padStart(2, '0');
-                    formattedDate = `${dt.getFullYear()}-${pad(dt.getMonth() + 1)}-${pad(dt.getDate())} ${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
-                } catch (e) { }
-            }
-
-            html += `
-                <tr style="border-bottom: 1px solid var(--card-border); transition: background-color 0.15s;">
-                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-weight: 600; color: var(--text-secondary);">${no}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 600; color: var(--text-primary); font-size: 0.8rem;">${r.kab_name}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary);">${r.kec_name}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary);">${r.desa_name}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary);">${r.sls_name} <span style="font-size:0.7rem; color:var(--text-secondary); display:block; font-family:monospace;">${r.sls_code}</span></td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.85rem; color: var(--text-primary);">${petugasLabel}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.85rem; color: var(--text-primary);">${pengawasLabel}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 600; font-family: monospace; font-size: 0.8rem; color: var(--text-primary);">${r.codeIdentity || '-'}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-weight: 700; color: var(--text-primary); font-size: 0.85rem;">${r.data1}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle;">
-                        <span class="table-badge ${statusBadgeClass}">${r.status}</span>
+            if (level === 'sls') {
+                const subslsCode = item.id || item.code;
+                const slsName = item.nmsls || `SLS ${subslsCode.slice(-6)}`;
+                const desaKecInfo = `${item.nmdesa || ''} • ${item.nmkec || ''}`;
+                wilayahCell = `
+                    <div>
+                        <span style="font-weight: 700; color: var(--text-primary); font-size: 0.85rem;">${slsName}</span>
+                        <div style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px;">
+                            <span style="font-family: monospace; background: rgba(99,102,241,0.08); padding: 1px 4px; border-radius: 4px; color: var(--primary);">${subslsCode}</span>
+                            • ${desaKecInfo}
+                        </div>
+                    </div>
+                `;
+                cakupanCell = `
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.75rem; color: var(--text-secondary);">
+                        <div><strong style="color:var(--text-primary);">PPL:</strong> ${item.pencacah || '-'}</div>
+                        <div style="margin-top:2px;"><strong style="color:var(--text-primary);">PML:</strong> ${item.pengawas || '-'}</div>
                     </td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-size: 0.8rem; color: var(--text-primary); white-space: nowrap;">${formattedDate}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle; font-size: 0.75rem; color: var(--text-primary); max-width: 250px; word-wrap: break-word; line-height: 1.3;">
-                        ${r.remark || '-'}
+                `;
+            } else {
+                const code = item.code;
+                const name = item.name;
+                const nextLevel = level === 'kab' ? 'kab' : (level === 'kec' ? 'kec' : 'desa');
+                const subCount = level === 'kab' ? `${item.kec_count} Kec • ${item.desa_count} Desa` : (level === 'kec' ? `${item.desa_count} Desa • ${item.sls_count} SLS` : `${item.sls_count} SLS`);
+                
+                wilayahCell = `
+                    <div style="cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;" onclick="window.drillDownRekap('${nextLevel}', '${code}')" title="Klik untuk rincian ${level === 'kab' ? 'Kecamatan' : (level === 'kec' ? 'Desa' : 'SLS')}">
+                        <span style="font-weight: 700; color: var(--primary); font-size: 0.85rem;">${name}</span>
+                        <span style="font-size: 0.72rem; font-family: monospace; color: var(--text-secondary);">[${code}]</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary); opacity: 0.7;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </div>
+                `;
+                cakupanCell = `
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-size: 0.75rem; color: var(--text-secondary); font-weight: 600;">
+                        ${subCount}
+                    </td>
+                `;
+            }
+
+            bodyHtml += `
+                <tr style="border-bottom: 1px solid var(--border-light); transition: background-color 0.15s;">
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-weight: 600; color: var(--text-secondary);">${no}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle;">${wilayahCell}</td>
+                    ${cakupanCell}
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: var(--text-primary);">${(item.total || 0).toLocaleString('id-ID')}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #ef4444;">${(item.open || 0).toLocaleString('id-ID')}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #f59e0b;">${(item.draft || 0).toLocaleString('id-ID')}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #3b82f6;">${(item.submitted_pencacah || 0).toLocaleString('id-ID')}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #10b981;">${(item.approved || 0).toLocaleString('id-ID')}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #8b5cf6;">${(item.completed_admin || 0).toLocaleString('id-ID')}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 800; color: var(--text-primary);">${(item.selesai || 0).toLocaleString('id-ID')}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle;">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                            <div style="flex: 1; background: rgba(148,163,184,0.2); height: 6px; border-radius: 3px; overflow: hidden; min-width: 40px;">
+                                <div style="width: ${Math.min(pct, 100)}%; background: ${pctColor}; height: 100%; border-radius: 3px;"></div>
+                            </div>
+                            <span style="font-weight: 800; font-family: monospace; font-size: 0.8rem; color: ${pctColor}; width: 42px; text-align: right;">${pct}%</span>
+                        </div>
                     </td>
                 </tr>
             `;
         });
-        tbody.innerHTML = html;
+        tbody.innerHTML = bodyHtml;
 
-        const pagInfo = document.getElementById('assign-sls-pagination-info');
+        // Update Pagination Info & Buttons
+        const pagInfo = document.getElementById('rekap-status-pagination-info');
         if (pagInfo) {
-            pagInfo.innerText = `Menampilkan ${startIndex + 1} - ${endIndex} dari ${totalItems} Target`;
+            pagInfo.textContent = `Menampilkan ${startIdx + 1} - ${endIdx} dari ${totalItems} ${level === 'sls' ? 'SLS' : 'Wilayah'}`;
         }
 
-        const pagBtns = document.getElementById('assign-sls-pagination-buttons');
+        const pagBtns = document.getElementById('rekap-status-pagination-buttons');
         if (pagBtns) {
             let btnsHtml = '';
-            btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === 1 ? 'disabled' : ''} onclick="window.setGranularPage(1)">Awal</button>`;
-            btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === 1 ? 'disabled' : ''} onclick="window.setGranularPage(${window.granularCurrentPage - 1})">Sebelumnya</button>`;
+            btnsHtml += `<button class="page-btn" ${window.rekapStatusCurrentPage === 1 ? 'disabled' : ''} onclick="window.setRekapStatusPage(1)">Awal</button>`;
+            btnsHtml += `<button class="page-btn" ${window.rekapStatusCurrentPage === 1 ? 'disabled' : ''} onclick="window.setRekapStatusPage(${window.rekapStatusCurrentPage - 1})">Sebelumnya</button>`;
 
-            let startPage = Math.max(1, window.granularCurrentPage - 2);
+            let startPage = Math.max(1, window.rekapStatusCurrentPage - 2);
             let endPage = Math.min(totalPages, startPage + 4);
             if (endPage - startPage < 4) {
                 startPage = Math.max(1, endPage - 4);
             }
 
             for (let p = startPage; p <= endPage; p++) {
-                btnsHtml += `<button class="page-btn ${p === window.granularCurrentPage ? 'active' : ''}" onclick="window.setGranularPage(${p})">${p}</button>`;
+                btnsHtml += `<button class="page-btn ${p === window.rekapStatusCurrentPage ? 'active' : ''}" onclick="window.setRekapStatusPage(${p})">${p}</button>`;
             }
 
-            btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === totalPages ? 'disabled' : ''} onclick="window.setGranularPage(${window.granularCurrentPage + 1})">Berikutnya</button>`;
-            btnsHtml += `<button class="page-btn" ${window.granularCurrentPage === totalPages ? 'disabled' : ''} onclick="window.setGranularPage(${totalPages})">Akhir</button>`;
+            btnsHtml += `<button class="page-btn" ${window.rekapStatusCurrentPage === totalPages ? 'disabled' : ''} onclick="window.setRekapStatusPage(${window.rekapStatusCurrentPage + 1})">Berikutnya</button>`;
+            btnsHtml += `<button class="page-btn" ${window.rekapStatusCurrentPage === totalPages ? 'disabled' : ''} onclick="window.setRekapStatusPage(${totalPages})">Akhir</button>`;
             pagBtns.innerHTML = btnsHtml;
         }
-
-        // Auto-refresh rekap panel if open
-        const rekapModal = document.getElementById('rekap-belum-modal');
-        const rekapBelumOpen = rekapModal && rekapModal.style.display === 'flex';
-        if (rekapBelumOpen && window.renderRekapBelum) {
-            window.renderRekapBelum();
-        }
     };
 
-    window.setGranularPage = function (page) {
-        window.granularCurrentPage = page;
-        window.renderGranularAssignmentsTable(false);
+    window.setRekapStatusPage = function (p) {
+        window.rekapStatusCurrentPage = p;
+        window.renderRekapStatusTable(false);
     };
 
-    window.downloadGranularAssignCSV = function () {
-        if (!window.GRANULAR_ASSIGNMENTS_DATA) return;
-
-        const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
-        const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
-        const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
-        const desaVal = document.getElementById('assign-sls-desa-filter')?.value || 'all';
-        const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
-        const statusVal = document.getElementById('assign-sls-status-filter')?.value || 'all';
-        const searchVal = document.getElementById('assign-sls-search-input')?.value.toLowerCase().trim() || '';
-        const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
-        const surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value : (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
-
-        let filtered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
-            if (r.survey_type !== surveyTypeFilter) return false;
-            if (kabVal !== 'all' && (r.kab_name || '').toUpperCase() !== cleanKabVal) return false;
-            if (kecVal !== 'all' && r.kec_name !== kecVal) return false;
-            if (desaVal !== 'all' && r.desa_name !== desaVal) return false;
-            if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
-            if (statusVal !== 'all' && r.status !== statusVal) return false;
-            if (searchVal) {
-                const matchText = (
-                    (r.data1 || '') + ' ' +
-                    (r.petugas_username || '') + ' ' +
-                    (r.petugas_fullname || '') + ' ' +
-                    (r.pengawas_username || '') + ' ' +
-                    (r.pengawas_fullname || '') + ' ' +
-                    (r.sls_name || '') + ' ' +
-                    (r.sls_code || '')
-                ).toLowerCase();
-                if (!matchText.includes(searchVal)) return false;
-            }
-            return true;
-        });
-
-        if (filtered.length === 0) {
-            alert('Tidak ada data untuk diunduh.');
+    window.exportRekapStatusCSV = function () {
+        if (!window.lastRekapStatusList || window.lastRekapStatusList.length === 0) {
+            alert('Tidak ada data rekap status untuk diunduh.');
             return;
         }
 
-        let csvContent = '\uFEFFNo;Kabupaten;Kecamatan;Desa;Kode SLS;Nama SLS;Username Petugas;Nama Petugas;Username Pengawas;Nama Pengawas;ID Target;Nama Assignment;Status;Tanggal Update;Jenis Sensus\r\n';
-        filtered.forEach((r, idx) => {
+        const level = window.rekapStatusCurrentLevel || 'kab';
+        let csvContent = '\uFEFFNo;Level;Kode;Nama Wilayah;Kabupaten;Kecamatan;Desa;PPL;PML;Total Target;Open;Draft;Submitted PPL;Submitted Respondent;Approved PML;Completed Admin;Total Selesai;Persen Capaian\r\n';
+
+        window.lastRekapStatusList.forEach((r, idx) => {
             const no = idx + 1;
-            const kab = (r.kab_name || '-').replace(/"/g, '""');
-            const kec = (r.kec_name || '-').replace(/"/g, '""');
-            const desa = (r.desa_name || '-').replace(/"/g, '""');
-            const slsCode = r.sls_code || '-';
-            const slsName = (r.sls_name || '-').replace(/"/g, '""');
-            const petUser = r.petugas_username || '-';
-            const petName = (r.petugas_fullname || '-').replace(/"/g, '""');
-            const pengawasUser = r.pengawas_username || '-';
-            const pengawasName = (r.pengawas_fullname || '-').replace(/"/g, '""');
-            const targetId = r.codeIdentity || '-';
-            const targetName = (r.data1 || '-').replace(/"/g, '""');
-            const status = r.status || 'OPEN';
+            const code = r.code || r.id || '';
+            const name = (r.name || r.nmsls || '').replace(/"/g, '""');
+            const kab = (r.nmkab || '').replace(/"/g, '""');
+            const kec = (r.nmkec || '').replace(/"/g, '""');
+            const desa = (r.nmdesa || '').replace(/"/g, '""');
+            const ppl = (r.pencacah || '').replace(/"/g, '""');
+            const pml = (r.pengawas || '').replace(/"/g, '""');
+            const total = r.total || 0;
+            const open = r.open || 0;
+            const draft = r.draft || 0;
+            const subPpl = r.submitted_pencacah || 0;
+            const subResp = r.submitted_respondent || 0;
+            const approved = r.approved || 0;
+            const completed = r.completed_admin || 0;
+            const selesai = r.selesai || 0;
+            const pct = (r.pct || 0).toFixed(1) + '%';
 
-            let formattedDate = '-';
-            if (r.dateModifiedEpoch && r.dateModifiedEpoch > 0) {
-                try {
-                    const dt = new Date(r.dateModifiedEpoch * 1000);
-                    const pad = (n) => String(n).padStart(2, '0');
-                    formattedDate = `${dt.getFullYear()}-${pad(dt.getMonth() + 1)}-${pad(dt.getDate())} ${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
-                } catch (e) { }
-            }
-
-            const type = r.survey_type === 'se_umum' ? 'SE Umum' : 'SE UB';
-
-            csvContent += `"${no}";"${kab}";"${kec}";"${desa}";"${slsCode}";"${slsName}";"${petUser}";"${petName}";"${pengawasUser}";"${pengawasName}";"${targetId}";"${targetName}";"${status}";"${formattedDate}";"${type}"\r\n`;
+            csvContent += `"${no}";"${level}";"${code}";"${name}";"${kab}";"${kec}";"${desa}";"${ppl}";"${pml}";"${total}";"${open}";"${draft}";"${subPpl}";"${subResp}";"${approved}";"${completed}";"${selesai}";"${pct}"\r\n`;
         });
 
         const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.setAttribute('href', url);
-        const fileName = `granular_assignments_${surveyTypeFilter}_${kabVal.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}.csv`;
-        link.setAttribute('download', fileName);
+        link.setAttribute('download', `Rekap_Status_${level.toUpperCase()}_${new Date().toISOString().split('T')[0]}.csv`);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
         URL.revokeObjectURL(url);
     };
 
-    window.downloadGranularAssignExcel = function () {
-        if (!window.GRANULAR_ASSIGNMENTS_DATA) return;
-
-        const kabVal = document.getElementById('assign-sls-kab-filter')?.value || 'all';
-        const cleanKabVal = kabVal.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
-        const kecVal = document.getElementById('assign-sls-kec-filter')?.value || 'all';
-        const desaVal = document.getElementById('assign-sls-desa-filter')?.value || 'all';
-        const slsVal = document.getElementById('assign-sls-sls-filter')?.value || 'all';
-        const statusVal = document.getElementById('assign-sls-status-filter')?.value || 'all';
-        const searchVal = document.getElementById('assign-sls-search-input')?.value.toLowerCase().trim() || '';
-        const surveyFilterEl = document.getElementById('assign-sls-survey-filter');
-        const surveyTypeFilter = surveyFilterEl ? surveyFilterEl.value : (localStorage.getItem('active_assign_subtab') === 'se2026' ? 'se_umum' : 'se_ub');
-
-        let filtered = window.GRANULAR_ASSIGNMENTS_DATA.filter(r => {
-            if (r.survey_type !== surveyTypeFilter) return false;
-            if (kabVal !== 'all' && (r.kab_name || '').toUpperCase() !== cleanKabVal) return false;
-            if (kecVal !== 'all' && r.kec_name !== kecVal) return false;
-            if (desaVal !== 'all' && r.desa_name !== desaVal) return false;
-            if (slsVal !== 'all' && r.sls_code !== slsVal) return false;
-            if (statusVal !== 'all' && r.status !== statusVal) return false;
-            if (searchVal) {
-                const matchText = (
-                    (r.data1 || '') + ' ' +
-                    (r.petugas_username || '') + ' ' +
-                    (r.petugas_fullname || '') + ' ' +
-                    (r.pengawas_username || '') + ' ' +
-                    (r.pengawas_fullname || '') + ' ' +
-                    (r.sls_name || '') + ' ' +
-                    (r.sls_code || '')
-                ).toLowerCase();
-                if (!matchText.includes(searchVal)) return false;
-            }
-            return true;
-        });
-
-        if (filtered.length === 0) {
-            alert('Tidak ada data untuk diunduh.');
+    window.exportRekapStatusExcel = function () {
+        if (typeof XLSX === 'undefined') {
+            alert('Library SheetJS (XLSX) belum dimuat.');
+            return;
+        }
+        if (!window.lastRekapStatusList || window.lastRekapStatusList.length === 0) {
+            alert('Tidak ada data rekap status untuk diunduh.');
             return;
         }
 
-        const exportData = filtered.map((r, idx) => {
-            let formattedDate = '-';
-            if (r.dateModifiedEpoch && r.dateModifiedEpoch > 0) {
-                try {
-                    const dt = new Date(r.dateModifiedEpoch * 1000);
-                    const pad = (n) => String(n).padStart(2, '0');
-                    formattedDate = `${dt.getFullYear()}-${pad(dt.getMonth() + 1)}-${pad(dt.getDate())} ${pad(dt.getHours())}:${pad(dt.getMinutes())}`;
-                } catch (e) { }
-            }
-
+        const level = window.rekapStatusCurrentLevel || 'kab';
+        const exportData = window.lastRekapStatusList.map((r, idx) => {
             return {
                 'No': idx + 1,
-                'Kabupaten': r.kab_name || '-',
-                'Kecamatan': r.kec_name || '-',
-                'Desa': r.desa_name || '-',
-                'Kode SLS': r.sls_code ? String(r.sls_code) : '-',
-                'Nama SLS': r.sls_name || '-',
-                'Username Petugas': r.petugas_username || '-',
-                'Nama Petugas': r.petugas_fullname || '-',
-                'Username Pengawas': r.pengawas_username || '-',
-                'Nama Pengawas': r.pengawas_fullname || '-',
-                'ID Target': r.codeIdentity ? String(r.codeIdentity) : '-',
-                'Nama Assignment': r.data1 || '-',
-                'Status': r.status || 'OPEN',
-                'Tanggal Update': formattedDate,
-                'Jenis Sensus': r.survey_type === 'se_umum' ? 'SE Umum' : 'SE UB'
+                'Level': level.toUpperCase(),
+                'Kode Wilayah': r.code || r.id || '',
+                'Nama Wilayah': r.name || r.nmsls || '',
+                'Kabupaten': r.nmkab || '',
+                'Kecamatan': r.nmkec || '',
+                'Desa': r.nmdesa || '',
+                'Petugas PPL': r.pencacah || '-',
+                'Petugas PML': r.pengawas || '-',
+                'Total Target': r.total || 0,
+                'Open': r.open || 0,
+                'Draft': r.draft || 0,
+                'Submitted PPL': r.submitted_pencacah || 0,
+                'Submitted Respondent': r.submitted_respondent || 0,
+                'Approved PML': r.approved || 0,
+                'Completed Admin': r.completed_admin || 0,
+                'Rejected PML': r.rejected_pengawas || 0,
+                'Revoked PML': r.revoked_pengawas || 0,
+                'Edited PML': r.edited_pengawas || 0,
+                'Edited Admin': r.edited_admin || 0,
+                'Total Selesai': r.selesai || 0,
+                'Persen Capaian (%)': (r.pct || 0).toFixed(1) + '%'
             };
         });
 
         const ws = XLSX.utils.json_to_sheet(exportData);
         const wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Granular_Assignments");
-        const fileName = `granular_assignments_${surveyTypeFilter}_${kabVal.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}.xlsx`;
-        XLSX.writeFile(wb, fileName);
+        XLSX.utils.book_append_sheet(wb, ws, `Rekap_Status_${level}`);
+        XLSX.writeFile(wb, `Rekap_Status_${level.toUpperCase()}_${new Date().toISOString().split('T')[0]}.xlsx`);
     };
-
-    window.loadGranularAssignmentsData = loadGranularAssignmentsData;
     window.toggleStatsDetail = function (section) {
         const container = document.getElementById(`${section}-stats-expanded`);
         const btn = document.getElementById(`${section}-toggle-detail`);
