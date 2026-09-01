@@ -8293,15 +8293,19 @@ document.addEventListener('DOMContentLoaded', () => {
         window.lastPetugasSummaryArr = arr;
 
         if (arr.length === 0) {
-            if (!data || data.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Silakan muat data atau pilih wilayah terlebih dahulu...</td></tr>';
+            const searchInput = document.getElementById('petugas-summary-search-input');
+            if (searchInput && searchInput.value.trim()) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada petugas yang cocok dengan pencarian...</td></tr>';
             } else {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada petugas yang cocok dengan pencarian...</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 2rem; color: var(--text-secondary);">Tidak ada data petugas untuk wilayah yang dipilih.</td></tr>';
             }
+            const petugasInfo = document.getElementById('petugas-summary-pagination-info');
+            if (petugasInfo) petugasInfo.textContent = 'Menampilkan 0 dari 0 Petugas';
+            const petugasBtns = document.getElementById('petugas-summary-pagination-buttons');
+            if (petugasBtns) petugasBtns.innerHTML = '';
             return;
         }
 
-        
         const totalPetugas = arr.length;
         const totalPetugasPages = Math.ceil(totalPetugas / window.petugasSummaryPerPage) || 1;
         if (window.petugasSummaryCurrentPage > totalPetugasPages) window.petugasSummaryCurrentPage = totalPetugasPages;
@@ -8315,7 +8319,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (petugasInfo) {
             petugasInfo.textContent = `Menampilkan ${startPIdx + 1} - ${endPIdx} dari ${totalPetugas} Petugas`;
         }
-        
+
         const petugasBtns = document.getElementById('petugas-summary-pagination-buttons');
         if (petugasBtns) {
             let btnsHtml = '';
@@ -8339,187 +8343,207 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let html = '';
         paginatedArr.forEach((p, i) => {
-            const idxReal = startPIdx + i;
+            try {
+                const idxReal = startPIdx + i;
+                const pName = String(p.name || 'Petugas');
+                const pEmail = String(p.email || '-');
+                const pRole = String(p.role || 'Pencacah');
+                const safeNameJs = pName.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+                const safeEmailJs = pEmail.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+                const safeRoleJs = pRole.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+                const initials = (pName.length >= 2 ? pName.substring(0, 2) : pName).toUpperCase();
 
-            const pct = p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) : 0;
-            const isComplete = pct === "100.0";
+                const pct = p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) : 0;
+                const isComplete = pct === "100.0";
 
-            let badgeHtml = '';
-            if (isComplete) {
-                badgeHtml = `<div style="background: rgba(34, 197, 94, 0.1); color: var(--color-delivered); border: 1px solid rgba(34, 197, 94, 0.2); padding: 0.25rem 0.5rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 700;">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    Tuntas
-                </div>`;
-            } else {
-                badgeHtml = `<div style="display: flex; align-items: center; gap: 0.5rem; width: 100%;">
-                    <div style="flex-grow: 1; height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px; overflow: hidden;">
-                        <div style="height: 100%; width: ${pct}%; background: var(--primary); border-radius: 3px;"></div>
-                    </div>
-                    <span style="font-weight: 700; color: var(--text-primary); min-width: 35px; text-align: right;">${pct}%</span>
-                </div>`;
-            }
-
-            let waHtml = "";
-            const emailClean = (p.email || '').toLowerCase().trim();
-            if (window.PETUGAS_PHONES && window.PETUGAS_PHONES[emailClean]) {
-                const phoneData = window.PETUGAS_PHONES[emailClean];
-                if (phoneData.phone) {
-                    const waLink = `https://wa.me/${phoneData.phone}`;
-                    waHtml = `<a href="${waLink}" target="_blank" onclick="event.stopPropagation();" style="display: inline-flex; align-items: center; color: #25D366; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'" title="Chat WhatsApp">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    </a>`;
+                let badgeHtml = '';
+                if (isComplete) {
+                    badgeHtml = `<div style="background: rgba(34, 197, 94, 0.1); color: var(--color-delivered); border: 1px solid rgba(34, 197, 94, 0.2); padding: 0.25rem 0.5rem; border-radius: 0.5rem; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 700;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Tuntas
+                    </div>`;
+                } else {
+                    badgeHtml = `<div style="display: flex; align-items: center; gap: 0.5rem; width: 100%;">
+                        <div style="flex-grow: 1; height: 6px; background: rgba(0,0,0,0.05); border-radius: 3px; overflow: hidden;">
+                            <div style="height: 100%; width: ${pct}%; background: var(--primary); border-radius: 3px;"></div>
+                        </div>
+                        <span style="font-weight: 700; color: var(--text-primary); min-width: 35px; text-align: right;">${pct}%</span>
+                    </div>`;
                 }
-            }
 
-            let roleBadge = "";
-            if (p.role === 'Pengawas') {
-                roleBadge = `<span style="font-size: 0.6rem; padding: 2px 6px; background: rgba(249, 115, 22, 0.1); color: var(--primary); border: 1px solid rgba(249, 115, 22, 0.2); border-radius: 4px; font-weight: 700;">PML</span>`;
-            } else if (p.role === 'Pencacah') {
-                roleBadge = `<span style="font-size: 0.6rem; padding: 2px 6px; background: rgba(59, 130, 246, 0.1); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 4px; font-weight: 700;">PPL</span>`;
-            }
-
-            let deltaHtml = "";
-            if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
-                let allDates = Object.keys(window.PETUGAS_HISTORY_MAP).sort().filter(d => d !== "2026-07-09");
-                let rangeVal = window.petugasHistoryRange || '7';
-                let activeDates = allDates;
-                if (rangeVal === '7') {
-                    activeDates = allDates.slice(-7);
-                } else if (rangeVal === '14') {
-                    activeDates = allDates.slice(-14);
-                } else if (rangeVal === '30') {
-                    activeDates = allDates.slice(-30);
+                let waHtml = "";
+                const emailClean = pEmail.toLowerCase().trim();
+                if (window.PETUGAS_PHONES && window.PETUGAS_PHONES[emailClean]) {
+                    const phoneData = window.PETUGAS_PHONES[emailClean];
+                    if (phoneData && phoneData.phone) {
+                        const waLink = `https://wa.me/${phoneData.phone}`;
+                        waHtml = `<a href="${waLink}" target="_blank" onclick="event.stopPropagation();" style="display: inline-flex; align-items: center; color: #25D366; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'" title="Chat WhatsApp">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>`;
+                    }
                 }
-                const displayDates = [...activeDates].reverse();
 
-                displayDates.forEach((d) => {
-                    let dVal = undefined;
-                    let dPct = undefined;
-                    let dHtmlDetails = "";
+                let roleBadge = "";
+                if (pRole === 'Pengawas') {
+                    roleBadge = `<span style="font-size: 0.6rem; padding: 2px 6px; background: rgba(249, 115, 22, 0.1); color: var(--primary); border: 1px solid rgba(249, 115, 22, 0.2); border-radius: 4px; font-weight: 700;">PML</span>`;
+                } else if (pRole === 'Pencacah') {
+                    roleBadge = `<span style="font-size: 0.6rem; padding: 2px 6px; background: rgba(59, 130, 246, 0.1); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 4px; font-weight: 700;">PPL</span>`;
+                }
 
-                    if (window.PETUGAS_HISTORY_MAP[d] && window.PETUGAS_HISTORY_MAP[d][p.role] && window.PETUGAS_HISTORY_MAP[d][p.role][p.email]) {
-                        const hSnap = window.PETUGAS_HISTORY_MAP[d][p.role][p.email];
-                        const dIdx = allDates.indexOf(d);
+                let slsBadgeHtml = "";
+                if (p.sls_list && p.sls_list.length > 0) {
+                    if (p.sls_list.length === 1) {
+                        slsBadgeHtml = `<span style="font-family: monospace; font-size: 0.7rem; color: #4338ca; background: #e0e7ff; padding: 1px 6px; border-radius: 4px; font-weight: 600; white-space: nowrap;" title="ID SLS: ${p.sls_list[0]}">ID SLS: ${p.sls_list[0]}</span>`;
+                    } else if (p.sls_list.length <= 2) {
+                        slsBadgeHtml = `<span style="font-family: monospace; font-size: 0.7rem; color: #4338ca; background: #e0e7ff; padding: 1px 6px; border-radius: 4px; font-weight: 600; white-space: nowrap;" title="ID SLS: ${p.sls_list.join(', ')}">ID SLS: ${p.sls_list.join(', ')}</span>`;
+                    } else {
+                        slsBadgeHtml = `<span style="font-family: monospace; font-size: 0.7rem; color: #4338ca; background: #e0e7ff; padding: 1px 6px; border-radius: 4px; font-weight: 600; white-space: nowrap; cursor: pointer;" title="ID SLS (${p.sls_list.length}): &#10;${p.sls_list.join('&#10;')}">ID SLS: ${p.sls_list[0]} <span style="font-size:0.62rem; opacity:0.85;">(+${p.sls_list.length - 1} SLS)</span></span>`;
+                    }
+                }
 
-                        if (dIdx > 0) {
-                            const prevDate = allDates[dIdx - 1];
-                            if (window.PETUGAS_HISTORY_MAP[prevDate] && window.PETUGAS_HISTORY_MAP[prevDate][p.role] && window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email]) {
-                                const pSnap = window.PETUGAS_HISTORY_MAP[prevDate][p.role][p.email];
+                let deltaHtml = "";
+                if (window._showPetugasHistory && window.PETUGAS_HISTORY_MAP) {
+                    let allDates = Object.keys(window.PETUGAS_HISTORY_MAP).sort().filter(d => d !== "2026-07-09");
+                    let rangeVal = window.petugasHistoryRange || '7';
+                    let activeDates = allDates;
+                    if (rangeVal === '7') {
+                        activeDates = allDates.slice(-7);
+                    } else if (rangeVal === '14') {
+                        activeDates = allDates.slice(-14);
+                    } else if (rangeVal === '30') {
+                        activeDates = allDates.slice(-30);
+                    }
+                    const displayDates = [...activeDates].reverse();
 
-                                const getD = (k) => (hSnap[k] || 0) - (pSnap[k] || 0);
+                    displayDates.forEach((d) => {
+                        let dVal = undefined;
+                        let dPct = undefined;
+                        let dHtmlDetails = "";
 
-                                const dSubPPL = getD('submitted_pencacah');
-                                const dSubResp = getD('submitted_respondent');
-                                const dAppr = getD('approved');
-                                const dRej = getD('rejected');
-                                const dRev = getD('revoked');
-                                const dEdPml = getD('edited_pengawas');
-                                const dEdAdm = getD('edited_admin');
-                                const dCompAdm = getD('completed_admin');
+                        if (window.PETUGAS_HISTORY_MAP[d] && window.PETUGAS_HISTORY_MAP[d][pRole] && window.PETUGAS_HISTORY_MAP[d][pRole][pEmail]) {
+                            const hSnap = window.PETUGAS_HISTORY_MAP[d][pRole][pEmail];
+                            const dIdx = allDates.indexOf(d);
 
-                                let target = hSnap.target || p.total || 1;
-                                let pTarget = pSnap.target || p.total || 1;
-                                let currCum = 0, prevCum = 0;
+                            if (dIdx > 0) {
+                                const prevDate = allDates[dIdx - 1];
+                                if (window.PETUGAS_HISTORY_MAP[prevDate] && window.PETUGAS_HISTORY_MAP[prevDate][pRole] && window.PETUGAS_HISTORY_MAP[prevDate][pRole][pEmail]) {
+                                    const pSnap = window.PETUGAS_HISTORY_MAP[prevDate][pRole][pEmail];
 
-                                if (p.role === 'Pengawas') {
-                                    currCum = (hSnap.approved || 0) + (hSnap.rejected || 0) + (hSnap.revoked || 0);
-                                    prevCum = (pSnap.approved || 0) + (pSnap.rejected || 0) + (pSnap.revoked || 0);
-                                } else {
-                                    // Pencacah: Selain Open dan Draft
-                                    currCum = (hSnap.submitted_pencacah || 0) + (hSnap.approved || 0) + (hSnap.rejected || 0) +
-                                        (hSnap.edited_admin || 0) + (hSnap.completed_admin || 0) + (hSnap.submitted_respondent || 0) +
-                                        (hSnap.revoked || 0) + (hSnap.edited_pengawas || 0);
-                                    prevCum = (pSnap.submitted_pencacah || 0) + (pSnap.approved || 0) + (pSnap.rejected || 0) +
-                                        (pSnap.edited_admin || 0) + (pSnap.completed_admin || 0) + (pSnap.submitted_respondent || 0) +
-                                        (pSnap.revoked || 0) + (pSnap.edited_pengawas || 0);
+                                    const getD = (k) => (hSnap[k] || 0) - (pSnap[k] || 0);
+
+                                    const dSubPPL = getD('submitted_pencacah');
+                                    const dSubResp = getD('submitted_respondent');
+                                    const dAppr = getD('approved');
+                                    const dRej = getD('rejected');
+                                    const dRev = getD('revoked');
+                                    const dEdPml = getD('edited_pengawas');
+                                    const dEdAdm = getD('edited_admin');
+                                    const dCompAdm = getD('completed_admin');
+
+                                    let target = hSnap.target || p.total || 1;
+                                    let pTarget = pSnap.target || p.total || 1;
+                                    let currCum = 0, prevCum = 0;
+
+                                    if (pRole === 'Pengawas') {
+                                        currCum = (hSnap.approved || 0) + (hSnap.rejected || 0) + (hSnap.revoked || 0);
+                                        prevCum = (pSnap.approved || 0) + (pSnap.rejected || 0) + (pSnap.revoked || 0);
+                                    } else {
+                                        currCum = (hSnap.submitted_pencacah || 0) + (hSnap.approved || 0) + (hSnap.rejected || 0) +
+                                            (hSnap.edited_admin || 0) + (hSnap.completed_admin || 0) + (hSnap.submitted_respondent || 0) +
+                                            (hSnap.revoked || 0) + (hSnap.edited_pengawas || 0);
+                                        prevCum = (pSnap.submitted_pencacah || 0) + (pSnap.approved || 0) + (pSnap.rejected || 0) +
+                                            (pSnap.edited_admin || 0) + (pSnap.completed_admin || 0) + (pSnap.submitted_respondent || 0) +
+                                            (pSnap.revoked || 0) + (pSnap.edited_pengawas || 0);
+                                    }
+
+                                    dVal = currCum - prevCum;
+                                    dPct = (currCum / target * 100) - (prevCum / pTarget * 100);
+
+                                    const dTargetVal = getD('target');
+                                    const dOpen = getD('open');
+                                    const dDraft = getD('draft');
+
+                                    if (dTargetVal !== 0) dHtmlDetails += `<span style="color:#64748b">Target: ${dTargetVal > 0 ? '+' : ''}${dTargetVal}</span>`;
+                                    if (dOpen !== 0) dHtmlDetails += `<span style="color:#64748b">Open: ${dOpen > 0 ? '+' : ''}${dOpen}</span>`;
+                                    if (dDraft !== 0) dHtmlDetails += `<span style="color:#64748b">Draft: ${dDraft > 0 ? '+' : ''}${dDraft}</span>`;
+                                    if (dSubPPL !== 0) dHtmlDetails += `<span style="color:#3b82f6">Submit PPL: ${dSubPPL > 0 ? '+' : ''}${dSubPPL}</span>`;
+                                    if (dAppr !== 0) dHtmlDetails += `<span style="color:#10b981">Approved: ${dAppr > 0 ? '+' : ''}${dAppr}</span>`;
+                                    if (dCompAdm !== 0) dHtmlDetails += `<span style="color:#8b5cf6">Completed: ${dCompAdm > 0 ? '+' : ''}${dCompAdm}</span>`;
+                                    if (dRej !== 0) dHtmlDetails += `<span style="color:#ef4444">Rejected: ${dRej > 0 ? '+' : ''}${dRej}</span>`;
+                                    if (dRev !== 0) dHtmlDetails += `<span style="color:#f43f5e">Revoked: ${dRev > 0 ? '+' : ''}${dRev}</span>`;
+                                    if (dEdPml !== 0) dHtmlDetails += `<span style="color:#8b5cf6">Edited PML: ${dEdPml > 0 ? '+' : ''}${dEdPml}</span>`;
+                                    if (dEdAdm !== 0) dHtmlDetails += `<span style="color:#d946ef">Edited Admin: ${dEdAdm > 0 ? '+' : ''}${dEdAdm}</span>`;
+                                    if (dSubResp !== 0) dHtmlDetails += `<span style="color:#0ea5e9">Submit Resp: ${dSubResp > 0 ? '+' : ''}${dSubResp}</span>`;
                                 }
-
-                                dVal = currCum - prevCum;
-
-                                dPct = (currCum / target * 100) - (prevCum / pTarget * 100);
-
-                                const dTargetVal = getD('target');
-                                const dOpen = getD('open');
-                                const dDraft = getD('draft');
-
-                                if (dTargetVal !== 0) dHtmlDetails += `<span style="color:#64748b">Target: ${dTargetVal > 0 ? '+' : ''}${dTargetVal}</span>`;
-                                if (dOpen !== 0) dHtmlDetails += `<span style="color:#64748b">Open: ${dOpen > 0 ? '+' : ''}${dOpen}</span>`;
-                                if (dDraft !== 0) dHtmlDetails += `<span style="color:#64748b">Draft: ${dDraft > 0 ? '+' : ''}${dDraft}</span>`;
-                                if (dSubPPL !== 0) dHtmlDetails += `<span style="color:#3b82f6">Submit PPL: ${dSubPPL > 0 ? '+' : ''}${dSubPPL}</span>`;
-                                if (dAppr !== 0) dHtmlDetails += `<span style="color:#10b981">Approved: ${dAppr > 0 ? '+' : ''}${dAppr}</span>`;
-                                if (dCompAdm !== 0) dHtmlDetails += `<span style="color:#8b5cf6">Completed: ${dCompAdm > 0 ? '+' : ''}${dCompAdm}</span>`;
-                                if (dRej !== 0) dHtmlDetails += `<span style="color:#ef4444">Rejected: ${dRej > 0 ? '+' : ''}${dRej}</span>`;
-                                if (dRev !== 0) dHtmlDetails += `<span style="color:#f43f5e">Revoked: ${dRev > 0 ? '+' : ''}${dRev}</span>`;
-                                if (dEdPml !== 0) dHtmlDetails += `<span style="color:#8b5cf6">Edited PML: ${dEdPml > 0 ? '+' : ''}${dEdPml}</span>`;
-                                if (dEdAdm !== 0) dHtmlDetails += `<span style="color:#d946ef">Edited Admin: ${dEdAdm > 0 ? '+' : ''}${dEdAdm}</span>`;
-                                if (dSubResp !== 0) dHtmlDetails += `<span style="color:#0ea5e9">Submit Resp: ${dSubResp > 0 ? '+' : ''}${dSubResp}</span>`;
                             }
                         }
-                    }
-                    if (dVal === undefined) {
-                        deltaHtml += `<td style="text-align: center; min-width: 90px; color: var(--text-secondary);">—</td>`;
-                    } else {
-                        const dColor = dVal > 0 ? '#16a34a' : (dVal === 0 ? '#d97706' : '#dc2626');
-                        const isLatest = (d === allDates[allDates.length - 1]);
-                        deltaHtml += `<td style="text-align: center; min-width: 90px; background: ${isLatest ? 'rgba(99,102,241,0.06)' : 'transparent'};">
-                            <div style="font-weight: 700; color: ${dColor}; font-size: 1.05em;">
-                                ${dVal > 0 ? '+' : ''}${dVal.toLocaleString('id-ID')}
-                                <span style="font-size: 0.75em; opacity: 0.85; margin-left: 2px;">(${dPct > 0 ? '+' : ''}${dPct.toFixed(1).replace('.', ',')}%)</span>
-                            </div>
-                            <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px; display: flex; flex-direction: column; gap: 2px;">
-                                ${dHtmlDetails}
-                            </div>
-                        </td>`;
-                    }
-                });
-            }
+                        if (dVal === undefined) {
+                            deltaHtml += `<td style="text-align: center; min-width: 90px; color: var(--text-secondary);">—</td>`;
+                        } else {
+                            const dColor = dVal > 0 ? '#16a34a' : (dVal === 0 ? '#d97706' : '#dc2626');
+                            const isLatest = (d === allDates[allDates.length - 1]);
+                            deltaHtml += `<td style="text-align: center; min-width: 90px; background: ${isLatest ? 'rgba(99,102,241,0.06)' : 'transparent'};">
+                                <div style="font-weight: 700; color: ${dColor}; font-size: 1.05em;">
+                                    ${dVal > 0 ? '+' : ''}${dVal.toLocaleString('id-ID')}
+                                    <span style="font-size: 0.75em; opacity: 0.85; margin-left: 2px;">(${dPct > 0 ? '+' : ''}${dPct.toFixed(1).replace('.', ',')}%)</span>
+                                </div>
+                                <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px; display: flex; flex-direction: column; gap: 2px;">
+                                    ${dHtmlDetails}
+                                </div>
+                            </td>`;
+                        }
+                    });
+                }
 
-            html += `
-                <tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s; cursor: pointer;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'" onclick="window.showPetugasSLSDetail('${p.email}', '${p.role}', '${p.name.replace(/'/g, "\\'")}')">
-                    <td style="text-align: center; font-weight: 600; color: var(--text-secondary); width: 50px; min-width: 50px;">${idxReal + 1}</td>
-                    <td style="font-weight: 600; color: var(--text-primary); min-width: 200px;">
-                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            <div style="width: 24px; height: 24px; border-radius: 50%; background: rgba(249, 115, 22, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; flex-shrink: 0;">
-                                ${p.name.substring(0, 2).toUpperCase()}
+                html += `
+                    <tr style="border-bottom: 1px solid var(--border-light); transition: all 0.2s; cursor: pointer;" onmouseover="this.style.background='var(--bg-secondary)'" onmouseout="this.style.background='transparent'" onclick="window.showPetugasSLSDetail('${safeEmailJs}', '${safeRoleJs}', '${safeNameJs}')">
+                        <td style="text-align: center; font-weight: 600; color: var(--text-secondary); width: 50px; min-width: 50px;">${idxReal + 1}</td>
+                        <td style="font-weight: 600; color: var(--text-primary); min-width: 200px;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div style="width: 24px; height: 24px; border-radius: 50%; background: rgba(249, 115, 22, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; flex-shrink: 0;">
+                                    ${initials}
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                                    <span>${pName}</span>
+                                    ${roleBadge}
+                                    ${slsBadgeHtml}
+                                </div>
                             </div>
-                            <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
-                                <span>${p.name}</span>
-                                ${roleBadge}
-                                ${slsBadgeHtml}
+                        </td>
+                        <td style="font-size: 0.85rem; font-family: monospace; color: var(--text-secondary); min-width: 160px;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span>${pEmail}</span>
+                                ${waHtml}
                             </div>
-                        </div>
-                    </td>
-                    <td style="font-size: 0.85rem; font-family: monospace; color: var(--text-secondary); min-width: 160px;">
-                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            <span>${p.email}</span>
-                            ${waHtml}
-                        </div>
-                    </td>
-                    <td style="text-align: center; font-family: monospace; font-weight: 700; min-width: 90px;">${p.total.toLocaleString('id-ID')}</td>
-                    <td style="text-align: center; font-family: monospace; color: #ef4444; min-width: 90px;">
-                        <div style="font-size: 1.05em; font-weight: 700;">${p.belum.toLocaleString('id-ID')}</div>
-                        <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px; display: flex; flex-direction: column; gap: 2px;">
-                            ${p.open > 0 ? `<span style="color:#64748b">Open: ${p.open}</span>` : ''}
-                            ${p.draft > 0 ? `<span style="color:#f59e0b">Draft: ${p.draft}</span>` : ''}
-                        </div>
-                    </td>
-                    <td style="text-align: center; font-family: monospace; color: var(--color-delivered); min-width: 95px;">
-                        <div style="font-size: 1.05em; font-weight: 700;">${p.selesai.toLocaleString('id-ID')}</div>
-                        <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px; display: flex; flex-direction: column; gap: 2px;">
-                            ${p.submitted_pencacah > 0 ? `<span style="color:#3b82f6">Submit PPL: ${p.submitted_pencacah}</span>` : ''}
-                            ${p.submitted_respondent > 0 ? `<span style="color:#0ea5e9">Submit Resp: ${p.submitted_respondent}</span>` : ''}
-                            ${p.approved > 0 ? `<span style="color:#10b981">Approved: ${p.approved}</span>` : ''}
-                            ${p.completed_admin > 0 ? `<span style="color:#8b5cf6">Completed: ${p.completed_admin}</span>` : ''}
-                            ${p.rejected > 0 ? `<span style="color:#ef4444">Rejected: ${p.rejected}</span>` : ''}
-                            ${p.revoked > 0 ? `<span style="color:#f43f5e">Revoked: ${p.revoked}</span>` : ''}
-                            ${p.edited_pengawas > 0 ? `<span style="color:#8b5cf6">Edited PML: ${p.edited_pengawas}</span>` : ''}
-                            ${p.edited_admin > 0 ? `<span style="color:#d946ef">Edited Admin: ${p.edited_admin}</span>` : ''}
-                        </div>
-                    </td>
-                    ${deltaHtml}
-                    <td style="text-align: center; min-width: 100px;">${badgeHtml}</td>
-                </tr>
-            `;
+                        </td>
+                        <td style="text-align: center; font-family: monospace; font-weight: 700; min-width: 90px;">${(p.total || 0).toLocaleString('id-ID')}</td>
+                        <td style="text-align: center; font-family: monospace; color: #ef4444; min-width: 90px;">
+                            <div style="font-size: 1.05em; font-weight: 700;">${(p.belum || 0).toLocaleString('id-ID')}</div>
+                            <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px; display: flex; flex-direction: column; gap: 2px;">
+                                ${p.open > 0 ? `<span style="color:#64748b">Open: ${p.open}</span>` : ''}
+                                ${p.draft > 0 ? `<span style="color:#f59e0b">Draft: ${p.draft}</span>` : ''}
+                            </div>
+                        </td>
+                        <td style="text-align: center; font-family: monospace; color: var(--color-delivered); min-width: 95px;">
+                            <div style="font-size: 1.05em; font-weight: 700;">${(p.selesai || 0).toLocaleString('id-ID')}</div>
+                            <div style="font-size: 0.65rem; color: #94a3b8; margin-top: 4px; display: flex; flex-direction: column; gap: 2px;">
+                                ${p.submitted_pencacah > 0 ? `<span style="color:#3b82f6">Submit PPL: ${p.submitted_pencacah}</span>` : ''}
+                                ${p.submitted_respondent > 0 ? `<span style="color:#0ea5e9">Submit Resp: ${p.submitted_respondent}</span>` : ''}
+                                ${p.approved > 0 ? `<span style="color:#10b981">Approved: ${p.approved}</span>` : ''}
+                                ${p.completed_admin > 0 ? `<span style="color:#8b5cf6">Completed: ${p.completed_admin}</span>` : ''}
+                                ${p.rejected > 0 ? `<span style="color:#ef4444">Rejected: ${p.rejected}</span>` : ''}
+                                ${p.revoked > 0 ? `<span style="color:#f43f5e">Revoked: ${p.revoked}</span>` : ''}
+                                ${p.edited_pengawas > 0 ? `<span style="color:#8b5cf6">Edited PML: ${p.edited_pengawas}</span>` : ''}
+                                ${p.edited_admin > 0 ? `<span style="color:#d946ef">Edited Admin: ${p.edited_admin}</span>` : ''}
+                            </div>
+                        </td>
+                        ${deltaHtml}
+                        <td style="text-align: center; min-width: 100px;">${badgeHtml}</td>
+                    </tr>
+                `;
+            } catch (err) {
+                console.error("Error rendering row for petugas:", p, err);
+            }
         });
         tbody.innerHTML = html;
 
