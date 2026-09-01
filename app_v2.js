@@ -8391,13 +8391,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let slsBadgeHtml = "";
                 if (p.sls_list && p.sls_list.length > 0) {
-                    if (p.sls_list.length === 1) {
-                        slsBadgeHtml = `<span style="font-family: monospace; font-size: 0.7rem; color: #4338ca; background: #e0e7ff; padding: 1px 6px; border-radius: 4px; font-weight: 600; white-space: nowrap;" title="ID SLS: ${p.sls_list[0]}">ID SLS: ${p.sls_list[0]}</span>`;
-                    } else if (p.sls_list.length <= 2) {
-                        slsBadgeHtml = `<span style="font-family: monospace; font-size: 0.7rem; color: #4338ca; background: #e0e7ff; padding: 1px 6px; border-radius: 4px; font-weight: 600; white-space: nowrap;" title="ID SLS: ${p.sls_list.join(', ')}">ID SLS: ${p.sls_list.join(', ')}</span>`;
-                    } else {
-                        slsBadgeHtml = `<span style="font-family: monospace; font-size: 0.7rem; color: #4338ca; background: #e0e7ff; padding: 1px 6px; border-radius: 4px; font-weight: 600; white-space: nowrap; cursor: pointer;" title="ID SLS (${p.sls_list.length}): &#10;${p.sls_list.join('&#10;')}">ID SLS: ${p.sls_list[0]} <span style="font-size:0.62rem; opacity:0.85;">(+${p.sls_list.length - 1} SLS)</span></span>`;
-                    }
+                    slsBadgeHtml = p.sls_list.map(sls => 
+                        `<span style="font-family: monospace; font-size: 0.7rem; color: #4338ca; background: #e0e7ff; padding: 1px 6px; border-radius: 4px; font-weight: 600; white-space: nowrap;" title="ID SLS: ${sls}">ID SLS: ${sls}</span>`
+                    ).join('');
                 }
 
                 let deltaHtml = "";
