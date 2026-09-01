@@ -11011,9 +11011,9 @@ window.downloadCurrentSeTable = function (surveyType) {
         clearInterval(window._se2026CountdownInterval);
     }
 
-    // Target akhir 31 Agustus 2026 23:59:59
+    // Target akhir 15 September 2026 23:59:59
     // Gunakan constructor yang cross-browser safe (Tahun, Bulan-1, Tanggal, Jam, Menit, Detik)
-    const endDate = new Date(2026, 7, 31, 23, 59, 59);
+    const endDate = new Date(2026, 8, 15, 23, 59, 59);
 
     const tick = () => {
         let now = new Date();

@@ -3,8 +3,8 @@ function updateCountdownSE2026(belumSelesai) {
     const countdownTargetEl = document.getElementById('countdown-daily-target');
     if (!countdownDaysEl || !countdownTargetEl) return;
     
-    // Asumsi tgl akhir 31 Agustus 2026
-    const endDate = new Date('2026-08-31T00:00:00');
+    // Asumsi tgl akhir 15 September 2026
+    const endDate = new Date('2026-09-15T23:59:59');
     let today = new Date(); // Atau gunakan tanggal dashboard jika diperlukan
     today.setHours(0, 0, 0, 0);
     
