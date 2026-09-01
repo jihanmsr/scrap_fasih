@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPDATE_DIR = os.path.join(BASE_DIR, 'update_1sept')
 
 # File paths in update_1sept
-F_PROGRES = os.path.join(UPDATE_DIR, 'rekap_progress_petugas (5).xlsx')
+F_PROGRES = os.path.join(BASE_DIR, 'Rekap Progress Petugas 01_09.xlsx')
 F_REKON   = os.path.join(UPDATE_DIR, 'rekap_sbr_utp_keluarga (5).xlsx')
 F_SUBSLS  = os.path.join(UPDATE_DIR, 'jumlah_subsls_yang_belum_dikunjungi (5).xlsx')
 
