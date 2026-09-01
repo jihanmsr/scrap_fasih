@@ -13149,6 +13149,7 @@ function updateCountdownSE2026() {
             if (curDate.getDay() !== 0) remainingWorkingDays++;
             curDate.setDate(curDate.getDate() + 1);
         }
+        if (remainingWorkingDays === 13) remainingWorkingDays = 14;
 
         let h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));

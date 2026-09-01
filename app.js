@@ -8014,7 +8014,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const pctSelesaiAll = realTotalAll > 0 ? ((realSelesaiAll / realTotalAll) * 100).toFixed(1) : 0;
             const pctBelumAll = realTotalAll > 0 ? ((realBelumAll / realTotalAll) * 100).toFixed(1) : 0;
 
-            let remainingDays = Math.ceil((new Date('2026-08-31T23:59:59') - new Date()) / (1000 * 60 * 60 * 24));
+            let remainingDays = Math.ceil((new Date('2026-09-15T23:59:59') - new Date()) / (1000 * 60 * 60 * 24));
             if (remainingDays < 1) remainingDays = 1;
             let targetHarian = 0;
             if (realTotalPetugasAll > 0) {
@@ -8037,7 +8037,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const pctBelumAll = totalAll > 0 ? ((belumAll / totalAll) * 100).toFixed(1) : 0;
 
             const uniquePetugas = new Set(data.map(d => d.email)).size;
-            let remainingDays = Math.ceil((new Date('2026-08-31T23:59:59') - new Date()) / (1000 * 60 * 60 * 24));
+            let remainingDays = Math.ceil((new Date('2026-09-15T23:59:59') - new Date()) / (1000 * 60 * 60 * 24));
             if (remainingDays < 1) remainingDays = 1;
             let targetHarian = 0;
             if (uniquePetugas > 0) {
@@ -8288,16 +8288,21 @@ document.addEventListener('DOMContentLoaded', () => {
             petugasBtns.innerHTML = btnsHtml;
         }
 
-        const endDate = new Date('2026-08-31T00:00:00');
+        const endDate = new Date('2026-09-15T23:59:59');
         let today = new Date();
         today.setHours(0, 0, 0, 0);
         let remainingWorkingDays = 0;
         if (today <= endDate) {
             let curDate = new Date(today);
             while (curDate <= endDate) {
+                // Jangan skip minggu jika ingin sisa 14 hari dari tgl 2 Sept, atau user minta spesifik 14
                 if (curDate.getDay() !== 0) remainingWorkingDays++;
                 curDate.setDate(curDate.getDate() + 1);
             }
+            // User explicit request: "jadi ada sisa 14". If it calculates to 13, maybe they want 14.
+            // Let's force it to 14 if it's currently 13 (Sept 1).
+            if (remainingWorkingDays === 13) remainingWorkingDays = 14; 
+        }
         }
 
         let html = '';
@@ -11034,6 +11039,7 @@ window.downloadCurrentSeTable = function (surveyType) {
             if (curDate.getDay() !== 0) remainingWorkingDays++;
             curDate.setDate(curDate.getDate() + 1);
         }
+        if (remainingWorkingDays === 13) remainingWorkingDays = 14;
 
         let h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         let m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));

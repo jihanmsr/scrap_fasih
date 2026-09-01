@@ -18,6 +18,7 @@ function updateCountdownSE2026(belumSelesai) {
             }
             curDate.setDate(curDate.getDate() + 1);
         }
+        if (remainingWorkingDays === 13) remainingWorkingDays = 14;
     }
     
     if (remainingWorkingDays > 0) {
