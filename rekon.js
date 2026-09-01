@@ -19,7 +19,8 @@ async function loadRekonData() {
             
             rekonSlsData.forEach(d => {
                 if (typeof d.nmkab === 'string') {
-                    d.nmkab = d.nmkab.replace(/^\[\d+\]\s*/, '');
+                    // Do not strip the kabkot code so it sorts properly by code
+                    // d.nmkab = d.nmkab.replace(/^\[\d+\]\s*/, '');
                 }
             });
             
@@ -54,7 +55,11 @@ function getUniqueValues(data, key, filters = {}) {
     filtered.forEach(d => {
         if (d[key]) set.add(d[key]);
     });
-    return Array.from(set).sort();
+    let arr = Array.from(set).sort();
+    if (key === 'nmkab' || key === 'kab_name' || key === 'kab') {
+        arr.sort(window.sortKabupatenCallback);
+    }
+    return arr;
 }
 
 function populateSelect(id, values, defaultText) {

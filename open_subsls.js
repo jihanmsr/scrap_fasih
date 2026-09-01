@@ -97,7 +97,7 @@ function populateMapFilters() {
         if (d.kabupaten && d.kabupaten.trim()) kabSet.add(d.kabupaten.trim());
     });
 
-    Array.from(kabSet).sort().forEach(kab => {
+    Array.from(kabSet).sort(window.sortKabupatenCallback).forEach(kab => {
         const opt = document.createElement('option');
         opt.value = kab;
         opt.textContent = kab;
@@ -123,7 +123,7 @@ window.updateMapKecFilter = function() {
         }
     });
     
-    Array.from(kecSet).sort().forEach(kec => {
+    Array.from(kecSet).sort(window.sortKabupatenCallback).forEach(kec => {
         const opt = document.createElement('option');
         opt.value = kec;
         opt.textContent = kec;
@@ -264,7 +264,7 @@ function initFilters() {
     const kabFilter = document.getElementById('subsls-filter-kab');
     if (!kabFilter) return;
     kabFilter.innerHTML = '<option value="">Semua Kabupaten</option>';
-    const kabupatens = [...new Set(window.OPEN_SUBSLS_DATA.map(d => d.kabupaten))].filter(Boolean).sort();
+    const kabupatens = [...new Set(window.OPEN_SUBSLS_DATA.map(d => d.kabupaten))].filter(Boolean).sort(window.sortKabupatenCallback);
     kabupatens.forEach(kab => {
         const option = document.createElement('option');
         option.value = kab;
@@ -289,7 +289,7 @@ window.toggleExcelFilter = function(e, key) {
         if (key === 'nama_petugas' && !d[key]) return '(Belum Diassign)';
         if (key === 'nama_sub_sls') return d.nama_sub_sls || d.sls || '-';
         return d[key] || '-';
-    }))].sort();
+    }))].sort(window.sortKabupatenCallback);
 
     let html = `
         <div style="margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px;">
@@ -652,7 +652,7 @@ function populateDrawerFilters() {
         if (d.kabupaten && d.kabupaten.trim()) kabSet.add(d.kabupaten.trim());
     });
 
-    Array.from(kabSet).sort().forEach(kab => {
+    Array.from(kabSet).sort(window.sortKabupatenCallback).forEach(kab => {
         const opt = document.createElement("option");
         opt.value = kab;
         opt.textContent = kab;
@@ -678,7 +678,7 @@ window.onDrawerKabChange = function() {
             kecSet.add(d.kecamatan.trim());
         }
     });
-    Array.from(kecSet).sort().forEach(k => {
+    Array.from(kecSet).sort(window.sortKabupatenCallback).forEach(k => {
         const opt = document.createElement("option");
         opt.value = k;
         opt.textContent = k;
@@ -706,7 +706,7 @@ window.onDrawerKecChange = function() {
             desaSet.add(d.desa.trim());
         }
     });
-    Array.from(desaSet).sort().forEach(d => {
+    Array.from(desaSet).sort(window.sortKabupatenCallback).forEach(d => {
         const opt = document.createElement("option");
         opt.value = d;
         opt.textContent = d;
@@ -733,7 +733,7 @@ window.onDrawerDesaChange = function() {
             if (sName) slsSet.add(sName);
         }
     });
-    Array.from(slsSet).sort().forEach(s => {
+    Array.from(slsSet).sort(window.sortKabupatenCallback).forEach(s => {
         const opt = document.createElement("option");
         opt.value = s;
         opt.textContent = s;

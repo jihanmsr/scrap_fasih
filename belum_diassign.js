@@ -36,7 +36,7 @@
         const select = document.getElementById('belum-filter-kab');
         if (!select) return;
 
-        const kabs = [...new Set(rawData.map(d => d.kab_name).filter(Boolean))].sort();
+        const kabs = [...new Set(rawData.map(d => d.kab_name).filter(Boolean))].sort(window.sortKabupatenCallback);
         select.innerHTML = '<option value="">Semua Kabupaten/Kota</option>';
         kabs.forEach(kab => {
             const opt = document.createElement('option');
@@ -50,7 +50,7 @@
         const select = document.getElementById('belum-filter-status');
         if (!select) return;
 
-        const statuses = [...new Set(rawData.map(d => d.status).filter(Boolean))].sort();
+        const statuses = [...new Set(rawData.map(d => d.status).filter(Boolean))].sort(window.sortKabupatenCallback);
         select.innerHTML = '<option value="">Semua Status</option>';
         statuses.forEach(st => {
             const opt = document.createElement('option');

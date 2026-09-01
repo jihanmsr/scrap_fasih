@@ -16,7 +16,7 @@
         // Isi dropdown Kab
         const kabSel = document.getElementById('pny-filter-kab');
         if (kabSel && kabSel.options.length === 1) {
-            const kabList = [...new Set(data.map(d => d.kabupaten))].sort();
+            const kabList = [...new Set(data.map(d => d.kabupaten))].sort(window.sortKabupatenCallback);
             kabList.forEach(k => {
                 const opt = document.createElement('option');
                 opt.value = k;

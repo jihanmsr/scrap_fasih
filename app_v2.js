@@ -3336,7 +3336,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!kabSelect) return;
 
         // Extract unique regions
-        const uniqueKabs = [...new Set(window.ASSIGN_SLS_DATA.map(i => i.kab_name))].sort();
+        const uniqueKabs = [...new Set(window.ASSIGN_SLS_DATA.map(i => i.kab_name))].sort(window.sortKabupatenCallback);
 
         kabSelect.innerHTML = '<option value="all">Semua Kabupaten</option>' +
             uniqueKabs.map(k => `<option value="${k}">${k}</option>`).join('');
@@ -3392,7 +3392,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         kecSelect.disabled = false;
         const filteredSls = window.ASSIGN_SLS_DATA.filter(i => i.kab_name === kabVal);
-        const uniqueKecs = [...new Set(filteredSls.map(i => i.kec_name))].sort();
+        const uniqueKecs = [...new Set(filteredSls.map(i => i.kec_name))].sort(window.sortKabupatenCallback);
 
         kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>' +
             uniqueKecs.map(k => `<option value="${k}">${k}</option>`).join('');
@@ -3418,7 +3418,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         desaSelect.disabled = false;
         const filteredSls = window.ASSIGN_SLS_DATA.filter(i => i.kab_name === kabVal && i.kec_name === kecVal);
-        const uniqueDesas = [...new Set(filteredSls.map(i => i.desa_name))].sort();
+        const uniqueDesas = [...new Set(filteredSls.map(i => i.desa_name))].sort(window.sortKabupatenCallback);
 
         desaSelect.innerHTML = '<option value="all">Semua Desa</option>' +
             uniqueDesas.map(d => `<option value="${d}">${d}</option>`).join('');
@@ -4481,7 +4481,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!kabSelect) return;
 
         // Extract unique regions
-        const uniqueKabs = [...new Set(window.ASSIGN_SLS_DATA.map(i => i.kab_name))].sort();
+        const uniqueKabs = [...new Set(window.ASSIGN_SLS_DATA.map(i => i.kab_name))].sort(window.sortKabupatenCallback);
 
         kabSelect.innerHTML = '<option value="all">Semua Kabupaten</option>' +
             uniqueKabs.map(k => `<option value="${k}">${k}</option>`).join('');
@@ -4545,7 +4545,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         kecSelect.disabled = false;
         const filteredSls = window.ASSIGN_SLS_DATA.filter(i => i.kab_name === kabVal);
-        const uniqueKecs = [...new Set(filteredSls.map(i => i.kec_name))].sort();
+        const uniqueKecs = [...new Set(filteredSls.map(i => i.kec_name))].sort(window.sortKabupatenCallback);
 
         kecSelect.innerHTML = '<option value="all">Semua Kecamatan</option>' +
             uniqueKecs.map(k => `<option value="${k}">${k}</option>`).join('');
@@ -4572,7 +4572,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         desaSelect.disabled = false;
         const filteredSls = window.ASSIGN_SLS_DATA.filter(i => i.kab_name === kabVal && i.kec_name === kecVal);
-        const uniqueDesas = [...new Set(filteredSls.map(i => i.desa_name))].sort();
+        const uniqueDesas = [...new Set(filteredSls.map(i => i.desa_name))].sort(window.sortKabupatenCallback);
 
         desaSelect.innerHTML = '<option value="all">Semua Desa</option>' +
             uniqueDesas.map(d => `<option value="${d}">${d}</option>`).join('');
@@ -9423,7 +9423,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function populateAnomaliKabDropdown(data) {
         const sel = document.getElementById('anomali-filter-kab');
         if (!sel) return;
-        const kabs = [...new Set(data.map(r => r.kab_code).filter(Boolean))].sort();
+        const kabs = [...new Set(data.map(r => r.kab_code).filter(Boolean))].sort(window.sortKabupatenCallback);
         sel.innerHTML = '<option value="">Semua Kab/Kota</option>' +
             kabs.map(k => `<option value="${k}">${k}</option>`).join('');
     }
@@ -9455,7 +9455,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function populateAnomaliJenisDropdown(data) {
         const sel = document.getElementById('anomali-filter-jenis');
         if (!sel) return;
-        const jenisList = [...new Set(data.map(r => r.jenis_anomali).filter(Boolean))].sort();
+        const jenisList = [...new Set(data.map(r => r.jenis_anomali).filter(Boolean))].sort(window.sortKabupatenCallback);
         sel.innerHTML = '<option value="">Semua Jenis</option>' +
             jenisList.map(j => `<option value="${j}">${j.replace('Biaya Produksi ', '')}</option>`).join('');
     }
@@ -10426,7 +10426,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function populateDataHilangKabDropdown(data) {
         const sel = document.getElementById('data_hilang-filter-kab');
         if (!sel) return;
-        const kabs = [...new Set(data.map(r => r.kab_code).filter(Boolean))].sort();
+        const kabs = [...new Set(data.map(r => r.kab_code).filter(Boolean))].sort(window.sortKabupatenCallback);
         sel.innerHTML = '<option value="">Semua Kab/Kota</option>' +
             kabs.map(k => `<option value="${k}">${k}</option>`).join('');
     }
@@ -10458,7 +10458,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function populateDataHilangJenisDropdown(data) {
         const sel = document.getElementById('data_hilang-filter-jenis');
         if (!sel) return;
-        const jenisList = [...new Set(data.map(r => r.jenis_data_hilang).filter(Boolean))].sort();
+        const jenisList = [...new Set(data.map(r => r.jenis_data_hilang).filter(Boolean))].sort(window.sortKabupatenCallback);
         sel.innerHTML = '<option value="">Semua Jenis</option>' +
             jenisList.map(j => `<option value="${j}">${j.replace('Biaya Produksi ', '')}</option>`).join('');
     }
@@ -11655,7 +11655,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // clear dropdowns
             const kabFilter = document.getElementById('data_hilang-filter-kab');
             if(kabFilter) {
-                let kabs = [...new Set(data.map(d => d.kab || d.kabupaten))].filter(Boolean).sort();
+                let kabs = [...new Set(data.map(d => d.kab || d.kabupaten))].filter(Boolean).sort(window.sortKabupatenCallback);
                 kabFilter.innerHTML = '<option value="">Semua Kab/Kota</option>' + kabs.map(k => `<option value="${k}">${k}</option>`).join('');
             }
             
@@ -12599,7 +12599,7 @@ window.initTrenFilters = function () {
     data.forEach(d => { if (d.kab_name) kabSet.add(d.kab_name); });
     const kabFilter = document.getElementById('tren-kab-filter');
     if (kabFilter && kabFilter.options.length <= 1) {
-        Array.from(kabSet).sort().forEach(kab => {
+        Array.from(kabSet).sort(window.sortKabupatenCallback).forEach(kab => {
             const opt = document.createElement('option');
             opt.value = kab;
             opt.textContent = kab.replace(/^\[\d+\]\s*/, '');

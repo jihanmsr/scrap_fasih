@@ -22,6 +22,20 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="daily_submission_stats.js?v=1788231548_v0109"></script>
+    <script>
+        window.KAB_ORDER = ["BANGGAI KEPULAUAN","BANGGAI","MOROWALI","POSO","DONGGALA","TOLI-TOLI","BUOL","PARIGI MOUTONG","TOJO UNA-UNA","SIGI","BANGGAI LAUT","MOROWALI UTARA","PALU"];
+        window.sortKabupatenCallback = function(a, b) {
+            if (typeof a !== 'string' || typeof b !== 'string') return 0;
+            let cleanA = a.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+            let cleanB = b.replace(/^\[\d+\]\s*/, '').trim().toUpperCase();
+            let iA = window.KAB_ORDER.indexOf(cleanA);
+            let iB = window.KAB_ORDER.indexOf(cleanB);
+            if (iA === -1) iA = 999;
+            if (iB === -1) iB = 999;
+            if (iA !== iB) return iA - iB;
+            return a.localeCompare(b);
+        };
+    </script>
     <script src="daily_summary.js?v=1788231548_v0109"></script>
     <script src="open_subsls_data.js?v=1788231548_v0109"></script>
     <script src="petasls.js?v=1788231548_v0109"></script>
