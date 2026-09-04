@@ -5497,10 +5497,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const el = document.getElementById('last-updated-text');
         if (!el) return;
 
-        // --- SEMENTARA: Override text UI agar terlihat seperti update 2 September jam 5 sore ---
-        el.innerHTML = '<span style="color: #ef4444; font-weight: 800;">Update Terakhir: 02 Sep 2026, 17.00.00 (Sync BPS)</span>';
-        return;
-
         let statusText = '';
         if (tabId === 'se_umum' || tabId === 'se_ub') {
             const ipasDataObj = window.IPAS_DATA;
@@ -8567,11 +8563,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     const isLatest = (d === allDates[allDates.length - 1]);
                     const dObj = new Date(d + 'T00:00:00');
                     let label = dObj.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' });
-                    
-                    // --- SEMENTARA: Override tulisan 1 Sep jadi 2 Sep agar sesuai request ---
-                    if (isLatest) {
-                        label = '2 Sep';
-                    }
                     
                     const sublabel = isLatest ? '<br><span style="font-size:0.6rem;font-weight:700;color:var(--primary);">HARI INI</span>' : '<br><span style="font-size:0.6rem;font-weight:400;opacity:0.7;">delta</span>';
                     thHistory += `<th style="text-align: center; min-width: 90px; cursor: pointer; ${isLatest ? 'background:rgba(99,102,241,0.12);border-bottom:2px solid var(--primary);' : ''}" onclick="window.sortPetugasSummary('history_${d}')">${label}${sublabel} <span class="sort-icon"></span></th>`;

@@ -675,9 +675,11 @@ async def run_download_and_update():
         except Exception:
             prev_date = now.date()
             
-        delta_days = 1
-        print(f"[INFO] Tanggal saat ini (WITA): {now_date_str}. Tanggal update terakhir: {prev_date_str}. Selisih: {delta_days} hari.")
+        delta_days = (now.date() - prev_date).days
+        if delta_days < 0: delta_days = 0
         
+        print(f"[INFO] Tanggal saat ini (WITA): {now_date_str}. Tanggal update terakhir: {prev_date_str}. Selisih: {delta_days} hari.")
+
         url = "https://fasih-sm.bps.go.id/app/api/analytic/api/v2/assignment/report-progress-assignment"
         
         compiled_results = {} # survey_type -> kab_code -> kec_list
