@@ -675,8 +675,7 @@ async def run_download_and_update():
         except Exception:
             prev_date = now.date()
             
-        delta_days = (now.date() - prev_date).days
-        if delta_days < 0: delta_days = 0
+        delta_days = 1
         
         print(f"[INFO] Tanggal saat ini (WITA): {now_date_str}. Tanggal update terakhir: {prev_date_str}. Selisih: {delta_days} hari.")
 
