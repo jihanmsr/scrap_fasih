@@ -274,22 +274,31 @@
 
     // ── Sub-tab Switcher inside SLS Open ──────────────────────────────────
     window.switchOpenSubslsSubTab = function (subTab) {
-        const fullopenDiv  = document.getElementById('open_subsls-sub-fullopen');
-        const penyisiranDiv= document.getElementById('open_subsls-sub-penyisiran');
-        const btnFullopen  = document.getElementById('open_subsls-sub-btn-fullopen');
-        const btnPenyisiran= document.getElementById('open_subsls-sub-btn-penyisiran');
+        const fullopenDiv    = document.getElementById('open_subsls-sub-fullopen');
+        const penyisiranDiv  = document.getElementById('open_subsls-sub-penyisiran');
+        const pnyKelDiv      = document.getElementById('open_subsls-sub-penyisiran-keluarga');
+        const btnFullopen    = document.getElementById('open_subsls-sub-btn-fullopen');
+        const btnPenyisiran  = document.getElementById('open_subsls-sub-btn-penyisiran');
+        const btnPnyKel      = document.getElementById('open_subsls-sub-btn-penyisiran-keluarga');
+
+        [btnFullopen, btnPenyisiran, btnPnyKel].forEach(b => {
+            if (b) b.classList.remove('active');
+        });
+        if (fullopenDiv) fullopenDiv.style.display = 'none';
+        if (penyisiranDiv) penyisiranDiv.style.display = 'none';
+        if (pnyKelDiv) pnyKelDiv.style.display = 'none';
 
         if (subTab === 'fullopen') {
             if (fullopenDiv) fullopenDiv.style.display = 'block';
-            if (penyisiranDiv) penyisiranDiv.style.display = 'none';
             if (btnFullopen) btnFullopen.classList.add('active');
-            if (btnPenyisiran) btnPenyisiran.classList.remove('active');
-        } else {
-            if (fullopenDiv) fullopenDiv.style.display = 'none';
+        } else if (subTab === 'penyisiran') {
             if (penyisiranDiv) penyisiranDiv.style.display = 'block';
-            if (btnFullopen) btnFullopen.classList.remove('active');
             if (btnPenyisiran) btnPenyisiran.classList.add('active');
             if (window.initPenyisiran) window.initPenyisiran();
+        } else if (subTab === 'penyisiran-keluarga') {
+            if (pnyKelDiv) pnyKelDiv.style.display = 'block';
+            if (btnPnyKel) btnPnyKel.classList.add('active');
+            if (window.initPenyisiranKeluarga) window.initPenyisiranKeluarga();
         }
     };
 

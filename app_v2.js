@@ -11583,15 +11583,22 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.switchDataHilangSubTab = function(tab) {
+        if (tab === 'penyisiran-keluarga') {
+            if (window.switchTab) window.switchTab('open_subsls');
+            if (window.switchOpenSubslsSubTab) window.switchOpenSubslsSubTab('penyisiran-keluarga');
+            return;
+        }
+
         currentDataHilangTab = tab;
         const btnUsaha = document.getElementById('btn-data-hilang-usaha');
         const btnKeluarga = document.getElementById('btn-data-hilang-keluarga');
+        const btnPenyisiran = document.getElementById('btn-data-hilang-penyisiran');
         const btnNonaktif = document.getElementById('btn-data-hilang-nonaktif');
         const btnDesil = document.getElementById('btn-data-hilang-desil');
         const mainHeader = document.getElementById('main-header');
         const mainSubheader = document.getElementById('main-subheader');
         
-        [btnUsaha, btnKeluarga, btnNonaktif, btnDesil].forEach(b => {
+        [btnUsaha, btnKeluarga, btnPenyisiran, btnNonaktif, btnDesil].forEach(b => {
             if(b) {
                 b.style.background = 'transparent';
                 b.style.color = 'var(--text-secondary)';
@@ -11798,7 +11805,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div style="font-size: 0.75rem; color: var(--text-secondary);">NIK_KK: ${maskStr(item.nik_kk) !== '-' ? maskStr(item.nik_kk) : maskStr(item.no_kk)}</div>
                     </td>
                     <td style="padding: 1rem; vertical-align: top;">
-                        <span style="padding: 0.2rem 0.5rem; background: #fee2e2; color: #991b1b; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${item.status_keluarga || '-'}</span>
+                        <span style="padding: 0.2rem 0.5rem; background: #fee2e2; color: #991b1b; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${item.status_keluarga || '0. Tidak Ditemukan (STOP)'}</span>
                     </td>
                     <td style="padding: 1rem; vertical-align: top; max-width: 150px; overflow: hidden; text-overflow: ellipsis;">
                         <span style="font-size: 0.75rem; color: var(--text-primary); font-weight: 500;" title="${item.ppl_master || item.Petugas || '-'}">${item.ppl_master || item.Petugas || '-'}</span>
