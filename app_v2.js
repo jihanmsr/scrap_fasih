@@ -7645,19 +7645,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const btnPetugas = document.getElementById('btn-summary-petugas');
         const btnDesa = document.getElementById('btn-summary-desa');
-        const btnPalu = document.getElementById('btn-summary-palu');
+        const btnKeberadaan = document.getElementById('btn-summary-keberadaan');
+        const standardSubview = document.getElementById('petugas-standard-subview');
+        const keberadaanContainer = document.getElementById('keberadaan-summary-container');
+        const standardCards = document.getElementById('petugas-summary-cards');
         const petugasContainer = document.getElementById('petugas-summary-table-container');
         const desaContainer = document.getElementById('desa-summary-table-container');
-        const paluContainer = document.getElementById('palu-monitoring-container');
         const searchInput = document.getElementById('petugas-summary-search-input');
         const titleEl = document.getElementById('petugas-summary-title');
         const descEl = document.getElementById('petugas-summary-desc');
-
         const paginationContainer = document.getElementById('petugas-summary-pagination');
 
         // Reset all active states
         btnPetugas?.classList.remove('active');
         btnDesa?.classList.remove('active');
+        btnKeberadaan?.classList.remove('active');
+
+        if (view === 'keberadaan') {
+            btnKeberadaan?.classList.add('active');
+            if (standardSubview) standardSubview.style.display = 'none';
+            if (keberadaanContainer) keberadaanContainer.style.display = 'block';
+            if (standardCards) standardCards.style.display = 'none';
+            if (window.renderKeberadaanTable) {
+                window.renderKeberadaanTable();
+            }
+            return;
+        }
+
+        // Restore standard view (petugas / desa)
+        if (standardSubview) standardSubview.style.display = 'block';
+        if (keberadaanContainer) keberadaanContainer.style.display = 'none';
+        if (standardCards) standardCards.style.display = 'grid';
+
         if (petugasContainer) petugasContainer.style.display = 'none';
         if (desaContainer) desaContainer.style.display = 'none';
 
@@ -7723,6 +7742,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.renderPetugasSummaryTable = function (data) {
+        if (window.granularSummaryView === 'keberadaan') {
+            if (window.renderKeberadaanTable) window.renderKeberadaanTable();
+            return;
+        }
         if (data) window.lastBaseFiltered = data;
         else if (!window.lastBaseFiltered) window.lastBaseFiltered = window.GRANULAR_ASSIGNMENTS_DATA || [];
 
