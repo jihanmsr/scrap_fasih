@@ -111,9 +111,17 @@ def generate():
         pencacah = str(r[31] or '').strip().lower()
         pengawas = str(r[32] or '').strip().lower()
         
-        # Compact SLS detail representation:
-        # [sls, sub, bu_dit, bu_bar, bu_tdk, bu_tut, kl_dit, kl_bar, kl_tdk, kl_men, status_sum, tot_keb, selisih]
-        sls_item = [sls, sub, bu_dit, bu_bar, bu_tdk, bu_tut, kl_dit, kl_bar, kl_tdk, kl_men, status_sum, tot_keb, selisih]
+        # Full SLS detail representation:
+        # 0: sls, 1: sub
+        # 2: bu_dit, 3: bu_bar, 4: bu_tdk, 5: bu_tut, 6: bu_gan, 7: bu_pus
+        # 8: kl_dit, 9: kl_bar, 10: kl_tdk, 11: kl_men, 12: kl_eli, 13: kl_tem, 14: kl_khu
+        # 15: status_sum, 16: tot_keb, 17: selisih
+        sls_item = [
+            sls, sub,
+            bu_dit, bu_bar, bu_tdk, bu_tut, bu_gan, bu_pus,
+            kl_dit, kl_bar, kl_tdk, kl_men, kl_eli, kl_tem, kl_khu,
+            status_sum, tot_keb, selisih
+        ]
         
         def update_petugas(target_dict, email, role):
             if not email: return

@@ -1658,24 +1658,33 @@
 
                         <!-- Controls: Role Switch, Quick Filter Pills, Search, Export -->
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
-                            <!-- Left: Role & Mode Pills -->
+                            <!-- Left: Role, View Mode & Filter Pills -->
                             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <!-- Role Switcher -->
                                 <div class="d-flex gap-1" style="background: var(--bg-secondary, #f1f5f9); padding: 3px; border-radius: 0.6rem; border: 1px solid var(--border-light, #e2e8f0);">
                                     <button class="btn-tab active" id="tab-keb-pencacah" onclick="window.setKeberadaanRole('Pencacah')" style="margin-bottom: 0; padding: 0.35rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.45rem;">Pencacah</button>
                                     <button class="btn-tab" id="tab-keb-pengawas" onclick="window.setKeberadaanRole('Pengawas')" style="margin-bottom: 0; padding: 0.35rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.45rem;">Pengawas</button>
                                 </div>
 
-                                <div class="d-flex gap-1" style="margin-left: 0.5rem;">
+                                <!-- View Mode: Ringkas vs Lengkap 13 Status -->
+                                <div class="d-flex gap-1" style="background: var(--bg-secondary, #f1f5f9); padding: 3px; border-radius: 0.6rem; border: 1px solid var(--border-light, #e2e8f0); margin-left: 0.25rem;">
+                                    <button class="btn-tab active" id="btn-keb-view-compact" onclick="window.setKeberadaanView('compact')" style="margin-bottom: 0; padding: 0.35rem 0.65rem; font-size: 0.78rem; font-weight: 700; border-radius: 0.45rem;" title="Ringkasan dengan Kolom Tidak Ditemukan">📊 Ringkas</button>
+                                    <button class="btn-tab" id="btn-keb-view-full" onclick="window.setKeberadaanView('full')" style="margin-bottom: 0; padding: 0.35rem 0.65rem; font-size: 0.78rem; font-weight: 700; border-radius: 0.45rem;" title="Tampilkan Semua 13 Kategori Status Lengkap">📋 Lengkap (13 Status)</button>
+                                </div>
+
+                                <!-- Filter Pills -->
+                                <div class="d-flex gap-1" style="margin-left: 0.25rem; flex-wrap: wrap;">
                                     <button class="btn btn-sm btn-filter-pill active" id="pill-keb-all" onclick="window.setKeberadaanMode('all')" style="border-radius: 9999px; font-size: 0.76rem; padding: 0.28rem 0.75rem; font-weight: 600; border: 1px solid var(--border-light); background: var(--primary); color: white;">Semua</button>
                                     <button class="btn btn-sm btn-filter-pill" id="pill-keb-bu" onclick="window.setKeberadaanMode('bu_bar')" style="border-radius: 9999px; font-size: 0.76rem; padding: 0.28rem 0.75rem; font-weight: 600; border: 1px solid var(--border-light); background: var(--card-bg); color: var(--text-secondary);">Top Usaha Baru</button>
                                     <button class="btn btn-sm btn-filter-pill" id="pill-keb-kl" onclick="window.setKeberadaanMode('kl_bar')" style="border-radius: 9999px; font-size: 0.76rem; padding: 0.28rem 0.75rem; font-weight: 600; border: 1px solid var(--border-light); background: var(--card-bg); color: var(--text-secondary);">Top Keluarga Baru</button>
-                                    <button class="btn btn-sm btn-filter-pill" id="pill-keb-selisih" onclick="window.setKeberadaanMode('selisih')" style="border-radius: 9999px; font-size: 0.76rem; padding: 0.28rem 0.75rem; font-weight: 600; border: 1px solid rgba(239,68,68,0.3); background: rgba(239,68,68,0.06); color: #dc2626;">⚠️ Ada Selisih</button>
+                                    <button class="btn btn-sm btn-filter-pill" id="pill-keb-tdk" onclick="window.setKeberadaanMode('tdk_dit')" style="border-radius: 9999px; font-size: 0.76rem; padding: 0.28rem 0.75rem; font-weight: 600; border: 1px solid rgba(245,158,11,0.3); background: rgba(245,158,11,0.08); color: #d97706;">⚠️ Top Tdk Ditemukan</button>
+                                    <button class="btn btn-sm btn-filter-pill" id="pill-keb-selisih" onclick="window.setKeberadaanMode('selisih')" style="border-radius: 9999px; font-size: 0.76rem; padding: 0.28rem 0.75rem; font-weight: 600; border: 1px solid rgba(239,68,68,0.3); background: rgba(239,68,68,0.06); color: #dc2626;">❌ Ada Selisih</button>
                                 </div>
                             </div>
 
                             <!-- Right: Search & Export -->
                             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                                <div class="search-wrapper" style="width: 230px; margin: 0; position: relative;">
+                                <div class="search-wrapper" style="width: 210px; margin: 0; position: relative;">
                                     <svg class="search-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" style="width: 15px; height: 15px;">
                                         <circle cx="11" cy="11" r="8"></circle>
                                         <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
@@ -1699,31 +1708,14 @@
                         </div>
 
                         <!-- Keberadaan Table Container -->
-                        <div class="ipas-table-wrapper" style="max-height: 520px; overflow: auto; width: 100%; border: 1px solid var(--card-border); border-radius: 0.75rem;">
-                            <table class="ipas-table" style="min-width: 1080px; width: 100%;">
-                                <thead>
-                                    <tr style="background: var(--bg-secondary, #f8fafc);">
-                                        <th style="width: 45px; text-align: center;">No</th>
-                                        <th style="text-align: left; min-width: 190px; cursor: pointer;" onclick="window.sortKeberadaan('name')">Nama Petugas <span class="sort-icon-keb" id="sort-keb-name"></span></th>
-                                        <th style="text-align: center; width: 75px; cursor: pointer;" onclick="window.sortKeberadaan('sls_count')">SLS <span class="sort-icon-keb" id="sort-keb-sls_count"></span></th>
-                                        <!-- Group Usaha -->
-                                        <th style="text-align: center; width: 95px; background: rgba(16,185,129,0.06); cursor: pointer;" onclick="window.sortKeberadaan('bu_dit')">Usaha Dit <span class="sort-icon-keb" id="sort-keb-bu_dit"></span></th>
-                                        <th style="text-align: center; width: 95px; background: rgba(16,185,129,0.06); cursor: pointer;" onclick="window.sortKeberadaan('bu_bar')">Usaha Baru <span class="sort-icon-keb" id="sort-keb-bu_bar"></span></th>
-                                        <th style="text-align: center; width: 95px; background: rgba(16,185,129,0.06); cursor: pointer;" onclick="window.sortKeberadaan('bu_nonaktif')">Usaha Tutup <span class="sort-icon-keb" id="sort-keb-bu_nonaktif"></span></th>
-                                        <!-- Group Keluarga -->
-                                        <th style="text-align: center; width: 95px; background: rgba(59,130,246,0.06); cursor: pointer;" onclick="window.sortKeberadaan('kl_dit')">Kel Dit <span class="sort-icon-keb" id="sort-keb-kl_dit"></span></th>
-                                        <th style="text-align: center; width: 95px; background: rgba(59,130,246,0.06); cursor: pointer;" onclick="window.sortKeberadaan('kl_bar')">Kel Baru <span class="sort-icon-keb" id="sort-keb-kl_bar"></span></th>
-                                        <th style="text-align: center; width: 95px; background: rgba(59,130,246,0.06); cursor: pointer;" onclick="window.sortKeberadaan('kl_nonaktif')">Kel Hilang <span class="sort-icon-keb" id="sort-keb-kl_nonaktif"></span></th>
-                                        <!-- Totals & Audit -->
-                                        <th style="text-align: center; width: 95px; cursor: pointer;" onclick="window.sortKeberadaan('tot_status')">Tot Status <span class="sort-icon-keb" id="sort-keb-tot_status"></span></th>
-                                        <th style="text-align: center; width: 95px; cursor: pointer;" onclick="window.sortKeberadaan('tot_keb')">Tot Keberadaan <span class="sort-icon-keb" id="sort-keb-tot_keb"></span></th>
-                                        <th style="text-align: center; width: 110px; cursor: pointer;" onclick="window.sortKeberadaan('selisih')">Selisih (Audit) <span class="sort-icon-keb" id="sort-keb-selisih"></span></th>
-                                        <th style="text-align: center; width: 75px;">Aksi</th>
-                                    </tr>
+                        <div class="ipas-table-wrapper" style="max-height: 540px; overflow: auto; width: 100%; border: 1px solid var(--card-border); border-radius: 0.75rem;">
+                            <table class="ipas-table" id="keberadaan-table" style="width: 100%; min-width: 1100px;">
+                                <thead id="keberadaan-table-head">
+                                    <!-- Rendered dynamically by keberadaan_petugas.js -->
                                 </thead>
                                 <tbody id="keberadaan-table-body">
                                     <tr>
-                                        <td colspan="13" style="text-align: center; padding: 2.5rem; color: var(--text-secondary);">
+                                        <td colspan="15" style="text-align: center; padding: 2.5rem; color: var(--text-secondary);">
                                             Memuat data keberadaan usaha &amp; keluarga...
                                         </td>
                                     </tr>
@@ -4249,21 +4241,26 @@
 
                         <!-- Body Table -->
                         <div style="padding:0; overflow-y:auto; flex:1; background:var(--card-bg);">
-                            <table style="width:100%; border-collapse:collapse; font-size:0.84rem;">
+                            <table style="width:100%; border-collapse:collapse; font-size:0.84rem; min-width: 950px;">
                                 <thead
                                     style="position:sticky; top:0; background:var(--bg-secondary); z-index:10; box-shadow:0 1px 3px rgba(0,0,0,0.05);">
                                     <tr>
-                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); width:45px;">No</th>
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); width:40px;">No</th>
                                         <th style="padding:0.7rem 0.8rem; text-align:left; border-bottom:1px solid var(--border-light); min-width:180px;">Kode Sub-SLS</th>
-                                        <th style="padding:0.7rem 0.6rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(16,185,129,0.06); width:75px;">U-Dit</th>
-                                        <th style="padding:0.7rem 0.6rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(16,185,129,0.06); width:75px;">U-Baru</th>
-                                        <th style="padding:0.7rem 0.6rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(16,185,129,0.06); width:80px;">U-Tutup/Tdk</th>
-                                        <th style="padding:0.7rem 0.6rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(59,130,246,0.06); width:75px;">K-Dit</th>
-                                        <th style="padding:0.7rem 0.6rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(59,130,246,0.06); width:75px;">K-Baru</th>
-                                        <th style="padding:0.7rem 0.6rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(59,130,246,0.06); width:80px;">K-Tdk/Men</th>
-                                        <th style="padding:0.7rem 0.6rem; text-align:center; border-bottom:1px solid var(--border-light); width:85px;">Tot Status</th>
-                                        <th style="padding:0.7rem 0.6rem; text-align:center; border-bottom:1px solid var(--border-light); width:85px;">Tot Keb</th>
-                                        <th style="padding:0.7rem 0.6rem; text-align:center; border-bottom:1px solid var(--border-light); width:90px;">Selisih</th>
+                                        <!-- Usaha -->
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(16,185,129,0.06); width:65px;">U-Dit</th>
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(16,185,129,0.06); width:65px;">U-Baru</th>
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(245,158,11,0.08); width:75px; color:#d97706;">U-Tdk Dit</th>
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(239,68,68,0.06); width:75px;">U-Tutup/Lain</th>
+                                        <!-- Keluarga -->
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(59,130,246,0.06); width:65px;">K-Dit</th>
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(59,130,246,0.06); width:65px;">K-Baru</th>
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(245,158,11,0.08); width:75px; color:#d97706;">K-Tdk Dit</th>
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(59,130,246,0.06); width:75px;">K-Lain</th>
+                                        <!-- Rekonsiliasi -->
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); width:80px;">Tot Status</th>
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); width:80px;">Tot Keb</th>
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); width:85px;">Selisih</th>
                                     </tr>
                                 </thead>
                                 <tbody id="keberadaan-modal-tbody">
@@ -4339,8 +4336,8 @@
     <script src="data_usaha_nonaktif.js"></script>
     <script src="data_desil.js?v=1788881041_v0109_p3"></script>
     <script src="rekap_status_sls.js?v=1789454047_v1509"></script>
-    <script src="data_keberadaan_petugas.js?v=20260915_v1"></script>
-    <script src="keberadaan_petugas.js?v=20260915_v1"></script>
+    <script src="data_keberadaan_petugas.js?v=20260915_v2"></script>
+    <script src="keberadaan_petugas.js?v=20260915_v2"></script>
     <script src="app_v2.js?v=20260915_fixsubview" defer></script>
 
     <script>

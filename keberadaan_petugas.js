@@ -9,7 +9,8 @@
 
     // State Variables
     window.keberadaanRole = 'Pencacah'; // 'Pencacah' | 'Pengawas'
-    window.keberadaanMode = 'all';      // 'all' | 'bu_bar' | 'kl_bar' | 'selisih'
+    window.keberadaanView = 'compact';  // 'compact' | 'full'
+    window.keberadaanMode = 'all';      // 'all' | 'bu_bar' | 'kl_bar' | 'tdk_dit' | 'selisih'
     window.keberadaanSearchQuery = '';
     window.keberadaanSortField = 'sls_count';
     window.keberadaanSortOrder = -1;
@@ -72,23 +73,61 @@
         window.renderKeberadaanTable();
     };
 
+    // View Mode switcher (compact vs full 13 statuses)
+    window.setKeberadaanView = function (view) {
+        window.keberadaanView = view;
+        const btnCompact = document.getElementById('btn-keb-view-compact');
+        const btnFull = document.getElementById('btn-keb-view-full');
+        if (btnCompact && btnFull) {
+            if (view === 'compact') {
+                btnCompact.classList.add('active');
+                btnFull.classList.remove('active');
+            } else {
+                btnFull.classList.add('active');
+                btnCompact.classList.remove('active');
+            }
+        }
+        window.renderKeberadaanTable();
+    };
+
     // Mode filter pills
     window.setKeberadaanMode = function (mode) {
         window.keberadaanMode = mode;
         window.keberadaanCurrentPage = 1;
 
-        const pills = ['all', 'bu_bar', 'kl_bar', 'selisih'];
+        const pills = [
+            { id: 'pill-keb-all', key: 'all' },
+            { id: 'pill-keb-bu', key: 'bu_bar' },
+            { id: 'pill-keb-kl', key: 'kl_bar' },
+            { id: 'pill-keb-tdk', key: 'tdk_dit' },
+            { id: 'pill-keb-selisih', key: 'selisih' }
+        ];
+
         pills.forEach(p => {
-            const el = document.getElementById('pill-keb-' + (p === 'bu_bar' ? 'bu' : p === 'kl_bar' ? 'kl' : p));
+            const el = document.getElementById(p.id);
             if (el) {
-                if (p === mode) {
+                if (p.key === mode) {
                     el.classList.add('active');
-                    el.style.background = (p === 'selisih') ? '#ef4444' : 'var(--primary)';
+                    if (p.key === 'selisih') {
+                        el.style.background = '#ef4444';
+                    } else if (p.key === 'tdk_dit') {
+                        el.style.background = '#d97706';
+                    } else {
+                        el.style.background = 'var(--primary)';
+                    }
                     el.style.color = '#ffffff';
                 } else {
                     el.classList.remove('active');
-                    el.style.background = (p === 'selisih') ? 'rgba(239,68,68,0.06)' : 'var(--card-bg)';
-                    el.style.color = (p === 'selisih') ? '#dc2626' : 'var(--text-secondary)';
+                    if (p.key === 'selisih') {
+                        el.style.background = 'rgba(239,68,68,0.06)';
+                        el.style.color = '#dc2626';
+                    } else if (p.key === 'tdk_dit') {
+                        el.style.background = 'rgba(245,158,11,0.08)';
+                        el.style.color = '#d97706';
+                    } else {
+                        el.style.background = 'var(--card-bg)';
+                        el.style.color = 'var(--text-secondary)';
+                    }
                 }
             }
         });
@@ -99,6 +138,9 @@
             window.keberadaanSortOrder = -1;
         } else if (mode === 'kl_bar') {
             window.keberadaanSortField = 'kl_bar';
+            window.keberadaanSortOrder = -1;
+        } else if (mode === 'tdk_dit') {
+            window.keberadaanSortField = 'tot_tdk';
             window.keberadaanSortOrder = -1;
         } else if (mode === 'selisih') {
             window.keberadaanSortField = 'anomali_count';
@@ -150,13 +192,94 @@
         window.renderKeberadaanTable();
     };
 
+    // Dynamic Thead Renderer
+    function renderTableHeader() {
+        const thead = document.getElementById('keberadaan-table-head');
+        if (!thead) return;
+
+        const isFull = (window.keberadaanView === 'full');
+        const sf = window.keberadaanSortField;
+        const so = window.keberadaanSortOrder;
+
+        function sortIcon(f) {
+            if (sf !== f) return '';
+            return `<span style="font-size:0.75rem; color:var(--primary); font-weight:800;">${so === 1 ? ' ▲' : ' ▼'}</span>`;
+        }
+
+        if (!isFull) {
+            // COMPACT VIEW: Clean 15 columns with explicit Tidak Ditemukan
+            thead.innerHTML = `
+                <tr style="background: var(--bg-secondary, #f8fafc); border-bottom: 2px solid var(--card-border);">
+                    <th style="width: 45px; text-align: center;">No</th>
+                    <th style="text-align: left; min-width: 190px; cursor: pointer;" onclick="window.sortKeberadaan('name')">Nama Petugas ${sortIcon('name')}</th>
+                    <th style="text-align: center; width: 70px; cursor: pointer;" onclick="window.sortKeberadaan('sls_count')">SLS ${sortIcon('sls_count')}</th>
+                    <!-- Usaha -->
+                    <th style="text-align: center; width: 85px; background: rgba(16,185,129,0.06); cursor: pointer;" onclick="window.sortKeberadaan('bu_dit')">U-Dit ${sortIcon('bu_dit')}</th>
+                    <th style="text-align: center; width: 85px; background: rgba(16,185,129,0.06); cursor: pointer;" onclick="window.sortKeberadaan('bu_bar')">U-Baru ${sortIcon('bu_bar')}</th>
+                    <th style="text-align: center; width: 95px; background: rgba(245,158,11,0.08); color: #d97706; cursor: pointer;" onclick="window.sortKeberadaan('bu_tdk')" title="Bangunan Usaha Tidak Ditemukan">U-Tdk Dit ${sortIcon('bu_tdk')}</th>
+                    <th style="text-align: center; width: 95px; background: rgba(239,68,68,0.05); color: #dc2626; cursor: pointer;" onclick="window.sortKeberadaan('bu_nonaktif')" title="Tutup, Ganda, dan Kantor Pusat">U-Tutup/Lain ${sortIcon('bu_nonaktif')}</th>
+                    <!-- Keluarga -->
+                    <th style="text-align: center; width: 85px; background: rgba(59,130,246,0.06); cursor: pointer;" onclick="window.sortKeberadaan('kl_dit')">K-Dit ${sortIcon('kl_dit')}</th>
+                    <th style="text-align: center; width: 85px; background: rgba(59,130,246,0.06); cursor: pointer;" onclick="window.sortKeberadaan('kl_bar')">K-Baru ${sortIcon('kl_bar')}</th>
+                    <th style="text-align: center; width: 95px; background: rgba(245,158,11,0.08); color: #d97706; cursor: pointer;" onclick="window.sortKeberadaan('kl_tdk')" title="Keluarga Tidak Ditemukan">K-Tdk Dit ${sortIcon('kl_tdk')}</th>
+                    <th style="text-align: center; width: 95px; background: rgba(59,130,246,0.06); cursor: pointer;" onclick="window.sortKeberadaan('kl_nonaktif')" title="Meninggal, Tidak Eligible, Tidak Dapat Ditemui, Khusus">K-Lain ${sortIcon('kl_nonaktif')}</th>
+                    <!-- Audit & Totals -->
+                    <th style="text-align: center; width: 90px; cursor: pointer;" onclick="window.sortKeberadaan('tot_status')">Tot Status ${sortIcon('tot_status')}</th>
+                    <th style="text-align: center; width: 90px; cursor: pointer;" onclick="window.sortKeberadaan('tot_keb')">Tot Keb ${sortIcon('tot_keb')}</th>
+                    <th style="text-align: center; width: 105px; cursor: pointer;" onclick="window.sortKeberadaan('selisih')">Selisih ${sortIcon('selisih')}</th>
+                    <th style="text-align: center; width: 75px;">Aksi</th>
+                </tr>
+            `;
+        } else {
+            // FULL 13-STATUS VIEW: 2-level grouped header
+            thead.innerHTML = `
+                <tr style="background: var(--bg-secondary, #f8fafc); border-bottom: 1px solid var(--card-border);">
+                    <th rowspan="2" style="width: 45px; text-align: center; vertical-align: middle;">No</th>
+                    <th rowspan="2" style="text-align: left; min-width: 190px; vertical-align: middle; cursor: pointer;" onclick="window.sortKeberadaan('name')">Nama Petugas ${sortIcon('name')}</th>
+                    <th rowspan="2" style="text-align: center; width: 65px; vertical-align: middle; cursor: pointer;" onclick="window.sortKeberadaan('sls_count')">SLS ${sortIcon('sls_count')}</th>
+                    <!-- Usaha Group -->
+                    <th colspan="6" style="text-align: center; background: rgba(16,185,129,0.12); color: #047857; font-weight: 800; border-left: 1px solid var(--border-light); border-right: 1px solid var(--border-light); font-size: 0.8rem; padding: 0.4rem;">BANGUNAN USAHA (6 KATEGORI)</th>
+                    <!-- Keluarga Group -->
+                    <th colspan="7" style="text-align: center; background: rgba(59,130,246,0.12); color: #1d4ed8; font-weight: 800; border-right: 1px solid var(--border-light); font-size: 0.8rem; padding: 0.4rem;">KELUARGA (7 KATEGORI)</th>
+                    <!-- Audit Group -->
+                    <th colspan="3" style="text-align: center; background: rgba(139,92,246,0.12); color: #6d28d9; font-weight: 800; border-right: 1px solid var(--border-light); font-size: 0.8rem; padding: 0.4rem;">REKONSILIASI</th>
+                    <th rowspan="2" style="text-align: center; width: 75px; vertical-align: middle;">Aksi</th>
+                </tr>
+                <tr style="background: var(--bg-secondary, #f8fafc); border-bottom: 2px solid var(--card-border); font-size: 0.76rem;">
+                    <!-- Usaha Sub-cols -->
+                    <th style="text-align: center; width: 70px; background: rgba(16,185,129,0.06); cursor: pointer;" onclick="window.sortKeberadaan('bu_dit')">Ditemukan ${sortIcon('bu_dit')}</th>
+                    <th style="text-align: center; width: 70px; background: rgba(16,185,129,0.06); cursor: pointer;" onclick="window.sortKeberadaan('bu_bar')">Baru ${sortIcon('bu_bar')}</th>
+                    <th style="text-align: center; width: 75px; background: rgba(245,158,11,0.08); color: #d97706; cursor: pointer;" onclick="window.sortKeberadaan('bu_tdk')">Tdk Dit ${sortIcon('bu_tdk')}</th>
+                    <th style="text-align: center; width: 65px; background: rgba(239,68,68,0.06); color: #dc2626; cursor: pointer;" onclick="window.sortKeberadaan('bu_tut')">Tutup ${sortIcon('bu_tut')}</th>
+                    <th style="text-align: center; width: 65px; background: rgba(239,68,68,0.04); cursor: pointer;" onclick="window.sortKeberadaan('bu_gan')">Ganda ${sortIcon('bu_gan')}</th>
+                    <th style="text-align: center; width: 65px; background: rgba(239,68,68,0.04); cursor: pointer;" onclick="window.sortKeberadaan('bu_pus')">Pusat ${sortIcon('bu_pus')}</th>
+                    <!-- Keluarga Sub-cols -->
+                    <th style="text-align: center; width: 70px; background: rgba(59,130,246,0.06); cursor: pointer;" onclick="window.sortKeberadaan('kl_dit')">Ditemukan ${sortIcon('kl_dit')}</th>
+                    <th style="text-align: center; width: 70px; background: rgba(59,130,246,0.06); cursor: pointer;" onclick="window.sortKeberadaan('kl_bar')">Baru ${sortIcon('kl_bar')}</th>
+                    <th style="text-align: center; width: 75px; background: rgba(245,158,11,0.08); color: #d97706; cursor: pointer;" onclick="window.sortKeberadaan('kl_tdk')">Tdk Dit ${sortIcon('kl_tdk')}</th>
+                    <th style="text-align: center; width: 70px; background: rgba(59,130,246,0.04); cursor: pointer;" onclick="window.sortKeberadaan('kl_men')">Meninggal ${sortIcon('kl_men')}</th>
+                    <th style="text-align: center; width: 70px; background: rgba(59,130,246,0.04); cursor: pointer;" onclick="window.sortKeberadaan('kl_tem')">Tdk Ditemui ${sortIcon('kl_tem')}</th>
+                    <th style="text-align: center; width: 70px; background: rgba(59,130,246,0.04); cursor: pointer;" onclick="window.sortKeberadaan('kl_eli')">Tdk Eligible ${sortIcon('kl_eli')}</th>
+                    <th style="text-align: center; width: 65px; background: rgba(59,130,246,0.04); cursor: pointer;" onclick="window.sortKeberadaan('kl_khu')">Khusus ${sortIcon('kl_khu')}</th>
+                    <!-- Audit Sub-cols -->
+                    <th style="text-align: center; width: 80px; cursor: pointer;" onclick="window.sortKeberadaan('tot_status')">Status ${sortIcon('tot_status')}</th>
+                    <th style="text-align: center; width: 80px; cursor: pointer;" onclick="window.sortKeberadaan('tot_keb')">Keberadaan ${sortIcon('tot_keb')}</th>
+                    <th style="text-align: center; width: 95px; cursor: pointer;" onclick="window.sortKeberadaan('selisih')">Selisih ${sortIcon('selisih')}</th>
+                </tr>
+            `;
+        }
+    }
+
     // Main Render Function
     window.renderKeberadaanTable = function () {
         const tbody = document.getElementById('keberadaan-table-body');
         if (!tbody) return;
 
+        // Render appropriate header
+        renderTableHeader();
+
         if (!window.DATA_KEBERADAAN_PETUGAS) {
-            tbody.innerHTML = `<tr><td colspan="13" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+            tbody.innerHTML = `<tr><td colspan="20" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
                 Data keberadaan belum dimuat. Pastikan file <code>data_keberadaan_petugas.js</code> telah tersedia.
             </td></tr>`;
             return;
@@ -198,13 +321,16 @@
 
         let filtered = rawList.map(p => {
             const name = getPetugasName(p.email);
-            const bu_nonaktif = (p.bu_tdk || 0) + (p.bu_tut || 0) + (p.bu_gan || 0) + (p.bu_pus || 0);
-            const kl_nonaktif = (p.kl_tdk || 0) + (p.kl_men || 0) + (p.kl_eli || 0) + (p.kl_tem || 0) + (p.kl_khu || 0);
+            const bu_nonaktif = (p.bu_tut || 0) + (p.bu_gan || 0) + (p.bu_pus || 0);
+            const kl_nonaktif = (p.kl_men || 0) + (p.kl_eli || 0) + (p.kl_tem || 0) + (p.kl_khu || 0);
+            const tot_tdk = (p.bu_tdk || 0) + (p.kl_tdk || 0);
+
             return {
                 ...p,
                 name: name,
                 bu_nonaktif: bu_nonaktif,
-                kl_nonaktif: kl_nonaktif
+                kl_nonaktif: kl_nonaktif,
+                tot_tdk: tot_tdk
             };
         });
 
@@ -234,6 +360,8 @@
             filtered = filtered.filter(p => (p.bu_bar || 0) > 0);
         } else if (window.keberadaanMode === 'kl_bar') {
             filtered = filtered.filter(p => (p.kl_bar || 0) > 0);
+        } else if (window.keberadaanMode === 'tdk_dit') {
+            filtered = filtered.filter(p => (p.tot_tdk || 0) > 0);
         } else if (window.keberadaanMode === 'selisih') {
             filtered = filtered.filter(p => (p.anomali_count || 0) > 0 || (p.selisih || 0) !== 0);
         }
@@ -254,13 +382,6 @@
         });
 
         window.lastKeberadaanFiltered = filtered;
-
-        // Update Sort Indicator Icons
-        document.querySelectorAll('.sort-icon-keb').forEach(el => { el.textContent = ''; });
-        const activeSortIcon = document.getElementById('sort-keb-' + sf);
-        if (activeSortIcon) {
-            activeSortIcon.textContent = (so === 1) ? ' ▲' : ' ▼';
-        }
 
         // 5. Pagination
         const totalItems = filtered.length;
@@ -284,8 +405,11 @@
         renderPaginationButtons(totalPages, currentPage);
 
         // 6. Render Table Rows
+        const isFull = (window.keberadaanView === 'full');
+        const colspanTotal = isFull ? 20 : 15;
+
         if (pageItems.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="13" style="text-align: center; padding: 2.5rem; color: var(--text-secondary);">
+            tbody.innerHTML = `<tr><td colspan="${colspanTotal}" style="text-align: center; padding: 2.5rem; color: var(--text-secondary);">
                 Tidak ada data ${window.keberadaanRole} yang cocok dengan filter.
             </td></tr>`;
             return;
@@ -310,42 +434,93 @@
                 ? `<span class="badge" style="background: rgba(139,92,246,0.12); color: #7c3aed; font-size: 0.7rem; font-weight: 700; padding: 2px 6px;">PML</span>`
                 : `<span class="badge" style="background: rgba(59,130,246,0.12); color: #2563eb; font-size: 0.7rem; font-weight: 700; padding: 2px 6px;">PPL</span>`;
 
-            html += `
-            <tr style="border-bottom: 1px solid var(--border-light, #e2e8f0); ${hasSelisih ? 'background: rgba(239,68,68,0.015);' : ''}">
-                <td style="text-align: center; color: var(--text-secondary); font-size: 0.8rem;">${rowNo}</td>
-                <td style="text-align: left;">
-                    <div style="font-weight: 700; color: var(--text-primary); font-size: 0.88rem; display: flex; align-items: center; gap: 0.4rem;">
-                        <span>${p.name}</span>
-                        ${roleBadge}
-                    </div>
-                    <div style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 1px; font-family: monospace;">${p.email}</div>
-                </td>
-                <td style="text-align: center;">
-                    <span class="badge" style="background: var(--bg-secondary); color: var(--text-primary); font-weight: 700; padding: 3px 8px; border-radius: 6px; border: 1px solid var(--border-light);">${p.sls_count}</span>
-                </td>
-                <!-- Usaha -->
-                <td style="text-align: center; font-weight: 600; color: #047857; background: rgba(16,185,129,0.02);">${formatNumber(p.bu_dit)}</td>
-                <td style="text-align: center; background: rgba(16,185,129,0.02);">
-                    <span class="badge" style="background: rgba(16,185,129,0.15); color: #059669; font-weight: 800;">+${formatNumber(p.bu_bar)}</span>
-                </td>
-                <td style="text-align: center; color: var(--text-secondary); background: rgba(16,185,129,0.02);">${formatNumber(p.bu_nonaktif)}</td>
-                <!-- Keluarga -->
-                <td style="text-align: center; font-weight: 600; color: #1d4ed8; background: rgba(59,130,246,0.02);">${formatNumber(p.kl_dit)}</td>
-                <td style="text-align: center; background: rgba(59,130,246,0.02);">
-                    <span class="badge" style="background: rgba(59,130,246,0.15); color: #2563eb; font-weight: 800;">+${formatNumber(p.kl_bar)}</span>
-                </td>
-                <td style="text-align: center; color: var(--text-secondary); background: rgba(59,130,246,0.02);">${formatNumber(p.kl_nonaktif)}</td>
-                <!-- Totals & Audit -->
-                <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_status)}</td>
-                <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_keb)}</td>
-                <td style="text-align: center;">${selisihBadge}</td>
-                <td style="text-align: center;">
-                    <button class="btn btn-sm" onclick="window.openKeberadaanDetail('${p.email}', '${p.role}')" style="padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.78rem; font-weight: 600; background: var(--bg-secondary); border: 1px solid var(--border-light); color: var(--text-primary); cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem;" title="Lihat rincian Sub-SLS">
-                        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                        Detail
-                    </button>
-                </td>
-            </tr>`;
+            // Action Button
+            const actionBtn = `
+                <button class="btn btn-sm" onclick="window.openKeberadaanDetail('${p.email}', '${p.role}')" style="padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.78rem; font-weight: 600; background: var(--bg-secondary); border: 1px solid var(--border-light); color: var(--text-primary); cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem;" title="Lihat rincian Sub-SLS">
+                    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Detail
+                </button>
+            `;
+
+            if (!isFull) {
+                // COMPACT ROW
+                const buTutupLainTitle = `Tutup: ${p.bu_tut || 0} | Ganda: ${p.bu_gan || 0} | Kantor Pusat: ${p.bu_pus || 0}`;
+                const klLainTitle = `Meninggal: ${p.kl_men || 0} | Tdk Ditemui: ${p.kl_tem || 0} | Tdk Eligible: ${p.kl_eli || 0} | Khusus: ${p.kl_khu || 0}`;
+
+                html += `
+                <tr style="border-bottom: 1px solid var(--border-light, #e2e8f0); ${hasSelisih ? 'background: rgba(239,68,68,0.015);' : ''}">
+                    <td style="text-align: center; color: var(--text-secondary); font-size: 0.8rem;">${rowNo}</td>
+                    <td style="text-align: left;">
+                        <div style="font-weight: 700; color: var(--text-primary); font-size: 0.88rem; display: flex; align-items: center; gap: 0.4rem;">
+                            <span>${p.name}</span>
+                            ${roleBadge}
+                        </div>
+                        <div style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 1px; font-family: monospace;">${p.email}</div>
+                    </td>
+                    <td style="text-align: center;">
+                        <span class="badge" style="background: var(--bg-secondary); color: var(--text-primary); font-weight: 700; padding: 3px 8px; border-radius: 6px; border: 1px solid var(--border-light);">${p.sls_count}</span>
+                    </td>
+                    <!-- Usaha -->
+                    <td style="text-align: center; font-weight: 600; color: #047857; background: rgba(16,185,129,0.02);">${formatNumber(p.bu_dit)}</td>
+                    <td style="text-align: center; background: rgba(16,185,129,0.02);">
+                        <span class="badge" style="background: rgba(16,185,129,0.15); color: #059669; font-weight: 800;">+${formatNumber(p.bu_bar)}</span>
+                    </td>
+                    <td style="text-align: center; background: rgba(245,158,11,0.03);">
+                        <span style="color: #d97706; font-weight: 700;">${formatNumber(p.bu_tdk)}</span>
+                    </td>
+                    <td style="text-align: center; color: #dc2626; cursor: help;" title="${buTutupLainTitle}">${formatNumber(p.bu_nonaktif)}</td>
+                    <!-- Keluarga -->
+                    <td style="text-align: center; font-weight: 600; color: #1d4ed8; background: rgba(59,130,246,0.02);">${formatNumber(p.kl_dit)}</td>
+                    <td style="text-align: center; background: rgba(59,130,246,0.02);">
+                        <span class="badge" style="background: rgba(59,130,246,0.15); color: #2563eb; font-weight: 800;">+${formatNumber(p.kl_bar)}</span>
+                    </td>
+                    <td style="text-align: center; background: rgba(245,158,11,0.03);">
+                        <span style="color: #d97706; font-weight: 700;">${formatNumber(p.kl_tdk)}</span>
+                    </td>
+                    <td style="text-align: center; color: var(--text-secondary); cursor: help;" title="${klLainTitle}">${formatNumber(p.kl_nonaktif)}</td>
+                    <!-- Totals & Audit -->
+                    <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_status)}</td>
+                    <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_keb)}</td>
+                    <td style="text-align: center;">${selisihBadge}</td>
+                    <td style="text-align: center;">${actionBtn}</td>
+                </tr>`;
+            } else {
+                // FULL 13-STATUS ROW
+                html += `
+                <tr style="border-bottom: 1px solid var(--border-light, #e2e8f0); ${hasSelisih ? 'background: rgba(239,68,68,0.015);' : ''}">
+                    <td style="text-align: center; color: var(--text-secondary); font-size: 0.8rem;">${rowNo}</td>
+                    <td style="text-align: left;">
+                        <div style="font-weight: 700; color: var(--text-primary); font-size: 0.86rem; display: flex; align-items: center; gap: 0.4rem;">
+                            <span>${p.name}</span>
+                            ${roleBadge}
+                        </div>
+                        <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 1px; font-family: monospace;">${p.email}</div>
+                    </td>
+                    <td style="text-align: center;">
+                        <span class="badge" style="background: var(--bg-secondary); color: var(--text-primary); font-weight: 700; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border-light); font-size: 0.78rem;">${p.sls_count}</span>
+                    </td>
+                    <!-- Usaha 6 cols -->
+                    <td style="text-align: center; font-weight: 600; color: #047857; background: rgba(16,185,129,0.02);">${formatNumber(p.bu_dit)}</td>
+                    <td style="text-align: center; background: rgba(16,185,129,0.02); font-weight: 700; color: #059669;">+${formatNumber(p.bu_bar)}</td>
+                    <td style="text-align: center; background: rgba(245,158,11,0.04); font-weight: 700; color: #d97706;">${formatNumber(p.bu_tdk)}</td>
+                    <td style="text-align: center; color: #dc2626;">${formatNumber(p.bu_tut)}</td>
+                    <td style="text-align: center; color: var(--text-secondary);">${formatNumber(p.bu_gan)}</td>
+                    <td style="text-align: center; color: var(--text-secondary);">${formatNumber(p.bu_pus)}</td>
+                    <!-- Keluarga 7 cols -->
+                    <td style="text-align: center; font-weight: 600; color: #1d4ed8; background: rgba(59,130,246,0.02);">${formatNumber(p.kl_dit)}</td>
+                    <td style="text-align: center; background: rgba(59,130,246,0.02); font-weight: 700; color: #2563eb;">+${formatNumber(p.kl_bar)}</td>
+                    <td style="text-align: center; background: rgba(245,158,11,0.04); font-weight: 700; color: #d97706;">${formatNumber(p.kl_tdk)}</td>
+                    <td style="text-align: center; color: var(--text-secondary);">${formatNumber(p.kl_men)}</td>
+                    <td style="text-align: center; color: var(--text-secondary);">${formatNumber(p.kl_tem)}</td>
+                    <td style="text-align: center; color: var(--text-secondary);">${formatNumber(p.kl_eli)}</td>
+                    <td style="text-align: center; color: var(--text-secondary);">${formatNumber(p.kl_khu)}</td>
+                    <!-- Rekonsiliasi 3 cols -->
+                    <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_status)}</td>
+                    <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_keb)}</td>
+                    <td style="text-align: center;">${selisihBadge}</td>
+                    <td style="text-align: center;">${actionBtn}</td>
+                </tr>`;
+            }
         });
 
         tbody.innerHTML = html;
@@ -513,21 +688,30 @@
         const kabListStr = (petugas.kabs || []).map(k => KAB_NAMES[k] || k).join(', ') || '-';
         subtitle.textContent = `Email: ${petugas.email} | Wilayah: ${kabListStr} | Total ${petugas.sls_count} Sub-SLS Ditugaskan`;
 
-        // Summary Bar in modal
+        // Summary Bar in modal with explicit Tidak Ditemukan & all categories
         if (summaryBar) {
-            const uAktif = (petugas.bu_dit || 0) + (petugas.bu_bar || 0);
-            const kAktif = (petugas.kl_dit || 0) + (petugas.kl_bar || 0);
             const selisihColor = (petugas.selisih === 0) ? '#059669' : '#dc2626';
 
             summaryBar.innerHTML = `
-                <div><b>🏬 Usaha:</b> Ditemukan: ${formatNumber(petugas.bu_dit)} | Baru: <span style="color:#059669; font-weight:700;">+${formatNumber(petugas.bu_bar)}</span> | Tutup/Tdk: ${formatNumber(petugas.bu_tdk + petugas.bu_tut)}</div>
-                <div><b>👨‍👩‍👧‍👦 Keluarga:</b> Ditemukan: ${formatNumber(petugas.kl_dit)} | Baru: <span style="color:#2563eb; font-weight:700;">+${formatNumber(petugas.kl_bar)}</span> | Hilang: ${formatNumber(petugas.kl_tdk + petugas.kl_men)}</div>
-                <div><b>⚖️ Audit:</b> Status: ${formatNumber(petugas.tot_status)} | Keberadaan: ${formatNumber(petugas.tot_keb)} | Selisih: <b style="color:${selisihColor};">${petugas.selisih} (${petugas.anomali_count} SLS)</b></div>
+                <div style="flex: 1 1 100%; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                        <span>🏬 <b>Usaha:</b> Dit: <b>${formatNumber(petugas.bu_dit)}</b> | Baru: <b style="color:#059669;">+${formatNumber(petugas.bu_bar)}</b> | <b style="color:#d97706;">Tdk Dit: ${formatNumber(petugas.bu_tdk)}</b> | Tutup: ${formatNumber(petugas.bu_tut)} | Ganda: ${formatNumber(petugas.bu_gan)} | Pusat: ${formatNumber(petugas.bu_pus)}</span>
+                    </div>
+                </div>
+                <div style="flex: 1 1 100%; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-top: 0.25rem;">
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                        <span>👨‍👩‍👧‍👦 <b>Keluarga:</b> Dit: <b>${formatNumber(petugas.kl_dit)}</b> | Baru: <b style="color:#2563eb;">+${formatNumber(petugas.kl_bar)}</b> | <b style="color:#d97706;">Tdk Dit: ${formatNumber(petugas.kl_tdk)}</b> | Men: ${formatNumber(petugas.kl_men)} | Tdk Ditemui: ${formatNumber(petugas.kl_tem)} | Tdk Eli: ${formatNumber(petugas.kl_eli)} | Khusus: ${formatNumber(petugas.kl_khu)}</span>
+                    </div>
+                    <div>
+                        <span>⚖️ <b>Audit:</b> Status: <b>${formatNumber(petugas.tot_status)}</b> | Keb: <b>${formatNumber(petugas.tot_keb)}</b> | Selisih: <b style="color:${selisihColor};">${petugas.selisih} (${petugas.anomali_count} SLS)</b></span>
+                    </div>
+                </div>
             `;
         }
 
         // SLS Table Rows
-        // Format of sls record: [sls, sub, bu_dit, bu_bar, bu_tdk, bu_tut, kl_dit, kl_bar, kl_tdk, kl_men, status_sum, tot_keb, selisih]
+        // Format of sls record:
+        // [sls, sub, bu_dit, bu_bar, bu_tdk, bu_tut, bu_gan, bu_pus, kl_dit, kl_bar, kl_tdk, kl_men, kl_eli, kl_tem, kl_khu, status_sum, tot_keb, selisih]
         const slsList = petugas.sls || [];
         let rowsHtml = '';
 
@@ -536,15 +720,31 @@
             const subCode = r[1] || '';
             const buDit = r[2] || 0;
             const buBar = r[3] || 0;
-            const buTdkTut = (r[4] || 0) + (r[5] || 0);
-            const klDit = r[6] || 0;
-            const klBar = r[7] || 0;
-            const klTdkMen = (r[8] || 0) + (r[9] || 0);
-            const statusSum = r[10] || 0;
-            const totKeb = r[11] || 0;
-            const sel = r[12] || 0;
+            const buTdk = r[4] || 0;
+            const buTut = r[5] || 0;
+            const buGan = r[6] || 0;
+            const buPus = r[7] || 0;
+
+            const klDit = r[8] || 0;
+            const klBar = r[9] || 0;
+            const klTdk = r[10] || 0;
+            const klMen = r[11] || 0;
+            const klEli = r[12] || 0;
+            const klTem = r[13] || 0;
+            const klKhu = r[14] || 0;
+
+            const statusSum = r[15] || 0;
+            const totKeb = r[16] || 0;
+            const sel = r[17] || 0;
 
             const isAnomali = (sel !== 0);
+
+            // Grouped compact columns for modal table
+            const buTutupLain = buTut + buGan + buPus;
+            const buTutupTooltip = `Tutup: ${buTut} | Ganda: ${buGan} | Pusat: ${buPus}`;
+
+            const klLain = klMen + klEli + klTem + klKhu;
+            const klLainTooltip = `Meninggal: ${klMen} | Tdk Ditemui: ${klTem} | Tdk Eligible: ${klEli} | Khusus: ${klKhu}`;
 
             // Nice format for SLS: 72010300070001 -> 72.01.030.007 0001
             let formattedSls = slsCode;
@@ -556,18 +756,27 @@
             <tr style="border-bottom: 1px solid var(--border-light); ${isAnomali ? 'background: rgba(239,68,68,0.035);' : ''}">
                 <td style="padding:0.6rem; text-align:center; color:var(--text-secondary);">${idx + 1}</td>
                 <td style="padding:0.6rem 0.8rem; text-align:left;">
-                    <div style="font-weight:700; font-family:monospace; color:var(--text-primary);">${formattedSls}</div>
+                    <div style="font-weight:700; font-family:monospace; color:var(--text-primary); font-size:0.86rem;">${formattedSls}</div>
                     <div style="font-size:0.75rem; color:var(--text-secondary);">Sub-SLS: <span class="badge" style="background:var(--bg-secondary); border:1px solid var(--border-light); font-weight:700;">${subCode}</span></div>
                 </td>
-                <td style="padding:0.6rem; text-align:center; color:#047857; font-weight:600; background:rgba(16,185,129,0.02);">${buDit}</td>
-                <td style="padding:0.6rem; text-align:center; color:#059669; font-weight:700; background:rgba(16,185,129,0.02);">${buBar > 0 ? '+' + buBar : 0}</td>
-                <td style="padding:0.6rem; text-align:center; color:var(--text-secondary); background:rgba(16,185,129,0.02);">${buTdkTut}</td>
-                <td style="padding:0.6rem; text-align:center; color:#1d4ed8; font-weight:600; background:rgba(59,130,246,0.02);">${klDit}</td>
-                <td style="padding:0.6rem; text-align:center; color:#2563eb; font-weight:700; background:rgba(59,130,246,0.02);">${klBar > 0 ? '+' + klBar : 0}</td>
-                <td style="padding:0.6rem; text-align:center; color:var(--text-secondary); background:rgba(59,130,246,0.02);">${klTdkMen}</td>
-                <td style="padding:0.6rem; text-align:center; font-weight:700;">${statusSum}</td>
-                <td style="padding:0.6rem; text-align:center; font-weight:700;">${totKeb}</td>
-                <td style="padding:0.6rem; text-align:center;">
+                <!-- Usaha -->
+                <td style="padding:0.6rem 0.5rem; text-align:center; font-weight:600; color:#047857; background:rgba(16,185,129,0.02);">${buDit}</td>
+                <td style="padding:0.6rem 0.5rem; text-align:center; background:rgba(16,185,129,0.02);">
+                    <span style="color:#059669; font-weight:700;">+${buBar}</span>
+                </td>
+                <td style="padding:0.6rem 0.5rem; text-align:center; background:rgba(245,158,11,0.04); font-weight:700; color:#d97706;">${buTdk}</td>
+                <td style="padding:0.6rem 0.5rem; text-align:center; color:#dc2626; cursor:help;" title="${buTutupTooltip}">${buTutupLain}</td>
+                <!-- Keluarga -->
+                <td style="padding:0.6rem 0.5rem; text-align:center; font-weight:600; color:#1d4ed8; background:rgba(59,130,246,0.02);">${klDit}</td>
+                <td style="padding:0.6rem 0.5rem; text-align:center; background:rgba(59,130,246,0.02);">
+                    <span style="color:#2563eb; font-weight:700;">+${klBar}</span>
+                </td>
+                <td style="padding:0.6rem 0.5rem; text-align:center; background:rgba(245,158,11,0.04); font-weight:700; color:#d97706;">${klTdk}</td>
+                <td style="padding:0.6rem 0.5rem; text-align:center; color:var(--text-secondary); cursor:help;" title="${klLainTooltip}">${klLain}</td>
+                <!-- Totals & Audit -->
+                <td style="padding:0.6rem 0.5rem; text-align:center; font-weight:700; color:var(--text-primary);">${statusSum}</td>
+                <td style="padding:0.6rem 0.5rem; text-align:center; font-weight:700; color:var(--text-primary);">${totKeb}</td>
+                <td style="padding:0.6rem 0.5rem; text-align:center;">
                     ${isAnomali ? `<span class="badge" style="background: rgba(239,68,68,0.15); color: #dc2626; font-weight: 800; font-family: monospace;">${sel > 0 ? '+' + sel : sel}</span>` : `<span class="badge" style="background: rgba(16,185,129,0.12); color: #059669; font-weight: 700;">0</span>`}
                 </td>
             </tr>`;
@@ -576,13 +785,13 @@
         tbody.innerHTML = rowsHtml;
 
         if (footerNote) {
-            footerNote.textContent = `Menampilkan ${slsList.length} Sub-SLS. Baris berwarna merah mengindikasikan adanya selisih antara Total Status dan Total Keberadaan.`;
+            footerNote.textContent = `Menampilkan ${slsList.length} Sub-SLS. Arahkan kursor pada angka U-Tutup/Lain atau K-Lain untuk melihat rincian Tutup, Ganda, Meninggal, dll.`;
         }
 
         modal.style.display = 'flex';
     };
 
-    // Export Excel (.xlsx)
+    // Export Excel (.xlsx) with ALL 13 categories
     window.exportKeberadaanExcel = function () {
         if (typeof XLSX === 'undefined') {
             alert('Library SheetJS (XLSX) belum dimuat.');
@@ -597,8 +806,13 @@
 
         const headers = [
             'No', 'Nama Petugas', 'Email', 'Role', 'Kabupaten', 'Jml SLS',
-            'Usaha Ditemukan', 'Usaha Baru', 'Usaha Tdk Dit', 'Usaha Tutup', 'Total Usaha Aktif', 'Total Usaha Semua',
-            'Keluarga Ditemukan', 'Keluarga Baru', 'Keluarga Tdk Dit', 'Keluarga Meninggal', 'Total Keluarga Aktif', 'Total Keluarga Semua',
+            // Usaha
+            'Usaha Ditemukan', 'Usaha Baru', 'Usaha Tidak Ditemukan', 'Usaha Tutup', 'Usaha Ganda', 'Usaha Kantor Pusat',
+            'Total Usaha Aktif', 'Total Usaha Semua',
+            // Keluarga
+            'Keluarga Ditemukan', 'Keluarga Baru', 'Keluarga Tidak Ditemukan', 'Keluarga Meninggal', 'Keluarga Tdk Eligible', 'Keluarga Tdk Ditemui', 'Keluarga Khusus',
+            'Total Keluarga Aktif', 'Total Keluarga Semua',
+            // Audit
             'Total Status', 'Total Keberadaan', 'Selisih Audit', 'Status Sinkron'
         ];
 
@@ -617,18 +831,26 @@
                 p.role,
                 kabStr,
                 p.sls_count,
+                // Usaha
                 p.bu_dit || 0,
                 p.bu_bar || 0,
                 p.bu_tdk || 0,
                 p.bu_tut || 0,
+                p.bu_gan || 0,
+                p.bu_pus || 0,
                 uAktif,
                 uAll,
+                // Keluarga
                 p.kl_dit || 0,
                 p.kl_bar || 0,
                 p.kl_tdk || 0,
                 p.kl_men || 0,
+                p.kl_eli || 0,
+                p.kl_tem || 0,
+                p.kl_khu || 0,
                 kAktif,
                 kAll,
+                // Audit
                 p.tot_status || 0,
                 p.tot_keb || 0,
                 p.selisih || 0,
@@ -648,10 +870,10 @@
         XLSX.utils.book_append_sheet(wb, ws, 'Keberadaan ' + window.keberadaanRole);
 
         const ts = new Date().toISOString().slice(0, 10);
-        XLSX.writeFile(wb, `Rekap_Keberadaan_Usaha_Keluarga_${window.keberadaanRole}_${ts}.xlsx`);
+        XLSX.writeFile(wb, `Rekap_Keberadaan_Lengkap_${window.keberadaanRole}_${ts}.xlsx`);
     };
 
-    // Export CSV
+    // Export CSV with ALL 13 categories
     window.exportKeberadaanCSV = function () {
         const data = window.lastKeberadaanFiltered || [];
         if (data.length === 0) {
@@ -661,8 +883,8 @@
 
         const headers = [
             'No', 'Nama Petugas', 'Email', 'Role', 'Kabupaten', 'Jml SLS',
-            'Usaha Ditemukan', 'Usaha Baru', 'Usaha Tdk Dit', 'Usaha Tutup', 'Total Usaha Aktif',
-            'Keluarga Ditemukan', 'Keluarga Baru', 'Keluarga Tdk Dit', 'Keluarga Meninggal', 'Total Keluarga Aktif',
+            'Usaha Ditemukan', 'Usaha Baru', 'Usaha Tidak Ditemukan', 'Usaha Tutup', 'Usaha Ganda', 'Usaha Kantor Pusat', 'Total Usaha Aktif',
+            'Keluarga Ditemukan', 'Keluarga Baru', 'Keluarga Tidak Ditemukan', 'Keluarga Meninggal', 'Keluarga Tdk Eligible', 'Keluarga Tdk Ditemui', 'Keluarga Khusus', 'Total Keluarga Aktif',
             'Total Status', 'Total Keberadaan', 'Selisih Audit'
         ];
 
@@ -684,11 +906,16 @@
                 p.bu_bar || 0,
                 p.bu_tdk || 0,
                 p.bu_tut || 0,
+                p.bu_gan || 0,
+                p.bu_pus || 0,
                 uAktif,
                 p.kl_dit || 0,
                 p.kl_bar || 0,
                 p.kl_tdk || 0,
                 p.kl_men || 0,
+                p.kl_eli || 0,
+                p.kl_tem || 0,
+                p.kl_khu || 0,
                 kAktif,
                 p.tot_status || 0,
                 p.tot_keb || 0,
@@ -702,7 +929,7 @@
         const url = URL.createObjectURL(blob);
         const ts = new Date().toISOString().slice(0, 10);
         link.setAttribute('href', url);
-        link.setAttribute('download', `Rekap_Keberadaan_Usaha_Keluarga_${window.keberadaanRole}_${ts}.csv`);
+        link.setAttribute('download', `Rekap_Keberadaan_Lengkap_${window.keberadaanRole}_${ts}.csv`);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
