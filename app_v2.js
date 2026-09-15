@@ -5879,6 +5879,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof window.loadGranularAssignmentsData === 'function') {
                 window.loadGranularAssignmentsData();
             }
+            if (window.renderRekapStatusTable) {
+                window.renderRekapStatusTable();
+            }
         } else if (tabId === 'anomali') {
             if (mainHeader) mainHeader.textContent = 'Pemantauan Anomali';
             if (mainSubheader) mainSubheader.textContent = 'Daftar anomali dan tindak lanjut petugas di lapangan';
@@ -9345,6 +9348,14 @@ document.addEventListener('DOMContentLoaded', () => {
         XLSX.utils.book_append_sheet(wb, ws, `Rekap_Status_${level}`);
         XLSX.writeFile(wb, `Rekap_Status_${level.toUpperCase()}_${new Date().toISOString().split('T')[0]}.xlsx`);
     };
+
+    // Auto-render Rekap Status Table on initial load
+    setTimeout(() => {
+        if (window.renderRekapStatusTable && window.REKAP_STATUS_DATA) {
+            window.renderRekapStatusTable();
+        }
+    }, 50);
+
     window.toggleStatsDetail = function (section) {
         const container = document.getElementById(`${section}-stats-expanded`);
         const btn = document.getElementById(`${section}-toggle-detail`);
