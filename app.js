@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (select) {
             window.petugasSummaryPerPage = parseInt(select.value) || 25;
             window.petugasSummaryCurrentPage = 1;
-            if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered);
+            if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered || window.GRANULAR_ASSIGNMENTS_DATA || []);
         }
     };
 
     window.changePetugasSummaryPage = function (page) {
         window.petugasSummaryCurrentPage = page;
-        if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered);
+        if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered || window.GRANULAR_ASSIGNMENTS_DATA || []);
     };
 
     // Sanitize localStorage active_assign_subtab to avoid loading UB data by default
@@ -7679,6 +7679,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.renderPetugasSummaryTable = function (data) {
+        if (data) window.lastBaseFiltered = data;
+        else if (!window.lastBaseFiltered) window.lastBaseFiltered = window.GRANULAR_ASSIGNMENTS_DATA || [];
+
         if (window.granularSummaryView === 'desa') {
             let totalAll = 0, selesaiAll = 0, belumAll = 0, desaMap = {};
             const kabFilter = document.getElementById('assign-sls-kab-filter')?.value || 'all';
@@ -8310,7 +8313,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const idxReal = startPIdx + i;
 
             const pct = p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) : 0;
-            const isComplete = pct === "100.0";
+            const isComplete = parseFloat(pct) >= 100.0;
 
             let badgeHtml = '';
             if (isComplete) {

@@ -9,7 +9,7 @@ def main():
     start_time = time.time()
     base_dir = os.path.dirname(os.path.abspath(__file__))
     output_js = os.path.join(base_dir, "penyisiran_keluarga_data.js")
-    output_excel = os.path.join(base_dir, "Prioritas_Penyisiran_Keluarga_SE2026_09Sep.xlsx")
+    output_excel = os.path.join(base_dir, "Prioritas_Penyisiran_Keluarga_SE2026_15Sep.xlsx")
 
     print("=" * 65)
     print(" GENERATE DATA PRIORITAS PENYISIRAN KELUARGA PER SLS (9 SEPT)")
@@ -38,7 +38,7 @@ def main():
     print(f"   -> {len(muatan_dict):,} SLS dimuat dari muatan")
 
     # 2. Load rekap realisasi keluarga yang ditemukan di Fasih
-    rekap_file = os.path.join(base_dir, "Rekap SBR, UTP, Keluarga_20260908.xlsx")
+    rekap_file = os.path.join(base_dir, "Rekap SBR, UTP, Keluarga_20260915.xlsx")
     realisasi_dict = {}
     if os.path.exists(rekap_file):
         print(f"2. Loading realisasi keluarga from {os.path.basename(rekap_file)}...")
@@ -69,8 +69,24 @@ def main():
         if not val: return ''
         return re.sub(r'\[\d+\]\s*', '', str(val)).strip()
 
+    def extract_code(text):
+        if not text: return ''
+        m = re.search(r'\[(\d+)\]', str(text))
+        return m.group(1) if m else ''
+
     for d in raw_data:
         rc = d.get('Region_Code')
+        if not rc:
+            kab_c = extract_code(d.get('kab', ''))
+            kec_c = extract_code(d.get('kec', ''))
+            desa_c = extract_code(d.get('desa', ''))
+            sls_raw = d.get('kode_sls', '')
+            try:
+                sls_clean = str(int(float(sls_raw))).zfill(6) if pd.notna(sls_raw) and str(sls_raw).strip() != '' else '000000'
+            except:
+                sls_clean = '000000'
+            if kab_c and kec_c and desa_c:
+                rc = f"72{kab_c}{kec_c}{desa_c}{sls_clean}"
         if not rc: continue
         s = sls_agg[rc]
         if not s['kab']:

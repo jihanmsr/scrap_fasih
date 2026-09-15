@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (select) {
             window.petugasSummaryPerPage = parseInt(select.value) || 25;
             window.petugasSummaryCurrentPage = 1;
-            if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered);
+            if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered || window.GRANULAR_ASSIGNMENTS_DATA || []);
         }
     };
 
     window.changePetugasSummaryPage = function(page) {
         window.petugasSummaryCurrentPage = page;
-        if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered);
+        if (window.renderPetugasSummaryTable) window.renderPetugasSummaryTable(window.lastBaseFiltered || window.GRANULAR_ASSIGNMENTS_DATA || []);
     };
 
     // Sanitize localStorage active_assign_subtab to avoid loading UB data by default
@@ -7629,8 +7629,9 @@ document.addEventListener('DOMContentLoaded', () => {
             window.petugasSortField = field;
             window.petugasSortOrder = field === 'name' ? 1 : -1;
         }
-        if (window.lastBaseFiltered && window.renderPetugasSummaryTable) {
-            window.renderPetugasSummaryTable(window.lastBaseFiltered);
+        window.petugasSummaryCurrentPage = 1;
+        if (window.renderPetugasSummaryTable) {
+            window.renderPetugasSummaryTable(window.lastBaseFiltered || window.GRANULAR_ASSIGNMENTS_DATA || []);
         }
     };
 
@@ -7722,6 +7723,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.renderPetugasSummaryTable = function (data) {
+        if (data) window.lastBaseFiltered = data;
+        else if (!window.lastBaseFiltered) window.lastBaseFiltered = window.GRANULAR_ASSIGNMENTS_DATA || [];
+
         if (window.granularSummaryView === 'desa') {
             let totalAll = 0, selesaiAll = 0, belumAll = 0, desaMap = {};
             const kabFilter = document.getElementById('assign-sls-kab-filter')?.value || 'all';
@@ -8353,7 +8357,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const initials = (pName.length >= 2 ? pName.substring(0, 2) : pName).toUpperCase();
 
                 const pct = p.total > 0 ? ((p.selesai / p.total) * 100).toFixed(1) : 0;
-                const isComplete = pct === "100.0";
+                const isComplete = parseFloat(pct) >= 100.0;
 
                 let badgeHtml = '';
                 if (isComplete) {
@@ -8586,10 +8590,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const headers = document.querySelectorAll('#petugas-summary-table-body').length > 0 ? document.getElementById('petugas-summary-table-body').parentElement.querySelectorAll('th') : [];
         headers.forEach(th => {
             const iconSpan = th.querySelector('.sort-icon');
-            if (iconSpan) {
-                iconSpan.innerHTML = ''; // Clear all
-                if (th.getAttribute('onclick') && th.getAttribute('onclick').includes(window.petugasSortField)) {
-                    iconSpan.innerHTML = window.petugasSortOrder === 1 ? ' ↑' : ' ↓';
+            if (iconSpan && th.getAttribute('onclick') && th.getAttribute('onclick').includes('window.sortPetugasSummary')) {
+                if (th.getAttribute('onclick').includes(window.petugasSortField)) {
+                    iconSpan.innerHTML = window.petugasSortOrder === 1 ? ' <strong style="color:var(--primary);">↑</strong>' : ' <strong style="color:var(--primary);">↓</strong>';
+                } else {
+                    iconSpan.innerHTML = ' <span style="color:#9ca3af; font-size:0.8em; margin-left:2px;">↕</span>';
                 }
             }
         });
