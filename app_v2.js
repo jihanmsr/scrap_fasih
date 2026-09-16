@@ -7658,6 +7658,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const titleEl = document.getElementById('petugas-summary-title');
         const descEl = document.getElementById('petugas-summary-desc');
         const paginationContainer = document.getElementById('petugas-summary-pagination');
+        const hierWrapper = document.getElementById('hierarchical-status-section-wrapper');
 
         // Reset all active states
         btnPetugas?.classList.remove('active');
@@ -7669,6 +7670,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (standardSubview) standardSubview.style.display = 'none';
             if (keberadaanContainer) keberadaanContainer.style.display = 'block';
             if (standardCards) standardCards.style.display = 'none';
+            if (hierWrapper) hierWrapper.style.display = 'none';
             if (window.renderKeberadaanTable) {
                 window.renderKeberadaanTable();
             }
@@ -7679,6 +7681,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (standardSubview) standardSubview.style.display = 'block';
         if (keberadaanContainer) keberadaanContainer.style.display = 'none';
         if (standardCards) standardCards.style.display = 'grid';
+        if (hierWrapper) hierWrapper.style.display = 'block';
 
         if (petugasContainer) petugasContainer.style.display = 'none';
         if (desaContainer) desaContainer.style.display = 'none';

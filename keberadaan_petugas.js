@@ -237,8 +237,8 @@
             thead.innerHTML = `
                 <tr style="background: var(--bg-secondary, #f8fafc); border-bottom: 2px solid var(--card-border);">
                     <th style="width: 45px; text-align: center;">No</th>
-                    <th style="text-align: left; min-width: 190px; cursor: pointer;" onclick="window.sortKeberadaan(\'${col2Sort}\')">${col2Title}</th>
-                    <th style="text-align: center; width: 140px; cursor: pointer;" onclick="window.sortKeberadaan(\'${col3Sort}\')">${col3Title}</th>
+                    <th style="text-align: left; min-width: 190px; cursor: pointer;" onclick="window.sortKeberadaan('${col2Sort}')">${col2Title}</th>
+                    <th style="text-align: center; width: 140px; cursor: pointer;" onclick="window.sortKeberadaan('${col3Sort}')">${col3Title}</th>
                     <!-- Usaha -->
                     <th style="text-align: center; width: 85px; background: rgba(16,185,129,0.06); cursor: pointer;" onclick="window.sortKeberadaan('bu_dit')">U-Dit ${sortIcon('bu_dit')}</th>
                     <th style="text-align: center; width: 85px; background: rgba(16,185,129,0.06); cursor: pointer;" onclick="window.sortKeberadaan('bu_bar')">U-Baru ${sortIcon('bu_bar')}</th>
@@ -261,8 +261,8 @@
             thead.innerHTML = `
                 <tr style="background: var(--bg-secondary, #f8fafc); border-bottom: 1px solid var(--card-border);">
                     <th rowspan="2" style="width: 45px; text-align: center; vertical-align: middle;">No</th>
-                    <th rowspan="2" style="text-align: left; min-width: 190px; vertical-align: middle; cursor: pointer;" onclick="window.sortKeberadaan(\'${col2Sort}\')">${col2Title}</th>
-                    <th rowspan="2" style="text-align: center; width: 140px; vertical-align: middle; cursor: pointer;" onclick="window.sortKeberadaan(\'${col3Sort}\')">${col3Title}</th>
+                    <th rowspan="2" style="text-align: left; min-width: 190px; vertical-align: middle; cursor: pointer;" onclick="window.sortKeberadaan('${col2Sort}')">${col2Title}</th>
+                    <th rowspan="2" style="text-align: center; width: 140px; vertical-align: middle; cursor: pointer;" onclick="window.sortKeberadaan('${col3Sort}')">${col3Title}</th>
                     <!-- Usaha Group -->
                     <th colspan="6" style="text-align: center; background: rgba(16,185,129,0.12); color: #047857; font-weight: 800; border-left: 1px solid var(--border-light); border-right: 1px solid var(--border-light); font-size: 0.8rem; padding: 0.4rem;">BANGUNAN USAHA (6 KATEGORI)</th>
                     <!-- Keluarga Group -->
@@ -341,9 +341,9 @@
         updateKeberadaanKPIs(resolvedKabPrefix, resolvedKecPrefix);
 
         // 3. Filter Petugas List
-
+        const isSlsMode = (window.keberadaanGrouping === 'sls');
         let rawList = [];
-        if (window.keberadaanGrouping === 'sls') {
+        if (isSlsMode) {
             const pencacah = window.DATA_KEBERADAAN_PETUGAS.pencacah || [];
             const pengawas = window.DATA_KEBERADAAN_PETUGAS.pengawas || [];
             const allPetugas = (window.keberadaanRole === 'Pengawas') ? pengawas : pencacah;
@@ -474,7 +474,7 @@
         if (paginationInfo) {
             const startDisplay = totalItems === 0 ? 0 : startIndex + 1;
             const endDisplay = Math.min(startIndex + perPage, totalItems);
-            paginationInfo.innerHTML = `Menampilkan <b>${startDisplay} - ${endDisplay}</b> dari <b>${formatNumber(totalItems)}</b> ${isSlsMode ? \'SLS\' : window.keberadaanRole}`;
+            paginationInfo.innerHTML = `Menampilkan <b>${startDisplay} - ${endDisplay}</b> dari <b>${formatNumber(totalItems)}</b> ${isSlsMode ? 'SLS' : window.keberadaanRole}`;
         }
 
         // Update Pagination Buttons
@@ -486,7 +486,7 @@
 
         if (pageItems.length === 0) {
             tbody.innerHTML = `<tr><td colspan="${colspanTotal}" style="text-align: center; padding: 2.5rem; color: var(--text-secondary);">
-                Tidak ada data ${isSlsMode ? \'SLS\' : window.keberadaanRole} yang cocok dengan filter.
+                Tidak ada data ${isSlsMode ? 'SLS' : window.keberadaanRole} yang cocok dengan filter.
             </td></tr>`;
             return;
         }
