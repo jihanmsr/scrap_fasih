@@ -9,6 +9,7 @@
 
     // State Variables
     window.keberadaanRole = 'Pencacah'; // 'Pencacah' | 'Pengawas'
+    window.keberadaanGrouping = 'petugas'; // 'petugas' | 'sls'
     window.keberadaanView = 'compact';  // 'compact' | 'full'
     window.keberadaanMode = 'all';      // 'all' | 'bu_bar' | 'kl_bar' | 'tdk_dit' | 'selisih'
     window.keberadaanSearchQuery = '';
@@ -70,6 +71,24 @@
             }
         }
 
+        window.renderKeberadaanTable();
+    };
+
+    // Grouping switcher
+    window.setKeberadaanGrouping = function (group) {
+        window.keberadaanGrouping = group;
+        window.keberadaanCurrentPage = 1;
+        const tabPetugas = document.getElementById('tab-keb-group-petugas');
+        const tabSls = document.getElementById('tab-keb-group-sls');
+        if (tabPetugas && tabSls) {
+            if (group === 'petugas') {
+                tabPetugas.classList.add('active');
+                tabSls.classList.remove('active');
+            } else {
+                tabSls.classList.add('active');
+                tabPetugas.classList.remove('active');
+            }
+        }
         window.renderKeberadaanTable();
     };
 
@@ -206,13 +225,20 @@
             return `<span style="font-size:0.75rem; color:var(--primary); font-weight:800;">${so === 1 ? ' ▲' : ' ▼'}</span>`;
         }
 
+        const isSlsMode = (window.keberadaanGrouping === 'sls');
+        const col2Title = isSlsMode ? `Kode SLS ${sortIcon('id')}` : `Nama Petugas ${sortIcon('name')}`;
+        const col3Title = isSlsMode ? `Petugas ${sortIcon('petugas_name')}` : `SLS ${sortIcon('sls_count')}`;
+        const col2Sort = isSlsMode ? 'id' : 'name';
+        const col3Sort = isSlsMode ? 'petugas_name' : 'sls_count';
+
+
         if (!isFull) {
             // COMPACT VIEW: Clean 15 columns with explicit Tidak Ditemukan
             thead.innerHTML = `
                 <tr style="background: var(--bg-secondary, #f8fafc); border-bottom: 2px solid var(--card-border);">
                     <th style="width: 45px; text-align: center;">No</th>
-                    <th style="text-align: left; min-width: 190px; cursor: pointer;" onclick="window.sortKeberadaan('name')">Nama Petugas ${sortIcon('name')}</th>
-                    <th style="text-align: center; width: 70px; cursor: pointer;" onclick="window.sortKeberadaan('sls_count')">SLS ${sortIcon('sls_count')}</th>
+                    <th style="text-align: left; min-width: 190px; cursor: pointer;" onclick="window.sortKeberadaan(\'${col2Sort}\')">${col2Title}</th>
+                    <th style="text-align: center; width: 140px; cursor: pointer;" onclick="window.sortKeberadaan(\'${col3Sort}\')">${col3Title}</th>
                     <!-- Usaha -->
                     <th style="text-align: center; width: 85px; background: rgba(16,185,129,0.06); cursor: pointer;" onclick="window.sortKeberadaan('bu_dit')">U-Dit ${sortIcon('bu_dit')}</th>
                     <th style="text-align: center; width: 85px; background: rgba(16,185,129,0.06); cursor: pointer;" onclick="window.sortKeberadaan('bu_bar')">U-Baru ${sortIcon('bu_bar')}</th>
@@ -235,8 +261,8 @@
             thead.innerHTML = `
                 <tr style="background: var(--bg-secondary, #f8fafc); border-bottom: 1px solid var(--card-border);">
                     <th rowspan="2" style="width: 45px; text-align: center; vertical-align: middle;">No</th>
-                    <th rowspan="2" style="text-align: left; min-width: 190px; vertical-align: middle; cursor: pointer;" onclick="window.sortKeberadaan('name')">Nama Petugas ${sortIcon('name')}</th>
-                    <th rowspan="2" style="text-align: center; width: 65px; vertical-align: middle; cursor: pointer;" onclick="window.sortKeberadaan('sls_count')">SLS ${sortIcon('sls_count')}</th>
+                    <th rowspan="2" style="text-align: left; min-width: 190px; vertical-align: middle; cursor: pointer;" onclick="window.sortKeberadaan(\'${col2Sort}\')">${col2Title}</th>
+                    <th rowspan="2" style="text-align: center; width: 140px; vertical-align: middle; cursor: pointer;" onclick="window.sortKeberadaan(\'${col3Sort}\')">${col3Title}</th>
                     <!-- Usaha Group -->
                     <th colspan="6" style="text-align: center; background: rgba(16,185,129,0.12); color: #047857; font-weight: 800; border-left: 1px solid var(--border-light); border-right: 1px solid var(--border-light); font-size: 0.8rem; padding: 0.4rem;">BANGUNAN USAHA (6 KATEGORI)</th>
                     <!-- Keluarga Group -->
@@ -315,11 +341,61 @@
         updateKeberadaanKPIs(resolvedKabPrefix, resolvedKecPrefix);
 
         // 3. Filter Petugas List
-        const rawList = (window.keberadaanRole === 'Pengawas')
-            ? (window.DATA_KEBERADAAN_PETUGAS.pengawas || [])
-            : (window.DATA_KEBERADAAN_PETUGAS.pencacah || []);
+
+        let rawList = [];
+        if (window.keberadaanGrouping === 'sls') {
+            const pencacah = window.DATA_KEBERADAAN_PETUGAS.pencacah || [];
+            const pengawas = window.DATA_KEBERADAAN_PETUGAS.pengawas || [];
+            const allPetugas = (window.keberadaanRole === 'Pengawas') ? pengawas : pencacah;
+            
+            allPetugas.forEach(p => {
+                if (p.sls && Array.isArray(p.sls)) {
+                    p.sls.forEach(s => {
+                        const kode14 = s[0] || '';
+                        const sub2 = s[1] || '';
+                        const kode16 = kode14 + sub2;
+                        const kab = kode14.substring(0, 4);
+                        const kec = kode14.substring(0, 7);
+                        const petName = getPetugasName(p.email);
+                        
+                        rawList.push({
+                            is_sls: true,
+                            id: kode16,
+                            name: kode16, 
+                            petugas_name: petName,
+                            role: p.role,
+                            email: p.email,
+                            kabs: [kab],
+                            kecs: [kec],
+                            bu_dit: s[2]||0,
+                            bu_bar: s[3]||0,
+                            bu_tdk: s[4]||0,
+                            bu_tut: s[5]||0,
+                            bu_gan: s[6]||0,
+                            bu_pus: s[7]||0,
+                            kl_dit: s[8]||0,
+                            kl_bar: s[9]||0,
+                            kl_tdk: s[10]||0,
+                            kl_men: s[11]||0,
+                            kl_eli: s[12]||0,
+                            kl_tem: s[13]||0,
+                            kl_khu: s[14]||0,
+                            tot_status: s[15]||0,
+                            tot_keb: s[16]||0,
+                            selisih: s[17]||0,
+                            anomali_count: (s[17] !== 0) ? 1 : 0
+                        });
+                    });
+                }
+            });
+        } else {
+            rawList = (window.keberadaanRole === 'Pengawas')
+                ? (window.DATA_KEBERADAAN_PETUGAS.pengawas || [])
+                : (window.DATA_KEBERADAAN_PETUGAS.pencacah || []);
+        }
 
         let filtered = rawList.map(p => {
+
             const name = getPetugasName(p.email);
             const bu_nonaktif = (p.bu_tut || 0) + (p.bu_gan || 0) + (p.bu_pus || 0);
             const kl_nonaktif = (p.kl_men || 0) + (p.kl_eli || 0) + (p.kl_tem || 0) + (p.kl_khu || 0);
@@ -398,7 +474,7 @@
         if (paginationInfo) {
             const startDisplay = totalItems === 0 ? 0 : startIndex + 1;
             const endDisplay = Math.min(startIndex + perPage, totalItems);
-            paginationInfo.innerHTML = `Menampilkan <b>${startDisplay} - ${endDisplay}</b> dari <b>${formatNumber(totalItems)}</b> ${window.keberadaanRole}`;
+            paginationInfo.innerHTML = `Menampilkan <b>${startDisplay} - ${endDisplay}</b> dari <b>${formatNumber(totalItems)}</b> ${isSlsMode ? \'SLS\' : window.keberadaanRole}`;
         }
 
         // Update Pagination Buttons
@@ -410,7 +486,7 @@
 
         if (pageItems.length === 0) {
             tbody.innerHTML = `<tr><td colspan="${colspanTotal}" style="text-align: center; padding: 2.5rem; color: var(--text-secondary);">
-                Tidak ada data ${window.keberadaanRole} yang cocok dengan filter.
+                Tidak ada data ${isSlsMode ? \'SLS\' : window.keberadaanRole} yang cocok dengan filter.
             </td></tr>`;
             return;
         }
@@ -442,6 +518,21 @@
                 </button>
             `;
 
+            const isSlsMode = (window.keberadaanGrouping === 'sls');
+            const col2Content = isSlsMode 
+                ? `<span>${p.id}</span>` 
+                : `<span>${p.name}</span>
+                            ${roleBadge}`;
+            const col3Content = isSlsMode 
+                ? `<div style="text-align: left; font-size: 0.78rem; display: flex; flex-direction: column; gap: 0.1rem;">
+                       <span style="font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 130px;" title="${p.petugas_name}">${p.petugas_name}</span>
+                       ${roleBadge}
+                   </div>`
+                : `<span class="badge" style="background: var(--bg-secondary); color: var(--text-primary); font-weight: 700; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border-light); font-size: 0.78rem;">${p.sls_count}</span>`;
+            
+            const emailSubtitle = isSlsMode ? `<div style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 1px;">SLS</div>` : `<div style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 1px; font-family: monospace;">${p.email}</div>`;
+
+
             if (!isFull) {
                 // COMPACT ROW
                 const buTutupLainTitle = `Tutup: ${p.bu_tut || 0} | Ganda: ${p.bu_gan || 0} | Kantor Pusat: ${p.bu_pus || 0}`;
@@ -452,13 +543,12 @@
                     <td style="text-align: center; color: var(--text-secondary); font-size: 0.8rem;">${rowNo}</td>
                     <td style="text-align: left;">
                         <div style="font-weight: 700; color: var(--text-primary); font-size: 0.88rem; display: flex; align-items: center; gap: 0.4rem;">
-                            <span>${p.name}</span>
-                            ${roleBadge}
+                            ${col2Content}
                         </div>
-                        <div style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 1px; font-family: monospace;">${p.email}</div>
+                        ${emailSubtitle}
                     </td>
                     <td style="text-align: center;">
-                        <span class="badge" style="background: var(--bg-secondary); color: var(--text-primary); font-weight: 700; padding: 3px 8px; border-radius: 6px; border: 1px solid var(--border-light);">${p.sls_count}</span>
+                        ${col3Content}
                     </td>
                     <!-- Usaha -->
                     <td style="text-align: center; font-weight: 600; color: #047857; background: rgba(16,185,129,0.02);">${formatNumber(p.bu_dit)}</td>
@@ -482,7 +572,7 @@
                     <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_status)}</td>
                     <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_keb)}</td>
                     <td style="text-align: center;">${selisihBadge}</td>
-                    <td style="text-align: center;">${actionBtn}</td>
+                    <td style="text-align: center;">${isSlsMode ? "-" : actionBtn}</td>
                 </tr>`;
             } else {
                 // FULL 13-STATUS ROW
@@ -491,13 +581,12 @@
                     <td style="text-align: center; color: var(--text-secondary); font-size: 0.8rem;">${rowNo}</td>
                     <td style="text-align: left;">
                         <div style="font-weight: 700; color: var(--text-primary); font-size: 0.86rem; display: flex; align-items: center; gap: 0.4rem;">
-                            <span>${p.name}</span>
-                            ${roleBadge}
+                            ${col2Content}
                         </div>
-                        <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 1px; font-family: monospace;">${p.email}</div>
+                        ${emailSubtitle}
                     </td>
                     <td style="text-align: center;">
-                        <span class="badge" style="background: var(--bg-secondary); color: var(--text-primary); font-weight: 700; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border-light); font-size: 0.78rem;">${p.sls_count}</span>
+                        ${col3Content}
                     </td>
                     <!-- Usaha 6 cols -->
                     <td style="text-align: center; font-weight: 600; color: #047857; background: rgba(16,185,129,0.02);">${formatNumber(p.bu_dit)}</td>
@@ -518,7 +607,7 @@
                     <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_status)}</td>
                     <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_keb)}</td>
                     <td style="text-align: center;">${selisihBadge}</td>
-                    <td style="text-align: center;">${actionBtn}</td>
+                    <td style="text-align: center;">${isSlsMode ? "-" : actionBtn}</td>
                 </tr>`;
             }
         });

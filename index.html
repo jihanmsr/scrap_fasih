@@ -891,6 +891,11 @@
                         <span id="pny-kel-count"
                             style="font-size:0.8rem;color:var(--text-secondary);white-space:nowrap;">-</span>
                         <div style="margin-left:auto; display:flex; gap:0.4rem; align-items:center;">
+                            <button onclick="window.open('dashboard_satelit/peta_satelit_palu.html', '_blank')" title="Buka Peta Satelit Palu"
+                                style="padding:0.35rem 0.75rem;border-radius:0.5rem;border:none;background:linear-gradient(135deg,#3b82f6,#2563eb);color:white;font-size:0.78rem;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:0.35rem;box-shadow:0 2px 6px rgba(59,130,246,0.25);">
+                                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+                                Peta Satelit
+                            </button>
                             <button onclick="window.downloadPenyisiranKeluargaExcel()" title="Download Excel (.xlsx)"
                                 style="padding:0.35rem 0.75rem;border-radius:0.5rem;border:none;background:linear-gradient(135deg,#10b981,#059669);color:white;font-size:0.78rem;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:0.35rem;box-shadow:0 2px 6px rgba(16,185,129,0.25);">
                                 <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
@@ -929,6 +934,9 @@
                                         <th
                                             style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
                                             Beban Target</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-primary);background:rgba(59,130,246,0.1);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Estimasi Satelit</th>
                                         <th
                                             style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
                                             Ditemukan</th>
@@ -1664,6 +1672,12 @@
                                 <div class="d-flex gap-1" style="background: var(--bg-secondary, #f1f5f9); padding: 3px; border-radius: 0.6rem; border: 1px solid var(--border-light, #e2e8f0);">
                                     <button class="btn-tab active" id="tab-keb-pencacah" onclick="window.setKeberadaanRole('Pencacah')" style="margin-bottom: 0; padding: 0.35rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.45rem;">Pencacah</button>
                                     <button class="btn-tab" id="tab-keb-pengawas" onclick="window.setKeberadaanRole('Pengawas')" style="margin-bottom: 0; padding: 0.35rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.45rem;">Pengawas</button>
+                                </div>
+
+                                <!-- Grouping Switcher -->
+                                <div class="d-flex gap-1" style="background: var(--bg-secondary, #f1f5f9); padding: 3px; border-radius: 0.6rem; border: 1px solid var(--border-light, #e2e8f0); margin-left: 0.25rem;">
+                                    <button class="btn-tab active" id="tab-keb-group-petugas" onclick="window.setKeberadaanGrouping('petugas')" style="margin-bottom: 0; padding: 0.35rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.45rem;">Per Petugas</button>
+                                    <button class="btn-tab" id="tab-keb-group-sls" onclick="window.setKeberadaanGrouping('sls')" style="margin-bottom: 0; padding: 0.35rem 0.75rem; font-size: 0.8rem; font-weight: 700; border-radius: 0.45rem;">Per SLS</button>
                                 </div>
 
                                 <!-- View Mode: Ringkas vs Lengkap 13 Status -->
@@ -4338,6 +4352,8 @@
     <script src="rekap_status_sls.js?v=1789454047_v1509"></script>
     <script src="data_keberadaan_petugas.js?v=20260915_v2"></script>
     <script src="keberadaan_petugas.js?v=20260915_v2"></script>
+    <script src="dashboard_satelit/bahodopi_data.js"></script>
+    <script src="dashboard_satelit/palu_data.js"></script>
     <script src="app_v2.js?v=20260915_fixsubview" defer></script>
 
     <script>

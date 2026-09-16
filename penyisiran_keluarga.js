@@ -10,7 +10,7 @@
     let pnyKelSortAsc = false; // DESC by default
 
     // ── Init saat tab dibuka ─────────────────────────────────────────────────
-    window.initPenyisiranKeluarga = function () {
+    window.initPenyisiranKeluarga = async function () {
         const data = window.PENYISIRAN_KELUARGA_DATA;
         if (!data || data.length === 0) return;
 
@@ -33,6 +33,30 @@
     window.renderPenyisiranKeluarga = function () {
         const data = window.PENYISIRAN_KELUARGA_DATA;
         if (!data) return;
+
+        // MERGE SATELLITE DATA HERE
+        try {
+            const satData = window.BAHODOPI_SATELIT_DATA || [];
+            const satMap = {};
+            satData.forEach(item => {
+                if (item['Kode SLS (16 digit)']) {
+                    satMap[item['Kode SLS (16 digit)']] = item['Estimasi Bangunan Satelit'];
+                }
+            });
+            
+            // Tambahkan data Palu
+            const paluData = window.PALU_SATELIT_DATA || {};
+            for (let id in paluData) {
+                satMap[id] = paluData[id];
+            }
+            data.forEach(d => {
+                if (satMap[d.id_sub_sls] !== undefined) {
+                    d.satelit_count = satMap[d.id_sub_sls];
+                }
+            });
+        } catch(e) {
+            console.log("Error processing satellite data", e);
+        }
 
         const search   = (document.getElementById('pny-kel-search')?.value || '').toLowerCase();
         const kab      = document.getElementById('pny-kel-filter-kab')?.value || '';
@@ -137,6 +161,7 @@
                     <div style="font-size:0.68rem;color:var(--text-secondary);font-family:monospace;">${d.id_sub_sls || ''}</div>
                 </td>
                 <td style="${tdR}font-weight:600;">${(d.target_muatan || 0).toLocaleString('id-ID')}</td>
+                <td style="${tdR}font-weight:700;color:#3b82f6;background:rgba(59,130,246,0.05);">${d.satelit_count !== undefined ? d.satelit_count.toLocaleString('id-ID') : '-'}</td>
                 <td style="${tdR}color:#16a34a;font-weight:600;">${(d.realisasi_ditemukan || 0).toLocaleString('id-ID')}</td>
                 <td style="${tdR}">${hilangNum}</td>
                 <td style="${tdC}">

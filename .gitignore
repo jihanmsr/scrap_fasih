@@ -38,3 +38,13 @@ scratch/
 *.xlsx
 ~*.xlsx
 
+# Raw Shapefiles and GIS datasets (>4GB)
+SHP/
+BATAS DESA DESEMBER 2019 DUKCAPIL SULAWESI TENGAH/
+*.shp
+*.shx
+*.prj
+*.cpg
+*.qpj
+
+

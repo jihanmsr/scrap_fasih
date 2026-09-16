@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Satellite Analysis | Bahodopi</title>
+    <meta name="description" content="Dashboard monitoring estimasi bangunan satelit versus prelist lapangan untuk wilayah Bahodopi, Morowali.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <main class="dashboard-container">
+        <header class="dashboard-header">
+            <div>
+                <h1 class="gradient-text">AI Satellite Analysis</h1>
+                <p class="subtitle">Kecamatan Bahodopi, Kab. Morowali (SE2026)</p>
+            </div>
+            <div class="header-actions">
+                <input type="text" id="searchInput" placeholder="Cari SLS atau Desa..." class="glass-input">
+            </div>
+        </header>
+
+        <section class="summary-cards">
+            <div class="glass-card stat-card">
+                <div class="stat-icon">🗺️</div>
+                <div class="stat-info">
+                    <h3>Total SLS Diproses</h3>
+                    <p id="totalSls" class="stat-value">0</p>
+                </div>
+            </div>
+            <div class="glass-card stat-card">
+                <div class="stat-icon">🏢</div>
+                <div class="stat-info">
+                    <h3>Total Bangunan (Satelit)</h3>
+                    <p id="totalBuildings" class="stat-value">0</p>
+                </div>
+            </div>
+            <div class="glass-card stat-card warning-card">
+                <div class="stat-icon">⚠️</div>
+                <div class="stat-info">
+                    <h3>Anomali Terbesar (Selisih)</h3>
+                    <p id="maxDiscrepancy" class="stat-value">0</p>
+                    <small id="maxDiscrepancySls">Memuat...</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-section">
+            <div class="glass-card table-container">
+                <div class="table-header">
+                    <h2>Detail Perbandingan SLS</h2>
+                    <span class="badge" id="rowCountBadge">0 data</span>
+                </div>
+                <div class="table-wrapper">
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>Desa / Kelurahan</th>
+                                <th>Nama SLS</th>
+                                <th>Beban Prelist</th>
+                                <th>Estimasi Satelit</th>
+                                <th>Selisih</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <td colspan="6" class="loading-state">Memuat data AI satelit...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
