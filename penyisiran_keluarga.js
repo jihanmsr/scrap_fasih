@@ -29,34 +29,46 @@
         window.renderPenyisiranKeluarga();
     };
 
-    // ── Render ───────────────────────────────────────────────────────────────
-    window.renderPenyisiranKeluarga = function () {
-        const data = window.PENYISIRAN_KELUARGA_DATA;
-        if (!data) return;
-
-        // MERGE SATELLITE DATA HERE
+    let satMerged = false;
+    function mergeSatelliteData(data) {
+        if (satMerged || !data) return;
         try {
             const satData = window.BAHODOPI_SATELIT_DATA || [];
             const satMap = {};
             satData.forEach(item => {
-                if (item['Kode SLS (16 digit)']) {
-                    satMap[item['Kode SLS (16 digit)']] = item['Estimasi Bangunan Satelit'];
+                const k = item['Kode SLS (16 digit)'];
+                const val = item['Estimasi Bangunan Satelit'];
+                if (k && val !== null && val !== undefined && !isNaN(val)) {
+                    satMap[String(k)] = Number(val);
                 }
             });
             
             // Tambahkan data Palu
             const paluData = window.PALU_SATELIT_DATA || {};
             for (let id in paluData) {
-                satMap[id] = paluData[id];
+                if (paluData[id] !== null && paluData[id] !== undefined && !isNaN(paluData[id])) {
+                    satMap[String(id)] = Number(paluData[id]);
+                }
             }
+
             data.forEach(d => {
-                if (satMap[d.id_sub_sls] !== undefined) {
-                    d.satelit_count = satMap[d.id_sub_sls];
+                const sId = String(d.id_sub_sls || '');
+                if (satMap[sId] !== undefined) {
+                    d.satelit_count = satMap[sId];
                 }
             });
+            satMerged = true;
         } catch(e) {
-            console.log("Error processing satellite data", e);
+            console.error("Error processing satellite data", e);
         }
+    }
+
+    // ── Render ───────────────────────────────────────────────────────────────
+    window.renderPenyisiranKeluarga = function () {
+        const data = window.PENYISIRAN_KELUARGA_DATA;
+        if (!data) return;
+
+        mergeSatelliteData(data);
 
         const search   = (document.getElementById('pny-kel-search')?.value || '').toLowerCase();
         const kab      = document.getElementById('pny-kel-filter-kab')?.value || '';
@@ -150,6 +162,7 @@
                 : '#16a34a';
 
             const hilangNum = `<span style="color:#ef4444;font-weight:700;">${(d.tidak_ditemukan || 0).toLocaleString('id-ID')}</span>`;
+            const satCountStr = (d.satelit_count !== undefined && d.satelit_count !== null && !isNaN(Number(d.satelit_count))) ? Number(d.satelit_count).toLocaleString('id-ID') : '-';
 
             return `<tr style="${rowBg}" onmouseenter="this.style.background='var(--hover-bg)'" onmouseleave="this.style.background='${d.kategori_sisir === 'PRIORITAS 1 - SISIR SEGERA' ? 'rgba(239,68,68,0.035)' : ''}'">
                 <td style="${tdC}color:var(--text-secondary);font-size:0.75rem;">${rank}</td>
@@ -161,7 +174,7 @@
                     <div style="font-size:0.68rem;color:var(--text-secondary);font-family:monospace;">${d.id_sub_sls || ''}</div>
                 </td>
                 <td style="${tdR}font-weight:600;">${(d.target_muatan || 0).toLocaleString('id-ID')}</td>
-                <td style="${tdR}font-weight:700;color:#3b82f6;background:rgba(59,130,246,0.05);">${d.satelit_count !== undefined ? d.satelit_count.toLocaleString('id-ID') : '-'}</td>
+                <td style="${tdR}font-weight:700;color:#3b82f6;background:rgba(59,130,246,0.05);">${satCountStr}</td>
                 <td style="${tdR}color:#16a34a;font-weight:600;">${(d.realisasi_ditemukan || 0).toLocaleString('id-ID')}</td>
                 <td style="${tdR}">${hilangNum}</td>
                 <td style="${tdC}">
