@@ -415,6 +415,12 @@
             btnSls.style.borderColor = view === 'sls' ? '#3b82f6' : 'var(--card-border)';
         }
 
+        // Show/hide urgency sort bar
+        const urgencyBar = document.getElementById('palu-urgency-sort-bar');
+        if (urgencyBar) {
+            urgencyBar.style.display = view === 'sls' ? 'flex' : 'none';
+        }
+
         // Update search placeholder
         const searchInput = document.getElementById('palu-search-input');
         if (searchInput) {
@@ -425,7 +431,7 @@
                 searchInput.placeholder = '🔍 Cari SLS, Kelurahan, Kecamatan, PPL...';
                 searchInput.oninput = function() { window.searchPaluTable(this.value); };
             }
-            searchInput.value = ''; // reset search
+            searchInput.value = '';
         }
 
         // Reset page & search states
@@ -433,6 +439,13 @@
         usahaSearchQuery = '';
         currentPage = 1;
         searchQuery = '';
+
+        // Default sort for SLS view: urgency composite
+        if (view === 'sls') {
+            sortField = '__urgent__';
+            sortOrder = -1;
+            updateUrgencySortBtnState('urgent');
+        }
 
         window.renderPaluTable();
     };
@@ -610,6 +623,12 @@
 
         // 2. Sort
         filteredFeatures.sort((a, b) => {
+            if (sortField === '__urgent__') {
+                // Skor urgency: OPEN x10 + DRAFT x3 + Tdk Ditemukan x2 + Bangkos x1
+                const scoreA = (a.open||0)*10 + (a.draft||0)*3 + (a.tot_tdk||0)*2 + (a.bangkos||0);
+                const scoreB = (b.open||0)*10 + (b.draft||0)*3 + (b.tot_tdk||0)*2 + (b.bangkos||0);
+                return scoreB - scoreA;
+            }
             let va = a[sortField] ?? 0;
             let vb = b[sortField] ?? 0;
             if (typeof va === 'string') return sortOrder * va.localeCompare(vb);
@@ -700,8 +719,52 @@
             sortField = field;
             sortOrder = (field === 'nmdesa' || field === 'nmsls') ? 1 : -1;
         }
+        updateUrgencySortBtnState(field);
         window.renderPaluTable();
     };
+
+    // Quick-sort from urgency bar
+    window.quickSortPalu = function (factor) {
+        if (factor === 'urgent') {
+            // Composite urgency score: OPEN berat x10, DRAFT x3, Tdk Ditemukan x2, Bangkos x1
+            sortField = '__urgent__';
+            sortOrder = -1;
+        } else {
+            sortField = factor;
+            sortOrder = -1;
+        }
+        currentPage = 1;
+        updateUrgencySortBtnState(factor);
+        window.renderPaluTable();
+    };
+
+    function updateUrgencySortBtnState(activeKey) {
+        const map = {
+            'open': 'sort-btn-open',
+            'draft': 'sort-btn-draft',
+            'bangkos': 'sort-btn-bangkos',
+            'tot_tdk': 'sort-btn-tdk',
+            'urgent': 'sort-btn-urgent',
+            '__urgent__': 'sort-btn-urgent'
+        };
+        ['sort-btn-open','sort-btn-draft','sort-btn-bangkos','sort-btn-tdk','sort-btn-urgent'].forEach(id => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.style.outline = 'none';
+            el.style.boxShadow = 'none';
+            el.style.opacity = '0.85';
+        });
+        const activeId = map[activeKey];
+        if (activeId) {
+            const active = document.getElementById(activeId);
+            if (active) {
+                active.style.boxShadow = '0 0 0 2px currentColor';
+                active.style.opacity = '1';
+            }
+        }
+    }
+
+
 
     // Search input
     let searchTimer = null;
