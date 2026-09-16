@@ -119,6 +119,7 @@
             { id: 'pill-keb-bu', key: 'bu_bar' },
             { id: 'pill-keb-kl', key: 'kl_bar' },
             { id: 'pill-keb-tdk', key: 'tdk_dit' },
+            { id: 'pill-keb-bangkos', key: 'bang_kos' },
             { id: 'pill-keb-selisih', key: 'selisih' }
         ];
 
@@ -131,6 +132,8 @@
                         el.style.background = '#ef4444';
                     } else if (p.key === 'tdk_dit') {
                         el.style.background = '#d97706';
+                    } else if (p.key === 'bang_kos') {
+                        el.style.background = '#475569';
                     } else {
                         el.style.background = 'var(--primary)';
                     }
@@ -143,6 +146,9 @@
                     } else if (p.key === 'tdk_dit') {
                         el.style.background = 'rgba(245,158,11,0.08)';
                         el.style.color = '#d97706';
+                    } else if (p.key === 'bang_kos') {
+                        el.style.background = 'rgba(100,116,139,0.08)';
+                        el.style.color = '#475569';
                     } else {
                         el.style.background = 'var(--card-bg)';
                         el.style.color = 'var(--text-secondary)';
@@ -160,6 +166,9 @@
             window.keberadaanSortOrder = -1;
         } else if (mode === 'tdk_dit') {
             window.keberadaanSortField = 'tot_tdk';
+            window.keberadaanSortOrder = -1;
+        } else if (mode === 'bang_kos') {
+            window.keberadaanSortField = 'bang_kos';
             window.keberadaanSortOrder = -1;
         } else if (mode === 'selisih') {
             window.keberadaanSortField = 'anomali_count';
@@ -233,7 +242,7 @@
 
 
         if (!isFull) {
-            // COMPACT VIEW: Clean 15 columns with explicit Tidak Ditemukan
+            // COMPACT VIEW: Clean 16 columns with explicit Tidak Ditemukan and Bangunan Kosong
             thead.innerHTML = `
                 <tr style="background: var(--bg-secondary, #f8fafc); border-bottom: 2px solid var(--card-border);">
                     <th style="width: 45px; text-align: center;">No</th>
@@ -249,6 +258,8 @@
                     <th style="text-align: center; width: 85px; background: rgba(59,130,246,0.06); cursor: pointer;" onclick="window.sortKeberadaan('kl_bar')">K-Baru ${sortIcon('kl_bar')}</th>
                     <th style="text-align: center; width: 95px; background: rgba(245,158,11,0.08); color: #d97706; cursor: pointer;" onclick="window.sortKeberadaan('kl_tdk')" title="Keluarga Tidak Ditemukan">K-Tdk Dit ${sortIcon('kl_tdk')}</th>
                     <th style="text-align: center; width: 95px; background: rgba(59,130,246,0.06); cursor: pointer;" onclick="window.sortKeberadaan('kl_nonaktif')" title="Meninggal, Tidak Eligible, Tidak Dapat Ditemui, Khusus">K-Lain ${sortIcon('kl_nonaktif')}</th>
+                    <!-- Bangunan Kosong -->
+                    <th style="text-align: center; width: 80px; background: rgba(100,116,139,0.08); color: #475569; cursor: pointer;" onclick="window.sortKeberadaan('bang_kos')" title="Bangunan Kosong">B-Kos ${sortIcon('bang_kos')}</th>
                     <!-- Audit & Totals -->
                     <th style="text-align: center; width: 90px; cursor: pointer;" onclick="window.sortKeberadaan('tot_status')">Tot Status ${sortIcon('tot_status')}</th>
                     <th style="text-align: center; width: 90px; cursor: pointer;" onclick="window.sortKeberadaan('tot_keb')">Tot Keb ${sortIcon('tot_keb')}</th>
@@ -257,7 +268,7 @@
                 </tr>
             `;
         } else {
-            // FULL 13-STATUS VIEW: 2-level grouped header
+            // FULL 13-STATUS VIEW: 2-level grouped header + Bangunan Kosong
             thead.innerHTML = `
                 <tr style="background: var(--bg-secondary, #f8fafc); border-bottom: 1px solid var(--card-border);">
                     <th rowspan="2" style="width: 45px; text-align: center; vertical-align: middle;">No</th>
@@ -267,6 +278,8 @@
                     <th colspan="6" style="text-align: center; background: rgba(16,185,129,0.12); color: #047857; font-weight: 800; border-left: 1px solid var(--border-light); border-right: 1px solid var(--border-light); font-size: 0.8rem; padding: 0.4rem;">BANGUNAN USAHA (6 KATEGORI)</th>
                     <!-- Keluarga Group -->
                     <th colspan="7" style="text-align: center; background: rgba(59,130,246,0.12); color: #1d4ed8; font-weight: 800; border-right: 1px solid var(--border-light); font-size: 0.8rem; padding: 0.4rem;">KELUARGA (7 KATEGORI)</th>
+                    <!-- Bangunan Kosong -->
+                    <th rowspan="2" style="text-align: center; width: 80px; background: rgba(100,116,139,0.08); color: #475569; vertical-align: middle; cursor: pointer;" onclick="window.sortKeberadaan('bang_kos')" title="Bangunan Kosong">B-Kos ${sortIcon('bang_kos')}</th>
                     <!-- Audit Group -->
                     <th colspan="3" style="text-align: center; background: rgba(139,92,246,0.12); color: #6d28d9; font-weight: 800; border-right: 1px solid var(--border-light); font-size: 0.8rem; padding: 0.4rem;">REKONSILIASI</th>
                     <th rowspan="2" style="text-align: center; width: 75px; vertical-align: middle;">Aksi</th>
@@ -383,6 +396,8 @@
                             tot_status: s[15]||0,
                             tot_keb: s[16]||0,
                             selisih: s[17]||0,
+                            bang_kos: s[18]||0,
+                            bangkos_sls: (s[18] && s[18] > 0) ? 1 : 0,
                             anomali_count: (s[17] !== 0) ? 1 : 0
                         });
                     });
@@ -438,6 +453,8 @@
             filtered = filtered.filter(p => (p.kl_bar || 0) > 0);
         } else if (window.keberadaanMode === 'tdk_dit') {
             filtered = filtered.filter(p => (p.tot_tdk || 0) > 0);
+        } else if (window.keberadaanMode === 'bang_kos') {
+            filtered = filtered.filter(p => (p.bang_kos || 0) > 0);
         } else if (window.keberadaanMode === 'selisih') {
             filtered = filtered.filter(p => (p.anomali_count || 0) > 0 || (p.selisih || 0) !== 0);
         }
@@ -482,7 +499,7 @@
 
         // 6. Render Table Rows
         const isFull = (window.keberadaanView === 'full');
-        const colspanTotal = isFull ? 20 : 15;
+        const colspanTotal = isFull ? 21 : 16;
 
         if (pageItems.length === 0) {
             tbody.innerHTML = `<tr><td colspan="${colspanTotal}" style="text-align: center; padding: 2.5rem; color: var(--text-secondary);">
@@ -568,6 +585,10 @@
                         <span style="color: #d97706; font-weight: 700;">${formatNumber(p.kl_tdk)}</span>
                     </td>
                     <td style="text-align: center; color: var(--text-secondary); cursor: help;" title="${klLainTitle}">${formatNumber(p.kl_nonaktif)}</td>
+                    <!-- Bangunan Kosong -->
+                    <td style="text-align: center; background: rgba(100,116,139,0.03); font-weight: 700; color: ${p.bang_kos > 0 ? '#334155' : 'var(--text-secondary)'}; font-size: 0.85rem;">
+                        ${p.bang_kos > 0 ? `<span style="background: rgba(100,116,139,0.12); color: #334155; padding: 0.15rem 0.45rem; border-radius: 6px; font-weight: 800;">${formatNumber(p.bang_kos)}</span>` : '-'}
+                    </td>
                     <!-- Totals & Audit -->
                     <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_status)}</td>
                     <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_keb)}</td>
@@ -603,6 +624,10 @@
                     <td style="text-align: center; color: var(--text-secondary);">${formatNumber(p.kl_tem)}</td>
                     <td style="text-align: center; color: var(--text-secondary);">${formatNumber(p.kl_eli)}</td>
                     <td style="text-align: center; color: var(--text-secondary);">${formatNumber(p.kl_khu)}</td>
+                    <!-- Bangunan Kosong -->
+                    <td style="text-align: center; background: rgba(100,116,139,0.03); font-weight: 700; color: ${p.bang_kos > 0 ? '#334155' : 'var(--text-secondary)'}; font-size: 0.85rem;">
+                        ${p.bang_kos > 0 ? `<span style="background: rgba(100,116,139,0.12); color: #334155; padding: 0.15rem 0.45rem; border-radius: 6px; font-weight: 800;">${formatNumber(p.bang_kos)}</span>` : '-'}
+                    </td>
                     <!-- Rekonsiliasi 3 cols -->
                     <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_status)}</td>
                     <td style="text-align: center; font-weight: 700; color: var(--text-primary);">${formatNumber(p.tot_keb)}</td>
@@ -630,6 +655,7 @@
             const tempSum = {
                 bu_dit: 0, bu_bar: 0, bu_tdk: 0, bu_tut: 0, bu_gan: 0, bu_pus: 0,
                 kl_dit: 0, kl_bar: 0, kl_tdk: 0, kl_men: 0, kl_eli: 0, kl_tem: 0, kl_khu: 0,
+                bang_kos: 0, bangkos_sls: 0,
                 tot_status: 0, tot_keb: 0, selisih: 0, anomali_sls: 0, sls_count: 0
             };
             list.forEach(p => {
@@ -651,6 +677,8 @@
                 tempSum.kl_eli += p.kl_eli;
                 tempSum.kl_tem += p.kl_tem;
                 tempSum.kl_khu += p.kl_khu;
+                tempSum.bang_kos += p.bang_kos || 0;
+                tempSum.bangkos_sls += p.bangkos_sls || 0;
                 tempSum.tot_status += p.tot_status;
                 tempSum.tot_keb += p.tot_keb;
                 tempSum.selisih += p.selisih;
@@ -698,6 +726,12 @@
         if (elKtdk) elKtdk.textContent = formatNumber(summary.kl_tdk);
         const elKmen = document.getElementById('keb-kpi-kl-men');
         if (elKmen) elKmen.textContent = formatNumber(summary.kl_men);
+
+        // Bangunan Kosong
+        const elBangKos = document.getElementById('keb-kpi-bang-kos');
+        if (elBangKos) elBangKos.textContent = formatNumber(summary.bang_kos || 0);
+        const elBangKosSls = document.getElementById('keb-kpi-bangkos-sls');
+        if (elBangKosSls) elBangKosSls.textContent = `${formatNumber(summary.bangkos_sls || 0)} SLS`;
 
         const elAuditRate = document.getElementById('keb-kpi-audit-rate');
         if (elAuditRate) elAuditRate.textContent = matchPct + '%';
@@ -790,6 +824,8 @@
                 <div style="flex: 1 1 100%; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-top: 0.25rem;">
                     <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
                         <span>👨‍👩‍👧‍👦 <b>Keluarga:</b> Dit: <b>${formatNumber(petugas.kl_dit)}</b> | Baru: <b style="color:#2563eb;">+${formatNumber(petugas.kl_bar)}</b> | <b style="color:#d97706;">Tdk Dit: ${formatNumber(petugas.kl_tdk)}</b> | Men: ${formatNumber(petugas.kl_men)} | Tdk Ditemui: ${formatNumber(petugas.kl_tem)} | Tdk Eli: ${formatNumber(petugas.kl_eli)} | Khusus: ${formatNumber(petugas.kl_khu)}</span>
+                        <span>•</span>
+                        <span>🏚️ <b>B-Kos:</b> <b>${formatNumber(petugas.bang_kos || 0)}</b> (${petugas.bangkos_sls || 0} SLS)</span>
                     </div>
                     <div>
                         <span>⚖️ <b>Audit:</b> Status: <b>${formatNumber(petugas.tot_status)}</b> | Keb: <b>${formatNumber(petugas.tot_keb)}</b> | Selisih: <b style="color:${selisihColor};">${petugas.selisih} (${petugas.anomali_count} SLS)</b></span>
@@ -800,7 +836,7 @@
 
         // SLS Table Rows
         // Format of sls record:
-        // [sls, sub, bu_dit, bu_bar, bu_tdk, bu_tut, bu_gan, bu_pus, kl_dit, kl_bar, kl_tdk, kl_men, kl_eli, kl_tem, kl_khu, status_sum, tot_keb, selisih]
+        // [sls, sub, bu_dit, bu_bar, bu_tdk, bu_tut, bu_gan, bu_pus, kl_dit, kl_bar, kl_tdk, kl_men, kl_eli, kl_tem, kl_khu, status_sum, tot_keb, selisih, bang_kos]
         const slsList = petugas.sls || [];
         let rowsHtml = '';
 
@@ -825,6 +861,7 @@
             const statusSum = r[15] || 0;
             const totKeb = r[16] || 0;
             const sel = r[17] || 0;
+            const bangKos = r[18] || 0;
 
             const isAnomali = (sel !== 0);
 
@@ -862,6 +899,8 @@
                 </td>
                 <td style="padding:0.6rem 0.5rem; text-align:center; background:rgba(245,158,11,0.04); font-weight:700; color:#d97706;">${klTdk}</td>
                 <td style="padding:0.6rem 0.5rem; text-align:center; color:var(--text-secondary); cursor:help;" title="${klLainTooltip}">${klLain}</td>
+                <!-- Bangunan Kosong -->
+                <td style="padding:0.6rem 0.5rem; text-align:center; font-weight:700; color:${bangKos > 0 ? '#334155' : 'var(--text-secondary)'}; background:rgba(100,116,139,0.04);">${bangKos > 0 ? formatNumber(bangKos) : '-'}</td>
                 <!-- Totals & Audit -->
                 <td style="padding:0.6rem 0.5rem; text-align:center; font-weight:700; color:var(--text-primary);">${statusSum}</td>
                 <td style="padding:0.6rem 0.5rem; text-align:center; font-weight:700; color:var(--text-primary);">${totKeb}</td>
@@ -901,6 +940,8 @@
             // Keluarga
             'Keluarga Ditemukan', 'Keluarga Baru', 'Keluarga Tidak Ditemukan', 'Keluarga Meninggal', 'Keluarga Tdk Eligible', 'Keluarga Tdk Ditemui', 'Keluarga Khusus',
             'Total Keluarga Aktif', 'Total Keluarga Semua',
+            // Bangunan Kosong
+            'Bangunan Kosong',
             // Audit
             'Total Status', 'Total Keberadaan', 'Selisih Audit', 'Status Sinkron'
         ];
@@ -939,6 +980,8 @@
                 p.kl_khu || 0,
                 kAktif,
                 kAll,
+                // Bangunan Kosong
+                p.bang_kos || 0,
                 // Audit
                 p.tot_status || 0,
                 p.tot_keb || 0,
@@ -957,7 +1000,6 @@
         ws['!cols'][4] = { wch: 24 }; // Kab
 
         XLSX.utils.book_append_sheet(wb, ws, 'Keberadaan ' + window.keberadaanRole);
-
         const ts = new Date().toISOString().slice(0, 10);
         XLSX.writeFile(wb, `Rekap_Keberadaan_Lengkap_${window.keberadaanRole}_${ts}.xlsx`);
     };
@@ -974,7 +1016,7 @@
             'No', 'Nama Petugas', 'Email', 'Role', 'Kabupaten', 'Jml SLS',
             'Usaha Ditemukan', 'Usaha Baru', 'Usaha Tidak Ditemukan', 'Usaha Tutup', 'Usaha Ganda', 'Usaha Kantor Pusat', 'Total Usaha Aktif',
             'Keluarga Ditemukan', 'Keluarga Baru', 'Keluarga Tidak Ditemukan', 'Keluarga Meninggal', 'Keluarga Tdk Eligible', 'Keluarga Tdk Ditemui', 'Keluarga Khusus', 'Total Keluarga Aktif',
-            'Total Status', 'Total Keberadaan', 'Selisih Audit'
+            'Bangunan Kosong', 'Total Status', 'Total Keberadaan', 'Selisih Audit'
         ];
 
         let csv = '\uFEFF' + headers.join(',') + '\n';
@@ -1006,6 +1048,7 @@
                 p.kl_tem || 0,
                 p.kl_khu || 0,
                 kAktif,
+                p.bang_kos || 0,
                 p.tot_status || 0,
                 p.tot_keb || 0,
                 p.selisih || 0

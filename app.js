@@ -5803,6 +5803,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (loggedUser) {
                 window.showAnomaliDataSection();
             }
+        } else if (tabId === 'penyisiran') {
+            if (mainHeader) mainHeader.textContent = 'Penyisiran Lapangan & Citra Satelit';
+            if (mainSubheader) mainSubheader.textContent = 'Prioritas penyisiran keluarga hilang vs deteksi satelit dan penyisiran bangunan usaha';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            if (typeof window.initPenyisiranKeluarga === 'function') {
+                window.initPenyisiranKeluarga();
+            }
         } else if (tabId === 'open_subsls') {
             if (mainHeader) mainHeader.textContent = 'Pemantauan SLS Open';
             if (mainSubheader) mainSubheader.textContent = 'Daftar SLS yang masih berstatus OPEN dan pemantauan kelengkapan petugas.';

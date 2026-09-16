@@ -2,10 +2,13 @@ import openpyxl
 import json
 import os
 import time
+from datetime import datetime
 
 def generate():
     start_time = time.time()
-    excel_path = 'rekap_progress_petugas_keberadaan_keluarga_dan_usaha.xlsx'
+    excel_path = 'rekap_progress_petugas_keluarga_usaha_bangkos.xlsx'
+    if not os.path.exists(excel_path):
+        excel_path = 'rekap_progress_petugas_keberadaan_keluarga_dan_usaha.xlsx'
     print(f"Reading {excel_path}...")
     
     wb = openpyxl.load_workbook(excel_path, data_only=True)
@@ -21,6 +24,7 @@ def generate():
         'sls_count': 0,
         'bu_dit': 0, 'bu_bar': 0, 'bu_tdk': 0, 'bu_tut': 0, 'bu_gan': 0, 'bu_pus': 0,
         'kl_dit': 0, 'kl_bar': 0, 'kl_tdk': 0, 'kl_men': 0, 'kl_eli': 0, 'kl_tem': 0, 'kl_khu': 0,
+        'bang_kos': 0, 'bangkos_sls': 0,
         'tot_status': 0, 'tot_keb': 0, 'selisih': 0, 'anomali_sls': 0
     }
     
@@ -51,6 +55,17 @@ def generate():
         kl_tem = int(r[25] or 0)
         kl_khu = int(r[26] or 0)
         
+        # Bangunan Kosong (kolom 27 di file bangkos)
+        bang_kos = int(r[27] or 0) if len(r) > 27 and isinstance(r[27], (int, float)) else 0
+        
+        # Email petugas
+        if len(r) >= 30 and '@' in str(r[28] or ''):
+            pencacah = str(r[28] or '').strip().lower()
+            pengawas = str(r[29] or '').strip().lower()
+        else:
+            pencacah = str(r[31] or '').strip().lower() if len(r) > 31 else ''
+            pengawas = str(r[32] or '').strip().lower() if len(r) > 32 else ''
+        
         tot_bu = bu_tdk + bu_dit + bu_bar + bu_tut + bu_gan + bu_pus
         tot_kl = kl_tdk + kl_dit + kl_bar + kl_men + kl_eli + kl_tem + kl_khu
         tot_keb = tot_bu + tot_kl
@@ -72,6 +87,9 @@ def generate():
         prov_summary['kl_eli'] += kl_eli
         prov_summary['kl_tem'] += kl_tem
         prov_summary['kl_khu'] += kl_khu
+        prov_summary['bang_kos'] += bang_kos
+        if bang_kos > 0:
+            prov_summary['bangkos_sls'] += 1
         prov_summary['tot_status'] += status_sum
         prov_summary['tot_keb'] += tot_keb
         prov_summary['selisih'] += selisih
@@ -85,6 +103,7 @@ def generate():
                     'sls_count': 0,
                     'bu_dit': 0, 'bu_bar': 0, 'bu_tdk': 0, 'bu_tut': 0, 'bu_gan': 0, 'bu_pus': 0,
                     'kl_dit': 0, 'kl_bar': 0, 'kl_tdk': 0, 'kl_men': 0, 'kl_eli': 0, 'kl_tem': 0, 'kl_khu': 0,
+                    'bang_kos': 0, 'bangkos_sls': 0,
                     'tot_status': 0, 'tot_keb': 0, 'selisih': 0, 'anomali_sls': 0
                 }
             ks = kab_summary[kab_code]
@@ -102,25 +121,25 @@ def generate():
             ks['kl_eli'] += kl_eli
             ks['kl_tem'] += kl_tem
             ks['kl_khu'] += kl_khu
+            ks['bang_kos'] += bang_kos
+            if bang_kos > 0:
+                ks['bangkos_sls'] += 1
             ks['tot_status'] += status_sum
             ks['tot_keb'] += tot_keb
             ks['selisih'] += selisih
             if is_anomali:
                 ks['anomali_sls'] += 1
-                
-        pencacah = str(r[31] or '').strip().lower()
-        pengawas = str(r[32] or '').strip().lower()
         
         # Full SLS detail representation:
         # 0: sls, 1: sub
         # 2: bu_dit, 3: bu_bar, 4: bu_tdk, 5: bu_tut, 6: bu_gan, 7: bu_pus
         # 8: kl_dit, 9: kl_bar, 10: kl_tdk, 11: kl_men, 12: kl_eli, 13: kl_tem, 14: kl_khu
-        # 15: status_sum, 16: tot_keb, 17: selisih
+        # 15: status_sum, 16: tot_keb, 17: selisih, 18: bang_kos
         sls_item = [
             sls, sub,
             bu_dit, bu_bar, bu_tdk, bu_tut, bu_gan, bu_pus,
             kl_dit, kl_bar, kl_tdk, kl_men, kl_eli, kl_tem, kl_khu,
-            status_sum, tot_keb, selisih
+            status_sum, tot_keb, selisih, bang_kos
         ]
         
         def update_petugas(target_dict, email, role):
@@ -134,6 +153,7 @@ def generate():
                     'sls_count': 0,
                     'bu_dit': 0, 'bu_bar': 0, 'bu_tdk': 0, 'bu_tut': 0, 'bu_gan': 0, 'bu_pus': 0,
                     'kl_dit': 0, 'kl_bar': 0, 'kl_tdk': 0, 'kl_men': 0, 'kl_eli': 0, 'kl_tem': 0, 'kl_khu': 0,
+                    'bang_kos': 0, 'bangkos_sls': 0,
                     'tot_status': 0, 'tot_keb': 0, 'selisih': 0, 'anomali_count': 0,
                     'sls': []
                 }
@@ -154,6 +174,9 @@ def generate():
             p['kl_eli'] += kl_eli
             p['kl_tem'] += kl_tem
             p['kl_khu'] += kl_khu
+            p['bang_kos'] += bang_kos
+            if bang_kos > 0:
+                p['bangkos_sls'] += 1
             p['tot_status'] += status_sum
             p['tot_keb'] += tot_keb
             p['selisih'] += selisih
@@ -180,8 +203,9 @@ def generate():
     pencacah_list = serialize_dict(pencacah_map)
     pengawas_list = serialize_dict(pengawas_map)
     
+    now_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     out_obj = {
-        'timestamp': '2026-09-15 14:00:00',
+        'timestamp': now_str,
         'total_sls': total_sls_rows,
         'summary_prov': prov_summary,
         'summary_kab': kab_summary,

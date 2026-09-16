@@ -204,6 +204,17 @@
                     Data Hilang
                 </button>
 
+                <button class="btn-tab" id="tab-btn-penyisiran" onclick="switchTab('penyisiran')"
+                    title="Prioritas Penyisiran Lapangan & Citra Satelit">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                        <path d="M2 12h20"></path>
+                    </svg>
+                    Penyisiran Lapangan
+                </button>
+
                 <button class="btn-tab" id="tab-btn-open_subsls" onclick="switchTab('open_subsls')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
@@ -322,22 +333,6 @@
                 </div>
             </header>
             <div class="tab-content" id="tab-content-open_subsls" style="display: none; padding: 1.5rem;">
-                <!-- SUB TAB NAVIGATION -->
-                <div class="sub-tabs-container" style="margin-bottom: 1.25rem;">
-                    <button class="btn-sub-tab active" id="open_subsls-sub-btn-fullopen"
-                        onclick="window.switchOpenSubslsSubTab('fullopen')">
-                        SLS Full Open
-                    </button>
-                    <button class="btn-sub-tab" id="open_subsls-sub-btn-penyisiran"
-                        onclick="window.switchOpenSubslsSubTab('penyisiran')">
-                        Penyisiran Bangunan Usaha
-                    </button>
-                    <button class="btn-sub-tab" id="open_subsls-sub-btn-penyisiran-keluarga"
-                        onclick="window.switchOpenSubslsSubTab('penyisiran-keluarga')">
-                        Prioritas Penyisiran Keluarga
-                    </button>
-                </div>
-
                 <!-- SUB TAB 1: FULL OPEN -->
                 <div id="open_subsls-sub-fullopen">
 
@@ -592,201 +587,23 @@
                     </div>
                 </div>
 
-                <!-- SUB TAB 2: PENYISIRAN BANGUNAN -->
-                <div id="open_subsls-sub-penyisiran" style="display: none;">
-                    <!-- Summary Cards -->
-                    <div id="penyisiran-summary-cards"
-                        style="display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-bottom:1.5rem;">
-                        <div
-                            style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                            <div
-                                style="font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">
-                                Total SubSLS</div>
-                            <div id="pny-total-subsls"
-                                style="font-size:1.6rem;font-weight:800;color:var(--text-primary);font-family:'Outfit',sans-serif;">
-                                -</div>
-                        </div>
-                        <div
-                            style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                            <div
-                                style="font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">
-                                Total Usaha</div>
-                            <div id="pny-total-usaha"
-                                style="font-size:1.6rem;font-weight:800;color:var(--text-primary);font-family:'Outfit',sans-serif;">
-                                -</div>
-                        </div>
-                        <div
-                            style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                            <div
-                                style="font-size:0.72rem;font-weight:700;color:#ef4444;text-transform:uppercase;letter-spacing:0.05em;">
-                                Tidak Ditemukan</div>
-                            <div id="pny-total-tdk"
-                                style="font-size:1.6rem;font-weight:800;color:#ef4444;font-family:'Outfit',sans-serif;">
-                                -</div>
-                            <div id="pny-pct-tdk" style="font-size:0.8rem;color:var(--text-secondary);font-weight:600;">
-                                -</div>
-                        </div>
-                        <div
-                            style="background:rgba(239,68,68,0.06);border:1.5px solid #ef4444;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                            <div
-                                style="font-size:0.72rem;font-weight:700;color:#ef4444;text-transform:uppercase;letter-spacing:0.05em;">
-                                &#9888; Prioritas 1</div>
-                            <div id="pny-p1"
-                                style="font-size:1.6rem;font-weight:800;color:#ef4444;font-family:'Outfit',sans-serif;">
-                                -</div>
-                            <div style="font-size:0.75rem;color:var(--text-secondary);">Sisir Segera</div>
-                        </div>
-                        <div
-                            style="background:rgba(245,158,11,0.06);border:1.5px solid #f59e0b;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                            <div
-                                style="font-size:0.72rem;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:0.05em;">
-                                &#9888; Prioritas 2</div>
-                            <div id="pny-p2"
-                                style="font-size:1.6rem;font-weight:800;color:#d97706;font-family:'Outfit',sans-serif;">
-                                -</div>
-                            <div style="font-size:0.75rem;color:var(--text-secondary);">Perlu Cek</div>
-                        </div>
-                        <div
-                            style="background:rgba(34,197,94,0.06);border:1.5px solid #22c55e;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
-                            <div
-                                style="font-size:0.72rem;font-weight:700;color:#16a34a;text-transform:uppercase;letter-spacing:0.05em;">
-                                Prioritas 3</div>
-                            <div id="pny-p3"
-                                style="font-size:1.6rem;font-weight:800;color:#16a34a;font-family:'Outfit',sans-serif;">
-                                -</div>
-                            <div style="font-size:0.75rem;color:var(--text-secondary);">Wajar</div>
-                        </div>
-                    </div>
+            </div>
 
-                    <!-- Filter Bar -->
-                    <div
-                        style="display:flex;gap:0.5rem;margin-bottom:0.85rem;flex-wrap:wrap;align-items:center;background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.75rem;padding:0.5rem 0.75rem;box-shadow:var(--shadow-sm);">
-                        <svg width="14" height="14" fill="none" stroke="var(--text-secondary)" stroke-width="2.5"
-                            viewBox="0 0 24 24" style="flex-shrink:0;">
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="M21 21l-4.35-4.35" />
-                        </svg>
-                        <input type="text" id="pny-search" placeholder="Cari kab / kec / desa / SLS..."
-                            oninput="window.renderPenyisiran()"
-                            style="flex:1;min-width:160px;padding:0.3rem 0.4rem;border:none;background:transparent;color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.85rem;outline:none;">
-                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
-                        <select id="pny-filter-kab" onchange="window.renderPenyisiran()"
-                            style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
-                            <option value="">Semua Kab/Kota</option>
-                        </select>
-                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
-                        <select id="pny-filter-kategori" onchange="window.renderPenyisiran()"
-                            style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
-                            <option value="">Semua Kategori</option>
-                            <option value="PRIORITAS 1 - SISIR SEGERA">&#128308; Prioritas 1 - Sisir Segera</option>
-                            <option value="PRIORITAS 2 - PERLU CEK">&#128993; Prioritas 2 - Perlu Cek</option>
-                            <option value="PRIORITAS 3 - WAJAR">&#128994; Prioritas 3 - Wajar</option>
-                        </select>
-                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
-                        <select id="pny-sort-by" onchange="window.renderPenyisiran()"
-                            style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
-                            <option value="skor_perhatian">Urutkan: Skor Perhatian</option>
-                            <option value="tidak_ditemukan">Urutkan: Tdk Ditemukan</option>
-                            <option value="total_usaha">Urutkan: Total Usaha</option>
-                            <option value="pct_tdk_ditemukan">Urutkan: % Tdk Ditemukan</option>
-                            <option value="pct_selesai">Urutkan: % Selesai</option>
-                        </select>
-                        <button id="pny-sort-dir" onclick="window.togglePenyisiranSort()"
-                            style="padding:0.3rem 0.6rem;border:1px solid var(--card-border);border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-size:0.8rem;cursor:pointer;">&#8595;
-                            DESC</button>
-                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
-                        <span id="pny-count"
-                            style="font-size:0.8rem;color:var(--text-secondary);white-space:nowrap;">-</span>
-                        <div style="margin-left:auto; display:flex; gap:0.4rem; align-items:center;">
-                            <button onclick="window.downloadPenyisiranExcel()" title="Download Excel (.xlsx)"
-                                style="padding:0.35rem 0.75rem;border-radius:0.5rem;border:none;background:linear-gradient(135deg,#10b981,#059669);color:white;font-size:0.78rem;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:0.35rem;box-shadow:0 2px 6px rgba(16,185,129,0.25);">
-                                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                                Excel (.xlsx)
-                            </button>
-                            <button onclick="window.downloadPenyisiranCSV()" title="Download CSV"
-                                style="padding:0.35rem 0.7rem;border-radius:0.5rem;border:1px solid var(--card-border);background:var(--input-bg);color:var(--text-primary);font-size:0.78rem;font-weight:600;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:0.35rem;">
-                                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                                CSV
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Table -->
-                    <div
-                        style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;overflow:hidden;box-shadow:var(--shadow-sm);">
-                        <div style="overflow-x:auto;">
-                            <table id="penyisiran-table" style="width:100%;border-collapse:collapse;font-size:0.82rem;">
-                                <thead>
-                                    <tr style="background:var(--bg-body);">
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            #</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            Kabupaten</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            Kecamatan</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            Desa/Kel</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            SLS / SubSLS</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            Total</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            Ditemukan</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:#ef4444;text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            Tdk Ditemukan</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            Tutup</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            Belum Terdata</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            % Selesai</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:center;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            Skor</th>
-                                        <th
-                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:center;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
-                                            Kategori</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="penyisiran-tbody">
-                                    <tr>
-                                        <td colspan="13"
-                                            style="text-align:center;padding:2rem;color:var(--text-secondary);">Memuat
-                                            data...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- Pagination -->
-                        <div id="pny-pagination"
-                            style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;border-top:1px solid var(--card-border);background:var(--bg-body);gap:0.5rem;flex-wrap:wrap;">
-                            <span id="pny-page-info" style="font-size:0.8rem;color:var(--text-secondary);"></span>
-                            <div style="display:flex;gap:0.35rem;">
-                                <button id="pny-btn-prev" onclick="window.changePnyPage(-1)"
-                                    style="padding:0.3rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;">&#8592;
-                                    Prev</button>
-                                <div id="pny-page-nums" style="display:flex;gap:0.25rem;"></div>
-                                <button id="pny-btn-next" onclick="window.changePnyPage(1)"
-                                    style="padding:0.3rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;">Next
-                                    &#8594;</button>
-                            </div>
-                        </div>
-                    </div>
+            <!-- TAB CONTENT: PENYISIRAN LAPANGAN -->
+            <div class="tab-content" id="tab-content-penyisiran" style="display: none; padding: 1.5rem;">
+                <!-- SUB TAB NAVIGATION -->
+                <div class="sub-tabs-container" style="margin-bottom: 1.25rem;">
+                    <button class="btn-sub-tab active" id="penyisiran-sub-btn-keluarga"
+                        onclick="window.switchPenyisiranSubTab('penyisiran-keluarga')">
+                        Prioritas Penyisiran Keluarga &amp; Satelit
+                    </button>
+                    <button class="btn-sub-tab" id="penyisiran-sub-btn-usaha"
+                        onclick="window.switchPenyisiranSubTab('penyisiran-usaha')">
+                        Penyisiran Bangunan Usaha
+                    </button>
                 </div>
-
                 <!-- SUB TAB 3: PENYISIRAN KELUARGA -->
-                <div id="open_subsls-sub-penyisiran-keluarga" style="display: none;">
+                <div id="open_subsls-sub-penyisiran-keluarga" style="display: block;">
                     <!-- Summary Cards -->
                     <div id="penyisiran-keluarga-summary-cards"
                         style="display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-bottom:1.5rem;">
@@ -985,7 +802,202 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- SUB TAB 2: PENYISIRAN BANGUNAN -->
+                <div id="open_subsls-sub-penyisiran" style="display: none;">
+                    <!-- Summary Cards -->
+                    <div id="penyisiran-summary-cards"
+                        style="display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-bottom:1.5rem;">
+                        <div
+                            style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">
+                                Total SubSLS</div>
+                            <div id="pny-total-subsls"
+                                style="font-size:1.6rem;font-weight:800;color:var(--text-primary);font-family:'Outfit',sans-serif;">
+                                -</div>
+                        </div>
+                        <div
+                            style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">
+                                Total Usaha</div>
+                            <div id="pny-total-usaha"
+                                style="font-size:1.6rem;font-weight:800;color:var(--text-primary);font-family:'Outfit',sans-serif;">
+                                -</div>
+                        </div>
+                        <div
+                            style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:#ef4444;text-transform:uppercase;letter-spacing:0.05em;">
+                                Tidak Ditemukan</div>
+                            <div id="pny-total-tdk"
+                                style="font-size:1.6rem;font-weight:800;color:#ef4444;font-family:'Outfit',sans-serif;">
+                                -</div>
+                            <div id="pny-pct-tdk" style="font-size:0.8rem;color:var(--text-secondary);font-weight:600;">
+                                -</div>
+                        </div>
+                        <div
+                            style="background:rgba(239,68,68,0.06);border:1.5px solid #ef4444;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:#ef4444;text-transform:uppercase;letter-spacing:0.05em;">
+                                &#9888; Prioritas 1</div>
+                            <div id="pny-p1"
+                                style="font-size:1.6rem;font-weight:800;color:#ef4444;font-family:'Outfit',sans-serif;">
+                                -</div>
+                            <div style="font-size:0.75rem;color:var(--text-secondary);">Sisir Segera</div>
+                        </div>
+                        <div
+                            style="background:rgba(245,158,11,0.06);border:1.5px solid #f59e0b;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:0.05em;">
+                                &#9888; Prioritas 2</div>
+                            <div id="pny-p2"
+                                style="font-size:1.6rem;font-weight:800;color:#d97706;font-family:'Outfit',sans-serif;">
+                                -</div>
+                            <div style="font-size:0.75rem;color:var(--text-secondary);">Perlu Cek</div>
+                        </div>
+                        <div
+                            style="background:rgba(34,197,94,0.06);border:1.5px solid #22c55e;border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow-sm);">
+                            <div
+                                style="font-size:0.72rem;font-weight:700;color:#16a34a;text-transform:uppercase;letter-spacing:0.05em;">
+                                Prioritas 3</div>
+                            <div id="pny-p3"
+                                style="font-size:1.6rem;font-weight:800;color:#16a34a;font-family:'Outfit',sans-serif;">
+                                -</div>
+                            <div style="font-size:0.75rem;color:var(--text-secondary);">Wajar</div>
+                        </div>
+                    </div>
+
+                    <!-- Filter Bar -->
+                    <div
+                        style="display:flex;gap:0.5rem;margin-bottom:0.85rem;flex-wrap:wrap;align-items:center;background:var(--card-bg);border:1px solid var(--card-border);border-radius:0.75rem;padding:0.5rem 0.75rem;box-shadow:var(--shadow-sm);">
+                        <svg width="14" height="14" fill="none" stroke="var(--text-secondary)" stroke-width="2.5"
+                            viewBox="0 0 24 24" style="flex-shrink:0;">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                        </svg>
+                        <input type="text" id="pny-search" placeholder="Cari kab / kec / desa / SLS..."
+                            oninput="window.renderPenyisiran()"
+                            style="flex:1;min-width:160px;padding:0.3rem 0.4rem;border:none;background:transparent;color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.85rem;outline:none;">
+                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
+                        <select id="pny-filter-kab" onchange="window.renderPenyisiran()"
+                            style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
+                            <option value="">Semua Kab/Kota</option>
+                        </select>
+                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
+                        <select id="pny-filter-kategori" onchange="window.renderPenyisiran()"
+                            style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
+                            <option value="">Semua Kategori</option>
+                            <option value="PRIORITAS 1 - SISIR SEGERA">&#128308; Prioritas 1 - Sisir Segera</option>
+                            <option value="PRIORITAS 2 - PERLU CEK">&#128993; Prioritas 2 - Perlu Cek</option>
+                            <option value="PRIORITAS 3 - WAJAR">&#128994; Prioritas 3 - Wajar</option>
+                        </select>
+                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
+                        <select id="pny-sort-by" onchange="window.renderPenyisiran()"
+                            style="padding:0.3rem 0.5rem;border:none;border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.82rem;outline:none;cursor:pointer;">
+                            <option value="skor_perhatian">Urutkan: Skor Perhatian</option>
+                            <option value="tidak_ditemukan">Urutkan: Tdk Ditemukan</option>
+                            <option value="total_usaha">Urutkan: Total Usaha</option>
+                            <option value="pct_tdk_ditemukan">Urutkan: % Tdk Ditemukan</option>
+                            <option value="pct_selesai">Urutkan: % Selesai</option>
+                        </select>
+                        <button id="pny-sort-dir" onclick="window.togglePenyisiranSort()"
+                            style="padding:0.3rem 0.6rem;border:1px solid var(--card-border);border-radius:0.4rem;background:var(--input-bg);color:var(--text-primary);font-size:0.8rem;cursor:pointer;">&#8595;
+                            DESC</button>
+                        <div style="width:1px;height:20px;background:var(--card-border);"></div>
+                        <span id="pny-count"
+                            style="font-size:0.8rem;color:var(--text-secondary);white-space:nowrap;">-</span>
+                        <div style="margin-left:auto; display:flex; gap:0.4rem; align-items:center;">
+                            <button onclick="window.downloadPenyisiranExcel()" title="Download Excel (.xlsx)"
+                                style="padding:0.35rem 0.75rem;border-radius:0.5rem;border:none;background:linear-gradient(135deg,#10b981,#059669);color:white;font-size:0.78rem;font-weight:700;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:0.35rem;box-shadow:0 2px 6px rgba(16,185,129,0.25);">
+                                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                                Excel (.xlsx)
+                            </button>
+                            <button onclick="window.downloadPenyisiranCSV()" title="Download CSV"
+                                style="padding:0.35rem 0.7rem;border-radius:0.5rem;border:1px solid var(--card-border);background:var(--input-bg);color:var(--text-primary);font-size:0.78rem;font-weight:600;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;display:flex;align-items:center;gap:0.35rem;">
+                                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                                CSV
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Table -->
+                    <div
+                        style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:1rem;overflow:hidden;box-shadow:var(--shadow-sm);">
+                        <div style="overflow-x:auto;">
+                            <table id="penyisiran-table" style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+                                <thead>
+                                    <tr style="background:var(--bg-body);">
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            #</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Kabupaten</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Kecamatan</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Desa/Kel</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:left;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            SLS / SubSLS</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Total</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Ditemukan</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:#ef4444;text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Tdk Ditemukan</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Tutup</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Belum Terdata</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:right;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            % Selesai</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:center;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Skor</th>
+                                        <th
+                                            style="padding:0.6rem 0.75rem;font-size:0.72rem;font-weight:700;color:var(--text-secondary);text-align:center;text-transform:uppercase;letter-spacing:0.04em;border-bottom:2px solid var(--card-border);white-space:nowrap;">
+                                            Kategori</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="penyisiran-tbody">
+                                    <tr>
+                                        <td colspan="13"
+                                            style="text-align:center;padding:2rem;color:var(--text-secondary);">Memuat
+                                            data...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Pagination -->
+                        <div id="pny-pagination"
+                            style="display:flex;justify-content:space-between;align-items:center;padding:0.65rem 1rem;border-top:1px solid var(--card-border);background:var(--bg-body);gap:0.5rem;flex-wrap:wrap;">
+                            <span id="pny-page-info" style="font-size:0.8rem;color:var(--text-secondary);"></span>
+                            <div style="display:flex;gap:0.35rem;">
+                                <button id="pny-btn-prev" onclick="window.changePnyPage(-1)"
+                                    style="padding:0.3rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;">&#8592;
+                                    Prev</button>
+                                <div id="pny-page-nums" style="display:flex;gap:0.25rem;"></div>
+                                <button id="pny-btn-next" onclick="window.changePnyPage(1)"
+                                    style="padding:0.3rem 0.75rem;border:1px solid var(--card-border);border-radius:0.5rem;background:var(--input-bg);color:var(--text-secondary);font-size:0.8rem;cursor:pointer;">Next
+                                    &#8594;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
 
             <!-- TAB CONTENT: BELUM DIASSIGN -->
             <div class="tab-content" id="tab-content-belum_diassign" style="display: none; padding: 1.5rem;">
@@ -1580,11 +1592,11 @@
                                     <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
                                     <line x1="12" y1="22.08" x2="12" y2="12"></line>
                                 </svg>
-                                Rekapitulasi Keberadaan Bangunan Usaha &amp; Keluarga
+                                Rekapitulasi Keberadaan Usaha, Keluarga &amp; Bangunan Kosong
                             </h3>
                             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                                 <span style="color: var(--text-secondary); font-size: 0.83rem; font-weight: 500;">
-                                    Monitoring hasil verifikasi lapangan: status keberadaan unit usaha dan keluarga per petugas berdasarkan tagging lapangan.
+                                    Monitoring hasil verifikasi lapangan: status keberadaan unit usaha, keluarga, dan bangunan kosong per petugas berdasarkan tagging lapangan.
                                     <span class="badge bg-primary ms-2" style="font-size: 0.72rem; vertical-align: middle;">Update 15 September</span>
                                 </span>
                                 <div id="keberadaan-wilayah-badge" class="badge" style="background: rgba(99,102,241,0.12); color: #6366f1; font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: 9999px; font-weight: 600;">
@@ -1651,7 +1663,19 @@
                                 </div>
                             </div>
 
-                            <!-- Card 5: Audit Kualitas (Status Sync) -->
+                            <!-- Card 5: Bangunan Kosong -->
+                            <div class="stat-card-compact" style="background: linear-gradient(135deg, rgba(100, 116, 139, 0.08) 0%, rgba(71, 85, 105, 0.03) 100%); border: 1px solid rgba(100, 116, 139, 0.28); border-radius: 0.85rem; padding: 1rem 1.1rem; cursor: pointer;" onclick="window.setKeberadaanMode('bang_kos')" title="Klik untuk memfilter petugas/SLS dengan bangunan kosong terbanyak">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                    <div class="stat-label" style="color: #475569; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">BANGUNAN KOSONG</div>
+                                    <span style="font-size: 1.15rem;">🏚️</span>
+                                </div>
+                                <div class="stat-value" id="keb-kpi-bang-kos" style="color: #334155; font-size: 1.7rem; font-weight: 800; font-family: 'Outfit', sans-serif; margin: 0.3rem 0;">0</div>
+                                <div style="font-size: 0.75rem; color: var(--text-secondary);">
+                                    <span id="keb-kpi-bangkos-sls" style="color: #475569; font-weight: 700;">0 SLS</span> teridentifikasi kosong
+                                </div>
+                            </div>
+
+                            <!-- Card 6: Audit Kualitas (Status Sync) -->
                             <div class="stat-card-compact" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(109, 40, 217, 0.03) 100%); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 0.85rem; padding: 1rem 1.1rem; cursor: pointer;" onclick="window.toggleKeberadaanSelisihOnly()" title="Klik untuk memfilter hanya SLS/Petugas yang ada selisih">
                                 <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                                     <div class="stat-label" style="color: #7c3aed; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">AUDIT KUALITAS (STATUS SYNC)</div>
@@ -1692,6 +1716,7 @@
                                     <button class="btn btn-sm btn-filter-pill" id="pill-keb-bu" onclick="window.setKeberadaanMode('bu_bar')" style="border-radius: 9999px; font-size: 0.76rem; padding: 0.28rem 0.75rem; font-weight: 600; border: 1px solid var(--border-light); background: var(--card-bg); color: var(--text-secondary);">Top Usaha Baru</button>
                                     <button class="btn btn-sm btn-filter-pill" id="pill-keb-kl" onclick="window.setKeberadaanMode('kl_bar')" style="border-radius: 9999px; font-size: 0.76rem; padding: 0.28rem 0.75rem; font-weight: 600; border: 1px solid var(--border-light); background: var(--card-bg); color: var(--text-secondary);">Top Keluarga Baru</button>
                                     <button class="btn btn-sm btn-filter-pill" id="pill-keb-tdk" onclick="window.setKeberadaanMode('tdk_dit')" style="border-radius: 9999px; font-size: 0.76rem; padding: 0.28rem 0.75rem; font-weight: 600; border: 1px solid rgba(245,158,11,0.3); background: rgba(245,158,11,0.08); color: #d97706;">⚠️ Top Tdk Ditemukan</button>
+                                    <button class="btn btn-sm btn-filter-pill" id="pill-keb-bangkos" onclick="window.setKeberadaanMode('bang_kos')" style="border-radius: 9999px; font-size: 0.76rem; padding: 0.28rem 0.75rem; font-weight: 600; border: 1px solid rgba(100,116,139,0.3); background: rgba(100,116,139,0.08); color: #475569;">🏚️ Top Bangunan Kosong</button>
                                     <button class="btn btn-sm btn-filter-pill" id="pill-keb-selisih" onclick="window.setKeberadaanMode('selisih')" style="border-radius: 9999px; font-size: 0.76rem; padding: 0.28rem 0.75rem; font-weight: 600; border: 1px solid rgba(239,68,68,0.3); background: rgba(239,68,68,0.06); color: #dc2626;">❌ Ada Selisih</button>
                                 </div>
                             </div>
@@ -4271,6 +4296,8 @@
                                         <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(59,130,246,0.06); width:65px;">K-Baru</th>
                                         <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(245,158,11,0.08); width:75px; color:#d97706;">K-Tdk Dit</th>
                                         <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(59,130,246,0.06); width:75px;">K-Lain</th>
+                                        <!-- Bangunan Kosong -->
+                                        <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); background:rgba(100,116,139,0.08); width:75px; color:#475569;">B-Kos</th>
                                         <!-- Rekonsiliasi -->
                                         <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); width:80px;">Tot Status</th>
                                         <th style="padding:0.7rem 0.5rem; text-align:center; border-bottom:1px solid var(--border-light); width:80px;">Tot Keb</th>
@@ -4333,7 +4360,7 @@
     <script src="mysql_data.js?v=1788881041_v0109"></script>
     <script src="new_businesses_data.js?v=1788881041_v0109"></script>
     <script src="penyisiran_data.js?v=1788881041_v0109"></script>
-    <script src="penyisiran.js?v=20260909_pnykel"></script>
+    <script src="penyisiran.js?v=20260916_v1"></script>
     <script src="penyisiran_keluarga_data.js?v=1789453472_v1509"></script>
     <script src="dashboard_satelit/bahodopi_data.js?v=20260916"></script>
     <script src="dashboard_satelit/palu_data.js?v=20260916"></script>
@@ -4352,9 +4379,9 @@
     <script src="data_usaha_nonaktif.js"></script>
     <script src="data_desil.js?v=1788881041_v0109_p3"></script>
     <script src="rekap_status_sls.js?v=1789454047_v1509"></script>
-    <script src="data_keberadaan_petugas.js?v=20260915_v2"></script>
-    <script src="keberadaan_petugas.js?v=20260916_v1"></script>
-    <script src="app_v2.js?v=20260916_v1" defer></script>
+    <script src="data_keberadaan_petugas.js?v=20260916_bangkos"></script>
+    <script src="keberadaan_petugas.js?v=20260916_bangkos"></script>
+    <script src="app_v2.js?v=20260916_v2" defer></script>
 
     <script>
         function switchSubTab(surveyType, subTab) {

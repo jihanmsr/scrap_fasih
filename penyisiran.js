@@ -272,33 +272,37 @@
     };
 
 
-    // ── Sub-tab Switcher inside SLS Open ──────────────────────────────────
-    window.switchOpenSubslsSubTab = function (subTab) {
-        const fullopenDiv    = document.getElementById('open_subsls-sub-fullopen');
+    // ── Sub-tab Switcher inside Penyisiran Lapangan ─────────────────────────
+    window.switchPenyisiranSubTab = function (subTab) {
         const penyisiranDiv  = document.getElementById('open_subsls-sub-penyisiran');
         const pnyKelDiv      = document.getElementById('open_subsls-sub-penyisiran-keluarga');
-        const btnFullopen    = document.getElementById('open_subsls-sub-btn-fullopen');
-        const btnPenyisiran  = document.getElementById('open_subsls-sub-btn-penyisiran');
-        const btnPnyKel      = document.getElementById('open_subsls-sub-btn-penyisiran-keluarga');
+        const btnKeluarga    = document.getElementById('penyisiran-sub-btn-keluarga') || document.getElementById('open_subsls-sub-btn-penyisiran-keluarga');
+        const btnUsaha       = document.getElementById('penyisiran-sub-btn-usaha') || document.getElementById('open_subsls-sub-btn-penyisiran');
 
-        [btnFullopen, btnPenyisiran, btnPnyKel].forEach(b => {
+        [btnKeluarga, btnUsaha].forEach(b => {
             if (b) b.classList.remove('active');
         });
-        if (fullopenDiv) fullopenDiv.style.display = 'none';
         if (penyisiranDiv) penyisiranDiv.style.display = 'none';
         if (pnyKelDiv) pnyKelDiv.style.display = 'none';
 
-        if (subTab === 'fullopen') {
-            if (fullopenDiv) fullopenDiv.style.display = 'block';
-            if (btnFullopen) btnFullopen.classList.add('active');
-        } else if (subTab === 'penyisiran') {
-            if (penyisiranDiv) penyisiranDiv.style.display = 'block';
-            if (btnPenyisiran) btnPenyisiran.classList.add('active');
-            if (window.initPenyisiran) window.initPenyisiran();
-        } else if (subTab === 'penyisiran-keluarga') {
+        if (subTab === 'penyisiran-keluarga' || subTab === 'keluarga') {
             if (pnyKelDiv) pnyKelDiv.style.display = 'block';
-            if (btnPnyKel) btnPnyKel.classList.add('active');
+            if (btnKeluarga) btnKeluarga.classList.add('active');
             if (window.initPenyisiranKeluarga) window.initPenyisiranKeluarga();
+        } else if (subTab === 'penyisiran-usaha' || subTab === 'penyisiran' || subTab === 'usaha') {
+            if (penyisiranDiv) penyisiranDiv.style.display = 'block';
+            if (btnUsaha) btnUsaha.classList.add('active');
+            if (window.initPenyisiran) window.initPenyisiran();
+        }
+    };
+
+    // ── Backward compatibility alias ──────────────────────────────────────────
+    window.switchOpenSubslsSubTab = function (subTab) {
+        if (subTab === 'fullopen') {
+            if (window.switchTab) window.switchTab('open_subsls');
+        } else {
+            if (window.switchTab) window.switchTab('penyisiran');
+            window.switchPenyisiranSubTab(subTab);
         }
     };
 

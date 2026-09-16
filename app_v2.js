@@ -5916,9 +5916,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof window.initPaluMonitoring === 'function') {
                 window.initPaluMonitoring();
             }
+        } else if (tabId === 'penyisiran') {
+            if (mainHeader) mainHeader.textContent = 'Penyisiran Lapangan & Citra Satelit';
+            if (mainSubheader) mainSubheader.textContent = 'Prioritas penyisiran keluarga hilang vs deteksi satelit dan penyisiran bangunan usaha';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            if (typeof window.initPenyisiranKeluarga === 'function') {
+                window.initPenyisiranKeluarga();
+            }
         } else if (tabId === 'open_subsls') {
-            if (mainHeader) mainHeader.textContent = 'Pemantauan SLS Status Full Open & Penyisiran Bangunan';
-            if (mainSubheader) mainSubheader.textContent = 'Pemantauan Sub SLS Full Open dan Penyisiran Bangunan Usaha berdasarkan prioritas';
+            if (mainHeader) mainHeader.textContent = 'Pemantauan SLS Status Full Open';
+            if (mainSubheader) mainSubheader.textContent = 'Pemantauan Sub SLS yang berstatus Full Open (belum dikerjakan sama sekali)';
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
             if (typeof window.initOpenSubSls === 'function') {
@@ -11626,8 +11634,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.switchDataHilangSubTab = function(tab) {
         if (tab === 'penyisiran-keluarga') {
-            if (window.switchTab) window.switchTab('open_subsls');
-            if (window.switchOpenSubslsSubTab) window.switchOpenSubslsSubTab('penyisiran-keluarga');
+            if (window.switchTab) window.switchTab('penyisiran');
+            if (window.switchPenyisiranSubTab) window.switchPenyisiranSubTab('penyisiran-keluarga');
             return;
         }
 
