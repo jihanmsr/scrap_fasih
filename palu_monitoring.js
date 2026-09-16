@@ -52,10 +52,13 @@
 
             // Re-render layers on map ready
             renderPaluMapLayers();
+            setTimeout(() => {
+                if (paluMap) paluMap.invalidateSize();
+            }, 150);
         } else {
             setTimeout(() => {
-                paluMap.invalidateSize();
-            }, 200);
+                if (paluMap) paluMap.invalidateSize();
+            }, 150);
         }
 
         updatePaluSummaryCards();
@@ -434,13 +437,13 @@
         const elInsight = document.getElementById('palu-insp-insight');
         if (elInsight) {
             if (gapCv >= 40) {
-                elInsight.innerHTML = `🚨 <strong>Potensi Lewat Cacah Tinggi!</strong> Deteksi AI Satelit (CV) menemukan <strong>${cvVal} atap bangunan fisik</strong> (Prelist: ${prelistVal}), namun yang tercatat baru <strong>${realisasiVal}</strong> (selisih <strong>+${gapCv} bangunan fisik</strong> belum terdata). Rekomendasi: koordinasikan dengan PPL untuk penyisiran fisik!`;
+                elInsight.innerHTML = `<strong>Perhatian Khusus:</strong> Deteksi CV Satelit menemukan <strong>${cvVal} bangunan fisik</strong> (Prelist: ${prelistVal}), sedangkan realisasi lapangan baru <strong>${realisasiVal}</strong> (selisih +${gapCv} belum terdata). Disarankan penyisiran ulang oleh PPL.`;
             } else if (gapCv >= 15) {
-                elInsight.innerHTML = `⚠️ <strong>Perlu Verifikasi Lapangan:</strong> Terdapat selisih <strong>+${gapCv} bangunan fisik</strong> antara deteksi AI satelit (${cvVal}) dan laporan lapangan (${realisasiVal}).`;
+                elInsight.innerHTML = `<strong>Perlu Verifikasi:</strong> Terdapat selisih +${gapCv} bangunan antara CV Satelit (${cvVal}) dan realisasi lapangan (${realisasiVal}).`;
             } else if (totTdk > 20 && cvVal > 30) {
-                elInsight.innerHTML = `⚠️ <strong>Responden Hilang Padahal Bangunan Ada:</strong> Terdapat ${totTdk} responden 'Tidak Ditemukan', namun citra satelit (CV) menunjukkan ${cvVal} bangunan fisik berdiri utuh. Cek ulang waktu kunjungan!`;
+                elInsight.innerHTML = `<strong>Anomali Responden:</strong> Terdapat ${totTdk} responden 'Tidak Ditemukan', namun citra satelit mendeteksi ${cvVal} bangunan fisik aktif.`;
             } else {
-                elInsight.innerHTML = `✅ <strong>Proporsional:</strong> Jumlah data lapangan (${realisasiVal}) seimbang dengan deteksi fisik AI (${cvVal}) dan target prelist (${prelistVal}). SLS tersisir dengan baik.`;
+                elInsight.innerHTML = `<strong>Sesuai:</strong> Jumlah data lapangan (${realisasiVal}) seimbang dengan target prelist (${prelistVal}) dan estimasi CV Satelit (${cvVal}).`;
             }
         }
 
@@ -455,15 +458,15 @@
             if (openVal > 0) {
                 badge.style.background = 'rgba(239, 68, 68, 0.15)';
                 badge.style.color = '#dc2626';
-                badge.textContent = `🔴 ADA ${openVal} DOKUMEN OPEN`;
+                badge.textContent = `OPEN (${openVal})`;
             } else if (draftVal > 0) {
                 badge.style.background = 'rgba(245, 158, 11, 0.15)';
                 badge.style.color = '#d97706';
-                badge.textContent = `🟡 ADA ${draftVal} DOKUMEN DRAFT`;
+                badge.textContent = `DRAFT (${draftVal})`;
             } else {
                 badge.style.background = 'rgba(16, 185, 129, 0.15)';
                 badge.style.color = '#059669';
-                badge.textContent = `🟢 SELESAI (SUDAH DISUBMIT)`;
+                badge.textContent = `SELESAI`;
             }
         }
 
@@ -688,10 +691,10 @@
                 ${th('DRAFT', 'draft')}
                 ${th('B-Kos', 'bangkos')}
                 ${th('Tdk Tmk', 'tot_tdk')}
-                ${th('📋 Prelist', 'prelist')}
-                ${th('👁️ Fisik (CV)', 'bangunan_cv')}
-                ${th('✅ Realisasi', 'realisasi_fisik')}
-                ${th('⚡ Gap Fisik', 'gap_cv')}
+                ${th('Prelist', 'prelist')}
+                ${th('CV Satelit', 'bangunan_cv')}
+                ${th('Realisasi', 'realisasi_fisik')}
+                ${th('Gap CV', 'gap_cv')}
                 ${th('PPL / PML', 'ppl', 'left')}
                 <th style="padding:0.6rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--text-secondary); font-weight:600;">Aksi</th>
             </tr>`;
@@ -747,19 +750,19 @@
             let va = a[sortField] ?? 0;
             let vb = b[sortField] ?? 0;
             if (typeof va === 'string') return sortOrder * va.localeCompare(vb);
-            if (va !== vb) return sortOrder * (va - vb);
-            return (b.open || 0) - (a.open || 0);
+            return sortOrder * (Number(va) - Number(vb));
         });
 
-        // 3. Pagination
+        // 3. Paginate
         const totalItems = filteredFeatures.length;
-        const totalPages = Math.max(1, Math.ceil(totalItems / perPage));
-        if (currentPage > totalPages) currentPage = totalPages;
+        const totalPages = Math.ceil(totalItems / perPage) || 1;
+        if (currentPage > totalPages) currentPage = 1;
 
         const startIndex = (currentPage - 1) * perPage;
         const pageItems = filteredFeatures.slice(startIndex, startIndex + perPage);
 
-        const countInfo = document.getElementById('palu-table-count-info');
+        // Update info counter
+        const countInfo = document.getElementById('palu-count-info');
         if (countInfo) {
             const startDisplay = totalItems === 0 ? 0 : startIndex + 1;
             const endDisplay = Math.min(startIndex + perPage, totalItems);
@@ -795,11 +798,11 @@
             const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0));
             const gapCv = p.gap_cv !== undefined ? p.gap_cv : (cvVal - realisasiVal);
 
-            let gapBadge = `<span style="color:#10b981; font-weight:700; font-size:0.8rem;">✅ ${gapCv}</span>`;
+            let gapBadge = `<span style="color:#10b981; font-weight:700; font-size:0.8rem;">${gapCv}</span>`;
             if (gapCv >= 40) {
-                gapBadge = `<span class="badge" style="background:rgba(239,68,68,0.15); color:#dc2626; font-weight:800; font-size:0.75rem;" title="Potensi Lewat Cacah: Deteksi AI Satelit menemukan ${cvVal} atap fisik (Prelist: ${prelistVal}), baru tercatat ${realisasiVal}">🚨 +${gapCv}</span>`;
+                gapBadge = `<span class="badge" style="background:rgba(239,68,68,0.15); color:#dc2626; font-weight:800; font-size:0.75rem;" title="Deteksi CV Satelit ${cvVal} bangunan, realisasi ${realisasiVal}">+${gapCv}</span>`;
             } else if (gapCv >= 15) {
-                gapBadge = `<span class="badge" style="background:rgba(245,158,11,0.15); color:#d97706; font-weight:700; font-size:0.75rem;" title="Perlu Cek: Selisih ${gapCv} bangunan fisik">⚠️ +${gapCv}</span>`;
+                gapBadge = `<span class="badge" style="background:rgba(245,158,11,0.15); color:#d97706; font-weight:700; font-size:0.75rem;" title="Selisih ${gapCv} bangunan">+${gapCv}</span>`;
             } else if (gapCv > 0) {
                 gapBadge = `<span style="color:var(--text-secondary); font-weight:600; font-size:0.78rem;">+${gapCv}</span>`;
             }
@@ -820,7 +823,7 @@
                 <td style="text-align:center; padding:0.55rem 0.5rem;">${bangkosBadge}</td>
                 <td style="text-align:center; padding:0.55rem 0.5rem;">${tdkBadge}</td>
                 <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#3b82f6;" title="Prelist Muatan BPS: ${prelistVal}">${prelistVal.toLocaleString('id-ID')}</td>
-                <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#6366f1;" title="Deteksi AI Satelit (CV): ${cvVal} Atap Fisik">${cvVal.toLocaleString('id-ID')}</td>
+                <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#6366f1;" title="Deteksi CV Satelit: ${cvVal} Bangunan">${cvVal.toLocaleString('id-ID')}</td>
                 <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#10b981;">${realisasiVal.toLocaleString('id-ID')}</td>
                 <td style="text-align:center; padding:0.55rem 0.5rem;">${gapBadge}</td>
                 <td style="text-align:left; font-size:0.78rem; padding:0.55rem 0.75rem;">
@@ -828,7 +831,7 @@
                     <div style="font-size:0.72rem; color:var(--text-secondary); max-width:140px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${p.pml || '-'}">PML: ${p.pml || '-'}</div>
                 </td>
                 <td style="text-align:center; padding:0.55rem 0.5rem;">
-                    <button class="btn btn-sm" onclick="window.focusSlsOnPaluMap('${p.idsls}')" style="padding:0.25rem 0.6rem; border-radius:6px; font-size:0.78rem; font-weight:700; background:linear-gradient(135deg,#3b82f6,#2563eb); color:#fff; border:none; cursor:pointer;" title="Lihat SLS di Peta">📍 Peta</button>
+                    <button class="btn btn-sm" onclick="window.focusSlsOnPaluMap('${p.idsls}')" style="padding:0.25rem 0.6rem; border-radius:6px; font-size:0.78rem; font-weight:700; background:linear-gradient(135deg,#3b82f6,#2563eb); color:#fff; border:none; cursor:pointer;" title="Lihat SLS di Peta">Peta</button>
                 </td>
             </tr>`;
         });
