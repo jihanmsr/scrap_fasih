@@ -1043,28 +1043,36 @@
                         </p>
                     </div>
 
-                    <!-- Quick Focus Pills for BTN & Priority Clusters -->
+                    <!-- Quick Focus Pills for Priority Clusters -->
                     <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
                         <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); margin-right: 0.2rem;">Fokus Area:</span>
                         <button class="btn-palu-area-pill active" data-area="all" onclick="window.focusPaluArea('all')"
                             style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            🌐 Semua Palu
+                            Semua Palu
                         </button>
-                        <button class="btn-palu-area-pill" data-area="tondo" onclick="window.focusPaluArea('tondo')"
-                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            🏘️ BTN Tondo (111 Draft)
+                        <button class="btn-palu-area-pill" data-area="lolu_utara" onclick="window.focusPaluArea('lolu_utara')"
+                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(239,68,68,0.3); background: var(--card-bg); color: #ef4444; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            Lolu Utara (210 Open, 226 Draft)
+                        </button>
+                        <button class="btn-palu-area-pill" data-area="tatura_selatan" onclick="window.focusPaluArea('tatura_selatan')"
+                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(245,158,11,0.3); background: var(--card-bg); color: #f59e0b; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            Tatura Selatan (347 Draft)
                         </button>
                         <button class="btn-palu-area-pill" data-area="lasoani" onclick="window.focusPaluArea('lasoani')"
                             style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            🏘️ Lasoani (448 Open, 211 Draft)
+                            Lasoani (57 Open, 30 Draft)
                         </button>
-                        <button class="btn-palu-area-pill" data-area="kawatuna" onclick="window.focusPaluArea('kawatuna')"
+                        <button class="btn-palu-area-pill" data-area="besusu_timur" onclick="window.focusPaluArea('besusu_timur')"
                             style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            🏘️ Kawatuna (246 Open)
+                            Besusu Timur (64 Open, 79 Draft)
                         </button>
-                        <button class="btn-palu-area-pill" data-area="merpati_maleo" onclick="window.focusPaluArea('merpati_maleo')"
+                        <button class="btn-palu-area-pill" data-area="kayumalue" onclick="window.focusPaluArea('kayumalue')"
                             style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            📍 Merpati &amp; Maleo (Tanamodindi)
+                            Kayumalue (34 Open, 127 Draft)
+                        </button>
+                        <button class="btn-palu-area-pill" data-area="tondo" onclick="window.focusPaluArea('tondo')"
+                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            BTN Tondo (2 Draft)
                         </button>
                     </div>
                 </div>
@@ -1073,7 +1081,6 @@
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
                     <!-- OPEN Card -->
                     <div style="background: var(--card-bg); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
-                        <div style="position: absolute; right: -10px; top: -10px; font-size: 3.5rem; opacity: 0.08; color: #ef4444;">📂</div>
                         <div style="font-size: 0.75rem; font-weight: 700; color: #ef4444; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
                             <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#ef4444;"></span>
                             Dokumen OPEN
@@ -1088,7 +1095,6 @@
 
                     <!-- DRAFT Card -->
                     <div style="background: var(--card-bg); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
-                        <div style="position: absolute; right: -10px; top: -10px; font-size: 3.5rem; opacity: 0.08; color: #f59e0b;">📝</div>
                         <div style="font-size: 0.75rem; font-weight: 700; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
                             <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#f59e0b;"></span>
                             Dokumen DRAFT
@@ -1103,7 +1109,6 @@
 
                     <!-- BANGKOS Card -->
                     <div style="background: var(--card-bg); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
-                        <div style="position: absolute; right: -10px; top: -10px; font-size: 3.5rem; opacity: 0.08; color: #8b5cf6;">🏚️</div>
                         <div style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
                             <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#8b5cf6;"></span>
                             Bangunan Kosong
@@ -1118,7 +1123,6 @@
 
                     <!-- TIDAK DITEMUKAN Card -->
                     <div style="background: var(--card-bg); border: 1px solid rgba(234, 88, 12, 0.3); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
-                        <div style="position: absolute; right: -10px; top: -10px; font-size: 3.5rem; opacity: 0.08; color: #ea580c;">❓</div>
                         <div style="font-size: 0.75rem; font-weight: 700; color: #ea580c; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
                             <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#ea580c;"></span>
                             Tidak Ditemukan (Keluarga &amp; Usaha)
@@ -1139,25 +1143,25 @@
                         <!-- Layer Mode Buttons -->
                         <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
                             <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary); margin-right: 0.25rem;">Sorot Layer:</span>
-                            <button class="btn-palu-mode active" data-mode="open" onclick="window.setPaluMapMode('open')"
+                            <button class="btn-palu-mode active" data-mode="all" onclick="window.setPaluMapMode('all')"
+                                style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid #3b82f6; background: #3b82f6; color: #fff; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                Semua SLS (1.482)
+                            </button>
+                            <button class="btn-palu-mode" data-mode="open" onclick="window.setPaluMapMode('open')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(239,68,68,0.3); background: rgba(239,68,68,0.06); color: #ef4444; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                🔴 Sorot Dokumen OPEN (86 SLS)
+                                Dokumen OPEN (22)
                             </button>
                             <button class="btn-palu-mode" data-mode="draft" onclick="window.setPaluMapMode('draft')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(245,158,11,0.3); background: rgba(245,158,11,0.06); color: #f59e0b; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                🟠 Sorot Dokumen DRAFT (321 SLS)
+                                Dokumen DRAFT (130)
                             </button>
                             <button class="btn-palu-mode" data-mode="bangkos" onclick="window.setPaluMapMode('bangkos')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(139,92,246,0.3); background: rgba(139,92,246,0.06); color: #8b5cf6; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                🟣 Bangunan Kosong (Semua SLS)
+                                Bangunan Kosong (1.270)
                             </button>
                             <button class="btn-palu-mode" data-mode="tidak_ditemukan" onclick="window.setPaluMapMode('tidak_ditemukan')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(234,88,12,0.3); background: rgba(234,88,12,0.06); color: #ea580c; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                ⚠️ Tidak Ditemukan (≥30 Kasus)
-                            </button>
-                            <button class="btn-palu-mode" data-mode="all" onclick="window.setPaluMapMode('all')"
-                                style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                🌐 Belum Selesai (OPEN + DRAFT)
+                                Tidak Ditemukan (≥30)
                             </button>
                         </div>
 
@@ -1165,13 +1169,12 @@
                         <div style="display: flex; gap: 0.3rem; align-items: center; background: var(--input-bg); padding: 0.2rem; border-radius: 0.5rem; border: 1px solid var(--card-border);">
                             <button class="btn-palu-basemap active" data-base="satellite" onclick="window.togglePaluBasemap('satellite')"
                                 style="padding: 0.3rem 0.65rem; border-radius: 0.35rem; border: none; background: #2563eb; color: #fff; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
-                                🛰️ Satelit
+                                Satelit
                             </button>
                             <button class="btn-palu-basemap" data-base="osm" onclick="window.togglePaluBasemap('osm')"
                                 style="padding: 0.3rem 0.65rem; border-radius: 0.35rem; border: none; background: transparent; color: var(--text-secondary); font-size: 0.75rem; font-weight: 700; cursor: pointer;">
-                                🗺️ OpenStreetMap
+                                Peta Jalan
                             </button>
-                        </div>
                     </div>
 
                     <!-- Map Container with Inspection Card Grid -->
@@ -1215,6 +1218,37 @@
                                     </div>
                                 </div>
 
+                                <!-- Komparasi Prelist Muatan & CV Satelit vs Realisasi Lapangan -->
+                                <div style="background: rgba(99, 102, 241, 0.06); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: 0.75rem; padding: 0.75rem; margin-bottom: 0.85rem;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                                        <div style="font-size: 0.75rem; font-weight: 800; color: #6366f1; text-transform: uppercase;">
+                                            Komparasi Prelist, CV Satelit &amp; Lapangan
+                                        </div>
+                                        <span id="palu-insp-coverage" style="font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 9999px; background: rgba(99,102,241,0.15); color: #6366f1;">Cakupan: -%</span>
+                                    </div>
+                                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.3rem; text-align: center; margin-bottom: 0.4rem;">
+                                        <div style="background: var(--card-bg); padding: 0.4rem 0.15rem; border-radius: 0.4rem; border: 1px solid var(--card-border);">
+                                            <div style="font-size: 0.62rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase;">Prelist</div>
+                                            <div id="palu-insp-prelist" style="font-size: 0.95rem; font-weight: 800; color: #3b82f6;">-</div>
+                                        </div>
+                                        <div style="background: var(--card-bg); padding: 0.4rem 0.15rem; border-radius: 0.4rem; border: 1px solid var(--card-border);">
+                                            <div style="font-size: 0.62rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase;">CV Satelit</div>
+                                            <div id="palu-insp-satelit" style="font-size: 0.95rem; font-weight: 800; color: #6366f1;" title="Deteksi Atap Citra Satelit via AI Computer Vision">-</div>
+                                        </div>
+                                        <div style="background: var(--card-bg); padding: 0.4rem 0.15rem; border-radius: 0.4rem; border: 1px solid var(--card-border);">
+                                            <div style="font-size: 0.62rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase;">Realisasi</div>
+                                            <div id="palu-insp-realisasi" style="font-size: 0.95rem; font-weight: 800; color: #10b981;">-</div>
+                                        </div>
+                                        <div style="background: var(--card-bg); padding: 0.4rem 0.15rem; border-radius: 0.4rem; border: 1px solid var(--card-border);">
+                                            <div style="font-size: 0.62rem; color: var(--text-secondary); font-weight: 700; text-transform: uppercase;">Gap CV</div>
+                                            <div id="palu-insp-gap" style="font-size: 0.95rem; font-weight: 800; color: #ef4444;">-</div>
+                                        </div>
+                                    </div>
+                                    <div id="palu-insp-insight" style="font-size: 0.72rem; color: var(--text-secondary); line-height: 1.35; padding: 0.35rem 0.5rem; background: var(--card-bg); border-radius: 0.4rem; border-left: 3px solid #6366f1;">
+                                        Pilih SLS untuk melihat analisis deteksi CV satelit vs target prelist muatan.
+                                    </div>
+                                </div>
+
                                 <div style="border-top: 1px solid var(--card-border); padding-top: 0.75rem;">
                                     <div style="margin-bottom: 0.5rem;">
                                         <div style="font-size: 0.72rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">PPL / Petugas Lapangan:</div>
@@ -1229,6 +1263,7 @@
                                 <!-- Dynamic Usaha in Selected SLS -->
                                 <div id="palu-insp-usaha-box" style="margin-top: 0.75rem; border-top: 1px solid var(--card-border); padding-top: 0.6rem; display: none;">
                                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                                        <div style="font-size: 0.75rem; font-weight: 700; color: #3b82f6;">Daftar Unit Usaha di SLS Ini:</div>
                                         <div style="font-size: 0.75rem; font-weight: 700; color: #3b82f6;">🏢 Daftar Usaha di SLS Ini:</div>
                                         <span id="palu-insp-usaha-count" style="font-size: 0.7rem; font-weight: 700; background: rgba(59,130,246,0.15); color: #3b82f6; padding: 0.1rem 0.45rem; border-radius: 9999px;">0</span>
                                     </div>
@@ -1250,13 +1285,13 @@
                     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem; margin-bottom: 1rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.75rem;">
                         <div style="display: flex; gap: 0.4rem; align-items: center;">
                             <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary); margin-right: 0.25rem;">Tampilan Tabel:</span>
-                            <button id="palu-view-btn-usaha" class="btn-palu-view active" onclick="window.setPaluTableView('usaha')"
+                            <button id="palu-view-btn-sls" class="btn-palu-view active" onclick="window.setPaluTableView('sls')"
                                 style="padding: 0.4rem 0.85rem; border-radius: 0.5rem; border: 1px solid #3b82f6; background: #3b82f6; color: #fff; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                🏢 Daftar Unit Usaha (2.302 Usaha)
-                            </button>
-                            <button id="palu-view-btn-sls" class="btn-palu-view" onclick="window.setPaluTableView('sls')"
-                                style="padding: 0.4rem 0.85rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
                                 🗺️ Rekap Wilayah SLS (1.482 SLS)
+                            </button>
+                            <button id="palu-view-btn-usaha" class="btn-palu-view" onclick="window.setPaluTableView('usaha')"
+                                style="padding: 0.4rem 0.85rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                🏢 Daftar Unit Usaha (2.302 Usaha)
                             </button>
                         </div>
                     </div>
@@ -1265,11 +1300,16 @@
                     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
                         <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; max-width: 480px;">
                             <input id="palu-search-input" type="text" oninput="window.searchPaluTable(this.value)"
-                                placeholder="🔍 Cari Nama Usaha, Pemilik, RT, Kelurahan..."
+                                placeholder="🔍 Cari Nama SLS, Kelurahan, RT..."
                                 style="width: 100%; padding: 0.6rem 0.9rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-size: 0.85rem; outline: none;">
                         </div>
 
-                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                            <a href="Analisis_Satelit_vs_Realisasi_Palu.xlsx" download
+                                style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 0.9rem; border-radius: 0.5rem; border: 1px solid #6366f1; background: rgba(99, 102, 241, 0.1); color: #6366f1; font-weight: 700; font-size: 0.82rem; text-decoration: none; cursor: pointer; transition: all 0.2s;"
+                                title="Unduh hasil perbandingan bangunan satelit vs realisasi lapangan seluruh SLS">
+                                🛰️ Unduh Analisis Satelit (.xlsx)
+                            </a>
                             <button onclick="window.exportPaluExcel()"
                                 style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 0.9rem; border-radius: 0.5rem; border: 1px solid #10b981; background: rgba(16, 185, 129, 0.1); color: #10b981; font-weight: 700; font-size: 0.82rem; cursor: pointer; transition: all 0.2s;">
                                 📊 Ekspor Excel (.xlsx)
@@ -1283,12 +1323,17 @@
 
                     <!-- Row Count Status -->
                     <div id="palu-table-count-info" style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
-                        Menampilkan Usaha...
+                        Menampilkan SLS...
                     </div>
 
-                    <!-- Urgency Quick-Sort Bar (hanya muncul di view SLS) -->
-                    <div id="palu-urgency-sort-bar" style="display:none; flex-wrap:wrap; align-items:center; gap:0.4rem; margin-bottom:0.75rem;">
+                    <!-- Urgency Quick-Sort Bar (aktif di view SLS) -->
+                    <div id="palu-urgency-sort-bar" style="display:flex; flex-wrap:wrap; align-items:center; gap:0.4rem; margin-bottom:0.75rem;">
                         <span style="font-size:0.75rem; font-weight:700; color:var(--text-secondary); white-space:nowrap;">⚡ Urutkan:</span>
+                        <button id="sort-btn-gapsat" onclick="window.quickSortPalu('gap_satelit')"
+                            style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:1px solid rgba(99,102,241,0.5); background:rgba(99,102,241,0.1); color:#6366f1; font-size:0.78rem; font-weight:700; cursor:pointer; transition:all 0.15s;"
+                            title="Urutkan SLS dengan selisih bangunan satelit yang belum tercatat terbanyak">
+                            🛰️ Gap Satelit Tertinggi
+                        </button>
                         <button id="sort-btn-open" onclick="window.quickSortPalu('open')"
                             style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:1px solid rgba(239,68,68,0.4); background:rgba(239,68,68,0.08); color:#dc2626; font-size:0.78rem; font-weight:700; cursor:pointer; transition:all 0.15s;">
                             🔴 OPEN Tertinggi
@@ -1930,7 +1975,7 @@
                             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
                                 <span style="color: var(--text-secondary); font-size: 0.83rem; font-weight: 500;">
                                     Monitoring hasil verifikasi lapangan: status keberadaan unit usaha, keluarga, dan bangunan kosong per petugas berdasarkan tagging lapangan.
-                                    <span class="badge bg-primary ms-2" style="font-size: 0.72rem; vertical-align: middle;">Update 15 September</span>
+                                    <span class="badge bg-primary ms-2" style="font-size: 0.72rem; vertical-align: middle;">Update 16 September</span>
                                 </span>
                                 <div id="keberadaan-wilayah-badge" class="badge" style="background: rgba(99,102,241,0.12); color: #6366f1; font-size: 0.8rem; padding: 0.35rem 0.75rem; border-radius: 9999px; font-weight: 600;">
                                     Provinsi Sulawesi Tengah
@@ -4706,18 +4751,18 @@
     <script src="petugas_phones.js?v=1788881041_v0109"></script>
     <script src="petugas_region_map.js?v=1788881041_v0109"></script>
     <script src="fast_petugas_progress.js?v=20260916_v1"></script>
-    <script src="fast_petugas_history.js?v=1789454047_v1509"></script>
+    <script src="fast_petugas_history.js?v=20260916_v2"></script>
     <script src="data_hilang_usaha.js"></script>
     <script src="data_hilang_keluarga.js?v=20260909_v1"></script>
     <script src="data_usaha_nonaktif.js"></script>
     <script src="data_desil.js?v=1788881041_v0109_p3"></script>
     <script src="rekap_status_sls.js?v=20260916_v1"></script>
-    <script src="data_keberadaan_petugas.js?v=20260916_bangkos"></script>
-    <script src="keberadaan_petugas.js?v=20260916_bangkos"></script>
-    <script src="palu_monitoring_data.js?v=20260916_v1"></script>
+    <script src="data_keberadaan_petugas.js?v=20260916_v2"></script>
+    <script src="keberadaan_petugas.js?v=20260916_v2"></script>
+    <script src="palu_monitoring_data.js?v=20260916_v6"></script>
     <script src="palu_usaha_data.js?v=20260916_v1"></script>
-    <script src="palu_monitoring.js?v=20260916_v3"></script>
-    <script src="app_v2.js?v=20260916_v2" defer></script>
+    <script src="palu_monitoring.js?v=20260916_v9"></script>
+    <script src="app_v2.js?v=20260916_v4" defer></script>
 
     <script>
         function switchSubTab(surveyType, subTab) {

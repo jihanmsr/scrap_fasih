@@ -6,7 +6,9 @@ from datetime import datetime
 
 def generate():
     start_time = time.time()
-    excel_path = 'rekap_progress_petugas_keluarga_usaha_bangkos.xlsx'
+    excel_path = 'rekap_progress_petugas (1).xlsx'
+    if not os.path.exists(excel_path):
+        excel_path = 'rekap_progress_petugas_keluarga_usaha_bangkos.xlsx'
     if not os.path.exists(excel_path):
         excel_path = 'rekap_progress_petugas_keberadaan_keluarga_dan_usaha.xlsx'
     print(f"Reading {excel_path}...")
@@ -16,6 +18,7 @@ def generate():
     
     rows = sheet.iter_rows(values_only=True)
     header = next(rows)
+    col_map = {str(h).strip().lower(): i for i, h in enumerate(header) if h is not None}
     
     pencacah_map = {}
     pengawas_map = {}
@@ -40,31 +43,30 @@ def generate():
         # Statuses: r[2:14]
         status_sum = sum(int(x or 0) for x in r[2:14])
         
-        bu_tdk = int(r[14] or 0)
-        bu_dit = int(r[15] or 0)
-        bu_bar = int(r[16] or 0)
-        bu_tut = int(r[17] or 0)
-        bu_gan = int(r[18] or 0)
-        bu_pus = int(r[19] or 0)
+        bu_tdk = int(r[col_map.get('bang_usaha_tidak_ditemukan', 14)] or 0)
+        bu_dit = int(r[col_map.get('bang_usaha_ditemukan', 15)] or 0)
+        bu_bar = int(r[col_map.get('bang_usaha_baru', 16)] or 0)
+        bu_tut = int(r[col_map.get('bang_usaha_tutup', 17)] or 0)
+        bu_gan = int(r[col_map.get('bang_usaha_ganda', 18)] or 0)
+        bu_pus = int(r[col_map.get('bang_usaha_kantor_pusat', 19)] or 0)
         
-        kl_tdk = int(r[20] or 0)
-        kl_dit = int(r[21] or 0)
-        kl_bar = int(r[22] or 0)
-        kl_men = int(r[23] or 0)
-        kl_eli = int(r[24] or 0)
-        kl_tem = int(r[25] or 0)
-        kl_khu = int(r[26] or 0)
+        kl_tdk = int(r[col_map.get('keluarga_tidak_ditemukan', 20)] or 0)
+        kl_dit = int(r[col_map.get('keluarga_ditemukan', 21)] or 0)
+        kl_bar = int(r[col_map.get('keluarga_baru', 22)] or 0)
+        kl_men = int(r[col_map.get('keluarga_meninggal', 23)] or 0)
+        kl_eli = int(r[col_map.get('keluarga_tidak_eligible', 24)] or 0)
+        kl_tem = int(r[col_map.get('keluarga_tidak_dapat_ditemui', 25)] or 0)
+        kl_khu = int(r[col_map.get('keluarga_khusus', 26)] or 0)
         
-        # Bangunan Kosong (kolom 27 di file bangkos)
-        bang_kos = int(r[27] or 0) if len(r) > 27 and isinstance(r[27], (int, float)) else 0
+        # Bangunan Kosong
+        bangkos_idx = col_map.get('bangunan_kosong', 27)
+        bang_kos = int(r[bangkos_idx] or 0) if bangkos_idx < len(r) and isinstance(r[bangkos_idx], (int, float)) else 0
         
         # Email petugas
-        if len(r) >= 30 and '@' in str(r[28] or ''):
-            pencacah = str(r[28] or '').strip().lower()
-            pengawas = str(r[29] or '').strip().lower()
-        else:
-            pencacah = str(r[31] or '').strip().lower() if len(r) > 31 else ''
-            pengawas = str(r[32] or '').strip().lower() if len(r) > 32 else ''
+        ppl_idx = col_map.get('pencacah_email', 29)
+        pml_idx = col_map.get('pengawas_email', 30)
+        pencacah = str(r[ppl_idx] or '').strip().lower() if ppl_idx < len(r) else ''
+        pengawas = str(r[pml_idx] or '').strip().lower() if pml_idx < len(r) else ''
         
         tot_bu = bu_tdk + bu_dit + bu_bar + bu_tut + bu_gan + bu_pus
         tot_kl = kl_tdk + kl_dit + kl_bar + kl_men + kl_eli + kl_tem + kl_khu

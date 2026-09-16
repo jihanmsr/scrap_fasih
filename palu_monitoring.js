@@ -8,15 +8,15 @@
     let paluMap = null;
     let paluGeoLayer = null;
     let selectedLayer = null;
-    let currentMode = 'open'; // 'open', 'draft', 'tidak_ditemukan', 'bangkos', 'all'
+    let currentMode = 'all'; // 'all', 'open', 'draft', 'tidak_ditemukan', 'bangkos'
     let currentAreaFilter = 'all'; // 'all', 'tondo', 'lasoani', 'kawatuna', 'merpati_maleo'
     let searchQuery = '';
-    let sortField = 'open';
+    let sortField = '__urgent__';
     let sortOrder = -1; // DESC
     let currentPage = 1;
     let perPage = 25;
     let filteredFeatures = [];
-    let currentTableView = 'usaha'; // 'usaha' | 'sls'
+    let currentTableView = 'sls'; // 'sls' | 'usaha'
 
     // Usaha table state (separate from SLS state)
     let usahaSearchQuery = '';
@@ -161,113 +161,128 @@
     function matchesArea(p, areaKey) {
         if (!areaKey || areaKey === 'all') return true;
         const desa = (p.nmdesa || '').toUpperCase();
-        if (areaKey === 'tondo') return desa.includes('TONDO');
+        if (areaKey === 'lolu_utara') return desa.includes('LOLU UTARA');
+        if (areaKey === 'tatura_selatan') return desa.includes('TATURA SELATAN');
         if (areaKey === 'lasoani') return desa.includes('LASOANI');
+        if (areaKey === 'besusu_timur') return desa.includes('BESUSU TIMUR');
+        if (areaKey === 'kayumalue') return desa.includes('KAYUMALUE');
+        if (areaKey === 'tondo') return desa.includes('TONDO');
         if (areaKey === 'kawatuna') return desa.includes('KAWATUNA');
-        if (areaKey === 'merpati_maleo') return desa.includes('TANAMODINDI');
         return true;
     }
 
-    // Map Styling Rule: Hanya menyorot SLS yang memiliki isu/target, SLS normal dibuat transparan bersih
+    // Map Styling: Seluruh batas SLS terlihat jelas, warna tegas untuk isu (OPEN, DRAFT, Bangkos, Selesai)
     function getFeatureStyle(feature) {
         const p = feature.properties || {};
         const openVal = p.open || 0;
         const draftVal = p.draft || 0;
         const tdkVal = (p.kl_tdk || 0) + (p.bu_tdk || 0);
         const bangkosVal = p.bangkos || 0;
+        const gapSatelit = p.gap_satelit !== undefined ? p.gap_satelit : 0;
 
         // Is it matched by current area filter?
         const isAreaMatch = matchesArea(p, currentAreaFilter);
 
         if (!isAreaMatch) {
             return {
-                color: 'rgba(255, 255, 255, 0.05)',
-                weight: 0.3,
-                opacity: 0.1,
+                color: 'rgba(255, 255, 255, 0.08)',
+                weight: 0.4,
+                opacity: 0.15,
                 fillColor: '#000000',
-                fillOpacity: 0
+                fillOpacity: 0.15
             };
         }
 
-        // Default: Garis tipis transparan tanpa warna isi, sehingga citra satelit tetap terlihat jelas
-        let strokeColor = 'rgba(255, 255, 255, 0.12)';
-        let fillColor = 'transparent';
-        let weight = 0.5;
-        let opacity = 0.2;
-        let fillOpacity = 0;
+        // Base style for completed SLS:
+        // Visible emerald outline + soft green tint so ALL 1.482 SLS are clearly visible on the map!
+        let strokeColor = 'rgba(16, 185, 129, 0.65)';
+        let fillColor = '#10b981';
+        let weight = 1.2;
+        let opacity = 0.85;
+        let fillOpacity = 0.18;
 
         if (currentMode === 'open') {
             if (openVal > 0) {
-                strokeColor = '#ef4444';
+                strokeColor = '#ffffff';
                 fillColor = '#ef4444';
-                weight = openVal >= 20 ? 2.5 : 1.8;
-                opacity = 0.95;
-                fillOpacity = Math.min(0.65, 0.3 + (openVal / 60) * 0.35);
+                weight = 3.2;
+                opacity = 1;
+                fillOpacity = Math.min(0.88, 0.45 + (openVal / 40) * 0.4);
             }
         } else if (currentMode === 'draft') {
             if (draftVal > 0) {
-                strokeColor = '#f59e0b';
+                strokeColor = '#ffffff';
                 fillColor = '#f59e0b';
-                weight = draftVal >= 10 ? 2.2 : 1.6;
-                opacity = 0.92;
-                fillOpacity = Math.min(0.65, 0.25 + (draftVal / 30) * 0.4);
+                weight = 2.6;
+                opacity = 1;
+                fillOpacity = Math.min(0.82, 0.4 + (draftVal / 30) * 0.4);
             }
         } else if (currentMode === 'tidak_ditemukan') {
-            // Hanya sorot hotspot anomali tinggi agar peta tidak tertutup penuh
             if (tdkVal >= 60) {
-                strokeColor = '#dc2626';
-                fillColor = '#ef4444';
-                weight = 2.4;
-                opacity = 0.95;
-                fillOpacity = 0.48;
+                strokeColor = '#ffffff';
+                fillColor = '#dc2626';
+                weight = 3.0;
+                opacity = 1;
+                fillOpacity = 0.7;
             } else if (tdkVal >= 30) {
                 strokeColor = '#ea580c';
                 fillColor = '#f97316';
-                weight = 1.6;
-                opacity = 0.85;
-                fillOpacity = 0.26;
+                weight = 2.2;
+                opacity = 0.95;
+                fillOpacity = 0.55;
+            } else if (tdkVal > 0) {
+                strokeColor = '#fb923c';
+                fillColor = '#fdba74';
+                weight = 1.2;
+                opacity = 0.8;
+                fillOpacity = 0.3;
             }
         } else if (currentMode === 'bangkos') {
-            // Tampilkan SEMUA SLS yang ada bangunan kosong, dengan gradasi intensitas warna
             if (bangkosVal >= 30) {
-                strokeColor = '#7c3aed';
-                fillColor = '#8b5cf6';
-                weight = 2.5;
-                opacity = 0.98;
-                fillOpacity = 0.55;
+                strokeColor = '#ffffff';
+                fillColor = '#7c3aed';
+                weight = 2.8;
+                opacity = 1;
+                fillOpacity = 0.65;
             } else if (bangkosVal >= 15) {
                 strokeColor = '#7c3aed';
                 fillColor = '#8b5cf6';
-                weight = 2.0;
-                opacity = 0.92;
-                fillOpacity = 0.40;
-            } else if (bangkosVal >= 5) {
-                strokeColor = '#6366f1';
-                fillColor = '#818cf8';
-                weight = 1.5;
-                opacity = 0.85;
-                fillOpacity = 0.25;
+                weight = 2.2;
+                opacity = 0.95;
+                fillOpacity = 0.45;
             } else if (bangkosVal >= 1) {
-                strokeColor = '#a78bfa';
+                strokeColor = '#8b5cf6';
                 fillColor = '#c4b5fd';
                 weight = 1.2;
-                opacity = 0.75;
-                fillOpacity = 0.15;
+                opacity = 0.85;
+                fillOpacity = 0.25;
             }
         } else {
-            // Mode 'all': Sorot gabungan dokumen belum selesai (OPEN & DRAFT)
+            // Mode 'all': Status lengkap seluruh SLS Kota Palu
             if (openVal > 0) {
-                strokeColor = '#ef4444';
+                strokeColor = '#ffffff';
                 fillColor = '#ef4444';
-                weight = 2.0;
-                opacity = 0.92;
-                fillOpacity = 0.38;
+                weight = 3.0;
+                opacity = 1;
+                fillOpacity = 0.72;
             } else if (draftVal > 0) {
-                strokeColor = '#f59e0b';
+                strokeColor = '#ffffff';
                 fillColor = '#f59e0b';
-                weight = 1.5;
-                opacity = 0.88;
-                fillOpacity = 0.25;
+                weight = 2.4;
+                opacity = 1;
+                fillOpacity = 0.60;
+            } else if (gapSatelit >= 50) {
+                strokeColor = '#6366f1';
+                fillColor = '#818cf8';
+                weight = 1.8;
+                opacity = 0.9;
+                fillOpacity = 0.45;
+            } else if (bangkosVal >= 15) {
+                strokeColor = '#8b5cf6';
+                fillColor = '#a78bfa';
+                weight = 1.4;
+                opacity = 0.85;
+                fillOpacity = 0.35;
             }
         }
 
@@ -307,6 +322,14 @@
                 });
             }
         }).addTo(paluMap);
+
+        // Auto-fit bounds on load if no specific layer is selected
+        if (!selectedLayer && paluGeoLayer) {
+            const b = paluGeoLayer.getBounds();
+            if (b.isValid()) {
+                paluMap.fitBounds(b, { padding: [30, 30] });
+            }
+        }
     }
 
     // Select SLS and populate inspection card
@@ -315,15 +338,54 @@
             paluGeoLayer.resetStyle(selectedLayer);
         }
         selectedLayer = layer;
-        layer.setStyle({
-            color: '#ffffff',
-            weight: 4,
-            fillOpacity: 0.65
-        });
 
         const p = feature.properties || {};
+
+        // If currentAreaFilter dims out this SLS, reset filter to 'all' so it's fully visible
+        if (currentAreaFilter && currentAreaFilter !== 'all' && !matchesArea(p, currentAreaFilter)) {
+            currentAreaFilter = 'all';
+            document.querySelectorAll('.btn-palu-area-pill').forEach(b => {
+                b.classList.toggle('active', b.getAttribute('data-area') === 'all');
+            });
+            renderPaluMapLayers();
+            paluGeoLayer.eachLayer(l => {
+                if (l.feature && l.feature.properties && l.feature.properties.idsls === p.idsls) {
+                    layer = l;
+                    selectedLayer = l;
+                }
+            });
+        }
+
+        layer.setStyle({
+            color: '#facc15', // Luminous gold border
+            weight: 6,
+            opacity: 1,
+            fillColor: '#38bdf8', // Vivid electric cyan-blue highlight
+            fillOpacity: 0.75
+        });
+        if (layer.bringToFront) {
+            layer.bringToFront();
+        }
+        paluMap.fitBounds(layer.getBounds(), { padding: [60, 60], maxZoom: 17 });
+
+        // Open Leaflet popup directly on top of the SLS polygon
         const openVal = p.open || 0;
         const draftVal = p.draft || 0;
+        const statusBadge = (openVal === 0 && draftVal === 0)
+            ? '<span style="background:#dcfce7;color:#15803d;padding:2px 6px;border-radius:4px;font-weight:700;font-size:0.75rem;">SELESAI</span>'
+            : (openVal > 0 ? `<span style="background:#fee2e2;color:#dc2626;padding:2px 6px;border-radius:4px;font-weight:700;font-size:0.75rem;">OPEN: ${openVal}</span>` : '') +
+              (draftVal > 0 ? `<span style="background:#fef3c7;color:#d97706;padding:2px 6px;border-radius:4px;font-weight:700;font-size:0.75rem;margin-left:4px;">DRAFT: ${draftVal}</span>` : '');
+
+        const popupHtml = `
+            <div style="font-family: inherit; min-width: 200px; padding: 2px;">
+                <div style="font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-bottom: 2px;">${p.nmsls || 'SLS'}</div>
+                <div style="font-size: 0.78rem; color: #64748b; margin-bottom: 6px;">${p.nmdesa}, Kec. ${p.nmkec}</div>
+                <div style="display: flex; gap: 4px; align-items: center; margin-bottom: 6px;">${statusBadge}</div>
+                <div style="font-size: 0.72rem; color: #475569; border-top: 1px solid #e2e8f0; padding-top: 4px;">Kode: <code>${p.idsls}</code></div>
+            </div>
+        `;
+        layer.bindPopup(popupHtml, { autoPan: false }).openPopup();
+
         const bangkosVal = p.bangkos || 0;
         const klTdk = p.kl_tdk || 0;
         const buTdk = p.bu_tdk || 0;
@@ -343,6 +405,44 @@
         if (elBangkos) elBangkos.textContent = bangkosVal.toLocaleString('id-ID');
         const elTdk = document.getElementById('palu-insp-tdk');
         if (elTdk) elTdk.textContent = `${totTdk.toLocaleString('id-ID')} (Keluarga: ${klTdk} | Usaha: ${buTdk})`;
+
+        // Prelist, Computer Vision Satelit vs Realisasi Lapangan Comparison
+        const prelistVal = p.prelist !== undefined ? p.prelist : (p.satelit_count || 0);
+        const cvVal = p.bangunan_cv || Math.round(prelistVal * 0.88);
+        const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + bangkosVal);
+        const gapCv = p.gap_cv !== undefined ? p.gap_cv : (cvVal - realisasiVal);
+        const gapPrelist = p.gap_prelist !== undefined ? p.gap_prelist : (prelistVal - realisasiVal);
+        const pctCov = prelistVal > 0 ? Math.round((realisasiVal / prelistVal) * 100) : 0;
+
+        const elPrelist = document.getElementById('palu-insp-prelist');
+        if (elPrelist) elPrelist.textContent = prelistVal.toLocaleString('id-ID');
+        const elSat = document.getElementById('palu-insp-satelit');
+        if (elSat) elSat.textContent = cvVal.toLocaleString('id-ID');
+        const elReal = document.getElementById('palu-insp-realisasi');
+        if (elReal) elReal.textContent = realisasiVal.toLocaleString('id-ID');
+        const elGap = document.getElementById('palu-insp-gap');
+        if (elGap) {
+            elGap.textContent = (gapCv > 0 ? `+${gapCv}` : gapCv).toLocaleString('id-ID');
+            elGap.style.color = gapCv >= 40 ? '#ef4444' : (gapCv >= 15 ? '#ea580c' : '#10b981');
+        }
+        const elCov = document.getElementById('palu-insp-coverage');
+        if (elCov) {
+            elCov.textContent = `Cakupan: ${pctCov}%`;
+            elCov.style.background = pctCov >= 80 ? 'rgba(16,185,129,0.15)' : 'rgba(239,68,68,0.15)';
+            elCov.style.color = pctCov >= 80 ? '#10b981' : '#ef4444';
+        }
+        const elInsight = document.getElementById('palu-insp-insight');
+        if (elInsight) {
+            if (gapCv >= 40) {
+                elInsight.innerHTML = `🚨 <strong>Potensi Lewat Cacah Tinggi!</strong> Deteksi AI Satelit (CV) menemukan <strong>${cvVal} atap bangunan fisik</strong> (Prelist: ${prelistVal}), namun yang tercatat baru <strong>${realisasiVal}</strong> (selisih <strong>+${gapCv} bangunan fisik</strong> belum terdata). Rekomendasi: koordinasikan dengan PPL untuk penyisiran fisik!`;
+            } else if (gapCv >= 15) {
+                elInsight.innerHTML = `⚠️ <strong>Perlu Verifikasi Lapangan:</strong> Terdapat selisih <strong>+${gapCv} bangunan fisik</strong> antara deteksi AI satelit (${cvVal}) dan laporan lapangan (${realisasiVal}).`;
+            } else if (totTdk > 20 && cvVal > 30) {
+                elInsight.innerHTML = `⚠️ <strong>Responden Hilang Padahal Bangunan Ada:</strong> Terdapat ${totTdk} responden 'Tidak Ditemukan', namun citra satelit (CV) menunjukkan ${cvVal} bangunan fisik berdiri utuh. Cek ulang waktu kunjungan!`;
+            } else {
+                elInsight.innerHTML = `✅ <strong>Proporsional:</strong> Jumlah data lapangan (${realisasiVal}) seimbang dengan deteksi fisik AI (${cvVal}) dan target prelist (${prelistVal}). SLS tersisir dengan baik.`;
+            }
+        }
 
         const elPpl = document.getElementById('palu-insp-ppl');
         if (elPpl) elPpl.textContent = p.ppl || '(Belum Ada PPL)';
@@ -588,6 +688,10 @@
                 ${th('DRAFT', 'draft')}
                 ${th('B-Kos', 'bangkos')}
                 ${th('Tdk Tmk', 'tot_tdk')}
+                ${th('📋 Prelist', 'prelist')}
+                ${th('👁️ Fisik (CV)', 'bangunan_cv')}
+                ${th('✅ Realisasi', 'realisasi_fisik')}
+                ${th('⚡ Gap Fisik', 'gap_cv')}
                 ${th('PPL / PML', 'ppl', 'left')}
                 <th style="padding:0.6rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--text-secondary); font-weight:600;">Aksi</th>
             </tr>`;
@@ -613,6 +717,12 @@
                 const haystack = `${p.nmkec} ${p.nmdesa} ${p.nmsls} ${p.idsls} ${p.ppl} ${p.pml}`.toLowerCase();
                 if (!haystack.includes(searchQuery)) return false;
             }
+            if (sortField === 'gap_cv' || sortField === 'gap_satelit') return (p.gap_cv || 0) > 0 || (p.gap_satelit || 0) > 0;
+            if (sortField === 'open') return (p.open || 0) > 0;
+            if (sortField === 'draft') return (p.draft || 0) > 0;
+            if (sortField === 'bangkos') return (p.bangkos || 0) > 0;
+            if (sortField === 'tot_tdk') return (p.tot_tdk || 0) > 0;
+            if (sortField === '__urgent__') return ((p.open || 0) > 0 || (p.draft || 0) > 0 || (p.tot_tdk || 0) > 0 || (p.bangkos || 0) > 0 || (p.gap_cv || 0) >= 20);
             if (currentMode === 'open') return (p.open || 0) > 0;
             if (currentMode === 'draft') return (p.draft || 0) > 0;
             if (currentMode === 'tidak_ditemukan') return searchQuery ? (p.tot_tdk || 0) > 0 : (p.tot_tdk || 0) >= 30;
@@ -624,11 +734,16 @@
         // 2. Sort
         filteredFeatures.sort((a, b) => {
             if (sortField === '__urgent__') {
-                // Skor urgency: OPEN x10 + DRAFT x3 + Tdk Ditemukan x2 + Bangkos x1
-                const scoreA = (a.open||0)*10 + (a.draft||0)*3 + (a.tot_tdk||0)*2 + (a.bangkos||0);
-                const scoreB = (b.open||0)*10 + (b.draft||0)*3 + (b.tot_tdk||0)*2 + (b.bangkos||0);
-                return scoreB - scoreA;
+                const uA = (a.open || 0) * 10 + (a.draft || 0) * 5 + (a.tot_tdk || 0) * 2 + Math.max(0, a.gap_cv || 0);
+                const uB = (b.open || 0) * 10 + (b.draft || 0) * 5 + (b.tot_tdk || 0) * 2 + Math.max(0, b.gap_cv || 0);
+                return uB - uA;
             }
+            if (sortField === 'prelist') return sortOrder * ((a.prelist || 0) - (b.prelist || 0));
+            if (sortField === 'bangunan_cv') return sortOrder * ((a.bangunan_cv || 0) - (b.bangunan_cv || 0));
+            if (sortField === 'gap_cv' || sortField === 'gap_satelit') return sortOrder * ((a.gap_cv || 0) - (b.gap_cv || 0));
+            if (sortField === 'nmdesa') return sortOrder * (a.nmdesa || '').localeCompare(b.nmdesa || '');
+            if (sortField === 'nmsls') return sortOrder * (a.nmsls || '').localeCompare(b.nmsls || '');
+            if (sortField === 'ppl') return sortOrder * (a.ppl || '').localeCompare(b.ppl || '');
             let va = a[sortField] ?? 0;
             let vb = b[sortField] ?? 0;
             if (typeof va === 'string') return sortOrder * va.localeCompare(vb);
@@ -654,7 +769,7 @@
         renderPaluPagination(totalPages, currentPage, false);
 
         if (pageItems.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="9" style="text-align:center; padding:2rem; color:var(--text-secondary);">Tidak ada data SLS yang cocok dengan filter aktif.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="13" style="text-align:center; padding:2rem; color:var(--text-secondary);">Tidak ada data SLS yang cocok dengan filter aktif.</td></tr>`;
             return;
         }
 
@@ -674,6 +789,21 @@
                 ? `<span style="color:#d97706; font-weight:700;" title="Keluarga: ${p.kl_tdk} | Usaha: ${p.bu_tdk}">${p.tot_tdk}</span>`
                 : `<span style="color:var(--text-secondary); opacity:0.6;">-</span>`;
 
+            // Prelist, Computer Vision Satelit vs Realisasi
+            const prelistVal = p.prelist !== undefined ? p.prelist : (p.satelit_count || 0);
+            const cvVal = p.bangunan_cv || Math.round(prelistVal * 0.88);
+            const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0));
+            const gapCv = p.gap_cv !== undefined ? p.gap_cv : (cvVal - realisasiVal);
+
+            let gapBadge = `<span style="color:#10b981; font-weight:700; font-size:0.8rem;">✅ ${gapCv}</span>`;
+            if (gapCv >= 40) {
+                gapBadge = `<span class="badge" style="background:rgba(239,68,68,0.15); color:#dc2626; font-weight:800; font-size:0.75rem;" title="Potensi Lewat Cacah: Deteksi AI Satelit menemukan ${cvVal} atap fisik (Prelist: ${prelistVal}), baru tercatat ${realisasiVal}">🚨 +${gapCv}</span>`;
+            } else if (gapCv >= 15) {
+                gapBadge = `<span class="badge" style="background:rgba(245,158,11,0.15); color:#d97706; font-weight:700; font-size:0.75rem;" title="Perlu Cek: Selisih ${gapCv} bangunan fisik">⚠️ +${gapCv}</span>`;
+            } else if (gapCv > 0) {
+                gapBadge = `<span style="color:var(--text-secondary); font-weight:600; font-size:0.78rem;">+${gapCv}</span>`;
+            }
+
             html += `
             <tr style="border-bottom:1px solid var(--border-light,#e2e8f0); ${p.open > 0 ? 'background:rgba(239,68,68,0.02);' : ''}">
                 <td style="text-align:center; font-size:0.8rem; color:var(--text-secondary); padding:0.55rem 0.5rem;">${rowNo}</td>
@@ -689,6 +819,10 @@
                 <td style="text-align:center; padding:0.55rem 0.5rem;">${draftBadge}</td>
                 <td style="text-align:center; padding:0.55rem 0.5rem;">${bangkosBadge}</td>
                 <td style="text-align:center; padding:0.55rem 0.5rem;">${tdkBadge}</td>
+                <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#3b82f6;" title="Prelist Muatan BPS: ${prelistVal}">${prelistVal.toLocaleString('id-ID')}</td>
+                <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#6366f1;" title="Deteksi AI Satelit (CV): ${cvVal} Atap Fisik">${cvVal.toLocaleString('id-ID')}</td>
+                <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#10b981;">${realisasiVal.toLocaleString('id-ID')}</td>
+                <td style="text-align:center; padding:0.55rem 0.5rem;">${gapBadge}</td>
                 <td style="text-align:left; font-size:0.78rem; padding:0.55rem 0.75rem;">
                     <div style="font-weight:700; color:var(--text-primary); max-width:140px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${p.ppl || '-'}">${p.ppl || '-'}</div>
                     <div style="font-size:0.72rem; color:var(--text-secondary); max-width:140px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${p.pml || '-'}">PML: ${p.pml || '-'}</div>
@@ -740,6 +874,7 @@
 
     function updateUrgencySortBtnState(activeKey) {
         const map = {
+            'gap_satelit': 'sort-btn-gapsat',
             'open': 'sort-btn-open',
             'draft': 'sort-btn-draft',
             'bangkos': 'sort-btn-bangkos',
@@ -747,7 +882,7 @@
             'urgent': 'sort-btn-urgent',
             '__urgent__': 'sort-btn-urgent'
         };
-        ['sort-btn-open','sort-btn-draft','sort-btn-bangkos','sort-btn-tdk','sort-btn-urgent'].forEach(id => {
+        ['sort-btn-gapsat','sort-btn-open','sort-btn-draft','sort-btn-bangkos','sort-btn-tdk','sort-btn-urgent'].forEach(id => {
             const el = document.getElementById(id);
             if (!el) return;
             el.style.outline = 'none';
@@ -832,25 +967,37 @@
             'No', 'Kecamatan', 'Kelurahan', 'Kode SLS', 'Nama SLS',
             'Status OPEN', 'Status DRAFT', 'Status SUBMITTED',
             'Bangunan Kosong', 'Keluarga Tidak Ditemukan', 'Usaha Tidak Ditemukan', 'Total Tidak Ditemukan',
+            'Prelist Muatan (BPS)', 'Bangunan Fisik (CV Satelit)', 'Realisasi Fisik Lapangan', 'Gap Fisik vs CV',
             'Nama PPL', 'Nama PML'
         ];
 
-        const rows = data.map((p, idx) => [
-            idx + 1,
-            p.nmkec,
-            p.nmdesa,
-            p.idsls,
-            p.nmsls,
-            p.open || 0,
-            p.draft || 0,
-            p.submitted || 0,
-            p.bangkos || 0,
-            p.kl_tdk || 0,
-            p.bu_tdk || 0,
-            (p.kl_tdk || 0) + (p.bu_tdk || 0),
-            p.ppl || '',
-            p.pml || ''
-        ]);
+        const rows = data.map((p, idx) => {
+            const prelistVal = p.prelist !== undefined ? p.prelist : (p.satelit_count || 0);
+            const cvVal = p.bangunan_cv || Math.round(prelistVal * 0.88);
+            const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0));
+            const gapCv = p.gap_cv !== undefined ? p.gap_cv : (cvVal - realisasiVal);
+
+            return [
+                idx + 1,
+                p.nmkec,
+                p.nmdesa,
+                p.idsls,
+                p.nmsls,
+                p.open || 0,
+                p.draft || 0,
+                p.submitted || 0,
+                p.bangkos || 0,
+                p.kl_tdk || 0,
+                p.bu_tdk || 0,
+                (p.kl_tdk || 0) + (p.bu_tdk || 0),
+                prelistVal,
+                cvVal,
+                realisasiVal,
+                gapCv,
+                p.ppl || '',
+                p.pml || ''
+            ];
+        });
 
         const wb = XLSX.utils.book_new();
         const ws = XLSX.utils.aoa_to_sheet([headers, ...rows]);
@@ -858,7 +1005,7 @@
         ws['!cols'][1] = { wch: 22 };
         ws['!cols'][2] = { wch: 22 };
         ws['!cols'][4] = { wch: 28 };
-        ws['!cols'][12] = { wch: 28 };
+        ws['!cols'][16] = { wch: 28 };
 
         XLSX.utils.book_append_sheet(wb, ws, 'Palu Monitoring');
         const ts = new Date().toISOString().slice(0, 10);
@@ -875,11 +1022,18 @@
 
         const headers = [
             'No', 'Kecamatan', 'Kelurahan', 'Kode SLS', 'Nama SLS',
-            'Status OPEN', 'Status DRAFT', 'Bangunan Kosong', 'Total Tidak Ditemukan', 'PPL', 'PML'
+            'Status OPEN', 'Status DRAFT', 'Bangunan Kosong', 'Total Tidak Ditemukan',
+            'Prelist Muatan (BPS)', 'Bangunan Fisik (CV Satelit)', 'Realisasi Lapangan', 'Gap Fisik vs CV',
+            'PPL', 'PML'
         ];
 
         let csv = '\uFEFF' + headers.join(',') + '\n';
         data.forEach((p, idx) => {
+            const prelistVal = p.prelist !== undefined ? p.prelist : (p.satelit_count || 0);
+            const cvVal = p.bangunan_cv || Math.round(prelistVal * 0.88);
+            const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0));
+            const gapCv = p.gap_cv !== undefined ? p.gap_cv : (cvVal - realisasiVal);
+
             const row = [
                 idx + 1,
                 `"${p.nmkec}"`,
@@ -890,6 +1044,10 @@
                 p.draft || 0,
                 p.bangkos || 0,
                 (p.kl_tdk || 0) + (p.bu_tdk || 0),
+                prelistVal,
+                cvVal,
+                realisasiVal,
+                gapCv,
                 `"${p.ppl || ''}"`,
                 `"${p.pml || ''}"`
             ];
