@@ -215,6 +215,17 @@
                     Penyisiran Lapangan
                 </button>
 
+                <button class="btn-tab" id="tab-btn-palu" onclick="switchTab('palu')"
+                    title="Monitoring Khusus Kota Palu, Titik OPEN/DRAFT & Area BTN">
+                    <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
+                        <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                        <line x1="8" y1="2" x2="8" y2="18"></line>
+                        <line x1="16" y1="6" x2="16" y2="22"></line>
+                    </svg>
+                    Monitoring Kota Palu
+                </button>
+
                 <button class="btn-tab" id="tab-btn-open_subsls" onclick="switchTab('open_subsls')">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
@@ -998,6 +1009,328 @@
 
             </div>
 
+            <!-- TAB CONTENT: MONITORING KOTA PALU -->
+            <div class="tab-content" id="tab-content-palu" style="display: none; padding: 1.5rem;">
+                <style>
+                    .btn-palu-area-pill.active {
+                        background: #3b82f6 !important;
+                        color: #ffffff !important;
+                        border-color: #3b82f6 !important;
+                        box-shadow: 0 0 10px rgba(59, 130, 246, 0.35);
+                    }
+                    .btn-palu-mode.active {
+                        background: var(--primary, #3b82f6) !important;
+                        color: #ffffff !important;
+                        border-color: var(--primary, #3b82f6) !important;
+                    }
+                    .btn-palu-basemap.active {
+                        background: #2563eb !important;
+                        color: #ffffff !important;
+                    }
+                </style>
+
+                <!-- Header & Quick Area Focus Pills -->
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div>
+                        <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin: 0 0 0.35rem 0; display: flex; align-items: center; gap: 0.6rem;">
+                            <span>🗺️</span> Pemantauan Spasial SLS Kota Palu
+                            <span style="font-size: 0.75rem; font-weight: 700; background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 0.2rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.3);">
+                                1,482 SLS Terpetakan
+                            </span>
+                        </h2>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">
+                            Pantau dokumen OPEN, DRAFT, Bangunan Kosong, dan Kasus Tidak Ditemukan dengan peta spasial poligon SLS.
+                        </p>
+                    </div>
+
+                    <!-- Quick Focus Pills for BTN & Priority Clusters -->
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
+                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); margin-right: 0.2rem;">Fokus Area:</span>
+                        <button class="btn-palu-area-pill active" data-area="all" onclick="window.focusPaluArea('all')"
+                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            🌐 Semua Palu
+                        </button>
+                        <button class="btn-palu-area-pill" data-area="tondo" onclick="window.focusPaluArea('tondo')"
+                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            🏘️ BTN Tondo (111 Draft)
+                        </button>
+                        <button class="btn-palu-area-pill" data-area="lasoani" onclick="window.focusPaluArea('lasoani')"
+                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            🏘️ Lasoani (448 Open, 211 Draft)
+                        </button>
+                        <button class="btn-palu-area-pill" data-area="kawatuna" onclick="window.focusPaluArea('kawatuna')"
+                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            🏘️ Kawatuna (246 Open)
+                        </button>
+                        <button class="btn-palu-area-pill" data-area="merpati_maleo" onclick="window.focusPaluArea('merpati_maleo')"
+                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            📍 Merpati &amp; Maleo (Tanamodindi)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4 Executive KPI Cards -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                    <!-- OPEN Card -->
+                    <div style="background: var(--card-bg); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
+                        <div style="position: absolute; right: -10px; top: -10px; font-size: 3.5rem; opacity: 0.08; color: #ef4444;">📂</div>
+                        <div style="font-size: 0.75rem; font-weight: 700; color: #ef4444; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#ef4444;"></span>
+                            Dokumen OPEN
+                        </div>
+                        <div id="palu-kpi-open" style="font-size: 2rem; font-weight: 800; color: #ef4444; font-family: 'Outfit', sans-serif; margin: 0.35rem 0 0.2rem 0;">
+                            -
+                        </div>
+                        <div id="palu-kpi-open-sls" style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">
+                            - SLS terdampak
+                        </div>
+                    </div>
+
+                    <!-- DRAFT Card -->
+                    <div style="background: var(--card-bg); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
+                        <div style="position: absolute; right: -10px; top: -10px; font-size: 3.5rem; opacity: 0.08; color: #f59e0b;">📝</div>
+                        <div style="font-size: 0.75rem; font-weight: 700; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#f59e0b;"></span>
+                            Dokumen DRAFT
+                        </div>
+                        <div id="palu-kpi-draft" style="font-size: 2rem; font-weight: 800; color: #f59e0b; font-family: 'Outfit', sans-serif; margin: 0.35rem 0 0.2rem 0;">
+                            -
+                        </div>
+                        <div id="palu-kpi-draft-sls" style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">
+                            - SLS terdampak
+                        </div>
+                    </div>
+
+                    <!-- BANGKOS Card -->
+                    <div style="background: var(--card-bg); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
+                        <div style="position: absolute; right: -10px; top: -10px; font-size: 3.5rem; opacity: 0.08; color: #8b5cf6;">🏚️</div>
+                        <div style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#8b5cf6;"></span>
+                            Bangunan Kosong
+                        </div>
+                        <div id="palu-kpi-bangkos" style="font-size: 2rem; font-weight: 800; color: #8b5cf6; font-family: 'Outfit', sans-serif; margin: 0.35rem 0 0.2rem 0;">
+                            -
+                        </div>
+                        <div id="palu-kpi-bangkos-sls" style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">
+                            - SLS terlapor
+                        </div>
+                    </div>
+
+                    <!-- TIDAK DITEMUKAN Card -->
+                    <div style="background: var(--card-bg); border: 1px solid rgba(234, 88, 12, 0.3); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
+                        <div style="position: absolute; right: -10px; top: -10px; font-size: 3.5rem; opacity: 0.08; color: #ea580c;">❓</div>
+                        <div style="font-size: 0.75rem; font-weight: 700; color: #ea580c; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#ea580c;"></span>
+                            Tidak Ditemukan (Keluarga &amp; Usaha)
+                        </div>
+                        <div id="palu-kpi-tdk" style="font-size: 2rem; font-weight: 800; color: #ea580c; font-family: 'Outfit', sans-serif; margin: 0.35rem 0 0.2rem 0;">
+                            -
+                        </div>
+                        <div id="palu-kpi-tdk-detail" style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">
+                            -
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Map Section -->
+                <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.25rem; margin-bottom: 1.5rem; box-shadow: var(--shadow-sm);">
+                    <!-- Map Toolbar: Layer Selector & Base Map -->
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--card-border);">
+                        <!-- Layer Mode Buttons -->
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
+                            <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary); margin-right: 0.25rem;">Sorot Layer:</span>
+                            <button class="btn-palu-mode active" data-mode="open" onclick="window.setPaluMapMode('open')"
+                                style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(239,68,68,0.3); background: rgba(239,68,68,0.06); color: #ef4444; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                🔴 Sorot Dokumen OPEN (86 SLS)
+                            </button>
+                            <button class="btn-palu-mode" data-mode="draft" onclick="window.setPaluMapMode('draft')"
+                                style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(245,158,11,0.3); background: rgba(245,158,11,0.06); color: #f59e0b; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                🟠 Sorot Dokumen DRAFT (321 SLS)
+                            </button>
+                            <button class="btn-palu-mode" data-mode="bangkos" onclick="window.setPaluMapMode('bangkos')"
+                                style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(139,92,246,0.3); background: rgba(139,92,246,0.06); color: #8b5cf6; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                🟣 Bangunan Kosong (Semua SLS)
+                            </button>
+                            <button class="btn-palu-mode" data-mode="tidak_ditemukan" onclick="window.setPaluMapMode('tidak_ditemukan')"
+                                style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(234,88,12,0.3); background: rgba(234,88,12,0.06); color: #ea580c; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                ⚠️ Tidak Ditemukan (≥30 Kasus)
+                            </button>
+                            <button class="btn-palu-mode" data-mode="all" onclick="window.setPaluMapMode('all')"
+                                style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                🌐 Belum Selesai (OPEN + DRAFT)
+                            </button>
+                        </div>
+
+                        <!-- Basemap Toggle -->
+                        <div style="display: flex; gap: 0.3rem; align-items: center; background: var(--input-bg); padding: 0.2rem; border-radius: 0.5rem; border: 1px solid var(--card-border);">
+                            <button class="btn-palu-basemap active" data-base="satellite" onclick="window.togglePaluBasemap('satellite')"
+                                style="padding: 0.3rem 0.65rem; border-radius: 0.35rem; border: none; background: #2563eb; color: #fff; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
+                                🛰️ Satelit
+                            </button>
+                            <button class="btn-palu-basemap" data-base="osm" onclick="window.togglePaluBasemap('osm')"
+                                style="padding: 0.3rem 0.65rem; border-radius: 0.35rem; border: none; background: transparent; color: var(--text-secondary); font-size: 0.75rem; font-weight: 700; cursor: pointer;">
+                                🗺️ OpenStreetMap
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Map Container with Inspection Card Grid -->
+                    <div style="display: grid; grid-template-columns: 1fr 340px; gap: 1rem; align-items: stretch;">
+                        <!-- Map Box -->
+                        <div style="position: relative; border-radius: 0.75rem; overflow: hidden; border: 1px solid var(--card-border);">
+                            <div id="palu-monitoring-map" style="height: 520px; width: 100%; z-index: 1;"></div>
+                        </div>
+
+                        <!-- Live Inspection Card -->
+                        <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                    <div>
+                                        <div id="palu-insp-title" style="font-weight: 800; font-size: 1.1rem; color: var(--text-primary); line-height: 1.3;">
+                                            Pilih SLS di Peta
+                                        </div>
+                                        <div id="palu-insp-sub" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.25rem;">
+                                            Klik poligon SLS pada peta untuk melihat rincian progres &amp; petugas
+                                        </div>
+                                    </div>
+                                    <div id="palu-insp-badge"></div>
+                                </div>
+
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin: 1rem 0;">
+                                    <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 0.6rem; padding: 0.6rem;">
+                                        <div style="font-size: 0.7rem; font-weight: 700; color: #ef4444; text-transform: uppercase;">OPEN</div>
+                                        <div id="palu-insp-open" style="font-size: 1.3rem; font-weight: 800; color: #ef4444;">-</div>
+                                    </div>
+                                    <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 0.6rem; padding: 0.6rem;">
+                                        <div style="font-size: 0.7rem; font-weight: 700; color: #f59e0b; text-transform: uppercase;">DRAFT</div>
+                                        <div id="palu-insp-draft" style="font-size: 1.3rem; font-weight: 800; color: #f59e0b;">-</div>
+                                    </div>
+                                    <div style="background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 0.6rem; padding: 0.6rem;">
+                                        <div style="font-size: 0.7rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase;">Bang. Kosong</div>
+                                        <div id="palu-insp-bangkos" style="font-size: 1.3rem; font-weight: 800; color: #8b5cf6;">-</div>
+                                    </div>
+                                    <div style="background: rgba(234, 88, 12, 0.08); border: 1px solid rgba(234, 88, 12, 0.2); border-radius: 0.6rem; padding: 0.6rem;">
+                                        <div style="font-size: 0.7rem; font-weight: 700; color: #ea580c; text-transform: uppercase;">Tdk Ditemukan</div>
+                                        <div id="palu-insp-tdk" style="font-size: 1.3rem; font-weight: 800; color: #ea580c;">-</div>
+                                    </div>
+                                </div>
+
+                                <div style="border-top: 1px solid var(--card-border); padding-top: 0.75rem;">
+                                    <div style="margin-bottom: 0.5rem;">
+                                        <div style="font-size: 0.72rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">PPL / Petugas Lapangan:</div>
+                                        <div id="palu-insp-ppl" style="font-size: 0.88rem; font-weight: 700; color: var(--text-primary); margin-top: 0.15rem;">-</div>
+                                    </div>
+                                    <div>
+                                        <div style="font-size: 0.72rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">PML / Pemeriksa:</div>
+                                        <div id="palu-insp-pml" style="font-size: 0.88rem; font-weight: 700; color: var(--text-primary); margin-top: 0.15rem;">-</div>
+                                    </div>
+                                </div>
+
+                                <!-- Dynamic Usaha in Selected SLS -->
+                                <div id="palu-insp-usaha-box" style="margin-top: 0.75rem; border-top: 1px solid var(--card-border); padding-top: 0.6rem; display: none;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                                        <div style="font-size: 0.75rem; font-weight: 700; color: #3b82f6;">🏢 Daftar Usaha di SLS Ini:</div>
+                                        <span id="palu-insp-usaha-count" style="font-size: 0.7rem; font-weight: 700; background: rgba(59,130,246,0.15); color: #3b82f6; padding: 0.1rem 0.45rem; border-radius: 9999px;">0</span>
+                                    </div>
+                                    <div id="palu-insp-usaha-list" style="max-height: 150px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.35rem;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="font-size: 0.72rem; color: var(--text-secondary); background: var(--input-bg); padding: 0.6rem; border-radius: 0.5rem; margin-top: 0.75rem; border: 1px solid var(--card-border);">
+                                💡 <b>Tips:</b> Klik nama SLS di tabel bawah untuk langsung melompat (zoom) ke lokasinya pada peta.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Priority SLS & Usaha Table Section -->
+                <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm);">
+                    <!-- View Selector: Unit Usaha vs SLS -->
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem; margin-bottom: 1rem; border-bottom: 1px solid var(--card-border); padding-bottom: 0.75rem;">
+                        <div style="display: flex; gap: 0.4rem; align-items: center;">
+                            <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary); margin-right: 0.25rem;">Tampilan Tabel:</span>
+                            <button id="palu-view-btn-usaha" class="btn-palu-view active" onclick="window.setPaluTableView('usaha')"
+                                style="padding: 0.4rem 0.85rem; border-radius: 0.5rem; border: 1px solid #3b82f6; background: #3b82f6; color: #fff; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                🏢 Daftar Unit Usaha (2.302 Usaha)
+                            </button>
+                            <button id="palu-view-btn-sls" class="btn-palu-view" onclick="window.setPaluTableView('sls')"
+                                style="padding: 0.4rem 0.85rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                🗺️ Rekap Wilayah SLS (1.482 SLS)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Search & Action Bar -->
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; max-width: 480px;">
+                            <input id="palu-search-input" type="text" oninput="window.searchPaluTable(this.value)"
+                                placeholder="🔍 Cari Nama Usaha, Pemilik, RT, Kelurahan..."
+                                style="width: 100%; padding: 0.6rem 0.9rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-size: 0.85rem; outline: none;">
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <button onclick="window.exportPaluExcel()"
+                                style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 0.9rem; border-radius: 0.5rem; border: 1px solid #10b981; background: rgba(16, 185, 129, 0.1); color: #10b981; font-weight: 700; font-size: 0.82rem; cursor: pointer; transition: all 0.2s;">
+                                📊 Ekspor Excel (.xlsx)
+                            </button>
+                            <button onclick="window.exportPaluCSV()"
+                                style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 0.9rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-secondary); font-weight: 700; font-size: 0.82rem; cursor: pointer; transition: all 0.2s;">
+                                📄 Ekspor CSV
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Row Count Status -->
+                    <div id="palu-table-count-info" style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                        Menampilkan Usaha...
+                    </div>
+
+                    <!-- Urgency Quick-Sort Bar (hanya muncul di view SLS) -->
+                    <div id="palu-urgency-sort-bar" style="display:none; flex-wrap:wrap; align-items:center; gap:0.4rem; margin-bottom:0.75rem;">
+                        <span style="font-size:0.75rem; font-weight:700; color:var(--text-secondary); white-space:nowrap;">⚡ Urutkan:</span>
+                        <button id="sort-btn-open" onclick="window.quickSortPalu('open')"
+                            style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:1px solid rgba(239,68,68,0.4); background:rgba(239,68,68,0.08); color:#dc2626; font-size:0.78rem; font-weight:700; cursor:pointer; transition:all 0.15s;">
+                            🔴 OPEN Tertinggi
+                        </button>
+                        <button id="sort-btn-draft" onclick="window.quickSortPalu('draft')"
+                            style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:1px solid rgba(245,158,11,0.4); background:rgba(245,158,11,0.08); color:#d97706; font-size:0.78rem; font-weight:700; cursor:pointer; transition:all 0.15s;">
+                            🟠 DRAFT Tertinggi
+                        </button>
+                        <button id="sort-btn-bangkos" onclick="window.quickSortPalu('bangkos')"
+                            style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:1px solid rgba(139,92,246,0.4); background:rgba(139,92,246,0.08); color:#7c3aed; font-size:0.78rem; font-weight:700; cursor:pointer; transition:all 0.15s;">
+                            🟣 Bang. Kosong Tertinggi
+                        </button>
+                        <button id="sort-btn-tdk" onclick="window.quickSortPalu('tot_tdk')"
+                            style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:1px solid rgba(234,88,12,0.4); background:rgba(234,88,12,0.08); color:#ea580c; font-size:0.78rem; font-weight:700; cursor:pointer; transition:all 0.15s;">
+                            ⚠️ Tidak Ditemukan Tertinggi
+                        </button>
+                        <button id="sort-btn-urgent" onclick="window.quickSortPalu('urgent')"
+                            style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:2px solid #3b82f6; background:rgba(59,130,246,0.1); color:#2563eb; font-size:0.78rem; font-weight:800; cursor:pointer; transition:all 0.15s;">
+                            🚨 Paling Urgent
+                        </button>
+                    </div>
+
+
+                    <div style="overflow-x: auto; border: 1px solid var(--card-border); border-radius: 0.6rem;">
+                        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.82rem;">
+                            <thead id="palu-table-head" style="background: var(--table-header-bg, rgba(255,255,255,0.03)); border-bottom: 1px solid var(--card-border);">
+                            </thead>
+                            <tbody id="palu-table-body">
+                                <tr>
+                                    <td colspan="10" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                                        Memuat data SLS Kota Palu...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination Controls -->
+                    <div id="palu-pagination-container" style="display: flex; justify-content: center; align-items: center; gap: 0.35rem; margin-top: 1rem;">
+                    </div>
+                </div>
+            </div>
 
             <!-- TAB CONTENT: BELUM DIASSIGN -->
             <div class="tab-content" id="tab-content-belum_diassign" style="display: none; padding: 1.5rem;">
@@ -4372,15 +4705,18 @@
     <script src="petugas_progress.js?v=1788881041_v0109"></script>
     <script src="petugas_phones.js?v=1788881041_v0109"></script>
     <script src="petugas_region_map.js?v=1788881041_v0109"></script>
-    <script src="fast_petugas_progress.js?v=1789454047_v1509"></script>
+    <script src="fast_petugas_progress.js?v=20260916_v1"></script>
     <script src="fast_petugas_history.js?v=1789454047_v1509"></script>
     <script src="data_hilang_usaha.js"></script>
     <script src="data_hilang_keluarga.js?v=20260909_v1"></script>
     <script src="data_usaha_nonaktif.js"></script>
     <script src="data_desil.js?v=1788881041_v0109_p3"></script>
-    <script src="rekap_status_sls.js?v=1789454047_v1509"></script>
+    <script src="rekap_status_sls.js?v=20260916_v1"></script>
     <script src="data_keberadaan_petugas.js?v=20260916_bangkos"></script>
     <script src="keberadaan_petugas.js?v=20260916_bangkos"></script>
+    <script src="palu_monitoring_data.js?v=20260916_v1"></script>
+    <script src="palu_usaha_data.js?v=20260916_v1"></script>
+    <script src="palu_monitoring.js?v=20260916_v3"></script>
     <script src="app_v2.js?v=20260916_v2" defer></script>
 
     <script>

@@ -5909,8 +5909,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.showDataHilangDataSection();
             }
         } else if (tabId === 'palu') {
-            if (mainHeader) mainHeader.textContent = '🔴 Monitoring Harian Kota Palu';
-            if (mainSubheader) mainSubheader.textContent = 'Pantau progres petugas Palu secara detail hingga 15 Juli 2026';
+            if (mainHeader) mainHeader.textContent = 'Monitoring Khusus Kota Palu';
+            if (mainSubheader) mainSubheader.textContent = 'Pemantauan Spasial & Titik Dokumen OPEN, DRAFT, Bangunan Kosong & Area BTN Baru';
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
             if (typeof window.initPaluMonitoring === 'function') {
