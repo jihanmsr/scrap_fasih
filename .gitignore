@@ -37,6 +37,7 @@ scratch/
 *.csv
 *.xlsx
 ~*.xlsx
+!Analisis_Satelit_vs_Realisasi_Palu.xlsx
 
 # Raw Shapefiles and GIS datasets (>4GB)
 SHP/
