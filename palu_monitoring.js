@@ -108,24 +108,19 @@
         currentPage = 1;
         selectedLayer = null;
 
-        // Highlight active pill
-        document.querySelectorAll('.btn-monitoring-kab-pill').forEach(b => {
+        // Highlight active tab
+        document.querySelectorAll('.btn-monitoring-kab-tab, .btn-monitoring-kab-pill').forEach(b => {
             const isActive = b.getAttribute('data-kab') === currentKabFilter;
             b.classList.toggle('active', isActive);
-            b.style.background = isActive ? '#3b82f6' : 'var(--card-bg)';
-            b.style.color = isActive ? '#fff' : 'var(--text-primary)';
-            b.style.borderColor = isActive ? '#3b82f6' : 'var(--card-border)';
         });
 
-        // Reset Palu cluster pills to 'all'
+        // Reset Palu cluster pills if any exist
         document.querySelectorAll('.btn-palu-area-pill').forEach(b => {
             const isAll = b.getAttribute('data-area') === 'all';
             b.classList.toggle('active', isAll);
-            b.style.background = isAll ? '#3b82f6' : 'var(--card-bg)';
-            b.style.color = isAll ? '#fff' : 'var(--text-primary)';
         });
 
-        // Show/hide Palu clusters row
+        // Show/hide Palu clusters row if present
         const paluClustersRow = document.getElementById('palu-cluster-pills-row');
         if (paluClustersRow) {
             paluClustersRow.style.display = (currentKabFilter === '7271' || currentKabFilter === 'all') ? 'flex' : 'none';
@@ -163,10 +158,18 @@
 
         if (!s) return;
 
-        // Badge in header
+        // Badge in header & active text
         const badgeEl = document.getElementById('monitoring-lanjutan-badge');
         if (badgeEl) {
-            badgeEl.textContent = `${(s.sls_count || 0).toLocaleString('id-ID')} SLS Terpetakan (${kabTitle})`;
+            badgeEl.textContent = `${(s.sls_count || 0).toLocaleString('id-ID')} SLS • ${kabTitle}`;
+        }
+        const summaryTextEl = document.getElementById('monitoring-active-summary-text');
+        if (summaryTextEl) {
+            if (activeKab === 'all') {
+                summaryTextEl.textContent = `Menampilkan seluruh 6 kabupaten/kota (${(s.sls_count || 0).toLocaleString('id-ID')} SLS)`;
+            } else {
+                summaryTextEl.textContent = `Menampilkan ${kabTitle} (${(s.sls_count || 0).toLocaleString('id-ID')} SLS)`;
+            }
         }
 
         // Executive KPI cards
