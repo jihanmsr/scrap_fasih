@@ -1,15 +1,16 @@
 /**
- * palu_monitoring.js - Monitoring Terpadu Khusus Kota Palu
- * Memetakan dokumen OPEN, DRAFT, Bangunan Kosong, dan Tidak Ditemukan
- * pada 1.482 SLS Kota Palu dengan batas spasial resmi dan citra satelit.
+ * palu_monitoring.js - Monitoring Lanjutan Wilayah Prioritas Sulawesi Tengah
+ * Memetakan dokumen OPEN, DRAFT, Bangunan Kosong, BANR, dan Titik Geotagging
+ * pada 8.980 SLS di Kota Palu, Kab. Banggai, Kab. Poso, Kab. Sigi, Kab. Donggala, Kab. Morowali Utara.
  */
 
 (function () {
     let paluMap = null;
     let paluGeoLayer = null;
     let selectedLayer = null;
-    let currentMode = 'all'; // 'all', 'open', 'draft', 'tidak_ditemukan', 'bangkos'
-    let currentAreaFilter = 'all'; // 'all', 'tondo', 'lasoani', 'kawatuna', 'merpati_maleo'
+    let currentMode = 'all'; // 'all', 'open', 'draft', 'tidak_ditemukan', 'bangkos', 'banr'
+    let currentKabFilter = 'all'; // 'all', '7271', '7202', '7204', '7210', '7205', '7212'
+    let currentAreaFilter = 'all'; // 'all', 'lolu_utara', 'tatura_selatan', etc. (for Palu clusters)
     let searchQuery = '';
     let sortField = '__urgent__';
     let sortOrder = -1; // DESC
@@ -17,6 +18,16 @@
     let perPage = 25;
     let filteredFeatures = [];
     let currentTableView = 'sls'; // 'sls' | 'usaha'
+
+    const KAB_CONFIG = {
+        'all':  { name: 'Semua Wilayah Prioritas', center: [-1.2000, 120.8000], zoom: 8 },
+        '7271': { name: 'Kota Palu', center: [-0.8917, 119.8707], zoom: 12 },
+        '7202': { name: 'Kab. Banggai', center: [-1.1500, 122.6500], zoom: 10 },
+        '7204': { name: 'Kab. Poso', center: [-1.6000, 120.7000], zoom: 10 },
+        '7210': { name: 'Kab. Sigi', center: [-1.2800, 119.9500], zoom: 10 },
+        '7205': { name: 'Kab. Donggala', center: [-0.5500, 119.8000], zoom: 10 },
+        '7212': { name: 'Kab. Morowali Utara', center: [-2.0000, 121.3500], zoom: 10 }
+    };
 
     // Usaha table state (separate from SLS state)
     let usahaSearchQuery = '';
@@ -53,8 +64,8 @@
             });
 
             paluMap = L.map('palu-monitoring-map', {
-                center: [-0.8917, 119.8707],
-                zoom: 13,
+                center: [-1.2000, 120.8000],
+                zoom: 8,
                 layers: [hybridTile],
                 zoomControl: true
             });
@@ -63,7 +74,7 @@
                 geotagLayer = L.layerGroup().addTo(paluMap);
             }
 
-            // Re-render layers on map ready
+            // Render layer features
             renderPaluMapLayers();
             setTimeout(() => {
                 if (paluMap) paluMap.invalidateSize();
@@ -74,25 +85,88 @@
             }, 150);
         }
 
-        updatePaluSummaryCards();
-        // Default: show unit usaha view
+        updatePaluSummaryCards(currentKabFilter);
         window.setPaluTableView(currentTableView);
     };
 
-    // Update Summary KPI Cards
-    function updatePaluSummaryCards() {
-        if (!window.PALU_MONITORING_DATA || !window.PALU_MONITORING_DATA.summary) return;
-        const s = window.PALU_MONITORING_DATA.summary;
+    // Filter Regency (Kabupaten/Kota)
+    window.filterMonitoringKab = function (kabCode) {
+        currentKabFilter = kabCode || 'all';
+        currentAreaFilter = 'all';
+        currentPage = 1;
+        selectedLayer = null;
 
+        // Highlight active pill
+        document.querySelectorAll('.btn-monitoring-kab-pill').forEach(b => {
+            const isActive = b.getAttribute('data-kab') === currentKabFilter;
+            b.classList.toggle('active', isActive);
+            b.style.background = isActive ? '#3b82f6' : 'var(--card-bg)';
+            b.style.color = isActive ? '#fff' : 'var(--text-primary)';
+            b.style.borderColor = isActive ? '#3b82f6' : 'var(--card-border)';
+        });
+
+        // Reset Palu cluster pills to 'all'
+        document.querySelectorAll('.btn-palu-area-pill').forEach(b => {
+            const isAll = b.getAttribute('data-area') === 'all';
+            b.classList.toggle('active', isAll);
+            b.style.background = isAll ? '#3b82f6' : 'var(--card-bg)';
+            b.style.color = isAll ? '#fff' : 'var(--text-primary)';
+        });
+
+        // Show/hide Palu clusters row
+        const paluClustersRow = document.getElementById('palu-cluster-pills-row');
+        if (paluClustersRow) {
+            paluClustersRow.style.display = (currentKabFilter === '7271' || currentKabFilter === 'all') ? 'flex' : 'none';
+        }
+
+        // Update cards & sorot badges
+        updatePaluSummaryCards(currentKabFilter);
+
+        // Pan/zoom map to the selected regency
+        const conf = KAB_CONFIG[currentKabFilter] || KAB_CONFIG['all'];
+        if (paluMap) {
+            paluMap.flyTo(conf.center, conf.zoom, { duration: 1.0 });
+        }
+
+        // Re-render polygons
+        renderPaluMapLayers(true);
+
+        // Re-render SLS table
+        window.renderPaluTable();
+    };
+
+    // Update Summary KPI Cards and Sorot Badges
+    function updatePaluSummaryCards(targetKab) {
+        const data = window.PALU_MONITORING_DATA || window.MONITORING_LANJUTAN_DATA;
+        if (!data) return;
+
+        const activeKab = targetKab || currentKabFilter || 'all';
+        let s = data.summary;
+        let kabTitle = '6 Wilayah Prioritas';
+
+        if (activeKab !== 'all' && data.kab_summary && data.kab_summary[activeKab]) {
+            s = data.kab_summary[activeKab];
+            kabTitle = s.nmkab || activeKab;
+        }
+
+        if (!s) return;
+
+        // Badge in header
+        const badgeEl = document.getElementById('monitoring-lanjutan-badge');
+        if (badgeEl) {
+            badgeEl.textContent = `${(s.sls_count || 0).toLocaleString('id-ID')} SLS Terpetakan (${kabTitle})`;
+        }
+
+        // Executive KPI cards
         const elOpen = document.getElementById('palu-kpi-open');
         if (elOpen) elOpen.textContent = (s.open || 0).toLocaleString('id-ID');
         const elOpenSls = document.getElementById('palu-kpi-open-sls');
-        if (elOpenSls) elOpenSls.textContent = `${(s.open_sls || 0).toLocaleString('id-ID')} SLS`;
+        if (elOpenSls) elOpenSls.textContent = `${(s.open_sls || 0).toLocaleString('id-ID')} SLS terdampak`;
 
         const elDraft = document.getElementById('palu-kpi-draft');
         if (elDraft) elDraft.textContent = (s.draft || 0).toLocaleString('id-ID');
         const elDraftSls = document.getElementById('palu-kpi-draft-sls');
-        if (elDraftSls) elDraftSls.textContent = `${(s.draft_sls || 0).toLocaleString('id-ID')} SLS`;
+        if (elDraftSls) elDraftSls.textContent = `${(s.draft_sls || 0).toLocaleString('id-ID')} SLS terdampak`;
 
         const elBangkos = document.getElementById('palu-kpi-bangkos');
         if (elBangkos) elBangkos.textContent = (s.bangkos || 0).toLocaleString('id-ID');
@@ -109,6 +183,18 @@
         if (elTdk) elTdk.textContent = totalTdk.toLocaleString('id-ID');
         const elTdkDetail = document.getElementById('palu-kpi-tdk-detail');
         if (elTdkDetail) elTdkDetail.textContent = `Keluarga: ${(s.kl_tdk || 0).toLocaleString('id-ID')} | Usaha: ${(s.bu_tdk || 0).toLocaleString('id-ID')}`;
+
+        // Sorot Layer Mode Counts
+        const scAll = document.getElementById('sorot-count-all');
+        if (scAll) scAll.textContent = (s.sls_count || 0).toLocaleString('id-ID');
+        const scOpen = document.getElementById('sorot-count-open');
+        if (scOpen) scOpen.textContent = (s.open || 0).toLocaleString('id-ID');
+        const scDraft = document.getElementById('sorot-count-draft');
+        if (scDraft) scDraft.textContent = (s.draft || 0).toLocaleString('id-ID');
+        const scBangkos = document.getElementById('sorot-count-bangkos');
+        if (scBangkos) scBangkos.textContent = (s.bangkos || 0).toLocaleString('id-ID');
+        const scBanr = document.getElementById('sorot-count-banr');
+        if (scBanr) scBanr.textContent = (s.banr || 0).toLocaleString('id-ID');
     }
 
     // Basemap toggle: Hybrid vs Google Roadmap
@@ -352,25 +438,42 @@
         };
     }
 
-    // Render GeoJSON to map
-    function renderPaluMapLayers() {
-        if (!paluMap || !window.PALU_MONITORING_DATA) return;
+    // Render GeoJSON to map (filtered by active kabupaten)
+    function renderPaluMapLayers(skipFitBounds) {
+        if (!paluMap) return;
+        const data = window.PALU_MONITORING_DATA || window.MONITORING_LANJUTAN_DATA;
+        if (!data) return;
 
         if (paluGeoLayer) {
             paluMap.removeLayer(paluGeoLayer);
         }
 
-        paluGeoLayer = L.geoJSON(window.PALU_MONITORING_DATA, {
+        let rawFeatures = data.features || [];
+        let featuresToRender = rawFeatures;
+
+        if (currentKabFilter && currentKabFilter !== 'all') {
+            featuresToRender = rawFeatures.filter(f => {
+                const p = f.properties || {};
+                return p.kdkab4 === currentKabFilter || p.kdkab === currentKabFilter.slice(2);
+            });
+        }
+
+        const filteredGeoJSON = {
+            type: 'FeatureCollection',
+            features: featuresToRender
+        };
+
+        paluGeoLayer = L.geoJSON(filteredGeoJSON, {
             style: getFeatureStyle,
             onEachFeature: function (feature, layer) {
                 const p = feature.properties || {};
                 const openVal = p.open || 0;
                 const draftVal = p.draft || 0;
                 const bangkosVal = p.bangkos || 0;
-                const tdkVal = (p.kl_tdk || 0) + (p.bu_tdk || 0);
+                const banrVal = p.banr || 0;
 
                 // Tooltip
-                const tooltipText = `<b>${p.nmsls || 'SLS'}</b> (${p.nmdesa})<br>OPEN: <b>${openVal}</b> | DRAFT: <b>${draftVal}</b> | B-Kos: <b>${bangkosVal}</b>`;
+                const tooltipText = `<b>${p.nmsls || 'SLS'}</b> (${p.nmdesa}, ${p.nmkab})<br>OPEN: <b>${openVal}</b> | DRAFT: <b>${draftVal}</b> | B-Kos: <b>${bangkosVal}</b> | BANR: <b>${banrVal}</b>`;
                 layer.bindTooltip(tooltipText, { sticky: true, direction: 'top' });
 
                 // Click event
@@ -380,8 +483,8 @@
             }
         }).addTo(paluMap);
 
-        // Auto-fit bounds on load if no specific layer is selected
-        if (!selectedLayer && paluGeoLayer) {
+        // Auto-fit bounds on load if no specific layer is selected and not explicitly skipped
+        if (!selectedLayer && paluGeoLayer && !skipFitBounds) {
             const b = paluGeoLayer.getBounds();
             if (b.isValid()) {
                 paluMap.fitBounds(b, { padding: [30, 30] });
@@ -404,7 +507,7 @@
             document.querySelectorAll('.btn-palu-area-pill').forEach(b => {
                 b.classList.toggle('active', b.getAttribute('data-area') === 'all');
             });
-            renderPaluMapLayers();
+            renderPaluMapLayers(true);
             paluGeoLayer.eachLayer(l => {
                 if (l.feature && l.feature.properties && l.feature.properties.idsls === p.idsls) {
                     layer = l;
@@ -428,15 +531,15 @@
         // Open Leaflet popup directly on top of the SLS polygon
         const openVal = p.open || 0;
         const draftVal = p.draft || 0;
-        const statusBadge = (openVal === 0 && draftVal === 0)
-            ? '<span style="background:#dcfce7;color:#15803d;padding:2px 6px;border-radius:4px;font-weight:700;font-size:0.75rem;">SELESAI</span>'
-            : (openVal > 0 ? `<span style="background:#fee2e2;color:#dc2626;padding:2px 6px;border-radius:4px;font-weight:700;font-size:0.75rem;">OPEN: ${openVal}</span>` : '') +
-              (draftVal > 0 ? `<span style="background:#fef3c7;color:#d97706;padding:2px 6px;border-radius:4px;font-weight:700;font-size:0.75rem;margin-left:4px;">DRAFT: ${draftVal}</span>` : '');
+        const statusBadge = openVal > 0 
+            ? '<span style="background: #fee2e2; color: #b91c1c; font-weight: 800; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem;">OPEN</span>'
+            : (draftVal > 0 ? '<span style="background: #fef3c7; color: #b45309; font-weight: 800; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem;">DRAFT</span>'
+            : '<span style="background: #dcfce7; color: #15803d; font-weight: 800; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem;">SELESAI</span>');
 
         const popupHtml = `
-            <div style="font-family: inherit; min-width: 200px; padding: 2px;">
-                <div style="font-size: 0.95rem; font-weight: 800; color: #0f172a; margin-bottom: 2px;">${p.nmsls || 'SLS'}</div>
-                <div style="font-size: 0.78rem; color: #64748b; margin-bottom: 6px;">${p.nmdesa}, Kec. ${p.nmkec}</div>
+            <div style="font-family: inherit; font-size: 0.8rem; min-width: 170px;">
+                <div style="font-weight: 800; font-size: 0.95rem; color: #0f172a; margin-bottom: 2px;">${p.nmsls || 'SLS'}</div>
+                <div style="font-size: 0.75rem; color: #64748b; margin-bottom: 4px;">${p.nmdesa}, Kec. ${p.nmkec}</div>
                 <div style="display: flex; gap: 4px; align-items: center; margin-bottom: 6px;">${statusBadge}</div>
                 <div style="font-size: 0.72rem; color: #475569; border-top: 1px solid #e2e8f0; padding-top: 4px;">Kode: <code>${p.idsls}</code></div>
             </div>
@@ -452,7 +555,7 @@
         const cardTitle = document.getElementById('palu-insp-title');
         if (cardTitle) cardTitle.textContent = p.nmsls || 'SLS';
         const cardSub = document.getElementById('palu-insp-sub');
-        if (cardSub) cardSub.textContent = `${p.nmdesa}, Kec. ${p.nmkec} (Kode: ${p.idsls})`;
+        if (cardSub) cardSub.textContent = `${p.nmkab || ''} • ${p.nmdesa}, Kec. ${p.nmkec} (Kode: ${p.idsls})`;
 
         const elOpen = document.getElementById('palu-insp-open');
         if (elOpen) elOpen.textContent = openVal.toLocaleString('id-ID');
