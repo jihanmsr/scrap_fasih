@@ -217,14 +217,14 @@
                 </button>
 
                 <button class="btn-tab" id="tab-btn-palu" onclick="switchTab('palu')"
-                    title="Monitoring Khusus Kota Palu, Titik OPEN/DRAFT & Area BTN">
+                    title="Monitoring Lanjutan Wilayah Prioritas (Kota Palu, Banggai, Poso, Sigi, Morut, Donggala)">
                     <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2.5" style="margin-right: 0.75rem;" viewbox="0 0 24 24" width="18">
                         <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
                         <line x1="8" y1="2" x2="8" y2="18"></line>
                         <line x1="16" y1="6" x2="16" y2="22"></line>
                     </svg>
-                    Monitoring Kota Palu
+                    Monitoring Lanjutan
                 </button>
 
                 <button class="btn-tab" id="tab-btn-open_subsls" onclick="switchTab('open_subsls')">
@@ -1010,9 +1010,15 @@
 
             </div>
 
-            <!-- TAB CONTENT: MONITORING KOTA PALU -->
+            <!-- TAB CONTENT: MONITORING LANJUTAN -->
             <div class="tab-content" id="tab-content-palu" style="display: none; padding: 1.5rem;">
                 <style>
+                    .btn-monitoring-kab-pill.active {
+                        background: #3b82f6 !important;
+                        color: #ffffff !important;
+                        border-color: #3b82f6 !important;
+                        box-shadow: 0 0 10px rgba(59, 130, 246, 0.35);
+                    }
                     .btn-palu-area-pill.active {
                         background: #3b82f6 !important;
                         color: #ffffff !important;
@@ -1030,51 +1036,86 @@
                     }
                 </style>
 
-                <!-- Header & Quick Area Focus Pills -->
-                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                <!-- Header & Kabupaten / Area Focus Pills -->
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
                     <div>
                         <h2 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin: 0 0 0.35rem 0; display: flex; align-items: center; gap: 0.6rem;">
-                            <span>🗺️</span> Pemantauan Spasial SLS Kota Palu
-                            <span style="font-size: 0.75rem; font-weight: 700; background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 0.2rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.3);">
-                                1,482 SLS Terpetakan
+                            <span>🗺️</span> Pemantauan Spasial SLS Monitoring Lanjutan
+                            <span id="monitoring-lanjutan-badge" style="font-size: 0.75rem; font-weight: 700; background: rgba(59, 130, 246, 0.15); color: #3b82f6; padding: 0.2rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(59, 130, 246, 0.3);">
+                                8.980 SLS Terpetakan (6 Wilayah)
                             </span>
                         </h2>
                         <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">
-                            Pantau dokumen OPEN, DRAFT, Bangunan Kosong, dan Kasus Tidak Ditemukan dengan peta spasial poligon SLS.
+                            Pantau dokumen OPEN, DRAFT, Bangunan Kosong, BANR, dan Titik Lapangan (Kota Palu, Kab. Banggai, Poso, Sigi, Donggala, Morowali Utara).
                         </p>
                     </div>
 
-                    <!-- Quick Focus Pills for Priority Clusters -->
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
-                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); margin-right: 0.2rem;">Fokus Area:</span>
-                        <button class="btn-palu-area-pill active" data-area="all" onclick="window.focusPaluArea('all')"
-                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            Semua Palu
-                        </button>
-                        <button class="btn-palu-area-pill" data-area="lolu_utara" onclick="window.focusPaluArea('lolu_utara')"
-                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(239,68,68,0.3); background: var(--card-bg); color: #ef4444; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            Lolu Utara (210 Open, 226 Draft)
-                        </button>
-                        <button class="btn-palu-area-pill" data-area="tatura_selatan" onclick="window.focusPaluArea('tatura_selatan')"
-                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(245,158,11,0.3); background: var(--card-bg); color: #f59e0b; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            Tatura Selatan (347 Draft)
-                        </button>
-                        <button class="btn-palu-area-pill" data-area="lasoani" onclick="window.focusPaluArea('lasoani')"
-                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            Lasoani (57 Open, 30 Draft)
-                        </button>
-                        <button class="btn-palu-area-pill" data-area="besusu_timur" onclick="window.focusPaluArea('besusu_timur')"
-                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            Besusu Timur (64 Open, 79 Draft)
-                        </button>
-                        <button class="btn-palu-area-pill" data-area="kayumalue" onclick="window.focusPaluArea('kayumalue')"
-                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            Kayumalue (34 Open, 127 Draft)
-                        </button>
-                        <button class="btn-palu-area-pill" data-area="tondo" onclick="window.focusPaluArea('tondo')"
-                            style="padding: 0.35rem 0.75rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                            BTN Tondo (2 Draft)
-                        </button>
+                    <!-- Regency (Kabupaten) Selector Pills -->
+                    <div style="display: flex; flex-direction: column; gap: 0.45rem; align-items: flex-end;">
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center;">
+                            <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); margin-right: 0.15rem;">Pilih Wilayah:</span>
+                            <button class="btn-monitoring-kab-pill active" data-kab="all" onclick="window.filterMonitoringKab('all')"
+                                style="padding: 0.32rem 0.7rem; border-radius: 9999px; border: 1px solid var(--card-border); background: #3b82f6; color: #fff; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                Semua (8.980)
+                            </button>
+                            <button class="btn-monitoring-kab-pill" data-kab="7271" onclick="window.filterMonitoringKab('7271')"
+                                style="padding: 0.32rem 0.7rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                Kota Palu (1.482)
+                            </button>
+                            <button class="btn-monitoring-kab-pill" data-kab="7202" onclick="window.filterMonitoringKab('7202')"
+                                style="padding: 0.32rem 0.7rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                Kab. Banggai (2.170)
+                            </button>
+                            <button class="btn-monitoring-kab-pill" data-kab="7204" onclick="window.filterMonitoringKab('7204')"
+                                style="padding: 0.32rem 0.7rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                Kab. Poso (1.671)
+                            </button>
+                            <button class="btn-monitoring-kab-pill" data-kab="7210" onclick="window.filterMonitoringKab('7210')"
+                                style="padding: 0.32rem 0.7rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                Kab. Sigi (1.643)
+                            </button>
+                            <button class="btn-monitoring-kab-pill" data-kab="7205" onclick="window.filterMonitoringKab('7205')"
+                                style="padding: 0.32rem 0.7rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                Kab. Donggala (1.130)
+                            </button>
+                            <button class="btn-monitoring-kab-pill" data-kab="7212" onclick="window.filterMonitoringKab('7212')"
+                                style="padding: 0.32rem 0.7rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                Kab. Morut (884)
+                            </button>
+                        </div>
+
+                        <!-- Sub-area focus pills for Palu clusters (when Palu is active) -->
+                        <div id="palu-cluster-pills-row" style="display: flex; flex-wrap: wrap; gap: 0.3rem; align-items: center;">
+                            <span style="font-size: 0.72rem; font-weight: 600; color: var(--text-secondary); margin-right: 0.15rem;">Kluster Palu:</span>
+                            <button class="btn-palu-area-pill active" data-area="all" onclick="window.focusPaluArea('all')"
+                                style="padding: 0.22rem 0.55rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.73rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                                Semua Area
+                            </button>
+                            <button class="btn-palu-area-pill" data-area="lolu_utara" onclick="window.focusPaluArea('lolu_utara')"
+                                style="padding: 0.22rem 0.55rem; border-radius: 9999px; border: 1px solid rgba(239,68,68,0.3); background: var(--card-bg); color: #ef4444; font-size: 0.73rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                                Lolu Utara
+                            </button>
+                            <button class="btn-palu-area-pill" data-area="tatura_selatan" onclick="window.focusPaluArea('tatura_selatan')"
+                                style="padding: 0.22rem 0.55rem; border-radius: 9999px; border: 1px solid rgba(245,158,11,0.3); background: var(--card-bg); color: #f59e0b; font-size: 0.73rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                                Tatura Selatan
+                            </button>
+                            <button class="btn-palu-area-pill" data-area="lasoani" onclick="window.focusPaluArea('lasoani')"
+                                style="padding: 0.22rem 0.55rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.73rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                                Lasoani
+                            </button>
+                            <button class="btn-palu-area-pill" data-area="besusu_timur" onclick="window.focusPaluArea('besusu_timur')"
+                                style="padding: 0.22rem 0.55rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.73rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                                Besusu Timur
+                            </button>
+                            <button class="btn-palu-area-pill" data-area="kayumalue" onclick="window.focusPaluArea('kayumalue')"
+                                style="padding: 0.22rem 0.55rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.73rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                                Kayumalue
+                            </button>
+                            <button class="btn-palu-area-pill" data-area="tondo" onclick="window.focusPaluArea('tondo')"
+                                style="padding: 0.22rem 0.55rem; border-radius: 9999px; border: 1px solid var(--card-border); background: var(--card-bg); color: var(--text-primary); font-size: 0.73rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                                BTN Tondo
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -1160,27 +1201,27 @@
                             <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary); margin-right: 0.25rem;">Sorot Layer:</span>
                             <button class="btn-palu-mode active" data-mode="all" onclick="window.setPaluMapMode('all')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid #3b82f6; background: #3b82f6; color: #fff; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                Semua SLS (1.482)
+                                Semua SLS (<span id="sorot-count-all">8.980</span>)
                             </button>
                             <button class="btn-palu-mode" data-mode="open" onclick="window.setPaluMapMode('open')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(239,68,68,0.3); background: rgba(239,68,68,0.06); color: #ef4444; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                Dokumen OPEN (22)
+                                Dokumen OPEN (<span id="sorot-count-open">583</span>)
                             </button>
                             <button class="btn-palu-mode" data-mode="draft" onclick="window.setPaluMapMode('draft')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(245,158,11,0.3); background: rgba(245,158,11,0.06); color: #f59e0b; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                Dokumen DRAFT (130)
+                                Dokumen DRAFT (<span id="sorot-count-draft">1.728</span>)
                             </button>
                             <button class="btn-palu-mode" data-mode="bangkos" onclick="window.setPaluMapMode('bangkos')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(139,92,246,0.3); background: rgba(139,92,246,0.06); color: #8b5cf6; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                Bangunan Kosong (1.270)
+                                Bangunan Kosong (<span id="sorot-count-bangkos">54.540</span>)
                             </button>
                             <button class="btn-palu-mode" data-mode="banr" onclick="window.setPaluMapMode('banr')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(6,182,212,0.3); background: rgba(6,182,212,0.06); color: #0891b2; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                BANR (262)
+                                BANR (<span id="sorot-count-banr">1.847</span>)
                             </button>
                             <button class="btn-palu-mode" data-mode="tidak_ditemukan" onclick="window.setPaluMapMode('tidak_ditemukan')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(234,88,12,0.3); background: rgba(234,88,12,0.06); color: #ea580c; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-                                Tidak Ditemukan (≥30)
+                                Tidak Ditemukan (<span id="sorot-count-tdk">≥30</span>)
                             </button>
                         </div>
 
@@ -4814,10 +4855,10 @@
     <script src="rekap_status_sls.js?v=20260916_v1"></script>
     <script src="data_keberadaan_petugas.js?v=20260916_v2"></script>
     <script src="keberadaan_petugas.js?v=20260916_v2"></script>
-    <script src="palu_monitoring_data.js?v=20260917_v8"></script>
+    <script src="palu_monitoring_data.js?v=20260917_v9"></script>
     <script src="palu_usaha_data.js?v=20260916_v1"></script>
-    <script src="palu_geotagging_data.js?v=20260917_v8"></script>
-    <script src="palu_monitoring.js?v=20260917_v8"></script>
+    <script src="palu_geotagging_data.js?v=20260917_v9"></script>
+    <script src="palu_monitoring.js?v=20260917_v9"></script>
     <script src="app_v2.js?v=20260917_v8" defer></script>
 
     <script>
