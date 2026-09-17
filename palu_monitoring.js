@@ -1616,6 +1616,76 @@
         document.body.removeChild(link);
     };
 
+    // Fullscreen Toggle for Map
+    window.togglePaluMapFullscreen = function (forceState) {
+        const mapBox = document.querySelector('.monitoring-map-box');
+        if (!mapBox) return;
+
+        const isCurrentlyFs = mapBox.classList.contains('is-fullscreen');
+        const willBeFs = typeof forceState === 'boolean' ? forceState : !isCurrentlyFs;
+
+        if (willBeFs) {
+            // Enter Fullscreen
+            mapBox.classList.add('is-fullscreen');
+            document.body.style.overflow = 'hidden';
+            const fsBtnLabel = document.getElementById('palu-fs-label');
+            if (fsBtnLabel) fsBtnLabel.textContent = 'Keluar Layar Penuh';
+            const fsBtnIcon = document.getElementById('palu-fs-icon');
+            if (fsBtnIcon) fsBtnIcon.textContent = '✕';
+            const fsControls = document.getElementById('palu-map-fs-controls');
+            if (fsControls) fsControls.style.display = 'flex';
+
+            // Try HTML5 requestFullscreen if supported
+            if (mapBox.requestFullscreen && !document.fullscreenElement) {
+                mapBox.requestFullscreen().catch(() => {});
+            }
+        } else {
+            // Exit Fullscreen
+            mapBox.classList.remove('is-fullscreen');
+            document.body.style.overflow = '';
+            const fsBtnLabel = document.getElementById('palu-fs-label');
+            if (fsBtnLabel) fsBtnLabel.textContent = 'Layar Penuh';
+            const fsBtnIcon = document.getElementById('palu-fs-icon');
+            if (fsBtnIcon) fsBtnIcon.textContent = '⛶';
+            const fsControls = document.getElementById('palu-map-fs-controls');
+            if (fsControls) fsControls.style.display = 'none';
+
+            if (document.exitFullscreen && document.fullscreenElement) {
+                document.exitFullscreen().catch(() => {});
+            }
+        }
+
+        // Leaflet recalculates dimensions
+        setTimeout(() => {
+            if (paluMap) {
+                paluMap.invalidateSize();
+                if (selectedLayer && selectedLayer.getBounds) {
+                    paluMap.fitBounds(selectedLayer.getBounds(), { padding: [50, 50], maxZoom: 17 });
+                }
+            }
+        }, 150);
+    };
+
+    // Listen for native escape / fullscreen exit
+    document.addEventListener('fullscreenchange', () => {
+        if (!document.fullscreenElement) {
+            const mapBox = document.querySelector('.monitoring-map-box');
+            if (mapBox && mapBox.classList.contains('is-fullscreen')) {
+                window.togglePaluMapFullscreen(false);
+            }
+        }
+    });
+
+    // Also listen for Escape key in case CSS fullscreen was used without native fullscreen
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const mapBox = document.querySelector('.monitoring-map-box');
+            if (mapBox && mapBox.classList.contains('is-fullscreen')) {
+                window.togglePaluMapFullscreen(false);
+            }
+        }
+    });
+
     // Aliases for HTML bindings
     window.setPaluMode = window.setPaluMapMode;
     window.filterPaluArea = window.focusPaluArea;
