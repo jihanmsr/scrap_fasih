@@ -1110,11 +1110,12 @@
         const thead = document.getElementById('palu-table-head');
         if (thead) {
             const th = (label, field, extra) =>
-                `<th onclick="window.sortPaluTable('${field}')" style="padding:0.6rem 0.75rem; text-align:${extra || 'center'}; font-size:0.78rem; color:var(--text-secondary); font-weight:600; cursor:pointer; white-space:nowrap;" title="Klik untuk sort">${label} <span style="opacity:0.5;">↕</span></th>`;
+                `<th onclick="window.sortPaluTable('${field}')" style="padding:0.6rem 0.55rem; text-align:${extra || 'center'}; font-size:0.78rem; color:var(--text-secondary); font-weight:600; cursor:pointer; white-space:nowrap;" title="Klik untuk sort">${label} <span style="opacity:0.5;">↕</span></th>`;
 
             thead.innerHTML = `<tr>
-                <th style="padding:0.6rem 0.75rem; text-align:center; width:40px; font-size:0.78rem; color:var(--text-secondary); font-weight:600;">No</th>
-                ${th('Kelurahan', 'nmdesa', 'left')}
+                <th style="padding:0.6rem 0.45rem; text-align:center; width:35px; font-size:0.78rem; color:var(--text-secondary); font-weight:600;">No</th>
+                ${th('Kabupaten', 'nmkab', 'left')}
+                ${th('Kelurahan / Desa', 'nmdesa', 'left')}
                 ${th('SLS', 'nmsls', 'left')}
                 ${th('OPEN', 'open')}
                 ${th('DRAFT', 'draft')}
@@ -1126,7 +1127,7 @@
                 ${th('Realisasi', 'realisasi_fisik')}
                 ${th('Gap CV', 'gap_cv')}
                 ${th('PPL / PML', 'ppl', 'left')}
-                <th style="padding:0.6rem 0.75rem; text-align:center; font-size:0.78rem; color:var(--text-secondary); font-weight:600;">Aksi</th>
+                <th style="padding:0.6rem 0.45rem; text-align:center; font-size:0.78rem; color:var(--text-secondary); font-weight:600;">Aksi</th>
             </tr>`;
         }
         renderSlsTable();
@@ -1134,9 +1135,11 @@
 
     function renderSlsTable() {
         const tbody = document.getElementById('palu-table-body');
-        if (!tbody || !window.PALU_MONITORING_DATA) return;
+        if (!tbody) return;
+        const data = window.PALU_MONITORING_DATA || window.MONITORING_LANJUTAN_DATA;
+        if (!data) return;
 
-        const rawFeatures = window.PALU_MONITORING_DATA.features || [];
+        const rawFeatures = data.features || [];
 
         // 1. Filter
         filteredFeatures = rawFeatures.map(f => {
@@ -1145,9 +1148,15 @@
             const tot_uncompleted = (p.open || 0) + (p.draft || 0);
             return { ...p, tot_tdk, tot_uncompleted };
         }).filter(p => {
+            // Regency filter
+            if (currentKabFilter && currentKabFilter !== 'all') {
+                if (p.kdkab4 !== currentKabFilter && p.kdkab !== currentKabFilter.slice(2)) {
+                    return false;
+                }
+            }
             if (!matchesArea(p, currentAreaFilter)) return false;
             if (searchQuery) {
-                const haystack = `${p.nmkec} ${p.nmdesa} ${p.nmsls} ${p.idsls} ${p.ppl} ${p.pml}`.toLowerCase();
+                const haystack = `${p.nmkab || ''} ${p.nmkec} ${p.nmdesa} ${p.nmsls} ${p.idsls} ${p.ppl} ${p.pml}`.toLowerCase();
                 if (!haystack.includes(searchQuery)) return false;
             }
             if (sortField === 'gap_cv' || sortField === 'gap_satelit') return (p.gap_cv || 0) > 0 || (p.gap_satelit || 0) > 0;
@@ -1173,6 +1182,7 @@
                 const uB = (b.open || 0) * 10 + (b.draft || 0) * 5 + (b.tot_tdk || 0) * 2 + Math.max(0, b.gap_cv || 0);
                 return uB - uA;
             }
+            if (sortField === 'nmkab') return sortOrder * (a.nmkab || '').localeCompare(b.nmkab || '');
             if (sortField === 'prelist') return sortOrder * ((a.prelist || 0) - (b.prelist || 0));
             if (sortField === 'bangunan_cv') return sortOrder * ((a.bangunan_cv || 0) - (b.bangunan_cv || 0));
             if (sortField === 'gap_cv' || sortField === 'gap_satelit') return sortOrder * ((a.gap_cv || 0) - (b.gap_cv || 0));
@@ -1205,7 +1215,7 @@
         renderPaluPagination(totalPages, currentPage, false);
 
         if (pageItems.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="14" style="text-align:center; padding:2rem; color:var(--text-secondary);">Tidak ada data SLS yang cocok dengan filter aktif.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="15" style="text-align:center; padding:2rem; color:var(--text-secondary);">Tidak ada data SLS yang cocok dengan filter aktif.</td></tr>`;
             return;
         }
 
@@ -1244,31 +1254,34 @@
                 gapBadge = `<span style="color:var(--text-secondary); font-weight:600; font-size:0.78rem;">+${gapCv}</span>`;
             }
 
+            const kabBadge = `<span style="display:inline-block; font-size:0.72rem; font-weight:700; color:#2563eb; background:rgba(37,99,235,0.08); padding:0.15rem 0.4rem; border-radius:0.3rem; white-space:nowrap;">${p.nmkab || ''}</span>`;
+
             html += `
             <tr style="border-bottom:1px solid var(--border-light,#e2e8f0); ${p.open > 0 ? 'background:rgba(239,68,68,0.02);' : ''}">
-                <td style="text-align:center; font-size:0.8rem; color:var(--text-secondary); padding:0.55rem 0.5rem;">${rowNo}</td>
-                <td style="text-align:left; padding:0.55rem 0.75rem;">
-                    <span style="font-weight:700; color:var(--text-primary); font-size:0.88rem;">${p.nmdesa}</span>
-                    <div style="font-size:0.75rem; color:var(--text-secondary);">Kec. ${p.nmkec}</div>
+                <td style="text-align:center; font-size:0.8rem; color:var(--text-secondary); padding:0.55rem 0.45rem;">${rowNo}</td>
+                <td style="text-align:left; padding:0.55rem 0.55rem;">${kabBadge}</td>
+                <td style="text-align:left; padding:0.55rem 0.55rem;">
+                    <span style="font-weight:700; color:var(--text-primary); font-size:0.85rem;">${p.nmdesa}</span>
+                    <div style="font-size:0.72rem; color:var(--text-secondary);">Kec. ${p.nmkec}</div>
                 </td>
-                <td style="text-align:left; padding:0.55rem 0.75rem;">
-                    <div style="font-weight:700; color:var(--text-primary); font-size:0.88rem;">${p.nmsls || '-'}</div>
-                    <code style="font-size:0.75rem; color:var(--text-secondary);">${p.idsls}</code>
+                <td style="text-align:left; padding:0.55rem 0.55rem;">
+                    <div style="font-weight:700; color:var(--text-primary); font-size:0.85rem; cursor:pointer;" onclick="window.focusSlsOnPaluMap('${p.idsls}')" title="Klik untuk zoom di peta">${p.nmsls || '-'}</div>
+                    <code style="font-size:0.72rem; color:var(--text-secondary);">${p.idsls}</code>
                 </td>
-                <td style="text-align:center; padding:0.55rem 0.5rem;">${openBadge}</td>
-                <td style="text-align:center; padding:0.55rem 0.5rem;">${draftBadge}</td>
-                <td style="text-align:center; padding:0.55rem 0.5rem;">${bangkosBadge}</td>
-                <td style="text-align:center; padding:0.55rem 0.5rem;">${banrBadge}</td>
-                <td style="text-align:center; padding:0.55rem 0.5rem;">${tdkBadge}</td>
-                <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#3b82f6;" title="Prelist Muatan BPS: ${prelistVal}">${prelistVal.toLocaleString('id-ID')}</td>
-                <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#6366f1;" title="Deteksi CV Satelit: ${cvVal} Bangunan">${cvVal.toLocaleString('id-ID')}</td>
-                <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#10b981;">${realisasiVal.toLocaleString('id-ID')}</td>
-                <td style="text-align:center; padding:0.55rem 0.5rem;">${gapBadge}</td>
-                <td style="text-align:left; font-size:0.78rem; padding:0.55rem 0.75rem;">
-                    <div style="font-weight:700; color:var(--text-primary); max-width:140px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${p.ppl || '-'}">${p.ppl || '-'}</div>
-                    <div style="font-size:0.72rem; color:var(--text-secondary); max-width:140px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${p.pml || '-'}">PML: ${p.pml || '-'}</div>
+                <td style="text-align:center; padding:0.55rem 0.4rem;">${openBadge}</td>
+                <td style="text-align:center; padding:0.55rem 0.4rem;">${draftBadge}</td>
+                <td style="text-align:center; padding:0.55rem 0.4rem;">${bangkosBadge}</td>
+                <td style="text-align:center; padding:0.55rem 0.4rem;">${banrBadge}</td>
+                <td style="text-align:center; padding:0.55rem 0.4rem;">${tdkBadge}</td>
+                <td style="text-align:center; padding:0.55rem 0.4rem; font-weight:700; color:#3b82f6;" title="Prelist Muatan BPS: ${prelistVal}">${prelistVal.toLocaleString('id-ID')}</td>
+                <td style="text-align:center; padding:0.55rem 0.4rem; font-weight:700; color:#6366f1;" title="Deteksi CV Satelit: ${cvVal} Bangunan">${cvVal.toLocaleString('id-ID')}</td>
+                <td style="text-align:center; padding:0.55rem 0.4rem; font-weight:700; color:#10b981;">${realisasiVal.toLocaleString('id-ID')}</td>
+                <td style="text-align:center; padding:0.55rem 0.4rem;">${gapBadge}</td>
+                <td style="text-align:left; font-size:0.78rem; padding:0.55rem 0.55rem;">
+                    <div style="font-weight:700; color:var(--text-primary); max-width:130px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${p.ppl || '-'}">${p.ppl || '-'}</div>
+                    <div style="font-size:0.72rem; color:var(--text-secondary); max-width:130px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="${p.pml || '-'}">PML: ${p.pml || '-'}</div>
                 </td>
-                <td style="text-align:center; padding:0.55rem 0.5rem;">
+                <td style="text-align:center; padding:0.55rem 0.45rem;">
                     <button class="btn btn-sm" onclick="window.focusSlsOnPaluMap('${p.idsls}')" style="padding:0.25rem 0.6rem; border-radius:6px; font-size:0.78rem; font-weight:700; background:linear-gradient(135deg,#3b82f6,#2563eb); color:#fff; border:none; cursor:pointer;" title="Lihat SLS di Peta">Peta</button>
                 </td>
             </tr>`;
@@ -1292,7 +1305,7 @@
             sortOrder *= -1;
         } else {
             sortField = field;
-            sortOrder = (field === 'nmdesa' || field === 'nmsls') ? 1 : -1;
+            sortOrder = (field === 'nmdesa' || field === 'nmsls' || field === 'nmkab') ? 1 : -1;
         }
         updateUrgencySortBtnState(field);
         window.renderPaluTable();
@@ -1301,7 +1314,6 @@
     // Quick-sort from urgency bar
     window.quickSortPalu = function (factor) {
         if (factor === 'urgent') {
-            // Composite urgency score: OPEN berat x10, DRAFT x3, Tdk Ditemukan x2, Bangkos x1
             sortField = '__urgent__';
             sortOrder = -1;
         } else {
@@ -1316,39 +1328,38 @@
     function updateUrgencySortBtnState(activeKey) {
         const map = {
             'gap_satelit': 'sort-btn-gapsat',
+            'gap_cv': 'sort-btn-gapsat',
             'open': 'sort-btn-open',
             'draft': 'sort-btn-draft',
             'bangkos': 'sort-btn-bangkos',
             'banr': 'sort-btn-banr',
             'tot_tdk': 'sort-btn-tdk',
-            'urgent': 'sort-btn-urgent',
             '__urgent__': 'sort-btn-urgent'
         };
-        ['sort-btn-gapsat','sort-btn-open','sort-btn-draft','sort-btn-bangkos','sort-btn-banr','sort-btn-tdk','sort-btn-urgent'].forEach(id => {
-            const el = document.getElementById(id);
-            if (!el) return;
-            el.style.outline = 'none';
-            el.style.boxShadow = 'none';
-            el.style.opacity = '0.85';
+        document.querySelectorAll('.btn-palu-sort').forEach(b => {
+            b.style.background = 'var(--input-bg)';
+            b.style.color = 'var(--text-primary)';
+            b.style.borderColor = 'var(--card-border)';
         });
         const activeId = map[activeKey];
         if (activeId) {
-            const active = document.getElementById(activeId);
-            if (active) {
-                active.style.boxShadow = '0 0 0 2px currentColor';
-                active.style.opacity = '1';
+            const btn = document.getElementById(activeId);
+            if (btn) {
+                btn.style.background = '#3b82f6';
+                btn.style.color = '#fff';
+                btn.style.borderColor = '#3b82f6';
             }
         }
     }
 
 
 
-    // Search input
+    // Search input handler
     let searchTimer = null;
-    window.handlePaluSearch = function (val) {
+    window.handlePaluSearch = function (query) {
         clearTimeout(searchTimer);
         searchTimer = setTimeout(() => {
-            searchQuery = (val || '').trim().toLowerCase();
+            searchQuery = (query || '').trim().toLowerCase();
             currentPage = 1;
             window.renderPaluTable();
         }, 200);
@@ -1406,9 +1417,9 @@
         }
 
         const headers = [
-            'No', 'Kecamatan', 'Kelurahan', 'Kode SLS', 'Nama SLS',
+            'No', 'Kabupaten', 'Kecamatan', 'Kelurahan / Desa', 'Kode SLS', 'Nama SLS',
             'Status OPEN', 'Status DRAFT', 'Status SUBMITTED',
-            'Bangunan Kosong', 'Keluarga Tidak Ditemukan', 'Usaha Tidak Ditemukan', 'Total Tidak Ditemukan',
+            'Bangunan Kosong', 'BANR', 'Keluarga Tidak Ditemukan', 'Usaha Tidak Ditemukan', 'Total Tidak Ditemukan',
             'Prelist Muatan (BPS)', 'Bangunan Fisik (CV Satelit)', 'Realisasi Fisik Lapangan', 'Gap Fisik vs CV',
             'Nama PPL', 'Nama PML'
         ];
@@ -1416,11 +1427,13 @@
         const rows = data.map((p, idx) => {
             const prelistVal = p.prelist !== undefined ? p.prelist : (p.satelit_count || 0);
             const cvVal = p.bangunan_cv || Math.round(prelistVal * 0.88);
-            const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0));
+            const banrVal = p.banr || 0;
+            const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0) + banrVal);
             const gapCv = p.gap_cv !== undefined ? p.gap_cv : (cvVal - realisasiVal);
 
             return [
                 idx + 1,
+                p.nmkab || '',
                 p.nmkec,
                 p.nmdesa,
                 p.idsls,
@@ -1429,6 +1442,7 @@
                 p.draft || 0,
                 p.submitted || 0,
                 p.bangkos || 0,
+                banrVal,
                 p.kl_tdk || 0,
                 p.bu_tdk || 0,
                 (p.kl_tdk || 0) + (p.bu_tdk || 0),
@@ -1446,12 +1460,14 @@
         ws['!cols'] = headers.map(() => ({ wch: 18 }));
         ws['!cols'][1] = { wch: 22 };
         ws['!cols'][2] = { wch: 22 };
-        ws['!cols'][4] = { wch: 28 };
-        ws['!cols'][16] = { wch: 28 };
+        ws['!cols'][3] = { wch: 22 };
+        ws['!cols'][5] = { wch: 28 };
+        ws['!cols'][18] = { wch: 28 };
 
-        XLSX.utils.book_append_sheet(wb, ws, 'Palu Monitoring');
+        XLSX.utils.book_append_sheet(wb, ws, 'Monitoring Lanjutan');
         const ts = new Date().toISOString().slice(0, 10);
-        XLSX.writeFile(wb, `Monitoring_Khusus_Kota_Palu_${ts}.xlsx`);
+        const kabSuffix = currentKabFilter === 'all' ? '6_Wilayah' : (KAB_CONFIG[currentKabFilter]?.name || currentKabFilter).replace(/[^a-zA-Z0-9]/g, '_');
+        XLSX.writeFile(wb, `Monitoring_Lanjutan_${kabSuffix}_${ts}.xlsx`);
     };
 
     // Export CSV
@@ -1463,8 +1479,8 @@
         }
 
         const headers = [
-            'No', 'Kecamatan', 'Kelurahan', 'Kode SLS', 'Nama SLS',
-            'Status OPEN', 'Status DRAFT', 'Bangunan Kosong', 'Total Tidak Ditemukan',
+            'No', 'Kabupaten', 'Kecamatan', 'Kelurahan', 'Kode SLS', 'Nama SLS',
+            'Status OPEN', 'Status DRAFT', 'Bangunan Kosong', 'BANR', 'Total Tidak Ditemukan',
             'Prelist Muatan (BPS)', 'Bangunan Fisik (CV Satelit)', 'Realisasi Lapangan', 'Gap Fisik vs CV',
             'PPL', 'PML'
         ];
@@ -1473,11 +1489,13 @@
         data.forEach((p, idx) => {
             const prelistVal = p.prelist !== undefined ? p.prelist : (p.satelit_count || 0);
             const cvVal = p.bangunan_cv || Math.round(prelistVal * 0.88);
-            const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0));
+            const banrVal = p.banr || 0;
+            const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0) + banrVal);
             const gapCv = p.gap_cv !== undefined ? p.gap_cv : (cvVal - realisasiVal);
 
             const row = [
                 idx + 1,
+                `"${p.nmkab || ''}"`,
                 `"${p.nmkec}"`,
                 `"${p.nmdesa}"`,
                 `"${p.idsls}"`,
@@ -1485,6 +1503,7 @@
                 p.open || 0,
                 p.draft || 0,
                 p.bangkos || 0,
+                banrVal,
                 (p.kl_tdk || 0) + (p.bu_tdk || 0),
                 prelistVal,
                 cvVal,
@@ -1500,8 +1519,9 @@
         const link = document.createElement('a');
         const url = URL.createObjectURL(blob);
         const ts = new Date().toISOString().slice(0, 10);
+        const kabSuffix = currentKabFilter === 'all' ? '6_Wilayah' : (KAB_CONFIG[currentKabFilter]?.name || currentKabFilter).replace(/[^a-zA-Z0-9]/g, '_');
         link.setAttribute('href', url);
-        link.setAttribute('download', `Monitoring_Khusus_Kota_Palu_${ts}.csv`);
+        link.setAttribute('download', `Monitoring_Lanjutan_${kabSuffix}_${ts}.csv`);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -1511,5 +1531,6 @@
     window.setPaluMode = window.setPaluMapMode;
     window.filterPaluArea = window.focusPaluArea;
     window.searchPaluTable = window.handlePaluSearch;
+    window.initMonitoringLanjutan = window.initPaluMonitoring;
 
 })();
