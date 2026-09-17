@@ -386,10 +386,10 @@
 
         layer.setStyle({
             color: '#facc15', // Luminous gold border
-            weight: 6,
+            weight: 5,
             opacity: 1,
-            fillColor: '#38bdf8', // Vivid electric cyan-blue highlight
-            fillOpacity: 0.75
+            fillColor: '#38bdf8', // Light cyan-blue tint
+            fillOpacity: 0.12 // Semi-transparent so satellite roofs and buildings are clearly visible
         });
         if (layer.bringToFront) {
             layer.bringToFront();
@@ -506,7 +506,12 @@
     // GEOTAGGING LAPANGAN SYSTEM (API Kak Ical)
     // ==========================================
     function loadAndRenderGeotagPoints(feature) {
-        if (!geotagLayer) return;
+        if (!paluMap) return;
+        if (!geotagLayer) {
+            geotagLayer = L.layerGroup().addTo(paluMap);
+        } else if (!paluMap.hasLayer(geotagLayer)) {
+            paluMap.addLayer(geotagLayer);
+        }
         geotagLayer.clearLayers();
         currentGeotagData = null;
 
@@ -690,10 +695,11 @@
             }
 
             const marker = L.circleMarker([pt.lat, pt.lng], {
-                radius: 5.5,
+                pane: 'markerPane',
+                radius: 7,
                 fillColor: color,
                 color: '#ffffff',
-                weight: 1.5,
+                weight: 2,
                 opacity: 1,
                 fillOpacity: 0.95
             });
