@@ -25,28 +25,32 @@
     let usahaKategoriFilter = ''; // '' | 'tidak_ditemukan' | 'nonaktif'
     let filteredUsaha = [];
 
-    // Basemaps
-    let esriTile = null;
-    let osmTile = null;
+    // Basemaps: Google Hybrid & Google Roadmap (Peta Jalan Resmi Google Maps, Anti-Block 403)
+    let hybridTile = null;
+    let roadTile = null;
 
     window.initPaluMonitoring = function () {
         const container = document.getElementById('palu-monitoring-map');
         if (!container) return;
 
         if (!paluMap) {
-            esriTile = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-                attribution: '&copy; Esri World Imagery',
-                maxZoom: 19
+            // Google Hybrid: Citra satelit jernih dengan label jalan, lorong, dan nama tempat
+            hybridTile = L.tileLayer('https://mt{s}.google.com/vt/lyrs=y&hl=id&x={x}&y={y}&z={z}', {
+                subdomains: ['0', '1', '2', '3'],
+                attribution: '&copy; Google Maps Hybrid',
+                maxZoom: 20
             });
-            osmTile = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap',
-                maxZoom: 19
+            // Google Roadmap: Peta jalan resmi Google Maps, cepat, lengkap, dan bebas blokir 403
+            roadTile = L.tileLayer('https://mt{s}.google.com/vt/lyrs=m&hl=id&x={x}&y={y}&z={z}', {
+                subdomains: ['0', '1', '2', '3'],
+                attribution: '&copy; Google Maps',
+                maxZoom: 20
             });
 
             paluMap = L.map('palu-monitoring-map', {
                 center: [-0.8917, 119.8707],
                 zoom: 13,
-                layers: [esriTile],
+                layers: [hybridTile],
                 zoomControl: true
             });
 
@@ -93,20 +97,32 @@
         if (elTdkDetail) elTdkDetail.textContent = `Keluarga: ${(s.kl_tdk || 0).toLocaleString('id-ID')} | Usaha: ${(s.bu_tdk || 0).toLocaleString('id-ID')}`;
     }
 
-    // Basemap toggle
+    // Basemap toggle: Hybrid vs Google Roadmap
     window.setPaluBasemap = function (type) {
         if (!paluMap) return;
-        if (type === 'satellite') {
-            if (osmTile) paluMap.removeLayer(osmTile);
-            if (esriTile) paluMap.addLayer(esriTile);
+        if (type === 'satellite' || type === 'hybrid') {
+            if (roadTile && paluMap.hasLayer(roadTile)) paluMap.removeLayer(roadTile);
+            if (hybridTile && !paluMap.hasLayer(hybridTile)) paluMap.addLayer(hybridTile);
         } else {
-            if (esriTile) paluMap.removeLayer(esriTile);
-            if (osmTile) paluMap.addLayer(osmTile);
+            if (hybridTile && paluMap.hasLayer(hybridTile)) paluMap.removeLayer(hybridTile);
+            if (roadTile && !paluMap.hasLayer(roadTile)) paluMap.addLayer(roadTile);
         }
         document.querySelectorAll('.btn-palu-basemap').forEach(b => {
-            b.classList.toggle('active', b.getAttribute('data-base') === type);
+            const dataBase = b.getAttribute('data-base');
+            const isActive = (type === 'satellite' || type === 'hybrid') 
+                ? (dataBase === 'satellite' || dataBase === 'hybrid') 
+                : (dataBase === type || dataBase === 'osm' || dataBase === 'road');
+            b.classList.toggle('active', isActive);
+            if (isActive) {
+                b.style.background = '#2563eb';
+                b.style.color = '#fff';
+            } else {
+                b.style.background = 'transparent';
+                b.style.color = 'var(--text-secondary)';
+            }
         });
     };
+    window.togglePaluBasemap = window.setPaluBasemap;
 
     // Mode switch: 'open', 'draft', 'tidak_ditemukan', 'bangkos', 'all'
     window.setPaluMapMode = function (mode) {

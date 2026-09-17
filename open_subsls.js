@@ -16,11 +16,13 @@ function initSlsMap() {
     if (!mapContainer) return;
 
     try {
-        window._osmTile = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap'
+        window._osmTile = L.tileLayer('https://mt{s}.google.com/vt/lyrs=m&hl=id&x={x}&y={y}&z={z}', {
+            subdomains: ['0', '1', '2', '3'],
+            attribution: '&copy; Google Maps'
         });
-        window._esriTile = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-            attribution: '&copy; Esri World Imagery'
+        window._esriTile = L.tileLayer('https://mt{s}.google.com/vt/lyrs=y&hl=id&x={x}&y={y}&z={z}', {
+            subdomains: ['0', '1', '2', '3'],
+            attribution: '&copy; Google Maps Hybrid'
         });
 
         slsOpenMap = L.map('sls-open-map', {

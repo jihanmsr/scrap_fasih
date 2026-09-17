@@ -1168,11 +1168,11 @@
 
                         <!-- Basemap Toggle -->
                         <div style="display: flex; gap: 0.3rem; align-items: center; background: var(--input-bg); padding: 0.2rem; border-radius: 0.5rem; border: 1px solid var(--card-border);">
-                            <button class="btn-palu-basemap active" data-base="satellite" onclick="window.togglePaluBasemap('satellite')"
+                            <button class="btn-palu-basemap active" data-base="hybrid" onclick="window.setPaluBasemap('hybrid')"
                                 style="padding: 0.3rem 0.65rem; border-radius: 0.35rem; border: none; background: #2563eb; color: #fff; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
-                                Satelit
+                                Satelit Hybrid
                             </button>
-                            <button class="btn-palu-basemap" data-base="osm" onclick="window.togglePaluBasemap('osm')"
+                            <button class="btn-palu-basemap" data-base="road" onclick="window.setPaluBasemap('road')"
                                 style="padding: 0.3rem 0.65rem; border-radius: 0.35rem; border: none; background: transparent; color: var(--text-secondary); font-size: 0.75rem; font-weight: 700; cursor: pointer;">
                                 Peta Jalan
                             </button>
@@ -4762,8 +4762,8 @@
     <script src="keberadaan_petugas.js?v=20260916_v2"></script>
     <script src="palu_monitoring_data.js?v=20260916_v7"></script>
     <script src="palu_usaha_data.js?v=20260916_v1"></script>
-    <script src="palu_monitoring.js?v=20260916_v11"></script>
-    <script src="app_v2.js?v=20260916_v6" defer></script>
+    <script src="palu_monitoring.js?v=20260917_v3"></script>
+    <script src="app_v2.js?v=20260917_v3" defer></script>
 
     <script>
         function switchSubTab(surveyType, subTab) {
