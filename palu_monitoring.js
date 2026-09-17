@@ -685,7 +685,7 @@
 
         // 2. Coba Live Fetch ke API Kak Ical
         const payload = {
-            kdkab: "71",
+            kdkab: p.kdkab || "71",
             kdkec: p.kdkec || "",
             kddesa: p.kddesa || "",
             kdsls: (p.kdsls || '') + (p.kdsubsls || '00')
