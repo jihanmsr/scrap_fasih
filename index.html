@@ -1251,6 +1251,34 @@
                                     </div>
                                 </div>
 
+                                <!-- Sebaran Titik Lapangan (API Geotagging) -->
+                                <div id="palu-geotag-box" style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 0.75rem; padding: 0.75rem; margin-bottom: 0.85rem;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                                        <div style="font-size: 0.75rem; font-weight: 800; color: #10b981; text-transform: uppercase; display: flex; align-items: center; gap: 0.3rem;">
+                                            Titik Lapangan (Geotag)
+                                        </div>
+                                        <span id="palu-geotag-badge" style="font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 9999px; background: rgba(16,185,129,0.15); color: #10b981;">0 Titik</span>
+                                    </div>
+                                    <div id="palu-geotag-summary" style="font-size: 0.72rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 0.4rem;">
+                                        Pilih SLS untuk memuat titik geotagging lapangan.
+                                    </div>
+                                    <!-- Filter Pills -->
+                                    <div id="palu-geotag-pills" style="display: none; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.4rem;">
+                                        <button class="btn-geotag-pill active" data-type="all" onclick="window.filterGeotagPoints('all')" style="padding: 0.2rem 0.5rem; font-size: 0.68rem; font-weight: 700; border-radius: 0.3rem; border: 1px solid #10b981; background: #10b981; color: #fff; cursor: pointer;">Semua</button>
+                                        <button class="btn-geotag-pill" data-type="usaha" onclick="window.filterGeotagPoints('usaha')" style="padding: 0.2rem 0.5rem; font-size: 0.68rem; font-weight: 700; border-radius: 0.3rem; border: 1px solid #3b82f6; background: transparent; color: #3b82f6; cursor: pointer;">Usaha</button>
+                                        <button class="btn-geotag-pill" data-type="keluarga" onclick="window.filterGeotagPoints('keluarga')" style="padding: 0.2rem 0.5rem; font-size: 0.68rem; font-weight: 700; border-radius: 0.3rem; border: 1px solid #16a34a; background: transparent; color: #16a34a; cursor: pointer;">Keluarga</button>
+                                        <button class="btn-geotag-pill" data-type="bangkos" onclick="window.filterGeotagPoints('bangkos')" style="padding: 0.2rem 0.5rem; font-size: 0.68rem; font-weight: 700; border-radius: 0.3rem; border: 1px solid #eab308; background: transparent; color: #ca8a04; cursor: pointer;">Bangkos</button>
+                                    </div>
+                                    <!-- Unvisited Prelist List -->
+                                    <div id="palu-unvisited-box" style="display: none; border-top: 1px dashed rgba(16,185,129,0.3); padding-top: 0.4rem; margin-top: 0.4rem;">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="window.toggleUnvisitedList()">
+                                            <span style="font-size: 0.72rem; font-weight: 700; color: #ef4444;" id="palu-unvisited-label">Prelist Belum Didata (0)</span>
+                                            <span id="palu-unvisited-arrow" style="font-size: 0.7rem; color: var(--text-secondary);">▼</span>
+                                        </div>
+                                        <div id="palu-unvisited-list" style="display: none; max-height: 130px; overflow-y: auto; margin-top: 0.4rem; flex-direction: column; gap: 0.3rem;"></div>
+                                    </div>
+                                </div>
+
                                 <div style="border-top: 1px solid var(--card-border); padding-top: 0.75rem;">
                                     <div style="margin-bottom: 0.5rem;">
                                         <div style="font-size: 0.72rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase;">PPL / Petugas Lapangan:</div>
@@ -4762,8 +4790,9 @@
     <script src="keberadaan_petugas.js?v=20260916_v2"></script>
     <script src="palu_monitoring_data.js?v=20260916_v7"></script>
     <script src="palu_usaha_data.js?v=20260916_v1"></script>
-    <script src="palu_monitoring.js?v=20260917_v3"></script>
-    <script src="app_v2.js?v=20260917_v3" defer></script>
+    <script src="palu_geotagging_data.js?v=20260917_v1"></script>
+    <script src="palu_monitoring.js?v=20260917_v4"></script>
+    <script src="app_v2.js?v=20260917_v4" defer></script>
 
     <script>
         function switchSubTab(surveyType, subTab) {

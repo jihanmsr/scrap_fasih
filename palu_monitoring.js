@@ -29,6 +29,11 @@
     let hybridTile = null;
     let roadTile = null;
 
+    // Geotagging Layer (API Titik Lapangan Kak Ical IPDS: https://ause.bpssulteng.id/api/sqllab_geotagging/sls)
+    let geotagLayer = null;
+    let currentGeotagData = null;
+    let currentGeotagFilter = 'all'; // 'all' | 'usaha' | 'keluarga' | 'bangkos'
+
     window.initPaluMonitoring = function () {
         const container = document.getElementById('palu-monitoring-map');
         if (!container) return;
@@ -53,6 +58,10 @@
                 layers: [hybridTile],
                 zoomControl: true
             });
+
+            if (!geotagLayer) {
+                geotagLayer = L.layerGroup().addTo(paluMap);
+            }
 
             // Re-render layers on map ready
             renderPaluMapLayers();
@@ -488,7 +497,270 @@
 
         // Zoom to layer
         paluMap.fitBounds(layer.getBounds(), { padding: [100, 100], maxZoom: 17 });
+
+        // Load & Render Geotagging Points from API Kak Ical IPDS
+        loadAndRenderGeotagPoints(feature);
     }
+
+    // ==========================================
+    // GEOTAGGING LAPANGAN SYSTEM (API Kak Ical)
+    // ==========================================
+    function loadAndRenderGeotagPoints(feature) {
+        if (!geotagLayer) return;
+        geotagLayer.clearLayers();
+        currentGeotagData = null;
+
+        const p = feature.properties || {};
+        const idsls = p.idsls;
+        const badgeEl = document.getElementById('palu-geotag-badge');
+        const summaryEl = document.getElementById('palu-geotag-summary');
+        const pillsEl = document.getElementById('palu-geotag-pills');
+        const unvisitedBoxEl = document.getElementById('palu-unvisited-box');
+        const unvisitedListEl = document.getElementById('palu-unvisited-list');
+
+        if (badgeEl) badgeEl.textContent = 'Memuat...';
+        if (summaryEl) summaryEl.innerHTML = '<span style="color:#6366f1;">Mengambil titik lapangan dari server...</span>';
+        if (pillsEl) pillsEl.style.display = 'none';
+        if (unvisitedBoxEl) unvisitedBoxEl.style.display = 'none';
+        if (unvisitedListEl) unvisitedListEl.style.display = 'none';
+
+        // 1. Cek Offline Cache lokal
+        const cache = window.PALU_GEOTAGGING_CACHE || {};
+        if (cache[idsls] && Array.isArray(cache[idsls])) {
+            renderGeotagPoints(cache[idsls], feature);
+            return;
+        }
+
+        // 2. Coba Live Fetch ke API Kak Ical
+        const payload = {
+            kdkab: "71",
+            kdkec: p.kdkec || "",
+            kddesa: p.kddesa || "",
+            kdsls: (p.kdsls || '') + (p.kdsubsls || '00')
+        };
+
+        fetch('https://ause.bpssulteng.id/api/sqllab_geotagging/sls', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(res => {
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.json();
+        })
+        .then(json => {
+            const feats = (json && json.data && json.data.features) ? json.data.features : [];
+            if (!window.PALU_GEOTAGGING_CACHE) window.PALU_GEOTAGGING_CACHE = {};
+            window.PALU_GEOTAGGING_CACHE[idsls] = feats;
+            renderGeotagPoints(feats, feature);
+        })
+        .catch(err => {
+            console.warn("Geotag live fetch failed:", err);
+            if (badgeEl) {
+                badgeEl.textContent = 'Offline';
+                badgeEl.style.background = 'rgba(239, 68, 68, 0.15)';
+                badgeEl.style.color = '#ef4444';
+            }
+            if (summaryEl) {
+                summaryEl.innerHTML = `
+                    <div style="background: rgba(245, 158, 11, 0.08); border-radius: 0.4rem; padding: 0.45rem; border-left: 2px solid #f59e0b; color: var(--text-primary); font-size: 0.7rem; line-height: 1.35;">
+                        Titik live server dibatasi CORS. Hubungi Kak Ical untuk mengizinkan <code>origin: '*'</code> atau jalankan <code>python3 sync_geotagging_palu.py</code>.
+                    </div>
+                `;
+            }
+        });
+    }
+
+    function renderGeotagPoints(features, slsFeature) {
+        if (!geotagLayer) return;
+        geotagLayer.clearLayers();
+        currentGeotagData = { features, slsFeature };
+
+        const p = slsFeature.properties || {};
+        const pointsWithCoords = [];
+        const unvisitedList = [];
+
+        let usahaCount = 0;
+        let keluargaCount = 0;
+        let bangkosCount = 0;
+        let draftCount = 0;
+
+        features.forEach(f => {
+            const props = f.properties || {};
+            const geom = f.geometry;
+            const isBangkos = (props.data1 === 'BANGUNAN KOSONG') || (props.ada_bang_usaha_value === 2 && !props.ada_keluarga_value);
+            const isUsaha = (props.ada_bang_usaha_value === 1) || (props.jumlah_usaha_ditemukan > 0) || (props.jumlah_usaha > 0);
+            const isKeluarga = Boolean(props.ada_keluarga_value && props.ada_keluarga_value !== 0);
+            const isDraft = (props.assignment_status_alias === 2);
+
+            if (geom && geom.type === 'Point' && Array.isArray(geom.coordinates) && geom.coordinates.length >= 2) {
+                const lng = geom.coordinates[0];
+                const lat = geom.coordinates[1];
+                pointsWithCoords.push({ feature: f, lat, lng, isUsaha, isKeluarga, isBangkos, isDraft });
+                if (isUsaha) usahaCount++;
+                else if (isBangkos) bangkosCount++;
+                else keluargaCount++;
+                if (isDraft) draftCount++;
+            } else {
+                unvisitedList.push(props);
+            }
+        });
+
+        const badgeEl = document.getElementById('palu-geotag-badge');
+        const summaryEl = document.getElementById('palu-geotag-summary');
+        const pillsEl = document.getElementById('palu-geotag-pills');
+        const unvisitedBoxEl = document.getElementById('palu-unvisited-box');
+        const unvisitedListEl = document.getElementById('palu-unvisited-list');
+        const unvisitedLabelEl = document.getElementById('palu-unvisited-label');
+
+        if (badgeEl) {
+            badgeEl.textContent = `${pointsWithCoords.length} Titik Lapangan`;
+            badgeEl.style.background = pointsWithCoords.length > 0 ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.15)';
+            badgeEl.style.color = pointsWithCoords.length > 0 ? '#10b981' : '#ef4444';
+        }
+
+        if (summaryEl) {
+            summaryEl.innerHTML = `
+                <div style="display: flex; justify-content: space-between; font-size: 0.72rem; margin-bottom: 0.3rem;">
+                    <span>Sudah berkoordinat: <b style="color:#10b981;">${pointsWithCoords.length}</b></span>
+                    <span>Belum tersurvei: <b style="color:#ef4444;">${unvisitedList.length}</b></span>
+                </div>
+                <div style="font-size: 0.68rem; color: var(--text-secondary); line-height: 1.35;">
+                    Area satelit di dalam batas SLS yang tidak bertitik merupakan bangunan yang <b>belum didata</b> petugas.
+                </div>
+            `;
+        }
+
+        if (pillsEl) {
+            pillsEl.style.display = 'flex';
+            currentGeotagFilter = 'all';
+            document.querySelectorAll('.btn-geotag-pill').forEach(b => {
+                const isAll = b.getAttribute('data-type') === 'all';
+                b.classList.toggle('active', isAll);
+                b.style.background = isAll ? '#10b981' : 'transparent';
+                b.style.color = isAll ? '#fff' : 'var(--text-secondary)';
+            });
+        }
+
+        // Tampilkan daftar prelist yang belum didata
+        if (unvisitedBoxEl) {
+            if (unvisitedList.length > 0) {
+                unvisitedBoxEl.style.display = 'block';
+                if (unvisitedLabelEl) unvisitedLabelEl.textContent = `Prelist Belum Didata (${unvisitedList.length})`;
+                if (unvisitedListEl) {
+                    unvisitedListEl.innerHTML = unvisitedList.slice(0, 30).map((u, i) => `
+                        <div style="background: rgba(239,68,68,0.06); padding: 0.3rem 0.45rem; border-radius: 0.35rem; border-left: 2px solid #ef4444;">
+                            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.72rem;">${i+1}. ${u.data1 || 'Tanpa Nama'}</div>
+                            <div style="color: var(--text-secondary); font-size: 0.65rem;">${u.alamat_prelist || 'Alamat prelist'}</div>
+                        </div>
+                    `).join('') + (unvisitedList.length > 30 ? `<div style="text-align: center; color: var(--text-secondary); font-size: 0.65rem; padding: 0.2rem;">+${unvisitedList.length - 30} prelist lainnya...</div>` : '');
+                }
+            } else {
+                unvisitedBoxEl.style.display = 'none';
+            }
+        }
+
+        drawGeotagMarkers(pointsWithCoords, 'all');
+    }
+
+    function drawGeotagMarkers(points, filter) {
+        if (!geotagLayer) return;
+        geotagLayer.clearLayers();
+
+        points.forEach(pt => {
+            if (filter === 'usaha' && !pt.isUsaha) return;
+            if (filter === 'keluarga' && (!pt.isKeluarga || pt.isBangkos)) return;
+            if (filter === 'bangkos' && !pt.isBangkos) return;
+
+            const props = pt.feature.properties || {};
+            let color = '#10b981'; // Hijau Keluarga
+            let labelType = 'Keluarga';
+
+            if (pt.isUsaha) {
+                color = '#2563eb'; // Biru Usaha
+                labelType = 'Unit Usaha';
+            } else if (pt.isBangkos) {
+                color = '#f59e0b'; // Kuning Bangkos
+                labelType = 'Bangunan Kosong';
+            }
+
+            if (pt.isDraft) {
+                color = '#ea580c'; // Oranye Draft
+                labelType += ' (Draft)';
+            }
+
+            const marker = L.circleMarker([pt.lat, pt.lng], {
+                radius: 5.5,
+                fillColor: color,
+                color: '#ffffff',
+                weight: 1.5,
+                opacity: 1,
+                fillOpacity: 0.95
+            });
+
+            const statusBadge = pt.isDraft 
+                ? '<span style="background:#fef3c7;color:#b45309;padding:1px 5px;border-radius:3px;font-weight:700;font-size:0.68rem;">DRAFT</span>'
+                : '<span style="background:#dcfce7;color:#15803d;padding:1px 5px;border-radius:3px;font-weight:700;font-size:0.68rem;">APPROVED</span>';
+
+            const popupContent = `
+                <div style="font-family: inherit; font-size: 0.78rem; min-width: 180px; padding: 2px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                        <span style="font-weight: 800; color: ${color}; font-size: 0.72rem; text-transform: uppercase;">${labelType}</span>
+                        ${statusBadge}
+                    </div>
+                    <div style="font-weight: 800; font-size: 0.88rem; color: #0f172a; margin-bottom: 3px;">${props.data1 || 'Tanpa Nama'}</div>
+                    <div style="font-size: 0.72rem; color: #475569; margin-bottom: 4px;">Bangunan Fisik No: <b>${props.no_bang || '-'}</b></div>
+                    ${props.alamat_prelist ? `<div style="font-size: 0.7rem; color: #64748b; margin-bottom: 4px;">📍 ${props.alamat_prelist}</div>` : ''}
+                    <div style="font-size: 0.65rem; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 3px;">Koordinat: ${pt.lat.toFixed(6)}, ${pt.lng.toFixed(6)}</div>
+                </div>
+            `;
+
+            marker.bindPopup(popupContent);
+            geotagLayer.addLayer(marker);
+        });
+    }
+
+    window.filterGeotagPoints = function (type) {
+        currentGeotagFilter = type;
+        document.querySelectorAll('.btn-geotag-pill').forEach(b => {
+            const isActive = b.getAttribute('data-type') === type;
+            b.classList.toggle('active', isActive);
+            if (isActive) {
+                b.style.background = (type === 'usaha' ? '#3b82f6' : (type === 'keluarga' ? '#16a34a' : (type === 'bangkos' ? '#eab308' : '#10b981')));
+                b.style.color = '#fff';
+            } else {
+                b.style.background = 'transparent';
+                b.style.color = 'var(--text-secondary)';
+            }
+        });
+
+        if (currentGeotagData && currentGeotagData.features) {
+            const points = [];
+            currentGeotagData.features.forEach(f => {
+                const props = f.properties || {};
+                const geom = f.geometry;
+                if (geom && geom.type === 'Point' && Array.isArray(geom.coordinates) && geom.coordinates.length >= 2) {
+                    const lng = geom.coordinates[0];
+                    const lat = geom.coordinates[1];
+                    const isBangkos = (props.data1 === 'BANGUNAN KOSONG') || (props.ada_bang_usaha_value === 2 && !props.ada_keluarga_value);
+                    const isUsaha = (props.ada_bang_usaha_value === 1) || (props.jumlah_usaha_ditemukan > 0) || (props.jumlah_usaha > 0);
+                    const isKeluarga = Boolean(props.ada_keluarga_value && props.ada_keluarga_value !== 0);
+                    const isDraft = (props.assignment_status_alias === 2);
+                    points.push({ feature: f, lat, lng, isUsaha, isKeluarga, isBangkos, isDraft });
+                }
+            });
+            drawGeotagMarkers(points, type);
+        }
+    };
+
+    window.toggleUnvisitedList = function () {
+        const listEl = document.getElementById('palu-unvisited-list');
+        const arrowEl = document.getElementById('palu-unvisited-arrow');
+        if (!listEl) return;
+        const isHidden = (listEl.style.display === 'none' || !listEl.style.display);
+        listEl.style.display = isHidden ? 'flex' : 'none';
+        if (arrowEl) arrowEl.textContent = isHidden ? '▲' : '▼';
+    };
 
     // Zoom to specific SLS from table button
     window.focusSlsOnPaluMap = function (idsls) {
