@@ -5832,6 +5832,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const mainSubheader = document.getElementById('main-subheader');
         const btnDownloadXlsx = document.getElementById('btn-download-xlsx');
         const btnDownloadBackupCsv = document.getElementById('btn-download-backup-csv');
+        const topHeader = document.querySelector('.main-content > header') || document.querySelector('header');
+        if (topHeader) {
+            topHeader.style.display = (tabId === 'palu') ? 'none' : 'flex';
+        }
 
         if (tabId === 'se_umum') {
             if (mainHeader) mainHeader.textContent = 'Dashboard Sensus Ekonomi 2026';
@@ -5909,8 +5913,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.showDataHilangDataSection();
             }
         } else if (tabId === 'palu') {
-            if (mainHeader) mainHeader.textContent = 'Monitoring Khusus Kota Palu';
-            if (mainSubheader) mainSubheader.textContent = 'Pemantauan Spasial & Titik Dokumen OPEN, DRAFT, Bangunan Kosong & Area BTN Baru';
+            if (topHeader) topHeader.style.display = 'none';
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
             if (typeof window.initPaluMonitoring === 'function') {

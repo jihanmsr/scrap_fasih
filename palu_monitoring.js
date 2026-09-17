@@ -49,6 +49,10 @@
         const container = document.getElementById('palu-monitoring-map');
         if (!container) return;
 
+        // Hide duplicate top header
+        const topHeader = document.querySelector('.main-content > header') || document.querySelector('header');
+        if (topHeader) topHeader.style.display = 'none';
+
         if (!paluMap) {
             // Google Hybrid: Citra satelit jernih dengan label jalan, lorong, dan nama tempat
             hybridTile = L.tileLayer('https://mt{s}.google.com/vt/lyrs=y&hl=id&x={x}&y={y}&z={z}', {
