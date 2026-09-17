@@ -9,7 +9,7 @@
     let paluGeoLayer = null;
     let selectedLayer = null;
     let currentMode = 'all'; // 'all', 'open', 'draft', 'tidak_ditemukan', 'bangkos', 'banr'
-    let currentKabFilter = 'all'; // 'all', '7271', '7202', '7204', '7210', '7205', '7212'
+    let currentKabFilter = 'all'; // 'all', '7271', '7202', '7204', '7210', '7205', '7212', '7209'
     let currentAreaFilter = 'all'; // 'all', 'lolu_utara', 'tatura_selatan', etc. (for Palu clusters)
     let searchQuery = '';
     let sortField = '__urgent__';
@@ -26,7 +26,8 @@
         '7204': { name: 'Kab. Poso', center: [-1.6000, 120.7000], zoom: 10 },
         '7210': { name: 'Kab. Sigi', center: [-1.2800, 119.9500], zoom: 10 },
         '7205': { name: 'Kab. Donggala', center: [-0.5500, 119.8000], zoom: 10 },
-        '7212': { name: 'Kab. Morowali Utara', center: [-2.0000, 121.3500], zoom: 10 }
+        '7212': { name: 'Kab. Morowali Utara', center: [-2.0000, 121.3500], zoom: 10 },
+        '7209': { name: 'Kab. Tojo Una-Una', center: [-0.8727, 121.6418], zoom: 9 }
     };
 
     // Usaha table state (separate from SLS state)
@@ -166,7 +167,8 @@
         const summaryTextEl = document.getElementById('monitoring-active-summary-text');
         if (summaryTextEl) {
             if (activeKab === 'all') {
-                summaryTextEl.textContent = `Menampilkan seluruh 6 kabupaten/kota (${(s.sls_count || 0).toLocaleString('id-ID')} SLS)`;
+                const totalKab = Object.keys(KAB_CONFIG).length - 1;
+                summaryTextEl.textContent = `Menampilkan seluruh ${totalKab} kabupaten/kota prioritas (${(s.sls_count || 0).toLocaleString('id-ID')} SLS)`;
             } else {
                 summaryTextEl.textContent = `Menampilkan ${kabTitle} (${(s.sls_count || 0).toLocaleString('id-ID')} SLS)`;
             }
@@ -1552,7 +1554,7 @@
 
         XLSX.utils.book_append_sheet(wb, ws, 'Monitoring Lanjutan');
         const ts = new Date().toISOString().slice(0, 10);
-        const kabSuffix = currentKabFilter === 'all' ? '6_Wilayah' : (KAB_CONFIG[currentKabFilter]?.name || currentKabFilter).replace(/[^a-zA-Z0-9]/g, '_');
+        const kabSuffix = currentKabFilter === 'all' ? 'Semua_Wilayah' : (KAB_CONFIG[currentKabFilter]?.name || currentKabFilter).replace(/[^a-zA-Z0-9]/g, '_');
         XLSX.writeFile(wb, `Monitoring_Lanjutan_${kabSuffix}_${ts}.xlsx`);
     };
 
@@ -1605,7 +1607,7 @@
         const link = document.createElement('a');
         const url = URL.createObjectURL(blob);
         const ts = new Date().toISOString().slice(0, 10);
-        const kabSuffix = currentKabFilter === 'all' ? '6_Wilayah' : (KAB_CONFIG[currentKabFilter]?.name || currentKabFilter).replace(/[^a-zA-Z0-9]/g, '_');
+        const kabSuffix = currentKabFilter === 'all' ? 'Semua_Wilayah' : (KAB_CONFIG[currentKabFilter]?.name || currentKabFilter).replace(/[^a-zA-Z0-9]/g, '_');
         link.setAttribute('href', url);
         link.setAttribute('download', `Monitoring_Lanjutan_${kabSuffix}_${ts}.csv`);
         document.body.appendChild(link);

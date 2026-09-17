@@ -14,8 +14,8 @@ import json
 import os
 import time
 
-TARGET_KABS_EXCEL = {'7271', '7202', '7204', '7210', '7205', '7212'}
-TARGET_KABS_GEO = {'71', '02', '04', '10', '05', '12'}
+TARGET_KABS_EXCEL = {'7271', '7202', '7204', '7210', '7205', '7212', '7209'}
+TARGET_KABS_GEO = {'71', '02', '04', '10', '05', '12', '09'}
 
 KAB_NAME_MAP = {
     '7271': 'KOTA PALU',
@@ -23,7 +23,8 @@ KAB_NAME_MAP = {
     '7204': 'KAB. POSO',
     '7210': 'KAB. SIGI',
     '7205': 'KAB. DONGGALA',
-    '7212': 'KAB. MOROWALI UTARA'
+    '7212': 'KAB. MOROWALI UTARA',
+    '7209': 'KAB. TOJO UNA-UNA'
 }
 
 KAB_CODE_2TO4 = {
@@ -32,7 +33,8 @@ KAB_CODE_2TO4 = {
     '04': '7204',
     '10': '7210',
     '05': '7205',
-    '12': '7212'
+    '12': '7212',
+    '09': '7209'
 }
 
 KAB_CENTERS = {
@@ -42,6 +44,7 @@ KAB_CENTERS = {
     '7210': [-1.1638, 119.9575],    # Sigi
     '7205': [-0.6789, 119.7454],    # Donggala
     '7212': [-2.0078, 121.3323],    # Morowali Utara / Kolonodale
+    '7209': [-0.8727, 121.6418],    # Tojo Una-Una / Ampana
     'all':  [-1.2000, 121.2000]     # Sulteng center
 }
 
