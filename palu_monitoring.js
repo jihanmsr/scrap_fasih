@@ -74,6 +74,14 @@
                 geotagLayer = L.layerGroup().addTo(paluMap);
             }
 
+            // Auto-resize on container dimension change to eliminate any gaps
+            if (window.ResizeObserver && container) {
+                const ro = new ResizeObserver(() => {
+                    if (paluMap) paluMap.invalidateSize();
+                });
+                ro.observe(container);
+            }
+
             // Render layer features
             renderPaluMapLayers();
             setTimeout(() => {

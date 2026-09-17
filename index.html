@@ -1034,6 +1034,44 @@
                         background: #2563eb !important;
                         color: #ffffff !important;
                     }
+                    .monitoring-map-grid {
+                        display: grid;
+                        grid-template-columns: 1fr 360px;
+                        gap: 1rem;
+                        align-items: stretch;
+                    }
+                    @media (max-width: 1024px) {
+                        .monitoring-map-grid {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                    .monitoring-map-box {
+                        position: relative;
+                        border-radius: 0.75rem;
+                        overflow: hidden;
+                        border: 1px solid var(--card-border);
+                        display: flex;
+                        flex-direction: column;
+                        min-height: 560px;
+                        height: 100%;
+                    }
+                    #palu-monitoring-map {
+                        flex: 1;
+                        width: 100%;
+                        height: 100%;
+                        min-height: 560px;
+                        z-index: 1;
+                    }
+                    .monitoring-insp-panel {
+                        background: var(--card-bg);
+                        border: 1px solid var(--card-border);
+                        border-radius: 0.75rem;
+                        padding: 1.15rem;
+                        display: flex;
+                        flex-direction: column;
+                        max-height: 720px;
+                        overflow-y: auto;
+                    }
                 </style>
 
                 <!-- Header & Kabupaten / Area Focus Pills -->
@@ -1239,14 +1277,14 @@
                     </div>
 
                     <!-- Map Container with Inspection Card Grid -->
-                    <div style="display: grid; grid-template-columns: 1fr 340px; gap: 1rem; align-items: stretch;">
-                        <!-- Map Box -->
-                        <div style="position: relative; border-radius: 0.75rem; overflow: hidden; border: 1px solid var(--card-border);">
-                            <div id="palu-monitoring-map" style="height: 520px; width: 100%; z-index: 1;"></div>
+                    <div class="monitoring-map-grid">
+                        <!-- Map Box (Fills entire available height with zero white gap) -->
+                        <div class="monitoring-map-box">
+                            <div id="palu-monitoring-map"></div>
                         </div>
 
-                        <!-- Live Inspection Card -->
-                        <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 0.75rem; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+                        <!-- Live Inspection Card (Scrolls cleanly if content is tall) -->
+                        <div class="monitoring-insp-panel">
                             <div>
                                 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem;">
                                     <div>
@@ -4855,10 +4893,10 @@
     <script src="rekap_status_sls.js?v=20260916_v1"></script>
     <script src="data_keberadaan_petugas.js?v=20260916_v2"></script>
     <script src="keberadaan_petugas.js?v=20260916_v2"></script>
-    <script src="palu_monitoring_data.js?v=20260917_v9"></script>
+    <script src="palu_monitoring_data.js?v=20260917_v10"></script>
     <script src="palu_usaha_data.js?v=20260916_v1"></script>
-    <script src="palu_geotagging_data.js?v=20260917_v9"></script>
-    <script src="palu_monitoring.js?v=20260917_v9"></script>
+    <script src="palu_geotagging_data.js?v=20260917_v10"></script>
+    <script src="palu_monitoring.js?v=20260917_v10"></script>
     <script src="app_v2.js?v=20260917_v8" defer></script>
 
     <script>
