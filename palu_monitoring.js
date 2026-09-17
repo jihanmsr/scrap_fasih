@@ -1177,26 +1177,32 @@
             if (searchQuery) {
                 const haystack = `${p.nmkab || ''} ${p.nmkec} ${p.nmdesa} ${p.nmsls} ${p.idsls} ${p.ppl} ${p.pml}`.toLowerCase();
                 if (!haystack.includes(searchQuery)) return false;
+                // Jika user sedang mencari teks / kode tertentu, tampilkan semua yang cocok tanpa dipangkas filter lain
+                return true;
             }
-            if (sortField === 'gap_cv' || sortField === 'gap_satelit') return (p.gap_cv || 0) > 0 || (p.gap_satelit || 0) > 0;
-            if (sortField === 'open') return (p.open || 0) > 0;
-            if (sortField === 'draft') return (p.draft || 0) > 0;
-            if (sortField === 'bangkos') return (p.bangkos || 0) > 0;
-            if (sortField === 'banr') return (p.banr || 0) > 0;
-            if (sortField === 'tot_tdk') return (p.tot_tdk || 0) > 0;
-            if (sortField === '__urgent__') return ((p.open || 0) > 0 || (p.draft || 0) > 0 || (p.tot_tdk || 0) > 0 || (p.bangkos || 0) > 0 || (p.banr || 0) > 0 || (p.gap_cv || 0) >= 20);
+
+            // Filter berdasarkan Quick-Sort / Mode yang aktif jika tidak sedang mencari
+            if (activeQuickSort === 'gap_satelit' || activeQuickSort === 'gap_cv') return (p.gap_cv || 0) > 0 || (p.gap_satelit || 0) > 0;
+            if (activeQuickSort === 'open') return (p.open || 0) > 0;
+            if (activeQuickSort === 'draft') return (p.draft || 0) > 0;
+            if (activeQuickSort === 'bangkos') return (p.bangkos || 0) > 0;
+            if (activeQuickSort === 'banr') return (p.banr || 0) > 0;
+            if (activeQuickSort === 'tot_tdk') return (p.tot_tdk || 0) > 0;
+            if (activeQuickSort === 'urgent' || activeQuickSort === '__urgent__') return ((p.open || 0) > 0 || (p.draft || 0) > 0 || (p.tot_tdk || 0) > 0 || (p.bangkos || 0) > 0 || (p.banr || 0) > 0 || (p.gap_cv || 0) >= 20);
+
             if (currentMode === 'open') return (p.open || 0) > 0;
             if (currentMode === 'draft') return (p.draft || 0) > 0;
-            if (currentMode === 'bangkos') return searchQuery ? (p.bangkos || 0) > 0 : (p.bangkos || 0) >= 12;
+            if (currentMode === 'bangkos') return (p.bangkos || 0) >= 12;
             if (currentMode === 'banr') return (p.banr || 0) > 0;
-            if (currentMode === 'tidak_ditemukan') return searchQuery ? (p.tot_tdk || 0) > 0 : (p.tot_tdk || 0) >= 30;
-            if (currentMode === 'all') return (p.open || 0) > 0 || (p.draft || 0) > 0;
+            if (currentMode === 'tidak_ditemukan') return (p.tot_tdk || 0) >= 30;
+            
+            // Mode 'all': tampilkan semua SLS
             return true;
         });
 
         // 2. Sort
         filteredFeatures.sort((a, b) => {
-            if (sortField === '__urgent__') {
+            if (sortField === '__urgent__' || sortField === 'default') {
                 const uA = (a.open || 0) * 10 + (a.draft || 0) * 5 + (a.tot_tdk || 0) * 2 + Math.max(0, a.gap_cv || 0);
                 const uB = (b.open || 0) * 10 + (b.draft || 0) * 5 + (b.tot_tdk || 0) * 2 + Math.max(0, b.gap_cv || 0);
                 return uB - uA;
@@ -1233,12 +1239,14 @@
 
         renderPaluPagination(totalPages, currentPage, false);
 
+        // 4. Render Rows
+        let html = '';
         if (pageItems.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="15" style="text-align:center; padding:2rem; color:var(--text-secondary);">Tidak ada data SLS yang cocok dengan filter aktif.</td></tr>`;
+            html = `<tr><td colspan="15" style="text-align:center; padding:2rem; color:var(--text-secondary);">Tidak ada data SLS yang cocok dengan filter atau pencarian</td></tr>`;
+            tbody.innerHTML = html;
             return;
         }
 
-        let html = '';
         pageItems.forEach((p, idx) => {
             const rowNo = startIndex + idx + 1;
             const openBadge = p.open > 0
@@ -1262,16 +1270,15 @@
             const banrVal = p.banr || 0;
             const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0) + banrVal);
             const gapPrelist = p.gap_prelist !== undefined ? p.gap_prelist : (prelistVal - realisasiVal);
+            const gapCv = p.gap_cv !== undefined ? p.gap_cv : gapPrelist;
 
             let gapBadge = `<span style="color:#10b981; font-weight:700; font-size:0.8rem;">0</span>`;
-            if (gapPrelist > 30) {
-                gapBadge = `<span class="badge" style="background:rgba(239,68,68,0.15); color:#dc2626; font-weight:800; font-size:0.75rem;" title="Target Prelist ${prelistVal}, Realisasi ${realisasiVal}">-${gapPrelist}</span>`;
-            } else if (gapPrelist > 5) {
-                gapBadge = `<span class="badge" style="background:rgba(245,158,11,0.15); color:#d97706; font-weight:700; font-size:0.75rem;" title="Sisa ${gapPrelist} muatan">-${gapPrelist}</span>`;
-            } else if (gapPrelist > 0) {
-                gapBadge = `<span style="color:var(--text-secondary); font-weight:600; font-size:0.78rem;">-${gapPrelist}</span>`;
-            } else {
-                gapBadge = `<span style="color:#10b981; font-weight:700; font-size:0.8rem;">+${Math.abs(gapPrelist)}</span>`;
+            if (gapCv >= 40) {
+                gapBadge = `<span class="badge" style="background:rgba(239,68,68,0.15); color:#dc2626; font-weight:800; font-size:0.75rem;" title="Target Prelist ${prelistVal}, Realisasi ${realisasiVal}">+${gapCv}</span>`;
+            } else if (gapCv > 0) {
+                gapBadge = `<span class="badge" style="background:rgba(245,158,11,0.15); color:#d97706; font-weight:700; font-size:0.75rem;" title="Selisih ${gapCv} muatan">+${gapCv}</span>`;
+            } else if (gapCv < 0) {
+                gapBadge = `<span style="color:var(--text-secondary); font-weight:600; font-size:0.78rem;">${gapCv}</span>`;
             }
 
             const kabBadge = `<span style="display:inline-block; font-size:0.72rem; font-weight:700; color:#2563eb; background:rgba(37,99,235,0.08); padding:0.15rem 0.4rem; border-radius:0.3rem; white-space:nowrap;">${p.nmkab || ''}</span>`;
@@ -1318,33 +1325,53 @@
         }
     };
 
-    // Sort table
     window.sortPaluTable = function (field) {
         if (sortField === field) {
-            sortOrder *= -1;
+            sortOrder = -sortOrder;
         } else {
             sortField = field;
-            sortOrder = (field === 'nmdesa' || field === 'nmsls' || field === 'nmkab') ? 1 : -1;
+            sortOrder = 1;
         }
-        updateUrgencySortBtnState(field);
+        currentPage = 1;
         window.renderPaluTable();
     };
 
-    // Quick-sort from urgency bar
+    // Quick-sort from urgency bar with toggle support
+    let activeQuickSort = null;
     window.quickSortPalu = function (factor) {
-        if (factor === 'urgent') {
-            sortField = '__urgent__';
-            sortOrder = -1;
+        if (activeQuickSort === factor) {
+            // Toggle off back to default
+            activeQuickSort = null;
+            sortField = 'default';
+            sortOrder = 1;
         } else {
-            sortField = factor;
+            activeQuickSort = factor;
+            if (factor === 'urgent') {
+                sortField = '__urgent__';
+            } else {
+                sortField = factor;
+            }
             sortOrder = -1;
         }
         currentPage = 1;
-        updateUrgencySortBtnState(factor);
+        updateUrgencySortBtnState(activeQuickSort);
         window.renderPaluTable();
     };
 
     function updateUrgencySortBtnState(activeKey) {
+        const allIds = [
+            'sort-btn-gapsat', 'sort-btn-open', 'sort-btn-draft', 
+            'sort-btn-bangkos', 'sort-btn-banr', 'sort-btn-tdk', 'sort-btn-urgent'
+        ];
+        allIds.forEach(id => {
+            const btn = document.getElementById(id);
+            if (btn) {
+                btn.style.boxShadow = 'none';
+                btn.style.transform = 'none';
+                btn.style.opacity = '0.85';
+            }
+        });
+
         const map = {
             'gap_satelit': 'sort-btn-gapsat',
             'gap_cv': 'sort-btn-gapsat',
@@ -1353,29 +1380,46 @@
             'bangkos': 'sort-btn-bangkos',
             'banr': 'sort-btn-banr',
             'tot_tdk': 'sort-btn-tdk',
+            'urgent': 'sort-btn-urgent',
             '__urgent__': 'sort-btn-urgent'
         };
-        document.querySelectorAll('.btn-palu-sort').forEach(b => {
-            b.style.background = 'var(--input-bg)';
-            b.style.color = 'var(--text-primary)';
-            b.style.borderColor = 'var(--card-border)';
-        });
+
         const activeId = map[activeKey];
         if (activeId) {
             const btn = document.getElementById(activeId);
             if (btn) {
-                btn.style.background = '#3b82f6';
-                btn.style.color = '#fff';
-                btn.style.borderColor = '#3b82f6';
+                btn.style.opacity = '1';
+                btn.style.boxShadow = '0 0 0 2px #2563eb, 0 2px 6px rgba(37,99,235,0.3)';
+                btn.style.transform = 'translateY(-1px)';
             }
         }
     }
 
+    // Reset Table Filters
+    window.resetPaluTableFilters = function () {
+        const searchInput = document.getElementById('palu-search-input');
+        if (searchInput) searchInput.value = '';
+        const clearBtn = document.getElementById('palu-search-clear-btn');
+        if (clearBtn) clearBtn.style.display = 'none';
 
+        searchQuery = '';
+        activeQuickSort = null;
+        sortField = 'default';
+        sortOrder = 1;
+        currentAreaFilter = 'all';
+        currentPage = 1;
+
+        updateUrgencySortBtnState(null);
+        window.renderPaluTable();
+    };
 
     // Search input handler
     let searchTimer = null;
     window.handlePaluSearch = function (query) {
+        const clearBtn = document.getElementById('palu-search-clear-btn');
+        if (clearBtn) {
+            clearBtn.style.display = (query && query.trim().length > 0) ? 'block' : 'none';
+        }
         clearTimeout(searchTimer);
         searchTimer = setTimeout(() => {
             searchQuery = (query || '').trim().toLowerCase();

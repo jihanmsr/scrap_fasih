@@ -92,6 +92,17 @@ def main():
                 
     print(f"   Loaded {len(excel_data)} Excel entries in {time.time()-t0:.1f}s")
 
+    print("1b. Loading original Palu Satellite & CV data from baseline...")
+    old_palu_map = {}
+    try:
+        import subprocess
+        c_old = subprocess.check_output(['git', 'show', '29d4bd0:palu_monitoring_data.js']).decode()
+        old_palu_data = json.loads(c_old[c_old.find('{'):c_old.rfind('}')+1])
+        old_palu_map = {f['properties']['idsls']: f['properties'] for f in old_palu_data.get('features', [])}
+        print(f"   Loaded {len(old_palu_map)} original Palu SLS with true satellite analysis!")
+    except Exception as e:
+        print(f"   Warning loading old Palu: {e}")
+
     print("2. Loading spatial geometries from petasls.geojson...")
     t1 = time.time()
     with open('petasls.geojson', 'r', encoding='utf-8') as f:
@@ -156,15 +167,23 @@ def main():
         
         realisasi_fisik = submitted + bangkos + banr
         
-        # Prelist estimation: submitted + open + draft - baru
-        baru = bu_bar + kl_bar
-        prelist_est = max(0, submitted + open_val + draft_val + bu_tdk + kl_tdk - baru)
-        if prelist_est == 0 and realisasi_fisik > 0:
-            prelist_est = int(realisasi_fisik * 0.9)
-            
-        cv_satelit = round(prelist_est * 0.88) if prelist_est > 0 else 0
-        gap_cv = cv_satelit - realisasi_fisik
-        gap_prelist = prelist_est - realisasi_fisik
+        # Cek apakah ini SLS Kota Palu yang sudah memiliki data Satelit / CV riil asli
+        old_palu = old_palu_map.get(full_idsls)
+        if old_palu and old_palu.get('satelit_count') is not None:
+            satelit_count = old_palu.get('satelit_count', 0)
+            cv_satelit = old_palu.get('bangunan_cv', round(satelit_count * 0.925))
+            prelist_val = old_palu.get('prelist', satelit_count)
+            gap_cv = old_palu.get('gap_cv', cv_satelit - realisasi_fisik)
+            gap_prelist = old_palu.get('gap_prelist', prelist_val - realisasi_fisik)
+        else:
+            # Prelist estimation untuk kabupaten lain: submitted + open + draft - baru
+            baru = bu_bar + kl_bar
+            prelist_val = max(0, submitted + open_val + draft_val + bu_tdk + kl_tdk - baru)
+            if prelist_val == 0 and realisasi_fisik > 0:
+                prelist_val = int(realisasi_fisik * 0.9)
+            cv_satelit = round(prelist_val * 0.88) if prelist_val > 0 else 0
+            gap_cv = cv_satelit - realisasi_fisik
+            gap_prelist = prelist_val - realisasi_fisik
 
         prop = {
             'idsls': full_idsls,
@@ -186,7 +205,7 @@ def main():
             'bu_tdk': bu_tdk, 'bu_dit': bu_dit, 'bu_bar': bu_bar,
             'kl_tdk': kl_tdk, 'kl_dit': kl_dit, 'kl_bar': kl_bar,
             'realisasi_fisik': realisasi_fisik,
-            'prelist': prelist_est,
+            'prelist': prelist_val,
             'bangunan_cv': cv_satelit,
             'gap_cv': gap_cv,
             'gap_prelist': gap_prelist,
@@ -208,7 +227,7 @@ def main():
         overall_summary['kl_dit'] += kl_dit
         overall_summary['kl_bar'] += kl_bar
         overall_summary['realisasi_total'] += realisasi_fisik
-        overall_summary['prelist_total'] += prelist_est
+        overall_summary['prelist_total'] += prelist_val
         if bangkos > 0: overall_summary['bangkos_sls'] += 1
         if banr > 0: overall_summary['banr_sls'] += 1
         if open_val > 0: overall_summary['open_sls'] += 1
@@ -228,7 +247,7 @@ def main():
         ks['kl_dit'] += kl_dit
         ks['kl_bar'] += kl_bar
         ks['realisasi_total'] += realisasi_fisik
-        ks['prelist_total'] += prelist_est
+        ks['prelist_total'] += prelist_val
         if bangkos > 0: ks['bangkos_sls'] += 1
         if banr > 0: ks['banr_sls'] += 1
         if open_val > 0: ks['open_sls'] += 1
