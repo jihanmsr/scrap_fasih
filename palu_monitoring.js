@@ -1395,6 +1395,21 @@
         }
     }
 
+    // Clear search input
+    window.clearPaluSearch = function () {
+        const searchInput = document.getElementById('palu-search-input');
+        if (searchInput) {
+            searchInput.value = '';
+            searchInput.focus();
+        }
+        const clearBtn = document.getElementById('palu-search-clear-btn');
+        if (clearBtn) clearBtn.style.display = 'none';
+
+        searchQuery = '';
+        currentPage = 1;
+        window.renderPaluTable();
+    };
+
     // Reset Table Filters
     window.resetPaluTableFilters = function () {
         const searchInput = document.getElementById('palu-search-input');
@@ -1407,9 +1422,17 @@
         sortField = 'default';
         sortOrder = 1;
         currentAreaFilter = 'all';
+        currentMode = 'all';
         currentPage = 1;
 
+        // Reset mode buttons to 'all'
+        document.querySelectorAll('.btn-palu-mode').forEach(b => {
+            b.classList.toggle('active', b.getAttribute('data-mode') === 'all');
+        });
+
         updateUrgencySortBtnState(null);
+        if (typeof updatePaluStatsCard === 'function') updatePaluStatsCard();
+        if (typeof updatePaluLayer === 'function') updatePaluLayer();
         window.renderPaluTable();
     };
 

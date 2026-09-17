@@ -1447,10 +1447,20 @@
 
                     <!-- Search & Action Bar -->
                     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                        <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; max-width: 480px;">
-                            <input id="palu-search-input" type="text" oninput="window.searchPaluTable(this.value)"
-                                placeholder="🔍 Cari Nama SLS, Kelurahan, RT..."
-                                style="width: 100%; padding: 0.6rem 0.9rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-size: 0.85rem; outline: none;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; max-width: 540px;">
+                            <div style="position: relative; flex: 1;">
+                                <input id="palu-search-input" type="text" oninput="window.searchPaluTable(this.value)"
+                                    placeholder="🔍 Cari Nama SLS, Kelurahan, Kode SLS, PPL..."
+                                    style="width: 100%; padding: 0.6rem 2.2rem 0.6rem 0.9rem; border-radius: 0.5rem; border: 1px solid var(--card-border); background: var(--input-bg); color: var(--text-primary); font-size: 0.85rem; outline: none;">
+                                <button id="palu-search-clear-btn" onclick="window.clearPaluSearch()"
+                                    style="display: none; position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-secondary); font-size: 1.1rem; cursor: pointer; padding: 2px 6px; line-height: 1; border-radius: 50%;"
+                                    title="Hapus kata kunci pencarian">✕</button>
+                            </div>
+                            <button id="palu-reset-filter-btn" onclick="window.resetPaluTableFilters()"
+                                style="padding: 0.55rem 0.85rem; border-radius: 0.5rem; border: 1px solid rgba(239,68,68,0.35); background: rgba(239,68,68,0.08); color: #dc2626; font-size: 0.82rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap; transition: all 0.2s;"
+                                title="Reset semua filter & pencarian (tampilkan semua SLS)">
+                                🔄 Reset Filter
+                            </button>
                         </div>
 
                         <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
@@ -1506,6 +1516,11 @@
                         <button id="sort-btn-urgent" onclick="window.quickSortPalu('urgent')"
                             style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:2px solid #3b82f6; background:rgba(59,130,246,0.1); color:#2563eb; font-size:0.78rem; font-weight:800; cursor:pointer; transition:all 0.15s;">
                             🚨 Paling Urgent
+                        </button>
+                        <button id="sort-btn-reset-order" onclick="window.resetPaluTableFilters()"
+                            style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:1px dashed var(--card-border); background:var(--input-bg); color:var(--text-secondary); font-size:0.78rem; font-weight:700; cursor:pointer; transition:all 0.15s;"
+                            title="Kembalikan urutan default & hapus filter">
+                            ↺ Reset Urutan
                         </button>
                     </div>
 
