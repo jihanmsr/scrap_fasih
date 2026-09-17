@@ -9,7 +9,7 @@
     let paluGeoLayer = null;
     let selectedLayer = null;
     let currentMode = 'all'; // 'all', 'open', 'draft', 'tidak_ditemukan', 'bangkos', 'banr'
-    let currentKabFilter = 'all'; // 'all', '7271', '7202', '7204', '7210', '7205', '7212', '7209'
+    let currentKabFilter = 'all'; // 'all', '7271', '7202', '7204', '7210', '7205', '7212', '7209', '7208'
     let currentAreaFilter = 'all'; // 'all', 'lolu_utara', 'tatura_selatan', etc. (for Palu clusters)
     let searchQuery = '';
     let sortField = '__urgent__';
@@ -27,7 +27,8 @@
         '7210': { name: 'Kab. Sigi', center: [-1.2800, 119.9500], zoom: 10 },
         '7205': { name: 'Kab. Donggala', center: [-0.5500, 119.8000], zoom: 10 },
         '7212': { name: 'Kab. Morowali Utara', center: [-2.0000, 121.3500], zoom: 10 },
-        '7209': { name: 'Kab. Tojo Una-Una', center: [-0.8727, 121.6418], zoom: 9 }
+        '7209': { name: 'Kab. Tojo Una-Una', center: [-0.8727, 121.6418], zoom: 9 },
+        '7208': { name: 'Kab. Parigi Moutong', center: [-0.4500, 120.4500], zoom: 9 }
     };
 
     // Usaha table state (separate from SLS state)
