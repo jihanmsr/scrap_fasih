@@ -1122,6 +1122,20 @@
                         </div>
                     </div>
 
+                    <!-- BANR (Bangunan Non-Respon) Card -->
+                    <div style="background: var(--card-bg); border: 1px solid rgba(6, 182, 212, 0.3); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
+                        <div style="font-size: 0.75rem; font-weight: 700; color: #0891b2; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
+                            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#0891b2;"></span>
+                            Bangunan Non-Respon (BANR)
+                        </div>
+                        <div id="palu-kpi-banr" style="font-size: 2rem; font-weight: 800; color: #0891b2; font-family: 'Outfit', sans-serif; margin: 0.35rem 0 0.2rem 0;">
+                            -
+                        </div>
+                        <div id="palu-kpi-banr-sls" style="font-size: 0.8rem; color: var(--text-secondary); font-weight: 600;">
+                            - SLS terlapor
+                        </div>
+                    </div>
+
                     <!-- TIDAK DITEMUKAN Card -->
                     <div style="background: var(--card-bg); border: 1px solid rgba(234, 88, 12, 0.3); border-radius: 1rem; padding: 1.25rem; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
                         <div style="font-size: 0.75rem; font-weight: 700; color: #ea580c; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.4rem;">
@@ -1159,6 +1173,10 @@
                             <button class="btn-palu-mode" data-mode="bangkos" onclick="window.setPaluMapMode('bangkos')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(139,92,246,0.3); background: rgba(139,92,246,0.06); color: #8b5cf6; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
                                 Bangunan Kosong (1.270)
+                            </button>
+                            <button class="btn-palu-mode" data-mode="banr" onclick="window.setPaluMapMode('banr')"
+                                style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(6,182,212,0.3); background: rgba(6,182,212,0.06); color: #0891b2; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                                BANR (262)
                             </button>
                             <button class="btn-palu-mode" data-mode="tidak_ditemukan" onclick="window.setPaluMapMode('tidak_ditemukan')"
                                 style="padding: 0.35rem 0.75rem; border-radius: 0.5rem; border: 1px solid rgba(234,88,12,0.3); background: rgba(234,88,12,0.06); color: #ea580c; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
@@ -1214,7 +1232,11 @@
                                         <div style="font-size: 0.7rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase;">Bang. Kosong</div>
                                         <div id="palu-insp-bangkos" style="font-size: 1.3rem; font-weight: 800; color: #8b5cf6;">-</div>
                                     </div>
-                                    <div style="background: rgba(234, 88, 12, 0.08); border: 1px solid rgba(234, 88, 12, 0.2); border-radius: 0.6rem; padding: 0.6rem;">
+                                    <div style="background: rgba(6, 182, 212, 0.08); border: 1px solid rgba(6, 182, 212, 0.2); border-radius: 0.6rem; padding: 0.6rem;">
+                                        <div style="font-size: 0.7rem; font-weight: 700; color: #0891b2; text-transform: uppercase;">BANR</div>
+                                        <div id="palu-insp-banr" style="font-size: 1.3rem; font-weight: 800; color: #0891b2;">-</div>
+                                    </div>
+                                    <div style="grid-column: span 2; background: rgba(234, 88, 12, 0.08); border: 1px solid rgba(234, 88, 12, 0.2); border-radius: 0.6rem; padding: 0.6rem;">
                                         <div style="font-size: 0.7rem; font-weight: 700; color: #ea580c; text-transform: uppercase;">Tdk Ditemukan</div>
                                         <div id="palu-insp-tdk" style="font-size: 1.3rem; font-weight: 800; color: #ea580c;">-</div>
                                     </div>
@@ -1373,11 +1395,15 @@
                         </button>
                         <button id="sort-btn-bangkos" onclick="window.quickSortPalu('bangkos')"
                             style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:1px solid rgba(139,92,246,0.4); background:rgba(139,92,246,0.08); color:#7c3aed; font-size:0.78rem; font-weight:700; cursor:pointer; transition:all 0.15s;">
-                            🟣 Bang. Kosong Tertinggi
+                            Bang. Kosong Tertinggi
+                        </button>
+                        <button id="sort-btn-banr" onclick="window.quickSortPalu('banr')"
+                            style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:1px solid rgba(6,182,212,0.4); background:rgba(6,182,212,0.08); color:#0891b2; font-size:0.78rem; font-weight:700; cursor:pointer; transition:all 0.15s;">
+                            BANR Tertinggi
                         </button>
                         <button id="sort-btn-tdk" onclick="window.quickSortPalu('tot_tdk')"
                             style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:1px solid rgba(234,88,12,0.4); background:rgba(234,88,12,0.08); color:#ea580c; font-size:0.78rem; font-weight:700; cursor:pointer; transition:all 0.15s;">
-                            ⚠️ Tidak Ditemukan Tertinggi
+                            Tidak Ditemukan Tertinggi
                         </button>
                         <button id="sort-btn-urgent" onclick="window.quickSortPalu('urgent')"
                             style="padding:0.3rem 0.65rem; border-radius:0.4rem; border:2px solid #3b82f6; background:rgba(59,130,246,0.1); color:#2563eb; font-size:0.78rem; font-weight:800; cursor:pointer; transition:all 0.15s;">
@@ -4788,11 +4814,11 @@
     <script src="rekap_status_sls.js?v=20260916_v1"></script>
     <script src="data_keberadaan_petugas.js?v=20260916_v2"></script>
     <script src="keberadaan_petugas.js?v=20260916_v2"></script>
-    <script src="palu_monitoring_data.js?v=20260916_v7"></script>
+    <script src="palu_monitoring_data.js?v=20260917_v8"></script>
     <script src="palu_usaha_data.js?v=20260916_v1"></script>
-    <script src="palu_geotagging_data.js?v=20260917_v7"></script>
-    <script src="palu_monitoring.js?v=20260917_v7"></script>
-    <script src="app_v2.js?v=20260917_v7" defer></script>
+    <script src="palu_geotagging_data.js?v=20260917_v8"></script>
+    <script src="palu_monitoring.js?v=20260917_v8"></script>
+    <script src="app_v2.js?v=20260917_v8" defer></script>
 
     <script>
         function switchSubTab(surveyType, subTab) {

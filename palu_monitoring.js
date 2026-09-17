@@ -97,7 +97,12 @@
         const elBangkos = document.getElementById('palu-kpi-bangkos');
         if (elBangkos) elBangkos.textContent = (s.bangkos || 0).toLocaleString('id-ID');
         const elBangkosSls = document.getElementById('palu-kpi-bangkos-sls');
-        if (elBangkosSls) elBangkosSls.textContent = `${(s.bangkos_sls || 0).toLocaleString('id-ID')} SLS`;
+        if (elBangkosSls) elBangkosSls.textContent = `${(s.bangkos_sls || 0).toLocaleString('id-ID')} SLS terlapor`;
+
+        const elBanr = document.getElementById('palu-kpi-banr');
+        if (elBanr) elBanr.textContent = (s.banr || 0).toLocaleString('id-ID');
+        const elBanrSls = document.getElementById('palu-kpi-banr-sls');
+        if (elBanrSls) elBanrSls.textContent = `${(s.banr_sls || 0).toLocaleString('id-ID')} SLS terlapor`;
 
         const totalTdk = (s.bu_tdk || 0) + (s.kl_tdk || 0);
         const elTdk = document.getElementById('palu-kpi-tdk');
@@ -133,7 +138,7 @@
     };
     window.togglePaluBasemap = window.setPaluBasemap;
 
-    // Mode switch: 'open', 'draft', 'tidak_ditemukan', 'bangkos', 'all'
+    // Mode switch: 'open', 'draft', 'tidak_ditemukan', 'bangkos', 'banr', 'all'
     window.setPaluMapMode = function (mode) {
         currentMode = mode;
         document.querySelectorAll('.btn-palu-mode').forEach(b => {
@@ -152,6 +157,9 @@
             sortOrder = -1;
         } else if (mode === 'bangkos') {
             sortField = 'bangkos';
+            sortOrder = -1;
+        } else if (mode === 'banr') {
+            sortField = 'banr';
             sortOrder = -1;
         }
 
@@ -284,6 +292,27 @@
                 weight = 1.2;
                 opacity = 0.85;
                 fillOpacity = 0.25;
+            }
+        } else if (currentMode === 'banr') {
+            const banrVal = p.banr || 0;
+            if (banrVal >= 10) {
+                strokeColor = '#ffffff';
+                fillColor = '#0891b2';
+                weight = 2.8;
+                opacity = 1;
+                fillOpacity = 0.70;
+            } else if (banrVal >= 3) {
+                strokeColor = '#0891b2';
+                fillColor = '#06b6d4';
+                weight = 2.2;
+                opacity = 0.95;
+                fillOpacity = 0.50;
+            } else if (banrVal >= 1) {
+                strokeColor = '#06b6d4';
+                fillColor = '#67e8f9';
+                weight = 1.4;
+                opacity = 0.85;
+                fillOpacity = 0.30;
             }
         } else {
             // Mode 'all': Status lengkap seluruh SLS Kota Palu
@@ -431,13 +460,16 @@
         if (elDraft) elDraft.textContent = draftVal.toLocaleString('id-ID');
         const elBangkos = document.getElementById('palu-insp-bangkos');
         if (elBangkos) elBangkos.textContent = bangkosVal.toLocaleString('id-ID');
+        const elBanr = document.getElementById('palu-insp-banr');
+        if (elBanr) elBanr.textContent = (p.banr || 0).toLocaleString('id-ID');
         const elTdk = document.getElementById('palu-insp-tdk');
         if (elTdk) elTdk.textContent = `${totTdk.toLocaleString('id-ID')} (Keluarga: ${klTdk} | Usaha: ${buTdk})`;
 
         // Prelist, Computer Vision Satelit vs Realisasi Lapangan Comparison
         const prelistVal = p.prelist !== undefined ? p.prelist : (p.satelit_count || 0);
         const cvVal = p.bangunan_cv || Math.round(prelistVal * 0.88);
-        const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + bangkosVal);
+        const banrVal = p.banr || 0;
+        const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + bangkosVal + banrVal);
         const gapCv = p.gap_cv !== undefined ? p.gap_cv : (cvVal - realisasiVal);
         const gapPrelist = p.gap_prelist !== undefined ? p.gap_prelist : (prelistVal - realisasiVal);
         const pctCov = prelistVal > 0 ? Math.round((realisasiVal / prelistVal) * 100) : 0;
@@ -984,6 +1016,7 @@
                 ${th('OPEN', 'open')}
                 ${th('DRAFT', 'draft')}
                 ${th('B-Kos', 'bangkos')}
+                ${th('BANR', 'banr')}
                 ${th('Tdk Tmk', 'tot_tdk')}
                 ${th('Prelist', 'prelist')}
                 ${th('CV Satelit', 'bangunan_cv')}
@@ -1018,12 +1051,14 @@
             if (sortField === 'open') return (p.open || 0) > 0;
             if (sortField === 'draft') return (p.draft || 0) > 0;
             if (sortField === 'bangkos') return (p.bangkos || 0) > 0;
+            if (sortField === 'banr') return (p.banr || 0) > 0;
             if (sortField === 'tot_tdk') return (p.tot_tdk || 0) > 0;
-            if (sortField === '__urgent__') return ((p.open || 0) > 0 || (p.draft || 0) > 0 || (p.tot_tdk || 0) > 0 || (p.bangkos || 0) > 0 || (p.gap_cv || 0) >= 20);
+            if (sortField === '__urgent__') return ((p.open || 0) > 0 || (p.draft || 0) > 0 || (p.tot_tdk || 0) > 0 || (p.bangkos || 0) > 0 || (p.banr || 0) > 0 || (p.gap_cv || 0) >= 20);
             if (currentMode === 'open') return (p.open || 0) > 0;
             if (currentMode === 'draft') return (p.draft || 0) > 0;
-            if (currentMode === 'tidak_ditemukan') return searchQuery ? (p.tot_tdk || 0) > 0 : (p.tot_tdk || 0) >= 30;
             if (currentMode === 'bangkos') return searchQuery ? (p.bangkos || 0) > 0 : (p.bangkos || 0) >= 12;
+            if (currentMode === 'banr') return (p.banr || 0) > 0;
+            if (currentMode === 'tidak_ditemukan') return searchQuery ? (p.tot_tdk || 0) > 0 : (p.tot_tdk || 0) >= 30;
             if (currentMode === 'all') return (p.open || 0) > 0 || (p.draft || 0) > 0;
             return true;
         });
@@ -1038,6 +1073,7 @@
             if (sortField === 'prelist') return sortOrder * ((a.prelist || 0) - (b.prelist || 0));
             if (sortField === 'bangunan_cv') return sortOrder * ((a.bangunan_cv || 0) - (b.bangunan_cv || 0));
             if (sortField === 'gap_cv' || sortField === 'gap_satelit') return sortOrder * ((a.gap_cv || 0) - (b.gap_cv || 0));
+            if (sortField === 'banr') return sortOrder * ((a.banr || 0) - (b.banr || 0));
             if (sortField === 'nmdesa') return sortOrder * (a.nmdesa || '').localeCompare(b.nmdesa || '');
             if (sortField === 'nmsls') return sortOrder * (a.nmsls || '').localeCompare(b.nmsls || '');
             if (sortField === 'ppl') return sortOrder * (a.ppl || '').localeCompare(b.ppl || '');
@@ -1066,7 +1102,7 @@
         renderPaluPagination(totalPages, currentPage, false);
 
         if (pageItems.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="13" style="text-align:center; padding:2rem; color:var(--text-secondary);">Tidak ada data SLS yang cocok dengan filter aktif.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="14" style="text-align:center; padding:2rem; color:var(--text-secondary);">Tidak ada data SLS yang cocok dengan filter aktif.</td></tr>`;
             return;
         }
 
@@ -1082,6 +1118,9 @@
             const bangkosBadge = p.bangkos > 0
                 ? `<span class="badge" style="background:rgba(99,102,241,0.12); color:#4f46e5; font-weight:700;">${p.bangkos}</span>`
                 : `<span style="color:var(--text-secondary); opacity:0.6;">-</span>`;
+            const banrBadge = p.banr > 0
+                ? `<span class="badge" style="background:rgba(6,182,212,0.15); color:#0891b2; font-weight:700;">${p.banr}</span>`
+                : `<span style="color:var(--text-secondary); opacity:0.6;">-</span>`;
             const tdkBadge = p.tot_tdk > 0
                 ? `<span style="color:#d97706; font-weight:700;" title="Keluarga: ${p.kl_tdk} | Usaha: ${p.bu_tdk}">${p.tot_tdk}</span>`
                 : `<span style="color:var(--text-secondary); opacity:0.6;">-</span>`;
@@ -1089,7 +1128,8 @@
             // Prelist, Computer Vision Satelit vs Realisasi
             const prelistVal = p.prelist !== undefined ? p.prelist : (p.satelit_count || 0);
             const cvVal = p.bangunan_cv || Math.round(prelistVal * 0.88);
-            const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0));
+            const banrVal = p.banr || 0;
+            const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0) + banrVal);
             const gapCv = p.gap_cv !== undefined ? p.gap_cv : (cvVal - realisasiVal);
 
             let gapBadge = `<span style="color:#10b981; font-weight:700; font-size:0.8rem;">${gapCv}</span>`;
@@ -1115,6 +1155,7 @@
                 <td style="text-align:center; padding:0.55rem 0.5rem;">${openBadge}</td>
                 <td style="text-align:center; padding:0.55rem 0.5rem;">${draftBadge}</td>
                 <td style="text-align:center; padding:0.55rem 0.5rem;">${bangkosBadge}</td>
+                <td style="text-align:center; padding:0.55rem 0.5rem;">${banrBadge}</td>
                 <td style="text-align:center; padding:0.55rem 0.5rem;">${tdkBadge}</td>
                 <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#3b82f6;" title="Prelist Muatan BPS: ${prelistVal}">${prelistVal.toLocaleString('id-ID')}</td>
                 <td style="text-align:center; padding:0.55rem 0.5rem; font-weight:700; color:#6366f1;" title="Deteksi CV Satelit: ${cvVal} Bangunan">${cvVal.toLocaleString('id-ID')}</td>
@@ -1175,11 +1216,12 @@
             'open': 'sort-btn-open',
             'draft': 'sort-btn-draft',
             'bangkos': 'sort-btn-bangkos',
+            'banr': 'sort-btn-banr',
             'tot_tdk': 'sort-btn-tdk',
             'urgent': 'sort-btn-urgent',
             '__urgent__': 'sort-btn-urgent'
         };
-        ['sort-btn-gapsat','sort-btn-open','sort-btn-draft','sort-btn-bangkos','sort-btn-tdk','sort-btn-urgent'].forEach(id => {
+        ['sort-btn-gapsat','sort-btn-open','sort-btn-draft','sort-btn-bangkos','sort-btn-banr','sort-btn-tdk','sort-btn-urgent'].forEach(id => {
             const el = document.getElementById(id);
             if (!el) return;
             el.style.outline = 'none';
