@@ -583,25 +583,21 @@
         const elTdk = document.getElementById('palu-insp-tdk');
         if (elTdk) elTdk.textContent = `${totTdk.toLocaleString('id-ID')} (Keluarga: ${klTdk} | Usaha: ${buTdk})`;
 
-        // Prelist, Computer Vision Satelit vs Realisasi Lapangan Comparison
+        // Target Prelist vs Realisasi Fisik Lapangan Comparison
         const prelistVal = p.prelist !== undefined ? p.prelist : (p.satelit_count || 0);
-        const cvVal = p.bangunan_cv || Math.round(prelistVal * 0.88);
         const banrVal = p.banr || 0;
         const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + bangkosVal + banrVal);
-        const gapCv = p.gap_cv !== undefined ? p.gap_cv : (cvVal - realisasiVal);
-        const gapPrelist = p.gap_prelist !== undefined ? p.gap_prelist : (prelistVal - realisasiVal);
-        const pctCov = prelistVal > 0 ? Math.round((realisasiVal / prelistVal) * 100) : 0;
+        const gapVal = p.gap_prelist !== undefined ? p.gap_prelist : (prelistVal - realisasiVal);
+        const pctCov = prelistVal > 0 ? Math.round((realisasiVal / prelistVal) * 100) : (realisasiVal > 0 ? 100 : 0);
 
         const elPrelist = document.getElementById('palu-insp-prelist');
         if (elPrelist) elPrelist.textContent = prelistVal.toLocaleString('id-ID');
-        const elSat = document.getElementById('palu-insp-satelit');
-        if (elSat) elSat.textContent = cvVal.toLocaleString('id-ID');
         const elReal = document.getElementById('palu-insp-realisasi');
         if (elReal) elReal.textContent = realisasiVal.toLocaleString('id-ID');
         const elGap = document.getElementById('palu-insp-gap');
         if (elGap) {
-            elGap.textContent = (gapCv > 0 ? `+${gapCv}` : gapCv).toLocaleString('id-ID');
-            elGap.style.color = gapCv >= 40 ? '#ef4444' : (gapCv >= 15 ? '#ea580c' : '#10b981');
+            elGap.textContent = (gapVal > 0 ? `-${gapVal}` : `+${Math.abs(gapVal)}`).toLocaleString('id-ID');
+            elGap.style.color = gapVal > 25 ? '#ef4444' : (gapVal > 5 ? '#ea580c' : '#10b981');
         }
         const elCov = document.getElementById('palu-insp-coverage');
         if (elCov) {
@@ -611,14 +607,14 @@
         }
         const elInsight = document.getElementById('palu-insp-insight');
         if (elInsight) {
-            if (gapCv >= 40) {
-                elInsight.innerHTML = `<strong>Perhatian Khusus:</strong> Deteksi CV Satelit menemukan <strong>${cvVal} bangunan fisik</strong> (Prelist: ${prelistVal}), sedangkan realisasi lapangan baru <strong>${realisasiVal}</strong> (selisih +${gapCv} belum terdata). Disarankan penyisiran ulang oleh PPL.`;
-            } else if (gapCv >= 15) {
-                elInsight.innerHTML = `<strong>Perlu Verifikasi:</strong> Terdapat selisih +${gapCv} bangunan antara CV Satelit (${cvVal}) dan realisasi lapangan (${realisasiVal}).`;
-            } else if (totTdk > 20 && cvVal > 30) {
-                elInsight.innerHTML = `<strong>Anomali Responden:</strong> Terdapat ${totTdk} responden 'Tidak Ditemukan', namun citra satelit mendeteksi ${cvVal} bangunan fisik aktif.`;
+            if (gapVal > 30) {
+                elInsight.innerHTML = `<strong>Perhatian:</strong> Target prelist sebesar <strong>${prelistVal}</strong>, realisasi fisik baru <strong>${realisasiVal}</strong> (masih kurang <strong>${gapVal}</strong> muatan belum tersurvei). Disarankan penyisiran ulang oleh PPL.`;
+            } else if (totTdk > 20) {
+                elInsight.innerHTML = `<strong>Perhatian:</strong> Terdapat <strong>${totTdk}</strong> responden berstatus 'Tidak Ditemukan' (Keluarga: ${klTdk}, Usaha: ${buTdk}).`;
+            } else if (gapVal > 5) {
+                elInsight.innerHTML = `<strong>Progres:</strong> Terdapat selisih <strong>${gapVal}</strong> muatan antara target prelist (${prelistVal}) dan realisasi lapangan (${realisasiVal}).`;
             } else {
-                elInsight.innerHTML = `<strong>Sesuai:</strong> Jumlah data lapangan (${realisasiVal}) seimbang dengan target prelist (${prelistVal}) dan estimasi CV Satelit (${cvVal}).`;
+                elInsight.innerHTML = `<strong>Sesuai:</strong> Realisasi lapangan (<strong>${realisasiVal}</strong>) telah mencakup target prelist (<strong>${prelistVal}</strong>) dengan capaian <strong>${pctCov}%</strong>.`;
             }
         }
 
@@ -686,7 +682,7 @@
             return;
         }
 
-        // 2. Coba Live Fetch ke API Kak Ical
+        // 2. Coba Live Fetch via Local Proxy (CORS-free) atau langsung ke Server
         const payload = {
             kdkab: p.kdkab || "71",
             kdkec: p.kdkec || "",
@@ -694,36 +690,45 @@
             kdsls: (p.kdsls || '') + (p.kdsubsls || '00')
         };
 
-        fetch('https://ause.bpssulteng.id/api/sqllab_geotagging/sls', {
+        const fetchViaProxy = () => fetch('http://127.0.0.1:5050/api/sls', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
-        })
-        .then(res => {
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            return res.json();
-        })
-        .then(json => {
-            const feats = (json && json.data && json.data.features) ? json.data.features : [];
-            if (!window.PALU_GEOTAGGING_CACHE) window.PALU_GEOTAGGING_CACHE = {};
-            window.PALU_GEOTAGGING_CACHE[idsls] = feats;
-            renderGeotagPoints(feats, feature);
-        })
-        .catch(err => {
-            console.warn("Geotag live fetch failed:", err);
-            if (badgeEl) {
-                badgeEl.textContent = 'Offline';
-                badgeEl.style.background = 'rgba(239, 68, 68, 0.15)';
-                badgeEl.style.color = '#ef4444';
-            }
-            if (summaryEl) {
-                summaryEl.innerHTML = `
-                    <div style="background: rgba(245, 158, 11, 0.08); border-radius: 0.4rem; padding: 0.45rem; border-left: 2px solid #f59e0b; color: var(--text-primary); font-size: 0.7rem; line-height: 1.35;">
-                        Titik live server dibatasi CORS. Hubungi Kak Ical untuk mengizinkan <code>origin: '*'</code> atau jalankan <code>python3 sync_geotagging_palu.py</code>.
-                    </div>
-                `;
-            }
         });
+
+        const fetchDirect = () => fetch('https://ause.bpssulteng.id/api/sqllab_geotagging/sls', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+
+        fetchViaProxy()
+            .catch(() => fetchDirect())
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                return res.json();
+            })
+            .then(json => {
+                const feats = (json && json.data && json.data.features) ? json.data.features : [];
+                if (!window.PALU_GEOTAGGING_CACHE) window.PALU_GEOTAGGING_CACHE = {};
+                window.PALU_GEOTAGGING_CACHE[idsls] = feats;
+                renderGeotagPoints(feats, feature);
+            })
+            .catch(err => {
+                console.warn("Geotag live fetch failed:", err);
+                if (badgeEl) {
+                    badgeEl.textContent = 'Offline';
+                    badgeEl.style.background = 'rgba(239, 68, 68, 0.15)';
+                    badgeEl.style.color = '#ef4444';
+                }
+                if (summaryEl) {
+                    summaryEl.innerHTML = `
+                        <div style="background: rgba(245, 158, 11, 0.08); border-radius: 0.4rem; padding: 0.45rem; border-left: 2px solid #f59e0b; color: var(--text-primary); font-size: 0.7rem; line-height: 1.35;">
+                            Titik tidak dapat dimuat langsung karena pembatasan jaringan / SSL. Jalankan <code>python3 proxy_server.py</code> di terminal atau klik SLS prioritas yang berdokumen Open/Draft/BANR.
+                        </div>
+                    `;
+                }
+            });
     }
 
     function renderGeotagPoints(features, slsFeature) {
@@ -1137,10 +1142,9 @@
                 ${th('B-Kos', 'bangkos')}
                 ${th('BANR', 'banr')}
                 ${th('Tdk Tmk', 'tot_tdk')}
-                ${th('Prelist', 'prelist')}
-                ${th('CV Satelit', 'bangunan_cv')}
+                ${th('Target Prelist', 'prelist')}
                 ${th('Realisasi', 'realisasi_fisik')}
-                ${th('Gap CV', 'gap_cv')}
+                ${th('Sisa (Gap)', 'gap_prelist')}
                 ${th('PPL / PML', 'ppl', 'left')}
                 <th style="padding:0.6rem 0.45rem; text-align:center; font-size:0.78rem; color:var(--text-secondary); font-weight:600;">Aksi</th>
             </tr>`;
@@ -1253,20 +1257,21 @@
                 ? `<span style="color:#d97706; font-weight:700;" title="Keluarga: ${p.kl_tdk} | Usaha: ${p.bu_tdk}">${p.tot_tdk}</span>`
                 : `<span style="color:var(--text-secondary); opacity:0.6;">-</span>`;
 
-            // Prelist, Computer Vision Satelit vs Realisasi
+            // Prelist vs Realisasi Lapangan
             const prelistVal = p.prelist !== undefined ? p.prelist : (p.satelit_count || 0);
-            const cvVal = p.bangunan_cv || Math.round(prelistVal * 0.88);
             const banrVal = p.banr || 0;
             const realisasiVal = p.realisasi_fisik || ((p.submitted || 0) + (p.bangkos || 0) + banrVal);
-            const gapCv = p.gap_cv !== undefined ? p.gap_cv : (cvVal - realisasiVal);
+            const gapPrelist = p.gap_prelist !== undefined ? p.gap_prelist : (prelistVal - realisasiVal);
 
-            let gapBadge = `<span style="color:#10b981; font-weight:700; font-size:0.8rem;">${gapCv}</span>`;
-            if (gapCv >= 40) {
-                gapBadge = `<span class="badge" style="background:rgba(239,68,68,0.15); color:#dc2626; font-weight:800; font-size:0.75rem;" title="Deteksi CV Satelit ${cvVal} bangunan, realisasi ${realisasiVal}">+${gapCv}</span>`;
-            } else if (gapCv >= 15) {
-                gapBadge = `<span class="badge" style="background:rgba(245,158,11,0.15); color:#d97706; font-weight:700; font-size:0.75rem;" title="Selisih ${gapCv} bangunan">+${gapCv}</span>`;
-            } else if (gapCv > 0) {
-                gapBadge = `<span style="color:var(--text-secondary); font-weight:600; font-size:0.78rem;">+${gapCv}</span>`;
+            let gapBadge = `<span style="color:#10b981; font-weight:700; font-size:0.8rem;">0</span>`;
+            if (gapPrelist > 30) {
+                gapBadge = `<span class="badge" style="background:rgba(239,68,68,0.15); color:#dc2626; font-weight:800; font-size:0.75rem;" title="Target Prelist ${prelistVal}, Realisasi ${realisasiVal}">-${gapPrelist}</span>`;
+            } else if (gapPrelist > 5) {
+                gapBadge = `<span class="badge" style="background:rgba(245,158,11,0.15); color:#d97706; font-weight:700; font-size:0.75rem;" title="Sisa ${gapPrelist} muatan">-${gapPrelist}</span>`;
+            } else if (gapPrelist > 0) {
+                gapBadge = `<span style="color:var(--text-secondary); font-weight:600; font-size:0.78rem;">-${gapPrelist}</span>`;
+            } else {
+                gapBadge = `<span style="color:#10b981; font-weight:700; font-size:0.8rem;">+${Math.abs(gapPrelist)}</span>`;
             }
 
             const kabBadge = `<span style="display:inline-block; font-size:0.72rem; font-weight:700; color:#2563eb; background:rgba(37,99,235,0.08); padding:0.15rem 0.4rem; border-radius:0.3rem; white-space:nowrap;">${p.nmkab || ''}</span>`;
@@ -1289,7 +1294,6 @@
                 <td style="text-align:center; padding:0.55rem 0.4rem;">${banrBadge}</td>
                 <td style="text-align:center; padding:0.55rem 0.4rem;">${tdkBadge}</td>
                 <td style="text-align:center; padding:0.55rem 0.4rem; font-weight:700; color:#3b82f6;" title="Prelist Muatan BPS: ${prelistVal}">${prelistVal.toLocaleString('id-ID')}</td>
-                <td style="text-align:center; padding:0.55rem 0.4rem; font-weight:700; color:#6366f1;" title="Deteksi CV Satelit: ${cvVal} Bangunan">${cvVal.toLocaleString('id-ID')}</td>
                 <td style="text-align:center; padding:0.55rem 0.4rem; font-weight:700; color:#10b981;">${realisasiVal.toLocaleString('id-ID')}</td>
                 <td style="text-align:center; padding:0.55rem 0.4rem;">${gapBadge}</td>
                 <td style="text-align:left; font-size:0.78rem; padding:0.55rem 0.55rem;">
