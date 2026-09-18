@@ -10,10 +10,19 @@ let filterPopup = null;
 let slsOpenMap = null;
 let slsMapLayer = null;
 
-function initSlsMap() {
+async function initSlsMap() {
     if (slsOpenMap) return;
     const mapContainer = document.getElementById("sls-open-map");
     if (!mapContainer) return;
+
+    if (!window.PETA_SLS && window.loadScriptOnce) {
+        try {
+            await window.loadScriptOnce('petasls.js?v=1788881041_v0109', 'Memuat poligon Peta SLS...');
+        } catch (e) {
+            console.error("Gagal load petasls.js:", e);
+            return;
+        }
+    }
 
     try {
         window._osmTile = L.tileLayer('https://mt{s}.google.com/vt/lyrs=m&hl=id&x={x}&y={y}&z={z}', {

@@ -5918,6 +5918,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
             if (typeof window.initPaluMonitoring === 'function') {
                 window.initPaluMonitoring();
+            } else if (window.loadScriptOnce) {
+                (async () => {
+                    try {
+                        await window.loadScriptOnce('palu_monitoring_data.js?v=1789700487_v1809', 'Memuat data Wilayah Prioritas (1/4)...');
+                        await window.loadScriptOnce('palu_usaha_data.js?v=20260916_v1', 'Memuat data Usaha Prioritas (2/4)...');
+                        await window.loadScriptOnce('palu_geotagging_data.js?v=20260917_v11', 'Memuat titik Geotagging (3/4)...');
+                        await window.loadScriptOnce('palu_monitoring.js?v=20260917_v11', 'Menyiapkan modul Palu (4/4)...');
+                        if (typeof window.initPaluMonitoring === 'function') {
+                            window.initPaluMonitoring();
+                        }
+                    } catch (e) {
+                        console.error('Gagal lazy load Palu Monitoring:', e);
+                    }
+                })();
             }
         } else if (tabId === 'penyisiran') {
             if (mainHeader) mainHeader.textContent = 'Penyisiran Lapangan & Citra Satelit';
