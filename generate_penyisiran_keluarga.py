@@ -9,7 +9,7 @@ def main():
     start_time = time.time()
     base_dir = os.path.dirname(os.path.abspath(__file__))
     output_js = os.path.join(base_dir, "penyisiran_keluarga_data.js")
-    output_excel = os.path.join(base_dir, "Prioritas_Penyisiran_Keluarga_SE2026_15Sep.xlsx")
+    output_excel = os.path.join(base_dir, "Prioritas_Penyisiran_Keluarga_SE2026_18Sep.xlsx")
 
     print("=" * 65)
     print(" GENERATE DATA PRIORITAS PENYISIRAN KELUARGA PER SLS (9 SEPT)")
@@ -38,7 +38,7 @@ def main():
     print(f"   -> {len(muatan_dict):,} SLS dimuat dari muatan")
 
     # 2. Load rekap realisasi keluarga yang ditemukan di Fasih
-    rekap_file = os.path.join(base_dir, "Rekap SBR, UTP, Keluarga_20260915.xlsx")
+    rekap_file = os.path.join(base_dir, "Rekap SBR, UTP, Keluarga_20260918.xlsx")
     realisasi_dict = {}
     if os.path.exists(rekap_file):
         print(f"2. Loading realisasi keluarga from {os.path.basename(rekap_file)}...")
@@ -156,7 +156,7 @@ def main():
     # 6. Simpan ke JS
     print(f"5. Menulis dataset ke {os.path.basename(output_js)}...")
     with open(output_js, "w", encoding="utf-8") as f:
-        f.write("// Data Tabulasi Prioritas Penyisiran Keluarga per SLS - Update 9 September 2026\n")
+        f.write("// Data Tabulasi Prioritas Penyisiran Keluarga per SLS - Update 18 September 2026\n")
         f.write("window.PENYISIRAN_KELUARGA_DATA = ")
         json.dump(records, f, ensure_ascii=False)
         f.write(";\n")
