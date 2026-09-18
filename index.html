@@ -36,9 +36,9 @@
             return a.localeCompare(b);
         };
     </script>
+    <script src="lazy_loader.js?v=20260918_v1"></script>
     <script src="daily_summary.js?v=1788881041_v0109"></script>
     <script src="open_subsls_data.js?v=1788881041_v0109"></script>
-    <script src="petasls.js?v=1788881041_v0109"></script>
     <script src="highlighted_subsls.js?v=1788881041_v0109"></script>
     <script src="open_subsls.js?v=1788881041_v0109"></script>
     <script src="belum_diassign_data.js?v=1788881041_v0109"></script>
@@ -2043,15 +2043,15 @@
                                     style="height: 36px; padding-left: 2.2rem; font-size: 0.82rem;" />
                             </div>
                             <select id="select-history-range" onchange="window.setPetugasHistoryRange(this.value)"
-                                style="height: 36px; padding: 0.35rem 0.65rem; border-radius: 0.6rem; border: 1px solid var(--border-light); background: var(--input-bg); color: var(--text-primary); font-size: 0.8rem; font-weight: 600; font-family: 'Outfit', sans-serif; cursor: pointer;">
+                                style="display: none; height: 36px; padding: 0.35rem 0.65rem; border-radius: 0.6rem; border: 1px solid var(--border-light); background: var(--input-bg); color: var(--text-primary); font-size: 0.8rem; font-weight: 600; font-family: 'Outfit', sans-serif; cursor: pointer;">
                                 <option value="7" selected>7 Hari Terakhir</option>
                                 <option value="14">14 Hari Terakhir</option>
                                 <option value="30">30 Hari Terakhir</option>
                                 <option value="all">Semua Tanggal</option>
                             </select>
                             <button id="btn-toggle-history-petugas" onclick="window.togglePetugasHistory()"
-                                style="display: flex; align-items: center; gap: 0.4rem; background: rgba(99,102,241,0.1); color: var(--text-secondary); border: 1px solid var(--border-light); border-radius: 0.6rem; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s; white-space: nowrap; height: 36px;">
-                                Sembunyikan History
+                                style="display: flex; align-items: center; gap: 0.4rem; background: transparent; color: var(--text-secondary); border: 1px solid var(--border-light); border-radius: 0.6rem; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s; white-space: nowrap; height: 36px;">
+                                Tampilkan History
                             </button>
                             <button id="btn-download-excel-petugas" onclick="window.exportPetugasSummaryExcel()"
                                 style="display: flex; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; border-radius: 0.6rem; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; font-family: 'Outfit', sans-serif; box-shadow: 0 2px 8px rgba(16,185,129,0.3); transition: all 0.2s; white-space: nowrap; height: 36px;">
@@ -4973,19 +4973,10 @@
     <script src="petugas_phones.js?v=1788881041_v0109"></script>
     <script src="petugas_region_map.js?v=1789700487_v1809"></script>
     <script src="fast_petugas_progress.js?v=1789700487_v1809"></script>
-    <script src="fast_petugas_history.js?v=1789700487_v1809"></script>
-    <script src="data_hilang_usaha.js"></script>
-    <script src="data_hilang_keluarga.js?v=20260909_v1"></script>
-    <script src="data_usaha_nonaktif.js"></script>
-    <script src="data_desil.js?v=1788881041_v0109_p3"></script>
     <script src="rekap_status_sls.js?v=1789700487_v1809_v2"></script>
     <script src="data_keberadaan_petugas.js?v=1789700487_v1809"></script>
     <script src="keberadaan_petugas.js?v=20260916_v2"></script>
-    <script src="palu_monitoring_data.js?v=1789700487_v1809"></script>
-    <script src="palu_usaha_data.js?v=20260916_v1"></script>
-    <script src="palu_geotagging_data.js?v=20260917_v11"></script>
-    <script src="palu_monitoring.js?v=20260917_v11"></script>
-    <script src="app_v2.js?v=1789700487_v1809_v2" defer></script>
+    <script src="app_v2.js?v=20260918_lazy1" defer></script>
 
     <script>
         function switchSubTab(surveyType, subTab) {

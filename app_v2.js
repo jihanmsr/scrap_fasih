@@ -7755,9 +7755,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    window._showPetugasHistory = true;
-    window.togglePetugasHistory = function() {
-        window._showPetugasHistory = !window._showPetugasHistory;
+    window._showPetugasHistory = false;
+    window.togglePetugasHistory = async function() {
+        if (!window._showPetugasHistory) {
+            if (!window.PETUGAS_HISTORY_MAP && window.loadScriptOnce) {
+                try {
+                    await window.loadScriptOnce('fast_petugas_history.js?v=1789700487_v1809', 'Memuat riwayat harian petugas...');
+                } catch (e) {
+                    console.error('Gagal memuat history petugas:', e);
+                    return;
+                }
+            }
+            window._showPetugasHistory = true;
+        } else {
+            window._showPetugasHistory = false;
+        }
         const btn = document.getElementById('btn-toggle-history-petugas');
         const selectRange = document.getElementById('select-history-range');
         if (btn) {
@@ -11770,40 +11782,53 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     // Override loadDataHilangData
-    window.loadDataHilangData = function() {
+    window.loadDataHilangData = async function() {
         const loadingEl = document.getElementById('data_hilang-loading');
         const emptyEl = document.getElementById('data_hilang-empty');
         if(loadingEl) loadingEl.style.display = 'block';
         if(emptyEl) emptyEl.style.display = 'none';
         
-        setTimeout(() => {
-            let data = [];
-            if(currentDataHilangTab === 'usaha') {
-                data = window.dataHilangUsaha || [];
-            } else if (currentDataHilangTab === 'keluarga') {
-                data = window.dataHilangKeluarga || [];
-            } else if (currentDataHilangTab === 'nonaktif') {
-                data = window.dataUsahaNonaktif || [];
-            } else {
-                data = window.dataHilangDesil || [];
+        try {
+            if (currentDataHilangTab === 'usaha' && !window.dataHilangUsaha && window.loadScriptOnce) {
+                await window.loadScriptOnce('data_hilang_usaha.js', 'Memuat data Usaha Hilang...');
+            } else if (currentDataHilangTab === 'keluarga' && !window.dataHilangKeluarga && window.loadScriptOnce) {
+                await window.loadScriptOnce('data_hilang_keluarga.js?v=20260909_v1', 'Memuat data Keluarga Hilang...');
+            } else if (currentDataHilangTab === 'nonaktif' && !window.dataUsahaNonaktif && window.loadScriptOnce) {
+                await window.loadScriptOnce('data_usaha_nonaktif.js', 'Memuat data Usaha Nonaktif...');
+            } else if (currentDataHilangTab === 'desil' && !window.dataDesilMatrix && window.loadScriptOnce) {
+                await window.loadScriptOnce('data_desil.js?v=1788881041_v0109_p3', 'Memuat data Desil...');
             }
-            
-            dataHilangDataCache = data;
-            window.currentDataHilangFiltered = data;
-            // update UI counts
-            document.getElementById('data_hilang-count-total').textContent = data.length.toLocaleString();
-            
-            // clear dropdowns
-            const kabFilter = document.getElementById('data_hilang-filter-kab');
-            if(kabFilter) {
-                let kabs = [...new Set(data.map(d => d.kab || d.kabupaten))].filter(Boolean).sort(window.sortKabupatenCallback);
-                kabFilter.innerHTML = '<option value="">Semua Kab/Kota</option>' + kabs.map(k => `<option value="${k}">${k}</option>`).join('');
-            }
-            
-            if(loadingEl) loadingEl.style.display = 'none';
-            window.renderDesilMatrix();
-            window.renderDataHilangTable(data);
-        }, 100);
+        } catch (err) {
+            console.error('Gagal memuat dataset data hilang:', err);
+        }
+
+        let data = [];
+        if(currentDataHilangTab === 'usaha') {
+            data = window.dataHilangUsaha || [];
+        } else if (currentDataHilangTab === 'keluarga') {
+            data = window.dataHilangKeluarga || [];
+        } else if (currentDataHilangTab === 'nonaktif') {
+            data = window.dataUsahaNonaktif || [];
+        } else {
+            data = window.dataHilangDesil || [];
+        }
+        
+        dataHilangDataCache = data;
+        window.currentDataHilangFiltered = data;
+        // update UI counts
+        const countEl = document.getElementById('data_hilang-count-total');
+        if (countEl) countEl.textContent = data.length.toLocaleString();
+        
+        // clear dropdowns
+        const kabFilter = document.getElementById('data_hilang-filter-kab');
+        if(kabFilter) {
+            let kabs = [...new Set(data.map(d => d.kab || d.kabupaten))].filter(Boolean).sort(window.sortKabupatenCallback);
+            kabFilter.innerHTML = '<option value="">Semua Kab/Kota</option>' + kabs.map(k => `<option value="${k}">${k}</option>`).join('');
+        }
+        
+        if(loadingEl) loadingEl.style.display = 'none';
+        if (typeof window.renderDesilMatrix === 'function') window.renderDesilMatrix();
+        window.renderDataHilangTable(data);
     };
     
     // Override filterDataHilangTable
