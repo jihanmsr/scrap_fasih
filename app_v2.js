@@ -9146,6 +9146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <th style="text-align: center; cursor: pointer; min-width: 90px; color: #10b981;" onclick="window.sortRekapStatus('approved')">Approved <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('approved')}</span></th>
                 <th style="text-align: center; cursor: pointer; min-width: 90px; color: #8b5cf6;" onclick="window.sortRekapStatus('completed_admin')">Completed <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('completed_admin')}</span></th>
                 <th style="text-align: center; cursor: pointer; min-width: 90px;" onclick="window.sortRekapStatus('selesai')">Total Selesai <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('selesai')}</span></th>
+                <th style="text-align: center; cursor: pointer; min-width: 95px; color: #10b981;" onclick="window.sortRekapStatus('delta_selesai')" title="Pergerakan dokumen selesai dibanding snapshot sebelumnya">Delta Selesai <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('delta_selesai')}</span></th>
                 <th style="text-align: center; cursor: pointer; width: 120px;" onclick="window.sortRekapStatus('pct')">% Capaian <span style="font-size:0.75rem; opacity:0.6;">${sortIcon('pct')}</span></th>
             </tr>
         `;
@@ -9163,7 +9164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const paginated = list.slice(startIdx, endIdx);
 
         if (paginated.length === 0) {
-            tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; padding: 2.5rem; color: var(--text-secondary);">Tidak ada data wilayah yang cocok dengan pencarian / filter.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="13" style="text-align: center; padding: 2.5rem; color: var(--text-secondary);">Tidak ada data wilayah yang cocok dengan pencarian / filter.</td></tr>`;
             const pagInfo = document.getElementById('rekap-status-pagination-info');
             if (pagInfo) pagInfo.textContent = 'Menampilkan 0 dari 0 Wilayah';
             const pagBtns = document.getElementById('rekap-status-pagination-buttons');
@@ -9219,18 +9220,79 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
             }
 
+            const dt = item.delta_details || {};
+            const formatSubBadge = (val, color = '#64748b') => {
+                if (!val || val === 0) return '';
+                const sign = val > 0 ? '+' : '';
+                return `<div style="font-size: 0.68rem; font-weight: 700; color: ${color}; margin-top: 2px;">${sign}${val.toLocaleString('id-ID')}</div>`;
+            };
+
+            const openDeltaBadge = formatSubBadge(dt.open, dt.open > 0 ? '#ef4444' : '#10b981');
+            const draftDeltaBadge = formatSubBadge(dt.draft, dt.draft > 0 ? '#f59e0b' : '#10b981');
+            const subDeltaBadge = formatSubBadge(dt.submitted_pencacah, dt.submitted_pencacah > 0 ? '#3b82f6' : '#64748b');
+            const apprDeltaBadge = formatSubBadge(dt.approved, dt.approved > 0 ? '#10b981' : '#ef4444');
+            const compDeltaBadge = formatSubBadge(dt.completed_admin, dt.completed_admin > 0 ? '#8b5cf6' : '#64748b');
+
+            const dVal = item.delta_selesai || 0;
+            const dPct = (item.delta_pct !== undefined ? item.delta_pct : (item.total > 0 ? (dVal / item.total * 100) : 0));
+            const dColor = dVal > 0 ? '#10b981' : (dVal < 0 ? '#ef4444' : 'var(--text-secondary)');
+            const dSign = dVal > 0 ? '+' : '';
+            const dPctSign = dPct > 0 ? '+' : '';
+
+            let detailsList = [];
+            if (dt.approved) detailsList.push(`<span style="color:#10b981; white-space:nowrap;">Appr: ${dt.approved > 0 ? '+' : ''}${dt.approved.toLocaleString('id-ID')}</span>`);
+            if (dt.draft) detailsList.push(`<span style="color:#f59e0b; white-space:nowrap;">Draft: ${dt.draft > 0 ? '+' : ''}${dt.draft.toLocaleString('id-ID')}</span>`);
+            if (dt.submitted_pencacah) detailsList.push(`<span style="color:#3b82f6; white-space:nowrap;">Submit: ${dt.submitted_pencacah > 0 ? '+' : ''}${dt.submitted_pencacah.toLocaleString('id-ID')}</span>`);
+            if (dt.completed_admin) detailsList.push(`<span style="color:#8b5cf6; white-space:nowrap;">Comp: ${dt.completed_admin > 0 ? '+' : ''}${dt.completed_admin.toLocaleString('id-ID')}</span>`);
+            if (dt.open) detailsList.push(`<span style="color:#ef4444; white-space:nowrap;">Open: ${dt.open > 0 ? '+' : ''}${dt.open.toLocaleString('id-ID')}</span>`);
+            if (dt.rejected) detailsList.push(`<span style="color:#f43f5e; white-space:nowrap;">Rej: ${dt.rejected > 0 ? '+' : ''}${dt.rejected.toLocaleString('id-ID')}</span>`);
+
+            let detailsHtml = '';
+            if (detailsList.length > 0) {
+                detailsHtml = `<div style="font-size: 0.68rem; margin-top: 4px; display: flex; flex-direction: column; gap: 1px; align-items: center; line-height: 1.25;">
+                    ${detailsList.slice(0, 3).join('')}
+                    ${detailsList.length > 3 ? `<span style="font-size:0.62rem; color:var(--text-secondary); opacity:0.8;">+${detailsList.length - 3} lainnya</span>` : ''}
+                </div>`;
+            }
+
+            const deltaCell = `
+                <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace;">
+                    <div style="font-weight: 800; font-size: 0.95rem; color: ${dColor};">
+                        ${dVal !== 0 ? `${dSign}${dVal.toLocaleString('id-ID')}` : '<span style="opacity:0.4;">0</span>'}
+                    </div>
+                    ${dVal !== 0 ? `<div style="font-size: 0.72rem; font-weight: 600; color: ${dColor}; opacity: 0.9;">(${dPctSign}${dPct.toFixed(1).replace('.', ',')}%)</div>` : ''}
+                    ${detailsHtml}
+                </td>
+            `;
+
             bodyHtml += `
                 <tr style="border-bottom: 1px solid var(--border-light); transition: background-color 0.15s;">
                     <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-weight: 600; color: var(--text-secondary);">${no}</td>
                     <td style="padding: 0.65rem 0.75rem; text-align: left; vertical-align: middle;">${wilayahCell}</td>
                     ${cakupanCell}
                     <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: var(--text-primary);">${(item.total || 0).toLocaleString('id-ID')}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #ef4444;">${(item.open || 0).toLocaleString('id-ID')}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #f59e0b;">${(item.draft || 0).toLocaleString('id-ID')}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #3b82f6;">${(item.submitted_pencacah || 0).toLocaleString('id-ID')}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #10b981;">${(item.approved || 0).toLocaleString('id-ID')}</td>
-                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #8b5cf6;">${(item.completed_admin || 0).toLocaleString('id-ID')}</td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #ef4444;">
+                        ${(item.open || 0).toLocaleString('id-ID')}
+                        ${openDeltaBadge}
+                    </td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #f59e0b;">
+                        ${(item.draft || 0).toLocaleString('id-ID')}
+                        ${draftDeltaBadge}
+                    </td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #3b82f6;">
+                        ${(item.submitted_pencacah || 0).toLocaleString('id-ID')}
+                        ${subDeltaBadge}
+                    </td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #10b981;">
+                        ${(item.approved || 0).toLocaleString('id-ID')}
+                        ${apprDeltaBadge}
+                    </td>
+                    <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 700; color: #8b5cf6;">
+                        ${(item.completed_admin || 0).toLocaleString('id-ID')}
+                        ${compDeltaBadge}
+                    </td>
                     <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle; font-family: monospace; font-weight: 800; color: var(--text-primary);">${(item.selesai || 0).toLocaleString('id-ID')}</td>
+                    ${deltaCell}
                     <td style="padding: 0.65rem 0.75rem; text-align: center; vertical-align: middle;">
                         <div style="display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
                             <div style="flex: 1; background: rgba(148,163,184,0.2); height: 6px; border-radius: 3px; overflow: hidden; min-width: 40px;">
@@ -9284,7 +9346,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const level = window.rekapStatusCurrentLevel || 'kab';
-        let csvContent = '\uFEFFNo;Level;Kode;Nama Wilayah;Kabupaten;Kecamatan;Desa;PPL;PML;Total Target;Open;Draft;Submitted PPL;Submitted Respondent;Approved PML;Completed Admin;Total Selesai;Persen Capaian\r\n';
+        let csvContent = '\uFEFFNo;Level;Kode;Nama Wilayah;Kabupaten;Kecamatan;Desa;PPL;PML;Total Target;Open;Draft;Submitted PPL;Submitted Respondent;Approved PML;Completed Admin;Total Selesai;Delta Selesai;Delta (%);Persen Capaian\r\n';
 
         window.lastRekapStatusList.forEach((r, idx) => {
             const no = idx + 1;
@@ -9303,9 +9365,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const approved = r.approved || 0;
             const completed = r.completed_admin || 0;
             const selesai = r.selesai || 0;
+            const dVal = r.delta_selesai || 0;
+            const dPct = (r.delta_pct !== undefined ? r.delta_pct : 0).toFixed(1) + '%';
             const pct = (r.pct || 0).toFixed(1) + '%';
 
-            csvContent += `"${no}";"${level}";"${code}";"${name}";"${kab}";"${kec}";"${desa}";"${ppl}";"${pml}";"${total}";"${open}";"${draft}";"${subPpl}";"${subResp}";"${approved}";"${completed}";"${selesai}";"${pct}"\r\n`;
+            csvContent += `"${no}";"${level}";"${code}";"${name}";"${kab}";"${kec}";"${desa}";"${ppl}";"${pml}";"${total}";"${open}";"${draft}";"${subPpl}";"${subResp}";"${approved}";"${completed}";"${selesai}";"${dVal}";"${dPct}";"${pct}"\r\n`;
         });
 
         const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
@@ -9353,6 +9417,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Edited PML': r.edited_pengawas || 0,
                 'Edited Admin': r.edited_admin || 0,
                 'Total Selesai': r.selesai || 0,
+                'Delta Selesai': r.delta_selesai || 0,
+                'Delta (%)': (r.delta_pct !== undefined ? r.delta_pct : 0).toFixed(1) + '%',
                 'Persen Capaian (%)': (r.pct || 0).toFixed(1) + '%'
             };
         });
