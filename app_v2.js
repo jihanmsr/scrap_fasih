@@ -5834,7 +5834,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const btnDownloadBackupCsv = document.getElementById('btn-download-backup-csv');
         const topHeader = document.querySelector('.main-content > header') || document.querySelector('header');
         if (topHeader) {
-            topHeader.style.display = (tabId === 'palu') ? 'none' : 'flex';
+            topHeader.style.display = (tabId === 'palu' || tabId === 'rekon') ? 'none' : 'flex';
         }
 
         if (tabId === 'se_umum') {
@@ -5957,12 +5957,24 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof window.initBelumDiassign === 'function') {
                 window.initBelumDiassign();
             }
-        } else {
+        } else if (tabId === 'rekon') {
+            if (topHeader) topHeader.style.display = 'none';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
+            if (typeof renderRekon === 'function') {
+                renderRekon();
+            }
+        } else if (tabId === 'email') {
             if (mainHeader) mainHeader.textContent = 'Pemantauan Email Usaha Besar';
             if (mainSubheader) mainSubheader.textContent = 'Daftar pemantauan status pengiriman email kuesioner kepada responden Usaha Besar (UB)';
             if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'inline-flex';
             if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'inline-flex';
             renderList();
+        } else {
+            if (mainHeader) mainHeader.textContent = 'Dashboard Sensus Ekonomi 2026';
+            if (mainSubheader) mainSubheader.textContent = 'Monitoring Sensus Ekonomi 2026 BPS Provinsi Sulawesi Tengah';
+            if (btnDownloadXlsx) btnDownloadXlsx.style.display = 'none';
+            if (btnDownloadBackupCsv) btnDownloadBackupCsv.style.display = 'none';
         }
 
         window.updateLastUpdatedText(tabId);
