@@ -1338,8 +1338,10 @@ body {
     .sidebar-nav {
         flex-direction: row;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
         gap: 0.5rem;
         padding-bottom: 0.5rem;
+        scrollbar-width: thin;
     }
 
     .sidebar-nav .btn-tab {
@@ -1347,6 +1349,8 @@ body {
         font-size: 0.85rem;
         white-space: nowrap;
         flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
     }
 
     .sidebar-footer {
@@ -2224,7 +2228,7 @@ th.sortable:hover {
     .tabs-navigation {
         flex-wrap: wrap;
     }
-    .btn-tab {
+    .tabs-navigation .btn-tab {
         flex: 1 1 45%;
         text-align: center;
         justify-content: center;

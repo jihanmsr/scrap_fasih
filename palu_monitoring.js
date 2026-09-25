@@ -679,59 +679,75 @@
         if (unvisitedListEl) unvisitedListEl.style.display = 'none';
 
         // 1. Cek Offline Cache lokal
-        const cache = window.PALU_GEOTAGGING_CACHE || {};
-        if (cache[idsls] && Array.isArray(cache[idsls])) {
-            renderGeotagPoints(cache[idsls], feature);
+        const checkAndRender = () => {
+            const cache = window.PALU_GEOTAGGING_CACHE || {};
+            if (cache[idsls] && Array.isArray(cache[idsls])) {
+                renderGeotagPoints(cache[idsls], feature);
+                return true;
+            }
+            return false;
+        };
+
+        if (checkAndRender()) return;
+
+        // 2. Coba Live Fetch via Local Proxy (CORS-free) atau langsung ke Server
+        const tryLiveFetch = () => {
+            const payload = {
+                kdkab: p.kdkab || "71",
+                kdkec: p.kdkec || "",
+                kddesa: p.kddesa || "",
+                kdsls: (p.kdsls || '') + (p.kdsubsls || '00')
+            };
+
+            const fetchViaProxy = () => fetch('http://127.0.0.1:5050/api/sls', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            const fetchDirect = () => fetch('https://ause.bpssulteng.id/api/sqllab_geotagging/sls', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            fetchViaProxy()
+                .catch(() => fetchDirect())
+                .then(res => {
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    return res.json();
+                })
+                .then(json => {
+                    const feats = (json && json.data && json.data.features) ? json.data.features : [];
+                    if (!window.PALU_GEOTAGGING_CACHE) window.PALU_GEOTAGGING_CACHE = {};
+                    window.PALU_GEOTAGGING_CACHE[idsls] = feats;
+                    renderGeotagPoints(feats, feature);
+                })
+                .catch(err => {
+                    console.warn("Geotag live fetch failed:", err);
+                    if (badgeEl) {
+                        badgeEl.textContent = 'Offline';
+                        badgeEl.style.background = 'rgba(239, 68, 68, 0.15)';
+                        badgeEl.style.color = '#ef4444';
+                    }
+                    if (summaryEl) {
+                        summaryEl.innerHTML = `
+                            <div style="background: rgba(245, 158, 11, 0.08); border-radius: 0.4rem; padding: 0.45rem; border-left: 2px solid #f59e0b; color: var(--text-primary); font-size: 0.7rem; line-height: 1.35;">
+                                Titik tidak dapat dimuat langsung karena pembatasan jaringan / SSL. Jalankan <code>python3 proxy_server.py</code> di terminal atau klik SLS prioritas yang berdokumen Open/Draft/BANR.
+                            </div>
+                        `;
+                    }
+                });
+        };
+
+        if (window.PALU_GEOTAGGING_PROMISE) {
+            window.PALU_GEOTAGGING_PROMISE.then(() => {
+                if (!checkAndRender()) tryLiveFetch();
+            }).catch(() => tryLiveFetch());
             return;
         }
 
-        // 2. Coba Live Fetch via Local Proxy (CORS-free) atau langsung ke Server
-        const payload = {
-            kdkab: p.kdkab || "71",
-            kdkec: p.kdkec || "",
-            kddesa: p.kddesa || "",
-            kdsls: (p.kdsls || '') + (p.kdsubsls || '00')
-        };
-
-        const fetchViaProxy = () => fetch('http://127.0.0.1:5050/api/sls', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-        });
-
-        const fetchDirect = () => fetch('https://ause.bpssulteng.id/api/sqllab_geotagging/sls', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-        });
-
-        fetchViaProxy()
-            .catch(() => fetchDirect())
-            .then(res => {
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                return res.json();
-            })
-            .then(json => {
-                const feats = (json && json.data && json.data.features) ? json.data.features : [];
-                if (!window.PALU_GEOTAGGING_CACHE) window.PALU_GEOTAGGING_CACHE = {};
-                window.PALU_GEOTAGGING_CACHE[idsls] = feats;
-                renderGeotagPoints(feats, feature);
-            })
-            .catch(err => {
-                console.warn("Geotag live fetch failed:", err);
-                if (badgeEl) {
-                    badgeEl.textContent = 'Offline';
-                    badgeEl.style.background = 'rgba(239, 68, 68, 0.15)';
-                    badgeEl.style.color = '#ef4444';
-                }
-                if (summaryEl) {
-                    summaryEl.innerHTML = `
-                        <div style="background: rgba(245, 158, 11, 0.08); border-radius: 0.4rem; padding: 0.45rem; border-left: 2px solid #f59e0b; color: var(--text-primary); font-size: 0.7rem; line-height: 1.35;">
-                            Titik tidak dapat dimuat langsung karena pembatasan jaringan / SSL. Jalankan <code>python3 proxy_server.py</code> di terminal atau klik SLS prioritas yang berdokumen Open/Draft/BANR.
-                        </div>
-                    `;
-                }
-            });
+        tryLiveFetch();
     }
 
     function renderGeotagPoints(features, slsFeature) {

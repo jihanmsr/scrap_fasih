@@ -5921,13 +5921,16 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (window.loadScriptOnce) {
                 (async () => {
                     try {
-                        await window.loadScriptOnce('palu_monitoring_data.js?v=1789700487_v1809', 'Memuat data Wilayah Prioritas (1/4)...');
-                        await window.loadScriptOnce('palu_usaha_data.js?v=20260916_v1', 'Memuat data Usaha Prioritas (2/4)...');
-                        await window.loadScriptOnce('palu_geotagging_data.js?v=20260917_v11', 'Memuat titik Geotagging (3/4)...');
-                        await window.loadScriptOnce('palu_monitoring.js?v=20260917_v11', 'Menyiapkan modul Palu (4/4)...');
+                        await window.loadScriptOnce('palu_monitoring_data.js?v=20260925_v1', 'Memuat data Wilayah Prioritas (1/3)...');
+                        await window.loadScriptOnce('palu_usaha_data.js?v=20260916_v1', 'Memuat data Usaha Prioritas (2/3)...');
+                        await window.loadScriptOnce('palu_monitoring.js?v=20260925_v1', 'Menyiapkan modul Monitoring Lanjutan (3/3)...');
                         if (typeof window.initPaluMonitoring === 'function') {
                             window.initPaluMonitoring();
                         }
+                        // Muat cache titik geotagging 68MB di latar belakang agar HP tidak lemot/crash
+                        window.PALU_GEOTAGGING_PROMISE = window.loadScriptOnce('palu_geotagging_data.js?v=20260925_v1', '').catch(err => {
+                            console.warn('Geotag background load deferred:', err);
+                        });
                     } catch (e) {
                         console.error('Gagal lazy load Palu Monitoring:', e);
                     }
